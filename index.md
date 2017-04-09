@@ -2,7 +2,6 @@
 title: Trilinos organization
 keywords: sample homepage
 tags: [getting_started]
-sidebar: mydoc_sidebar
 permalink: index.html
 ---
 
