@@ -20,7 +20,9 @@ $( document ).ready(function() {
      * AnchorJS
      */
     anchors.add('h2,h3,h4,h5');
-
+    $("a.dropdown-toggle").click(function() {
+         window.location = $(this).attr('href');
+    });
 });
 
 // needed for nav tabs on pages. See Formatting > Nav tabs for more details.
