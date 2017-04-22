@@ -21,7 +21,7 @@ $( document ).ready(function() {
      */
     anchors.add('h2,h3,h4,h5');
     $("a.dropdown-toggle").click(function() {
-         window.location = $(this).attr('href');
+         window.location = $(this).attr('href').substring(1);
     });
 });
 
