@@ -1,5 +1,5 @@
 ---
-title: Getting started
+title: Install GCC
 permalink: install_gcc.html
 folder: start
 ---
