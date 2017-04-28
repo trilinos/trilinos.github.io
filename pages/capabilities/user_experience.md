@@ -63,67 +63,13 @@ Sub-area lead: Bill Spotz
 
 Simplified layers are higher-level packages or codes that attempt to simplify the task of solving a linear, nonlinear, or optimization problem. Skins are interfaces to Trilinos from other languages, such as C, Fortran, Python, etc. Both simplified layers and skins increase interoperability, either between or among packages or languages.
 
-<center>
-
-<table border="1">
-
-<tbody>
-
-<tr>
-
-<th>Package</th>
-
-<th>Description</th>
-
-</tr>
-
-<tr>
-
-<td> [Stratimikos](http://trilinos.org/packages/stratimikos/) </td>
-
-<td>Single interface to all Trilinos linear solver capabilities</td>
-
-</tr>
-
-<tr>
-
-<td>[Piro](http://trilinos.org/packages/piro)</td>
-
-<td>Single interface to all Trilinos nonlinear solver capabilities</td>
-
-</tr>
-
-<tr>
-
-<td>[PyTrilinos](http://trilinos.org/packages/pytrilinos/)</td>
-
-<td>Python interfaces to selected Trilinos packages and classes</td>
-
-</tr>
-
-<tr>
-
-<td>[ForTrilinos](http://trilinos.org/packages/fortrilinos/)</td>
-
-<td>Fortran interfaces to selected Trilinos packages and classes</td>
-
-</tr>
-
-<tr>
-
-<td>CTrilinos</td>
-
-<td>C interfaces to selected Trilinos packages and classes</td>
-
-</tr>
-
-</tbody>
-
-</table>
-
-</center>
-
-<a name="HCI"></a>
+Package | Description
+--------| -----------
+[Stratimikos](http://trilinos.org/packages/stratimikos/) | Single interface to all Trilinos linear solver capabilities
+[Piro](http://trilinos.org/packages/piro) | Single interface to all Trilinos nonlinear solver capabilities
+[PyTrilinos](http://trilinos.org/packages/pytrilinos/) | Python interfaces to selected Trilinos packages and classes
+[ForTrilinos](http://trilinos.org/packages/fortrilinos/) | Fortran interfaces to selected Trilinos packages and classes
+CTrilinos | C interfaces to selected Trilinos packages and classes
 
 * * *
 
