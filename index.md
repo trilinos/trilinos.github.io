@@ -18,36 +18,24 @@ A unique design feature of Trilinos is its focus on packages.
 [The Trilinos Capability Area homepage ]() organizes Trilinos capabilities into nine collections of functionality and describes 
 which packages are relevant to each area.  This discussion is especially useful for new Trilinos users.
 
-## EuroTUG 2016
-
-The 2016 European Trilinos User Group Meeting will be held at the Leibniz Rechenzentrum (LRZ),​ Garching, Germany on April 18th-20th.  
-See [this page]() for registration information and other details.
-
 ## Trilinos is on GitHub
 
 The [primary Trilinos repository](https://github.com/trilinos/Trilinos) 
 is now hosted on GitHub. This allows users and potential developers greater access to Trilinos source code.
 
-## TUG 2015
+## TUG 2017
 
-The 2015 Trilinos User Group Meeting (TUG) was held October 26th-29th in Albuquerque. 
-For more information, including videos from many of the presentations, visit the [TUG 2015 Homepage]
-().
+The 2017 Trilinos User Group Meeting (TUG) will be held in October in Albuquerque. 
 
 
-## Trilinos 12.4 Release
 
-Trilinos 12.4 is now available for [download](). 
+## Trilinos 12.10 Release
+
+Trilinos 12.10 is now available for [download](). 
 The 12.4 release uses a [CMake](https://cmake.org/) 
 build system, which requires CMake version 2.8.11 or greater. 
 Instructions for building Trilinos 10.0 and later are available 
 [here]().
-
-## Trilinos User Group 2014
-
-The 2014 Trilinos User Group Meeting (TUG) was held October 27th-30th in Albuquerque. 
-For more information, including videos from many of the presentations, visit the 
-[TUG 2014 Homepage]().
 
 ## Trilinos Packages
 
