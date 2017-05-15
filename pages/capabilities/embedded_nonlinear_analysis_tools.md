@@ -20,129 +20,23 @@ If you have questions on the algorithm, software, or vision of this capability a
 
 ## Trilinos Packages in the Embedded Nonlinear Analysis Capability Area
 
-<table border="0" cellspacing="3" cellpadding="5px">
-
-<tbody>
-
-<tr>
-
-<th>Package Name</th>
-
-<th>Quick Description</th>
-
-<th>Point of Contact</th>
-
-</tr>
-
-<tr>
-
-<td>[NOX](http://trilinos.org/packages/nox-and-loca/)</td>
-
-<td>Nonlinear Solver with Globalized Newton’s methods</td>
-
-<td>Roger Pawlowski</td>
-
-</tr>
-
-<tr>
-
-<td>[LOCA](http://trilinos.org/packages/nox-and-loca/)</td>
-
-<td>Parameter Continuation, Bifurcation Tracking</td>
-
-<td>Eric Phipps</td>
-
-</tr>
-
-<tr>
-
-<td>[Rythmos](http://trilinos.org/packages/rythmos/)</td>
-
-<td>Time integration algorithms</td>
-
-<td>Curt Ober</td>
-
-</tr>
-
-<tr>
-
-<td>[MOOCHO](http://trilinos.org/packages/moocho/)</td>
-
-<td>Embedded (PDE-constrained) Optimization, rSQP</td>
-
-<td>Roscoe Bartlett</td>
-
-</tr>
-
-<tr>
-
-<td>Aristos</td>
-
-<td>Full-space intrusive optimization (not yet released)</td>
-
-<td>Dennis Ridzal</td>
-
-</tr>
-
-<tr>
-
-<td>[Sacado](http://trilinos.org/packages/sacado/)</td>
-
-<td>Automatic Differentiation using Expression Templates</td>
-
-<td>Eric Phipps</td>
-
-</tr>
-
-<tr>
-
-<td>[Stokhos](http://trilinos.org/packages/stokhos/)</td>
-
-<td>Stochastic-Galerkin Uncertainty Quantification Tools</td>
-
-<td>Eric Phipps</td>
-
-</tr>
-
-<tr>
-
-<td>TriKota</td>
-
-<td>Interface to Dakota toolkit for a Trilinos application (not yet released)</td>
-
-<td>Andy Salinger</td>
-
-</tr>
-
-</tbody>
-
-</table>
+Package Name | Quick Description | Point of Contact
+------ | ------ | ------
+[NOX](http://trilinos.org/packages/nox-and-loca/) | Nonlinear Solver with Globalized Newton’s methods | Roger Pawlowski
+[LOCA](http://trilinos.org/packages/nox-and-loca/) | Parameter Continuation, Bifurcation Tracking | Eric Phipps
+[Rythmos](http://trilinos.org/packages/rythmos/) | Time integration algorithms | Curt Ober
+[MOOCHO](http://trilinos.org/packages/moocho/) | Embedded (PDE-constrained) Optimization, rSQP | Roscoe Bartlett
+Aristos | Full-space intrusive optimization (not yet released) | Dennis Ridzal
+[Sacado](http://trilinos.org/packages/sacado/) | Automatic Differentiation using Expression Templates | Eric Phipps
+[Stokhos](http://trilinos.org/packages/stokhos/) | Stochastic-Galerkin Uncertainty Quantification Tools | Eric Phipps
+TriKota | Interface to Dakota toolkit for a Trilinos application (not yet released) | Andy Salinger
 
 ## Related Efforts Outside of Trilinos
 
-<table border="0" cellspacing="3" cellpadding="5px">
-
-<tbody>
-
-<tr>
-
-<td>[Dakota](http://dakota.sandia.gov)</td>
-
-<td>Dakota is a mature and widely-used software toolkit at Sandia, independent from Trilinos, that delivers many related analysis capabilities using non-intrusive (black box) methods. These include numerous algorithms in the areas of Optimization, Uncertainty Quantification, Nonlinear-Least-Squares, and Reliability. A adapter package called TriKota is under development for the Trilinos 10.0 release to make these capabilities accessible through the same interface as the above anaysis codes.</td>
-
-</tr>
-
-<tr>
-
-<td>DemoApps</td>
-
-<td>The DemoApps code project is building a prototype PDE code primarily from Trilinos packages. The code will demonstrate the use of Embedded Nonlinear Analysis Tools as well as cutting edge algorithms from all other Trilinos capability areas (not yet externally released).</td>
-
-</tr>
-
-</tbody>
-
-</table>
+|         |         |
+| -------- | --------- |
+| [Dakota](http://dakota.sandia.gov) | Dakota is a mature and widely-used software toolkit at Sandia, independent from Trilinos, that delivers many related analysis capabilities using non-intrusive (black box) methods. These include numerous algorithms in the areas of Optimization, Uncertainty Quantification, Nonlinear-Least-Squares, and Reliability. A adapter package called TriKota is under development for the Trilinos 10.0 release to make these capabilities accessible through the same interface as the above anaysis codes. |
+| DemoApps | The DemoApps code project is building a prototype PDE code primarily from Trilinos packages. The code will demonstrate the use of Embedded Nonlinear Analysis Tools as well as cutting edge algorithms from all other Trilinos capability areas (not yet externally released). |
 
 ## Brief Mathematical Description of Trilinos’ Embedded Nonlinear Analysis Tools
 
