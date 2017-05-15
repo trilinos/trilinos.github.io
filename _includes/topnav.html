@@ -1,5 +1,5 @@
 <!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-inverse">
     <div class="container topnavlinks">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -29,10 +29,19 @@
                 {% for entry in site.data.topnav.topnav_dropdowns %}
                 {% for folder in entry.folders %}
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ folder.title }}<b class="caret"></b></a>
+                    <a href="{{ folder.url |  remove: "/"}}" class="dropdown-toggle" data-toggle="dropdown">{{ folder.title }}<b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         {% for folderitem in folder.folderitems %}
-                        {% if folderitem.external_url %}
+                        {% if folderitem.submenus %}
+                        <li class="dropdown dropdown-submenu">
+                            <a href="{{ folderitem.url |  remove: "/"}}" class="dropdown-toggle" data-toggle="dropdown">{{ folderitem.title }}</a>
+                            <ul class="dropdown-menu">
+                                {% for submenu in folderitem.submenus %}
+                                <li><a href="{{ submenu.url |  remove: "/"}}">{{ submenu.title }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                        {% elsif folderitem.external_url %}
                         <li><a href="{{folderitem.external_url}}" target="_blank">{{folderitem.title}}</a></li>
                         {% elsif page.url contains folderitem.url %}
                         <li class="dropdownActive"><a href="{{folderitem.url |  remove: "/"}}">{{folderitem.title}}</a></li>
