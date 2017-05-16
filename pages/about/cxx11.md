@@ -14,5 +14,5 @@ Using this option will cause Trilinos to behave exactly the same as it did prior
 
 ### Helpful Links:
 
-[Instructions for installing GCC](https://trilinos.org/getting-started/installing-gcc/ "Installing GCC")
-[Adding C++11 dependency for Trilinos packages and client codes](http://trilinos.org/about/cxx11/adding-cxx11-dependencies-for-packages/ "Adding CXX11 Dependencies for Packages")
+[Instructions for installing GCC](install_gcc.html)
+[Adding C++11 dependency for Trilinos packages and client codes](add_CXX11.html)
