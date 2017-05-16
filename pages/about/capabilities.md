@@ -8,6 +8,7 @@ folder: about
 
 Trilinos packages deliver a wide array of capabilities ranging from basic linear algebra to linear and nonlinear solvers and time integrators. Trilinos provides growing capabilities in problem formulation tools such as automatic differentiation and problem partitioning support. The table below matches various capabilities to the Trilinos packages that deliver those capabilities.
 
+{:#table-capabilities}
 Capability | Package(s)
 ------ | ------
 Basic Linear Algebra Libraries | 
@@ -54,3 +55,4 @@ Instructional |
 Trilinos Tutorial | [Didasko](http://trilinos.org/packages/didasko/)
 Archetype package | [New_Package](http://trilinos.org/packages/new-package/)
 Demonstration | [TrilinosCouplings](http://trilinos.org/packages/trilinos-couplings/)
+
