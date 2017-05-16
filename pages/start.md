@@ -13,28 +13,28 @@ Note that there may be overlap between some documents.
 
 Try this first:
 
-*   [About page](http://trilinos.org/about/ "About") -- What’s Trilinos all about?
-*   [Trilinos Overview (.pdf)](http://trilinos.org/oldsite/TrilinosOverview.pdf) -- A broad overview of Trilinos
-*   [Events](http://trilinos.org/community/events/ "Events") -- Links to Trilinos-focused event pages. Recent Trilinos User Group meeting pages contain links to recorded presentations covering introductory and advanced topics
+*   [About page](about.html) -- What’s Trilinos all about?
+*   [Trilinos Overview (.pdf)](pdfs/TrilinosOverview.pdf) -- A broad overview of Trilinos
+*   [Events](events.html) -- Links to Trilinos-focused event pages. Recent Trilinos User Group meeting pages contain links to recorded presentations covering introductory and advanced topics
 
 Supplemental material:
 
 *   [**Trilinos Hands-on Tutorial**](https://github.com/trilinos/Trilinos_tutorial/wiki/TrilinosHandsOnTutorial) -- Introductory and example material used for numerous live hands-on tutorials
-*   [An Overview of the Trilinos Project (.pdf)](http://trilinos.org/oldsite/TrilinosACMTOMS2004.pdf) -- ACM Transactions on Mathematical Software, Vol. V, No. N, December 2004, Pages 1-27
-*   [Trilinos Progress, Challenges, and Future Plans (.ppt)](http://trilinos.org/oldsite/events/trilinos_user_group_2008/presentations/1-HerouxTrilinosProgressChallengesFutures.ppt) -- Talk given by Mike Heroux at the 2008 Trilinos User Group meeting
-*   [Trilinos Forum](http://trilinos.org/community/forum/ "Forum") -- Under construction
+*   [An Overview of the Trilinos Project (.pdf)](pdfs/TrilinosACMTOMS2004.pdf) -- ACM Transactions on Mathematical Software, Vol. V, No. N, December 2004, Pages 1-27
+*   [Trilinos Progress, Challenges, and Future Plans (.ppt)](pdfs/1-HerouxTrilinosProgressChallengesFutures.ppt) -- Talk given by Mike Heroux at the 2008 Trilinos User Group meeting
+*   [Trilinos Forum](forum.md) -- Under construction
 
 ## What’s Available in Trilinos?
 
 Try this first:
 
-*   [Trilinos Capability Areas](http://trilinos.org/capability-areas/ "Capability Areas") -- What capabilities are available in Trilinos?
-*   [Capabilities overview](http://trilinos.org/about/capabilities/ "Capabilities") -- What can Trilinos packages do?
-*   [Releases page](http://trilinos.org/about/releases/ "Releases") -- What packages are available in what releases?
+*   [Trilinos Capability Areas](capability-areas.html) -- What capabilities are available in Trilinos?
+*   [Capabilities overview](capabilities.md) -- What can Trilinos packages do?
+*   [Releases page](releases.html) -- What packages are available in what releases?
 
 Supplemental material:
 
-*   [Packages page](http://trilinos.org/packages/ "Packages") -- Links to individual package site
+*   [Packages page](packages.html) -- Links to individual package site
 
 ## Configuring, Building, and Installing Trilinos
 
@@ -56,6 +56,6 @@ Try this first:
 
 Supplemental material:
 
-*   [Documentation page](http://trilinos.org/about/documentation/ "Documentation") -- A list of Trilinos publications and other documentation
-*   View the publications and source documentation on the individual package sites for more detailed information (see the [Packages page](http://trilinos.org/packages/ "Packages")).
+*   [Documentation page](documentation.html) -- A list of Trilinos publications and other documentation
+*   View the publications and source documentation on the individual package sites for more detailed information (see the [Packages page](packages.md")).
 
