@@ -41,7 +41,7 @@ Trilinos is designed from the bottom up for use on a distributed memory parallel
 
 ## Trilinos Documentation and Downloads
 
-Documentation for Trilinos packages is available on each [packages](http://trilinos.org/packages/ "Packages") home page. Visit the [download](http://trilinos.org/download/ "Download") page to download Trilinos.
+Documentation for Trilinos packages is available on each [packages](packages.html) home page. Visit the [download](download.html) page to download Trilinos.
 
 ## Trilinos Featured in RCE HPC Podcast
 

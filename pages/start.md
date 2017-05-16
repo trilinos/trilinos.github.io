@@ -29,7 +29,7 @@ Supplemental material:
 Try this first:
 
 *   [Trilinos Capability Areas](capability-areas.html) -- What capabilities are available in Trilinos?
-*   [Capabilities overview](capabilities.html) -- What can Trilinos packages do?
+*   [Capabilities overview](capability.html) -- What can Trilinos packages do?
 *   [Releases page](releases.html) -- What packages are available in what releases?
 
 Supplemental material:
@@ -57,5 +57,5 @@ Try this first:
 Supplemental material:
 
 *   [Documentation page](documentation.html) -- A list of Trilinos publications and other documentation
-*   View the publications and source documentation on the individual package sites for more detailed information (see the [Packages page](packages.html")).
+*   View the publications and source documentation on the individual package sites for more detailed information (see the [Packages page](packages.html)).
 
