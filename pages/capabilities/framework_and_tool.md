@@ -27,10 +27,10 @@ The Framework and Tools Capability Area provides resources for both users and de
 
 The Trilinos project provides a guide to getting started with using Trilinos. In addition, the documentation page features links to a pdf and hand-on tutorial, as well as information about how to compile Trilinos and build against Trilinos libraries. Trilinos user documentation can be found at the following links:
 
-[Getting started with using Trilinos](http://trilinos.org/about/getting-started/ "Getting Started")  
-[Trilinos user documentation webpage](http://trilinos.org/about/documentation/ "Documentation")
+[Getting started with using Trilinos](start.html)  
+[Trilinos user documentation webpage](documentation.html)
 
-[Package-Specific Documentation, including Doxygen and user guides (when available)](http://trilinos.org/packages/ "Packages")  
+[Package-Specific Documentation, including Doxygen and user guides (when available)](packages.html)  
 After clicking on the above link, click on the name of a package, either in the left side bar, or in the main body of the page. Then click on the “Documentation” link in the left side bar.
 
 <a name="DeveloperDocs"></a>

@@ -73,4 +73,4 @@ The following are areas of algorithm and software development that will be recei
 
 ## Where should you look next?
 
-For more detailed information on the capabilities available through Trilinos, you can look at the web pages for the individual packages, that were listed in the [above Table](#packagelinks). Each package has example problems that show common use cases.
+For more detailed information on the capabilities available through Trilinos, you can look at the web pages for the individual packages, that were listed in the [above Table](#trilinos-packages-in-the-embedded-nonlinear-analysis-capability-area). Each package has example problems that show common use cases.

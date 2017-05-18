@@ -14,7 +14,7 @@ The discretization capability area was first introduced in Trilinos 9.0\. The ob
         <img border="0" alt="Trilinos Team" src="images/hcurl_approx_y.jpg" width="30" height="30">
     </div>
     <div class="col-sm-4">
-        <img border="0" alt="Trilinos Team" src="hdiv_approx_x.jpg" width="30" height="30">
+        <img border="0" alt="Trilinos Team" src="images/hdiv_approx_x.jpg" width="30" height="30">
     </div>
 </div>
 
