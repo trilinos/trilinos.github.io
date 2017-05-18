@@ -4,9 +4,19 @@ permalink: discretizations.html
 folder: capabilities
 ---
 
-The discretization capability area was first introduced in Trilinos 9.0\. The objective is to provide, over time, a collection of libraries and interfaces that enable rapid development of application codes for applications that require numerical solution of Partial Differential Equations (PDE). The tools included in this capability area are designed to work with the rest of [Trilinos](http://trilinos.org/ "Trilinos Home Page") packages or to be used as interoperable components in existing user environments. The tools included in discretization capability area can be broadly divided into three related categories that correspond to the key steps in the numerical solution of PDEs by mesh-based methods.
+The discretization capability area was first introduced in Trilinos 9.0\. The objective is to provide, over time, a collection of libraries and interfaces that enable rapid development of application codes for applications that require numerical solution of Partial Differential Equations (PDE). The tools included in this capability area are designed to work with the rest of [Trilinos](http://trilinos.github.io/ "Trilinos Home Page") packages or to be used as interoperable components in existing user environments. The tools included in discretization capability area can be broadly divided into three related categories that correspond to the key steps in the numerical solution of PDEs by mesh-based methods.
 
-![](http://trilinos.org/oldsite/CapabilityWebpages/Discretizations/images/Ninja_Hcurl_40_approx.jpg) ![](http://trilinos.org/oldsite/CapabilityWebpages/Discretizations/images/hcurl_approx_y.jpg) ![](http://trilinos.org/oldsite/CapabilityWebpages/Discretizations/images/hdiv_approx_x.jpg)
+<div class="row">
+    <div class="col-sm-4">
+        <img border="0" alt="Trilinos Team" src="images/Ninja_Hcurl_40_approx.jpg" width="30" height="30">
+    </div>
+    <div class="col-sm-4">
+        <img border="0" alt="Trilinos Team" src="images/hcurl_approx_y.jpg" width="30" height="30">
+    </div>
+    <div class="col-sm-4">
+        <img border="0" alt="Trilinos Team" src="hdiv_approx_x.jpg" width="30" height="30">
+    </div>
+</div>
 
 * * *
 
@@ -26,7 +36,7 @@ The discretization capability area was first introduced in Trilinos 9.0\. The ob
 
 **Brief summary of available tools.**
 
-The discretization capability area of [Trilinos 10.0](http://trilinos.org/ "Trilinos Home Page") includes the following packages:
+The discretization capability area of [Trilinos 10.0](http://trilinos.github.io/ "Trilinos Home Page") includes the following packages:
 
 **Global tools:** [FEI](http://trilinos.org/packages/fei/)  
 The Finite Element Interface to Linear Solvers (FEI) is a general interface for assembling finite-element data into a linear system of equations. It is an abstraction layer that insulates finite-element application codes from linear-algebra issues such as sparse matrix storage formats and mappings from nodes and solution fields to distributed equation spaces. It puts a common face on various linear solvers, allowing finite-element applications to switch from one solver library to another with minimal changes to application code. FEI provides natural mechanisms for assembling finite-element data such as element-wise stiffness arrays and load vectors, boundary-condition specifications and constraint relations. It accepts data from multi-physics problems, allowing arbitrarily complicated elements with multiple solution fields per node, and cell centered fields. It is designed for use in distributed-memory parallel finite-element applications, to assemble and solve distributed linear systems using scalable underlying solver libraries.
