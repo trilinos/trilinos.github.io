@@ -15,8 +15,8 @@ A unique design feature of Trilinos is its focus on packages.
 
 ## What Trilinos Can Do: Trilinos Capability Areas
 
-[The Trilinos Capability Area homepage ]() organizes Trilinos capabilities into nine collections of functionality and describes 
-which packages are relevant to each area.  This discussion is especially useful for new Trilinos users.
+[The Trilinos Capability Area homepage](capability-areas.html) organizes Trilinos capabilities into nine collections of functionality and describes 
+which packages are relevant to each area. This discussion is especially useful for new Trilinos users.
 
 ## Trilinos is on GitHub
 
@@ -27,11 +27,9 @@ is now hosted on GitHub. This allows users and potential developers greater acce
 
 The 2017 Trilinos User Group Meeting (TUG) will be held in October in Albuquerque. 
 
-
-
 ## Trilinos 12.10 Release
 
-Trilinos 12.10 is now available for [download](). 
+Trilinos 12.10 is now available for [download](download.html). 
 The 12.4 release uses a [CMake](https://cmake.org/) 
 build system, which requires CMake version 2.8.11 or greater. 
 Instructions for building Trilinos 10.0 and later are available 
