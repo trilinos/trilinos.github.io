@@ -31,6 +31,6 @@ CTrilinos | [Isorropia](http://trilinos.org/packages/isorropia/ "Isorropia") | [
 [Fei](http://trilinos.org/packages/fei/ "Fei") | [ML](http://trilinos.org/packages/ml/ "ML") | [PyTrilinos](http://trilinos.org/packages/pytrilinos/ "PyTrilinos") | [Teko](http://trilinos.org/packages/teko/ "Teko")
 [ForTrilinos](http://trilinos.org/packages/fortrilinos/ "ForTrilinos") | [Moertel](http://trilinos.org/packages/moertel/ "Moertel") | ROL | [Teuchos](http://trilinos.org/packages/teuchos/ "Teuchos")
 
-For more details about the release, view the [release notes](http://trilinos.org/oldsite/release_notes-12.10.html) and the [license](http://trilinos.org/download/license/ "License").
+For more details about the release, view the [release notes](http://trilinos.org/oldsite/release_notes-12.10.html) and the [license](license.html).
 
 Instructions for the Trilinos CMake build system can be found [here](http://trilinos.org/docs/files/TrilinosBuildReference.html).

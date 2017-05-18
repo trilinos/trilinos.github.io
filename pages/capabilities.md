@@ -7,16 +7,16 @@ permalink: capability-areas.html
 
 <span style="text-decoration: underline;">Because of the broad scope of Trilinos, we have defined capability areas within Trilinos:</span>
 
-User Experience -- [[overview](#UX)] [[webpage](http://trilinos.org/capability-areas/user-experience/ "User Experience")]  
-Parallel Programming Environments [[overview](#PPE)][[webpage](http://trilinos.org/capability-areas/parallel-programming-environments/ "Parallel Programming Environments")]  
-Framework & Tools -- [[overview](#FrameworkTools)] [[webpage](http://trilinos.org/capability-areas/framework-and-tools/ "Framework and Tools")]  
-Software Engineering Technologies and Integration -- [[overview](#SoftwareEngineering)] [[webpage](http://trilinos.org/capability-areas/software-engineering-technologies-and-integration/ "Software Engineering Technologies and Integration")]  
-I/O Support -- [[overview](#IOSupport)]  
-Meshes, Geometry, & Load Balancing -- [[overview](#GeometryMeshingLoadBlancing)] [[webpage](http://trilinos.org/capability-areas/meshes-geometry-and-load-balancing/ "Meshes, Geometry and Load Balancing")]  
-Discretizations -- [[overview](#Discretizations)] [[webpage](http://trilinos.org/capability-areas/discretizations/ "Discretizations")]  
-Scalable Linear Algebra -- [[overview](#ScalableLinearAlgebra)] [[webpage](http://trilinos.org/capability-areas/scalable-linear-algebra/ "Scalable Linear Algebra")]  
-Linear & Eigen Solvers -- [[overview](#LinearEigenSolvers)] [[webpage](http://trilinos.org/capability-areas/linear-and-eigen-solvers/ "Linear and Eigen Solvers")]  
-Embedded Nonlinear Analysis Tools -- [[overview](#NonlinearSolvers)] [[webpage](http://trilinos.org/capability-areas/embedded-nonlinear-analysis-tools/ "Embedded Nonlinear Analysis Tools")]
+User Experience -- [[overview](#user-experience)] [[webpage](user_experience.html)]  
+Parallel Programming Environments [[overview](#parallel-programming-environments)][[webpage](parralel_programming.html)]  
+Framework & Tools -- [[overview](#framework--tools)] [[webpage](framework_tool.html)]  
+Software Engineering Technologies and Integration -- [[overview](#software-engineering-technologies-and-integration)] [[webpage](software_engineering_technologies.html)]  
+I/O Support -- [[overview](#io-support)]  
+Meshes, Geometry, & Load Balancing -- [[overview](##meshes-geometry--load-balancing)] [[webpage](meshes_geometry_load_balancing.html)]  
+Discretizations -- [[overview](#discretizations)] [[webpage](discretizations.html)]  
+Scalable Linear Algebra -- [[overview](#linear-algebra-services)] [[webpage](linear_algebra.html)]  
+Linear & Eigen Solvers -- [[overview](#linear--eigen-solvers)] [[webpage](linear_eigen_solver.html)]  
+Embedded Nonlinear Analysis Tools -- [[overview](#embedded-nonlinear-analysis-tools)] [[webpage](embedded_nonlinear_analysis_tools.html)]
 
 A brief summary of each capability area is provided below, as well as a link to the capability area homepage (note that some of the webpages are under construction). Each capability area is assigned to a capability leader. The capability leaders are listed below and on the capability area homepages.
 
@@ -67,7 +67,7 @@ The tools included in discretization capability area can be broadly divided into
 
 Leader -- Mark Hoemmen
 
-Trilinos provides state-of-the art capabilities in scalable linear algebra computations. It focuses in particular on sparse graphs and matrices. Trilinos provides shared- and distributed-memory parallel data objects and computational kernels in several libraries. The packages in this capability area with which most users want to interact are Epetra and Tpetra. Other packages represented by this area include Thyra, Xpetra, Kokkos, EpetraExt, and Teuchos. Please see the [above link](http://trilinos.org/capability-areas/scalable-linear-algebra/ "Scalable Linear Algebra") for full details.<a name="LinearEigenSolvers"></a>
+Trilinos provides state-of-the art capabilities in scalable linear algebra computations. It focuses in particular on sparse graphs and matrices. Trilinos provides shared- and distributed-memory parallel data objects and computational kernels in several libraries. The packages in this capability area with which most users want to interact are Epetra and Tpetra. Other packages represented by this area include Thyra, Xpetra, Kokkos, EpetraExt, and Teuchos. Please see the [above link](linear_algebra.html) for full details.<a name="LinearEigenSolvers"></a>
 
 ## Linear & Eigen Solvers
 
