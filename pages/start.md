@@ -1,6 +1,6 @@
 ---
 title: Getting started
-permalink: start.html
+permalink: getting_started.html
 ---
 
 # Getting Started
