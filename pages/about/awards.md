@@ -8,14 +8,24 @@ Trilinos received a 2004 R&D 100 Award, given out yearly by R&D Magazine to reco
 
 The formal announcement was made in the September 2004 issue of R&D Magazine.
 
-Awards | Pictures
------- | ------
-[R&D Magazine”R&D 100 Awards Software”](http://www.rdmag.com/award-winners/2004/08/pearl-real-gem)    
-Sandia National Labs -- News Center  “Sandia wins two R&D 100 Awards”     
-[Trilinos R&D 100 News Note”Trilinos Wins R&D 100 Award”](https://software.sandia.gov/trilinos/TrilinosRD100Newsnote.pdf)  
-[New Mexico Business Weekly “New Mexico firms, labs earn R&D awards”](http://www.bizjournals.com/albuquerque/stories/2004/07/12/daily6.html)  
-Supercomputing Online “Sandia Wins R&D 100 Award” Sandia CCIM Newsnotes “Trilinos Wins R&D 100 Award”   
-[Sandia LabNews “Sandia research wins two R&D 100 Awards”](http://www.sandia.gov/LabNews/LN07-23-04/key07-23-04_stories.html) | [![Trilinos RD100 Team](http://trilinos.org/oldsite/images/rd100_team_small.jpg)](http://trilinos.org/oldsite/images/rd100_team.jpg)
+<div class="row">
+    <div class="col-sm-7">
+        <ul>
+            <li><a href="http://www.rdmag.com/award-winners/2004/08/pearl-real-gem">R&D Magazine”R&D 100 Awards Software”</a></li><br>
+            <li>Sandia National Labs -- News Center  “Sandia wins two R&D 100 Awards”</li><br>
+            <li><a href="https://software.sandia.gov/trilinos/TrilinosRD100Newsnote.pdf">Trilinos R&D 100 News Note “Trilinos Wins R&D 100 Award”</a></li><br>
+            <li><a href="http://www.bizjournals.com/albuquerque/stories/2004/07/12/daily6.html">New Mexico Business Weekly “New Mexico firms, labs earn R&D awards”</a></li><br>     
+            <li>Supercomputing Online “Sandia Wins R&D 100 Award” Sandia CCIM Newsnotes “Trilinos Wins R&D 100 Award” </li><br> 
+            <li><a href="http://www.sandia.gov/LabNews/LN07-23-04/key07-23-04_stories.html">Sandia LabNews “Sandia research wins two R&D 100 Awards”</a></li><br> 
+        </ul>
+    </div>
+    <div class="col-sm-5">
+        <a href="http://trilinos.org/oldsite/images/rd100_team.jpg">
+        <img border="0" alt="Trilinos Team" src="pdfs/trilinos-team.jpg" width="60" height="60">
+        </a><br>
+        <strong>Trilinos RD100 Team</strong>
+    </div>
+</div>
 
 
 ## SC2004 HPC Software Challenge
