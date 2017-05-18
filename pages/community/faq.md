@@ -6,18 +6,18 @@ folder: community
 
 Below are some frequently asked questions about adding to trilinos.org web content.
 
-[Q: I would like to contribute to trilinos.org. How do I get started?
-](#GetStarted)[Q: I need to add/update metadata. Where can I make the changes?
-](#Metadata)[Q: What metadata is defined for the Trilinos-level?  
-](#TrilinosMetadata)[Q: What metadata must be defined for each package homepage?  
-](#PackageMetadata)[Q: What metadata must be defined for each package child page?  
-](#PackageChildMetadata)[Q: How do I add a new package homepage?  
-](#AddPackageHomepage)[Q: How do I add a new package child page?  
-](#AddPackageChildPage)[Q: Other than adding new pages, what do I need to do when adding a new package to trilinos.org?](#AddPackageOther)
+[Q: I would like to contribute to trilinos.org. How do I get started?](#GetStarted)  
+[Q: I need to add/update metadata. Where can I make the changes?](#Metadata)  
+[Q: What metadata is defined for the Trilinos-level?](#TrilinosMetadata)  
+[Q: What metadata must be defined for each package homepage?](#PackageMetadata)  
+[Q: What metadata must be defined for each package child page?](#PackageChildMetadata)  
+[Q: How do I add a new package homepage?](#AddPackageHomepage)  
+[Q: How do I add a new package child page?](#AddPackageChildPage)  
+[Q: Other than adding new pages, what do I need to do when adding a new package to trilinos.org?](#AddPackageOther)
 
 <a name="GetStarted"></a>**Q: I would like to contribute to trilinos.org. How do I get started?**
 
-**A:** (Note this question addresses contributing to the trilinos.org website. Information about contributing to the Trilinos Project can be found on the [Contribute](https://trilinos.org/community/contribute/ "Contribute") page.) If you are part of the Trilinos development team, after you register for an account (see “Register” in the footer menu), your account should be granted elevated permissions by an administrator. If you need the permission elevation process expedited, send a note to trilinos-framework@software.sandia.gov. If you are not part of the Trilinos development team, we are in the process of figuring out how to accept your contributions. If you are interested in contributing to the site, please contact trilinos-framework@software.sandia.gov.
+**A:** (Note this question addresses contributing to the trilinos.org website. Information about contributing to the Trilinos Project can be found on the [Contribute](contribute.html) page.) If you are part of the Trilinos development team, after you register for an account (see “Register” in the footer menu), your account should be granted elevated permissions by an administrator. If you need the permission elevation process expedited, send a note to trilinos-framework@software.sandia.gov. If you are not part of the Trilinos development team, we are in the process of figuring out how to accept your contributions. If you are interested in contributing to the site, please contact trilinos-framework@software.sandia.gov.
 
 <a name="Metadata"></a>**Q: I need to add/update metadata. Where can I make the changes?**
 
@@ -71,6 +71,6 @@ Below are some frequently asked questions about adding to trilinos.org web conte
 
 A: New packages should be mentioned on:
 
-*   [http://trilinos.org/packages/](http://trilinos.org/packages/)
-*   [http://trilinos.org/about/capabilities/](http://trilinos.org/about/capabilities/)
-*   If the license for the package is anything other than BSD (including if any additional third-party licenses are included in the code), the information needs to be added to the [licenses](http://trilinos.org/download/license/ "License") page also. Contact [trilinos-framework@software.sandia.gov](mailto:trilinos-framework@software.sandia.gov) for assistance.
+*   [http://trilinos.github.io/packages/](packages.html)
+*   [http://trilinos.github.io/capabilities/](capability.html)
+*   If the license for the package is anything other than BSD (including if any additional third-party licenses are included in the code), the information needs to be added to the [licenses](license.html) page also. Contact [trilinos-framework@software.sandia.gov](mailto:trilinos-framework@software.sandia.gov) for assistance.
