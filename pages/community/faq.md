@@ -6,14 +6,14 @@ folder: community
 
 Below are some frequently asked questions about adding to trilinos.org web content.
 
-[Q: I would like to contribute to trilinos.org. How do I get started?](#GetStarted)  
-[Q: I need to add/update metadata. Where can I make the changes?](#Metadata)  
-[Q: What metadata is defined for the Trilinos-level?](#TrilinosMetadata)  
-[Q: What metadata must be defined for each package homepage?](#PackageMetadata)  
-[Q: What metadata must be defined for each package child page?](#PackageChildMetadata)  
-[Q: How do I add a new package homepage?](#AddPackageHomepage)  
-[Q: How do I add a new package child page?](#AddPackageChildPage)  
-[Q: Other than adding new pages, what do I need to do when adding a new package to trilinos.org?](#AddPackageOther)
+* [Q: I would like to contribute to trilinos.org. How do I get started?](#GetStarted)  
+* [Q: I need to add/update metadata. Where can I make the changes?](#Metadata)  
+* [Q: What metadata is defined for the Trilinos-level?](#TrilinosMetadata)  
+* [Q: What metadata must be defined for each package homepage?](#PackageMetadata)  
+* [Q: What metadata must be defined for each package child page?](#PackageChildMetadata)  
+* [Q: How do I add a new package homepage?](#AddPackageHomepage)  
+* [Q: How do I add a new package child page?](#AddPackageChildPage)  
+* [Q: Other than adding new pages, what do I need to do when adding a new package to trilinos.org?](#AddPackageOther)
 
 <a name="GetStarted"></a>**Q: I would like to contribute to trilinos.org. How do I get started?**
 
@@ -69,7 +69,7 @@ Below are some frequently asked questions about adding to trilinos.org web conte
 
 <a name="AddPackageOther"></a>**Q: Other than adding new pages, what do I need to do when adding a new package to trilinos.org?**
 
-A: New packages should be mentioned on:
+**A:** New packages should be mentioned on:
 
 *   [http://trilinos.github.io/packages/](packages.html)
 *   [http://trilinos.github.io/capabilities/](capability.html)
