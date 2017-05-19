@@ -29,6 +29,8 @@ CTrilinos | [Isorropia](http://trilinos.org/packages/isorropia/ "Isorropia") | [
 
 ## Trilinos 12.8
 
+Trilinos 12.8 was released in September 2016 and includes the following packages:
+
 Download  | Trilinos | Packages | Version | 12.8
 ------ | ------ | ------ | -------- | ----------
 [Amesos](/packages/amesos/ "Amesos") | [Galeri](http://trilinos.org/packages/galeri/ "Galeri") | [MOOCHO](http://trilinos.org/packages/moocho/ "MOOCHO") | [RTOp](http://trilinos.org/packages/rtop/ "RTOp") | ThreadPool
@@ -85,6 +87,8 @@ Domi | [Komplex](http://trilinos.org/packages/komplex/ "Komplex") | Pike | [Stok
 [ForTrilinos](http://trilinos.org/packages/fortrilinos/ "ForTrilinos") | [Moertel](http://trilinos.org/packages/moertel/ "Moertel") | ROL | [Teuchos](http://trilinos.org/packages/teuchos/ "Teuchos")
 
 ## Trilinos 12.2
+
+Trilinos 12.2 was released in August 2015 and includes the following packages:
 
 Download  | Trilinos | Packages | Version | 12.2
 ------ | ------ | ------ | -------- | ----------
