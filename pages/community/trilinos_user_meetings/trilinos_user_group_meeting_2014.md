@@ -1,5 +1,5 @@
 ---
-title: Trilinos User-Developer Group Meeting 2014
+title: Trilinos User Group Meeting 2014
 permalink: trilinos_user_group_meeting_2014.html
 folder: community
 ---
@@ -11,7 +11,7 @@ folder: community
     October 28th-29th: User Sessions*
     October 30th: Developer Sessions*   
 
-*Schedule subject to change    
+    *Schedule subject to change    
 
 Computer Science Research Institute  
 1450 Innovation Parkway, SE  

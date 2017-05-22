@@ -1,5 +1,5 @@
 ---
-title: Trilinos User-Developer Group Meeting 2015
+title: Trilinos User Group Meeting 2015
 permalink: trilinos_user_group_meeting_2015.html
 folder: community
 ---
