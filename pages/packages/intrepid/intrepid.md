@@ -82,7 +82,7 @@ The expert version of Intrepid is essentially a collection of mathematical metho
 
 <tr>
 
-<td>const Scalar& operator(i,j,…,k)</td>
+<td>const Scalar & operator(i,j,…,k)</td>
 
 <td>const accessor using multi-index</td>
 
@@ -90,7 +90,7 @@ The expert version of Intrepid is essentially a collection of mathematical metho
 
 <tr>
 
-<td>Scalar& operator(i,j,…,k)</td>
+<td>Scalar & operator(i,j,…,k)</td>
 
 <td>non-const accessor using multi-index</td>
 
@@ -98,7 +98,7 @@ The expert version of Intrepid is essentially a collection of mathematical metho
 
 <tr>
 
-<td>const Scalar& operator[i]</td>
+<td>const Scalar & operator[i]</td>
 
 <td>const accessor using the ordinal of the array element</td>
 
@@ -160,11 +160,11 @@ Intrepid documentation uses the following notation for indices and dimensions of
 
 <tr>
 
-<td align="center">f,l,r</td>
+<td align="center">f, l, r</td>
 
 <td align="center">field</td>
 
-<td align="center">F,L,R</td>
+<td align="center">F, L, R</td>
 
 <td>number of Fields, Left field and Right fields (in integration)</td>
 
@@ -400,7 +400,7 @@ Naming of basis classes and filesfollows a convention that allows to quickly det
 
 <tr>
 
-<th scope="row">**discrete space type**</th>
+<th scope="row">discrete space type</th>
 
 <td>C (Complete), I (Incomplete), B (Broken)</td>
 
@@ -416,7 +416,7 @@ Naming of basis classes and filesfollows a convention that allows to quickly det
 
 <tr>
 
-<th scope="row">**basis type**</th>
+<th scope="row">basis type</th>
 
 <td>FEM (default basis implementation), FEM_JACOBI, FEM_ORTH</td>
 
