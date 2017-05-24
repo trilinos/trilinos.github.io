@@ -1,6 +1,6 @@
 ---
 title: CXX11
-permalink: CXX11.html
+permalink: about/CXX11.html
 folder: about
 ---
 

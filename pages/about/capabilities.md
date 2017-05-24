@@ -1,6 +1,6 @@
 ---
 title: Capabilities
-permalink: capability.html
+permalink: about/capability.html
 folder: about
 ---
 

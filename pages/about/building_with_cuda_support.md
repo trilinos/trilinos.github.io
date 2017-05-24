@@ -1,6 +1,6 @@
 ---
 title: Building with CUDA Support
-permalink: building_with_CUDA_support.html
+permalink: about/documentation/building_with_CUDA_support.html
 folder: about
 ---
 

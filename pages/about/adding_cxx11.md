@@ -1,6 +1,6 @@
 ---
 title: Adding CXX11 Dependencies for Packages
-permalink: add_CXX11.html
+permalink: about/CXX11/add_CXX11.html
 folder: about
 ---
 

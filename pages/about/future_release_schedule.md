@@ -1,6 +1,6 @@
 ---
 title: Future Release Schedule
-permalink: future_release_schedule.html
+permalink: about/releases/future_release_schedule.html
 folder: about
 ---
 
