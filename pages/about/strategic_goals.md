@@ -1,6 +1,6 @@
 ---
 title: Strategic Goals
-permalink: about/strategic_goals.html
+permalink: strategic_goals.html
 folder: about
 ---
 

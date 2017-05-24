@@ -1,6 +1,6 @@
 ---
 title: TPL Version Compatibility
-permalink: about/tpl_version_compatibility.html
+permalink: tpl_version_compatibility.html
 folder: about
 ---
 

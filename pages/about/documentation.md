@@ -1,6 +1,6 @@
 ---
 title: Documentation
-permalink: about/documentation.html
+permalink: documentation.html
 folder: about
 ---
 

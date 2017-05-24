@@ -1,6 +1,6 @@
 ---
 title: Awards
-permalink: about/awards.html
+permalink: awards.html
 folder: about
 ---
 

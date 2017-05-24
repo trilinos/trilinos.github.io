@@ -1,6 +1,6 @@
 ---
 title: Doxygen
-permalink: about/documentation/doxygen.html
+permalink: documentation/doxygen.html
 folder: about
 ---
 

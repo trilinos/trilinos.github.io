@@ -1,6 +1,6 @@
 ---
 title: Releases
-permalink: about/releases.html
+permalink: releases.html
 folder: about
 ---
 
