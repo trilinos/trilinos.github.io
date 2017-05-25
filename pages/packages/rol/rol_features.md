@@ -1,22 +1,12 @@
 ---
-title: ROL
-permalink: rol.html
+title: ROL Features
+permalink: rol_features.html
 folder: packages
 ---
 
-[about](rol.html)   [docs](rol_documentation.html)  [uses](rol_uses.html)    [features](rol_features.html)
+[about](rol.html) [docs](rol_documentation.html) [uses](rol_uses.html) [features](rol_features.html)
 
 * * *
-
-<center><img border="0" alt="Trilinos Team" src="images/ROL_Logo.jpg" width="60" height="60"></center>
-
-<center><strong>Numerical optimization made practical:</strong></center>   
- 
-<center>Any application, any hardware, any problem size.</center>  
-
-* * *
-
-**Rapid Optimization Library (ROL)** is a C++ package for large-scale optimization. It is used for the solution of optimal design, optimal control and inverse problems in large-scale engineering applications. Other uses include mesh optimization and image processing.
 
 ROL aims to combine flexibility, efficiency and robustness. Key features:
 
@@ -26,9 +16,3 @@ ROL aims to combine flexibility, efficiency and robustness. Key features:
 *   _Modular interfaces throughout the optimization process_ —enable custom and user-defined algorithms, stopping criteria, hierarchies of algorithms, and selective use of a variety of tools and components.
 
 For details, see [ROL_PDF_Slides](http://trilinos.org/wordpress/wp-content/uploads/2015/05/ROL.pdf "ROL PDF Presentation") or [ROL_PowerPoint_Slides](http://trilinos.org/wordpress/wp-content/uploads/2015/05/ROL.pptx "ROL PowerPoint Presentation").
-
-* * *
-
-Some use cases:
-
-[![](http://trilinos.org/wordpress/wp-content/uploads/2015/05/ROL_Uses_Inverse.png)](http://trilinos.org/wordpress/wp-content/uploads/2015/05/ROL_Uses_Inverse.png)
