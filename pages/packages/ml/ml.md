@@ -20,13 +20,12 @@ Please use the links below to navigate the ML documentation:
 *   [How to cite ML](#ml-how-to-cite).
 
 ML documentation is created and maintained using Doxygen. Click [here](http://trilinos.sandia.gov/packages/ml/doxygen/development/inline/index.html) to access the latest Doxygen documentation, containing details about ML and its classes, examples of usage, how to interface with other Trilinos packages, and more.
-
-<a name="ml-how-to-cite"></a>  
+ 
 If you use ML for your applications, please let us know by writing an e-mail to the ml developers. Please also cite ML using the following bibtex entry:
 
     @TechReport{ml-guide,
         author      =  {M.W. Gee and C.M. Siefert and J.J. Hu and R.S. Tuminaro and M.G. Sala},
-        title       =  {{ML} 5.0 Smoothed Aggregation User's Guide},
+        title       =  {ML 5.0 Smoothed Aggregation User's Guide},
         institution =  {Sandia National Laboratories},
         year        =  {2006},
         number      =  {SAND2006-2649},
