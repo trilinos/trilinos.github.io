@@ -23,13 +23,13 @@ ML documentation is created and maintained using Doxygen. Click [here](http://tr
  
 If you use ML for your applications, please let us know by writing an e-mail to the ml developers. Please also cite ML using the following bibtex entry:
 
-    @TechReport{ml-guide,
-        author      =  {M.W. Gee and C.M. Siefert and J.J. Hu and R.S. Tuminaro and M.G. Sala},
-        title       =  {ML 5.0 Smoothed Aggregation User's Guide},
-        institution =  {Sandia National Laboratories},
-        year        =  {2006},
-        number      =  {SAND2006-2649},
-    }
+@TechReport{ml-guide,
+    author      =  {M.W. Gee and C.M. Siefert and J.J. Hu and R.S. Tuminaro and M.G. Sala},
+    title       =  {ML 5.0 Smoothed Aggregation User's Guide},
+    institution =  {Sandia National Laboratories},
+    year        =  {2006},
+    number      =  {SAND2006-2649},
+}
 
 <a name="ml-overview"></a><span style="text-decoration: underline;">**Overview**</span>
 

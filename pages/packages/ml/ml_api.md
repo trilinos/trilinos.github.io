@@ -50,13 +50,13 @@ The [MLAPI documentation](http://trilinos.sandia.gov/packages/docs/dev/packages/
 
 If you use MLAPI for your applications, please let us know by writing an e-mail to the ml developers. Please also cite MLAPI using the following bibtex entry:
 
-    @Article{Sala:2006:OOF,
-      author =       "Marzio Sala",
-      title =        "An Object-Oriented Framework for the Development of Scalable Parallel Multilevel Preconditioners",
-      journal =      "{ACM} Transactions on Mathematical Software",
-      volume =       "32",
-      number =       "3",
-      month =        sep,
-      year =         "2006",
-      accepted =     "4 November 2005",
-    }
+@Article{Sala:2006:OOF,
+  author =       "Marzio Sala",
+  title =        "An Object-Oriented Framework for the Development of Scalable Parallel Multilevel Preconditioners",
+  journal =      "{ACM} Transactions on Mathematical Software",
+  volume =       "32",
+  number =       "3",
+  month =        sep,
+  year =         "2006",
+  accepted =     "4 November 2005",
+}
