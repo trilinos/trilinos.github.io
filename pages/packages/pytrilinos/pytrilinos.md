@@ -4,11 +4,13 @@ permalink: pytrilinos.html
 folder: packages
 ---
 
-Welcome to the PyTrilinos home
+<img border="0" alt="Trilinos Team" src="images/PyTrilinos.jpg" width="10" height="10">
 
+Welcome to the PyTrilinos home
 PyTrilinos is a set of [python](https://www.python.org) wrappers for selected [Trilinos](http://trilinos.org) packages. 
 This allows a [python](https://www.python.org) programmer to dynamically import Trilinos packages into a [python](https://www.python.org) 
-script or the [python](https://www.python.org) command-line interpreter, allowing the creation and manipulation of Trilinos objects and the execution of Trilinos algorithms, without the need to constantly recompile.
+script or the [python](https://www.python.org) command-line interpreter, allowing the creation and manipulation of Trilinos objects 
+and the execution of Trilinos algorithms, without the need to constantly recompile.
 
 PyTrilinos adds a level of convenience to Trilinos users; quick and dirty tests can be run immediately, unit testing can be built quickly within the [python](https://www.python.org) unit testing framework, 
 object-oriented design can be explored more efficiently, and full-fledged applications can be developed using [python](https://www.python.org).
