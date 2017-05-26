@@ -6,7 +6,7 @@ folder: packages
 
 The WebTrilinos, browser-based Trilinos repository can be accessed via a Docker Image. Instructions for obtaining the Image and installing Docker are below.
 
-** 1.Follow these directions to install Docker on your local machine:**
+**1.Follow these directions to install Docker on your local machine:**
 
 * Linux: [http://docs.docker.com/linux/step_one/](http://docs.docker.com/linux/step_one/)  
 * OS X: [http://docs.docker.com/mac/step_one/](http://docs.docker.com/mac/step_one/)  
