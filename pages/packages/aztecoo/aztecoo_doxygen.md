@@ -1,6 +1,6 @@
 ---
 title: AztecOO Doxygen
-permalink: aztecOO_doxygen.html
+permalink: aztecoo_doxygen.html
 folder: packages
 ---
 
