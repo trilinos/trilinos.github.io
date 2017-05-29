@@ -33,7 +33,7 @@ Trilinos 12.10 is now available for [download](download.html).
 The 12.4 release uses a [CMake](https://cmake.org/) 
 build system, which requires CMake version 2.8.11 or greater. 
 Instructions for building Trilinos 10.0 and later are available 
-[here]().
+[here](pdfs/Trilinos10.12Tutorial.pdf).
 
 ## Trilinos Packages
 

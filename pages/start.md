@@ -52,7 +52,7 @@ Try this first:
 *   [Trilinos 10.12 Tutorial (.pdf)](pdfs/Trilinos10.12Tutorial.pdf) -- A tutorial for new Trilinos users including introductions to some important concepts and examples. Covers primarily the Epetra stack of packages. This tutorial was last updated for Trilinos release 10.12\. See the [Trilinos Hands-on Tutorial](https://github.com/trilinos/Trilinos_tutorial/wiki/TrilinosHandsOnTutorial) for more up-to-date information.
 *   [FIND_PACKAGE(Trilinos) Documentation](pdfs/Finding_Trilinos.txt) -- Instructions for building your Trilinos 10.0 and later compatible CMake-aware software project. The FIND_PACKAGE capability makes it easy to build against Trilinos, including linking against the correct list of libraries. In Trilinos 10.6 and later, a small functional example to be used as a template for applications wanting to use FIND_PACKAGE(Trilinos) can be found in the source code under demos/buildAgainstTrilinos.
 *   [Makefile.export Documentation](pdfs/Export_Makefile.txt) -- The Makefile.export system, avaialble in Trilinos 10.4 and later, provides an easy way to build against Trilinos for code that is compiled using simple Makefiles.
-*   [Didasko](http://trilinos.org/packages/didasko/) -- *An example package frequently referred to by the Trilinos Tutorial*
+*   [Didasko](didasko.html) -- *An example package frequently referred to by the Trilinos Tutorial*
 
 Supplemental material:
 

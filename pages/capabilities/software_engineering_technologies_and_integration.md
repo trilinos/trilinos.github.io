@@ -8,17 +8,17 @@ Trilinos Software Engineering Technologies and Integration Capabilities
 
 ## Outline
 
-*   [Introduction](#setic_intro_sec)
-*   [Numerical Algorithm Interoperability and Vertical Integration](#setic_numerical_algo_sec)
-    *   [Abstract Numerical Algorithms (ANAs)](#setic_ana_sub_sec)
-    *   [Thyra: Interoperability and vertical integration of ANAs](#setic_thyra_sub_sec)
-    *   [Kokkos & Tpetra / Epetra: Linear algebra data structures](#setic_epetra_sub_sec)
-*   [General Software Interoperability and Integration](#setic_general_soft_integrate_sec)
-    *   [Memory management](#setic_mem_mng_sub_sec)
-    *   [User input and configuration control](#setic_user_input_control_sub_sec)
-    *   [User introspection](#setic_coord_output_sub_sec)
-*   [General Software Quality and Design](#setic_general_soft_design_sec)
-*   [Lean/Agile Software Engineering Principles and Practices](#setic_lean_agile_sec)
+*   [Introduction](#introduction)
+*   [Numerical Algorithm Interoperability and Vertical Integration](#numerical-algorithm-interoperability-and-vertical-integration)
+    *   [Abstract Numerical Algorithms (ANAs)](#abstract-numerical-algorithms-anas)
+    *   [Thyra: Interoperability and vertical integration of ANAs](#thyra-interoperability-and-vertical-integration-of-anas)
+    *   [Kokkos & Tpetra / Epetra: Linear algebra data structures](#linear-algebra-data-structures)
+*   [General Software Interoperability and Integration](#general-software-interoperability-and-integration)
+    *   [Memory management](#memory-management)
+    *   [User input and configuration control](#user-input-and-configuration-control)
+    *   [User introspection](#user-introspection)
+*   [General Software Quality and Design](#general-software-quality-and-design)
+*   [Lean/Agile Software Engineering Principles and Practices](#leanagile-software-engineering-principles-and-practices)
 
 ## Introduction
 
@@ -64,13 +64,13 @@ The concepts involved with ANAs are independent of Trilinos and of are even inde
 
 ### Thyra (Interoperability and vertical integration of ANAs)
 
-The [Thyra](http://trilinos.org/packages/thyra/) package contains a set of interfaces and supporting code that defines basic interoperability mechanisms between different types of abstract numerical algorithm (ANA) software. The foundations for all Thyra interfaces are the mathematical concepts of vectors, vector spaces, and linear operators. All other ANA interfaces and support software are built on these fundamental operator/vector interfaces.
+The [Thyra](thyra.html) package contains a set of interfaces and supporting code that defines basic interoperability mechanisms between different types of abstract numerical algorithm (ANA) software. The foundations for all Thyra interfaces are the mathematical concepts of vectors, vector spaces, and linear operators. All other ANA interfaces and support software are built on these fundamental operator/vector interfaces.
 
 The following document describes the basic ideas behind Thyra and provides an overview of the operator/vector interfaces:
 
 *   Bartlett, Roscoe. _Thyra Linear Operators and Vectors: Overview of Interfaces and Support Software for the Development and Interoperability of Abstract Numerical Algorithms._ SAND2007-5984, Sandia National Laboratories, 2007 [[PDF](http://web.ornl.gov/~8vt/ThyraOverview2007.pdf)]
 
-The primary [Thyra](http://trilinos.org/packages/thyra/) ANA interfaces are broadly layered as followed:
+The primary [Thyra](thyra.html) ANA interfaces are broadly layered as followed:
 
 *   **[Operator/vector interfaces](http://trilinos.sandia.gov/packages/docs/dev/packages/thyra/src/interfaces/operator_vector/ana/fundamental/doc/html/index.html)**
     *   [Thyra::VectorBase](http://trilinos.sandia.gov/packages/docs/dev/packages/thyra/doc/html/classThyra_1_1VectorBase.html)
@@ -96,13 +96,13 @@ For each of these sets of interfaces, the Thyra package also a set of general ad
 
 There are several Trilinos packages that implement ANAs, and/or can accept input as ANA object, and/or can provide implementations of ANA objects for other ANAs to use. The primary packages related to Thyra and ANAs are:
 
-*   **[Thyra](http://trilinos.org/packages/thyra/)**
+*   **[Thyra](thyra.html)**
     *   Adapters
         *   [Thyra/{Epetra, Tpetra} Adapters](http://trilinos.sandia.gov/packages/docs/dev/packages/thyra/adapters/epetra/doc/html/index.html):
             *   Utility classes and functions for mapping between Thyra wrapper objects, and Epetra or Tpetra linear algebra objects
         *   [Thyra/EpetraExt Adatpers](http://trilinos.sandia.gov/packages/docs/dev/packages/thyra/adapters/epetraext/doc/html/index.html):
             *   [Thyra::EpetraModelEvaluator](http://trilinos.sandia.gov/packages/docs/dev/packages/thyra/doc/html/classThyra_1_1EpetraModelEvaluator.html): Implements [Thyra::ModelEvaluator](http://trilinos.sandia.gov/packages/docs/dev/packages/thyra/doc/html/classThyra_1_1ModelEvaluator.html) in terms of an [EpetraExt::ModelEvaluator](http://trilinos.org/docs/dev/packages/epetraext/doc/html/classEpetraExt_1_1ModelEvaluator.html) object
-*   **[Stratimikos](http://trilinos.org/packages/stratimikos/)**
+*   **[Stratimikos](stratimikos.html)**
     *   User Interfaces:
         *   Stratimikos::DefaultLinearSolverBuilder: Derives from [Thyra::LinearSolverBuilderBase](http://trilinos.sandia.gov/packages/docs/dev/packages/thyra/doc/html/classThyra_1_1LinearSolverBuilderBase.html) and provides access PFB and LOWSFB factory objects for preconditioners and linear solvers in Amesos, AztecOO, Belos, Ifpack, and ML
     *   Adapters:
@@ -111,13 +111,13 @@ There are several Trilinos packages that implement ANAs, and/or can accept input
         *   Thyra/Belos Adapters: Provides implementations of LOWS[F]B using Belos
         *   Thyra/Ifpack Adapters: Provides implementations of P[F]B using Ifpack
         *   Thyra/ML Adapters: Provides implementations of P[F]B using ML
-*   **[NOX/LOCA](http://trilinos.org/packages/nox-and-loca/)**
+*   **[NOX/LOCA](nox_and_loca.html)**
     *   Adapters
         *   NOX::Thyra::Group: Implements NOX::Abstract::Group in terms of a [Thyra::ModelEvaluator](http://trilinos.sandia.gov/packages/docs/dev/packages/thyra/doc/html/classThyra_1_1ModelEvaluator.html) object
         *   Thyra::NOXNonlinearSolver: Implements [Thyra::NonlinearSolverBase](http://trilinos.sandia.gov/packages/docs/dev/packages/thyra/doc/html/classThyra_1_1NonlinearSolverBase.html) in terms of NOX::Solver::Generic and NOX::StatusTest::Generic objects
-*   **[Rythmos](http://trilinos.org/packages/rythmos)**
+*   **[Rythmos](rythmos.html)**
     *   Implemented directly in terms of Thyra interfaces and objects
-*   **[MOOCHO](http://trilinos.org/packages/moocho/)**
+*   **[MOOCHO](moocho.html)**
     *   [Moocho/Thyra adapters](http://trilinos.org/docs/dev/packages/moocho/thyra/doc/html/index.html):
         *   MoochoPack::MoochoThyraSolver: Allows the solution of optimization problems provided as [Thyra::ModelEvaluator](http://trilinos.sandia.gov/packages/docs/dev/packages/thyra/doc/html/classThyra_1_1ModelEvaluator.html) objects
 
@@ -171,7 +171,7 @@ General software design and quality issues are important to any large-scale soft
 
 The following document outlines a set of modern C++ coding and Doxygen documentation guidelines for numerical C++ software:
 
-*   Bartlett, Roscoe. _Thyra Coding and Documentation Guidelines (TCDG)._ Sandia National Laboratories [[PDF](http://web.ornl.gov/~8vt/ThyraCodingGuideLines.pdf)]
+*   Bartlett, Roscoe. _Thyra Coding and Documentation Guidelines (TCDG)._ Sandia National Laboratories [[PDF](https://trilinos.org/docs/dev/packages/thyra/doc/html/ThyraCodingGuideLines.pdf)]
 
 ## Lean/Agile Software Engineering Principles and Practices
 
@@ -179,7 +179,9 @@ At the foundation of any software development effort is a set of underlying soft
 
 The following document describes how various Lean/Agile principles can be applied to the Trilinos development and release practices:
 
-*   Bartlett, Roscoe. _Daily Integration and Testing of the Development Versions of Applications and Trilinos: A stronger foundation for enhanced collaboration in application and algorithm research and development._SAND2007-7040, Sandia National Laboratories, October 2007 [[PDF](http://web.ornl.gov/~8vt/AppPlusTrilinosDev2007.pdf)]
+*   Bartlett, Roscoe. _Daily Integration and Testing of the Development Versions of Applications and Trilinos: 
+A stronger foundation for enhanced collaboration in application and algorithm research and development._SAND2007-7040, 
+Sandia National Laboratories, October 2007 [[PDF](pdfs/AppPlusTrilinosDev.pdf)]
 
 Some of the areas where Lean/Agile methods relate to Trilinos development and release issues include:
 

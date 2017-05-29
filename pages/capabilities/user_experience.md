@@ -65,10 +65,10 @@ Simplified layers are higher-level packages or codes that attempt to simplify th
 
 Package | Description
 --------| -----------
-[Stratimikos](http://trilinos.org/packages/stratimikos/) | Single interface to all Trilinos linear solver capabilities
-[Piro](http://trilinos.org/packages/piro) | Single interface to all Trilinos nonlinear solver capabilities
-[PyTrilinos](http://trilinos.org/packages/pytrilinos/) | Python interfaces to selected Trilinos packages and classes
-[ForTrilinos](http://trilinos.org/packages/fortrilinos/) | Fortran interfaces to selected Trilinos packages and classes
+[Stratimikos](stratimikos.html) | Single interface to all Trilinos linear solver capabilities
+[Piro](piro.html) | Single interface to all Trilinos nonlinear solver capabilities
+[PyTrilinos](pytrilinos.html) | Python interfaces to selected Trilinos packages and classes
+[ForTrilinos](fortrilinos.html) | Fortran interfaces to selected Trilinos packages and classes
 CTrilinos | C interfaces to selected Trilinos packages and classes
 
 * * *

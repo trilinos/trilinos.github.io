@@ -51,18 +51,18 @@ The Trilinos Developer Webiste provides information about Trilinos development t
 
 The following packages are included in the Trilinos Framework and Tools Capability Area.
 
-### [Didasko](http://trilinos.org/packages/didasko/)
+### [Didasko](didasko.html)
 
 Didasko, the Trilinos tutorial package, offers a quick introduction to several Trilinos packages. Users can start with Didasko examples when writing their own code that links against Trilinos libraries. Here is a link to an overview of Didasko from the 2004 Trilinos User Group meeting.
 
-### Galeri
+### [Galeri](galeri.html)
 
 Galeri contains a suite of utilities and classes to generate a variety of (distributed) linear systems.
 
-### Teuchos
+### [Teuchos](teuchos.html)
 
 Teuchos provides a suite of common tools for Trilinos for developers to use. These tools include BLAS/LAPACK wrappers, smart pointers, parameter lists, XML parsers, etc.
 
-### TriUtils
+### [TriUtils](triutils.html)
 
 TriUtils a package of utilities for other Trilinos packages.
