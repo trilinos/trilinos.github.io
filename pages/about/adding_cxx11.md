@@ -8,16 +8,16 @@ folder: about
 
 Trilinos has the CMake option `Trilinos_ENABLE_CXX11`. It is ON if C++11 is enabled (which is the default), and OFF otherwise.
 
-### A) How to define an optional dependency on C++11:
+## A) How to define an optional dependency on C++11:
 
 A Trilinos package that wants to depend *optionally* on C++11 has to just change two lines in their CMake-related code. This is demonstrated in the TeuchosCore subpackage.
 
-#### A.1) Add the package-specific #cmakedefine HAVE_<PACKAGE_UC>_CXX11 to the <Package>_config.h.in file.
+### A.1) Add the package-specific `#cmakedefine HAVE_<PACKAGE_UC>_CXX11` to the `<Package>_config.h.in` file.
 
 For TeuchosCore the names are:
 
-*   **<PACKAGE_UC>** = **TEUCHOSCORE** (“UC” stands for “upper case.” This is the upper-case version of the (sub)package name used in C/C++ macros.)
-*   **<Package>** = **TeuchosCore** (regular (sub)package name as known by TriBITS)
+*   **\<PACKAGE_UC\>** = **TEUCHOSCORE** (“UC” stands for “upper case.” This is the upper-case version of the (sub)package name used in C/C++ macros.)
+*   **\<Package\>** = **TeuchosCore** (regular (sub)package name as known by TriBITS)
 
 the file is:
 
@@ -27,7 +27,7 @@ and the line is:
 
 `#cmakedefine HAVE_TEUCHOSCORE_CXX11`
 
-#### A.2) Set HAVE_<PACKAGE_UC>_CXX11 to ${Trilinos_ENABLE_CXX11} in CMakeLists.txt *before* configuring the <Package>_config.h file.
+### A.2) Set `HAVE_<PACKAGE_UC>_CXX11` to ${Trilinos_ENABLE_CXX11} in CMakeLists.txt *before* configuring the `<Package>_config.h` file.
 
 For TeuchosCore, the line of code is:
 
@@ -41,7 +41,7 @@ WARNING: Set this CMake variable **`HAVE_<PACKAGE_UC>_CXX11`** (i.e. `HAVE_TEUCH
 
 `TRIBITS_CONFIGURE_FILE(${PACKAGE_NAME}_config.h`)
 
-#### A.3) Put in #ifdefs in your code for C++11 support based on the C++ macro HAVE_<PACKAGE_UC>_CXX11.
+### A.3) Put in #ifdefs in your code for C++11 support based on the C++ macro `HAVE_<PACKAGE_UC>_CXX11`.
 
 For TeuchosCore, an example is in the file:
 
@@ -63,7 +63,7 @@ TEUCHOS_UNIT_TEST( std_shared_ptr, nonnull_is_null )
 
 If there are any questions, send email to [trilinos-framework@software.sandia.gov](mailto:trilinos-framework@software.sandia.gov).
 
-### B) How to define a required dependency on C++11:
+## B) How to define a required dependency on C++11:
 
 Once we get the okay, and Kokkos and Tpetra (and selected other packages) are allowed to have a required dependency on C++11, then these packages just need to ‘CXX11’ to the list to the [TRIBITS_PACKAGE_DEFINE_DEPENDENCIES()](https://tribits.org/doc/TribitsDevelopersGuide.html#tribits-package-define-dependencies) macro call:
 
@@ -82,7 +82,7 @@ If a package is explicitly enabled that requires C++11, then it will either grac
 
 This dummy ‘CXX11’ TPL will be added to TriBITS proper and snapshotted to Trilinos *before* Trilinos is allowed to make C++11 required.
 
-### FAQ:
+## FAQ:
 
 **Q:** Why can’t each individual C++ package decide to support C++11 or not?
 

@@ -6,29 +6,33 @@ folder: about
 
 Building Trilinos with CUDA support requires a script called nvcc_wrapper, which is distributed inside Kokkos within Trilinos. Enabling both CUDA and MPI using OpenMPI can be done by setting these environment variables:
 
-<pre>export OMPI_CXX=/<Tpath>/Trilinos/Trilinos/packages/kokkos/config/nvcc_wrapper</pre>
+    export OMPI_CXX=/<Tpath>/Trilinos/Trilinos/packages/kokkos/config/nvcc_wrapper
 
-<pre>export NVCC_WRAPPER_DEFAULT_COMPILER=/<Gpath>/bin/g++</pre>
+    export NVCC_WRAPPER_DEFAULT_COMPILER=/<Gpath>/bin/g++
 
-<pre>export CUDA_LAUNCH_BLOCKING=1</pre>
+    export CUDA_LAUNCH_BLOCKING=1
 
 where _Tpath_ is the path at which a copy of Trilinos is available, and _Gpath_ is the path to the base of a C++11 compliant GCC installation (current working versions are limited to 4.7.2-4.8.x).
 
-The first variable tells mpicxx to use nvcc_wrapper as the underlying compiler, and the second variable tells nvcc_wrapper which host compiler to use (note: nvcc fails when using a host compiler newer than 4.8.x due to some incorrect parsing of some the standard library headers). The third variable is for UVM (which the Tpetra stack in Trilinos currently requires) and forces a fence after each kernel launch. If it is not possible to redefine the compiler used by MPI, forego the use of the MPI compiler wrappers and set the MPI includes/libraries directly, or recompile the MPI library with nvcc_wrapper (if possible).
+The first variable tells mpicxx to use nvcc_wrapper as the underlying compiler, and the second variable tells nvcc_wrapper which 
+host compiler to use (note: nvcc fails when using a host compiler newer than 4.8.x due to some incorrect parsing of some the standard library 
+headers). The third variable is for UVM (which the Tpetra stack in Trilinos currently requires) and forces a fence after each kernel launch. 
+If it is not possible to redefine the compiler used by MPI, forego the use of the MPI compiler wrappers and set the 
+MPI includes/libraries directly, or recompile the MPI library with nvcc_wrapper (if possible).
 
 Below is a CMake configure script fragment to then configure Trilinos:
 
-<pre>-DCMAKE_CXX_COMPILER=/<Mpath>/bin/mpicxx \
- -DCMAKE_C_COMPILER=/<Mpath>/bin/mpicc \
- -DCMAKE_Fortran_COMPILER=/<Mpath>/bin/mpif77 \
- -DCMAKE_CXX_FLAGS="-g -lineinfo -Xcudafe \
---diag_suppress=conversion_function_not_usable -Xcudafe \
---diag_suppress=cc_clobber_ignored -Xcudafe \
---diag_suppress=code_is_unreachable" \
- -DTPL_ENABLE_MPI=ON \
- -DTPL_ENABLE_CUDA=ON \
- -DKokkos_ENABLE_Cuda=ON \
- -DKokkos_ENABLE_Cuda_UVM=ON \</pre>
+     -DCMAKE_CXX_COMPILER=/<Mpath>/bin/mpicxx \
+     -DCMAKE_C_COMPILER=/<Mpath>/bin/mpicc \
+     -DCMAKE_Fortran_COMPILER=/<Mpath>/bin/mpif77 \
+     -DCMAKE_CXX_FLAGS="-g -lineinfo -Xcudafe \
+    --diag_suppress=conversion_function_not_usable -Xcudafe \
+    --diag_suppress=cc_clobber_ignored -Xcudafe \
+    --diag_suppress=code_is_unreachable" \
+     -DTPL_ENABLE_MPI=ON \
+     -DTPL_ENABLE_CUDA=ON \
+     -DKokkos_ENABLE_Cuda=ON \
+     -DKokkos_ENABLE_Cuda_UVM=ON \
 
 where _Mpath_ is the path to the base of the OpenMPI installation to use for the build.
 
