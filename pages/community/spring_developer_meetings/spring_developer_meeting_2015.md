@@ -10,7 +10,9 @@ Albuquerque, NM
 
 ## Trilinos Background
 
-The Trilinos Project is an effort to develop algorithms and enabling technologies within an object-oriented software framework for the solution of large-scale, complex multi-physics engineering and scientific problems. A unique design feature of Trilinos is its focus on packages. Learn more about Trilinos at the [Trilinos home page.](http://trilinos.org/ "Trilinos Home Page")
+The Trilinos Project is an effort to develop algorithms and enabling technologies within an object-oriented software framework for the solution of large-scale, 
+complex multi-physics engineering and scientific problems. A unique design feature of Trilinos is its focus on packages. 
+Learn more about Trilinos at the [Trilinos home page.](http://trilinos.github.io/ "Trilinos Home Page")
 
 ## Meeting Overview
 
@@ -30,11 +32,9 @@ The schedule for the Spring Developer Meeting will consist of training, as well 
 
 Below is the outline of the meeting schedule. Specific information about sessions will be added in the weeks prior to the meeting.
 
-### <span style="font-size: 22px; font-weight: bold;">Tuesday, May 12th</span>
+### Tuesday, May 12th
 
 <span style="text-decoration: underline;">CSRI/279</span>
-
-<tt>NONE</tt>
 
 ### Wednesday, May 13th
 

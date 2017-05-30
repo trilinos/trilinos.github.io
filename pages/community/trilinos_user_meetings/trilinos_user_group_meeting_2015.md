@@ -21,7 +21,7 @@ Contact: [Mike Heroux](mailto:maherou@sandia.gov)
 
 ## Trilinos Background
 
-The Trilinos Project is an effort to develop algorithms and enabling technologies within an object-oriented software framework for the solution of large-scale, complex multi-physics engineering and scientific problems. A unique design feature of Trilinos is its focus on packages. Full details of Trilinos and links to package websites can be found at the [Trilinos home page](http://trilinos.org/ "Trilinos Home Page").
+The Trilinos Project is an effort to develop algorithms and enabling technologies within an object-oriented software framework for the solution of large-scale, complex multi-physics engineering and scientific problems. A unique design feature of Trilinos is its focus on packages. Full details of Trilinos and links to package websites can be found at the [Trilinos home page](http://trilinos.github.io "Trilinos Home Page").
 
 ## Meeting Overview
 
@@ -68,11 +68,11 @@ TUG 2015 was held in Albuquerque and hosted by Sandia National Labs. The goal of
 </tr>
 <tr>
 <th id="time-7" axis="time"><abbr title="2011-11-01T14:00:00">10:55</abbr>–<abbr title="2011-11-01T14:45:00">11:15</abbr></th>
-<td headers="time-7 location-1">HTS: A Multithreaded Direct Sparse Triangular Solver Combining Level Scheduling and Recursive Blocking (A. Bradley) <a href="http://digitalops.sandia.gov/Mediasite/Play/5580221399674f99aca44fb82fe6a5dd1d">video</a>, <a href="https://trilinos.org/wordpress/wp-content/uploads/2016/01/HTS.pptx">pptx</a></td>
+<td headers="time-7 location-1">HTS: A Multithreaded Direct Sparse Triangular Solver Combining Level Scheduling and Recursive Blocking (A. Bradley) <a href="http://digitalops.sandia.gov/Mediasite/Play/5580221399674f99aca44fb82fe6a5dd1d">video</a>, <a href="/pdfs/HTS.pptx">pptx</a></td>
 </tr>
 <tr>
 <th id="time-5" axis="time"><abbr title="2011-11-01T11:45:00">11:15</abbr>–<abbr title="2011-11-01T13:15:00">11:35</abbr></th>
-<td headers="time-5 location-1">Task-parallel sparse incomplete Cholesky factorization using Kokkos APIs (K. Kim) <a href="http://digitalops.sandia.gov/Mediasite/Play/28a42334cd0c4fb096d0e36f4d9e77a61d">video</a>, <a href="https://trilinos.org/wordpress/wp-content/uploads/2016/01/KokkosPortableAPI.pdf">pdf</a></td>
+<td headers="time-5 location-1">Task-parallel sparse incomplete Cholesky factorization using Kokkos APIs (K. Kim) <a href="http://digitalops.sandia.gov/Mediasite/Play/28a42334cd0c4fb096d0e36f4d9e77a61d">video</a>, <a href="/pdfs/KokkosPortableAPI.pdf">pdf</a></td>
 </tr>
 <tr>
 <th id="time-6" axis="time"><abbr title="2011-11-01T13:15:00">11:35</abbr>–<abbr title="2011-11-01T14:00:00">1:00</abbr></th>
@@ -98,7 +98,7 @@ TUG 2015 was held in Albuquerque and hosted by Sandia National Labs. The goal of
 </tr>
 <tr>
 <th id="time-9" axis="time"><abbr title="2011-11-01T15:15:00">3:30</abbr>–<abbr title="2011-11-01T15:30:00">4:30</abbr></th>
-<td headers="time-9 location-1">A new MATLAB interface to MueLu (T. Wiesner) <a href="http://digitalops.sandia.gov/Mediasite/Play/83cecb9ec82e4949896e14d64ffbf1841d">video</a>, <a href="https://trilinos.org/wordpress/wp-content/uploads/2016/01/tug2015_wiesner.pdf">pdf</a></td>
+<td headers="time-9 location-1">A new MATLAB interface to MueLu (T. Wiesner) <a href="http://digitalops.sandia.gov/Mediasite/Play/83cecb9ec82e4949896e14d64ffbf1841d">video</a>, <a href="/pdfs/tug2015_wiesner.pdf">pdf</a></td>
 </tr>
 </tbody>
 </table>
@@ -111,11 +111,11 @@ TUG 2015 was held in Albuquerque and hosted by Sandia National Labs. The goal of
 </tr>
 <tr>
 <th id="time-3" axis="time"><abbr title="2011-11-01T09:45:00">9:00</abbr>–<abbr title="2011-11-01T10:15:00">9:30</abbr></th>
-<td headers="time-3 location-1">IDEAS xSDK: Providing Software Interoperability (A. Klinvex) <a href="http://digitalops.sandia.gov/Mediasite/Play/374cd519afbc4412a81b0027015d54db1d">video</a>, <a href="https://trilinos.org/wordpress/wp-content/uploads/2016/01/IDEASxSDK.pptx">pptx</a></td>
+<td headers="time-3 location-1">IDEAS xSDK: Providing Software Interoperability (A. Klinvex) <a href="http://digitalops.sandia.gov/Mediasite/Play/374cd519afbc4412a81b0027015d54db1d">video</a>, <a href="/pdfs/IDEASxSDK.pptx">pptx</a></td>
 </tr>
 <tr>
 <th id="time-2" axis="time"><abbr title="2011-11-01T09:30:00">9:30</abbr>–<abbr title="2011-11-01T09:45:00">9:50</abbr></th>
-<td headers="time-2 location-1">Extend Anasazi eigensolvers for billion-node graphs on an array of commodity SSDs (D. Zheng) <a href="http://digitalops.sandia.gov/Mediasite/Play/868f573f946b4038af532f3edcaf1dda1d">video</a>, <a href="https://trilinos.org/wordpress/wp-content/uploads/2016/01/FlashEigen-TUG.pdf">pdf</a></td>
+<td headers="time-2 location-1">Extend Anasazi eigensolvers for billion-node graphs on an array of commodity SSDs (D. Zheng) <a href="http://digitalops.sandia.gov/Mediasite/Play/868f573f946b4038af532f3edcaf1dda1d">video</a>, <a href="/pdfs/FlashEigen-TUG.pdf">pdf</a></td>
 </tr>
 <tr>
 <th id="time-3" axis="time"><abbr title="2011-11-01T09:45:00">9:50</abbr>–<abbr title="2011-11-01T10:15:00">10:20</abbr></th>

@@ -30,13 +30,13 @@ TBA
 
 Below is the outline of the meeting schedule. This information is still subject to change.
 
-### <span style="font-size: 22px; font-weight: bold;">Wednesday, May 11th</span>
+### Wednesday, May 11th
 
 <span style="text-decoration: underline;">CERLI/127</span>
 
 <tt>1:30-5:00 TBA/available for small groups</tt>
 
-### <span style="font-size: 22px; font-weight: bold;">Thursday, May 12th</span>
+### Thursday, May 12th
 
 <span style="text-decoration: underline;">CSRI/90</span>
 
