@@ -1,5 +1,5 @@
 ---
 title: Linear
-permalink: .html
+permalink: linear_eigen_solver.html
 folder: products
 ---

@@ -1,5 +1,5 @@
 ---
 title: Nonlinear
-permalink: .html
+permalink: nonlinear_solver.html
 folder: products
 ---

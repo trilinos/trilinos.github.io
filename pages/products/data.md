@@ -1,5 +1,5 @@
 ---
-title: Data
-permalink: .html
+title: Data Service
+permalink: data_service.html
 folder: products
 ---

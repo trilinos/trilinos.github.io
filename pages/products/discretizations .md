@@ -1,5 +1,5 @@
 ---
 title: Discretizations
-permalink: .html
+permalink: discretizations.html
 folder: products
 ---
