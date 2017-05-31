@@ -27,9 +27,9 @@ folder: community
   
 **March 2 -- 3, 2015, Saclay, France**
 
-[2015 EuroTUG Flyer (PDF)](http://trilinos.org/wordpress/wp-content/uploads/2015/01/EuroTUG2015Flyer.pdf)
+[2015 EuroTUG Flyer (PDF)](pdfs/EuroTUG2015Flyer.pdf)
 
-[![EuroTUG2015GroupPhoto](http://trilinos.org/wordpress/wp-content/uploads/2014/10/EuroTUG2015GroupPhoto.jpg)](http://trilinos.org/wordpress/wp-content/uploads/2014/10/EuroTUG2015GroupPhoto.jpg)
+[![EuroTUG2015GroupPhoto](images/EuroTUG2015GroupPhoto.jpg)](images/EuroTUG2015GroupPhoto.jpg)
 
 <center>Attendees of 2015 European Trilinos User Group Meeting</center>
 
@@ -37,31 +37,31 @@ folder: community
 
 ### Monday, March 2, 2015
 
-9:00 [Getting Started With Trilinos](http://trilinos.org/wordpress/wp-content/uploads/2015/03/1-GettingStartedWithTrilinos.pdf) (M. Heroux)  
-9:45 [Thread Scalable Programming with Tpetra and Kokkos](http://trilinos.org/wordpress/wp-content/uploads/2015/03/2-ThreadScalableProgrammingIntro.pdf) (R. Pawlowski, M. Heroux)  
+9:00 [Getting Started With Trilinos](pdfs/1-GettingStartedWithTrilinos.pdf) (M. Heroux)  
+9:45 [Thread Scalable Programming with Tpetra and Kokkos](pdfs/2-ThreadScalableProgrammingIntro.pdf) (R. Pawlowski, M. Heroux)  
 11:00 **Break**  
-11:15 [Introduction to the Triilnos AMG package Muelu](http://trilinos.org/wordpress/wp-content/uploads/2015/03/MueLu_talk.pdf) (T. Wiesner)  
+11:15 [Introduction to the Triilnos AMG package Muelu](pdfs/MueLu_talk.pdf) (T. Wiesner)  
 13:00 **Lunch**  
-14:30 [Trilinos Progress Challenges and Futures](http://trilinos.org/wordpress/wp-content/uploads/2015/03/3-HerouxTrilinosProgressChallengesFutures.pdf) (M. Heroux)  
-15:15 [Using Trilinos Linear Solvers](http://trilinos.org/wordpress/wp-content/uploads/2015/03/4-UsingTrilinosLinearSolvers.pdf) (M. Heroux)  
+14:30 [Trilinos Progress Challenges and Futures](pdfs/3-HerouxTrilinosProgressChallengesFutures.pdf) (M. Heroux)  
+15:15 [Using Trilinos Linear Solvers](pdfs/4-UsingTrilinosLinearSolvers.pdf) (M. Heroux)  
 16:00 **Break**  
-16:30 [Using Nonlinear Analysis Tools In Trilinos](http://trilinos.org/wordpress/wp-content/uploads/2015/03/EuroTUG2015_NonlinearAnalysisToolchain_Pawlowski.pdf) (R. Pawlowski)  
+16:30 [Using Nonlinear Analysis Tools In Trilinos](pdfs/EuroTUG2015_NonlinearAnalysisToolchain_Pawlowski.pdf) (R. Pawlowski)  
 17:15 **Adjourn**  
 20:00 **Dinner**
 
 ### Tuesday, March 3, 2015
 
-9:00 [Improving Scientific Software Productivity: The IDEAS Project](http://trilinos.org/wordpress/wp-content/uploads/2015/03/5-ImprovingSciSWProd.pdf) (M. Heroux)  
-9:30 [Use of Trilinos for Stellar Hydrodynamics](http://trilinos.org/wordpress/wp-content/uploads/2014/10/eurotug-goffrey.pdf) (T. Goffrey)  
-10:15 [Muelu AMG Design and Extensibility](http://trilinos.org/wordpress/wp-content/uploads/2015/03/MueLu_talk2.pdf) (T. Wiesner)  
+9:00 [Improving Scientific Software Productivity: The IDEAS Project](pdfs/5-ImprovingSciSWProd.pdf) (M. Heroux)  
+9:30 [Use of Trilinos for Stellar Hydrodynamics](pdfs/eurotug-goffrey.pdf) (T. Goffrey)  
+10:15 [Muelu AMG Design and Extensibility](pdfs/MueLu_talk2.pdf) (T. Wiesner)  
 11:00 **Break**  
-11:30 [Use of Trilinos in the Coolfluid 3 DSL](http://trilinos.org/wordpress/wp-content/uploads/2015/03/eurotug-janssens.pdf) (B. Janssens)  
-12:15 Discretizations using [Phalanx](http://trilinos.org/wordpress/wp-content/uploads/2015/03/EuroTUG2015_Phalanx_Pawlowski.pdf) and [Panzer](http://trilinos.org/wordpress/wp-content/uploads/2015/03/EuroTUG2015_Panzer_Pawlowski.pdf) (R. Pawlowski)  
+11:30 [Use of Trilinos in the Coolfluid 3 DSL](pdfs/eurotug-janssens.pdf) (B. Janssens)  
+12:15 Discretizations using [Phalanx](pdfs/EuroTUG2015_Phalanx_Pawlowski.pdf) and [Panzer](pdfs/EuroTUG2015_Panzer_Pawlowski.pdf) (R. Pawlowski)  
 13:00 **Lunch**  
-14:30 [Task-centric/Dataflow Application Design for Emerging HPC systems](http://trilinos.org/wordpress/wp-content/uploads/2015/03/6-TaskCentricAppDesign.pdf) (M. Heroux)  
-15:00 [Multiphysics Coupling Using Trilinos Components](http://trilinos.org/wordpress/wp-content/uploads/2015/03/EuroTUG2015_Multiphysics_Pawlowski.pdf) (R. Pawlowski)  
+14:30 [Task-centric/Dataflow Application Design for Emerging HPC systems](pdfs/6-TaskCentricAppDesign.pdf) (M. Heroux)  
+15:00 [Multiphysics Coupling Using Trilinos Components](pdfs/EuroTUG2015_Multiphysics_Pawlowski.pdf) (R. Pawlowski)  
 16:00 **Break**  
-16:30 [PIKE: A new multi physics coupling package](http://trilinos.org/wordpress/wp-content/uploads/2014/10/EuroTUG2015_PIKE_DTK_Pawlowski.pdf) (R. Pawlowski)  
+16:30 [PIKE: A new multi physics coupling package](pdfs/EuroTUG2015_PIKE_DTK_Pawlowski.pdf) (R. Pawlowski)  
 17:15 **Adjourn**  
 
 
@@ -79,14 +79,14 @@ folder: community
 *   Régine Lombard (Association Aristote)  
 
 
-[![mdls](http://trilinos.org/wordpress/wp-content/uploads/2014/10/mdls.png)](mailto:maherou@sandia.gov)
+[![mdls](images/mdls.png)](mailto:maherou@sandia.gov)
 
 Maison de la Simulation (MdS)
 
 Bâtiment 565 -- Digite  
 CEA Saclay  
 91191 Gif-sur-Yvette cedex  
-e-mail: <a style="color: #16387c;">info@maisondelasimulation.fr  </a>
+E-mail: <a style="color: #16387c;">info@maisondelasimulation.fr  </a>  
 Website: [http://www.maisondelasimulation.fr](http://www.maisondelasimulation.fr "Maison de la Simulation")  
 Contact: [Mike Heroux](mailto:maherou@sandia.gov)
 

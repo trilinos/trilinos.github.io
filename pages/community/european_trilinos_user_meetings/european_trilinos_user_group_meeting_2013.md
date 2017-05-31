@@ -12,5 +12,5 @@ Host: Michael Gee
 
 More information about The 2013 European Trilinos User Group meeting can be found at the [Conference Home Page](http://www.lnm.mw.tum.de/mhpc/european-trilinos-user-group-meeting).
 
-[![csm_eurotug2013_7936c6ff03](https://trilinos.org/wordpress/wp-content/uploads/2016/01/csm_eurotug2013_7936c6ff03-300x149.jpeg)](https://trilinos.org/wordpress/wp-content/uploads/2016/01/csm_eurotug2013_7936c6ff03.jpeg)
+[![csm_eurotug2013_7936c6ff03](images/csm_eurotug2013_7936c6ff03-300x149.jpeg)](images/csm_eurotug2013_7936c6ff03.jpeg)
 
