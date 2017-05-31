@@ -1,6 +1,6 @@
 ---
-title: Linear
-permalink: linear_eigen_solver.html
+title: Linear Solver
+permalink: linear_solver.html
 folder: products
 ---
 

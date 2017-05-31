@@ -1,5 +1,5 @@
 ---
-title: Nonlinear
+title: Nonlinear Solver
 permalink: nonlinear_solver.html
 folder: products
 ---
