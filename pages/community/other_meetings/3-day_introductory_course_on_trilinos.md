@@ -17,4 +17,4 @@ More information about this introductory Trilinos training opportunity, includin
 
 ## Trilinos Background
 
-The Trilinos Project is an effort to develop algorithms and enabling technologies within an object-oriented software framework for the solution of large-scale, complex multi-physics engineering and scientific problems. A unique design feature of Trilinos is its focus on packages. Full details of Trilinos and links to package websites can be found at the [Trilinos home page](http://trilinos.org/).
+The Trilinos Project is an effort to develop algorithms and enabling technologies within an object-oriented software framework for the solution of large-scale, complex multi-physics engineering and scientific problems. A unique design feature of Trilinos is its focus on packages. Full details of Trilinos and links to package websites can be found at the [Trilinos home page](http://trilinos.github.io/).

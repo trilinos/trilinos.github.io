@@ -17,11 +17,11 @@ Presentation One:
 
 **An Overview Of CMake, CTest, CDash, and CPack**  
 <cite>(Bill Hoffman)</cite>  
-[[presentation]](http://trilinos.org/oldsite/events/kitware_cmake_workshop_2009/presentations/SandiaTrilinosMay2009.pdf)
+[Presentation](pdfs/SandiaTrilinosMay2009.pdf)
 
 Presentation Two:
 
 **Trilinos Usage of CMake/CTest/CDash**  
 <cite>(Roscoe Bartlett)</cite>  
-[[presentation]](http://trilinos.org/oldsite/events/kitware_cmake_workshop_2009/presentations/KitwareSNLCMakeWorkshop_Trilinos.ppt)
+[Presentation](pdfs/KitwareSNLCMakeWorkshop_Trilinos.ppt)
 
