@@ -92,12 +92,12 @@ Contact: [Mike Heroux](mailto:maherou@sandia.gov)
 
 **Trilinos Background**
 
-The Trilinos Project is an effort to develop algorithms and enabling technologies within an object-oriented software framework for the solution of large-scale, complex multi-physics engineering and scientific problems. A unique design feature of Trilinos is its focus on packages. Full details of Trilinos and links to package websites can be found at the [Trilinos home page](http://trilinos.org/ "Trilinos Home Page").
+The Trilinos Project is an effort to develop algorithms and enabling technologies within an object-oriented software framework for the solution of large-scale, complex multi-physics engineering and scientific problems. A unique design feature of Trilinos is its focus on packages. Full details of Trilinos and links to package websites can be found at the [Trilinos home page](http://trilinos.github.io/ "Trilinos Home Page").
 
 ## Meeting Overview
 
 EuroTUG 2015 will be held at Mason de la Simulation in Paris-Saclay, France and hosted by CEA. The goal of the annual European user group meeting is to facilitate communication between European Trilinos users, clients and developers.
 
-Announcements will posted to trilinos-announce@software.sandia.gov. Please [subscribe](http://trilinos.org/community/mail-lists/ "Mail lists") to this list for notification.
+Announcements will posted to trilinos-announce@software.sandia.gov. Please [subscribe](mail_lists.html "Mail lists") to this list for notification.
 
-![mdls](http://trilinos.org/wordpress/wp-content/uploads/2014/10/mdls.png)
+![mdls](images/mdls.png)
