@@ -47,7 +47,7 @@ Monday and Tuesday will consist of Tutorial material and user-focused talks. Wed
 <tr>
 <th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">1:30</abbr>–<abbr title="2011-10-31T17:15:00">4:30</abbr></th>
 <td headers="time-1 location-1">
-<div>Kokkos Tutorial (C. Edwards) <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2013/presentations/2013-11-TUG-Kokkos-Tutorial.pdf" target="_blank">pdf</a>, <a href="http://digitalops.sandia.gov/Mediasite/Play/0fc8200ff18b4622b9c9787b2a4200651d" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://digitalops.sandia.gov/Mediasite/Play/0fc8200ff18b4622b9c9787b2a4200651d', 'video 3');" title="video 3"  target="_blank">video 3</a></div>
+<div>Kokkos Tutorial (C. Edwards) <a href="/pdfs/2013-11-TUG-Kokkos-Tutorial.pdf" target="_blank">pdf</a>, <a href="http://digitalops.sandia.gov/Mediasite/Play/0fc8200ff18b4622b9c9787b2a4200651d" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://digitalops.sandia.gov/Mediasite/Play/0fc8200ff18b4622b9c9787b2a4200651d', 'video 3');" title="video 3"  target="_blank">video 3</a></div>
 </td>
 </tr>
 </tbody>
@@ -70,7 +70,7 @@ Monday and Tuesday will consist of Tutorial material and user-focused talks. Wed
 <tr>
 <th id="time-3" axis="time"><abbr title="2011-11-01T09:45:00">9:50</abbr>–<abbr title="2011-11-01T10:15:00">10:10</abbr></th>
 <td headers="time-3 location-1">
-<div>ROL Optimization (D. Ridzal) <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2013/presentations/2013_TUG_ROL.pdf" target="_blank">pdf</a>, <a href="http://digitalops.sandia.gov/Mediasite/Play/f78230153a2a4c93afda185efae503941d" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://digitalops.sandia.gov/Mediasite/Play/f78230153a2a4c93afda185efae503941d', 'video 4');" title="video 4"  target="_blank">video 4</a> (slide 78, 1:04:49)</div>
+<div>ROL Optimization (D. Ridzal) <a href="/pdfs/2013_TUG_ROL.pdf" target="_blank">pdf</a>, <a href="http://digitalops.sandia.gov/Mediasite/Play/f78230153a2a4c93afda185efae503941d" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://digitalops.sandia.gov/Mediasite/Play/f78230153a2a4c93afda185efae503941d', 'video 4');" title="video 4"  target="_blank">video 4</a> (slide 78, 1:04:49)</div>
 </td>
 </tr>
 <tr>
@@ -136,7 +136,7 @@ Monday and Tuesday will consist of Tutorial material and user-focused talks. Wed
 <tr>
 <th id="time-8" axis="time"><abbr title="2011-11-01T14:45:00">3:20</abbr>–<abbr title="2011-11-01T15:15:00">3:40</abbr></th>
 <td headers="time-8 location-1">
-<div>Trilinos Data Services: Then, Now, Tomorrow (M. Heroux) <a href="http://trilinos.org/wordpress/wp-content/uploads/2013/11/TrilinosDataThenNowFuture.pdf" onclick="__gaTracker('send', 'event', 'download', 'http://trilinos.org/wordpress/wp-content/uploads/2013/11/TrilinosDataThenNowFuture.pdf');" title="pdf"  target="_blank">pdf</a></div>
+<div>Trilinos Data Services: Then, Now, Tomorrow (M. Heroux) <a href="/pdfs/TrilinosDataThenNowFuture.pdf" onclick="__gaTracker('send', 'event', 'download', '/pdfs/TrilinosDataThenNowFuture.pdf');" title="pdf"  target="_blank">pdf</a></div>
 </td>
 </tr>
 <tr>
@@ -189,7 +189,7 @@ Monday and Tuesday will consist of Tutorial material and user-focused talks. Wed
 <tr>
 <th id="time-4" axis="time"><abbr title="2011-11-02T09:40:00">11:20</abbr>–<abbr title="2011-11-02T10:00:00">11:40</abbr></th>
 <td headers="time-4 location-1">
-<div>Update on STK (A. Williams) <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2013/presentations/TUG_11-6-2013_STKupdate.pptx">pptx</a></div>
+<div>Update on STK (A. Williams) <a href="/pdfs/TUG_11-6-2013_STKupdate.pptx">pptx</a></div>
 </td>
 </tr>
 <tr>
