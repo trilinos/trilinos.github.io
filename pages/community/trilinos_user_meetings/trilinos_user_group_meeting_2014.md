@@ -42,7 +42,7 @@ The below schedule is tentative and could be modified prior to the meeting. (Las
 <tr>
 <th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">1:30</abbr>–<abbr title="2011-10-31T17:15:00">5:00</abbr></th>
 <td headers="time-1 location-1">
-<div>Trilinos Tutorial (M. Hoemmen) <a href="http://trilinos.org/wordpress/wp-content/uploads/2014/07/TrilinosTutorialTUG2014.pptx">pptx</a></div>
+<div>Trilinos Tutorial (M. Hoemmen) <a href="/pdfs/TrilinosTutorialTUG2014.pptx">pptx</a></div>
 </td>
 </tr>
 </tbody>
@@ -53,7 +53,7 @@ The below schedule is tentative and could be modified prior to the meeting. (Las
 <tr>
 <th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">8:30</abbr>–<abbr title="2011-11-01T09:30:00">9:30</abbr></th>
 <td headers="time-1 location-1">
-<div>Trilinos Progress, Challenges, and Future Plans (M. Heroux) <a href="http://digitalops.sandia.gov/Mediasite/Play/42aae47c80704211b90dc8105582da0c1d">video</a>, <a href="http://trilinos.org/wordpress/wp-content/uploads/2014/07/HerouxTrilinosProgressChallengesFutures.pdf" onclick="__gaTracker('send', 'event', 'download', 'http://trilinos.org/wordpress/wp-content/uploads/2014/07/HerouxTrilinosProgressChallengesFutures.pdf');" title="pdf">pdf</a></div>
+<div>Trilinos Progress, Challenges, and Future Plans (M. Heroux) <a href="http://digitalops.sandia.gov/Mediasite/Play/42aae47c80704211b90dc8105582da0c1d">video</a>, <a href="/pdfs/HerouxTrilinosProgressChallengesFutures.pdf" onclick="__gaTracker('send', 'event', 'download', '/pdfs/HerouxTrilinosProgressChallengesFutures.pdf');" title="pdf">pdf</a></div>
 </td>
 </tr>
 <tr>
@@ -71,7 +71,7 @@ The below schedule is tentative and could be modified prior to the meeting. (Las
 <tr>
 <th id="time-4" axis="time" width="16%"><abbr title="2011-11-01T10:15:00">10:30</abbr>–<abbr title="2011-11-01T11:45:00">11:15</abbr></th>
 <td headers="time-4 location-1">
-<div>Threaded construction and fill of Tpetra sparse linear systems using Kokkos (two-part talk: M. Hoemmen and C. Edwards) <a href="http://digitalops.sandia.gov/Mediasite/Play/11ed0595609a43de94d62606eb94653c1d">video</a>, <a href="http://trilinos.org/wordpress/wp-content/uploads/2014/07/2014-10-TUG-Tpetra-Kokkos-Fill.pptx">pptx</a></div>
+<div>Threaded construction and fill of Tpetra sparse linear systems using Kokkos (two-part talk: M. Hoemmen and C. Edwards) <a href="http://digitalops.sandia.gov/Mediasite/Play/11ed0595609a43de94d62606eb94653c1d">video</a>, <a href="/pdfs/2014-10-TUG-Tpetra-Kokkos-Fill.pptx">pptx</a></div>
 </td>
 </tr>
 <tr>
@@ -89,19 +89,19 @@ The below schedule is tentative and could be modified prior to the meeting. (Las
 <tr>
 <th id="time-6" axis="time"><abbr title="2011-11-01T13:15:00">1:30</abbr>–<abbr title="2011-11-01T14:00:00">2:00</abbr></th>
 <td headers="time-6 location-1">
-<div>Improving Scientific SW Development Productivity (M. Heroux) <a href="http://digitalops.sandia.gov/Mediasite/Play/48bcc1a387814c03b65cb8373fe3cd7b1d">video</a>, <a href="http://trilinos.org/wordpress/wp-content/uploads/2014/07/IDEAS-Project.pdf">pdf</a></div>
+<div>Improving Scientific SW Development Productivity (M. Heroux) <a href="http://digitalops.sandia.gov/Mediasite/Play/48bcc1a387814c03b65cb8373fe3cd7b1d">video</a>, <a href="/pdfs/IDEAS-Project.pdf">pdf</a></div>
 </td>
 </tr>
 <tr>
 <th id="time-6" axis="time"><abbr title="2011-11-01T13:15:00">2:00</abbr>–<abbr title="2011-11-01T14:00:00">2:30</abbr></th>
 <td headers="time-6 location-1">
-<div><span class="Apple-style-span">Camellia: A Software Framework for a Discontinuous Petrov-Galerkin Methodology</span> (N. Roberts) <a href="http://digitalops.sandia.gov/Mediasite/Play/dcd4c90ab351448a9fe157e0c37a25461d">video</a>, <a href="http://trilinos.org/wordpress/wp-content/uploads/2014/07/Camellia-TUG-2014.pdf">pdf</a></div>
+<div><span class="Apple-style-span">Camellia: A Software Framework for a Discontinuous Petrov-Galerkin Methodology</span> (N. Roberts) <a href="http://digitalops.sandia.gov/Mediasite/Play/dcd4c90ab351448a9fe157e0c37a25461d">video</a>, <a href="/pdfs/Camellia-TUG-2014.pdf">pdf</a></div>
 </td>
 </tr>
 <tr>
 <th id="time-8" axis="time"><abbr title="2011-11-01T14:45:00">2:30</abbr>–<abbr title="2011-11-01T15:15:00">2:50</abbr></th>
 <td headers="time-8 location-1">
-<div>Automatic Sparsity Pattern Extraction (S. Peles, S. Klus) <a href="http://trilinos.org/wordpress/wp-content/uploads/2014/07/Sandia_TUG_2014_final_no_markings_animation.pdf">pdf</a></div>
+<div>Automatic Sparsity Pattern Extraction (S. Peles, S. Klus) <a href="/pdfs/Sandia_TUG_2014_final_no_markings_animation.pdf">pdf</a></div>
 </td>
 </tr>
 <tr>
@@ -119,13 +119,13 @@ The below schedule is tentative and could be modified prior to the meeting. (Las
 <tr>
 <th id="time-9" axis="time"><abbr title="2011-11-01T15:15:00">3:30</abbr>–<abbr title="2011-11-01T15:30:00">4:00</abbr></th>
 <td headers="time-9 location-1">
-<div>STK_TUG_2014 (Williams) <a href="http://digitalops.sandia.gov/Mediasite/Play/0eb798d4dd834cc1973173f3ffb5f76e1d">video</a>, <a href="http://trilinos.org/wordpress/wp-content/uploads/2014/07/STK_TUG_2014.pptx">pptx</a></div>
+<div>STK_TUG_2014 (Williams) <a href="http://digitalops.sandia.gov/Mediasite/Play/0eb798d4dd834cc1973173f3ffb5f76e1d">video</a>, <a href="pdfs/STK_TUG_2014.pptx">pptx</a></div>
 </td>
 </tr>
 <tr>
 <th id="time-9" axis="time"><abbr title="2011-11-01T15:15:00">4:00</abbr>–<abbr title="2011-11-01T15:30:00">4:30</abbr></th>
 <td headers="time-9 location-1">
-<div>Mesh Adaptivity Using Percept and STK (B. Carnes) <a href="http://trilinos.org/wordpress/wp-content/uploads/2014/07/Percept_Trilinos_Talk_2014_Final.pptx">pptx</a></div>
+<div>Mesh Adaptivity Using Percept and STK (B. Carnes) <a href="/pdfs/Percept_Trilinos_Talk_2014_Final.pptx">pptx</a></div>
 </td>
 </tr>
 </tbody>
@@ -142,19 +142,19 @@ The below schedule is tentative and could be modified prior to the meeting. (Las
 <tr>
 <th id="time-3" axis="time"><abbr title="2011-11-01T09:45:00">8:50</abbr>–<abbr title="2011-11-01T10:15:00">9:10</abbr></th>
 <td headers="time-3 location-1">
-<div>Intrelab: Application to elasticity (P. Kuberry) <a href="http://digitalops.sandia.gov/Mediasite/Play/174a77e316dd48a2bdab257d34477daf1d">video</a>, <a href="http://trilinos.org/wordpress/wp-content/uploads/2014/07/Kuberry.pdf">pdf</a></div>
+<div>Intrelab: Application to elasticity (P. Kuberry) <a href="http://digitalops.sandia.gov/Mediasite/Play/174a77e316dd48a2bdab257d34477daf1d">video</a>, <a href="/pdfs/Kuberry.pdf">pdf</a></div>
 </td>
 </tr>
 <tr>
 <th id="time-2" axis="time"><abbr title="2011-11-01T09:30:00">9:10</abbr>–<abbr title="2011-11-01T09:45:00">9:30</abbr></th>
 <td headers="time-2 location-1">
-<div>Semi-Lagrangian methods for transport using Intrepid (S. Moe) <a href="http://digitalops.sandia.gov/Mediasite/Play/bbabc316ff864d6eb684958dab4aeca61d">video</a>, <a href="http://trilinos.org/wordpress/wp-content/uploads/2014/07/main.pdf">pdf</a></div>
+<div>Semi-Lagrangian methods for transport using Intrepid (S. Moe) <a href="http://digitalops.sandia.gov/Mediasite/Play/bbabc316ff864d6eb684958dab4aeca61d">video</a>, <a href="/pdfs/main.pdf">pdf</a></div>
 </td>
 </tr>
 <tr>
 <th id="time-3" axis="time"><abbr title="2011-11-01T09:45:00">9:30</abbr>–<abbr title="2011-11-01T10:15:00">10:00</abbr></th>
 <td headers="time-3 location-1">
-<div><span class="Apple-style-span"><span class="Apple-style-span"><span class='classtoolTips0' style='border-bottom:2px dotted #888;'>Implementation of a second-order stabilized CVFEM using Intrepid</span> </span></span>(K. Peterson) <a href="http://digitalops.sandia.gov/Mediasite/Play/2e07840f6fd84cb3a1091c6d70eee1701d">video</a>, <a href="http://trilinos.org/wordpress/wp-content/uploads/2014/07/CVFEM_TUG_14.pdf">pdf</a></div>
+<div><span class="Apple-style-span"><span class="Apple-style-span"><span class='classtoolTips0' style='border-bottom:2px dotted #888;'>Implementation of a second-order stabilized CVFEM using Intrepid</span> </span></span>(K. Peterson) <a href="http://digitalops.sandia.gov/Mediasite/Play/2e07840f6fd84cb3a1091c6d70eee1701d">video</a>, <a href="pdfs/CVFEM_TUG_14.pdf">pdf</a></div>
 </td>
 </tr>
 <tr>
@@ -172,13 +172,13 @@ The below schedule is tentative and could be modified prior to the meeting. (Las
 <tr>
 <th id="time-6" axis="time"><abbr title="2011-11-01T13:15:00">10:50</abbr>–<abbr title="2011-11-01T14:00:00">11:10</abbr></th>
 <td headers="time-6 location-1">
-<div>Adjoint-based deterministic Inversion of Ice Sheets (M. Perego) <a href="http://digitalops.sandia.gov/Mediasite/Play/9236e537a12547ff92b052ff490926031d">video</a>, <a href="http://trilinos.org/wordpress/wp-content/uploads/2014/07/PeregoTUG2014.pdf">pdf</a></div>
+<div>Adjoint-based deterministic Inversion of Ice Sheets (M. Perego) <a href="http://digitalops.sandia.gov/Mediasite/Play/9236e537a12547ff92b052ff490926031d">video</a>, <a href="/pdfs/PeregoTUG2014.pdf">pdf</a></div>
 </td>
 </tr>
 <tr>
 <th id="time-4" axis="time" width="23%"><abbr title="">11:10</abbr>–<abbr title="">11:35</abbr></th>
 <td headers="time-4 location-1">
-<div>PIKE (R. Pawlowski) <a href="http://trilinos.org/wordpress/wp-content/uploads/2014/07/Pawlowski_TUG_PIKE_DTK_2014_10_29.pdf">pdf</a></div>
+<div>PIKE (R. Pawlowski) <a href="/pdfs/Pawlowski_TUG_PIKE_DTK_2014_10_29.pdf">pdf</a></div>
 </td>
 </tr>
 <tr>
@@ -196,13 +196,13 @@ The below schedule is tentative and could be modified prior to the meeting. (Las
 <tr>
 <th id="time-8" axis="time"><abbr title="2011-11-01T14:45:00">1:30</abbr>–<abbr title="2011-11-01T15:15:00">1:50</abbr></th>
 <td headers="time-8 location-1">
-<div><span class="Apple-style-span">MueLu: The Trilinos Multigrid Framework</span> (Hu / Prokopenko) <a href="http://trilinos.org/wordpress/wp-content/uploads/2014/07/MueLu_TUG2014_Prokopenko.pdf">pdf</a></div>
+<div><span class="Apple-style-span">MueLu: The Trilinos Multigrid Framework</span> (Hu / Prokopenko) <a href="/pdfs/MueLu_TUG2014_Prokopenko.pdf">pdf</a></div>
 </td>
 </tr>
 <tr>
 <th id="time-7" axis="time"><abbr title="2011-11-01T14:00:00">1:50</abbr>–<abbr title="2011-11-01T14:45:00">2:20</abbr></th>
 <td headers="time-7 location-1">
-<div><span class="Apple-style-span">Overview of Anasazi and its newest eigensolver, TraceMin</span> (A. Klinvex) <a href="http://digitalops.sandia.gov/Mediasite/Play/fc2cd304588b4f57b6cc623e7a4127491d">video</a>, <a href="http://trilinos.org/wordpress/wp-content/uploads/2014/08/Klinvex-TUG-2014-Anasazi.pdf">pdf</a></div>
+<div><span class="Apple-style-span">Overview of Anasazi and its newest eigensolver, TraceMin</span> (A. Klinvex) <a href="http://digitalops.sandia.gov/Mediasite/Play/fc2cd304588b4f57b6cc623e7a4127491d">video</a>, <a href="/pdfs/Klinvex-TUG-2014-Anasazi.pdf">pdf</a></div>
 </td>
 </tr>
 <tr>
@@ -214,7 +214,7 @@ The below schedule is tentative and could be modified prior to the meeting. (Las
 <tr>
 <th id="time-6" axis="time"><abbr title="2011-11-01T13:15:00">2:40</abbr>–<abbr title="2011-11-01T14:00:00">3:00</abbr></th>
 <td headers="time-6 location-1">
-<div><span class="Apple-style-span">Uncertainty Quantification for Next-Generation Architectures</span> (E. Phipps) <a href="http://digitalops.sandia.gov/Mediasite/Play/ba7d1828a80941508d46094279fb32121d">video</a>, <a href="http://trilinos.org/wordpress/wp-content/uploads/2014/07/exascale_uq.pptx">pptx</a></div>
+<div><span class="Apple-style-span">Uncertainty Quantification for Next-Generation Architectures</span> (E. Phipps) <a href="http://digitalops.sandia.gov/Mediasite/Play/ba7d1828a80941508d46094279fb32121d">video</a>, <a href="/pdfs/exascale_uq.pptx">pptx</a></div>
 </td>
 </tr>
 <tr>
@@ -237,13 +237,13 @@ The below schedule is tentative and could be modified prior to the meeting. (Las
 <tr>
 <th id="time-1" axis="time"><abbr title="2011-11-02T08:30:00">8:30</abbr>–<abbr title="2011-11-02T09:00:00">9:00</abbr></th>
 <td headers="time-1 location-1">
-<div>Intrepid/Kokkos (Demeshko/Edwards) <a href="http://trilinos.org/wordpress/wp-content/uploads/2014/07/IntrepidTUG2014_2.pptx">pptx</a></div>
+<div>Intrepid/Kokkos (Demeshko/Edwards) <a href="/pdfs/IntrepidTUG2014_2.pptx">pptx</a></div>
 </td>
 </tr>
 <tr>
 <th id="time-7" axis="time"><abbr title="2011-11-02T10:45:00">9:00</abbr>–<abbr title="2011-11-02T11:05:00">9:30</abbr></th>
 <td headers="time-7 location-1">
-<div>Kokkos update: Spaces, Execution Policies, and C++11 (Trott/Edwards) <a href="http://trilinos.org/wordpress/wp-content/uploads/2014/07/2014-10-TUG-Kokkos-Develop.pdf">pdf</a></div>
+<div>Kokkos update: Spaces, Execution Policies, and C++11 (Trott/Edwards) <a href="/pdfs/2014-10-TUG-Kokkos-Develop.pdf">pdf</a></div>
 </td>
 </tr>
 <tr>
@@ -273,7 +273,7 @@ The below schedule is tentative and could be modified prior to the meeting. (Las
 <tr>
 <th id="time-4" axis="time"><abbr title="2011-11-02T09:40:00">11:20</abbr>–<abbr title="2011-11-02T10:00:00">12:00</abbr></th>
 <td headers="time-4 location-1">
-<div>Trilinos Community 2.0 (M. Heroux) <a href="http://trilinos.org/wordpress/wp-content/uploads/2014/07/HerouxTrilinosCommunity2.0.pdf">pdf</a></div>
+<div>Trilinos Community 2.0 (M. Heroux) <a href="/pdfs/HerouxTrilinosCommunity2.0.pdf">pdf</a></div>
 </td>
 </tr>
 <tr>
