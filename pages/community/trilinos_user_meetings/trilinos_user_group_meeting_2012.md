@@ -45,7 +45,7 @@ Streaming video for nearly all user-focused sessions is now available. Videos ar
 <tr>
 <th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">8:30</abbr>–<abbr title="2011-11-01T09:30:00">9:00</abbr></th>
 <td headers="time-1 location-1">
-<div>Introduction to Bilder (T. Austin) <a href="http://digitalops.sandia.gov/Mediasite/Play/3288984f573d4017827f31f351079e491d">Video</a>, <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2012/presentations/txBilderAustin1030.pdf">pdf</a></div>
+<div>Introduction to Bilder (T. Austin) <a href="http://digitalops.sandia.gov/Mediasite/Play/3288984f573d4017827f31f351079e491d">Video</a>, <a href="/pdfs/txBilderAustin1030.pdf">pdf</a></div>
 </td>
 </tr>
 <tr>
@@ -57,7 +57,7 @@ Streaming video for nearly all user-focused sessions is now available. Videos ar
 <tr>
 <th id="time-3" axis="time"><abbr title="2011-11-01T09:45:00">9:30</abbr>–<abbr title="2011-11-01T10:15:00">10:15</abbr></th>
 <td headers="time-3 location-1">
-<div>5 Capability Area Summaries <a href="http://digitalops.sandia.gov/Mediasite/Play/3288984f573d4017827f31f351079e491d">Video</a>, <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2012/presentations/FrameworkAndToolsCA2012.pdf">pdf</a>, <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2012/presentations/User_Experience.pdf">pdf</a>, <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2012/presentations/DiscretizationCapabilityAreaOverview.pdf">pdf</a>,</div>
+<div>5 Capability Area Summaries <a href="http://digitalops.sandia.gov/Mediasite/Play/3288984f573d4017827f31f351079e491d">Video</a>, <a href="/pdfs/FrameworkAndToolsCA2012.pdf">pdf</a>, <a href="/pdfs/User_Experience.pdf">pdf</a>, <a href="/pdfs/DiscretizationCapabilityAreaOverview.pdf">pdf</a>,</div>
 </td>
 </tr>
 <tr>
@@ -87,7 +87,7 @@ Streaming video for nearly all user-focused sessions is now available. Videos ar
 <tr>
 <th id="time-6" axis="time"><abbr title="2011-11-01T13:15:00">1:30</abbr>–<abbr title="2011-11-01T14:00:00">2:30</abbr></th>
 <td headers="time-6 location-1">
-<div>KokkosArray: A C++ Library for Manycore Performance-Portability (C. Edwards, C. Trott, D. Sunderland) <a href="http://digitalops.sandia.gov/Mediasite/Play/55bcfe14a9304b48ae6ffd6041a035691d">Video</a>, <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2012/presentations/Kokkos-Array-2012-TUG.pdf">pdf</a>, <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2012/presentations/Trilinos-TUG-MiniMD.pdf">pdf</a></div>
+<div>KokkosArray: A C++ Library for Manycore Performance-Portability (C. Edwards, C. Trott, D. Sunderland) <a href="http://digitalops.sandia.gov/Mediasite/Play/55bcfe14a9304b48ae6ffd6041a035691d">Video</a>, <a href="/pdfs/Kokkos-Array-2012-TUG.pdf">pdf</a>, <a href="/pdfs/Trilinos-TUG-MiniMD.pdf">pdf</a></div>
 </td>
 </tr>
 <tr>
@@ -105,19 +105,19 @@ Streaming video for nearly all user-focused sessions is now available. Videos ar
 <tr>
 <th id="time-8" axis="time"><abbr title="2011-11-01T14:45:00">3:15</abbr>–<abbr title="2011-11-01T15:15:00">3:45</abbr></th>
 <td headers="time-8 location-1">
-<div>Structured Grid Computations in Trilinos (Teuchos MD Array) (B. Spotz) <a href="http://digitalops.sandia.gov/Mediasite/Play/55bcfe14a9304b48ae6ffd6041a035691d">Video</a>, <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2012/presentations/Teuchos_MDArrays.pdf">pdf</a></div>
+<div>Structured Grid Computations in Trilinos (Teuchos MD Array) (B. Spotz) <a href="http://digitalops.sandia.gov/Mediasite/Play/55bcfe14a9304b48ae6ffd6041a035691d">Video</a>, <a href="/pdfs/Teuchos_MDArrays.pdf">pdf</a></div>
 </td>
 </tr>
 <tr>
 <th id="time-8" axis="time"><abbr title="2011-11-01T14:45:00">3:45</abbr>–<abbr title="2011-11-01T15:15:00">4:15</abbr></th>
 <td headers="time-8 location-1">
-<div>A New Degree of Freedom Capability (DOF Manager) (E. Cyr) <a href="http://digitalops.sandia.gov/Mediasite/Play/55bcfe14a9304b48ae6ffd6041a035691d">Video</a>, <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2012/presentations/tug2012_mod.pdf">pdf</a></div>
+<div>A New Degree of Freedom Capability (DOF Manager) (E. Cyr) <a href="http://digitalops.sandia.gov/Mediasite/Play/55bcfe14a9304b48ae6ffd6041a035691d">Video</a>, <a href="/pdfs/tug2012_mod.pdf">pdf</a></div>
 </td>
 </tr>
 <tr>
 <th id="time-9" axis="time"><abbr title="2011-11-01T15:15:00">4:15</abbr>–<abbr title="2011-11-01T15:30:00">4:30</abbr></th>
 <td headers="time-9 location-1">
-<div>Discretization Tool Use in Charon (S. Gao) <a href="http://digitalops.sandia.gov/Mediasite/Play/55bcfe14a9304b48ae6ffd6041a035691d">Video</a>, <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2012/presentations/Suzey_TUG_Meeting_Oct2012.pdf">pdf</a></div>
+<div>Discretization Tool Use in Charon (S. Gao) <a href="http://digitalops.sandia.gov/Mediasite/Play/55bcfe14a9304b48ae6ffd6041a035691d">Video</a>, <a href="/pdfs/Suzey_TUG_Meeting_Oct2012.pdf">pdf</a></div>
 </td>
 </tr>
 </tbody>
@@ -128,7 +128,7 @@ Streaming video for nearly all user-focused sessions is now available. Videos ar
 <tr>
 <th id="time-1" axis="time"><abbr title="2011-11-02T08:30:00">8:30</abbr>–<abbr title="2011-11-02T09:00:00">9:00</abbr></th>
 <td headers="time-1 location-1">
-<div>A Mortar Element Package (Moertel) (G. Hansen) <a href="http://digitalops.sandia.gov/Mediasite/Play/9276d04a800b4704b11a4e5519b6c9e71d">Video</a>, <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2012/presentations/Moertel.pdf">pdf</a></div>
+<div>A Mortar Element Package (Moertel) (G. Hansen) <a href="http://digitalops.sandia.gov/Mediasite/Play/9276d04a800b4704b11a4e5519b6c9e71d">Video</a>, <a href="/pdfs/Moertel.pdf">pdf</a></div>
 </td>
 </tr>
 <tr>
@@ -140,7 +140,7 @@ Streaming video for nearly all user-focused sessions is now available. Videos ar
 <tr>
 <th id="time-3" axis="time"><abbr title="2011-11-02T09:20:00">9:15</abbr>–<abbr title="2011-11-02T09:40:00">9:30</abbr></th>
 <td headers="time-3 location-1">
-<div>The SIERRA Toolkit for Unstructured Problems (STK) (A. Williams) <a href="http://digitalops.sandia.gov/Mediasite/Play/9276d04a800b4704b11a4e5519b6c9e71d">Video</a>, <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2012/presentations/STK_TUG_2012.pdf">pdf</a></div>
+<div>The SIERRA Toolkit for Unstructured Problems (STK) (A. Williams) <a href="http://digitalops.sandia.gov/Mediasite/Play/9276d04a800b4704b11a4e5519b6c9e71d">Video</a>, <a href="/pdfs/STK_TUG_2012.pdf">pdf</a></div>
 </td>
 </tr>
 <tr>
@@ -152,7 +152,7 @@ Streaming video for nearly all user-focused sessions is now available. Videos ar
 <tr>
 <th id="time-5" axis="time"><abbr title="2011-11-02T10:00:00">9:45</abbr>–<abbr title="2011-11-02T10:30:00">10:15</abbr></th>
 <td headers="time-5 location-1">
-<div>Integrating Analysis and Computation with Trios Services (R. Oldfield) <a href="http://digitalops.sandia.gov/Mediasite/Play/9276d04a800b4704b11a4e5519b6c9e71d">Video</a>, <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2012/presentations/trios-services-tug.pdf">pdf</a></div>
+<div>Integrating Analysis and Computation with Trios Services (R. Oldfield) <a href="http://digitalops.sandia.gov/Mediasite/Play/9276d04a800b4704b11a4e5519b6c9e71d">Video</a>, <a href="/pdfs/trios-services-tug.pdf">pdf</a></div>
 </td>
 </tr>
 <tr>
@@ -164,7 +164,7 @@ Streaming video for nearly all user-focused sessions is now available. Videos ar
 <tr>
 <th id="time-7" axis="time"><abbr title="2011-11-02T10:45:00">10:30</abbr>–<abbr title="2011-11-02T11:05:00">11:00</abbr></th>
 <td headers="time-7 location-1">
-<div>The Next Generation of Multi-Level Preconditioners (MueLu) (J. Hu) <a href="http://digitalops.sandia.gov/Mediasite/Play/9276d04a800b4704b11a4e5519b6c9e71d">Video</a>, <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2012/presentations/MueLuOverview_TUG2012.pdf">pdf</a></div>
+<div>The Next Generation of Multi-Level Preconditioners (MueLu) (J. Hu) <a href="http://digitalops.sandia.gov/Mediasite/Play/9276d04a800b4704b11a4e5519b6c9e71d">Video</a>, <a href="/pdfs/MueLuOverview_TUG2012.pdf">pdf</a></div>
 </td>
 </tr>
 <tr>
@@ -176,7 +176,7 @@ Streaming video for nearly all user-focused sessions is now available. Videos ar
 <tr>
 <th id="time-9" axis="time"><abbr title="2011-11-02T11:25:00">11:15</abbr>–<abbr title="2011-11-02T11:45:00">11:45</abbr></th>
 <td colspan="1" headers="time-9">
-<div>Rapid Application Development with Albany (A. Salinger) <a href="http://digitalops.sandia.gov/Mediasite/Play/9276d04a800b4704b11a4e5519b6c9e71d">Video</a>, <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2012/presentations/TUG12_Salinger_AlbanyOverview.pdf">pdf</a></div>
+<div>Rapid Application Development with Albany (A. Salinger) <a href="http://digitalops.sandia.gov/Mediasite/Play/9276d04a800b4704b11a4e5519b6c9e71d">Video</a>, <a href="/pdfs/TUG12_Salinger_AlbanyOverview.pdf">pdf</a></div>
 </td>
 </tr>
 <tr>
@@ -188,7 +188,7 @@ Streaming video for nearly all user-focused sessions is now available. Videos ar
 <tr>
 <th id="time-11" axis="time"><abbr title="2011-11-02T13:15:00">1:15</abbr>–<abbr title="2011-11-02T14:00:00">1:30</abbr></th>
 <td headers="time-11 location-1">
-<div>Transient Solvers in Rythmos (C. Ober) <a href="http://digitalops.sandia.gov/Mediasite/Play/7d009ab9c5c7457a954afd2ff05125c21d">Video</a>, <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2012/presentations/2012-10-31_TUG-Rythmos.pdf">pdf</a></div>
+<div>Transient Solvers in Rythmos (C. Ober) <a href="http://digitalops.sandia.gov/Mediasite/Play/7d009ab9c5c7457a954afd2ff05125c21d">Video</a>, <a href="/pdfs/2012-10-31_TUG-Rythmos.pdf">pdf</a></div>
 </td>
 </tr>
 <tr>
@@ -223,7 +223,7 @@ Streaming video for nearly all user-focused sessions is now available. Videos ar
 <tr>
 <th id="time-1" axis="time" width="23%"><abbr title="2011-11-03T08:30:00">8:30</abbr>–<abbr title="2011-11-03T08:50:00">9:00</abbr></th>
 <td headers="time-1 location-1">
-<div>Bilder Tutorial (T. Austin) <a href="http://digitalops.sandia.gov/Mediasite/Play/85a242f240c7425e89de1a987192499f1d">Video</a>, <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2012/presentations/txBilderAustin1101.pdf">pdf</a></div>
+<div>Bilder Tutorial (T. Austin) <a href="http://digitalops.sandia.gov/Mediasite/Play/85a242f240c7425e89de1a987192499f1d">Video</a>, <a href="/pdfs/txBilderAustin1101.pdf">pdf</a></div>
 </td>
 </tr>
 <tr>
@@ -241,7 +241,7 @@ Streaming video for nearly all user-focused sessions is now available. Videos ar
 <tr>
 <th id="time-5" axis="time"><abbr title="2011-11-03T09:30:00">9:45</abbr>–<abbr title="2011-11-03T10:00:00">10:15</abbr></th>
 <td headers="time-5 location-1">
-<div>Trilinos Framework Update (J. Willenbring) <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2012/presentations/TUG2012FrameworkUpdate.pdf">pdf</a></div>
+<div>Trilinos Framework Update (J. Willenbring) <a href="/pdfs/TUG2012FrameworkUpdate.pdf">pdf</a></div>
 </td>
 </tr>
 <tr>
@@ -253,7 +253,7 @@ Streaming video for nearly all user-focused sessions is now available. Videos ar
 <tr>
 <th id="time-7" axis="time"><abbr title="2011-11-03T10:30:00">10:45</abbr>–<abbr title="2011-11-03T11:00:00">12:00</abbr></th>
 <td headers="time-7 location-1">
-<div>TriBITS Lifecycle Model Adoption (R. Bartlett) <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2012/presentations/TUG20121101_TriBITSLifecycleModelAdoption.pdf">pdf</a></div>
+<div>TriBITS Lifecycle Model Adoption (R. Bartlett) <a href="/pdfs/TUG20121101_TriBITSLifecycleModelAdoption.pdf">pdf</a></div>
 </td>
 </tr>
 <tr>
