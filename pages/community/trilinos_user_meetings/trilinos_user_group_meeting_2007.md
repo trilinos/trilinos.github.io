@@ -32,6 +32,7 @@ Arvada to Louisiana, turn left. Get on I-40 East (left), exit on Eubank south (r
 
 [Map](images/csri_map.jpg) (circled in red on the right)  
 [Google Maps](http://maps.google.com/maps?f=q&hl=en&q=Eubank+Blvd+SE+and+Research+Rd+SE,+Albuquerque,+NM+87111&ie=UTF8&z=17&ll=35.056989,-106.530519&spn=0.008229,0.010074&t=h&om=1) (from that intersection, east on Reasearch Rd to Innovation Pkwy)
+<br>
 
 <table id="programTable" class=" aligncenter" cellspacing="0" cellpadding="0">
 <tbody>
@@ -138,13 +139,11 @@ Arvada to Louisiana, turn left. Get on I-40 East (left), exit on Eubank south (r
 <td><strong>Milestone: Lessons Learned, Next Steps</strong><br />
 <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2007/abstracts/thursday_2-15.html">[abstract]</a><br />
 <cite>2007 Trilinos Milestone Team</cite></td>
-</tr>
 <tr>
 <td>3:15 -- 3:30</td>
 <td>Break</td>
 <td>Break</td>
 <td>Break</td>
-</tr>
 <tr>
 <td>3:30 -- 4:30</td>
 <td><strong>Using Thyra and Stratimikos to build block composite capabilities</strong><br />
@@ -159,6 +158,3 @@ Arvada to Louisiana, turn left. Get on I-40 East (left), exit on Eubank south (r
 <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2007/abstracts/thursday_3-30.html">[abstract]</a><br />
 <a href="/pdfs/TrilinosStrategicPlanning.ppt">[presentation ppt]</a><br />
 <cite>Heroux</cite></td>
-</tr>
-</tbody>
-</table>

@@ -49,7 +49,7 @@ directly to the right of the title of each collection of clips.
 <td>8:30 am</td>
 <td rowspan="11"></td>
 <td rowspan="2"><strong>ForTrilinos Tutorial</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2010/presentations/tug2010_fortrilinos.pdf">pdf</a>, Video<br />
+<a href="/pdfs/tug2010_fortrilinos.pdf">pdf</a>, Video<br />
 <cite>(Damian R.)</cite></td>
 <td rowspan="3"><strong>Phalanx</strong><br />
 Video<br />
@@ -71,7 +71,7 @@ Video* --<br />
 <tr>
 <td>9:15 am</td>
 <td rowspan="2"><strong>PyTrilinos Tutorial</strong><br />
-<a href="http://trilinos.org/oldsite/packages/pytrilinos/PyTrilinosTutorial.pdf">pdf</a>, Video* --<br />
+<a href="/pdfs/PyTrilinosTutorial.pdf">pdf</a>, Video* --<br />
 48:24, slide 54<br />
 <cite>(Bill S.)</cite></td>
 </tr>
@@ -103,7 +103,7 @@ Video<br />
 <tr>
 <td>10:30 am</td>
 <td rowspan="3"><strong>Capability Area Summaries</strong><br />
-<a href="http://www.cs.sandia.gov/%7Erabartl/TUG20101102_SoftwareEngineeringCapabilitiesArea.pdf">SE Technologies and Integration pdf</a><br />
+<a href="/pdfs/TUG20101102_SoftwareEngineeringCapabilitiesArea.pdf">SE Technologies and Integration pdf</a><br />
 Video* (all Areas) --<br />
 27:30, slide 25</td>
 </tr>
@@ -125,7 +125,7 @@ Video* --<br />
 57:29, slide 69<br />
 <cite>(Andy S.)</cite></td>
 <td rowspan="1"><strong>Code Reviews: the Gerrit Tool and Experience from the SIERRA Tool Kit Team</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2010/presentations/tug2010_gerrit.pdf">pdf</a><br />
+<a href="/pdfs/tug2010_gerrit.pdf">pdf</a><br />
 <cite>(Pat N.)</cite></td>
 </tr>
 <tr>
@@ -193,14 +193,14 @@ Video* --<br />
 <tr>
 <td>3:30 pm</td>
 <td rowspan="1"><strong>Trios</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2010/presentations/tug2010_trios.ppt">pdf</a>, Video<br />
+<a href="/pdfs/tug2010_trios.ppt">pdf</a>, Video<br />
 <cite>(Ron O.)</cite></td>
 <td rowspan="2"><strong>Trilinos Advisory Group Session</strong></td>
 </tr>
 <tr>
 <td>4:00 pm</td>
 <td><strong>Building and Linking Against Trilinos</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2010/presentations/tug2010_cmake.ppt">pdf</a>, Video* --<br />
+<a href="/pdfs/tug2010_cmake.ppt">ppt</a>, Video* --<br />
 32:11, slide 13<br />
 <cite>(Brent P.)</cite></td>
 </tr>
