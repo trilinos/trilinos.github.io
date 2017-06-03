@@ -25,7 +25,7 @@ In these cases, we list the time at which the specified talk starts, as well as 
 <tr>
 <th id="time-1" axis="time"><abbr title="2011-10-31T13:00:00">1:00</abbr>–<abbr title="2011-10-31T17:15:00">5:15</abbr></th>
 <td headers="time-1 location-1">
-<div>Hands-on Trilinos Tutorial (M. Heroux, M. Hoemmen) <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2011/presentations/TrilinosTutorialTug2011.pdf">pdf</a>, Video</div>
+<div>Hands-on Trilinos Tutorial (M. Heroux, M. Hoemmen) <a href="/pdfs/TrilinosTutorialTug2011.pdf">pdf</a>, Video</div>
 </td>
 </tr>
 </tbody>
@@ -48,7 +48,7 @@ In these cases, we list the time at which the specified talk starts, as well as 
 <tr>
 <th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">8:30</abbr>–<abbr title="2011-11-01T09:30:00">9:30</abbr></th>
 <td headers="time-1 location-1">
-<div>A Tutorial on Anasazi and Belos (H. Thornquist) <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2011/presentations/TUG_2011_Belos_Anasazi.pptx">pptx</a>, Video</div>
+<div>A Tutorial on Anasazi and Belos (H. Thornquist) <a href="/pdfs/TUG_2011_Belos_Anasazi.pptx">pptx</a>, Video</div>
 </td>
 </tr>
 <tr>
@@ -66,7 +66,7 @@ In these cases, we list the time at which the specified talk starts, as well as 
 <tr>
 <th id="time-4" axis="time" width="16%"><abbr title="2011-11-01T10:15:00">10:15</abbr>–<abbr title="2011-11-01T11:45:00">11:45</abbr></th>
 <td headers="time-4 location-1">
-<div>8 Capability Area Summaries <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2011/presentations/FrameworkAndToolsCA2011.pdf">pdf</a>, <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2011/presentations/TUG20111102_SoftwareEngineeringCapabilitiesArea.ppt">ppt</a>, <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2011/presentations/Salinger_TUG11_ENATCapabilityOverview.pdf">pdf</a>, Video* -- 1:31:25, slide 70</div>
+<div>8 Capability Area Summaries <a href="/pdfs/FrameworkAndToolsCA2011.pdf">pdf</a>, <a href="/pdfs/TUG20111102_SoftwareEngineeringCapabilitiesArea.ppt">ppt</a>, <a href="/pdfs/Salinger_TUG11_ENATCapabilityOverview.pdf">pdf</a>, Video* -- 1:31:25, slide 70</div>
 </td>
 </tr>
 <tr>
@@ -84,7 +84,7 @@ In these cases, we list the time at which the specified talk starts, as well as 
 <tr>
 <th id="time-7" axis="time"><abbr title="2011-11-01T14:00:00">2:00</abbr>–<abbr title="2011-11-01T14:45:00">2:45</abbr></th>
 <td headers="time-7 location-1">
-<div>Incorporating Trilinos Data Classes into an Application (C. Baker) <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2011/presentations/TUG2011.pdf">pdf</a>, Video* -- 44:55, slide 31</div>
+<div>Incorporating Trilinos Data Classes into an Application (C. Baker) <a href="/pdfs/TUG2011.pdf">pdf</a>, Video* -- 44:55, slide 31</div>
 </td>
 </tr>
 <tr>
@@ -102,7 +102,7 @@ In these cases, we list the time at which the specified talk starts, as well as 
 <tr>
 <th id="time-10" axis="time"><abbr title="2011-11-01T15:30:00">3:30</abbr>–<abbr title="2011-11-01T16:15:00">4:15</abbr></th>
 <td headers="time-10 location-1">
-<div>LifeV: Applications, Design, and Parallel Framework (Simone Deparis) <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2011/presentations/lifev-presentation.pdf">pdf</a>, Video* -- 2:07:50, slide 90</div>
+<div>LifeV: Applications, Design, and Parallel Framework (Simone Deparis) <a href="/pdfs/lifev-presentation.pdf">pdf</a>, Video* -- 2:07:50, slide 90</div>
 </td>
 </tr>
 <tr>
@@ -120,7 +120,7 @@ In these cases, we list the time at which the specified talk starts, as well as 
 <tr>
 <th id="time-1" axis="time"><abbr title="2011-11-02T08:30:00">8:30</abbr>–<abbr title="2011-11-02T09:00:00">9:00</abbr></th>
 <td headers="time-1 location-1">
-<div>Next-Generation Iterative Solvers for Next-Generation Computing: Anasazi and Belos (M. Hoemmen) <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2011/presentations/AnasaziBelosTUG2011.pdf">pdf</a></div>
+<div>Next-Generation Iterative Solvers for Next-Generation Computing: Anasazi and Belos (M. Hoemmen) <a href="/pdfs/AnasaziBelosTUG2011.pdf">pdf</a></div>
 </td>
 </tr>
 <tr>
@@ -132,19 +132,19 @@ In these cases, we list the time at which the specified talk starts, as well as 
 <tr>
 <th id="time-3" axis="time"><abbr title="2011-11-02T09:20:00">9:20</abbr>–<abbr title="2011-11-02T09:40:00">9:40</abbr></th>
 <td headers="time-3 location-1">
-<div>Data Services and Trilinos: Addressing I/O Challenges for Exascale Applications (R. Oldfield) <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2011/presentations/trios-services.pptx">pptx</a></div>
+<div>Data Services and Trilinos: Addressing I/O Challenges for Exascale Applications (R. Oldfield) <a href="/pdfs/trios-services.pptx">pptx</a></div>
 </td>
 </tr>
 <tr>
 <th id="time-4" axis="time"><abbr title="2011-11-02T09:40:00">9:40</abbr>–<abbr title="2011-11-02T10:00:00">10:00</abbr></th>
 <td headers="time-4 location-1">
-<div>Building Hierarchical Toolchains for Nonlinear Analysis (R. Pawlowski) <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2011/presentations/Pawlowski_TUG_NonlinearAnalysisToolchain.pdf">pdf</a></div>
+<div>Building Hierarchical Toolchains for Nonlinear Analysis (R. Pawlowski) <a href="/pdfs/Pawlowski_TUG_NonlinearAnalysisToolchain.pdf">pdf</a></div>
 </td>
 </tr>
 <tr>
 <th id="time-5" axis="time"><abbr title="2011-11-02T10:00:00">10:00</abbr>–<abbr title="2011-11-02T10:30:00">10:30</abbr></th>
 <td headers="time-5 location-1">
-<div>Embedded Algorithms using Templates (E. Phipps) <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2011/presentations/templates.pdf">pdf</a></div>
+<div>Embedded Algorithms using Templates (E. Phipps) <a href="/pdfs/templates.pdf">pdf</a></div>
 </td>
 </tr>
 <tr>
@@ -156,7 +156,7 @@ In these cases, we list the time at which the specified talk starts, as well as 
 <tr>
 <th id="time-7" axis="time"><abbr title="2011-11-02T10:45:00">10:45</abbr>–<abbr title="2011-11-02T11:05:00">11:05</abbr></th>
 <td headers="time-7 location-1">
-<div>CVFEM and Climate VIZ applications (K. Peterson) <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2011/presentations/Intrepid_Apps_TUG2011.pdf">pdf</a>, Video</div>
+<div>CVFEM and Climate VIZ applications (K. Peterson) <a href="/pdfs/Intrepid_Apps_TUG2011.pdf">pdf</a>, Video</div>
 </td>
 </tr>
 <tr>
@@ -168,7 +168,7 @@ In these cases, we list the time at which the specified talk starts, as well as 
 <tr>
 <th id="time-9" axis="time"><abbr title="2011-11-02T11:25:00">11:25</abbr>–<abbr title="2011-11-02T11:45:00">11:45</abbr></th>
 <td colspan="1" headers="time-9">
-<div>Panzer (E. Cyr, R. Pawlowski) <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2011/presentations/PawlowskiCyr_TUG_Panzer_2011_10_v3.pdf">pdf</a>, Video* -- 35:32, slide 63</div>
+<div>Panzer (E. Cyr, R. Pawlowski) <a href="/pdfs/PawlowskiCyr_TUG_Panzer_2011_10_v3.pdf">pdf</a>, Video* -- 35:32, slide 63</div>
 </td>
 </tr>
 <tr>
@@ -180,7 +180,7 @@ In these cases, we list the time at which the specified talk starts, as well as 
 <tr>
 <th id="time-11" axis="time"><abbr title="2011-11-02T13:15:00">1:15</abbr>–<abbr title="2011-11-02T14:00:00">2:00</abbr></th>
 <td headers="time-11 location-1">
-<div>Building an Open-source Multiphysics PDE Research Tool using Trilinos (R. Pawlowski) <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2011/presentations/Pawlowski_TUG_Drekar.pdf">pdf</a>, Video</div>
+<div>Building an Open-source Multiphysics PDE Research Tool using Trilinos (R. Pawlowski) <a href="/pdfs/Pawlowski_TUG_Drekar.pdf">pdf</a>, Video</div>
 </td>
 </tr>
 <tr>
@@ -210,19 +210,19 @@ In these cases, we list the time at which the specified talk starts, as well as 
 <tr>
 <th id="time-1" axis="time" width="16%"><abbr title="2011-11-03T08:30:00">8:30</abbr>–<abbr title="2011-11-03T08:50:00">8:50</abbr></th>
 <td headers="time-1 location-1">
-<div>Generalization and externalization of the Trilinos package-based system (R. Bartlett) <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2011/presentations/TUG20111103_GeneralizationOfTrilinosSESystem.pptx">pptx</a></div>
+<div>Generalization and externalization of the Trilinos package-based system (R. Bartlett) <a href="/pdfs/TUG20111103_GeneralizationOfTrilinosSESystem.pptx">pptx</a></div>
 </td>
 </tr>
 <tr>
 <th id="time-2" axis="time"><abbr title="2011-11-03T08:50:00">8:50</abbr>–<abbr title="2011-11-03T09:10:00">9:10</abbr></th>
 <td headers="time-2 location-1">
-<div>Trilinos coding and documentation guidelines document (R. Bartlett) <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2011/presentations/TUG20111103_TrilinosCodingDocGuidelines.pptx">pptx</a></div>
+<div>Trilinos coding and documentation guidelines document (R. Bartlett) <a href="/pdfs/TUG20111103_TrilinosCodingDocGuidelines.pptx">pptx</a></div>
 </td>
 </tr>
 <tr>
 <th id="time-3" axis="time"><abbr title="2011-11-03T09:10:00">9:10</abbr>–<abbr title="2011-11-03T09:30:00">9:30</abbr></th>
 <td headers="time-3 location-1">
-<div>Trilinos TPL Support (B. Perschbacher) <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2011/presentations/FindPackage.pdf">pdf</a></div>
+<div>Trilinos TPL Support (B. Perschbacher) <a href="/pdfs/FindPackage.pdf">pdf</a></div>
 </td>
 </tr>
 <tr>
@@ -240,13 +240,13 @@ In these cases, we list the time at which the specified talk starts, as well as 
 <tr>
 <th id="time-7" axis="time"><abbr title="2011-11-03T10:30:00">10:30</abbr>–<abbr title="2011-11-03T11:00:00">11:00</abbr></th>
 <td headers="time-7 location-1">
-<div>Framework Update -- Release Issues, Deprecated Code Removal, trilinos.org, Licensing, Copyright, Subpackaging, SS Code Testing (J. Willenbring)</div>
+<div>Framework Update -- Release Issues, Deprecated Code Removal, ,trilinos.github.io Licensing, Copyright, Subpackaging, SS Code Testing (J. Willenbring)</div>
 </td>
 </tr>
 <tr>
 <th id="time-9" axis="time"><abbr title="2011-11-03T11:00:00">11:00</abbr>–<abbr title="2011-11-03T12:00:00">12:00</abbr></th>
 <td headers="time-9 location-1">
-<div>Trilinos lifecycle model 2.0 (R. Bartlett) <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2011/presentations/TUG20111103_TrilinosLifecycleModel2.0.pptx">pptx</a></div>
+<div>Trilinos lifecycle model 2.0 (R. Bartlett) <a href="/pdfs/TUG20111103_TrilinosLifecycleModel2.0.pptx">pptx</a></div>
 </td>
 </tr>
 <tr>
