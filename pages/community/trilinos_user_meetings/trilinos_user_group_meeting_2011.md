@@ -240,7 +240,7 @@ In these cases, we list the time at which the specified talk starts, as well as 
 <tr>
 <th id="time-7" axis="time"><abbr title="2011-11-03T10:30:00">10:30</abbr>–<abbr title="2011-11-03T11:00:00">11:00</abbr></th>
 <td headers="time-7 location-1">
-<div>Framework Update -- Release Issues, Deprecated Code Removal, ,trilinos.github.io Licensing, Copyright, Subpackaging, SS Code Testing (J. Willenbring)</div>
+<div>Framework Update -- Release Issues, Deprecated Code Removal, ,trilinos.org Licensing, Copyright, Subpackaging, SS Code Testing (J. Willenbring)</div>
 </td>
 </tr>
 <tr>
