@@ -1,7 +1,7 @@
 ---
 title: Parallel Programming Environments
 permalink: parralel_programming.html
-folder: capabilities
+folder: products
 ---
 
 From the very beginning of the Trilinos project, we have used lightweight abstract interfaces to access parallel computing machine information and services. The first interface was the Epetra_Comm layer, which had two basic concrete adapters, Epetra_SerialComm and Epetra_MpiComm. By writing Trilinos software on top of Epetra_Comm, the code was portable in both serial and distributed memory environments. Furthermore, nesting of the comm interfaces permitted additional flexibility.

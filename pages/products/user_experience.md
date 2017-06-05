@@ -1,7 +1,7 @@
 ---
 title: User experience
 permalink: user_experience.html
-folder: capabilities
+folder: products
 ---
 
 ## Introduction
