@@ -30,7 +30,7 @@ Note that talks will be 45 minutes, with the final 15 minutes reserved for discu
 
 Arvada to Louisiana, turn left. Get on I-40 East (left), exit on Eubank south (right). Around 5 or 6 lights, take a left at Gibson and a right at the stop sign -- Innovation Parkway. Second building on left, 1450 Innovation Parkway.
 
-[Map](http://trilinos.org/oldsite/events/trilinos_user_group_2008/csri_map.jpg) (circled in red on the right)  
+[Map](images/csri_map.jpg) (circled in red on the right)  
 [Google Maps](http://maps.google.com/maps?f=q&hl=en&q=Eubank+Blvd+SE+and+Research+Rd+SE,+Albuquerque,+NM+87111&ie=UTF8&z=17&ll=35.056989,-106.530519&spn=0.008229,0.010074&t=h&om=1) (from that intersection, east on Reasearch Rd to Innovation Pkwy)
 
 <table id="programTable" cellspacing="0" cellpadding="0">
@@ -48,13 +48,13 @@ Arvada to Louisiana, turn left. Get on I-40 East (left), exit on Eubank south (r
 <tr>
 <td>8:30 am</td>
 <td><strong>CMake Trilinos</strong><br />
-<cite>(Ross B., Esteban G.) </cite> <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2008/presentations/TUG20081021_CMakeTrilinos.pdf">[presentation pdf]</a></td>
+<cite>(Ross B., Esteban G.) </cite> <a href="/pdfs/TUG20081021_CMakeTrilinos.pdf">[presentation pdf]</a></td>
 <td rowspan="5"><strong>Epetra and Tpetra Concepts</strong><br />
 <cite>(Mike H.)</cite><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2008/presentations/HerouxEpetraConcepts.ppt">[presentation ppt]</a></td>
+<a href="/pdfs/HerouxEpetraConcepts.ppt">[presentation ppt]</a></td>
 <td rowspan="4"><strong>Daily Integration of Apps + Trilinos Dev</strong><br />
 <cite>(Ross B.)<cite><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2008/presentations/TUG20081023_APPTrilinosIntegration.pdf">[presentation pdf]</a><br />
+<a href="/pdfs/TUG20081023_APPTrilinosIntegration.pdf">[presentation pdf]</a><br />
 </cite></cite></td>
 </tr>
 <tr>
@@ -62,10 +62,10 @@ Arvada to Louisiana, turn left. Get on I-40 East (left), exit on Eubank south (r
 <td rowspan="6"><strong>Progress, Challenges, Future Plans, and Capability areas</strong><br />
 <cite>(Heroux,capability leaders) </cite><br />
 <a href="http://trilinos.sandia.gov/events/trilinos_user_group_2008/presentations/1-HerouxTrilinosProgressChallengesFutures.ppt">[presentation ppt]</a><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2008/presentations/6-HerouxScalableLinearAlgebra.ppt">[presentation ppt]</a><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2008/presentations/TUG08_ENATCapabilityOverview.ppt">[presentation ppt]</a><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2008/presentations/TUG2008.pdf">[presentation pdf]</a><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2008/presentations/TUG20081021_SoftwareEngineeringCapabilitiesArea.pdf">[presentation pdf]</a></td>
+<a href="/pdfs/6-HerouxScalableLinearAlgebra.ppt">[presentation ppt]</a><br />
+<a href="/pdfs/TUG08_ENATCapabilityOverview.ppt">[presentation ppt]</a><br />
+<a href="/pdfs/TUG2008.pdf">[presentation pdf]</a><br />
+<a href="/pdfs/TUG20081021_SoftwareEngineeringCapabilitiesArea.pdf">[presentation pdf]</a></td>
 </tr>
 <tr>
 <td>9:30 am</td>
@@ -75,7 +75,7 @@ Arvada to Louisiana, turn left. Get on I-40 East (left), exit on Eubank south (r
 <tr>
 <td rowspan="2">9:45 am</td>
 <td rowspan="2"><strong>Memory Management with Teuchos</strong><br />
-<cite>(Ross B.)</cite> <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2008/presentations/TUG20081022_Teuchos_MemoryManagement.pdf">[presentation pdf]</a></td>
+<cite>(Ross B.)</cite> <a href="/pdfs/TUG20081022_Teuchos_MemoryManagement.pdf">[presentation pdf]</a></td>
 </tr>
 <tr>
 <td rowspan="2">10:15 am</td>
@@ -90,7 +90,7 @@ Arvada to Louisiana, turn left. Get on I-40 East (left), exit on Eubank south (r
 <cite>(Roger P.)</cite></td>
 <td rowspan="4"><strong>Maintaining Stability of Trilinos Dev -- Stable vs Experimental Code</strong><br />
 <cite>(Ross B.)</cite><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2008/presentations/TUG20081023_TrilinosStableVsExperimentalCode.pdf">[presentation pdf]</a></td>
+<a href="/pdfs/TUG20081023_TrilinosStableVsExperimentalCode.pdf">[presentation pdf]</a></td>
 </tr>
 <tr>
 <td rowspan="3">11:00 am</td>
@@ -109,21 +109,21 @@ Arvada to Louisiana, turn left. Get on I-40 East (left), exit on Eubank south (r
 <cite>(Carter E.)</cite><br />
 <strong>Inline meshing in PamGen </strong><br />
 <cite>(David H.)</cite><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2008/presentations/TUG-08-DMH.ppt">[presentation ppt]</a><br />
+<a href="/pdfs/TUG-08-DMH.ppt">[presentation ppt]</a><br />
 <strong>Load balancing in Zoltan/Isorropia </strong><br />
 <cite>(Erik B.)</cite><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2008/presentations/Boman-TUG08.ppt">[presentation ppt]</a></td>
+<a href="/pdfs/Boman-TUG08.ppt">[presentation ppt]</a></td>
 <td rowspan="2"><strong>FEI</strong><br />
 <cite>(Alan W.)</cite></td>
 <td rowspan="2"><strong>CMake for Developers</strong><br />
 <cite>(Esteban G., Ross B.)</cite><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2008/presentations/TUG20081023_CMakeForDevelopers.pdf">[presentation pdf]</a></td>
+<a href="/pdfs/TUG20081023_CMakeForDevelopers.pdf">[presentation pdf]</a></td>
 </tr>
 <tr>
 <td rowspan="2">1:45 pm</td>
 <td rowspan="4"><strong>Peta/Exascale Trilinos</strong><br />
 <cite>(Mike H.)</cite><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2008/presentations/HerouxExtremeScaleTrilinos.ppt">[presentation ppt]</a></td>
+<a href="/pdfs/HerouxExtremeScaleTrilinos.ppt">[presentation ppt]</a></td>
 <td rowspan="2"><strong>TDD to improve SW Quality</strong><br />
 <cite>(Todd C.)</cite></td>
 </tr>
@@ -131,7 +131,7 @@ Arvada to Louisiana, turn left. Get on I-40 East (left), exit on Eubank south (r
 <td rowspan="2">2:15 pm</td>
 <td rowspan="2"><strong>Ordering and coloring in Isorropia</strong><br />
 <cite>(Cedric C.)</cite><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2008/presentations/Chevalier-TUG08.pdf">[presentation pdf]</a></td>
+<a href="/pdfs/Chevalier-TUG08.pdf">[presentation pdf]</a></td>
 <td rowspan="4"><strong>Trilinos strategic planning (capability based)</strong></td>
 </tr>
 <tr>
@@ -156,10 +156,10 @@ Arvada to Louisiana, turn left. Get on I-40 East (left), exit on Eubank south (r
 <td rowspan="3">3:45 pm</td>
 <td rowspan="3"><strong>Trilinos Tools for Instrusive Polynomial Chaos</strong><br />
 <cite>(Eric P.)</cite><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2008/presentations/Stokhos%20TUG%20v2.pdf">[presentation pdf]</a><br />
+<a href="/pdfs/StokhosTUGv2.pdf">[presentation pdf]</a><br />
 <strong>Building a PDE code from Trilinos Components and TriKota</strong><br />
 <cite>(Andy S.)</cite><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2008/presentations/TUG08_PDECode.ppt">[presentation ppt]</a></td>
+<a href="/pdfs/TUG08_PDECode.ppt">[presentation ppt]</a></td>
 </tr>
 </tbody>
 </table>
