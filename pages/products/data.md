@@ -13,20 +13,6 @@ The Trilinos I/O Support capability area provides general I/O support for applic
 
 ## Trilinos Meshes, Geometry and Load Balancing Capabilities
 
-> [Introduction](#Intro)
-> 
-> [Meshes and Geometry](#Mesh)
-> 
-> > [PAMGEN: Inline Meshing](#PAMGEN)  
-> > [phdMesh: Unstructured Mesh Database](#phdMesh)  
-> > [ABMesh: Array-Based Mesh Database](#ABMesh)  
-> > [TUCASA: Parallel Mesh File Interface](#TUCASA)
-> 
-> [Load Balancing Capabilities](#LB)
-> 
-> > [Isorropia: Matrix Partitioning, Ordering and Coloring](#Isorropia)  
-> > [Zoltan: Dynamic load balancing, partitioning, ordering and coloring](#Zoltan)
-
 ### Introduction
 
 The goal of the Meshes, Geometry and Load-Balancing Capability Area is to provide libraries, tools, and common interfaces for creating, accessing and manipulating mesh and matrix data within applications. This capability area was created in FY08; several related packages were released in Trilinos v9\. Geometry and mesh efforts include in-application meshing tools for simple geometries, mesh databases, and mesh I/O and redistribution libraries. Load-balancing capabilities include partitioning and repartitioning for matrices and meshes, as well as other types of data (particles, circuits, etc.). The following activities are planned for this capability area:
@@ -96,7 +82,7 @@ mesh entities ([Zoltan](http://trilinos.org/oldsite/CapabilityWebpages/GeomMeshL
     </div>
 </div>
 
-#### <a name="Isorropia"></a>Isorropia: Matrix Partitioning
+#### Isorropia: Matrix Partitioning
 
 <a name="Isorropia"></a>Point of Contact: [E. Boman](http://www.sandia.gov/~egboman/) (SNL)  
 Isorropia Page: [http://trilinos.sandia.gov/packages/isorropia/](isorropia.html)  

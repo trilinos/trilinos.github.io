@@ -297,7 +297,7 @@ Y
 <a name="Linear_solver_interfaces"></a> 
 ## <span style="text-decoration: underline;">Linear solver interfaces</span>
 
-### <a name="Stratimikos"></a>  **Stratimikos****: High level linear solver interface**
+### **Stratimikos**: High level linear solver interface
 
 Point-of-contact: Roscoe Bartlett (bartlettra@ornl.gov)  
 [http://trilinos.sandia.gov/packages/stratimikos](stratimikos.html)
@@ -312,7 +312,7 @@ Stratimikos is compatible with Epetra and Tpetra.
 
 ## <span style="text-decoration: underline;">Iterative linear and eigen-solvers</span>
 
-### <a name="AztecOO"></a> **AztecOO****: Preconditioners and Krylov subspace methods**
+### **AztecOO**: Preconditioners and Krylov subspace methods
 
 Point-of-contact: Mike Heroux (maherou@sandia.gov)  
 [https://trilinos.github.io/aztecoo.html](aztecoo.html)
@@ -321,7 +321,7 @@ AztecOO includes a number of Krylov iterative methods such as conjugate gradient
 
 AztecOO is compatible with Epetra only.
 
-### **Belos: Classical and block Krylov subspace methods**
+### **Belos**: Classical and block Krylov subspace methods
 
 Points-of-contact: Heidi Thornquist (hkthorn@sandia.gov) and Mike Parks (mlparks@sandia.gov)  
 [https://trilinos.github.io/belos.html](belos.html)
@@ -340,7 +340,7 @@ Belos provides next-generation iterative linear solvers and a powerful linear so
 
 Belos is compatible with Epetra and Tpetra.
 
-### **Anasazi****: parallel** **eigen****-solvers**
+### **Anasazi**: parallel eigen-solvers
 
 Point-of-contact: Heidi Thornquist (hkthorn@sandia.gov)  
 [https://trilinos.github.io/anasazi.html](anasazi.html)
@@ -351,7 +351,7 @@ One of the goals of Anasazi is to allow the user the flexibility to specify the 
 
 Anasazi is compatible with Epetra and Tpetra.
 
-### **Komplex****: Complex-valued system solver**
+### **Komplex**: Complex-valued system solver
 
 Points-of-contact: Mike Heroux (maherou@sandia.gov) and David Day (dmday@sandia.gov)  
 [https://trilinos.github.io/komplex.html](komplex.html)
@@ -370,9 +370,9 @@ KOMPLEX is an add-on module to AZTEC that allows users to solve complex-valued l
 
 <a name="_Direct_linear_solvers"></a>
 
-### <span style="text-decoration: underline;">Direct linear solvers</span>
+## <span style="text-decoration: underline;">Direct linear solvers</span>
 
-#### **Amesos****: direct sparse linear solver interface**
+### **Amesos**: direct sparse linear solver interface
 
 Point-of-contact: Siva Rajamanickam (srajama@sandia.gov)  
 [https://trilinos.github.io/amesos.html](amesos.html)
@@ -395,7 +395,7 @@ Point-of-contact: Siva Rajamanickam (srajama@sandia.gov)
 
 Amesos2 can be considered a templated version of Amesos that supports a wider variety of scalar and index types. Amesos2 provides two internal serial direct solvers, KLU2 (as of release 11.12) and Basker (as of release 11.14). Users of prior releases will need a third-party direct solver, such as SuperLU.
 
-### **Pliris****: direct dense linear solver**
+### **Pliris**: direct dense linear solver
 
 Point-of-contact: Joe Kotulski (jdkotul@sandia.gov)  
 [https://trilinos.github.io/pliris.html](pliris.html)
@@ -408,7 +408,7 @@ The matrix is torus-wrap mapped onto the processors(transparent to the user) and
 
 ## <span style="text-decoration: underline;">Preconditioners</span>
 
-### <a name="ShyLU"></a> **ShyLU****: Hybrid iterative/direct Schur complement solver**
+### **ShyLU**: Hybrid iterative/direct Schur complement solver
 
 Points-of-contact: Erik Boman (egboman@sandia.gov) and Siva Rajamanickam (srajama@sandia.gov)
 
@@ -416,14 +416,14 @@ ShyLU is designed as a node-level solver and can use both MPI and threads in sev
 
 ShyLU uses a hybrid direct/iterative approach based on Schur complements. The goal is to provide robustness similar to sparse direct solvers, but memory usage more similar to preconditioned iterative solvers.
 
-### **Teko****: Block preconditioning framework**
+### **Teko**: Block preconditioning framework
 
 Point-of-contact: Eric Cyr (eccyr@sandia.gov)  
 [https://trilinos.github.io/teko.html](teko.html)
 
 Teko is a package for development and implementation of block preconditioners. This includes support for manipulation and setup of block operators. Furthermore tools exist to support decomposition of a fully coupled operator. Additionally, facilities that allow the construction of approximate inverse operators using the full complement of available preconditioners and solvers are available in Teko. Finally, a small number of generic block preconditioners has been implemented in Teko, including block Jacobi, and block Gauss-Seidel. For the Navier-Stokes equation, Teko has implementations of SIMPLE, PCD and LSC.
 
-### **Ifpack****: Point preconditioning, incomplete factorizations, and classical domain decomposition**
+### **Ifpack**: Point preconditioning, incomplete factorizations, and classical domain decomposition
 
 Points-of-contact: Mike Heroux (maherou@sandia.gov) and Siva Rajamanickam (srajama@sandia.gov)  
 [https://trilinos.github.io/ifpack.html](ifpack.html)
@@ -434,7 +434,7 @@ Ifpack contains one-level domain decomposition preconditioners of overlapping ty
 
 Ifpack is compatible with Epetra only.
 
-### <a name="Ifpack2"></a> **Ifpack2**: Point preconditioning, incomplete factorizations
+### **Ifpack2**: Point preconditioning, incomplete factorizations
 
 Points-of-contact: Mark Hoemmen (mhoemme@sandia.gov) , Chris Siefert ([csiefer@sandia.gov](mailto:csiefer@sandia.gov)), Jonathan Hu ([jhu@sandia.gov](mailto:jhu@sandia.gov))
 
@@ -465,7 +465,7 @@ ML can also be used as a framework to generate new multigrid methods. Using MLâ€
 
 ML is compatible with Epetra only.
 
-### <a name="MueLu"></a> **MueLu**: multigrid framework
+### **MueLu**: multigrid framework
 
 Points-of-contact: Ray Tuminaro (rstumin@sandia.gov), Jonathan Hu (jhu@sandia.gov), and Andrey Prokopenko ([aprokop@sandia.gov](mailto:aprokop@sandia.gov))  
 [https://trilinos.github.io/muelu.html](muelu.html)

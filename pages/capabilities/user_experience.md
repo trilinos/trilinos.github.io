@@ -4,19 +4,6 @@ permalink: user_experience.html
 folder: capabilities
 ---
 
-## Trilinos User Experience Capability Area
-
-> [Introduction](#Intro)  
-> [Application Support](#AppSupport)  
-> [Documentation, Examples and Tutorials](#DocExTut)  
-> [Web Site Design](#WebSiteDesign)  
-> [Simplified Layers and Skins](#LayersAndSkins)  
-> [Human/Computer Interaction](#HCI)
-
-<a name="Intro"></a>
-
-* * *
-
 ## Introduction
 
 The User Experience capability area is aimed at improving the ability of developers who use Trilinos to use it effectively and efficiently. Our goals are to make documentation, examples, and tutorials clear, accurate and easy to find; to improve interfaces; and to foster relationships between Trilinos and application developers.
