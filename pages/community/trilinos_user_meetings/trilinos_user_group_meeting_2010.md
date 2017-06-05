@@ -5,9 +5,10 @@ folder: community
 ---
 
 ## Trilinos User Group Meeting  
+
     November 1st -- November 4th, 2010    
-    
-Albuquerque, NM  
+
+Albuquerque, NM      
 Contact: [Mike Heroux](mailto:maherou@sandia.gov)
 
 ## Meeting Background

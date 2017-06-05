@@ -5,8 +5,11 @@ folder: community
 ---
 
 ## Trilinos User Group Meeting 2011  
+
     October 31st -- November 2nd: Tutorial and User Days  
     November 3rd: Developer Day  
+
+
 Albuquerque, NM  
 Contact: [Mike Heroux](mailto:maherou@sandia.gov)
 
@@ -14,7 +17,7 @@ Contact: [Mike Heroux](mailto:maherou@sandia.gov)
 
 The TUG 2011 schedule is shown below. Links to slides for some talks are available. Streaming Video is now available for most user-focused talks.
 
-*Denotes that the streaming video link points to a collection of TUG videos, and the specified talk is not the first in the collection. 
+Denotes that the streaming video link points to a collection of TUG videos, and the specified talk is not the first in the collection. 
 In these cases, we list the time at which the specified talk starts, as well as the slide number that the talk starts on. 
 (The slide numbers can be seen by hovering over the small slides near the bottom of the screen.)
 

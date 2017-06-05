@@ -9,8 +9,7 @@ folder: community
 **Sandia CSRI 90**  
 Contact: [Roscoe Bartlett](mailto:rabartl@sandia.gov)
 
-## Schedule of talks:
-
+## Schedule of talks
 
 
 Presentation One:

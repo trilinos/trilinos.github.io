@@ -8,8 +8,8 @@ folder: community
 <h2>Quick Start for Beginners </h2>
 </center>
 
-    **September 25th -- 27th, 2013** 
-    **Warsaw University of Technology Warsaw, Poland**
+    September 25th -- 27th, 2013 
+    Warsaw University of Technology Warsaw, Poland
 
 The course is intended for beginners and new users of Trilinos. The program is focused mainly on the basic Trilinos packages, handling vectors and matrices, defining maps, solution of systems of linear equations both in serial and parallel. Also, a few excercices on nonlinear problems and other useful Trilinos options will be shown.
 
