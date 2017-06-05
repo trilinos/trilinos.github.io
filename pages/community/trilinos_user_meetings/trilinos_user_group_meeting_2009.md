@@ -34,7 +34,7 @@ Note that talks sheduled for one hour will be 45 minutes, with the final 15 minu
 
 Arvada to Louisiana, turn left. Get on I-40 East (left), exit on Eubank south (right). Around 5 or 6 lights, take a left at Gibson and a right at the stop sign -- Innovation Parkway. Second building on left, 1450 Innovation Parkway.
 
-[Map](http://trilinos.org/oldsite/events/trilinos_user_group_2009/csri_map.jpg) (circled in red on the right)  
+[Map](images/csri_map.jpg) (circled in red on the right)  
 [Google Maps](http://maps.google.com/maps?f=q&hl=en&q=Eubank+Blvd+SE+and+Research+Rd+SE,+Albuquerque,+NM+87111&ie=UTF8&z=17&ll=35.056989,-106.530519&spn=0.008229,0.010074&t=h&om=1) (from that intersection, east on Reasearch Rd to Innovation Pkwy)
 
 ## Schedule
@@ -66,7 +66,7 @@ Arvada to Louisiana, turn left. Get on I-40 East (left), exit on Eubank south (r
 <td><strong>Building Trilinos with CMake</strong><br />
 <cite>(Brent P.)</cite></td>
 <td rowspan="1"><strong>Phalanx</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2009/presentations/TUG_Phalanx_2009_Web.pdf">[presentation pdf]</a><br />
+<a href="/pdfs/TUG_Phalanx_2009_Web.pdf">[presentation pdf]</a><br />
 <cite>(Roger P.)</cite><br />
 <strong>Shards</strong><br />
 <cite>(Carter E.)</cite></td>
@@ -82,7 +82,7 @@ Arvada to Louisiana, turn left. Get on I-40 East (left), exit on Eubank south (r
 <td rowspan="2"><strong>Introductions, Progress, Challenges, and Future Plans</strong><br />
 <cite>(Mike H.)</cite></td>
 <td rowspan="3"><strong>Capability Couplings</strong><br />
-<a href="http://trilinos.org/oldsite/packages/intrepid/supplementary/TUG09_Intrepid_Tutorial.pdf">[presentation pdf]</a><br />
+<a href="/pdfs/TUG09_Intrepid_Tutorial.pdf">[presentation pdf]</a><br />
 <cite>(Kara P.)</cite></td>
 </tr>
 <tr>
@@ -91,10 +91,10 @@ Arvada to Louisiana, turn left. Get on I-40 East (left), exit on Eubank south (r
 <tr>
 <td>9:30 am</td>
 <td rowspan="2"><strong>4 Capability Area Summaries</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2009/presentations/LinearEigenSystems_Overview.pdf">[Linear &amp; Eigen Solvers pdf]</a><br />
+<a href="/pdfs/LinearEigenSystems_Overview.pdf">[Linear &amp; Eigen Solvers pdf]</a><br />
 <a href="http://www.cs.sandia.gov/%7Erabartl/TUG20091103_SoftwareEngineeringCapabilitiesArea.pdf">[SE Technologies and Integration pdf</a> <a href="http://www.cs.sandia.gov/%7Erabartl/TUG20091103_SoftwareEngineeringCapabilitiesArea.ppt">ppt]</a></td>
 <td rowspan="2"><strong>OSKI</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2009/presentations/oski.pdf">[presentation pdf]</a><br />
+<a href="/pdfs/oski.pdf">[presentation pdf]</a><br />
 <cite>(Mark Hoemmen)</cite></td>
 <td rowspan="2"><strong>Trilinos Framework Update and Policy Page Review</strong><br />
 <cite>(Jim W.)</cite></td>
@@ -102,7 +102,7 @@ Arvada to Louisiana, turn left. Get on I-40 East (left), exit on Eubank south (r
 <tr>
 <td>9:45 am</td>
 <td rowspan="1"><strong>Mesquite</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2009/presentations/Msq-Capabilities-TUG.pdf">[presentation pdf]</a><br />
+<a href="/pdfs/Msq-Capabilities-TUG.pdf">[presentation pdf]</a><br />
 <cite>(Pat K.)</cite></td>
 </tr>
 <tr>
@@ -116,7 +116,7 @@ Arvada to Louisiana, turn left. Get on I-40 East (left), exit on Eubank south (r
 <td>10:30 am</td>
 <td rowspan="2"><strong>3 Capability Area Summaries</strong></td>
 <td rowspan="2"><strong>What&#8217;s New in Isorropia</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2009/presentations/Boman-TUG09.pdf">[presentation pdf]</a><br />
+<a href="/pdfs/Boman-TUG09.pdf">[presentation pdf]</a><br />
 <cite>(Erik B.)</cite></td>
 <td rowspan="2"><strong>Summary Kernel Discussion</strong></td>
 <td rowspan="4"><strong>Git Training</strong><br />
@@ -128,12 +128,12 @@ Arvada to Louisiana, turn left. Get on I-40 East (left), exit on Eubank south (r
 <tr>
 <td>11:00 am</td>
 <td rowspan="2"><strong>Mature Nonlinear Analysis Capabilities: NOX, LOCA, Rythmos, Sacado</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2009/presentations/TUG_NOX_2009_Web.pdf">[NOX pdf]</a><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2009/presentations/LOCA_TUG09.pdf">[LOCA pdf]</a><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2009/presentations/SacadoTUG09.pdf">[Sacado pdf]</a><br />
+<a href="/pdfs/TUG_NOX_2009_Web.pdf">[NOX pdf]</a><br />
+<a href="/pdfs/LOCA_TUG09.pdf">[LOCA pdf]</a><br />
+<a href="/pdfs/SacadoTUG09.pdf">[Sacado pdf]</a><br />
 <cite>(Roger P, Eric P, Todd C)</cite></td>
 <td rowspan="3"><strong>Belos</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2009/presentations/TUG_2009_Belos.pdf">[presentation pdf]</a><br />
+<a href="/pdfs/TUG_2009_Belos.pdf">[presentation pdf]</a><br />
 <cite>(Mike P.)</cite><br />
 <strong>Introducing Tpetra and Kokkos</strong><br />
 <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2009/abstracts/wednesday_11-20.html">[abstract]</a><br />
@@ -178,7 +178,7 @@ Arvada to Louisiana, turn left. Get on I-40 East (left), exit on Eubank south (r
 <tr>
 <td>1:30 pm</td>
 <td rowspan="1"><strong>Embedded UQ with Stokhos</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2009/presentations/StokhosTUG09.pdf">[presentation pdf]</a><br />
+<a href="/pdfs/StokhosTUG09.pdf">[presentation pdf]</a><br />
 <cite>(Eric P.)</cite><br />
 <strong>Library Mode Dakota via TriKota</strong><br />
 <cite>(Andy S.)</cite></td>
@@ -204,7 +204,7 @@ Arvada to Louisiana, turn left. Get on I-40 East (left), exit on Eubank south (r
 <tr>
 <td>2:45 pm</td>
 <td rowspan="3"><strong>Intro to Optika</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2009/presentations/optikapresentation3.pdf">[presentation pdf </a> <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2009/presentations/optikapresentation3.ppt">ppt]</a><br />
+<a href="/pdfs/optikapresentation3.pdf">[presentation pdf </a> <a href="/pdfs/optikapresentation3.ppt">ppt]</a><br />
 <cite>(Kurtis N.)</cite></td>
 </tr>
 <tr>
@@ -226,7 +226,7 @@ Arvada to Louisiana, turn left. Get on I-40 East (left), exit on Eubank south (r
 <tr>
 <td>3:45 pm</td>
 <td><strong>Teko: A Package for Mulitphysics Preconditioners</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2009/presentations/TUG_Teko_2009.pdf">[presentation pdf]</a><br />
+<a href="/pdfs/TUG_Teko_2009.pdf">[presentation pdf]</a><br />
 <cite>(User Talk -- Eric Cyr)</cite></td>
 </tr>
 <tr>
