@@ -4,7 +4,9 @@ permalink: epetraext.html
 folder: packages
 ---
 
-![](http://trilinos.org/oldsite/packages/epetra/epetra.jpg) **Welcome to the EpetraExt Home**
+![](images/epetra.jpg) 
+
+**Welcome to the EpetraExt Home**
 
 EpetraExt provides the fundamental construction routines and services function that are required for serial and parallel linear algebra libraries. EpetraExt provides the underlying foundation for all Trilinos solvers.
 

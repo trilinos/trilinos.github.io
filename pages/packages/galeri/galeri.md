@@ -4,15 +4,19 @@ permalink: galeri.html
 folder: packages
 ---
 
-![Galeri Logo](http://trilinos.org/oldsite/packages/galeri/galeri.png)
+![Galeri Logo](images/galeri.png)
 
 Galeri: Finite Element and Matrix Generation Package
 
 _Loosely translated, the Greek term “Galeri” simply means **“Gallery”**._
 
-The Trilinos package **Galeri** contains a suite of utilities and classes to generate a variety of (distributed) linear systems. Galeri’s functionalities are very close to that of the MATLAB’s gallery() function.
+The Trilinos package **Galeri** contains a suite of utilities and classes to generate a variety of (distributed) linear systems. 
+Galeri’s functionalities are very close to that of the MATLAB’s gallery() function.
 
-Several well-know finite element and finite difference matrices can be generated using only a few simple code lines. For a quick overview of Galeri, see [here](http://trilinos.org/oldsite/packages/galeri/slides-overview.html). You can also give a look to the example below, which generates a matrix corresponding to a <tt>nx * ny</tt> Cartesian grid, divided across <tt>mx * my</tt> processors (so that <tt>Comm.NumProc() = mx * my</tt>).:
+Several well-know finite element and finite difference matrices can be generated using only a few simple code lines. 
+For a quick overview of Galeri, see [here](http://trilinos.org/oldsite/packages/galeri/slides-overview.html). 
+You can also give a look to the example below, which generates a matrix corresponding to a <tt>nx * ny</tt> Cartesian grid, 
+divided across <tt>mx * my</tt> processors (so that <tt>Comm.NumProc() = mx * my</tt>).:
 
 
 

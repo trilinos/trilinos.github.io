@@ -7,7 +7,7 @@ folder: packages
 **The ML API: A C++ Framework for the Development of Scalable Multilevel and Domain Decomposition Preconditioners based on Aggregation**  
 MLAPI is an object oriented framework that enables the development and usage of efficient, scalable and portable implementations of multilevel preconditioners for general distributed sparse matrices, in both serial and parallel environments. To learn more about MLAPI, see the [ACM/TOMS article](http://dx.doi.org/10.1145/1163641.1163643).
 
-The main feature of this framework is the use of several programming paradigms for the different implementation layes, with a strong emphasis on object oriented classes and operator overloading for the top layer, and optimized FORTRAN and C code for the layers underneath. In particular, MLAPI takes advantage of [ML](http://trilinos.org/packages/ml/) for all computationally intensive tasks.
+The main feature of this framework is the use of several programming paradigms for the different implementation layes, with a strong emphasis on object oriented classes and operator overloading for the top layer, and optimized FORTRAN and C code for the layers underneath. In particular, MLAPI takes advantage of [ML](ml.html) for all computationally intensive tasks.
 
 MLAPI has been designed with the following goals in mind:
 

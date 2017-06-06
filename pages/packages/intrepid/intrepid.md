@@ -4,7 +4,7 @@ permalink: intrepid.html
 folder: packages
 ---
 
-![](http://trilinos.org/oldsite/packages/intrepid/images/intrepid-balloon.jpg)
+![](images/intrepid-balloon.jpg)
 
 Welcome to the Intrepid Home
 

@@ -34,10 +34,10 @@ Research on mesh optimization performed by the present group of researchers has 
 <div class="row">
     <div class="col-sm-6">
         <img border="0" alt="Trilinos Team" src="images/carotid1.gif" width="60" height="60"> <br>
-        <img border="0" alt="Trilinos Team" src="images/cell10-mesh1.gif" width="60" height="60">       
+        Mesh on arteriovenous graft      
     </div>
     <div class="col-sm-6">
-        Mesh on arteriovenous graft<>br
+        <img border="0" alt="Trilinos Team" src="images/cell10-mesh1.gif" width="60" height="60"> <br>
         Quarter-section of accelerator cavity
     </div>
 </div>

@@ -4,7 +4,7 @@ permalink: ml.html
 folder: packages
 ---
 
-![ML](http://trilinos.org/oldsite/packages/ml/ml.jpg)
+![ML](images/ml.jpg)
 
 Welcome to the homepages for ML, Sandia’s main multigrid preconditioning package. ML is designed to solve large sparse linear systems of equations arising primarily from elliptic PDE discretizations. ML is used to define and build multigrid solvers and preconditioners, and it contains black-box classes to construct highly-scalable smoothed aggregation preconditioners. ML preconditioners have been used on thousands of processors for a variety of problems, including the incompressible Navier-Stokes equations with heat and mass transfer, linear and nonlinear elasticity equations, the Maxwell equations, semiconductor equations, and more.
 

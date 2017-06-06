@@ -4,7 +4,7 @@ permalink: moertel.html
 folder: packages
 ---
 
-![Moertel](http://trilinos.org/oldsite/packages/moertel/moertel.png)
+![Moertel](images/moertel.png)
 
 Welcome to the Moertel package home page
 

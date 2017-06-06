@@ -4,7 +4,7 @@ permalink: muelu.html
 folder: packages
 ---
 
-[![logo_Blue](http://trilinos.org/wordpress/wp-content/uploads/2014/10/logo_Blue1.png)](http://trilinos.org/wordpress/wp-content/uploads/2014/10/logo_Blue1.png)
+[logo_Blue](images/logo_Blue1.png)
 
 **Welcome to MueLu, the Trilinos multigrid framework!**
 

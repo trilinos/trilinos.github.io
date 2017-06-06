@@ -10,7 +10,7 @@ Epetra provides the fundamental construction routines and services function that
 
 <span style="text-decoration: underline;">**Epetra Publications**</span>
 
-*   [EpetraPerformance Optimization Guide (.pdf)](http://trilinos.org/wordpress/wp-content/uploads/2014/10/EpetraPerformanceGuide.pdf) -- A guide to getting the best performance out of Epetra.
-*   [Epetra Coding Guidelines (.pdf)](http://trilinos.org/oldsite/packages/epetra/EpetraCodingGuidelines.pdf) -- Coding Guidelines for developers of Epetra.
-*   [Supporting 64-bit global indices in Epetra and other Trilinos packages -- Techniques used and lessons learned (.pdf)](http://trilinos.org/oldsite/packages/epetra/Epetra64HowTo.pdf) -- A description of the changes required to support 64-bit global indices in Epetra and how the functionality can be used.
-*   [Epetra/OSKI Interface (.pdf)](http://trilinos.org/oldsite/packages/epetra/IanKarlin.pdf) -- Overview and Performance Analysis of the Epetra/OSKI Matrix Class in Trilinos
+*   [EpetraPerformance Optimization Guide (.pdf)](pdfs/EpetraPerformanceGuide.pdf) -- A guide to getting the best performance out of Epetra.
+*   [Epetra Coding Guidelines (.pdf)](pdfs/EpetraCodingGuidelines.pdf) -- Coding Guidelines for developers of Epetra.
+*   [Supporting 64-bit global indices in Epetra and other Trilinos packages -- Techniques used and lessons learned (.pdf)](pdfs/Epetra64HowTo.pdf) -- A description of the changes required to support 64-bit global indices in Epetra and how the functionality can be used.
+*   [Epetra/OSKI Interface (.pdf)](pdfs/IanKarlin.pdf) -- Overview and Performance Analysis of the Epetra/OSKI Matrix Class in Trilinos
