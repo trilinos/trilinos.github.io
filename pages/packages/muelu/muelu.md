@@ -32,13 +32,13 @@ MueLu is extensible and allows for the research and development of new multigrid
 *   **Broad range of supported platforms:** MueLu runs on wide variety of architectures, from desktop workstations to parallel Linux clusters and supercomputers.
 *   **Open source:** MueLu is freely available through a [simplified BSD license](http://trilinos.org/docs/dev/packages/muelu/doc/html/index.html#muelu_copyright).
 
-If you are interested in using MueLu for your research or want to contribute, please contact any of the [MueLu developers](http://trilinos.org/packages/muelu/muelu-team "MueLu Team").
+If you are interested in using MueLu for your research or want to contribute, please contact any of the [MueLu developers](muelu_team.html "MueLu Team").
 
 ### <span style="text-decoration: underline;">Helpful Links</span>
 
 *   MueLu is governed by a [simplified BSD license](http://trilinos.org/docs/dev/packages/muelu/doc/html/index.html#muelu_copyright).
-*   [Documentation](http://trilinos.org/packages/muelu/muelu-documentation/ "Documentation") (User’s Guide, [Tutorial](http://trilinos.org/packages/muelu/muelu-tutorial/), [Doxygen](http://trilinos.org/docs/dev/packages/muelu/doc/html/index.html "MueLu Doxygen"))
-*   The [MueLu development team](http://trilinos.org/packages/muelu/muelu-team "MueLu Team").
-*   [How to contact](http://trilinos.org/packages/muelu/muelu-contact-us "MueLu Documentation") the MueLu team.
-*   [How to cite MueLu](http://trilinos.org/packages/muelu/muelu-citation/ "MueLu citation").
+*   [Documentation](muelu_documentation.html "Documentation") (User’s Guide, [Tutorial](muelu_tutorial.html), [Doxygen](http://trilinos.org/docs/dev/packages/muelu/doc/html/index.html "MueLu Doxygen"))
+*   The [MueLu development team](muelu_team.html "MueLu Team").
+*   [How to contact](muelu_contact.html "MueLu Documentation") the MueLu team.
+*   [How to cite MueLu](muelu_citation.html "MueLu citation").
 *   [Summary of MueLu testing dashboard](http://testing.sandia.gov/cdash/index.php?project=Trilinos&subproject=MueLu)

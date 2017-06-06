@@ -1,6 +1,6 @@
 ---
 title: RTOp
-permalink: rotp.html
+permalink: rtop.html
 folder: packages
 ---
 

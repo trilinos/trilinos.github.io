@@ -10,14 +10,14 @@ Welcome to the homepages for ML, Sandia’s main multigrid preconditioning packa
 
 Please use the links below to navigate the ML documentation:
 
-*   An [overview](http://trilinos.org/packages/ml#ml-overview) of ML.
+*   An [overview](#ml-overview) of ML.
 *   [Documentation](http://trilinos.org/docs/dev/packages/ml/doc/html/index.html) generated directly from ML’s source code by Doxygen.
-*   [User Guides](http://trilinos.org/packages/ml/ml-publications/#ml-user-guides "ML Publications").
-*   The [ML API](http://trilinos.org/packages/ml/ml-api/).
+*   [User Guides](ml-publications.html#ml-user-guides "ML Publications").
+*   The [ML API](ml_api.html).
 *   [Mail lists](http://trilinos.org/oldsite/packages/ml/mail_lists.html) for users and developers.
-*   Relevant [papers](http://trilinos.org/packages/ml/ml-publications/ "ML Publications") and [citations](http://trilinos.org/packages/ml/ml-citations/ "ML Citations").
+*   Relevant [papers](ml-publications.html "ML Publications") and [citations](http://trilinos.org/packages/ml/ml-citations/ "ML Citations").
 *   [Who are the ML developers?](http://trilinos.org/oldsite/packages/ml/team.html)
-*   [How to cite ML](#ml-how-to-cite).
+*   [How to cite ML](ml_citations.html).
 
 ML documentation is created and maintained using Doxygen. Click [here](http://trilinos.sandia.gov/packages/ml/doxygen/development/inline/index.html) to access the latest Doxygen documentation, containing details about ML and its classes, examples of usage, how to interface with other Trilinos packages, and more.
  
@@ -68,18 +68,18 @@ Our primary goal has been to provide state-of-the-art iterative methods that per
     *   Polynomial-based smoothers
     *   One step CG smoothing
     *   Two-stage distributed relaxation hybrid for eddy current equations
-    *   Any [AztecOO](http://trilinos.org/packages/aztecoo/) preconditioner
-    *   Any [IFPACK](http://trilinos.org/packages/ifpack/) preconditioner
-    *   Any [Amesos](http://trilinos.org/packages/amesos/) solver
+    *   Any [AztecOO](aztecoo.html) preconditioner
+    *   Any [IFPACK](ifpack.html) preconditioner
+    *   Any [Amesos](amesos.html) solver
 
     as coarse solver
 
     *   Sparse approximate inverse interface
-*   A set of efficient and user-friendly, MATLAB-like interface, called [MLAPI](http://trilinos.org/packages/ml/ml-api).
+*   A set of efficient and user-friendly, MATLAB-like interface, called [MLAPI](ml_api.html).
 
 **Interoperability**
 
-ML is designed to interoperate with other Trilinos packages, and in particular with the [AztecOO](http://trilinos.org/packages/aztecoo/) linear solver package, also developed at Sandia. However, ML can be run stand-alone. Alternatively, the user can call ML from his own application by supplying matrix-getrow functions and matrix-vector multiply functions. The user can optionally supply application-specific smoothers, or use ML’s internal smoothers.
+ML is designed to interoperate with other Trilinos packages, and in particular with the [AztecOO](aztecoo.html) linear solver package, also developed at Sandia. However, ML can be run stand-alone. Alternatively, the user can call ML from his own application by supplying matrix-getrow functions and matrix-vector multiply functions. The user can optionally supply application-specific smoothers, or use ML’s internal smoothers.
 
 ML is used within several applications at Sandia and a few applications outside of Sandia. ML is released for external distribution and can be obtained as part of the Trilinos development environment.
 
