@@ -6,7 +6,7 @@ folder: packages
 
 ![IFPACK Logo](http://trilinos.org/oldsite/packages/ifpack/ifpack.png)    **Welcome to the IFPACK Home**
 
-IFPACK provides a suite of object-oriented algebraic preconditioners for the solution of preconditioned iterative solvers. IFPACK constructors expect an Epetra_RowMatrix object for construction. IFPACK is part of the Trilinos Solver Project and IFPACK object interact well with other Trilinos classes. In particular, IFPACK can be used as a preconditioner for [AztecOO](http://trilinos.org/packages/aztecoo/).  
+IFPACK provides a suite of object-oriented algebraic preconditioners for the solution of preconditioned iterative solvers. IFPACK constructors expect an Epetra_RowMatrix object for construction. IFPACK is part of the Trilinos Solver Project and IFPACK object interact well with other Trilinos classes. In particular, IFPACK can be used as a preconditioner for [AztecOO](aztecoo.html).  
 IFPACK documentation is created and maintained using Doxygen; the latest Doxygen documentation, containing details about IFPACK and its classes, examples of usage, and more, is accessible [here](http://trilinos.org/docs/dev/packages/ifpack/doc/html/index.html).
 
 If you use IFPACK for your applications, please let us know by writing an e-mail to the [IFPACK developers](http://trilinos.org/oldsite/packages/ifpack/team.html). Please also cite IFPACK using the following bibtex entry:
@@ -29,4 +29,4 @@ To compile IFPACK, one needs the Epetra and Teuchos packages of Trilinos. It is 
 
 <span style="text-decoration: underline;">**IFPACK Publications**</span>
 
-*   [Ifpack User Guide (.pdf)](http://trilinos.org/oldsite/packages/ifpack/IfpackUserGuide.pdf)
+*   [Ifpack User Guide (.pdf)](pdfs/IfpackUserGuide.pdf)
