@@ -4,13 +4,15 @@ permalink: didasko.html
 folder: packages
 ---
 
-![Didasko Logo](http://trilinos.org/oldsite/packages/didasko/didasko_logo.jpeg) **Welcome to the Didasko Home**
+![Didasko Logo](images/didasko_logo.jpeg) 
+
+**Welcome to the Didasko Home**
 
 Note that the primary Trilinos tutorial can now be found [here.](https://github.com/trilinos/Trilinos_tutorial/wiki "Trilinos Hands On Tutorial") Didasko may be retired in a future release.
 
-Didasko, the tutorial of Trilinos, offers a quick introduction to several Trilinos packages. It contains a printable [PDF](http://trilinos.org/oldsite/Trilinos7.0Tutorial.pdf) document and a variety of well-commented [browsable examples](http://trilinos.sandia.gov/packages/didasko/examples.html) that illustrate how to use Trilinos. The PDF file and the examples are distributed within Trilinos; see the [download page](http://trilinos.org/download).
+Didasko, the tutorial of Trilinos, offers a quick introduction to several Trilinos packages. It contains a printable [PDF](pdfs/Trilinos7.0Tutorial.pdf) document and a variety of well-commented [browsable examples](http://trilinos.sandia.gov/packages/didasko/examples.html) that illustrate how to use Trilinos. The PDF file and the examples are distributed within Trilinos; see the [download page](download.html).
 
-Didasko contains examples for the following Trilinos packages: [Teuchos](http://trilinos.org/packages/teuchos/), [Epetra](http://trilinos.org/packages/epetra/), [EpetraExt](http://trilinos.org/packages/epetraext), [TriUtils](http://trilinos.org/packages/triutils), [Amesos](http://trilinos.org/packages/amesos/), [AztecOO](http://trilinos.org/packages/aztecoo/), [IFPACK](http://trilinos.org/packages/ifpack/), [ML](http://trilinos.org/packages/ml/), [NOX](http://trilinos.org/packages/nox-and-loca/), [Anasazi](http://trilinos.org/packages/anasazi), [Belos](http://trilinos.org/packages/belos/), [TPetra](http://trilinos.org/packages/tpetra/).
+Didasko contains examples for the following Trilinos packages: [Teuchos](teuchos.html), [Epetra](epetra.html), [EpetraExt](epetraext.html), [TriUtils](triutils.html), [Amesos](amesos.html), [AztecOO](aztecoo.html), [IFPACK](ifpack.html), [ML](ml.html), [NOX](nox_and_loca.html), [Anasazi](anasazi.html), [Belos](belos.html), [TPetra](tpetra.html).
 
 With Didasko, you can quickly and effectively learn how to create and use distributed linear algebra objects, define PDE-like linear systems, solve them with direct and iterative solvers, defined a variety of preconditioners, and solve nonlinear systems. Didasko examples are short, easy to understand, and typically each example focuses on a well-defined topic.
 

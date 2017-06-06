@@ -4,7 +4,9 @@ permalink: amesos.html
 folder: packages
 ---
 
-![](http://trilinos.org/oldsite/packages/amesos/AmesosLogo.jpeg) **Welcome to the Amesos Home**
+![](images/AmesosLogo.jpeg) 
+
+**Welcome to the Amesos Home**
 
 _Amesos is a Greek term meaning **direct**._
 
@@ -20,9 +22,9 @@ Amesos is the Direct Sparse Solver Package in Trilinos. The goal of Amesos is to
 *   [SCALAPACK version 1.7](http://www.netlib.org/scalapack/scalapack_home.html)
 *   [MUMPS version 4.7.3](http://graal.ens-lyon.fr/MUMPS/) (experimental support for version 4.9)
 
-Amesos comes with a serial direct solver, called KLU, and a parallel direct solver, called Paraklete, which can be used to solve sparse linear systems. Each interface can be enabled at configure time. Amesos also offers an interface to Python, thus making all the supported interfaces available within the Python interpreter; see the [PyTrilinos](http://trilinos.org/packages/pytrilinos) package for more details.
+Amesos comes with a serial direct solver, called KLU, and a parallel direct solver, called Paraklete, which can be used to solve sparse linear systems. Each interface can be enabled at configure time. Amesos also offers an interface to Python, thus making all the supported interfaces available within the Python interpreter; see the [PyTrilinos](pytrilinos.html) package for more details.
 
-For a brief overview of Amesos’ usage, click [here](http://trilinos.org/oldsite/packages/amesos/slides-overview.html). This page requires JavaScript and a recent browser. Amesos documentation is created and maintained using Doxygen. Click [here](http://trilinos.org/docs/dev/packages/amesos/doc/html/index.html) to access the latest Doxygen documentation, containing details about Amesos and its classes, examples of usage, how to interface with other Trilinos packages, and more. You can also check the [Amesos guide](http://trilinos.org/oldsite/packages/amesos/AmesosReferenceGuide.pdf) (PDF file, 143 Kbytes) and the [design of Amesos](http://trilinos.org/oldsite/packages/amesos/AmesosDesign.pdf) (PDF file, 183 Kbytes). If you want a quick overview of the project, you can give a look [here](http://trilinos.org/oldsite/packages/amesos/PARA06-amesos.pdf) to the slides presented at the PARA’06 conference. If you use Amesos for your applications, please let us know by writing an e-mail to the [Amesos developers](mailto:amesos-developers@software.sandia.gov). Please also cite Amesos using the following bibtex entries:
+For a brief overview of Amesos’ usage, click [here](http://trilinos.org/oldsite/packages/amesos/slides-overview.html). This page requires JavaScript and a recent browser. Amesos documentation is created and maintained using Doxygen. Click [here](http://trilinos.org/docs/dev/packages/amesos/doc/html/index.html) to access the latest Doxygen documentation, containing details about Amesos and its classes, examples of usage, how to interface with other Trilinos packages, and more. You can also check the [Amesos guide](pdfs/AmesosReferenceGuide.pdf) (PDF file, 143 Kbytes) and the [design of Amesos](pdfs/AmesosDesign.pdf) (PDF file, 183 Kbytes). If you want a quick overview of the project, you can give a look [here](pdfs/PARA06-amesos.pdf) to the slides presented at the PARA’06 conference. If you use Amesos for your applications, please let us know by writing an e-mail to the [Amesos developers](mailto:amesos-developers@software.sandia.gov). Please also cite Amesos using the following bibtex entries:
 
     @article{amesos,
         title = "On the Design of Interfaces to Sparse Direct Solvers",

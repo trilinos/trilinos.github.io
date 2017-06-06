@@ -23,9 +23,9 @@ AztecOO supports a “matrix-free” mechanism via the pure virtual class Epetra
 
 <span style="text-decoration: underline;">**Documents**</span>
 
-*   [User Guide](http://trilinos.org/oldsite/packages/aztecoo/AztecOOUserGuide.pdf) (.pdf)
+*   [User Guide](pdfs/AztecOOUserGuide.pdf) (.pdf)
 
-![](http://trilinos.org/oldsite/packages/aztecoo/aztec.jpg)
+![](images/aztec.jpg)
 
 ## Aztec 2.1 Foundation for AztecOO
 

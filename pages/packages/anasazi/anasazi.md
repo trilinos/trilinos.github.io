@@ -4,7 +4,7 @@ permalink: anasazi.html
 folder: packages
 ---
 
-![Anasazi](http://trilinos.org/oldsite/packages/anasazi/anasazi.png)
+![Anasazi](images/anasazi.png)
 
 
 <span style="text-decoration: underline;">**Overview**</span>
@@ -17,8 +17,7 @@ An implementation of Anasazi is accomplished via the use of interfaces. Current 
 
 Anasazi supports the following solver/matrix combinations:
 
-[![eigensolver_table](http://trilinos.org/wordpress/wp-content/uploads/2014/08/eigensolver_table.png)](http://trilinos.org/wordpress/wp-content/uploads/2014/08/eigensolver_table.png)
-
+[eigensolver_table](images/eigensolver_table.png)
 <span style="text-decoration: underline;">Chart notes:</span>
 
 1.  This chart **does not** endorse the use of a particular solver for a particular eigenvalue problem.
@@ -34,6 +33,6 @@ Anasazi supports the following solver/matrix combinations:
 <span style="text-decoration: underline;">**Anasazi Publications**</span>
 
 *   [Anasazi software for the numerical solution of large-scale eigenvalue problems](http://dx.doi.org/10.1145/1527286.1527287) -- Describes the design and development of the Anasazi package.
-*   [Overview of Anasazi and its newest eigensolver, TraceMin](http://trilinos.org/wordpress/wp-content/uploads/2014/08/Klinvex-TUG-2014-Anasazi.pdf) -- Presentation from the Trilinos Users Group meeting, October 29th, 2014.
-*   [Installing the Anasazi Eigensolver Package with Application to Some Graph Eigenvalue Problems](http://trilinos.org/wordpress/wp-content/uploads/2014/08/anasazi-ug-public.pdf "Installing the Anasazi Eigensolver Package with Application to Some Graph Eigenvalue Problems") -- Introductory installation and usage guide.
+*   [Overview of Anasazi and its newest eigensolver, TraceMin](pdfs/Klinvex-TUG-2014-Anasazi.pdf) -- Presentation from the Trilinos Users Group meeting, October 29th, 2014.
+*   [Installing the Anasazi Eigensolver Package with Application to Some Graph Eigenvalue Problems](pdfs/anasazi-ug-public.pdf "Installing the Anasazi Eigensolver Package with Application to Some Graph Eigenvalue Problems") -- Introductory installation and usage guide.
 
