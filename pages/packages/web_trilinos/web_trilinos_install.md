@@ -6,7 +6,7 @@ folder: packages
 
 **Installation**
 
-It is recommended that users not install WebTrilinos, but rather access WebTrilinos via the [WebTrilinos Docker Image](https://trilinos.org/packages/web-trilinos/webtrilinos-docker-image/).
+It is recommended that users not install WebTrilinos, but rather access WebTrilinos via the [WebTrilinos Docker Image](web_trilinos_docker_image.html).
 
 Below is the procedure to follow to install WebTrilinos:
 

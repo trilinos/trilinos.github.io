@@ -10,7 +10,7 @@ folder: packages
 
 ### Presentations
 
-[PDF](http://trilinos.org/wordpress/wp-content/uploads/2015/05/ROL.pdf "ROL PDF Presentation") or [PowerPoint](http://trilinos.org/wordpress/wp-content/uploads/2015/05/ROL.pptx "ROL PowerPoint Presentation").
+[PDF](pdfs/ROL.pdf "ROL PDF Presentation") or [PowerPoint](pdfs/ROL.pptx "ROL PowerPoint Presentation").
 
 * * *
 

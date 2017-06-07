@@ -10,4 +10,4 @@ folder: packages
 
 Some use cases:
 
-[![](http://trilinos.org/wordpress/wp-content/uploads/2015/05/ROL_Uses_Inverse.png)](http://trilinos.org/wordpress/wp-content/uploads/2015/05/ROL_Uses_Inverse.png)
+[](images/ROL_Uses_Inverse.png)

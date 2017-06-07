@@ -18,7 +18,7 @@ Simply that you can use most of Trilinos from the Web. Stated otherwise, WebTril
 
 **What platforms does WebTrilinos run on?**
 
-WebTrilinos has been tested on a Linux webserver (Fedora Core), but it should run on all platforms with python, a web server (we use [apache](http://www.apache.org)) and [PHP](http://php.net) installed, and where PyTrilinos runs. If you can install and use PyTrilinos, then you are mostly done; please check the [PyTrilinos web page](http://trilinos.org/packages/pytrilinos/) for more details on how to install PyTrilinos. WebTrilinos also uses few *nix commands like <tt>convert</tt>.
+WebTrilinos has been tested on a Linux webserver (Fedora Core), but it should run on all platforms with python, a web server (we use [apache](http://www.apache.org)) and [PHP](http://php.net) installed, and where PyTrilinos runs. If you can install and use PyTrilinos, then you are mostly done; please check the [PyTrilinos web page](pytrilinos.html) for more details on how to install PyTrilinos. WebTrilinos also uses few *nix commands like <tt>convert</tt>.
 
 **Is there support for MPI and threads?**
 

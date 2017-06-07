@@ -15,4 +15,4 @@ ROL aims to combine flexibility, efficiency and robustness. Key features:
 *   _Special APIs for simulation-based optimization_ —enable a streamlined embedding into engineering applications, rigorous implementation verification and efficient use.
 *   _Modular interfaces throughout the optimization process_ —enable custom and user-defined algorithms, stopping criteria, hierarchies of algorithms, and selective use of a variety of tools and components.
 
-For details, see [ROL_PDF_Slides](http://trilinos.org/wordpress/wp-content/uploads/2015/05/ROL.pdf "ROL PDF Presentation") or [ROL_PowerPoint_Slides](http://trilinos.org/wordpress/wp-content/uploads/2015/05/ROL.pptx "ROL PowerPoint Presentation").
+For details, see [ROL_PDF_Slides](pdfs/ROL.pdf "ROL PDF Presentation") or [ROL_PowerPoint_Slides](pdfs/ROL.pptx "ROL PowerPoint Presentation").

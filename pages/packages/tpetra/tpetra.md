@@ -4,7 +4,7 @@ permalink: tpetra.html
 folder: packages
 ---
 
-![](http://trilinos.org/oldsite/packages/epetra/epetra.jpg)
+![](images/epetra.jpg)
 
 # Tpetra: Parallel sparse linear algebra
 
