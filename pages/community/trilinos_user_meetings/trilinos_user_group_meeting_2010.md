@@ -39,13 +39,11 @@ directly to the right of the title of each collection of clips.
 <td>Tutorial Day</td>
 <td colspan="2">User Days</td>
 <td>Developer Day</td>
-</tr>
 <tr>
 <td>Monday, Nov. 1</td>
 <td>Tuesday, Nov. 2</td>
 <td>Wednesday, Nov. 3</td>
 <td>Thursday, Nov. 4</td>
-</tr>
 <tr>
 <td>8:30 am</td>
 <td rowspan="11"></td>
@@ -57,25 +55,22 @@ Video<br />
 <cite>(Roger P.)</cite><strong>Intrepid</strong><br />
 Video* --<br />
 26:33, slide 25<br />
-<cite>(Kara P.)</cite></p>
+<cite>(Kara P.)</cite>
 <p><strong>Using Trilinos in a Heterogeneous Multiphysics Code</strong><br />
 Video* --<br />
 48:42, slide 47<br />
-<cite>(Bill Cochran)</cite></td>
+<cite>(Bill Cochran)</cite>
 <td rowspan="3"><strong>State of Trilinos Software Engineering,</strong><strong> Lifecycle Model Discussion</strong><br />
 <a href="http://www.cs.sandia.gov/%7Erabartl/TUG20101104_Trilinos_SE.pdf">pdf</a><br />
 <cite>(Ross B.)</cite></td>
-</tr>
 <tr>
 <td>9:00 am</td>
-</tr>
 <tr>
 <td>9:15 am</td>
 <td rowspan="2"><strong>PyTrilinos Tutorial</strong><br />
 <a href="/pdfs/PyTrilinosTutorial.pdf">pdf</a>, Video* --<br />
 48:24, slide 54<br />
 <cite>(Bill S.)</cite></td>
-</tr>
 <tr>
 <td>9:30 am</td>
 <td rowspan="3"><strong>Parallel Development Using Tpetra and Kokkos</strong><br />
@@ -85,18 +80,14 @@ Video* --<br />
 <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2010/abstracts/wednesday_9-30.html">[abstract]</a></td>
 <td rowspan="3"><strong>Trilinos Framework Update</strong><br />
 <cite>(Jim W.)<cite></cite></cite></td>
-</tr>
 <tr>
 <td>9:45 am</td>
 <td rowspan="1">Break</td>
-</tr>
 <tr>
 <td>10:00 am</td>
 <td rowspan="2"><strong>Introductions, Progress, Challenges, and Future Plans</strong><br />
 Video<br />
-<cite>(Mike H.)</cite></td>
-</tr>
-<tr>
+<cite>(Mike H.)</cite></td><tr>
 <td>10:15 am</td>
 <td rowspan="2">Break</td>
 <td rowspan="2">Break</td>
@@ -185,30 +176,21 @@ Video* --<br />
 <td>3:00 pm</td>
 <td rowspan="2">Break</td>
 <td rowspan="2">Break</td>
-</tr>
 <tr>
 <td>3:15 pm</td>
 <td rowspan="3"><strong>Trilinos Strategic Planning</strong><br />
 <cite>(project based)</cite></td>
-</tr>
 <tr>
 <td>3:30 pm</td>
 <td rowspan="1"><strong>Trios</strong><br />
 <a href="/pdfs/tug2010_trios.ppt">pdf</a>, Video<br />
 <cite>(Ron O.)</cite></td>
 <td rowspan="2"><strong>Trilinos Advisory Group Session</strong></td>
-</tr>
 <tr>
 <td>4:00 pm</td>
 <td><strong>Building and Linking Against Trilinos</strong><br />
 <a href="/pdfs/tug2010_cmake.ppt">ppt</a>, Video* --<br />
 32:11, slide 13<br />
 <cite>(Brent P.)</cite></td>
-</tr>
 <tr>
 <td>4:30 pm</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>

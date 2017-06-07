@@ -55,7 +55,6 @@ Arvada to Louisiana, turn left. Get on I-40 East (left), exit on Eubank south (r
 <cite>Willenbring / Heroux</cite></td>
 <td><strong>Trilinos 102: Advanced Concepts</strong><br />
 <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2007/abstracts/wednesday_8-30.html">[abstract]</a><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2007/abstracts/wednesday_8-30.html"><strong>[presentation ppt]</strong></a><br />
 <cite>Heroux</cite></td>
 <td><strong>Trilinos Framework: Update and Future Plans</strong><br />
 <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2007/abstracts/thursday_8-30.html">[abstract]</a><br />
