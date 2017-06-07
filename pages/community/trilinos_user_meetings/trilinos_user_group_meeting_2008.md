@@ -37,8 +37,14 @@ Arvada to Louisiana, turn left. Get on I-40 East (left), exit on Eubank south (r
 <style>
 table, th, td {
     border: 1px solid black;
+    table-layout: fixed;
     text-align:center;
 }
+
+th, td {
+    width: 300px;
+}
+
 </style>
 </head>
 
@@ -72,7 +78,7 @@ table, th, td {
 <td>8:45 am</td>
 <td><strong>Progress, Challenges, Future Plans, and Capability areas</strong><br />
 <cite>(Heroux,capability leaders) </cite><br />
-<a href="http://trilinos.sandia.gov/events/trilinos_user_group_2008/presentations/1-HerouxTrilinosProgressChallengesFutures.ppt">[presentation ppt]</a><br />
+<a href="/pdfs/1-HerouxTrilinosProgressChallengesFutures.ppt">[presentation ppt]</a><br />
 <a href="/pdfs/6-HerouxScalableLinearAlgebra.ppt">[presentation ppt]</a><br />
 <a href="/pdfs/TUG08_ENATCapabilityOverview.ppt">[presentation ppt]</a><br />
 <a href="/pdfs/TUG2008.pdf">[presentation pdf]</a><br />

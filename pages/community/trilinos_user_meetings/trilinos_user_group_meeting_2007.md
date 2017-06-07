@@ -34,6 +34,21 @@ Arvada to Louisiana, turn left. Get on I-40 East (left), exit on Eubank south (r
 [Google Maps](http://maps.google.com/maps?f=q&hl=en&q=Eubank+Blvd+SE+and+Research+Rd+SE,+Albuquerque,+NM+87111&ie=UTF8&z=17&ll=35.056989,-106.530519&spn=0.008229,0.010074&t=h&om=1) (from that intersection, east on Reasearch Rd to Innovation Pkwy)
 <br>
 
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+    table-layout: fixed;
+    text-align:center;
+}
+
+th, td {
+    width: 300px;
+}
+
+</style>
+</head>
+
 <table id="programTable" class=" aligncenter" cellspacing="0" cellpadding="0">
 <tbody>
 <tr>
@@ -130,11 +145,11 @@ Arvada to Louisiana, turn left. Get on I-40 East (left), exit on Eubank south (r
 <td><strong>Trilinos: From a Userâ€™s Perspective</strong><br />
 <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2007/abstracts/wednesday_2-15_1.html">[abstract]</a><br />
 <a href="/pdfs/Hooper_TUG_2007_v1.ppt">[presentation ppt]</a><br />
-<cite>Hooper</cite></p>
+<cite>Hooper</cite>
 <hr size="1" width="100%" />
 <p><strong>The DOE ACTS Collection Project</strong><br />
 <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2007/abstracts/wednesday_2-15_2.html">[abstract]</a><br />
-<cite>Drummond, LBL</cite></td>
+<cite>Drummond, LBL</cite>
 <td><strong>Milestone: Lessons Learned, Next Steps</strong><br />
 <a href="http://trilinos.org/oldsite/events/trilinos_user_group_2007/abstracts/thursday_2-15.html">[abstract]</a><br />
 <cite>2007 Trilinos Milestone Team</cite></td>

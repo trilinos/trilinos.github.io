@@ -32,6 +32,21 @@ The TUG 2010 schedule is shown below. Links to slides for some talks are availab
 For a listing of all talks included in all video links, see the TUG 2010 video homepage and click on the “view description” icon 
 directly to the right of the title of each collection of clips.
 
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+    table-layout: fixed;
+    text-align:center;
+}
+
+th, td {
+    width: 300px;
+}
+
+</style>
+</head>
+
 <table id="programTable" cellspacing="0" cellpadding="0">
 <tbody>
 <tr>

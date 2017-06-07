@@ -39,6 +39,21 @@ Arvada to Louisiana, turn left. Get on I-40 East (left), exit on Eubank south (r
 
 ## Schedule
 
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+    table-layout: fixed;
+    text-align:center;
+}
+
+th, td {
+    width: 300px;
+}
+
+</style>
+</head>
+
 <table id="programTable" cellspacing="0" cellpadding="0">
 <tbody>
 <tr>
