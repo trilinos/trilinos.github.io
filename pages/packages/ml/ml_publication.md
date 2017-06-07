@@ -31,10 +31,10 @@ folder: packages
 
 <a name="ml-user-guides"></a><span style="text-decoration: underline;">**User Guides**</span>
 
-*   [ML-5.0 User’s Guide (.pdf)](http://trilinos.org/oldsite/packages/ml/mlguide5.pdf)
-*   [ML-4.0 User’s Guide (.pdf)](http://trilinos.org/oldsite/packages/ml/mlguide4.pdf)
-*   [ML-3.1 User’s Guide (.pdf)](http://trilinos.org/oldsite/packages/ml/mlguide31.pdf)
-*   [MLAPI-3.1 Overview (.pdf)](http://trilinos.org/oldsite/packages/ml/mlapi_guide.pdf)
-*   [ML-3.0 User’s Guide (.pdf)](http://trilinos.org/oldsite/packages/ml/mlguide3.pdf)
-*   [ML-2.0 User’s Guide (.ps)](http://trilinos.sandia.gov/packages/ml/mlguide2.ps)
-*   [ML SemiCoarsen Guide (.pdf)](http://trilinos.org/wordpress/wp-content/uploads/2014/08/SemiCoarsen.pdf)
+*   [ML-5.0 User’s Guide (.pdf)](pdfs/mlguide5.pdf)
+*   [ML-4.0 User’s Guide (.pdf)](pdfs/mlguide4.pdf)
+*   [ML-3.1 User’s Guide (.pdf)](pdfs/mlguide31.pdf)
+*   [MLAPI-3.1 Overview (.pdf)](pdfs/mlapi_guide.pdf)
+*   [ML-3.0 User’s Guide (.pdf)](pdfs/mlguide3.pdf)
+*   [ML-2.0 User’s Guide (.ps)](pdfs/mlguide2.ps)
+*   [ML SemiCoarsen Guide (.pdf)](pdfs/SemiCoarsen.pdf)

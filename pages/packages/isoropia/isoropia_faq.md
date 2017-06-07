@@ -10,7 +10,8 @@ Isorropia is a Greek term meaning “equilibrium” or “balance”. This refer
 
 **What’s the difference between Isorropia and Zoltan?**
 
-Isorropia provides a convenient and powerful interface between Zoltan and Epetra. Zoltan provides the underlying partitioning (load balancing), coloring, and ordering algorithms. Isorropia sets up graph/hypergraph models of sparse matrices and calls Zoltan. Note that Isorropia supports many Zoltan features but not all (e.g. multiple weights). In most cases, if you have an Epetra matrix or graph, you should use Isorropia not Zoltan.
+Isorropia provides a convenient and powerful interface between Zoltan and Epetra. Zoltan provides the underlying partitioning (load balancing), coloring, and ordering algorithms. Isorropia sets up graph/hypergraph models of sparse matrices and calls Zoltan. 
+Note that Isorropia supports many Zoltan features but not all (e.g. multiple weights). In most cases, if you have an Epetra matrix or graph, you should use Isorropia not Zoltan.
 
 **Can I build Isorropia without Zoltan?**
 

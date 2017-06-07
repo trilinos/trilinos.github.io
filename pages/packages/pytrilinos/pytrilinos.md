@@ -7,7 +7,7 @@ folder: packages
 <img border="0" alt="Trilinos Team" src="images/PyTrilinos.jpg" width="10" height="10">
 
 Welcome to the PyTrilinos home
-PyTrilinos is a set of [python](https://www.python.org) wrappers for selected [Trilinos](http://trilinos.org) packages. 
+PyTrilinos is a set of [python](https://www.python.org) wrappers for selected [Trilinos](http://trilinos.github.io) packages. 
 This allows a [python](https://www.python.org) programmer to dynamically import Trilinos packages into a [python](https://www.python.org) 
 script or the [python](https://www.python.org) command-line interpreter, allowing the creation and manipulation of Trilinos objects 
 and the execution of Trilinos algorithms, without the need to constantly recompile.
@@ -18,13 +18,13 @@ object-oriented design can be explored more efficiently, and full-fledged applic
 PyTrilinos is intended to supplement the outstanding efforts of the community of [SciPy](http://www.scipy.org) developers by providing robust solver capabilities to the scientific [python](https://www.python.org) community.
  As such, it has a high degree of compatibility with [NumPy](http://www.numpy.org/), the _n_-dimensional array module that provides contiguous, homogeneous data support for all [SciPy](http://www.scipy.org) modules.
 
-A description of the linear algebra modules of PyTrilinos can be found in the Sandia report [SAND2005-3835](http://trilinos.org/oldsite/packages/pytrilinos/UsersGuide.pdf). You may also examine various conference presentations of PyTrilinos:
+A description of the linear algebra modules of PyTrilinos can be found in the Sandia report [SAND2005-3835](pdfs/UsersGuide.pdf). You may also examine various conference presentations of PyTrilinos:
 
-*   [Reproducible Research in Computational Geophysics](http://trilinos.org/oldsite/packages/pytrilinos/RRCG06-PyTrilinos.pdf)
-*   [SciPy 2006](http://trilinos.org/oldsite/packages/pytrilinos/SciPy06-PyTrilinos.pdf)
-*   [PARA’06 Conference](http://trilinos.org/oldsite/packages/pytrilinos/PARA06-pytrilinos.pdf)
-*   [SIAM Parallel Processing 2006](http://trilinos.org/oldsite/packages/pytrilinos/SIAMPP06-PyTrilinos.pdf)
-*   [SciPy 2005](http://trilinos.org/oldsite/packages/pytrilinos/SciPy05-PyTrilinos.pdf)
+*   [Reproducible Research in Computational Geophysics](pdfs/RRCG06-PyTrilinos.pdf)
+*   [SciPy 2006](pdfs/SciPy06-PyTrilinos.pdf)
+*   [PARA’06 Conference](pdfs/PARA06-pytrilinos.pdf)
+*   [SIAM Parallel Processing 2006](pdfs/SIAMPP06-PyTrilinos.pdf)
+*   [SciPy 2005](pdfs/SciPy05-PyTrilinos.pdf)
 
 General questions can be directed to the [PyTrilinos users mailing list](https://software.sandia.gov/mailman/listinfo/pytrilinos-users).
 

@@ -26,5 +26,6 @@ No.
 
 **What kinds of domain decomposition does PAMGEN provide.**
 
-PAMGEN provides several decomposition options. The most useful is a simple bisection strategy that slices the mesh in different topological directions. This strategy works best when the number of processors has many prime factors. A user defined slicing strategy allows control which topological direction are sliced. 
+PAMGEN provides several decomposition options. The most useful is a simple bisection strategy that slices the mesh in different topological directions. 
+This strategy works best when the number of processors has many prime factors. A user defined slicing strategy allows control which topological direction are sliced. 
 A random decomposition method is provided as a stress test for analysis codes.

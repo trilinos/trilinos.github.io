@@ -15,7 +15,7 @@ Please use the links below to navigate the ML documentation:
 *   [User Guides](ml-publications.html#ml-user-guides "ML Publications").
 *   The [ML API](ml_api.html).
 *   [Mail lists](http://trilinos.org/oldsite/packages/ml/mail_lists.html) for users and developers.
-*   Relevant [papers](ml-publications.html "ML Publications") and [citations](http://trilinos.org/packages/ml/ml-citations/ "ML Citations").
+*   Relevant [papers](ml-publications.html "ML Publications") and [citations](ml_citations.html "ML Citations").
 *   [Who are the ML developers?](http://trilinos.org/oldsite/packages/ml/team.html)
 *   [How to cite ML](ml_citations.html).
 
