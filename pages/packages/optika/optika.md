@@ -4,7 +4,7 @@ permalink: optika.html
 folder: packages
 ---
 
-![Optika](http://trilinos.org/oldsite/packages/optika/optikabanner.png)
+![Optika](images/optikabanner.png)
 
 Welcome to the Optika Home
 
@@ -12,7 +12,7 @@ The Optika package provides trilinos users with easy access to GUI input methods
 
 The Users Manual
 
-For a complete and detailed descrption of what Optika is and how to use it, please see the [Optika Users Manual](http://trilinos.org/docs/dev/packages/optika/doc/html/OptikaSANDReport.pdf)
+For a complete and detailed descrption of what Optika is and how to use it, please see the [Optika Users Manual](pdfs/OptikaSANDReport.pdf)
 
 ### Overview
 

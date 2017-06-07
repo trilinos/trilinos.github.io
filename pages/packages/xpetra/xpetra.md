@@ -4,7 +4,7 @@ permalink: xpetra.html
 folder: packages
 ---
 
-[![xpetra](http://trilinos.org/wordpress/wp-content/uploads/2014/08/xpetra.jpg)](http://trilinos.org/wordpress/wp-content/uploads/2014/08/xpetra.jpg)
+[![xpetra](images/xpetra.jpg)](http://trilinos.org/wordpress/wp-content/uploads/2014/08/xpetra.jpg)
 
 Xpetra a lightweight wrapper to both Epetra and Tpetra. The Xpetra syntax  
 mirrors that of Tpetra. Xpetra enables algorithm developers to write to a  

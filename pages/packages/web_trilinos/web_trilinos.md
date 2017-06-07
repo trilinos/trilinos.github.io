@@ -4,7 +4,7 @@ permalink: web_trilinos.html
 folder: packages
 ---
 
-![WebTrilinos Logo](http://trilinos.org/oldsite/packages/webtrilinos/webtrilinos_logo.jpg)
+![WebTrilinos Logo](images/webtrilinos_logo.jpg)
 
 WebTrilinos is a scientific portal, a web-based environment to use several Trilinos packages through the web.
 
@@ -16,7 +16,7 @@ From the user’s perspective, the only component required to use WebTrilinos is
 
 NOTE: Currently, only the C++ interface for WebTrilinos is maintained. Tutorial hosts are encouraged to use the C++ interface page as the landing page for students. If anyone wishes to contribute changes back to WebTrilinos in the form of GitHub pull requests for the maintenance of the Python and MatrixPortal interfaces, they are welcome to do so.
 
-NOTE: this web site does not offer access to WebTrilinos capabilities. The **recommended approach for accessing WebTrilinos functionality** is to use the [WebTrilinos Docker image](https://trilinos.org/packages/web-trilinos/webtrilinos-docker-image/). Alternatively, you (or your system administrator) can install it on your web server.
+NOTE: this web site does not offer access to WebTrilinos capabilities. The **recommended approach for accessing WebTrilinos functionality** is to use the [WebTrilinos Docker image](web_trilinos_docker_image.html). Alternatively, you (or your system administrator) can install it on your web server.
 
 To be installed, WebTrilinos requires the following:
 
@@ -26,7 +26,7 @@ To be installed, WebTrilinos requires the following:
 4.  the [PyChart](http://home.gna.org/pychart/) package;
 5.  the <tt>convert</tt> *nix tool to convert image files.
 
-WebTrilinos comes with a set of easy-to-use tools that suggest the configuration options. For more details, please check the [FAQ](https://trilinos.org/packages/web-trilinos/webtrilinos-faq/) page. Check also the [installation page](https://trilinos.org/packages/web-trilinos/webtrilinos-install/) for more details on the installation procedure.
+WebTrilinos comes with a set of easy-to-use tools that suggest the configuration options. For more details, please check the [FAQ](webtrilinos_faq.html) page. Check also the [installation page](webtrilinos_install.html) for more details on the installation procedure.
 
 <span style="text-decoration: underline;">**Overview**</span>
 
@@ -42,7 +42,7 @@ If your focus are sparse linear system, you can experiment with various solution
 
 A simplified workflow for WebTrilinos is reported in the figure below; note that, in the current implementation, the server and solver are hosted on the same machine.
 
-![](http://trilinos.org/oldsite/packages/webtrilinos/diagram.png)
+![](images/diagram.png)
 
 * * *
 
@@ -57,6 +57,6 @@ Matrix Portal operates as a sequence of five **steps**, defined as follows:
 5.  **Step 4: Check Results** collects the results and offers tools to analyze and compare them. A simple tool is given, to generate a bar chart for selected data. From here, you can go back to step 1 and select new problems, or go to step 2 and select new solution techniques for already defined problems.
 
 You can move across these steps as shown in the following picture:  
-[![](http://trilinos.org/oldsite/packages/webtrilinos/workflow.png)](http://trilinos.sandia.gov/packages/webtrilinos/step1.html)
+[![](images/workflow.png)](http://trilinos.sandia.gov/packages/webtrilinos/step1.html)
 
-An overview of the installation procedure is reported in the [FAQ](https://trilinos.org/packages/web-trilinos/webtrilinos-faq/) page.
+An overview of the installation procedure is reported in the [FAQ](/webtrilinos_faq.html) page.

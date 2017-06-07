@@ -4,7 +4,7 @@ permalink: teuchos.html
 folder: packages
 ---
 
-![Teuchos](http://trilinos.org/oldsite/packages/teuchos/teuchos1.png)
+![Teuchos](images/teuchos1.png)
 
 Teuchos provides a suite of common tools for Trilinos for developers to use. These tools include BLAS and LAPACK wrappers, smart pointers, parameter lists, and XML parsers.
 

@@ -35,7 +35,7 @@ The Nessie Network Transport Interface (NNTI) provides a portable, lightweight, 
 *   CTH fragment detection (not in repo): Performs in-transit fragment detection for CTH shock physics code. systems.
 *   Kelpie Key/Value Store (not in repo): Provides an in-memory key/value store.
 
-![Image nessie](http://trilinos.org/oldsite/packages/trios/nessie.png)
+![Image nessie](images/nessie.png)
 
 What is Trios useful for?
 
