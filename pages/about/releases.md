@@ -49,7 +49,7 @@ CTrilinos | [Isorropia](isorropia.html "Isorropia") | [Pamgen](pamgen.html "PAMG
 
 ## Trilinos 12.6
 
-Trilinos 12.6 was released in February 2016 and includes the following packages. For more details about the release, view the [release notes](http:.html.htmltrilinos.org.htmloldsite.htmlrelease_notes-12.6.html).
+Trilinos 12.6 was released in February 2016 and includes the following packages. For more details about the release, view the [release notes](https://trilinos.org/oldsite/release_notes-12.6.html).
 
 Download  | Trilinos | Packages | Version | 12.6
 ------ | ------ | ------ | -------- | ----------
@@ -69,7 +69,7 @@ CTrilinos | [Isorropia](isorropia.html "Isorropia") | [Pamgen](pamgen.html "PAMG
 
 ## Trilinos 12.4
 
-Trilinos 12.4 was released in November 2015 and includes the following packages. For more details about the release, view the [release notes](http:.html.htmltrilinos.org.htmloldsite.htmlrelease_notes-12.4.html).
+Trilinos 12.4 was released in November 2015 and includes the following packages. For more details about the release, view the [release notes](https://trilinos.org/oldsite/release_notes-12.4.html).
 
 Download  | Trilinos | Packages | Version | 12.4
 ------ | ------ | ------ | -------- | ----------
@@ -107,7 +107,7 @@ Domi | [Komplex](komplex.html "Komplex") | Pike | [Stokhos](stokhos.html "Stokho
 
 ## Trilinos 12.0
 
-Trilinos 12.0 was released in May 2015 and includes the following packages. For more details about the release, view the [release notes](http:.html.htmltrilinos.org.htmloldsite.htmlrelease_notes-12.0.html).
+Trilinos 12.0 was released in May 2015 and includes the following packages. For more details about the release, view the [release notes](https://trilinos.org/oldsite/release_notes-12.0.html).
 
 Download  | Trilinos | Packages | Version | 12.0
 ------ | ------ | ------ | -------- | ----------
@@ -126,7 +126,7 @@ Domi | [Komplex](komplex.html "Komplex") | Pike | [Stratimikos](stratimikos.html
 
 ## Trilinos 11.14
 
-Trilinos 11.14 was released in March 2015 and includes the following packages. For more details about the release, view the [release notes](http:.html.htmltrilinos.org.htmloldsite.htmlrelease_notes-11.14.html).
+Trilinos 11.14 was released in March 2015 and includes the following packages. For more details about the release, view the [release notes](https://trilinos.org/oldsite/release_notes-11.14.html).
 
 Download  | Trilinos | Packages | Version | 11.14
 ------ | ------ | ------ | -------- | ----------
@@ -144,7 +144,7 @@ CTrilinos | [Isorropia](isorropia.html "Isorropia") | [Pamgen](pamgen.html "PAMG
 
 ## Trilinos 11.12
 
-Trilinos 11.12 was released in October 2014 and includes the following packages. For more details about the release, view the [release notes](http:.html.htmltrilinos.org.htmloldsite.htmlrelease_notes-11.12.html).
+Trilinos 11.12 was released in October 2014 and includes the following packages. For more details about the release, view the [release notes](https://trilinos.org/oldsite/release_notes-11.12.html).
 
 Download  | Trilinos | Packages | Version | 11.12
 ------ | ------ | ------ | -------- | ----------
@@ -162,7 +162,7 @@ CTrilinos | [Isorropia](isorropia.html "Isorropia") | [Pamgen](pamgen.html "PAMG
 
 ## Trilinos 11.10
 
-Trilinos 11.10 was released in August 2014 and includes the following packages. For more details about the release, view the [release notes](http:.html.htmltrilinos.org.htmloldsite.htmlrelease_notes-11.10.html).
+Trilinos 11.10 was released in August 2014 and includes the following packages. For more details about the release, view the [release notes](https://trilinos.org/oldsite/release_notes-11.10.html).
 
 Download  | Trilinos | Packages | Version | 11.10
 ------ | ------ | ------ | -------- | ----------
@@ -180,7 +180,7 @@ CTrilinos | [Isorropia](isorropia.html "Isorropia") | [Pamgen](pamgen.html "PAMG
 
 ## Trilinos 11.8
 
-Trilinos 11.8 was released in April 2014 and includes the following 54 packages. For more details about the release, view the [release notes](http:.html.htmltrilinos.org.htmloldsite.htmlrelease_notes-11.8.html).
+Trilinos 11.8 was released in April 2014 and includes the following 54 packages. For more details about the release, view the [release notes](https://trilinos.org/oldsite/release_notes-11.8.html).
 
 Download  | Trilinos | Packages | Version | 11.8
 ------ | ------ | ------ | -------- | ----------
@@ -198,7 +198,7 @@ CTrilinos | [Isorropia](isorropia.html "Isorropia") | [Pamgen](pamgen.html "PAMG
 
 ## Trilinos 11.6
 
-Trilinos 11.6 was released in January 2014 and includes the following 54 packages. For more details about the release, view the [release notes](http:.html.htmltrilinos.org.htmloldsite.htmlrelease_notes-11.6.html).
+Trilinos 11.6 was released in January 2014 and includes the following 54 packages. For more details about the release, view the [release notes](https://trilinos.org/oldsite/release_notes-11.6.html).
 
 Download  | Trilinos | Packages | Version | 11.6
 ------ | ------ | ------ | -------- | ----------
@@ -216,7 +216,7 @@ CTrilinos | [Isorropia](isorropia.html "Isorropia") | [Pamgen](pamgen.html "PAMG
 
 ## Trilinos 11.4
 
-Trilinos 11.4 was released in July 2013 and includes the following 54 packages. For more details about the release, view the [release notes](http:.html.htmltrilinos.org.htmloldsite.htmlrelease_notes-11.4.html).
+Trilinos 11.4 was released in July 2013 and includes the following 54 packages. For more details about the release, view the [release notes](https://trilinos.org/oldsite/release_notes-11.4.html).
 
 Download  | Trilinos | Packages | Version | 11.4
 ------ | ------ | ------ | -------- | ----------
@@ -234,7 +234,7 @@ CTrilinos | [Isorropia](isorropia.html "Isorropia") | [Pamgen](pamgen.html "PAMG
 
 ## Trilinos 11.2
 
-Trilinos 11.2 was released in April 2013 and includes the following 54 packages. For more details about the release, view the [release notes](http:.html.htmltrilinos.org.htmloldsite.htmlrelease_notes-11.2.html).
+Trilinos 11.2 was released in April 2013 and includes the following 54 packages. For more details about the release, view the [release notes](https://trilinos.org/oldsite/release_notes-11.2.html).
 
 Download  | Trilinos | Packages | Version | 11.2
 ------ | ------ | ------ | -------- | ----------
@@ -252,7 +252,7 @@ CTrilinos | [Isorropia](isorropia.html "Isorropia") | [Pamgen](pamgen.html "PAMG
 
 ## Trilinos 11.0
 
-Trilinos 11.0 was released in September 2012 and includes the following 54 packages. For more details about the release, view the [release notes](http:.html.htmltrilinos.org.htmloldsite.htmlrelease_notes-11.0.html).
+Trilinos 11.0 was released in September 2012 and includes the following 54 packages. For more details about the release, view the [release notes](https://trilinos.org/oldsite/release_notes-11.0.html).
 
 Download  | Trilinos | Packages | Version | 11.0
 ------ | ------ | ------ | -------- | ----------
@@ -270,7 +270,7 @@ CTrilinos | [Isorropia](isorropia.html "Isorropia") | [Pamgen](pamgen.html "PAMG
 
 ## Trilinos 10.12
 
-Trilinos 10.12 was released in July 2012 and includes the following 51 packages. For more details about the release, view the [release notes](http:.html.htmltrilinos.org.htmloldsite.htmlrelease_notes-10.12.html).
+Trilinos 10.12 was released in July 2012 and includes the following 51 packages. For more details about the release, view the [release notes](https://trilinos.org/oldsite/release_notes-10.12.html).
 
 Download  | Trilinos | Packages | Version | 10.12
 ------ | ------ | ------ | -------- | ----------
@@ -288,7 +288,7 @@ CTrilinos | [Isorropia](isorropia.html) | [Pamgen](pamgen.html) | [Stokhos](stok
 
 ## Trilinos 10.10
 
-Trilinos 10.10 was released in February 2012 and includes the following 50 packages. For more details about the release, view the [release notes](http:.html.htmltrilinos.org.htmloldsite.htmlrelease_notes-10.10.html).
+Trilinos 10.10 was released in February 2012 and includes the following 50 packages. For more details about the release, view the [release notes](https://trilinos.org/oldsite/release_notes-10.10.html).
 
 Download  | Trilinos | Packages | Version | 10.10
 ------ | ------ | ------ | -------- | ----------
@@ -305,7 +305,7 @@ CTrilinos | [Intrepid](intrepid.html) | [Optika](optika.html) | SEACAS | [Tpetra
 
 ## Trilinos 10.8
 
-Trilinos 10.8 was released in September 2011 and includes the following 50 packages. For more details about the release, view the [release notes](http:.html.htmltrilinos.org.htmloldsite.htmlrelease_notes-10.8.html).
+Trilinos 10.8 was released in September 2011 and includes the following 50 packages. For more details about the release, view the [release notes](https://trilinos.org/oldsite/release_notes-10.8.html).
 
 Download  | Trilinos | Packages | Version | 10.8
 ------ | ------ | ------ | -------- | ----------
@@ -322,7 +322,7 @@ CTrilinos | [Intrepid](intrepid.html) | [Optika](optika.html) | SEACAS | [Tpetra
 
 ## Trilinos 10.6
 
-Trilinos 10.6 was released in September 2010 and includes the following 48 packages. For more details about the release, view the [release notes](http:.html.htmltrilinos.org.htmloldsite.htmlrelease_notes-10.6.html).
+Trilinos 10.6 was released in September 2010 and includes the following 48 packages. For more details about the release, view the [release notes](https://trilinos.org/oldsite/release_notes-10.6.html).
 
 Download  | Trilinos | Packages | Version | 10.6
 ------ | ------ | ------ | -------- | ----------
@@ -339,7 +339,7 @@ CTrilinos | [Intrepid](intrepid.html) | [Optika](optika.html) | [Shards](shards.
 
 ## Trilinos 10.4
 
-Trilinos 10.4 was released in July 2010 and includes the following 47 packages. For more details about the release, view the [release notes](http:.html.htmltrilinos.org.htmloldsite.htmlrelease_notes-10.4.html) and the [changelog](http:.html.htmlwww.trilinos.org.htmloldsite.htmlchangelog-10.4.html).
+Trilinos 10.4 was released in July 2010 and includes the following 47 packages. For more details about the release, view the [release notes](http://www.trilinos.org/oldsite/changelog-10.4.html) and the [changelog](https://trilinos.org/oldsite/release_notes-10.4.html).
 
 Download  | Trilinos | Packages | Version | 10.4
 ------ | ------ | ------ | -------- | ----------
@@ -356,7 +356,7 @@ CTrilinos | [Kokkos](kokkos.html) | Optipack | [STK](stk.html) | TrilinosCouplin
 
 ## Trilinos 10.2
 
-Trilinos 10.2 was released in April 2010 and includes the following 45 packages. For more details about the release, view the [release notes](http:.html.htmltrilinos.org.htmloldsite.htmlrelease_notes-10.2.html) and the [changelog](http:.html.htmlwww.trilinos.org.htmloldsite.htmlchangelog-10.2.html).
+Trilinos 10.2 was released in April 2010 and includes the following 45 packages. For more details about the release, view the [release notes](https://trilinos.org/oldsite/release_notes-10.2.html) and the [changelog](http://www.trilinos.org/oldsite/changelog-10.2.html).
 
 Download  | Trilinos | Packages | Version | 10.2
 ------ | ------ | ------ | -------- | ----------
@@ -372,7 +372,7 @@ Download  | Trilinos | Packages | Version | 10.2
 
 ## Trilinos 10.0
 
-Trilinos 10.0 was released in September 2009 and includes the following 38 packages. For more details about the release, view the [release notes](http:.html.htmltrilinos.org.htmloldsite.htmlrelease_notes-10.0.txt) and the [changelog](http:.html.htmlwww.trilinos.org.htmloldsite.htmlchangelog-10.0.html).
+Trilinos 10.0 was released in September 2009 and includes the following 38 packages. For more details about the release, view the [release notes](https://trilinos.org/oldsite/release_notes-10.0.txt) and the [changelog](http://www.trilinos.org/oldsite/changelog-10.0.html).
 
 Download  | Trilinos | Packages | Version | 10.0
 ------ | ------ | ------ | -------- | ----------
@@ -387,7 +387,7 @@ Download  | Trilinos | Packages | Version | 10.0
 
 ## Trilinos 9.0
 
-Trilinos 9.0 was released in September 2008 and includes the following 39 packages. For more details about the release, view the [release notes](http:.html.htmltrilinos.org.htmloldsite.htmlrelease_notes-9.0.txt) and the [changelog](http:.html.htmlwww.trilinos.org.htmloldsite.htmlchangelog-9.0.html).
+Trilinos 9.0 was released in September 2008 and includes the following 39 packages. For more details about the release, view the [release notes](https://trilinos.org/oldsite/release_notes-9.0.txt) and the [changelog](http://www.trilinos.org/oldsite/changelog-9.0.html).
 
 Download  | Trilinos | Packages | Version | 9.0
 ------ | ------ | ------ | -------- | ----------
@@ -402,7 +402,7 @@ Download  | Trilinos | Packages | Version | 9.0
 
 ## Trilinos 8.0
 
-Trilinos 8.0 was released in August 2007 and included the following 30 packages. For more details about the release, view the [release notes](http:.html.htmltrilinos.org.htmloldsite.htmlrelease_notes-8.0.html) and the [changelog](http:.html.htmltrilinos.org.htmloldsite.htmlchangelog-8.0.html).
+Trilinos 8.0 was released in August 2007 and included the following 30 packages. For more details about the release, view the [release notes](https://trilinos.org/oldsite/release_notes-8.0.html) and the [changelog](https://trilinos.org/oldsite/changelog-8.0.html).
 
 Download  | Trilinos | Packages | 8.0
 ------ | ------ | ------ | -------- 
@@ -417,7 +417,7 @@ Download  | Trilinos | Packages | 8.0
 
 ## Trilinos 7.0
 
-Trilinos 7.0 was released in September 2006 and included the following 27 packages. For more details about the release, view the [release notes](http:.html.htmltrilinos.org.htmloldsite.htmlrelease_notes-7.0.html) and the [changelog](http:.html.htmltrilinos.org.htmloldsite.htmlchangelog-7.0.html).
+Trilinos 7.0 was released in September 2006 and included the following 27 packages. For more details about the release, view the [release notes](https://trilinos.org/oldsite/release_notes-7.0.html) and the [changelog](https://trilinos.org/oldsite/changelog-7.0.html).
 
 Download  | Trilinos | Packages | 7.0
 ------ | ------ | ------ | -------- 
@@ -431,7 +431,7 @@ Download  | Trilinos | Packages | 7.0
 
 ## Trilinos 6.0
 
-Trilinos 6.0 was released in September 2005 and included the following 18 packages. For more details about the release, view the [release notes](http:.html.htmltrilinos.org.htmloldsite.htmlrelease_notes-6.0.html) and the [changelog](http:.html.htmltrilinos.org.htmloldsite.htmlchangelog-6.0.html).
+Trilinos 6.0 was released in September 2005 and included the following 18 packages. For more details about the release, view the [release notes](https://trilinos.org/oldsite/release_notes-6.0.html) and the [changelog](https://trilinos.org/oldsite/changelog-6.0.html).
 
 Download  | Trilinos | Packages | 6.0
 ------ | ------ | ------ | -------- 
@@ -443,7 +443,7 @@ Download  | Trilinos | Packages | 6.0
 
 ## Trilinos 5.0
 
-Trilinos 5.0 was released in March 2005 and included the following 17 packages. For more details about the release, view the [release notes](http:.html.htmltrilinos.org.htmloldsite.htmlrelease_notes-5.0.html) and the [changelog](http:.html.htmltrilinos.org.htmloldsite.htmlchangelog-5.0.html).
+Trilinos 5.0 was released in March 2005 and included the following 17 packages. For more details about the release, view the [release notes](https://trilinos.org/oldsite/release_notes-5.0.html) and the [changelog](https://trilinos.org/oldsite/changelog-5.0.html).
 
 Download  | Trilinos | Packages | 5.0
 ------ | ------ | ------ | -------- 
@@ -456,7 +456,7 @@ Download  | Trilinos | Packages | 5.0
 
 ## Trilinos 4.0
 
-Trilinos 4.0 was released in June 2004 and included the following 16 packages. For more details about the release, view the [release notes](http:.html.htmltrilinos.org.htmloldsite.htmlrelease_notes-4.0.html).
+Trilinos 4.0 was released in June 2004 and included the following 16 packages. For more details about the release, view the [release notes](https://trilinos.org/oldsite/release_notes-4.0.html).
 
 Download  | Trilinos | Packages | 4.0
 ------ | ------ | ------ | -------- 

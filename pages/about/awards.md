@@ -20,9 +20,8 @@ The formal announcement was made in the September 2004 issue of R&D Magazine.
         </ul>
     </div>
     <div class="col-sm-5">
-        <a href="http://trilinos.org/oldsite/images/rd100_team.jpg">
         <img border="0" alt="Trilinos Team" src="images/trilinos-team.jpg" width="60" height="60">
-        </a><br>
+        <br>
         <strong>Trilinos RD100 Team</strong>
     </div>
 </div>
