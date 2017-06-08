@@ -1,23 +1,23 @@
 ---
-title: FAQ for Contributing to trilinos.org
-permalink: faq_for_contributing_to_trilinos_org.html
+title: FAQ for Contributing to trilinos.github.io
+permalink: faq_for_contributing_to_trilinos_githubio.html
 folder: community
 ---
 
-Below are some frequently asked questions about adding to trilinos.org web content.
+Below are some frequently asked questions about adding to trilinos.github.io web content.
 
-* [Q: I would like to contribute to trilinos.org. How do I get started?](#GetStarted)  
+* [Q: I would like to contribute to trilinos.github.io. How do I get started?](#GetStarted)  
 * [Q: I need to add/update metadata. Where can I make the changes?](#Metadata)  
 * [Q: What metadata is defined for the Trilinos-level?](#TrilinosMetadata)  
 * [Q: What metadata must be defined for each package homepage?](#PackageMetadata)  
 * [Q: What metadata must be defined for each package child page?](#PackageChildMetadata)  
 * [Q: How do I add a new package homepage?](#AddPackageHomepage)  
 * [Q: How do I add a new package child page?](#AddPackageChildPage)  
-* [Q: Other than adding new pages, what do I need to do when adding a new package to trilinos.org?](#AddPackageOther)
+* [Q: Other than adding new pages, what do I need to do when adding a new package to trilinos.github.io?](#AddPackageOther)
 
-<a name="GetStarted"></a>**Q: I would like to contribute to trilinos.org. How do I get started?**
+<a name="GetStarted"></a>**Q: I would like to contribute to trilinos.github.io. How do I get started?**
 
-**A:** (Note this question addresses contributing to the trilinos.org website. Information about contributing to the Trilinos Project can be found on the [Contribute](contribute.html) page.) If you are part of the Trilinos development team, after you register for an account (see “Register” in the footer menu), your account should be granted elevated permissions by an administrator. If you need the permission elevation process expedited, send a note to trilinos-framework@software.sandia.gov. If you are not part of the Trilinos development team, we are in the process of figuring out how to accept your contributions. If you are interested in contributing to the site, please contact trilinos-framework@software.sandia.gov.
+**A:** (Note this question addresses contributing to the trilinos.github.io website. Information about contributing to the Trilinos Project can be found on the [Contribute](contribute.html) page.) If you are part of the Trilinos development team, after you register for an account (see “Register” in the footer menu), your account should be granted elevated permissions by an administrator. If you need the permission elevation process expedited, send a note to trilinos-framework@software.sandia.gov. If you are not part of the Trilinos development team, we are in the process of figuring out how to accept your contributions. If you are interested in contributing to the site, please contact trilinos-framework@software.sandia.gov.
 
 <a name="Metadata"></a>**Q: I need to add/update metadata. Where can I make the changes?**
 
@@ -67,7 +67,7 @@ Below are some frequently asked questions about adding to trilinos.org web conte
 2.  Under Sidebars -> Main Sidebar select “Package Sidebar”.
 3.  Define the metadata for a package child page as described above.
 
-<a name="AddPackageOther"></a>**Q: Other than adding new pages, what do I need to do when adding a new package to trilinos.org?**
+<a name="AddPackageOther"></a>**Q: Other than adding new pages, what do I need to do when adding a new package to trilinos.github.io?**
 
 **A:** New packages should be mentioned on:
 
