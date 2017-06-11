@@ -65,14 +65,14 @@ th, td {
 <td>Morning:<br />
 8:30 -- 9:30</td>
 <td><strong>Trilinos 101: Getting  started with Trilinos</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2007/abstracts/tuesday_8-30.html">[abstract]</a><br />
+<a href="trilinos_user_group_2007_abstracts_tuesday_8h30.html">[abstract]</a><br />
 <a href="/pdfs/Trilinos101.ppt">[presentation ppt]</a><br />
 <cite>Willenbring / Heroux</cite></td>
 <td><strong>Trilinos 102: Advanced Concepts</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2007/abstracts/wednesday_8-30.html">[abstract]</a><br />
+<a href="trilinos_user_group_2007_abstracts_wednesday_8h30.html">[abstract]</a><br />
 <cite>Heroux</cite></td>
 <td><strong>Trilinos Framework: Update and Future Plans</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2007/abstracts/thursday_8-30.html">[abstract]</a><br />
+<a href="trilinos_user_group_2007_abstracts_thursday_8h30.html">[abstract]</a><br />
 <a href="/pdfs/BuildingTrilinosUsingCMake.ppt">[presentation ppt]</a><br />
 <a href="/pdfs/BuildingTrilinosUsingCMake.pdf">[presentation pdf]</a><br />
 <cite>Willenbring / Shead</cite></td>
@@ -80,16 +80,16 @@ th, td {
 <tr>
 <td>9:30 -- 10:30</td>
 <td><strong>Trilinos Progress, Challenges and Future Plans</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2007/abstracts/tuesday_9-30.html">[abstract]</a><br />
+<a href="trilinos_user_group_2007_abstracts_tuesday_9h30">[abstract]</a><br />
 <a href="http://trilinos.sandia.gov/events/trilinos_user_group_2007/presentations/TrilinosProgressChallengesFutures.ppt">[presentation ppt]</a><br />
 <cite>Heroux</cite></td>
 <td><strong>Safe memory usage in C++ with new Teuchos utility class</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2007/abstracts/wednesday_9-30.html">[abstract]</a><br />
+<a href="trilinos_user_group_2007_abstracts_wednesday_9h30">[abstract]</a><br />
 <a href="/pdfs/TUG2007_Teuchos_MemoryManagement.ppt">[presentation ppt]</a><br />
 <a href="/pdfs/TUG2007_Teuchos_MemoryManagement.pdf">[presentation pdf]</a><br />
 <cite>Bartlett</cite></td>
 <td><strong>To PDE Components and Beyond</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2007/abstracts/thursday_9-30.html">[abstract]</a><br />
+<a href="trilinos_user_group_2007_abstracts_thursday_9h30">[abstract]</a><br />
 <a href="/pdfs/TUG_ComponentsVisionRoadmap.ppt">[presentation ppt]</a><br />
 <cite>Salinger</cite></td>
 </tr>
@@ -102,14 +102,14 @@ th, td {
 <tr>
 <td>11:00 -- 11:45</td>
 <td><strong>Using Belos: Next-generation Iterative Solvers</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2007/abstracts/tuesday_11-00.html">[abstract]</a><br />
+<a href="trilinos_user_group_2007_abstracts_tuesday_11h.html">[abstract]</a><br />
 <a href="/pdfs/TUG_Belos_Users.ppt">[presentation ppt]</a><br />
 <cite>Thornquist</cite></td>
 <td><strong>Effective partitioning and load balancing</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2007/abstracts/wednesday_11-00.html">[abstract]</a><br />
+<a href="trilinos_user_group_2007_abstracts_wednesdayday_11h.html">[abstract]</a><br />
 <cite>Boman</cite></td>
 <td><strong>Parallel interactive computing with PyTrilinos and ipython</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2007/abstracts/thursday_11-00.html">[abstract]</a><br />
+<a href="trilinos_user_group_2007_abstracts_thursday_11h.html">[abstract]</a><br />
 <a href="/pdfs/ParallelInteractivePyTrilinos.ppt">[presentation ppt]</a><br />
 <cite>Spotz</cite></td>
 </tr>
@@ -123,35 +123,35 @@ th, td {
 <tr>
 <td>1:15 -- 2:15</td>
 <td><strong>Some of Whatâ€™s New in Trilinos: Sacado, phdMesh, Intrepid, FEI</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2007/abstracts/tuesday_1-15.html">[abstract]</a><br />
+<a href="trilinos_user_group_2007_abstracts_tuesday_1h15.html">[abstract]</a><br />
 <a href="/pdfs/Sacado_07.pdf">[presentation pdf]</a><br />
 <cite>Phipps / Edwards / Ridzal / Williams</cite></td>
 <td><strong>The Titan Project: Requirements for Data Mining &amp; Analysis.</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2007/abstracts/wednesday_1-15.html">[abstract]</a><br />
+<a href="trilinos_user_group_2007_abstracts_wednesday_1h15.html">[abstract]</a><br />
 <a href="/pdfs/Dunlavy_TUG_2007.ppt">[presentation ppt]</a><br />
 <cite>Dunlavy</cite></td>
 <td><strong>What about Multicore?</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2007/abstracts/thursday_1-15.html">[abstract]</a><br />
+<a href="trilinos_user_group_2007_abstracts_thursday_1h15.html">[abstract]</a><br />
 <a href="/pdfs/WhatAboutMulticore.ppt">[presentation ppt]</a><br />
 <cite>Heroux / Edwards / Doerfler</cite></td>
 </tr>
 <tr>
 <td>2:15 -- 3:15</td>
 <td><strong>Whatâ€™s New in the Old: Rythmos, ML, Amesos</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2007/abstracts/tuesday_2-15.html">[abstract]</a><br />
+<a href="trilinos_user_group_2007_abstracts_tuesday_2h15.html">[abstract]</a><br />
 <a href="/pdfs/tug07.pdf">[presentation pdf]</a><br />
 <a href="/pdfs/TUG_Amesos_Users.ppt">[presentation ppt]</a><br />
 <cite>Coffey / Siefert / Thornquist</cite></td>
 <td><strong>Trilinos: From a Userâ€™s Perspective</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2007/abstracts/wednesday_2-15_1.html">[abstract]</a><br />
+<a href="trilinos_user_group_2007_abstracts_wednesday_2h15.html">[abstract]</a><br />
 <a href="/pdfs/Hooper_TUG_2007_v1.ppt">[presentation ppt]</a><br />
 <cite>Hooper</cite>
 <hr size="1" width="100%" />
 <p><strong>The DOE ACTS Collection Project</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2007/abstracts/wednesday_2-15_2.html">[abstract]</a><br />
+<a href="trilinos_user_group_2007_abstracts_wednesday_2h15_2.html">[abstract]</a><br />
 <cite>Drummond, LBL</cite>
 <td><strong>Milestone: Lessons Learned, Next Steps</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2007/abstracts/thursday_2-15.html">[abstract]</a><br />
+<a href="trilinos_user_group_2007_abstracts_thursday_2h15.html">[abstract]</a><br />
 <cite>2007 Trilinos Milestone Team</cite></td>
 <tr>
 <td>3:15 -- 3:30</td>
@@ -161,14 +161,14 @@ th, td {
 <tr>
 <td>3:30 -- 4:30</td>
 <td><strong>Using Thyra and Stratimikos to build block composite capabilities</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2007/abstracts/tuesday_3-30.html">[abstract]</a><br />
+<a href="trilinos_user_group_2007_abstracts_tuesday_3h30.html">[abstract]</a><br />
 <a href="/pdfs/TUG2007_Thyra_Implicit.ppt">[presentation ppt]</a><br />
 <a href="/pdfs/TUG2007_Thyra_Implicit.pdf">[presentation pdf]</a><br />
 <cite>Bartlett</cite></td>
 <td><strong>Stochastic Methods: Characterization and requirements</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2007/abstracts/wednesday_3-30.html">[abstract]</a><br />
+<a href="trilinos_user_group_2007_abstracts_wednesday_3h30.html">[abstract]</a><br />
 <cite>Comboul / Arnst, USC</cite></td>
 <td><strong>Trilinos Strategic Planning</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2007/abstracts/thursday_3-30.html">[abstract]</a><br />
+<a href="trilinos_user_group_2007_abstracts_thursday_3h30.html">[abstract]</a><br />
 <a href="/pdfs/TrilinosStrategicPlanning.ppt">[presentation ppt]</a><br />
 <cite>Heroux</cite></td>
