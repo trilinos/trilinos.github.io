@@ -92,7 +92,7 @@ Video* --<br />
 Video* --<br />
 1:07:45, slide 132<br />
 <cite>(Chris B.)</cite><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2010/abstracts/wednesday_9-30.html">[abstract]</a></td>
+<a href="trilinos_user_group_2010_abstracts_wednesday_9h30.html">[abstract]</a></td>
 <td rowspan="3"><strong>Trilinos Framework Update</strong><br />
 <cite>(Jim W.)<cite></cite></cite></td>
 <tr>
