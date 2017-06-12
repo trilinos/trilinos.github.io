@@ -88,7 +88,7 @@ th, td {
 <td rowspan="3"><strong>CASK</strong><br />
 <cite>(Cray)</cite></td>
 <td rowspan="3"><strong>Trilinos SE Status and Future Issues</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2009/abstracts/thursday_8-30.html">[abstract]</a><br />
+<a href="trilinos_user_group_2009_abstracts_thursday_8h30.html">[abstract]</a><br />
 <a href="http://www.cs.sandia.gov/%7Erabartl/TUG20091105_TrilinosSeIssues.pdf">[presentation pdf</a> <a href="http://www.cs.sandia.gov/%7Erabartl/TUG20091105_TrilinosSeIssues.ppt"> ppt]</a><br />
 <cite>(Ross B.)</cite></td>
 </tr>
@@ -151,11 +151,11 @@ th, td {
 <a href="/pdfs/TUG_2009_Belos.pdf">[presentation pdf]</a><br />
 <cite>(Mike P.)</cite><br />
 <strong>Introducing Tpetra and Kokkos</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2009/abstracts/wednesday_11-20.html">[abstract]</a><br />
+<a href="trilinos_user_group_2009_abstracts_wednesday_11h20.html">[abstract]</a><br />
 [presentation pptx]<br />
 <cite>(Chris B.)</cite><br />
 <strong>Teuchos Memory Management</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2009/abstracts/wednesday_11-40.html">[abstract]</a><br />
+<a href="trilinos_user_group_2009_abstracts_wednesday_11h40.html">[abstract]</a><br />
 [presentation pptx] (begins on slide 16)<br />
 <cite>(Chris B.)</cite></td>
 <td rowspan="16"></td>
@@ -198,7 +198,7 @@ th, td {
 <strong>Library Mode Dakota via TriKota</strong><br />
 <cite>(Andy S.)</cite></td>
 <td rowspan="2"><strong>Pattern Formation in Mesoscopic Superconductors</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2009/abstracts/wednesday_1-30.html">[abstract]</a><br />
+<a href="trilinos_user_group_2009_abstracts_wednesday_1h30.html">[abstract]</a><br />
 <a href="http://win.ua.ac.be/%7Enschloe/system/files/tug-2009-schloemer.pdf">[presentation pdf]</a><br />
 <cite>(User Talk -- Nico Schloemer)</cite></td>
 </tr>
@@ -212,7 +212,7 @@ th, td {
 <tr>
 <td>2:15 pm</td>
 <td rowspan="3"><strong>Software Development Environments for Scientific and Engineering Software</strong><br />
-<a href="http://trilinos.org/oldsite/events/trilinos_user_group_2009/abstracts/wednesday_2-15.html">[abstract]</a><br />
+<a href="trilinos_user_group_2009_abstracts_wednesday_2h15.html">[abstract]</a><br />
 <a href="http://carver.cs.ua.edu/Talks/TUG_Carver.pdf">[presentation pdf]</a><br />
 <cite>(User Talk -- Jeff Carver)</cite></td>
 </tr>
