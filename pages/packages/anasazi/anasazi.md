@@ -17,7 +17,7 @@ An implementation of Anasazi is accomplished via the use of interfaces. Current 
 
 Anasazi supports the following solver/matrix combinations:
 
-[eigensolver_table](images/eigensolver_table.png)
+![eigensolver_table](images/eigensolver_table.png)
 <span style="text-decoration: underline;">Chart notes:</span>
 
 1.  This chart **does not** endorse the use of a particular solver for a particular eigenvalue problem.

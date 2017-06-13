@@ -33,7 +33,7 @@ AztecOO supports a “matrix-free” mechanism via the pure virtual class Epetra
 
 <div style="color: #000000;">Aztec is embedded in the current AztecOO capability in Trilinos.</div>
 
-<div style="color: #000000;">Aztec 2.1 is still available at this link: [http://www.cs.sandia.gov/CRF/aztec1.html](http://www.cs.sandia.gov/CRF/aztec1.html "http://www.cs.sandia.gov/CRF/aztec1.html")</div>
+Aztec 2.1 is still available at this link: [http://www.cs.sandia.gov/CRF/aztec1.html](http://www.cs.sandia.gov/CRF/aztec1.html)
 
 ## The Aztec development team:
 
