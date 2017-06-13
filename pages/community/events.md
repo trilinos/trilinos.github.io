@@ -13,7 +13,7 @@ folder: community
 *   [US Trilinos User Group 2014](trilinos_user_group_meeting_2014.html) -- Oct 27-30, 2014, Albuquerque, NM USA
 *   [European Trilinos User Group Meeting 2014](european_trilinos_user_group_meeting_2014.html) -- CSCS, Lugano, Switzerland
 *   [Spring Developer Meeting 2014](spring_developer_meeting_2014.html) -- Jun 4-5, 2014, Albuquerque, NM, USA
-*   [US Trilinos User Group 2013](trilinos_user_group_meeting_2013.html") -- Albuquerque, NM, USA
+*   [US Trilinos User Group 2013](trilinos_user_group_meeting_2013.html) -- Albuquerque, NM, USA
 *   [3-day Introductory Course on Trilinos 2013 (Warsaw, Poland)](3-day_introductory_course_on_trilinos.html)
 *   [European Trilinos User Group 2013](european_trilinos_user_group_meeting_2013.html) -- Munich, Germany
 *   [Trilinos User Group 2012](trilinos_user_group_meeting_2012.html)

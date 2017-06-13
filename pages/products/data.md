@@ -124,9 +124,9 @@ to compare their effectiveness. Zoltan also provides native parallel distance-on
 graph-based interface. These algorithms are state-of-the-art distributed memory implementations, as described in the following JPDC article:
 [_A Framework for Scalable Parallel Greedy Coloring on Distributed Memory Computers_](http://www.sandia.gov/~egboman/papers/coloring_framework.pdf)
 <br>
-<img alt="" src="/pdfs/zoltan_chisels.gif" width="90%" />
+<img alt="" src="/images/zoltan_chisels.gif" width="90%" />
 <br>
-<img alt="" src="/pdfs/zoltan_slac.gif" width="100%" />
+<img alt="" src="/images/zoltan_slac.gif" width="100%" />
 
 * * *
 

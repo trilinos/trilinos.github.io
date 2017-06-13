@@ -64,7 +64,7 @@ th, td {
 <tr>
 <td>8:30 am</td>
 <td><strong>CMake Trilinos</strong><br />
-<cite>(Ross B., Esteban G.) </cite> <a href="/pdfs/TUG20081021_CMakeTrilinos.pdf">[presentation pdf]</a></td>
+<cite>(Ross B., Esteban G.) </cite> <a href="/pdfs/TUG20081021_CMakeTrilinos.pdf"><br />[presentation pdf]</a></td>
 <td><strong>Epetra and Tpetra Concepts</strong><br />
 <cite>(Mike H.)</cite><br />
 <a href="/pdfs/HerouxEpetraConcepts.ppt">[presentation ppt]</a></td>

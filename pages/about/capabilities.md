@@ -43,7 +43,7 @@ Vector reduction transformation operators | [RTOp](rtop.html)
 Matrix gallery | [Galeri](galeri.html)
 GUI Tools | [Optika](optika.html)
 Threading | ThreadPool
-I/O Utilities | [SEACAS](seacas.html)
+I/O Utilities | SEACAS
 Simulation Tools | Sundance
 Mesh Generation, Improvement, and Adaptivity |
 Mesh Generation | [PAMGEN](pamgen.html)

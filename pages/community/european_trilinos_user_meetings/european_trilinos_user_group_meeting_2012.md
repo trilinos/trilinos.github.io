@@ -11,7 +11,7 @@ EPFL Lausanne
 
 **Host:** [Simone Deparis](mailto:simone.deparis@epfl.ch)
 
-**Next year:** [EuroTUG 2013](http://trilinos.org/oldsite/events/eurotug_2013/) will be held in Munich, Germany.
+**Next year:** [EuroTUG 2013](european_trilinos_user_group_meeting_2013.html) will be held in Munich, Germany.
 
 ![Photo of EuroTUG 2012 participants](images/euroTUG.jpg)
 
