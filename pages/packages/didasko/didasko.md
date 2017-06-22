@@ -27,7 +27,7 @@ In order to take advantage of Didasko, we suggest to compile Trilinos with the f
 
 From this web page you can:
 
-*   [Browse](http://trilinos.sandia.gov/packages/docs/dev/packages/didasko/doc/html/index.html) the source of all Didasko’s examples;
+*   [Browse](https://trilinos.org/docs/dev/packages/didasko/doc/html/index.html) the source of all Didasko’s examples;
 *   Check the FAQ page.
 
 Have fun! Don’t hesitate to [contact us](http://trilinos.org/oldsite/packages/didasko/contact.html) for bugs, suggestions, or to help with the development!
