@@ -2,6 +2,8 @@
 title: ForTrilinos
 permalink: fortrilinos.html
 folder: packages
+redirect_to:
+  - https://trilinos.github.io/ForTrilinos/
 ---
 
 **Welcome to the ForTrilinos Home**
