@@ -5,14 +5,14 @@ permalink: download.html
 
 <span style="text-decoration: underline;"><span style="font-size: 20px;">Trilinos Release 12.10.1</span></span>
 
-Download: [.gz](http://trilinos.org/oldsite/download/login.html?tid=tr12101gz) (`93.26` MB), [.bz2](http://trilinos.org/oldsite/download/login.html?tid=tr12101bz2) (`77.69` MB)
+Download: [.gz](download_files/trilinos-12.10.1-Source.tar.gz) (`93.26` MB), [.bz2](download_files/trilinos-12.10.1-Source.tar.bz2) (`77.69` MB)
 
 CRC checksum:  
 `.gz 2741256545  
 .bz2 2265823741  
 `
 
-`Total downloads: 747`
+`Total downloads: 1275`
 
 Trilinos 12.10 was released in November 2016 and includes the following packages:
 

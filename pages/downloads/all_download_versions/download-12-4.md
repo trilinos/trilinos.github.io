@@ -6,7 +6,7 @@ folder: downloads
 
 <span style="text-decoration: underline;"><span style="font-size: 20px;">Trilinos Release 12.4.2</span></span>
 
-Download: [.gz](http://trilinos.org/oldsite/download/login.html?tid=tr12042gz) (`115.54` MB), [.bz2](http://trilinos.org/oldsite/download/login.html?tid=tr12042bz2) (`99.98` MB)
+Download: [.gz](download_files/trilinos-12.4.1-Source.tar.gz) (`115.54` MB), [.bz2](download_files/trilinos-12.4.1-Source.tar.bz2) (`99.98` MB)
 
 CRC checksum:  
 `.gz 3579615972  

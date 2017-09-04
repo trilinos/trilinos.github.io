@@ -6,7 +6,7 @@ folder: downloads
 
 <span style="text-decoration: underline;"><span style="font-size: 20px;">Trilinos Release 12.0.1</span></span>
 
-Download: [.gz](http://trilinos.org/oldsite/download/login.html?tid=tr12001gz) (`127.75` MB), [.bz2](http://trilinos.org/oldsite/download/login.html?tid=tr12001bz2) (`109.56` MB)
+Download: [.gz](download_files/trilinos-12.0.1-Source.tar.gz) (`127.75` MB), [.bz2](download_files/trilinos-12.0.1-Source.tar.bz2) (`109.56` MB)
 
 CRC checksum:  
 `.gz 3230060499  
