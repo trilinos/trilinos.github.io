@@ -8,7 +8,7 @@ folder: community
 
 October 23th: User Tutorial  
 October 24th: User Sessions  
-October 25th: Developer Sessions
+October 25th: Developer Sessions  
 October 26th: Optional Small Group Developer Sessions, TBA, morning only
 
 ## Location
@@ -34,18 +34,20 @@ The goal of the annual meeting is to facilitate communication between Trilinos u
 
 Registration for TUG 2017 is limited. 
 If you wish to attend and are not a Sandia employee or contractor, please contact [the TUG organizers](mailto:trilinos-help@software.sandia.gov) for more information before registering. 
-Registration for eligible attendees is [now available](https://docs.google.com/forms/d/e/1FAIpQLSfPJDq7U4DgPAl8Xc4WbLy3JMefd4DaKSJIAOjCjOJ5VVcPGw/viewform).
+Registration for eligible attendees is [now available](https://docs.google.com/forms/d/e/1FAIpQLSdcDiCzxCdQ7hebcqvKCybdrzCcfJGMXmT4ADkUXd9uJ1cnFA/viewform?usp=sf_link).
 
 ## Schedule
+
+Note: The below schedule is tentative and could change significantly, including dates and start and end times.
 
 <p style="text-align: center;"><span style="text-decoration: underline;">Monday, October 23th</span> (User Tutorial)</p>
 
 <table summary="Timetable">
 <tbody>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">1:00</abbr>–<abbr title="2011-11-01T09:30:00">3:00</abbr></th>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">TBD</abbr>–<abbr title="2011-11-01T09:30:00">3:00</abbr></th>
 <td headers="time-1 location-1">
-<div>Trilinos Tutorial (M. Hoemmen, A. Klinvex)</div>
+<div>Trilinos Tutorial (TBA)</div>
 </td>
 </tr>
 <tr>
@@ -59,65 +61,10 @@ Registration for eligible attendees is [now available](https://docs.google.com/f
 
 <table summary="Timetable">
 <tbody>
+
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">8:30</abbr>–<abbr title="2011-11-01T09:30:00">9:15</abbr></th>
-<td headers="time-1 location-1">
-<div>Trilinos Progress, Challenges, and Future Plans (M. Heroux)</div>
-</td>
-</tr>
-<tr>
-<th id="time-2" axis="time"><abbr title="2011-11-01T09:30:00">9:15</abbr>–<abbr title="2011-11-01T09:45:00">9:40</abbr></th>
-<td headers="time-2 location-1">Kokkos tasking (S. Rajamanickam/K. Kim)</td>
-</tr>
-<tr>
-<th id="time-2" axis="time"><abbr title="2011-11-01T09:30:00">9:40</abbr>–<abbr title="2011-11-01T09:45:00">10:00</abbr></th>
-<td headers="time-2 location-1">ShyLU and Tacho (K. Kim)</td>
-</tr>
-<tr>
-<th id="time-3" axis="time"><abbr title="2011-11-01T09:45:00">10:00</abbr>–<abbr title="2011-11-01T10:15:00">10:30</abbr></th>
-<td headers="time-3 location-1">
-<div>Break</div>
-</td>
-</tr>
-<tr>
-<th id="time-4" axis="time" width="16%"><abbr title="2011-11-01T10:15:00">10:30</abbr>–<abbr title="2011-11-01T11:45:00">11:00</abbr></th>
-<td headers="time-4 location-1">Experiences with 2nd generation Trilinos linear solvers in TeaLeaf (Richard Smedley-Stevenson)</td>
-</tr>
-<tr>
-<th id="time-7" axis="time"><abbr title="2011-11-01T14:00:00">11:00</abbr>–<abbr title="2011-11-01T14:45:00">11:45</abbr></th>
-<td headers="time-7 location-1">Docker for Trilinos (T. Wiesner)</td>
-</tr>
-<tr>
-<th id="time-5" axis="time"><abbr title="2011-11-01T11:45:00">11:45</abbr>–<abbr title="2011-11-01T13:15:00">1:15</abbr></th>
-<td headers="time-5 location-1">Lunch</td>
-</tr>
-<tr>
-<th id="time-6" axis="time"><abbr title="2011-11-01T13:15:00">1:15</abbr>–<abbr title="2011-11-01T14:00:00">1:30</abbr></th>
-<td headers="time-6 location-1">Reading YAML into a Teuchos::ParameterList (C. Siefert)</td>
-</tr>
-<tr>
-<th id="time-6" axis="time"><abbr title="2011-11-01T13:15:00">1:30</abbr>–<abbr title="2011-11-01T14:00:00">1:50</abbr></th>
-<td headers="time-6 location-1">Zoltan2:  Partitioning, Mapping, Ordering (K. Devine)</td>
-</tr>
-<tr>
-<th id="time-8" axis="time"><abbr title="2011-11-01T14:45:00">1:50</abbr>–<abbr title="2011-11-01T15:15:00">2:10</abbr></th>
-<td headers="time-8 location-1">Tempus -- New Trilinos time-integration package (C. Ober)</td>
-</tr>
-<tr>
-<th id="time-8" axis="time"><abbr title="2011-11-01T14:45:00">2:10</abbr>–<abbr title="2011-11-01T15:15:00">2:40</abbr></th>
-<td headers="time-8 location-1">Current status of thread parallelism and CUDA support in Tpetra and downstream linear solvers (M. Hoemmen)</td>
-</tr>
-<tr>
-<th id="time-8" axis="time"><abbr title="2011-11-01T14:45:00">2:40</abbr>–<abbr title="2011-11-01T15:15:00">2:55</abbr></th>
-<td headers="time-8 location-1">Intrepid2 (K. Kim)</td>
-</tr>
-<tr>
-<th id="time-8" axis="time"><abbr title="2011-11-01T14:45:00">2:55</abbr>–<abbr title="2011-11-01T15:15:00">3:30</abbr></th>
-<td headers="time-8 location-1">Break</td>
-</tr>
-<tr>
-<th id="time-9" axis="time"><abbr title="2011-11-01T15:15:00">3:30</abbr>–<abbr title="2011-11-01T15:30:00">4:30</abbr></th>
-<td headers="time-9 location-1">User feedback session / User meeting wrap-up</td>
+<th id="time-2" axis="time"><abbr title="2011-11-01T09:30:00">8:30</abbr>–<abbr title="2011-11-01T09:45:00">4:30</abbr></th>
+<td headers="time-2 location-1">TBA</td>
 </tr>
 </tbody>
 </table>
@@ -125,44 +72,8 @@ Registration for eligible attendees is [now available](https://docs.google.com/f
 <table summary="Timetable">
 <tbody>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">8:30</abbr>–<abbr title="2011-11-01T09:30:00">9:15</abbr></th> 
-<td headers="time-1 location-1">Trilinos SQE Overview/Discussion (M. Heroux)</td>
-</tr>
-<tr>
-<th id="time-2" axis="time"><abbr title="2011-11-01T09:30:00">9:15</abbr>–<abbr title="2011-11-01T09:45:00">10:15</abbr></th>
-<td headers="time-2 location-1">Trilinos Status and Plans for NGP</td>
-</tr>
-<tr>
-<th id="time-3" axis="time"><abbr title="2011-11-01T09:45:00">10:15</abbr>–<abbr title="2011-11-01T10:15:00">10:45</abbr></th>
-<td headers="time-3 location-1">Break</td>
-</tr>
-<tr>
-<th id="time-4" axis="time" width="16%"><abbr title="2011-11-01T10:15:00">10:45</abbr>–<abbr title="2011-11-01T11:45:00">11:15</abbr></th>
-<td headers="time-4 location-1">SST Project Workflow &amp; Tools (A. Levine)</td>
-</tr>
-<tr>
-<th id="time-7" axis="time"><abbr title="2011-11-01T14:00:00">11:15</abbr>–<abbr title="2011-11-01T14:45:00">11:45</abbr></th>
-<td headers="time-7 location-1">Workflow follow-up discussion / Strategic Planning topic selection</td>
-</tr>
-<tr>
-<th id="time-5" axis="time"><abbr title="2011-11-01T11:45:00">11:45</abbr>–<abbr title="2011-11-01T13:15:00">1:30</abbr></th>
-<td headers="time-5 location-1">Working On-site Lunch / Trilinos Strategic Planning (Trilinos project level)</td>
-</tr>
-<tr>
-<th id="time-6" axis="time"><abbr title="2011-11-01T13:15:00">1:30</abbr>–<abbr title="2011-11-01T14:00:00">1:50</abbr></th>
-<td headers="time-6 location-1">Do This Not That: Import/Export and FillComplete Edition (C. Siefert)</td>
-</tr>
-<tr>
-<th id="time-6" axis="time"><abbr title="2011-11-01T13:15:00">1:50</abbr>–<abbr title="2011-11-01T14:00:00">2:20</abbr></th>
-<td headers="time-6 location-1">KokkosKernels Introduction (M. Deveci)</td>
-</tr>
-<tr>
-<th id="time-6" axis="time"><abbr title="2011-11-01T13:15:00">2:20</abbr>–<abbr title="2011-11-01T14:00:00">2:50</abbr></th>
-<td headers="time-6 location-1">TriData: Applying Trilinos to Data Analysis Applications (A. Klinvex)</td>
-</tr>
-<tr>
-<th id="time-9" axis="time"><abbr title="2011-11-01T15:15:00">2:50</abbr>–<abbr title="2011-11-01T15:30:00">4:30</abbr></th>
-<td headers="time-9 location-1">TBA/possible end of meeting or smaller group discussions</td>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">8:30</abbr>–<abbr title="2011-11-01T09:30:00">4:30</abbr></th> 
+<td headers="time-1 location-1">TBA</td>
 </tr>
 </tbody>
 </table>
