@@ -6,7 +6,7 @@ folder: community
 
 ## Dates
 
-October 23th: User Tutorial  
+October 23th: User Tutorial (tentative)  
 October 24th: User Sessions  
 October 25th: Developer Sessions  
 October 26th: Optional Small Group Developer Sessions, TBA, morning only
