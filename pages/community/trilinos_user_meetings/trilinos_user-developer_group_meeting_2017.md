@@ -45,14 +45,14 @@ Note: The below schedule is tentative and could change significantly, including 
 <table summary="Timetable">
 <tbody>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">TBD</abbr>–<abbr title="2011-11-01T09:30:00">3:00</abbr></th>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">1:00</abbr>–<abbr title="2011-11-01T09:30:00">TBD</abbr></th>
 <td headers="time-1 location-1">
-<div>Trilinos Tutorial (TBA)</div>
+<div>Trilinos Tutorial, M. Hoemmen & L. Berger-Vergiat</div>
 </td>
 </tr>
 <tr>
-<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">3:00</abbr>–<abbr title="2011-10-31T17:15:00">5:00</abbr></th>
-<td headers="time-1 location-1">Trilinos Hands-on Tutorial (individual-driven with experts available)</td>
+<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">TBD</abbr>–<abbr title="2011-10-31T17:15:00">5:00</abbr></th>
+<td headers="time-1 location-1">Trilinos Tutorial - MueLu focus, L. Berger-Vergiat</td>
 </tr>
 </tbody>
 </table>
