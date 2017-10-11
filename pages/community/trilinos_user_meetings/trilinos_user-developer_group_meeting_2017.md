@@ -76,7 +76,7 @@ Note: The below schedule is tentative and could change significantly, including 
 <table summary="Timetable">
 <tbody>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:45</abbr>–<abbr title="2011-11-01T09:30:00">9:45</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">8:30</abbr>–<abbr title="2011-11-01T09:30:00">9:15</abbr></th> 
 <td headers="time-1 location-1">Developer Discussion of Trilinos Products, M. Heroux</td>
 </tr>
 <tr>
