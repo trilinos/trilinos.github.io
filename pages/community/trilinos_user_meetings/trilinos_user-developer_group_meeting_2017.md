@@ -67,8 +67,24 @@ Note: The below schedule is tentative and could change significantly, including 
 <td headers="time-2 location-1">Trilinos Future Plans and Product Overview, M. Heroux</td>
 </tr>
 <tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">TBD</abbr>–<abbr title="2011-11-01T09:30:00">TBD</abbr></th> 
+<td headers="time-1 location-1">ForTrilinos: using SWIG to auto-generate Fortran interface to Trilinos, A. Prokopenko</td>
+</tr>
+<tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">TBD</abbr>–<abbr title="2011-11-01T09:30:00">TBD</abbr></th> 
+<td headers="time-1 location-1">Tempus, C. Ober</td>
+</tr>
+<tr>
 <th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:30</abbr>–<abbr title="2011-11-01T09:30:00">4:30</abbr></th> 
 <td headers="time-1 location-1">TBA</td>
+</tr>
+<tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">3:00</abbr>–<abbr title="2011-11-01T09:30:00">3:30</abbr></th> 
+<td headers="time-1 location-1">Break</td>
+</tr>
+<tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">3:30</abbr>–<abbr title="2011-11-01T09:30:00">4:30</abbr></th> 
+<td headers="time-1 location-1">User Feedback / User meeting wrap-up</td>
 </tr>
 </tbody>
 </table>
