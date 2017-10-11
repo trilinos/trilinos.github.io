@@ -76,7 +76,7 @@ Note: The below schedule is tentative and could change significantly, including 
 <table summary="Timetable">
 <tbody>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">8:30</abbr>–<abbr title="2011-11-01T09:30:00">9:15</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:45</abbr>–<abbr title="2011-11-01T09:30:00">9:45</abbr></th> 
 <td headers="time-1 location-1">Developer Discussion of Trilinos Products, M. Heroux</td>
 </tr>
 <tr>
@@ -112,8 +112,20 @@ Note: The below schedule is tentative and could change significantly, including 
 <td headers="time-1 location-1">Help! I'm Drowning in Trilinos Emails!  Productivity Hints from the MueLu Team, C. Siefert</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">1:45</abbr>–<abbr title="2011-11-01T09:30:00">4:30</abbr></th> 
-<td headers="time-1 location-1">TBA</td>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">1:45</abbr>–<abbr title="2011-11-01T09:30:00">2:45</abbr></th> 
+<td headers="time-1 location-1">Test and workflow discussions</td>
+</tr>
+<tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">2:45</abbr>–<abbr title="2011-11-01T09:30:00">3:00</abbr></th> 
+<td headers="time-1 location-1">Strategic Planning topic selection</td>
+</tr>
+<tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">3:00</abbr>–<abbr title="2011-11-01T09:30:00">3:30</abbr></th> 
+<td headers="time-1 location-1">Break</td>
+</tr>
+<tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">3:30</abbr>–<abbr title="2011-11-01T09:30:00">4:30</abbr></th> 
+<td headers="time-1 location-1">Strategic Planning</td>
 </tr>
 </tbody>
 </table>
