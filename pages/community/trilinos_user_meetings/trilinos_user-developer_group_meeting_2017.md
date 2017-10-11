@@ -63,8 +63,12 @@ Note: The below schedule is tentative and could change significantly, including 
 <tbody>
 
 <tr>
-<th id="time-2" axis="time"><abbr title="2011-11-01T09:30:00">8:30</abbr>–<abbr title="2011-11-01T09:45:00">4:30</abbr></th>
-<td headers="time-2 location-1">TBA</td>
+<th id="time-2" axis="time"><abbr title="2011-11-01T09:30:00">8:30</abbr>–<abbr title="2011-11-01T09:45:00">9:30</abbr></th>
+<td headers="time-2 location-1">Trilinos Future Plans and Product Overview, M. Heroux</td>
+</tr>
+<tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:30</abbr>–<abbr title="2011-11-01T09:30:00">4:30</abbr></th> 
+<td headers="time-1 location-1">TBA</td>
 </tr>
 </tbody>
 </table>
@@ -72,7 +76,43 @@ Note: The below schedule is tentative and could change significantly, including 
 <table summary="Timetable">
 <tbody>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">8:30</abbr>–<abbr title="2011-11-01T09:30:00">4:30</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">8:30</abbr>–<abbr title="2011-11-01T09:30:00">9:15</abbr></th> 
+<td headers="time-1 location-1">Developer Discussion of Trilinos Products, M. Heroux</td>
+</tr>
+<tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:15</abbr>–<abbr title="2011-11-01T09:30:00">9:45</abbr></th> 
+<td headers="time-1 location-1">Sub-team workflows for increased team productivity, tight team integration and scalable testing, R. Bartlett</td>
+</tr>
+<tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:45</abbr>–<abbr title="2011-11-01T09:30:00">10:15</abbr></th> 
+<td headers="time-1 location-1">Stability w.r.t. the Tip of Develop, J. Gates</td>
+</tr>
+<tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">10:15</abbr>–<abbr title="2011-11-01T09:30:00">10:45</abbr></th> 
+<td headers="time-1 location-1">BREAK</td>
+</tr>
+<tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">10:45</abbr>–<abbr title="2011-11-01T09:30:00">11:15</abbr></th> 
+<td headers="time-1 location-1">Pull Request Testing, J. Willenbring & A. Levine</td>
+</tr>
+<tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">11:15</abbr>–<abbr title="2011-11-01T09:30:00">11:45</abbr></th> 
+<td headers="time-1 location-1">Multi-core testing requirements and approaches, Discussion</td>
+</tr>
+<tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">11:45</abbr>–<abbr title="2011-11-01T09:30:00">1:15</abbr></th> 
+<td headers="time-1 location-1">Lunch</td>
+</tr>
+<tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">1:15</abbr>–<abbr title="2011-11-01T09:30:00">1:30</abbr></th> 
+<td headers="time-1 location-1">Trilinos and PyTrilinos installers for Anaconda, B. Spotz</td>
+</tr>
+<tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">1:30</abbr>–<abbr title="2011-11-01T09:30:00">1:45</abbr></th> 
+<td headers="time-1 location-1">Help! I'm Drowning in Trilinos Emails!  Productivity Hints from the MueLu Team, C. Siefert</td>
+</tr>
+<tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">1:45</abbr>–<abbr title="2011-11-01T09:30:00">4:30</abbr></th> 
 <td headers="time-1 location-1">TBA</td>
 </tr>
 </tbody>
