@@ -63,28 +63,44 @@ Note: The below schedule is tentative and could change significantly, including 
 <tbody>
 
 <tr>
-<th id="time-2" axis="time"><abbr title="2011-11-01T09:30:00">8:30</abbr>–<abbr title="2011-11-01T09:45:00">9:30</abbr></th>
+<th id="time-2" axis="time"><abbr title="2011-11-01T09:30:00">8:30</abbr>–<abbr title="2011-11-01T09:45:00">8:45</abbr></th>
+<td headers="time-2 location-1">Welcome and Introductions, M. Heroux</td>
+</tr>
+<tr>
+<th id="time-2" axis="time"><abbr title="2011-11-01T09:30:00">8:45</abbr>–<abbr title="2011-11-01T09:45:00">9:45</abbr></th>
 <td headers="time-2 location-1">Trilinos Future Plans and Product Overview, M. Heroux</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">TBD</abbr>–<abbr title="2011-11-01T09:30:00">TBD</abbr></th> 
-<td headers="time-1 location-1">ForTrilinos: using SWIG to auto-generate Fortran interface to Trilinos, A. Prokopenko</td>
-</tr>
-<tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">TBD</abbr>–<abbr title="2011-11-01T09:30:00">TBD</abbr></th> 
-<td headers="time-1 location-1">Tempus, C. Ober</td>
-</tr>
-<tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">TBD</abbr>–<abbr title="2011-11-01T09:30:00">TBD</abbr></th> 
-<td headers="time-1 location-1">Rapid Optimization Library: Overview and a Micro-Tutorial</td>
-</tr>
-<tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">TBD</abbr>–<abbr title="2011-11-01T09:30:00">TBD</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:45</abbr>–<abbr title="2011-11-01T09:30:00">10:15</abbr></th> 
 <td headers="time-1 location-1">The MiniSolver Framework for Complex Material Models, A. Mota</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:30</abbr>–<abbr title="2011-11-01T09:30:00">3:00</abbr></th> 
-<td headers="time-1 location-1">TBA</td>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">10:15</abbr>–<abbr title="2011-11-01T09:30:00">10:45</abbr></th> 
+<td headers="time-1 location-1">BREAK</td>
+</tr>
+<tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">10:45</abbr>–<abbr title="2011-11-01T09:30:00">11:45</abbr></th> 
+<td headers="time-1 location-1">Rapid Optimization Library: Overview and a Micro-Tutorial</td>
+</tr>
+<tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">11:45</abbr>–<abbr title="2011-11-01T09:30:00">1:15</abbr></th> 
+<td headers="time-1 location-1">Lunch</td>
+</tr>
+<tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">1:15</abbr>–<abbr title="2011-11-01T09:30:00">1:30</abbr></th> 
+<td headers="time-1 location-1">ForTrilinos: using SWIG to auto-generate Fortran interface to Trilinos, A. Prokopenko</td>
+</tr>
+<tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">1:30</abbr>–<abbr title="2011-11-01T09:30:00">1:50</abbr></th> 
+<td headers="time-1 location-1">Trilinos and PyTrilinos installers for Anaconda, B. Spotz</td>
+</tr>
+<tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">1:50</abbr>–<abbr title="2011-11-01T09:30:00">2:10</abbr></th> 
+<td headers="time-1 location-1">Tempus, C. Ober</td>
+</tr>
+<tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">2:10</abbr>–<abbr title="2011-11-01T09:30:00">3:00</abbr></th> 
+<td headers="time-1 location-1">User talk, TBA</td>
 </tr>
 <tr>
 <th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">3:00</abbr>–<abbr title="2011-11-01T09:30:00">3:30</abbr></th> 
@@ -129,26 +145,22 @@ Note: The below schedule is tentative and could change significantly, including 
 </tr>
 <tr>
 <th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">1:15</abbr>–<abbr title="2011-11-01T09:30:00">1:30</abbr></th> 
-<td headers="time-1 location-1">Trilinos and PyTrilinos installers for Anaconda, B. Spotz</td>
-</tr>
-<tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">1:30</abbr>–<abbr title="2011-11-01T09:30:00">1:45</abbr></th> 
 <td headers="time-1 location-1">Help! I'm Drowning in Trilinos Emails!  Productivity Hints from the MueLu Team, C. Siefert</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">1:45</abbr>–<abbr title="2011-11-01T09:30:00">2:45</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">1:30</abbr>–<abbr title="2011-11-01T09:30:00">2:30</abbr></th> 
 <td headers="time-1 location-1">Test and workflow discussions</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">2:45</abbr>–<abbr title="2011-11-01T09:30:00">3:00</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">2:30</abbr>–<abbr title="2011-11-01T09:30:00">2:45</abbr></th> 
 <td headers="time-1 location-1">Strategic Planning topic selection</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">3:00</abbr>–<abbr title="2011-11-01T09:30:00">3:30</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">2:45</abbr>–<abbr title="2011-11-01T09:30:00">3:15</abbr></th> 
 <td headers="time-1 location-1">Break</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">3:30</abbr>–<abbr title="2011-11-01T09:30:00">4:30</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">3:15</abbr>–<abbr title="2011-11-01T09:30:00">4:30</abbr></th> 
 <td headers="time-1 location-1">Strategic Planning</td>
 </tr>
 </tbody>
