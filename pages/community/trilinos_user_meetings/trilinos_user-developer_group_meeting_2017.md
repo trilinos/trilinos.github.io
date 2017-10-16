@@ -99,15 +99,15 @@ Note: The below schedule is tentative and could change significantly, including 
 <td headers="time-1 location-1">Tempus (C. Ober)</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">2:10</abbr>–<abbr title="2011-11-01T09:30:00">3:00</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">2:10</abbr>–<abbr title="2011-11-01T09:30:00">2:45</abbr></th> 
 <td headers="time-1 location-1">Trilinos' Linear Solver integrated in MFiX, a Fortran based Multiphase Solver from NETL (V. Kotteda, V. Kumar, W. Spotz)</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">3:00</abbr>–<abbr title="2011-11-01T09:30:00">3:30</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">2:45</abbr>–<abbr title="2011-11-01T09:30:00">3:15</abbr></th> 
 <td headers="time-1 location-1">Break</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">3:30</abbr>–<abbr title="2011-11-01T09:30:00">4:30</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">3:15</abbr>–<abbr title="2011-11-01T09:30:00">4:30</abbr></th> 
 <td headers="time-1 location-1">User Feedback / User meeting wrap-up</td>
 </tr>
 </tbody>
