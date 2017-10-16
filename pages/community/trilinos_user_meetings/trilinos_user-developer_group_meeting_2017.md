@@ -137,7 +137,7 @@ Note: The below schedule is tentative and could change significantly, including 
 </tr>
 <tr>
 <th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">11:15</abbr>–<abbr title="2011-11-01T09:30:00">11:45</abbr></th> 
-<td headers="time-1 location-1">Multi-core testing requirements and approaches, Discussion</td>
+<td headers="time-1 location-1">Many-core/GPU testing requirements and approaches, Discussion</td>
 </tr>
 <tr>
 <th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">11:45</abbr>–<abbr title="2011-11-01T09:30:00">1:15</abbr></th> 
