@@ -3,8 +3,8 @@ title: Trilinos User-Developer Group Meeting 2017
 permalink: trilinos_user-developer_group_meeting_2017.html
 folder: community
 ---
-![Trilinos Logo] 
-(https://github.com/trilinos/Logos/blob/master/Trilinos_logo.jpg)
+<A HREF="https://github.com/trilinos/Logos/blob/master/Trilinos_logo.jpg"><IMG SRC="Trilinos_logo.jpg" width="350"/>
+  
 ## Dates
 
 October 23th: User Tutorial (tentative)  
