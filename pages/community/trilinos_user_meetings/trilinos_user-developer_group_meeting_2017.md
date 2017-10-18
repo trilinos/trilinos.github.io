@@ -107,7 +107,7 @@ Note: The below schedule is tentative and could change significantly, including 
 <td headers="time-1 location-1">Using the Basker Linear Solvers in Xyce (H. Thornquist)</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">3:0</abbr>–<abbr title="2011-11-01T09:30:00">3:30</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">3:00</abbr>–<abbr title="2011-11-01T09:30:00">3:30</abbr></th> 
 <td headers="time-1 location-1">Break</td>
 </tr>
 <tr>
