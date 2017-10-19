@@ -25,7 +25,7 @@ is now hosted on GitHub. This allows users and potential developers greater acce
 
 ## TUG 2017
 
-The 2017 Trilinos User Group Meeting (TUG) will be held in October in Albuquerque. 
+The [2017 Trilinos User Group Meeting](https://trilinos.github.io/trilinos_user-developer_group_meeting_2017.html) (TUG) will be held in October in Albuquerque. 
 
 ## Trilinos 12.10 Release
 
