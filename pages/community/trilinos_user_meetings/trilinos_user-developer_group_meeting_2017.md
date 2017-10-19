@@ -68,7 +68,7 @@ Note: The below schedule is tentative and could change significantly, including 
 </tr>
 <tr>
 <th id="time-2" axis="time"><abbr title="2011-11-01T09:30:00">9:30</abbr>–<abbr title="2011-11-01T09:45:00">10:00</abbr></th>
-<td headers="time-2 location-1">Kokkoskernels Update (S. Rajamanickam</td>
+<td headers="time-2 location-1">Kokkoskernels Update (S. Rajamanickam)</td>
 </tr>
 <tr>
 <th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">10:00</abbr>–<abbr title="2011-11-01T09:30:00">10:30</abbr></th> 
