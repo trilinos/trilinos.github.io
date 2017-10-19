@@ -63,23 +63,23 @@ Note: The below schedule is tentative and could change significantly, including 
 <tbody>
 
 <tr>
-<th id="time-2" axis="time"><abbr title="2011-11-01T09:30:00">8:30</abbr>–<abbr title="2011-11-01T09:45:00">8:45</abbr></th>
-<td headers="time-2 location-1">Welcome and Introductions (M. Heroux)</td>
-</tr>
-<tr>
-<th id="time-2" axis="time"><abbr title="2011-11-01T09:30:00">8:45</abbr>–<abbr title="2011-11-01T09:45:00">9:45</abbr></th>
+<th id="time-2" axis="time"><abbr title="2011-11-01T09:30:00">8:30</abbr>–<abbr title="2011-11-01T09:45:00">9:30</abbr></th>
 <td headers="time-2 location-1">Trilinos Future Plans and Product Overview (M. Heroux)</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:45</abbr>–<abbr title="2011-11-01T09:30:00">10:15</abbr></th> 
-<td headers="time-1 location-1">The MiniSolver Framework for Complex Material Models (A. Mota)</td>
+<th id="time-2" axis="time"><abbr title="2011-11-01T09:30:00">9:30</abbr>–<abbr title="2011-11-01T09:45:00">10:00</abbr></th>
+<td headers="time-2 location-1">Kokkoskernels Update (S. Rajamanickam</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">10:15</abbr>–<abbr title="2011-11-01T09:30:00">10:45</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">10:00</abbr>–<abbr title="2011-11-01T09:30:00">10:30</abbr></th> 
 <td headers="time-1 location-1">BREAK</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">10:45</abbr>–<abbr title="2011-11-01T09:30:00">11:45</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">10:30</abbr>–<abbr title="2011-11-01T09:30:00">11:00</abbr></th> 
+<td headers="time-1 location-1">The MiniSolver Framework for Complex Material Models (A. Mota)</td>
+</tr>
+<tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">11:00</abbr>–<abbr title="2011-11-01T09:30:00">11:45</abbr></th> 
 <td headers="time-1 location-1">Rapid Optimization Library: Overview and a Micro-Tutorial (TBD)</td>
 </tr>
 <tr>
