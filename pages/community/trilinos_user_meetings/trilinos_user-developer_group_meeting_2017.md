@@ -9,7 +9,7 @@ folder: community
 October 23th: User Tutorial (tentative)  
 October 24th: User Sessions  
 October 25th: Developer Sessions  
-October 26th: Optional Small Group Developer Sessions, TBA, morning only
+October 26th: Optional Small Group Developer Sessions, morning only
 
 ## Location
 
@@ -166,6 +166,19 @@ Note: The below schedule is tentative and could change significantly, including 
 <tr>
 <th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">3:15</abbr>–<abbr title="2011-11-01T09:30:00">4:30</abbr></th> 
 <td headers="time-1 location-1">Strategic Planning</td>
+</tr>
+</tbody>
+</table>
+
+<p style="text-align: center;"><span style="text-decoration: underline;">Thursday, October 26th</span> Small Group Developer Meetings</p>
+
+<table summary="Timetable">
+<tbody>
+<tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">11:00</abbr>–<abbr title="2011-11-01T09:30:00">12:30</abbr></th>
+<td headers="time-1 location-1">
+<div>Refactoring Thyra Abstractions (R. Pawlowski, discussion leader)</div>
+</td>
 </tr>
 </tbody>
 </table>
