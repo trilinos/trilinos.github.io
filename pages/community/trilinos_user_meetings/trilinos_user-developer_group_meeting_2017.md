@@ -120,16 +120,8 @@ Note: The below schedule is tentative and could change significantly, including 
 <table summary="Timetable">
 <tbody>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">8:30</abbr>–<abbr title="2011-11-01T09:30:00">9:15</abbr></th> 
-<td headers="time-1 location-1">Developer Discussion of Trilinos Products (M. Heroux)</td>
-</tr>
-<tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:15</abbr>–<abbr title="2011-11-01T09:30:00">9:45</abbr></th> 
-<td headers="time-1 location-1">Sub-team workflows for increased team productivity, tight team integration and scalable testing (R. Bartlett, D. Ridzal)</td>
-</tr>
-<tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:45</abbr>–<abbr title="2011-11-01T09:30:00">10:15</abbr></th> 
-<td headers="time-1 location-1">Stability w.r.t. the Tip of Develop (J. Gates)</td>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">8:30</abbr>–<abbr title="2011-11-01T09:30:00">10:15</abbr></th> 
+<td headers="time-1 location-1">Developer Discussion of Trilinos Products (M. Heroux, Product Leaders)</td>
 </tr>
 <tr>
 <th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">10:15</abbr>–<abbr title="2011-11-01T09:30:00">10:45</abbr></th> 
@@ -137,34 +129,38 @@ Note: The below schedule is tentative and could change significantly, including 
 </tr>
 <tr>
 <th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">10:45</abbr>–<abbr title="2011-11-01T09:30:00">11:15</abbr></th> 
-<td headers="time-1 location-1">Pull Request Testing (J. Willenbring & A. Levine)</td>
+<td headers="time-1 location-1">Stability w.r.t. the Tip of Develop (J. Gates)</td>
 </tr>
 <tr>
 <th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">11:15</abbr>–<abbr title="2011-11-01T09:30:00">11:45</abbr></th> 
 <td headers="time-1 location-1">Many-core/GPU testing requirements and approaches, Discussion</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">11:45</abbr>–<abbr title="2011-11-01T09:30:00">1:15</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">11:45</abbr>–<abbr title="2011-11-01T09:30:00">12:45</abbr></th> 
 <td headers="time-1 location-1">Lunch</td>
+</tr>
+<tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">12:45</abbr>–<abbr title="2011-11-01T09:30:00">1:15</abbr></th> 
+<td headers="time-1 location-1">Sub-team workflows for increased team productivity, tight team integration and scalable testing (R. Bartlett, D. Ridzal)</td>
 </tr>
 <tr>
 <th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">1:15</abbr>–<abbr title="2011-11-01T09:30:00">1:30</abbr></th> 
 <td headers="time-1 location-1">Help! I'm Drowning in Trilinos Emails!  Productivity Hints from the MueLu Team (C. Siefert)</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">1:30</abbr>–<abbr title="2011-11-01T09:30:00">2:30</abbr></th> 
-<td headers="time-1 location-1">Test and workflow discussions</td>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">1:30</abbr>–<abbr title="2011-11-01T09:30:00">2:00</abbr></th> 
+<td headers="time-1 location-1">Pull Request Testing (J. Willenbring & A. Levine)</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">2:30</abbr>–<abbr title="2011-11-01T09:30:00">2:45</abbr></th> 
-<td headers="time-1 location-1">Strategic Planning topic selection</td>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">2:00</abbr>–<abbr title="2011-11-01T09:30:00">2:30</abbr></th> 
+<td headers="time-1 location-1">Strategic Planning</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">2:45</abbr>–<abbr title="2011-11-01T09:30:00">3:15</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">2:30</abbr>–<abbr title="2011-11-01T09:30:00">3:00</abbr></th> 
 <td headers="time-1 location-1">Break</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">3:15</abbr>–<abbr title="2011-11-01T09:30:00">4:30</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">3:00</abbr>–<abbr title="2011-11-01T09:30:00">4:30</abbr></th> 
 <td headers="time-1 location-1">Strategic Planning</td>
 </tr>
 </tbody>
