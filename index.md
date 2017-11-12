@@ -24,12 +24,12 @@ is now hosted on GitHub. This allows users and potential developers greater acce
 
 ## TUG 2017
 
-[The 2017 Trilinos User Group Meeting (TUG)](https://trilinos.github.io/trilinos_user-developer_group_meeting_2017.html) will be held in October in Albuquerque. 
+[The 2017 Trilinos User Group Meeting (TUG)](https://trilinos.github.io/trilinos_user-developer_group_meeting_2017.html) was  held in October in Albuquerque. 
 
-## Trilinos 12.10 Release
+## Trilinos 12.12 Release
 
-Trilinos 12.10 is now available for [download](download.html). 
-The 12.4 release uses a [CMake](https://cmake.org/) 
+Trilinos 12.12 is now available for [download](download.html). 
+The 12.12 release uses a [CMake](https://cmake.org/) 
 build system, which requires CMake version 2.8.11 or greater. 
 Instructions for building Trilinos 10.0 and later are available 
 [here](pdfs/Trilinos10.12Tutorial.pdf).
