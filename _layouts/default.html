@@ -60,18 +60,24 @@
     <div class="col-lg-12">&nbsp;</div>
     <!-- Content Row -->
     <div class="row">
-        <!-- Sidebar Column -->
-        <div class="col-md-1">
+        {% if page.show_sidebar %}
+        <div class="col-md-9">
+            {{content}}
+        </div>
 
+        <div class="col-md-3">
           {% include sidebar.html %}
-    <!-- Content Column -->
-    <div class="col-md-11">
-        {{content}}
-    </div>
+        </div>
+
+        {% else %}
+        <div class="col-md-12">
+            {{content}}
+        </div>
+        {% endif %}
     <!-- /.row -->
-</div>
-<!-- /.container -->
     </div>
+<!-- /.container -->
+</div>
 
 </body>
 {% if site.google_analytics %}
