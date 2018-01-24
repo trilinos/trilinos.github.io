@@ -2,6 +2,10 @@
 title: Amesos Install
 permalink: amesos_install.html
 folder: packages
+show_sidebar: true
+contact: amesos-developers@software.sandia.gov
+package: amesos
+doxygen: true
 ---
 
 ## Quick Amesos Installation

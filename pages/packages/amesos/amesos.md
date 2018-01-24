@@ -2,6 +2,10 @@
 title: Amesos
 permalink: amesos.html
 folder: packages
+show_sidebar: true
+contact: amesos-developers@software.sandia.gov
+package: amesos
+doxygen: true
 ---
 
 ![](images/AmesosLogo.jpeg) 
