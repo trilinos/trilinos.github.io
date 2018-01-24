@@ -2,6 +2,10 @@
 title: AztecOO
 permalink: aztecoo.html
 folder: packages
+show_sidebar: true
+contact: maherou@sandia.gov
+package: aztecoo
+doxygen: true
 ---
 
 ## Welcome to the AztecOO Home

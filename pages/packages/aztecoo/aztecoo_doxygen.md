@@ -2,6 +2,10 @@
 title: AztecOO Doxygen
 permalink: aztecoo_doxygen.html
 folder: packages
+show_sidebar: true
+contact: maherou@sandia.gov
+package: aztecoo
+doxygen: true
 ---
 
 

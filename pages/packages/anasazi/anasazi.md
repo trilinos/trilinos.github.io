@@ -2,6 +2,10 @@
 title: Anasazi
 permalink: anasazi.html
 folder: packages
+show_sidebar: true
+contact: hkthorn@sandia.gov, rblehou@sandia.gov
+package: anasazi
+doxygen: true
 ---
 
 ![Anasazi](images/anasazi.png)

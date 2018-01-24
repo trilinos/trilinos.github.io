@@ -2,6 +2,10 @@
 title: Anasazi Doxygen
 permalink: anasazi_doxygen.html
 folder: packages
+show_sidebar: true
+contact: hkthorn@sandia.gov, rblehou@sandia.gov
+package: anasazi
+doxygen: true
 ---
 
 Development Doxygen for Anasazi is available [Here](http://trilinos.org/docs/dev/packages/anasazi/doc/html/index.html)  
