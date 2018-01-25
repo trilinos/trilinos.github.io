@@ -2,6 +2,10 @@
 title: Isorropia
 permalink: isorropia.html
 folder: packages
+show_sidebar: true
+contact: egboman@sandia.gov
+package: isorropia
+doxygen: true
 ---
 
 **Welcome to the Isorropia Home**

@@ -2,6 +2,10 @@
 title: MueLu
 permalink: muelu.html
 folder: packages
+show_sidebar: true
+contact: jhu@sandia.gov, aprokop@sandia.gov
+package: muelu
+doxygen: true
 ---
 
 [logo_Blue](images/logo_Blue1.png)

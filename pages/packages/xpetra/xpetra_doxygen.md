@@ -2,6 +2,10 @@
 title: Xpetra Doxygen
 permalink: xpetra_doxygen.html
 folder: packages
+show_sidebar: true
+contact: Andrey Prokopenko (aprokop@sandia.gov), Jonathan Hu (jhu@sandia.gov)
+package: xpetra
+doxygen: true
 ---
 
 Development Doxygen for Xpetra is available [Here](http://trilinos.org/docs/dev/packages/xpetra/doc/html/index.html)  

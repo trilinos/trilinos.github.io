@@ -2,6 +2,10 @@
 title: Phalanx
 permalink: phalanx.html
 folder: packages
+show_sidebar: true
+contact: rppawlo@sandia.gov
+package: optipack
+doxygen: true
 ---
 
 **Welcome to the Phalanx Home**

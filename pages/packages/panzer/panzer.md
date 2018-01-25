@@ -2,6 +2,10 @@
 title: Panzer
 permalink: panzer.html
 folder: packages
+show_sidebar: true
+contact: eccyr@sandia.gov, rppawlo@sandia.gov, jmgate@sandia.gov
+package: optipack
+doxygen: true
 ---
 
 This is a temporary placeholder for a forthcoming Panzer page.

@@ -2,6 +2,10 @@
 title: Optika
 permalink: optika.html
 folder: packages
+show_sidebar: true
+contact: klnusbaum@gmail.com
+package: optika
+doxygen: true
 ---
 
 ![Optika](images/optikabanner.png)

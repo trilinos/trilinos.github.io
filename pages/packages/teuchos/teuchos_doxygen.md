@@ -2,6 +2,10 @@
 title: Teuchos Doxygen
 permalink: teuchos_doxygen.html
 folder: packages
+show_sidebar: true
+contact: hkthorn@sandia.gov
+package: teuchos
+doxygen: true
 ---
 
 Development Doxygen for Teuchos is available [Here](http://trilinos.org/docs/dev/packages/teuchos/doc/html/index.html)  

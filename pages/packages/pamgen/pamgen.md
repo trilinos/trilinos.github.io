@@ -2,6 +2,9 @@
 title: PAMGEN
 permalink: pamgen.html
 folder: packages
+show_sidebar: true
+contact: dmhensi@sandia.gov
+package: optipack
 ---
 
 Welcome to the PAMGEN Home

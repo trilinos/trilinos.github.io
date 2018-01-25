@@ -2,6 +2,10 @@
 title: ML
 permalink: ml.html
 folder: packages
+show_sidebar: true
+contact: Ray Tuminaro (rstumin@sandia.gov), Chris Siefert (csiefer@sandia.gov), and Jonathan Hu (jhu@sandia.gov)
+package: ml
+doxygen: true
 ---
 
 ![ML](images/ml.jpg)

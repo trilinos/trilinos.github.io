@@ -2,6 +2,10 @@
 title: Intrepid
 permalink: intrepid.html
 folder: packages
+show_sidebar: true
+contact: pbboche@sandia.gov
+package: intrepid
+doxygen: true
 ---
 
 ![](images/intrepid-balloon.jpg)

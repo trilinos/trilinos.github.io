@@ -2,6 +2,9 @@
 title: ShyLU
 permalink: shylu.html
 folder: packages
+show_sidebar: true
+contact: shylu-developers@software.sandia.gov
+package: shards
 ---
 
 ## Welcome to the ShyLU Home

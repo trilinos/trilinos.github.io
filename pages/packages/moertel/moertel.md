@@ -2,6 +2,9 @@
 title: Moertel
 permalink: moertel.html
 folder: packages
+show_sidebar: true
+contact: gahanse@sandia.gov
+package: moertel
 ---
 
 ![Moertel](images/moertel.png)

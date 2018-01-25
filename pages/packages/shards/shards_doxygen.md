@@ -2,6 +2,10 @@
 title: Shards Doxygen
 permalink: shards_doxygen.html
 folder: packages
+show_sidebar: true
+contact: hcedwar@sandia.gov
+package: shards
+doxygen: true
 ---
 
 Development Doxygen for Shards is available [Here](http://trilinos.org/docs/dev/packages/shards/doc/html/index.html)  

@@ -2,6 +2,10 @@
 title: ML Doxygen
 permalink: ml_doxygen.html
 folder: packages
+show_sidebar: true
+contact: Ray Tuminaro (rstumin@sandia.gov), Chris Siefert (csiefer@sandia.gov), and Jonathan Hu (jhu@sandia.gov)
+package: ml
+doxygen: true
 ---
 
 Development Doxygen for ML is available [Here](http://trilinos.org/docs/dev/packages/ml/doc/html/index.html)  

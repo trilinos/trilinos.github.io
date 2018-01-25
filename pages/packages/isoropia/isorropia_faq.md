@@ -2,6 +2,9 @@
 title: Isorropia FAQ
 permalink: isorropia_faq.html
 folder: packages
+show_sidebar: true
+contact: egboman@sandia.gov
+package: isorropia
 ---
 
 **What’s significant about the name ‘Isorropia’?**

@@ -2,6 +2,10 @@
 title: TriKota Doxygen
 permalink: trikota_doxygen.html
 folder: packages
+show_sidebar: true
+contact: agsalin@sandia.gov
+package: trikota
+doxygen: true
 ---
 
 Development Doxygen for TriKota is available [Here](http://trilinos.org/docs/dev/packages/TriKota/doc/html/index.html)  

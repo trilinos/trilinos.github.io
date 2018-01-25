@@ -2,6 +2,10 @@
 title: Kokkos Doxygen
 permalink: kokkos_doxygen.html
 folder: packages
+show_sidebar: true
+contact: hcedwar@sandia.gov
+package: kokkos
+doxygen: true
 ---
 
 Development Doxygen for Kokkos is available [Here](http://trilinos.org/docs/dev/packages/kokkos/doc/html/index.html)  

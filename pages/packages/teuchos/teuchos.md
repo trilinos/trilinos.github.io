@@ -2,6 +2,10 @@
 title: Teuchos
 permalink: teuchos.html
 folder: packages
+show_sidebar: true
+contact: hkthorn@sandia.gov
+package: teuchos
+doxygen: true
 ---
 
 ![Teuchos](images/teuchos1.png)

@@ -2,6 +2,10 @@
 title: EpetraExt Doxygen
 permalink: epetraext_doxygen.html
 folder: packages
+show_sidebar: true
+contact: maherou@sandia.gov
+package: epetraext
+doxygen: true
 ---
 
 Development Doxygen for EpetraExt is available [Here](http://trilinos.org/docs/dev/packages/epetraext/doc/html/index.html)  

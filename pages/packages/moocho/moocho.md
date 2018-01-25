@@ -2,6 +2,10 @@
 title: MOOCHO
 permalink: moocho.html
 folder: packages
+show_sidebar: true
+contact: bartlettra@ornl.gov
+package: moocho
+doxygen: true
 ---
 
 MOOCHO (Multifunctional Object-Oriented arCHitecture for Optimization) is designed to solve large-scale, equality and inequality nonlinearly 

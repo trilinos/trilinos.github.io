@@ -2,6 +2,10 @@
 title: Teko
 permalink: teko.html
 folder: packages
+show_sidebar: true
+contact: eccyr@sandia.gov
+package: teko
+doxygen: true
 ---
 
 Welcome to the Teko Home

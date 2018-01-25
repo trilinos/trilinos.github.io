@@ -2,6 +2,10 @@
 title: TriKota
 permalink: trikota.html
 folder: packages
+show_sidebar: true
+contact: agsalin@sandia.gov
+package: trikota
+doxygen: true
 ---
 
 Welcome to the TriKota Home

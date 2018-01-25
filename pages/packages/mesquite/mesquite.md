@@ -2,6 +2,9 @@
 title: Mesquite
 permalink: mesquite.html
 folder: packages
+show_sidebar: true
+contact: maherou@sandia.gov
+package: mesquite
 ---
 
 <span class="style20">**MESQUITE** is a linkable software library that applies a variety of node-movement algorithms to improve the quality and/or adapt a given mesh. Mesquite uses advanced smoothing and optimization to:</span>

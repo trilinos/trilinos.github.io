@@ -2,6 +2,10 @@
 title: Rythmos Doxygen
 permalink: rythmos_doxygen.html
 folder: packages
+show_sidebar: true
+contact: ccober@sandia.gov
+package: rythmos
+doxygen: true
 ---
 
 Development Doxygen for Rythmos is available [Here](http://trilinos.org/docs/dev/packages/rythmos/doc/html/index.html)  

@@ -2,6 +2,10 @@
 title: MueLu Doxygen
 permalink: muelu_doxygen.html
 folder: packages
+show_sidebar: true
+contact: jhu@sandia.gov, aprokop@sandia.gov
+package: muelu
+doxygen: true
 ---
 
 Development Doxygen for MueLu is available [Here](http://trilinos.org/docs/dev/packages/muelu/doc/html/index.html)  

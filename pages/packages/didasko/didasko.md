@@ -2,6 +2,10 @@
 title: Didasko
 permalink: didasko.html
 folder: packages
+show_sidebar: true
+contact: marzio.sala@gmail.com
+package: didasko
+doxygen: true
 ---
 
 ![Didasko Logo](images/didasko_logo.jpeg) 

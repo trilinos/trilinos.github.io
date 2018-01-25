@@ -2,6 +2,10 @@
 title: Komplex
 permalink: komplex.html
 folder: packages
+show_sidebar: true
+contact: maherou@sandia.gov
+package: komplex
+doxygen: true
 ---
 
 Welcome to the Komplex Home

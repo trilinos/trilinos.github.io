@@ -2,6 +2,10 @@
 title: Trilinos Couplings
 permalink: trilinoscouplings.html
 folder: packages
+show_sidebar: true
+contact: trilinoscouplings-developers@sandia.gov
+package: trilinoscouplings
+doxygen: true
 ---
 
 Welcome to the TrilinosCouplings Home

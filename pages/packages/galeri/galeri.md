@@ -2,6 +2,10 @@
 title: Galeri
 permalink: galeri.html
 folder: packages
+show_sidebar: true
+contact: marzio.sala@gmail.com
+package: galeri
+doxygen: true
 ---
 
 ![Galeri Logo](images/galeri.png)

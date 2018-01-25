@@ -2,6 +2,10 @@
 title: ROL
 permalink: rol.html
 folder: packages
+show_sidebar: true
+contact: rol-developers@software.sandia.gov
+package: rol
+doxygen: true
 ---
 
 [about](rol.html)   [docs](rol_documentation.html)  [uses](rol_uses.html)    [features](rol_features.html)

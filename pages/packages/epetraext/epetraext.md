@@ -2,6 +2,10 @@
 title: EpetraExt
 permalink: epetraext.html
 folder: packages
+show_sidebar: true
+contact: maherou@sandia.gov
+package: epetraext
+doxygen: true
 ---
 
 ![](images/epetra.jpg) 

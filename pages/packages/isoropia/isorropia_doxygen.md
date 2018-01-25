@@ -2,6 +2,10 @@
 title: Isorropia Doxygen
 permalink: isorropia_doxygen.html
 folder: packages
+show_sidebar: true
+contact: egboman@sandia.gov
+package: isorropia
+doxygen: true
 ---
 
 Development Doxygen for Isorropia is available [Here](http://trilinos.org/docs/dev/packages/isorropia/doc/html/index.html)  

@@ -2,6 +2,10 @@
 title: Belos
 permalink: belos.html
 folder: packages
+show_sidebar: true
+contact: hkthorn@sandia.gov
+package: belos
+doxygen: true
 ---
 
 Welcome to the Belos Home

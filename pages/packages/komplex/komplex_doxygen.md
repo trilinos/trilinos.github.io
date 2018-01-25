@@ -2,6 +2,10 @@
 title: Komplex Doxygen
 permalink: komplex_doxygen.html
 folder: packages
+show_sidebar: true
+contact: maherou@sandia.gov
+package: komplex
+doxygen: true
 ---
 
 Development Doxygen for Komplex is available [Here](http://trilinos.org/docs/dev/packages/komplex/doc/html/index.html)  

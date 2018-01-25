@@ -2,6 +2,10 @@
 title: NOX and LOCA Doxygen
 permalink: nox_and_loca_doxygen.html
 folder: packages
+show_sidebar: true
+contact: rppawlo@sandia.gov
+package: nox
+doxygen: true
 ---
 
 Development Doxygen for Nox and Loca is available [Here](http://trilinos.org/docs/dev/packages/nox/doc/html/index.html)  

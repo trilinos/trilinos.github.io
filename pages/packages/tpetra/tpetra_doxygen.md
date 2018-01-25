@@ -2,6 +2,10 @@
 title: Tpetra Doxygen
 permalink: tpetra_doxygen.html
 folder: packages
+show_sidebar: true
+contact:  mhoemme@sandia.gov
+package: tpetra
+doxygen: true
 ---
 
 Development Doxygen for Tpetra is available [Here](http://trilinos.org/docs/dev/packages/tpetra/doc/html/index.html)  

@@ -2,8 +2,12 @@
 title: ForTrilinos
 permalink: fortrilinos.html
 folder: packages
+show_sidebar: true
+contact: william@sandia.gov
+package: ForTrilinos
+doxygen: true
 redirect_to:
-  - https://trilinos.github.io/ForTrilinos/
+  - https://trilinos.github.io/ForTrilinos/  
 ---
 
 **Welcome to the ForTrilinos Home**

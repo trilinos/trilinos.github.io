@@ -1,7 +1,11 @@
 ---
-title: IFPACK2
+title: Ifpack2
 permalink: ifpack2.html
 folder: packages
+show_sidebar: true
+contact: Mark Hoemmen (mhoemme@sandia.gov), Jonathan Hu (jhu@sandia.gov), Chris Siefert (csiefer@sandia.gov)
+package: ifpack2
+doxygen: true
 ---
 
 Ifpack2 provides incomplete factorizations, relaxations, and domain decomposition operators for linear algebra objects (sparse matrices, operators, and dense vectors and multivectors) provided by the [Tpetra](tpetra.html) package. You may use these operators however you wish: for example as preconditioners in an iterative solver, or as smoothers for algebraic multigrid.

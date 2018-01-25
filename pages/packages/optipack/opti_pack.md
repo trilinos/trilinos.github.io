@@ -2,6 +2,10 @@
 title: OptiPack
 permalink: optipack.html
 folder: packages
+show_sidebar: true
+contact: bartlettra@ornl.gov
+package: optipack
+doxygen: true
 ---
 
 Welcome to the OptiPack Home

@@ -2,6 +2,10 @@
 title: Thyra Doxygen
 permalink: thyra_doxygen.html
 folder: packages
+show_sidebar: true
+contact: bartlettra@ornl.gov
+package: thyra
+doxygen: true
 ---
 
 Development Doxygen for Thyra is available [Here](http://trilinos.org/docs/dev/packages/thyra/doc/html/index.html)  

@@ -2,6 +2,10 @@
 title: Piro Doxygen
 permalink: piro_doxygen.html
 folder: packages
+show_sidebar: true
+contact: agsalin@sandia.gov
+package: piro
+doxygen: true
 ---
 
 Development Doxygen for Piro is available [Here](http://trilinos.org/docs/dev/packages/piro/doc/html/index.html)  

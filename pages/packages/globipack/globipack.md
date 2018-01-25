@@ -2,6 +2,10 @@
 title: GlobiPack
 permalink: globipack.html
 folder: packages
+show_sidebar: true
+contact: bartlettra@ornl.gov
+package: globipack
+doxygen: true
 ---
 
 The GlobiPack package contains a set of interfaces and implementations for 1D globalization capabilities to be used in nonlinear solvers, optimization solvers, and similar algorithms that require globalization methods (e.g. line search and trust region methods). Basic interfaces and a few implementations are present for 1D line search methods appropritate for Newton, quasi-Newton, and nonlinear CG algorithms.  

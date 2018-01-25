@@ -2,6 +2,9 @@
 title: PyTrilinos
 permalink: pytrilinos.html
 folder: packages
+show_sidebar: true
+contact: wfspotz@sandia.gov
+package: pytrilinos
 ---
 
 <img border="0" alt="Trilinos Team" src="images/PyTrilinos.jpg" width="10" height="10">

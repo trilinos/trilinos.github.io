@@ -2,6 +2,10 @@
 title: OptiPack Doxygen
 permalink: optipack_doxygen.html
 folder: packages
+show_sidebar: true
+contact: bartlettra@ornl.gov
+package: optipack
+doxygen: true
 ---
 
 Development Doxygen for OptiPack is available [Here](http://trilinos.org/docs/dev/packages/optipack/doc/html/index.html)  

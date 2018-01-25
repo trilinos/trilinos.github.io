@@ -2,6 +2,10 @@
 title: Teko Doxygen
 permalink: teko_doxygen.html
 folder: packages
+show_sidebar: true
+contact: eccyr@sandia.gov
+package: teko
+doxygen: true
 ---
 
 Development Doxygen for Teko is available [Here](http://trilinos.org/docs/dev/packages/teko/doc/html/index.html)  

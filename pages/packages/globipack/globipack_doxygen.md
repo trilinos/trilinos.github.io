@@ -2,6 +2,10 @@
 title: GlobiPack Doxygen
 permalink: globipack_doxygen.html
 folder: packages
+show_sidebar: true
+contact: bartlettra@ornl.gov
+package: globipack
+doxygen: true
 ---
 
 Development Doxygen for GlobiPack is available [Here](http://trilinos.org/docs/dev/packages/globipack/doc/html/index.html)  

@@ -2,6 +2,10 @@
 title: Trios
 permalink: trios.html
 folder: packages
+show_sidebar: true
+contact: trios-developers@software.sandia.gov
+package: trios
+doxygen: true
 ---
 
 Welcome to the Trios Home

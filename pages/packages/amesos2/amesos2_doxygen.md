@@ -2,6 +2,10 @@
 title: Amesos2 Doxygen
 permalink: amesos2_doxygen.html
 folder: packages
+show_sidebar: true
+contact: amesos2-developers@software.sandia.gov
+package: amesos2
+doxygen: true
 ---
 
 Development Doxygen for Amesos2 is available [here](http://trilinos.org/docs/dev/packages/amesos2/doc/html/index.html)  

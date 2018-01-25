@@ -2,6 +2,10 @@
 title: Optika Doxygen
 permalink: optika_doxygen.html
 folder: packages
+show_sidebar: true
+contact: klnusbaum@gmail.com
+package: optika
+doxygen: true
 ---
 
 Development Doxygen for Optika is available [Here](http://trilinos.org/docs/dev/packages/optika/doc/html/index.html)  

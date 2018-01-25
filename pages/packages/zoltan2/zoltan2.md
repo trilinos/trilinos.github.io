@@ -2,6 +2,10 @@
 title: Zoltan2
 permalink: zoltan2.html
 folder: packages
+show_sidebar: true
+contact: zoltan2-dev@software.sandia.gov
+package: zoltan2
+doxygen: true
 ---
 
 Welcome to the Zoltan2 Home

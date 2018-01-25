@@ -2,6 +2,10 @@
 title: Stokhos
 permalink: stokhos.html
 folder: packages
+show_sidebar: true
+contact: etphipp@sandia.gov
+package: stokhos
+doxygen: true
 ---
 
 Welcome to the Stokhos Home

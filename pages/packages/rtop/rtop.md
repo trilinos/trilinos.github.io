@@ -2,6 +2,10 @@
 title: RTOp
 permalink: rtop.html
 folder: packages
+show_sidebar: true
+contact: bartlettra@ornl.gov
+package: rtop
+doxygen: true
 ---
 
 Welcome to the RTOp Home  

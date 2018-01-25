@@ -2,6 +2,10 @@
 title: Zoltan2 Doxygen
 permalink: zoltan2_doxygen.html
 folder: packages
+show_sidebar: true
+contact: zoltan2-dev@software.sandia.gov
+package: zoltan2
+doxygen: true
 ---
 
 Development Doxygen for Zoltan2 is available [Here](http://trilinos.org/docs/dev/packages/zoltan2/doc/html/index.html)  

@@ -2,6 +2,10 @@
 title: IFPACK
 permalink: ifpack.html
 folder: packages
+show_sidebar: true
+contact: maherou@sandia.gov
+package: ifpack
+doxygen: true
 ---
 
 ![IFPACK Logo](images/ifpack.png)    

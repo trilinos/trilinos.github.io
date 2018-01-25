@@ -2,6 +2,10 @@
 title: Shards
 permalink: shards.html
 folder: packages
+show_sidebar: true
+contact: hcedwar@sandia.gov
+package: shards
+doxygen: true
 ---
 
 The purpose of Shards is to provide a suite of common tools for numerical and topological data that facilitate interoperability between typical software modules used to solve Partial Differential Equations (PDEs) by finite element, finite volume and finite difference methods. Shards comprises of two categories of tools: methods to manage and access information about cell topologies used in mesh-based methods for PDEs, and methods to work with multi-dimensional arrays used to store numerical data in corresponding computer codes. The basic cell topology functionality of Shards includes methods to query adjacencies of subcells, find subcell permutation with respect to a global cell and create user-defined custom cell topologies. Multi-dimensional array part of the package provides specialized compile-time dimension tags, multi-index access methods, rank and dimension queries.

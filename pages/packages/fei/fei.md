@@ -2,6 +2,9 @@
 title: Fei
 permalink: fei.html
 folder: packages
+show_sidebar: true
+contact: william@sandia.gov
+package: fei
 ---
 
 **Welcome to the Fei Home**

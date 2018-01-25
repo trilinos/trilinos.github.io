@@ -2,6 +2,10 @@
 title: NOX and LOCA
 permalink: nox_and_loca.html
 folder: packages
+show_sidebar: true
+contact: rppawlo@sandia.gov
+package: nox
+doxygen: true
 ---
 
 Welcome to the NOX & LOCA Home

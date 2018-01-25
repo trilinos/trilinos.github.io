@@ -2,6 +2,10 @@
 title: Epetra
 permalink: epetra.html
 folder: packages
+show_sidebar: true
+contact: maherou@sandia.gov
+package: epetra
+doxygen: true
 ---
 
 Welcome to the Epetra Home

@@ -2,6 +2,10 @@
 title: MOOCHO Doxygen
 permalink: moocho_doxygen.html
 folder: packages
+show_sidebar: true
+contact: bartlettra@ornl.gov
+package: moocho
+doxygen: true
 ---
 
 Development Doxygen for MOOCHO is available [Here](http://trilinos.org/docs/dev/packages/moocho/doc/html/index.html)  

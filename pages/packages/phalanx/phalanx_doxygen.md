@@ -2,6 +2,10 @@
 title: Phalanx Doxygen
 permalink: phalanx_doxygen.html
 folder: packages
+show_sidebar: true
+contact: rppawlo@sandia.gov
+package: optipack
+doxygen: true
 ---
 
 Development Doxygen for Phalanx is available [Here](http://trilinos.org/docs/dev/packages/phalanx/doc/html/index.html)  

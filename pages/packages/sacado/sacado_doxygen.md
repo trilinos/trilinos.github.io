@@ -2,6 +2,10 @@
 title: Sacado Doxygen
 permalink: sacado_doxygen.html
 folder: packages
+show_sidebar: true
+contact: etphipp@sandia.gov
+package: sacado
+doxygen: true
 ---
 
 Development Doxygen for Sacado is available [Here](http://trilinos.org/docs/dev/packages/sacado/doc/html/index.html)  

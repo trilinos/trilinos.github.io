@@ -2,6 +2,10 @@
 title: Galeri Doxygen
 permalink: galeri_doxygen.html
 folder: packages
+show_sidebar: true
+contact: marzio.sala@gmail.com
+package: galeri
+doxygen: true
 ---
 
 Development Doxygen for Galeri is available [Here](http://trilinos.org/docs/dev/packages/galeri/doc/html/index.html)  

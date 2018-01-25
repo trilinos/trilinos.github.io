@@ -2,6 +2,10 @@
 title: Stokhos Doxygen
 permalink: stokhos_doxygen.html
 folder: packages
+show_sidebar: true
+contact: etphipp@sandia.gov
+package: stokhos
+doxygen: true
 ---
 
 Development Doxygen for Stokhos is available [Here](http://trilinos.org/docs/dev/packages/stokhos/doc/html/index.html)  

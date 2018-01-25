@@ -2,6 +2,10 @@
 title: Tpetra
 permalink: tpetra.html
 folder: packages
+show_sidebar: true
+contact: mhoemme@sandia.gov
+package: tpetra
+doxygen: true
 ---
 
 ![](images/epetra.jpg)

@@ -2,6 +2,10 @@
 title: Piro
 permalink: piro.html
 folder: packages
+show_sidebar: true
+contact: agsalin@sandia.gov
+package: piro
+doxygen: true
 ---
 
 **Welcome to the Piro Home**

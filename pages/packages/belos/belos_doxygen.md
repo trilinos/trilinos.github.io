@@ -2,6 +2,10 @@
 title: Belos Doxygen
 permalink: belos_doxygen.html
 folder: packages
+show_sidebar: true
+contact: hkthorn@sandia.gov
+package: belos
+doxygen: true
 ---
 
 Development Doxygen for Belos is available [Here](http://trilinos.org/docs/dev/packages/belos/doc/html/index.html)  

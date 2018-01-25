@@ -2,6 +2,10 @@
 title: Stratimikos Doxygen
 permalink: stratimikos_doxygen.html
 folder: packages
+show_sidebar: true
+contact: bartlettra@ornl.gov
+package: stratimikos
+doxygen: true
 ---
 
 Development Doxygen for Stratimikos is available [Here](http://trilinos.org/docs/dev/packages/stratimikos/doc/html/index.html)  

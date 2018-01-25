@@ -2,6 +2,10 @@
 title: Xpetra
 permalink: xpetra.html
 folder: packages
+show_sidebar: true
+contact: Andrey Prokopenko (aprokop@sandia.gov), Jonathan Hu (jhu@sandia.gov)
+package: xpetra
+doxygen: true
 ---
 
 [xpetra](images/xpetra.jpg)

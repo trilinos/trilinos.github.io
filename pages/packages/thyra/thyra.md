@@ -2,6 +2,10 @@
 title: Thyra
 permalink: thyra.html
 folder: packages
+show_sidebar: true
+contact: bartlettra@ornl.gov
+package: thyra
+doxygen: true
 ---
 
 Welcome to the Thyra Home

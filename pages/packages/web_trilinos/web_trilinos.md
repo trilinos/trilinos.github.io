@@ -2,6 +2,9 @@
 title: Web Trilinos
 permalink: web_trilinos.html
 folder: packages
+show_sidebar: true
+contact: marzio.sala@gmail.com
+package: trios
 ---
 
 ![WebTrilinos Logo](images/webtrilinos_logo.jpg)

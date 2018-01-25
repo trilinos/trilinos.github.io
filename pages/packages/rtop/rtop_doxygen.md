@@ -2,6 +2,10 @@
 title: RTOp Doxygen
 permalink: rotp_doxygen.html
 folder: packages
+show_sidebar: true
+contact: bartlettra@ornl.gov
+package: rtop
+doxygen: true
 ---
 
 Development Doxygen for RTOp is available [Here](http://trilinos.org/docs/dev/packages/rtop/doc/html/index.html)  

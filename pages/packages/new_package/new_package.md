@@ -2,6 +2,9 @@
 title: New Package
 permalink: new_package.html
 folder: packages
+show_sidebar: true
+contact: jmwille@sandia.gov
+package: newpackage
 ---
 
 Trilinos has an open architecture that facilitates easy incorporation of new packages. 

@@ -2,6 +2,10 @@
 title: Kokkos
 permalink: kokkos.html
 folder: packages
+show_sidebar: true
+contact: hcedwar@sandia.gov
+package: kokkos
+doxygen: true
 ---
 
 Kokkos is a Trilinos core kernels package. This page is no longer maintained. The current Kokkos homepage is [https://github.com/kokkos](https://github.com/kokkos).

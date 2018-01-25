@@ -2,6 +2,9 @@
 title: ForTrilinos FAQ
 permalink: fortrilinos_faq.html
 folder: packages
+show_sidebar: true
+contact: william@sandia.gov
+package: ForTrilinos
 ---
 
 **What features must a Fortran compiler support to successfully compile ForTrilinos?**

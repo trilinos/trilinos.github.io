@@ -2,6 +2,10 @@
 title: Trilinos Couplings Doxygen
 permalink: trilinoscouplings_doxygen.html
 folder: packages
+show_sidebar: true
+contact: trilinoscouplings-developers@sandia.gov
+package: trilinoscouplings
+doxygen: true
 ---
 
 Development Doxygen for TrilinosCouplings is available [Here](http://trilinos.org/docs/dev/packages/trilinoscouplings/doc/html/index.html)  

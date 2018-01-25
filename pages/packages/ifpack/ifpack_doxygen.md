@@ -2,6 +2,10 @@
 title: IFPACK Doxygen
 permalink: ifpack_doxygen.html
 folder: packages
+show_sidebar: true
+contact: maherou@sandia.gov
+package: ifpack
+doxygen: true
 ---
 
 Development Doxygen for IFPACK is available [Here](http://trilinos.org/docs/dev/packages/ifpack/doc/html/index.html)  

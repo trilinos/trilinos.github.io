@@ -2,6 +2,10 @@
 title: ForTrilinos Doxygen
 permalink: fortrilinos_doxygen.html
 folder: packages
+show_sidebar: true
+contact: william@sandia.gov
+package: ForTrilinos
+doxygen: true
 ---
 
 Development Doxygen for ForTrilinos is available [Here](http://trilinos.org/docs/dev/packages/ForTrilinos/doc/html/index.html)  

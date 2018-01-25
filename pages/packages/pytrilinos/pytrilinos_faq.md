@@ -2,6 +2,9 @@
 title: PyTrilinos FAQ
 permalink: pytrilinos_faq.html
 folder: packages
+show_sidebar: true
+contact: wfspotz@sandia.gov
+package: pytrilinos
 ---
 
 ## General Issues

@@ -1,7 +1,11 @@
 ---
-title: IFPACK2 Doxygen
+title: Ifpack2 Doxygen
 permalink: ifpack2_doxygen.html
 folder: packages
+show_sidebar: true
+contact: Mark Hoemmen (mhoemme@sandia.gov), Jonathan Hu (jhu@sandia.gov), Chris Siefert (csiefer@sandia.gov)
+package: ifpack2
+doxygen: true
 ---
 
 Development Doxygen for Ifpack2 is available [Here](http://trilinos.org/docs/dev/packages/ifpack2/doc/html/index.html)  

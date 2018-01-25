@@ -2,6 +2,10 @@
 title: Intrepid Doxygen
 permalink: intrepid_doxygen.html
 folder: packages
+show_sidebar: true
+contact: pbboche@sandia.gov
+package: intrepid
+doxygen: true
 ---
 
 Development Doxygen for Intrepid is available [Here](http://trilinos.org/docs/dev/packages/intrepid/doc/html/index.html)  

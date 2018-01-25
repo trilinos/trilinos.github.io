@@ -2,6 +2,9 @@
 title: STK
 permalink: stk.html
 folder: packages
+show_sidebar: true
+contact: mwglass@sandia.gov
+package: shards
 ---
 
 Welcome to the STK Home
