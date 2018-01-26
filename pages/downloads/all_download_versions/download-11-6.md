@@ -9,7 +9,8 @@ Many Trilinos download resources are still hosted at the old site. Please excuse
 
 Trilinos Release 11.6.2
 
-Download: [.gz](http://trilinos.org/oldsite/download/login.html?tid=tr11062gz) [.bz2](http://trilinos.org/oldsite/download/login.html?tid=tr11062bz2)
+<p>Download: <a href="download_files/trilinos-11.6.2-Source.tar.gz" class="downloadLink" name="Trilinos 11.6">.gz</a> (<code>127.75</code> MB), 
+<a href="download_files/trilinos-11.6.2-Source.tar.bz2" class="downloadLink" name="Trilinos 11.6">.bz2</a> (<code>109.56</code> MB)</p>
 
 Trilinos 11.6 was released in January 2014 and includes the following 54 packages. For more details about the release, view the [release notes](http://trilinos.org/oldsite/release_notes-11.6.html).
 

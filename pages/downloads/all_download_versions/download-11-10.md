@@ -6,7 +6,8 @@ folder: downloads
 
 <span style="text-decoration: underline;"><span style="font-size: 20px;">Trilinos Release 11.10.2</span></span>
 
-Download: [.gz](http://trilinos.org/oldsite/download/login.html?tid=tr11102gz) [.bz2](http://trilinos.org/oldsite/download/login.html?tid=tr11102bz2)
+<p>Download: <a href="download_files/trilinos-11.10.2-Source.tar.gz" class="downloadLink" name="Trilinos 11.10">.gz</a> (<code>127.75</code> MB), 
+<a href="download_files/trilinos-11.10.2-Source.tar.bz2" class="downloadLink" name="Trilinos 11.10">.bz2</a> (<code>109.56</code> MB)</p>
 
 Trilinos 11.10 was released in August 2014 and includes the following packages. For more details about the release, view the [release notes](http://trilinos.org/oldsite/release_notes-11.10.html).
 
