@@ -9,5 +9,12 @@
   gtag('js', new Date());
 
   gtag('config', '{{ site.google_analytics_id }}');
+   $(document).ready(function(){
+     $('a.downloadLink').click(function() {
+         gtag('event', 'download', {
+             'event_label':  $(this).attr('name'),
+         });
+     });
+   });
 </script>
 {% endif %}
