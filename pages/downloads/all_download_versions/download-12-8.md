@@ -6,8 +6,8 @@ folder: downloads
 
 <span style="text-decoration: underline;"><span style="font-size: 20px;">Trilinos Release 12.8.1</span></span>
 
-<p>Download: <a href="download_files/trilinos-12.8.1-Source.tar.gz" class="downloadLink" name="Trilinos 12.8">.gz</a> (<code>92.95</code> MB),
-<a href="download_files/trilinos-12.8.1-Source.tar.bz2" class="downloadLink" name="Trilinos 12.8">.bz2</a> (<code>77.62</code> MB)</p>
+<p>Download: <a href="http://10.185.11.90/download/files/trilinos-12.8.1-Source.tar.gz" class="downloadLink" name="Trilinos 12.8">.gz</a> (<code>92.95</code> MB),
+<a href="http://10.185.11.90/download/files/trilinos-12.8.1-Source.tar.bz2" class="downloadLink" name="Trilinos 12.8">.bz2</a> (<code>77.62</code> MB)</p>
 
 CRC checksum:  
 `.gz 546018424  

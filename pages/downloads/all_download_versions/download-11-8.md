@@ -8,8 +8,8 @@ Many Trilinos download resources are still hosted at the old site. Please excuse
 
 Trilinos Release 11.8.1
 
-<p>Download: <a href="download_files/trilinos-11.8.1-Source.tar.gz" class="downloadLink" name="Trilinos 11.8">.gz</a> (<code>127.75</code> MB), 
-<a href="download_files/trilinos-11.8.1-Source.tar.bz2" class="downloadLink" name="Trilinos 11.8">.bz2</a> (<code>109.56</code> MB)</p>
+<p>Download: <a href="http://10.185.11.90/download/files/trilinos-11.8.1-Source.tar.gz" class="downloadLink" name="Trilinos 11.8">.gz</a> (<code>127.75</code> MB), 
+<a href="https://trilinos.org/oldsite/download/files/trilinos-11.8.1-Source.tar.bz2" class="downloadLink" name="Trilinos 11.8">.bz2</a> (<code>109.56</code> MB)</p>
 
 Trilinos 11.8 was released in April 2014 and includes the following 54 packages. For more details about the release, view the [release notes](http://trilinos.org/oldsite/release_notes-11.8.html).
 
