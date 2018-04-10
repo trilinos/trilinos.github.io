@@ -7,7 +7,7 @@ permalink: product.html
 
 <span style="text-decoration: underline;">Because of the broad scope of Trilinos, and a continued project emphasis on developing production quality code, we have defined Products within Trilinos:</span>
   
-Framework - [[overview](#framework)] [[webpage](framework_tool_and_software_engineering.html)]  
+Framework - [[overview](#framework)] [[webpage](framework.md)]  
 Data Services - [[overview](#data-services)] [[webpage](data_service.html)]  
 Linear Solvers - [[overview](#linear-solvers)] [[webpage](linear_solver.html)]      
 Nonlinear Solvers - [[overview](#nonlinear-solvers)] [[webpage](nonlinear_solver.html)]    
@@ -21,9 +21,13 @@ Leader - Jim Willenbring
 
 The Framework and Tools Capability Area provides resources for both users and developers. Like User Experience, this capability area is different from most of the other capability areas in that the resources provided extend beyond packages and focus on tools that aid in building, maintaining and documenting Trilinos.<a name="SoftwareEngineering"></a>
 
+* * *
+
 ## Data Services
 
 Leader - Karen Devine
+
+* * *
 
 ## Linear Solvers
 
