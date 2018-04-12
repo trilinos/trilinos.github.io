@@ -8,7 +8,7 @@ permalink: product.html
 <span style="text-decoration: underline;">Because of the broad scope of Trilinos, and a continued project emphasis on developing production quality code, we have defined Products within Trilinos:</span>
   
 Framework - [[overview](#framework)] [[webpage](products/framework.md)]  
-Data Services - [[overview](#data-services)] [[webpage](products/data.md)]  
+Data Services - [[overview](#data-services)] [[webpage](data.md)]  
 Linear Solvers - [[overview](#linear-solvers)] [[webpage](linear_solver.md)]      
 Nonlinear Solvers - [[overview](#nonlinear-solvers)] [[webpage](nonlinear_solver.md)]    
 Discretizations - [[overview](#discretizations)] [[webpage](discretizations.md)]    
