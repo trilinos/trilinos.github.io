@@ -8,10 +8,10 @@ permalink: product.html
 <span style="text-decoration: underline;">Because of the broad scope of Trilinos, and a continued project emphasis on developing production quality code, we have defined Products within Trilinos:</span>
   
 Framework - [[overview](#framework)] [[webpage](products/framework.md)]  
-Data Services - [[overview](#data-services)] [[webpage](products/data.html)]  
-Linear Solvers - [[overview](#linear-solvers)] [[webpage](linear_solver.html)]      
-Nonlinear Solvers - [[overview](#nonlinear-solvers)] [[webpage](nonlinear_solver.html)]    
-Discretizations - [[overview](#discretizations)] [[webpage](discretizations.html)]    
+Data Services - [[overview](#data-services)] [[webpage](products/data.md)]  
+Linear Solvers - [[overview](#linear-solvers)] [[webpage](linear_solver.md)]      
+Nonlinear Solvers - [[overview](#nonlinear-solvers)] [[webpage](nonlinear_solver.md)]    
+Discretizations - [[overview](#discretizations)] [[webpage](discretizations.md)]    
 
 A brief summary of each capability area is provided below, as well as a link to the capability area homepage (note that some of the webpages are under construction). Each capability area is assigned to a capability leader. The capability leaders are listed below and on the capability area homepages.
 
