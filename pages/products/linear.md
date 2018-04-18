@@ -240,7 +240,7 @@ Y
 
 <tr>
 
-<td valign="top" width="261">Hybrid Schur complement methods</td>
+<td valign="top" width="261">Domian Decomposition Preconditioners and Subdomain solvers </td>
 
 <td valign="top" width="99"><a href="#-shylu-hybrid-iterativedirect-schur-complement-solver">ShyLU</a></td>
 
