@@ -3,7 +3,7 @@
 Github website platform for Trilinos organization
 
 
-# Instructions on editting and maintaining repos
+# Instructions on editing and maintaining repos
 
 ## Running locally
 
