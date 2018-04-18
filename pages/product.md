@@ -33,7 +33,7 @@ Leader - Karen Devine
 
 Leader - Siva Rajamanickam
 
-Trilinos provides a wide-variety of solution methods for linear and eigen systems. The Linear & Eigen Solvers Capability Area provides iterative and direct solvers, preconditioners, high-level interfaces, and eigen-solvers.<a name="NonlinearSolvers"></a>
+Trilinos provides a wide-variety of solution methods for linear and eigen systems. The Linear & Eigen Solvers Capability Area provides iterative and direct solvers, preconditioners, high-level interfaces, and eigen-solvers. Wide-variety of  preconditioners such as incomplete factorizations, domain decomposition preconditioners, and multigrid methods are supported. <a name="NonlinearSolvers"></a>
 
 * * *
 
