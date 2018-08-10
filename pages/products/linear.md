@@ -410,11 +410,12 @@ The matrix is torus-wrap mapped onto the processors(transparent to the user) and
 
 ### **ShyLU**: Hybrid iterative/direct Schur complement solver
 
-Points-of-contact: Erik Boman (egboman@sandia.gov) and Siva Rajamanickam (srajama@sandia.gov)
+Points-of-contact: Siva Rajamanickam (srajama@sandia.gov)
+[https://trilinos.github.io/shylu.html]shylu.html
 
-ShyLU is designed as a node-level solver and can use both MPI and threads in several ways. ShyLU was designed (a) to solve difficult but medium-size problems, and (b) to be used as a subdomain solver or smoother for very large problems within an iterative scheme. It is a purely algebraic method and so can be used as a black-box solver.
+ShyLU is designed as a set of domain-decomposition solvers that us distributed memory and node-level solvers and kernels that support the distributed memory solvers. The approaches in ShyLU are algebraic and so can be used as a black-box solvers.
 
-ShyLU uses a hybrid direct/iterative approach based on Schur complements. The goal is to provide robustness similar to sparse direct solvers, but memory usage more similar to preconditioned iterative solvers.
+The Domain Decomposition methods in ShyLU are a one-level hybrid direct/iterative approach based on Schur complements, two-level balancing domain decomposition method (bddc) and Overlapping Schwarz methods (FroSch). The node level solvers include sparse LU factorization (basker), sparse Cholesky factorization (Tacho), multithreaded triangular solver (HTS) and a fast iterative ILU algorithm (FastILU).
 
 ### **Teko**: Block preconditioning framework
 
