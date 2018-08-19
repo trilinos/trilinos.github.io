@@ -411,6 +411,7 @@ The matrix is torus-wrap mapped onto the processors(transparent to the user) and
 ### **ShyLU**: Hybrid iterative/direct Schur complement solver
 
 Point-of-contact: Siva Rajamanickam (srajama@sandia.gov)
+
 [https://trilinos.github.io/shylu.html](shylu.html)
 
 ShyLU is designed as a set of domain-decomposition solvers that us distributed memory and node-level solvers and kernels that support the distributed memory solvers. The approaches in ShyLU are algebraic and so can be used as a black-box solvers.
