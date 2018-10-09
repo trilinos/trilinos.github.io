@@ -7,7 +7,7 @@ folder: community
 ## Dates
 
 October 23th: Small Group Developer Sessions  
-October 24th: User Sessions
+October 24th: User Sessions  
 October 25th: Developer Sessions  
 
 ## Location
@@ -140,7 +140,7 @@ Note: The below schedule is tentative and could change significantly, including 
 </tr>
 <tr>
 <th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">10:00</abbr>–<abbr title="2011-11-01T09:30:00">10:30</abbr></th> 
-<td headers="time-1 location-1">Trilinos Software Develpment Research Status (R. Milewicz</td>
+<td headers="time-1 location-1">Trilinos Software Develpment Research Status (R. Milewicz)</td>
 </tr>
 <tr>
 <th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">10:30</abbr>–<abbr title="2011-11-01T09:30:00">10:45</abbr></th> 
