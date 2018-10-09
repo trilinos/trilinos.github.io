@@ -37,7 +37,7 @@ If you wish to attend and are not a Sandia employee or contractor, please contac
 
 ## Schedule
 
-Note: The below schedule is tentative and could change significantly, including dates and start and end times.
+Note: The below schedule is tentative and could change significantly, including dates and start and end times. Last updated 10/9/18.
 
 <p style="text-align: center;"><span style="text-decoration: underline;">Tuesday, October 23th</span> (Developer Discussions)</p>
 
@@ -59,7 +59,7 @@ Note: The below schedule is tentative and could change significantly, including 
 </tr>
 <tr>
 <th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">3:30</abbr>–<abbr title="2011-10-31T17:15:00">4:30</abbr></th>
-<td headers="time-1 location-1">Trilinos Stability Impact on ATDM + related discussion (R. Bartlett)</td>
+<td headers="time-1 location-1">1424 Department Meeting - Background and Movitvation (M. Heroux)</td>
 </tr>
 </tbody>
 </table>
@@ -131,12 +131,16 @@ Note: The below schedule is tentative and could change significantly, including 
 <table summary="Timetable">
 <tbody>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">8:30</abbr>–<abbr title="2011-11-01T09:30:00">9:30</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">8:15</abbr>–<abbr title="2011-11-01T09:30:00">9:00</abbr></th> 
 <td headers="time-1 location-1">Trilinos State of the Product (M. Heroux)</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:30</abbr>–<abbr title="2011-11-01T09:30:00">10:00</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:00</abbr>–<abbr title="2011-11-01T09:30:00">9:30</abbr></th> 
 <td headers="time-1 location-1">Trilinos Framework Update (J. Willenbring)</td>
+</tr>
+<tr>
+<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">9:30</abbr>–<abbr title="2011-10-31T17:15:00">10:00</abbr></th>
+<td headers="time-1 location-1">Trilinos Stability Impact on ATDM (R. Bartlett)</td>
 </tr>
 <tr>
 <th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">10:00</abbr>–<abbr title="2011-11-01T09:30:00">10:30</abbr></th> 
