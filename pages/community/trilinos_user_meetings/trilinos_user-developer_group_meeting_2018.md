@@ -37,7 +37,7 @@ If you wish to attend and are not a Sandia employee or contractor, please contac
 
 ## Schedule
 
-Note: The below schedule is tentative and could change significantly, including dates and start and end times. Last updated 10/9/18.
+Note: The below schedule is tentative and could change significantly, including dates and start and end times. Last updated 10/16/18.
 
 <p style="text-align: center;"><span style="text-decoration: underline;">Tuesday, October 23th</span> (Developer Discussions)</p>
 
@@ -75,11 +75,11 @@ Note: The below schedule is tentative and could change significantly, including 
 </tr>
 <tr>
 <th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:30</abbr>–<abbr title="2011-11-01T09:30:00">9:50</abbr></th> 
-<td headers="time-1 location-1">Tpetra and Data Services Plans (K. Devine)</td>
+<td headers="time-1 location-1">Intrepid (M. Perego)</td>
 </tr>
 <tr>
-<th id="time-2" axis="time"><abbr title="2011-11-01T09:30:00">9:50</abbr>–<abbr title="2011-11-01T09:45:00">10:20</abbr></th>
-<td headers="time-2 location-1">Tpetra finite-element assembly (T. Fuller, C. Siefert)</td>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:50</abbr>–<abbr title="2011-11-01T09:30:00">10:20</abbr></th> 
+<td headers="time-1 location-1">Drekar (R. Pawlowski)</td>
 </tr>
 <tr>
 <th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">10:20</abbr>–<abbr title="2011-11-01T09:30:00">10:40</abbr></th> 
@@ -87,42 +87,42 @@ Note: The below schedule is tentative and could change significantly, including 
 </tr>
 <tr>
 <th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">10:40</abbr>–<abbr title="2011-11-01T09:30:00">11:00</abbr></th> 
-<td headers="time-1 location-1">Tpetra Deprecations (M. Hoemmen)</td>
-</tr>
-<tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">11:00</abbr>–<abbr title="2011-11-01T09:30:00">11:30</abbr></th> 
-<td headers="time-1 location-1">BDDC (C. Dohrmann)</td>
-</tr>
-<tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">11:30</abbr>–<abbr title="2011-11-01T09:30:00">1:00</abbr></th> 
-<td headers="time-1 location-1">Lunch</td>
-</tr>
-<tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">1:00</abbr>–<abbr title="2011-11-01T09:30:00">1:40</abbr></th> 
-<td headers="time-1 location-1">Drekar (J. Shadid)</td>
-</tr>
-<tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">1:40</abbr>–<abbr title="2011-11-01T09:30:00">2:00</abbr></th> 
 <td headers="time-1 location-1">Empire (E. Phillips)</td>
 </tr>
 <tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">11:00</abbr>–<abbr title="2011-11-01T09:30:00">11:20</abbr></th> 
+<td headers="time-1 location-1">RefMaxwell (C. Trott)</td>
+</tr>
+<tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">11:20</abbr>–<abbr title="2011-11-01T09:30:00">11:40</abbr></th> 
+<td headers="time-1 location-1">BDDC (C. Dohrmann)</td>
+</tr>
+<tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">11:40</abbr>–<abbr title="2011-11-01T09:30:00">1:10</abbr></th> 
+<td headers="time-1 location-1">Lunch</td>
+</tr>
+<tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">1:10</abbr>–<abbr title="2011-11-01T09:30:00">1:30</abbr></th> 
+<td headers="time-1 location-1">Tpetra and Data Services Plans (K. Devine)</td>
+</tr>
+<tr>
+<th id="time-2" axis="time"><abbr title="2011-11-01T09:30:00">1:30</abbr>–<abbr title="2011-11-01T09:45:00">2:00</abbr></th>
+<td headers="time-2 location-1">Tpetra finite-element assembly (T. Fuller, C. Siefert)</td>
+</tr>
+<tr>
 <th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">2:00</abbr>–<abbr title="2011-11-01T09:30:00">2:20</abbr></th> 
-<td headers="time-1 location-1">Intrepid (M. Perego)</td>
+<td headers="time-1 location-1">Tpetra Deprecations (M. Hoemmen)</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">2:20</abbr>–<abbr title="2011-11-01T09:30:00">2:30</abbr></th> 
-<td headers="time-1 location-1">BREAK</td>
-</tr>
-<tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">2:30</abbr>–<abbr title="2011-11-01T09:30:00">3:00</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">2:20</abbr>–<abbr title="2011-11-01T09:30:00">2:50</abbr></th> 
 <td headers="time-1 location-1">Tempus (C. Ober)</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">3:00</abbr>–<abbr title="2011-11-01T09:30:00">3:30</abbr></th> 
-<td headers="time-1 location-1">Thyra Feedback and Requirements (R. Bartlett)</td>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">2:50</abbr>–<abbr title="2011-11-01T09:30:00">3:15</abbr></th> 
+<td headers="time-1 location-1">BREAK</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">3:30</abbr>–<abbr title="2011-11-01T09:30:00">4:30</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">3:15</abbr>–<abbr title="2011-11-01T09:30:00">4:30</abbr></th> 
 <td headers="time-1 location-1">User Feedback / User meeting wrap-up</td>
 </tr>
 </tbody>
