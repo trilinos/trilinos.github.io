@@ -91,7 +91,7 @@ Note: The below schedule is tentative and could change significantly, including 
 </tr>
 <tr>
 <th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">11:00</abbr>–<abbr title="2011-11-01T09:30:00">11:20</abbr></th> 
-<td headers="time-1 location-1">RefMaxwell (C. Trott)</td>
+<td headers="time-1 location-1">RefMaxwell (C. Glusa)</td>
 </tr>
 <tr>
 <th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">11:20</abbr>–<abbr title="2011-11-01T09:30:00">11:40</abbr></th> 
