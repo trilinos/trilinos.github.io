@@ -37,7 +37,7 @@ If you wish to attend and are not a Sandia employee or contractor, please contac
 
 ## Schedule
 
-Note: The below schedule is tentative and could change significantly, including dates and start and end times. Last updated 10/16/18.
+Note: The below schedule is tentative and could change significantly, including dates and start and end times. Last updated 10/17/18.
 
 <p style="text-align: center;"><span style="text-decoration: underline;">Tuesday, October 23th</span> (Developer Discussions)</p>
 
@@ -118,11 +118,15 @@ Note: The below schedule is tentative and could change significantly, including 
 <td headers="time-1 location-1">Tempus (C. Ober)</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">2:50</abbr>–<abbr title="2011-11-01T09:30:00">3:15</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">2:50</abbr>–<abbr title="2011-11-01T09:30:00">3:10</abbr></th> 
+<td headers="time-1 location-1">Developing a Harmonic Balance Method for Charon (A. Huang)</td>
+</tr>
+<tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">3:10</abbr>–<abbr title="2011-11-01T09:30:00">3:30</abbr></th> 
 <td headers="time-1 location-1">BREAK</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">3:15</abbr>–<abbr title="2011-11-01T09:30:00">4:30</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">3:30</abbr>–<abbr title="2011-11-01T09:30:00">4:30</abbr></th> 
 <td headers="time-1 location-1">User Feedback / User meeting wrap-up</td>
 </tr>
 </tbody>
