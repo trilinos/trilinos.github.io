@@ -37,7 +37,7 @@ If you wish to attend and are not a Sandia employee or contractor, please contac
 
 ## Schedule
 
-Note: The below schedule is tentative and could change significantly, including dates and start and end times. Last updated 10/17/18.
+Note: The below schedule is tentative and could change significantly, including dates and start and end times. Last updated 10/22/18.
 
 <p style="text-align: center;"><span style="text-decoration: underline;">Tuesday, October 23th</span> (Developer Discussions)</p>
 
@@ -82,15 +82,15 @@ Note: The below schedule is tentative and could change significantly, including 
 <td headers="time-1 location-1">Drekar (R. Pawlowski)</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">10:20</abbr>–<abbr title="2011-11-01T09:30:00">10:40</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">10:20</abbr>–<abbr title="2011-11-01T09:30:00">10:50</abbr></th> 
 <td headers="time-1 location-1">BREAK</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">10:40</abbr>–<abbr title="2011-11-01T09:30:00">11:00</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">10:50</abbr>–<abbr title="2011-11-01T09:30:00">11:10</abbr></th> 
 <td headers="time-1 location-1">Empire (E. Phillips)</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">11:00</abbr>–<abbr title="2011-11-01T09:30:00">11:20</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">11:10</abbr>–<abbr title="2011-11-01T09:30:00">11:20</abbr></th> 
 <td headers="time-1 location-1">RefMaxwell (C. Glusa)</td>
 </tr>
 <tr>
