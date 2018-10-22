@@ -70,32 +70,36 @@ Note: The below schedule is tentative and could change significantly, including 
 <tbody>
 
 <tr>
-<th id="time-2" axis="time"><abbr title="2011-11-01T09:30:00">8:30</abbr>–<abbr title="2011-11-01T09:45:00">9:30</abbr></th>
+<th id="time-2" axis="time"><abbr title="2011-11-01T09:30:00">8:30</abbr>–<abbr title="2011-11-01T09:45:00">9:10</abbr></th>
 <td headers="time-2 location-1">Trilinos Future Plans and Product Overview (M. Heroux)</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:30</abbr>–<abbr title="2011-11-01T09:30:00">9:50</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:30</abbr>–<abbr title="2011-11-01T09:10:00">9:30</abbr></th> 
 <td headers="time-1 location-1">Intrepid (M. Perego)</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:50</abbr>–<abbr title="2011-11-01T09:30:00">10:20</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:30</abbr>–<abbr title="2011-11-01T09:30:00">10:00</abbr></th> 
 <td headers="time-1 location-1">Drekar (R. Pawlowski)</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">10:20</abbr>–<abbr title="2011-11-01T09:30:00">10:50</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">10:00</abbr>–<abbr title="2011-11-01T09:30:00">10:30</abbr></th> 
 <td headers="time-1 location-1">BREAK</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">10:50</abbr>–<abbr title="2011-11-01T09:30:00">11:10</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">10:30</abbr>–<abbr title="2011-11-01T09:30:00">10:50</abbr></th> 
 <td headers="time-1 location-1">Empire (E. Phillips)</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">11:10</abbr>–<abbr title="2011-11-01T09:30:00">11:20</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">10:50</abbr>–<abbr title="2011-11-01T09:30:00">11:00</abbr></th> 
 <td headers="time-1 location-1">RefMaxwell (C. Glusa)</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">11:20</abbr>–<abbr title="2011-11-01T09:30:00">11:40</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">11:00</abbr>–<abbr title="2011-11-01T09:30:00">11:20</abbr></th> 
 <td headers="time-1 location-1">BDDC (C. Dohrmann)</td>
+</tr>
+<tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">11:20</abbr>–<abbr title="2011-11-01T09:30:00">11:40</abbr></th> 
+<td headers="time-1 location-1">Developing a Harmonic Balance Method for Charon (A. Huang)</td>
 </tr>
 <tr>
 <th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">11:40</abbr>–<abbr title="2011-11-01T09:30:00">1:10</abbr></th> 
@@ -118,15 +122,11 @@ Note: The below schedule is tentative and could change significantly, including 
 <td headers="time-1 location-1">Tempus (C. Ober)</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">2:50</abbr>–<abbr title="2011-11-01T09:30:00">3:10</abbr></th> 
-<td headers="time-1 location-1">Developing a Harmonic Balance Method for Charon (A. Huang)</td>
-</tr>
-<tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">3:10</abbr>–<abbr title="2011-11-01T09:30:00">3:30</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">2:50</abbr>–<abbr title="2011-11-01T09:30:00">3:15</abbr></th> 
 <td headers="time-1 location-1">BREAK</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">3:30</abbr>–<abbr title="2011-11-01T09:30:00">4:30</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">3:15</abbr>–<abbr title="2011-11-01T09:30:00">4:30</abbr></th> 
 <td headers="time-1 location-1">User Feedback / User meeting wrap-up</td>
 </tr>
 </tbody>
