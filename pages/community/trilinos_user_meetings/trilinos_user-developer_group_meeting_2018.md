@@ -59,7 +59,7 @@ Note: The below schedule is tentative and could change significantly, including 
 </tr>
 <tr>
 <th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">3:30</abbr>–<abbr title="2011-10-31T17:15:00">4:30</abbr></th>
-<td headers="time-1 location-1">1424 Department Meeting - Background and Movitvation (M. Heroux)</td>
+<td headers="time-1 location-1">1424 Department Meeting - Background and Motivation (M. Heroux)</td>
 </tr>
 </tbody>
 </table>
