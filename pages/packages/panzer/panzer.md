@@ -3,7 +3,7 @@ title: Panzer
 permalink: panzer.html
 folder: packages
 show_sidebar: true
-contact: eccyr@sandia.gov, rppawlo@sandia.gov, jmgate@sandia.gov
+contact: eccyr@sandia.gov, rppawlo@sandia.gov
 package: optipack
 doxygen: true
 ---
