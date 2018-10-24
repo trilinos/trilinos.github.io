@@ -74,7 +74,7 @@ Note: The below schedule is tentative and could change significantly, including 
 <td headers="time-2 location-1">Trilinos Future Plans and Product Overview (M. Heroux)</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:30</abbr>–<abbr title="2011-11-01T09:10:00">9:30</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:10</abbr>–<abbr title="2011-11-01T09:10:00">9:30</abbr></th> 
 <td headers="time-1 location-1">Intrepid (M. Perego)</td>
 </tr>
 <tr>
