@@ -35,4 +35,4 @@ For details, see [ROL_PDF_Slides](pdfs/ROL.pdf "ROL PDF Presentation") or [ROL_P
 
 Some use cases:
 
-![](images/ROL_Uses_Inverse.png)
+![](images/ROL_Apps.png)
