@@ -5,8 +5,8 @@ permalink: download.html
 
 <span style="text-decoration: underline;"><span style="font-size: 20px;">Trilinos Release 12.12.1</span></span>
 
-<p>Download: <a href="http://10.185.11.90/download/files/trilinos-12.12.1-Source.tar.gz" class="downloadLink" name="Trilinos 12.12">.gz</a> (<code>93.26</code> MB),
-<a href="http://10.185.11.90/download/files/trilinos-12.12.1-Source.tar.bz2" class="downloadLink" name="Trilinos 12.12">.bz2</a> (<code>77.69</code> MB)</p>
+<p>Download: <a href="http://trilinos.csbsju.edu/download/files/trilinos-12.12.1-Source.tar.gz" class="downloadLink" name="Trilinos 12.12">.gz</a> (<code>93.26</code> MB),
+<a href="http://trilinos.csbsju.edu/download/files/trilinos-12.12.1-Source.tar.bz2" class="downloadLink" name="Trilinos 12.12">.bz2</a> (<code>77.69</code> MB)</p>
 
 CRC checksum:  
 `.gz 2741256545  
