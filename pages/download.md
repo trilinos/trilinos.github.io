@@ -5,6 +5,8 @@ permalink: download.html
 
 <span style="text-decoration: underline;"><span style="font-size: 20px;">Trilinos Release 12.12.1</span></span>
 
+<p> <b> Note on Trilinos Tarfile Releases: </b> <i> While Trilinos compressed tarfile releases are important for some scripted workflows, most Trilinos users have migrated to directly interacting with the Trilinos GitHub repository.  As a result, the Trilinos projects has substantially reduced the frequency of compressed tarfile releases.  If you want to keep up with more frequent updates, please use the Trilinos GitHub master branch.  See the <a href="https://trilinos.github.io/public_git_repos.html">Trilinos GitHub summary page </a> for details.</i> </p>
+
 <p>Download: <a href="http://trilinos.csbsju.edu/download/files/trilinos-12.12.1-Source.tar.gz" class="downloadLink" name="Trilinos 12.12">.gz</a> (<code>93.26</code> MB),
 <a href="http://trilinos.csbsju.edu/download/files/trilinos-12.12.1-Source.tar.bz2" class="downloadLink" name="Trilinos 12.12">.bz2</a> (<code>77.69</code> MB)</p>
 
