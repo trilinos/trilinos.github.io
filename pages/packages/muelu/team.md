@@ -6,16 +6,20 @@ folder: packages
 
 The current MueLu development team is
 
+* Luc Berger-Vergiat
 * Jonathan Hu
+* Brian Kelley
+* Matthias Mayr
 * Andrey Prokopenko
 * Chris Siefert
 * Ray Tuminaro
-* Tobias Wiesner
 
 Other contributors are
 
+* Tom Benson
 * Emily Furst
 * Jeremie Gaidamour
 * Axel Gerstenberger
 * Brian Kelley
 * Paul Tsuji
+* Tobias Wiesner
