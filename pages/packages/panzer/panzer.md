@@ -4,7 +4,7 @@ permalink: panzer.html
 folder: packages
 show_sidebar: true
 contact: eccyr@sandia.gov, rppawlo@sandia.gov
-package: optipack
+package: panzer
 doxygen: true
 ---
 
