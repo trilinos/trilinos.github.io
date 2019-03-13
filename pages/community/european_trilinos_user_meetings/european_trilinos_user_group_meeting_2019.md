@@ -9,7 +9,10 @@ folder: community
 **Eidgenössische Technische Hochschule Zürich (ETH Zürich)**  
 **Zürich, Switzerland**
 
-The Trilinos Project team will be holding a one-day European Trilinos User Group meeting on June 11, 2019 at ETH Zürich, Switzerland.  The meeting is one day before the 2019 Platform for Advanced Scientific Computing Conference [PASC 2019](https://pasc19.pasc-conference.org) also held at ETH from June 12 – 14.
+The Trilinos Project team will be holding a one-day European Trilinos User Group meeting on June 11, 2019 at ETH Zürich, Switzerland.  The meeting will occur the day before the 2019 Platform for Advanced Scientific Computing Conference [PASC 2019](https://pasc19.pasc-conference.org) also held at ETH from June 12 – 14.
+
+### Registration:
+- In preparation.
 
 ### Meeting Themes:
 - Overview of Trilinos capabilities for next-generation parallel computers.
