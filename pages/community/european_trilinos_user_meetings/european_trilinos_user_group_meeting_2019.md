@@ -22,14 +22,18 @@ The Trilinos Project team will be holding a one-day European Trilinos User Group
 - US solver efforts for Exascale platforms.
 
 ### Agenda
-- 1900 - Monday, June 10 - Informal Dinner near ETH - Contact Mike Heroux [maherou@sandia.gov](mailto:maherou@sandia.gov) if you want to join for dinner.
-- 0800 - Meeting Introduction and Overview - Mike Heroux, Sandia National Laboratories
-- 0845 - Introduction to Kokkos - Christian Trott, Sandia National Laboratories
+
+Monday, June 10
+- 1900  - Informal Dinner near ETH - Contact Mike Heroux [maherou@sandia.gov](mailto:maherou@sandia.gov) if you want to join for dinner
+
+Tuesday, June 11
+- 0800 - __Meeting Introduction and Overview__ - **Mike Heroux**, Sandia National Laboratories
+- 0845 - __Introduction to Kokkos__ - **Christian Trott**, Sandia National Laboratories
 - 1000 - Break
-- 1030 - Introduction to Trilinos/KokkosKernels MPI+X Linear Solvers - Siva Rajamanickam, Sandia National Laboratories
+- 1030 - __Introduction to Trilinos/KokkosKernels MPI+X Linear Solvers__ - **Siva Rajamanickam**, Sandia National Laboratories
 - 1145 - Lunch
-- 1315 - Discretization and Assembly using Intrepid2 and Tpetra - Mauro Perego, Sandia National Laboratories
-- 1430 - Using Trilinos/Muelu for scalable multigrid preconditioning - Matthias Mayr, University of the Bundeswehr Munich
+- 1315 - __Discretization and Assembly using Intrepid2 and Tpetra__ - **Mauro Perego**, Sandia National Laboratories
+- 1430 - __Using Trilinos/Muelu for Scalable Multigrid Preconditioning__ - **Matthias Mayr**, University of the Bundeswehr Munich
 - 1530 - Break
-- 1600 - Using Trilinos from container and interactive environments - Tobias Wiesner, Leica Geosystems
-- 1700 - Open Discussion
+- 1600 - __Using Trilinos from Container and Interactive Environments__ - **Tobias Wiesner**, Leica Geosystems
+- 1700 - __Open Discussion__
