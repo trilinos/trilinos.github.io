@@ -38,6 +38,6 @@ The Trilinos Project team will be holding a one-day European Trilinos User Group
 - 1315 - _Fast and Robust Overlapping Schwarz: FROSch_ - **Alexander Heinlein**, University of Cologne
 - 1400 - _Using Trilinos/Muelu for Scalable Multigrid Preconditioning_ - **Matthias Mayr**, University of the Bundeswehr Munich
 - 1445 - Break
-- 1315 - _Discretization and Assembly using Intrepid2 and Tpetra_ - **Mauro Perego**, Sandia National Laboratories
-- 1430 - _The ECP Extreme-scale Scientific Software Development Kit (xSDK)_ - **Keita Teranishi**, Sandia National Laboratories
+- 1515 - _Discretization and Assembly using Intrepid2 and Tpetra_ - **Mauro Perego**, Sandia National Laboratories
+- 1630 - _The ECP Extreme-scale Scientific Software Development Kit (xSDK)_ - **Keita Teranishi**, Sandia National Laboratories
 - 1700 - _Open Discussion_
