@@ -30,12 +30,14 @@ The Trilinos Project team will be holding a one-day European Trilinos User Group
 #### Tuesday, June 11
 
 - 0800 - _Meeting Introduction and Overview_ - **Mike Heroux**, Sandia National Laboratories
-- 0845 - _Introduction to Kokkos_ - **Christian Trott**, Sandia National Laboratories
-- 1000 - Break
-- 1030 - _Introduction to Trilinos/KokkosKernels MPI+X Linear Solvers_ - **Siva Rajamanickam**, Sandia National Laboratories
-- 1145 - Lunch
+- 0830 - _Using Trilinos from Container and Interactive Environments_ - **Tobias Wiesner**, Leica Geosystems
+- 0915 - _Introduction to Kokkos_ - **Christian Trott**, Sandia National Laboratories
+- 1030 - Break
+- 1100 - _Introduction to Trilinos/KokkosKernels MPI+X Linear Solvers_ - **Siva Rajamanickam**, Sandia National Laboratories
+- 1200 - Lunch
+- 1315 - _Fast and Robust Overlapping Schwarz: FROSch_ - **Alexander Heinlein**, University of Cologne
+- 1400 - _Using Trilinos/Muelu for Scalable Multigrid Preconditioning_ - **Matthias Mayr**, University of the Bundeswehr Munich
+- 1445 - Break
 - 1315 - _Discretization and Assembly using Intrepid2 and Tpetra_ - **Mauro Perego**, Sandia National Laboratories
-- 1430 - _Using Trilinos/Muelu for Scalable Multigrid Preconditioning_ - **Matthias Mayr**, University of the Bundeswehr Munich
-- 1530 - Break
-- 1600 - _Using Trilinos from Container and Interactive Environments_ - **Tobias Wiesner**, Leica Geosystems
+- 1430 - _The ECP Extreme-scale Scientific Software Development Kit (xSDK)_ - **Keita Teranishi**, Sandia National Laboratories
 - 1700 - _Open Discussion_
