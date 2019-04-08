@@ -32,7 +32,7 @@ The Trilinos Project team will be holding a one-day European Trilinos User Group
 #### Tuesday, June 11
 
 - 0800 - _Meeting Introduction and Overview_ - **Mike Heroux**, Sandia National Laboratories
-- 0830 - _Using Trilinos from Container and Interactive Environments_ - **Tobias Wiesner**, Leica Geosystems
+- 0830 - _Using Trilinos from Container and Interactive Environments_ - **Tobias Wiesner**
 - 0915 - _Introduction to Kokkos_ - **Christian Trott**, Sandia National Laboratories
 - 1030 - Break
 - 1100 - _Introduction to Trilinos/KokkosKernels MPI+X Linear Solvers_ - **Siva Rajamanickam**, Sandia National Laboratories
