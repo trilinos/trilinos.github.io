@@ -23,7 +23,7 @@ The Trilinos Project team will be holding a one-day European Trilinos User Group
 - Capabilities in KokkosKernels for parallel on-node mathematical kernels.
 - US solver efforts for Exascale platforms.
 
-### Agenda
+### Agenda (Select Arrow for Abstract)
 
 #### Monday, June 10
 
@@ -53,7 +53,7 @@ The Trilinos Project team will be holding a one-day European Trilinos User Group
 
 <details>
 <summary>
-0915 - Introduction to Kokkos_ - Christian Trott, Sandia National Laboratories
+0915 - Introduction to Kokkos - Christian Trott, Sandia National Laboratories
 </summary>
     TBD
 </details>
