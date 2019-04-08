@@ -40,9 +40,10 @@ The Trilinos Project team will be holding a one-day European Trilinos User Group
 - 1315 - _Fast and Robust Overlapping Schwarz: FROSch_ - **Alexander Heinlein**, University of Cologne
 - 1400 - _Using Trilinos/Muelu for Scalable Multigrid Preconditioning_ - **Matthias Mayr**, University of the Bundeswehr Munich
 - 1445 - Break
+- 1515 - _Discretization and Assembly using Intrepid2 and Tpetra_ - **Mauro Perego**, Sandia National Laboratories
 <details>
   <summary>
-- 1515 - _Discretization and Assembly using Intrepid2 and Tpetra_ - **Mauro Perego**, Sandia National Laboratories
+    Abstract
   </summary>
   Intrepid2 is a performance portable C++ toolkit for the local assembly of high-order compatible finite elements. Performance portability is achieved through the Kokkos programming model. In this talk we introduce Intrepid2 and its capabilities. We then demonstrate how to discretize partial differential equations and assemble the associated finite element matrices and right-hand sides using the Trilinos linear algebra package Tpetra. Finally, we give a brief overview of other discretization tools available in Trilinos.
 </details>
