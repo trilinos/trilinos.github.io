@@ -27,7 +27,13 @@ The Trilinos Project team will be holding a one-day European Trilinos User Group
 
 #### Monday, June 10
 
-- 1900  - Informal Dinner near ETH - Contact Mike Heroux [maherou@sandia.gov](mailto:maherou@sandia.gov) if you want to join for dinner
+<details>
+<summary>
+1900  - Informal Dinner near ETH - Contact Mike Heroux [maherou@sandia.gov](mailto:maherou@sandia.gov) if you want to join for dinner
+</summary>
+    Location - TBD
+</details>
+
 
 #### Tuesday, June 11
 
@@ -35,47 +41,55 @@ The Trilinos Project team will be holding a one-day European Trilinos User Group
 <summary>
 0800 - Meeting Introduction and Overview - Mike Heroux, Sandia National Laboratories
 </summary>
+    TBD
 </details>
 
 <details>
 <summary>
 0830 - Using Trilinos from Container and Interactive Environments - Tobias Wiesner
 </summary>
+    TBD
 </details>
 
 <details>
 <summary>
 0915 - Introduction to Kokkos_ - Christian Trott, Sandia National Laboratories
 </summary>
+    TBD
 </details>
 
 <details>
 <summary>
 1030 - Break
 </summary>
+    TBD
 </details>
 <details>
 <summary>
 1200 - Lunch
 </summary>
+    TBD
 </details>
 
 <details>
 <summary>
 1315 - Fast and Robust Overlapping Schwarz: FROSch - Alexander Heinlein, University of Cologne
 </summary>
+    TBD
 </details>
 
 <details>
 <summary>
 1400 - Using Trilinos/Muelu for Scalable Multigrid Preconditioning - Matthias Mayr, University of the Bundeswehr Munich
 </summary>
+    TBD
 </details>
 
 <details>
 <summary>
 1445 - Break
 </summary>
+    TBD
 </details>
 
 <details>
@@ -88,10 +102,12 @@ The Trilinos Project team will be holding a one-day European Trilinos User Group
 <summary>
 1630 - The ECP Extreme-scale Scientific Software Development Kit (xSDK) - Keita Teranishi, Sandia National Laboratories
 </summary>
+    TBD
 </details>
 
 <details>
 <summary>
 1700 - Open Discussion
 </summary>
+    TBD
 </details>
