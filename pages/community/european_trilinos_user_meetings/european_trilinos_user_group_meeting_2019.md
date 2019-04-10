@@ -81,7 +81,7 @@ Trilinos provides a rich collection of linear solver capabilities in a variety o
 <summary>
 1315 - Fast and Robust Overlapping Schwarz: FROSch - Alexander Heinlein, University of Cologne
 </summary>
-    [FROSch](https://shylu-frosch.github.io) is a Trilinos-compatible software library for parallel overlapping Schwarz preconditioning.  This presentation provides an overview of FROSch and how to use it to robustly solve large sparse linear systems.
+    <a href="https://shylu-frosch.github.io">FROSch</a> is a Trilinos-compatible software library for parallel overlapping Schwarz preconditioning.  This presentation provides an overview of FROSch and how to use it to robustly solve large sparse linear systems.
 </details>
 
 <details>
@@ -108,7 +108,7 @@ Trilinos provides a rich collection of linear solver capabilities in a variety o
 <summary>
 1630 - The ECP Extreme-scale Scientific Software Development Kit (xSDK) - Keita Teranishi, Sandia National Laboratories
 </summary>
-    The [xSDK](https://xsdk.info) is a community effort to provide coordination and improved common experience with a growing collection of popular math libraries, including hypre, PETSc, SuperLU, Trilinos and more.  In this presentation, we give an overview of the xSDK and how it can be useful to math libraries users.
+    The <a href="https://xsdk.info">xSDK</a> is a community effort to provide coordination and improved common experience with a growing collection of popular math libraries, including hypre, PETSc, SuperLU, Trilinos and more.  In this presentation, we give an overview of the xSDK and how it can be useful to math libraries users.
 </details>
 
 <details>
