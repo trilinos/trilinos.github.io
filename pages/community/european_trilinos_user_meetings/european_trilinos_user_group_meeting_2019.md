@@ -21,6 +21,7 @@ The Trilinos Project team will be holding a one-day European Trilinos User Group
 - Overview of Trilinos capabilities for next-generation parallel computers.
 - Use of Kokkos for efficient on-node parallel problem construction.
 - Capabilities in KokkosKernels for parallel on-node mathematical kernels.
+- Tools for the discretization and solution of differential equations.
 - US solver efforts for Exascale platforms.
 
 ### Agenda (Select Arrow for Abstract)
