@@ -83,7 +83,12 @@ Trilinos provides a rich collection of linear solver capabilities in a variety o
 <summary>
 1315 - Fast and Robust Overlapping Schwarz: FROSch - Alexander Heinlein, University of Cologne
 </summary>
-    <a href="https://shylu-frosch.github.io">FROSch</a> is a Trilinos-compatible software library for parallel overlapping Schwarz preconditioning.  This presentation provides an overview of FROSch and how to use it to robustly solve large sparse linear systems.
+	<p>
+    <a href="https://shylu-frosch.github.io">FROSch</a> (Fast and Robust Overlapping Schwarz) is a framework for parallel Schwarz domain decomposition preconditioners, which is part of the Trilinos package ShyLU. Although being a general framework for the construction and combination of Schwarz operators, FROSch currently focusses on preconditioners that are algebraic in the sense that they can be constructed from a fully assembled, parallel distributed matrix. 
+    </p>
+    <p>
+In this talk, the construction of parallel and robust Schwarz preconditioners using FROSch will be presented, and numerical results for several model problems will be shown, e.g., for scalar elliptic, elasticity, and fluid flow problems. For instance, a monolithic Schwarz preconditioner for saddle-point problems is used to precondition fluid flow problems, and a multi-level Schwarz preconditioner is used in scalability results for up to more than 100,000 MPI-ranks for a scalar elliptic model problem. Furthermore, a brief introduction to the use of FROSch preconditioners will be given.
+    </p>
 </details>
 
 <details>
