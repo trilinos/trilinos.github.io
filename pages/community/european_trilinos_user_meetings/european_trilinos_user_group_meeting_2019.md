@@ -68,7 +68,7 @@ The Trilinos Project team will be holding a one-day European Trilinos User Group
 </details>
 <details>
 <summary>
-1100 - Solving Linear Systems using Trilinos and KokkosKernels - Siva Rajamanickam, Sandia National Laboratories
+1100 - Solving Linear Systems using Trilinos and KokkosKernels - Mike Heroux, Sandia National Laboratories
 </summary>
 Trilinos provides a rich collection of linear solver capabilities in a variety of packages.  In addition, KokkosKernels provides node-parallel solver components that can be used in combination with other Trilinos capabilities or independently.  In this presentation, we give an overview of the new capabilities that are focused on effective use of emerging scalable systems with parallel nodes.
 </details>
