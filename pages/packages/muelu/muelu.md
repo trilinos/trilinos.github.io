@@ -3,7 +3,7 @@ title: MueLu
 permalink: muelu.html
 folder: packages
 show_sidebar: true
-contact: jhu@sandia.gov, aprokop@sandia.gov
+contact: jhu@sandia.gov, csiefer@sandia.gov, rstumin@sandia.gov
 package: muelu
 doxygen: true
 ---

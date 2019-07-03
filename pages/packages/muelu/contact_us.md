@@ -6,6 +6,8 @@ folder: packages
 
 For MueLu bug reporting:
 
+<span style="color: #0000ff;">https://github.com/trilinos/Trilinos/issues</span> (preferred)
+
 <span style="color: #0000ff;">_muelu-developers AT software DOT sandia DOT gov_</span>
 
 For MueLu help (<span style="text-decoration: underline;">requires membership</span>):

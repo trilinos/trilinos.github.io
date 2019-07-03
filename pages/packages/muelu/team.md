@@ -7,6 +7,7 @@ folder: packages
 The current MueLu development team is
 
 * Luc Berger-Vergiat
+* Christian Glusa
 * Jonathan Hu
 * Brian Kelley
 * Matthias Mayr
