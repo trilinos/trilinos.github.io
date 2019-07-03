@@ -21,6 +21,5 @@ Other contributors are
 * Emily Furst
 * Jeremie Gaidamour
 * Axel Gerstenberger
-* Brian Kelley
 * Paul Tsuji
 * Tobias Wiesner
