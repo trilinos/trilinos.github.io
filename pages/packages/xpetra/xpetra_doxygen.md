@@ -3,7 +3,7 @@ title: Xpetra Doxygen
 permalink: xpetra_doxygen.html
 folder: packages
 show_sidebar: true
-contact: Andrey Prokopenko (aprokop@sandia.gov), Jonathan Hu (jhu@sandia.gov)
+contact: Jonathan Hu (jhu@sandia.gov), Chris Siefert (csiefer@sandia.gov)
 package: xpetra
 doxygen: true
 ---
