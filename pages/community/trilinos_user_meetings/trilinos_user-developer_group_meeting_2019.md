@@ -42,131 +42,63 @@ If you wish to attend and are not a Sandia employee or contractor, please contac
 
 Note: The below schedule is tentative and could change significantly, including dates and start and end times. Last updated 10/03/2019.
 
-<p style="text-align: center;"><span style="text-decoration: underline;">Tuesday, October 23th</span> (Developer Discussions)</p>
+<p style="text-align: center;"><span style="text-decoration: underline;">Tuesday, October 22nd</span> (User Day)</p>
 
 <table summary="Timetable">
 <tbody>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">1:00</abbr>–<abbr title="2011-11-01T09:30:00">2:00</abbr></th>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">TBD</abbr>–<abbr title="2011-11-01T09:30:00">TBD</abbr></th>
 <td headers="time-1 location-1">
-<div>Discretizations Product Developer Meeting (M. Perego)</div>
+<div>MueLu: Algorithmic Developments and NGP Performance (C. Siefert)</div>
 </td>
 </tr>
 <tr>
-<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">2:00</abbr>–<abbr title="2011-10-31T17:15:00">3:00</abbr></th>
-<td headers="time-1 location-1">Hardware-Aware CTest for MPI, Multi-Threading, and GPUs (R. Bartlett, S. Hammond)</td>
+<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">TBD</abbr>–<abbr title="2011-10-31T17:15:00">TBD</abbr></th>
+<td headers="time-1 location-1">Tpetra FE Assembly Layer: Getting Both Convenience and Performance (C. Siefert)</td>
 </tr>
 <tr>
-<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">3:00</abbr>–<abbr title="2011-10-31T17:15:00">3:30</abbr></th>
+<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">TBD</abbr>–<abbr title="2011-10-31T17:15:00">TBD</abbr></th>
 <td headers="time-1 location-1">Break</td>
 </tr>
 <tr>
 <th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">3:30</abbr>–<abbr title="2011-10-31T17:15:00">4:30</abbr></th>
-<td headers="time-1 location-1">1424 Department Meeting - Background and Motivation (M. Heroux)</td>
+<td headers="time-1 location-1">Product Updates / Feedback</td>
+</tr>
+<tr>
+<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">3:30</abbr>–<abbr title="2011-10-31T17:15:00">4:30</abbr></th>
+<td headers="time-1 location-1">User Feedback</td>
 </tr>
 </tbody>
 </table>
 
-<p style="text-align: center;"><span style="text-decoration: underline;">Wednesday, October 24th</span> (User Day)</p>
+<p style="text-align: center;"><span style="text-decoration: underline;">Wednesday, October 23rd</span> (Developer Day)</p>
 
 <table summary="Timetable">
 <tbody>
 
 <tr>
-<th id="time-2" axis="time"><abbr title="2011-11-01T09:30:00">8:30</abbr>–<abbr title="2011-11-01T09:45:00">9:10</abbr></th>
-<td headers="time-2 location-1">Trilinos Future Plans and Product Overview (M. Heroux)</td>
-</tr>
-<tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:10</abbr>–<abbr title="2011-11-01T09:10:00">9:30</abbr></th> 
-<td headers="time-1 location-1">Intrepid (M. Perego)</td>
-</tr>
-<tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:30</abbr>–<abbr title="2011-11-01T09:30:00">10:00</abbr></th> 
-<td headers="time-1 location-1">Drekar (R. Pawlowski)</td>
-</tr>
-<tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">10:00</abbr>–<abbr title="2011-11-01T09:30:00">10:30</abbr></th> 
-<td headers="time-1 location-1">BREAK</td>
-</tr>
-<tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">10:30</abbr>–<abbr title="2011-11-01T09:30:00">10:50</abbr></th> 
-<td headers="time-1 location-1">Empire (E. Phillips)</td>
-</tr>
-<tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">10:50</abbr>–<abbr title="2011-11-01T09:30:00">11:00</abbr></th> 
-<td headers="time-1 location-1">RefMaxwell (C. Glusa)</td>
-</tr>
-<tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">11:00</abbr>–<abbr title="2011-11-01T09:30:00">11:20</abbr></th> 
-<td headers="time-1 location-1">BDDC (C. Dohrmann)</td>
-</tr>
-<tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">11:20</abbr>–<abbr title="2011-11-01T09:30:00">11:40</abbr></th> 
-<td headers="time-1 location-1">Developing a Harmonic Balance Method for Charon (A. Huang)</td>
+<th id="time-2" axis="time"><abbr title="2011-11-01T09:30:00">TBD</abbr>–<abbr title="2011-11-01T09:45:00">TBD</abbr></th>
+<td headers="time-2 location-1">Developer Day Welcome</td>
 </tr>
 <tr>
 <th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">11:40</abbr>–<abbr title="2011-11-01T09:30:00">1:10</abbr></th> 
 <td headers="time-1 location-1">Lunch</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">1:10</abbr>–<abbr title="2011-11-01T09:30:00">1:30</abbr></th> 
-<td headers="time-1 location-1">Tpetra and Data Services Plans (K. Devine)</td>
-</tr>
-<tr>
-<th id="time-2" axis="time"><abbr title="2011-11-01T09:30:00">1:30</abbr>–<abbr title="2011-11-01T09:45:00">2:00</abbr></th>
-<td headers="time-2 location-1">Tpetra finite-element assembly (T. Fuller, C. Siefert)</td>
-</tr>
-<tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">2:00</abbr>–<abbr title="2011-11-01T09:30:00">2:20</abbr></th> 
-<td headers="time-1 location-1">Tpetra Deprecations (M. Hoemmen)</td>
-</tr>
-<tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">2:20</abbr>–<abbr title="2011-11-01T09:30:00">2:50</abbr></th> 
-<td headers="time-1 location-1">Tempus (C. Ober)</td>
-</tr>
-<tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">2:50</abbr>–<abbr title="2011-11-01T09:30:00">3:15</abbr></th> 
-<td headers="time-1 location-1">BREAK</td>
-</tr>
-<tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">3:15</abbr>–<abbr title="2011-11-01T09:30:00">4:30</abbr></th> 
-<td headers="time-1 location-1">User Feedback / User meeting wrap-up</td>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">TBD</abbr>–<abbr title="2011-11-01T09:30:00">4:30</abbr></th> 
+<td headers="time-1 location-1">Strategic Planning</td>
 </tr>
 </tbody>
 </table>
-<p style="text-align: center;"><span style="text-decoration: underline;">Thursday October 25th</span> (Trilinos Developers)</p>
+<p style="text-align: center;"><span style="text-decoration: underline;">Thursday October 25th</span> (Performance Testing)</p>
 <table summary="Timetable">
 <tbody>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">8:15</abbr>–<abbr title="2011-11-01T09:30:00">9:00</abbr></th> 
-<td headers="time-1 location-1">Trilinos State of the Product (M. Heroux)</td>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">TBD</abbr>–<abbr title="2011-11-01T09:30:00">TBD</abbr></th> 
+<td headers="time-1 location-1">TBD</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:00</abbr>–<abbr title="2011-11-01T09:30:00">9:30</abbr></th> 
-<td headers="time-1 location-1">Trilinos Framework Update (J. Willenbring)</td>
-</tr>
-<tr>
-<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">9:30</abbr>–<abbr title="2011-10-31T17:15:00">10:00</abbr></th>
-<td headers="time-1 location-1">Trilinos Stability Impact on ATDM (R. Bartlett)</td>
-</tr>
-<tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">10:00</abbr>–<abbr title="2011-11-01T09:30:00">10:30</abbr></th> 
-<td headers="time-1 location-1">Trilinos Software Develpment Research Status (R. Milewicz)</td>
-</tr>
-<tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">10:30</abbr>–<abbr title="2011-11-01T09:30:00">10:45</abbr></th> 
-<td headers="time-1 location-1">Break</td>
-</tr>
-<tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">10:45</abbr>–<abbr title="2011-11-01T09:30:00">12:00</abbr></th> 
-<td headers="time-1 location-1">Trilinos Strategic Planning</td>
-</tr>
-<tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">12:00</abbr>–<abbr title="2011-11-01T09:30:00">1:30</abbr></th> 
-<td headers="time-1 location-1">Lunch</td>
-</tr>
-<tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">1:30</abbr>–<abbr title="2011-11-01T09:30:00">TBD</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">TBD</abbr>–<abbr title="2011-11-01T09:30:00">TBD</abbr></th> 
 <td headers="time-1 location-1">TBD</td>
 </tr>
 </tbody>
