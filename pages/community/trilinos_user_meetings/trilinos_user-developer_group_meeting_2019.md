@@ -40,32 +40,80 @@ If you wish to attend and are not a Sandia employee or contractor, please contac
 
 ## Schedule
 
-Note: The below schedule is tentative and could change significantly, including dates and start and end times. Last updated 10/03/2019.
+Note: The below schedule is tentative and could change significantly, including dates and start and end times. Last updated 10/14/2019.
 
 <p style="text-align: center;"><span style="text-decoration: underline;">Tuesday, October 22nd</span> (User Day)</p>
 
 <table summary="Timetable">
 <tbody>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">TBD</abbr>–<abbr title="2011-11-01T09:30:00">TBD</abbr></th>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">8:30</abbr>–<abbr title="2011-11-01T09:30:00">9:00</abbr></th>
+<td headers="time-1 location-1">
+<div>Welcome and Trilinos Product Model Update (J. Willenbring)</div>
+</td>
+</tr>
+<tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:00</abbr>–<abbr title="2011-11-01T09:30:00">9:20</abbr></th>
+<td headers="time-1 location-1">
+<div>Trilinos Framework Product Update (J. Willenbring)</div>
+</td>
+</tr>
+<tr>
+<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">9:20</abbr>–<abbr title="2011-10-31T17:15:00">9:40</abbr></th>
+<td headers="time-1 location-1">Tpetra FE Assembly Layer: Getting Both Convenience and Performance (C. Siefert)</td>
+</tr>
+<tr>
+<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">9:40</abbr>–<abbr title="2011-10-31T17:15:00">10:00</abbr></th>
+<td headers="time-1 location-1">Data Services Product Update (K. Devine)</td>
+</tr>
+<tr>
+<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">10:00</abbr>–<abbr title="2011-10-31T17:15:00">10:30</abbr></th>
+<td headers="time-1 location-1">Break</td>
+</tr>
+<tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">10:30</abbr>–<abbr title="2011-11-01T09:30:00">10:50</abbr></th>
 <td headers="time-1 location-1">
 <div>MueLu: Algorithmic Developments and NGP Performance (C. Siefert)</div>
 </td>
 </tr>
 <tr>
-<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">TBD</abbr>–<abbr title="2011-10-31T17:15:00">TBD</abbr></th>
-<td headers="time-1 location-1">Tpetra FE Assembly Layer: Getting Both Convenience and Performance (C. Siefert)</td>
+<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">10:50</abbr>–<abbr title="2011-10-31T17:15:00">11:10</abbr></th>
+<td headers="time-1 location-1">Linear Solver Product Update (TBD)</td>
 </tr>
 <tr>
-<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">TBD</abbr>–<abbr title="2011-10-31T17:15:00">TBD</abbr></th>
+<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">11:10</abbr>–<abbr title="2011-10-31T17:15:00">11:30</abbr></th>
+<td headers="time-1 location-1">Nonlinear Solver Product Update (R. Pawlowski)</td>
+</tr>
+<tr>
+<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">11:30</abbr>–<abbr title="2011-10-31T17:15:00">11:50</abbr></th>
+<td headers="time-1 location-1">Discretizations Product Update (M. Perego)</td>
+</tr>
+<tr>
+<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">11:50</abbr>–<abbr title="2011-10-31T17:15:00">1:00</abbr></th>
+<td headers="time-1 location-1">Lunch</td>
+</tr>
+<tr>
+<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">1:00</abbr>–<abbr title="2011-10-31T17:15:00">1:20</abbr></th>
+<td headers="time-1 location-1">How to File a Bug Report (TBD)</td>
+</tr>
+<tr>
+<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">1:20</abbr>–<abbr title="2011-10-31T17:15:00">1:40</abbr></th>
+<td headers="time-1 location-1">Introduction to GitDist (R. Bartlett)</td>
+</tr>
+<tr>
+<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">1:40</abbr>–<abbr title="2011-10-31T17:15:00">2:00</abbr></th>
+<td headers="time-1 location-1">Intro to SPiFI (TBD)</td>
+</tr>
+<tr>
+<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">2:00</abbr>–<abbr title="2011-10-31T17:15:00">2:45</abbr></th>
+<td headers="time-1 location-1">Stability w.r.t. the Tip of develop:  An Experience Report from Two Years In (J. Gates)</td>
+</tr>
+<tr>
+<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">2:45</abbr>–<abbr title="2011-10-31T17:15:00">3:15</abbr></th>
 <td headers="time-1 location-1">Break</td>
 </tr>
 <tr>
-<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">3:30</abbr>–<abbr title="2011-10-31T17:15:00">4:30</abbr></th>
-<td headers="time-1 location-1">Product Updates / Feedback</td>
-</tr>
-<tr>
-<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">3:30</abbr>–<abbr title="2011-10-31T17:15:00">4:30</abbr></th>
+<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">3:15</abbr>–<abbr title="2011-10-31T17:15:00">5:00</abbr></th>
 <td headers="time-1 location-1">User Feedback</td>
 </tr>
 </tbody>
