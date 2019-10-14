@@ -9,7 +9,7 @@ folder: community
 Note: The below dates are firm. The content of each day may change based on demand.
 
 October 22nd: User Sessions  
-October 23rd: Developer Sessions & Performance Testing (Not specific to Trilinos)
+October 23rd: Developer Sessions & Performance Testing (Not specific to Trilinos)  
 October 24th: Developer Sessions (morning only)  
 
 
