@@ -129,12 +129,19 @@ Note: The below schedule is tentative and could change significantly, including 
 <td headers="time-2 location-1">Developer Day Welcome</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">11:40</abbr>–<abbr title="2011-11-01T09:30:00">1:10</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">TBD</abbr>–<abbr title="2011-11-01T09:30:00">TBD</abbr></th> 
+<td headers="time-1 location-1">Strategic Planning</td>
+</tr><tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">12:00</abbr>–<abbr title="2011-11-01T09:30:00">1:30</abbr></th> 
 <td headers="time-1 location-1">Lunch</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">TBD</abbr>–<abbr title="2011-11-01T09:30:00">4:30</abbr></th> 
-<td headers="time-1 location-1">Strategic Planning</td>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">1:30</abbr>–<abbr title="2011-11-01T09:30:00">2:30</abbr></th> 
+<td headers="time-1 location-1">Performance Testing - Introduction of Existing Efforts and Tools (J. Elliott, S. Swan, J. Watkins, E. Ridgway)</td>
+</tr>
+<tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">2:30</abbr>–<abbr title="2011-11-01T09:30:00">4:00</abbr></th> 
+<td headers="time-1 location-1">Performance Testing Discussion</td>
 </tr>
 </tbody>
 </table>
