@@ -40,7 +40,7 @@ If you wish to attend and are not a Sandia employee or contractor, please contac
 
 ## Schedule
 
-Note: The below schedule is tentative and could change significantly, including dates and start and end times. Last updated 10/14/2019.
+Note: The below schedule is tentative and could change significantly, including dates and start and end times. Last updated 10/15/2019.
 
 <p style="text-align: center;"><span style="text-decoration: underline;">Tuesday, October 22nd</span> (User Day)</p>
 
@@ -59,8 +59,8 @@ Note: The below schedule is tentative and could change significantly, including 
 </td>
 </tr>
 <tr>
-<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">9:20</abbr>–<abbr title="2011-10-31T17:15:00">9:40</abbr></th>
-<td headers="time-1 location-1">Tpetra FE Assembly Layer: Getting Both Convenience and Performance (C. Siefert)</td>
+<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">9:20</abbr>–<abbr title="2011-10-31T17:15:00">9:400</abbr></th>
+<td headers="time-1 location-1">Discretizations Product Update (M. Perego)</td>
 </tr>
 <tr>
 <th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">9:40</abbr>–<abbr title="2011-10-31T17:15:00">10:00</abbr></th>
@@ -71,22 +71,22 @@ Note: The below schedule is tentative and could change significantly, including 
 <td headers="time-1 location-1">Break</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">10:30</abbr>–<abbr title="2011-11-01T09:30:00">10:50</abbr></th>
-<td headers="time-1 location-1">
-<div>MueLu: Algorithmic Developments and NGP Performance (C. Siefert)</div>
-</td>
+<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">10:30</abbr>–<abbr title="2011-10-31T17:15:00">10:50</abbr></th>
+<td headers="time-1 location-1">Tpetra FE Assembly Layer: Getting Both Convenience and Performance (C. Siefert)</td>
 </tr>
 <tr>
 <th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">10:50</abbr>–<abbr title="2011-10-31T17:15:00">11:10</abbr></th>
 <td headers="time-1 location-1">Linear Solver Product Update (TBD)</td>
 </tr>
 <tr>
-<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">11:10</abbr>–<abbr title="2011-10-31T17:15:00">11:30</abbr></th>
-<td headers="time-1 location-1">Nonlinear Solver Product Update (R. Pawlowski)</td>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">11:10</abbr>–<abbr title="2011-11-01T09:30:00">11:30</abbr></th>
+<td headers="time-1 location-1">
+<div>MueLu: Algorithmic Developments and NGP Performance (J. Hu)</div>
+</td>
 </tr>
 <tr>
 <th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">11:30</abbr>–<abbr title="2011-10-31T17:15:00">11:50</abbr></th>
-<td headers="time-1 location-1">Discretizations Product Update (M. Perego)</td>
+<td headers="time-1 location-1">Nonlinear Solver Product Update (R. Pawlowski)</td>
 </tr>
 <tr>
 <th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">11:50</abbr>–<abbr title="2011-10-31T17:15:00">1:00</abbr></th>
@@ -154,7 +154,7 @@ Note: The below schedule is tentative and could change significantly, including 
 </tr>
 <tr>
 <th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">TBD</abbr>–<abbr title="2011-11-01T09:30:00">TBD</abbr></th> 
-<td headers="time-1 location-1">TBD</td>
+<td headers="time-1 location-1">UVM</td>
 </tr>
 </tbody>
 </table>
