@@ -145,7 +145,7 @@ Note: The below schedule is tentative and could change significantly, including 
 </tr>
 </tbody>
 </table>
-<p style="text-align: center;"><span style="text-decoration: underline;">Thursday October 25th</span> (Developer Sessions)</p>
+<p style="text-align: center;"><span style="text-decoration: underline;">Thursday October 24th</span> (Developer Sessions)</p>
 <table summary="Timetable">
 <tbody>
 <tr>
