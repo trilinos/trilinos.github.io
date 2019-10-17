@@ -59,7 +59,7 @@ Note: The below schedule is tentative and could change significantly, including 
 </td>
 </tr>
 <tr>
-<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">9:20</abbr>–<abbr title="2011-10-31T17:15:00">9:400</abbr></th>
+<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">9:20</abbr>–<abbr title="2011-10-31T17:15:00">9:40</abbr></th>
 <td headers="time-1 location-1">Discretizations Product Update (M. Perego)</td>
 </tr>
 <tr>
