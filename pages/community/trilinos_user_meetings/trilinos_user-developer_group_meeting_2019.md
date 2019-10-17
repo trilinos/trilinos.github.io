@@ -130,7 +130,7 @@ Note: The below schedule is tentative and could change significantly, including 
 </tr>
 <tr>
 <th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">8:45</abbr>–<abbr title="2011-11-01T09:30:00">9:00</abbr></th> 
-<td headers="time-1 location-1">ctest_analyze_and_report.py for Automated CTest Alerts (R. Bartlett)</td>
+<td headers="time-1 location-1">cdash_analyze_and_report.py for Automated Test Alerts (R. Bartlett)</td>
 </tr>
 <tr>
 <th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:00</abbr>–<abbr title="2011-11-01T09:30:00">9:30</abbr></th> 
