@@ -145,7 +145,7 @@ Note: The below schedule is tentative and could change significantly, including 
 <td headers="time-1 location-1">Break</td>
 </tr>
 <tr>
-<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">13:00</abbr>–<abbr title="2011-10-31T17:15:00">12:00</abbr></th>
+<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">10:30</abbr>–<abbr title="2011-10-31T17:15:00">12:00</abbr></th>
 <td headers="time-1 location-1">Trilinos Strategic Planning</td>
 </tr>
 <tr>
@@ -166,8 +166,8 @@ Note: The below schedule is tentative and could change significantly, including 
 <table summary="Timetable">
 <tbody>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">TBD</abbr>–<abbr title="2011-11-01T09:30:00">TBD</abbr></th> 
-<td headers="time-1 location-1">TBD</td>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:00</abbr>–<abbr title="2011-11-01T09:30:00">9:30</abbr></th> 
+<td headers="time-1 location-1">Trilinos Strategic Planning 2</td>
 </tr>
 <tr>
 <th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:30</abbr>–<abbr title="2011-11-01T09:30:00">10:30</abbr></th> 
