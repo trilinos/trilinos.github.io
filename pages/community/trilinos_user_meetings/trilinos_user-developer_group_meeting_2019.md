@@ -6,7 +6,7 @@ folder: community
   
 ## Dates
 
-Note: The below dates are firm. The content of each day may change based on demand.
+Note: The below dates are firm. The schedule is still subject to change.
 
 October 22nd: User Sessions  
 October 23rd: Developer Sessions & Performance Testing (Not specific to Trilinos)  
