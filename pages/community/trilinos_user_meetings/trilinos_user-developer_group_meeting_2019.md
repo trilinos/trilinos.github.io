@@ -40,7 +40,7 @@ If you wish to attend and are not a Sandia employee or contractor, please contac
 
 ## Schedule
 
-Note: The below schedule is tentative and could change significantly, including dates and start and end times. Last updated 10/15/2019.
+Note: The below schedule is tentative and could change significantly, including dates and start and end times. Last updated 10/17/2019.
 
 <p style="text-align: center;"><span style="text-decoration: underline;">Tuesday, October 22nd</span> (User Day)</p>
 
@@ -94,11 +94,11 @@ Note: The below schedule is tentative and could change significantly, including 
 </tr>
 <tr>
 <th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">1:00</abbr>–<abbr title="2011-10-31T17:15:00">1:20</abbr></th>
-<td headers="time-1 location-1">How to File a Bug Report (TBD)</td>
+<td headers="time-1 location-1">How to File a Bug Report (W. McLendon)</td>
 </tr>
 <tr>
 <th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">1:20</abbr>–<abbr title="2011-10-31T17:15:00">1:40</abbr></th>
-<td headers="time-1 location-1">Introduction to GitDist (R. Bartlett)</td>
+<td headers="time-1 location-1">Introduction to GitDist (J. Gates)</td>
 </tr>
 <tr>
 <th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">1:40</abbr>–<abbr title="2011-10-31T17:15:00">2:00</abbr></th>
@@ -125,13 +125,30 @@ Note: The below schedule is tentative and could change significantly, including 
 <tbody>
 
 <tr>
-<th id="time-2" axis="time"><abbr title="2011-11-01T09:30:00">TBD</abbr>–<abbr title="2011-11-01T09:45:00">TBD</abbr></th>
-<td headers="time-2 location-1">Developer Day Welcome</td>
+<th id="time-2" axis="time"><abbr title="2011-11-01T09:30:00">8:30</abbr>–<abbr title="2011-11-01T09:45:00">8:45</abbr></th>
+<td headers="time-2 location-1">Developer Day Welcome (J. Willenbring)</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">TBD</abbr>–<abbr title="2011-11-01T09:30:00">TBD</abbr></th> 
-<td headers="time-1 location-1">Strategic Planning</td>
-</tr><tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">8:45</abbr>–<abbr title="2011-11-01T09:30:00">9:00</abbr></th> 
+<td headers="time-1 location-1">ctest_analyze_and_report.py for Automated CTest Alerts (R. Bartlett)</td>
+</tr>
+<tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:00</abbr>–<abbr title="2011-11-01T09:30:00">9:30</abbr></th> 
+<td headers="time-1 location-1">SEMS 2.0 (W. Burgess)</td>
+</tr>
+<tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:30</abbr>–<abbr title="2011-11-01T09:30:00">10:00</abbr></th> 
+<td headers="time-1 location-1">Refactoring: Lessons learned from changing bash to python (P. Wolfenbarger)</td>
+</tr>
+<tr>
+<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">10:00</abbr>–<abbr title="2011-10-31T17:15:00">10:30</abbr></th>
+<td headers="time-1 location-1">Break</td>
+</tr>
+<tr>
+<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">13:00</abbr>–<abbr title="2011-10-31T17:15:00">12:00</abbr></th>
+<td headers="time-1 location-1">Trilinos Strategic Planning</td>
+</tr>
+<tr>
 <th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">12:00</abbr>–<abbr title="2011-11-01T09:30:00">1:30</abbr></th> 
 <td headers="time-1 location-1">Lunch</td>
 </tr>
@@ -153,8 +170,12 @@ Note: The below schedule is tentative and could change significantly, including 
 <td headers="time-1 location-1">TBD</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">TBD</abbr>–<abbr title="2011-11-01T09:30:00">TBD</abbr></th> 
-<td headers="time-1 location-1">UVM</td>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:30</abbr>–<abbr title="2011-11-01T09:30:00">10:30</abbr></th> 
+<td headers="time-1 location-1">Alternatives to UVM in Trilinos (M. Hoemmen)</td>
+</tr>
+<tr>
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">10:30</abbr>–<abbr title="2011-11-01T09:30:00">11:30</abbr></th> 
+<td headers="time-1 location-1">Alternatives to UVM Discussion</td>
 </tr>
 </tbody>
 </table>
