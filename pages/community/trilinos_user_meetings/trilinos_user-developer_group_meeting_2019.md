@@ -134,7 +134,7 @@ Note: The below schedule is tentative and could change significantly, including 
 </tr>
 <tr>
 <th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:00</abbr>–<abbr title="2011-11-01T09:30:00">9:30</abbr></th> 
-<td headers="time-1 location-1">SEMS 2.0 (W. Burgess)</td>
+<td headers="time-1 location-1">SEMS Reintroduced (W. Burgess)</td>
 </tr>
 <tr>
 <th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:30</abbr>–<abbr title="2011-11-01T09:30:00">10:00</abbr></th> 
