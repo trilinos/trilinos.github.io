@@ -34,13 +34,13 @@ The goal of the annual meeting is to facilitate communication between Trilinos u
 
 ## Registration
 
-Registration for TUG 2018 is limited.
+Registration for TUG 2019 is limited.
 If you wish to attend and are not a Sandia employee or contractor, please contact [the TUG organizers](mailto:trilinos-help@software.sandia.gov) for more information. 
 <!--Registration for eligible attendees is [now available](https://docs.google.com/forms/d/e/1FAIpQLSdcDiCzxCdQ7hebcqvKCybdrzCcfJGMXmT4ADkUXd9uJ1cnFA/viewform?usp=sf_link).-->
 
 ## Schedule
 
-Note: The below schedule is tentative and could change significantly, including dates and start and end times. Last updated 10/17/2019.
+Note: The below schedule is tentative and could change significantly, including dates and start and end times. Last updated 10/18/2019.
 
 <p style="text-align: center;"><span style="text-decoration: underline;">Tuesday, October 22nd</span> (User Day)</p>
 
@@ -76,7 +76,7 @@ Note: The below schedule is tentative and could change significantly, including 
 </tr>
 <tr>
 <th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">10:50</abbr>–<abbr title="2011-10-31T17:15:00">11:10</abbr></th>
-<td headers="time-1 location-1">Linear Solver Product Update (TBD)</td>
+<td headers="time-1 location-1">Linear Solver Product Update (J. Hu)</td>
 </tr>
 <tr>
 <th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">11:10</abbr>–<abbr title="2011-11-01T09:30:00">11:30</abbr></th>
@@ -94,15 +94,15 @@ Note: The below schedule is tentative and could change significantly, including 
 </tr>
 <tr>
 <th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">1:00</abbr>–<abbr title="2011-10-31T17:15:00">1:20</abbr></th>
-<td headers="time-1 location-1">How to File a Bug Report (W. McLendon)</td>
-</tr>
-<tr>
-<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">1:20</abbr>–<abbr title="2011-10-31T17:15:00">1:40</abbr></th>
 <td headers="time-1 location-1">Introduction to GitDist (J. Gates)</td>
 </tr>
 <tr>
+<th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">1:20</abbr>–<abbr title="2011-10-31T17:15:00">1:40</abbr></th>
+<td headers="time-1 location-1">How to File a Bug Report (W. McLendon)</td>
+</tr>
+<tr>
 <th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">1:40</abbr>–<abbr title="2011-10-31T17:15:00">2:00</abbr></th>
-<td headers="time-1 location-1">Intro to SPiFI (TBD)</td>
+<td headers="time-1 location-1">Intro to SPiFI (J. Gates)</td>
 </tr>
 <tr>
 <th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">2:00</abbr>–<abbr title="2011-10-31T17:15:00">2:45</abbr></th>
