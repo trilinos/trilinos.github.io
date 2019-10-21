@@ -40,7 +40,7 @@ If you wish to attend and are not a Sandia employee or contractor, please contac
 
 ## Schedule
 
-Note: The below schedule is tentative and could change significantly, including dates and start and end times. Last updated 10/18/2019.
+Note: The below schedule is tentative and could change significantly, including dates and start and end times. Last updated 10/21/2019.
 
 <p style="text-align: center;"><span style="text-decoration: underline;">Tuesday, October 22nd</span> (User Day)</p>
 
@@ -98,7 +98,7 @@ Note: The below schedule is tentative and could change significantly, including 
 </tr>
 <tr>
 <th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">1:20</abbr>–<abbr title="2011-10-31T17:15:00">1:40</abbr></th>
-<td headers="time-1 location-1">How to File a Bug Report (W. McLendon)</td>
+<td headers="time-1 location-1">Writing Good Bug Reports(W. McLendon)</td>
 </tr>
 <tr>
 <th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">1:40</abbr>–<abbr title="2011-10-31T17:15:00">2:00</abbr></th>
