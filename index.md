@@ -22,9 +22,9 @@ which packages are relevant to each area. This discussion is especially useful f
 The [primary Trilinos repository](https://github.com/trilinos/Trilinos) 
 is now hosted on GitHub. This allows users and potential developers greater access to Trilinos source code.
 
-## TUG 2018
+## TUG 2019
 
-[The 2018 Trilinos User Group Meeting (TUG)](https://trilinos.github.io/trilinos_user-developer_group_meeting_2018.html) is  held in October in Albuquerque. 
+[The 2019 Trilinos User Group Meeting (TUG)](https://trilinos.github.io/trilinos_user-developer_group_meeting_2019.html) is  held in October in Albuquerque. 
 
 ## Trilinos 12.12 Release
 
