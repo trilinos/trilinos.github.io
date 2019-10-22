@@ -98,7 +98,7 @@ Note: The below schedule is tentative and could change significantly, including 
 </tr>
 <tr>
 <th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">1:20</abbr>–<abbr title="2011-10-31T17:15:00">1:40</abbr></th>
-<td headers="time-1 location-1">Writing Good Bug Reports(W. McLendon)</td>
+<td headers="time-1 location-1">Writing Good Bug Reports (W. McLendon)</td>
 </tr>
 <tr>
 <th id="time-1" axis="time" width="23%"><abbr title="2011-10-31T13:00:00">1:40</abbr>–<abbr title="2011-10-31T17:15:00">2:00</abbr></th>
