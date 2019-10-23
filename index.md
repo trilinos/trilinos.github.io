@@ -26,6 +26,10 @@ is now hosted on GitHub. This allows users and potential developers greater acce
 
 [The 2019 Trilinos User Group Meeting (TUG)](https://trilinos.github.io/trilinos_user-developer_group_meeting_2019.html) is  held in October in Albuquerque. 
 
+## Trilinos v12 Code Deprecation
+
+Trilinos announces 37 code deprecations in 16 packages.  Code removal from the Trilinos develop branch will begin November 15, 2019.  See the [Trilinos v12 Deprecation Document](https://github.com/trilinos/Trilinos/wiki/Trilinos_v2_code_deprecation.pdf) for details. 
+
 ## Trilinos 12.12 Release
 
 Trilinos 12.12 is now available for [download](download.html). 
