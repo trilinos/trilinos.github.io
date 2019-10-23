@@ -10,7 +10,7 @@ Note: The below dates are firm. The schedule is still subject to change.
 
 October 22nd: User Sessions  
 October 23rd: Developer Sessions & Performance Testing (Not specific to Trilinos)  
-October 24th: Developer Sessions (morning only)  
+October 24th: UVM Session (morning only)  
 
 
 ## Location
@@ -40,7 +40,7 @@ If you wish to attend and are not a Sandia employee or contractor, please contac
 
 ## Schedule
 
-Note: The below schedule is tentative and could change significantly, including dates and start and end times. Last updated 10/21/2019.
+Note: The below schedule is tentative and could change significantly, including dates and start and end times. Last updated 10/23/2019.
 
 <p style="text-align: center;"><span style="text-decoration: underline;">Tuesday, October 22nd</span> (User Day)</p>
 
@@ -165,10 +165,6 @@ Note: The below schedule is tentative and could change significantly, including 
 <p style="text-align: center;"><span style="text-decoration: underline;">Thursday October 24th</span> (Developer Sessions)</p>
 <table summary="Timetable">
 <tbody>
-<tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:00</abbr>–<abbr title="2011-11-01T09:30:00">9:30</abbr></th> 
-<td headers="time-1 location-1">Trilinos Strategic Planning 2</td>
-</tr>
 <tr>
 <th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:30</abbr>–<abbr title="2011-11-01T09:30:00">10:30</abbr></th> 
 <td headers="time-1 location-1">Alternatives to UVM in Trilinos (M. Hoemmen)</td>
