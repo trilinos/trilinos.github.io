@@ -28,7 +28,7 @@ is now hosted on GitHub. This allows users and potential developers greater acce
 
 ## Trilinos v12 Code Deprecation
 
-Trilinos announces 37 code deprecations in 16 packages.  Code removal from the Trilinos develop branch will begin November 15, 2019.  See the [Trilinos v12 Deprecation Document](https://github.com/trilinos/Trilinos/wiki/Trilinos_v2_code_deprecation.pdf) for details. 
+Trilinos announces 37 code deprecations in 16 packages.  Code removal from the Trilinos develop branch will begin November 15, 2019.  See the [Trilinos v12 Deprecation Document](https://github.com/trilinos/Trilinos/wiki/Trilinos_v12_code_deprecation.pdf) for details. 
 
 ## Trilinos 12.12 Release
 
