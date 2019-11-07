@@ -9,16 +9,29 @@ package: shards
 
 ## Welcome to the ShyLU Home
 
-ShyLU stands for either “Scalable Hybrid LU” or “Sparse Hybrid LU”. It is also an Indian name.
+ShyLU is a package for solving sparse linear systems using domain decomposition methods. ShyLU has two main focus areas - 
+(1) distributed memory domain-decomposition solvers and (2) node-level solvers and kernels that support the distributed memory solvers. The approaches in ShyLU are algebraic and so can be used as a black-box solvers.
 
-ShyLU is a package for solving sparse linear systems. It can be used either as a preconditioner, or as a solver. Currently, we recommend using it as an Ifpack preconditioner.
+The node level solvers include sparse LU factorization (basker), sparse Cholesky factorization (Tacho), multithreaded triangular solver (HTS) and a fast iterative ILU algorithm (FastILU).
 
-ShyLU uses a hybrid direct/iterative approach based on Schur complements. The goal is to provide robustness similar to sparse direct solvers, but memory usage more similar to preconditioned iterative solvers.
+## Domain Decomposition Solvers
 
-ShyLU was designed as a node-level solver. It can use both MPI and threads in several ways. 
-ShyLU was designed (a) to solve difficult but medium-size problems, and (b) to be used as a subdomain solver or smoother for very large problems within an iterative scheme. 
-It is a purely algebraic method so can be used as a black-box solver. ShyLU has been particularly successful in electrical circuit simulation (Xyce).
+The Domain Decomposition methods in ShyLU are a one-level hybrid direct/iterative approach based on Schur complements, two-level balancing domain decomposition method (bddc) and Overlapping Schwarz methods (FROSch). 
 
-ShyLU is highly configurable and supports a number of parameters to control how the Schur complement is approximated (dropping or probing) and how the inner-outer iteration works. These features are not yet documented.
+The one-level hybrid direct/iterative approach based on Schur complements was developed to provide robustness similar to sparse direct solvers with less memory use. This has been particulary effective for circuit simulation problems.
 
-ShyLU is currently experimental code. It works, but it is pretty rough. The examples is a good starting point. Interfaces may change in the future.
+FROSch can be used for both one-level overlapping Schwarz and two-level Generalized Dryja Smith Widlund preconditioner. FROSch has been shown to be effectve in several applications including land-ice simulations.
+
+BDDC is an experimental code for the solver that implements the Balancing Domain Decomposition solver.
+
+## Node Level Direct Solvers
+
+Basker is a shared-memory parallel LU factorization based direct solver that uses the BTF ordering.
+
+Tacho is a shared-memory parallel Cholesky factorization based direct solver that uses Kokkos based tasking.
+
+HTS is a sparse triangular solver that uses OpenMP for triangular solves on the host.
+
+FastILU is an iterative ILU and traingular solve implementaion using Kokkos.
+
+
