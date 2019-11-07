@@ -18,7 +18,7 @@ The node level solvers include sparse LU factorization (basker), sparse Cholesky
 
 The Domain Decomposition methods in ShyLU are a one-level hybrid direct/iterative approach based on Schur complements, two-level balancing domain decomposition method (bddc) and Overlapping Schwarz methods (FROSch). 
 
-The one-level hybrid direct/iterative approach based on Schur complements was developed to provide robustness similar to sparse direct solvers with less memory use. This has been particulary effective for circuit simulation problems.
+The one-level hybrid direct/iterative approach based on Schur complements was developed to provide robustness similar to sparse direct solvers with less memory use. This has been particularly effective for circuit simulation problems.
 
 [FROSch](https://shylu-frosch.github.io) can be used for both one-level overlapping Schwarz and two-level GDSW (Generalized Dryja-Smith-Widlund) type preconditioners. FROSch has been shown to be effective in several applications including land-ice simulations.
 
@@ -32,6 +32,6 @@ Tacho is a shared-memory parallel Cholesky factorization based direct solver tha
 
 HTS is a sparse triangular solver that uses OpenMP for triangular solves on the host.
 
-FastILU is an iterative ILU and traingular solve implementaion using Kokkos.
+FastILU is an iterative ILU and triangular solve implementation using Kokkos.
 
 
