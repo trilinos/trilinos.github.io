@@ -20,7 +20,7 @@ The Domain Decomposition methods in ShyLU are a one-level hybrid direct/iterativ
 
 The one-level hybrid direct/iterative approach based on Schur complements was developed to provide robustness similar to sparse direct solvers with less memory use. This has been particulary effective for circuit simulation problems.
 
-FROSch can be used for both one-level overlapping Schwarz and two-level Generalized Dryja Smith Widlund preconditioner. FROSch has been shown to be effectve in several applications including land-ice simulations.
+[FROSch](https://shylu-frosch.github.io) can be used for both one-level overlapping Schwarz and two-level GDSW (Generalized Dryja-Smith-Widlund) type preconditioners. FROSch has been shown to be effective in several applications including land-ice simulations.
 
 BDDC is an experimental code for the solver that implements the Balancing Domain Decomposition solver.
 
