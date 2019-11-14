@@ -42,7 +42,7 @@ Basic Linear Algebra Libraries
 *   [MOOCHO](moocho.html "MOOCHO") -- MOOCHO (Multifunctional Object-Oriented arCHitecture for Optimization) is designed to solve large-scale, equality and inequality nonlinearly constrained, non-convex optimization problems (i.e. nonlinear programs) using reduced-space successive quadratic programming (SQP) methods.
 *   [Piro](piro.html "Piro") -- Piro is striving to be the single unifying layer above all nonlinear solver, time integration, optimization, and UQ packages.
 *   [Rythmos](rythmos.html "Rythmos") -- Rythmos is a transient integrator for ordinary differential equations and differential-algebraic equations with support for explicit, implicit, one-step and multi-step algorithms. The fundamental design of Rythmos is aimed at supporting operator-split algorithms, multi-physics applications, block linear algebra, and adjoint integration.
-*   [TriKota](trikota.html "TriKota") -- TriKota is a convenience package that builds the [Dakota](https:.html.htmldakota.sandia.gov) framework underneath Trilinos as if it were a Trilinos package. Dakota contains a wide array of algorithms for optimization and UQ.
+*   [TriKota](trikota.html "TriKota") -- TriKota is a convenience package that builds the [Dakota](https:dakota.sandia.gov) framework underneath Trilinos as if it were a Trilinos package. Dakota contains a wide array of algorithms for optimization and UQ.
 *   [GlobiPack](globipack.html "GlobiPack") -- The GlobiPack package contains a set of interfaces and implementations for 1D globalization capabilities to be used in nonlinear solvers, optimization solvers, and similar algorithms that require globalization methods (e.g. line search and trust region methods).
 *   [OptiPack](optipack.html "OptiPack") -- The OptiPack package contains interfaces and concrete implementations of some basic optimization algorithms based on [Thyra](thyra.html "Thyra"). The globalization methods used are implemented in [GlobiPack](globipack.html "GlobiPack").
 
@@ -67,7 +67,7 @@ Basic Linear Algebra Libraries
 
 ## Partitioning .html Load Balancing
 
-*   [Isorropia](isorropia.html "Isorropia") -- Isorropia is a partitioning and load balancing package, intended to assist with redistributing objects such as matrices and matrix-graphs in a parallel execution setting, to allow for more efficient computations. Isorropia is primarily an interface to the [Zoltan](http:.html.htmlwww.cs.sandia.gov.htmlZoltan.html) library.
+*   [Isorropia](isorropia.html "Isorropia") -- Isorropia is a partitioning and load balancing package, intended to assist with redistributing objects such as matrices and matrix-graphs in a parallel execution setting, to allow for more efficient computations. Isorropia is primarily an interface to the [Zoltan](https://cs.sandia.gov/Zoltan/) library.
 
 *   [Zoltan](zoltan.html "Zoltan") -- Zoltan is a toolkit of parallel services for dynamic, unstructured, and.htmlor adaptive simulations. Zoltan provides parallel dynamic load balancing and related services for a wide variety of applications, including finite element methods, matrix operations, particle methods, and crash simulations. Zoltan also provides parallel graph coloring, matrix ordering, unstructured communication tools, and distributed data directories.
 
