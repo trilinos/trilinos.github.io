@@ -27,9 +27,9 @@ After clicking on the above link, click on the name of a package, either in the 
 
 ### Trilinos Developer Documentation
 
-The Trilinos Developer Webiste provides information about Trilinos development tools and policies.
+The Trilinos Developer Wiki provides information about Trilinos development tools and policies.
 
-[Trilinos Developer Website](https://software.sandia.gov/trilinos/developer/)
+[Trilinos Developer Wiki](https://github.com/trilinos/Trilinos/wiki)
 
 ### Package List
 
