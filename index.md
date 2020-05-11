@@ -9,7 +9,7 @@ permalink: index.html
 ## Welcome to the Trilinos Project Home Page
 
 The Trilinos Project is a community of developers, users and
-<a href="#" data-toggle="tooltip" data-original-title="{{site.data.glossary.trilinos_package}}">user-developers</a>
+<a href="#" data-toggle="tooltip" data-original-title="{{site.data.glossary.user_developer}}">user-developers</a>
 focused on collaborative creation of algorithms and enabling technologies within an object-oriented software framework for the solution of large-scale, complex multi-physics engineering and scientific problems on new and emerging high-performance computing (HPC) architectures.
 
 Trilinos is organized around fundamental software elements called <a href="#" data-toggle="tooltip" data-original-title="{{site.data.glossary.trilinos_package}}">packages</a>.  The Trilinos package architecture enables simultaneous development of many new capabilities in a federated system.  Each package has its own name and identity within the research community, giving the package team recognition outside of Trilinos itself.
