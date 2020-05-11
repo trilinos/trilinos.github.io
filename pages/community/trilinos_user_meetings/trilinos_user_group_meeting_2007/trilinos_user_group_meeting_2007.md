@@ -81,7 +81,7 @@ th, td {
 <td>9:30 -- 10:30</td>
 <td><strong>Trilinos Progress, Challenges and Future Plans</strong><br />
 <a href="trilinos_user_group_2007_abstracts_tuesday_9h30">[abstract]</a><br />
-<a href="http://trilinos.sandia.gov/events/trilinos_user_group_2007/presentations/TrilinosProgressChallengesFutures.ppt">[presentation ppt]</a><br />
+<a href="https://trilinos.org/events/trilinos_user_group_2007/presentations/TrilinosProgressChallengesFutures.ppt">[presentation ppt]</a><br />
 <cite>Heroux</cite></td>
 <td><strong>Safe memory usage in C++ with new Teuchos utility class</strong><br />
 <a href="trilinos_user_group_2007_abstracts_wednesday_9h30">[abstract]</a><br />

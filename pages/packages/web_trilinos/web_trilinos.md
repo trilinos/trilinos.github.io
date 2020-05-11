@@ -60,6 +60,6 @@ Matrix Portal operates as a sequence of five **steps**, defined as follows:
 5.  **Step 4: Check Results** collects the results and offers tools to analyze and compare them. A simple tool is given, to generate a bar chart for selected data. From here, you can go back to step 1 and select new problems, or go to step 2 and select new solution techniques for already defined problems.
 
 You can move across these steps as shown in the following picture:  
-[![](images/workflow.png)](http://trilinos.sandia.gov/packages/webtrilinos/step1.html)
+[![](images/workflow.png)](https://trilinos.org/webtrilinos/step1.html)
 
 An overview of the installation procedure is reported in the [FAQ](/webtrilinos_faq.html) page.

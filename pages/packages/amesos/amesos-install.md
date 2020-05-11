@@ -10,11 +10,11 @@ doxygen: true
 
 ## Quick Amesos Installation
 
-Amesos can built with support for Amesos_Klu and Amesos_Lapack by adding --enable-amesos to your configure invocation. Refer to the [Trilinos Installation Manual](http://trilinos.sandia.gov/installation_manual.html) for instructions on installing Trilinos.
+Amesos can built with support for Amesos_Klu and Amesos_Lapack by adding --enable-amesos to your configure invocation.
 
-Full Amesos Installation
+## Full Amesos Installation
 
-To use Amesos with Amesos_Dscpack, Amesos_Superludist, Amesos_Superlu and/or Amesos_Umfpack, you will need to compile the corresponding third party package: [DSCPACK](http://trilinos.org/oldsite/packages/amesos/dscpack_install.html), [UMFPACK](http://trilinos.org/oldsite/packages/amesos/umfpack_install.html), [SuperLU](http://trilinos.org/oldsite/packages/amesos/superlu_install.html), and [SuperLU_MPI](http://trilinos.org/oldsite/packages/amesos/superludist_install.html), and set two additional switches in the configure invocation. One switch to specify the package that you intend to link in and one to specify where that package has been built.
+To use Amesos with Amesos_Dscpack, Amesos_Superludist, Amesos_Superlu and/or Amesos_Umfpack, you will need to compile the corresponding third party package: [DSCPACK](dscpack_install.html), [UMFPACK](umfpack_install.html), [SuperLU](superlu_install.html), and [SuperLU_MPI](superludist_install.html), and set two additional switches in the configure invocation. One switch to specify the package that you intend to link in and one to specify where that package has been built.
 
 To use Amesos with Amesos_Dscpack, Amesos_Superludist, Amesos_Superlu and/or Amesos_Umfpack:
 

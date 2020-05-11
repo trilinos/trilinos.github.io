@@ -300,7 +300,7 @@ Y
 ### **Stratimikos**: High level linear solver interface
 
 Point-of-contact: Roscoe Bartlett (bartlettra@ornl.gov)  
-[http://trilinos.sandia.gov/packages/stratimikos](stratimikos.html)
+[https://trilinos.org/stratimikos](stratimikos.html)
 
 Stratimikos contains a unified set of wrappers to linear solver and preconditioner capabilities in Trilinos. Stratimikos essentially consists of the single class DefaultLinearSolverBuilder. This class takes as input a (nested) parameter list that contains options for the desired solvers and preconditioners.
 

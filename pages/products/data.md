@@ -85,7 +85,7 @@ mesh entities ([Zoltan](http://trilinos.org/oldsite/CapabilityWebpages/GeomMeshL
 #### Isorropia: Matrix Partitioning
 
 <a name="Isorropia"></a>Point of Contact: [E. Boman](http://www.sandia.gov/~egboman/) (SNL)  
-Isorropia Page: [http://trilinos.sandia.gov/packages/isorropia/](isorropia.html)  
+Isorropia Page: [https://trilinos.org/isorropia/](isorropia.html)  
 Status: Isorropia was enhanced and released in Trilinos v9.0.[Isorropia](isorropia.html) is a 
 repartitioning/rebalancing package that redistributes matrices and matrix-graphs in a parallel execution setting 
 to enable more efficient matrix computations. Isorropia is the package to use for distributing EPetra data structures. 
@@ -99,7 +99,7 @@ Parallel matrix ordering can reduce matrix fill during direct factorizations. Th
 matrix permutation vector and the separator trees used in reordering. Parallel coloring is an important capability for some preconditioners. 
 Colors are assigned to matrix rows depending on the connectivity of rows through nonzero entries in the matrix. 
 The interface provides both distance-one and distance-two coloring. 
-See [below](http://trilinos.sandia.gov/CapabilityWebpages/GeomMeshLoadBal/GeomMeshBal_Capability.html#zoltan_ordering) for more details on coloring and ordering.
+See [below](https://trilinos.org/CapabilityWebpages/GeomMeshLoadBal/GeomMeshBal_Capability.html#zoltan_ordering) for more details on coloring and ordering.
 
 #### Zoltan: Dynamic load balancing, partitioning, coloring and ordering
 

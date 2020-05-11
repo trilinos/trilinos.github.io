@@ -12,9 +12,9 @@ Welcome to the NOX & LOCA Home
 
 NOX and LOCA are a combined package for robustly solving and analyzing large-scale systems of nonlinear equations.
 
-NOX is short for Nonlinear Object-Oriented Solutions, and its objective is to enable the robust and efficient solution of the equation: ![](http://trilinos.sandia.gov/packages/nox/index01.png), where ![](http://trilinos.sandia.gov/packages/nox/index02.png) using globalized Newton methods such as line search and trust region methods. NOX is designed to work with any linear algebra package and to be easily customized. NOX is part of Sandia’s Trilinos project.
+NOX is short for Nonlinear Object-Oriented Solutions, and its objective is to enable the robust and efficient solution of the equation: ![](https://trilinos.org/nox/index01.png), where ![](https://trilinos.org/nox/index02.png) using globalized Newton methods such as line search and trust region methods. NOX is designed to work with any linear algebra package and to be easily customized. NOX is part of Sandia’s Trilinos project.
 
-LOCA, distributed as part of NOX, is short for Library of Continuation Algorithms, and its objective is to compute families of solutions to ![](http://trilinos.sandia.gov/packages/nox/index03.png) and their bifurcations, where ![](http://trilinos.sandia.gov/packages/nox/index04.png).
+LOCA, distributed as part of NOX, is short for Library of Continuation Algorithms, and its objective is to compute families of solutions to ![](https://trilinos.org/nox/index03.png) and their bifurcations, where ![](https://trilinos.org/nox/index04.png).
 
 The User’s Guide and Developer’s Manual are built using doxygen and can be accessed via the web. Please choose the documentation corresponding to your software version on the left hand toolbar
 

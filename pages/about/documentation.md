@@ -17,7 +17,7 @@ Find out more about Trilinos: how to use it, install it, configure it, and even 
 *   [An Overview of the Trilinos Project](pdfs/TrilinosACMTOMS2004.pdf) -- ACM Transactions on Mathematical Software, Vol. 31, Issue 3, September 2005, Pages 397-423.
 *   [Epetra Performance Optimization Guide (.pdf)](pdfs/EpetraPerformanceGuide.pdf) -- A guide to getting the best performance out of Epetra.
 *   [Supporting 64-bit global indices in Epetra and other Trilinos packages -- Techniques used and lessons learned (.pdf)](pdfs/Epetra64HowTo.pdf) -- A description of the changes required to support 64-bit global indices in Epetra and how the functionality can be used.
-*   [RefCountPtr Beginner’s Guide (.pdf)](http://trilinos.sandia.gov/RefCountPtrBeginnersGuideSAND.pdf) -- An Introduction to the Trilinos Smart Reference-Counted Pointer Class for (Almost) Automatic Dynamic Memory Management in C++.
+*   [RefCountPtr Beginner’s Guide (.pdf)](https://trilinos.org/RefCountPtrBeginnersGuideSAND.pdf) -- An Introduction to the Trilinos Smart Reference-Counted Pointer Class for (Almost) Automatic Dynamic Memory Management in C++.
 *   [Trilinos 9.0 User Guide (.pdf)](pdfs/TrilinosUserGuide.pdf) -- A guide for new users of Trilinos 9.0\. **The build instructions reflect the Autotols build system used in Trilinos 9.0 and earlier. Please see the new [instructions](http://trilinos.org/build_instructions.html) for building Trilinos 10.0 and later.
 *   [compareTestOutput Users Manual (.pdf)](pdfs/compareTestOutput.pdf) -- The compareTestOutput test utility provides comprehensive evaluation of the output of a test program to determine the success or failure.
 *   [Citing Trilinos Documents](pdfs/citing.txt) -- *How to cite Trilinos documents.*

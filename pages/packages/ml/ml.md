@@ -23,7 +23,7 @@ Please use the links below to navigate the ML documentation:
 *   [Who are the ML developers?](http://trilinos.org/oldsite/packages/ml/team.html)
 *   [How to cite ML](ml_citations.html).
 
-ML documentation is created and maintained using Doxygen. Click [here](http://trilinos.sandia.gov/packages/ml/doxygen/development/inline/index.html) to access the latest Doxygen documentation, containing details about ML and its classes, examples of usage, how to interface with other Trilinos packages, and more.
+ML documentation is created and maintained using Doxygen. Click [here](https://trilinos.org/ml/doxygen/development/inline/index.html) to access the latest Doxygen documentation, containing details about ML and its classes, examples of usage, how to interface with other Trilinos packages, and more.
  
 If you use ML for your applications, please let us know by writing an e-mail to the ml developers. Please also cite ML using the following bibtex entry:
 

@@ -8,13 +8,13 @@ package: didasko
 doxygen: true
 ---
 
-![Didasko Logo](images/didasko_logo.jpeg) 
+![Didasko Logo](images/didasko_logo.jpeg)
 
 **Welcome to the Didasko Home**
 
 Note that the primary Trilinos tutorial can now be found [here.](https://github.com/trilinos/Trilinos_tutorial/wiki "Trilinos Hands On Tutorial") Didasko may be retired in a future release.
 
-Didasko, the tutorial of Trilinos, offers a quick introduction to several Trilinos packages. It contains a printable [PDF](pdfs/Trilinos7.0Tutorial.pdf) document and a variety of well-commented [browsable examples](http://trilinos.sandia.gov/packages/didasko/examples.html) that illustrate how to use Trilinos. The PDF file and the examples are distributed within Trilinos; see the [download page](download.html).
+Didasko, the tutorial of Trilinos, offers a quick introduction to several Trilinos packages. It contains a printable [PDF](pdfs/Trilinos7.0Tutorial.pdf) document and a variety of well-commented [browsable examples](https://trilinos.org/didasko/examples.html) that illustrate how to use Trilinos. The PDF file and the examples are distributed within Trilinos; see the [download page](download.html).
 
 Didasko contains examples for the following Trilinos packages: [Teuchos](teuchos.html), [Epetra](epetra.html), [EpetraExt](epetraext.html), [TriUtils](triutils.html), [Amesos](amesos.html), [AztecOO](aztecoo.html), [IFPACK](ifpack.html), [ML](ml.html), [NOX](nox_and_loca.html), [Anasazi](anasazi.html), [Belos](belos.html), [TPetra](tpetra.html).
 
@@ -33,8 +33,6 @@ From this web page you can:
 
 *   [Browse](https://trilinos.org/docs/dev/packages/didasko/doc/html/index.html) the source of all Didasko’s examples;
 *   Check the FAQ page.
-
-Have fun! Don’t hesitate to [contact us](http://trilinos.org/oldsite/packages/didasko/contact.html) for bugs, suggestions, or to help with the development!
 
 If you want to cite didasko and/or the Trilinos tutorial PDF document, please use the following bibtex entry:
 

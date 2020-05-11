@@ -18,19 +18,19 @@ The [Thyra](thyra.html) package contains a set of interfaces and supporting code
 
  The primary [Thyra](thyra.html) ANA interfaces are broadly layered as followed:
 
- *   **[Operator/vector interfaces](http://trilinos.sandia.gov/packages/docs/dev/packages/thyra/src/interfaces/operator_vector/ana/fundamental/doc/html/index.html)**
-     *   [Thyra::VectorBase](http://trilinos.sandia.gov/packages/docs/dev/packages/thyra/doc/html/classThyra_1_1VectorBase.html)
-     *   [Thyra::VectorSpaceBase](http://trilinos.sandia.gov/packages/docs/dev/packages/thyra/doc/html/classThyra_1_1VectorSpaceBase.html)
-     *   [Thyra::LinearOpBase](http://trilinos.sandia.gov/packages/docs/dev/packages/thyra/doc/html/classThyra_1_1LinearOpBase.html)
-     *   [Thyra::MultiVectorBase](http://trilinos.sandia.gov/packages/docs/dev/packages/thyra/doc/html/classThyra_1_1MultiVectorBase.html)
- *   **[Operator solve interfaces](http://trilinos.sandia.gov/packages/docs/dev/packages/thyra/src/interfaces/operator_solve/ana/fundamental/doc/html/index.html)**
-     *   [Thyra::PreconditionerBase](http://trilinos.sandia.gov/packages/docs/dev/packages/thyra/doc/html/classThyra_1_1PreconditionerBase.html)
-     *   [Thyra::PreconditionerFactoryBase](http://trilinos.sandia.gov/packages/docs/dev/packages/thyra/doc/html/classThyra_1_1PreconditionerFactoryBase.html)
-     *   [Thyra::LinearOpWithSolveBase](http://trilinos.sandia.gov/packages/docs/dev/packages/thyra/doc/html/classThyra_1_1LinearOpWithSolveBase.html)
-     *   [Thyra::LinearOpWithSolveFactoryBase](http://trilinos.sandia.gov/packages/docs/dev/packages/thyra/doc/html/classThyra_1_1LinearOpWithSolveFactoryBase.html)
- *   **[Nonlinear Intefaces](http://trilinos.sandia.gov/packages/docs/dev/packages/thyra/src/interfaces/nonlinear/model_evaluator/ana/fundamental/doc/html/index.html)**
-     *   [Thyra::ModelEvaluator](http://trilinos.sandia.gov/packages/docs/dev/packages/thyra/doc/html/classThyra_1_1ModelEvaluator.html)
-     *   [Thyra::NonlinearSolverBase](http://trilinos.sandia.gov/packages/docs/dev/packages/thyra/doc/html/classThyra_1_1NonlinearSolverBase.html)
+ *   **Operator/vector interfaces**
+     *   [Thyra::VectorBase](https://trilinos.org/docs/dev/packages/thyra/doc/html/classThyra_1_1VectorBase.html)
+     *   [Thyra::VectorSpaceBase](https://trilinos.org/docs/dev/packages/thyra/doc/html/classThyra_1_1VectorSpaceBase.html)
+     *   [Thyra::LinearOpBase](https://trilinos.org/docs/dev/packages/thyra/doc/html/classThyra_1_1LinearOpBase.html)
+     *   [Thyra::MultiVectorBase](https://trilinos.org/docs/dev/packages/thyra/doc/html/classThyra_1_1MultiVectorBase.html)
+ *   **Operator solve interfaces**
+     *   [Thyra::PreconditionerBase](https://trilinos.org/docs/dev/packages/thyra/doc/html/classThyra_1_1PreconditionerBase.html)
+     *   [Thyra::PreconditionerFactoryBase](https://trilinos.org/docs/dev/packages/thyra/doc/html/classThyra_1_1PreconditionerFactoryBase.html)
+     *   [Thyra::LinearOpWithSolveBase](https://trilinos.org/docs/dev/packages/thyra/doc/html/classThyra_1_1LinearOpWithSolveBase.html)
+     *   [Thyra::LinearOpWithSolveFactoryBase](https://trilinos.org/docs/dev/packages/thyra/doc/html/classThyra_1_1LinearOpWithSolveFactoryBase.html)
+ *   **Nonlinear Interfaces**
+     *   [Thyra::ModelEvaluator](https://trilinos.org/docs/dev/packages/thyra/doc/html/classThyra_1_1ModelEvaluator.html)
+     *   [Thyra::NonlinearSolverBase](https://trilinos.org/docs/dev/packages/thyra/doc/html/classThyra_1_1NonlinearSolverBase.html)
 
  A few important points about Thyra interfaces are:
 
@@ -44,10 +44,10 @@ The [Thyra](thyra.html) package contains a set of interfaces and supporting code
 
  *   **[Thyra](thyra.html)**
      *   Adapters
-         *   [Thyra/{Epetra, Tpetra} Adapters](http://trilinos.sandia.gov/packages/docs/dev/packages/thyra/adapters/epetra/doc/html/index.html):
+         *   [Thyra/{Epetra, Tpetra} Adapters](https://trilinos.org/docs/dev/packages/thyra/adapters/epetra/doc/html/index.html):
              *   Utility classes and functions for mapping between Thyra wrapper objects, and Epetra or Tpetra linear algebra objects
-         *   [Thyra/EpetraExt Adatpers](http://trilinos.sandia.gov/packages/docs/dev/packages/thyra/adapters/epetraext/doc/html/index.html):
-             *   [Thyra::EpetraModelEvaluator](http://trilinos.sandia.gov/packages/docs/dev/packages/thyra/doc/html/classThyra_1_1EpetraModelEvaluator.html): Implements [Thyra::ModelEvaluator](http://trilinos.sandia.gov/packages/docs/dev/packages/thyra/doc/html/classThyra_1_1ModelEvaluator.html) in terms of an [EpetraExt::ModelEvaluator](http://trilinos.org/docs/dev/packages/epetraext/doc/html/classEpetraExt_1_1ModelEvaluator.html) object
+         *   [Thyra/EpetraExt Adatpers](https://trilinos.org/docs/dev/packages/thyra/adapters/epetraext/doc/html/index.html):
+             *   [Thyra::EpetraModelEvaluator](https://trilinos.org/docs/dev/packages/thyra/doc/html/classThyra_1_1EpetraModelEvaluator.html): Implements [Thyra::ModelEvaluator](https://trilinos.org/docs/dev/packages/thyra/doc/html/classThyra_1_1ModelEvaluator.html) in terms of an [EpetraExt::ModelEvaluator](http://trilinos.org/docs/dev/packages/epetraext/doc/html/classEpetraExt_1_1ModelEvaluator.html) object
 
 Thyra Coding and Documentation Guidelines
 
