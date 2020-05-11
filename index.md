@@ -1,10 +1,9 @@
 ---
-title: Trilinos organization
+title: Trilinos Home Page
 keywords: homepage scientific libraries parallel computing
 permalink: index.html
 ---
 
-# Trilinos Home Page
 
 ## Welcome to the Trilinos Project Home Page
 
