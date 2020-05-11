@@ -3,10 +3,8 @@ title: Trilinos User-Developer Group Meeting 2019
 permalink: trilinos_user-developer_group_meeting_2019.html
 folder: community
 ---
-  
-## Dates
 
-Note: The below dates are firm. The schedule is still subject to change.
+## Dates
 
 October 22nd: User Sessions  
 October 23rd: Developer Sessions & Performance Testing (Not specific to Trilinos)  
@@ -22,25 +20,21 @@ Contact: [Jim Willenbring](mailto:jmwille@sandia.gov)
 
 ## Trilinos Background
 
-The Trilinos Project is an effort to develop algorithms and enabling technologies within an object-oriented software framework 
-for the solution of large-scale, complex multi-physics engineering and scientific problems. 
-A unique design feature of Trilinos is its focus on packages. 
-Full details of Trilinos and links to package websites can be found at the [Trilinos home page](http://trilinos.org/ "Trilinos Home Page").
+The Trilinos Project is an effort to develop algorithms and enabling technologies within an object-oriented software framework
+for the solution of large-scale, complex multi-physics engineering and scientific problems.
+A unique design feature of Trilinos is its focus on packages.
+Full details of Trilinos and links to package websites can be found at the [Trilinos home page](https://trilinos.github.io "Trilinos Home Page").
 
 ## Meeting Overview
 
-TUG 2019 will be held in Albuquerque and hosted by Sandia National Labs. 
+TUG 2019 was held in Albuquerque and hosted by Sandia National Labs.
 The goal of the annual meeting is to facilitate communication between Trilinos users, clients and developers.
 
 ## Registration
 
-Registration for TUG 2019 is limited.
-If you wish to attend and are not a Sandia employee or contractor, please contact [the TUG organizers](mailto:trilinos-help@software.sandia.gov) for more information. 
-<!--Registration for eligible attendees is [now available](https://docs.google.com/forms/d/e/1FAIpQLSdcDiCzxCdQ7hebcqvKCybdrzCcfJGMXmT4ADkUXd9uJ1cnFA/viewform?usp=sf_link).-->
+Closed.
 
 ## Schedule
-
-Note: The below schedule is tentative and could change significantly, including dates and start and end times. Last updated 10/23/2019.
 
 <p style="text-align: center;"><span style="text-decoration: underline;">Tuesday, October 22nd</span> (User Day)</p>
 
@@ -129,15 +123,15 @@ Note: The below schedule is tentative and could change significantly, including 
 <td headers="time-2 location-1">Developer Day Welcome (J. Willenbring)</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">8:45</abbr>–<abbr title="2011-11-01T09:30:00">9:00</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">8:45</abbr>–<abbr title="2011-11-01T09:30:00">9:00</abbr></th>
 <td headers="time-1 location-1">cdash_analyze_and_report.py for Automated Test Alerts (R. Bartlett)</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:00</abbr>–<abbr title="2011-11-01T09:30:00">9:30</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:00</abbr>–<abbr title="2011-11-01T09:30:00">9:30</abbr></th>
 <td headers="time-1 location-1">SEMS Reintroduced (W. Burgess)</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:30</abbr>–<abbr title="2011-11-01T09:30:00">10:00</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:30</abbr>–<abbr title="2011-11-01T09:30:00">10:00</abbr></th>
 <td headers="time-1 location-1">Refactoring: Lessons learned from changing bash to python (P. Wolfenbarger)</td>
 </tr>
 <tr>
@@ -149,15 +143,15 @@ Note: The below schedule is tentative and could change significantly, including 
 <td headers="time-1 location-1">Trilinos Strategic Planning</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">12:00</abbr>–<abbr title="2011-11-01T09:30:00">1:30</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">12:00</abbr>–<abbr title="2011-11-01T09:30:00">1:30</abbr></th>
 <td headers="time-1 location-1">Lunch</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">1:30</abbr>–<abbr title="2011-11-01T09:30:00">2:30</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">1:30</abbr>–<abbr title="2011-11-01T09:30:00">2:30</abbr></th>
 <td headers="time-1 location-1">Performance Testing - Introduction of Existing Efforts and Tools (J. Elliott, S. Swan, J. Watkins, E. Ridgway)</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">2:30</abbr>–<abbr title="2011-11-01T09:30:00">4:00</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">2:30</abbr>–<abbr title="2011-11-01T09:30:00">4:00</abbr></th>
 <td headers="time-1 location-1">Performance Testing Discussion</td>
 </tr>
 </tbody>
@@ -166,11 +160,11 @@ Note: The below schedule is tentative and could change significantly, including 
 <table summary="Timetable">
 <tbody>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:30</abbr>–<abbr title="2011-11-01T09:30:00">10:30</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">9:30</abbr>–<abbr title="2011-11-01T09:30:00">10:30</abbr></th>
 <td headers="time-1 location-1">Alternatives to UVM in Trilinos (M. Hoemmen)</td>
 </tr>
 <tr>
-<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">10:30</abbr>–<abbr title="2011-11-01T09:30:00">11:30</abbr></th> 
+<th id="time-1" axis="time"><abbr title="2011-11-01T08:30:00">10:30</abbr>–<abbr title="2011-11-01T09:30:00">11:30</abbr></th>
 <td headers="time-1 location-1">Alternatives to UVM Discussion</td>
 </tr>
 </tbody>
