@@ -22,7 +22,7 @@ Trilinos contains many packages, organized in [five product suites](product.html
 The [primary Trilinos repository](https://github.com/trilinos/Trilinos) is  hosted on GitHub.
 
 ## TUG 2020
-This year's Trilinos User-Developer Group (TUG) Meeting will be virtual.  Details will be announced on this page.
+[The 2020 Trilinos User-Developer Group (TUG) Meeting]https://trilinos.github.io/trilinos_user-developer_group_meeting_2020.html) will be virtual.  Details available in August, 2020.
 
 ## TUG 2019
-[The 2019 Trilinos User Group Meeting (TUG)](https://trilinos.github.io/trilinos_user-developer_group_meeting_2019.html) was held in October in Albuquerque.
+[The 2019 Trilinos User-Developer Group Meeting (TUG)](https://trilinos.github.io/trilinos_user-developer_group_meeting_2019.html) was held in October in Albuquerque.
