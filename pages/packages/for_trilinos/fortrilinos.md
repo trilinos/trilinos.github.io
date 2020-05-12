@@ -3,7 +3,7 @@ title: ForTrilinos
 permalink: fortrilinos.html
 folder: packages
 show_sidebar: true
-contact: william@sandia.gov
+contact: maherou@sandia.gov
 package: ForTrilinos
 doxygen: true
 redirect_to:

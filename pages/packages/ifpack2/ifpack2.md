@@ -3,7 +3,7 @@ title: Ifpack2
 permalink: ifpack2.html
 folder: packages
 show_sidebar: true
-contact: Mark Hoemmen (mhoemme@sandia.gov), Jonathan Hu (jhu@sandia.gov), Chris Siefert (csiefer@sandia.gov)
+contact: Jonathan Hu (jhu@sandia.gov), Chris Siefert (csiefer@sandia.gov)
 package: ifpack2
 doxygen: true
 ---

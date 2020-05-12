@@ -3,7 +3,7 @@ title: Domi
 permalink: domi.html
 folder: packages
 show_sidebar: true
-contact: wfspotz@sandia.gov
+contact: N/A
 package: domi
 doxygen: true
 ---

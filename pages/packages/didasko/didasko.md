@@ -3,7 +3,7 @@ title: Didasko
 permalink: didasko.html
 folder: packages
 show_sidebar: true
-contact: marzio.sala@gmail.com
+contact: maherou@sandia.gov
 package: didasko
 doxygen: true
 ---

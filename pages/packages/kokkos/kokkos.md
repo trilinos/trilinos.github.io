@@ -3,7 +3,7 @@ title: Kokkos
 permalink: kokkos.html
 folder: packages
 show_sidebar: true
-contact: hcedwar@sandia.gov
+contact: crtrott@sandia.gov
 package: kokkos
 doxygen: true
 ---

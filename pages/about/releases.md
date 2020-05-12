@@ -1,10 +1,14 @@
 ---
-title: Releases
+title: Trilinos Releases
 permalink: releases.html
 folder: about
 ---
 
-## Trilinos Versions
+## Trilinos GitHub Access
+
+Starting with Trilinos 12.12, we have stopped careful tracking of which packages are available in a release.  As more Trilinos users move to direct cloning of Trilinos from GitHub, careful management of versions and package content becomes less important. See [Future Release Schedule](future_release_schedule) for more discussion.
+
+# Trilinos 12.10 and earlier
 
 Even point version numbers, e.g. 10.0.0, 10.0.1, 10.2.0, 10.2.3, indicate release versions of Trilinos. Odd point version numbers, e.g. 10.1, 10.3, 10.5, indicate development (non-release) versions of Trilinos.
 
@@ -405,7 +409,7 @@ Download  | Trilinos | Packages | Version | 9.0
 Trilinos 8.0 was released in August 2007 and included the following 30 packages. For more details about the release, view the [release notes](https://trilinos.org/oldsite/release_notes-8.0.html) and the [changelog](https://trilinos.org/oldsite/changelog-8.0.html).
 
 Download  | Trilinos | Packages | 8.0
------- | ------ | ------ | -------- 
+------ | ------ | ------ | --------
 [Amesos](amesos.html) | [Ifpack](ifpack.html) | [MOOCHO](moocho.html) | [Stratimikos](stratimikos.html)
 [Anasazi](anasazi.html) | [Isorropia](isorropia.html) | [New_Package](new_package.html) | [Teuchos](teuchos.html)
 [AztecOO](aztecoo.html) | [Kokkos](kokkos.html) | [NOX](nox_and_loca.html) | [Thyra](thyra.html)
@@ -420,7 +424,7 @@ Download  | Trilinos | Packages | 8.0
 Trilinos 7.0 was released in September 2006 and included the following 27 packages. For more details about the release, view the [release notes](https://trilinos.org/oldsite/release_notes-7.0.html) and the [changelog](https://trilinos.org/oldsite/changelog-7.0.html).
 
 Download  | Trilinos | Packages | 7.0
------- | ------ | ------ | -------- 
+------ | ------ | ------ | --------
 [Amesos](amesos.html) | [Ifpack](ifpack.html) | [Moertel](moertel.html) (new) | [Rythmos](rythmos.html) (new)
 [Anasazi](anasazi.html) | [Isorropia](isorropia.html) (new) | [MOOCHO](moocho.html) (new) | [Stratimikos](stratimikos.html) (new)
 [AztecOO](aztecoo.html) | [Kokkos](kokkos.html) | [New_Package](new_package.html) | [Teuchos](teuchos.html)
@@ -434,7 +438,7 @@ Download  | Trilinos | Packages | 7.0
 Trilinos 6.0 was released in September 2005 and included the following 18 packages. For more details about the release, view the [release notes](https://trilinos.org/oldsite/release_notes-6.0.html) and the [changelog](https://trilinos.org/oldsite/changelog-6.0.html).
 
 Download  | Trilinos | Packages | 6.0
------- | ------ | ------ | -------- 
+------ | ------ | ------ | --------
 [Amesos](amesos.html) | [EpetraExt](epetraext.html) | [ML](ml.html) | [Teuchos](teuchos.html)
 [Anasazi](anasazi.html) | [Ifpack](ifpack.html) | [New_Package](new_package.html) | [Thyra](thyra.html) (new)
 [AztecOO](aztecoo.html) | [Kokkos](kokkos.html) | [NOX](nox_and_loca.html) | [Triutils](triutils.html)
@@ -446,7 +450,7 @@ Download  | Trilinos | Packages | 6.0
 Trilinos 5.0 was released in March 2005 and included the following 17 packages. For more details about the release, view the [release notes](https://trilinos.org/oldsite/release_notes-5.0.html) and the [changelog](https://trilinos.org/oldsite/changelog-5.0.html).
 
 Download  | Trilinos | Packages | 5.0
------- | ------ | ------ | -------- 
+------ | ------ | ------ | --------
 [Amesos](amesos.html) | [EpetraExt](epetraext.html) | [ML](ml.html) | [Teuchos](teuchos.html)
 [Anasazi](anasazi.html) (new) | [Ifpack](ifpack.html) | [New_Package](new_package.html) | [Triutils](triutils.html)
 [AztecOO](aztecoo.html) | [Kokkos](kokkos.html) | [NOX](nox_and_loca.html)
@@ -459,7 +463,7 @@ Download  | Trilinos | Packages | 5.0
 Trilinos 4.0 was released in June 2004 and included the following 16 packages. For more details about the release, view the [release notes](https://trilinos.org/oldsite/release_notes-4.0.html).
 
 Download  | Trilinos | Packages | 4.0
------- | ------ | ------ | -------- 
+------ | ------ | ------ | --------
 [Amesos](amesos.html) (new) | [Ifpack](ifpack.html) | [ML](ml.html) | [Triutils](triutils.html)
 [AztecOO](aztecoo.html) | [Kokkos](kokkos.html) (new) | [NOX](nox_and_loca.html) | TSFCore (new)
 [Epetra](epetra.html) | [Komplex](komplex.html) (new) | [New_Package](new_package.html) | TSFCoreUtils (new)
@@ -471,6 +475,6 @@ Download  | Trilinos | Packages | 4.0
 Trilinos 3.1 was the first official public release of Trilinos. It was released in September 2003 and contained the following 8 packages.
 
 Download  | Trilinos | Packages | 3.1
------- | ------ | ------ | -------- 
+------ | ------ | ------ | --------
 [AztecOO](aztecoo.html) | [EpetraExt](epetraext.html) | [ML](ml.html) | [NOX](nox_and_loca.html)
 [Epetra](epetra.html) | [Ifpack](ifpack.html) | [New_Package](new_package.html) | [Triutils](triutils.html)

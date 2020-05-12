@@ -1,9 +1,9 @@
 ---
 title: Optika
 permalink: optika.html
-folder: packages
+folder: exploratory
 show_sidebar: true
-contact: klnusbaum@gmail.com
+contact: trilinos-framework@software.sandia.gov
 package: optika
 doxygen: true
 ---

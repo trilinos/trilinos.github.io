@@ -3,7 +3,7 @@ title: GlobiPack
 permalink: globipack.html
 folder: packages
 show_sidebar: true
-contact: bartlettra@ornl.gov
+contact: rabartl@sandia.gov
 package: globipack
 doxygen: true
 ---

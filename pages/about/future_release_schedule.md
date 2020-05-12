@@ -4,12 +4,6 @@ permalink: future_release_schedule.html
 folder: about
 ---
 
-Trilinos releases quarterly during the first month of each calendar quarter.  The tentative schedule for major releases is below.  Release updates occur as necessary (e.g. release 10.2.3 containing fixes for bugs in 10.2.2).
+With the growth in continuous integration and delivery, the Trilinos team does not emphasize planning explicit releases or release dates as much as in the past.  Having said that, Trilinos does follow Semantic Versioning (SEMVER) practices, as defined by [semver.org](https://semver.org).  As a result, major release versioning is particularly consequential, since it signals the disruption of backward compatibility.
 
-**2016 Trilinos release schedule**
-
-February 3, 2016: Trilinos 12.6 (repository freeze January 12)
-
-July 27, 2016: Trilinos 12.8 (repository freeze July 12)
-
-November 16, 2016: Trilinos 12.10 (repository freeze November 1)
+Presently, the Trilinos team is preparing Trilinos Version 13, which eliminates numerous dynamic allocation functionality in Tpetra.  Availability of "on-demand" memory allocation, while convenient to the user, essentially prohibits shared memory parallel scalability because at any time a thread could be forced to re-allocate storage.

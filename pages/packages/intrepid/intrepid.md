@@ -3,7 +3,7 @@ title: Intrepid
 permalink: intrepid.html
 folder: packages
 show_sidebar: true
-contact: pbboche@sandia.gov
+contact: mperego@sandia.gov
 package: intrepid
 doxygen: true
 ---
