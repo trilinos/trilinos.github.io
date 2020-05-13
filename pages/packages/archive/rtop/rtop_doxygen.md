@@ -1,7 +1,7 @@
 ---
 title: RTOp Doxygen
 permalink: rotp_doxygen.html
-folder: packages
+folder: archive
 show_sidebar: true
 contact: bartlettra@ornl.gov
 package: rtop

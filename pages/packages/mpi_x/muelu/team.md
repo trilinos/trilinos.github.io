@@ -1,7 +1,7 @@
 ---
 title: MueLu Team
 permalink: muelu_team.html
-folder: packages
+folder: mpi_x
 ---
 
 The current MueLu development team is

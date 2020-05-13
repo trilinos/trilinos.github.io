@@ -1,7 +1,7 @@
 ---
 title: Optika Doxygen
 permalink: optika_doxygen.html
-folder: exploratory
+folder: archive
 show_sidebar: true
 contact: klnusbaum@gmail.com
 package: optika

@@ -1,7 +1,7 @@
 ---
 title: Teuchos Doxygen
 permalink: teuchos_doxygen.html
-folder: packages
+folder: mpi
 show_sidebar: true
 contact: hkthorn@sandia.gov
 package: teuchos

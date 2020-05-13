@@ -1,7 +1,7 @@
 ---
 title: Panzer
 permalink: panzer.html
-folder: packages
+folder: mpi_x
 show_sidebar: true
 contact: eccyr@sandia.gov, rppawlo@sandia.gov
 package: panzer

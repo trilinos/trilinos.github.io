@@ -1,7 +1,7 @@
 ---
 title: ML Citation
 permalink: ml_citations.html
-folder: packages
+folder: mpi
 ---
 
 If you publish a paper that mentions ML, please send us a link. Here are a few papers that reference the ML package.

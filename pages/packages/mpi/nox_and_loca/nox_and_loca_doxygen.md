@@ -1,7 +1,7 @@
 ---
 title: NOX and LOCA Doxygen
 permalink: nox_and_loca_doxygen.html
-folder: packages
+folder: mpi
 show_sidebar: true
 contact: rppawlo@sandia.gov
 package: nox

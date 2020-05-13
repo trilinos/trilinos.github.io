@@ -1,7 +1,7 @@
 ---
 title: Amesos2
 permalink: amesos2.html
-folder: packages
+folder: mpi_x
 show_sidebar: true
 contact: amesos2-developers@software.sandia.gov
 package: amesos2

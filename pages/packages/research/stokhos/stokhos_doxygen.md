@@ -1,7 +1,7 @@
 ---
 title: Stokhos Doxygen
 permalink: stokhos_doxygen.html
-folder: packages
+folder: research
 show_sidebar: true
 contact: etphipp@sandia.gov
 package: stokhos

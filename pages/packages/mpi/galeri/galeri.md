@@ -1,7 +1,7 @@
 ---
 title: Galeri
 permalink: galeri.html
-folder: packages
+folder: mpi
 show_sidebar: true
 contact: maherou@sandia.gov
 package: galeri

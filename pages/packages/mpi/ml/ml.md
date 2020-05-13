@@ -1,7 +1,7 @@
 ---
 title: ML
 permalink: ml.html
-folder: packages
+folder: mpi
 show_sidebar: true
 contact: Ray Tuminaro (rstumin@sandia.gov), Chris Siefert (csiefer@sandia.gov), and Jonathan Hu (jhu@sandia.gov)
 package: ml

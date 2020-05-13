@@ -1,7 +1,7 @@
 ---
 title: Ifpack2 Doxygen
 permalink: ifpack2_doxygen.html
-folder: packages
+folder: mpi_x
 show_sidebar: true
 contact: Mark Hoemmen (mhoemme@sandia.gov), Jonathan Hu (jhu@sandia.gov), Chris Siefert (csiefer@sandia.gov)
 package: ifpack2

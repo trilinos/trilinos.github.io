@@ -1,7 +1,7 @@
 ---
 title: Sacado
 permalink: sacado.html
-folder: packages
+folder: mpi_x
 show_sidebar: true
 contact: etphipp@sandia.gov
 package: sacado

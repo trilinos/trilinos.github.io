@@ -1,7 +1,7 @@
 ---
 title: Mesquite
 permalink: mesquite.html
-folder: packages
+folder: archive
 show_sidebar: true
 contact: trilinos-framework@software.sandia.gov
 package: mesquite

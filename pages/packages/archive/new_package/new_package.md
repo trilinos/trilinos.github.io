@@ -1,7 +1,7 @@
 ---
 title: New Package
 permalink: new_package.html
-folder: packages
+folder: archive
 show_sidebar: true
 contact: maherou@sandia.gov
 package: newpackage

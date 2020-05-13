@@ -1,7 +1,7 @@
 ---
 title: ROL
 permalink: rol.html
-folder: packages
+folder: mpi_x
 show_sidebar: true
 contact: rol-developers@software.sandia.gov
 package: rol

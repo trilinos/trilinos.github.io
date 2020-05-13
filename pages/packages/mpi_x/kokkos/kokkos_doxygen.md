@@ -1,7 +1,7 @@
 ---
 title: Kokkos Doxygen
 permalink: kokkos_doxygen.html
-folder: packages
+folder: mpi_x
 show_sidebar: true
 contact: hcedwar@sandia.gov
 package: kokkos

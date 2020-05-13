@@ -1,7 +1,7 @@
 ---
 title: GlobiPack
 permalink: globipack.html
-folder: packages
+folder: archive
 show_sidebar: true
 contact: rabartl@sandia.gov
 package: globipack

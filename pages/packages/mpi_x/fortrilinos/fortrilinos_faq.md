@@ -1,7 +1,7 @@
 ---
 title: ForTrilinos FAQ
 permalink: fortrilinos_faq.html
-folder: packages
+folder: mpi_x
 show_sidebar: true
 contact: william@sandia.gov
 package: ForTrilinos

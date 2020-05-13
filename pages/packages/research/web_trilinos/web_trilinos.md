@@ -1,7 +1,7 @@
 ---
 title: Web Trilinos
 permalink: web_trilinos.html
-folder: packages
+folder: research
 show_sidebar: true
 contact: marzio.sala@gmail.com
 package: trios

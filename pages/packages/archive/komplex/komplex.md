@@ -1,7 +1,7 @@
 ---
 title: Komplex
 permalink: komplex.html
-folder: packages
+folder: archive
 show_sidebar: true
 contact: maherou@sandia.gov
 package: komplex

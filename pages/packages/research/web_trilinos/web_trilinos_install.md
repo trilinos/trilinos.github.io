@@ -1,7 +1,7 @@
 ---
 title: WebTrilinos Install
 permalink: web_trilinos_install.html
-folder: packages
+folder: research
 ---
 
 **Installation**

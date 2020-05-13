@@ -1,7 +1,7 @@
 ---
 title: PyTrilinos FAQ
 permalink: pytrilinos_faq.html
-folder: packages
+folder: research
 show_sidebar: true
 contact: wfspotz@sandia.gov
 package: pytrilinos

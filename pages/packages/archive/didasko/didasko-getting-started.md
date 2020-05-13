@@ -1,7 +1,7 @@
 ---
 title: Didasko Getting Started
 permalink: didasko_getting_started.html
-folder: packages
+folder: archive
 ---
 
 **What are the prerequisites for Didasko?**

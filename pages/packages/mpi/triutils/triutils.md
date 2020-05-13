@@ -1,7 +1,7 @@
 ---
 title: TriUtils
 permalink: triutils.html
-folder: packages
+folder: mpi
 show_sidebar: true
 contact: maherou@sandia.gov
 package: triutils

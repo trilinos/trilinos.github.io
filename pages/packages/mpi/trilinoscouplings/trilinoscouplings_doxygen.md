@@ -1,7 +1,7 @@
 ---
 title: Trilinos Couplings Doxygen
 permalink: trilinoscouplings_doxygen.html
-folder: packages
+folder: mpi
 show_sidebar: true
 contact: trilinoscouplings-developers@sandia.gov
 package: trilinoscouplings

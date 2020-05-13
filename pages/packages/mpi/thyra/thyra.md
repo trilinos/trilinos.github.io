@@ -1,7 +1,7 @@
 ---
 title: Thyra
 permalink: thyra.html
-folder: packages
+folder: mpi
 show_sidebar: true
 contact: rabartl@sandia.gov
 package: thyra

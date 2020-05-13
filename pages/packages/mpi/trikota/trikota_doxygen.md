@@ -1,7 +1,7 @@
 ---
 title: TriKota Doxygen
 permalink: trikota_doxygen.html
-folder: packages
+folder: mpi
 show_sidebar: true
 contact: agsalin@sandia.gov
 package: trikota

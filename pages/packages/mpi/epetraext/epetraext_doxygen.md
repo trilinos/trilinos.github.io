@@ -1,7 +1,7 @@
 ---
 title: EpetraExt Doxygen
 permalink: epetraext_doxygen.html
-folder: packages
+folder: mpi
 show_sidebar: true
 contact: maherou@sandia.gov
 package: epetraext

@@ -1,7 +1,7 @@
 ---
 title: WebTrilinos FAQ
 permalink: web_trilinos_faq.html
-folder: packages
+folder: research
 ---
 
 **What is WebTrilinos?**

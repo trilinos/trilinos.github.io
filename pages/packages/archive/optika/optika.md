@@ -1,7 +1,7 @@
 ---
 title: Optika
 permalink: optika.html
-folder: exploratory
+folder: archive
 show_sidebar: true
 contact: trilinos-framework@software.sandia.gov
 package: optika

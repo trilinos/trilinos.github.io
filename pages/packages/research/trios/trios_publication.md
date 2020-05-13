@@ -1,7 +1,7 @@
 ---
 title: Trios Publications
 permalink: trios_publication.html
-folder: packages
+folder: research
 ---
 
 **Primary Trios Publication**

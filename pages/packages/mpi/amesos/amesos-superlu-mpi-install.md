@@ -1,7 +1,7 @@
 ---
 title: Amesos SuperLU MPI Install
 permalink: amesos-superlu-mpi-install.html
-folder: packages
+folder: mpi
 ---
 
 SuperLU MPI Installation

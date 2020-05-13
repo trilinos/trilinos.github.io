@@ -1,7 +1,7 @@
 ---
 title: Teko Doxygen
 permalink: teko_doxygen.html
-folder: packages
+folder: research
 show_sidebar: true
 contact: eccyr@sandia.gov
 package: teko

@@ -1,7 +1,7 @@
 ---
 title: Intrepid Doxygen
 permalink: intrepid_doxygen.html
-folder: packages
+folder: mpi
 show_sidebar: true
 contact: pbboche@sandia.gov
 package: intrepid

@@ -1,7 +1,7 @@
 ---
 title: Thyra Doxygen
 permalink: thyra_doxygen.html
-folder: packages
+folder: mpi
 show_sidebar: true
 contact: bartlettra@ornl.gov
 package: thyra

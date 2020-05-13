@@ -1,7 +1,7 @@
 ---
 title: Amesos Installation
 permalink: amesos_installation.html
-folder: packages
+folder: mpi
 ---
 
 Adding --enable-amesos to the configure line will allow Amesos to be installed and offers access to the Amesos_Klu class. Access to other classes require some additional installation effort.

@@ -1,7 +1,7 @@
 ---
 title: Rythmos Doxygen
 permalink: rythmos_doxygen.html
-folder: packages
+folder: archive
 show_sidebar: true
 contact: ccober@sandia.gov
 package: rythmos

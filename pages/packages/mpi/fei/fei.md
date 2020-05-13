@@ -1,7 +1,7 @@
 ---
 title: Fei
 permalink: fei.html
-folder: packages
+folder: mpi
 show_sidebar: true
 contact: william@sandia.gov
 package: fei

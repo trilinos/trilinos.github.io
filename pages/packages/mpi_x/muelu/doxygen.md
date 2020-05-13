@@ -1,7 +1,7 @@
 ---
 title: MueLu Doxygen
 permalink: muelu_doxygen.html
-folder: packages
+folder: mpi_x
 show_sidebar: true
 contact: jhu@sandia.gov, csiefer@sandia.gov, rstumin@sandia.gov
 package: muelu

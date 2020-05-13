@@ -1,7 +1,7 @@
 ---
 title: Claps
 permalink: claps.html
-folder: packages
+folder: archive
 show_sidebar: true
 contact: crdohrm@sandia.gov
 package: claps

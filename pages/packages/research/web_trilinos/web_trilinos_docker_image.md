@@ -1,7 +1,7 @@
 ---
 title: WebTrilinos Docker Image
 permalink: web_trilinos_docker_image.html
-folder: packages
+folder: research
 ---
 
 The WebTrilinos, browser-based Trilinos repository can be accessed via a Docker Image. Instructions for obtaining the Image and installing Docker are below.

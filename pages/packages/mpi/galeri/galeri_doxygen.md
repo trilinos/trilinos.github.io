@@ -1,7 +1,7 @@
 ---
 title: Galeri Doxygen
 permalink: galeri_doxygen.html
-folder: packages
+folder: mpi
 show_sidebar: true
 contact: marzio.sala@gmail.com
 package: galeri

@@ -1,7 +1,7 @@
 ---
 title: MueLu Tutorial
 permalink: muelu_tutorial.html
-folder: packages
+folder: mpi_x
 ---
 
 The [MueLu tutorial](pdfs/MueLu_tutorial.pdf) describes the most important features of MueLu covering the absolute beginner’s level, the advanced users and multigrid experts. It contains accompanying exercises where the interested user can do its own experiments with multigrid parameters. The MueLu tutorial is directly included in the MueLu sources in Trilinos.

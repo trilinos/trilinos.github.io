@@ -1,7 +1,7 @@
 ---
 title: Zoltan
 permalink: zoltan.html
-folder: packages
+folder: mpi
 show_sidebar: true
 contact: zoltan-dev@software.sandia.gov
 package: zoltan

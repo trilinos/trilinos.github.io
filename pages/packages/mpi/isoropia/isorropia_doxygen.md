@@ -1,7 +1,7 @@
 ---
 title: Isorropia Doxygen
 permalink: isorropia_doxygen.html
-folder: packages
+folder: mpi
 show_sidebar: true
 contact: egboman@sandia.gov
 package: isorropia

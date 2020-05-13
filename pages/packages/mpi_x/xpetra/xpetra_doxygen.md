@@ -1,7 +1,7 @@
 ---
 title: Xpetra Doxygen
 permalink: xpetra_doxygen.html
-folder: packages
+folder: mpi_x
 show_sidebar: true
 contact: Jonathan Hu (jhu@sandia.gov), Chris Siefert (csiefer@sandia.gov)
 package: xpetra

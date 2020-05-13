@@ -1,7 +1,7 @@
 ---
 title: Amesos ScaLAPACK Install
 permalink: amesos-scalapack-install.html
-folder: packages
+folder: mpi
 ---
 
 ## ScaLAPACK Installation

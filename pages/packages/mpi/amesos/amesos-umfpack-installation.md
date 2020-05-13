@@ -1,7 +1,7 @@
 ---
 title: Amesos UMFPACK Installation
 permalink: amesos-umfpack-installation.html
-folder: packages
+folder: mpi
 ---
 
 ## UMFPACK Installation

@@ -1,7 +1,7 @@
 ---
 title: Kokkos
 permalink: kokkos.html
-folder: packages
+folder: mpi_x
 show_sidebar: true
 contact: crtrott@sandia.gov
 package: kokkos

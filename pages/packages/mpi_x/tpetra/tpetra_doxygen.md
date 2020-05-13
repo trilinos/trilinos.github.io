@@ -1,7 +1,7 @@
 ---
 title: Tpetra Doxygen
 permalink: tpetra_doxygen.html
-folder: packages
+folder: mpi_x
 show_sidebar: true
 contact:  mhoemme@sandia.gov
 package: tpetra

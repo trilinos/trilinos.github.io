@@ -1,7 +1,7 @@
 ---
 title: Anasazi Doxygen
 permalink: anasazi_doxygen.html
-folder: packages
+folder: mpi_x
 show_sidebar: true
 contact: hkthorn@sandia.gov, rblehou@sandia.gov
 package: anasazi

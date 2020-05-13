@@ -1,7 +1,7 @@
 ---
 title: Shards Doxygen
 permalink: shards_doxygen.html
-folder: packages
+folder: archive
 show_sidebar: true
 contact: hcedwar@sandia.gov
 package: shards

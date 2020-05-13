@@ -1,7 +1,7 @@
 ---
 title: MueLu Citation
 permalink: muelu_citation.html
-folder: packages
+folder: mpi_x
 ---
 
 To cite MueLu, please use the following bibliography entries.

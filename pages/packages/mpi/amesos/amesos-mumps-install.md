@@ -1,7 +1,7 @@
 ---
 title: Amesos MUMPS Install
 permalink: amesos-mumps-install.html
-folder: packages
+folder: mpi
 ---
 
 ## MUMPS Support

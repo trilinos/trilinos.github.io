@@ -1,7 +1,7 @@
 ---
 title: Trios
 permalink: trios.html
-folder: packages
+folder: research
 show_sidebar: true
 contact: trios-developers@software.sandia.gov
 package: trios

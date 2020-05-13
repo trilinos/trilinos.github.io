@@ -1,7 +1,7 @@
 ---
 title: STK
 permalink: stk.html
-folder: packages
+folder: mpi_x
 show_sidebar: true
 contact: mwglass@sandia.gov
 package: shards

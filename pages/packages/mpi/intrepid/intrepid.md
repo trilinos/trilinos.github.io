@@ -1,7 +1,7 @@
 ---
 title: Intrepid
 permalink: intrepid.html
-folder: packages
+folder: mpi
 show_sidebar: true
 contact: mperego@sandia.gov
 package: intrepid

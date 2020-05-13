@@ -1,7 +1,7 @@
 ---
 title: ShyLU Doxygen
 permalink: shylu_doxygen.html
-folder: packages
+folder: mpi_x
 show_sidebar: true
 contact: shylu-developers@software.sandia.gov
 package: shards

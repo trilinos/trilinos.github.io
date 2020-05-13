@@ -1,7 +1,7 @@
 ---
 title: ML Publications and User Guides
 permalink: ml_publications.html
-folder: packages
+folder: mpi
 ---
 
 <a name="ML-publications"></a><span style="text-decoration: underline;">**Publications**</span>

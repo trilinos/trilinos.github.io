@@ -1,7 +1,7 @@
 ---
 title: Isorropia
 permalink: isorropia.html
-folder: packages
+folder: mpi
 show_sidebar: true
 contact: egboman@sandia.gov
 package: isorropia

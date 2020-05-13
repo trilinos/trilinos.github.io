@@ -1,7 +1,7 @@
 ---
 title: PAMGEN
 permalink: pamgen.html
-folder: packages
+folder: mpi
 show_sidebar: true
 contact: dmhensi@sandia.gov
 package: optipack

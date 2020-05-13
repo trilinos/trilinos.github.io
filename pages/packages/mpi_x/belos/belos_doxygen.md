@@ -1,7 +1,7 @@
 ---
 title: Belos Doxygen
 permalink: belos_doxygen.html
-folder: packages
+folder: mpi_x
 show_sidebar: true
 contact: hkthorn@sandia.gov
 package: belos

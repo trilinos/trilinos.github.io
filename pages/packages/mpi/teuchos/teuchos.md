@@ -1,7 +1,7 @@
 ---
 title: Teuchos
 permalink: teuchos.html
-folder: packages
+folder: mpi
 show_sidebar: true
 contact: hkthorn@sandia.gov
 package: teuchos

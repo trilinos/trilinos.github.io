@@ -1,7 +1,7 @@
 ---
 title: Moertel
 permalink: moertel.html
-folder: packages
+folder: archive
 show_sidebar: true
 contact: maherou@sandia.gov
 package: moertel

@@ -1,7 +1,7 @@
 ---
 title: PAMGEN FAQ
 permalink: pamgen_faq.html
-folder: packages
+folder: mpi
 ---
 
 **What is PAMGEN useful for?**

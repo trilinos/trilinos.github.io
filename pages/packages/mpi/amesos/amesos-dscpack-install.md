@@ -1,7 +1,7 @@
 ---
 title: Amesos DSCPACK Install
 permalink: amesos-dscpack-install.html
-folder: packages
+folder: mpi
 ---
 
 ## DSCPACK Installation

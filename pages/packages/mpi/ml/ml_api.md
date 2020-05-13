@@ -1,7 +1,7 @@
 ---
 title: ML API
 permalink: ml_api.html
-folder: packages
+folder: mpi
 ---
 
 **The ML API: A C++ Framework for the Development of Scalable Multilevel and Domain Decomposition Preconditioners based on Aggregation**  

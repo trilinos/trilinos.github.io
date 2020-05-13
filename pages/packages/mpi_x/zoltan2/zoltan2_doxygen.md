@@ -1,7 +1,7 @@
 ---
 title: Zoltan2 Doxygen
 permalink: zoltan2_doxygen.html
-folder: packages
+folder: mpi_x
 show_sidebar: true
 contact: zoltan2-dev@software.sandia.gov
 package: zoltan2

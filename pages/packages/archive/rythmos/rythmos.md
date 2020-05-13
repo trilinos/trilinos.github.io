@@ -1,7 +1,7 @@
 ---
 title: Rythmos
 permalink: rythmos.html
-folder: packages
+folder: archive
 show_sidebar: true
 contact: ccober@sandia.gov
 package: rythmos

@@ -1,7 +1,7 @@
 ---
 title: Teko
 permalink: teko.html
-folder: packages
+folder: research
 show_sidebar: true
 contact: eccyr@sandia.gov
 package: teko

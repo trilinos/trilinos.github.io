@@ -1,7 +1,7 @@
 ---
 title: Piro
 permalink: piro.html
-folder: packages
+folder: mpi
 show_sidebar: true
 contact: agsalin@sandia.gov
 package: piro

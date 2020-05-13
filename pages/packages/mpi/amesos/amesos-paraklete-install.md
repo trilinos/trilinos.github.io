@@ -1,7 +1,7 @@
 ---
 title: Amesos Paraklete Install
 permalink: amesos-paraklete-install.html
-folder: packages
+folder: mpi
 ---
 
 ## Paraklete Installation

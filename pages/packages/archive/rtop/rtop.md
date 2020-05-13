@@ -1,7 +1,7 @@
 ---
 title: RTOp
 permalink: rtop.html
-folder: packages
+folder: archive
 show_sidebar: true
 contact: bartlettra@ornl.gov
 package: rtop

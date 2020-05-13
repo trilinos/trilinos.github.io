@@ -1,7 +1,7 @@
 ---
 title: IFPACK Doxygen
 permalink: ifpack_doxygen.html
-folder: packages
+folder: mpi
 show_sidebar: true
 contact: maherou@sandia.gov
 package: ifpack

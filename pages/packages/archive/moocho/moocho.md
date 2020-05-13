@@ -1,7 +1,7 @@
 ---
 title: MOOCHO
 permalink: moocho.html
-folder: packages
+folder: archive
 show_sidebar: true
 contact: rabartl@sandia.gov
 package: moocho

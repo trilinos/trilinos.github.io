@@ -1,7 +1,7 @@
 ---
 title: ForTrilinos
 permalink: fortrilinos.html
-folder: packages
+folder: mpi_x
 show_sidebar: true
 contact: maherou@sandia.gov
 package: ForTrilinos

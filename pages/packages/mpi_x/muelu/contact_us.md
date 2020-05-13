@@ -1,7 +1,7 @@
 ---
 title: Contact us
 permalink: muelu_contact.html
-folder: packages
+folder: mpi_x
 ---
 
 For MueLu bug reporting:

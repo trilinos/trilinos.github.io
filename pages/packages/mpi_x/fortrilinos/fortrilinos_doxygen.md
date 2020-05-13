@@ -1,7 +1,7 @@
 ---
 title: ForTrilinos Doxygen
 permalink: fortrilinos_doxygen.html
-folder: packages
+folder: mpi_x
 show_sidebar: true
 contact: william@sandia.gov
 package: ForTrilinos

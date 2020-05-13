@@ -1,7 +1,7 @@
 ---
 title: Ifpack2
 permalink: ifpack2.html
-folder: packages
+folder: mpi_x
 show_sidebar: true
 contact: Jonathan Hu (jhu@sandia.gov), Chris Siefert (csiefer@sandia.gov)
 package: ifpack2

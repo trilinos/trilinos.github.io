@@ -1,7 +1,7 @@
 ---
 title: MueLu Documentation
 permalink: muelu_documentation.html
-folder: packages
+folder: mpi_x
 ---
 
 [MueLu User’s Guide](pdfs/mueluguide.pdf) ([bibtex citation](muelu_citation.html)) (For the most up-to-date version, download Trilinos and see muelu/doc/UsersGuide.)

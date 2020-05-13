@@ -1,7 +1,7 @@
 ---
 title: Phalanx Doxygen
 permalink: phalanx_doxygen.html
-folder: packages
+folder: research
 show_sidebar: true
 contact: rppawlo@sandia.gov
 package: optipack

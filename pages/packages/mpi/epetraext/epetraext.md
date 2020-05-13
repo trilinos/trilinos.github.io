@@ -1,7 +1,7 @@
 ---
 title: EpetraExt
 permalink: epetraext.html
-folder: packages
+folder: mpi
 show_sidebar: true
 contact: maherou@sandia.gov
 package: epetraext

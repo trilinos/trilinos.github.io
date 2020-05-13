@@ -1,7 +1,7 @@
 ---
 title: Domi
 permalink: domi.html
-folder: packages
+folder: archive
 show_sidebar: true
 contact: N/A
 package: domi

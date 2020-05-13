@@ -1,7 +1,7 @@
 ---
 title: Komplex Doxygen
 permalink: komplex_doxygen.html
-folder: packages
+folder: archive
 show_sidebar: true
 contact: maherou@sandia.gov
 package: komplex

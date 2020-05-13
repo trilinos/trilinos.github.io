@@ -1,7 +1,7 @@
 ---
 title: Amesos Doxygen
 permalink: amesos_doxygen.html
-folder: packages
+folder: mpi
 show_sidebar: true
 contact: amesos-developers@software.sandia.gov
 package: amesos

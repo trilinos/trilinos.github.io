@@ -1,7 +1,7 @@
 ---
 title: Stratimikos
 permalink: stratimikos.html
-folder: packages
+folder: mpi
 show_sidebar: true
 contact: bartlettra@ornl.gov
 package: stratimikos
