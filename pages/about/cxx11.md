@@ -11,8 +11,3 @@ Packages that do not depend on C++11, either directly or through other packages,
 `-DTrilinos_ENABLE_CXX11=OFF`
 
 Using this option will cause Trilinos to behave exactly the same as it did prior to turning on C++11 support by default.
-
-### Helpful Links:
-
-[Instructions for installing GCC](install_gcc.html)
-[Adding C++11 dependency for Trilinos packages and client codes](add_CXX11.html)

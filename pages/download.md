@@ -3,8 +3,4 @@ title: Download
 permalink: download.html
 ---
 
-Don't want to use Git workflows?
-
-Download versions of Trilinos from the GitHub **[Trilinos releases page](https://github.com/trilinos/Trilinos/releases)**.
-
-There you can find tarballs for each tagged release.
+If you don't want to use Git workflows, you can download versions of Trilinos from the GitHub **[Trilinos releases page](https://github.com/trilinos/Trilinos/releases)**.

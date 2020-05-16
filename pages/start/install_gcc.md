@@ -4,8 +4,6 @@ permalink: install_gcc.html
 folder: start
 ---
 
-# Installing GCC
-
 Starting with Trilinos 12.0 (and after Trilinos 11.14 on the development branch), some Trilinos packages, including Kokkos and Tpetra, will begin to require certain features from C++11 that will require a minimum GCC version of 4.7.2\. Some common machines (Enterprise Linux 6, OSX) do not meet this minimum requirement.
 
 There are several ways that a person can get a new version of GCC. For OSX in particular, most people have needed to install their own compilers to use Trilinos for a long time. Common solutions include MacPorts, Fink, hpc.sourceforge, and others. The Trilinos Project does not endorse any specific solution. However, on this page, we offer some information for people looking to install GCC from source for OSX or Linux, and also mention the CentOS devtoolset as another possible solution.
