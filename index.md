@@ -15,19 +15,18 @@ Trilinos is also a collection of reusable scientific software libraries, known i
   <a href="#" data-toggle="tooltip" data-original-title="{{site.data.definitions.nonlinear_solver}}">non-linear solvers</a>,
  <a href="#" data-toggle="tooltip" data-original-title="{{site.data.definitions.transient_solver}}">transient solvers</a>,
  <a href="#" data-toggle="tooltip" data-original-title="{{site.data.definitions.optimization_solver}}">optimization solvers</a>, and
-<a href="#" data-toggle="tooltip" data-original-title="{{site.data.definitions.linear_solver}}">uncertainty quantification (UQ) solvers</a>.
+<a href="#" data-toggle="tooltip" data-original-title="{{site.data.definitions.uq_solver}}">uncertainty quantification (UQ) solvers</a>.
 
 ### Parallel Computing Using Trilinos
 Most Trilinos algorithms and software are built upon its abilities to construct and solve
 <a href="#" data-toggle="tooltip" data-original-title="{{site.data.definitions.sparse_problem}}">sparse problems</a>, using
-
 <a href="#" data-toggle="tooltip" data-original-title="{{site.data.definitions.sparse_linear_solver}}">sparse linear solvers</a>. These solvers rely on a collection of data structure classes and functions (kernels) for
 <a href="#" data-toggle="tooltip" data-original-title="{{site.data.definitions.parallel_linear_algebra_kernels}}">parallel linear algebra</a>, especially
 <a href="#" data-toggle="tooltip" data-original-title="{{site.data.definitions.parallel_sparse_kernels}}">parallel sparse kernels</a>.
 
 ### Trilinos Portable Parallel Execution
-Trilinos is targeted for all major parallel architectures, including distributed memory using
-<a href="#" data-toggle="tooltip" data-original-title="{{site.data.definitions.mpi}}">the Message Passing Interface (MPI)</a>,
+Trilinos is targeted for all major parallel architectures, including distributed memory using the
+<a href="#" data-toggle="tooltip" data-original-title="{{site.data.definitions.mpi}}">Message Passing Interface (MPI)</a>,
 <a href="#" data-toggle="tooltip" data-original-title="{{site.data.definitions.multicore}}">multicore</a> using a variety of common approaches,
 <a href="#" data-toggle="tooltip" data-original-title="{{site.data.definitions.accelerator}}">accelerators</a> using common and emerging approaches, and
 <a href="#" data-toggle="tooltip" data-original-title="{{site.data.definitions.vectorization}}">vectorization</a>.
