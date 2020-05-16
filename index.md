@@ -27,9 +27,10 @@ Most Trilinos algorithms and software are built upon its abilities to construct 
 
 ### Trilinos Portable Parallel Execution
 Trilinos is targeted for all major parallel architectures, including distributed memory using
-<a href="#" data-toggle="tooltip" data-original-title="{{site.data.definitions.mpi}}">the Message Passing Interface (MPI)</a>, <a href="#" data-toggle="tooltip" data-original-title="{{site.data.definitions.multicore}}">multicore</a> using a variety of common approaches,
-href="#" data-toggle="tooltip" data-original-title="{{site.data.definitions.accelerator}}">accelerators</a> using common and emerging approaches, and
- href="#" data-toggle="tooltip" data-original-title="{{site.data.definitions.vectorization}}">vectorization</a>.
+<a href="#" data-toggle="tooltip" data-original-title="{{site.data.definitions.mpi}}">the Message Passing Interface (MPI)</a>,
+<a href="#" data-toggle="tooltip" data-original-title="{{site.data.definitions.multicore}}">multicore</a> using a variety of common approaches,
+<a href="#" data-toggle="tooltip" data-original-title="{{site.data.definitions.accelerator}}">accelerators</a> using common and emerging approaches, and
+<a href="#" data-toggle="tooltip" data-original-title="{{site.data.definitions.vectorization}}">vectorization</a>.
 
  Trilinos parallel functionality is written on top of libraries that support compile-time polymorphism, such that, as long as a given algorithm and problem size contain enough latent parallelism, the same Trilinos source code can be compiled and execution on any reasonable combination of distributed, multicore, accelerator and vectorizing computing devices.
 
