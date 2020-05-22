@@ -15,6 +15,16 @@ url = {https://trilinos.github.io}
 }
 ```
 
+If you want to cite a specific package in Trilinos, you may provide a direct link to its webpage too.  For example:
+```
+@Manual{muelu-website,
+title = {The {M}uelu {P}roject {W}ebsite},
+author = {The {M}uelu {P}roject {T}eam}},
+year = {2020 (acccessed May 22, 2020)},
+url = {https://trilinos.github.io/muelu.html}
+}
+```
+
 Note that you may need to install the URL package:
 
 ```
