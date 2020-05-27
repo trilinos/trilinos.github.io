@@ -4,7 +4,7 @@ permalink: phalanx.html
 folder: research
 show_sidebar: true
 contact: rppawlo@sandia.gov
-package: optipack
+package: phalanx
 doxygen: true
 ---
 
