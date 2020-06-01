@@ -299,7 +299,7 @@ Y
 
 ### **Stratimikos**: High level linear solver interface
 
-Point-of-contact: Roscoe Bartlett (bartlettra@ornl.gov)  
+Point-of-contact: Roscoe Bartlett (rabartl@sandia.gov)  
 [https://trilinos.org/stratimikos](stratimikos.html)
 
 Stratimikos contains a unified set of wrappers to linear solver and preconditioner capabilities in Trilinos. Stratimikos essentially consists of the single class DefaultLinearSolverBuilder. This class takes as input a (nested) parameter list that contains options for the desired solvers and preconditioners.
@@ -323,7 +323,7 @@ AztecOO is compatible with Epetra only.
 
 ### **Belos**: Classical and block Krylov subspace methods
 
-Points-of-contact: Heidi Thornquist (hkthorn@sandia.gov) and Mike Parks (mlparks@sandia.gov)  
+Points-of-contact: Heidi Thornquist (hkthorn@sandia.gov) and Jennifer Loe (jloe@sandia.gov)  
 [https://trilinos.github.io/belos.html](belos.html)
 
 Belos provides next-generation iterative linear solvers and a powerful linear solver developer framework. This framework includes the following abstract interfaces and implementations:
@@ -439,7 +439,7 @@ Ifpack is compatible with Epetra only.
 
 ### **Ifpack2**: Point preconditioning, incomplete factorizations
 
-Points-of-contact: Mark Hoemmen (mhoemme@sandia.gov) , Chris Siefert ([csiefer@sandia.gov](mailto:csiefer@sandia.gov)), Jonathan Hu ([jhu@sandia.gov](mailto:jhu@sandia.gov))
+Points-of-contact: Chris Siefert ([csiefer@sandia.gov](mailto:csiefer@sandia.gov)), Jonathan Hu ([jhu@sandia.gov](mailto:jhu@sandia.gov))
 
 [https://trilinos.github.io/ifpack2.html](ifpack2.html)
 
