@@ -29,6 +29,7 @@ The following packages are undergoing active development in support of new appli
 - [NOX](nox_and_loca.html "NOX and LOCA") -- Nonlinear solver package. Abstract and concrete classes for construction and solution of nonlinear problems.
 - [LOCA](nox_and_loca.html "NOX and LOCA") -- LOCA is a software library for performing bifurcation analysis of large-scale applications. When implemented with an application code, LOCA enables the tracking of solution branches as a function of system parameters and the direct tracking of bifurcation points. LOCA is designed to drive application codes that use Newton’s method to locate steady-state solutions to nonlinear problems.
 - [ROL](rol "Rapid Optimization Library (ROL)") -- Rapid Optimization Library (ROL) is Trilinos’ next-generation package for large-scale optimization. It is used for the solution of optimal design, optimal control and inverse problems in large-scale engineering applications. Other uses include mesh optimization and image processing. ROL solves nonlinear nonconvex optimization problems with general equality and inequality constraints, with efficient specializations for various problem types. ROL’s matrix-free API enables direct use of application data structures and memory spaces, linear solvers, nonlinear solvers and preconditioners.
+- [Tempus](tempus.html "Tempus") -- Time-integration framework for advanced transient analysis, including various time integrators and embedded sensitivity analysis.
 
 ### Eigensolvers
 
@@ -36,7 +37,7 @@ The following packages are undergoing active development in support of new appli
 
 ### Automatic Differentiation
 
-- [Sacado](sacado.html "Sacado") -- Sacado is a package for automatic differentiation of C++ programs It provides simple yet fast and efficient classes for forward, revers and Taylor polynomial mode automatic differentiation using C++ template and operator overloading. The resulting derivatives can be leveraged in numerous ways including nonlinear solves with [NOX](nox_and_loca.html "NOX and LOCA") continuation and bifurcation analysis with [LOCA](nox_and_loca.html "NOX and LOCA") optimization with [MOOCHO](moocho.html "MOOCHO"), and time integration wit [Rythmos](rythmos.html "Rythmos").
+- [Sacado](sacado.html "Sacado") -- Sacado is a package for automatic differentiation of C++ programs It provides simple yet fast and efficient classes for forward, revers and Taylor polynomial mode automatic differentiation using C++ template and operator overloading. The resulting derivatives can be leveraged in numerous ways including nonlinear solves with [NOX](nox_and_loca.html "NOX and LOCA") continuation and bifurcation analysis with [LOCA](nox_and_loca.html "NOX and LOCA") optimization with [MOOCHO](moocho.html "MOOCHO"), and time integration with [Rythmos](rythmos.html "Rythmos").
 - [Stokhos](stokhos.html "Stokhos") -- Stokhos is a package for intrusive stochastic Galerkin uncertainty quantification methods. It provides methods for computing well-known intrusive stochastic Galerkin projections such as Polynomial Chaos and Generalized Polynomial Chaos, interfaces for forming the resulting nonlinear systems, and linear solver methods for solving block stochastic Galerkin linear systems.
 
 ## Supported Trilinos packages
