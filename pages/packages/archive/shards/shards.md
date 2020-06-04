@@ -3,7 +3,7 @@ title: Shards
 permalink: shards.html
 folder: archive
 show_sidebar: true
-contact: hcedwar@sandia.gov
+contact: mperego@sandia.gov
 package: shards
 doxygen: true
 ---
