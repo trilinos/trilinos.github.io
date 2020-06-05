@@ -5,7 +5,7 @@ folder: research
 show_sidebar: true
 contact: pakuber@sandia.gov
 package: compadre
-doxygen: true
+doxygen: false
 ---
 The Compadre Toolkit provides tools for the approximation of linear operators applied to a function (including point evaluation and derivatives), given samples of the function over a cloud of points. The toolkit can be used for data transfer applications as well as for meshless discretization of PDEs. Compadre currently uses Generalized Moving Least Squares (GMLS) for approximating functionals and we plan on implementing other meshless methods like radial basis functions. 
 
