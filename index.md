@@ -42,7 +42,7 @@ Trilinos contains many packages, organized in [five product suites](product.html
 - Data services: Vectors, matrices, graphs and similar data containers, and related operations.
 - Linear and Eigenproblem solvers: For large, distributed systems of equations.
 - Nonlinear solvers and analysis tools: Includes basic nonlinear approaches, continuation methods and similar.
-- Discretizations: Many finite element and similar approaches.
+- Discretizations: Tools for the discretization of integral and differential equations.
 - Framework: Tools for building, testing and integrating Trilinos capabilities.
 
 ### Trilinos GitHub Location

@@ -3,22 +3,22 @@ title: Intrepid
 permalink: intrepid.html
 folder: mpi
 show_sidebar: true
-contact: mperego@sandia.gov
+contact: mperego@sandia.gov, pbboche@sandia.gov, dridzal@sandia.gov, kjpeter@sandia.gov
 package: intrepid
 doxygen: true
 ---
 
 ![](images/intrepid-balloon.jpg)
 
-Welcome to the Intrepid Home
+Intrepid is still mantained but not developed. For a performance portable implementation see [Intrepid2](intrepid2.html)
 
 Intrepid stands for **IN**teroperable **T**ools for **R**apid d**E**velo**P**ment of compat**I**ble **D**iscretizations.
 
-Intrepid is a library of interoperable tools for compatible discretizations of Partial Differential Equations (PDEs). Included with the Trilinos 10.0 release is the “_expert version_” of Intrepid. This version is intended primarily for application developers who want to reuse large parts of their existing code frameworks such as I/O, data structures, assembly routines, etc. while gaining access to advanced discretization capabilities provided by Intrepid. In such cases the bulk of the data is owned and managed by the user rather than by Intrepid. To avoid unnecessary and possibly expensive copying of data to and from Intrepid, the expert version of the package comprises of mostly stateless classes operating on user-owned data.Virtually all numerical data required by PDE codes can be represented as a multi-dimensional array of scalar values. For this reason, and to enahnce interoprability, Intrepid classes are templated on generic multi-dimensional arrays. The [Shards](shards.html) package provides an implementation of a multi-dimensional array that can be used for that purpose, or users can write their own multi-dimensional arrays as long as a minimal interface is supported.
+Intrepid is a library of interoperable tools for compatible discretizations of Partial Differential Equations (PDEs). It is intended primarily for application developers who want to reuse large parts of their existing code frameworks such as I/O, data structures, assembly routines, etc. while gaining access to advanced discretization capabilities provided by Intrepid. In such cases the bulk of the data is owned and managed by the user rather than by Intrepid. To avoid unnecessary and possibly expensive copying of data to and from Intrepid, the expert version of the package comprises of mostly stateless classes operating on user-owned data.Virtually all numerical data required by PDE codes can be represented as a multi-dimensional array of scalar values. For this reason, and to enahnce interoprability, Intrepid classes are templated on generic multi-dimensional arrays. The [Shards](shards.html) package provides an implementation of a multi-dimensional array that can be used for that purpose, or users can write their own multi-dimensional arrays as long as a minimal interface is supported. 
 
 Overview
 
-Current release of Intrepid includes the following features:
+Intrepid includes the following features:
 
 *   Default finite element basis functions for _H(grad)_, _H(curl)_, _H(div)_ and _L2_ spaces of orders up to 2 on standard cell topologies in 1D, 2D and 3D
 *   High-order (up to 10) basis functions for _H(grad)_, _H(curl)_, _H(div)_ and _L2_ spaces on select cell topologies
@@ -28,17 +28,9 @@ Current release of Intrepid includes the following features:
 *   Implementation of multi-diumensional arrays and algebraic operations on them
 *   Examples showing solution of basic 2nd order elliptic boundary value problems (Poisson, div-curl, and curl-curl systems) using Intrepid
 
-Development plans
-
-The next release of Intrepid is expected to support Finite Difference and Finite Volume discretizations on standard and non-standard (polygon and polyhedron) cell topologies. A user-firendly version for rapid development of PDE codes is also under development.
-
-Known issues
-
-Check the Frequently Asked Questions page for information on known issues.
-
 Supplementary materials
 
-*   Intrepid [tutorial:](pdfs/TUG09_Intrepid_Tutorial.pdf) 2009 Fall TUG Meeting. In this tutorial you will find brief summary of the package and a step-by-step example showing assembly of a linear system corresponding to curl-conforming least-squares finite element discretization of a div-curl boundary value problem with tangential boundary conditions.
+*   [Solving PDEs with Intrepid](https://content.iospress.com/articles/scientific-programming/spr340) by Bochev, Edwards, Kirby, Peterson, Ridzal.
 
 <span style="text-decoration: underline;">**Overview**</span>
 

@@ -40,6 +40,13 @@ The following packages are undergoing active development in support of new appli
 - [Sacado](sacado.html "Sacado") -- Sacado is a package for automatic differentiation of C++ programs It provides simple yet fast and efficient classes for forward, revers and Taylor polynomial mode automatic differentiation using C++ template and operator overloading. The resulting derivatives can be leveraged in numerous ways including nonlinear solves with [NOX](nox_and_loca.html "NOX and LOCA") continuation and bifurcation analysis with [LOCA](nox_and_loca.html "NOX and LOCA") optimization with [MOOCHO](moocho.html "MOOCHO"), and time integration with [Rythmos](rythmos.html "Rythmos").
 - [Stokhos](stokhos.html "Stokhos") -- Stokhos is a package for intrusive stochastic Galerkin uncertainty quantification methods. It provides methods for computing well-known intrusive stochastic Galerkin projections such as Polynomial Chaos and Generalized Polynomial Chaos, interfaces for forming the resulting nonlinear systems, and linear solver methods for solving block stochastic Galerkin linear systems.
 
+### Discretization Utilities
+- [Panzer](panzer.html "Compadre") -- Panzer is a package for performing finte element analysis
+- [Intrepid2](intrepid2.html "Intrepid2") -- Performance portable tools for the local assembly of high-order compatible finte element discretizations.
+- [Phalanx](phalanx.html "Phalanx") -- Phalanx is a DAG-based local field evaluation kernel specifically designed for general partial differential equation solvers.
+- [Compadre](compadre.html "Compadre") -- Toolkit for meshless discretizations enabling solution of differential equations and data transfer.
+
+
 ## Supported Trilinos packages
 The following packages are no longer under active development but are supported for bug fixes.
 
@@ -58,7 +65,7 @@ The following packages are no longer under active development but are supported 
 - [AztecOO](aztecoo.html "AztecOO") -- Preconditioned Krylov solver package. Supercedes Aztec 2.1\. Solves linear systems of equations via preconditioned Krylov methods. Uses Epetra objects, compatible with IFPACK, ML and Aztec.
 - [Amesos](amesos.html "Amesos") -- Direct solver classes. Supports use of a growing list of third party direct solvers, including DSCPACK, SuperLU, SuperLUDist and UMFPACK. Compatible with Epetra.
 
-### Partitioning .html Load Balancing
+### Partitioning and Load Balancing
 
 - [Isorropia](isorropia.html "Isorropia") -- Isorropia is a partitioning and load balancing package, intended to assist with redistributing objects such as matrices and matrix-graphs in a parallel execution setting, to allow for more efficient computations. Isorropia is primarily an interface to the [Zoltan](https://cs.sandia.gov/Zoltan/) library.
 - [Zoltan](zoltan.html "Zoltan") -- Zoltan is a toolkit of parallel services for dynamic, unstructured, and.htmlor adaptive simulations. Zoltan provides parallel dynamic load balancing and related services for a wide variety of applications, including finite element methods, matrix operations, particle methods, and crash simulations. Zoltan also provides parallel graph coloring, matrix ordering, unstructured communication tools, and distributed data directories.
@@ -69,11 +76,13 @@ The following packages are no longer under active development but are supported 
 - [PyTrilinos](pytrilinos.html "PyTrilinos") -- Python interfaces to selected Trilinos packages.
 - [WebTrilinos](web_trilinos.html "Web Trilinos") -- Web interface to experiment with Trilinos through a browser.
 - [Stratimikos](stratimikos.html "Stratimikos") -- The package Stratimikos contains a unified set of Thyra-based wrappers to linear solver and preconditioner capabilities in Trilinos. The Stratimikos package is also a place where unified testing of linear solvers and preconditioners can be performed.
-- [FEI](fei.html "Fei") -- A general interface for assembling finite-element data into a system of linear equations.
 - [TrilinosCouplings](trilinoscouplings.html "Trilinos Couplings") -- A collection of interfaces between packages.
 
 ### Discretization Utilities
 
-- [Intrepid](intrepid.html "Intrepid") -- Intrepid is a library of interoperable tools for compatible discretizations of Partial Differential Equations (PDEs). Included with the Trilinos 10.0 release is the “expert version” of Intrepid. This version is intended primarily for application developers who want to reuse large parts of their existing code frameworks such as I.htmlO, data structures, assembly routines, etc. while gaining access to advanced discretization capabilities provided by Intrepid.
+- [Intrepid](intrepid.html "Intrepid") -- Intrepid is a library of interoperable tools for compatible discretizations of partial differential equations.
+- [Shards](shards.html "Shards") -- topology data for mesh-based discretization of differential equations
+- [MiniTensor](minitensor.html "MiniTensor") -- Tools for the manipulation and optimization of small vectors/tensors
+- [FEI](fei.html "FEI") -- A general interface for assembling finite-element data into a system of linear equations.
 - [STK](stk.html "STK") -- Contains capabilities intended to support massively parallel multi-physics computations on dynamically changing unstructured meshes. The primary capability in the STK package is the mesh database which supports creation and manipulation of mesh entities (nodes, elements etc) and computational field data defined on the mesh. STK also contains sub-libraries that support geometric proximity searches, assembly into linear-systems, etc.
-- [Phalanx](phalanx.html "Phalanx") -- Phalanx is a local field evaluation kernel specifically designed for general partial differential equation solvers.
+
