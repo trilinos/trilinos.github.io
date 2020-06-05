@@ -60,7 +60,7 @@ The following table gives a one-line description of available Trilinos linear an
 
 <td rowspan="2" width="261">Krylov methods</td>
 
-<td valign="top" width="99"><a href="#-aztecoo-preconditioners-and-krylov-subspace-methods">AztecOO</a></td>
+<td valign="top" width="99"><a href="#aztecoo-preconditioners-and-krylov-subspace-methods">AztecOO</a></td>
 
 <td width="68">
 
@@ -74,7 +74,7 @@ Y
 
 <tr>
 
-<td valign="top" width="99"><a href="#-belos-classical-and-block-krylov-subspace-methods">Belos</a></td>
+<td valign="top" width="99"><a href="#belos-classical-and-block-krylov-subspace-methods">Belos</a></td>
 
 <td width="68">
 
@@ -94,7 +94,7 @@ Y
 
 <td rowspan="3" width="261">Direct solvers</td>
 
-<td valign="top" width="99"><a href="#-amesos-direct-sparse-linear-solver-interface">Amesos</a></td>
+<td valign="top" width="99"><a href="#amesos-direct-sparse-linear-solver-interface">Amesos</a></td>
 
 <td width="68">
 
@@ -108,7 +108,7 @@ Y
 
 <tr>
 
-<td valign="top" width="99"><a href="#-amesos2-direct-sparse-linear-solver-interface">Amesos2</a></td>
+<td valign="top" width="99"><a href="#amesos2-direct-sparse-linear-solver-interface">Amesos2</a></td>
 
 <td width="68">
 
@@ -126,7 +126,7 @@ Y
 
 <tr>
 
-<td valign="top" width="99"><a href="#-pliris-direct-dense-linear-solver">Pliris</a></td>
+<td valign="top" width="99"><a href="#pliris-direct-dense-linear-solver">Pliris</a></td>
 
 <td width="68">
 
@@ -142,7 +142,7 @@ Y
 
 <td rowspan="2" width="261">Incomplete factorizations, SOR methods, Additive Schwarz</td>
 
-<td valign="top" width="99"><a href="#-ifpack-point-preconditioning-incomplete-factorizations-and-classical-domain-decomposition">Ifpack</a></td>
+<td valign="top" width="99"><a href="#ifpack-point-preconditioning-incomplete-factorizations-and-classical-domain-decomposition">Ifpack</a></td>
 
 <td width="68">
 
@@ -156,7 +156,7 @@ Y
 
 <tr>
 
-<td valign="top" width="99"><a href="#-ifpack2-point-preconditioning-incomplete-factorizations">Ifpack2</a></td>
+<td valign="top" width="99"><a href="#ifpack2-point-preconditioning-incomplete-factorizations">Ifpack2</a></td>
 
 <td width="68"></td>
 
@@ -172,7 +172,7 @@ Y
 
 <td rowspan="2" width="261">Algebraic multigrid</td>
 
-<td valign="top" width="99"><a href="#-ml-smoothed-aggregation-algebraic-multigrid">ML</a></td>
+<td valign="top" width="99"><a href="#ml-smoothed-aggregation-algebraic-multigrid">ML</a></td>
 
 <td width="68">
 
@@ -186,7 +186,7 @@ Y
 
 <tr>
 
-<td valign="top" width="99"><a href="#-muelu-multigrid-framework">MueLu</a></td>
+<td valign="top" width="99"><a href="#muelu-multigrid-framework">MueLu</a></td>
 
 <td width="68">
 
@@ -206,7 +206,7 @@ Y
 
 <td valign="top" width="261">Block preconditioning framework</td>
 
-<td valign="top" width="99"><a href="#-teko-block-preconditioning-framework">Teko</a></td>
+<td valign="top" width="99"><a href="#teko-block-preconditioning-framework">Teko</a></td>
 
 <td width="68">
 
@@ -222,7 +222,7 @@ Y
 
 <td valign="top" width="261">Eigen methods</td>
 
-<td valign="top" width="99"><a href="#-anasazi-parallel-eigen-solvers">Anasazi</a></td>
+<td valign="top" width="99"><a href="#anasazi-parallel-eigen-solvers">Anasazi</a></td>
 
 <td width="68">
 
@@ -240,9 +240,9 @@ Y
 
 <tr>
 
-<td valign="top" width="261">Domian Decomposition Preconditioners and Subdomain solvers </td>
+<td valign="top" width="261">Domain Decomposition Preconditioners and Subdomain solvers </td>
 
-<td valign="top" width="99"><a href="#-shylu-hybrid-iterativedirect-schur-complement-solver">ShyLU</a></td>
+<td valign="top" width="99"><a href="#shylu-hybrid-iterativedirect-schur-complement-solver">ShyLU</a></td>
 
 <td width="68">
 
@@ -258,7 +258,7 @@ Y
 
 <td valign="top" width="261">Equivalent real forms</td>
 
-<td valign="top" width="99"><a href="#-komplex-complex-valued-system-solver">Komplex</a></td>
+<td valign="top" width="99"><a href="#komplex-complex-valued-system-solver">Komplex</a></td>
 
 <td width="68">
 
@@ -274,7 +274,7 @@ Y
 
 <td valign="top" width="261">Solver manager</td>
 
-<td valign="top" width="99"><a href="#--stratimikos-high-level-linear-solver-interface">Stratimikos</a></td>
+<td valign="top" width="99"><a href="#stratimikos-high-level-linear-solver-interface">Stratimikos</a></td>
 
 <td width="68">
 
