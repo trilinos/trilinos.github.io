@@ -41,7 +41,7 @@ The following packages are undergoing active development in support of new appli
 - [Stokhos](stokhos.html "Stokhos") -- Stokhos is a package for intrusive stochastic Galerkin uncertainty quantification methods. It provides methods for computing well-known intrusive stochastic Galerkin projections such as Polynomial Chaos and Generalized Polynomial Chaos, interfaces for forming the resulting nonlinear systems, and linear solver methods for solving block stochastic Galerkin linear systems.
 
 ### Discretization Utilities
-- [Panzer](panzer.html "Compadre") -- Panzer is a package for performing finte element analysis
+- [Panzer](panzer.html "Panzer") -- Panzer is a package for performing finte element analysis
 - [Intrepid2](intrepid2.html "Intrepid2") -- Performance portable tools for the local assembly of high-order compatible finte element discretizations.
 - [Phalanx](phalanx.html "Phalanx") -- Phalanx is a DAG-based local field evaluation kernel specifically designed for general partial differential equation solvers.
 - [Compadre](compadre.html "Compadre") -- Toolkit for meshless discretizations enabling solution of differential equations and data transfer.
