@@ -3,7 +3,7 @@ title: Tpetra
 permalink: tpetra.html
 folder: mpi_x
 show_sidebar: true
-contact: mhoemme@sandia.gov
+contact: kddevin@sandia.gov
 package: tpetra
 doxygen: true
 ---
