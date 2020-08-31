@@ -18,7 +18,7 @@ Note that there may be overlap between some documents.
 
 ### Configuring, Building, and Installing Trilinos
 
-- [Trilinos CMake Reference](http://trilinos.org/docs/files/TrilinosBuildReference.pdf)) Instructions for building Trilinos 10.0 and later.
+- [Trilinos CMake Reference](https://docs.trilinos.org/files/TrilinosBuildReference.html)) Instructions for building Trilinos 10.0 and later.
 - [Third-party library (TPL) version compatibility](tpl_version_compatibility.html)
 
 ### Working With Trilinos
