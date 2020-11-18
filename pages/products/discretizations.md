@@ -2,9 +2,12 @@
 title: Discretizations
 permalink: discretizations.html
 folder: products
+contact: mperego@sandia.gov
 ---
 
 The objective of the Discretizations product is to provide modular, interoperable and extensible tools for the discretization of integral and differential equations. Adopting state-of-the-art numerics and HPC programming models, the discretization tools target both research and production applications. The Discretizations product includes tools for mesh-based discretizations such as finite element analysis as well as meshless discretization such as generalized moving least squares. 
+
+Discretizations Product Lead: Mauro Perego (mperego@sandia.gov)
 
 <div class="row">
     <div class="col-sm-2">
