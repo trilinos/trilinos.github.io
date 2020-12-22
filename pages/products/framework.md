@@ -26,7 +26,7 @@ The Trilinos project provides a guide to getting started with using Trilinos. In
 [Trilinos user documentation webpage](documentation.html)
 
 [Package-Specific Documentation, including Doxygen and user guides (when available)](packages.html)  
-After clicking on the above link, click on the name of a package, either in the left side bar, or in the main body of the page. Then click on the “Documentation” link in the left side bar.
+After clicking on the above link, click on the name of a package in the main body of the page. Then click on a link in the “Documentation” box (development and release versions are available for most packages).
 
 ### Trilinos Developer Documentation and Tools
 
