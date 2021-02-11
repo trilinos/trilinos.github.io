@@ -6,11 +6,11 @@ folder: community
 
 ## Dates
 
-- TBD
+- Cancelled
 
 ## Location
 
-- Virtual: Online
+- N/A
 - Contact: [Jim Willenbring](mailto:jmwille@sandia.gov)
 
 ## Trilinos Background
@@ -21,12 +21,12 @@ Full details of Trilinos and links to package websites can be found at the [Tril
 
 ## Meeting Overview
 
-TUG 2020 will be hosted online.  Meeting presentations will be recorded.  With sufficient interest, hands-on sessions will be considered.
+TUG 2020 was cancelled due to the COVID-19 pandemic.
 
 ## Registration
 
-TBD
+N/A
 
 ## Schedule
 
-TBD
+N/A

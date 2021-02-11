@@ -45,11 +45,28 @@ Trilinos contains many packages, organized in [five product suites](product.html
 - Discretizations: Many finite element and similar approaches.
 - Framework: Tools for building, testing and integrating Trilinos capabilities.
 
-### Trilinos GitHub Location
-The [primary Trilinos repository](https://github.com/trilinos/Trilinos) is  hosted on GitHub.
+### Related sites for Trilinos information:
+[Trilinos Home Page](https://trilinos.github.io/)
+- Software description, downloads, doxygen, etc.
+- If you are a new user, this is a great place to start!  (See [also](https://github.com/trilinos/Trilinos#documentation).)
+
+[Trilinos Repository](https://github.com/trilinos/Trilinos)
+- Site for the Trilinos git repository to handle open/general issues.
+- Developer's wiki.
+
+[Trilinos Developers Site](https://github.com/trilinos/Trilinos/wiki)
+- Site for information that Trilinos developers need to know.
+
+[Sandia Trilinos Portal](https://snl-wiki.sandia.gov/display/TRIL/Trilinos+Portal)
+- Site containing Sandia specific information related to Trilinos.
+- Access limited to Sandia staff.
+
+[Sandia Trilinos Strategy Planning](https://sems-atlassian-srn.sandia.gov/projects/TRILINOS/summary)
+- Sandia Jira site for Trilinos strategy epics and tasks.
+- Access limited to Sandia staff.
 
 ### TUG 2020
-[The 2020 Trilinos User-Developer Group (TUG) Meeting](https://trilinos.github.io/trilinos_user-developer_group_meeting_2020.html) will be virtual.  Details available in August, 2020.
+[The 2020 Trilinos User-Developer Group (TUG) Meeting](https://trilinos.github.io/trilinos_user-developer_group_meeting_2020.html) was cancelled due to the COVID-19 pandemic.
 
 ### TUG 2019
 [The 2019 Trilinos User-Developer Group Meeting (TUG)](https://trilinos.github.io/trilinos_user-developer_group_meeting_2019.html) was held in October in Albuquerque.
