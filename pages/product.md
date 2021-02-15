@@ -31,7 +31,7 @@ The Trilinos Embedded Nonlinear Analysis Tools Capability Area collects the top 
 ### Discretizations
 Leader - Mauro Perego
 
-The discretization capability area is new to Trilinos 9.0\. The objective is to provide, over time, a collection of libraries and interfaces that enable rapid development of application codes for applications that require numerical solution of Partial Differential Equations (PDE). The tools included in this capability area are designed to work with the rest of Trilinos packages or to be used as interoperable components in existing user environments.  The tools included in discretization capability area can be broadly divided into three related categories that correspond to the key steps in the numerical solution of PDEs by mesh-based methods.  [Further details.](products/discretizations.md) <a name="ScalableLinearAlgebra"></a>
+The objective of the Discretizations product is to provide modular, interoperable and extensible tools for the discretization of integral and differential equations. Adopting state-of-the-art numerics and HPC programming models, the discretization tools target both research and production applications. The Discretizations product includes tools for mesh-based discretizations such as finite element analysis as well as meshless discretization such as generalized moving least squares. [Further details.](products/discretizations.md) <a name="ScalableLinearAlgebra"></a>
 
 ### Framework
 Leader - Jim Willenbring

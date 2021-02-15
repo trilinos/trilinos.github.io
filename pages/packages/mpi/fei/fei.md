@@ -1,5 +1,5 @@
 ---
-title: Fei
+title: FEI
 permalink: fei.html
 folder: mpi
 show_sidebar: true
@@ -7,7 +7,7 @@ contact: william@sandia.gov
 package: fei
 ---
 
-**Welcome to the Fei Home**
+**Welcome to the FEI Home**
 
 The Finite Element Interface to Linear Solvers (FEI) is a general interface for assembling finite-element data into a linear system of equations. 
 It is an abstraction layer that insulates finite-element application codes from linear-algebra issues such as sparse matrix storage formats and mappings from nodes and solution fields to distributed equation spaces. 
@@ -16,10 +16,5 @@ FEI provides natural mechanisms for assembling finite-element data such as eleme
 It accepts data from multi-physics problems, allowing arbitrarily complicated elements with multiple solution fields per node, and cell centered fields. 
 It is designed for use in distributed-memory parallel finite-element applications, to assemble and solve distributed linear systems using scalable underlying solver libraries.
 
-**Overview**
+FEI is still maintained but no longer deveoped.
 
-Under construction…
-
-**Links**
-
-Under construction…
