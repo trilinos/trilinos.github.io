@@ -45,7 +45,7 @@ Trilinos contains many packages, organized in [five product suites](product.html
 - Discretizations: Tools for the discretization of integral and differential equations.
 - Framework: Tools for building, testing and integrating Trilinos capabilities.
 
-### Related sites for Trilinos information:
+### Related sites for Trilinos:
 [Trilinos Home Page](https://trilinos.github.io/)
 - Software description, downloads, doxygen, etc.
 - If you are a new user, this is a great place to start!  (See [also](https://github.com/trilinos/Trilinos#documentation).)
@@ -57,13 +57,15 @@ Trilinos contains many packages, organized in [five product suites](product.html
 [Trilinos Developers Site](https://github.com/trilinos/Trilinos/wiki)
 - Site for information that Trilinos developers need to know.
 
+### Related Sandia sites for Trilinos (access limited to Sandia staff:
+[Sandia Trilinos Help Desk](https://trilinos-help.sandia.gov)
+- Site to submit questions and requests.
+
 [Sandia Trilinos Portal](https://snl-wiki.sandia.gov/display/TRIL/Trilinos+Portal)
 - Site containing Sandia specific information related to Trilinos.
-- Access limited to Sandia staff.
 
 [Sandia Trilinos Strategy Planning](https://sems-atlassian-srn.sandia.gov/projects/TRILINOS/summary)
 - Sandia Jira site for Trilinos strategy epics and tasks.
-- Access limited to Sandia staff.
 
 ### TUG 2020
 [The 2020 Trilinos User-Developer Group (TUG) Meeting](https://trilinos.github.io/trilinos_user-developer_group_meeting_2020.html) was cancelled due to the COVID-19 pandemic.
