@@ -46,9 +46,9 @@ Trilinos contains many packages, organized in [five product suites](product.html
 - Framework: Tools for building, testing and integrating Trilinos capabilities.
 
 ### Related sites for Trilinos:
-[Trilinos Home Page](https://trilinos.github.io/)
-- Software description, downloads, doxygen, etc.
-- If you are a new user, this is a great place to start!  (See [also](https://github.com/trilinos/Trilinos#documentation).)
+
+[Trilinos Getting Started](https://trilinos.github.io/getting_started.html)
+- If you are a new user, this is a great place to start!
 
 [Trilinos Repository](https://github.com/trilinos/Trilinos)
 - Site for the Trilinos git repository to handle open/general issues.
@@ -57,7 +57,7 @@ Trilinos contains many packages, organized in [five product suites](product.html
 [Trilinos Developers Site](https://github.com/trilinos/Trilinos/wiki)
 - Site for information that Trilinos developers need to know.
 
-### Related Sandia sites for Trilinos (access limited to Sandia staff:
+### Related Sandia sites for Trilinos (access limited to Sandia staff):
 [Sandia Trilinos Help Desk](https://trilinos-help.sandia.gov)
 - Site to submit questions and requests.
 
