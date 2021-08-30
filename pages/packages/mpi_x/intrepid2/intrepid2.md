@@ -30,5 +30,5 @@ Hierachical basis functions are implemented accordingly to the paper [Orientatio
 Interpolation-based projections are described in the book [Computing with Hp-Adaptive Finite Elements, Vol. 2](https://dl.acm.org/doi/book/10.5555/1564840) by Demkowicz, Kurtz, Pardo, Paszynski, Rachowicz, Zdunek.
 
 Slides on recent Intrepid2 capabilities:
-*   [Discretization and Assembly using Intrepid2 and Tpetra](https://mysite.sandia.gov/personal/mperego/_layouts/15/WopiFrame.aspx?sourcedoc={A057122F-B0EE-4826-B52D-D324647C5E1C}&file=EuroTUG_perego2.pdf&action=default)
-*   [Exploiting Tensor-Product Structure in High-Order Finite Elements on Next-Generation Architectures](https://mysite.sandia.gov/personal/mperego/_layouts/15/WopiFrame.aspx?sourcedoc={2F818B92-8316-4870-B83C-A9DD7DE735CE}&file=Intrepid2SumFactorization_USNCCM_2021.pdf&action=default)
+*   [Discretization and Assembly using Intrepid2 and Tpetra](https://www.osti.gov/servlets/purl/1640745)
+*   [Exploiting Tensor-Product Structure in High-Order Finite Elements on Next-Generation Architectures](https://drive.google.com/file/d/1l_GOsrl618iMC4Pf839vIhRMBluU_5uE/view?usp=sharing)
