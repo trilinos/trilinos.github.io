@@ -28,3 +28,7 @@ Given that Intrepid2 largely mantains the mathematical structure of [Intrepid](i
 Hierachical basis functions are implemented accordingly to the paper [Orientation embedded high order shape functions for the exact sequence elements of all shapes](https://www.sciencedirect.com/science/article/pii/S0898122115002084) by Fuentes, Keith, Demkowicz and Nagaraj. However, in Intrepid2 the orientations are not embedded in the basis but enforced separately for additional flexibility.
 
 Interpolation-based projections are described in the book [Computing with Hp-Adaptive Finite Elements, Vol. 2](https://dl.acm.org/doi/book/10.5555/1564840) by Demkowicz, Kurtz, Pardo, Paszynski, Rachowicz, Zdunek.
+
+Slides on recent Intrepid2 capabilities:
+*   [Discretization and Assembly using Intrepid2 and Tpetra](https://mysite.sandia.gov/personal/mperego/_layouts/15/WopiFrame.aspx?sourcedoc={A057122F-B0EE-4826-B52D-D324647C5E1C}&file=EuroTUG_perego2.pdf&action=default)
+*   [Exploiting Tensor-Product Structure in High-Order Finite Elements on Next-Generation Architectures](https://mysite.sandia.gov/personal/mperego/_layouts/15/WopiFrame.aspx?sourcedoc={2F818B92-8316-4870-B83C-A9DD7DE735CE}&file=Intrepid2SumFactorization_USNCCM_2021.pdf&action=default)
