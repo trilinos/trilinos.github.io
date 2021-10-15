@@ -59,12 +59,15 @@ Trilinos contains many packages, organized in [five product suites](product.html
 
 ### Related Sandia sites for Trilinos (access limited to Sandia staff):
 [Sandia Trilinos Help Desk](https://trilinos-help.sandia.gov)
-- Site to submit questions and requests.
+- Primary site to submit questions and requests.
+- Link to the [SRN Trilinos Help Desk](https://sems-atlassian-srn.sandia.gov/servicedesk/customer/portal/10)
 
-[Sandia Trilinos Portal](https://snl-wiki.sandia.gov/display/TRIL/Trilinos+Portal)
+[Sandia Trilinos Portal](https://sems-atlassian-son.sandia.gov/confluence/display/trilinos/Trilinos+Portal)
 - Site containing Sandia specific information related to Trilinos.
+- Primary site containing Sandia specific information related to Trilinos.
+- Link to the [SRN Trilinos Portal](https://wiki.sandia.gov/display/TRIL/Trilinos+Portal)
 
-[Sandia Trilinos Strategy Planning](https://sems-atlassian-srn.sandia.gov/projects/TRILINOS/summary)
+[Sandia Trilinos Strategy Planning](https://sems-atlassian-son.sandia.gov/jira/projects/TRILINOS/summary)
 - Sandia Jira site for Trilinos strategy epics and tasks.
 
 ### TUG 2020
