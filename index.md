@@ -63,7 +63,6 @@ Trilinos contains many packages, organized in [five product suites](product.html
 - Link to the [SRN Trilinos Help Desk](https://sems-atlassian-srn.sandia.gov/servicedesk/customer/portal/10)
 
 [Sandia Trilinos Portal](https://sems-atlassian-son.sandia.gov/confluence/display/trilinos/Trilinos+Portal)
-- Site containing Sandia specific information related to Trilinos.
 - Primary site containing Sandia specific information related to Trilinos.
 - Link to the [SRN Trilinos Portal](https://wiki.sandia.gov/display/TRIL/Trilinos+Portal)
 
