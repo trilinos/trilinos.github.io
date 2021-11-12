@@ -69,8 +69,7 @@ Trilinos contains many packages, organized in [five product suites](product.html
 [Sandia Trilinos Strategy Planning](https://sems-atlassian-son.sandia.gov/jira/projects/TRILINOS/summary)
 - Sandia Jira site for Trilinos strategy epics and tasks.
 
-### TUG 2020
-[The 2020 Trilinos User-Developer Group (TUG) Meeting](https://trilinos.github.io/trilinos_user-developer_group_meeting_2020.html) was cancelled due to the COVID-19 pandemic.
-
-### TUG 2019
-[The 2019 Trilinos User-Developer Group Meeting (TUG)](https://trilinos.github.io/trilinos_user-developer_group_meeting_2019.html) was held in October in Albuquerque.
+### Trilinos User-Developer Group (TUG) Meetings
+- [The 2021 Trilinos User-Developer Group (TUG) Meeting](https://trilinos.github.io/trilinos_user-developer_group_meeting_2021.html) will be virtually held November 30 - December 2, 2021.
+- [The 2020 Trilinos User-Developer Group (TUG) Meeting](https://trilinos.github.io/trilinos_user-developer_group_meeting_2020.html) was cancelled due to the COVID-19 pandemic.
+- [The 2019 Trilinos User-Developer Group (TUG) Meeting](https://trilinos.github.io/trilinos_user-developer_group_meeting_2019.html) was held in October in Albuquerque.
