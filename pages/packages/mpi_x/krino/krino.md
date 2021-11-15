@@ -9,7 +9,7 @@ doxygen: false
 ---
 
 
-Krino provides interoperable tools for computing and reinitialing signed distance fields and for creating unstructured stk meshes that conform to level set fields on a non-conforming background mesh.  Krino calculates signed distance fields from multiple analytic shapes, from a faceted description including STL files, and from an existing level set field. Both Euclidean nearest point methods are supported as well as fast marching methods. 
+Krino provides interoperable tools for computing and reinitialing signed distance fields and for creating unstructured stk meshes that conform to level set fields on a non-conforming background mesh.  Krino calculates signed distance fields from multiple analytic shapes, from a faceted description including STL files, and from an existing level set field. Both scalable Euclidean nearest point methods and fast marching methods are supported for signed distance calculations. 
 
 Krino implements the conforming decomposition in the Conformal Decomposition Finite Element Method (CDFEM). In CDFEM interface conforming h-refinement is performed where nodes are added at the intersection between one to many level set interfaces and a a background mesh. In this way the background mesh is decomposed into elements that conform to the background mesh and to the level set interfaces on that mesh. Krino supports CDFEM for an arbitrary number of static and dynamic level set interfaces. Optionally krino can also support interface conforming r-refinement in which nodes of the background mesh are moved to nearby intersections between the mesh and the level set interfaces before performing the conformal decomposition.  This snapping procedure improves the quality of the resulting conformal mesh. 
 
