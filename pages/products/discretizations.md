@@ -55,6 +55,9 @@ Compadre toolkit provides tools for the approximation of linear operators applie
 [MiniTensor](minitensor.html)  
 The package is a library for the use, manipulation, algebra and optimization of small vectors and tensors and problems that depend on them. It was first conceived and developed for the implementation of complex material models in Albany. Its purpose is to provide a compact representation of vector and tensor expressions. Its emphasis is on ease of use, and accurate algorithms, specifically those used for the development of constitutive models in finite deformation solid mechanics. It is smaller, but more focused than Blitz++, TVMet or Eigen. It is used in both research (Albany/LCM) and production (Sierra/SM) environments.
 
+[Krino](krino.html)  
+Krino provides interoperable tools for computing and reinitializing signed distance fields and for creating unstructured stk meshes that conform to level set fields on a non-conforming background mesh. Both scalable Euclidean nearest point methods and fast marching methods are supported for signed distance calculations.
+
 [Intrepid](intrepid.html)  
 The package provides interoperable tools for compatible discretizations of PDEs. [Intrepid2](intrepid2.html) is a performance portable implementation of Intrepid. They share most of the functionalities, however Intrepid, while still maintained, is no longer developed.
 
