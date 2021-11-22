@@ -27,6 +27,6 @@ Overview
 
 Supplementary materials
 
-The Conforming Decomposition Finite Element Method (https://doi.org/10.1002/fld.2095)
+[The Conforming Decomposition Finite Element Method](https://doi.org/10.1002/fld.2095)
 
-Signed distance calculation, application of CDFEM to many intersecting level sets (https://doi.org/10.1016/j.jcp.2018.08.022)
+[Signed distance calculation, application of CDFEM to many intersecting level sets](https://doi.org/10.1016/j.jcp.2018.08.022)
