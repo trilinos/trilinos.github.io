@@ -90,7 +90,6 @@ to its stakeholder communities.
 <tr><td colspan=2> <b> Presentations and Updates from Trilinos Product Areas </b>                                           </td> </tr>
 <tr><th><abbr>  9:30 </abbr></th>  <td> Framework (J. Willenbring)                                                          </td> </tr>
 <tr><th><abbr>       </abbr></th>  <td> <em>Update</em>                                                                     </td> </tr>
-<tr><th><abbr>       </abbr></th>  <td> <em>Talks TBD</em>                                                                  </td> </tr>
 <tr><th><abbr> 10:00 </abbr></th>  <td> Data Services (K. Devine)                                                           </td> </tr>
 <tr><th><abbr>       </abbr></th>  <td> <em>Update</em>                                                                     </td> </tr>
 <tr><th><abbr>       </abbr></th>  <td> <em>How to use Tpetra without UVM</em>                                              </td> </tr>
@@ -116,13 +115,13 @@ to its stakeholder communities.
 <tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober)                                                                   </td> </tr>
 <tr><th><abbr>  8:15 </abbr></th>  <td> <em>SPARC Title TBD</em> (T. Fisher, ...)                                           </td> </tr>
 <tr><th><abbr>  8:40 </abbr></th>  <td> <em>EMPIRE Title TBD</em> (R. Pawlowski, K. Cartwright, ...)                        </td> </tr>
-<tr><th><abbr>  9:05 </abbr></th>  <td> <em>GEMMA Title TBD</em> (J. Kotulski, V. Dang, W. Langston)                        </td> </tr>
+<tr><th><abbr>  9:05 </abbr></th>  <td> <em>EIGER / GEMMA Electromagnetic Code Capabilities</em>  (Joe D. Kotulski, Vinh Dang) </td> </tr>
 <tr><th><abbr>  9:30 </abbr></th>  <td> <em>Sierra/Thermal Fluids Title TBD</em> (J. Clausen, ...)                          </td> </tr>
 <tr><th><abbr>  9:55 </abbr></th>  <td> <b>Break</b>                                                                        </td> </tr>
 <tr><th><abbr> 10:10 </abbr></th>  <td> <em>Developing a GPU-enabled 3D Discontinuous Petrov-Galerkin Toolkit: Experiences with Intrepid2​</em> (J. Plews)                            </td> </tr>
-<tr><th><abbr> 10:35 </abbr></th>  <td> <em>Drekar Title TBD</em> (M. Crockatt, J, Shadid, R. Pawlowski, ...)               </td> </tr>
-<tr><th><abbr> 11:00 </abbr></th>  <td> <em>Amanzi-ATS/Exasheds Title TBD</em> (David Moulton (LANL) and Ethan Coon (ORNL)) </td> </tr>
-<tr><th><abbr> 11:25 </abbr></th>  <td> <em>FROSch Icesheet Title TBD</em> (A. Heinlein and I. Yamazaki)                    </td> </tr>
+<tr><th><abbr> 10:35 </abbr></th>  <td> <em>Fluid Plasma Model Development in Drekar</em>  (Michael M. Crockatt (SNL), John N. Shadid (SNL), Roger P. Pawlowski (SNL), Sidafa Conde, Sibu Mabuza (Clemson), Jesús Bonilla (LANL))  </td> </tr>
+<tr><th><abbr> 11:00 </abbr></th>  <td> <em>Amanzi-ATS/Exasheds</em> (David Moulton (LANL) and Ethan Coon (ORNL)) </td> </tr>
+<tr><th><abbr> 11:25 </abbr></th>  <td> <em>FROSch Preconditioners for Land Ice Simulations of Greenland and Antarctica</em>  (Alexander Heinlein, Mauro Perego, Sivasankaran Rajamanickam, and Ichitaro Yamazaki)                    </td> </tr>
 <tr><th><abbr> 11:50 </abbr></th>  <td> <b>Adjourn</b>                                                                      </td> </tr>
 </tbody>
 </table>
@@ -134,16 +133,17 @@ to its stakeholder communities.
 <tbody>
 <tr><td colspan=2> <b> Developer Sessions </b>                                                                              </td> </tr>
 <tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober)                                                                   </td> </tr>
-<tr><th><abbr>  8:15 </abbr></th>  <td> <em>Overview of New Trilinos Testing Infrastructure</em> (E. Harvey)                </td> </tr>
-<tr><th><abbr>  8:30 </abbr></th>  <td> <em>PR Testing and the ‘Terrible Diagram’</em> (W. McLendon)                        </td> </tr>
-<tr><th><abbr>  8:45 </abbr></th>  <td> <em>Usability Title TBD</em> (A. Fate)                                              </td> </tr>
-<tr><th><abbr>  9:15 </abbr></th>  <td> <em>TriBits Modernization</em> (R. Bartlett)                                        </td> </tr>
-<tr><th><abbr>  9:45 </abbr></th>  <td> <em>Automated Performance Testing and Tuning</em> (J. Watkins)                      </td> </tr>
-<tr><th><abbr> 10:15 </abbr></th>  <td> <b>Break</b>                                                                        </td> </tr>
+<tr><th><abbr>  8:00 </abbr></th>  <td> <em>Overview of New Trilinos Testing Infrastructure</em> (E. Harvey)                </td> </tr>
+<tr><th><abbr>  8:15 </abbr></th>  <td> <em>PR Testing and the ‘Terrible Diagram’</em> (W. McLendon)                        </td> </tr>
+<tr><th><abbr>  8:30 </abbr></th>  <td> <em>Usability Title TBD</em> (A. Fate)                                              </td> </tr>
+<tr><th><abbr>  9:00 </abbr></th>  <td> <em>TriBits Modernization</em> (R. Bartlett)                                        </td> </tr>
+<tr><th><abbr>  9:30 </abbr></th>  <td> <em>Automated Performance Testing and Tuning</em> (J. Watkins)                      </td> </tr>
+<tr><th><abbr> 10:30 </abbr></th>  <td> <em>Using Trilinos with E4S</em>  (Sameer Shende, University of Oregon)             </td> </tr>
+<tr><th><abbr> 10:30 </abbr></th>  <td> <b>Break</b>                                                                        </td> </tr>
 <tr><td colspan=2> <b> Developer Driven Discussions </b>                                                                    </td> </tr>
-<tr><th><abbr> 10:30 </abbr></th>  <td> Selection of Topics                                                                 </td> </tr>
-<tr><th><abbr> 10:45 </abbr></th>  <td> Breakout Discussions                                                                </td> </tr>
-<tr><th><abbr> 11:15 </abbr></th>  <td> Full Group Discussion                                                               </td> </tr>
-<tr><th><abbr> 11:50 </abbr></th>  <td> <b>Adjourn</b>                                                                      </td> </tr>
+<tr><th><abbr> 10:45 </abbr></th>  <td> Selection of Topics                                                                 </td> </tr>
+<tr><th><abbr> 11:00 </abbr></th>  <td> Breakout Discussions                                                                </td> </tr>
+<tr><th><abbr> 11:30 </abbr></th>  <td> Full Group Discussion                                                               </td> </tr>
+<tr><th><abbr> 12:00 </abbr></th>  <td> <b>Adjourn</b>                                                                      </td> </tr>
 </tbody>
 </table>
