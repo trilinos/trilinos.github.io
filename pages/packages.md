@@ -45,7 +45,7 @@ The following packages are undergoing active development in support of new appli
 - [Intrepid2](intrepid2.html "Intrepid2") -- Performance portable tools for the local assembly of high-order compatible finte element discretizations.
 - [Phalanx](phalanx.html "Phalanx") -- Phalanx is a DAG-based local field evaluation kernel specifically designed for general partial differential equation solvers.
 - [Compadre](compadre.html "Compadre") -- Toolkit for meshless discretizations enabling solution of differential equations and data transfer.
-
+- [Krino](krino.html "Krino") -- Tools for computing and reinitializing signed distance fields and for creating unstructured stk meshes that conform to level set fields. 
 
 ## Supported Trilinos packages
 The following packages are no longer under active development but are supported for bug fixes.
