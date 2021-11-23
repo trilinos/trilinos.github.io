@@ -133,7 +133,7 @@ to its stakeholder communities.
 <tbody>
 <tr><td colspan=2> <b> Developer Sessions </b>                                                                              </td> </tr>
 <tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober)                                                                   </td> </tr>
-<tr><th><abbr>  8:00 </abbr></th>  <td> <em>Overview of New Trilinos Testing Infrastructure</em> (E. Harvey)                </td> </tr>
+<tr><th><abbr>  8:00 </abbr></th>  <td> <em>A Common Tool for Building Trilinos: Introduction to GenConfig </em> (Evan Harvey, Joshua Braun, and James Willenbring)                </td> </tr>
 <tr><th><abbr>  8:15 </abbr></th>  <td> <em>PR Testing and the ‘Terrible Diagram’</em> (W. McLendon)                        </td> </tr>
 <tr><th><abbr>  8:30 </abbr></th>  <td> <em>Usability Title TBD</em> (A. Fate)                                              </td> </tr>
 <tr><th><abbr>  9:00 </abbr></th>  <td> <em>TriBits Modernization</em> (R. Bartlett)                                        </td> </tr>
