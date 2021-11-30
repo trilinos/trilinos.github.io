@@ -44,8 +44,10 @@ The following packages are undergoing active development in support of new appli
 - [Panzer](panzer.html "Panzer") -- Panzer is a package for performing finte element analysis
 - [Intrepid2](intrepid2.html "Intrepid2") -- Performance portable tools for the local assembly of high-order compatible finte element discretizations.
 - [Phalanx](phalanx.html "Phalanx") -- Phalanx is a DAG-based local field evaluation kernel specifically designed for general partial differential equation solvers.
-- [Compadre](compadre.html "Compadre") -- Toolkit for meshless discretizations enabling solution of differential equations and data transfer.
-- [Krino](krino.html "Krino") -- Tools for computing and reinitializing signed distance fields and for creating unstructured stk meshes that conform to level set fields. 
+- [STK](stk.html "STK") -- Contains capabilities intended to support massively parallel multi-physics computations on dynamically changing unstructured meshes. The primary capability in the STK package is the mesh database which supports creation and manipulation of mesh entities (nodes, elements etc) and computational field data defined on the mesh. STK also contains sub-libraries that support geometric proximity searches, assembly into linear-systems, etc.
+- [Krino](krino.html "Krino") -- Tools for computing and reinitializing signed distance fields and for creating unstructured stk meshes that conform to level set fields.
+- [Percept](percept.html "Percept") -- A collection of tools, including mesh adaptation and data tranfer, to enable solution verification.
+- [Compadre](compadre.html "Compadre") -- Toolkit for meshless discretizations enabling solution of differential equations and data transfer. 
 
 ## Supported Trilinos packages
 The following packages are no longer under active development but are supported for bug fixes.
@@ -84,5 +86,3 @@ The following packages are no longer under active development but are supported 
 - [Shards](shards.html "Shards") -- topology data for mesh-based discretization of differential equations
 - [MiniTensor](minitensor.html "MiniTensor") -- Tools for the manipulation and optimization of small vectors/tensors
 - [FEI](fei.html "FEI") -- A general interface for assembling finite-element data into a system of linear equations.
-- [STK](stk.html "STK") -- Contains capabilities intended to support massively parallel multi-physics computations on dynamically changing unstructured meshes. The primary capability in the STK package is the mesh database which supports creation and manipulation of mesh entities (nodes, elements etc) and computational field data defined on the mesh. STK also contains sub-libraries that support geometric proximity searches, assembly into linear-systems, etc.
-- [Percept](percept.html "Percept") -- A collection of tools, including mesh adaptation and data tranfer, to enable solution verification.
