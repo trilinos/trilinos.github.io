@@ -113,14 +113,14 @@ to its stakeholder communities.
 <tbody>
 <tr><td colspan=2> <b> Applications Session </b>                                                                            </td> </tr>
 <tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober)                                                                   </td> </tr>
-<tr><th><abbr>  8:15 </abbr></th>  <td> <em>SPARC Title TBD</em> (T. Fisher, ...)                                           </td> </tr>
+<tr><th><abbr>  8:15 </abbr></th>  <td> <em>SPARC Leveraging of Trilinos Components</em> (Travis Fisher)                    </td> </tr>
 <tr><th><abbr>  8:40 </abbr></th>  <td> <em>EMPIRE Title TBD</em> (R. Pawlowski, K. Cartwright, ...)                        </td> </tr>
 <tr><th><abbr>  9:05 </abbr></th>  <td> <em>EIGER / GEMMA Electromagnetic Code Capabilities</em>  (Joe D. Kotulski, Vinh Dang) </td> </tr>
 <tr><th><abbr>  9:30 </abbr></th>  <td> <em>Sierra/Thermal Fluids Title TBD</em> (J. Clausen, ...)                          </td> </tr>
 <tr><th><abbr>  9:55 </abbr></th>  <td> <b>Break</b>                                                                        </td> </tr>
 <tr><th><abbr> 10:10 </abbr></th>  <td> <em>Developing a GPU-enabled 3D Discontinuous Petrov-Galerkin Toolkit: Experiences with Intrepid2​</em> (J. Plews)                            </td> </tr>
 <tr><th><abbr> 10:35 </abbr></th>  <td> <em>Fluid Plasma Model Development in Drekar</em>  (Michael M. Crockatt (SNL), John N. Shadid (SNL), Roger P. Pawlowski (SNL), Sidafa Conde, Sibu Mabuza (Clemson), Jesús Bonilla (LANL))  </td> </tr>
-<tr><th><abbr> 11:00 </abbr></th>  <td> <em>Amanzi-ATS/Exasheds</em> (David Moulton (LANL) and Ethan Coon (ORNL)) </td> </tr>
+<tr><th><abbr> 11:00 </abbr></th>  <td> <em>Refactoring Amanzi-ATS to leverage Tpetra/Kokkos abstractions for heterogeneous architectures </em> (Julien Loiseau, David Moulton (LANL) and Ethan Coon (ORNL)) </td> </tr>
 <tr><th><abbr> 11:25 </abbr></th>  <td> <em>FROSch Preconditioners for Land Ice Simulations of Greenland and Antarctica</em>  (Alexander Heinlein, Mauro Perego, Sivasankaran Rajamanickam, and Ichitaro Yamazaki)                    </td> </tr>
 <tr><th><abbr> 11:50 </abbr></th>  <td> <b>Adjourn</b>                                                                      </td> </tr>
 </tbody>
@@ -135,7 +135,7 @@ to its stakeholder communities.
 <tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober)                                                                   </td> </tr>
 <tr><th><abbr>  8:00 </abbr></th>  <td> <em>A Common Tool for Building Trilinos: Introduction to GenConfig </em> (Evan Harvey, Joshua Braun, and James Willenbring)                </td> </tr>
 <tr><th><abbr>  8:15 </abbr></th>  <td> <em>PR Testing and the ‘Terrible Diagram’</em> (W. McLendon)                        </td> </tr>
-<tr><th><abbr>  8:30 </abbr></th>  <td> <em>Usability Title TBD</em> (A. Fate)                                              </td> </tr>
+<tr><th><abbr>  8:30 </abbr></th>  <td> <em>User Experience: Defined and Applied </em> (Ashley Fate)                        </td> </tr>
 <tr><th><abbr>  9:00 </abbr></th>  <td> <em>TriBits Modernization</em> (R. Bartlett)                                        </td> </tr>
 <tr><th><abbr>  9:30 </abbr></th>  <td> <em>Automated Performance Testing and Tuning</em> (J. Watkins)                      </td> </tr>
 <tr><th><abbr> 10:30 </abbr></th>  <td> <em>Using Trilinos with E4S</em>  (Sameer Shende, University of Oregon)             </td> </tr>
