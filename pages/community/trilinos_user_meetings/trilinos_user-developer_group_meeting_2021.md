@@ -86,7 +86,7 @@ to its stakeholder communities.
 <tr><td colspan=2> <b> Opening </b>                                                                                         </td> </tr>
 <tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober)                                                                   </td> </tr>
 <tr><th><abbr>  8:15 </abbr></th>  <td> 
-  Keynote - <a href="trilinos_user-developer_group_meeting_2021/2021-11-30/01-TUG2021-Heroux.pdf">HPC Software Platform Trends: The Evolution of Trilinos from 2001 to 2026</a> (M. Heroux)  </td> </tr>
+  Keynote - <a href="pages/community/trilinos_user_meetings/trilinos_user-developer_group_meeting_2021/2021-11-30/01-TUG2021-Heroux.pdf">HPC Software Platform Trends: The Evolution of Trilinos from 2001 to 2026</a> (M. Heroux)  </td> </tr>
 <tr><th><abbr>  9:00 </abbr></th>  <td> 20th Anniversary Celebration                                                        </td> </tr>
 <tr><td colspan=2> <b> Presentations and Updates from Trilinos Product Areas </b>                                           </td> </tr>
 <tr><th><abbr>  9:30 </abbr></th>  <td> Framework (J. Willenbring)                                                          </td> </tr>
