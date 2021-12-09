@@ -69,7 +69,7 @@ The following packages are no longer under active development but are supported 
 
 ### Partitioning and Load Balancing
 
-- [Isorropia](isorropia.html "Isorropia") -- Isorropia is a partitioning and load balancing package, intended to assist with redistributing objects such as matrices and matrix-graphs in a parallel execution setting, to allow for more efficient computations. Isorropia is primarily an interface to the [Zoltan](https://cs.sandia.gov/Zoltan/) library.
+- [Isorropia](isorropia.html "Isorropia") -- Isorropia is a partitioning and load balancing package, intended to assist with redistributing objects such as matrices and matrix-graphs in a parallel execution setting, to allow for more efficient computations. Isorropia is primarily an interface to the [Zoltan](https://sandialabs.github.io/Zoltan/) library.
 - [Zoltan](zoltan.html "Zoltan") -- Zoltan is a toolkit of parallel services for dynamic, unstructured, and.htmlor adaptive simulations. Zoltan provides parallel dynamic load balancing and related services for a wide variety of applications, including finite element methods, matrix operations, particle methods, and crash simulations. Zoltan also provides parallel graph coloring, matrix ordering, unstructured communication tools, and distributed data directories.
 
 ### Abstract Interfaces and Adapters
