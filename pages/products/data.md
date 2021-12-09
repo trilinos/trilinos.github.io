@@ -94,7 +94,7 @@ low interprocessor communication costs for common matrix operations. It also cre
 according to the computed data distributions, and migrates matrix data to the new distribution. Current development efforts include 
 matrix ordering and two-dimensional matrix partitioning interfaces.
 
-Isorropia also contains interfaces to [Zoltan’s](http://www.cs.sandia.gov/Zoltan/) parallel coloring and matrix ordering capabilities. 
+Isorropia also contains interfaces to [Zoltan](https://sandialabs.github.io/Zoltan/) parallel coloring and matrix ordering capabilities. 
 Parallel matrix ordering can reduce matrix fill during direct factorizations. The interface provides access to both the 
 matrix permutation vector and the separator trees used in reordering. Parallel coloring is an important capability for some preconditioners. 
 Colors are assigned to matrix rows depending on the connectivity of rows through nonzero entries in the matrix. 
@@ -104,13 +104,13 @@ See [below](https://trilinos.org/CapabilityWebpages/GeomMeshLoadBal/GeomMeshBal_
 #### Zoltan: Dynamic load balancing, partitioning, coloring and ordering
 
 Point of Contact: [K. Devine](http://www.cs.sandia.gov/~kddevin/) (SNL)  
-[Zoltan Page: http://www.cs.sandia.gov/Zoltan](http://www.cs.sandia.gov/Zoltan/)  
-Status: Zoltan is currently available for download from the [Zoltan home page](http://www.cs.sandia.gov/Zoltan/). 
+[Zoltan Page: https://sandialabs.github.io/Zoltan/](https://sandialabs.github.io/Zoltan/)  
+Status: Zoltan is currently available for download from the [Zoltan home page](https://sandialabs.github.io/Zoltan/). 
 It is also released in Trilinos 9.0 in September 2008.The Zoltan library includes a suite of partitioning and repartitioning algorithms 
 for general applications. It can be used for distributing matrices, meshes, particles, agents, or any objects within a simulation. 
 The partitioning and repartitioning algorithms include geometric methods (useful for particle- and mesh-based applications), 
 and connectivity-base methods (such as graph- and hypergraph-partitioning). Three interfaces to Zoltan exist (in order of decreasing maturity): 
-the [native Zoltan interface](http://www.cs.sandia.gov/Zoltan/ug_html/ug.html) the [Isorropia](isorropia.html) 
+the [native Zoltan interface](https://sandialabs.github.io/Zoltan/ug_html/ug.html) the [Isorropia](isorropia.html) 
 Epetra matrix interface, and the [ITAPS](http://www.itaps.org) mesh interface. The native Zoltan interface is data-structure neutral, 
 so an application does not have to build or use specific data structures to use Zoltan. This design allows Zoltan to be used by a 
 wide range of applications. Zoltan is widely used in the ASC community, and is a key component of the SciDAC CSCAPES 
