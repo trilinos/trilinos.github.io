@@ -89,7 +89,7 @@ to its stakeholder communities.
 <tbody>
 <tr><td colspan=2> <b> Opening </b>                                                                                         </td> </tr>
 <tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober)                                                                   </td> </tr>
-<tr><th><abbr>  8:15 </abbr></th>  <td> Keynote - <a href="pages/community/trilinos_user_meetings/trilinos_user-developer_group_meeting_2021/2021-11-30/01-TUG2021-Heroux.pdf">HPC Software Platform Trends: The Evolution of Trilinos from 2001 to 2026</a> (M. Heroux) <a href=https://digitalops.sandia.gov/Mediasite/Showcase/trilinos/Presentation/15898b5703bd41749689aae1e08f7f8a1d>video</a> </td> </tr>
+<tr><th><abbr>  8:15 </abbr></th>  <td> Keynote - <a href="pages/community/trilinos_user_meetings/trilinos_user-developer_group_meeting_2021/2021-11-30/01-TUG2021-Heroux.pdf">HPC Software Platform Trends: The Evolution of Trilinos from 2001 to 2026</a> <a href=https://digitalops.sandia.gov/Mediasite/Showcase/trilinos/Presentation/15898b5703bd41749689aae1e08f7f8a1d>video</a>  (M. Heroux) </td> </tr>
 
 <tr><th><abbr>  9:00 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/trilinos_user-developer_group_meeting_2021/2021-11-30/01-TUG2021-Heroux.pdf">20th Anniversary Celebration</a> (Slides 62-74) <a href=https://digitalops.sandia.gov/Mediasite/Showcase/trilinos/Presentation/15898b5703bd41749689aae1e08f7f8a1d>video at ~1:17:00</a> </td> </tr>
 
