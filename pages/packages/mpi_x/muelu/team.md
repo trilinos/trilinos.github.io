@@ -7,11 +7,13 @@ folder: mpi_x
 The current MueLu development team is
 
 * Luc Berger-Vergiat
+* Max Firmbach
 * Christian Glusa
+* Graham Harper
 * Jonathan Hu
 * Brian Kelley
 * Matthias Mayr
-* Andrey Prokopenko
+* Peter Ohm
 * Chris Siefert
 * Ray Tuminaro
 
@@ -21,5 +23,6 @@ Other contributors are
 * Emily Furst
 * Jeremie Gaidamour
 * Axel Gerstenberger
+* Andrey Prokopenko
 * Paul Tsuji
 * Tobias Wiesner

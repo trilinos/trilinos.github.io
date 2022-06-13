@@ -8,7 +8,7 @@ package: muelu
 doxygen: true
 ---
 
-[logo_Blue](images/logo_Blue1.png)
+![logo_Blue](images/logo_Blue1.png)
 
 **Welcome to MueLu, the Trilinos multigrid framework!**
 
