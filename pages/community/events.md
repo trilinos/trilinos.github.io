@@ -4,6 +4,7 @@ permalink: events.html
 folder: community
 ---
 
+*   [European Trilinos User Group 2022](european_trilinos_user_group_meeting_2022.html) -- Sep 12-14, 2022, Munich, Germany
 *   [European Trilinos User Group 2019](european_trilinos_user_group_meeting_2019.html) -- Jun 11, 2019, Zürich, Switzerland
 *   [US Trilinos User Group 2016](trilinos_user-developer_group_meeting_2016.html) -- Oct 24-26, 2016, Albuquerque, NM, USA
 *   [European Trilinos User Group 2016](european_trilinos_user_group_meeting_2016.html) -- Apr 18-20, 2016, Garching, Germany

@@ -73,3 +73,6 @@ Trilinos contains many packages, organized in [five product suites](product.html
 - [The 2021 Trilinos User-Developer Group (TUG) Meeting](https://trilinos.github.io/trilinos_user-developer_group_meeting_2021.html) will be virtually held November 30 - December 2, 2021.
 - [The 2020 Trilinos User-Developer Group (TUG) Meeting](https://trilinos.github.io/trilinos_user-developer_group_meeting_2020.html) was cancelled due to the COVID-19 pandemic.
 - [The 2019 Trilinos User-Developer Group (TUG) Meeting](https://trilinos.github.io/trilinos_user-developer_group_meeting_2019.html) was held in October in Albuquerque.
+
+### European Trilinos User Group (EuroTUG) Meetings
+- [The 2022 European Trilinos User Group (EuroTUG) Meeting](european_trilinos_user_group_meeting_2022.html) will be held September 12 - 14, 2022.
