@@ -41,13 +41,9 @@ between Trilinos users, stakeholders and developers.
 
 There is no registration fee for attendance; however, registration
 is required for our reporting purposes (see attached).  Registration
-may be submitted through October 24, 2022.
-Registration form will be added soon.
-<!---
-Please send the completed
-[registration form](pdfs/2022_Trilinos_User_Group_Meeting_Registration_Form.docx)
+may be submitted through October 24, 2022.  Registration form will be added soon.
+Please send the completed [registration form](pdfs/2022_TUG_Registration_Form.pdf)
 to [Phyllis Rutka](mailto:parutka@sandia.gov).
--->
 After registration, attendees will receive an invite for the meetings.
 Please do not forward the invite as registration is needed to attend.
 
