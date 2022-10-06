@@ -60,28 +60,31 @@ Title: TBD
 
 <table summary="Timetable">
 <tbody>
-<tr><td colspan=2> <b> Opening </b>                                                                                         </td> </tr>
-<tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober)                                                                   </td> </tr>
-<tr><th><abbr>  8:15 </abbr></th>  <td> Keynote - TBD </td> </tr>
+<tr><td colspan=2> <b> Opening </b>                                                                          </td> </tr>
+<tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober)                                                    </td> </tr>
+<tr><th><abbr>  8:15 </abbr></th>  <td> Keynote - Wolfgang Bangerth (U of Colorado) </td> </tr>
 
-<tr><th><abbr>  9:00 </abbr></th>  <td> TBD </td> </tr>
+<tr><td colspan=2> <b> Presentations and Updates from Trilinos Product Areas </b>                            </td> </tr>
+<tr><th><abbr>  9:00 </abbr></th>  <td> Framework                                                            </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> Framework Product Overview and Update (C. Ober) </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> GenConfig (TBD) </td> </tr>
 
-<tr><td colspan=2> <b> Presentations and Updates from Trilinos Product Areas </b>                                           </td> </tr>
-<tr><th><abbr>  9:30 </abbr></th>  <td> Framework                                                                           </td> </tr>
-<tr><th><abbr>       </abbr></th>  <td> Framework Product Overview and Update </td> </tr>
+<tr><th><abbr>  9:45 </abbr></th>  <td> Data Services                                                        </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> Data Services Update (M. Wolf) </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> Tpetra in FY23 (C. Siefert) </td> </tr>
 
-<tr><th><abbr> 10:00 </abbr></th>  <td> Data Services                                                                       </td> </tr>
-<tr><th><abbr>       </abbr></th>  <td> Data Services Update </td> </tr>
+<tr><th><abbr> 10:15 </abbr></th>  <td> <b> Break </b>                                                       </td> </tr>
 
-<tr><th><abbr> 10:30 </abbr></th>  <td> Discretizations                                                                     </td> </tr>
-<tr><th><abbr>       </abbr></th>  <td> Discretizations Product Update </td> </tr>
+<tr><th><abbr> 10:30 </abbr></th>  <td> Discretizations                                                      </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> Discretizations Product Update (M. Perego) </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> Intrepid2 (N. Roberts) </td> </tr>
 
-<tr><th><abbr> 11:00 </abbr></th>  <td> Linear Solvers                                                                      </td> </tr>
-<tr><th><abbr>       </abbr></th>  <td> Solvers Update</a> (S. Rajamanickam) </td> </tr>
+<tr><th><abbr> 11:00 </abbr></th>  <td> Linear Solvers                                                       </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> Solvers Update (S. Rajamanickam) </td> </tr>
 
-<tr><th><abbr> 11:30 </abbr></th>  <td> Nonlinear Solvers                                                                   </td> </tr>
-<tr><th><abbr>       </abbr></th>  <td> Nonlinear Analysis Product Area Update </td> </tr>
-<tr><th><abbr> 12:00 </abbr></th>  <td> <b>Adjourn</b>                                                                      </td> </tr>
+<tr><th><abbr> 11:30 </abbr></th>  <td> Nonlinear Analysis                                                   </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> Nonlinear Analysis Product Area Update (R. Pawlowski) </td> </tr>
+<tr><th><abbr> 11:45 </abbr></th>  <td> <b>Adjourn</b>                                                       </td> </tr>
 </tbody>
 </table>
 
@@ -90,11 +93,21 @@ Title: TBD
 
 <table summary="Timetable">
 <tbody>
-<tr><td colspan=2> <b> Applications Session </b>                                                                            </td> </tr>
-<tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober)                                                                   </td> </tr>
-<tr><th><abbr>  8:15 </abbr></th>  <td> TBD </td> </tr>
+<tr><td colspan=2> <b> Applications Session </b>                                                             </td> </tr>
+<tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober)                                                    </td> </tr>
+<tr><th><abbr>  8:15 </abbr></th>  <td> Stuart Slattery (ORNL) </td> </tr>
+<tr><th><abbr>  8:45 </abbr></th>  <td> Sierra Thermal Fluids (J. Clausen) </td> </tr>
+<tr><th><abbr>  9:15 </abbr></th>  <td> Ice Sheet (J. Watkins and M. Perego) </td> </tr>
+<tr><th><abbr>  9:45 </abbr></th>  <td> Alegra (T. Fuller) </td> </tr>
 
-<tr><th><abbr> 12:00 </abbr></th>  <td> <b>Adjourn</b>                                                                      </td> </tr>
+<tr><th><abbr> 10:15 </abbr></th>  <td> <b> Break </b>                                                       </td> </tr>
+
+<tr><th><abbr> 10:30 </abbr></th>  <td> E4S (S. Shende) </td> </tr>
+<tr><th><abbr> 11:00 </abbr></th>  <td> Sierra Structural Dynamics (J. Vo) </td> </tr>
+<tr><th><abbr> 11:30 </abbr></th>  <td> Adjoint Sensitivities (E. Phipps) </td> </tr>
+<tr><th><abbr> 12:00 </abbr></th>  <td> MrHyde/FEM^3 (T. Wildey) </td> </tr>
+
+<tr><th><abbr> 12:30 </abbr></th>  <td> <b>Adjourn</b>                                                       </td> </tr>
 </tbody>
 </table>
 
@@ -103,10 +116,31 @@ Title: TBD
 
 <table summary="Timetable">
 <tbody>
-<tr><td colspan=2> <b> Developer Sessions </b>                                                                              </td> </tr>
-<tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober)                                                                   </td> </tr>
-<tr><th><abbr>  8:15 </abbr></th>  <td> TBD </td> </tr>
+<tr><td colspan=2> <b> Developer Sessions </b>                                                               </td> </tr>
+<tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober)                                                    </td> </tr>
+<tr><th><abbr>  8:00 </abbr></th>  <td> Update on the CMake modernization effort (R. Bartlett) </td> </tr>
+<tr><th><abbr>  8:25 </abbr></th>  <td> CDash query tutorial for triaging systemic Trilinos PR build and test failures (R. Bartlett) </td> </tr>
+<tr><th><abbr>  8:50 </abbr></th>  <td> Performance Testing talk (J. Hu / C. Siefert) </td> </tr>
+<tr><th><abbr>  9:15 </abbr></th>  <td> Higher-order geometric-algebraic multigrid (C. Glusa) </td> </tr>
 
-<tr><th><abbr> 12:00 </abbr></th>  <td> <b>Adjourn</b>                                                                      </td> </tr>
+<tr><th><abbr>  9:40 </abbr></th>  <td> <b> Break </b>                                                       </td> </tr>
+
+<tr><th><abbr>  9:55 </abbr></th>  <td> PyTrilinos Reboot (K. Liegeois) </td> </tr>
+<tr><th><abbr> 10:20 </abbr></th>  <td> Trilinos and Machine Learning (Siefert/Tuminaro/Hu) </td> </tr>
+<tr><th><abbr> 10:45 </abbr></th>  <td> SQE Status and Changes (J. Turgeon) </td> </tr>
+
+<tr><th><abbr> 11:15 </abbr></th>  <td> <b> Lunch Break </b>                                                 </td> </tr>
+
+<tr><td colspan=2> <b> Panel Discussions </b>                                                                </td> </tr>
+
+<tr><th><abbr> 12:00 </abbr></th>  <td> Future Tools (Moderator: J. Willenbring) </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> Spack-CM / Test Beds - J. Frye </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> Spack - P. Sakievich </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> ASC DevOps - S. Warnock </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> E4S Containers - S. Shende </td> </tr>
+
+<tr><th><abbr>  1:30 </abbr></th>  <td> Usability and Documentation - (J. Loe) </td> </tr>
+
+<tr><th><abbr>  2:15 </abbr></th>  <td> <b>Adjourn</b>                                                       </td> </tr>
 </tbody>
 </table>
