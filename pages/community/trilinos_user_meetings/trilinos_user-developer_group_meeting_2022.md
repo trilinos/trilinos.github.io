@@ -39,8 +39,13 @@ between Trilinos users, stakeholders and developers.
 
 ## Registration
 
+Although this meeting will be hybrid (i.e., attend in-person at
+Sandia or online via MS Teams), we are encouraging everyone to come
+and join us in Albuquerque, New Mexico and get (re-) acquainted to
+the Trilinos community.
+
 There is no registration fee for attendance; however, registration
-is required for our reporting purposes (see attached).  Registration
+is required for our reporting purposes.  Registration
 may be submitted through October 24, 2022.  Registration form will be added soon.
 Please send the completed [registration form](pdfs/2022_TUG_Registration_Form.pdf)
 to [Phyllis Rutka](mailto:parutka@sandia.gov).
@@ -50,11 +55,44 @@ Please do not forward the invite as registration is needed to attend.
 Unregistered attendees will be removed from the meeting and asked
 to complete the registration form.
 
+<b>Sandians need to register</b>, as it will help with monitoring
+attendance, and the reporting requirements for this meeting.
+
+
+<b>Attending Virtually</b>
+
+If you are planning on attending virtually, please make sure you
+register for the day(s) you plan to join us by <b>Oct. 24th</b>.  The sooner
+the better!
+ 
+<b>Attending In-Person</b>
+
+ * If you are a non-Sandian and a non-US citizen, you will need to
+   register by <b>Oct. 12th</b>.  Otherwise, you will need to join us
+   virtually.
+   * We will send you additionally information on what is needed
+     for you to attend, so please do not delay.
+   * Please note that approval for some countries may take too long,
+     and you may need to attend virtually.
+ * If you are a non-Sandian and a US citizen, please fill out the
+   registration by <b>Oct. 21st</b>.  Otherwise, you will need to join us
+   virtually.
+   * This will allow us time to complete the necessary paperwork
+     to get you badged and able to gain entrance to CSRI.
+ * If you are a Sandian and a non-US citizen, please make sure
+   Building CSRI is included on your FNRSP, and your registration
+   reflects your in-person status.  Again by <b>Oct. 24th</b>
+ * If you are a Sandian and a US citizen, please fill out the
+   registration form by <b>Oct. 24th</b>.  Again, sooner would help us in
+   the planning!
+
+
 ## Keynote
 
-Title: TBD
+Title: Wolfgang Bangerth (Colorado State University)
 
 ## Agenda
+All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 
 <p style="text-align: center;"><span style="text-decoration: underline;">Tuesday, October 25th</span></p>
 
@@ -62,7 +100,7 @@ Title: TBD
 <tbody>
 <tr><td colspan=2> <b> Opening </b>                                                                          </td> </tr>
 <tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober)                                                    </td> </tr>
-<tr><th><abbr>  8:15 </abbr></th>  <td> Keynote - Wolfgang Bangerth (U of Colorado) </td> </tr>
+<tr><th><abbr>  8:15 </abbr></th>  <td> Keynote - Wolfgang Bangerth (Colorado State University) </td> </tr>
 
 <tr><td colspan=2> <b> Presentations and Updates from Trilinos Product Areas </b>                            </td> </tr>
 <tr><th><abbr>  9:00 </abbr></th>  <td> Framework                                                            </td> </tr>
@@ -72,6 +110,7 @@ Title: TBD
 <tr><th><abbr>  9:45 </abbr></th>  <td> Data Services                                                        </td> </tr>
 <tr><th><abbr>       </abbr></th>  <td> Data Services Update (M. Wolf) </td> </tr>
 <tr><th><abbr>       </abbr></th>  <td> Tpetra in FY23 (C. Siefert) </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> Kokkos/Kokkos Kernels (C. Trott, S. Rajamanickam) </td> </tr>
 
 <tr><th><abbr> 10:15 </abbr></th>  <td> <b> Break </b>                                                       </td> </tr>
 
@@ -105,7 +144,7 @@ Title: TBD
 <tr><th><abbr> 10:30 </abbr></th>  <td> E4S (S. Shende) </td> </tr>
 <tr><th><abbr> 11:00 </abbr></th>  <td> Sierra Structural Dynamics (J. Vo) </td> </tr>
 <tr><th><abbr> 11:30 </abbr></th>  <td> Adjoint Sensitivities (E. Phipps) </td> </tr>
-<tr><th><abbr> 12:00 </abbr></th>  <td> MrHyde/FEM^3 (T. Wildey) </td> </tr>
+<tr><th><abbr> 12:00 </abbr></th>  <td> Extreme-scale Electromagnetics for Design and Control of Metamaterials (D. Ridzal) </td> </tr>
 
 <tr><th><abbr> 12:30 </abbr></th>  <td> <b>Adjourn</b>                                                       </td> </tr>
 </tbody>
