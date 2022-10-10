@@ -123,7 +123,8 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 
 <tr><th><abbr> 11:30 </abbr></th>  <td> Nonlinear Analysis                                                   </td> </tr>
 <tr><th><abbr>       </abbr></th>  <td> Nonlinear Analysis Product Area Update (R. Pawlowski) </td> </tr>
-<tr><th><abbr> 11:45 </abbr></th>  <td> <b>Adjourn</b>                                                       </td> </tr>
+<tr><th><abbr> 11:45 </abbr></th>  <td> GEMMA/Adelus (V. Dang / J. Kutolski)                                 </td> </tr>
+<tr><th><abbr> 12:15 </abbr></th>  <td> <b>Adjourn</b>                                                       </td> </tr>
 </tbody>
 </table>
 
