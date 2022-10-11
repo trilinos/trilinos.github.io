@@ -108,7 +108,6 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><th><abbr>       </abbr></th>  <td> GenConfig (TBD) </td> </tr>
 
 <tr><th><abbr>  9:45 </abbr></th>  <td> Data Services                                                        </td> </tr>
-<tr><th><abbr>       </abbr></th>  <td> Data Services Update (M. Wolf) </td> </tr>
 <tr><th><abbr>       </abbr></th>  <td> Tpetra in FY23 (C. Siefert) </td> </tr>
 <tr><th><abbr>       </abbr></th>  <td> Kokkos/Kokkos Kernels (C. Trott, S. Rajamanickam) </td> </tr>
 
