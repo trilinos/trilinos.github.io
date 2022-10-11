@@ -148,7 +148,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><th><abbr> 12:00 </abbr></th>  <td> Extreme-scale Electromagnetics for Design and Control of Metamaterials (D. Ridzal) </td> </tr>
 <tr><th><abbr> 12:30 </abbr></th>  <td> Physics based block preconditioning with sparse approximate inverses in MueLu: An application to beam/solid interaction (M. Firmbach) </td> </tr>
 
-<tr><th><abbr> 12:30 </abbr></th>  <td> <b>Adjourn</b>                                                       </td> </tr>
+<tr><th><abbr>  1:00 </abbr></th>  <td> <b>Adjourn</b>                                                       </td> </tr>
 </tbody>
 </table>
 
