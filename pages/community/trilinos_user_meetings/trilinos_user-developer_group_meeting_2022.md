@@ -104,8 +104,8 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 
 <tr><td colspan=2> <b> Presentations and Updates from Trilinos Product Areas </b>                            </td> </tr>
 <tr><th><abbr>  9:00 </abbr></th>  <td> Framework                                                            </td> </tr>
-<tr><th><abbr>       </abbr></th>  <td> Framework Product Overview and Update (C. Ober) </td> </tr>
-<tr><th><abbr>       </abbr></th>  <td> GenConfig (TBD) </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> Framework Product Overview and Update (C. Ober, J. Willenbring E. Harvey, W. Burgess) </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> Overview of GenConfig (E. Harvey, J. Braun, J. Willenbring) </td> </tr>
 
 <tr><th><abbr>  9:45 </abbr></th>  <td> Data Services                                                        </td> </tr>
 <tr><th><abbr>       </abbr></th>  <td> Tpetra in FY23 (C. Siefert) </td> </tr>
@@ -176,11 +176,20 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><th><abbr> 12:00 </abbr></th>  <td> Future Tools (Moderator: J. Willenbring) </td> </tr>
 <tr><th><abbr>       </abbr></th>  <td> Spack-CM / Test Beds - J. Frye </td> </tr>
 <tr><th><abbr>       </abbr></th>  <td> Spack - P. Sakievich </td> </tr>
-<tr><th><abbr>       </abbr></th>  <td> ASC DevOps - S. Warnock </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> ASC DevOps Initiative: ASC Unified Environment and Trilinos - S. Warnock </td> </tr>
 <tr><th><abbr>       </abbr></th>  <td> E4S Containers - S. Shende </td> </tr>
 
 <tr><th><abbr>  1:30 </abbr></th>  <td> Usability and Documentation - (J. Loe) </td> </tr>
 
-<tr><th><abbr>  2:15 </abbr></th>  <td> <b>Adjourn</b>                                                       </td> </tr>
+<tr><th><abbr>  2:15 </abbr></th>  <td> <b> Break </b>                                                       </td> </tr>
+
+<tr><th><abbr>  2:30 </abbr></th>  <td> Developer Open Discussion (Current Suggested Topics) </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> Use cases for Kokkos execution space instances (aka CUDA streams) in Trilinos (C. Siefert) </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> Developer requirements for allowing "External Kokkos" in Trilinos (C. Siefert) </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> LO/GO template removal in Tpetra stack (to become compile-time options) (C. Siefert) </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> Trilinos 14 Publication, since current Trilinos references are old (S. Rajamanickam) </td> </tr>
+
+
+<tr><th><abbr>  3:30 </abbr></th>  <td> <b>Adjourn</b>                                                       </td> </tr>
 </tbody>
 </table>
