@@ -89,7 +89,8 @@ the better!
 
 ## Keynote
 
-Title: Wolfgang Bangerth (Colorado State University)
+Complex simulations with the deal.II open source software,
+and how we use Trilinos for that: Wolfgang Bangerth (Colorado State University)
 
 ## Agenda
 All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
@@ -100,29 +101,30 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tbody>
 <tr><td colspan=2> <b> Opening </b>                                                                          </td> </tr>
 <tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober)                                                    </td> </tr>
-<tr><th><abbr>  8:15 </abbr></th>  <td> Keynote - Wolfgang Bangerth (Colorado State University) </td> </tr>
+<tr><th><abbr>  8:15 </abbr></th>  <td> Keynote - "Complex simulations with the deal.II open source software,
+and how we use Trilinos for that" Wolfgang Bangerth (Colorado State University) </td> </tr>
 
 <tr><td colspan=2> <b> Presentations and Updates from Trilinos Product Areas </b>                            </td> </tr>
 <tr><th><abbr>  9:00 </abbr></th>  <td> Framework                                                            </td> </tr>
-<tr><th><abbr>       </abbr></th>  <td> Framework Product Overview and Update (C. Ober, J. Willenbring E. Harvey, W. Burgess) </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> Trilinos Framework Update (C. Ober, J. Willenbring, E. Harvey, W. Burgess) </td> </tr>
 <tr><th><abbr>       </abbr></th>  <td> Overview of GenConfig (E. Harvey, J. Braun, J. Willenbring) </td> </tr>
 
 <tr><th><abbr>  9:45 </abbr></th>  <td> Data Services                                                        </td> </tr>
 <tr><th><abbr>       </abbr></th>  <td> Tpetra in FY23 (C. Siefert) </td> </tr>
-<tr><th><abbr>       </abbr></th>  <td> Kokkos/Kokkos Kernels (C. Trott, S. Rajamanickam) </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> Kokkos Ecosystem 4.0 Update (Nathan Ellingwood) </td> </tr>
 
 <tr><th><abbr> 10:15 </abbr></th>  <td> <b> Break </b>                                                       </td> </tr>
 
 <tr><th><abbr> 10:30 </abbr></th>  <td> Discretizations                                                      </td> </tr>
-<tr><th><abbr>       </abbr></th>  <td> Discretizations Product Update (M. Perego) </td> </tr>
-<tr><th><abbr>       </abbr></th>  <td> Intrepid2 (N. Roberts) </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> Trilinos Discretizations Product Update (M. Perego) </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> Discretizations: Intrepid2 Update (N. Roberts) </td> </tr>
 
 <tr><th><abbr> 11:00 </abbr></th>  <td> Linear Solvers                                                       </td> </tr>
 <tr><th><abbr>       </abbr></th>  <td> Solvers Update (S. Rajamanickam) </td> </tr>
 
 <tr><th><abbr> 11:30 </abbr></th>  <td> Nonlinear Analysis                                                   </td> </tr>
 <tr><th><abbr>       </abbr></th>  <td> Nonlinear Analysis Product Area Update (R. Pawlowski) </td> </tr>
-<tr><th><abbr> 11:45 </abbr></th>  <td> GEMMA/Adelus (V. Dang / J. Kutolski)                                 </td> </tr>
+<tr><th><abbr> 11:45 </abbr></th>  <td> GEMMA Electromagnetic Code and ADELUS - New Capabilities (J. Kotulski / V. Dang )                                 </td> </tr>
 <tr><th><abbr> 12:15 </abbr></th>  <td> <b>Adjourn</b>                                                       </td> </tr>
 </tbody>
 </table>
@@ -136,14 +138,14 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober)                                                    </td> </tr>
 <tr><th><abbr>  8:15 </abbr></th>  <td> Stuart Slattery (ORNL) </td> </tr>
 <tr><th><abbr>  8:45 </abbr></th>  <td> Sierra Thermal Fluids (J. Clausen) </td> </tr>
-<tr><th><abbr>  9:15 </abbr></th>  <td> Ice Sheet (J. Watkins and M. Perego) </td> </tr>
-<tr><th><abbr>  9:45 </abbr></th>  <td> Alegra (T. Fuller) </td> </tr>
+<tr><th><abbr>  9:15 </abbr></th>  <td> Ice Sheet Modeling with MALI (M. Perego / J. Watkins) </td> </tr>
+<tr><th><abbr>  9:45 </abbr></th>  <td> The ALEGRA Finite Element Code and Trilinos (T. Fuller) </td> </tr>
 
 <tr><th><abbr> 10:15 </abbr></th>  <td> <b> Break </b>                                                       </td> </tr>
 
 <tr><th><abbr> 10:30 </abbr></th>  <td> E4S (S. Shende) </td> </tr>
-<tr><th><abbr> 11:00 </abbr></th>  <td> Sierra Structural Dynamics (J. Vo) </td> </tr>
-<tr><th><abbr> 11:30 </abbr></th>  <td> Adjoint Sensitivities (E. Phipps) </td> </tr>
+<tr><th><abbr> 11:00 </abbr></th>  <td> Revolutionary Speedups in SIERRA Structural Dynamics Enhance Mission Impact (J. Vo) </td> </tr>
+<tr><th><abbr> 11:30 </abbr></th>  <td> Adjoint Sensitivities and Calibration of Hypersonic Flow Problems in SPARC (E. Phipps, P. Blonigan, K. Maupin, and J. Ray) </td> </tr>
 <tr><th><abbr> 12:00 </abbr></th>  <td> Extreme-scale Electromagnetics for Design and Control of Metamaterials (K. DiPietro, T. Wildey and D. Ridzal) </td> </tr>
 <tr><th><abbr> 12:30 </abbr></th>  <td> Physics based block preconditioning with sparse approximate inverses in MueLu: An application to beam/solid interaction (M. Firmbach / M. Mayr) </td> </tr>
 
@@ -166,7 +168,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><th><abbr>  9:40 </abbr></th>  <td> <b> Break </b>                                                       </td> </tr>
 
 <tr><th><abbr>  9:55 </abbr></th>  <td> PyTrilinos Reboot (K. Liegeois) </td> </tr>
-<tr><th><abbr> 10:20 </abbr></th>  <td> Trilinos and Machine Learning (Siefert/Tuminaro/Hu) </td> </tr>
+<tr><th><abbr> 10:20 </abbr></th>  <td> Trilinos and Machine Learning (C. Siefert) </td> </tr>
 <tr><th><abbr> 10:45 </abbr></th>  <td> SQE Status and Changes (J. Turgeon) </td> </tr>
 
 <tr><th><abbr> 11:15 </abbr></th>  <td> <b> Lunch Break </b>                                                 </td> </tr>
@@ -175,11 +177,11 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 
 <tr><th><abbr> 12:00 </abbr></th>  <td> Future Tools (Moderator: J. Willenbring) </td> </tr>
 <tr><th><abbr>       </abbr></th>  <td> Spack-CM / Test Beds - J. Frye </td> </tr>
-<tr><th><abbr>       </abbr></th>  <td> Spack - P. Sakievich </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> Spack Driven Software Development and Spack-Manager - P. Sakievich </td> </tr>
 <tr><th><abbr>       </abbr></th>  <td> ASC DevOps Initiative: ASC Unified Environment and Trilinos - S. Warnock </td> </tr>
 <tr><th><abbr>       </abbr></th>  <td> E4S Containers - S. Shende </td> </tr>
 
-<tr><th><abbr>  1:30 </abbr></th>  <td> Usability and Documentation - (J. Loe) </td> </tr>
+<tr><th><abbr>  1:30 </abbr></th>  <td> Trilinos Usability and Documentation Discussion - (J. Loe) </td> </tr>
 
 <tr><th><abbr>  2:15 </abbr></th>  <td> <b> Break </b>                                                       </td> </tr>
 
