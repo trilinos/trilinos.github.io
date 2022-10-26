@@ -190,6 +190,9 @@ and how we use Trilinos for that" Wolfgang Bangerth (Colorado State University) 
 <tr><th><abbr>       </abbr></th>  <td> Developer requirements for allowing "External Kokkos" in Trilinos (C. Siefert) </td> </tr>
 <tr><th><abbr>       </abbr></th>  <td> LO/GO template removal in Tpetra stack (to become compile-time options) (C. Siefert) </td> </tr>
 <tr><th><abbr>       </abbr></th>  <td> Trilinos 14 Publication, since current Trilinos references are old (S. Rajamanickam) </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> In-person/remote approach for future meetings (was there sufficient in-person attendance to make that useful?) (J. Willenbring) </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> Fostering community participation in Trilinos (J. Willenbring) </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> Trilinos test cases for E4S that stress AMD (and later Intel) GPUs? (J. Willenbring) </td> </tr>
 
 
 <tr><th><abbr>  3:30 </abbr></th>  <td> <b>Adjourn</b>                                                       </td> </tr>
