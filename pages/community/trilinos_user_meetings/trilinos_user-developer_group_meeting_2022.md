@@ -147,7 +147,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><th><abbr> 10:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-26/05_E4S_TUG22.pdf">E4S</a> (S. Shende) </td> </tr>
 <tr><th><abbr> 11:00 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-26/06_TrillinosUserGroup_SdGpuSpeedups.pdf">Revolutionary Speedups in SIERRA Structural Dynamics Enhance Mission Impact</a> (J. Vo) </td> </tr>
 <tr><th><abbr> 11:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-26/07_sparc_adjoint.pdf">Adjoint Sensitivities and Calibration of Hypersonic Flow Problems in SPARC</a> (E. Phipps, P. Blonigan, K. Maupin, and J. Ray) </td> </tr>
-<tr><th><abbr> 12:00 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-26/08_Mirage-TUG.pdf">Extreme-scale Electromagnetics for Design and Control of Metamaterials</a>Extreme-scale Electromagnetics for Design and Control of Metamaterials (K. DiPietro, T. Wildey and D. Ridzal) </td> </tr>
+<tr><th><abbr> 12:00 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-26/08_Mirage-TUG.pdf">Extreme-scale Electromagnetics for Design and Control of Metamaterials</a> (K. DiPietro, T. Wildey and D. Ridzal) </td> </tr>
 <tr><th><abbr> 12:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-26/09_TUG2022_Firmbach.pdf">Physics based block preconditioning with sparse approximate inverses in MueLu: An application to beam/solid interaction</a> (M. Firmbach / M. Mayr) </td> </tr>
 
 <tr><th><abbr>  1:00 </abbr></th>  <td> <b>Adjourn</b>                                                       </td> </tr>
@@ -200,7 +200,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
   <li> (votes:  1) Documentation for Trilinos? (J. Loe)</li>
   <li> (votes:  0) In-person/remote approach for future meetings (was there sufficient in-person attendance to make that useful?) (J. Willenbring)</li>
   <li> (votes: 0) Trilinos test cases for E4S that stress AMD (and later Intel) GPUs? (J. Willenbring)</li>
-<ol>
+</ol>
 </td> </tr>
 
 <tr><th><abbr>  3:30 </abbr></th>  <td> <b>Adjourn</b>                                                       </td> </tr>
