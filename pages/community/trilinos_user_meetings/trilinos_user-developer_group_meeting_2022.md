@@ -101,30 +101,31 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tbody>
 <tr><td colspan=2> <b> Opening </b>                                                                          </td> </tr>
 <tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober)                                                    </td> </tr>
-<tr><th><abbr>  8:15 </abbr></th>  <td> Keynote - "Complex simulations with the deal.II open source software,
-and how we use Trilinos for that" Wolfgang Bangerth (Colorado State University) </td> </tr>
+<tr><th><abbr>  8:15 </abbr></th>  <td> Keynote - <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-25/01_bangerth.pdf">Complex simulations with the deal.II open source software, and how we use Trilinos for that</a> Wolfgang Bangerth (Colorado State University) </td> </tr>
 
 <tr><td colspan=2> <b> Presentations and Updates from Trilinos Product Areas </b>                            </td> </tr>
 <tr><th><abbr>  9:00 </abbr></th>  <td> Framework                                                            </td> </tr>
-<tr><th><abbr>       </abbr></th>  <td> Trilinos Framework Update (C. Ober, J. Willenbring, E. Harvey, W. Burgess) </td> </tr>
-<tr><th><abbr>       </abbr></th>  <td> Overview of GenConfig (E. Harvey, J. Braun, J. Willenbring) </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-25/02_TUG22_Framework_Update.pdf">Trilinos Framework Update</a> (Ober, J. Willenbring, E. Harvey, W. Burgess) </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-25/03_TUG22-GenConfig.pdf">Overview of GenConfig</a>  (E. Harvey, J. Braun, J. Willenbring) </td> </tr>
 
 <tr><th><abbr>  9:45 </abbr></th>  <td> Data Services                                                        </td> </tr>
-<tr><th><abbr>       </abbr></th>  <td> Tpetra in FY23 (C. Siefert) </td> </tr>
-<tr><th><abbr>       </abbr></th>  <td> Kokkos Ecosystem 4.0 Update (Nathan Ellingwood) </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-25/04_TUG_Tpetra_Siefert.pdf">Tpetra in FY23</a> (C. Siefert) </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-25/05_Kokkos_TUG_Presentation.pdf">Kokkos Ecosystem 4.0 Update</a> (Nathan Ellingwood) </td> </tr>
 
 <tr><th><abbr> 10:15 </abbr></th>  <td> <b> Break </b>                                                       </td> </tr>
 
 <tr><th><abbr> 10:30 </abbr></th>  <td> Discretizations                                                      </td> </tr>
-<tr><th><abbr>       </abbr></th>  <td> Trilinos Discretizations Product Update (M. Perego) </td> </tr>
-<tr><th><abbr>       </abbr></th>  <td> Discretizations: Intrepid2 Update (N. Roberts) </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-25/06_discretization_update.pdf">Trilinos Discretizations Product Update</a> (M. Perego) </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-25/07_TUG-Intrepid2_Updates.pdf">Discretizations: Intrepid2 Update</a> (N. Roberts) </td> </tr>
 
 <tr><th><abbr> 11:00 </abbr></th>  <td> Linear Solvers                                                       </td> </tr>
-<tr><th><abbr>       </abbr></th>  <td> Solvers Update (S. Rajamanickam) </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-25/08_TUG_2022_Consolidated.pdf">Solvers Update</a> (S. Rajamanickam) </td> </tr>
 
 <tr><th><abbr> 11:30 </abbr></th>  <td> Nonlinear Analysis                                                   </td> </tr>
-<tr><th><abbr>       </abbr></th>  <td> Nonlinear Analysis Product Area Update (R. Pawlowski) </td> </tr>
-<tr><th><abbr> 11:45 </abbr></th>  <td> GEMMA Electromagnetic Code and ADELUS - New Capabilities (J. Kotulski / V. Dang )                                 </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-25/09_TUG_NonlinearSolverProductAreaUpdates_2022_10_25.pdf">Nonlinear Analysis Product Area Update</a> (R. Pawlowski) </td> </tr>
+
+<tr><th><abbr> 11:45 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-25/10_Gemma_Adelus_TUG2022.pdf">GEMMA Electromagnetic Code and ADELUS - New Capabilities</a> (J. Kotulski / V. Dang )                                 </td> </tr>
+
 <tr><th><abbr> 12:15 </abbr></th>  <td> <b>Adjourn</b>                                                       </td> </tr>
 </tbody>
 </table>
@@ -137,17 +138,17 @@ and how we use Trilinos for that" Wolfgang Bangerth (Colorado State University) 
 <tr><td colspan=2> <b> Applications Session </b>                                                             </td> </tr>
 <tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober)                                                    </td> </tr>
 <tr><th><abbr>  8:15 </abbr></th>  <td> Stuart Slattery (ORNL) </td> </tr>
-<tr><th><abbr>  8:45 </abbr></th>  <td> Sierra Thermal Fluids (J. Clausen) </td> </tr>
-<tr><th><abbr>  9:15 </abbr></th>  <td> Ice Sheet Modeling with MALI (M. Perego / J. Watkins) </td> </tr>
-<tr><th><abbr>  9:45 </abbr></th>  <td> The ALEGRA Finite Element Code and Trilinos (T. Fuller) </td> </tr>
+<tr><th><abbr>  8:45 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-26/02_FY23_TUG_Aria_ATS.pdf">Sierra Thermal Fluids</a> (J. Clausen) </td> </tr>
+<tr><th><abbr>  9:15 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-26/03_Ice_sheet_project_v2.pdf">Ice Sheet Modeling with MALI</a> (M. Perego / J. Watkins) </td> </tr>
+<tr><th><abbr>  9:45 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-26/04_ALEGRA_TUG_2022.pdf">The ALEGRA Finite Element Code and Trilinos</a> (T. Fuller) </td> </tr>
 
 <tr><th><abbr> 10:15 </abbr></th>  <td> <b> Break </b>                                                       </td> </tr>
 
-<tr><th><abbr> 10:30 </abbr></th>  <td> E4S (S. Shende) </td> </tr>
-<tr><th><abbr> 11:00 </abbr></th>  <td> Revolutionary Speedups in SIERRA Structural Dynamics Enhance Mission Impact (J. Vo) </td> </tr>
-<tr><th><abbr> 11:30 </abbr></th>  <td> Adjoint Sensitivities and Calibration of Hypersonic Flow Problems in SPARC (E. Phipps, P. Blonigan, K. Maupin, and J. Ray) </td> </tr>
-<tr><th><abbr> 12:00 </abbr></th>  <td> Extreme-scale Electromagnetics for Design and Control of Metamaterials (K. DiPietro, T. Wildey and D. Ridzal) </td> </tr>
-<tr><th><abbr> 12:30 </abbr></th>  <td> Physics based block preconditioning with sparse approximate inverses in MueLu: An application to beam/solid interaction (M. Firmbach / M. Mayr) </td> </tr>
+<tr><th><abbr> 10:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-26/05_E4S_TUG22.pdf">E4S</a> (S. Shende) </td> </tr>
+<tr><th><abbr> 11:00 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-26/06_TrillinosUserGroup_SdGpuSpeedups.pdf">Revolutionary Speedups in SIERRA Structural Dynamics Enhance Mission Impact</a> (J. Vo) </td> </tr>
+<tr><th><abbr> 11:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-26/07_sparc_adjoint.pdf">Adjoint Sensitivities and Calibration of Hypersonic Flow Problems in SPARC</a> (E. Phipps, P. Blonigan, K. Maupin, and J. Ray) </td> </tr>
+<tr><th><abbr> 12:00 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-26/08_Mirage-TUG.pdf">Extreme-scale Electromagnetics for Design and Control of Metamaterials</a>Extreme-scale Electromagnetics for Design and Control of Metamaterials (K. DiPietro, T. Wildey and D. Ridzal) </td> </tr>
+<tr><th><abbr> 12:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-26/09_TUG2022_Firmbach.pdf">Physics based block preconditioning with sparse approximate inverses in MueLu: An application to beam/solid interaction</a> (M. Firmbach / M. Mayr) </td> </tr>
 
 <tr><th><abbr>  1:00 </abbr></th>  <td> <b>Adjourn</b>                                                       </td> </tr>
 </tbody>
@@ -160,15 +161,15 @@ and how we use Trilinos for that" Wolfgang Bangerth (Colorado State University) 
 <tbody>
 <tr><td colspan=2> <b> Developer Sessions </b>                                                               </td> </tr>
 <tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober)                                                    </td> </tr>
-<tr><th><abbr>  8:00 </abbr></th>  <td> Update on the CMake modernization effort (R. Bartlett) </td> </tr>
-<tr><th><abbr>  8:25 </abbr></th>  <td> CDash query tutorial for triaging systemic Trilinos PR build and test failures (R. Bartlett) </td> </tr>
-<tr><th><abbr>  8:50 </abbr></th>  <td> Performance Testing talk (J. Hu / C. Siefert) </td> </tr>
-<tr><th><abbr>  9:15 </abbr></th>  <td> Higher-order geometric-algebraic multigrid (C. Glusa) </td> </tr>
+<tr><th><abbr>  8:00 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-27/01_TribitsModernization_TUG_2022-10-27.pdf">Update on the CMake modernization effort</a> (R. Bartlett) </td> </tr>
+<tr><th><abbr>  8:25 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-27/02_PrTriaggingCDashTutorial_TUG_2022-10-27.pdf">CDash query tutorial for triaging systemic Trilinos PR build and test failures</a> (R. Bartlett) </td> </tr>
+<tr><th><abbr>  8:50 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-27/03_TrilinosPerfTracking.pdf">Performance Testing talk</a> (J. Hu / C. Siefert) </td> </tr>
+<tr><th><abbr>  9:15 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-27/04_slides.pdf">Higher-order geometric-algebraic multigrid</a> (C. Glusa) </td> </tr>
 
 <tr><th><abbr>  9:40 </abbr></th>  <td> <b> Break </b>                                                       </td> </tr>
 
-<tr><th><abbr>  9:55 </abbr></th>  <td> PyTrilinos Reboot (K. Liegeois) </td> </tr>
-<tr><th><abbr> 10:20 </abbr></th>  <td> Trilinos and Machine Learning (C. Siefert) </td> </tr>
+<tr><th><abbr>  9:55 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-27/05_TUG_PyTrilinos2.pdf">PyTrilinos Reboot</a> (K. Liegeois) </td> </tr>
+<tr><th><abbr> 10:20 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-27/06_TUG_MachineLearning_Siefert.pdf">Trilinos and Machine Learning</a> (C. Siefert) </td> </tr>
 <tr><th><abbr> 10:45 </abbr></th>  <td> SQE Status and Changes (J. Turgeon) </td> </tr>
 
 <tr><th><abbr> 11:15 </abbr></th>  <td> <b> Lunch Break </b>                                                 </td> </tr>
@@ -176,24 +177,31 @@ and how we use Trilinos for that" Wolfgang Bangerth (Colorado State University) 
 <tr><td colspan=2> <b> Panel Discussions </b>                                                                </td> </tr>
 
 <tr><th><abbr> 12:00 </abbr></th>  <td> Future Tools (Moderator: J. Willenbring) </td> </tr>
-<tr><th><abbr>       </abbr></th>  <td> Spack-CM / Test Beds - J. Frye </td> </tr>
-<tr><th><abbr>       </abbr></th>  <td> Spack Driven Software Development and Spack-Manager - P. Sakievich </td> </tr>
-<tr><th><abbr>       </abbr></th>  <td> ASC DevOps Initiative: ASC Unified Environment and Trilinos - S. Warnock </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-27/08.1_TUG-2022-jfrye-revised.pdf">Spack-CM / Test Beds</a> - J. Frye </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-27/08.2_Spack_Driven_Developer_Workflow-SAND2022-14726_C.pdf">Spack Driven Software Development and Spack-Manager</a> - P. Sakievich </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-27/08.3_ASC_DO_TUG.pdf">ASC DevOps Initiative: ASC Unified Environment and Trilinos</a> - S. Warnock </td> </tr>
 <tr><th><abbr>       </abbr></th>  <td> E4S Containers - S. Shende </td> </tr>
 
-<tr><th><abbr>  1:30 </abbr></th>  <td> Trilinos Usability and Documentation Discussion - (J. Loe) </td> </tr>
+<tr><th><abbr>  1:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-27/09_TUGUsability.pdf">Trilinos Usability and Documentation Discussion</a> (J. Loe) </td> </tr>
 
 <tr><th><abbr>  2:15 </abbr></th>  <td> <b> Break </b>                                                       </td> </tr>
 
-<tr><th><abbr>  2:30 </abbr></th>  <td> Developer Open Discussion (Current Suggested Topics) </td> </tr>
-<tr><th><abbr>       </abbr></th>  <td> Use cases for Kokkos execution space instances (aka CUDA streams) in Trilinos (C. Siefert) </td> </tr>
-<tr><th><abbr>       </abbr></th>  <td> Developer requirements for allowing "External Kokkos" in Trilinos (C. Siefert) </td> </tr>
-<tr><th><abbr>       </abbr></th>  <td> LO/GO template removal in Tpetra stack (to become compile-time options) (C. Siefert) </td> </tr>
-<tr><th><abbr>       </abbr></th>  <td> Trilinos 14 Publication, since current Trilinos references are old (S. Rajamanickam) </td> </tr>
-<tr><th><abbr>       </abbr></th>  <td> In-person/remote approach for future meetings (was there sufficient in-person attendance to make that useful?) (J. Willenbring) </td> </tr>
-<tr><th><abbr>       </abbr></th>  <td> Fostering community participation in Trilinos (J. Willenbring) </td> </tr>
-<tr><th><abbr>       </abbr></th>  <td> Trilinos test cases for E4S that stress AMD (and later Intel) GPUs? (J. Willenbring) </td> </tr>
-
+<tr><th><abbr>  2:30 </abbr></th>  <td> Developer Open Discussion (Only discussed the first three.) </td> </tr>
+<tr><th><abbr>       </abbr></th>  <td> 
+<ol>
+  <li> (votes: 17) Developer requirements for allowing "External Kokkos" in Trilinos (C. Siefert) </li>
+  <li> (votes: 14) Adjustments to the Trilinos PR testing processes to remove impediments.  (R. Bartlett) </li>
+  <li> (votes: 12) Are we comfortable having Trilinos depend on Spack (or working actively towards that)? (R. Bartlett)</li>
+  <li> (votes: 10) A Trilinos Slack channel? (J. Willenbring)</li>
+  <li> (votes:  7) Use cases for Kokkos execution space instances (aka CUDA streams) in Trilinos (C. Siefert) </li>
+  <li> (votes:  5) LO/GO template removal in Tpetra stack (to become compile-time options) (C. Siefert)</li>
+  <li> (votes:  4) Should we have a Trilinos 14 publication, since current Trilinos references are old (S. Rajamanickam)</li>
+  <li> (votes:  2) Fostering community participation in Trilinos (J. Willenbring) </li>
+  <li> (votes:  1) Documentation for Trilinos? (J. Loe)</li>
+  <li> (votes:  0) In-person/remote approach for future meetings (was there sufficient in-person attendance to make that useful?) (J. Willenbring)</li>
+  <li> (votes: 0) Trilinos test cases for E4S that stress AMD (and later Intel) GPUs? (J. Willenbring)</li>
+<ol>
+</td> </tr>
 
 <tr><th><abbr>  3:30 </abbr></th>  <td> <b>Adjourn</b>                                                       </td> </tr>
 </tbody>
