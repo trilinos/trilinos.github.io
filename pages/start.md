@@ -12,6 +12,7 @@ Note that there may be overlap between some documents.
 - [About page](about.html)
 - [Trilinos Overview (.pdf)](pdfs/TrilinosOverview.pdf) A broad overview of Trilinos.  Legacy document but still instructive.
 - [Events](events.html) Recent Trilinos User-Developer Group meeting pages contain links to recorded presentations covering introductory and advanced topics
+- The [Trilinos Official YouTube channel](https://www.youtube.com/channel/UCXUzjWRBdpPVBbJn8vFRc7w) has several recorded talks from beginner to exper level 
 - [An Overview of the Trilinos Project (.pdf)](pdfs/TrilinosACMTOMS2004.pdf) The original Trilinos article from ACM Transactions on Mathematical Software, Vol. V, No. N, December 2004, Pages 1-27
 
 - [Packages page](packages.html) Links to individual package site
