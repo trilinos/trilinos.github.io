@@ -124,7 +124,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><th><abbr> 11:30 </abbr></th>  <td> Nonlinear Analysis                                                   </td> </tr>
 <tr><th><abbr>       </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-25/09_TUG_NonlinearSolverProductAreaUpdates_2022_10_25.pdf">Nonlinear Analysis Product Area Update</a> (R. Pawlowski) </td> </tr>
 
-<tr><th><abbr> 11:45 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-25/10_Gemma_Adelus_TUG2022.pdf">GEMMA Electromagnetic Code and ADELUS - New Capabilities</a> (J. Kotulski / V. Dang )                                 </td> </tr>
+<tr><th><abbr> 11:45 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-25/10_Gemma_Adelus_TUG2022.pdf">GEMMA Electromagnetic Code and ADELUS - New Capabilities</a> (J. Kotulski, V. Dang )                                 </td> </tr>
 
 <tr><th><abbr> 12:15 </abbr></th>  <td> <b>Adjourn</b>                                                       </td> </tr>
 </tbody>
@@ -137,18 +137,18 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tbody>
 <tr><td colspan=2> <b> Applications Session </b>                                                             </td> </tr>
 <tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober)                                                    </td> </tr>
-<tr><th><abbr>  8:15 </abbr></th>  <td> Stuart Slattery (ORNL) </td> </tr>
+<tr><th><abbr>  8:15 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-26/01_tug_2022.pdf">CFD Simulations with Panzer</a> (R. Glasby, S. Hamilton, S. Slattery) (ORNL) </td> </tr>
 <tr><th><abbr>  8:45 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-26/02_FY23_TUG_Aria_ATS.pdf">Sierra Thermal Fluids</a> (J. Clausen) </td> </tr>
-<tr><th><abbr>  9:15 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-26/03_Ice_sheet_project_v2.pdf">Ice Sheet Modeling with MALI</a> (M. Perego / J. Watkins) </td> </tr>
+<tr><th><abbr>  9:15 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-26/03_Ice_sheet_project_v2.pdf">Ice Sheet Modeling with MALI</a> (M. Perego, J. Watkins) </td> </tr>
 <tr><th><abbr>  9:45 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-26/04_ALEGRA_TUG_2022.pdf">The ALEGRA Finite Element Code and Trilinos</a> (T. Fuller) </td> </tr>
 
 <tr><th><abbr> 10:15 </abbr></th>  <td> <b> Break </b>                                                       </td> </tr>
 
-<tr><th><abbr> 10:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-26/05_E4S_TUG22.pdf">E4S</a> (S. Shende) </td> </tr>
+<tr><th><abbr> 10:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-26/05_E4S_TUG22.pdf">E4S</a> (S. Shende) (U. of Oregon) </td> </tr>
 <tr><th><abbr> 11:00 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-26/06_TrillinosUserGroup_SdGpuSpeedups.pdf">Revolutionary Speedups in SIERRA Structural Dynamics Enhance Mission Impact</a> (J. Vo) </td> </tr>
-<tr><th><abbr> 11:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-26/07_sparc_adjoint.pdf">Adjoint Sensitivities and Calibration of Hypersonic Flow Problems in SPARC</a> (E. Phipps, P. Blonigan, K. Maupin, and J. Ray) </td> </tr>
-<tr><th><abbr> 12:00 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-26/08_Mirage-TUG.pdf">Extreme-scale Electromagnetics for Design and Control of Metamaterials</a> (K. DiPietro, T. Wildey and D. Ridzal) </td> </tr>
-<tr><th><abbr> 12:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-26/09_TUG2022_Firmbach.pdf">Physics based block preconditioning with sparse approximate inverses in MueLu: An application to beam/solid interaction</a> (M. Firmbach / M. Mayr) </td> </tr>
+<tr><th><abbr> 11:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-26/07_sparc_adjoint.pdf">Adjoint Sensitivities and Calibration of Hypersonic Flow Problems in SPARC</a> (E. Phipps, P. Blonigan, K. Maupin, J. Ray) </td> </tr>
+<tr><th><abbr> 12:00 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-26/08_Mirage-TUG.pdf">Extreme-scale Electromagnetics for Design and Control of Metamaterials</a> (K. DiPietro, T. Wildey, D. Ridzal) </td> </tr>
+<tr><th><abbr> 12:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-26/09_TUG2022_Firmbach.pdf">Physics based block preconditioning with sparse approximate inverses in MueLu: An application to beam/solid interaction</a> (M. Firmbach, A. Popp, M. Mayr) (U. of the Bundeswehr Munich) </td> </tr>
 
 <tr><th><abbr>  1:00 </abbr></th>  <td> <b>Adjourn</b>                                                       </td> </tr>
 </tbody>
@@ -163,14 +163,14 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober)                                                    </td> </tr>
 <tr><th><abbr>  8:00 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-27/01_TribitsModernization_TUG_2022-10-27.pdf">Update on the CMake modernization effort</a> (R. Bartlett) </td> </tr>
 <tr><th><abbr>  8:25 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-27/02_PrTriaggingCDashTutorial_TUG_2022-10-27.pdf">CDash query tutorial for triaging systemic Trilinos PR build and test failures</a> (R. Bartlett) </td> </tr>
-<tr><th><abbr>  8:50 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-27/03_TrilinosPerfTracking.pdf">Performance Testing talk</a> (J. Hu / C. Siefert) </td> </tr>
+<tr><th><abbr>  8:50 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-27/03_TrilinosPerfTracking.pdf">Performance Testing talk</a> (J. Hu, G. Danielson, B. Kelley, E. Ridgway) </td> </tr>
 <tr><th><abbr>  9:15 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-27/04_slides.pdf">Higher-order geometric-algebraic multigrid</a> (C. Glusa) </td> </tr>
 
 <tr><th><abbr>  9:40 </abbr></th>  <td> <b> Break </b>                                                       </td> </tr>
 
-<tr><th><abbr>  9:55 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-27/05_TUG_PyTrilinos2.pdf">PyTrilinos Reboot</a> (K. Liegeois) </td> </tr>
+<tr><th><abbr>  9:55 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-27/05_TUG_PyTrilinos2.pdf">PyTrilinos Reboot</a> (K. Liegeois, C. Glusa) </td> </tr>
 <tr><th><abbr> 10:20 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2022/2022-10-27/06_TUG_MachineLearning_Siefert.pdf">Trilinos and Machine Learning</a> (C. Siefert) </td> </tr>
-<tr><th><abbr> 10:45 </abbr></th>  <td> SQE Status and Changes (J. Turgeon) </td> </tr>
+<tr><th><abbr> 10:45 </abbr></th>  <td> SQE Discussion </td> </tr>
 
 <tr><th><abbr> 11:15 </abbr></th>  <td> <b> Lunch Break </b>                                                 </td> </tr>
 
