@@ -132,7 +132,7 @@ graph-based interface. These algorithms are state-of-the-art distributed memory 
 
 ## Linear algebra objects and services
 
-Trilinos offers linear algebra objects such as sparse graphs, sparse matrices, and dense vectors that can be created, modified, and utilized in various computations such as sparse matrix-vector multiplies or dot products. Additionally, one can integrate their own linear algebra implementations or functions into Trilinos and access them through its solvers. This collection of features is collectively referred to as linear algebra services.
+Trilinos offers linear algebra objects such as sparse graphs, sparse matrices, and dense vectors that can be created, modified, and utilized in various computations such as sparse matrix-vector multiplies or dot products. Additionally, one can integrate their own linear algebra implementations or functions into Trilinos and use them within the solvers in Trilinos. This collection of features is referred to as linear algebra services.
 
 ### Parallelism
 
