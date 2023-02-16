@@ -296,7 +296,6 @@ Y
 
 
 <details><summary>  <h3> Linear solver interfaces </h3> </summary>
-<p>
 
 ### **Stratimikos**: High level linear solver interface
 
@@ -309,11 +308,10 @@ Stratimikos has adapters for AztecOO, Belos, Amesos, Ifpack, and ML. Stratimikos
 
 * * *
 
-</p>
 </details>
 
- <details><summary>  <h3> Iterative linear and eigen-solvers </h3> </summary>
-<p>
+
+<details><summary>  <h3> Iterative linear and eigen-solvers </h3> </summary>
 
 
 ### **Belos**: Classical and block Krylov subspace methods
@@ -356,14 +354,12 @@ Anasazi is compatible with Epetra and Tpetra.
 
 </div>
 
-</p>
 </details>
 
 
 
 
 <details><summary>  <h3> Direct linear solvers </h3> </summary>
-<p>
 
 ### **Amesos2**: direct sparse linear solver interface
 
@@ -375,12 +371,10 @@ Amesos2 can be considered a templated version of Amesos that supports a wider va
 
 * * *
 
-</p>
 </details>
 
 
 <details><summary>  <h3> Preconditioners </h3> </summary>
-<p>
 
 ### **ShyLU**: Hybrid iterative/direct Schur complement solver
 
@@ -425,11 +419,9 @@ MueLu is compatible with Epetra and Tpetra.
 
 * * *
 
-</p>
 </details>
 
- <details><summary>  <h3> Legacy Solver Packages </h3> </summary>
-<p>
+<details><summary>  <h3> Legacy Solver Packages </h3> </summary>
 
 
   ### **AztecOO**: Preconditioners and Krylov subspace methods
@@ -516,7 +508,6 @@ KOMPLEX is an add-on module to AZTEC that allows users to solve complex-valued l
 
 </div>
 
-</p>
 </details>
 
 
