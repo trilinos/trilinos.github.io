@@ -296,7 +296,9 @@ Y
 
 
 <details><summary>  <h3> Linear solver interfaces </h3> </summary>
+<p>
 
+  
 ### **Stratimikos**: High level linear solver interface
 
 Point-of-contact: Roscoe Bartlett (rabartl@sandia.gov)  
@@ -308,6 +310,7 @@ Stratimikos has adapters for AztecOO, Belos, Amesos, Ifpack, and ML. Stratimikos
 
 * * *
 
+</p>
 </details>
 
 
