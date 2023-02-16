@@ -294,8 +294,9 @@ Y
 
 </table>
 
-<a name="Linear_solver_interfaces"></a> 
-## <span style="text-decoration: underline;">Linear solver interfaces</span>
+
+<details><summary>  <h3> Linear solver interfaces </h3> </summary>
+<p>
 
 ### **Stratimikos**: High level linear solver interface
 
@@ -304,22 +305,16 @@ Point-of-contact: Roscoe Bartlett (rabartl@sandia.gov)
 
 Stratimikos contains a unified set of wrappers to linear solver and preconditioner capabilities in Trilinos. Stratimikos essentially consists of the single class DefaultLinearSolverBuilder. This class takes as input a (nested) parameter list that contains options for the desired solvers and preconditioners.
 
-Stratimikos has adapters for AztecOO, Belos, Amesos, Ifpack, and ML.
-
-Stratimikos is compatible with Epetra and Tpetra.
+Stratimikos has adapters for AztecOO, Belos, Amesos, Ifpack, and ML. Stratimikos is compatible with Epetra and Tpetra.
 
 * * *
 
-## <span style="text-decoration: underline;">Iterative linear and eigen-solvers</span>
+</p>
+</details>
 
-### **AztecOO**: Preconditioners and Krylov subspace methods
+ <details><summary>  <h3> Iterative linear and eigen-solvers </h3> </summary>
+<p>
 
-Point-of-contact: Mike Heroux (maherou@sandia.gov)  
-[https://trilinos.github.io/aztecoo.html](aztecoo.html)
-
-AztecOO includes a number of Krylov iterative methods such as conjugate gradient (CG), generalized minimum residual (GMRES) and stabilized biconjugate gradient (BiCGSTAB) to solve systems of equations. AztecOO may use a variety of internally implemented preconditioners, such as SOR, polynomial, domain decomposition, and incomplete factorization preconditioning, as well as preconditioners provided by other Trilinos packages. AztecOO also fully contains the C-language Aztec linear solver package, so any application that is using Aztec can use the AztecOO library in place of Aztec. Note that only bug fixes are being applied to AztecOO. Active algorithm development is taking place in [Belos](http://trilinos.org/oldsite/CapabilityWebpages/LinearEigenCapabilities/overview.html#Belos).
-
-AztecOO is compatible with Epetra only.
 
 ### **Belos**: Classical and block Krylov subspace methods
 
@@ -351,13 +346,6 @@ One of the goals of Anasazi is to allow the user the flexibility to specify the 
 
 Anasazi is compatible with Epetra and Tpetra.
 
-### **Komplex**: Complex-valued system solver
-
-Points-of-contact: Mike Heroux (maherou@sandia.gov) and David Day (dmday@sandia.gov)  
-[https://trilinos.github.io/komplex.html](komplex.html)
-
-KOMPLEX is an add-on module to AZTEC that allows users to solve complex-valued linear systems. KOMPLEX solves a complex-valued linear system Ax=b by solving an equivalent real-valued system of twice the dimension.
-
 <div>
 
 <div align="center">
@@ -368,25 +356,14 @@ KOMPLEX is an add-on module to AZTEC that allows users to solve complex-valued l
 
 </div>
 
-<a name="_Direct_linear_solvers"></a>
+</p>
+</details>
 
-## <span style="text-decoration: underline;">Direct linear solvers</span>
 
-### **Amesos**: direct sparse linear solver interface
 
-Point-of-contact: Siva Rajamanickam (srajama@sandia.gov)  
-[https://trilinos.github.io/amesos.html](amesos.html)
 
-Amesos is a set of C++ interfaces to serial and parallel sparse direct solvers. Amesos contains two nice sparse solvers: KLU and Paraklete. KLU is serial, while Paraklete (distributed with Trilinos 7.0 or higher) is a parallel solver. Amesos also offers an interface to LAPACK, and several other well-know solvers available on the web.
-
-The main idea of Amesos is to give a high-level view of direct solvers, as composed by four main phases:
-
-1) specification of parameters  
-2) initialization of the solver, using matrix sparsity only  
-3) computation of the factors  
-4) solution of the linear system
-
-Amesos insulates the user from all the low-level details typical of direct solvers, like the matrix format, data distribution for the matrix, the solution and the right-hand side, parameter settings, and so on. Amesos is not based on any matrix format; instead, an matrix interface (specified by using the Epetra_RowMatrix class) is adopted. This facilitates the usage of Amesos classes in any projects whose matrix can be wrapped as an Epetra_RowMatrix.
+<details><summary>  <h3> Direct linear solvers </h3> </summary>
+<p>
 
 ### **Amesos2**: direct sparse linear solver interface
 
@@ -395,18 +372,15 @@ Point-of-contact: Siva Rajamanickam (srajama@sandia.gov)
 
 Amesos2 can be considered a templated version of Amesos that supports a wider variety of scalar and index types. Amesos2 provides two internal serial direct solvers, KLU2 (as of release 11.12) and Basker (as of release 11.14). Users of prior releases will need a third-party direct solver, such as SuperLU.
 
-### **Pliris**: direct dense linear solver
-
-Point-of-contact: Joe Kotulski (jdkotul@sandia.gov)  
-[https://trilinos.github.io/pliris.html](pliris.html)
-
-Pliris is an object-oriented interface to a LU solver for dense matrices on parallel platforms. These matrices are double precision real matrices distributed on a parallel machine.
-
-The matrix is torus-wrap mapped onto the processors(transparent to the user) and uses partial pivoting during the factorization of the matrix. Each processor contains a portion of the matrix and the right hand sides determined by a distribution function to optimally load balance the computation and communication during the factorization of the matrix. The general prescription is that no processor can have no more(or less) than one row or column of the matrix than any other processor. Since the input matrix is not torus-wrapped permutation of the results is performed to “unwrap the results” which is transparent to the user.
 
 * * *
 
-## <span style="text-decoration: underline;">Preconditioners</span>
+</p>
+</details>
+
+
+<details><summary>  <h3> Preconditioners </h3> </summary>
+<p>
 
 ### **ShyLU**: Hybrid iterative/direct Schur complement solver
 
@@ -426,16 +400,7 @@ Point-of-contact: Eric Cyr (eccyr@sandia.gov)
 
 Teko is a package for development and implementation of block preconditioners. This includes support for manipulation and setup of block operators. Furthermore tools exist to support decomposition of a fully coupled operator. Additionally, facilities that allow the construction of approximate inverse operators using the full complement of available preconditioners and solvers are available in Teko. Finally, a small number of generic block preconditioners has been implemented in Teko, including block Jacobi, and block Gauss-Seidel. For the Navier-Stokes equation, Teko has implementations of SIMPLE, PCD and LSC.
 
-### **Ifpack**: Point preconditioning, incomplete factorizations, and classical domain decomposition
 
-Points-of-contact: Mike Heroux (maherou@sandia.gov) and Siva Rajamanickam (srajama@sandia.gov)  
-[https://trilinos.github.io/ifpack.html](ifpack.html)
-
-Ifpack provides a suite of object-oriented algebraic preconditioners. Ifpack constructors expect an Epetra_RowMatrix object for construction. Ifpack objects interact well with other Trilinos classes. In particular,Ifpack can be used as a preconditioner for AztecOO and smoother in ML.
-
-Ifpack contains one-level domain decomposition preconditioners of overlapping type. Each “subdomain” is defined by the set of rows assigned to a given processors. Several options are available for the local solution, ranging from simple relaxation schemes, to incomplete factorizations, to direct solvers (through the Amesos package).
-
-Ifpack is compatible with Epetra only.
 
 ### **Ifpack2**: Point preconditioning, incomplete factorizations
 
@@ -446,6 +411,35 @@ Points-of-contact: Chris Siefert ([csiefer@sandia.gov](mailto:csiefer@sandia.gov
 Ifpack2 can be considered a templated version of Ifpack. It provides SOR type relaxation methods, incomplete factorizations, and additive Schwarz methods.
 
 Ifpack2 is compatible with Tpetra only.
+
+
+
+### **MueLu**: multigrid framework
+
+Points-of-contact: Ray Tuminaro (rstumin@sandia.gov), Jonathan Hu (jhu@sandia.gov), and Chris Siefert([csiefer@sandia.gov](mailto:csiefer@sandia.gov))  
+[https://trilinos.github.io/muelu.html](muelu.html)
+
+MueLu provides a framework for parallel multigrid preconditioning methods for large sparse linear systems. MueLu provides algebraic multigrid methods for symmetric and nonsymmetric systems based on smoothed aggregation. It is designed to be extensible and can in principle support other algebraic multigrid (e.g., Ruge-Stueben) and geometric multigrid methods. MueLu does not provide any smoothers itself, but instead relies on other Trilinos packages for these capabilities. MueLu is templated on the ordinal and scalar types, and it can also exploit the hybrid communication benefits of Tpetra and Kokkos.
+
+MueLu is compatible with Epetra and Tpetra.
+
+* * *
+
+</p>
+</details>
+
+ <details><summary>  <h3> Legacy Solver Packages </h3> </summary>
+<p>
+
+
+  ### **AztecOO**: Preconditioners and Krylov subspace methods
+
+Point-of-contact: Mike Heroux (maherou@sandia.gov)  
+[https://trilinos.github.io/aztecoo.html](aztecoo.html)
+
+AztecOO includes a number of Krylov iterative methods such as conjugate gradient (CG), generalized minimum residual (GMRES) and stabilized biconjugate gradient (BiCGSTAB) to solve systems of equations. AztecOO may use a variety of internally implemented preconditioners, such as SOR, polynomial, domain decomposition, and incomplete factorization preconditioning, as well as preconditioners provided by other Trilinos packages. AztecOO also fully contains the C-language Aztec linear solver package, so any application that is using Aztec can use the AztecOO library in place of Aztec. Note that only bug fixes are being applied to AztecOO. Active algorithm development is taking place in [Belos](http://trilinos.org/oldsite/CapabilityWebpages/LinearEigenCapabilities/overview.html#Belos).
+
+AztecOO is compatible with Epetra only.
 
 ### **ML**: smoothed aggregation algebraic multigrid
 
@@ -468,11 +462,61 @@ ML can also be used as a framework to generate new multigrid methods. Using ML�
 
 ML is compatible with Epetra only.
 
-### **MueLu**: multigrid framework
+### **Amesos**: direct sparse linear solver interface
 
-Points-of-contact: Ray Tuminaro (rstumin@sandia.gov), Jonathan Hu (jhu@sandia.gov), and Chris Siefert([csiefer@sandia.gov](mailto:csiefer@sandia.gov))  
-[https://trilinos.github.io/muelu.html](muelu.html)
+Point-of-contact: Siva Rajamanickam (srajama@sandia.gov)  
+[https://trilinos.github.io/amesos.html](amesos.html)
 
-MueLu provides a framework for parallel multigrid preconditioning methods for large sparse linear systems. MueLu provides algebraic multigrid methods for symmetric and nonsymmetric systems based on smoothed aggregation. It is designed to be extensible and can in principle support other algebraic multigrid (e.g., Ruge-Stueben) and geometric multigrid methods. MueLu does not provide any smoothers itself, but instead relies on other Trilinos packages for these capabilities. MueLu is templated on the ordinal and scalar types, and it can also exploit the hybrid communication benefits of Tpetra and Kokkos.
+Amesos is a set of C++ interfaces to serial and parallel sparse direct solvers. Amesos contains two nice sparse solvers: KLU and Paraklete. KLU is serial, while Paraklete (distributed with Trilinos 7.0 or higher) is a parallel solver. Amesos also offers an interface to LAPACK, and several other well-know solvers available on the web.
 
-MueLu is compatible with Epetra and Tpetra.
+The main idea of Amesos is to give a high-level view of direct solvers, as composed by four main phases:
+
+1) specification of parameters  
+2) initialization of the solver, using matrix sparsity only  
+3) computation of the factors  
+4) solution of the linear system
+
+Amesos insulates the user from all the low-level details typical of direct solvers, like the matrix format, data distribution for the matrix, the solution and the right-hand side, parameter settings, and so on. Amesos is not based on any matrix format; instead, an matrix interface (specified by using the Epetra_RowMatrix class) is adopted. This facilitates the usage of Amesos classes in any projects whose matrix can be wrapped as an Epetra_RowMatrix.
+
+### **Ifpack**: Point preconditioning, incomplete factorizations, and classical domain decomposition
+
+Points-of-contact: Mike Heroux (maherou@sandia.gov) and Siva Rajamanickam (srajama@sandia.gov)  
+[https://trilinos.github.io/ifpack.html](ifpack.html)
+
+Ifpack provides a suite of object-oriented algebraic preconditioners. Ifpack constructors expect an Epetra_RowMatrix object for construction. Ifpack objects interact well with other Trilinos classes. In particular,Ifpack can be used as a preconditioner for AztecOO and smoother in ML.
+
+Ifpack contains one-level domain decomposition preconditioners of overlapping type. Each “subdomain” is defined by the set of rows assigned to a given processors. Several options are available for the local solution, ranging from simple relaxation schemes, to incomplete factorizations, to direct solvers (through the Amesos package).
+
+Ifpack is compatible with Epetra only.
+  
+### **Pliris**: direct dense linear solver
+
+Point-of-contact: Joe Kotulski (jdkotul@sandia.gov)  
+[https://trilinos.github.io/pliris.html](pliris.html)
+
+Pliris is an object-oriented interface to a LU solver for dense matrices on parallel platforms. These matrices are double precision real matrices distributed on a parallel machine.
+
+The matrix is torus-wrap mapped onto the processors(transparent to the user) and uses partial pivoting during the factorization of the matrix. Each processor contains a portion of the matrix and the right hand sides determined by a distribution function to optimally load balance the computation and communication during the factorization of the matrix. The general prescription is that no processor can have no more(or less) than one row or column of the matrix than any other processor. Since the input matrix is not torus-wrapped permutation of the results is performed to “unwrap the results” which is transparent to the user.
+
+  
+### **Komplex**: Complex-valued system solver
+
+Points-of-contact: Mike Heroux (maherou@sandia.gov) and David Day (dmday@sandia.gov)  
+[https://trilinos.github.io/komplex.html](komplex.html)
+
+KOMPLEX is an add-on module to AZTEC that allows users to solve complex-valued linear systems. KOMPLEX solves a complex-valued linear system Ax=b by solving an equivalent real-valued system of twice the dimension.
+
+<div>
+
+<div align="center">
+
+* * *
+
+</div>
+
+</div>
+
+</p>
+</details>
+
+
