@@ -297,7 +297,7 @@ Y
 
 
 <details>
-  <summary>  <h3> Linear solver interfaces </h3> </summary>
+  <summary>  Linear solver interfaces </summary>
   
 <p>
 
@@ -318,7 +318,8 @@ Stratimikos has adapters for AztecOO, Belos, Amesos, Ifpack, and ML. Stratimikos
 </details>
 
 
-<details><summary>  <h3> Iterative linear and eigen-solvers </h3> </summary>
+<details>
+  <summary>  Iterative linear and eigen-solvers</summary>
 
 
 ### **Belos**: Classical and block Krylov subspace methods
@@ -366,7 +367,8 @@ Anasazi is compatible with Epetra and Tpetra.
 
 
 
-<details><summary>  Direct linear solvers </summary>
+<details>
+  <summary>  Direct linear solvers </summary>
 
 ### **Amesos2**: direct sparse linear solver interface
 
@@ -381,7 +383,8 @@ Amesos2 can be considered a templated version of Amesos that supports a wider va
 </details>
 
 
-<details><summary>  <h3> Preconditioners </h3> </summary>
+<details>
+  <summary>  Preconditioners  </summary>
 
 ### **ShyLU**: Hybrid iterative/direct Schur complement solver
 
@@ -428,7 +431,9 @@ MueLu is compatible with Epetra and Tpetra.
 
 </details>
 
-<details><summary>  <h3> Legacy Solver Packages </h3> </summary>
+
+<details>
+  <summary>  Legacy Solver Packages </summary>
 
 
   ### **AztecOO**: Preconditioners and Krylov subspace methods
