@@ -362,7 +362,7 @@ Anasazi is compatible with Epetra and Tpetra.
 
 
 
-<details><summary>  <h3> Direct linear solvers </h3> </summary>
+<details><summary>  Direct linear solvers </summary>
 
 ### **Amesos2**: direct sparse linear solver interface
 
