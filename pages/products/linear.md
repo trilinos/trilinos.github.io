@@ -295,7 +295,10 @@ Y
 </table>
 
 
-<details><summary>  <h3> Linear solver interfaces </h3> </summary>
+
+<details>
+  <summary>  <h3> Linear solver interfaces </h3> </summary>
+  
 <p>
 
   
@@ -311,6 +314,7 @@ Stratimikos has adapters for AztecOO, Belos, Amesos, Ifpack, and ML. Stratimikos
 * * *
 
 </p>
+  
 </details>
 
 
