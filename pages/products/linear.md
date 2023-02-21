@@ -140,6 +140,16 @@ Y
 
 <tr>
 
+<td valign="top" width="99"><a href="#adelus-direct-dense-linear-solver">Adelus</a></td>
+
+<td width="68"></td>
+
+<td width="68"></td>
+
+</tr>
+
+<tr>
+
 <td rowspan="2" width="261">Incomplete factorizations, SOR methods, Additive Schwarz</td>
 
 <td valign="top" width="99"><a href="#ifpack-point-preconditioning-incomplete-factorizations-and-classical-domain-decomposition">Ifpack</a></td>
