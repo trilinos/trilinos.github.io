@@ -4,6 +4,7 @@ permalink: events.html
 folder: community
 ---
 
+*   [European Trilinos User Group 2023](european_trilinos_user_group_meeting_2023.html) -- June 28-30, 2023, Delft, The Netherlands
 *   [US Trilinos User Group 2022](trilinos_user-developer_group_meeting_2022.html) -- Oct 25-27, 2022, Albuquerque, NM, USA
 *   [European Trilinos User Group 2022](european_trilinos_user_group_meeting_2022.html) -- Sep 12-14, 2022, Munich, Germany
 *   [US Trilinos User Group 2021](trilinos_user-developer_group_meeting_2021.html) -- Nov. 30 - Dec. 2, 2021, Albuquerque, NM, USA
