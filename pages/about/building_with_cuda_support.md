@@ -12,7 +12,7 @@ Building Trilinos with CUDA support requires a script called nvcc_wrapper, which
 
 where _Tpath_ is the path at which a copy of Trilinos is available.
 
-This variable tells mpicxx to use nvcc_wrapper as the underlying compiler. NOte that nvcc_wrapper uses g++ as the default C++ host compiler.
+This variable tells mpicxx to use nvcc_wrapper as the underlying compiler. Note that nvcc_wrapper uses g++ as the default C++ host compiler.
 
 Below is a CMake configure script fragment to then configure Trilinos:
 
