@@ -3,7 +3,7 @@ title: Tpetra Doxygen
 permalink: tpetra_doxygen.html
 folder: mpi_x
 show_sidebar: true
-contact:  mhoemme@sandia.gov
+contact:  Chris Siefert (csiefer@sandia.gov)
 package: tpetra
 doxygen: true
 ---
