@@ -3,7 +3,7 @@ title: Ifpack2 Citation
 permalink: ifpack2_citation.html
 folder: mpi_x
 show_sidebar: true
-contact: Mark Hoemmen (mhoemme@sandia.gov), Jonathan Hu (jhu@sandia.gov), Chris Siefert (csiefer@sandia.gov)
+contact: Jonathan Hu (jhu@sandia.gov), Chris Siefert (csiefer@sandia.gov)
 package: ifpack2
 ---
 
