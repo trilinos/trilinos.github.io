@@ -70,6 +70,7 @@ Trilinos contains many packages, organized in [five product suites](product.html
 - Sandia Jira site for Trilinos strategy epics and tasks.
 
 ### Trilinos User-Developer Group (TUG) Meetings
+- [The 2023 Trilinos User-Developer Group (TUG) Meeting](https://trilinos.github.io/trilinos_user-developer_group_meeting_2023.html) will be a hybrid (virtual and in-person) meeting held October 31 - November 2, 2023.
 - [The 2022 Trilinos User-Developer Group (TUG) Meeting](https://trilinos.github.io/trilinos_user-developer_group_meeting_2022.html) will be a hybrid (virtual and in-person) meeting held October 25 - 27, 2022.
 - [The 2021 Trilinos User-Developer Group (TUG) Meeting](https://trilinos.github.io/trilinos_user-developer_group_meeting_2021.html) was virtually held November 30 - December 2, 2021.
 - [The 2020 Trilinos User-Developer Group (TUG) Meeting](https://trilinos.github.io/trilinos_user-developer_group_meeting_2020.html) was cancelled due to the COVID-19 pandemic.

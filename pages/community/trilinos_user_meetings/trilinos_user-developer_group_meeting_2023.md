@@ -35,9 +35,20 @@ websites can be found at the
 
 ## Meeting Overview
 
-TUG 2023 will be held in-person and virtually hosted by Sandia National
-Labs.  The goal of the annual meeting is to facilitate communication
-between Trilinos users, stakeholders and developers.
+
+We are pleased to announce the 2023 Trilinos User Group Meeting (TUG23) will be held October 31st through November 2nd, 2023 at Sandia National Laboratories, in Albuquerque, New Mexico.  
+The tentative agenda is
+ 
+ * Tuesday AM, Oct. 31st – Keynote Speaker and Product Area/Package Updates
+ * Wednesday AM, Nov. 1st – Application and User Talks
+ * Thursday AM/PM, Nov. 2nd – Developer’s Day
+ 
+As in previous years, this will be a hybrid meeting with both virtual and in-person attendees.  We do encourage everyone to consider attending in-person, so that we can get together and talk about Trilinos.   We are planning to have morning sessions (8am -12pm MDT) so that our European colleagues can join us remotely.  The Developers Day will likely run into the afternoon due to the amount of material we would like to cover.
+ 
+<b>Tutorials and Hack-a-thons</b>
+
+Additionally, we are considering having tutorials and/or hackathons on one or several of the afternoons of Oct. 30th (Monday PM), Oct. 31st (Tuesday PM) and Nov. 1st (Wednesday PM).  These will be scheduled based on interest shared on the TUG23 registration, and we will share any additions to the agenda for tutorials and/or hackathon as soon as we can.  If you are interested in this, please let us know early with your registration.  There are several tutorials available, e.g., Getting Started, Teuchos, Tpetra, Belos, MueLu, Kokkos, NOX, Zoltan, …, so please let us know your interest on the registration.  Also based on interest, we are considering having a hackathon during one or more of these afternoons based on interest.  If you would like to work with Trilinos developers on your application, please let us know.  We would like to connect you to Trilinos developers to help incorporate and use Trilinos in your application.
+
 
 ## Registration
 
@@ -68,25 +79,15 @@ the better!
  
 <b>Attending In-Person</b>
 
- * If you are a non-Sandian and a non-US citizen, you will need to
-   register by <b>Oct. 12th</b>.  Otherwise, you will need to join us
-   virtually.
-   * We will send you additionally information on what is needed
-     for you to attend, so please do not delay.
-   * Please note that approval for some countries may take too long,
-     and you may need to attend virtually.
- * If you are a non-Sandian and a US citizen, please fill out the
-   registration by <b>Oct. 19th</b>.  Otherwise, you will need to join us
-   virtually.
-   * This will allow us time to complete the necessary paperwork
-     to get you badged and able to gain entrance to CSRI.
- * If you are a Sandian and a non-US citizen, please make sure
-   Building CSRI is included on your FNRSP, and your registration
-   reflects your in-person status.  Again by <b>Oct. 25th</b>
- * If you are a Sandian and a US citizen, please fill out the
-   registration form by <b>Oct. 25th</b>.  Again, sooner would help us in
-   the planning!
-
+ * If you are a non-Sandian and a non-US citizen, you will need to declare your intention by <b>Oct. 2nd</b>.  Otherwise, you will need to join us virtually.
+   * We will send you additional information on what is needed for you to attend in-person, so please do not delay.
+   * If from a sensitive country, please contact us by <b>Aug. 28th or as soon as possible</b> as the suggested lead time for the paperwork is 60-days.
+   * Please note that process for some countries may take too long, and you may need to attend virtually.
+ * If you are a non-Sandian and a US citizen, please fill out the registration by <b>Oct. 25th</b>.  Otherwise, you will need to join us <b>virtually</b>. 
+   * This will allow us time to complete the necessary paperwork to get you badged and able to gain entrance to CSRI.
+ * If you are a Sandian and a non-US citizen, please make sure Building CSRI is included on your FNRSP, and your registration reflects your in-person status.  Again by <b>Oct. 25th</b>.
+ * If you are a Sandian and a US citizen, please fill out the registration form by <b>Oct. 25th</b>.  Again, sooner would help us in the planning!
+ 
 
 ## Keynote
 
