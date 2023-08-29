@@ -57,12 +57,12 @@ Sandia or online via MS Teams), we are encouraging everyone to come
 and join us in Albuquerque, New Mexico.
 
 There is no registration fee for attendance; however, registration
-is required for our reporting purposes.  Registration
-may be submitted through October 25th, 2023.  Registration form will be added soon.
-Please send the completed registration form
-to [Phyllis Rutka](mailto:parutka@sandia.gov).
-After registration, attendees will receive an invite for the meetings.
-Please do not forward the invite as registration is needed to attend.
+is required for our reporting purposes.  Registration may be submitted
+through October 25th, 2023.  Please send the completed
+[registration form](pdfs/2023_TUG_registration_form.pdf) to
+[Phyllis Rutka](mailto:parutka@sandia.gov).  After registration closes on
+October 25, you be emailed an invite for the meetings.  Please do
+not forward the invite as registration is needed to attend. 
 
 Unregistered attendees will be removed from the meeting and asked
 to complete the registration form.
