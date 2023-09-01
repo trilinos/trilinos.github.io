@@ -6,14 +6,7 @@ folder: community
 
 ## Dates
 
-October 30th: Tutorial / Hackathon
-
-October 31st: Keynote, Trilinos Strategic and Operational Leadership updates, Trilinos survey results
-
-November 1st: Application and Platform Session
-
-November 2nd: Developers Session
-
+October 30th - November 2nd
 
 ## Location
 
