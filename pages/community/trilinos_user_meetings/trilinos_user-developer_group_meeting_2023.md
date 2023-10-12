@@ -110,7 +110,7 @@ The sooner the better!
 
 ## Keynote
 
-Placeholder Title *"Sandia's HPC Hardware"* Jim Laros (Sandia National Laboratories)
+Placeholder Title "Sandia's HPC Hardware" Jim Laros (Sandia National Laboratories)
 
 In this presentation, I will give a hopefully informal interactive
 talk attempting to touch on various topics related to the history
@@ -148,8 +148,8 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tbody>
 <tr><td colspan=2> <b> Opening </b>                                                                          </td> </tr>
 <tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober, J. Willenbring)                                    </td> </tr>
-<tr><th><abbr>  8:15 </abbr></th>  <td> <b>Keynote</b> - Placeholder Title *"Sandia's HPC Hardware"* Jim Laros (Sandia National Laboratories) </td> </tr>
-<tr><th><abbr>  9:15 </abbr></th>  <td> Trilinos DevOps Pipeline Planning (S. Browne, J. Hu, C. Ober\*, R. Pawlowski, J. Willenbring) </td> </tr>
+<tr><th><abbr>  8:15 </abbr></th>  <td> <b>Keynote</b> - Placeholder Title "Sandia's HPC Hardware" Jim Laros (Sandia National Laboratories) </td> </tr>
+<tr><th><abbr>  9:15 </abbr></th>  <td> Trilinos DevOps Pipeline Planning (S. Browne, J. Hu, C. Ober&ast;, R. Pawlowski, J. Willenbring) </td> </tr>
 
 <tr><th><abbr> 10:15 </abbr></th>  <td> <b> Break </b>                                                       </td> </tr>
 
@@ -217,7 +217,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 </table>
 
 
-<p style="text-align: center;"><span style="text-decoration: underline;">Thursday October 27th</span></p>
+<p style="text-align: center;"><span style="text-decoration: underline;">Thursday, November 2nd</span></p>
 
 <table summary="Timetable">
 <tbody>
@@ -231,7 +231,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 
 <tr><th><abbr> 10:00 </abbr></th>  <td> External testing infrastructure (S. Shende)                          </td> </tr>
 <tr><th><abbr> 10:30 </abbr></th>  <td> ASC / SQE (J. Turgeon)                                               </td> </tr>
-<tr><th><abbr> 11:00 </abbr></th>  <td> Trilinos Survey Results (S. Browne, J. Hu, C. Ober\*, R. Pawlowski, J. Willenbring) </td> </tr>
+<tr><th><abbr> 11:00 </abbr></th>  <td> Trilinos Survey Results (S. Browne, J. Hu, C. Ober&ast;, R. Pawlowski, J. Willenbring) </td> </tr>
 
 <tr><th><abbr> 11:30 </abbr></th>  <td> <b> Lunch Break </b>                                                 </td> </tr>
 
