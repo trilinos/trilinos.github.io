@@ -210,9 +210,9 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><th><abbr>  3:00 </abbr></th>  <td> <b> Break </b>                                                       </td> </tr>
 
 <tr><th><abbr>  3:15 </abbr></th>  <td> Performance Profiling (B. Kelley) </td> </tr>
-<tr><th><abbr>  3:45 </abbr></th>  <td> ASC DevOps Trilinos Planning Team efforts (S. Warnock) </td> </tr>
+<tr><th><abbr>  3:35 </abbr></th>  <td> ASC DevOps Trilinos Planning Team efforts (S. Warnock) </td> </tr>
 
-<tr><th><abbr>  4:15 </abbr></th>  <td> <b>Adjourn</b>                                                       </td> </tr>
+<tr><th><abbr>  4:05 </abbr></th>  <td> <b>Adjourn</b>                                                       </td> </tr>
 </tbody>
 </table>
 
