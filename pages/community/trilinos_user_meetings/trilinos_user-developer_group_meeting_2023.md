@@ -198,7 +198,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><th><abbr> 10:15 </abbr></th>  <td> <b> Break </b>                                                       </td> </tr>
 
 <tr><th><abbr> 10:45 </abbr></th>  <td> Plato and ROL (S. Hardesty, D. Ridzal) </td> </tr>
-<tr><th><abbr> 11:15 </abbr></th>  <td> Questa / Grafiki (N. Ellingwood, D. Dunlevy, J. Berry) </td> </tr>
+<tr><th><abbr> 11:15 </abbr></th>  <td> Grafiki: Trilinos-based Software for High-Performance Distributed Graph-based Algorithms (N. Ellingwood) </td> </tr>
 <tr><th><abbr> 11:45 </abbr></th>  <td> Gemma (V. Dang, J. Kotulski) </td> </tr>
 
 <tr><th><abbr> 12:15 </abbr></th>  <td> <b> Lunch </b>                                                       </td> </tr>
