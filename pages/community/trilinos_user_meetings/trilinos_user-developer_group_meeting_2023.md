@@ -262,6 +262,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
                                             <li> A mechanism to label all views that are created without an explicit label with some useful identifier, e.g. "filename, line number".
                                           </ul>
                                           <li> <a href="https://github.com/trilinos/Trilinos/issues/12398">General Trilinos maintenance: useless spaces are making up to 2 MB</a> T. Romin
+                                          <li> <a href="https://github.com/trilinos/Trilinos/issues/8001">GTest as a TPL</a> T. Romin
                                           <li> Other Topics?
                                           <ul>
                                             <li> Please share possible topics with Curt Ober (ccober@sandia.gov) and Jim Willenbring (jmwille@sandia.gov).
