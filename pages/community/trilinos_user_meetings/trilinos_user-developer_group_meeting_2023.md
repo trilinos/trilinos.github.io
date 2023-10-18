@@ -203,7 +203,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 
 <tr><th><abbr> 12:15 </abbr></th>  <td> <b> Lunch </b>                                                       </td> </tr>
 
-<tr><th><abbr>  1:30 </abbr></th>  <td> Sierra SD (J. Plews) </td> </tr>
+<tr><th><abbr>  1:30 </abbr></th>  <td> Performance of Modal Random Vibration Calculations for Structural Dynamics on Heterogeneous Computing Architectures (J. Plews) </td> </tr>
 <tr><th><abbr>  2:00 </abbr></th>  <td> GPU H2D/D2H + Fence Tooling (C. Siefert, J. Hu) </td> </tr>
 <tr><th><abbr>  2:30 </abbr></th>  <td> Epetra to Tpetra Transition (T. Fuller, C. Pearson) </td> </tr>
 
@@ -231,25 +231,25 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 
 <tr><th><abbr> 10:00 </abbr></th>  <td> External testing infrastructure (S. Shende)                          </td> </tr>
 <tr><th><abbr> 10:30 </abbr></th>  <td> ASC / SQE (J. Turgeon)                                               </td> </tr>
-<tr><th><abbr> 11:00 </abbr></th>  <td> Trilinos Survey Results (S. Browne, J. Hu, C. Ober&ast;, R. Pawlowski, J. Willenbring) </td> </tr>
+<tr><th><abbr> 11:00 </abbr></th>  <td> Trilinos DevOps Pipeline Survey (S. Browne, J. Hu, C. Ober&ast;, R. Pawlowski, J. Willenbring) </td> </tr>
 
 <tr><th><abbr> 11:30 </abbr></th>  <td> <b> Lunch Break </b>                                                 </td> </tr>
 
-<tr><td colspan=2> <b> Container and Spack </b>                                                                </td> </tr>
+<tr><td colspan=2> <b> Containers and Spack </b>                                                                </td> </tr>
 <tr><th><abbr> 12:30 </abbr></th>  <td> Containers for Trilinos PR Testing (S. Browne)              </td> </tr>
 <tr><th><abbr>  1:00 </abbr></th>  <td> ParaTools Team and Spack (S. Browne, J. Frye, J. LaPre)              </td> </tr>
 <tr><th><abbr>  1:30 </abbr></th>  <td> Cmake / Spack Containers, MPMD programming with CTH (A. Agelastos)  </td> </tr>
-<tr><th><abbr>  1:45 </abbr></th>  <td> DetNet / Containers / GPUs (K. Pedretti, C. Garasi)  </td> </tr>
-<tr><th><abbr>  2:15 </abbr></th>  <td> Alegra Spack (T. Fuller)   </td> </tr>
+<tr><th><abbr>  1:45 </abbr></th>  <td> Alegra Spack (T. Fuller)   </td> </tr>
 
-<tr><th><abbr>  2:45 </abbr></th>  <td> <b> Break </b> 
+<tr><th><abbr>  2:15 </abbr></th>  <td> <b> Break </b> 
                                         <ul>
                                           <li> Vote on Open Discussion Topics 
                                         </ul> </td> </tr>
 
-<tr><th><abbr>  3:15 </abbr></th>  <td> <b>Open Discussion</b> (Possible Topics)
+<tr><th><abbr>  2:45 </abbr></th>  <td> <b>Open Discussion</b> (Possible Topics)
                                         <ul>
-                                          <li> Containers/Spack
+                                          <li> Containers
+                                          <li> Spack
                                           <li> Trilinos DevOps Pipeline and Survey
                                           <li> Nightly and Integration Testing
                                           <ul>
@@ -261,6 +261,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
                                             <li> A mechanism to prefix all views created within MueLu with "MueLu:".
                                             <li> A mechanism to label all views that are created without an explicit label with some useful identifier, e.g. "filename, line number".
                                           </ul>
+                                          <li> <a href="https://github.com/trilinos/Trilinos/issues/12398">General Trilinos maintenance: useless spaces are making up to 2 MB</a> T. Romin
                                           <li> Other Topics?
                                           <ul>
                                             <li> Please share possible topics with Curt Ober (ccober@sandia.gov) and Jim Willenbring (jmwille@sandia.gov).
