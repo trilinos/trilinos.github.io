@@ -110,7 +110,7 @@ The sooner the better!
 
 ## Keynote
 
-Placeholder Title "Sandia's HPC Hardware" Jim Laros (Sandia National Laboratories)
+Turning the Titanic with a Leaf-blower: *How the DOE, Influences, Leverages and Adapts to an Evolving HPC Industry* - Jim Laros (Sandia National Laboratories)
 
 In this presentation, I will give a hopefully informal interactive
 talk attempting to touch on various topics related to the history
@@ -148,7 +148,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tbody>
 <tr><td colspan=2> <b> Opening </b>                                                                          </td> </tr>
 <tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober, J. Willenbring)                                    </td> </tr>
-<tr><th><abbr>  8:15 </abbr></th>  <td> <b>Keynote</b> - Placeholder Title "Sandia's HPC Hardware" Jim Laros (Sandia National Laboratories) </td> </tr>
+<tr><th><abbr>  8:15 </abbr></th>  <td> <b>Keynote</b> - Turning the Titanic with a Leaf-blower: <i>How the DOE, Influences, Leverages and Adapts to an Evolving HPC Industry</i> - Jim Laros (Sandia National Laboratories) </td> </tr>
 <tr><th><abbr>  9:15 </abbr></th>  <td> Trilinos DevOps Pipeline Planning (S. Browne, J. Hu, C. Ober&ast;, R. Pawlowski, J. Willenbring) </td> </tr>
 
 <tr><th><abbr> 10:15 </abbr></th>  <td> <b> Break </b>                                                       </td> </tr>
