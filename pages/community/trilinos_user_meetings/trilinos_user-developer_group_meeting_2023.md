@@ -164,7 +164,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 
 <tr><th><abbr> 11:15 </abbr></th>  <td> Trilinos Core Update / Plans for FY24 (R. Pawlowski)                                         </td> </tr>
 
-<tr><th><abbr> 11:30 </abbr></th>  <td> Solvers Update / Plans for FY24 (C. Glusa)                                                      </td> </tr>
+<tr><th><abbr> 11:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-10-31/06_Solvers-Update_Glusa_TUG2023.pdf">Trilinos Solver Updates</a> (C. Glusa)  </td> </tr>
 
 <tr><th><abbr> 11:45 </abbr></th>  <td>
                                         Discretizations and Analysis Update / Plans for FY24 (M. Perego) 
@@ -263,6 +263,10 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
                                           </ul>
                                           <li> <a href="https://github.com/trilinos/Trilinos/issues/12398">General Trilinos maintenance: useless spaces are making up to 2 MB</a> T. Romin
                                           <li> <a href="https://github.com/trilinos/Trilinos/issues/8001">GTest as a TPL</a> T. Romin
+                                          <li> Epetra-Tpetra Transition for Trilinos Packages in FY24 (C. Ober and C. Siefert)
+                                          <ul>
+                                            <li> e.g., test coverage, missing funcitonality and performance.
+                                          </ul>
                                           <li> Other Topics?
                                           <ul>
                                             <li> Please share possible topics with Curt Ober (ccober@sandia.gov) and Jim Willenbring (jmwille@sandia.gov).
