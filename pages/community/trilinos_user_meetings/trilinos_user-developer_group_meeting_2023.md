@@ -153,7 +153,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 
 <tr><th><abbr> 10:15 </abbr></th>  <td> <b> Break </b>                                                       </td> </tr>
 
-<tr><th><abbr> 10:30 </abbr></th>  <td> Introduction of New Strategic and Operational Leadership (C. Ober, S. Rajamanickam)  </td> </tr>
+<tr><th><abbr> 10:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-10-31/03_New-Leadership-Structure_Ober_2023-10-31_TUG_Trilinos_New_Leadership_Structure.pdf">Introduction of New Strategic and Operational Leadership</a> (C. Ober, S. Rajamanickam)  </td> </tr>
 <tr><td colspan=2> <b> Updates from Trilinos Areas </b>                            </td> </tr>
 <tr><th><abbr> 10:45 </abbr></th>  <td> 
                                         Framework Update / Plans for FY24 (S. Browne) 
@@ -169,7 +169,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><th><abbr> 11:45 </abbr></th>  <td>
                                         Discretizations and Analysis Update / Plans for FY24 (M. Perego) 
                                         <ul>
-                                          <li> PyTrilinos2 (K. Liegeois)
+                                          <li> PyTrilinos2: automatic (re)generation of a Python interface for Trilinos (K. Liegeois, C. Glusa)
                                         </ul> </td> </tr>
 
 <tr><th><abbr> 12:10 </abbr></th>  <td> <b>Lunch</b>                                                       </td> </tr>
@@ -191,26 +191,28 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober, J. Willenbring)                                    </td> </tr>
 
 <tr><th><abbr>  8:15 </abbr></th>  <td> CFD Simulations (S. Slattery) (ORNL) </td> </tr>
-<tr><th><abbr>  8:45 </abbr></th>  <td> FROSch (A. Heinlein) </td> </tr>
+<tr><th><abbr>  8:45 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/02_FROSch_Heinlein_2023-heinlein-frosch.pdf">Fast and Robust Overlapping Schwarz (FROSch) Preconditioners in Trilinos</a> (A. Heinlein) </td> </tr>
 <tr><th><abbr>  9:15 </abbr></th>  <td> Albany Numerical Optimization (M. Perego, K. Liegeois) </td> </tr>
 <tr><th><abbr>  9:45 </abbr></th>  <td> Drekar (E. Phillips) </td> </tr>
 
 <tr><th><abbr> 10:15 </abbr></th>  <td> <b> Break </b>                                                       </td> </tr>
 
-<tr><th><abbr> 10:45 </abbr></th>  <td> Plato and ROL (S. Hardesty, D. Ridzal) </td> </tr>
-<tr><th><abbr> 11:15 </abbr></th>  <td> Grafiki: Trilinos-based Software for High-Performance Distributed Graph-based Algorithms (N. Ellingwood) </td> </tr>
-<tr><th><abbr> 11:45 </abbr></th>  <td> Gemma (V. Dang, J. Kotulski) </td> </tr>
+<tr><th><abbr> 10:45 </abbr></th>  <td> Plato Optimization-Based Design (S. Hardesty, D. Ridzal) </td> </tr>
+<tr><th><abbr> 11:15 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/06_Grafiki_Ellingwood_ellingwood_tug_talk_20231101.pdf">Grafiki: Trilinos-based Software for High-Performance Distributed Graph-based Algorithms</a> (N. Ellingwood) </td> </tr>
+<tr><th><abbr> 11:45 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/07_Gemma_Dang_Gemma_DistributedSchurPCAPreconditioner_TUG2023_v2.pptx">A Distributed-Memory Schur-complement PCA Preconditioner for Gemma Ill-conditioned Problems</a> (V. Dang, J. Kotulski) </td> </tr>
 
 <tr><th><abbr> 12:15 </abbr></th>  <td> <b> Lunch </b>                                                       </td> </tr>
 
-<tr><th><abbr>  1:30 </abbr></th>  <td> Performance of Modal Random Vibration Calculations for Structural Dynamics on Heterogeneous Computing Architectures (J. Plews) </td> </tr>
-<tr><th><abbr>  2:00 </abbr></th>  <td> GPU H2D/D2H + Fence Tooling (C. Siefert, J. Hu) </td> </tr>
-<tr><th><abbr>  2:30 </abbr></th>  <td> Epetra to Tpetra Transition (T. Fuller, C. Pearson) </td> </tr>
+<tr><th><abbr>  1:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/08_Sierra-SD_Plews_2023-10-31_Plews_TUG_SierraSD.pptx">Performance of Modal Random Vibration Calculations for Structural Dynamics on Heterogeneous Computing Architectures</a> (J. Plews, N. Crane) </td> </tr>
+<tr><th><abbr>  2:00 </abbr></th>  <td> <ul>
+                                          <li> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/09a_GPU-Tooling_Siefert_TUG_24_H2D_Tools_v2.pdf">Trilinos Tools: Identifying Host-To-Device Transfers and State Of The Code</a> (C. Siefert, J. Hu)
+                                        </ul> </td> </tr>
+<tr><th><abbr>  2:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/10_Kokkos-Tpetra-FE-Assembly_Pearson_20231101_pearson_tug.pdf">Using Kokkos In Tpetra Finite Element Assembly</a> (C. Pearson, C. Siefert)  </td> </tr>
 
 <tr><th><abbr>  3:00 </abbr></th>  <td> <b> Break </b>                                                       </td> </tr>
 
-<tr><th><abbr>  3:15 </abbr></th>  <td> Performance Profiling (B. Kelley) </td> </tr>
-<tr><th><abbr>  3:35 </abbr></th>  <td> ASC DevOps Trilinos Planning Team efforts (S. Warnock) </td> </tr>
+<tr><th><abbr>  3:15 </abbr></th>  <td> Trilinos Performance Monitoring with Watchr (B. Kelley) </td> </tr>
+<tr><th><abbr>  3:35 </abbr></th>  <td> ASC DevOps Trilinos Planning Team: Common Build Trilinos Products (S, Baxley, A. Potla, S. Warnock) </td> </tr>
 
 <tr><th><abbr>  4:05 </abbr></th>  <td> <b>Adjourn</b>                                                       </td> </tr>
 </tbody>
@@ -223,13 +225,13 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tbody>
 <tr><td colspan=2> <b> Developer Sessions </b>                                                               </td> </tr>
 <tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober, J. Willenbring)                                    </td> </tr>
-<tr><th><abbr>  8:15 </abbr></th>  <td> Modern TriBITS talk (R. Bartlett)                                    </td> </tr>
+<tr><th><abbr>  8:15 </abbr></th>  <td> Modern TriBITS (R. Bartlett)                                    </td> </tr>
 <tr><th><abbr>  8:45 </abbr></th>  <td> Kokkos Overview on new capabilities and programmatic developments (C. Trott) </td> </tr>
-<tr><th><abbr>  9:15 </abbr></th>  <td> Kokkos Kernels (L. Berger-Vergiat, S. Rajamanickam)                                     </td> </tr>
+<tr><th><abbr>  9:15 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-02/03_Kokkos-Kernels_Berger-Vergiat_TUG_2023_KokkosKernels.pptx">Kokkos Kernels</a> (L. Berger-Vergiat, S. Rajamanickam, V. Dang, N. Ellingwood, J. Foucar, B. Kelley, E. Harvey, K. Liegeois, C. Pearson, E. Prudencio)                                     </td> </tr>
 
 <tr><th><abbr>  9:45 </abbr></th>  <td> <b> Break </b>                                                       </td> </tr>
 
-<tr><th><abbr> 10:00 </abbr></th>  <td> External testing infrastructure (S. Shende)                          </td> </tr>
+<tr><th><abbr> 10:00 </abbr></th>  <td> E4S and Frank: A platform for CI/CD with GPUs (S. Shende)                          </td> </tr>
 <tr><th><abbr> 10:30 </abbr></th>  <td> ASC / SQE (J. Turgeon)                                               </td> </tr>
 <tr><th><abbr> 11:00 </abbr></th>  <td> Trilinos DevOps Pipeline Survey (S. Browne, J. Hu, C. Ober&ast;, R. Pawlowski, J. Willenbring) </td> </tr>
 
@@ -238,7 +240,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><td colspan=2> <b> Containers and Spack </b>                                                                </td> </tr>
 <tr><th><abbr> 12:30 </abbr></th>  <td> Containers for Trilinos PR Testing (S. Browne)              </td> </tr>
 <tr><th><abbr>  1:00 </abbr></th>  <td> ParaTools Team and Spack (S. Browne, J. Frye, J. LaPre)              </td> </tr>
-<tr><th><abbr> 11:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-02/09_Spack-Containers-CTH_Agelastos_FutureContainerStrategy-20231024a.pptx.pdf">Containers and MPMD for CTH/SABLE</a> (A. Agelastos)  </td> </tr>
+<tr><th><abbr>  1:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-02/09_Spack-Containers-CTH_Agelastos_FutureContainerStrategy-20231024a.pptx.pdf">Containers and MPMD for CTH/SABLE</a> (A. Agelastos)  </td> </tr>
 <tr><th><abbr>  1:45 </abbr></th>  <td> Alegra Spack (T. Fuller)   </td> </tr>
 
 <tr><th><abbr>  2:15 </abbr></th>  <td> <b> Break </b> 
@@ -261,9 +263,10 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
                                             <li> A mechanism to prefix all views created within MueLu with "MueLu:".
                                             <li> A mechanism to label all views that are created without an explicit label with some useful identifier, e.g. "filename, line number".
                                           </ul>
-                                          <li> <a href="https://github.com/trilinos/Trilinos/issues/12398">General Trilinos maintenance: useless spaces are making up to 2 MB</a> T. Romin
-                                          <li> <a href="https://github.com/trilinos/Trilinos/issues/8001">GTest as a TPL</a> T. Romin
+                                          <li> <a href="https://github.com/trilinos/Trilinos/issues/12398">General Trilinos maintenance: useless spaces are making up to 2 MB</a> (T. Romin)
+                                          <li> <a href="https://github.com/trilinos/Trilinos/issues/8001">GTest as a TPL</a> (T. Romin)
                                           <li> Epetra-Tpetra Transition for Trilinos Packages in FY24 (C. Ober and C. Siefert)
+                                          <li> <a href="https://github.com/trilinos/Trilinos/issues/12270">Framework: add action to delete merge branches?</a> (J. Hu)
                                           <ul>
                                             <li> e.g., test coverage, missing funcitonality and performance.
                                           </ul>
