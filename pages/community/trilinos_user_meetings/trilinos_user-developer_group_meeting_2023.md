@@ -266,10 +266,10 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
                                           <li> <a href="https://github.com/trilinos/Trilinos/issues/12398">General Trilinos maintenance: useless spaces are making up to 2 MB</a> (T. Romin)
                                           <li> <a href="https://github.com/trilinos/Trilinos/issues/8001">GTest as a TPL</a> (T. Romin)
                                           <li> Epetra-Tpetra Transition for Trilinos Packages in FY24 (C. Ober and C. Siefert)
-                                          <li> <a href="https://github.com/trilinos/Trilinos/issues/12270">Framework: add action to delete merge branches?</a> (J. Hu)
                                           <ul>
                                             <li> e.g., test coverage, missing funcitonality and performance.
                                           </ul>
+                                          <li> <a href="https://github.com/trilinos/Trilinos/issues/12270">Framework: add action to delete merge branches?</a> (J. Hu)
                                           <li> Other Topics?
                                           <ul>
                                             <li> Please share possible topics with Curt Ober (ccober@sandia.gov) and Jim Willenbring (jmwille@sandia.gov).
