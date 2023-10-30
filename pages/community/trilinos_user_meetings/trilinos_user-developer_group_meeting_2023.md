@@ -167,7 +167,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><th><abbr> 11:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-10-31/06_Solvers-Update_Glusa_TUG2023.pdf">Trilinos Solver Updates</a> (C. Glusa)  </td> </tr>
 
 <tr><th><abbr> 11:45 </abbr></th>  <td>
-                                        Discretizations and Analysis Update / Plans for FY24 (M. Perego) 
+                                        Discretizations and Analysis product update (M. Perego) 
                                         <ul>
                                           <li> PyTrilinos2: automatic (re)generation of a Python interface for Trilinos (K. Liegeois, C. Glusa)
                                         </ul> </td> </tr>
@@ -190,10 +190,10 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><td colspan=2> <b> Applications Session </b>                                                             </td> </tr>
 <tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober, J. Willenbring)                                    </td> </tr>
 
-<tr><th><abbr>  8:15 </abbr></th>  <td> CFD Simulations (S. Slattery) (ORNL) </td> </tr>
+<tr><th><abbr>  8:15 </abbr></th>  <td> CFD Simulations with Panzer (S. Slattery) (ORNL) </td> </tr>
 <tr><th><abbr>  8:45 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/02_FROSch_Heinlein_2023-heinlein-frosch.pdf">Fast and Robust Overlapping Schwarz (FROSch) Preconditioners in Trilinos</a> (A. Heinlein) </td> </tr>
-<tr><th><abbr>  9:15 </abbr></th>  <td> Albany Numerical Optimization (M. Perego, K. Liegeois) </td> </tr>
-<tr><th><abbr>  9:45 </abbr></th>  <td> Drekar (E. Phillips) </td> </tr>
+<tr><th><abbr>  9:15 </abbr></th>  <td> PDE-constrained optimization for ice sheet model initialization in MALI (M. Perego, K. Liegeois) </td> </tr>
+<tr><th><abbr>  9:45 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/04_Drekar_Phillips_TUG2023.pptx">Recent Fusion-Related Results in Drekar</a> (E. Phillips) </td> </tr>
 
 <tr><th><abbr> 10:15 </abbr></th>  <td> <b> Break </b>                                                       </td> </tr>
 
@@ -211,7 +211,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 
 <tr><th><abbr>  3:00 </abbr></th>  <td> <b> Break </b>                                                       </td> </tr>
 
-<tr><th><abbr>  3:15 </abbr></th>  <td> Trilinos Performance Monitoring with Watchr (B. Kelley) </td> </tr>
+<tr><th><abbr>  3:15 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/11_Performance-Profiling_Kelley_TUG23_PerformanceProfiling.pptx">Trilinos Performance Monitoring with Watchr</a>  (B. Kelley) </td> </tr>
 <tr><th><abbr>  3:35 </abbr></th>  <td> ASC DevOps Trilinos Planning Team: Common Build Trilinos Products (S, Baxley, A. Potla, S. Warnock) </td> </tr>
 
 <tr><th><abbr>  4:05 </abbr></th>  <td> <b>Adjourn</b>                                                       </td> </tr>
@@ -270,6 +270,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
                                             <li> e.g., test coverage, missing funcitonality and performance.
                                           </ul>
                                           <li> <a href="https://github.com/trilinos/Trilinos/issues/12270">Framework: add action to delete merge branches?</a> (J. Hu)
+                                          <li> clang-format?
                                           <li> Other Topics?
                                           <ul>
                                             <li> Please share possible topics with Curt Ober (ccober@sandia.gov) and Jim Willenbring (jmwille@sandia.gov).
