@@ -156,7 +156,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><th><abbr> 10:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-10-31/03_New-Leadership-Structure_Ober_2023-10-31_TUG_Trilinos_New_Leadership_Structure.pdf">Introduction of New Strategic and Operational Leadership</a> (C. Ober, S. Rajamanickam)  </td> </tr>
 <tr><td colspan=2> <b> Updates from Trilinos Areas </b>                            </td> </tr>
 <tr><th><abbr> 10:45 </abbr></th>  <td> 
-                                        Framework Update / Plans for FY24 (S. Browne) 
+                                        <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-10-31/04_Framework-Update_Browne_TUG_Framework_Update.pptx.pdf">Framework Updates</a>  (S. Browne) 
                                         <ul>
                                           <li> GitHub Runners (E. Ho, S. Browne) 
                                           <li> ECN/CDash (S. Browne)
@@ -232,7 +232,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><th><abbr>  9:45 </abbr></th>  <td> <b> Break </b>                                                       </td> </tr>
 
 <tr><th><abbr> 10:00 </abbr></th>  <td> E4S and Frank: A platform for CI/CD with GPUs (S. Shende)                          </td> </tr>
-<tr><th><abbr> 10:30 </abbr></th>  <td> ASC / SQE (J. Turgeon)                                               </td> </tr>
+<tr><th><abbr> 10:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-02/05_ASC-SQE_Turgeon_ASCSQE_Code_Credibility_2.pdf">Advancing Software Code Credibility and Pedigree Using SQE</a> (J. Turgeon)                                               </td> </tr>
 <tr><th><abbr> 11:00 </abbr></th>  <td> Trilinos DevOps Pipeline Survey (S. Browne, J. Hu, C. Ober&ast;, R. Pawlowski, J. Willenbring) </td> </tr>
 
 <tr><th><abbr> 11:30 </abbr></th>  <td> <b> Lunch Break </b>                                                 </td> </tr>
