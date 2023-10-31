@@ -148,8 +148,8 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tbody>
 <tr><td colspan=2> <b> Opening </b>                                                                          </td> </tr>
 <tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober, J. Willenbring)                                    </td> </tr>
-<tr><th><abbr>  8:15 </abbr></th>  <td> <b>Keynote</b> - Turning the Titanic with a Leaf-blower: <i>How the DOE, Influences, Leverages and Adapts to an Evolving HPC Industry</i> - Jim Laros (Sandia National Laboratories) </td> </tr>
-<tr><th><abbr>  9:15 </abbr></th>  <td> Trilinos DevOps Pipeline Planning (S. Browne, J. Hu, C. Ober&ast;, R. Pawlowski, J. Willenbring) </td> </tr>
+<tr><th><abbr>  8:15 </abbr></th>  <td> <b>Keynote</b> - <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-10-31/01_Keynote_Laros_TUG23_Keynote_Final.pdf">Turning the Titanic with a Leaf-blower: <i>How the DOE, Influences, Leverages and Adapts to an Evolving HPC Industry</i></a> - Jim Laros (Sandia National Laboratories) </td> </tr>
+<tr><th><abbr>  9:15 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-10-31/02_TDOP-Planning_Ober_Trilinos_DevOps_Pipeline_Planning-short-TUG.pdf">Trilinos DevOps Pipeline Planning</a>  (S. Browne, J. Hu, C. Ober&ast;, R. Pawlowski, J. Willenbring) </td> </tr>
 
 <tr><th><abbr> 10:15 </abbr></th>  <td> <b> Break </b>                                                       </td> </tr>
 
@@ -158,11 +158,10 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><th><abbr> 10:45 </abbr></th>  <td> 
                                         <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-10-31/04_Framework-Update_Browne_TUG_Framework_Update.pptx.pdf">Framework Updates</a>  (S. Browne) 
                                         <ul>
-                                          <li> GitHub Runners (E. Ho, S. Browne) 
-                                          <li> ECN/CDash (S. Browne)
+                                          <li> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-10-31/04b_Framework-Update_Ho_TUG23_Presentation.pptx">Trilinos Autotester Changes</a> (E. Ho, S. Browne) 
                                         </ul> </td> </tr>
 
-<tr><th><abbr> 11:15 </abbr></th>  <td> Trilinos Core Update / Plans for FY24 (R. Pawlowski)
+<tr><th><abbr> 11:15 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-10-31/05_Trilinos-Core-Update_Pawlowski_TUG_CoreProductAreaUpdates_2023_10_31.pptx">Trilinos Core Product Area Update</a> (R. Pawlowski)
                                         <ul>
                                           <li> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-10-31/05b_Trilinos-Core-Update_Pawlowski_Liegeois_PyTrilinos2_TUG23.pdf">PyTrilinos2: automatic (re)generation of a Python interface for Trilinos</a>  (K. Liegeois, C. Glusa)
                                         </ul>
@@ -170,9 +169,9 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 
 <tr><th><abbr> 11:45 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-10-31/06_Solvers-Update_Glusa_TUG2023.pdf">Trilinos Solver Updates</a> (C. Glusa)  </td> </tr>
 
-<tr><th><abbr> 12:00 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-10-31/06_Solvers-Update_Glusa_TUG2023.pdf">Discretizations and Analysis product update (M. Perego) </td> </tr>
+<tr><th><abbr> 12:00 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-10-31/06_Solvers-Update_Glusa_TUG2023.pdf">Discretizations and Analysis product update</a> (M. Perego) </td> </tr>
 
-<tr><th><abbr> 12:10 </abbr></th>  <td> <b>Lunch</b>                                                       </td> </tr>
+<tr><th><abbr> 12:30 </abbr></th>  <td> <b>Lunch</b>                                                       </td> </tr>
 <tr><th><abbr>  1:30 </abbr></th>  <td> <b>Trilinos Hackathon</b> 
                                         <ul>
                                           <li> There will be several Trilinos Developers available to help
