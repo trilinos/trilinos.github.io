@@ -164,7 +164,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 
 <tr><th><abbr> 11:15 </abbr></th>  <td> Trilinos Core Update / Plans for FY24 (R. Pawlowski)
                                         <ul>
-                                          <li> PyTrilinos2: automatic (re)generation of a Python interface for Trilinos (K. Liegeois, C. Glusa)
+                                          <li> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-10-31/05b_Trilinos-Core-Update_Pawlowski_Liegeois_PyTrilinos2_TUG23.pdf">PyTrilinos2: automatic (re)generation of a Python interface for Trilinos</a>  (K. Liegeois, C. Glusa)
                                         </ul>
 </td> </tr>
 
