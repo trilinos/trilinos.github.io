@@ -162,15 +162,15 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
                                           <li> ECN/CDash (S. Browne)
                                         </ul> </td> </tr>
 
-<tr><th><abbr> 11:15 </abbr></th>  <td> Trilinos Core Update / Plans for FY24 (R. Pawlowski)                                         </td> </tr>
+<tr><th><abbr> 11:15 </abbr></th>  <td> Trilinos Core Update / Plans for FY24 (R. Pawlowski)
+                                        <ul>
+                                          <li> PyTrilinos2: automatic (re)generation of a Python interface for Trilinos (K. Liegeois, C. Glusa)
+                                        </ul>
+</td> </tr>
 
 <tr><th><abbr> 11:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-10-31/06_Solvers-Update_Glusa_TUG2023.pdf">Trilinos Solver Updates</a> (C. Glusa)  </td> </tr>
 
-<tr><th><abbr> 11:45 </abbr></th>  <td>
-                                        Discretizations and Analysis product update (M. Perego) 
-                                        <ul>
-                                          <li> PyTrilinos2: automatic (re)generation of a Python interface for Trilinos (K. Liegeois, C. Glusa)
-                                        </ul> </td> </tr>
+<tr><th><abbr> 11:45 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-10-31/06_Solvers-Update_Glusa_TUG2023.pdf">Discretizations and Analysis product update (M. Perego) </td> </tr>
 
 <tr><th><abbr> 12:10 </abbr></th>  <td> <b>Lunch</b>                                                       </td> </tr>
 <tr><th><abbr>  1:00 </abbr></th>  <td> <b>Trilinos Hackathon</b> 
@@ -190,7 +190,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><td colspan=2> <b> Applications Session </b>                                                             </td> </tr>
 <tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober, J. Willenbring)                                    </td> </tr>
 
-<tr><th><abbr>  8:15 </abbr></th>  <td> CFD Simulations with Panzer (S. Slattery) (ORNL) </td> </tr>
+<tr><th><abbr>  8:15 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/01_CFD-Simulations_Hamilton_TUG23.pptx">CFD Simulations with Panzer</a> S. Hamilton (ORNL) S. Slattery (ORNL) T. Erwin (ORNL) R. Pawlowski (SNL) B. Reuter (SNL) </td> </tr>
 <tr><th><abbr>  8:45 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/02_FROSch_Heinlein_2023-heinlein-frosch.pdf">Fast and Robust Overlapping Schwarz (FROSch) Preconditioners in Trilinos</a> (A. Heinlein) </td> </tr>
 <tr><th><abbr>  9:15 </abbr></th>  <td> PDE-constrained optimization for ice sheet model initialization in MALI (M. Perego, K. Liegeois) </td> </tr>
 <tr><th><abbr>  9:45 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/04_Drekar_Phillips_TUG2023.pptx">Recent Fusion-Related Results in Drekar</a> (E. Phillips) </td> </tr>
