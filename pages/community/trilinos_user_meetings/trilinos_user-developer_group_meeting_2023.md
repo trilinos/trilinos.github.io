@@ -271,6 +271,8 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
                                           </ul>
                                           <li> <a href="https://github.com/trilinos/Trilinos/issues/12270">Framework: add action to delete merge branches?</a> (J. Hu)
                                           <li> clang-format?
+                                          <li> Deprecating Cmake options in Trilinos (Ross, Chris)
+                                          <li> Tpetra-level support for Kokkos execution space instances (Chris)
                                           <li> Other Topics?
                                           <ul>
                                             <li> Please share possible topics with Curt Ober (ccober@sandia.gov) and Jim Willenbring (jmwille@sandia.gov).
