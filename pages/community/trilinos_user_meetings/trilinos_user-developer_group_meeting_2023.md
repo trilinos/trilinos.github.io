@@ -168,9 +168,9 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
                                         </ul>
 </td> </tr>
 
-<tr><th><abbr> 11:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-10-31/06_Solvers-Update_Glusa_TUG2023.pdf">Trilinos Solver Updates</a> (C. Glusa)  </td> </tr>
+<tr><th><abbr> 11:45 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-10-31/06_Solvers-Update_Glusa_TUG2023.pdf">Trilinos Solver Updates</a> (C. Glusa)  </td> </tr>
 
-<tr><th><abbr> 11:45 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-10-31/06_Solvers-Update_Glusa_TUG2023.pdf">Discretizations and Analysis product update (M. Perego) </td> </tr>
+<tr><th><abbr> 12:00 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-10-31/06_Solvers-Update_Glusa_TUG2023.pdf">Discretizations and Analysis product update (M. Perego) </td> </tr>
 
 <tr><th><abbr> 12:10 </abbr></th>  <td> <b>Lunch</b>                                                       </td> </tr>
 <tr><th><abbr>  1:00 </abbr></th>  <td> <b>Trilinos Hackathon</b> 
