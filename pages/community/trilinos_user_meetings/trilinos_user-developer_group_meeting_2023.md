@@ -203,10 +203,13 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><th><abbr> 12:15 </abbr></th>  <td> <b> Lunch </b>                                                       </td> </tr>
 
 <tr><th><abbr>  1:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/08_Sierra-SD_Plews_2023-10-31_Plews_TUG_SierraSD.pptx">Performance of Modal Random Vibration Calculations for Structural Dynamics on Heterogeneous Computing Architectures</a> (J. Plews, N. Crane) </td> </tr>
-<tr><th><abbr>  2:00 </abbr></th>  <td> <ul> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/09a_GPU-Tooling_Siefert_TUG_24_H2D_Tools_v2.pdf">Trilinos Tools: Identifying Host-To-Device Transfers and State Of The Code</a> (C. Siefert, J. Hu)
-                                        </ul> </td> </tr>
-<tr><th><abbr>  2:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/10_Kokkos-Tpetra-FE-Assembly_Pearson_20231101_pearson_tug.pdf">Using Kokkos In Tpetra Finite Element Assembly</a> (C. Pearson, C. Siefert)
-           <li> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/10a_Fuller_EPETRA_TPETRA_ALEGRA.pdf">Epetra to Tpetra Transition in ALEGRA</a> (T. Fuller)
+<tr><th><abbr>  2:00 </abbr></th>  <td>  
+  <li> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/09a_GPU-Tooling_Siefert_TUG_24_H2D_Tools_v2.pdf">Trilinos Tools: Identifying Host-To-Device Transfers and State Of The Code</a> (C. Siefert, J. Hu)
+  <li> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/09b_Hu_Tpetra-Profiling-Exemplars-TUG-2023-final.pdf">Tpetra Memory Transfer Tracking in Action</a> (J. Hu, C. Siefert)
+                                       </td> </tr>
+<tr><th><abbr>  2:30 </abbr></th>  <td> 
+  <li> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/10_Kokkos-Tpetra-FE-Assembly_Pearson_20231101_pearson_tug.pdf">Using Kokkos In Tpetra Finite Element Assembly</a> (C. Pearson, C. Siefert)
+  <li> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/10a_Fuller_EPETRA_TPETRA_ALEGRA.pdf">Epetra to Tpetra Transition in ALEGRA</a> (T. Fuller)
 </td> </tr>
 
 <tr><th><abbr>  3:00 </abbr></th>  <td> <b> Break </b>                                                       </td> </tr>
