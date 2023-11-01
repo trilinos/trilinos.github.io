@@ -191,12 +191,12 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 
 <tr><th><abbr>  8:15 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/01_CFD-Simulations_Hamilton_TUG23.pptx">CFD Simulations with Panzer</a> S. Hamilton (ORNL) S. Slattery (ORNL) T. Erwin (ORNL) R. Pawlowski (SNL) B. Reuter (SNL) </td> </tr>
 <tr><th><abbr>  8:45 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/02_FROSch_Heinlein_2023-heinlein-frosch.pdf">Fast and Robust Overlapping Schwarz (FROSch) Preconditioners in Trilinos</a> (A. Heinlein) </td> </tr>
-<tr><th><abbr>  9:15 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/04_Drekar_Phillips_TUG2023.pptx">PDE-constrained optimization for ice sheet model initialization in MALI</a> (M. Perego, K. Liegeois) </td> </tr>
-<tr><th><abbr>  9:45 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/03_Albany-Numerical-Optimization_perego_TUG23.pdf">Recent Fusion-Related Results in Drekar</a> (E. Phillips) </td> </tr>
+<tr><th><abbr>  9:15 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/03_Albany-Numerical-Optimization_perego_TUG23.pdf">PDE-constrained optimization for ice sheet model initialization in MALI</a> (M. Perego, K. Liegeois) </td> </tr>
+<tr><th><abbr>  9:45 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/04_Drekar_Phillips_TUG2023.pptx">Recent Fusion-Related Results in Drekar</a> (E. Phillips) </td> </tr>
 
 <tr><th><abbr> 10:15 </abbr></th>  <td> <b> Break </b>                                                       </td> </tr>
 
-<tr><th><abbr> 10:45 </abbr></th>  <td> Plato Optimization-Based Design (S. Hardesty, D. Ridzal) </td> </tr>
+<tr><th><abbr> 10:45 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/05_Plato-ROL_Hardesty_Plato_TUG_Presentation.pptx">Plato Optimization-Based Design</a>  (S. Hardesty, D. Ridzal) </td> </tr>
 <tr><th><abbr> 11:15 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/06_Grafiki_Ellingwood_ellingwood_tug_talk_20231101.pdf">Grafiki: Trilinos-based Software for High-Performance Distributed Graph-based Algorithms</a> (N. Ellingwood) </td> </tr>
 <tr><th><abbr> 11:45 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/07_Gemma_Dang_Gemma_DistributedSchurPCAPreconditioner_TUG2023_v2.pptx">A Distributed-Memory Schur-complement PCA Preconditioner for Gemma Ill-conditioned Problems</a> (V. Dang, J. Kotulski) </td> </tr>
 
