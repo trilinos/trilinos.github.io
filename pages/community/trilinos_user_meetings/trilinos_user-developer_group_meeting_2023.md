@@ -242,7 +242,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 
 <tr><td colspan=2> <b> Containers and Spack </b>                                                                </td> </tr>
 <tr><th><abbr> 12:30 </abbr></th>  <td> Containers for Trilinos PR Testing (S. Browne)              </td> </tr>
-<tr><th><abbr>  1:00 </abbr></th>  <td> ParaTools Team and Spack (S. Browne, J. Frye, J. LaPre)              </td> </tr>
+<tr><th><abbr>  1:00 </abbr></th>  <td> Testing Trilinos with Spack (S. Browne, J. LaPre)              </td> </tr>
 <tr><th><abbr>  1:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-02/09_Spack-Containers-CTH_Agelastos_FutureContainerStrategy-20231024a.pptx.pdf">Containers and MPMD for CTH/SABLE</a> (A. Agelastos)  </td> </tr>
 <tr><th><abbr>  1:45 </abbr></th>  <td> Alegra Spack (T. Fuller)   </td> </tr>
 
