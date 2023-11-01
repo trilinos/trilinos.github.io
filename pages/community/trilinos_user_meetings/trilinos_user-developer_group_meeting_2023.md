@@ -253,7 +253,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 
 <tr><th><abbr>  2:45 </abbr></th>  <td> <b>Open Discussion</b> (Possible Topics)
                                         <ul>
-                                          <li> Trilinos and the Linux Foundation (C. Trott)
+                                          <li> Trilinos and the High Performance Software Foundation (HPSF) (C. Trott)
                                           <li> Containers
                                           <li> Spack
                                           <li> Trilinos DevOps Pipeline and Survey
