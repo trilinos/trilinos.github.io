@@ -191,8 +191,8 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 
 <tr><th><abbr>  8:15 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/01_CFD-Simulations_Hamilton_TUG23.pptx">CFD Simulations with Panzer</a> S. Hamilton (ORNL) S. Slattery (ORNL) T. Erwin (ORNL) R. Pawlowski (SNL) B. Reuter (SNL) </td> </tr>
 <tr><th><abbr>  8:45 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/02_FROSch_Heinlein_2023-heinlein-frosch.pdf">Fast and Robust Overlapping Schwarz (FROSch) Preconditioners in Trilinos</a> (A. Heinlein) </td> </tr>
-<tr><th><abbr>  9:15 </abbr></th>  <td> PDE-constrained optimization for ice sheet model initialization in MALI (M. Perego, K. Liegeois) </td> </tr>
-<tr><th><abbr>  9:45 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/04_Drekar_Phillips_TUG2023.pptx">Recent Fusion-Related Results in Drekar</a> (E. Phillips) </td> </tr>
+<tr><th><abbr>  9:15 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/04_Drekar_Phillips_TUG2023.pptx">PDE-constrained optimization for ice sheet model initialization in MALI</a> (M. Perego, K. Liegeois) </td> </tr>
+<tr><th><abbr>  9:45 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/03_Albany-Numerical-Optimization_perego_TUG23.pdf">Recent Fusion-Related Results in Drekar</a> (E. Phillips) </td> </tr>
 
 <tr><th><abbr> 10:15 </abbr></th>  <td> <b> Break </b>                                                       </td> </tr>
 
@@ -203,15 +203,16 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><th><abbr> 12:15 </abbr></th>  <td> <b> Lunch </b>                                                       </td> </tr>
 
 <tr><th><abbr>  1:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/08_Sierra-SD_Plews_2023-10-31_Plews_TUG_SierraSD.pptx">Performance of Modal Random Vibration Calculations for Structural Dynamics on Heterogeneous Computing Architectures</a> (J. Plews, N. Crane) </td> </tr>
-<tr><th><abbr>  2:00 </abbr></th>  <td> <ul>
-                                          <li> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/09a_GPU-Tooling_Siefert_TUG_24_H2D_Tools_v2.pdf">Trilinos Tools: Identifying Host-To-Device Transfers and State Of The Code</a> (C. Siefert, J. Hu)
+<tr><th><abbr>  2:00 </abbr></th>  <td> <ul> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/09a_GPU-Tooling_Siefert_TUG_24_H2D_Tools_v2.pdf">Trilinos Tools: Identifying Host-To-Device Transfers and State Of The Code</a> (C. Siefert, J. Hu)
                                         </ul> </td> </tr>
-<tr><th><abbr>  2:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/10_Kokkos-Tpetra-FE-Assembly_Pearson_20231101_pearson_tug.pdf">Using Kokkos In Tpetra Finite Element Assembly</a> (C. Pearson, C. Siefert)  </td> </tr>
+<tr><th><abbr>  2:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/10_Kokkos-Tpetra-FE-Assembly_Pearson_20231101_pearson_tug.pdf">Using Kokkos In Tpetra Finite Element Assembly</a> (C. Pearson, C. Siefert)
+           <li> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/10a_Fuller_EPETRA_TPETRA_ALEGRA.pdf">Epetra to Tpetra Transition in ALEGRA</a> (T. Fuller)
+</td> </tr>
 
 <tr><th><abbr>  3:00 </abbr></th>  <td> <b> Break </b>                                                       </td> </tr>
 
 <tr><th><abbr>  3:15 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/11_Performance-Profiling_Kelley_TUG23_PerformanceProfiling.pptx">Trilinos Performance Monitoring with Watchr</a>  (B. Kelley) </td> </tr>
-<tr><th><abbr>  3:35 </abbr></th>  <td> ASC DevOps Trilinos Planning Team: Common Build Trilinos Products (S, Baxley, A. Potla, S. Warnock) </td> </tr>
+<tr><th><abbr>  3:35 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/12_ASC-DevOps-Trilinos-Planning_Warnock_ASCDO_TUG2023_Final.pptx">ASC DevOps Trilinos Planning Team: Common Build Trilinos Products</a> (S, Baxley, A. Potla, S. Warnock) </td> </tr>
 
 <tr><th><abbr>  4:05 </abbr></th>  <td> <b>Adjourn</b>                                                       </td> </tr>
 </tbody>
