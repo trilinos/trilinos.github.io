@@ -228,7 +228,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tbody>
 <tr><td colspan=2> <b> Developer Sessions </b>                                                               </td> </tr>
 <tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober, J. Willenbring)                                    </td> </tr>
-<tr><th><abbr>  8:15 </abbr></th>  <td> Modern TriBITS (R. Bartlett)                                    </td> </tr>
+<tr><th><abbr>  8:15 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-02/01_Modern-TriBITS_Bartlett.pptx">Modern TriBITS</a> (R. Bartlett)                                    </td> </tr>
 <tr><th><abbr>  8:45 </abbr></th>  <td> Kokkos Overview on new capabilities and programmatic developments (C. Trott) </td> </tr>
 <tr><th><abbr>  9:15 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-02/03_Kokkos-Kernels_Berger-Vergiat_TUG_2023_KokkosKernels.pptx">Kokkos Kernels</a> (L. Berger-Vergiat, S. Rajamanickam, V. Dang, N. Ellingwood, J. Foucar, B. Kelley, E. Harvey, K. Liegeois, C. Pearson, E. Prudencio)                                     </td> </tr>
 
