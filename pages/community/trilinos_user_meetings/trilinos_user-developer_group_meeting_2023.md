@@ -236,13 +236,13 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 
 <tr><th><abbr> 10:00 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-02/04_External-Testing_Shende_E4S_Frank_TUG23.pptx">E4S and Frank: A Platform for CI/CD with GPUs</a> (S. Shende)                          </td> </tr>
 <tr><th><abbr> 10:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-02/05_ASC-SQE_Turgeon_ASCSQE_Code_Credibility_2.pdf">Advancing Software Code Credibility and Pedigree Using SQE</a> (J. Turgeon)                                               </td> </tr>
-<tr><th><abbr> 11:00 </abbr></th>  <td> Trilinos DevOps Pipeline Survey (S. Browne, J. Hu, C. Ober&ast;, R. Pawlowski, J. Willenbring) </td> </tr>
+<tr><th><abbr> 11:00 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-02/06_TDOP_Survey_Ober_Trilinos_Checkbox_Survey_Summary-TUG.pdf">Results of Trilinos DevOps Pipeline Survey</a> (S. Browne, J. Hu, C. Ober&ast;, R. Pawlowski, J. Willenbring) </td> </tr>
 
 <tr><th><abbr> 11:30 </abbr></th>  <td> <b> Lunch Break </b>                                                 </td> </tr>
 
 <tr><td colspan=2> <b> Containers and Spack </b>                                                                </td> </tr>
-<tr><th><abbr> 12:30 </abbr></th>  <td> Containers for Trilinos PR Testing (S. Browne)              </td> </tr>
-<tr><th><abbr>  1:00 </abbr></th>  <td> Testing Trilinos with Spack (S. Browne, J. LaPre)              </td> </tr>
+<tr><th><abbr> 12:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-02/07_Containers-Trilinos-PR-Testing_Browne_TUG_Framework_DevelopingWithinContainers.pptx">Developing Trilinos Within Containers</a> (S. Browne)              </td> </tr>
+<tr><th><abbr>  1:00 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-02/08_Spack_Browne_TUG_Framework_TestingWithSpack.pptx">Testing Trilinos with Spack</a> (S. Browne, J. LaPre)              </td> </tr>
 <tr><th><abbr>  1:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-02/09_Spack-Containers-CTH_Agelastos_FutureContainerStrategy-20231024a.pptx.pdf">Containers and MPMD for CTH/SABLE</a> (A. Agelastos)  </td> </tr>
 <tr><th><abbr>  1:45 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-02/10_Alegra-Spack_Fuller_SPACK_ALEGRA.pdf">Adoption and Usage of Spack in ALEGRA DevOps and Development</a> (T. Fuller)   </td> </tr>
 
