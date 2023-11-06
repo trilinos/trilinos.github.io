@@ -251,36 +251,32 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
                                           <li> Vote on Open Discussion Topics 
                                         </ul> </td> </tr>
 
-<tr><th><abbr>  2:45 </abbr></th>  <td> <b>Open Discussion</b> (Possible Topics)
+<tr><th><abbr>  2:45 </abbr></th>  <td> <b>Open Discussion</b> (Votes: (<i>Limit 3 votes per person</i> / <i>Unlimited votes for other topics</i>))
                                         <ul>
-                                          <li> Trilinos and the High Performance Software Foundation (HPSF) (C. Trott)
-                                          <li> Containers
-                                          <li> Spack
-                                          <li> Trilinos DevOps Pipeline and Survey
-                                          <li> Nightly and Integration Testing
+                                          <li> Trilinos and the High Performance Software Foundation (HPSF) (C. Trott) (<b>Discussed</b>)
+                                          <li> (10/1) Deprecating Cmake options in Trilinos (Ross, Chris) (<b>Discussed</b>)
+                                          <li> (9/0) Containers (<b>Discussed</b>)
+                                          <li> (9/0) Tpetra-level support for Kokkos execution space instances (Chris) (<b>Discussed</b>)
+                                          <li> (8/0) Spack (<b>Discussed</b>)
+                                          <li> (7/2) Nightly and Integration Testing (<b>Discussed</b>)
                                           <ul>
                                             <li> How to better incorporate into workflow?
                                             <li> Some developers can't see nightly testing.
                                           </ul>
-                                          <li> Better labels for the Kokkos views (Glusa)
+                                          <li> (4/0) Epetra-Tpetra Transition for Trilinos Packages in FY24 (C. Ober and C. Siefert)
+                                          <ul>
+                                            <li> e.g., test coverage, missing functionality and performance.
+                                          </ul>
+                                          <li> (2/0) Better labels for the Kokkos views (Glusa)
                                           <ul>
                                             <li> A mechanism to prefix all views created within MueLu with "MueLu:".
                                             <li> A mechanism to label all views that are created without an explicit label with some useful identifier, e.g. "filename, line number".
                                           </ul>
-                                          <li> <a href="https://github.com/trilinos/Trilinos/issues/12398">General Trilinos maintenance: useless spaces are making up to 2 MB</a> (T. Romin)
-                                          <li> <a href="https://github.com/trilinos/Trilinos/issues/8001">GTest as a TPL</a> (T. Romin)
-                                          <li> Epetra-Tpetra Transition for Trilinos Packages in FY24 (C. Ober and C. Siefert)
-                                          <ul>
-                                            <li> e.g., test coverage, missing funcitonality and performance.
-                                          </ul>
-                                          <li> <a href="https://github.com/trilinos/Trilinos/issues/12270">Framework: add action to delete merge branches?</a> (J. Hu)
-                                          <li> clang-format?
-                                          <li> Deprecating Cmake options in Trilinos (Ross, Chris)
-                                          <li> Tpetra-level support for Kokkos execution space instances (Chris)
-                                          <li> Other Topics?
-                                          <ul>
-                                            <li> Please share possible topics with Curt Ober (ccober@sandia.gov) and Jim Willenbring (jmwille@sandia.gov).
-                                          </ul>
+                                          <li> (2/0) clang-format?
+                                          <li> (1/2) <a href="https://github.com/trilinos/Trilinos/issues/12270">Framework: add action to delete merge branches?</a> (J. Hu)
+                                          <li> (1/0) <a href="https://github.com/trilinos/Trilinos/issues/8001">GTest as a TPL</a> (T. Romin)
+                                          <li> (1/0) Trilinos DevOps Pipeline and Survey
+                                          <li> (0/1) <a href="https://github.com/trilinos/Trilinos/issues/12398">General Trilinos maintenance: useless spaces are making up to 2 MB</a> (T. Romin)
                                         </ul> </td> </tr>
 
 <tr><th><abbr>  5:00 </abbr></th>  <td> <b>Adjourn</b>                                                       </td> </tr>
