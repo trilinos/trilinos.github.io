@@ -30,5 +30,5 @@ For example, applications can use STK Search and STK Transfer without using STK 
 STK Util does not depend on any other STK modules.
 
 Documentation for the STK modules is provided here:
-[PDF](pdfs/STKManual_2023-10-2-final.pdf "STK Manual PDF")
+[PDF](pages/packages/mpi_x/stk/STKManual_2023-10-2-final.pdf "STK Manual PDF")
 
