@@ -3,13 +3,13 @@ title: STK Doxygen
 permalink: stk_doxygen.html
 folder: mpi_x
 show_sidebar: true
-contact: mwglass@sandia.gov
-package: shards
+contact: william@sandia.gov
+package: stk
 offset: 7
 ---
 
 No Development Doxygen currently available.  
-Links to all available Trilinos release Doxygen collections for STK are listed below.  
+Links to all available Trilinos release Doxygen collections are listed below.  
 Trilinos Version: 
 
 {% for trilinos_version in site.trilinos_versions offset:page.offset %}
