@@ -3,7 +3,7 @@ title: STK Doxygen
 permalink: stk_doxygen.html
 folder: mpi_x
 show_sidebar: true
-contact: william@sandia.gov
+contact: STK-NGPTeam@sandia.gov
 package: stk
 offset: 7
 ---
