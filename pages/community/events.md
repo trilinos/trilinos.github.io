@@ -4,6 +4,7 @@ permalink: events.html
 folder: community
 ---
 
+*   [European Trilinos & Kokkos User Group Meeting 2024](european_trilinos_kokkos_user_group_meeting_2024.html) -- June 24-26, 2024, Hamburg, Germany
 *   [US Trilinos User Group 2023](trilinos_user-developer_group_meeting_2023.html) -- Oct 30-Nov 2, 2023, Albuquerque, NM, USA
 *   [European Trilinos User Group 2023](european_trilinos_user_group_meeting_2023.html) -- June 28-30, 2023, Delft, The Netherlands
 *   [US Trilinos User Group 2022](trilinos_user-developer_group_meeting_2022.html) -- Oct 25-27, 2022, Albuquerque, NM, USA
