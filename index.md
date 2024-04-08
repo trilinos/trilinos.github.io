@@ -77,5 +77,6 @@ Trilinos contains many packages, organized in [five product suites](product.html
 - [The 2019 Trilinos User-Developer Group (TUG) Meeting](https://trilinos.github.io/trilinos_user-developer_group_meeting_2019.html) was held in October in Albuquerque.
 
 ### European Trilinos User Group (EuroTUG) Meetings
+- [The 2024 European Trilinos User Group (EuroTUG) Meeting](european_trilinos_kokkos_user_group_meeting_2024.html) will be held June 24 - 26, 2024.
 - [The 2023 European Trilinos User Group (EuroTUG) Meeting](european_trilinos_user_group_meeting_2023.html) will be held June 28 - 30, 2023.
 - [The 2022 European Trilinos User Group (EuroTUG) Meeting](european_trilinos_user_group_meeting_2022.html) will be held September 12 - 14, 2022.
