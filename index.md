@@ -70,13 +70,40 @@ Trilinos contains many packages, organized in [five product suites](product.html
 - Sandia Jira site for Trilinos strategy epics and tasks.
 
 ### Trilinos User-Developer Group (TUG) Meetings
-- [The 2023 Trilinos User-Developer Group (TUG) Meeting](https://trilinos.github.io/trilinos_user-developer_group_meeting_2023.html) will be a hybrid (virtual and in-person) meeting held October 31 - November 2, 2023.
-- [The 2022 Trilinos User-Developer Group (TUG) Meeting](https://trilinos.github.io/trilinos_user-developer_group_meeting_2022.html) will be a hybrid (virtual and in-person) meeting held October 25 - 27, 2022.
-- [The 2021 Trilinos User-Developer Group (TUG) Meeting](https://trilinos.github.io/trilinos_user-developer_group_meeting_2021.html) was virtually held November 30 - December 2, 2021.
-- [The 2020 Trilinos User-Developer Group (TUG) Meeting](https://trilinos.github.io/trilinos_user-developer_group_meeting_2020.html) was cancelled due to the COVID-19 pandemic.
-- [The 2019 Trilinos User-Developer Group (TUG) Meeting](https://trilinos.github.io/trilinos_user-developer_group_meeting_2019.html) was held in October in Albuquerque.
+- [The 2024 Trilinos User-Developer Group (TUG) Meeting](https://trilinos.github.io/trilinos_user-developer_group_meeting_2024.html) - hybrid (virtual and in-person) meeting, October 22 - 24, 2024.
+- [The 2023 Trilinos User-Developer Group (TUG) Meeting](https://trilinos.github.io/trilinos_user-developer_group_meeting_2023.html) - hybrid (virtual and in-person) meeting, October 31 - November 2, 2023.
 
 ### European Trilinos User Group (EuroTUG) Meetings
-- [The 2024 European Trilinos User Group (EuroTUG) Meeting](european_trilinos_kokkos_user_group_meeting_2024.html) will be held June 24 - 26, 2024.
-- [The 2023 European Trilinos User Group (EuroTUG) Meeting](european_trilinos_user_group_meeting_2023.html) will be held June 28 - 30, 2023.
-- [The 2022 European Trilinos User Group (EuroTUG) Meeting](european_trilinos_user_group_meeting_2022.html) will be held September 12 - 14, 2022.
+- [The 2024 European Trilinos User Group (EuroTUG) Meeting](european_trilinos_kokkos_user_group_meeting_2024.html), June 24 - 26, 2024.
+- [The 2023 European Trilinos User Group (EuroTUG) Meeting](european_trilinos_user_group_meeting_2023.html), June 28 - 30, 2023.
+
+### Past Meetings
+- [The 2022 Trilinos User-Developer Group (TUG) Meeting](https://trilinos.github.io/trilinos_user-developer_group_meeting_2022.html) - hybrid (virtual and in-person) meeting, October 25 - 27, 2022.
+- [The 2022 European Trilinos User Group (EuroTUG) Meeting](european_trilinos_user_group_meeting_2022.html), September 12 - 14, 2022.
+- [The 2021 Trilinos User-Developer Group (TUG) Meeting](https://trilinos.github.io/trilinos_user-developer_group_meeting_2021.html) - virtual meeting, November 30 - December 2, 2021.
+- [The 2020 Trilinos User-Developer Group (TUG) Meeting](https://trilinos.github.io/trilinos_user-developer_group_meeting_2020.html) - cancelled due to the COVID-19 pandemic.
+- [The 2019 Trilinos User-Developer Group (TUG) Meeting](https://trilinos.github.io/trilinos_user-developer_group_meeting_2019.html)
+- [European Trilinos User Group Meeting 2019](https://trilinos.github.io/european_trilinos_user_group_meeting_2019.html)
+- [Trilinos User-Developer Group Meeting 2018](https://trilinos.github.io/trilinos_user-developer_group_meeting_2018.html)
+- [Trilinos User-Developer Group Meeting 2017](https://trilinos.github.io/trilinos_user-developer_group_meeting_2017.html)
+- [Trilinos User-Developer Group Meeting 2016](https://trilinos.github.io/trilinos_user-developer_group_meeting_2016.html)
+- [Spring Developer Meeting 2016](https://trilinos.github.io/spring_developer_meeting_2016.html)
+- [European Trilinos User Group Meeting 2016](https://trilinos.github.io/european_trilinos_user_group_meeting_2016.html)
+- [Trilinos User Group Meeting 2015](https://trilinos.github.io/trilinos_user_group_meeting_2015.html)
+- [European Trilinos User Group Meeting 2015](https://trilinos.github.io/european_trilinos_user_group_meeting_2015.html)
+- [Spring Developer Meeting 2015](https://trilinos.github.io/spring_developer_meeting_2015.html)
+- [Trilinos User Group Meeting 2014](https://trilinos.github.io/trilinos_user_group_meeting_2014.html)
+- [European Trilinos User Group Meeting 2014](https://trilinos.github.io/european_trilinos_user_group_meeting_2014.html)
+- [Spring Developer Meeting 2014](https://trilinos.github.io/spring_developer_meeting_2014.html)
+- [Trilinos User Group Meeting 2013](https://trilinos.github.io/trilinos_user_group_meeting_2013.html)
+- [3-day Introductory Course on Trilinos](https://trilinos.github.io/3-day_introductory_course_on_trilinos.html)
+- [European Trilinos User Group Meeting 2013](https://trilinos.github.io/european_trilinos_user_group_meeting_2013.html)
+- [Trilinos User Group Meeting 2012](https://trilinos.github.io/trilinos_user_group_meeting_2012.html)
+- [European Trilinos User Group Meeting 2012](https://trilinos.github.io/european_trilinos_user_group_meeting_2012.html)
+- [Trilinos User Group Meeting 2011](https://trilinos.github.io/trilinos_user_group_meeting_2011.html)
+- [Trilinos User Group Meeting 2010](https://trilinos.github.io/trilinos_user_group_meeting_2010.html)
+- [Trilinos User Group Meeting 2009](https://trilinos.github.io/trilinos_user_group_meeting_2009.html)
+- [Kitware/SNL CMake/CTest/CDash Workshop](https://trilinos.github.io/kitwaresnl-cmakectestcdash-workshop.html)
+- [Trilinos User Group Meeting 2008](https://trilinos.github.io/trilinos_user_group_meeting_2008.html)
+- [Copper Mountain Conference 2008](https://trilinos.github.io/copper_mountain_conference_2008.html)
+- [Trilinos User Group Meeting 2007](https://trilinos.github.io/trilinos_user_group_meeting_2007.html)
