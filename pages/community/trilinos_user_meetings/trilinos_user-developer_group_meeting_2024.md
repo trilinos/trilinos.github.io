@@ -71,7 +71,7 @@ reporting purposes. Please complete the registration form and send
 it to parutka@sandia.gov (see deadlines below). After registration
 closes, you will receive an invite for the meetings. Please do not
 forward the invite as registration is necessary to attend. [Click
-here for the registration form](pdfs/2024_TUG_registration_form.pdf).
+here for the registration form](pdfs/2024_TUG_registration.pdf).
 
 <b>Sandians need to register</b>, as it will help with monitoring
 attendance, and the reporting requirements for this meeting.
