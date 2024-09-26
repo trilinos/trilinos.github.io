@@ -94,7 +94,7 @@ attendance, and the reporting requirements for this meeting.
 
 ## Keynote
 
-TBD
+Tensor Decomposition of Large-Scale Data with GenTen (E. Phipps)
 
 
 ## Tentative Agenda
@@ -105,25 +105,42 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 
 <table summary="Timetable">
 <tbody>
-<tr><td colspan=2> <b> Opening </b>                                                                     </td> </tr>
-<tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober)                                               </td> </tr>
-<tr><th><abbr>  8:15 </abbr></th>  <td> <b>Keynote</b> - TBD                                            </td> </tr>
+<tr><td colspan=2> <b> Opening </b>                                                                                                                                  </td> </tr>
+<tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober)                                                                                                            </td> </tr>
+<tr><th><abbr>  8:15 </abbr></th>  <td> <b>Keynote</b> - Tensor Decomposition of Large-Scale Data with GenTen (E. Phipps)                                            </td> </tr>
 
-<tr><td colspan=2> <b> Updates from Trilinos Areas </b>                                                 </td> </tr>
+<tr><td colspan=2> <b> Updates from Trilinos Areas </b>                                                                                                              </td> </tr>
 
-<tr><th><abbr> ??? </abbr></th>  <td> DevOps (Framework) Updates  (S. Browne)                           </td> </tr>
-<tr><th><abbr> ??? </abbr></th>  <td> Trilinos Core Updates (R. Pawlowski)                              </td> </tr>
-<tr><th><abbr> ??? </abbr></th>  <td> Solver Updates (C. Glusa)                                         </td> </tr>
-<tr><th><abbr> ??? </abbr></th>  <td> Discretizations and Analysis Updates (M. Perego)                  </td> </tr>
-
-<tr><th><abbr>   ??? </abbr></th>  <td> Trilinos Presentations                                          </td> </tr>
-
-<tr><th><abbr> 12:00 </abbr></th>  <td> <b>Lunch</b>                                                    </td> </tr>
-<tr><th><abbr>  1:00 </abbr></th>  <td> <b>Trilinos Collaboration</b> 
+<tr><th><abbr>  9:15 </abbr></th>  <td> Trilinos, HPSF, Epetra Deprecation, ... (C. Ober, J. Willenbring, S. Browne)                                                 </td> </tr>
+<tr><th><abbr> 10:15 </abbr></th>  <td> <b>Break</b>                                                                                                                 </td> </tr>
+<tr><th><abbr> 10:30 </abbr></th>  <td> DevOps (a.k.a. Framework) Updates  (S. Browne)
                                         <ul>
-                                          <li> Conference room will be available for collaboration and discussions.
-                                        </ul>                                                           </td> </tr>
-<tr><th><abbr>  5:00 </abbr></th>  <td> <b>Adjourn</b>                                                  </td> </tr>
+                                          <li> Description / Updates / Plans for FY25                              
+                                        </ul>                                                                                                                        </td> </tr>
+<tr><th><abbr> 11:00 </abbr></th>  <td> Trilinos Core Updates (R. Pawlowski)
+                                        <ul>
+                                          <li> Description / Updates / Plans for FY25                              
+                                          <li> Package Highlight
+                                        </ul>                                                                                                                        </td> </tr>
+<tr><th><abbr> 11:15 </abbr></th>  <td> Solver Updates (C. Glusa)
+                                        <ul>
+                                          <li> Description / Updates / Plans for FY25                              
+                                          <li> Package Highlight
+                                        </ul>                                                                                                                        </td> </tr>
+<tr><th><abbr> 11:30 </abbr></th>  <td> Discretizations and Analysis Updates (M. Perego)
+                                        <ul>
+                                          <li> Description / Updates / Plans for FY25                              
+                                          <li> Package Highlight
+                                        </ul>                                                                                                                        </td> </tr>
+
+<tr><th><abbr> 11:45 </abbr></th>  <td> <b>Lunch / Adjourn </b>                                                                                                      </td> </tr>
+<tr><th><abbr>  1:00 </abbr></th>  <td> <b>Nvidia HPC Session</b> 
+                                        <ul>
+                                          <li> Nvidia will be visiting Sandia and will be sharing presentations on their HPC efforts.
+                                          <li> This is an broader event than TUG, and TUG registrants can attend.
+                                          <li> Additional details will be including as they come available.
+                                        </ul>                                                                                                                        </td> </tr>
+<tr><th><abbr>  5:00 </abbr></th>  <td> <b>Adjourn</b>                                                                                                               </td> </tr>
 </tbody>
 </table>
 
@@ -132,18 +149,27 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 
 <table summary="Timetable">
 <tbody>
-<tr><td colspan=2> <b> Applications Session </b>                                                        </td> </tr>
-<tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober)                                               </td> </tr>
+<tr><td colspan=2> <b> Applications Session </b>                                                                                                                     </td> </tr>
+<tr><th><abbr>  7:50 </abbr></th>  <td> Welcome (C. Ober)                                                                                                            </td> </tr>
 
-<tr><th><abbr>   ??? </abbr></th>  <td> Application Presentations                                       </td> </tr>
+<tr><th><abbr>  8:00 </abbr></th>  <td> Multiphysics Usage of Trilinos (M. Firmbach)                                                                                 </td> </tr>
+<tr><th><abbr>  8:30 </abbr></th>  <td> Empire (D. Sirajuddin)                                                                                                       </td> </tr>
+<tr><th><abbr>  9:00 </abbr></th>  <td> Empire Compiling and Performance (J. Elliott)                                                                                </td> </tr>
+<tr><th><abbr>  9:30 </abbr></th>  <td> Using Preconditioners in Gemma (J. Kotulski, V. Dang, J. Rivero)                                                             </td> </tr>
 
-<tr><th><abbr> 12:00 </abbr></th>  <td> <b> Lunch </b>                                                  </td> </tr>
+<tr><th><abbr> 10:00 </abbr></th>  <td> <b>Break</b>                                                                                                                 </td> </tr>
+
+<tr><th><abbr> 10:15 </abbr></th>  <td> Recent Teko Usage in Aria (M. Phillips)                                                                                      </td> </tr>
+<tr><th><abbr> 10:45 </abbr></th>  <td> Charon/Tpetra Performance Improvements (L. Musson)                                                                           </td> </tr>
+<tr><th><abbr> 11:15 </abbr></th>  <td> Introduction to Using LLMs at Sandia (G. Harper and C. Siefert)                                                              </td> </tr>
+
+<tr><th><abbr> 12:00 </abbr></th>  <td> <b> Lunch </b>                                                                                                               </td> </tr>
 <tr><th><abbr>  1:00 </abbr></th>  <td> <b>Trilinos Collaboration</b> 
                                         <ul>
                                           <li> Conference room will be available for collaboration and discussions.
-                                        </ul>                                                           </td> </tr>
+                                        </ul>                                                                                                                        </td> </tr>
 
-<tr><th><abbr>  5:00 </abbr></th>  <td> <b>Adjourn</b>                                                  </td> </tr>
+<tr><th><abbr>  5:00 </abbr></th>  <td> <b>Adjourn</b>                                                                                                               </td> </tr>
 </tbody>
 </table>
 
@@ -152,17 +178,40 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 
 <table summary="Timetable">
 <tbody>
-<tr><td colspan=2> <b> Developer Sessions </b>                                                          </td> </tr>
-<tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober)                                               </td> </tr>
+<tr><td colspan=2> <b> Developer Sessions </b>                                                                                                                       </td> </tr>
+<tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober)                                                                                                            </td> </tr>
 
-<tr><th><abbr>   ??? </abbr></th>  <td> Developer Presentations                                         </td> </tr>
+<tr><th><abbr>  8:10 </abbr></th>  <td> Intrepid2 (M. Arnst, Liege University)                                                                                       </td> </tr>
+<tr><th><abbr>  8:30 </abbr></th>  <td> DevOps Tutorial (S. Brown, Trilinos DevOps Team)
+                                        <ul>
+                                          <li> AutoTester2
+                                          <li> Containers
+                                          <li> Tour of DevOps Workflow (usage of containers)
+                                          <li> DCO Signing
+                                        </ul>                                                                                                                        </td> </tr>
 
-<tr><th><abbr> 12:00 </abbr></th>  <td> <b> Lunch </b>                                                  </td> </tr>
+<tr><th><abbr> 10:00 </abbr></th>  <td> <b>Break</b>                                                                                                                 </td> </tr>
 
-<tr><th><abbr>   ??? </abbr></th>  <td> Developer Presentations                                         </td> </tr>
+<tr><th><abbr> 10:15 </abbr></th>  <td> Keeping Trilinos working  performantly every night, everywhere  (C. Siefert)                                                 </td> </tr>
+<tr><th><abbr> 10:45 </abbr></th>  <td> Belos Dense CRS Matrix (H. Thornquist)                                                                                       </td> </tr>
+<tr><th><abbr> 11:15 </abbr></th>  <td> My First LLM? (C. Siefert, G. Harper)                                                                                        </td> </tr>
 
-<tr><th><abbr>  2:45 </abbr></th>  <td> <b>Open Discussion</b> (Votes: (Limit 3 votes per person</i>))  </td> </tr>
+<tr><th><abbr> 12:15 </abbr></th>  <td> <b> Lunch </b>                                                                                                               </td> </tr>
 
-<tr><th><abbr>  5:00 </abbr></th>  <td> <b>Adjourn</b>                                                  </td> </tr>
+<tr><th><abbr>  1:15 </abbr></th>  <td> LLM+Editor and ATLAS demo/Hands-On (C. Siefert)                                                                              </td> </tr>
+<tr><th><abbr>  1:45 </abbr></th>  <td> ASC DevOps Research Project and Trilinos (R. Bartlett, J. Willenbring, R. Milewicz)                                          </td> </tr>
+<tr><th><abbr>  2:15 </abbr></th>  <td> Software Sustainability / Stewardship CI Update (J. Willenbring)                                                             </td> </tr>
+
+<tr><th><abbr>  2:45 </abbr></th>  <td> <b>Break (30 min.)</b>
+                                        <ul>
+                                          <li> Vote on Open Discussion Topics
+                                        </ul>                                                                                                                        </td> </tr>
+
+<tr><th><abbr>  3:15 </abbr></th>  <td> <b>Open Discussion</b>
+                                        <ul>
+                                          <li> How to Leverage AI Tools (writing code, documentation, comment messages, ...)
+                                        </ul>                                                                                                                        </td> </tr>
+
+<tr><th><abbr>  5:00 </abbr></th>  <td> <b>Adjourn</b>                                                                                                               </td> </tr>
 </tbody>
 </table>
