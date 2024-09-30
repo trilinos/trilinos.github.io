@@ -137,7 +137,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><th><abbr>  1:00 </abbr></th>  <td> <b>Nvidia HPC Session</b> 
                                         <ul>
                                           <li> Nvidia will be visiting Sandia and will be sharing presentations on their HPC efforts.
-                                          <li> This is an broader event than TUG, and TUG registrants can attend.
+                                          <li> This is a broader event than TUG, and TUG registrants can attend.
                                           <li> Additional details will be including as they come available.
                                         </ul>                                                                                                                        </td> </tr>
 <tr><th><abbr>  5:00 </abbr></th>  <td> <b>Adjourn</b>                                                                                                               </td> </tr>
@@ -161,7 +161,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 
 <tr><th><abbr> 10:15 </abbr></th>  <td> Recent Teko Usage in Aria (M. Phillips)                                                                                      </td> </tr>
 <tr><th><abbr> 10:45 </abbr></th>  <td> Charon/Tpetra Performance Improvements (L. Musson)                                                                           </td> </tr>
-<tr><th><abbr> 11:15 </abbr></th>  <td> Introduction to Using LLMs at Sandia (G. Harper and C. Siefert)                                                              </td> </tr>
+<tr><th><abbr> 11:15 </abbr></th>  <td> My Very First Large(ish) Language Model: Doing Model Inference, Fine Tuning & RAG at Sandia (G. Harper and C. Siefert)       </td> </tr>
 
 <tr><th><abbr> 12:00 </abbr></th>  <td> <b> Lunch </b>                                                                                                               </td> </tr>
 <tr><th><abbr>  1:00 </abbr></th>  <td> <b>Trilinos Collaboration</b> 
@@ -194,20 +194,19 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 
 <tr><th><abbr> 10:15 </abbr></th>  <td> Keeping Trilinos working  performantly every night, everywhere  (C. Siefert)                                                 </td> </tr>
 <tr><th><abbr> 10:45 </abbr></th>  <td> Belos Dense CRS Matrix (H. Thornquist)                                                                                       </td> </tr>
-<tr><th><abbr> 11:15 </abbr></th>  <td> My First LLM? (C. Siefert, G. Harper)                                                                                        </td> </tr>
+<tr><th><abbr> 11:15 </abbr></th>  <td> Hands-on with LLMs at Sandia: ATLAS and LLM-Editor Integration with Shirty (C. Siefert)                                      </td> </tr>
 
-<tr><th><abbr> 12:15 </abbr></th>  <td> <b> Lunch </b>                                                                                                               </td> </tr>
+<tr><th><abbr> 11:45 </abbr></th>  <td> <b> Lunch </b>                                                                                                               </td> </tr>
 
-<tr><th><abbr>  1:15 </abbr></th>  <td> LLM+Editor and ATLAS demo/Hands-On (C. Siefert)                                                                              </td> </tr>
-<tr><th><abbr>  1:45 </abbr></th>  <td> ASC DevOps Research Project and Trilinos (R. Bartlett, J. Willenbring, R. Milewicz)                                          </td> </tr>
-<tr><th><abbr>  2:15 </abbr></th>  <td> Software Sustainability / Stewardship CI Update (J. Willenbring)                                                             </td> </tr>
+<tr><th><abbr>  1:00 </abbr></th>  <td> ASC DevOps Research Project and Trilinos (R. Bartlett, J. Willenbring, R. Milewicz)                                          </td> </tr>
+<tr><th><abbr>  1:30 </abbr></th>  <td> Software Sustainability / Stewardship CI Update (J. Willenbring)                                                             </td> </tr>
 
-<tr><th><abbr>  2:45 </abbr></th>  <td> <b>Break (30 min.)</b>
+<tr><th><abbr>  2:00 </abbr></th>  <td> <b>Break (30 min.)</b>
                                         <ul>
                                           <li> Vote on Open Discussion Topics
                                         </ul>                                                                                                                        </td> </tr>
 
-<tr><th><abbr>  3:15 </abbr></th>  <td> <b>Open Discussion</b>
+<tr><th><abbr>  2:30 </abbr></th>  <td> <b>Open Discussion</b>
                                         <ul>
                                           <li> How to Leverage AI Tools (writing code, documentation, comment messages, ...)
                                         </ul>                                                                                                                        </td> </tr>
