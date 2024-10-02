@@ -96,6 +96,21 @@ attendance, and the reporting requirements for this meeting.
 
 Tensor Decomposition of Large-Scale Data with GenTen (E. Phipps)
 
+Tensors, or high dimensional arrays of data, are ubiquitous in
+science, engineering, and informatics, arising in diverse areas
+including multiphysics simulation, remote sensing, text analytics,
+and cyber security.  Tensor decomposition methods, akin to matrix
+factorization methods for two-dimensional data, facilitate powerful
+analysis and reduction of such data, including data compression,
+surrogate modeling, pattern identification, and anomaly detection.
+In this talk, we describe a recently developed tool for tensor
+decomposition of large-scale data called GenTen.  GenTen leverages
+several packages in Trilinos to compute tensor decompositions in
+parallel on modern CPU and GPU computing architectures.  We describe
+the kinds of decompositions GenTen can compute, demonstrate the
+kinds of analysis it facilitates, and how GenTen uses Trilinos
+packages in these computations.  On-going challenges and future
+research directions will also be discussed.
 
 ## Tentative Agenda
 All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
