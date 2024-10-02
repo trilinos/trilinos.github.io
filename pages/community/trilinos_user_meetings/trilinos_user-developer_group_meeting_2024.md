@@ -135,12 +135,12 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><th><abbr> 11:00 </abbr></th>  <td> Trilinos Core Updates (R. Pawlowski)
                                         <ul>
                                           <li> Description / Updates / Plans for FY25                              
-                                          <li> Package Highlight
+                                          <li> Package Highlight - Tpetra Update (J. Hu)
                                         </ul>                                                                                                                        </td> </tr>
 <tr><th><abbr> 11:15 </abbr></th>  <td> Solver Updates (C. Glusa)
                                         <ul>
                                           <li> Description / Updates / Plans for FY25                              
-                                          <li> Package Highlight
+                                          <li> Package Highlight - ShyLU Node (I. Yamazaki)
                                         </ul>                                                                                                                        </td> </tr>
 <tr><th><abbr> 11:30 </abbr></th>  <td> Discretizations and Analysis Updates (M. Perego)
                                         <ul>
@@ -168,7 +168,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><th><abbr>  7:50 </abbr></th>  <td> Welcome (C. Ober)                                                                                                            </td> </tr>
 
 <tr><th><abbr>  8:00 </abbr></th>  <td> Multiphysics Usage of Trilinos (M. Firmbach)                                                                                 </td> </tr>
-<tr><th><abbr>  8:30 </abbr></th>  <td> Empire (D. Sirajuddin)                                                                                                       </td> </tr>
+<tr><th><abbr>  8:30 </abbr></th>  <td> Empire Simulations of Pulsed Power at Sandia (D. Sirajuddin)                                                                 </td> </tr>
 <tr><th><abbr>  9:00 </abbr></th>  <td> Empire Compiling and Performance (J. Elliott)                                                                                </td> </tr>
 <tr><th><abbr>  9:30 </abbr></th>  <td> Using Preconditioners in Gemma (J. Kotulski, V. Dang, J. Rivero)                                                             </td> </tr>
 
