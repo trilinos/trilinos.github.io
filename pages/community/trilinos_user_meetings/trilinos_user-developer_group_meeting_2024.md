@@ -145,15 +145,23 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><th><abbr> 11:30 </abbr></th>  <td> Discretizations and Analysis Updates (M. Perego)
                                         <ul>
                                           <li> Description / Updates / Plans for FY25                              
-                                          <li> Package Highlight
+                                          <li> Package Highlight - ROL (D. Ridzal)
                                         </ul>                                                                                                                        </td> </tr>
 
 <tr><th><abbr> 11:45 </abbr></th>  <td> <b>Lunch / Adjourn </b>                                                                                                      </td> </tr>
-<tr><th><abbr>  1:00 </abbr></th>  <td> <b>Nvidia HPC Session</b> 
+<tr><th><abbr>  1:00 </abbr></th>  <td> <b>Nvidia HPC Session</b> <br>
+                                        NVIDIA’s HPC SDK (Graham Lopez) <br>
+					                    This presentation will provide an overview of the NVIDIA HPC SDK and its role on NVIDIA HPC systems. We
+                       					will look at the design and motivation behind the HPC SDK to understand how and various choices are made
+                       					in the product. We’ll look at a few case studies of how support for programming models, new hardware, and
+                       					new software products have shaped the past evolution of the HPC SDK, where it currently stands today, and
+                       					the future directions of the HPC SDK. Finally, we invite the audience to share their thoughts, feedback,
+                       					and ideas on the software.  We'll explore speculative concepts and emerging trends that could shape the future
+                       					of HPC application development.  <br><br>
+                                        Nvidia Attendees (Tentative):
                                         <ul>
-                                          <li> Nvidia will be visiting Sandia and will be sharing presentations on their HPC efforts.
-                                          <li> This is a broader event than TUG, and TUG registrants can attend.
-                                          <li> Additional details will be including as they come available.
+                                          <li> Scot Halverson - HPC Solutions Architect
+                                          <li> Mark Hoemmen - CUTLASS Engineering, C++ Standard
                                         </ul>                                                                                                                        </td> </tr>
 <tr><th><abbr>  5:00 </abbr></th>  <td> <b>Adjourn</b>                                                                                                               </td> </tr>
 </tbody>
