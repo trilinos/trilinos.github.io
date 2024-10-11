@@ -149,8 +149,8 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
                                         </ul>                                                                                                                        </td> </tr>
 
 <tr><th><abbr> 11:45 </abbr></th>  <td> <b>Lunch / Adjourn </b>                                                                                                      </td> </tr>
-<tr><th><abbr>  1:00 </abbr></th>  <td> <b>Nvidia HPC Session</b> <br>
-                                        NVIDIA’s HPC SDK (Graham Lopez) <br>
+<tr><th><abbr>  1:00 </abbr></th>  <td> <b>Nvidia HPC Session</b> <br><br>
+                                        NVIDIA’s HPC SDK (Graham Lopez) <br><br>
 					                    This presentation will provide an overview of the NVIDIA HPC SDK and its role on NVIDIA HPC systems. We
                        					will look at the design and motivation behind the HPC SDK to understand how and various choices are made
                        					in the product. We’ll look at a few case studies of how support for programming models, new hardware, and
@@ -204,7 +204,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><td colspan=2> <b> Developer Sessions </b>                                                                                                                       </td> </tr>
 <tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober)                                                                                                            </td> </tr>
 
-<tr><th><abbr>  8:10 </abbr></th>  <td> Intrepid2 (M. Arnst, Liege University)                                                                                       </td> </tr>
+<tr><th><abbr>  8:10 </abbr></th>  <td> Using Intrepid2 for high-order FE assembly in a multi-physics code (M. Arnst, R. Tomasetti)                                  </td> </tr>
 <tr><th><abbr>  8:30 </abbr></th>  <td> DevOps Tutorial (S. Brown, Trilinos DevOps Team)
                                         <ul>
                                           <li> AutoTester2
