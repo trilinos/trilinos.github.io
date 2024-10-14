@@ -126,7 +126,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 
 <tr><td colspan=2> <b> Updates from Trilinos Areas </b>                                                                                                              </td> </tr>
 
-<tr><th><abbr>  9:15 </abbr></th>  <td> Trilinos, HPSF, Epetra Deprecation, ... (C. Ober, J. Willenbring, S. Browne)                                                 </td> </tr>
+<tr><th><abbr>  9:15 </abbr></th>  <td> Trilinos, HPSF, Epetra Deprecation (C. Ober, S. Browne, J. Willenbring)                                                      </td> </tr>
 <tr><th><abbr> 10:15 </abbr></th>  <td> <b>Break</b>                                                                                                                 </td> </tr>
 <tr><th><abbr> 10:30 </abbr></th>  <td> DevOps (a.k.a. Framework) Updates  (S. Browne)
                                         <ul>
@@ -177,7 +177,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 
 <tr><th><abbr>  8:00 </abbr></th>  <td> Multiphysics Usage of Trilinos (M. Firmbach)                                                                                 </td> </tr>
 <tr><th><abbr>  8:30 </abbr></th>  <td> Empire Simulations of Pulsed Power at Sandia (D. Sirajuddin)                                                                 </td> </tr>
-<tr><th><abbr>  9:00 </abbr></th>  <td> Empire Compiling and Performance (J. Elliott)                                                                                </td> </tr>
+<tr><th><abbr>  9:00 </abbr></th>  <td> Build Times on Modern Heterogenous Systems: Steps towards a faster future (J. Elliott)                                       </td> </tr>
 <tr><th><abbr>  9:30 </abbr></th>  <td> Using Preconditioners in Gemma (J. Kotulski, V. Dang, J. Rivero)                                                             </td> </tr>
 
 <tr><th><abbr> 10:00 </abbr></th>  <td> <b>Break</b>                                                                                                                 </td> </tr>
