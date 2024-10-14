@@ -205,13 +205,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober)                                                                                                            </td> </tr>
 
 <tr><th><abbr>  8:10 </abbr></th>  <td> Using Intrepid2 for high-order FE assembly in a multi-physics code (M. Arnst, R. Tomasetti)                                  </td> </tr>
-<tr><th><abbr>  8:30 </abbr></th>  <td> DevOps Tutorial (S. Brown, Trilinos DevOps Team)
-                                        <ul>
-                                          <li> AutoTester2
-                                          <li> Containers
-                                          <li> Tour of DevOps Workflow (usage of containers)
-                                          <li> DCO Signing
-                                        </ul>                                                                                                                        </td> </tr>
+<tr><th><abbr>  8:30 </abbr></th>  <td> AutoTester2: Modernized Trilinos CI Testing (S. Brown, Trilinos DevOps Team)                                                 </td> </tr>
 
 <tr><th><abbr> 10:00 </abbr></th>  <td> <b>Break</b>                                                                                                                 </td> </tr>
 
