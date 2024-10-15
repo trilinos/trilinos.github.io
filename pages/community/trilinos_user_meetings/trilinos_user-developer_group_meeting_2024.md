@@ -120,35 +120,36 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 
 <table summary="Timetable">
 <tbody>
-<tr><td colspan=2> <b> Opening </b>                                                                                                                                  </td> </tr>
-<tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober)                                                                                                            </td> </tr>
-<tr><th><abbr>  8:15 </abbr></th>  <td> <b>Keynote</b> - Tensor Decomposition of Large-Scale Data with GenTen (E. Phipps)                                            </td> </tr>
+<tr><td colspan=2> <b> Opening </b>                                                                                                                                                               </td> </tr>
+<tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober)                                                                                                                                         </td> </tr>
+<tr><th><abbr>  8:15 </abbr></th>  <td> <b>Keynote</b> - Tensor Decomposition of Large-Scale Data with GenTen (E. Phipps)                                                                         </td> </tr>
 
-<tr><td colspan=2> <b> Updates from Trilinos Areas </b>                                                                                                              </td> </tr>
+<tr><td colspan=2> <b> Updates from Trilinos Areas </b>                                                                                                                                           </td> </tr>
 
-<tr><th><abbr>  9:15 </abbr></th>  <td> Trilinos, HPSF, Epetra Deprecation (C. Ober, S. Browne, J. Willenbring)                                                      </td> </tr>
-<tr><th><abbr> 10:15 </abbr></th>  <td> <b>Break</b>                                                                                                                 </td> </tr>
+<tr><th><abbr>  9:15 </abbr></th>  <td> 
+<a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-22/02_UUR_2024_Trilinos_HPSF_Ober-Final.pdf">Trilinos, HPSF, Epetra Deprecation</a> (C. Ober, S. Browne, J. Willenbring)         </td> </tr>
+<tr><th><abbr> 10:15 </abbr></th>  <td> <b>Break</b>                                                                                                                                              </td> </tr>
 <tr><th><abbr> 10:30 </abbr></th>  <td> DevOps (a.k.a. Framework) Updates  (S. Browne)
                                         <ul>
                                           <li> Description / Updates / Plans for FY25                              
-                                        </ul>                                                                                                                        </td> </tr>
+                                        </ul>                                                                                                                                                     </td> </tr>
 <tr><th><abbr> 11:00 </abbr></th>  <td> Trilinos Core Updates (R. Pawlowski)
                                         <ul>
                                           <li> Description / Updates / Plans for FY25                              
                                           <li> Package Highlight - Tpetra Update (J. Hu)
-                                        </ul>                                                                                                                        </td> </tr>
+                                        </ul>                                                                                                                                                     </td> </tr>
 <tr><th><abbr> 11:15 </abbr></th>  <td> Solver Updates (C. Glusa)
                                         <ul>
                                           <li> Description / Updates / Plans for FY25                              
                                           <li> Package Highlight - ShyLU Node (I. Yamazaki)
-                                        </ul>                                                                                                                        </td> </tr>
+                                        </ul>                                                                                                                                                     </td> </tr>
 <tr><th><abbr> 11:30 </abbr></th>  <td> Discretizations and Analysis Updates (M. Perego)
                                         <ul>
                                           <li> Description / Updates / Plans for FY25                              
                                           <li> Package Highlight - ROL (D. Ridzal)
-                                        </ul>                                                                                                                        </td> </tr>
+                                        </ul>                                                                                                                                                     </td> </tr>
 
-<tr><th><abbr> 11:45 </abbr></th>  <td> <b>Lunch / Adjourn </b>                                                                                                      </td> </tr>
+<tr><th><abbr> 11:45 </abbr></th>  <td> <b>Lunch / Adjourn </b>                                                                                                                                   </td> </tr>
 <tr><th><abbr>  1:00 </abbr></th>  <td> <b>Nvidia HPC Session</b> <br><br>
                                         NVIDIA’s HPC SDK (Graham Lopez) <br><br>
 					                    This presentation will provide an overview of the NVIDIA HPC SDK and its role on NVIDIA HPC systems. We
@@ -162,8 +163,8 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
                                         <ul>
                                           <li> Scot Halverson - HPC Solutions Architect
                                           <li> Mark Hoemmen - CUTLASS Engineering, C++ Standard
-                                        </ul>                                                                                                                        </td> </tr>
-<tr><th><abbr>  5:00 </abbr></th>  <td> <b>Adjourn</b>                                                                                                               </td> </tr>
+                                        </ul>                                                                                                                                                     </td> </tr>
+<tr><th><abbr>  5:00 </abbr></th>  <td> <b>Adjourn</b>                                                                                                                                            </td> </tr>
 </tbody>
 </table>
 
@@ -172,27 +173,27 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 
 <table summary="Timetable">
 <tbody>
-<tr><td colspan=2> <b> Applications Session </b>                                                                                                                     </td> </tr>
-<tr><th><abbr>  7:50 </abbr></th>  <td> Welcome (C. Ober)                                                                                                            </td> </tr>
+<tr><td colspan=2> <b> Applications Session </b>                                                                                                                                                  </td> </tr>
+<tr><th><abbr>  7:50 </abbr></th>  <td> Welcome (C. Ober)                                                                                                                                         </td> </tr>
 
-<tr><th><abbr>  8:00 </abbr></th>  <td> Multiphysics Usage of Trilinos (M. Firmbach)                                                                                 </td> </tr>
-<tr><th><abbr>  8:30 </abbr></th>  <td> Empire Simulations of Pulsed Power at Sandia (D. Sirajuddin)                                                                 </td> </tr>
-<tr><th><abbr>  9:00 </abbr></th>  <td> Build Times on Modern Heterogenous Systems: Steps towards a faster future (J. Elliott)                                       </td> </tr>
-<tr><th><abbr>  9:30 </abbr></th>  <td> Using Preconditioners in Gemma (J. Kotulski, V. Dang, J. Rivero)                                                             </td> </tr>
+<tr><th><abbr>  8:00 </abbr></th>  <td> Multiphysics Usage of Trilinos (M. Firmbach)                                                                                                              </td> </tr>
+<tr><th><abbr>  8:30 </abbr></th>  <td> Empire Simulations of Pulsed Power at Sandia (D. Sirajuddin)                                                                                              </td> </tr>
+<tr><th><abbr>  9:00 </abbr></th>  <td> Build Times on Modern Heterogenous Systems: Steps towards a faster future (J. Elliott)                                                                    </td> </tr>
+<tr><th><abbr>  9:30 </abbr></th>  <td> Using Preconditioners in Gemma (J. Kotulski, V. Dang, J. Rivero)                                                                                          </td> </tr>
 
-<tr><th><abbr> 10:00 </abbr></th>  <td> <b>Break</b>                                                                                                                 </td> </tr>
+<tr><th><abbr> 10:00 </abbr></th>  <td> <b>Break</b>                                                                                                                                              </td> </tr>
 
-<tr><th><abbr> 10:15 </abbr></th>  <td> Recent Teko Usage in Aria (M. Phillips)                                                                                      </td> </tr>
-<tr><th><abbr> 10:45 </abbr></th>  <td> Charon/Tpetra Performance Improvements (S. Gao)                                                                              </td> </tr>
-<tr><th><abbr> 11:15 </abbr></th>  <td> My Very First Large(ish) Language Model: Doing Model Inference, Fine Tuning & RAG at Sandia (G. Harper and C. Siefert)       </td> </tr>
+<tr><th><abbr> 10:15 </abbr></th>  <td> Recent Teko Usage in Aria (M. Phillips)                                                                                                                   </td> </tr>
+<tr><th><abbr> 10:45 </abbr></th>  <td> Charon/Tpetra Performance Improvements (S. Gao)                                                                                                           </td> </tr>
+<tr><th><abbr> 11:15 </abbr></th>  <td> My Very First Large(ish) Language Model: Doing Model Inference, Fine Tuning & RAG at Sandia (G. Harper and C. Siefert)                                    </td> </tr>
 
-<tr><th><abbr> 12:00 </abbr></th>  <td> <b> Lunch </b>                                                                                                               </td> </tr>
+<tr><th><abbr> 12:00 </abbr></th>  <td> <b> Lunch </b>                                                                                                                                            </td> </tr>
 <tr><th><abbr>  1:00 </abbr></th>  <td> <b>Trilinos Collaboration</b> 
                                         <ul>
                                           <li> Conference room will be available for collaboration and discussions.
-                                        </ul>                                                                                                                        </td> </tr>
+                                        </ul>                                                                                                                                                     </td> </tr>
 
-<tr><th><abbr>  5:00 </abbr></th>  <td> <b>Adjourn</b>                                                                                                               </td> </tr>
+<tr><th><abbr>  5:00 </abbr></th>  <td> <b>Adjourn</b>                                                                                                                                            </td> </tr>
 </tbody>
 </table>
 
@@ -201,33 +202,33 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 
 <table summary="Timetable">
 <tbody>
-<tr><td colspan=2> <b> Developer Sessions </b>                                                                                                                       </td> </tr>
-<tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober)                                                                                                            </td> </tr>
+<tr><td colspan=2> <b> Developer Sessions </b>                                                                                                                                                    </td> </tr>
+<tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober)                                                                                                                                         </td> </tr>
 
-<tr><th><abbr>  8:10 </abbr></th>  <td> Using Intrepid2 for high-order FE assembly in a multi-physics code (M. Arnst, R. Tomasetti)                                  </td> </tr>
-<tr><th><abbr>  8:30 </abbr></th>  <td> AutoTester2: Modernized Trilinos CI Testing (S. Brown, Trilinos DevOps Team)                                                 </td> </tr>
+<tr><th><abbr>  8:10 </abbr></th>  <td> Using Intrepid2 for high-order FE assembly in a multi-physics code (M. Arnst, R. Tomasetti)                                                               </td> </tr>
+<tr><th><abbr>  8:30 </abbr></th>  <td> AutoTester2: Modernized Trilinos CI Testing (S. Brown, Trilinos DevOps Team)                                                                              </td> </tr>
 
-<tr><th><abbr> 10:00 </abbr></th>  <td> <b>Break</b>                                                                                                                 </td> </tr>
+<tr><th><abbr> 10:00 </abbr></th>  <td> <b>Break</b>                                                                                                                                              </td> </tr>
 
-<tr><th><abbr> 10:15 </abbr></th>  <td> Keeping Trilinos working  performantly every night, everywhere  (C. Siefert)                                                 </td> </tr>
-<tr><th><abbr> 10:45 </abbr></th>  <td> Belos Serial Dense Matrix Abstraction (H. Thornquist)                                                                        </td> </tr>
-<tr><th><abbr> 11:15 </abbr></th>  <td> Hands-on with LLMs at Sandia: ATLAS and LLM-Editor Integration with Shirty (C. Siefert)                                      </td> </tr>
+<tr><th><abbr> 10:15 </abbr></th>  <td> Keeping Trilinos working  performantly every night, everywhere  (C. Siefert)                                                                              </td> </tr>
+<tr><th><abbr> 10:45 </abbr></th>  <td> Belos Serial Dense Matrix Abstraction (H. Thornquist)                                                                                                     </td> </tr>
+<tr><th><abbr> 11:15 </abbr></th>  <td> Hands-on with LLMs at Sandia: ATLAS and LLM-Editor Integration with Shirty (C. Siefert)                                                                   </td> </tr>
 
-<tr><th><abbr> 11:45 </abbr></th>  <td> <b> Lunch </b>                                                                                                               </td> </tr>
+<tr><th><abbr> 11:45 </abbr></th>  <td> <b> Lunch </b>                                                                                                                                            </td> </tr>
 
-<tr><th><abbr>  1:00 </abbr></th>  <td> ASC DevOps Research Project and Trilinos (R. Bartlett, J. Willenbring, R. Milewicz)                                          </td> </tr>
-<tr><th><abbr>  1:30 </abbr></th>  <td> Software Sustainability / Stewardship CI Update (J. Willenbring)                                                             </td> </tr>
+<tr><th><abbr>  1:00 </abbr></th>  <td> ASC DevOps Research Project and Trilinos (R. Bartlett, J. Willenbring, R. Milewicz)                                                                       </td> </tr>
+<tr><th><abbr>  1:30 </abbr></th>  <td> Software Sustainability / Stewardship CI Update (J. Willenbring)                                                                                          </td> </tr>
 
 <tr><th><abbr>  2:00 </abbr></th>  <td> <b>Break (30 min.)</b>
                                         <ul>
                                           <li> Vote on Open Discussion Topics
-                                        </ul>                                                                                                                        </td> </tr>
+                                        </ul>                                                                                                                                                     </td> </tr>
 
 <tr><th><abbr>  2:30 </abbr></th>  <td> <b>Open Discussion</b>
                                         <ul>
                                           <li> How to Leverage AI Tools (writing code, documentation, comment messages, ...)
-                                        </ul>                                                                                                                        </td> </tr>
+                                        </ul>                                                                                                                                                     </td> </tr>
 
-<tr><th><abbr>  5:00 </abbr></th>  <td> <b>Adjourn</b>                                                                                                               </td> </tr>
+<tr><th><abbr>  5:00 </abbr></th>  <td> <b>Adjourn</b>                                                                                                                                            </td> </tr>
 </tbody>
 </table>
