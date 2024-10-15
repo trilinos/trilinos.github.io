@@ -183,7 +183,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><th><abbr> 10:00 </abbr></th>  <td> <b>Break</b>                                                                                                                 </td> </tr>
 
 <tr><th><abbr> 10:15 </abbr></th>  <td> Recent Teko Usage in Aria (M. Phillips)                                                                                      </td> </tr>
-<tr><th><abbr> 10:45 </abbr></th>  <td> Charon/Tpetra Performance Improvements (L. Musson)                                                                           </td> </tr>
+<tr><th><abbr> 10:45 </abbr></th>  <td> Charon/Tpetra Performance Improvements (S. Gao)                                                                              </td> </tr>
 <tr><th><abbr> 11:15 </abbr></th>  <td> My Very First Large(ish) Language Model: Doing Model Inference, Fine Tuning & RAG at Sandia (G. Harper and C. Siefert)       </td> </tr>
 
 <tr><th><abbr> 12:00 </abbr></th>  <td> <b> Lunch </b>                                                                                                               </td> </tr>
@@ -210,7 +210,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><th><abbr> 10:00 </abbr></th>  <td> <b>Break</b>                                                                                                                 </td> </tr>
 
 <tr><th><abbr> 10:15 </abbr></th>  <td> Keeping Trilinos working  performantly every night, everywhere  (C. Siefert)                                                 </td> </tr>
-<tr><th><abbr> 10:45 </abbr></th>  <td> Belos Dense CRS Matrix (H. Thornquist)                                                                                       </td> </tr>
+<tr><th><abbr> 10:45 </abbr></th>  <td> Belos Serial Dense Matrix Abstraction (H. Thornquist)                                                                        </td> </tr>
 <tr><th><abbr> 11:15 </abbr></th>  <td> Hands-on with LLMs at Sandia: ATLAS and LLM-Editor Integration with Shirty (C. Siefert)                                      </td> </tr>
 
 <tr><th><abbr> 11:45 </abbr></th>  <td> <b> Lunch </b>                                                                                                               </td> </tr>
