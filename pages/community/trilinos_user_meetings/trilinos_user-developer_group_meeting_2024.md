@@ -183,7 +183,8 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 
 <tr><th><abbr> 10:00 </abbr></th>  <td> <b>Break</b>                                                                                                                                              </td> </tr>
 
-<tr><th><abbr> 10:15 </abbr></th>  <td> Recent Teko Usage in Aria (M. Phillips)                                                                                                                   </td> </tr>
+<tr><th><abbr> 10:15 </abbr></th>  <td> 
+<a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-23/05_malachi-phillips-tug-2024-slides.pdf">Recent Teko Usage in Aria</a> (M. Phillips)                                          </td> </tr>
 <tr><th><abbr> 10:45 </abbr></th>  <td> Charon/Tpetra Performance Improvements (S. Gao)                                                                                                           </td> </tr>
 <tr><th><abbr> 11:15 </abbr></th>  <td> My Very First Large(ish) Language Model: Doing Model Inference, Fine Tuning & RAG at Sandia (G. Harper and C. Siefert)                                    </td> </tr>
 
