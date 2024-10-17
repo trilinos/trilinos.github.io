@@ -179,13 +179,15 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><th><abbr>  8:00 </abbr></th>  <td> Multiphysics Usage of Trilinos (M. Firmbach)                                                                                                              </td> </tr>
 <tr><th><abbr>  8:30 </abbr></th>  <td> Empire Simulations of Pulsed Power at Sandia (D. Sirajuddin)                                                                                              </td> </tr>
 <tr><th><abbr>  9:00 </abbr></th>  <td> Build Times on Modern Heterogenous Systems: Steps towards a faster future (J. Elliott)                                                                    </td> </tr>
-<tr><th><abbr>  9:30 </abbr></th>  <td> Using Preconditioners in Gemma (J. Kotulski, V. Dang, J. Rivero)                                                                                          </td> </tr>
-
+<tr><th><abbr>  9:30 </abbr></th>  <td>
+<a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-23/04_TUG2024_MultiregionSolver_SimpleAlgebraicPreconditioner_v3.pdf">Multi-Region Solver and Algebraically-Transformed Block-Diagonal Preconditioner for High-Q Cavity Problems</a> (V. Dang, R. Pfeiffer, J. Kotulski)                                          </td> </tr>
 <tr><th><abbr> 10:00 </abbr></th>  <td> <b>Break</b>                                                                                                                                              </td> </tr>
 
 <tr><th><abbr> 10:15 </abbr></th>  <td> 
 <a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-23/05_malachi-phillips-tug-2024-slides.pdf">Recent Teko Usage in Aria</a> (M. Phillips)                                          </td> </tr>
-<tr><th><abbr> 10:45 </abbr></th>  <td> Charon/Tpetra Performance Improvements (S. Gao)                                                                                                           </td> </tr>
+<tr><th><abbr> 10:45 </abbr></th>  <td> <s>Charon/Tpetra Performance Improvements (L. Musson)</s> Withdrawn <br>
+                                   On Scalable Multiphysics Block Preconditioning of an Implicit VMS Resistive MHD Formulation with Application to Magnetic Confinement Fusion<br>
+                                   John N. Shadid, Jesus Bonilla (LANL) , Peter Ohm (RIKEN, Japan), Edward Phillips, Michael Crockatt, Roger Pawlowski, R. Tuminaro, J. Hu, and X. Tang (LANL)    </td> </tr>
 <tr><th><abbr> 11:15 </abbr></th>  <td> My Very First Large(ish) Language Model: Doing Model Inference, Fine Tuning & RAG at Sandia (G. Harper and C. Siefert)                                    </td> </tr>
 
 <tr><th><abbr> 12:00 </abbr></th>  <td> <b> Lunch </b>                                                                                                                                            </td> </tr>
@@ -211,7 +213,8 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 
 <tr><th><abbr> 10:00 </abbr></th>  <td> <b>Break</b>                                                                                                                                              </td> </tr>
 
-<tr><th><abbr> 10:15 </abbr></th>  <td> Keeping Trilinos working  performantly every night, everywhere  (C. Siefert)                                                                              </td> </tr>
+<tr><th><abbr> 10:15 </abbr></th>  <td> 
+<a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-24/03_TUG_Tpetra_Performance_Slides24.pdf">Keeping Trilinos working performantly every night, everywhere</a> (C. Siefert, et. al.)</td></tr>
 <tr><th><abbr> 10:45 </abbr></th>  <td> Belos Serial Dense Matrix Abstraction (H. Thornquist)                                                                                                     </td> </tr>
 <tr><th><abbr> 11:15 </abbr></th>  <td> Hands-on with LLMs at Sandia: ATLAS and LLM-Editor Integration with Shirty (C. Siefert)                                                                   </td> </tr>
 
