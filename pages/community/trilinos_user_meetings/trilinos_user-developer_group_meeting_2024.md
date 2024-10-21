@@ -122,7 +122,8 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tbody>
 <tr><td colspan=2> <b> Opening </b>                                                                                                                                                               </td> </tr>
 <tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober)                                                                                                                                         </td> </tr>
-<tr><th><abbr>  8:15 </abbr></th>  <td> <b>Keynote</b> - Tensor Decomposition of Large-Scale Data with GenTen (E. Phipps)                                                                         </td> </tr>
+<tr><th><abbr>  8:15 </abbr></th>  <td> <b>Keynote</b> <br>
+<a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-22/01_genten_tug_for_posting.pdf">Tensor Decomposition of Large-Scale Data with GenTen</a> (E. Phipps)                           </td> </tr>
 
 <tr><td colspan=2> <b> Updates from Trilinos Areas </b>                                                                                                                                           </td> </tr>
 
@@ -131,7 +132,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><th><abbr> 10:15 </abbr></th>  <td> <b>Break</b>                                                                                                                                              </td> </tr>
 <tr><th><abbr> 10:30 </abbr></th>  <td> DevOps (a.k.a. Framework) Updates  (S. Browne)
                                         <ul>
-                                          <li> Description / Updates / Plans for FY25                              
+                                          <li> <a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-22/03_TUG_Framework_Update_2024.pdf">Trilinos DevOps Updates</a> (S. Browne)
                                         </ul>                                                                                                                                                     </td> </tr>
 <tr><th><abbr> 11:00 </abbr></th>  <td> Trilinos Core Updates (R. Pawlowski)
                                         <ul>
@@ -140,7 +141,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
                                         </ul>                                                                                                                                                     </td> </tr>
 <tr><th><abbr> 11:15 </abbr></th>  <td> Solver Updates (C. Glusa)
                                         <ul>
-                                          <li> Description / Updates / Plans for FY25                              
+                                          <li> <a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-22/05_Solvers_TUG2024.pdf">Trilinos Solver Updates</a> (C. Glusa)
                                           <li> Package Highlight - ShyLU Node (I. Yamazaki)
                                         </ul>                                                                                                                                                     </td> </tr>
 <tr><th><abbr> 11:30 </abbr></th>  <td> Discretizations and Analysis Updates (M. Perego)
@@ -178,17 +179,18 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 
 <tr><th><abbr>  8:00 </abbr></th>  <td> Multiphysics Usage of Trilinos (M. Firmbach)                                                                                                              </td> </tr>
 <tr><th><abbr>  8:30 </abbr></th>  <td> Empire Simulations of Pulsed Power at Sandia (D. Sirajuddin)                                                                                              </td> </tr>
-<tr><th><abbr>  9:00 </abbr></th>  <td> Build Times on Modern Heterogenous Systems: Steps towards a faster future (J. Elliott)                                                                    </td> </tr>
-<tr><th><abbr>  9:30 </abbr></th>  <td>
-<a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-23/04_TUG2024_MultiregionSolver_SimpleAlgebraicPreconditioner_v3.pdf">Multi-Region Solver and Algebraically-Transformed Block-Diagonal Preconditioner for High-Q Cavity Problems</a> (V. Dang, R. Pfeiffer, J. Kotulski)                                          </td> </tr>
+<tr><th><abbr>  9:00 </abbr></th>  <td>
+<a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-23/03_2024-10-16-TUG.pdf">Build Times on Modern Heterogenous Systems: Steps towards a faster future</a> (J. Elliot, J. Doerfert) </td> </tr> <tr><th><abbr>  9:30 </abbr></th>  <td>
+<a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-23/04_TUG2024_MultiregionSolver_SimpleAlgebraicPreconditioner_v3.pdf">Multi-Region Solver and Algebraically-Transformed Block-Diagonal Preconditioner for High-Q Cavity Problems</a> (V. Dang, R. Pfeiffer, J. Kotulski) </td> </tr>
 <tr><th><abbr> 10:00 </abbr></th>  <td> <b>Break</b>                                                                                                                                              </td> </tr>
 
 <tr><th><abbr> 10:15 </abbr></th>  <td> 
 <a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-23/05_malachi-phillips-tug-2024-slides.pdf">Recent Teko Usage in Aria</a> (M. Phillips)                                          </td> </tr>
 <tr><th><abbr> 10:45 </abbr></th>  <td> <s>Charon/Tpetra Performance Improvements (L. Musson)</s> Withdrawn <br>
                                    On Scalable Multiphysics Block Preconditioning of an Implicit VMS Resistive MHD Formulation with Application to Magnetic Confinement Fusion<br>
-                                   John N. Shadid, Jesus Bonilla (LANL) , Peter Ohm (RIKEN, Japan), Edward Phillips, Michael Crockatt, Roger Pawlowski, R. Tuminaro, J. Hu, and X. Tang (LANL)    </td> </tr>
-<tr><th><abbr> 11:15 </abbr></th>  <td> My Very First Large(ish) Language Model: Doing Model Inference, Fine Tuning & RAG at Sandia (G. Harper and C. Siefert)                                    </td> </tr>
+                                   J. Shadid, J. Bonilla (LANL), P. Ohm (RIKEN, Japan), E. Phillips, M. Crockatt, R. Pawlowski, R. Tuminaro, J. Hu, and X. Tang (LANL)                            </td> </tr>
+<tr><th><abbr> 11:15 </abbr></th>  <td> 
+<a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-23/07_TUG_MyVeryFirstLargeishLanguageModel-2.pdf">My Very First Large(ish) Language Model: Doing Model Inference, Fine Tuning & RAG at Sandia</a> (C. Siefert, G. Harper) </td> </tr>
 
 <tr><th><abbr> 12:00 </abbr></th>  <td> <b> Lunch </b>                                                                                                                                            </td> </tr>
 <tr><th><abbr>  1:00 </abbr></th>  <td> <b>Trilinos Collaboration</b> 
@@ -208,15 +210,17 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><td colspan=2> <b> Developer Sessions </b>                                                                                                                                                    </td> </tr>
 <tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober)                                                                                                                                         </td> </tr>
 
-<tr><th><abbr>  8:10 </abbr></th>  <td> Using Intrepid2 for high-order FE assembly in a multi-physics code (M. Arnst, R. Tomasetti)                                                               </td> </tr>
-<tr><th><abbr>  8:30 </abbr></th>  <td> AutoTester2: Modernized Trilinos CI Testing (S. Brown, Trilinos DevOps Team)                                                                              </td> </tr>
-
+<tr><th><abbr>  8:10 </abbr></th>  <td> 
+<a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-24/01_TUG2024-presentation-Arnst-Tomasetti.pdf">Using Intrepid2 for high-order FE assembly in a multi-physics code</a> (M. Arnst, R. Tomasetti) </td> </tr>
+<tr><th><abbr>  8:30 </abbr></th>  <td> 
+<a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-24/02_TUG_Framework_AT2_2024.pdf">AutoTester2: Modernized Trilinos CI Testing</a> (S. Brown, A. Chauphan, J. Frye, J. LaPre)     </td> </tr>
 <tr><th><abbr> 10:00 </abbr></th>  <td> <b>Break</b>                                                                                                                                              </td> </tr>
 
 <tr><th><abbr> 10:15 </abbr></th>  <td> 
 <a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-24/03_TUG_Tpetra_Performance_Slides24.pdf">Keeping Trilinos working performantly every night, everywhere</a> (C. Siefert, et. al.)</td></tr>
 <tr><th><abbr> 10:45 </abbr></th>  <td> Belos Serial Dense Matrix Abstraction (H. Thornquist)                                                                                                     </td> </tr>
-<tr><th><abbr> 11:15 </abbr></th>  <td> Hands-on with LLMs at Sandia: ATLAS and LLM-Editor Integration with Shirty (C. Siefert)                                                                   </td> </tr>
+<tr><th><abbr> 11:15 </abbr></th>  <td> 
+<a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-24/05_TUG_24_Shirty-5.pdf">Hands-On with ATLAS/SHIRTY As A Trilinos Developer: Coding with LLMs at Sandia</a> (C. Siefert, C. Glusa, J. Hu)</td></tr>
 
 <tr><th><abbr> 11:45 </abbr></th>  <td> <b> Lunch </b>                                                                                                                                            </td> </tr>
 
@@ -230,7 +234,9 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 
 <tr><th><abbr>  2:30 </abbr></th>  <td> <b>Open Discussion</b>
                                         <ul>
-                                          <li> How to Leverage AI Tools (writing code, documentation, comment messages, ...)
+                                          <li> How are people Leveraging AI Tools (writing code, documentation, comment messages, ...)?
+                                          <li> What software quality metrics would be useful?
+                                          <li> Adding a Trilinos-level option for controlling whether to use host-pinned MPI communication buffers. (Hu)
                                         </ul>                                                                                                                                                     </td> </tr>
 
 <tr><th><abbr>  5:00 </abbr></th>  <td> <b>Adjourn</b>                                                                                                                                            </td> </tr>
