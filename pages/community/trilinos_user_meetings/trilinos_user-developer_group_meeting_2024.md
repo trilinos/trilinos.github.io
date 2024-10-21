@@ -137,17 +137,17 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><th><abbr> 11:00 </abbr></th>  <td> Trilinos Core Updates (R. Pawlowski)
                                         <ul>
                                           <li> Description / Updates / Plans for FY25                              
-                                          <li> Package Highlight -  <a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-22/04a_Tpetra-Update-TUG-2024.pdf">What’s New in Tpetra</a> (J. Hu)
+                                          <li> <i>Package Highlight</i> -  <a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-22/04a_Tpetra-Update-TUG-2024.pdf">What’s New in Tpetra</a> (J. Hu)
                                         </ul>                                                                                                                                                     </td> </tr>
 <tr><th><abbr> 11:15 </abbr></th>  <td> Solver Updates (C. Glusa)
                                         <ul>
                                           <li> <a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-22/05_Solvers_TUG2024.pdf">Trilinos Solver Updates</a> (C. Glusa)
-                                          <li> Package Highlight - ShyLU Node (I. Yamazaki)
+                                          <li> <i>Package Highlight</i> - <a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-22/05a_ShyLU_TUG2024.pdf">Trilinos ShyLU node updates</a> (I. Yamazaki)
                                         </ul>                                                                                                                                                     </td> </tr>
 <tr><th><abbr> 11:30 </abbr></th>  <td> Discretizations and Analysis Updates (M. Perego)
                                         <ul>
                                           <li> Description / Updates / Plans for FY25                              
-                                          <li> Package Highlight - ROL (D. Ridzal)
+                                          <li> <i>Package Highlight</i> - ROL (D. Ridzal)
                                         </ul>                                                                                                                                                     </td> </tr>
 
 <tr><th><abbr> 11:45 </abbr></th>  <td> <b>Lunch / Adjourn </b>                                                                                                                                   </td> </tr>
