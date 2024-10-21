@@ -137,7 +137,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><th><abbr> 11:00 </abbr></th>  <td> Trilinos Core Updates (R. Pawlowski)
                                         <ul>
                                           <li> Description / Updates / Plans for FY25                              
-                                          <li> Package Highlight - Tpetra Update (J. Hu)
+                                          <li> Package Highlight -  <a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-22/04a_Tpetra-Update-TUG-2024.pdf">What’s New in Tpetra</a> (J. Hu)
                                         </ul>                                                                                                                                                     </td> </tr>
 <tr><th><abbr> 11:15 </abbr></th>  <td> Solver Updates (C. Glusa)
                                         <ul>
@@ -187,7 +187,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><th><abbr> 10:15 </abbr></th>  <td> 
 <a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-23/05_malachi-phillips-tug-2024-slides.pdf">Recent Teko Usage in Aria</a> (M. Phillips)                                          </td> </tr>
 <tr><th><abbr> 10:45 </abbr></th>  <td> <s>Charon/Tpetra Performance Improvements (L. Musson)</s> Withdrawn <br>
-                                   On Scalable Multiphysics Block Preconditioning of an Implicit VMS Resistive MHD Formulation with Application to Magnetic Confinement Fusion<br>
+<a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-23/06_2024_Shadid_TUG.pdf">On Scalable Multiphysics Block Preconditioning of an Implicit VMS Resistive MHD Formulation with Application to Magnetic Confinement Fusion</a> <br>
                                    J. Shadid, J. Bonilla (LANL), P. Ohm (RIKEN, Japan), E. Phillips, M. Crockatt, R. Pawlowski, R. Tuminaro, J. Hu, and X. Tang (LANL)                            </td> </tr>
 <tr><th><abbr> 11:15 </abbr></th>  <td> 
 <a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-23/07_TUG_MyVeryFirstLargeishLanguageModel-2.pdf">My Very First Large(ish) Language Model: Doing Model Inference, Fine Tuning & RAG at Sandia</a> (C. Siefert, G. Harper) </td> </tr>
@@ -225,7 +225,8 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><th><abbr> 11:45 </abbr></th>  <td> <b> Lunch </b>                                                                                                                                            </td> </tr>
 
 <tr><th><abbr>  1:00 </abbr></th>  <td> ASC DevOps Research Project and Trilinos (R. Bartlett, J. Willenbring, R. Milewicz)                                                                       </td> </tr>
-<tr><th><abbr>  1:30 </abbr></th>  <td> Software Sustainability / Stewardship CI Update (J. Willenbring)                                                                                          </td> </tr>
+<tr><th><abbr>  1:30 </abbr></th>  <td> 
+<a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-24/07_2024-TUG-Willenbring.pdf">Software Sustainability / Stewardship CI Update</a> (J. Willenbring)                             </td> </tr>
 
 <tr><th><abbr>  2:00 </abbr></th>  <td> <b>Break (30 min.)</b>
                                         <ul>
