@@ -224,7 +224,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 
 <tr><th><abbr> 11:45 </abbr></th>  <td> <b> Lunch </b>                                                                                                                                            </td> </tr>
 
-<tr><th><abbr>  1:00 </abbr></th>  <td> ASC DevOps Research Project and Trilinos (R. Bartlett, J. Willenbring, R. Milewicz)                                                                       </td> </tr>
+<tr><th><abbr>  1:00 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-24/06_2024-ASCDOR-Bartlett.pdf">ASC DevOps Research Project and Trilinos</a> (R. Bartlett, J. Willenbring, R. Milewicz)                                                                       </td> </tr>
 <tr><th><abbr>  1:30 </abbr></th>  <td> 
 <a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-24/07_2024-TUG-Willenbring.pdf">Software Sustainability / Stewardship CI Update</a> (J. Willenbring)                             </td> </tr>
 
