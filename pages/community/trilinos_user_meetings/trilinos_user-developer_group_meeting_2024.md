@@ -147,7 +147,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><th><abbr> 11:30 </abbr></th>  <td> Discretizations and Analysis Updates (M. Perego)
                                         <ul>
                                           <li> Description / Updates / Plans for FY25                              
-                                          <li> <i>Package Highlight</i> - ROL (D. Ridzal)
+                                          <li> <i>Package Highlight</i> - <a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-22/06a_ROL-main.pdf">Rapid Optimization Library: Machine Learning with PyROL</a> (D. Ridzal)
                                         </ul>                                                                                                                                                     </td> </tr>
 
 <tr><th><abbr> 11:45 </abbr></th>  <td> <b>Lunch / Adjourn </b>                                                                                                                                   </td> </tr>
@@ -220,7 +220,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-24/03_TUG_Tpetra_Performance_Slides24.pdf">Keeping Trilinos working performantly every night, everywhere</a> (C. Siefert, et. al.)</td></tr>
 <tr><th><abbr> 10:45 </abbr></th>  <td> Belos Serial Dense Matrix Abstraction (H. Thornquist)                                                                                                     </td> </tr>
 <tr><th><abbr> 11:15 </abbr></th>  <td> 
-<a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-24/05_TUG_24_Shirty-5.pdf">Hands-On with ATLAS/SHIRTY As A Trilinos Developer: Coding with LLMs at Sandia</a> (C. Siefert, C. Glusa, J. Hu)</td></tr>
+<a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-24/05_TUG_24_Shirty-6.pdf">Hands-On with ATLAS/SHIRTY As A Trilinos Developer: Coding with LLMs at Sandia</a> (C. Siefert, C. Glusa, J. Hu)</td></tr>
 
 <tr><th><abbr> 11:45 </abbr></th>  <td> <b> Lunch </b>                                                                                                                                            </td> </tr>
 
