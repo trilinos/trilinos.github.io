@@ -136,7 +136,7 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
                                         </ul>                                                                                                                                                     </td> </tr>
 <tr><th><abbr> 11:00 </abbr></th>  <td> Trilinos Core Updates (R. Pawlowski)
                                         <ul>
-                                          <li> Description / Updates / Plans for FY25                              
+                                          <li> <a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-22/04_TUG_CoreProductAreaUpdates_2024_10_22.pdf">Trilinos Core Product Area Update</a> (R. Pawlowski)
                                           <li> <i>Package Highlight</i> -  <a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-22/04a_Tpetra-Update-TUG-2024.pdf">What’s New in Tpetra</a> (J. Hu)
                                         </ul>                                                                                                                                                     </td> </tr>
 <tr><th><abbr> 11:15 </abbr></th>  <td> Solver Updates (C. Glusa)
@@ -177,10 +177,12 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><td colspan=2> <b> Applications Session </b>                                                                                                                                                  </td> </tr>
 <tr><th><abbr>  7:50 </abbr></th>  <td> Welcome (C. Ober)                                                                                                                                         </td> </tr>
 
-<tr><th><abbr>  8:00 </abbr></th>  <td> Multiphysics Usage of Trilinos (M. Firmbach)                                                                                                              </td> </tr>
+<tr><th><abbr>  8:00 </abbr></th>  <td>
+<a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-23/01_Firmbach_TUG.pdf">Trilinos use in 4C-multiphysics</a> (M. Firmbach)                                                        </td> </tr>
 <tr><th><abbr>  8:30 </abbr></th>  <td> Empire Simulations of Pulsed Power at Sandia (D. Sirajuddin)                                                                                              </td> </tr>
 <tr><th><abbr>  9:00 </abbr></th>  <td>
-<a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-23/03_2024-10-16-TUG.pdf">Build Times on Modern Heterogenous Systems: Steps towards a faster future</a> (J. Elliot, J. Doerfert) </td> </tr> <tr><th><abbr>  9:30 </abbr></th>  <td>
+<a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-23/03_2024-10-16-TUG.pdf">Build Times on Modern Heterogenous Systems: Steps towards a faster future</a> (J. Elliot, J. Doerfert) </td> </tr>
+<tr><th><abbr>  9:30 </abbr></th>  <td>
 <a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-23/04_TUG2024_MultiregionSolver_SimpleAlgebraicPreconditioner_v3.pdf">Multi-Region Solver and Algebraically-Transformed Block-Diagonal Preconditioner for High-Q Cavity Problems</a> (V. Dang, R. Pfeiffer, J. Kotulski) </td> </tr>
 <tr><th><abbr> 10:00 </abbr></th>  <td> <b>Break</b>                                                                                                                                              </td> </tr>
 
