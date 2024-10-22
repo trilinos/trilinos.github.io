@@ -146,8 +146,9 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
                                         </ul>                                                                                                                                                     </td> </tr>
 <tr><th><abbr> 11:30 </abbr></th>  <td> Discretizations and Analysis Updates (M. Perego)
                                         <ul>
-                                          <li> Description / Updates / Plans for FY25                              
-                                          <li> <i>Package Highlight</i> - <a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-22/06a_ROL-main.pdf">Rapid Optimization Library: Machine Learning with PyROL</a> (D. Ridzal)
+                                          <li> <a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-22/06_discretization_and_analysis_update.pdf">Discretizations and Analysis
+Product Updates</a> (M. Perego)
+                                          <li> <i>Package Highlight</i> - <a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-22/06a_ROL-main.pdf">Rapid Optimization Library: Machine Learning with PyROL</a> (B. Chen, D. Ridzal)
                                         </ul>                                                                                                                                                     </td> </tr>
 
 <tr><th><abbr> 11:45 </abbr></th>  <td> <b>Lunch / Adjourn </b>                                                                                                                                   </td> </tr>
