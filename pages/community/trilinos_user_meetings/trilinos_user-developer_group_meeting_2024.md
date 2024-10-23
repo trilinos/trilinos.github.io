@@ -180,7 +180,8 @@ Product Updates</a> (M. Perego)
 
 <tr><th><abbr>  8:00 </abbr></th>  <td>
 <a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-23/01_Firmbach_TUG.pdf">Trilinos use in 4C-multiphysics</a> (M. Firmbach)                                                        </td> </tr>
-<tr><th><abbr>  8:30 </abbr></th>  <td> Empire Simulations of Pulsed Power at Sandia (D. Sirajuddin)                                                                                              </td> </tr>
+<tr><th><abbr>  8:30 </abbr></th>  <td> 
+<a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-23/02_Sirajuddin_TUG.pdf">RAMSES impact on Sandia’s pulsed power program</a> (D. Sirajuddin)                                     </td> </tr>
 <tr><th><abbr>  9:00 </abbr></th>  <td>
 <a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-23/03_2024-10-16-TUG.pdf">Build Times on Modern Heterogenous Systems: Steps towards a faster future</a> (J. Elliot, J. Doerfert) </td> </tr>
 <tr><th><abbr>  9:30 </abbr></th>  <td>
@@ -223,7 +224,7 @@ Product Updates</a> (M. Perego)
 <a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-24/03_TUG_Tpetra_Performance_Slides24.pdf">Keeping Trilinos working performantly every night, everywhere</a> (C. Siefert, et. al.)</td></tr>
 <tr><th><abbr> 10:45 </abbr></th>  <td> Belos Serial Dense Matrix Abstraction (H. Thornquist)                                                                                                     </td> </tr>
 <tr><th><abbr> 11:15 </abbr></th>  <td> 
-<a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-24/05_TUG_24_Shirty-6.pdf">Hands-On with ATLAS/SHIRTY As A Trilinos Developer: Coding with LLMs at Sandia</a> (C. Siefert, C. Glusa, J. Hu)</td></tr>
+<a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-24/05_TUG_24_Shirty-3.pdf">Hands-On with ATLAS/SHIRTY As A Trilinos Developer: Coding with LLMs at Sandia</a> (C. Siefert, C. Glusa, J. Hu)</td></tr>
 
 <tr><th><abbr> 11:45 </abbr></th>  <td> <b> Lunch </b>                                                                                                                                            </td> </tr>
 
