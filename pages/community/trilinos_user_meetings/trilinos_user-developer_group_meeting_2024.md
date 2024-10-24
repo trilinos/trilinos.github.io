@@ -222,7 +222,8 @@ Product Updates</a> (M. Perego)
 
 <tr><th><abbr> 10:15 </abbr></th>  <td> 
 <a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-24/03_TUG_Tpetra_Performance_Slides24.pdf">Keeping Trilinos working performantly every night, everywhere</a> (C. Siefert, et. al.)</td></tr>
-<a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-24/04_2024_TUG_Belos_SerialDenseMatrix_Thornquist.pdf">Belos Serial Dense Matrix Abstraction</a> (H. Thornquist)                 </td></tr>
+<tr><th><abbr> 10:45 </abbr></th>  <td> 
+<a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-24/04_2024_TUG_Belos_SerialDenseMatrix_Thornquist.pdf">Belos Serial Dense Matrix Abstraction</a> (H. Thornquist)                  </td></tr>
 <tr><th><abbr> 11:15 </abbr></th>  <td> 
 <a href="pages/community/trilinos_user_meetings/TUG_2024/2024-10-24/05_TUG_24_Shirty-3.pdf">Hands-On with ATLAS/SHIRTY As A Trilinos Developer: Coding with LLMs at Sandia</a> (C. Siefert, C. Glusa, J. Hu)</td></tr>
 
