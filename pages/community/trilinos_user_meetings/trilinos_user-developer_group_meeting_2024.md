@@ -243,6 +243,11 @@ Product Updates</a> (M. Perego)
                                           <li> How are people Leveraging AI Tools (writing code, documentation, comment messages, ...)?
                                           <li> What software quality metrics would be useful?
                                           <li> Adding a Trilinos-level option for controlling whether to use host-pinned MPI communication buffers. (Hu)
+                                          <li> I would like to suggest 'Julia wrappers for Trilinos' as a discussion topic. (Philip Thiele)
+                                               <ul>
+                                                   <li> As Julia is becoming more prevalent in scientific computing I think it would be useful to have Trilinos available.  There are multiple other C and C++ projects and the Julia package CxxWrap (https://github.com/JuliaInterop/CxxWrap.jl) aims at providing a similar experience to Boost.Python for writing most of the wrapping in C++.  I think the CMake autogeneration things for PyTrilinos2 could be adapted to also produce most of the code needed for Julia, but I am not too familiar with how that actually works so I might be wrong.
+                                               </ul>
+                                          <li> Support for user-supplied execution space instances in Tpetra.  Do we want it? (Siefert)
                                         </ul>                                                                                                                                                     </td> </tr>
 
 <tr><th><abbr>  5:00 </abbr></th>  <td> <b>Adjourn</b>                                                                                                                                            </td> </tr>
