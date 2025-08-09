@@ -3,7 +3,7 @@ title: Anasazi
 permalink: anasazi.html
 folder: mpi_x
 show_sidebar: true
-contact: hkthorn@sandia.gov, rblehou@sandia.gov
+contact: hkthorn@sandia.gov
 package: anasazi
 doxygen: true
 ---
