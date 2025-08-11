@@ -1,5 +1,5 @@
 ---
-title: Packages
+title: Packages by Capabilities
 permalink: packages.html
 ---
 
@@ -25,9 +25,9 @@ Trilinos is comprised of over 50 packages. Each Trilinos package is a self-conta
     <td>Extended Epetra routines and services.</td>
   </tr>
   <tr>
-    <td style="text-align: center;">🛠️</td>
-    <td><a href="kokkos.html" title="Kokkos">Kokkos</a></td>
-    <td>Core kernel package.</td>
+    <td style="text-align: center;">✅</td>
+    <td><a href="https://github.com/kokkos" title="Kokkos">Kokkos</a></td>
+    <td>Performance portability library.</td>
   </tr>
   <tr>
     <td style="text-align: center;">✅</td>
