@@ -106,11 +106,6 @@ jobs:
         ./build_docs.pl
         popd
         
-    - name: Copy XML files
-      run: |
-        ${{ env.TRILINOS_SOURCE }}/packages/belos/doc/copy_xml_to_src_html.py ${{ env.TRILINOS_BUILD }}
-        ${{ env.TRILINOS_SOURCE }}/packages/stratimikos/doc/copy_xml_to_src_html.py ${{ env.TRILINOS_BUILD }}
-
     - name: Invalidate old doxygen cache
       if: ${{ steps.cache-restore.outputs.cache-hit }}
       shell: bash
@@ -128,6 +123,11 @@ jobs:
       with:
         path: ${{ env.TRILINOS_SOURCE }}/packages/*/doc/html
         key: html-${{ env.DOC_REF }}
+
+    - name: Copy XML files
+      run: |
+        ${{ env.TRILINOS_SOURCE }}/packages/belos/doc/copy_xml_to_src_html.py ${{ env.TRILINOS_BUILD }}
+        ${{ env.TRILINOS_SOURCE }}/packages/stratimikos/doc/copy_xml_to_src_html.py ${{ env.TRILINOS_BUILD }}
 
     - name: Copy html to webpages
       run: |
