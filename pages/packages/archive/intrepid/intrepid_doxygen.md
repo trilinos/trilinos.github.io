@@ -8,7 +8,7 @@ package: intrepid
 doxygen: true
 ---
 
-Development Doxygen for Intrepid is available [Here](docs/dev//intrepid/index.html)  
+Development Doxygen for Intrepid is available [Here](docs//intrepid/index.html)  
 Links to all available Trilinos release Doxygen collections for Intrepid are listed below.  
 Trilinos Version:
 

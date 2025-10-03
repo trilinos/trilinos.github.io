@@ -18,5 +18,5 @@ Why do you want to use Ifpack2? First, if you are using Tpetra, you need to use 
 
 ### <span style="text-decoration: underline;">Helpful Links</span>
 
-*   [Documentation](ifpack2_documentation.html "Documentation") ([User’s Guide](pdfs/ifpack2guide.pdf), [Doxygen](docs/dev//ifpack2/index.html))
+*   [Documentation](ifpack2_documentation.html "Documentation") ([User’s Guide](pdfs/ifpack2guide.pdf), [Doxygen](docs//ifpack2/index.html))
 *   [How to cite Ifpack2](ifpack2_citation.html)

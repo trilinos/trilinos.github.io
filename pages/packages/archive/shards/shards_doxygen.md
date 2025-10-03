@@ -8,7 +8,7 @@ package: shards
 doxygen: true
 ---
 
-Development Doxygen for Shards is available [Here](docs/dev//shards/index.html)  
+Development Doxygen for Shards is available [Here](docs//shards/index.html)  
 Links to all available Trilinos release Doxygen collections for Shards are listed below.  
 Trilinos Version: 
 

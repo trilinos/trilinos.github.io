@@ -9,7 +9,7 @@ doxygen: true
 ---
 
 
-Development Doxygen for AztecOO is available [Here](docs/dev//aztecoo/index.html)  
+Development Doxygen for AztecOO is available [Here](docs//aztecoo/index.html)  
 Links to all available Trilinos release Doxygen collections for AztecOO are listed below.  
 Trilinos Version: 
 

@@ -8,7 +8,7 @@ package: amesos
 doxygen: true
 ---
 
-Development Doxygen for Amesos is available [here](docs/dev//amesos/index.html)  
+Development Doxygen for Amesos is available [here](docs//amesos/index.html)  
 Links to all available Trilinos release Doxygen collections for Amesos are listed below.  
 Trilinos Version:
 

@@ -31,7 +31,7 @@ In order to take advantage of Didasko, we suggest to compile Trilinos with the f
 
 From this web page you can:
 
-*   [Browse](docs/dev//didasko/index.html) the source of all Didasko’s examples;
+*   [Browse](docs//didasko/index.html) the source of all Didasko’s examples;
 *   Check the FAQ page.
 
 If you want to cite didasko and/or the Trilinos tutorial PDF document, please use the following bibtex entry:

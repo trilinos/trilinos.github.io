@@ -17,7 +17,6 @@ env:
 
   # in what subdirectory should the doxygen documentation appear
   DOC_REF: dev
-  # DOC_REF: release
 
 permissions:
   contents: write
@@ -122,13 +121,13 @@ jobs:
 
     - name: Copy html to webpages
       run: |
-        rm -rf ${{ env.WEBPAGES_DIR }}/docs/${{ env.DOC_REF }}
-        mkdir ${{ env.WEBPAGES_DIR }}/docs/${{ env.DOC_REF }}
+        rm -rf ${{ env.WEBPAGES_DIR }}/docs/
+        mkdir ${{ env.WEBPAGES_DIR }}/docs/
         
         pushd ${{ env.TRILINOS_SOURCE }}/packages
         for p in * ; do
           if [[ -d $p && -d $p/doc/html ]] ; then
-            cp -r $p/doc/html $GITHUB_WORKSPACE/${{ env.WEBPAGES_DIR }}/docs/${{ env.DOC_REF }}/$p
+            cp -r $p/doc/html $GITHUB_WORKSPACE/${{ env.WEBPAGES_DIR }}/docs/$p
           fi
         done   
         popd

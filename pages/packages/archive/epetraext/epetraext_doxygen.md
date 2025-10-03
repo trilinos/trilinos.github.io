@@ -8,7 +8,7 @@ package: epetraext
 doxygen: true
 ---
 
-Development Doxygen for EpetraExt is available [Here](docs/dev//epetraext/index.html)  
+Development Doxygen for EpetraExt is available [Here](docs//epetraext/index.html)  
 Links to all available Trilinos release Doxygen collections for EpetraExt are listed below.  
 Trilinos Version: 
 

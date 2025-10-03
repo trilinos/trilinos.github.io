@@ -8,7 +8,7 @@ package: globipack
 doxygen: true
 ---
 
-Development Doxygen for GlobiPack is available [Here](docs/dev//globipack/index.html)  
+Development Doxygen for GlobiPack is available [Here](docs//globipack/index.html)  
 Links to all available Trilinos release Doxygen collections for GlobiPack are listed below.  
 Trilinos Version:
 

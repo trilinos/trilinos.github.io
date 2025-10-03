@@ -8,7 +8,7 @@ package: rtop
 doxygen: true
 ---
 
-Development Doxygen for RTOp is available [Here](docs/dev//rtop/index.html)  
+Development Doxygen for RTOp is available [Here](docs//rtop/index.html)  
 Links to all available Trilinos release Doxygen collections for RTOp are listed below.  
 Trilinos Version: 
 

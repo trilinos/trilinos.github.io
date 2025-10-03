@@ -8,7 +8,7 @@ package: optika
 doxygen: true
 ---
 
-Development Doxygen for Optika is available [Here](docs/dev//optika/index.html)  
+Development Doxygen for Optika is available [Here](docs//optika/index.html)  
 Links to all available Trilinos release Doxygen collections for Optika are listed below.  
 Trilinos Version:
 

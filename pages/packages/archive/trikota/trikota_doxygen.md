@@ -8,7 +8,7 @@ package: trikota
 doxygen: true
 ---
 
-Development Doxygen for TriKota is available [Here](docs/dev//TriKota/index.html)  
+Development Doxygen for TriKota is available [Here](docs//TriKota/index.html)  
 Links to all available Trilinos release Doxygen collections for TriKota are listed below.  
 Trilinos Version: 
 

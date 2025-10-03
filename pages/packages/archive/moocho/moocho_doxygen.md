@@ -8,7 +8,7 @@ package: moocho
 doxygen: true
 ---
 
-Development Doxygen for MOOCHO is available [Here](docs/dev//moocho/index.html)  
+Development Doxygen for MOOCHO is available [Here](docs//moocho/index.html)  
 Links to all available Trilinos release Doxygen collections for MOOCHO are listed below.  
 Trilinos Version: 
 

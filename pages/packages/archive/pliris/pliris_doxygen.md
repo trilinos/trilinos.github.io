@@ -8,7 +8,7 @@ package: pliris
 doxygen: true
 ---
 
-Development Doxygen for Pliris is available [Here](docs/dev//pliris/index.html)  
+Development Doxygen for Pliris is available [Here](docs//pliris/index.html)  
 Links to all available Trilinos release Doxygen collections for Pliris are listed below.  
 Trilinos Version: 
 

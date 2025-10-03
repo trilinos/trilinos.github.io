@@ -8,7 +8,7 @@ package: optipack
 doxygen: true
 ---
 
-Development Doxygen for OptiPack is available [Here](docs/dev//optipack/index.html)  
+Development Doxygen for OptiPack is available [Here](docs//optipack/index.html)  
 Links to all available Trilinos release Doxygen collections for OptiPack are listed below.  
 Trilinos Version:
 

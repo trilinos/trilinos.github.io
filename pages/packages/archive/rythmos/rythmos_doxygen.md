@@ -8,7 +8,7 @@ package: rythmos
 doxygen: true
 ---
 
-Development Doxygen for Rythmos is available [Here](docs/dev//rythmos/index.html)  
+Development Doxygen for Rythmos is available [Here](docs//rythmos/index.html)  
 Links to all available Trilinos release Doxygen collections for Rythmos are listed below.  
 Trilinos Version: 
 

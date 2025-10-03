@@ -8,7 +8,7 @@ package: ifpack
 doxygen: true
 ---
 
-Development Doxygen for IFPACK is available [Here](docs/dev//ifpack/index.html)  
+Development Doxygen for IFPACK is available [Here](docs//ifpack/index.html)  
 Links to all available Trilinos release Doxygen collections for IFPACK are listed below.  
 Trilinos Version: 
 

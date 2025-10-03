@@ -8,7 +8,7 @@ package: komplex
 doxygen: true
 ---
 
-Development Doxygen for Komplex is available [Here](docs/dev//komplex/index.html)  
+Development Doxygen for Komplex is available [Here](docs//komplex/index.html)  
 Links to all available Trilinos release Doxygen collections for Komplex are listed below.  
 Trilinos Version:
 

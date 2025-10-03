@@ -8,7 +8,7 @@ package: ml
 doxygen: true
 ---
 
-Development Doxygen for ML is available [Here](docs/dev//ml/index.html)  
+Development Doxygen for ML is available [Here](docs//ml/index.html)  
 Links to all available Trilinos release Doxygen collections for ML are listed below.  
 Trilinos Version:
 

@@ -8,6 +8,6 @@ folder: packages
 
 [MueLu Tutorial](muelu_tutorial.html "MueLu Tutorial") (PDF document and virtual machine image)
 
-[Doxygen](docs/dev//muelu/index.html) for version-of-the-day MueLu
+[Doxygen](docs//muelu/index.html) for version-of-the-day MueLu
 
 [Email archive](https://software.sandia.gov/pipermail/muelu-users/) of MueLu User’s list

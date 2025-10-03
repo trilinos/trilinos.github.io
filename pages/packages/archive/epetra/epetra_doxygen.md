@@ -8,7 +8,7 @@ package: epetra
 doxygen: true
 ---
 
-Development Doxygen for Epetra is available [Here](docs/dev//epetra/index.html)  
+Development Doxygen for Epetra is available [Here](docs//epetra/index.html)  
 Links to all available Trilinos release Doxygen collections for Epetra are listed below.  
 Trilinos Version: 
 

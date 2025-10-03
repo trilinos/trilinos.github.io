@@ -8,7 +8,7 @@ package: isorropia
 doxygen: true
 ---
 
-Development Doxygen for Isorropia is available [Here](docs/dev//isorropia/index.html)  
+Development Doxygen for Isorropia is available [Here](docs//isorropia/index.html)  
 Links to all available Trilinos release Doxygen collections for Isorropia are listed below.  
 Trilinos Version:
 

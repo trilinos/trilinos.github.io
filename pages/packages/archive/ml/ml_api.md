@@ -20,7 +20,7 @@ MLAPI has been designed with the following goals in mind:
     At a first glance, this may appear as a major limitation for optimal performances. Dealing with an instance of an object, and not with pointers or references, signifies that the new instances have to be created and copied, usually an expensive operation. This is not what happens with MLAPI. In fact, all MLAPI objects are defined as light containers of pointers, automatically allocated and managed as necessary.
 7.  **Operator overloading**. Operator overloading is an interesting capability of C++ that has been only partially used in the scientific computing community. We adopt expression templates to increase the performances of MLAPI.
 
-We now report one short example of MLAPI usage; more examples can be found [here](docs/dev//ml/index.html). The following is a power method codes using MLAPI:
+We now report one short example of MLAPI usage; more examples can be found [here](docs//ml/index.html). The following is a power method codes using MLAPI:
    
     int NumGlobalRows = 16;
     Space MySpace(NumGlobalRows);
@@ -46,7 +46,7 @@ We now report one short example of MLAPI usage; more examples can be found [here
 
 As one can see, operators and vectors are mostly like MATLAB. This makes the MLAPI an ideal tool to test and implement novel ideas. The MLAPI distribution, contained within the ML package of Trilinos, reports several examples. including a fully-fledged multilevel preconditioner based on smoothed aggregation, and a working adaptive smoothed aggregation preconditioner.
 
-The [MLAPI documentation](docs/dev//ml/index.html) is maintained using Doxygen.
+The [MLAPI documentation](docs//ml/index.html) is maintained using Doxygen.
 
 If you use MLAPI for your applications, please let us know by writing an e-mail to the ml developers. Please also cite MLAPI using the following bibtex entry:
 
