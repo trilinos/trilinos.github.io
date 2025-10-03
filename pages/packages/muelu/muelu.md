@@ -45,4 +45,3 @@ If you are interested in using MueLu for your research or want to contribute, pl
 *   The [MueLu development team](muelu_team.html "MueLu Team").
 *   [How to contact](muelu_contact.html "MueLu Documentation") the MueLu team.
 *   [How to cite MueLu](muelu_citation.html "MueLu citation").
-*   [Summary of MueLu testing dashboard](http://testing.sandia.gov/cdash/index.php?project=Trilinos&subproject=MueLu)
