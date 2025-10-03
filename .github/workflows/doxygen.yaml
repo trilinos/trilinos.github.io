@@ -1,0 +1,147 @@
+name: documentation
+
+on:
+  push:
+    branches: [ "master" ]
+  workflow_dispatch:
+
+env:
+  # Where we are getting the Trilinos source code from
+  TRILINOS_REPO: cgcgcg/Trilinos
+  TRILINOS_REF: doxygen
+
+  # directories relative to $GITHUB_WORKSPACE
+  WEBPAGES_DIR: trilinos.github.io  
+  TRILINOS_SOURCE: Trilinos
+  TRILINOS_BUILD: Trilinos-build
+
+  # in what subdirectory should the doxygen documentation appear
+  DOC_REF: dev
+  # DOC_REF: release
+
+permissions:
+  contents: write
+  pull-requests: write
+  pages: write
+  id-token: write
+  actions: write
+
+
+jobs:
+
+  docs:
+    name: Documentation
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Install Ubuntu packages needed for building Trilinos and running doxygen
+      if: always()
+      run: |
+        sudo apt-get update
+        sudo apt-get install -yq doxygen graphviz texlive texlive-latex-extra ghostscript cmake mpi-default-bin mpi-default-dev libopenblas-serial-dev ccache
+
+    - name: Check out webpage repo
+      uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4.2.1
+      with:
+        path: ${{ env.WEBPAGES_DIR }}
+
+    - name: Check out Trilinos repo 
+      uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4.2.1
+      with:
+        repository: ${{ env.TRILINOS_REPO }}
+        ref: ${{ env.TRILINOS_REF }}
+        path: ${{ env.TRILINOS_SOURCE }}
+
+    - name: Pull ccache cache for Trilinos build
+      if: always()
+      id: ccache-restore
+      uses: actions/cache/restore@5a3ec84eff668545956fd18022155c47e93e2684 # v4.2.3
+      with:
+        path: /home/runner/.cache/ccache
+        key: ccache-${{ env.DOC_REF }}
+
+    - name: Build Trilinos
+      run: |
+        mkdir $GITHUB_WORKSPACE/${{ env.TRILINOS_BUILD }}
+        pushd $GITHUB_WORKSPACE/${{ env.TRILINOS_BUILD }}
+        $GITHUB_WORKSPACE/${{ env.TRILINOS_SOURCE }}/doc/DocumentingParameterLists/do-configure  -D CMAKE_CXX_COMPILER_LAUNCHER=ccache -D CMAKE_C_COMPILER_LAUNCHER=ccache $GITHUB_WORKSPACE/${{ env.TRILINOS_SOURCE }} 
+        make -j 4
+        popd
+
+    - name: Invalidate old ccache cache for Trilinos build
+      if: ${{ steps.ccache-restore.outputs.cache-hit }}
+      shell: bash
+      env:
+        GH_TOKEN: ${{ github.token }}
+      run: |
+        gh extension install actions/gh-actions-cache
+        gh actions-cache delete ccache-${{ env.DOC_REF }} --confirm
+      continue-on-error: true
+
+    - name: Push new ccache cache for Trilinos build
+      if: always()
+      uses: actions/cache/save@5a3ec84eff668545956fd18022155c47e93e2684 # v4.2.3
+      with:
+        path: /home/runner/.cache/ccache
+        key: ccache-${{ env.DOC_REF }}
+
+    - name: Pull doxygen cache
+      if: always()
+      id: cache-restore
+      uses: actions/cache/restore@1bd1e32a3bdc45362d1e726936510720a7c30a57 # v4.2.0
+      with:
+        path: ${{ env.TRILINOS_SOURCE }}/packages/*/doc/html
+        key: html-${{ env.DOC_REF }}
+        
+    - name: Run doxygen
+      run: |
+        pushd ${{ env.TRILINOS_SOURCE }}/doc
+        ./build_docs.pl
+        popd
+        
+    - name: Copy XML files
+      run: |
+        ${{ env.TRILINOS_SOURCE }}/packages/belos/doc/copy_xml_to_src_html.py ${{ env.TRILINOS_BUILD }}
+        ${{ env.TRILINOS_SOURCE }}/packages/stratimikos/doc/copy_xml_to_src_html.py ${{ env.TRILINOS_BUILD }}
+
+    - name: Invalidate old doxygen cache
+      if: ${{ steps.cache-restore.outputs.cache-hit }}
+      shell: bash
+      env:
+        GH_TOKEN: ${{ github.token }}
+      run: |
+        gh cache delete html-${{ env.DOC_REF }}
+      continue-on-error: true
+
+    - name: Push new doxygen cache
+      if: always()
+      uses: actions/cache/save@1bd1e32a3bdc45362d1e726936510720a7c30a57 # v4.2.0
+      with:
+        path: ${{ env.TRILINOS_SOURCE }}/packages/*/doc/html
+        key: html-${{ env.DOC_REF }}
+
+    - name: Copy html to webpages
+      run: |
+        rm -rf ${{ env.WEBPAGES_DIR }}/docs/${{ env.DOC_REF }}
+        mkdir ${{ env.WEBPAGES_DIR }}/docs/${{ env.DOC_REF }}
+        
+        pushd ${{ env.TRILINOS_SOURCE }}/packages
+        for p in * ; do
+          if [[ -d $p && -d $p/doc/html ]] ; then
+            cp -r $p/doc/html $GITHUB_WORKSPACE/${{ env.WEBPAGES_DIR }}/docs/${{ env.DOC_REF }}/$p
+          fi
+        done   
+        popd
+
+    - name: Create PR
+      uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e # v7.0.8
+      with:
+        path: ${{ env.WEBPAGES_DIR }}
+        token: ${{ secrets.GITHUB_TOKEN }}
+        commit-message: "Update Doxygen"
+        title: "Update Doxygen"
+        body: |
+          This PR updates the Doxygen documentation.
+        branch: doxygen-update
+        base: master
+        delete-branch: true
