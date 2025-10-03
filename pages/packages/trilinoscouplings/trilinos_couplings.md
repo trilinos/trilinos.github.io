@@ -14,4 +14,4 @@ TrilinosCouplings provides a location for multiple Trilinos packages to be combi
 
 ### Examples
 
-A number of [example drivers](http://trilinos.org/docs/dev/packages/trilinoscouplings/doc/html/index.html#trilinoscouplings_scaling_ex) are included in TrilinosCouplings that use the finite element method to solve the Poisson equation, an advection-diffusion equation, and a system of div-curl equations. (See the “Scaling Examples” section.)
+A number of [example drivers](docs/dev//trilinoscouplings/index.html#trilinoscouplings_scaling_ex) are included in TrilinosCouplings that use the finite element method to solve the Poisson equation, an advection-diffusion equation, and a system of div-curl equations. (See the “Scaling Examples” section.)

@@ -12,7 +12,7 @@ doxygen: true
 
 Teuchos provides a suite of common tools for Trilinos for developers to use. These tools include BLAS and LAPACK wrappers, smart pointers, parameter lists, and XML parsers.
 
-For more information about specific Teuchos classes, see the [documentation](http://trilinos.org/docs/dev/packages/teuchos/doc/html/index.html).
+For more information about specific Teuchos classes, see the [documentation](docs/dev//teuchos/index.html).
 
 The following documents provide some specific information related to a subset of Teuchos functionality:
 

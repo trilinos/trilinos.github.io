@@ -8,9 +8,9 @@ package: ml
 doxygen: true
 ---
 
-Development Doxygen for ML is available [Here](http://trilinos.org/docs/dev/packages/ml/doc/html/index.html)  
+Development Doxygen for ML is available [Here](docs/dev//ml/index.html)  
 Links to all available Trilinos release Doxygen collections for ML are listed below.  
 Trilinos Version:
 
 {% for trilinos_version in site.trilinos_versions %}
-[{{ trilinos_version }}]({{ "http://trilinos.org/docs/r" | append: trilinos_version | append: "/packages/" | append: page.package | append: "/doc/html/index.html" }}),{% endfor %}
+[{{ trilinos_version }}]({{ "docs/r" | append: trilinos_version | append: "/packages/" | append: page.package | append: "/index.html" }}),{% endfor %}

@@ -15,7 +15,7 @@ Welcome to the homepages for ML, Sandia’s main multigrid preconditioning packa
 Please use the links below to navigate the ML documentation:
 
 *   An [overview](#ml-overview) of ML.
-*   [Documentation](http://trilinos.org/docs/dev/packages/ml/doc/html/index.html) generated directly from ML’s source code by Doxygen.
+*   [Documentation](docs/dev//ml/index.html) generated directly from ML’s source code by Doxygen.
 *   [User Guides](ml-publications.html#ml-user-guides "ML Publications").
 *   The [ML API](ml_api.html).
 *   [Mail lists](http://trilinos.org/oldsite/packages/ml/mail_lists.html) for users and developers.
@@ -87,4 +87,4 @@ ML is designed to interoperate with other Trilinos packages, and in particular w
 
 ML is used within several applications at Sandia and a few applications outside of Sandia. ML is released for external distribution and can be obtained as part of the Trilinos development environment.
 
-[Read More](http://trilinos.org/docs/dev/packages/ml/doc/html/index.html) about ML, its project goals, functionalities, commented examples, more documentation.
+[Read More](docs/dev//ml/index.html) about ML, its project goals, functionalities, commented examples, more documentation.

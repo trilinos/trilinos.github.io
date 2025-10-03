@@ -16,6 +16,6 @@ folder: packages
 
 ### Doxygen
 
-Development Doxygen for ROL is available [Here](http://trilinos.org/docs/dev/packages/rol/doc/html/index.html)  
+Development Doxygen for ROL is available [Here](docs/dev//rol/index.html)  
 Links to all available Trilinos release Doxygen collections for ROL are listed below.  
-Trilinos Version: [12.10](http://trilinos.org/docs/r12.10/packages/rol/doc/html/index.html) [12.8](http://trilinos.org/docs/r12.8/packages/rol/doc/html/index.html) [12.6](http://trilinos.org/docs/r12.6/packages/rol/doc/html/index.html) [12.4](http://trilinos.org/docs/r12.4/packages/rol/doc/html/index.html) [12.2](http://trilinos.org/docs/r12.2/packages/rol/doc/html/index.html) [12.0](http://trilinos.org/docs/r12.0/packages/rol/doc/html/index.html)
+Trilinos Version: [12.10](docs/r12.10/packages/rol/index.html) [12.8](docs/r12.8/packages/rol/index.html) [12.6](docs/r12.6/packages/rol/index.html) [12.4](docs/r12.4/packages/rol/index.html) [12.2](docs/r12.2/packages/rol/index.html) [12.0](docs/r12.0/packages/rol/index.html)
