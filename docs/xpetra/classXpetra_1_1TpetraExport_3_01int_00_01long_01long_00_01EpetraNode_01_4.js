@@ -1,0 +1,26 @@
+var classXpetra_1_1TpetraExport_3_01int_00_01long_01long_00_01EpetraNode_01_4 =
+[
+    [ "LocalOrdinal", "classXpetra_1_1TpetraExport_3_01int_00_01long_01long_00_01EpetraNode_01_4.html#af7a50c149d6deb6316219767bc5a784e", null ],
+    [ "GlobalOrdinal", "classXpetra_1_1TpetraExport_3_01int_00_01long_01long_00_01EpetraNode_01_4.html#aba4fffe5d5ea66a9e543050bb68fded2", null ],
+    [ "Node", "classXpetra_1_1TpetraExport_3_01int_00_01long_01long_00_01EpetraNode_01_4.html#abcdf52c854b278b19241e1cc622defae", null ],
+    [ "map_type", "classXpetra_1_1TpetraExport_3_01int_00_01long_01long_00_01EpetraNode_01_4.html#a2e1b9be9c1d4d8719cda306f19f1ebfc", null ],
+    [ "TpetraExport", "classXpetra_1_1TpetraExport_3_01int_00_01long_01long_00_01EpetraNode_01_4.html#aa9b7a353754513a65105d68de093cf86", null ],
+    [ "TpetraExport", "classXpetra_1_1TpetraExport_3_01int_00_01long_01long_00_01EpetraNode_01_4.html#a3a45f4deb4eadad24fbef033b85774a9", null ],
+    [ "TpetraExport", "classXpetra_1_1TpetraExport_3_01int_00_01long_01long_00_01EpetraNode_01_4.html#af6216bdf3d6d4e0047c5699095415226", null ],
+    [ "~TpetraExport", "classXpetra_1_1TpetraExport_3_01int_00_01long_01long_00_01EpetraNode_01_4.html#a5fd5f763c0300656c6994b9a0bbd53e0", null ],
+    [ "TpetraExport", "classXpetra_1_1TpetraExport_3_01int_00_01long_01long_00_01EpetraNode_01_4.html#abfdd5d492e6fefe655d600401c2baed7", null ],
+    [ "getNumSameIDs", "classXpetra_1_1TpetraExport_3_01int_00_01long_01long_00_01EpetraNode_01_4.html#a56729d4e577918f25b0b7d69203c0c0c", null ],
+    [ "getNumPermuteIDs", "classXpetra_1_1TpetraExport_3_01int_00_01long_01long_00_01EpetraNode_01_4.html#a6993b6ac503ea8adc5faba96483d1989", null ],
+    [ "getPermuteFromLIDs", "classXpetra_1_1TpetraExport_3_01int_00_01long_01long_00_01EpetraNode_01_4.html#a9246ca6758999806d2da85b81fe806d1", null ],
+    [ "getPermuteToLIDs", "classXpetra_1_1TpetraExport_3_01int_00_01long_01long_00_01EpetraNode_01_4.html#a9035cb66e36e12f78c6c0acc1344a8c8", null ],
+    [ "getNumRemoteIDs", "classXpetra_1_1TpetraExport_3_01int_00_01long_01long_00_01EpetraNode_01_4.html#a15109c3a94f1eb88a0b085855680f486", null ],
+    [ "getRemoteLIDs", "classXpetra_1_1TpetraExport_3_01int_00_01long_01long_00_01EpetraNode_01_4.html#a9d1c8a4a196d2ec2a90ab4d4b3601a47", null ],
+    [ "getNumExportIDs", "classXpetra_1_1TpetraExport_3_01int_00_01long_01long_00_01EpetraNode_01_4.html#af471bf89ba6478b501120cd6246dfacc", null ],
+    [ "getExportLIDs", "classXpetra_1_1TpetraExport_3_01int_00_01long_01long_00_01EpetraNode_01_4.html#a0560effa002f51ee2040ce925615adb3", null ],
+    [ "getExportPIDs", "classXpetra_1_1TpetraExport_3_01int_00_01long_01long_00_01EpetraNode_01_4.html#a72f7fee8609b937e1282f585f8e82461", null ],
+    [ "getSourceMap", "classXpetra_1_1TpetraExport_3_01int_00_01long_01long_00_01EpetraNode_01_4.html#aa9ae62bb54cebecef4c9061c15f002ac", null ],
+    [ "getTargetMap", "classXpetra_1_1TpetraExport_3_01int_00_01long_01long_00_01EpetraNode_01_4.html#a9d23c8b9866c438f79237bd7daf530c8", null ],
+    [ "setDistributorParameters", "classXpetra_1_1TpetraExport_3_01int_00_01long_01long_00_01EpetraNode_01_4.html#aba2dff1f1937524451e5dfb6e0456471", null ],
+    [ "print", "classXpetra_1_1TpetraExport_3_01int_00_01long_01long_00_01EpetraNode_01_4.html#a89ecd8246b9d1cb9f6d000519dd0c11e", null ],
+    [ "getTpetra_Export", "classXpetra_1_1TpetraExport_3_01int_00_01long_01long_00_01EpetraNode_01_4.html#a3767304dbebc8db7eaef83719c808b37", null ]
+];

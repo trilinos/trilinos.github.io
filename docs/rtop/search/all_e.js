@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['unary_5ffunc_5fptr_5ft_0',['unary_func_ptr_t',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/rtop/doc/../../../packages/rtop/src/support/doc/html/classRTOpPack_1_1TOpUnaryFuncPtr.html#a1f54051e5fbd4011f7bfdb9bb5c72664',1,'RTOpPack::TOpUnaryFuncPtr']]],
+  ['uninitialize_1',['uninitialize',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/rtop/doc/../../../packages/rtop/src/interfaces/doc/html/classRTOpPack_1_1ConstSubMultiVectorView.html#a62ddaa5c4019211e8bda412d1a1a9868',1,'RTOpPack::ConstSubMultiVectorView::uninitialize()'],['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/rtop/doc/../../../packages/rtop/src/interfaces/doc/html/classRTOpPack_1_1ConstSubVectorView.html#a98bcfa680895c47f7b32203d6ef472db',1,'RTOpPack::ConstSubVectorView::uninitialize()'],['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/rtop/doc/../../../packages/rtop/src/support/doc/html/classRTOpPack_1_1SparseSubVectorT.html#a51ab021f289448c4e3c4a8f182bc2b16',1,'RTOpPack::SparseSubVectorT::uninitialize()']]],
+  ['unknownerror_2',['UnknownError',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/rtop/doc/../../../packages/rtop/src/interfaces/doc/html/classRTOpPack_1_1UnknownError.html',1,'RTOpPack']]]
+];

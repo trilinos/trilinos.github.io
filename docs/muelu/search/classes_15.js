@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['variablecontainer_0',['VariableContainer',['../classMueLu_1_1VariableContainer.html',1,'MueLu']]],
+  ['variabledoflaplacianfactory_1',['VariableDofLaplacianFactory',['../classMueLu_1_1VariableDofLaplacianFactory.html',1,'MueLu']]],
+  ['vector_2',['Vector',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/epetraext/doc/html/classGenSQP_1_1Vector.html',1,'GenSQP']]],
+  ['vector_5fdirichlet_3',['Vector_Dirichlet',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/epetraext/doc/html/classEpetraExt_1_1Vector__Dirichlet.html',1,'EpetraExt']]],
+  ['vectorcountingfunctor_4',['VectorCountingFunctor',['../classMueLu_1_1MatrixConstruction_1_1VectorCountingFunctor.html',1,'MueLu::MatrixConstruction']]],
+  ['vectorcountingfunctor_3c_20local_5fmatrix_5ftype_2c_20functor_5ftype_20_3e_5',['VectorCountingFunctor&lt; local_matrix_type, functor_type &gt;',['../classMueLu_1_1MatrixConstruction_1_1VectorCountingFunctor_3_01local__matrix__type_00_01functor__type_01_4.html',1,'MueLu::MatrixConstruction']]],
+  ['vectordirichletfunctor_6',['VectorDirichletFunctor',['../classMueLu_1_1BoundaryDetection_1_1VectorDirichletFunctor.html',1,'MueLu::BoundaryDetection']]],
+  ['vectordropboundaryfunctor_7',['VectorDropBoundaryFunctor',['../classMueLu_1_1Misc_1_1VectorDropBoundaryFunctor.html',1,'MueLu::Misc']]],
+  ['vectordropfunctor_8',['VectorDropFunctor',['../classMueLu_1_1DistanceLaplacian_1_1VectorDropFunctor.html',1,'MueLu::DistanceLaplacian']]],
+  ['vectordroppingbase_9',['VectorDroppingBase',['../classMueLu_1_1VectorDroppingBase.html',1,'MueLu']]],
+  ['vectordroppingclassical_10',['VectorDroppingClassical',['../classMueLu_1_1VectorDroppingClassical.html',1,'MueLu']]],
+  ['vectordroppingdistancelaplacian_11',['VectorDroppingDistanceLaplacian',['../classMueLu_1_1VectorDroppingDistanceLaplacian.html',1,'MueLu']]],
+  ['vectorfillfunctor_12',['VectorFillFunctor',['../classMueLu_1_1MatrixConstruction_1_1VectorFillFunctor.html',1,'MueLu::MatrixConstruction']]],
+  ['vectorfillnoreusefunctor_13',['VectorFillNoReuseFunctor',['../classVectorFillNoReuseFunctor.html',1,'']]],
+  ['vectorsymmetricdropboundaryfunctor_14',['VectorSymmetricDropBoundaryFunctor',['../classMueLu_1_1Misc_1_1VectorSymmetricDropBoundaryFunctor.html',1,'MueLu::Misc']]],
+  ['verboseobject_15',['VerboseObject',['../classMueLu_1_1VerboseObject.html',1,'MueLu']]],
+  ['viewtransform_16',['ViewTransform',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/epetraext/doc/html/classEpetraExt_1_1ViewTransform.html',1,'EpetraExt']]],
+  ['viewtransform_3c_20epetra_5fcrsgraph_20_3e_17',['ViewTransform&lt; Epetra_CrsGraph &gt;',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/epetraext/doc/html/classEpetraExt_1_1ViewTransform.html',1,'EpetraExt']]],
+  ['viewtransform_3c_20epetra_5fcrsmatrix_20_3e_18',['ViewTransform&lt; Epetra_CrsMatrix &gt;',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/epetraext/doc/html/classEpetraExt_1_1ViewTransform.html',1,'EpetraExt']]],
+  ['viewtransform_3c_20epetra_5flinearproblem_20_3e_19',['ViewTransform&lt; Epetra_LinearProblem &gt;',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/epetraext/doc/html/classEpetraExt_1_1ViewTransform.html',1,'EpetraExt']]],
+  ['viewtransform_3c_20epetra_5fmultivector_20_3e_20',['ViewTransform&lt; Epetra_MultiVector &gt;',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/epetraext/doc/html/classEpetraExt_1_1ViewTransform.html',1,'EpetraExt']]],
+  ['visualizationhelpers_21',['VisualizationHelpers',['../classMueLu_1_1VisualizationHelpers.html',1,'MueLu']]],
+  ['visualizationhelpers_3c_20defaultscalar_2c_20defaultlocalordinal_2c_20defaultglobalordinal_2c_20defaultnode_20_3e_22',['VisualizationHelpers&lt; DefaultScalar, DefaultLocalOrdinal, DefaultGlobalOrdinal, DefaultNode &gt;',['../classMueLu_1_1VisualizationHelpers.html',1,'MueLu']]]
+];

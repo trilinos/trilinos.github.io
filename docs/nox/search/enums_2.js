@@ -1,0 +1,7 @@
+var searchData=
+[
+  ['checktype_0',['checktype',['../namespaceNOX_1_1StatusTest.html#a7c9d9087fff0cfe208e9edc1603ab14e',1,'NOX::StatusTest::CheckType'],['../namespaceLOCA_1_1StatusTest.html#a2e989cc4f698eda74ea14b3589150ce8',1,'LOCA::StatusTest::CheckType']]],
+  ['combotype_1',['combotype',['../classNOX_1_1StatusTest_1_1Combo.html#a788f39025311c7e7fdb1d53660dafe19',1,'NOX::StatusTest::Combo::ComboType'],['../classLOCA_1_1StatusTest_1_1Combo.html#a7a81c06e054cf288d73c3358834d2c32',1,'LOCA::StatusTest::Combo::ComboType']]],
+  ['convergencecriteriatype_2',['ConvergenceCriteriaType',['../classNOX_1_1Solver_1_1TensorBased.html#a519d4177b6796550477b0ed8479cae4e',1,'NOX::Solver::TensorBased']]],
+  ['copytype_3',['CopyType',['../namespaceNOX.html#a053a1ab5b2b3bd9546883b949142c592',1,'NOX']]]
+];

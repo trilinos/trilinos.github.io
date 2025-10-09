@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['packsize_0',['PackSize',['../structPHX_1_1PackSize.html',1,'PHX']]],
+  ['packsize_3c_20nextmember_2c_20parampack_2e_2e_2e_20_3e_1',['PackSize&lt; NextMember, ParamPack... &gt;',['../structPHX_1_1PackSize_3_01NextMember_00_01ParamPack_8_8_8_01_4.html',1,'PHX']]],
+  ['packsize_3c_3e_2',['PackSize&lt;&gt;',['../structPHX_1_1PackSize_3_4.html',1,'PHX']]],
+  ['performance_3',['Performance',['../user_guide.html#performance',1,'']]],
+  ['performance_20example_20requirements_4',['B. Performance Example Requirements',['../user_guide.html#ug_step1_performance',1,'']]],
+  ['phalanx_5',['phalanx',['../user_guide.html#db',1,'D. Configure Trilinos/Phalanx'],['../index.html',1,'Phalanx'],['../user_guide.html#user_guide_step1',1,'Step 1: Configuring, Building, and installing Phalanx']]],
+  ['phalanx_20br_6',['1. Why name it Phalanx?  &lt;br&gt;',['../faq.html#faq1',1,'']]],
+  ['phalanx_20domain_20model_7',['Phalanx Domain Model',['../user_guide.html#user_guide_domain_model',1,'']]],
+  ['phalanx_20nomenclature_8',['B. Learn the Phalanx Nomenclature',['../user_guide.html#ug_dummy_2',1,'']]],
+  ['phx_3a_3acontiguousallocator_20with_20sacado_3a_3adfad_20based_20fields_20what_20is_20the_20problem_9',['8. Valgrind gives a memory leak error in all evaluators when using the PHX::ContiguousAllocator with Sacado::DFad based fields.  What is the problem?',['../faq.html#faq8',1,'']]],
+  ['phx_3a_3afield_10',['Field',['../classPHX_1_1Field.html#a530e5538d16798a252d9eda47d0f45cf',1,'PHX::Field']]],
+  ['phx_3a_3atypestring_20object_11',['Step 4: Specialize the PHX::TypeString Object',['../user_guide.html#user_guide_step4',1,'']]],
+  ['postevaldata_12',['E. EvalData,PreEvalData,PostEvalData',['../user_guide.html#td5',1,'']]],
+  ['postevaluate_13',['postevaluate',['../classPHX_1_1EvaluatorWithBaseImpl.html#a26aa6ae98fe8a9f4068e48005328db79',1,'PHX::EvaluatorWithBaseImpl::postEvaluate()'],['../classPHX_1_1DagManager.html#abbf60e9d309c057866f2651dfc92432d',1,'PHX::DagManager::postEvaluate()'],['../classPHX_1_1Evaluator.html#ab8cb396a637f18cf129cf409ca2c6549',1,'PHX::Evaluator::postEvaluate()']]],
+  ['postregistrationsetup_14',['postregistrationsetup',['../classPHX_1_1DagManager.html#a67fd1e0e8257db76d3e8ff2e41201329',1,'PHX::DagManager::postRegistrationSetup()'],['../classPHX_1_1FieldManager.html#a122c6e05cba70198807d3589cd588a77',1,'PHX::FieldManager::postRegistrationSetup()'],['../classPHX_1_1EvaluatorWithBaseImpl.html#abfaf6c34a36fbf67d89de23471fe8bb5',1,'PHX::EvaluatorWithBaseImpl::postRegistrationSetup()'],['../classPHX_1_1AliasField.html#ab3c03ea9379199c8c76946c41ccbb386',1,'PHX::AliasField::postRegistrationSetup()'],['../classPHX_1_1Evaluator.html#af8d972a470d43db8bd204ae6d83a8627',1,'PHX::Evaluator::postRegistrationSetup()']]],
+  ['postregistrationsetupfortype_15',['postRegistrationSetupForType',['../classPHX_1_1FieldManager.html#a728a8167050a5841ebc3ee7d2fae4624',1,'PHX::FieldManager']]],
+  ['preevaldata_20postevaldata_16',['E. EvalData,PreEvalData,PostEvalData',['../user_guide.html#td5',1,'']]],
+  ['preevaluate_17',['preevaluate',['../classPHX_1_1EvaluatorWithBaseImpl.html#a3048c3b3845dbe9790d3b6737be32418',1,'PHX::EvaluatorWithBaseImpl::preEvaluate()'],['../classPHX_1_1Evaluator.html#af90253f89126ffd5b1e04760c8cf8a65',1,'PHX::Evaluator::preEvaluate()'],['../classPHX_1_1DagManager.html#a0b27eeaa002dc7394263a986b4d04f68',1,'PHX::DagManager::preEvaluate()']]],
+  ['prepareforrecompute_18',['prepareForRecompute',['../structPHX_1_1DeviceEvaluator.html#ad9c2f2536247960779d58be85add0c7e',1,'PHX::DeviceEvaluator']]],
+  ['print_19',['print',['../classPHX_1_1DagManager.html#afae32cc00b3464ef1dd7994fafcc7035',1,'PHX::DagManager']]],
+  ['printevaluator_20',['printEvaluator',['../classPHX_1_1DagManager.html#add55b4ab3a0957571dd46aedbcfcb6b5',1,'PHX::DagManager']]],
+  ['printevaluatorstartstopmessage_21',['printevaluatorstartstopmessage',['../classPHX_1_1FieldManager.html#af29828b72ef734739e0177a3a6c27462',1,'PHX::FieldManager::printEvaluatorStartStopMessage()'],['../classPHX_1_1EvaluationContainer.html#a67b4e4f1d515317500f31797e5b10d80',1,'PHX::EvaluationContainer::printEvaluatorStartStopMessage()'],['../classPHX_1_1DagManager.html#a234bd7e9cad094ea235251e398bf4358',1,'PHX::DagManager::printEvaluatorStartStopMessage()']]],
+  ['printfieldvalues_22',['printfieldvalues',['../classPHX_1_1EvaluatorWithBaseImpl.html#a30dea6cb601b630f8d896fdd44b68b89',1,'PHX::EvaluatorWithBaseImpl::printFieldValues()'],['../classPHX_1_1Evaluator.html#a97eb53644fea759594d8d67e2647a3c6',1,'PHX::Evaluator::printFieldValues()']]],
+  ['problem_23',['8. Valgrind gives a memory leak error in all evaluators when using the PHX::ContiguousAllocator with Sacado::DFad based fields.  What is the problem?',['../faq.html#faq8',1,'']]]
+];

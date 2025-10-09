@@ -1,0 +1,10 @@
+var searchData=
+[
+  ['undefinedwrappertype_0',['UndefinedWrapperType',['../classBelos_1_1UndefinedWrapperType.html#ad1503f0b039c8d845628d1a2743fdb2a',1,'Belos::UndefinedWrapperType']]],
+  ['unsetparameterlist_1',['unsetParameterList',['../classBelos_1_1TsqrOrthoManager.html#a340ae21a2755330049e0b7fe1133b717',1,'Belos::TsqrOrthoManager']]],
+  ['updatecolumn_2',['updateColumn',['../classBelos_1_1details_1_1ProjectedLeastSquaresSolver.html#a5f1c639b20014faec6608efe288a1e3f',1,'Belos::details::ProjectedLeastSquaresSolver']]],
+  ['updatecolumns_3',['updateColumns',['../classBelos_1_1details_1_1ProjectedLeastSquaresSolver.html#a8588e4764ff64e526c9843eb9f2f211f',1,'Belos::details::ProjectedLeastSquaresSolver']]],
+  ['updatelsqr_4',['updatelsqr',['../classBelos_1_1BlockFGmresIter.html#aa774c1fb2e5db5cbde2438c45eb06b3b',1,'Belos::BlockFGmresIter::updateLSQR()'],['../classBelos_1_1BlockGCRODRIter.html#acbb7118872bc10953ec024ad46613d0c',1,'Belos::BlockGCRODRIter::updateLSQR()'],['../classBelos_1_1BlockGmresIter.html#ab0361a6e76915462d2c2d79b8d9b9b75',1,'Belos::BlockGmresIter::updateLSQR()'],['../classBelos_1_1GCRODRIter.html#abfb4cfe8437b2c29a209a01f20cde95d',1,'Belos::GCRODRIter::updateLSQR()'],['../classBelos_1_1GmresIteration.html#a61acfbb28fb63f0202da963dd60dd108',1,'Belos::GmresIteration::updateLSQR()'],['../classBelos_1_1PseudoBlockGmresIter.html#aea989332dece289c65143112f26a5126',1,'Belos::PseudoBlockGmresIter::updateLSQR()']]],
+  ['updatesolution_5',['updatesolution',['../classBelos_1_1LinearProblem.html#af208749759ebd71cc439bccd831a2fab',1,'Belos::LinearProblem::updateSolution(const Teuchos::RCP&lt; MV &gt; &amp;update=Teuchos::null, bool updateLP=false, ScalarType scale=Teuchos::ScalarTraits&lt; ScalarType &gt;::one())'],['../classBelos_1_1LinearProblem.html#afa479f6950a075f75b94ed5abb9eba24',1,'Belos::LinearProblem::updateSolution(const Teuchos::RCP&lt; MV &gt; &amp;update=Teuchos::null, ScalarType scale=Teuchos::ScalarTraits&lt; ScalarType &gt;::one()) const']]],
+  ['uppercase_6',['upperCase',['../namespaceBelos_1_1Impl.html#a473fde3917e8411f93c86e4d9b413c6e',1,'Belos::Impl']]]
+];

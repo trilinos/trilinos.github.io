@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['base_5ft_0',['base_t',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/thyra/doc/../../../packages/rtop/src/support/doc/html/classRTOpPack_1_1ROp__1__CoordVariantScalarReduction.html#a0e2d39ee5c569b0e88ab28b5241aee70',1,'RTOpPack::ROp_1_CoordVariantScalarReduction::base_t'],['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/thyra/doc/../../../packages/rtop/src/support/doc/html/classRTOpPack_1_1ROp__1__ScalarReduction.html#a73734dbd5aa512574dfef8aacc023006',1,'RTOpPack::ROp_1_ScalarReduction::base_t'],['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/thyra/doc/../../../packages/rtop/src/support/doc/html/classRTOpPack_1_1ROp__2__ScalarReduction.html#a9271fab0e2ddb77fadfc4bd024850e59',1,'RTOpPack::ROp_2_ScalarReduction::base_t']]]
+];

@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['norminf_0',['norminf',['../classEpetra__MsrMatrix.html#a0c5167577483c8c89964e3ec942b38fd',1,'Epetra_MsrMatrix::NormInf()'],['../classAztecOO__Operator.html#a79c25190ef11b53eb75184c8a3be8f4e',1,'AztecOO_Operator::NormInf()']]],
+  ['normone_1',['NormOne',['../classEpetra__MsrMatrix.html#a1fec2da721c64fda5441a652bf3f947b',1,'Epetra_MsrMatrix']]],
+  ['numglobalcols_2',['NumGlobalCols',['../classEpetra__MsrMatrix.html#ab7867c4004d2ce8024d7cac91a7367f5',1,'Epetra_MsrMatrix']]],
+  ['numglobalcols64_3',['NumGlobalCols64',['../classEpetra__MsrMatrix.html#ada385116c70c26969dc8e9669e5dcf39',1,'Epetra_MsrMatrix']]],
+  ['numglobaldiagonals_4',['NumGlobalDiagonals',['../classEpetra__MsrMatrix.html#ab949484c0bc1b0621c2de0fdb2d02b27',1,'Epetra_MsrMatrix']]],
+  ['numglobaldiagonals64_5',['NumGlobalDiagonals64',['../classEpetra__MsrMatrix.html#a39670520fe0bc6f2db4e50585dbcafeb',1,'Epetra_MsrMatrix']]],
+  ['numglobalnonzeros_6',['NumGlobalNonzeros',['../classEpetra__MsrMatrix.html#a45b034b6934dc3c0bc76483e4d629719',1,'Epetra_MsrMatrix']]],
+  ['numglobalnonzeros64_7',['NumGlobalNonzeros64',['../classEpetra__MsrMatrix.html#af8278da63f2b08b18ac39e5860a4c8c8',1,'Epetra_MsrMatrix']]],
+  ['numglobalrows_8',['NumGlobalRows',['../classEpetra__MsrMatrix.html#a61243bf46cea54f29d1e0d6551bebb78',1,'Epetra_MsrMatrix']]],
+  ['numglobalrows64_9',['NumGlobalRows64',['../classEpetra__MsrMatrix.html#a18a78c52c5b9281b6e2a013be2191bc8',1,'Epetra_MsrMatrix']]],
+  ['numiters_10',['numiters',['../classAztecOO.html#ade765c89e8146e549db73ff9180efe2e',1,'AztecOO::NumIters()'],['../classAztecOO__Operator.html#ae6e89b8a3a8ed9c6d418a81c2fa3c7e9',1,'AztecOO_Operator::NumIters()']]],
+  ['nummycols_11',['NumMyCols',['../classEpetra__MsrMatrix.html#acabb4a2e5ff4601e3a51d0ce723b6ea0',1,'Epetra_MsrMatrix']]],
+  ['nummydiagonals_12',['NumMyDiagonals',['../classEpetra__MsrMatrix.html#a3304b05254d109d8abede24a6b537984',1,'Epetra_MsrMatrix']]],
+  ['nummynonzeros_13',['NumMyNonzeros',['../classEpetra__MsrMatrix.html#a260de0258c916c7553a8d7cf87336bba',1,'Epetra_MsrMatrix']]],
+  ['nummyrowentries_14',['NumMyRowEntries',['../classEpetra__MsrMatrix.html#a41eb43c65e43ed98df64bb0428704e1e',1,'Epetra_MsrMatrix']]],
+  ['nummyrows_15',['NumMyRows',['../classEpetra__MsrMatrix.html#a800a699e673c57b0aaa6c426be7b155e',1,'Epetra_MsrMatrix']]]
+];

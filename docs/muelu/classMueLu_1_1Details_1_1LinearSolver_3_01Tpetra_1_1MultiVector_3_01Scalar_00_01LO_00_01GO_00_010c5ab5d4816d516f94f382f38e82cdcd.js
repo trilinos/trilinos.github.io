@@ -1,0 +1,18 @@
+var classMueLu_1_1Details_1_1LinearSolver_3_01Tpetra_1_1MultiVector_3_01Scalar_00_01LO_00_01GO_00_010c5ab5d4816d516f94f382f38e82cdcd =
+[
+    [ "LinearSolver", "classMueLu_1_1Details_1_1LinearSolver_3_01Tpetra_1_1MultiVector_3_01Scalar_00_01LO_00_01GO_00_010c5ab5d4816d516f94f382f38e82cdcd.html#ae1d821152c747b91abdc13c3eb33ece7", null ],
+    [ "~LinearSolver", "classMueLu_1_1Details_1_1LinearSolver_3_01Tpetra_1_1MultiVector_3_01Scalar_00_01LO_00_01GO_00_010c5ab5d4816d516f94f382f38e82cdcd.html#aaa26804192d48b52428ae3187d080839", null ],
+    [ "setMatrix", "classMueLu_1_1Details_1_1LinearSolver_3_01Tpetra_1_1MultiVector_3_01Scalar_00_01LO_00_01GO_00_010c5ab5d4816d516f94f382f38e82cdcd.html#a0df6e28e9e0bb1911555a8acc24dcd09", null ],
+    [ "getMatrix", "classMueLu_1_1Details_1_1LinearSolver_3_01Tpetra_1_1MultiVector_3_01Scalar_00_01LO_00_01GO_00_010c5ab5d4816d516f94f382f38e82cdcd.html#a4b7f6c1485a0691c699077ea3a822725", null ],
+    [ "solve", "classMueLu_1_1Details_1_1LinearSolver_3_01Tpetra_1_1MultiVector_3_01Scalar_00_01LO_00_01GO_00_010c5ab5d4816d516f94f382f38e82cdcd.html#a85fad7301b7ec8fe0cfddf17294ab88f", null ],
+    [ "setParameters", "classMueLu_1_1Details_1_1LinearSolver_3_01Tpetra_1_1MultiVector_3_01Scalar_00_01LO_00_01GO_00_010c5ab5d4816d516f94f382f38e82cdcd.html#a42c034caa30dedd77fd239c72d053248", null ],
+    [ "symbolic", "classMueLu_1_1Details_1_1LinearSolver_3_01Tpetra_1_1MultiVector_3_01Scalar_00_01LO_00_01GO_00_010c5ab5d4816d516f94f382f38e82cdcd.html#a3e2d96c624dbe6484c783e51925ca54a", null ],
+    [ "numeric", "classMueLu_1_1Details_1_1LinearSolver_3_01Tpetra_1_1MultiVector_3_01Scalar_00_01LO_00_01GO_00_010c5ab5d4816d516f94f382f38e82cdcd.html#acc5611399f1dbd3ca887bc55d56f2699", null ],
+    [ "description", "classMueLu_1_1Details_1_1LinearSolver_3_01Tpetra_1_1MultiVector_3_01Scalar_00_01LO_00_01GO_00_010c5ab5d4816d516f94f382f38e82cdcd.html#ae1b35b0a79b9e85d2631865a09fa0507", null ],
+    [ "describe", "classMueLu_1_1Details_1_1LinearSolver_3_01Tpetra_1_1MultiVector_3_01Scalar_00_01LO_00_01GO_00_010c5ab5d4816d516f94f382f38e82cdcd.html#a0a059ed23f4d5c218d08dcb50e0edab3", null ],
+    [ "A_", "classMueLu_1_1Details_1_1LinearSolver_3_01Tpetra_1_1MultiVector_3_01Scalar_00_01LO_00_01GO_00_010c5ab5d4816d516f94f382f38e82cdcd.html#af7dfc7efc89d78b564523dc8832d85e0", null ],
+    [ "params_", "classMueLu_1_1Details_1_1LinearSolver_3_01Tpetra_1_1MultiVector_3_01Scalar_00_01LO_00_01GO_00_010c5ab5d4816d516f94f382f38e82cdcd.html#abf764fa76dc357b229c1308b33da4cbc", null ],
+    [ "solver_", "classMueLu_1_1Details_1_1LinearSolver_3_01Tpetra_1_1MultiVector_3_01Scalar_00_01LO_00_01GO_00_010c5ab5d4816d516f94f382f38e82cdcd.html#a32e3ffa192a9f1fa95a82826921c1437", null ],
+    [ "changedA_", "classMueLu_1_1Details_1_1LinearSolver_3_01Tpetra_1_1MultiVector_3_01Scalar_00_01LO_00_01GO_00_010c5ab5d4816d516f94f382f38e82cdcd.html#ab1e93b2e624f9c79d25aa74b73dfe2c2", null ],
+    [ "changedParams_", "classMueLu_1_1Details_1_1LinearSolver_3_01Tpetra_1_1MultiVector_3_01Scalar_00_01LO_00_01GO_00_010c5ab5d4816d516f94f382f38e82cdcd.html#a5c3207423016fc4900a0b72345cdb36e", null ]
+];

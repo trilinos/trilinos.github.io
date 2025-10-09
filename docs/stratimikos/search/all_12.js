@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['quadrature_0',['quadrature',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/epetraext/doc/html/classStokhos_1_1Quadrature.html',1,'Stokhos::Quadrature&lt; typename ordinal_type, typename scalar_type &gt;'],['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/epetraext/doc/html/namespaceGLpApp.html#a5f6e450817642810396365b6e5288633',1,'GLpApp::quadrature()']]],
+  ['query_1',['query',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/amesos/doc/html/classAmesos.html#a9929aa33f9b760a4a3a04dba8f9a75b1',1,'Amesos::Query(const char *ClassType)'],['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/amesos/doc/html/classAmesos.html#a3f735ee973b11c6623f86d421c24388b',1,'Amesos::Query(const std::string CT)']]],
+  ['quickpart_5flist_5finc_5fint_2',['quickpart_list_inc_int',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/epetraext/doc/html/namespaceEpetraExt.html#ae8bf76c9675c7b84e09eec7b239fbe65',1,'EpetraExt']]]
+];

@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['ncoorddim_0',['nCoordDim',['../classVerySimpleVectorAdapter.html#a0fb2a3f1de050c74b4216a257992b37b',1,'VerySimpleVectorAdapter']]],
+  ['ncoordperrank_1',['nCoordPerRank',['../classVerySimpleVectorAdapter.html#a33ff354a9413ccb936b5dd17f0020652',1,'VerySimpleVectorAdapter']]],
+  ['no_5fprocs_2',['no_procs',['../classZoltan2_1_1CommunicationModel.html#a1280afae979dd530d0d8df089dcad182',1,'Zoltan2::CommunicationModel']]],
+  ['no_5ftasks_3',['no_tasks',['../classZoltan2_1_1CommunicationModel.html#ab4ad964d228adff6b1628aa28caa7613',1,'Zoltan2::CommunicationModel']]],
+  ['node_5fmap_4',['node_map',['../classZoltan2_1_1Zoltan2__Directory.html#ac85b063c6fb63a4a74252ce288d62151',1,'Zoltan2::Zoltan2_Directory']]],
+  ['nprocs_5',['nprocs',['../classZoltan2_1_1CoordinateTaskMapper.html#a210a3c7b9f6db4a215a86ce991aa54a1',1,'Zoltan2::CoordinateTaskMapper']]],
+  ['nrecvs_6',['nrecvs',['../classZoltan2_1_1Zoltan2__Directory__Plan.html#a9e6b24e2cefc8004a4cd327fa907f8f8',1,'Zoltan2::Zoltan2_Directory_Plan']]],
+  ['nsends_7',['nsends',['../classZoltan2_1_1Zoltan2__Directory__Plan.html#ab5d4e489b7dd0f8b7f8b8bdb6f7c3dd0',1,'Zoltan2::Zoltan2_Directory_Plan']]],
+  ['ntasks_8',['ntasks',['../classZoltan2_1_1CoordinateTaskMapper.html#a6f8191ecd69e2db62da55edc1942eac1',1,'Zoltan2::CoordinateTaskMapper']]],
+  ['num_5fcolors_9',['num_colors',['../classZoltan2_1_1TpetraCrsColorer.html#a49fe82b17a5dd8171c3dd41b03a797b8',1,'Zoltan2::TpetraCrsColorer::num_colors'],['../classZoltan2_1_1TpetraCrsColorer_3_01Tpetra_1_1BlockCrsMatrix_3_01SC_00_01LO_00_01GO_00_01NO_01_4_01_4.html#a5972af2c8edd301947cb5da1f31ddf09',1,'Zoltan2::TpetraCrsColorer&lt; Tpetra::BlockCrsMatrix&lt; SC, LO, GO, NO &gt; &gt;::num_colors']]],
+  ['num_5fcuts_10',['num_cuts',['../structZoltan2_1_1ReduceWeightsFunctor.html#a7d6473686828aae28154020572716091',1,'Zoltan2::ReduceWeightsFunctor']]],
+  ['num_5fid_11',['num_id',['../structZoltan2_1_1TPL__Traits_3_01first__t_00_01ZOLTAN__ID__PTR_01_4.html#a9666d329f27e47576d8bb295e7503774',1,'Zoltan2::TPL_Traits&lt; first_t, ZOLTAN_ID_PTR &gt;::NUM_ID'],['../structZoltan2_1_1TPL__Traits_3_01ZOLTAN__ID__PTR_00_01second__t_01_4.html#a7b1f454db82f4260a65f2df67f6606fd',1,'Zoltan2::TPL_Traits&lt; ZOLTAN_ID_PTR, second_t &gt;::NUM_ID']]],
+  ['num_5fparts_12',['num_parts',['../classZoltan2_1_1PartitionMapping.html#a847240edd08673fedbb9f29f19f85287',1,'Zoltan2::PartitionMapping']]],
+  ['num_5franks_5fper_5fnode_13',['num_ranks_per_node',['../classZoltan2_1_1CoordinateCommunicationModel.html#a3b259b5c6ace9278d436e185ad4f6156',1,'Zoltan2::CoordinateCommunicationModel']]],
+  ['numberofcriteria_5f_14',['numberOfCriteria_',['../classZoltan2_1_1PartitioningProblem.html#a3cf8f38697aff5e1c4fcda2956e68f33',1,'Zoltan2::PartitioningProblem']]],
+  ['numberofweights_5f_15',['numberOfWeights_',['../classZoltan2_1_1PartitioningProblem.html#a6c7b12e1df889ce436e9865820fbcd0f',1,'Zoltan2::PartitioningProblem']]],
+  ['numnzweight_5f_16',['numNzWeight_',['../classZoltan2_1_1TpetraRowMatrixAdapter.html#a6842bceb5f2fd7121cdadc3f243d4c3f',1,'Zoltan2::TpetraRowMatrixAdapter']]],
+  ['numpoints_17',['numPoints',['../classGeometricGen_1_1CoordinateDistribution.html#ad0b4d7331480579d0780ea1a9beb943d',1,'GeometricGen::CoordinateDistribution']]],
+  ['numprocs_5f_18',['numProcs_',['../classZoltan2_1_1Environment.html#a9147d4464c5e9645fb3577a016ecfaa3',1,'Zoltan2::Environment']]],
+  ['numranks_19',['numRanks',['../classZoltan2_1_1Machine.html#ac9df2509bca1f2b1d51231ab16c24033',1,'Zoltan2::Machine']]],
+  ['nvals_20',['nvals',['../classZoltan2_1_1Zoltan2__Directory__Plan.html#a10df6daecf42c009b0876d24269ffbb1',1,'Zoltan2::Zoltan2_Directory_Plan']]],
+  ['nvals_5frecv_21',['nvals_recv',['../classZoltan2_1_1Zoltan2__Directory__Plan.html#affba8da280472cc99bdc8ffb644edc60',1,'Zoltan2::Zoltan2_Directory_Plan']]],
+  ['nweightsperedge_5f_22',['nWeightsPerEdge_',['../classZoltan2_1_1TpetraRowGraphAdapter.html#a27d46a65b07130c8802f7da03cd37da8',1,'Zoltan2::TpetraRowGraphAdapter']]],
+  ['nweightsperrow_5f_23',['nWeightsPerRow_',['../classZoltan2_1_1TpetraRowMatrixAdapter.html#a4119d598ef2e844e4566764d2f3ce641',1,'Zoltan2::TpetraRowMatrixAdapter']]],
+  ['nweightspervertex_5f_24',['nWeightsPerVertex_',['../classZoltan2_1_1TpetraRowGraphAdapter.html#a77c7322ffa82776b0e729348f6270765',1,'Zoltan2::TpetraRowGraphAdapter']]]
+];

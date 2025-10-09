@@ -1,0 +1,25 @@
+var classMueLu_1_1BraessSarazinSmoother =
+[
+    [ "GetValidParameterList", "classMueLu_1_1BraessSarazinSmoother.html#a3fa15b9477fbd594c512fcd0449a5ce4", null ],
+    [ "DeclareInput", "classMueLu_1_1BraessSarazinSmoother.html#aaa9463b968b1b6000452989616e5d78c", null ],
+    [ "AddFactoryManager", "classMueLu_1_1BraessSarazinSmoother.html#aefd31032bb547a71a06db63ab8ebb155", null ],
+    [ "Setup", "classMueLu_1_1BraessSarazinSmoother.html#ab3ebf5b85847614690df54fdd5a23bc7", null ],
+    [ "Apply", "classMueLu_1_1BraessSarazinSmoother.html#a81342c426f0c7ad454e6bff736d13ea8", null ],
+    [ "Copy", "classMueLu_1_1BraessSarazinSmoother.html#aaba793aab0f1a33c87da16ef02af95ab", null ],
+    [ "description", "classMueLu_1_1BraessSarazinSmoother.html#a7db6e5fa2bb624e5549753979a6b0f1c", null ],
+    [ "print", "classMueLu_1_1BraessSarazinSmoother.html#acceffe880a81bed8bb16dcbb36822081", null ],
+    [ "getNodeSmootherComplexity", "classMueLu_1_1BraessSarazinSmoother.html#ab077f0c6d8c0b6f709655ffa21d4910c", null ],
+    [ "type_", "classMueLu_1_1BraessSarazinSmoother.html#a65c623afff2d32351a68cfd6f8eac03b", null ],
+    [ "AFact_", "classMueLu_1_1BraessSarazinSmoother.html#a5660219253ef38b706040dc24388c875", null ],
+    [ "FactManager_", "classMueLu_1_1BraessSarazinSmoother.html#acb393da39bab6f5ac6b8baa84a8d50a3", null ],
+    [ "A_", "classMueLu_1_1BraessSarazinSmoother.html#a52dd7f2874f4497c9bd116841065eb60", null ],
+    [ "rangeMapExtractor_", "classMueLu_1_1BraessSarazinSmoother.html#a9a993cff8af64e5c971ab45bca8b16b7", null ],
+    [ "domainMapExtractor_", "classMueLu_1_1BraessSarazinSmoother.html#a4b8649abc30c9a159d6d4a158a12f16f", null ],
+    [ "A00_", "classMueLu_1_1BraessSarazinSmoother.html#ab00e4de5dd01e0d31aad02c2962e73ad", null ],
+    [ "A01_", "classMueLu_1_1BraessSarazinSmoother.html#a0eaabc8457b3802927ca84116adf495a", null ],
+    [ "A10_", "classMueLu_1_1BraessSarazinSmoother.html#a1fdba744f53c8069458318be9dbc74b9", null ],
+    [ "A11_", "classMueLu_1_1BraessSarazinSmoother.html#a705dd682c6ff49f8dc6272a77fab1ff4", null ],
+    [ "S_", "classMueLu_1_1BraessSarazinSmoother.html#acbd6a485edc41d8add4d274a46c0a447", null ],
+    [ "D_", "classMueLu_1_1BraessSarazinSmoother.html#a97910d0d70c8fccacff7bbd8b1aa3765", null ],
+    [ "smoo_", "classMueLu_1_1BraessSarazinSmoother.html#abef6db5f41041943b573ba6bbd22bf12", null ]
+];

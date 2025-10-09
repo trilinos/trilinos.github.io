@@ -1,0 +1,1280 @@
+\documentclass{article}
+\usepackage{ifthen}
+\usepackage{epsfig}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\color{white}
+\pagecolor{black}
+% Packages requested by user
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{newunicodechar}
+  \makeatletter
+    \def\doxynewunicodechar#1#2{%
+    \@tempswafalse
+    \edef\nuc@tempa{\detokenize{#1}}%
+    \if\relax\nuc@tempa\relax
+      \nuc@emptyargerr
+    \else
+      \edef\@tempb{\expandafter\@car\nuc@tempa\@nil}%
+      \nuc@check
+      \if@tempswa
+        \@namedef{u8:\nuc@tempa}{#2}%
+      \fi
+    \fi
+  }
+  \makeatother
+  \doxynewunicodechar{⁻}{${}^{-}$}% Superscript minus
+  \doxynewunicodechar{²}{${}^{2}$}% Superscript two
+  \doxynewunicodechar{³}{${}^{3}$}% Superscript three
+
+\pagestyle{empty}
+\begin{document}
+$ \{ {\bf v}_0,\ldots {\bf v}_V\} $
+\pagebreak
+
+$\{ {\bf p}_0,\ldots {\bf p}_P\} $
+\pagebreak
+
+$ \{ {\bf v}_0,\ldots {\bf v}_V\}\cup \{ {\bf p}_0,\ldots {\bf p}_P\} $
+\pagebreak
+
+$\{{\bf q}_0,\ldots,{\bf q}_N\}$
+\pagebreak
+
+$N = V + P$
+\pagebreak
+
+\[ 
+  \{{\bf q}_0,\ldots,{\bf q}_N\} = \{ {\bf v}_0,\ldots {\bf v}_V,{\bf p}_0,\ldots {\bf p}_P\} 
+  \]
+\pagebreak
+
+$ \hat{\mathcal{C}} $
+\pagebreak
+
+$\{\hat{{\bf q}}_0,\ldots,\hat{{\bf q}}_{N}\}$
+\pagebreak
+
+$ \{\hat{\phi}_i\}_{i=0}^{N} $
+\pagebreak
+
+$ \hat{\phi}_i( \hat{{\bf q}}_j)=\delta_{ij} $
+\pagebreak
+
+$\mathcal{C}$
+\pagebreak
+
+$\hat{\mathcal{C}}$
+\pagebreak
+
+\[               
+  F_\mathcal{C}(\hat{\bf x}) = \sum_{m=0}^{N}  {\bf q}_m(\mathcal{C})  \hat{\phi}_m(\hat{\bf x})          
+\]
+\pagebreak
+
+$\{{\bf q}_0(\mathcal{C}),\ldots,{\bf q}_N(\mathcal{C})\}$
+\pagebreak
+
+\[        
+  \big(F_{\mathcal{C}}(\hat{\bf x})\big)_i = 
+              \sum_{m=0}^{N}  \big({\bf q}_m(\mathcal{C})\big)_i\hat{\phi}_m(\hat{\bf x})           
+\]
+\pagebreak
+
+$ \big({\bf q}_m(\mathcal{C})\big)_i $
+\pagebreak
+
+$F(\hat{\bf x})\ \mbox{and}\ {\bf q}_m$
+\pagebreak
+
+$F(\hat{\bf x})$
+\pagebreak
+
+$F^{-1}({\bf x})$
+\pagebreak
+
+\[                    
+      DF_{ij}(\hat{{\bf x}}) = \frac{\partial F_i(\hat{{\bf x}})}{\partial\hat{{\bf x}}_j}                    
+\]
+\pagebreak
+
+\[  
+      DF_{ij}(\hat{{\bf x}}) = \sum_{m=0}^{N}
+                ({\bf q}_m)_i\frac{\partial\hat{\phi}_m(\hat{{\bf x}})}{\partial\hat{{\bf x}}_j} \,.       
+\]
+\pagebreak
+
+$DF_{ij}(\hat{{\bf x}}) $
+\pagebreak
+
+$DF_{ij}^{-1}(\hat{{\bf x}}) $
+\pagebreak
+
+$\mbox{det} DF_{ij}(\hat{{\bf x}}) $
+\pagebreak
+
+$\mathcal{S}_i$
+\pagebreak
+
+\[
+    \Phi : R \mapsto \mathcal{S} \,.
+\]
+\pagebreak
+
+$\mathcal{\hat{C}}$
+\pagebreak
+
+$\hat{\mathcal{S}}_i$
+\pagebreak
+
+\[
+    \hat{\Phi} : R \mapsto \hat{\mathcal{S}}_i \,.
+\]
+\pagebreak
+
+\[
+    \Phi = F\circ \hat{\Phi} \,,
+\]
+\pagebreak
+
+\[
+      R = [-1,1]\,.
+\]
+\pagebreak
+
+\[
+      R = \left\{\begin{array}{rl} 
+          \{(0,0),(1,0),(0,1)\} & \mbox{if the face is Triangle} \\[1ex]
+            [-1,1]\times [-1,1] & \mbox{if the face is Quadrilateral}
+          \end{array}\right.
+\]
+\pagebreak
+
+$ \Phi : R \mapsto {\mathcal{S}}_i $
+\pagebreak
+
+$\hat{\Phi}: R \mapsto \hat{\mathcal{S}}_i$
+\pagebreak
+
+$ \{\mathcal{S}_{c,i}\}_{c=0}^N $
+\pagebreak
+
+$DF_{c}$
+\pagebreak
+
+${\mathcal C}$
+\pagebreak
+
+\[ 
+        \mbox{jacobian}(p,i,j)   = [DF_{c}(\mbox{points}(p))]_{ij} \quad \mbox{for $0\le c < C$ - fixed} 
+\]
+\pagebreak
+
+\[
+        \mbox{jacobian}(c,p,i,j) = [DF_{c}(\mbox{points}(p))]_{ij} \quad c=0,\ldots, C
+\]
+\pagebreak
+
+\[ 
+        \mbox{jacobian}(c,p,i,j) = [DF_{c}(\mbox{points}(c,p))]_{ij} \quad c=0,\ldots, C
+\]
+\pagebreak
+
+\[ 
+        \mbox{jacobianInv}(c,p,*,*) = \mbox{jacobian}^{-1}(c,p,*,*) \quad c = 0,\ldots, C
+        \quad\mbox{or}\quad
+        \mbox{jacobianInv}(p,*,*)   = \mbox{jacobian}^{-1}(p,*,*) 
+\]
+\pagebreak
+
+\[ 
+        \mbox{jacobianDet}(c,p) = \mbox{det}(\mbox{jacobian}(c,p,*,*)) \quad c=0,\ldots, C 
+        \quad\mbox{or}\quad
+        \mbox{jacobianDet}(p)   = \mbox{det}(\mbox{jacobian}(p,*,*)) 
+  \]
+\pagebreak
+
+$ F_{c} $
+\pagebreak
+
+\[  
+        \mbox{physPoints}(p,d)   = \Big(F_c(\mbox{refPoint}(p,*)) \Big)_d \quad \mbox{for $0\le c < C$ - fixed}    
+\]
+\pagebreak
+
+\[
+        \mbox{physPoints}(c,p,d) = \Big(F_c(\mbox{refPoint}(p,*)) \Big)_d \quad c=0,\ldots, C 
+\]
+\pagebreak
+
+\[  
+        \mbox{physPoints}(c,p,d) = \Big(F_c(\mbox{refPoint}(c,p,*)) \Big)_d \quad c=0,\ldots, C 
+\]
+\pagebreak
+
+$ F^{-1}_{c} $
+\pagebreak
+
+\[            
+        \mbox{refPoints}(p,d) = \Big(F^{-1}_c(physPoint(p,*)) \Big)_d         
+\]
+\pagebreak
+
+\[            
+        \mbox{refPoints}(c,p,d) = \Big(F^{-1}_c(physPoint(c,p,*)) \Big)_d         
+\]
+\pagebreak
+
+\[            
+          \mbox{refPoints}(p,d) = \Big(F^{-1}_c(physPoint(p,*)) \Big)_d         
+\]
+\pagebreak
+
+\[            
+          \mbox{refPoints}(c,p,d) = \Big(F^{-1}_c(physPoint(c,p,*)) \Big)_d         
+\]
+\pagebreak
+
+\[
+        {subcellPoints}(p,*) = \hat{\Phi}_i(t_p) \quad\mbox{and}\quad
+        \hat{\Phi}_i(t_p) = \left\{
+        \begin{array}{ll}
+          (\hat{x}(t_p),\hat{y}(t_p),\hat{z}(t_p)) & \mbox{for 3D parent cells}\\[1.5ex] 
+          (\hat{x}(t_p),\hat{y}(t_p))              & \mbox{for 2D parent cells}                 
+        \end{array} \right.
+        \quad t_p \in R = [-1,1] \,;
+ \]
+\pagebreak
+
+\[
+        {subcellPoints}(p,*) = \hat{\Phi}_i(u_p,v_p)\quad\mbox{and}\quad
+        \hat{\Phi}_i(u_p,v_p) = (\hat{x}(u_p,v_p), \hat{y}(u_p,v_p), \hat{z}(u_p, v_p))
+        \quad (u_p,v_p)\in R
+ \]
+\pagebreak
+
+\[
+        R = \left\{\begin{array}{rl} 
+                  \{(0,0),(1,0),(0,1)\} & \mbox{if face is Triangle} \\[1ex]
+                    [-1,1]\times [-1,1] & \mbox{if face is Quadrilateral}
+            \end{array}\right.
+\]
+\pagebreak
+
+$ \Phi_{c,i} =  F_{c}\circ\hat{\Phi}_i $
+\pagebreak
+
+\[
+        {refEdgeTangent}(*) = \hat{\bf t}_i = {\partial\hat{\Phi}_i(t)\over\partial t}\,,
+\]
+\pagebreak
+
+$\hat{\Phi}_i : R =[-1,1]\mapsto \hat{\mathcal E}_i$
+\pagebreak
+
+$\hat{\mathcal E}_i$
+\pagebreak
+
+\[
+        \hat{\Phi}_i(t) = \left\{\begin{array}{ll}
+            (\hat{x}(t),\hat{y}(t),\hat{z}(t)) & \mbox{for 3D parent cells} \\[1ex]
+            (\hat{x}(t),\hat{y}(t))            & \mbox{for 2D parent cells} \\[1ex]
+          \end{array}\right.
+\]
+\pagebreak
+
+\[
+        |\hat{\bf t}_i | = {1\over 2} |\hat{\mathcal E}_i |\,.
+\]
+\pagebreak
+
+\[
+        {refFaceTanU}(*) = \hat{\bf t}_{i,u} = {\partial\hat{\Phi}_i(u,v)\over\partial u} = 
+        \left({\partial\hat{x}(u,v)\over\partial u}, 
+              {\partial\hat{y}(u,v)\over\partial u},
+              {\partial\hat{z}(u,v)\over\partial u} \right) ;
+\]
+\pagebreak
+
+\[
+        {refFaceTanV}(*) = \hat{\bf t}_{i,v} = {\partial\hat{\Phi}_i(u,v)\over \partial v} = 
+        \left({\partial\hat{x}(u,v)\over\partial v}, 
+              {\partial\hat{y}(u,v)\over\partial v},
+              {\partial\hat{z}(u,v)\over\partial v} \right)\,;
+\]
+\pagebreak
+
+$\hat{\Phi}_i: R \mapsto \hat{\mathcal F}_i$
+\pagebreak
+
+$\hat{\mathcal F}_i$
+\pagebreak
+
+\[
+       \hat{\Phi}_i(u,v) =(\hat{x}(u,v),\hat{y}(u,v),\hat{z}(u,v))
+\]
+\pagebreak
+
+\[
+        R = \left\{\begin{array}{rl} 
+            \{(0,0),(1,0),(0,1)\} & \mbox{if $\hat{\mathcal F}_i$  is Triangle} \\[1ex]
+              [-1,1]\times [-1,1] & \mbox{if $\hat{\mathcal F}_i$ is Quadrilateral} \,.
+            \end{array}\right.
+\]
+\pagebreak
+
+$\hat{x},\hat{y},\hat{z}$
+\pagebreak
+
+\[
+        {refSideNormal}(*) = \hat{\bf n}_i =
+        \left\{\begin{array}{rl} 
+            \displaystyle
+            \left({\partial\hat{\Phi}_i(t)\over\partial t}\right)^{\perp} 
+                                                      & \mbox{for 2D parent cells} \\[2ex]
+            \displaystyle
+            {\partial\hat{\Phi}_{i}\over\partial u} \times 
+            {\partial\hat{\Phi}_{i}\over\partial v}   & \mbox{for 3D parent cells} 
+        \end{array}\right.
+\]
+\pagebreak
+
+$ (u_1,u_2)^\perp = (u_2, -u_1)$
+\pagebreak
+
+$\hat{\Phi}_i: R \mapsto \hat{\mathcal S}_i$
+\pagebreak
+
+$\hat{\mathcal S}_i$
+\pagebreak
+
+\[
+        \hat{\Phi}_i(u,v) = 
+          \left\{\begin{array}{rl}
+            (\hat{x}(t),\hat{y}(t))                   & \mbox{for 2D parent cells} \\[1ex]
+            (\hat{x}(u,v),\hat{y}(u,v),\hat{z}(u,v))  & \mbox{for 3D parent cells}
+        \end{array}\right.
+  
+\]
+\pagebreak
+
+\[
+        R = \left\{\begin{array}{rl} 
+        \{(0,0),(1,0),(0,1)\}   & \mbox{if $\hat{\mathcal S}_i$ is Triangle} \\[1ex]
+            [-1,1]\times [-1,1] & \mbox{if $\hat{\mathcal S}_i$ is Quadrilateral} \,.
+        \end{array}\right.
+\]
+\pagebreak
+
+\[
+        |\hat{\bf n}_i | = \left\{\begin{array}{rl} 
+            2 \mbox{Area}(\hat{\mathcal F}_i) & \mbox{if $\hat{\mathcal F}_i$  is Triangle} \\[1ex]
+              \mbox{Area}(\hat{\mathcal F}_i) & \mbox{if $\hat{\mathcal F}_i$ is Quadrilateral} \,.
+        \end{array}\right.
+\]
+\pagebreak
+
+\[
+        |\hat{\bf n}_i | = {1\over 2} |\hat{\mathcal F}_i |\,.
+\]
+\pagebreak
+
+$\hat{{\bf n}}= \hat{\bf t}^\perp = (t_2,-t_1)$
+\pagebreak
+
+$\hat{{\bf t}}=(t_1,t_2)$
+\pagebreak
+
+$(\hat{{\bf n}},\hat{{\bf t}})$
+\pagebreak
+
+\[
+        {refFaceNormal}(*) = \hat{\bf n}_i = {\partial\hat{\Phi}_{i}\over\partial u} \times 
+                             {\partial\hat{\Phi}_{i}\over\partial v}
+\]
+\pagebreak
+
+\[
+        \hat{\Phi}_i(u,v) =(\hat{x}(u,v),\hat{y}(u,v),\hat{z}(u,v))
+\]
+\pagebreak
+
+\[
+        R = \left\{\begin{array}{rl} 
+            \{(0,0),(1,0),(0,1)\} & \mbox{if ${\mathcal F}$  is Triangle} \\[1ex]
+              [-1,1]\times [-1,1] & \mbox{if ${\mathcal F}$ is Quadrilateral} \,.
+            \end{array}\right.
+\]
+\pagebreak
+
+\[
+        |\hat{\bf n}_i | = \left\{\begin{array}{rl} 
+            2 \mbox{Area}(\hat{\mathcal F}_i) & \mbox{if $\hat{\mathcal F}_i$  is Triangle} \\[1ex]
+              \mbox{Area}(\hat{\mathcal F}_i) & \mbox{if $\hat{\mathcal F}_i$ is Quadrilateral} \,.
+            \end{array}\right.
+\]
+\pagebreak
+
+${\partial\hat{\Phi}_{i}/\partial u}$
+\pagebreak
+
+${\partial\hat{\Phi}_{i}/\partial v}$
+\pagebreak
+
+$\{\mathcal{E}_{c,i}\}_{c=0}^{N}$
+\pagebreak
+
+${\bf x}_p = F_c(\hat{\Phi}_i(t_p))\in\mathcal{E}_{c,i}$
+\pagebreak
+
+$\mathcal{E}_{c,i}$
+\pagebreak
+
+\[
+        {edgeTangents}(c,p,d) = 
+            DF_c(\hat{\Phi}_i(t_p))\cdot {\partial{\hat{\Phi}}_{i}(t_p)\over\partial t}\,; \qquad t_p \in R
+\]
+\pagebreak
+
+$ DF_c $
+\pagebreak
+
+${\mathcal E}_{c,i}$
+\pagebreak
+
+$ {\partial{\hat{\Phi}}_{i}/\partial t}$
+\pagebreak
+
+$ \hat{\Phi}_i R\mapsto\hat{\mathcal E}_i $
+\pagebreak
+
+$DF_c(\hat{\Phi}_i(t_p))$
+\pagebreak
+
+$ t_p \in R=[-1,1] $
+\pagebreak
+
+$\{\mathcal{F}_{c,i}\}_{c=0}^{N}$
+\pagebreak
+
+${\bf x}_p = F_c(\hat{\Phi}_i(u_p,v_p))\in\mathcal{F}_{c,i}$
+\pagebreak
+
+$\mathcal{F}_{c,i}$
+\pagebreak
+
+\[
+        {faceTanU}(c,p,d) = DF_c(\hat{\Phi}_i(u_p, v_p))\cdot {\partial\hat{\Phi}_i\over\partial u};\qquad
+        {faceTanV}(c,p,d) = DF_c(\hat{\Phi}_i(u_p, v_p))\cdot {\partial\hat{\Phi}_{i}\over\partial v}\,;
+        \qquad (u_p, v_p) \in R \,.
+\]
+\pagebreak
+
+${\mathcal F}_{c,i}$
+\pagebreak
+
+$ {\partial\hat{\Phi}_i/\partial u}, {\partial\hat{\Phi}_i/\partial v}$
+\pagebreak
+
+$ \hat{\Phi}_i : R\mapsto \hat{\mathcal F}_i$
+\pagebreak
+
+\[
+        R = 
+          \left\{\begin{array}{rl} 
+            \{(0,0),(1,0),(0,1)\} & \mbox{if $\hat{\mathcal F}_i$ is Triangle} \\[1ex]
+              [-1,1]\times [-1,1] & \mbox{if $\hat{\mathcal F}_i$ is Quadrilateral}
+          \end{array}\right.
+ \]
+\pagebreak
+
+$DF_c(\hat{\Phi}_i(u_p,v_p))$
+\pagebreak
+
+$(u_p,v_p)\in R$
+\pagebreak
+
+$\{\mathcal{S}_{c,i}\}_{c=0}^{N}$
+\pagebreak
+
+${\bf x}_p = F_c(\hat{\Phi}_i(P_p))\in\mathcal{S}_{c,i}$
+\pagebreak
+
+$\mathcal{S}_{c,i}$
+\pagebreak
+
+\[
+        {sideNormals}(c,p,d) = 
+          \left\{\begin{array}{crl} 
+            \displaystyle
+            \left(DF_c(\hat{\Phi}_i(t_p))\cdot 
+            {\partial{\hat{\Phi}}_{i}(t_p)\over\partial t}\right)^{\perp} &  t_p\in R 
+                                                        & \mbox{for 2D parent cells} \\[2ex]
+            \displaystyle
+            \left( DF_c(\hat{\Phi}_i(u_p, v_p))\cdot {\partial\hat{\Phi}_i\over\partial u}\right) \times
+            \left( DF_c(\hat{\Phi}_i(u_p, v_p))\cdot {\partial\hat{\Phi}_i\over\partial v}\right) \,;
+            & (u_p, v_p) \in R                          & \mbox{for 3D parent cells}
+        \end{array}\right.
+ \]
+\pagebreak
+
+${\mathcal S}_{c,i}$
+\pagebreak
+
+$ \hat{\Phi}_i : R\mapsto \hat{\mathcal S}_i$
+\pagebreak
+
+\[
+        R = \left\{\begin{array}{rl} 
+            \{(0,0),(1,0),(0,1)\} & \mbox{if $\hat{\mathcal S}_i$ is Triangle} \\[1ex]
+            [-1,1]\times [-1,1] & \mbox{if $\hat{\mathcal S}_i$ is Quadrilateral}
+            \end{array}\right.
+\]
+\pagebreak
+
+${\bf n}=(t_2,-t_1)$
+\pagebreak
+
+${\bf t}=(t_1,t_2)$
+\pagebreak
+
+$({\bf n},{\bf t})$
+\pagebreak
+
+$DF_c(\hat{\Phi}_i(P_p))$
+\pagebreak
+
+$P_p\in R$
+\pagebreak
+
+\[
+        {faceNormals}(c,p,d) = 
+           \left( DF_c(\hat{\Phi}_i(u_p, v_p))\cdot {\partial\hat{\Phi}_i\over\partial u}\right) \times
+           \left( DF_c(\hat{\Phi}_i(u_p, v_p))\cdot {\partial\hat{\Phi}_i\over\partial v}\right) \,;
+           \qquad (u_p, v_p) \in R \,.
+\]
+\pagebreak
+
+\[
+        R = \left\{\begin{array}{rl} 
+            \{(0,0),(1,0),(0,1)\} & \mbox{if $\hat{\mathcal F}_i$ is Triangle} \\[1ex]
+              [-1,1]\times [-1,1] & \mbox{if $\hat{\mathcal F}_i$ is Quadrilateral}
+            \end{array}\right.
+\]
+\pagebreak
+
+\[
+       \mbox{inRefCell}(i,j) = 
+         \left\{\begin{array}{rl} 
+            1 & \mbox{if $points(i,j,*)\in\hat{\mathcal{C}}$} \\[2ex]
+            0 & \mbox{if $points(i,j,*)\notin\hat{\mathcal{C}}$} 
+         \end{array}\right.
+  \]
+\pagebreak
+
+\[
+        \mbox{inCell}(p) = 
+          \left\{\begin{array}{rl} 
+             1 & \mbox{if $points(p,*)\in {\mathcal{C}}$} \\ [2ex]
+             0 & \mbox{if $points(p,*)\notin {\mathcal{C}}$} 
+          \end{array}\right.
+\]
+\pagebreak
+
+\[
+        \mbox{inCell}(c,p) = 
+          \left\{\begin{array}{rl} 
+              1 & \mbox{if $points(c,p,*)\in {\mathcal{C}}$} \\ [2ex]
+              0 & \mbox{if $points(c,p,*)\notin {\mathcal{C}}$} 
+        \end{array}\right.
+\]
+\pagebreak
+
+$ diag(a,\ldots,a) $
+\pagebreak
+
+$ diag(a_1,\ldots,a_d) $
+\pagebreak
+
+$ \{a_{ij}\}$
+\pagebreak
+
+$ \alpha = \beta = 0 $
+\pagebreak
+
+$ \alpha = \beta = -0.5 $
+\pagebreak
+
+$ P^{\alpha,\beta}_{np}(z)$
+\pagebreak
+
+$(1+z) P^{\alpha,\beta+1}_{np-1}(z)$
+\pagebreak
+
+$(1-z) P^{\alpha+1,\beta}_{np-1}(z)$
+\pagebreak
+
+$ (1-z)(1+z) P^{\alpha+1,\beta+1}_{np-2}(z) $
+\pagebreak
+
+$  \frac{du}{dz}(z[i]) =  \sum_{j=0}^{np-1} D[i*np+j] u(z[j]) $
+\pagebreak
+
+$ \frac{du}{dz}(z[i]) =
+    \sum_{j=0}^{np-1} D[i*np+j] u(z[j]) $
+\pagebreak
+
+$
+    \frac{du}{dz}(z[i]) = \sum_{j=0}^{np-1} D[i*np+j] u(z[j]) $
+\pagebreak
+
+$ -1 \leq z \leq 1 $
+\pagebreak
+
+$
+    \begin{array}{rcl}
+    h_j(z) =  \left\{ \begin{array}{ll}
+    \displaystyle \frac{P_{np}^{\alpha,\beta}(z)}
+    {[P_{np}^{\alpha,\beta}(z_j)]^\prime
+    (z-z_j)} & \mbox{if $z \ne z_j$}\\
+    & \\
+    1 & \mbox{if $z=z_j$}
+    \end{array}
+    \right.
+    \end{array}
+    $
+\pagebreak
+
+$ \begin{array}{rcl}
+h_j(z) = \left\{ \begin{array}{ll}
+\displaystyle \frac{(1+z) P_{np-1}^{\alpha,\beta+1}(z)}
+{((1+z_j) [P_{np-1}^{\alpha,\beta+1}(z_j)]^\prime +
+P_{np-1}^{\alpha,\beta+1}(z_j) ) (z-z_j)} & \mbox{if $z \ne z_j$}\\
+& \\
+1 & \mbox{if $z=z_j$}
+\end{array}
+\right.
+\end{array}   $
+\pagebreak
+
+$ \begin{array}{rcl}
+h_j(z) = \left\{ \begin{array}{ll}
+\displaystyle \frac{(1-z) P_{np-1}^{\alpha+1,\beta}(z)}
+{((1-z_j) [P_{np-1}^{\alpha+1,\beta}(z_j)]^\prime -
+P_{np-1}^{\alpha+1,\beta}(z_j) ) (z-z_j)} & \mbox{if $z \ne z_j$}\\
+& \\
+1 & \mbox{if $z=z_j$}
+\end{array}
+\right.
+\end{array}   $
+\pagebreak
+
+$ \begin{array}{rcl}
+h_j(z) = \left\{ \begin{array}{ll}
+\displaystyle \frac{(1-z^2) P_{np-2}^{\alpha+1,\beta+1}(z)}
+{((1-z^2_j) [P_{np-2}^{\alpha+1,\beta+1}(z_j)]^\prime -
+2 z_j P_{np-2}^{\alpha+1,\beta+1}(z_j) ) (z-z_j)}&\mbox{if $z \ne z_j$}\\
+& \\
+1 & \mbox{if $z=z_j$}
+\end{array}
+\right.
+\end{array}   $
+\pagebreak
+
+$
+u(zm[i]) = \sum_{j=0}^{nz-1} im[i*nz+j] \ u(zgj[j])
+$
+\pagebreak
+
+$ u(zm[i]) =    \sum_{j=0}^{nz-1} im[i*nz+j] \ u(zgrj[j]) $
+\pagebreak
+
+$ u(zm[i]) =    \sum_{j=0}^{nz-1} im[i*nz+j] \ u(zglj[j]) $
+\pagebreak
+
+$
+       P^{\alpha,\beta}_n(z) $
+\pagebreak
+
+$
+       \frac{d}{dz} P^{\alpha,\beta}_n(z) $
+\pagebreak
+
+$ P^{\alpha,\beta}_n(z) \alpha > -1, \beta > -1 $
+\pagebreak
+
+$ \begin{array}{rcl}
+P^{\alpha,\beta}_0(z) &=& 1 \\
+P^{\alpha,\beta}_1(z) &=& \frac{1}{2} [ \alpha-\beta+(\alpha+\beta+2)z] \\
+a^1_n P^{\alpha,\beta}_{n+1}(z) &=& (a^2_n + a^3_n z)
+P^{\alpha,\beta}_n(z) - a^4_n P^{\alpha,\beta}_{n-1}(z) \\
+a^1_n &=& 2(n+1)(n+\alpha + \beta + 1)(2n + \alpha + \beta) \\
+a^2_n &=& (2n + \alpha + \beta + 1)(\alpha^2 - \beta^2)  \\
+a^3_n &=& (2n + \alpha + \beta)(2n + \alpha + \beta + 1)
+(2n + \alpha + \beta + 2)  \\
+a^4_n &=& 2(n+\alpha)(n+\beta)(2n + \alpha + \beta + 2)
+\end{array} $
+\pagebreak
+
+$ \begin{array}{rcl}
+b^1_n(z)\frac{d}{dz} P^{\alpha,\beta}_n(z)&=&b^2_n(z)P^{\alpha,\beta}_n(z)
++ b^3_n(z) P^{\alpha,\beta}_{n-1}(z) \hspace{2.2cm} \\
+b^1_n(z) &=& (2n+\alpha + \beta)(1-z^2) \\
+b^2_n(z) &=& n[\alpha - \beta - (2n+\alpha + \beta)z]\\
+b^3_n(z) &=& 2(n+\alpha)(n+\beta)
+\end{array} $
+\pagebreak
+
+$ P^(\alpha,\beta)_n(z)$
+\pagebreak
+
+$ \frac{d}{dz} P^{\alpha,\beta}_n(z)
+= \frac{1}{2} (\alpha + \beta + n + 1)  P^{\alpha,\beta}_n(z) $
+\pagebreak
+
+$ P_n^{\alpha,\beta}(z) = 0 $
+\pagebreak
+
+$( \alpha > -1, \beta > -1)$
+\pagebreak
+
+$ \left [  \begin{array}{ccccc}
+a[0] & b[0]   &        &        & \\
+b[0] & a[1]   & b[1]   &        & \\
+0   & \ddots & \ddots & \ddots &  \\
+&        & \ddots & \ddots & b[n-2] \\
+&        &        & b[n-2] & a[n-1] \end{array} \right ] $
+\pagebreak
+
+$  b_j p_j(z) = (z - a_j ) p_{j-1}(z) - b_{j-1}   p_{j-2}(z) $
+\pagebreak
+
+$ j=n+1$
+\pagebreak
+
+$p_j(z)$
+\pagebreak
+
+$ \alpha,\beta > -1$
+\pagebreak
+
+$ \Gamma(x)$
+\pagebreak
+
+$\Gamma(x)$
+\pagebreak
+
+$ \Gamma(x) = (x-1)!  \mbox{ or  }  \Gamma(x+1/2) = (x-1/2)\Gamma(x-1/2)$
+\pagebreak
+
+$ \Gamma(1/2) = \sqrt{\pi}$
+\pagebreak
+
+$i(xMult)            = 0$
+\pagebreak
+
+$i(xMult,yMult)      =yMult$
+\pagebreak
+
+$i(xMult,yMult,zMult)=zMult+\sum_{r = 0}^{k-xMult} r$
+\pagebreak
+
+$\displaystyle D\{1,2,1\}f = \frac{d^4 f}{dx dy^2 dz}$
+\pagebreak
+
+$\{x, y, z\}$
+\pagebreak
+
+$\{1,2,1\}$
+\pagebreak
+
+\[       \begin{pmatrix} spaceDim + k - 1 \\ spaceDim - 1 \end{pmatrix}              \]
+\pagebreak
+
+${\bf t}$
+\pagebreak
+
+${\bf n}$
+\pagebreak
+
+$n$
+\pagebreak
+
+$n+1$
+\pagebreak
+
+$ \alpha $
+\pagebreak
+
+$ \beta $
+\pagebreak
+
+$ n $
+\pagebreak
+
+\[
+            P_n^{(\alpha,\beta)} (z) = 
+              \frac{\Gamma (\alpha+n+1)}{n!\Gamma (\alpha+\beta+n+1)}
+              \sum_{m=0}^n {n\choose m}
+              \frac{\Gamma (\alpha + \beta + n + m + 1)}{\Gamma (\alpha + m + 1)} \left(\frac{z-1}{2}\right)^m
+          \]
+\pagebreak
+
+$ P_0^{(\alpha,\beta)} $
+\pagebreak
+
+$ P_0^{(\alpha,\beta)}, P_1^{(\alpha,\beta)} $
+\pagebreak
+
+$ P_0^{(\alpha,\beta)}, P_1^{(\alpha,\beta)}, P_2^{(\alpha,\beta)} $
+\pagebreak
+
+$ P_0^{(\alpha,\beta)}, P_1^{(\alpha,\beta)}, ..., P_3^{(\alpha,\beta)} $
+\pagebreak
+
+$ P_0^{(\alpha,\beta)}, P_1^{(\alpha,\beta)}, ..., P_n^{(\alpha,\beta)} $
+\pagebreak
+
+$ 1 $
+\pagebreak
+
+$ x $
+\pagebreak
+
+$ \frac{1}{2} (3x^2-1) $
+\pagebreak
+
+$ \frac{1}{2} (5x^3-3x) $
+\pagebreak
+
+$ \frac{1}{8} (35x^4-30x^2+3) $
+\pagebreak
+
+$ \frac{1}{8} (63x^5-70x^3+15x) $
+\pagebreak
+
+$ \frac{1}{16} (231x^6-315x^4+105x^2-5) $
+\pagebreak
+
+$ \frac{1}{16} (429x^7-693x^5+315x^3-35x) $
+\pagebreak
+
+$ \frac{1}{128} (6435x^8-12012x^6+6930x^4-1260x^2+35) $
+\pagebreak
+
+$ \frac{1}{128} (12155x^9-25740x^7+18018x^5-4620x^3+315x) $
+\pagebreak
+
+$ \frac{1}{128} (46189x^{10}-109395x^8+90090x^6-30030x^4+3465x^2-63) $
+\pagebreak
+
+$\mathcal{H}_n\subset H_0^2(\Omega)$
+\pagebreak
+
+$\Omega=[-1,1]$
+\pagebreak
+
+\[\mathcal{H}_n = \{h_{2j}(x),h_{2j+1}\}_{j=0}^{n-1} \]
+\pagebreak
+
+$\{x_i\}_{i=0}^{n-1}$
+\pagebreak
+
+\[ -1\leq x_0 \leq \cdots \leq x_i \leq x_{i+1} \leq \cdots \leq x_n \leq 1 \]
+\pagebreak
+
+\[ h_{2j}(x_i) = \delta_{ij},\quad h'_{2j}(x_i) = 0 \]
+\pagebreak
+
+\[ h_{2j+1}(x_i) = 0,\quad h'_{2j+1}(x_i) = \delta_{ij} \]
+\pagebreak
+
+\[ P_{j+1}(x) = x P_j(x) + \frac{x^2-1}{j+1}P_j^{(1)}(x),\quad P_0(x) = 1 \]
+\pagebreak
+
+\[ P_{j+1}^{(m)(x)} = (j+m)P_j^{(m-1)}(x) + x P_j^{(m)}(x),\quad P_j^{(m)} = 0,\;\forall j<m\]
+\pagebreak
+
+$P_j(x_i)$
+\pagebreak
+
+$P_j'(x_i)$
+\pagebreak
+
+$x_i$
+\pagebreak
+
+$P_j^{(m)}(x_i) $
+\pagebreak
+
+$P_j^{(m+1)}(x_i)  $
+\pagebreak
+
+\[
+P^{\alpha,\beta}_{n+1} = \left( a_n + b_n x\right) P^{\alpha,\beta}_n - c_n P^{\alpha,\beta}_{n-1}
+\]
+\pagebreak
+
+\[
+P^{\alpha,\beta}_0 = 1
+\]
+\pagebreak
+
+$H(grad,\Omega)$
+\pagebreak
+
+$H(curl,\Omega)$
+\pagebreak
+
+$H(div,\Omega)$
+\pagebreak
+
+$L^2(\Omega)$
+\pagebreak
+
+$\widehat{{\mathcal C}}$
+\pagebreak
+
+$\{\widehat{{\mathcal C}},\widehat{P},\widehat{\Lambda}\}$
+\pagebreak
+
+$\{\widehat{u}_i\}_{i=0}^n$
+\pagebreak
+
+$\{{u}_i\}_{i=0}^n$
+\pagebreak
+
+$\{{\mathcal C},P,\Lambda\}$
+\pagebreak
+
+\[
+      u_i = \sigma_i \Phi^*(\widehat{u}_i), \qquad i=1,\ldots,n \,.
+ \]
+\pagebreak
+
+$\{\sigma_i\}_{i=0}^n$
+\pagebreak
+
+$\sigma_i = \pm 1$
+\pagebreak
+
+$\Phi^*$
+\pagebreak
+
+$F_{\mathcal C}$
+\pagebreak
+
+$DF_{\mathcal C}$
+\pagebreak
+
+$J_{\mathcal C} = \det(DF_{\mathcal C})$
+\pagebreak
+
+\[
+    \begin{array}{ll}
+      \Phi^*_G : HGRAD(\widehat{{\mathcal C}}) \mapsto HGRAD({\mathcal C})&
+      \qquad \Phi^*_G(\widehat{u}) = \widehat{u}\circ F^{-1}_{\mathcal C} \\[2ex]
+      \Phi^*_C : HCURL(\widehat{{\mathcal C}}) \mapsto HCURL({\mathcal C})&
+      \qquad \Phi^*_C(\widehat{\bf u}) = \left((DF_{\mathcal C})^{-{\sf T}}\cdot\widehat{\bf u}\right)\circ F^{-1}_{\mathcal C} \\[2ex]
+      \Phi^*_D : HDIV(\widehat{{\mathcal C}}) \mapsto HDIV({\mathcal C})&
+      \qquad \Phi^*_D(\widehat{\bf u}) = \left(J^{-1}_{\mathcal C} DF_{\mathcal C}\cdot\widehat{\bf u}\right)\circ F^{-1}_{\mathcal C} 
+      \\[2ex]
+      \Phi^*_S : HVOL(\widehat{{\mathcal C}}) \mapsto HVOL({\mathcal C})&
+      \qquad \Phi^*_S(\widehat{u}) = \left(J^{-1}_{\mathcal C} \widehat{u}\right) \circ F^{-1}_{\mathcal C} \,.
+    \end{array}
+ \]
+\pagebreak
+
+\[
+          \int_{{\mathcal C}} f(x) dx = \int_{\widehat{{\mathcal C}}} f(F(\widehat{x})) |J | d\widehat{x}
+      \]
+\pagebreak
+
+$\mathcal{F}$
+\pagebreak
+
+\[
+          \int_{\mathcal{F}} f(x) dx = \int_{R} f(\Phi(u,v)) 
+          \left\|\frac{\partial\Phi}{\partial u}\times \frac{\partial\Phi}{\partial v}\right\| du\,dv
+      \]
+\pagebreak
+
+$\mathcal{E}$
+\pagebreak
+
+\[
+          \int_{\mathcal{E}} f(x) dx = \int_{R} f(\Phi(s)) \|\Phi'\| ds
+      \]
+\pagebreak
+
+$\{{\bf u}_i\}_{i=0}^n$
+\pagebreak
+
+$\{c_i\}_{i=0}^n$
+\pagebreak
+
+\[
+      {\bf u}^h(x) = \sum_{i=0}^n c_i {\bf u}_i(x) \,.
+ \]
+\pagebreak
+
+\[
+      {\bf u}^h(x) = \sum_{i=0}^n c_i \sigma_i
+               \left((DF_{\mathcal C})^{-{\sf T}}\cdot\widehat{\bf u}_i\right)\circ 
+                     F^{-1}_{\mathcal C}(x) 
+             = \sum_{i=0}^n c_i \sigma_i 
+                    (DF_{\mathcal C}(\widehat{x}))^{-{\sf T}}\cdot\widehat{\bf u}_i(\widehat{x})\,,
+ \]
+\pagebreak
+
+$ \widehat{x} = F^{-1}_{\mathcal C}(x) \in \widehat{\mathcal C} $
+\pagebreak
+
+$\{x_p\}_{p=0}^P \subset {\mathcal C}$
+\pagebreak
+
+$F^{-1}_{\mathcal C}$
+\pagebreak
+
+$\{\widehat{x}_p\}_{p=0}^P$
+\pagebreak
+
+$\widehat{\mathcal{C}}$
+\pagebreak
+
+$\{\widehat{\bf u}_i\}_{i=1}^n$
+\pagebreak
+
+\[
+      \mathbf{K}^{\mathcal{C}}_{i,j} = \int_{\mathcal C} {\mathcal L}_L {\bf u}_i(x)\, {\mathcal L}_R {\bf u}_j(x) \, dx \,.
+ \]
+\pagebreak
+
+${\mathcal L}_L$
+\pagebreak
+
+${\mathcal L}_R $
+\pagebreak
+
+\[
+     \mathbf{K}^{\mathcal{C}}_{i,j} = \int_{\widehat{\mathcal C}} \sigma_i \sigma_j
+     (DF_{\mathcal C}(\widehat{x}))^{-{\sf T}}\cdot\widehat{\bf u}_i(\widehat{x})\cdot
+     (DF_{\mathcal C}(\widehat{x}))^{-{\sf T}}\cdot\widehat{\bf u}_i(\widehat{x})\,d\widehat{x}
+ \]
+\pagebreak
+
+\[
+   \mathbf{K}^{\mathcal{C}}_{i,j} = 
+   \mbox{diag}(\sigma_0,\ldots,\sigma_n)\widehat{\mathbf{K}}^{\mathcal{C}}\mbox{diag}(\sigma_0,\ldots,\sigma_n)
+ \]
+\pagebreak
+
+\[ 
+   \widehat{\mathbf{K}}^{\mathcal{C}}_{i,j} = \int_{\widehat{\mathcal C}}
+   (DF_{\mathcal C}(\widehat{x}))^{-{\sf T}}\cdot\widehat{\bf u}_i(\widehat{x})\cdot
+   (DF_{\mathcal C}(\widehat{x}))^{-{\sf T}}\cdot\widehat{\bf u}_i(\widehat{x})\,d\widehat{x}
+ \]
+\pagebreak
+
+\[
+   \mathbf{f}^{\mathcal{C}}_{i} = \int_{\mathcal C} f(x) {\mathcal L}_R u_i(x) \, dx \,.
+ \]
+\pagebreak
+
+\[
+   \mathbf{f}^{\mathcal{C}} = 
+      \mbox{diag}(\sigma_0,\ldots,\sigma_n)\widehat{\mathbf{f}}^{\mathcal{C}}\,,
+ \]
+\pagebreak
+
+\[
+   \widehat{\mathbf{f}}^{\mathcal{C}} = \int_{\widehat{\mathcal C}}
+         \mathbf{f}\circ F_{\mathcal C}(\widehat{x}) 
+         (DF_{\mathcal C}(\widehat{x}))^{-{\sf T}}\cdot\widehat{\bf u}_i(\widehat{x})\,d\widehat{x}
+ \]
+\pagebreak
+
+$\Phi^*(\widehat{u}_f) = \widehat{u}_f\circ F^{-1}_{c} $
+\pagebreak
+
+\[
+         \{ x_{c,p} \}_{p=0}^P = \{ F_{c} (\widehat{x}_p) \}_{p=0}^{P}\qquad 0\le c < C \,.
+  \]
+\pagebreak
+
+$ F^{-1}_{c}(x_{c,p}) = \widehat{x}_p $
+\pagebreak
+
+$\{\widehat{u}_f\}_{f=0}^{F}$
+\pagebreak
+
+\[
+         inVals(f,p) = \widehat{u}_f(\widehat{x}_p) \,.
+  \]
+\pagebreak
+
+\[
+         outVals(c,f,p) 
+            = \widehat{u}_f\circ F^{-1}_{c}(x_{c,p}) 
+            = \widehat{u}_f(\widehat{x}_p) =  inVals(f,p) \qquad 0\le c < C \,,
+  \]
+\pagebreak
+
+$\Phi^*(\nabla\widehat{u}_f) = \left((DF_c)^{-{\sf T}}\cdot\nabla\widehat{u}_f\right)\circ F^{-1}_{c}$
+\pagebreak
+
+\[
+         inVals(f,p,*) = \nabla\widehat{u}_f(\widehat{x}_p) \,.
+  \]
+\pagebreak
+
+\[
+         outVals(c,f,p,*) 
+              = \left((DF_c)^{-{\sf T}}\cdot\nabla\widehat{u}_f\right)\circ F^{-1}_{c}(x_{c,p}) 
+              = (DF_c)^{-{\sf T}}(\widehat{x}_p)\cdot\nabla\widehat{u}_f(\widehat{x}_p) \qquad 0\le c < C \,.
+  \]
+\pagebreak
+
+$\Phi^*(\widehat{\bf u}_f) = \left((DF_c)^{-{\sf T}}\cdot\widehat{\bf u}_f\right)\circ F^{-1}_{c}$
+\pagebreak
+
+$\{\widehat{\bf u}_f\}_{f=0}^{F}$
+\pagebreak
+
+\[
+         inVals(f,p,*) = \widehat{\bf u}_f(\widehat{x}_p) \,.
+  \]
+\pagebreak
+
+\[
+          outVals(c,f,p,*) 
+            = \left((DF_c)^{-{\sf T}}\cdot\widehat{\bf u}_f\right)\circ F^{-1}_{c}(x_{c,p}) 
+            = (DF_c)^{-{\sf T}}(\widehat{x}_p)\cdot\widehat{\bf u}_f(\widehat{x}_p) \qquad 0\le c < C \,.
+  \]
+\pagebreak
+
+$\Phi^*(\widehat{\bf u}_f) = \left(J^{-1}_{c} DF_{c}\cdot\nabla\times\widehat{\bf u}_f\right)\circ F^{-1}_{c}$
+\pagebreak
+
+\[
+         inVals(f,p,*) = \nabla\times\widehat{\bf u}_f(\widehat{x}_p) \,.
+  \]
+\pagebreak
+
+\[
+         outVals(c,f,p,*) 
+            = \left(J^{-1}_{c} DF_{c}\cdot\nabla\times\widehat{\bf u}_f\right)\circ F^{-1}_{c}(x_{c,p}) 
+            = J^{-1}_{c}(\widehat{x}_p) DF_{c}(\widehat{x}_p)\cdot\nabla\times\widehat{\bf u}_f(\widehat{x}_p)
+          \qquad 0\le c < C \,.
+  \]
+\pagebreak
+
+$\Phi^*(\widehat{\bf u}_f) = \left(J^{-1}_{c} DF_{c}\cdot\widehat{\bf u}_f\right)\circ F^{-1}_{c} $
+\pagebreak
+
+\[
+         outVals(c,f,p,*) 
+          = \left(J^{-1}_{c} DF_{c}\cdot \widehat{\bf u}_f\right)\circ F^{-1}_{c}(x_{c,p}) 
+          = J^{-1}_{c}(\widehat{x}_p) DF_{c}(\widehat{x}_p)\cdot\widehat{\bf u}_f(\widehat{x}_p)
+          \qquad 0\le c < C \,.
+  \]
+\pagebreak
+
+$\Phi^*(\widehat{\bf u}_f) = \left(J^{-1}_{c}\nabla\cdot\widehat{\bf u}_{f}\right) \circ F^{-1}_{c} $
+\pagebreak
+
+\[
+         inVals(f,p) = \nabla\cdot\widehat{\bf u}_f(\widehat{x}_p) \,.
+  \]
+\pagebreak
+
+\[
+         outVals(c,f,p,*) 
+            = \left(J^{-1}_{c}\nabla\cdot\widehat{\bf u}_{f}\right) \circ F^{-1}_{c} (x_{c,p}) 
+            = J^{-1}_{c}(\widehat{x}_p) \nabla\cdot\widehat{\bf u}_{f} (\widehat{x}_p)
+            \qquad 0\le c < C \,.
+  \]
+\pagebreak
+
+$\Phi^*(\widehat{u}_f) = \left(J^{-1}_{c}\widehat{u}_{f}\right) \circ F^{-1}_{c} $
+\pagebreak
+
+\[
+         outVals(c,f,p,*) 
+            = \left(J^{-1}_{c}\widehat{u}_{f}\right) \circ F^{-1}_{c} (x_{c,p}) 
+            = J^{-1}_{c}(\widehat{x}_p) \widehat{u}_{f} (\widehat{x}_p)
+            \qquad 0\le c < C \,.
+  \]
+\pagebreak
+
+\[
+         \mbox{outVals}(c,p)   = |\mbox{det}(DF_{c}(\widehat{x}_p))|\omega_{p} \,,
+  \]
+\pagebreak
+
+$\{(\widehat{x}_p,\omega_p)\}$
+\pagebreak
+
+\[
+         \mbox{outVals}(c,p)   = 
+          \left\|\frac{\partial\Phi_c(\widehat{x}_p)}{\partial u}\times 
+                 \frac{\partial\Phi_c(\widehat{x}_p)}{\partial v}\right\|\omega_{p} \,,
+\]
+\pagebreak
+
+$\widehat{\mathcal{F}}$
+\pagebreak
+
+$ \Phi_c : R \mapsto \mathcal{F} $
+\pagebreak
+
+\[
+         \mbox{outVals}(c,p)   = 
+              \left\|\frac{d \Phi_c(\widehat{x}_p)}{d s}\right\|\omega_{p} \,,
+\]
+\pagebreak
+
+$\widehat{\mathcal{E}}$
+\pagebreak
+
+$ \Phi_c : R \mapsto \mathcal{E} $
+\pagebreak
+
+\[
+       \mathbf{K}^{c} = \mbox{diag}(\sigma^c_0,\ldots,\sigma^c_{L-1}) \mathbf{K}^c 
+\]
+\pagebreak
+
+$\mathbf{K}^{c} \in \mathbf{R}^{L\times R}$
+\pagebreak
+
+$\{\sigma^c_l\}_{l=0}^{L-1}$
+\pagebreak
+
+\[
+       \mathbf{K}^{c} = \mathbf{K}^c \mbox{diag}(\sigma^c_0,\ldots,\sigma^c_{R-1})
+\]
+\pagebreak
+
+$\{\sigma^c_r\}_{r=0}^{R-1}$
+\pagebreak
+
+\[    
+       \mbox{inoutFunction}(c,f,*) = \mbox{fieldSigns}(c,f)*\mbox{inoutFunction}(c,f,*)
+\]
+\pagebreak
+
+\[
+       outPointValues(c,p,*) = \sum_{f=0}^{F-1} \sigma_{c,f} u_{c,f}(x_p)
+\]
+\pagebreak
+
+$\{u_{c,f}\}_{f=0}^{F-1} $
+\pagebreak
+
+$\{\sigma_{c,f}\}_{f=0}^{F-1} $
+\pagebreak
+
+\end{document}

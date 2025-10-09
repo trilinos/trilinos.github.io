@@ -1,0 +1,15 @@
+var searchData=
+[
+  ['val_0',['val',['../classZoltan2_1_1uMultiSortItem.html#a906495ec309fa933926041108088da93',1,'Zoltan2::uMultiSortItem::val'],['../structZoltan2_1_1uSortItem.html#afa6eaba5a834f807cb17720e2cc47c72',1,'Zoltan2::uSortItem::val'],['../structZoltan2_1_1uSignedSortItem.html#a48233012167beb7b95cbee209bbd9103',1,'Zoltan2::uSignedSortItem::val'],['../classgid__struct.html#ad55e9cb992efa582199634d84986548c',1,'gid_struct::val'],['../classlid__struct.html#a6f976d1d8e98df92967eebf579ad4f4b',1,'lid_struct::val'],['../structZoltan2_1_1GMWM__triplet.html#a5cbbc1e2e8200c4edbd22d655d45ac38',1,'Zoltan2::GMWM_triplet::val']]],
+  ['value_1',['value',['../structZoltan2_1_1ArrayCombinationReducer.html#aa4f165c8cf4698f1a03b0b2c9c186589',1,'Zoltan2::ArrayCombinationReducer::value'],['../structZoltan2_1_1ArrayReducer.html#a9365670425b0a71b8b2082191b0b8daa',1,'Zoltan2::ArrayReducer::value']]],
+  ['value_5fcount_2',['value_count',['../structZoltan2_1_1ReduceWeightsFunctor.html#a29c45a3112d06816da5986c39088e2f3',1,'Zoltan2::ReduceWeightsFunctor::value_count'],['../structZoltan2_1_1ArrayReducer.html#aa11e395e779def8774108cae440738d3',1,'Zoltan2::ArrayReducer::value_count'],['../structZoltan2_1_1ReduceArrayFunctor.html#a636027d3818d79ff4ebb8d2fc0d301ea',1,'Zoltan2::ReduceArrayFunctor::value_count']]],
+  ['value_5fcount_5frightleft_3',['value_count_rightleft',['../structZoltan2_1_1ArrayCombinationReducer.html#a72946ebf2a06ab54ec6d5fcd0c1dbc0c',1,'Zoltan2::ArrayCombinationReducer::value_count_rightleft'],['../structZoltan2_1_1ReduceWeightsFunctor.html#aebdc7cb7bc327f9f2350e45c8fef14d6',1,'Zoltan2::ReduceWeightsFunctor::value_count_rightleft']]],
+  ['value_5fcount_5fweights_4',['value_count_weights',['../structZoltan2_1_1ArrayCombinationReducer.html#aca1772be4c8d940711d59286370b58c9',1,'Zoltan2::ArrayCombinationReducer::value_count_weights'],['../structZoltan2_1_1ReduceWeightsFunctor.html#aa85d3ba4c2c9d0bab0af4db13db1d2d8',1,'Zoltan2::ReduceWeightsFunctor::value_count_weights']]],
+  ['values_5f_5',['values_',['../classZoltan2_1_1TpetraRowMatrixAdapter.html#abb4d26d8237dddbe2951cdd1e4b3596e',1,'Zoltan2::TpetraRowMatrixAdapter']]],
+  ['valuesdevice_5f_6',['valuesDevice_',['../classZoltan2_1_1TpetraRowMatrixAdapter.html#af8e609cf2b4ce08a91699ff772cb3b59',1,'Zoltan2::TpetraRowMatrixAdapter']]],
+  ['valueshost_5f_7',['valuesHost_',['../classZoltan2_1_1TpetraRowMatrixAdapter.html#aae4b422b1e1973b846426353e2d15cf1',1,'Zoltan2::TpetraRowMatrixAdapter']]],
+  ['verbose_8',['verbose',['../classZoltan2_1_1AlgTwoGhostLayer.html#a503e4d33837a527e763331e23d4ce8b9',1,'Zoltan2::AlgTwoGhostLayer']]],
+  ['vertexdegreeweightshost_5f_9',['vertexDegreeWeightsHost_',['../classZoltan2_1_1TpetraRowGraphAdapter.html#ad802c89a74daa766a4c5e4905540b64c',1,'Zoltan2::TpetraRowGraphAdapter']]],
+  ['vertexweights_5f_10',['vertexWeights_',['../classZoltan2_1_1TpetraRowGraphAdapter.html#a07bc572317a37aaaace55f32a978c9e8',1,'Zoltan2::TpetraRowGraphAdapter']]],
+  ['vertexweightsdevice_5f_11',['vertexWeightsDevice_',['../classZoltan2_1_1TpetraRowGraphAdapter.html#a8162ac4209848c8268df282731a9f836',1,'Zoltan2::TpetraRowGraphAdapter']]]
+];

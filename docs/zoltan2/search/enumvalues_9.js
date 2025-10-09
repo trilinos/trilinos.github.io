@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['no_5fassertions_0',['NO_ASSERTIONS',['../namespaceZoltan2.html#aa5647ff710d93088b7a1d04d16dbb28ba6988ce41922a05d4283580a2e556fc04',1,'Zoltan2']]],
+  ['no_5fstatus_1',['NO_STATUS',['../namespaceZoltan2.html#a6cae7ee10d21c7dada0507a5fec0fea4ad4e232477df407ef592c9d2c1d589047',1,'Zoltan2']]],
+  ['no_5ftimers_2',['NO_TIMERS',['../namespaceZoltan2.html#a2dd9d7a02bc84c094dd86c8c20c644b3a347d353d94b06fd8742d3a9994935aca',1,'Zoltan2']]],
+  ['normal_3',['normal',['../namespaceGeometricGen.html#a7d7e6d588f22bdfb8b62c7861614aeddaf8217fa5c80e85f2f4d72af7c87cf4dd',1,'GeometricGen']]],
+  ['normalized_4',['NORMALIZED',['../classZoltan2_1_1Sphynx.html#a5279801bd5762fc4367459f7e3ed862aa175ff6f89b1f1cbdc73c9657675953fc',1,'Zoltan2::Sphynx']]],
+  ['normbalancetotalmaximum_5',['normBalanceTotalMaximum',['../namespaceZoltan2.html#ace30a7e56ae81ff5f9ddb60bb2374960ac0ba2557881e09183879c3737cf07de1',1,'Zoltan2']]],
+  ['normminimizemaximumweight_6',['normMinimizeMaximumWeight',['../namespaceZoltan2.html#ace30a7e56ae81ff5f9ddb60bb2374960acc9eea7abd79633a57db3be949951b25',1,'Zoltan2']]],
+  ['normminimizetotalweight_7',['normMinimizeTotalWeight',['../namespaceZoltan2.html#ace30a7e56ae81ff5f9ddb60bb2374960ac2df9f9b7c0d5b6509e08b8077f2fe7e',1,'Zoltan2']]],
+  ['normnumnorms_8',['normNumNorms',['../namespaceZoltan2.html#ace30a7e56ae81ff5f9ddb60bb2374960ac78467131b246c3e2bce8870a027d855',1,'Zoltan2']]],
+  ['null_5fstream_9',['NULL_STREAM',['../namespaceZoltan2.html#a842ab8d87036919da883b47a6963e3d7a40f36f480bc17926a7f72137afb72900',1,'Zoltan2']]],
+  ['num_5fassertion_5flevels_10',['NUM_ASSERTION_LEVELS',['../namespaceZoltan2.html#aa5647ff710d93088b7a1d04d16dbb28babb1cd65d599323aa0a2a16b047e67537',1,'Zoltan2']]],
+  ['num_5fblock_5fparams_11',['NUM_BLOCK_PARAMS',['../namespaceZoltan2.html#aa565d9a766e408a4f71dd4bc1922f2bfa9026306d720b6ac12a903fab375458b6',1,'Zoltan2']]],
+  ['num_5fmodel_5fflags_12',['NUM_MODEL_FLAGS',['../namespaceZoltan2.html#ac94d579d4d368c280117017ab19d553bac46e9871208585794292eaa73b40d5c6',1,'Zoltan2']]],
+  ['num_5foutput_5fstreams_13',['NUM_OUTPUT_STREAMS',['../namespaceZoltan2.html#a842ab8d87036919da883b47a6963e3d7a55d35bfa9dbe7a7990b8b32351766bf1',1,'Zoltan2']]],
+  ['num_5frange_5ftypes_14',['NUM_RANGE_TYPES',['../namespaceZoltan2.html#a85521ffef37f8ba522b17793fddf280ead625aa352192714f5f5c4ee68000dc1d',1,'Zoltan2']]],
+  ['num_5fstatus_5foutput_5flevels_15',['NUM_STATUS_OUTPUT_LEVELS',['../namespaceZoltan2.html#a6cae7ee10d21c7dada0507a5fec0fea4ab544612bab177df18e1fb97b95e3a3f4',1,'Zoltan2']]],
+  ['num_5ftiming_5foptions_16',['NUM_TIMING_OPTIONS',['../namespaceZoltan2.html#a2dd9d7a02bc84c094dd86c8c20c644b3afb354ca97a37718f7db7024f9198e322',1,'Zoltan2']]],
+  ['numweighttypes_17',['numweighttypes',['../partition_2rcbPerformanceZ1_8cpp.html#aae9d49bbbd69858ce68ddeaabea9d177a865aa7abf552156b7355204290ff24c2',1,'numWeightTypes:&#160;rcbPerformanceZ1.cpp'],['../rcbPerformance_8cpp.html#aae9d49bbbd69858ce68ddeaabea9d177a865aa7abf552156b7355204290ff24c2',1,'numWeightTypes:&#160;rcbPerformance.cpp'],['../scaling_2rcbPerformanceZ1_8cpp.html#aae9d49bbbd69858ce68ddeaabea9d177a865aa7abf552156b7355204290ff24c2',1,'numWeightTypes:&#160;rcbPerformanceZ1.cpp']]]
+];

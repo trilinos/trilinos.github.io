@@ -1,0 +1,7 @@
+var searchData=
+[
+  ['basicreductobjreductionop_0',['BasicReductObjReductionOp',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/rtop/doc/../../../packages/rtop/src/support/doc/html/classRTOpPack_1_1BasicReductObjReductionOp.html',1,'RTOpPack']]],
+  ['basicreductobjreductionop_3c_20concretereductobj_2c_20reduct_5ftype_5fmax_20_3e_1',['BasicReductObjReductionOp&lt; ConcreteReductObj, REDUCT_TYPE_MAX &gt;',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/rtop/doc/../../../packages/rtop/src/support/doc/html/classRTOpPack_1_1BasicReductObjReductionOp_3_01ConcreteReductObj_00_01REDUCT__TYPE__MAX_01_4.html',1,'RTOpPack']]],
+  ['basicreductobjreductionop_3c_20concretereductobj_2c_20reduct_5ftype_5fmin_20_3e_2',['BasicReductObjReductionOp&lt; ConcreteReductObj, REDUCT_TYPE_MIN &gt;',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/rtop/doc/../../../packages/rtop/src/support/doc/html/classRTOpPack_1_1BasicReductObjReductionOp_3_01ConcreteReductObj_00_01REDUCT__TYPE__MIN_01_4.html',1,'RTOpPack']]],
+  ['basicreductobjreductionop_3c_20concretereductobj_2c_20reduct_5ftype_5fsum_20_3e_3',['BasicReductObjReductionOp&lt; ConcreteReductObj, REDUCT_TYPE_SUM &gt;',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/rtop/doc/../../../packages/rtop/src/support/doc/html/classRTOpPack_1_1BasicReductObjReductionOp_3_01ConcreteReductObj_00_01REDUCT__TYPE__SUM_01_4.html',1,'RTOpPack']]]
+];

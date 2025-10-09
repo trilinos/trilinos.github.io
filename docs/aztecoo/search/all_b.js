@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['namelist_0',['Namelist',['../structNamelist.html',1,'']]],
+  ['nan_1',['NaN',['../AztecOO__StatusType_8h.html#a83d088aa694917fb31c40a66342b4ddea4c2b7217d0a01a8d2d8e35742bb635b2',1,'AztecOO_StatusType.h']]],
+  ['none_2',['None',['../classAztecOO__StatusTestResNorm.html#a49884bd281af874e277c7e14cf4f52feaa4c4a16ea29d027e11dfedc42226d7f9',1,'AztecOO_StatusTestResNorm']]],
+  ['norminf_3',['norminf',['../classEpetra__MsrMatrix.html#a0c5167577483c8c89964e3ec942b38fd',1,'Epetra_MsrMatrix::NormInf()'],['../classAztecOO__Operator.html#a79c25190ef11b53eb75184c8a3be8f4e',1,'AztecOO_Operator::NormInf()']]],
+  ['normofinitres_4',['NormOfInitRes',['../classAztecOO__StatusTestResNorm.html#a49884bd281af874e277c7e14cf4f52feafc2446aa89ec34f52f7448690a4479af',1,'AztecOO_StatusTestResNorm']]],
+  ['normofrhs_5',['NormOfRHS',['../classAztecOO__StatusTestResNorm.html#a49884bd281af874e277c7e14cf4f52feaf2437ffc9b9e89fa9bc08e54f81e62bd',1,'AztecOO_StatusTestResNorm']]],
+  ['normone_6',['NormOne',['../classEpetra__MsrMatrix.html#a1fec2da721c64fda5441a652bf3f947b',1,'Epetra_MsrMatrix']]],
+  ['normtype_7',['NormType',['../classAztecOO__StatusTestResNorm.html#a34110b05165d61286337f02f1150bd3d',1,'AztecOO_StatusTestResNorm']]],
+  ['numglobalcols_8',['NumGlobalCols',['../classEpetra__MsrMatrix.html#ab7867c4004d2ce8024d7cac91a7367f5',1,'Epetra_MsrMatrix']]],
+  ['numglobalcols64_9',['NumGlobalCols64',['../classEpetra__MsrMatrix.html#ada385116c70c26969dc8e9669e5dcf39',1,'Epetra_MsrMatrix']]],
+  ['numglobaldiagonals_10',['NumGlobalDiagonals',['../classEpetra__MsrMatrix.html#ab949484c0bc1b0621c2de0fdb2d02b27',1,'Epetra_MsrMatrix']]],
+  ['numglobaldiagonals64_11',['NumGlobalDiagonals64',['../classEpetra__MsrMatrix.html#a39670520fe0bc6f2db4e50585dbcafeb',1,'Epetra_MsrMatrix']]],
+  ['numglobalnonzeros_12',['NumGlobalNonzeros',['../classEpetra__MsrMatrix.html#a45b034b6934dc3c0bc76483e4d629719',1,'Epetra_MsrMatrix']]],
+  ['numglobalnonzeros64_13',['NumGlobalNonzeros64',['../classEpetra__MsrMatrix.html#af8278da63f2b08b18ac39e5860a4c8c8',1,'Epetra_MsrMatrix']]],
+  ['numglobalrows_14',['NumGlobalRows',['../classEpetra__MsrMatrix.html#a61243bf46cea54f29d1e0d6551bebb78',1,'Epetra_MsrMatrix']]],
+  ['numglobalrows64_15',['NumGlobalRows64',['../classEpetra__MsrMatrix.html#a18a78c52c5b9281b6e2a013be2191bc8',1,'Epetra_MsrMatrix']]],
+  ['numiters_16',['numiters',['../classAztecOO.html#ade765c89e8146e549db73ff9180efe2e',1,'AztecOO::NumIters()'],['../classAztecOO__Operator.html#ae6e89b8a3a8ed9c6d418a81c2fa3c7e9',1,'AztecOO_Operator::NumIters()']]],
+  ['nummycols_17',['NumMyCols',['../classEpetra__MsrMatrix.html#acabb4a2e5ff4601e3a51d0ce723b6ea0',1,'Epetra_MsrMatrix']]],
+  ['nummydiagonals_18',['NumMyDiagonals',['../classEpetra__MsrMatrix.html#a3304b05254d109d8abede24a6b537984',1,'Epetra_MsrMatrix']]],
+  ['nummynonzeros_19',['NumMyNonzeros',['../classEpetra__MsrMatrix.html#a260de0258c916c7553a8d7cf87336bba',1,'Epetra_MsrMatrix']]],
+  ['nummyrowentries_20',['NumMyRowEntries',['../classEpetra__MsrMatrix.html#a41eb43c65e43ed98df64bb0428704e1e',1,'Epetra_MsrMatrix']]],
+  ['nummyrows_21',['NumMyRows',['../classEpetra__MsrMatrix.html#a800a699e673c57b0aaa6c426be7b155e',1,'Epetra_MsrMatrix']]]
+];

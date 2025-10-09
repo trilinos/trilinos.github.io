@@ -1,0 +1,1921 @@
+\_form#0=229x33:\begin{eqnarray*}
+  \mbox{Explicit:} & \dot{x} = \mathbf{f}(x,t)    & \ddot{x} = \mathbf{f}(\dot{x},x,t) \\
+  \mbox{Implicit:} & \mathcal{F}(\dot{x},x,t) = 0 & \mathcal{F}(\ddot{x},\dot{x},x,t) = 0
+\end{eqnarray*}
+\_form#1=8x6:$x$
+\_form#2=8x9:$\dot{x}$
+\_form#3=8x9:$\ddot{x}$
+\_form#4=86x14:$\mathcal{F}(\ddot{x},\dot{x},x,t) = 0$
+\_form#5=21x14:$x(t)$
+\_form#6=21x14:$\dot{x}(t)$
+\_form#7=21x14:$\ddot{x}(t)$
+\_form#8=10x11:$t_0$
+\_form#9=11x13:$t_f$
+\_form#10=33x14:$dx/dp$
+\_form#11=119x15:$[x^0, ... , x^{n-2}, x^{n-1}, x^{n}]$
+\_form#12=9x6:$n$
+\_form#13=74x15:$[S^0, ... , S^{M-1}]$
+\_form#14=14x10:$M$
+\_form#15=39x13:$\le M \le$
+\_form#16=299x15:$[S^0(x^{n-M+1}), ... , S^{M-3}(x^{n-2}), S^{M-2}(x^{n-1}),
+    S^{M-1}(x^{n})]$
+\_form#17=319x15:$[..., S^{M-4}(x^{n-200}), S^{M-3}(x^{n-100}),
+S^{M-2}(x^{n-1}), S^{M-1}(x^{n})]$
+\_form#18=86x14:$\dot{x}(t) = f(x(t), t)$
+\_form#19=114x14:$\ddot{x}(t)
+= f(x(t), \dot{x}(t), t)$
+\_form#20=113x14:$F(x(t),
+\dot{x}(t), \ddot{x}(t) = 0$
+\_form#21=126x15:$\dot{x}^{n+1} =
+(x^{n+1} - x^n)/dt$
+\_form#22=178x15:$\dot{x}^{n+1} = (x^{n+1} - x^n)/(dt/2) -
+\dot{x}^n$
+\_form#23=33x11:$t =
+t_n$
+\_form#24=41x14:$x(t_{n+1})$
+\_form#25=51x15:$\dot{x}(t_{n+1/2})$
+\_form#26=29x14:$\ddot{x}(t_n)$
+\_form#27=11x11:$t_n$
+\_form#28=59x14:$f(x, \dot{x}, \ddot{x},t)$
+\_form#29=14x9:$x_n$
+\_form#30=36x14:$\dot{x}_{n+1/2}$
+\_form#31=278x45:\[
+  e_{wrms} \equiv \sqrt{ \frac{1}{N} \sum_{i=1}^N \left( \frac
+     {u^n_i}{A_{tol} + \max (|u^n_i|, |u^{n+1}_i|) R_{tol}} \right) ^2 }
+\]
+\_form#32=23x13:$A_{tol}$
+\_form#33=21x13:$R_{tol}$
+\_form#34=25x6:$\max$
+\_form#35=15x9:$u^n$
+\_form#36=26x11:$u^{n+1}$
+\_form#37=15x13:$ u_i^n$
+\_form#38=5x9:$i$
+\_form#39=11x10:$ N$
+\_form#40=159x19:\[
+  e = \max_i ( u_i / ( A_{tol} + |u_i| R_{tol}))
+\]
+\_form#41=28x9:$\max_i$
+\_form#42=74x14:$\mathcal{F}(\dot{x},x,t) = 0$
+\_form#43=451x155:\begin{center}
+   \parbox{5in}{
+   \rule{5in}{0.4pt} \\
+   {\bf Algorithm} Backward Euler \\
+   \rule{5in}{0.4pt} \vspace{-15pt}
+   \begin{enumerate}
+     \setlength{\itemsep}{0pt} \setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt} \item {\it appAction.execute(solutionHistory,
+stepper, BEGIN\_STEP)} \item {\bf Compute the predictor} (e.g., apply stepper
+to $x_n$). \item {\it appAction.execute(solutionHistory, stepper,
+BEGIN\_SOLVE)} \item {\bf Solve $\mathcal{F}_n(\dot{x}=(x_n-x_{n-1})/\Delta
+t_n, x_n, t_n)=0$ for $x_n$} \item {\it appAction.execute(solutionHistory,
+stepper, AFTER\_SOLVE)} \item $\dot{x}_n \leftarrow (x_n-x_{n-1})/\Delta t_n$
+     \item {\it appAction.execute(solutionHistory, stepper, END\_STEP)}
+   \end{enumerate}
+   \vspace{-10pt} \rule{5in}{0.4pt}
+   }
+ \end{center}
+\_form#44=14x10:$W$
+\_form#45=116x29:\[
+   W = \alpha \frac{\partial \mathcal{F}_n}{\partial \dot{x}_n}
+     + \beta  \frac{\partial \mathcal{F}_n}{\partial x_n},
+ \]
+\_form#46=68x20:$ \alpha \equiv \frac{\partial \dot{x}_n(x_n) }{\partial x_n}, $
+\_form#47=69x19:$ \beta \equiv \frac{\partial x_n}{\partial x_n} = 1$
+\_form#48=116x24:\[
+   \dot{x}_n(x_n) = \frac{x_n - x_{n-1}}{\Delta t},
+ \]
+\_form#49=39x16:$ \alpha = \frac{1}{\Delta t} $
+\_form#50=31x13:$ \beta = 1 $
+\_form#51=119x29:\[
+   W = \frac{1}{\Delta t}
+       \frac{\partial \mathcal{F}_n}{\partial \dot{x}_n}
+     + \frac{\partial \mathcal{F}_n}{\partial x_n}.
+ \]
+\_form#52=103x30:\[
+  \dot{x}_{n} = \frac{(x_{n} - x_{n-1})}{\Delta t_{n}}.
+\]
+\_form#53=24x10:$dot{x}$
+\_form#54=15x10:$\Delta t$
+\_form#55=451x293:\begin{center}
+     \parbox{5in}{
+     \rule{5in}{0.4pt} \\
+     {\bf Algorithm} BDF2 \\
+     \rule{5in}{0.4pt} \vspace{-15pt}
+     \begin{enumerate}
+       \setlength{\itemsep}{0pt} \setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}
+       \item {\bf if ( "Startup", i.e., number of states $<$ 3) then}
+       \item \quad {\bf Take timestep with startup Stepper.}
+       \item \quad {\bf return}
+       \item {\bf endif}
+       \item {\it appAction.execute(solutionHistory, stepper, BEGIN\_STEP)}
+       \item {\bf Get old states $x_{n-1}$ and $x_{n-2}$.}
+       \item {\bf Set ODE parameters.}
+       \item \quad {\bf Time derivative: }
+             $\dot{x}_{n} = \frac{2\tau_n + \tau_{n-1}}{\tau_n + \tau_{n-1}}
+                   \left[ \frac{x_n-x_{n-1}}{\tau_n}\right]
+                 -  \frac{\tau_n}{\tau_n + \tau_{n-1}}
+                    \left[ \frac{x_{n-1}-x_{n-2}}{\tau_{n-1}}\right]$
+       \item \quad {\bf Alpha: $\alpha = \frac{2\tau_n + \tau_{n-1}}{(\tau_n +
+\tau_{n-1})\tau_n}$}
+       \item \quad {\bf Beta: $\beta = 1$}
+       \item {\it appAction.execute(solutionHistory, stepper, BEFORE\_SOLVE)}
+       \item {\bf Solve $\mathcal{F}(\dot{x}_n,x_n,t_n) = 0$ for $x_n$.}
+       \item {\it appAction.execute(solutionHistory, stepper, AFTER\_SOLVE)}
+       \item {\bf Update} $\dot{x}_{n} = \frac{2\tau_n + \tau_{n-1}}{\tau_n +
+\tau_{n-1}}
+                   \left[ \frac{x_n-x_{n-1}}{\tau_n}\right]
+                 -  \frac{\tau_n}{\tau_n + \tau_{n-1}}
+                    \left[ \frac{x_{n-1}-x_{n-2}}{\tau_{n-1}}\right]$
+       \item {\it appAction.execute(solutionHistory, stepper, END\_STEP)}
+     \end{enumerate}
+     \vspace{-10pt} \rule{5in}{0.4pt}
+     }
+   \end{center}
+\_form#56=116x29:\[
+     W = \alpha \frac{\partial \mathcal{F}_n}{\partial \dot{x}_n}
+       + \beta  \frac{\partial \mathcal{F}_n}{\partial x_n},
+   \]
+\_form#57=353x31:\[
+     \dot{x}_n(x_n) = \frac{2\tau_n + \tau_{n-1}}{\tau_n + \tau_{n-1}}
+                   \left[ \frac{x_n-x_{n-1}}{\tau_n}\right]
+                 -  \frac{\tau_n}{\tau_n + \tau_{n-1}}
+                    \left[ \frac{x_{n-1}-x_{n-2}}{\tau_{n-1}}\right],
+   \]
+\_form#58=116x13:$\Delta t_n = \tau_n = t_n - t_{n-1}$
+\_form#59=85x19:$ \alpha = \frac{2\tau_n + \tau_{n-1}}{(\tau_n + \tau_{n-1})\tau_n}$
+\_form#60=179x30:\[
+     W = \frac{2\tau_n + \tau_{n-1}}{(\tau_n + \tau_{n-1})\tau_n}
+         \frac{\partial \mathcal{F}_n}{\partial \dot{x}_n}
+       + \frac{\partial \mathcal{F}_n}{\partial x_n}.
+   \]
+\_form#61=321x31:\[
+  \dot{x}_{n} = \frac{2\tau_n + \tau_{n-1}}{\tau_n + \tau_{n-1}}
+                \left[ \frac{x_n-x_{n-1}}{\tau_n}\right]
+              -  \frac{\tau_n}{\tau_n + \tau_{n-1}}
+                 \left[ \frac{x_{n-1}-x_{n-2}}{\tau_{n-1}}\right]
+\]
+\_form#62=83x11:\[
+ \tau_n = t_n - t_{n-1}.
+ \]
+\_form#63=5x6:$s$
+\_form#64=381x39:\[
+   X_{i} = x_{n-1}
+   + \Delta t\,\sum_{j=1}^{i-1} a_{ij}\,\bar{f}(X_{j},t_{n-1}+c_{j}\Delta t)
+   + \Delta t\, a_{ii}\,\bar{f}(X_{i},t_{n-1}+c_{i}\Delta t)
+ \]
+\_form#65=224x35:\[
+   x_{n} = x_{n-1}
+   + \Delta t\,\sum_{i=1}^{s}b_{i}\,\bar{f}(X_{i},t_{n-1}+c_{i}\Delta t)
+ \]
+\_form#66=59x15:$\dot{x}=\bar{f}(x,t)$
+\_form#67=15x13:$X_{i}$
+\_form#68=65x13:$t_{n-1}+c_{i}\Delta t$
+\_form#69=14x9:$x_{n}$
+\_form#70=9x13:$b_{i}$
+\_form#71=38x9:$a_{ii}=a$
+\_form#72=135x16:\[
+   \dot{X}_{i} = \bar{f}(X_{i},t_{n-1}+c_{i}\Delta t),
+ \]
+\_form#73=231x76:\begin{eqnarray*}
+   \dot{X}_{i} & = & \frac{1}{a_{ii} \Delta t} [ X_{i} - x_{n-1}
+                    - \Delta t\,\sum_{j=1}^{i-1} a_{ij}\,\dot{X}_{j} ] \\
+   \dot{X}_{i} & = & \frac{X_{i} - \tilde{X}}{a_{ii} \Delta t}
+ \end{eqnarray*}
+\_form#74=140x39:\[
+   \tilde{X} = x_{n-1} + \Delta t \sum_{j=1}^{i-1} a_{ij}\, \dot{X}_{j}
+ \]
+\_form#75=28x11:$j>i$
+\_form#76=38x13:$a_{ij} = 0$
+\_form#77=36x13:$a_{ii} \neq 0$
+\_form#78=36x11:$a_{ii} = 0$
+\_form#79=541x564:\begin{center}
+   \parbox{6in}{
+   \rule{6in}{0.4pt} \\
+   {\bf Algorithm} DIRK \\
+   \rule{6in}{0.4pt} \vspace{-15pt}
+   \begin{enumerate}
+     \setlength{\itemsep}{0pt} \setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt} \item {\bf if ("Reset Initial guess.") then} \item
+\quad $X \leftarrow x_{n-1}$ \hfill {\it * Reset initial guess to last
+timestep.} \item {\bf endif} \item {\it appAction.execute(solutionHistory,
+stepper, BEGIN\_STEP)} \item {\bf for {$i = 0 \ldots s-1$}} \item \quad
+$\tilde{X} \leftarrow x_{n-1} +\Delta t \sum_{j=1}^{i-1} a_{ij}\,\dot{X}_{j}$
+     \item \quad {\it appAction.execute(solutionHistory, stepper,
+BEGIN\_STAGE)} \item \quad {\bf if ( $a_{k,i} = 0 \;\forall k = (i+1,\ldots,
+s-1)$, $b(i) = 0$, $b^\ast(i) = 0$) then} \item \qquad  $\dot{X}_i \leftarrow
+0$ \hfill {\it * Not needed for later calculations.} \item \quad {\bf else if
+($a_{ii} = 0$) then} \hfill {\it * Explicit stage.} \item \qquad  {\bf if
+($i=0$ and ``Use FSAL'' and (previous step not failed))} \item \qquad \quad
+$\dot{X}_0 \leftarrow \dot{X}_{s-1}$ \hfill {\it * Use $\dot{X}_{s-1}$ from
+$n-1$ time step.} \item \qquad {\bf else} \item \qquad \quad  $\dot{X}_i
+\leftarrow \bar{f}(\tilde{X},t_{n-1}+c_i\Delta t)$ \item \qquad {\bf endif}
+     \item \quad {\bf else}
+                 \hfill {\it * Implicit stage.}
+     \item \qquad  {\it appAction.execute(solutionHistory, stepper,
+BEFORE\_SOLVE)} \item \qquad  {\bf if (``Zero initial guess.'')} \item \qquad
+\quad  $X \leftarrow 0$ \hfill {\it * Else use previous stage value as
+initial guess.} \item \qquad {\bf endif} \item \qquad {\bf Solve
+$\mathcal{F}_i( \dot{X}_i = \frac{X - \tilde{X}}{a_{ii} \Delta t}, X,
+t_{n-1}+c_{i}\Delta t) = 0$ for $X$} \item \qquad  {\it
+appAction.execute(solutionHistory, stepper, AFTER\_SOLVE)} \item \qquad
+$\dot{X}_i \leftarrow \frac{X - \tilde{X}}{a_{ii} \Delta t}$ \item \quad {\bf
+endif} \item \quad  {\it appAction.execute(solutionHistory, stepper,
+BEFORE\_EXPLICIT\_EVAL)} \item \quad  {\it appAction.execute(solutionHistory,
+stepper, END\_STAGE)} \item {\bf end for} \item $x_n \leftarrow x_{n-1} +
+\Delta t\,\sum_{i=0}^{s-1}b_i\,\dot{X}_i$ \item {\bf if (``Embedded'') then}
+           \hfill {\it * Compute the local truncation error estimate.}
+     \item \quad  $\mathbf{e} \leftarrow
+                              \sum_{i=0}^{s-1} (b_i-b^\ast_i)\Delta
+t\,\dot{X}_i$ \item \quad  $\tilde{\mathbf{e}} \leftarrow \mathbf{e}/(a_{tol}
++ \max(\|x_n\|, \|x_{n-1}\|)r_{tol})$ \item \quad  $e_n \leftarrow
+\|\tilde{\mathbf{e}}\|_\infty$ \item {\bf endif} \item {\it
+appAction.execute(solutionHistory, stepper, END\_STEP)} \end{enumerate}
+   \vspace{-10pt} \rule{6in}{0.4pt}
+   }
+ \end{center}
+\_form#80=184x16:\[
+   \mathcal{F}_i = \dot{X}_{i} - \bar{f}(X_{i},t_{n-1}+c_{i}\Delta t) = 0
+ \]
+\_form#81=49x13:$\mathcal{F}_n \rightarrow \mathcal{F}_i$
+\_form#82=49x13:$x_n \rightarrow X_{i}$
+\_form#83=96x16:$\dot{x}_n(x_n) \rightarrow \dot{X}_{i}(X_{i})$
+\_form#84=103x31:\[
+   \dot{X}_{i}(X_{i}) = \frac{X_{i} - \tilde{X}}{a_{ii} \Delta t},
+ \]
+\_form#85=51x18:$ \alpha = \frac{1}{a_{ii} \Delta t} $
+\_form#86=130x30:\[
+   W = \frac{1}{a_{ii} \Delta t}
+       \frac{\partial \mathcal{F}_i}{\partial \dot{X}_i}
+     + \frac{\partial \mathcal{F}_i}{\partial X_i}.
+ \]
+\_form#87=15x13:$X_i$
+\_form#88=144x39:\[
+  \tilde{X} = x_{n-1} +\Delta t \sum_{j=1}^{i-1} a_{ij}\,\dot{X}_{j},
+\]
+\_form#89=75x31:\[
+  \dot{X}_i = \frac{X_{i} - \tilde{X}}{a_{ii} \Delta t}
+\]
+\_form#90=61x15:\[
+   \dot{x} = \bar{f}(x,t),
+ \]
+\_form#91=233x39:\[
+   X_{i} = x_{n-1}
+   + \Delta t\,\sum_{j=1}^{i-1} a_{ij}\,\bar{f}(X_{j},t_{n-1}+c_{j}\Delta t)
+ \]
+\_form#92=38x13:$a_{ij}=0$
+\_form#93=28x11:$j \leq i$
+\_form#94=81x15:\[
+   \dot{x}_{n} = \bar{f}(x_{n},t_{n}),
+ \]
+\_form#95=451x350:\begin{center}
+   \parbox{5in}{
+   \rule{5in}{0.4pt} \\
+   {\bf Algorithm} Explicit RK \\
+   \rule{5in}{0.4pt} \vspace{-15pt}
+   \begin{enumerate}
+     \setlength{\itemsep}{0pt} \setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt} \item $X \leftarrow x_{n-1}$ \item {\it
+appAction.execute(solutionHistory, stepper, BEGIN\_STEP)} \item {\bf for {$i
+= 0 \ldots s-1$}} \item \quad $X \leftarrow x_{n-1}
+                   + \Delta t\,\sum_{j=1}^{i-1} a_{ij}\,\dot{X}_j$
+     \item \quad {\it appAction.execute(solutionHistory, stepper,
+BEGIN\_STAGE)} \item \quad {\it appAction.execute(solutionHistory, stepper,
+BEFORE\_SOLVE)} \item \quad {\it appAction.execute(solutionHistory, stepper,
+AFTER\_SOLVE)} \item \quad {\it appAction.execute(solutionHistory, stepper,
+BEFORE\_EXPLICIT\_EVAL)} \item \quad {\bf if (i=0 and useFSAL and (previous
+step not failed)) then} \item \qquad  tmp = $\dot{X}_0$ \item \qquad
+$\dot{X}_0 = \dot{X}_s$ \item \qquad  $\dot{X}_s$ = tmp \item \qquad  {\bf
+continue} \item \quad {\bf else} \item \qquad  $\dot{X}_i \leftarrow
+\bar{f}(X_i,t_{n-1}+c_i\Delta t)$ \item \quad {\bf endif} \item \quad {\it
+appAction.execute(solutionHistory, stepper, END\_STAGE)} \item {\bf end for}
+     \item $x_n \leftarrow x_{n-1} + \Delta t\,\sum_{i=1}^{s}b_i\,\dot{X}_i$
+     \item {\it appAction.execute(solutionHistory, stepper, END\_STEP)}
+   \end{enumerate}
+   \vspace{-10pt} \rule{5in}{0.4pt}
+   }
+ \end{center}
+\_form#96=34x11:$c_1 = 0$
+\_form#97=33x11:$c_s = 1$
+\_form#98=43x14:$a_{sj} = b_j$
+\_form#99=164x91:\[
+  \begin{array}{c|cccc}  0  & 0    &     &     &   \\
+                        1/2 & 1/2  & 0   &     &   \\
+                        3/4 & 0    & 3/4 & 0   &   \\
+                         1  & 2/9  & 1/3 & 4/9 & 0 \\ \hline
+                            & 2/9  & 1/3 & 4/9 & 0 \\
+                            & 7/24 & 1/4 & 1/3 & 1/8 \end{array}
+  \]
+\_form#100=163x15:\[
+   x_{n} = x_{n-1} + \Delta t\, \bar{f}(x_{n-1},t_{n-1})
+ \]
+\_form#101=451x230:\begin{center}
+   \parbox{5in}{
+   \rule{5in}{0.4pt} \\
+   {\bf Algorithm} Forward Euler \\
+   \rule{5in}{0.4pt} \vspace{-15pt}
+   \begin{enumerate}
+     \setlength{\itemsep}{0pt} \setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt} \item {\it appAction.execute(solutionHistory,
+stepper, BEGIN\_STEP)} \item {\bf if (Not ``Use FSAL'' or (previous step
+failed)) then} \item \quad  {\it appAction.execute(solutionHistory, stepper,
+BEFORE\_EXPLICIT\_EVAL)} \item \quad  $\dot{x}_{n-1} \leftarrow
+\bar{f}(x_{n-1},t_{n-1})$ \item {\bf endif} \item $x_{n} \leftarrow x_{n-1} +
+\Delta t\, \dot{x}_{n-1}$ \hfill {\it * Forward Euler update.} \item {\it
+appAction.execute(solutionHistory, stepper, END\_STEP)} \item {\bf if (``Use
+FSAL'') then} \item \quad  {\it appAction.execute(solutionHistory, stepper,
+BEFORE\_EXPLICIT\_EVAL)} \item \quad  $\dot{x}_n \leftarrow
+\bar{f}(x_{n},t_{n})$ \item {\bf endif} \item {\it
+appAction.execute(solutionHistory, stepper, END\_STEP)} \end{enumerate}
+   \vspace{-10pt} \rule{5in}{0.4pt}
+   }
+ \end{center}
+\_form#102=26x11:$\dot{x}_{n-1}$
+\_form#103=75x15:$\dot{x}_{0} = \bar{f}(x_{0},t_{0})$
+\_form#104=16x9:$\alpha_m$
+\_form#105=14x10:$\alpha_f$
+\_form#106=9x13:$\beta$
+\_form#107=9x9:$\gamma$
+\_form#108=24x14:$[0,1]$
+\_form#109=71x13:$\alpha_m=\alpha_f = 0$
+\_form#110=74x14:$ \mathcal{F}(\dot{x},x,t) = 0 $
+\_form#111=204x14:\[
+   M(x,t)\, \dot{x}(x,t) + G(x,t) + F(x,t) = 0
+ \]
+\_form#112=126x14:\[
+   \mathcal{G}(\dot{x},x,t) + F(x,t) = 0,
+ \]
+\_form#113=165x14:$\mathcal{G}(\dot{x},x,t) = M(x,t)\, \dot{x} + G(x,t)$
+\_form#114=39x14:$M(x,t)$
+\_form#115=35x14:$F(x,t)$
+\_form#116=35x14:$G(x,t)$
+\_form#117=156x14:\[
+   \dot{x}(x,t) + g(x,t) + f(x,t) = 0
+ \]
+\_form#118=143x15:$f(x,t) = M(x,t)^{-1}\, F(x,t)$
+\_form#119=143x15:$g(x,t) = M(x,t)^{-1}\, G(x,t)$
+\_form#120=146x34:\[ \begin{array}{c|c}
+   \hat{c} & \hat{a} \\ \hline
+           & \hat{b}^T
+ \end{array}
+ \;\;\;\; \mbox{ and } \;\;\;\;
+ \begin{array}{c|c}
+   c & a \\ \hline
+     & b^T
+ \end{array}, \]
+\_form#121=424x35:\[ \begin{array}{rcll}
+   X_i & = & x_{n-1}
+    - \Delta t \sum_{j=1}^{i-1} \hat{a}_{ij}\, f(X_j,\hat{t}_j)
+    - \Delta t \sum_{j=1}^i           a_{ij}\, g(X_j,t_j)
+           & \mbox{for } i=1\ldots s, \\
+   x_n & = & x_{n-1}
+    - \Delta t \sum_{i=1}^s \hat{b}_{i}\, f(X_i,\hat{t}_i)
+    - \Delta t \sum_{i=1}^s       b_{i}\, g(X_i,t_i) &
+ \end{array} \]
+\_form#122=90x14:$\hat{t}_i = t_{n-1}+\hat{c}_i\Delta t$
+\_form#123=90x13:$t_i = t_{n-1}+c_i\Delta t$
+\_form#124=48x15:$f(X_j,\hat{t}_j)$
+\_form#125=10x15:$\hat{t}_j$
+\_form#126=48x14:$g(X_j,t_j)$
+\_form#127=10x13:$t_j$
+\_form#128=134x16:\[
+   X_i = \tilde{X} - a_{ii} \Delta t\, g(X_i,t_i)
+ \]
+\_form#129=263x39:\[
+   \tilde{X} = x_{n-1} - \Delta t \sum_{j=1}^{i-1}
+       \left(\hat{a}_{ij}\, f(X_j,\hat{t}_j) + a_{ij}\, g(X_j,t_j)\right)
+ \]
+\_form#130=174x19:\[
+   \mathcal{G}(\tilde{\dot{X}},X_i,t_i) = \tilde{\dot{X}} + g(X_i,t_i) = 0
+ \]
+\_form#131=13x16:$\tilde{\dot{X}}$
+\_form#132=173x31:\[
+   \tilde{\dot{X}} \equiv \frac{X_i - \tilde{X}}{a_{ii} \Delta t}
+   \quad \quad \left[ = -g(X_i,t_i)\right]
+ \]
+\_form#133=15x15:$\dot{X}_i$
+\_form#134=228x19:$\mathcal{G}(\tilde{\dot{X}},X_i,t) = M(X_i,t_i)\, \tilde{\dot{X}}
+ + G(X_i,t_i) = 0$
+\_form#135=9x11:$t_i$
+\_form#136=196x16:\[
+   \dot{X}_i(X_i,t_i) + g(X_i,t_i) + f(X_i,t_i) = 0
+ \]
+\_form#137=45x14:$f(X_i,t_i)$
+\_form#138=199x39:\begin{eqnarray*}
+   \dot{X}(X_i,t_i) & = & - g(X_i,t_i) - f(X_i,t_i) \\
+   \dot{X}(X_i,t_i) & = & \tilde{\dot{X}} - f(X_i,t_i)
+ \end{eqnarray*}
+\_form#139=121x19:\[
+   \mathcal{G} = \tilde{\dot{X}} + g(X_i,t_i) = 0.
+ \]
+\_form#140=44x13:$\mathcal{F}_n \rightarrow \mathcal{G}$
+\_form#141=93x19:$\dot{x}_n(x_n) \rightarrow \tilde{\dot{X}}(X_{i})$
+\_form#142=71x31:\[
+   \tilde{\dot{X}} \equiv \frac{X_i - \tilde{X}}{a_{ii} \Delta t}
+ \]
+\_form#143=126x33:\[
+   W = \frac{1}{a_{ii} \Delta t}
+       \frac{\partial \mathcal{G}}{\partial \tilde{\dot{X}}}
+     + \frac{\partial \mathcal{G}}{\partial X_i}.
+ \]
+\_form#144=36x11:$a_{ii}=0$
+\_form#145=296x39:\[
+    X_i = x_{n-1} - \Delta t\,\sum_{j=1}^{i-1} \left(
+      \hat{a}_{ij}\,f(X_j,\hat{t}_j) + a_{ij}\,g(X_j,t_j) \right) = \tilde{X}
+ \]
+\_form#146=50x16:$\dot{X}(X_i,t_i)$
+\_form#147=185x16:\[
+   \dot{X}_i(X_i,t_i) = - g(X_i,t_i) - f(X_i,t_i)
+ \]
+\_form#148=451x528:\begin{center}
+   \parbox{5in}{
+   \rule{5in}{0.4pt} \\
+   {\bf Algorithm} IMEX-RK \\
+   \rule{5in}{0.4pt} \vspace{-15pt}
+   \begin{enumerate}
+     \setlength{\itemsep}{0pt} \setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt} \item $X \leftarrow x_{n-1}$ \hfill {\it * Reset
+initial guess to last timestep.} \item {\it
+appAction.execute(solutionHistory, stepper, BEGIN\_STEP)} \item {\bf for {$i
+= 0 \ldots s-1$}} \item \quad  $\tilde{X} \leftarrow x_{n-1} - \Delta
+t\,\sum_{j=1}^{i-1} \left( \hat{a}_{ij}\, f_j + a_{ij}\, g_j \right)$ \item
+\quad  {\it appAction.execute(solutionHistory, stepper, BEGIN\_STAGE)} \item
+\quad  \hfill {\bf Implicit Tableau} \item \quad  {\bf if ($a_{ii} = 0$)
+then} \item \qquad   $X \leftarrow \tilde{X}$ \item \qquad  {\bf if ($a_{k,i}
+= 0 \;\forall k = (i+1,\ldots, s-1)$, $b(i) = 0$, $b^\ast(i) = 0$) then}
+     \item \qquad \quad  $g_i \leftarrow 0$
+                         \hfill {\it * Not needed for later calculations.}
+     \item \qquad  {\bf else}
+     \item \qquad \quad  $g_i \leftarrow M(X, t_i)^{-1}\, G(X, t_i)$
+     \item \qquad  {\bf endif}
+     \item \quad  {\bf else}
+     \item \qquad  {\it appAction.execute(solutionHistory, stepper,
+BEFORE\_SOLVE)} \item \qquad  {\bf if (``Zero initial guess.'') then} \item
+\qquad \quad  $X \leftarrow 0$ \hfill {\it * Else use previous stage value as
+initial guess.} \item \qquad  {\bf endif} \item \qquad  {\bf Solve
+$\mathcal{G}\left(\tilde{\dot{X}} = \frac{X-\tilde{X}}{a_{ii} \Delta
+t},X,t_i\right) = 0$ for $X$} \item \qquad  {\it
+appAction.execute(solutionHistory, stepper, AFTER\_SOLVE)} \item \qquad
+$\tilde{\dot{X}} \leftarrow \frac{X - \tilde{X}}{a_{ii} \Delta t}$ \item
+\qquad  $g_i \leftarrow - \tilde{\dot{X}}$ \item \quad  {\bf endif} \item
+\quad  \hfill {\bf Explicit Tableau} \item \quad  {\it
+appAction.execute(solutionHistory, stepper, BEFORE\_EXPLICIT\_EVAL)} \item
+\quad  $f_i \leftarrow M(X,\hat{t}_i)^{-1}\, F(X,\hat{t}_i)$ \item \quad
+$\dot{X} \leftarrow - g_i - f_i$ [Optionally] \item \quad  {\it
+appAction.execute(solutionHistory, stepper, END\_STAGE)} \item {\bf end for}
+     \item $x_n \leftarrow x_{n-1} - \Delta t\,\sum_{i=1}^{s}\hat{b}_i\,f_i
+                                   - \Delta t\,\sum_{i=1}^{s}     b_i \,g_i$
+     \item {\it appAction.execute(solutionHistory, stepper, END\_STEP)}
+   \end{enumerate}
+   \vspace{-10pt} \rule{5in}{0.4pt}
+   }
+ \end{center}
+\_form#149=58x48:\[ \begin{array}{c|cc}
+            0 & 0 & 0 \\
+            1 & 0 & 1 \\ \hline
+              & 0 & 1
+          \end{array} \]
+\_form#150=58x48:\[ \begin{array}{c|cc}
+            0 & 0 & 0 \\
+            1 & 1 & 0 \\ \hline
+              & 1 & 0
+          \end{array} \]
+\_form#151=39x33:\[ \begin{array}{c|c}
+            1 & 1 \\ \hline
+              & 1
+          \end{array} \]
+\_form#152=39x33:\[ \begin{array}{c|c}
+            0 & 0 \\ \hline
+              & 1
+          \end{array} \]
+\_form#153=76x15:$\gamma = 1-1/\sqrt{2}$
+\_form#154=121x48:\[ \begin{array}{c|cc}
+            \gamma   & \gamma & 0 \\
+            1-\gamma & 1-2\gamma & \gamma \\ \hline
+                     & 1/2       & 1/2
+          \end{array} \]
+\_form#155=83x48:\[ \begin{array}{c|cc}
+            0 & 0   & 0 \\
+            1 & 1   & 0 \\ \hline
+              & 1/2 & 1/2
+          \end{array} \]
+\_form#156=44x14:$\gamma = 1/2$
+\_form#157=84x15:$\gamma = 1/ (2 + \sqrt{2})$
+\_form#158=126x61:\[ \begin{array}{c|ccc}
+            0  &  0  &     &     \\
+            1  &  1  &  0  &     \\
+           1/2 & 1/4 & 1/4 &  0  \\ \hline
+               & 1/6 & 1/6 & 4/6  \end{array} \]
+\_form#159=159x61:\[ \begin{array}{c|ccc}
+             \gamma  & \gamma      &         &        \\
+            1-\gamma & 1-2\gamma   & \gamma  &        \\
+            1-2      & 1/2 -\gamma & 0       & \gamma \\ \hline
+                     & 1/6         & 1/6     & 2/3    \end{array} \]
+\_form#160=85x15:$\gamma = (3+\sqrt{3})/6$
+\_form#161=139x61:\[ \begin{array}{c|ccc}
+            0        & 0      & 0         & 0      \\
+            \gamma   & 0      & \gamma    & 0      \\
+            1-\gamma & 0      & 1-2\gamma & \gamma \\ \hline
+                     & 0      & 1/2       & 1/2
+          \end{array} \]
+\_form#162=161x61:\[ \begin{array}{c|ccc}
+            0        & 0        & 0         & 0 \\
+            \gamma   & \gamma   & 0         & 0 \\
+            1-\gamma & \gamma-1 & 2-2\gamma & 0 \\ \hline
+                     & 0        & 1/2       & 1/2
+          \end{array} \]
+\_form#163=194x33:\begin{eqnarray*}
+   M(z,t)\, \dot{z} + G(z,t) + F(z,t) & = & 0, \\
+   \mathcal{G}(\dot{z},z,t) + F(z,t) & = & 0,
+ \end{eqnarray*}
+\_form#164=385x31:\[
+   z     =\left\{\begin{array}{c} y\\ x \end{array}\right\},\;
+   F(z,t)=\left\{\begin{array}{c} F^y(x,y,t)\\ F^x(x,y,t)\end{array}\right\},
+   \mbox{ and }
+   G(z,t)=\left\{\begin{array}{c} 0\\ G^x(x,y,t) \end{array}\right\}
+ \]
+\_form#165=6x6:$z$
+\_form#166=8x9:$y$
+\_form#167=35x14:$F(z,t)$
+\_form#168=35x14:$G(z,t)$
+\_form#169=54x14:$F^y(x,y,t)$
+\_form#170=54x14:$F^x(x,y,t)$
+\_form#171=54x14:$G^x(x,y,t)$
+\_form#172=235x33:\begin{eqnarray*}
+   & & M^y(x,y,t)\: \dot{y} + F^y(x,y,t) = 0, \\
+   & & M^x(x,y,t)\: \dot{x} + F^x(x,y,t) + G^x(x,y,t) = 0, \\
+ \end{eqnarray*}
+\_form#173=180x31:\[
+      \left\{ \begin{array}{c} \dot{y} \\ \dot{x} \end{array}\right\}
+   +  \left\{ \begin{array}{c}    f^y  \\    f^x  \end{array}\right\}
+   +  \left\{ \begin{array}{c}     0   \\    g^x  \end{array}\right\} = 0
+ \]
+\_form#174=219x54:\begin{eqnarray*}
+   f^y(x,y,t) & = & M^y(x,y,t)^{-1}\, F^y(x,y,t), \\
+   f^x(x,y,t) & = & M^x(x,y,t)^{-1}\, F^x(x,y,t), \\
+   g^x(x,y,t) & = & M^x(x,y,t)^{-1}\, G^x(x,y,t),
+ \end{eqnarray*}
+\_form#175=154x14:\[
+   \dot{z} + g(x,y,t) + f(x,y,t) = 0,
+ \]
+\_form#176=179x15:$f(x,y,t) = M(x,y,t)^{-1}\, F(x,y,t)$
+\_form#177=179x15:$g(x,y,t) = M(x,y,t)^{-1}\, G(x,y,t)$
+\_form#178=421x41:\[ \begin{array}{rcll}
+  Z_i & = & Z_{n-1}
+  - \Delta t \sum_{j=1}^{i-1} \hat{a}_{ij}\; f(Z_j,\hat{t}_j)
+  - \Delta t \sum_{j=1}^i           a_{ij}\; g(Z_j,     t_j)
+    &   \mbox{for } i=1\ldots s, \\
+  z_n & = & z_{n-1}
+  - \Delta t \sum_{i=1}^s \left[ \hat{b}_i\; f(Z_i,\hat{t}_i)
+                                +     b_i\;  g(Z_i,     t_i) \right] &
+ \end{array} \]
+\_form#179=435x75:\[ \begin{array}{rcll}
+  Y_i & = & y_{n-1}
+  - \Delta t \sum_{j=1}^{i-1} \hat{a}_{ij}\; f^y(Z_j,\hat{t}_j)
+     &   \mbox{for } i=1\ldots s,\\
+  X_i & = & x_{n-1}
+  - \Delta t \sum_{j=1}^{i-1} \hat{a}_{ij}\; f^x(Z_j,\hat{t}_j)
+  - \Delta t \sum_{j=1}^i           a_{ij}\; g^x(Z_j,     t_j)
+    &   \mbox{for } i=1\ldots s, \\
+  y_n & = & y_{n-1}
+  - \Delta t \sum_{i=1}^s \hat{b}_{i}\; f^y(Z_i,\hat{t}_i) & \\
+  x_n & = & x_{n-1}
+  - \Delta t \sum_{i=1}^s \left[ \hat{b}_i\; f^x(Z_i,\hat{t}_i)
+                                +     b_i\;  g^x(Z_i,     t_i) \right] &
+ \end{array} \]
+\_form#180=51x15:$f^y(Z_j,\hat{t}_j)$
+\_form#181=51x15:$f^x(Z_j,\hat{t}_j)$
+\_form#182=51x14:$g^x(Z_j,t_j)$
+\_form#183=11x13:$Z_i$
+\_form#184=128x16:\[
+   Z_i = \tilde{Z} - a_{ii} \Delta t\, g(Z_i,t_i)
+ \]
+\_form#185=253x39:\[
+   \tilde{Z} = z_{n-1} - \Delta t \sum_{j=1}^{i-1}
+     \left[\hat{a}_{ij}\, f(Z_j,\hat{t}_j) + a_{ij}\, g(Z_j, t_j)\right]
+ \]
+\_form#186=233x33:\[
+   \left\{ \begin{array}{c}        Y_i \\        X_i  \end{array}\right\} =
+   \left\{ \begin{array}{c} \tilde{Y}  \\ \tilde{X}_i \end{array}\right\}
+   -  a_{ii} \Delta t
+   \left\{ \begin{array}{c}        0   \\ g^x(Z_i,t_i) \end{array}\right\}
+ \]
+\_form#187=288x85:\begin{eqnarray*}
+   \tilde{Y} & = & y_{n-1} - \Delta t \sum_{j=1}^{i-1}
+     \left[\hat{a}_{ij}\, f^y(Z_j,\hat{t}_j)\right] \\
+   \tilde{X} & = & x_{n-1} - \Delta t \sum_{j=1}^{i-1}
+     \left[\hat{a}_{ij}\, f^x(Z_j,\hat{t}_j) +a_{ij}\, g^x(Z_j,t_j)\right] \\
+ \end{eqnarray*}
+\_form#188=39x15:$Y_i = \tilde{Y}$
+\_form#189=221x19:\[
+   \mathcal{G}^x(\tilde{\dot{X}},X_i,Y_i,t_i) =
+     \tilde{\dot{X}} + g^x(X_i,Y_i,t_i) = 0
+ \]
+\_form#190=195x31:\[
+   \tilde{\dot{X}} \equiv \frac{X_i - \tilde{X}}{a_{ii} \Delta t}
+   \quad \quad \left[ = -g^x(X_i,Y_i,t_i)\right]
+ \]
+\_form#191=11x13:$Y_i$
+\_form#192=11x15:$\dot{Z}_i$
+\_form#193=189x16:\[
+   \dot{Z}_i(Z_i,t_i) + f(Z_i,t_i) + g(Z_i,t_i) = 0
+ \]
+\_form#194=88x14:$\dot{x}(x(t_i), y(t_i), t_i)$
+\_form#195=89x14:$\hat{c}_i = c_i \rightarrow \hat{t}_i = t_i$
+\_form#196=58x14:$x(t_i) \neq X_i$
+\_form#197=54x14:$y(t_i) \neq Y_i$
+\_form#198=35x14:$\hat{t}_i = t_i$
+\_form#199=43x14:$f(Z_i,t_i)$
+\_form#200=174x16:\[
+   \dot{Z}(Z_i,t_i) = - g(Z_i,t_i) - f(Z_i,t_i)
+ \]
+\_form#201=50x13:$\mathcal{F}_n \rightarrow \mathcal{G}^x$
+\_form#202=130x33:\[
+   W = \frac{1}{a_{ii} \Delta t}
+       \frac{\partial \mathcal{G}^x}{\partial \tilde{\dot{X}}}
+     + \frac{\partial \mathcal{G}^x}{\partial X_i}.
+ \]
+\_form#203=300x39:\[
+    X_i = \tilde{X} = x_{n-1} - \Delta t \sum_{j=1}^{i-1}
+     \left[\hat{a}_{ij}\, f^x(Z_j,\hat{t}_j) +a_{ij}\, g^x(Z_j,t_j)\right]
+ \]
+\_form#204=193x16:\[
+   \dot{X}_i = - g^x(X_i,Y_i,t_i) - f^x(X_i,Y_i,t_i)
+ \]
+\_form#205=68x14:$f^x(X_i,Y_i,t_i)$
+\_form#206=451x563:\begin{center}
+   \parbox{5in}{
+   \rule{5in}{0.4pt} \\
+   {\bf Algorithm} Partitioned IMEX-RK \\
+   \rule{5in}{0.4pt} \vspace{-15pt}
+   \begin{enumerate}
+     \setlength{\itemsep}{0pt} \setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt} \item $Z \leftarrow z_{n-1}$ \hfill {\it * Recall
+$Z_i = \{Y_i,X_i\}^T$} \item {\it appAction.execute(solutionHistory, stepper,
+BEGIN\_STEP)} \item {\bf for ($i = 0 \ldots s-1$)} \item \quad  $Y_i =
+y_{n-1} -\Delta t \sum_{j=1}^{i-1} \hat{a}_{ij}\;f^y_j$ \item \quad
+$\tilde{X} \leftarrow x_{n-1} - \Delta t\,\sum_{j=1}^{i-1} \left[
+                                      \hat{a}_{ij}\, f^x_j + a_{ij}\, g^x_j
+\right]$ \item \quad  {\it appAction.execute(solutionHistory, stepper,
+BEGIN\_STAGE)} \item \quad  \hfill {\bf Implicit Tableau} \item \quad  {\bf
+if ($a_{ii} = 0$) then} \item \qquad    $X_i   \leftarrow \tilde{X}$ \item
+\qquad    {\bf if ($a_{k,i} = 0 \;\forall k = (i+1,\ldots, s-1)$, $b(i) = 0$,
+$b^\ast(i) = 0$) then} \item \qquad \quad  $g^x_i \leftarrow 0$ \hfill {\it *
+Not needed for later calculations.} \item \qquad    {\bf else} \item \qquad
+\quad  $g^x_i \leftarrow g^x(X_i,Y_i,t_i)$ \item \qquad    {\bf endif} \item
+\quad  {\bf else} \item \qquad  {\it appAction.execute(solutionHistory,
+stepper, BEFORE\_SOLVE)} \item \qquad  {\bf if (``Zero initial guess.'')
+then} \item \qquad \quad   $X \leftarrow 0$ \hfill {\it * Else use previous
+stage value as initial guess.} \item \qquad  {\bf endif} \item \qquad  {\bf
+Solve $\mathcal{G}^x\left(\tilde{\dot{X}} = \frac{X-\tilde{X}}{a_{ii} \Delta
+t},X,Y,t_i\right) = 0$ for $X$ where $Y$ is known.} \item \qquad   {\it
+appAction.execute(solutionHistory, stepper, AFTER\_SOLVE)} \item \qquad
+$\tilde{\dot{X}} \leftarrow \frac{X - \tilde{X}}{a_{ii} \Delta t}$ \item
+\qquad   $g_i \leftarrow - \tilde{\dot{X}}$ \item \quad  {\bf endif} \item
+\quad  \hfill {\bf Explicit Tableau} \item \quad  {\it
+appAction.execute(solutionHistory, stepper, BEFORE\_EXPLICIT\_EVAL)} \item
+\quad  $f_i \leftarrow M(X,\hat{t}_i)^{-1}\, F(X,\hat{t}_i)$ \item \quad
+$\dot{Z} \leftarrow - g(Z_i,t_i) - f(Z_i,t_i)$ [Optionally] \item \quad  {\it
+appAction.execute(solutionHistory, stepper, END\_STAGE)} \item {\bf end for}
+     \item $z_n = z_{n-1} - \Delta t\,\sum_{i=1}^{s}\hat{b}_i\, f_i$
+     \item $x_n \mathrel{+{=}} - \Delta t\,\sum_{i=1}^{s} b_i\, g^x_i$
+     \item {\it appAction.execute(solutionHistory, stepper, END\_STEP)}
+   \end{enumerate}
+   \vspace{-10pt} \rule{5in}{0.4pt}
+   }
+ \end{center}
+\_form#207=94x14:\[
+  \mathcal{F}(\dot{x}_n,x_n,t_n) = 0
+\]
+\_form#208=18x11:$n^{th}$
+\_form#209=14x11:$\dot{x}_n$
+\_form#210=113x24:\[
+  \dot{x}_n(x_n) = \frac{x_n - x_{n-1}}{\Delta t}
+\]
+\_form#211=239x31:\[
+  \left[
+  \frac{\partial}{\partial x_n}
+  \left(
+    \mathcal{F}(\dot{x}_n,x_n,t_n)
+  \right)
+  \right] \Delta x_n^\nu = - \mathcal{F}(\dot{x}_n^\nu,x_n^\nu,t_n)
+\]
+\_form#212=95x15:$\Delta x_n^\nu = x_n^{\nu+1} - x_n^\nu$
+\_form#213=6x6:$\nu$
+\_form#214=431x31:\[
+  \left[
+  \frac{\partial \dot{x}_n(x_n) }{\partial x_n}
+  \frac{\partial}{\partial \dot{x}_n}
+  \left(
+    \mathcal{F}(\dot{x}_n,x_n,t_n)
+  \right)
+  +
+  \frac{\partial x_n}{\partial x_n}
+  \frac{\partial}{\partial x_n}
+  \left(
+    \mathcal{F}(\dot{x}_n,x_n,t_n)
+  \right)
+  \right] \Delta x_n^\nu = - \mathcal{F}(\dot{x}_n^\nu,x_n^\nu,t_n)
+\]
+\_form#215=134x14:\[
+  W \Delta x_n^\nu = - \mathcal{F}(\dot{x}_n^\nu,x_n^\nu,t_n)
+\]
+\_form#216=103x14:$\mathcal{F}_n = \mathcal{F}(\dot{x}_n,x_n,t_n)$
+\_form#217=113x29:\[
+  W = \alpha \frac{\partial \mathcal{F}_n}{\partial \dot{x}_n}
+    + \beta  \frac{\partial \mathcal{F}_n}{\partial x_n}
+\]
+\_form#218=83x13:\[
+  W = \alpha M + \beta J
+\]
+\_form#219=341x30:\[
+  \alpha \equiv \frac{\partial \dot{x}_n(x_n) }{\partial x_n},
+  \quad \quad
+  \beta \equiv \frac{\partial x_n}{\partial x_n} = 1,
+  \quad \quad
+  M = \frac{\partial \mathcal{F}_n}{\partial \dot{x}_n},
+  \quad \quad
+  J = \frac{\partial \mathcal{F}_n}{\partial x_n}
+\]
+\_form#220=8x10:$J$
+\_form#221=30x9:$\alpha=0$
+\_form#222=31x13:$\beta = 1$
+\_form#223=30x9:$\alpha=1$
+\_form#224=31x13:$\beta = 0$
+\_form#225=204x30:\[
+  \alpha \equiv \frac{\partial \dot{x}_n(x_n) }{\partial x_n}
+         = \frac{1}{\Delta t}
+  \quad \quad
+  \beta \equiv \frac{\partial x_n}{\partial x_n} = 1
+\]
+\_form#226=114x29:\[
+  W = \frac{1}{\Delta t} \frac{\partial \mathcal{F}_n}{\partial \dot{x}_n}
+    + \frac{\partial \mathcal{F}_n}{\partial x_n}
+\]
+\_form#227=163x15:\[
+  \mathcal{F}_n = \Delta t \dot{x}_n - \Delta t \bar{f}(x_n,t_n) = 0
+\]
+\_form#228=341x30:\[
+  \dot{x}_n(x_n) = \frac{x_n - x_{n-1}}{\Delta t}
+  \quad\quad
+  \alpha \equiv \frac{\partial \dot{x}_n(x_n) }{\partial x_n}
+         = \frac{1}{\Delta t}
+  \quad \quad
+  \beta \equiv \frac{\partial x_n}{\partial x_n} = 1
+\]
+\_form#229=16x13:$\mathcal{F}_n$
+\_form#230=234x31:\[
+  M = \frac{\partial \mathcal{F}_n}{\partial \dot{x}_n} = \Delta t,
+  \quad \quad
+  J = \frac{\partial \mathcal{F}_n}{\partial x_n}
+    = -\Delta t \frac{\partial \bar{f}_n}{\partial x_n}
+\]
+\_form#231=18x10:$W^\ast$
+\_form#232=266x33:\[
+  W^\ast = \alpha \frac{\partial \mathcal{F}_n}{\partial \dot{x}_n}
+         + \beta  \frac{\partial \mathcal{F}_n}{\partial x_n}
+         = \frac{1}{\Delta t} \Delta t
+         + (1) \left( - \Delta t \frac{\partial \bar{f}_n}{\partial x_n}
+               \right)
+\]
+\_form#233=96x31:\[
+  W^\ast = 1 - \Delta t \frac{\partial \bar{f}_n}{\partial x_n}
+\]
+\_form#234=80x20:$W = \frac{1}{\Delta t} - \frac{\partial \bar{f}_n}{\partial
+x_n}$
+\_form#235=30x9:$\alpha = 1$
+\_form#236=50x13:$\beta = -\Delta t$
+\_form#237=95x20:$\alpha \equiv \frac{\partial \dot{x}_n(x_n)}
+{\partial x_n} = \frac{1}{\Delta t}$
+\_form#238=69x19:$\beta \equiv
+\frac{\partial x_n}{\partial x_n} = 1 $
+\_form#239=25x13:$-\mathcal{F}_n$
+\_form#240=178x24:\[
+  \mathcal{F}_n = \frac{x_n - x_{n-1}}{\Delta t} - \bar{f}(x_n,t_n) = 0
+\]
+\_form#241=281x33:\[
+  W^{\ast\ast} =
+           \alpha \frac{\partial \mathcal{F}_n}{\partial \dot{x}_n}
+         + \beta  \frac{\partial \mathcal{F}_n}{\partial x_n}
+         = \frac{1}{\Delta t} (0)
+         + (1) \left(\frac{1}{\Delta t}
+                     - \frac{\partial \bar{f}_n}{\partial x_n}
+               \right)
+\]
+\_form#242=98x31:\[
+  W^{\ast\ast} =
+    \frac{1}{\Delta t} - \frac{\partial \bar{f}_n}{\partial x_n}
+\]
+\_form#243=39x16:$\alpha = \frac{1}{\Delta
+t}$
+\_form#244=41x13:$\beta = -1$
+\_form#245=126x14:\[
+   M(t) \ddot{x} + K(t) x = F(t),
+ \]
+\_form#246=61x14:\[
+   \ddot{x} = f(x,t),
+ \]
+\_form#247=191x16:\[
+   f(x,t) = \left(M(t)\right)^{-1} \left( F(t) - K(t) x \right).
+ \]
+\_form#248=165x53:\begin{eqnarray*}
+   x_{n+1}         & = & x_{n} + \Delta t\, \dot{x}_{n+1/2} \\
+   \ddot{x}_{n+1}  & = & f(x_{n+1},t_{n+1}) \\
+   \dot{x}_{n+3/2} & = & \dot{x}_{n+1/2} + \Delta t\, \ddot{x}_{n+1}
+ \end{eqnarray*}
+\_form#249=174x56:\begin{eqnarray*}
+   \dot{x}_{n+1/2} & = & \dot{x}_{n} + \frac{1}{2} \Delta t\, \ddot{x}_{n} \\
+   \dot{x}_{n+1/2} & = & \dot{x}_{n} + \frac{1}{2} \Delta t\, f(x_{n},t_{n})
+ \end{eqnarray*}
+\_form#250=211x56:\begin{eqnarray*}
+   \dot{x}_{n+1}&=&\dot{x}_{n+1/2} +\frac{1}{2} \Delta t\, \ddot{x}_{n+1} \\
+   \dot{x}_{n+1}&=&\dot{x}_{n+1/2} +\frac{1}{2} \Delta t\, f(x_{n+1},t_{n+1})
+ \end{eqnarray*}
+\_form#251=451x275:\begin{center}
+   \parbox{5in}{
+   \rule{5in}{0.4pt} \\
+   {\bf Algorithm} Leapfrog \\
+   \rule{5in}{0.4pt} \vspace{-15pt}
+   \begin{enumerate}
+     \setlength{\itemsep}{0pt} \setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt} \item {\it appAction.execute(solutionHistory,
+stepper, BEGIN\_STEP)} \item {\bf if (``Startup") then} \hfill {\it * Take
+half-step startup.} \item \quad  $\dot{x}_{n+1/2} = \dot{x}_n +
+\frac{1}{2}\Delta t \ddot{x}_n$ \item {\bf endif} \item {\it
+appAction.execute(solutionHistory, stepper, BEFORE\_X\_UPDATE)} \item
+$x_{n+1} = x_n + \Delta t \dot{x}_{n+1/2}$ \item {\it
+appAction.execute(solutionHistory, stepper, BEFORE\_EXPLICIT\_EVAL)} \item
+$\ddot{x}_{n+1} = f(x_{n+1},t_{n+1})$ \item {\it
+appAction.execute(solutionHistory, stepper, BEFORE\_XDOT\_UPDATE)} \item {\bf
+if (``Ending") then} \hfill {\it * Take half-step to get solution at the same
+time level.} \item \quad $\dot{x}_{n+1} \leftarrow \dot{x}_{n+1/2}
++\frac{1}{2} \Delta t\, \ddot{x}_{n+1}$ \item {\bf else} \item \quad
+$\dot{x}_{n+3/2} \leftarrow \dot{x}_{n+1/2} + \Delta t\, \ddot{x}_{n+1}$
+     \item {\bf endif}
+     \item {\it appAction.execute(solutionHistory, stepper, END\_STEP)}
+   \end{enumerate}
+   \vspace{-10pt} \rule{5in}{0.4pt}
+   }
+ \end{center}
+\_form#252=65x15:$(x_n,\dot{x}_{n+1/2})$
+\_form#253=43x14:$(x_n,\dot{x}_{n})$
+\_form#254=78x15:$(x_{n+1},\dot{x}_{n+3/2})$
+\_form#255=68x14:$(x_{n+1},\dot{x}_{n+1})$
+\_form#256=134x14:\[
+   \mathbf{M}\, \ddot{\mathbf{x}} + \mathbf{C}\, \dot{\mathbf{x}}
+   + \mathbf{K}\, \mathbf{x} = \mathbf{F}(t)
+ \]
+\_form#257=33x10:$\mathbf{a} = \ddot{\mathbf{x}}$
+\_form#258=228x16:\[
+    \mathbf{a} = -\mathbf{M}^{-1}\left[ \mathbf{C}\, \mathbf{v}
+   + \mathbf{K}\, \mathbf{d} - \mathbf{F}(t) \right]
+   = \bar{\mathbf{f}}(\mathbf{d}, \mathbf{v}, t)
+ \]
+\_form#259=34x10:$\mathbf{v} = \dot{\mathbf{x}}$
+\_form#260=34x10:$\mathbf{d} = \mathbf{x}$
+\_form#261=451x275:\begin{center}
+   \parbox{5in}{
+   \rule{5in}{0.4pt} \\
+   {\bf Algorithm} Newmark Explicit A-form \\
+   \rule{5in}{0.4pt} \vspace{-15pt}
+   \begin{enumerate}
+     \setlength{\itemsep}{0pt} \setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt} \item {\it appAction.execute(solutionHistory,
+stepper, BEGIN\_STEP)} \item {\bf if (Not ``Use FSAL'' or (previous step
+failed)) then} \item \quad  {\it appAction.execute(solutionHistory, stepper,
+BEFORE\_EXPLICIT\_EVAL)} \item \quad  $\mathbf{a}^{n-1} =
+                  \bar{\mathbf{f}}(\mathbf{d}^{n-1}, \mathbf{v}^{n-1},
+t^{n-1})$ \item {\bf endif} \item $\mathbf{d}^{\ast} = \mathbf{d}^{n-1} +
+\Delta t \mathbf{v}^{n-1}
+                              + \Delta t^2 \mathbf{a}^{n-1} / 2$
+     \item $\mathbf{v}^{\ast} =
+           \mathbf{v}^{n-1} + \Delta t (1-\gamma) \mathbf{a}^{n-1}$
+     \item $\mathbf{a}^{\ast} =
+           \bar{\mathbf{f}}(\mathbf{d}^{\ast}, \mathbf{v}^{\ast}, t^{n-1})$
+     \item $\mathbf{d}^n = \mathbf{d}^{\ast}$
+     \item $\mathbf{v}^n =
+           \mathbf{v}^{\ast} + \Delta t \gamma \mathbf{a}^{\ast}$
+     \item {\bf if (``Use FSAL'') then}
+     \item \quad  {\it appAction.execute(solutionHistory, stepper,
+BEFORE\_EXPLICIT\_EVAL)} \item \quad  $\mathbf{a}^n =
+                  \bar{\mathbf{f}}(\mathbf{d}^n, \mathbf{v}^n, t^n)$
+     \item {\bf endif}
+     \item {\it appAction.execute(solutionHistory, stepper, END\_STEP)}
+   \end{enumerate}
+   \vspace{-10pt} \rule{5in}{0.4pt}
+   }
+ \end{center}
+\_form#262=94x15:$\ddot{x}_{0} = \bar{f}(x_{0},\dot{x}_{0},t_{0})$
+\_form#263=41x11:$\gamma =  0.5$
+\_form#264=156x14:\[
+    \mathbf{M}\, \ddot{\mathbf{x}} + \mathbf{C}\, \dot{\mathbf{x}}
+    + \mathbf{K}\, \mathbf{x} + \mathbf{F}(t) = 0
+  \]
+\_form#265=231x14:\[
+       \mathbf{M}\, \mathbf{a} + \mathbf{C}\, \mathbf{v}
+     + \mathbf{K}\, \mathbf{d} + \mathbf{F}(t) =
+       \mathbf{f}(\mathbf{d}, \mathbf{v}, \mathbf{a}, t) = 0
+  \]
+\_form#266=451x215:\begin{center}
+    \parbox{5in}{
+    \rule{5in}{0.4pt} \\
+    {\bf Algorithm} Newmark Implicit A-form \\
+    \rule{5in}{0.4pt} \vspace{-15pt}
+    \begin{enumerate}
+      \setlength{\itemsep}{0pt} \setlength{\parskip}{0pt} \setlength{\parsep}{0pt}
+      \item {\it appAction.execute(solutionHistory, stepper, BEGIN\_STEP)}
+      \item $\mathbf{d}^{\ast} = \mathbf{d}^{n-1} + \Delta t \mathbf{v}^{n-1}
+                                     + \Delta t^2 (1-2 \beta) \mathbf{a}^{n-1} / 2$
+      \item $\mathbf{v}^{\ast} = \mathbf{v}^{n-1} + \Delta t (1-\gamma) \mathbf{a}^{n-1}$
+      \item {\it appAction.execute(solutionHistory, stepper, BEFORE\_SOLVE)}
+      \item {\bf Solve
+                 $\mathbf{f}(\mathbf{d}^n, \mathbf{v}^n, \mathbf{a}^n, t^n) = 0$
+                 for $\mathbf{a}^n$ where} \\
+                 $\mathbf{d}^n = \mathbf{d}^{\ast} + \beta \Delta t^2 \mathbf{a}^n$ \\
+                 $\mathbf{v}^n = \mathbf{v}^{\ast} + \gamma \Delta t \mathbf{a}^n$
+      \item {\it appAction.execute(solutionHistory, stepper, AFTER\_SOLVE)}
+      \item $\mathbf{d}^n = \mathbf{d}^{\ast} + \beta \Delta t^2 \mathbf{a}^n$
+      \item $\mathbf{v}^n = \mathbf{v}^{\ast} + \gamma \Delta t \mathbf{a}^n$
+      \item {\it appAction.execute(solutionHistory, stepper, END\_STEP)}
+    \end{enumerate}
+    \vspace{-10pt} \rule{5in}{0.4pt}
+    }
+  \end{center}
+\_form#267=451x215:\begin{center}
+   \parbox{5in}{
+   \rule{5in}{0.4pt} \\
+   {\bf Algorithm} Newmark Implicit D-form \\
+   \rule{5in}{0.4pt} \vspace{-15pt}
+   \begin{enumerate}
+     \setlength{\itemsep}{0pt} \setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt} \item {\it appAction.execute(solutionHistory,
+stepper, BEGIN\_STEP)} \item $\mathbf{d}^{\ast} = \mathbf{d}^{n-1} + \Delta t
+\mathbf{v}^{n-1}
+                              + \Delta t^2 (1-2 \beta) \mathbf{a}^{n-1} / 2$
+     \item $\mathbf{v}^{\ast} = \mathbf{v}^{n-1} + \Delta t (1-\gamma)
+\mathbf{a}^{n-1}$ \item {\it appAction.execute(solutionHistory, stepper,
+BEFORE\_SOLVE)} \item {\bf Solve
+           $\mathbf{f}(\mathbf{d}^n, \mathbf{v}^n, \mathbf{a}^n, t^n) = 0$
+           for $\mathbf{d}^n$ where} \\
+           $\mathbf{a}^n = (\mathbf{d}^n - \mathbf{d}^{\ast})/(\beta \Delta
+t^2)$ \\
+           $\mathbf{v}^n = \mathbf{v}^{\ast} + \gamma \Delta t \mathbf{a}^n$
+     \item {\it appAction.execute(solutionHistory, stepper, AFTER\_SOLVE)}
+     \item $\mathbf{a}^n = (\mathbf{d}^n - \mathbf{d}^{\ast})/(\beta \Delta
+t^2)$ \item $\mathbf{v}^n = \mathbf{v}^{\ast} + \gamma \Delta t \mathbf{a}^n$
+     \item {\it appAction.execute(solutionHistory, stepper, END\_STEP)}
+   \end{enumerate}
+   \vspace{-10pt} \rule{5in}{0.4pt}
+   }
+ \end{center}
+\_form#268=451x200:\begin{center}
+   \parbox{5in}{
+   \rule{5in}{0.4pt} \\
+   {\bf Algorithm} Operator Split \\
+   \rule{5in}{0.4pt} \vspace{-15pt}
+   \begin{enumerate}
+     \setlength{\itemsep}{0pt} \setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt} \item {\it appAction.execute(solutionHistory,
+stepper, BEGIN\_STEP)} \item $x^\ast = x^n$ \hfill {\it * Initialize
+operator-split solution.} \item {\bf for (each subStepper)} \item \quad  {\it
+appAction.execute(solutionHistory, stepper, BEFORE\_STEPPER)} \item \quad
+{\bf subStepper take time step.} \hfill {\it * Evolve solution, $x^\ast
+\rightarrow x^{\ast\ast}$.} \item \quad  {\it
+appAction.execute(solutionHistory, stepper, AFTER\_STEPPER)} \item \quad {\bf
+if (subStep failed) then break.} \item \quad  {\bf Promote solution, $ x^\ast
+\leftarrow x^{\ast\ast}$} \item {\bf end for} \item {\it
+appAction.execute(solutionHistory, stepper, END\_STEP)} \end{enumerate}
+   \vspace{-10pt} \rule{5in}{0.4pt}
+   }
+ \end{center}
+\_form#269=150x33:\[
+\begin{array}{c|c}
+  c & A \\ \hline
+    & b^T
+\end{array}
+\;\;\;\;\mbox{ where }\;\;\;\;
+\begin{array}{c|c} 0 & 0 \\ \hline
+                     & 1 \end{array}
+\]
+\_form#270=269x76:\[
+\begin{array}{c|c}
+  c & A \\ \hline
+    & b^T
+\end{array}
+\;\;\;\;\mbox{ where }\;\;\;\;
+\begin{array}{c|cccc}  0  &  0  &     &     &    \\
+                      1/2 & 1/2 &  0  &     &    \\
+                      1/2 &  0  & 1/2 &  0  &    \\
+                       1  &  0  &  0  &  1  &  0 \\ \hline
+                          & 1/6 & 1/3 & 1/3 & 1/6 \end{array}
+\]
+\_form#271=279x91:\[
+\begin{array}{c|c}
+  c & A   \\ \hline
+    & b^T \\
+    & b^{*T}
+\end{array}
+\;\;\;\;\mbox{ where }\;\;\;\;
+\begin{array}{c|cccc}  0  & 0    &     &     & \\
+                      1/2 & 1/2  & 0   &     & \\
+                      3/4 & 0    & 3/4 & 0   & \\
+                       1  & 2/9  & 1/3 & 4/9 & 0 \\ \hline
+                          & 2/9  & 1/3 & 4/9 & 0 \\
+                          & 7/24 & 1/4 & 1/3 & 1/8 \end{array}
+\]
+\_form#272=321x106:\[
+\begin{array}{c|c}
+  c & A   \\ \hline
+    & b^T \\
+    & b^{*T}
+\end{array}
+\;\;\;\;\mbox{ where }\;\;\;\;
+\begin{array}{c|ccccc}  0 & 0    &     &      &     & \\
+                      1/3 & 1/3  & 0   &      &     & \\
+                      1/3 & 1/6  & 1/6 & 0    &     & \\
+                      1/2 & 1/8  & 0   & 3/8  &     & \\
+                       1  & 1/2  & 0   & -3/2 & 2   & \\ \hline
+                          & 1/6  & 0   & 0    & 2/3 & 1/6 \\
+                          & 1/10 & 0   & 3/10 & 2/5 & 1/5 \end{array}
+\]
+\_form#273=279x76:\[
+\begin{array}{c|c}
+  c & A \\ \hline
+    & b^T
+\end{array}
+\;\;\;\;\mbox{ where }\;\;\;\;
+\begin{array}{c|cccc}  0  &  0  &     &     &    \\
+                      1/3 & 1/3 &  0  &     &    \\
+                      2/3 &-1/3 &  1  &  0  &    \\
+                       1  &  1  & -1  &  1  &  0 \\ \hline
+                          & 1/8 & 3/8 & 3/8 & 1/8 \end{array}
+\]
+\_form#274=256x76:\[
+\begin{array}{c|c}
+  c & A \\ \hline
+    & b^T
+\end{array}
+\;\;\;\;\mbox{ where }\;\;\;\;
+\begin{array}{c|cccc}  0  &  0  &     &     &    \\
+                      1/2 & 1/2 &  0  &     &    \\
+                       1  &  0  &  1  &  0  &    \\
+                       1  &  0  &  0  &  1  &  0 \\ \hline
+                          & 1/6 & 2/3 &  0  & 1/6 \end{array}
+\]
+\_form#275=299x91:\[
+\begin{array}{c|c}
+  c & A \\ \hline
+    & b^T
+\end{array}
+\;\;\;\;\mbox{ where }\;\;\;\;
+\begin{array}{c|ccccc}  0  &  0  &     &     &     &    \\
+                       1/5 & 1/5 &  0  &     &     &    \\
+                       1/5 &  0  & 1/5 &  0  &     &    \\
+                       1/3 &  0  &  0  & 1/3 &  0  &    \\
+                       2/3 &  0  &  0  &  0  & 2/3 &  0 \\ \hline
+                           & 1/4 &  0  &  0  &  0  & 3/4 \end{array}
+\]
+\_form#276=238x61:\[
+\begin{array}{c|c}
+  c & A \\ \hline
+    & b^T
+\end{array}
+\;\;\;\;\mbox{ where }\;\;\;\;
+\begin{array}{c|ccc}  0  &  0  &     &     \\
+                     1/2 & 1/2 &  0  &     \\
+                      1  & -1  &  2  &  0  \\ \hline
+                         & 1/6 & 4/6 & 1/6  \end{array}
+\]
+\_form#277=238x61:\[
+\begin{array}{c|c}
+  c & A \\ \hline
+    & b^T
+\end{array}
+\;\;\;\;\mbox{ where }\;\;\;\;
+\begin{array}{c|ccc}  0  &  0  &     &     \\
+                      1  &  1  &  0  &     \\
+                     1/2 & 1/4 & 1/4 &  0  \\ \hline
+                         & 1/6 & 1/6 & 4/6  \end{array}
+\]
+\_form#278=238x61:\[
+\begin{array}{c|c}
+  c & A \\ \hline
+    & b^T
+\end{array}
+\;\;\;\;\mbox{ where }\;\;\;\;
+\begin{array}{c|ccc}  0  &  0  &     &     \\
+                     1/3 & 1/3 &  0  &     \\
+                     2/3 &  0  & 2/3 &  0  \\ \hline
+                         & 1/4 &  0  & 3/4  \end{array}
+\]
+\_form#279=194x48:\[
+\begin{array}{c|c}
+  c & A \\ \hline
+    & b^T
+\end{array}
+\;\;\;\;\mbox{ where }\;\;\;\;
+\begin{array}{c|cc}  0  &  0  &     \\
+                    1/2 & 1/2 &  0  \\ \hline
+                        &  0  &  1   \end{array}
+\]
+\_form#280=206x48:\[
+\begin{array}{c|c}
+  c & A \\ \hline
+    & b^T
+\end{array}
+\;\;\;\;\mbox{ where }\;\;\;\;
+\begin{array}{c|cc}   0   &   0   &     \\
+                     2/3  &  2/3  &  0  \\ \hline
+                          &  1/4  & 3/4  \end{array}
+\]
+\_form#281=194x61:\[
+\begin{array}{c|c}
+  c & A \\ \hline
+    & b^T
+\end{array}
+\;\;\;\;\mbox{ where }\;\;\;\;
+\begin{array}{c|cc}  0  &  0  &     \\
+                     1  &  1  &  0  \\ \hline
+                        & 1/2 & 1/2 \\
+                        & 3/4 & 1/4 \end{array}
+\]
+\_form#282=45x49:\[
+ \begin{array}{c|c}
+   c & A \\ \hline
+     & b^T \\
+     & \hat{b}^T
+ \end{array}
+ \]
+\_form#283=150x33:\[
+\begin{array}{c|c}
+  c & A \\ \hline
+    & b^T
+\end{array}
+\;\;\;\;\mbox{ where }\;\;\;\;
+\begin{array}{c|c} 1 & 1 \\ \hline
+                     & 1 \end{array}
+\]
+\_form#284=194x48:\[
+\begin{array}{c|c}
+  c & A \\ \hline
+    & b^T
+\end{array}
+\;\;\;\;\mbox{ where }\;\;\;\;
+\begin{array}{c|cc} \gamma  & \gamma &        \\
+                       1    & 1-\gamma & \gamma \\ \hline
+                            & 1-\gamma & \gamma  \end{array}
+\]
+\_form#285=85x15:$\gamma = (2 - \sqrt{2})/2$
+\_form#286=46x14:$A_{sj} = b_j$
+\_form#287=269x61:\[
+\begin{array}{c|c}
+  c & A \\ \hline
+    & b^T
+\end{array}
+\;\;\;\;\mbox{ where }\;\;\;\;
+\begin{array}{c|ccc}  \gamma  & \gamma      &         &        \\
+                     1-\gamma & 1-2\gamma   & \gamma  &        \\
+                     1/2      & 1/2 -\gamma & 0       & \gamma \\ \hline
+                              & 1/6         & 1/6     & 2/3
+\end{array}
+\]
+\_form#288=233x48:\[
+\begin{array}{c|c}
+  c & A \\ \hline
+    & b^T
+\end{array}
+\;\;\;\;\mbox{ where }\;\;\;\;
+\begin{array}{c|cc}  \gamma  &  \gamma   &        \\
+                    1-\gamma & 1-2\gamma & \gamma \\ \hline
+                             &   1/2     &   1/2   \end{array}
+\]
+\_form#289=266x31:\[
+\gamma = \left\{ \begin{array}{cc}
+                   (2\pm \sqrt{2})/2 & \mbox{then 2nd order and L-stable} \\
+                   (3\pm \sqrt{3})/6 & \mbox{then 3rd order and A-stable}
+                 \end{array} \right.
+\]
+\_form#290=85x15:$\gamma = (3 + \sqrt{3})/6$
+\_form#291=206x48:\[
+\begin{array}{c|c}
+  c & A \\ \hline
+    & b^T
+\end{array}
+\;\;\;\;\mbox{ where }\;\;\;\;
+\begin{array}{c|cc}  0  &  0  &     \\
+                    2/3 & 1/3 & 1/3 \\ \hline
+                        & 1/4 & 3/4  \end{array}
+\]
+\_form#292=150x33:\[
+\begin{array}{c|c}
+  c & A \\ \hline
+    & b^T
+\end{array}
+\;\;\;\;\mbox{ where }\;\;\;\;
+\begin{array}{c|c} \theta  & \theta  \\  \hline
+                           & 1       \end{array}
+\]
+\_form#293=53x13:$0 < \theta \leq 1$
+\_form#294=6x10:$\theta$
+\_form#295=30x10:$theta$
+\_form#296=190x48:\[
+\begin{array}{c|c}
+  c & A \\ \hline
+    & b^T
+\end{array}
+\;\;\;\;\mbox{ where }\;\;\;\;
+\begin{array}{c|cc}  0  &  0       &        \\
+                     1  & 1-\theta & \theta \\ \hline
+                        & 1-\theta & \theta  \end{array}
+\]
+\_form#297=63x11:$0 < \theta <= 1$
+\_form#298=194x48:\[
+\begin{array}{c|c}
+  c & A \\ \hline
+    & b^T
+\end{array}
+\;\;\;\;\mbox{ where }\;\;\;\;
+\begin{array}{c|cc}  0  &  0  &     \\
+                     1  & 1/2 & 1/2 \\ \hline
+                        & 1/2 & 1/2  \end{array}
+\]
+\_form#299=175x33:\[
+\begin{array}{c|c}
+  c & A \\ \hline
+    & b^T
+\end{array}
+\;\;\;\;\mbox{ where }\;\;\;\;
+\begin{array}{c|c} 1/2  & 1/2  \\ \hline
+                        & 1    \end{array}
+\]
+\_form#300=206x49:\[
+ \begin{array}{c|c}
+   c & A \\ \hline
+     & b^T \\
+     & \hat{b}^T
+ \end{array}
+ \;\;\;\;\mbox{ where }\;\;\;\;
+ \begin{array}{c|cccc}  1/4  & 1/4  & \\
+                        3/4  & 1/2  & 1/4 \\   \hline
+                             & 1/2  & 1/2  \end{array}
+ \]
+\_form#301=238x61:\[
+ \begin{array}{c|c}
+   c & A \\ \hline
+     & b^T \\
+     & \hat{b}^T
+ \end{array}
+ \;\;\;\;\mbox{ where }\;\;\;\;
+ \begin{array}{c|cccc}  1/6  & 1/6  &           \\
+                        1/2  & 1/3  & 1/6 &     \\
+                        5/6  & 1/3  & 1/3 & 1/3 \\   \hline
+                             & 1/3  & 1/3 & 1/3  \end{array}
+ \]
+\_form#302=346x49:\[
+ \begin{array}{c|c}
+   c & A \\ \hline
+     & b^T \\
+     & \hat{b}^T
+ \end{array}
+ \;\;\;\;\mbox{ where }\;\;\;\;
+ \begin{array}{c|cccc}  1/(3+\sqrt{3})    & 1/(3+\sqrt{3}) & \\
+                        (1/6)(3+\sqrt{3}) & 1/\sqrt{3}     & 1/(3+\sqrt{3})
+\\   \hline & 1/2            & 1/2 \end{array} \]
+\_form#303=238x61:\[
+ \begin{array}{c|c}
+   c & A \\ \hline
+     & b^T \\
+     & \hat{b}^T
+ \end{array}
+ \;\;\;\;\mbox{ where }\;\;\;\;
+ \begin{array}{c|cccc}  1/6  & 1/6  & \\
+                        1/2  & 1/3  & 1/6 & \\
+                        5/6  & 1/3  & 1/3 & 1/3 \\   \hline
+                             & 1/3  & 1/3 & 1/3  \end{array}
+ \]
+\_form#304=150x33:\[
+\begin{array}{c|c}
+  c & A \\ \hline
+    & b^T
+\end{array}
+\;\;\;\;\mbox{ where }\;\;\;\;
+\begin{array}{c|c}  0  & 1  \\ \hline
+                       & 1  \end{array}
+\]
+\_form#305=194x48:\[
+\begin{array}{c|c}
+  c & A \\ \hline
+    & b^T
+\end{array}
+\;\;\;\;\mbox{ where }\;\;\;\;
+\begin{array}{c|cc}  0  & 1/2 &  0  \\
+                     1  & 1/2 &  0  \\ \hline
+                        & 1/2 & 1/2  \end{array}
+\]
+\_form#306=425x91:\[
+\begin{array}{c|c}
+  c & A \\ \hline
+    & b^T
+\end{array}
+\;\;\;\;\mbox{ where }\;\;\;\;
+\begin{array}{c|ccccc}
+  1/4   & 1/4       &            &         &         &     \\
+  3/4   & 1/2       & 1/4        &         &         &     \\
+  11/20 & 17/50     & -1/25      & 1/4     &         &     \\
+  1/2   & 371/1360  & -137/2720  & 15/544  & 1/4     &     \\
+   1    & 25/24     & -49/48     & 125/16  & -85/12  & 1/4 \\ \hline
+        & 25/24     & -49/48     & 125/16  & -85/12  & 1/4 \end{array}
+\]
+\_form#307=274x61:\[
+\begin{array}{c|c}
+  c & A \\ \hline
+    & b^T
+\end{array}
+\;\;\;\;\mbox{ where }\;\;\;\;
+\begin{array}{c|ccc}
+  \gamma   &     \gamma &           &        \\
+  1/2      & 1/2-\gamma &    \gamma &        \\
+  1-\gamma &    2\gamma & 1-4\gamma & \gamma \\ \hline
+           &     \delta & 1-2\delta & \delta \end{array}
+\]
+\_form#308=153x15:$\gamma = (1/\sqrt{3})\cos(\pi/18)+1/2$
+\_form#309=100x15:$\delta = 1/(6(2\gamma-1)^2)$
+\_form#310=599x96:\[
+ \begin{array}{c|c}
+   c & A \\ \hline
+     & b^T
+ \end{array}
+ \;\;\;\;\mbox{ where }\;\;\;\;
+ \begin{array}{c|ccccc}
+   (6-\sqrt{6})/10   & (6-\sqrt{6})/10              & 0 & 0 & 0 & 0 \\
+   (6+9\sqrt{6})/35  & (-6+5\sqrt{6})/14            & (6-\sqrt{6})/10 & 0 & 0
+& 0                \\
+        1            & (888+607\sqrt{6})/2850       & (126-161\sqrt{6})/1425
+& (6-\sqrt{6})/10         & 0                     & 0                \\
+   (4-\sqrt{6})/10   & (3153-3082\sqrt{6})/14250    &
+(3213+1148\sqrt{6})/28500   & (-267+88\sqrt{6})/500   & (6-\sqrt{6})/10 & 0
+\\ (4+\sqrt{6})/10   & (-32583+14638\sqrt{6})/71250 &
+(-17199+364\sqrt{6})/142500 & (1329-544\sqrt{6})/2500 & (-96+131\sqrt{6})/625
+& (6-\sqrt{6})/10  \\ \hline &       0                      &       0 & 1/9
+& (16-\sqrt{6})/36      & (16+\sqrt{6})/36 \end{array} \]
+\_form#311=199x61:\[
+\begin{array}{c|c}
+  c & A   \\ \hline
+    & b^T \\
+    & b^{*T}
+\end{array}
+\;\;\;\;\mbox{ where }\;\;\;\;
+\begin{array}{c|cccc}  1 & 1   & \\
+                       0 & -1  & 1 \\ \hline
+                         & 1/2 & 1/2 \\
+                         & 1   & 0 \end{array}
+\]
+\_form#312=194x48:\[
+\begin{array}{c|c}
+  c & A \\ \hline
+    & b^T
+\end{array}
+\;\;\;\;\mbox{ where }\;\;\;\;
+\begin{array}{c|cc} \gamma  &   \gamma &        \\
+                       1    & 1-\gamma & \gamma \\ \hline
+                            & 1-\gamma & \gamma  \end{array}
+\]
+\_form#313=85x15:$\gamma = (2\pm \sqrt{2})/2$
+\_form#314=451x95:\begin{center}
+   \parbox{5in}{
+   \rule{5in}{0.4pt} \\
+   {\bf Algorithm} Subcycling \\
+   \rule{5in}{0.4pt} \vspace{-15pt}
+   \begin{enumerate}
+     \setlength{\itemsep}{0pt} \setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt} \item {\it appAction.execute(solutionHistory,
+stepper, BEGIN\_STEP)} \item {\bf Advance solution, $x_{n}$ from $x_{n-1}$,
+by cycling substeppers.} \item {\it appAction.execute(solutionHistory,
+stepper, END\_STEP)} \end{enumerate} \vspace{-10pt} \rule{5in}{0.4pt}
+   }
+ \end{center}
+\_form#315=451x205:\begin{center}
+   \parbox{5in}{
+   \rule{5in}{0.4pt} \\
+   {\bf Algorithm} Trapezoidal \\
+   \rule{5in}{0.4pt} \vspace{-15pt}
+   \begin{enumerate}
+     \setlength{\itemsep}{0pt} \setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt} \item {\it appAction.execute(solutionHistory,
+stepper, BEGIN\_STEP)} \item {\bf Set ODE parameters.} \item \quad {\bf Time
+derivative: }
+                 $\dot{x}_{n} = \frac{(x_{n} - x_{n-1})}{(\Delta t_n/2)} -
+\dot{x}_{n-1}.$ \item \quad {\bf Alpha: $\alpha = \frac{2}{\Delta t_n}$}
+     \item \quad {\bf Beta: $\beta = 1$}
+     \item {\it appAction.execute(solutionHistory, stepper, BEFORE\_SOLVE)}
+     \item {\bf Solve $\mathcal{F}_n(\dot{x}=(x_n-x_{n-1})/(\Delta t_n/2) -
+\dot{x}_{n-1}, x_n, t_n)=0$ for $x_n$} \item {\it
+appAction.execute(solutionHistory, stepper, AFTER\_SOLVE)} \item $\dot{x}_n
+\leftarrow (x_n-x_{n-1})/(\Delta t_n/2) - \dot{x}_{n-1}$ \item {\it
+appAction.execute(solutionHistory, stepper, END\_STEP)} \end{enumerate}
+   \vspace{-10pt} \rule{5in}{0.4pt}
+   }
+ \end{center}
+\_form#316=184x14:\[
+   \dot{x}_n = (x_n-x_{n-1})/(\Delta t/2) - \dot{x}_{n-1},
+ \]
+\_form#317=39x16:$ \alpha = \frac{2}{\Delta t} $
+\_form#318=119x29:\[
+   W = \frac{2}{\Delta t}
+       \frac{\partial \mathcal{F}_n}{\partial \dot{x}_n}
+     + \frac{\partial \mathcal{F}_n}{\partial x_n}.
+ \]
+\_form#319=144x31:\[
+  \dot{x}_{n} = \frac{(x_{n} - x_{n-1})}{(\Delta t_n/2)} - \dot{x}_{n-1}.
+\]
+\_form#320=63x14:$\mathcal{F}(\ddot{x},\dot{x},x,t)$
+\_form#321=65x11:$\eta_{min}=0.01$
+\_form#322=66x11:$\eta_{max}=0.03$
+\_form#323=128x31:\[
+  \eta_{n-1} = \frac{|| x_{n-1} - x_{n-2} ||}{ || x_{n-2} || + \epsilon }
+\]
+\_form#324=5x6:$\epsilon$
+\_form#325=26x9:$\eta_{n-1}$
+\_form#326=111x10:\[
+  \eta_{min} < \eta_{n-1} < \eta_{max}
+\]
+\_form#327=8x9:$\rho$
+\_form#328=8x6:$\sigma$
+\_form#329=358x46:\[
+  \Delta t_n = \left\{
+    \begin{array}{rll}
+      \sigma \Delta t_{n-1} & \mbox{if $\eta_{n-1} > \eta_{max}$}
+                            & \mbox{where $0 < \sigma < 1$}             \\
+      \rho   \Delta t_{n-1} & \mbox{else if $\eta_{n-1} < \eta_{min}$}
+                            & \mbox{where $\rho > 1$}                   \\
+             \Delta t_{n-1} &
+                      \mbox{else if $\eta_{min}<\eta_{n-1}<\eta_{max}$} \\
+    \end{array}
+  \right.
+\]
+\_form#330=25x13:$e_{abs}^{max}$
+\_form#331=25x13:$e_{rel}^{max}$
+\_form#332=316x121:\[
+  \Delta t_n = \left\{
+    \begin{array}{rll}
+      \sigma \Delta t_{n-1} & \mbox{if Stepper fails}
+                            & \mbox{where $0 < \sigma < 1$}            \\
+      \rho   \Delta t_{n-1} & \mbox{else if $\eta_{n-1} < \eta_{min}$}
+                            & \mbox{where $\rho > 1$}                  \\
+      \sigma \Delta t_{n-1} & \mbox{else if $\eta_{n-1} > \eta_{max}$}
+                            & \mbox{where $0 < \sigma < 1$}            \\
+      \sigma \Delta t_{n-1} & \mbox{else if $e_{abs} > e_{abs}^{max}$}
+                            & \mbox{where $0 < \sigma < 1$}            \\
+      \sigma \Delta t_{n-1} & \mbox{else if $e_{rel} > e_{rel}^{max}$}
+                            & \mbox{where $0 < \sigma < 1$}            \\
+      \rho   \Delta t_{n-1} & \mbox{else if $p < p_{min}$}
+                            & \mbox{where $\rho > 1$}                  \\
+      \sigma \Delta t_{n-1} & \mbox{else if $p > p_{max}$}
+                            & \mbox{where $0 < \sigma < 1$}            \\
+             \Delta t_{n-1} & \mbox{else} &                            \\
+    \end{array}
+  \right.
+\]
+\_form#333=21x13:$\Delta t_n$
+\_form#334=124x13:$\Delta t_{min} < \Delta t_n < \Delta t_{max}$
+\_form#335=99x10:$ \eta_{min} < \eta_n < \eta_{max}$
+\_form#336=49x11:$\eta_{min}=0$
+\_form#337=66x14:$\eta_{max}=10^{16}$
+\_form#338=46x11:$\rho < 1.91$
+\_form#339=96x11:$\eta_{min} = 0.1*\eta_{max}$
+\_form#340=104x14:$ \Delta t = \min_{i \leq N} \{ \Delta t_i \}$
+\_form#341=205x24:\[
+     (\Delta t)_{n+1} =
+     (\Delta t)_n \left( \epsilon_n ^{-k_I / p}
+          \epsilon_{n-1}^{k_P / p} \epsilon_{n-2}^{-k_D / p} \right)
+\]
+\_form#342=170x24:\[
+     (\Delta t)_{n+1} =
+     (\Delta t)_n \left( \epsilon_n ^{-k_I / p}
+          \epsilon_{n-1}^{k_P / p} \right)
+\]
+\_form#343=140x24:\[
+     (\Delta t)_{n+1} =
+     (\Delta t)_n \left( \epsilon_n ^{-k_I / p} \right)
+\]
+\_form#344=11x9:$\epsilon_n $
+\_form#345=8x9:$p$
+\_form#346=28x14:$\mathcal{F}(x)$
+\_form#347=24x14:$ g(x) $
+\_form#348=46x14:$ f(x,\dot{x},t) $
+\_form#349=46x14:$ f(\dot{x},x,t) $
+\_form#350=43x10:\[
+  \mathbf{\dot{x}} = \lambda \mathbf{x}.
+  \]
+\_form#351=33x11:$\lambda \in \mathbf{C}$
+\_form#352=46x14:$\mathbf{x}(0) = 1$
+\_form#353=75x14:\[
+  \mathbf{x}(t) = \exp{\lambda t}.
+  \]
+\_form#354=51x14:$\mathbf{R}(\lambda) < 0$
+\_form#355=34x9:$ \mathbf{x} \rightarrow 0$
+\_form#356=38x9:$t \rightarrow \infty$
+\_form#357=99x13:\[
+  m\ddot{x} + c\dot{x} + kx=f
+  \]
+\_form#358=30x13:$k \geq 0$
+\_form#359=5x6:$c$
+\_form#360=8x13:$f$
+\_form#361=35x10:$m>0$
+\_form#362=64x33:\begin{eqnarray*}
+    x(0) & = & 0\\
+    \dot{x}(0) & = & 1
+  \end{eqnarray*}
+\_form#363=341x85:\begin{eqnarray*}
+    x(t) & = & t(1+0.5\tilde{f}t),  \hspace{3.6cm} if  \hspace{0.2cm} k = c =
+0 \\
+         & = & \frac{(\tilde{c}-\tilde{f})}{\tilde{c}^2}(1-e^{-\tilde{c}t}) +
+\frac{f}{c}t, \hspace{1.9cm} if \hspace{0.2cm} k = 0, c\neq 0 \\ & = &
+\frac{1}{\sqrt{\tilde{k}}}\sin(\sqrt{\tilde{k}}t) +
+\frac{f}{k}\left(1-\cos(\sqrt{\tilde{k}}t) \right), \hspace{0.2cm} if
+\hspace{0.2cm} k > 0, c = 0 \end{eqnarray*}
+\_form#364=45x14:$\tilde{c}\equiv c/m$
+\_form#365=48x16:$\tilde{k}\equiv k/m$
+\_form#366=49x16:$\tilde{f}\equiv f/m$
+\_form#367=30x11:$k > 0$
+\_form#368=28x13:$c \neq 0$
+\_form#369=51x10:$c = k = 0$
+\_form#370=34x9:$m=1$
+\_form#371=39x13:$f=-1$
+\_form#372=94x14:\[ x(t) = t(1-0.5t) \]
+\_form#373=45x14:$t\in [0,2]$
+\_form#374=53x13:$c = f = 0$
+\_form#375=58x10:$m=k = 1$
+\_form#376=43x10:\[
+    \mathbf{\ddot{x}}=-\mathbf{x}
+    \]
+\_form#377=219x33:\begin{eqnarray*}
+      x_{0}(t) & = & a+b*\sin((f/L)*t+\phi)\\
+      x_{1}(t) & = & b*(f/L)*\cos((f/L)*t+\phi)
+    \end{eqnarray*}
+\_form#378=170x65:\begin{eqnarray*}
+    \frac{d}{dt}x_{0}(t) & = & x_{1}(t)\\
+    \frac{d}{dt}x_{1}(t) & = & \left(\frac{f}{L}\right)^{2}(a-x_{0}(t))
+  \end{eqnarray*}
+\_form#379=29x9:$a=0$
+\_form#380=30x13:$f=1$
+\_form#381=30x10:$L=1$
+\_form#382=128x33:\begin{eqnarray*}
+    x_{0}(t_{0}=0) & = & \gamma_{0}[=0]\\
+    x_{1}(t_{0}=0) & = & \gamma_{1}[=1]
+  \end{eqnarray*}
+\_form#383=296x33:\begin{eqnarray*}
+    \phi & = & \arctan(((f/L)/\gamma_{1})*(\gamma_{0}-a))-(f/L)*t_{0}[=0]\\
+    b & = & \gamma_{1}/((f/L)*cos((f/L)*t_{0}+\phi))[=1]
+  \end{eqnarray*}
+\_form#384=66x14:\[
+    \mathbf{p}=(a,f,L)
+  \]
+\_form#385=74x14:\[
+    \dot{\mathbf{x}}=\mathbf{F}(\mathbf{x},t,\mathbf{p})
+  \]
+\_form#386=129x50:\begin{eqnarray*}
+    F_{0} & = & x_{1}\\
+    F_{1} & = & \left(\frac{f}{L}\right)^{2}(a-x_{0})
+  \end{eqnarray*}
+\_form#387=60x14:$\mathbf{s}=\partial\mathbf{x}/\partial\mathbf{p}$
+\_form#388=436x61:\[
+    \mathbf{s}(t)=\left[\begin{array}{cc}
+    1 & 0\\
+    \left(\frac{b}{L}\right)t\,\cos\left(\left(\frac{f}{L}\right)t+\phi\right)
+&
+\left(\frac{b}{L}\right)\cos\left(\left(\frac{f}{L}\right)t+\phi\right)-\frac{b\,
+f\, t}{L^{2}}\sin\left(\left(\frac{f}{L}\right)t+\phi\right)\\
+    -\frac{b\, f\, t}{L^{2}}\cos\left(\left(\frac{f}{L}\right)t+\phi\right) &
+-\frac{b\, f}{L^{2}}\cos\left(\left(\frac{f}{L}\right)t+\phi\right)+\frac{b\,
+f^{2}\, t}{L^{3}}\sin\left(\left(\frac{f}{L}\right)t+\phi\right)
+    \end{array}\right]
+  \]
+\_form#389=30x13:$\phi=0$
+\_form#390=28x10:$b=1$
+\_form#391=128x46:\[
+    \mathbf{s}(t=0)=\left[\begin{array}{cc}
+    1 & 0\\
+    0 & \frac{b}{L}\\
+    0 & -\frac{f}{L^{2}}
+    \end{array}\right]
+  \]
+\_form#392=230x14:$\dot{\mathbf{s}}=\partial\mathbf{s}/\partial t=\partial/\partial
+t(\partial\mathbf{x}/\partial\mathbf{p})=\partial/\partial\mathbf{p}(\partial\mathbf{x}/\partial
+t)$
+\_form#393=589x61:\[
+    \dot{\mathbf{s}}(t)=\left[\begin{array}{cc}
+    0 & 0\\
+ 
+\left(\frac{b}{L}\right)\cos\left(\left(\frac{f}{L}\right)t+\phi\right)-\frac{b\,
+f\, t}{L^{2}}\sin\left(\left(\frac{f}{L}\right)t+\phi\right) & -\frac{2b\,
+f}{L^{2}}\sin\left(\left(\frac{f}{L}\right)t+\phi\right)\left(\frac{b}{L}\right)-\frac{b\,
+f^{2}\, t}{L^{3}}\cos\left(\left(\frac{f}{L}\right)t+\phi\right)\\
+    -\frac{b\,
+f}{L^{2}}\cos\left(\left(\frac{f}{L}\right)t+\phi\right)+\frac{b\, f^{2}\,
+t}{L^{3}}\sin\left(\left(\frac{f}{L}\right)t+\phi\right) & \frac{2b\,
+f^{2}}{L^{3}}\sin\left(\left(\frac{f}{L}\right)t+\phi\right)+\frac{b\, f^{3}\,
+t}{L^{4}}\cos\left(\left(\frac{f}{L}\right)t+\phi\right)
+    \end{array}\right]
+  \]
+\_form#394=64x13:\[
+  \mathbf{\dot{x}}=\mathbf{x}^2 - b^2
+  \]
+\_form#395=40x10:$\mathbf{x} = \pm b$
+\_form#396=31x10:$\mathbf{x} = b$
+\_form#397=28x11:$b < 0$
+\_form#398=40x10:$\mathbf{x} = -b$
+\_form#399=28x11:$b > 0$
+\_form#400=186x33:\begin{eqnarray*}
+  \dot{x}_0(t) - x_1(t) & = & 0 \\
+  \dot{x}_1(t) - [(1-x_0^2)x_1-x_0]/\epsilon & = & 0
+\end{eqnarray*}
+\_form#401=96x33:\begin{eqnarray*}
+  x_0(t_0=0) & = & 2 \\
+  x_1(t_0=0) & = & 0
+\end{eqnarray*}
+\_form#402=236x33:\begin{eqnarray*}
+  \dot{x}_0(t_0=0) & = & x_1(t_0=0) = 0 \\
+  \dot{x}_1(t_0=0) & = & [(1-x_0^2)x_1-x_0]/\epsilon = -2/\epsilon
+\end{eqnarray*}
+\_form#403=224x33:\begin{eqnarray*}
+  M(x,t)\, \dot{x}(x,t) + G(x,t) + F(x,t) & = & 0, \\
+  \mathcal{G}(\dot{x},x,t) + F(x,t) & = & 0,
+\end{eqnarray*}
+\_form#404=366x31:\[
+  x      = \left[\begin{array}{c} x_0 \\ x_1 \end{array}\right],\;
+  F(x,t) = \left[\begin{array}{c} -x_1 \\ x_0/\epsilon\end{array}\right],
+  \mbox{ and }
+  G(x,t) = \left[\begin{array}{c} 0 \\
+                 -(1-x_0^2)x_1/\epsilon \end{array}\right]
+\]
+\_form#405=64x14:$M(x,t)=I$
+\_form#406=141x33:\begin{eqnarray*}
+  \mathcal{F}_0 & = & \dot{x}_0(t) - x_1(t) = 0 \\
+  \mathcal{F}_1 & = & \dot{x}_1(t) + x_0/\epsilon = 0
+\end{eqnarray*}
+\_form#407=181x33:\begin{eqnarray*}
+  \mathcal{G}_0 & = & \dot{x}_0(t) = 0 \\
+  \mathcal{G}_1 & = & \dot{x}_1(t) - (1-x_0^2)x_1/\epsilon = 0
+\end{eqnarray*}
+\_form#408=154x31:\[
+  W_{ij} \equiv \frac{d\mathcal{F}_i}{dx_j} =
+    \alpha \frac{\partial\mathcal{F}_i}{\partial \dot{x}_j}
+  + \beta \frac{\partial\mathcal{F}_i}{\partial x_j}
+\]
+\_form#409=211x33:\[
+  \alpha = \left\{
+    \begin{array}{cl}
+      \frac{\partial\dot{x}_i}{\partial x_j} & \mbox{ if } i = j \\
+      0 & \mbox{ if } i \neq j
+    \end{array} \right.
+  \;\;\;\; \mbox{ and } \;\;\;\;
+  \beta = 1
+\]
+\_form#410=173x126:\begin{eqnarray*}
+  W_{00} = \alpha \frac{\partial\mathcal{F}_0}{\partial \dot{x}_0}
+          + \beta \frac{\partial\mathcal{F}_0}{\partial x_0}
+       & = & \alpha \\
+  W_{01} = \alpha \frac{\partial\mathcal{F}_0}{\partial \dot{x}_1}
+          + \beta \frac{\partial\mathcal{F}_0}{\partial x_1}
+       & = & -\beta \\
+  W_{10} = \alpha \frac{\partial\mathcal{F}_1}{\partial \dot{x}_0}
+          + \beta \frac{\partial\mathcal{F}_1}{\partial x_0}
+       & = & 1/\epsilon \\
+  W_{11} = \alpha \frac{\partial\mathcal{F}_1}{\partial \dot{x}_1}
+          + \beta \frac{\partial\mathcal{F}_1}{\partial x_1}
+       & = & \alpha \\
+\end{eqnarray*}
+\_form#411=198x33:\begin{eqnarray*}
+  M(x,t)\, \dot{x} + G(x,t) + F(x,t) & = & 0, \\
+  \mathcal{G}(\dot{x},x,t) + F(x,t) & = & 0,
+\end{eqnarray*}
+\_form#412=385x31:\[
+  x      = \left\{\begin{array}{c} x_0 \\ x_1 \end{array}\right\},\;
+  F(x,t) = \left\{\begin{array}{c} -x_1 \\ x_0/\epsilon\end{array}\right\},
+  \mbox{ and }
+  G(x,t) = \left\{\begin{array}{c} 0 \\
+                 -(1-x_0^2)x_1/\epsilon \end{array}\right\}
+\]
+\_form#413=151x31:\[
+  W_{ij} \equiv \frac{d\mathcal{G}_i}{dx_j} =
+    \alpha \frac{\partial\mathcal{G}_i}{\partial \dot{x}_j}
+  + \beta \frac{\partial\mathcal{G}_i}{\partial x_j}
+\]
+\_form#414=238x126:\begin{eqnarray*}
+  W_{00} = \alpha \frac{\partial\mathcal{G}_0}{\partial \dot{x}_0}
+          + \beta \frac{\partial\mathcal{G}_0}{\partial x_0}
+       & = & \alpha \\
+  W_{01} = \alpha \frac{\partial\mathcal{G}_0}{\partial \dot{x}_1}
+          + \beta \frac{\partial\mathcal{G}_0}{\partial x_1}
+       & = & 0 \\
+  W_{10} = \alpha \frac{\partial\mathcal{G}_1}{\partial \dot{x}_0}
+          + \beta \frac{\partial\mathcal{G}_1}{\partial x_0}
+       & = & 2 \beta x_0 x_1/\epsilon \\
+  W_{11} = \alpha \frac{\partial\mathcal{G}_1}{\partial \dot{x}_1}
+          + \beta \frac{\partial\mathcal{G}_1}{\partial x_1}
+       & = & \alpha + \beta (x^2_0 - 1)/\epsilon \\
+\end{eqnarray*}
+\_form#415=194x33:\begin{eqnarray*}
+  M(z,t)\, \dot{z} + G(z,t) + F(z,t) & = & 0, \\
+  \mathcal{G}(\dot{z},z,t) + F(z,t) & = & 0,
+\end{eqnarray*}
+\_form#416=161x14:$\mathcal{G}(\dot{z},z,t) = M(z,t)\, \dot{z} + G(z,t)$
+\_form#417=39x14:$M(z,t)$
+\_form#418=598x31:\[
+  z      = \left\{\begin{array}{c} y   \\ x   \end{array}\right\}
+         = \left\{\begin{array}{c} x_0 \\ x_1 \end{array}\right\},\;\;\;
+  F(z,t) = \left\{\begin{array}{c} F^y(x,y,t)\\F^x(x,y,t)\end{array}\right\}
+         = \left\{\begin{array}{c} -x_1 \\ x_0/\epsilon\end{array}\right\},
+  \mbox{ and }
+  G(z,t) = \left\{\begin{array}{c} 0 \\ G^x(x,y,t)\end{array}\right\}
+         = \left\{\begin{array}{c} 0 \\
+                 -(1-x_0^2)x_1/\epsilon \end{array}\right\}
+\]
+\_form#419=63x14:$M(z,t)=I$
+\_form#420=181x33:\begin{eqnarray*}
+  F^y(x,y,t) & = & \dot{x}_0(t) - x_1(t) = 0 \\
+  F^x(x,y,t) & = & \dot{x}_1(t) + x_0/\epsilon = 0
+\end{eqnarray*}
+\_form#421=205x16:\[
+  G^x(x,y,t) = \dot{x}_1(t) - (1-x_0^2)x_1/\epsilon = 0
+\]
+\_form#422=121x14:$G^y(x,y,t) = \dot{x}_0(t) = 0$
+\_form#423=158x31:\[
+  W_{ij} \equiv \frac{d\mathcal{G}^x_i}{dx_j} =
+    \alpha \frac{\partial\mathcal{G}^x_i}{\partial \dot{x}_j}
+  + \beta \frac{\partial\mathcal{G}^x_i}{\partial x_j}
+\]
+\_form#424=240x29:\begin{eqnarray*}
+  W_{00} = \alpha \frac{\partial\mathcal{G}^x_0}{\partial \dot{x}_1}
+          + \beta \frac{\partial\mathcal{G}^x_0}{\partial x_1}
+       & = & \alpha + \beta (x^2_0 - 1)/\epsilon \\
+\end{eqnarray*}
+\_form#425=218x33:\begin{eqnarray*}
+  \mathcal{F}_0 & = & \dot{x}_0(t) - x_1(t) = 0 \\
+  \mathcal{F}_1 & = & \dot{x}_1(t) - [(1-x_0^2)x_1-x_0]/\epsilon = 0
+\end{eqnarray*}
+\_form#426=98x11:$t = 1,2,3,4,...,11$
+\_form#427=46x11:$\epsilon = 10^{-6}$
+\_form#428=28x9:$\epsilon = 0$
+\_form#429=134x60:\begin{eqnarray*}
+  \ln \left|x_0\right| - \frac{x_0^2}{2} & = & t + C \\
+  x_1 & = & \frac{x_0}{1-x_0^2}
+\end{eqnarray*}
+\_form#430=225x20:$C =\ln \left|x_0(t=0)\right| - \frac{x_0^2(t=0)}{2} =-1.306853.$
+\_form#431=245x31:\[
+  W_{ij} \equiv \frac{d\mathcal{F}_i}{dx_j} = \frac{d}{dx_j}
+         \mathcal{F}_i (\dot{x}_i, x_0, \ldots, x_k, \ldots, x_K, t)
+\]
+\_form#432=228x39:\[
+  \frac{d\mathcal{F}_i}{dx_j} =
+   \frac{\partial\dot{x}_i}{\partial x_j}
+   \frac{\partial\mathcal{F}_i}{\partial \dot{x}_i}
+   + \sum_{k=0}^K \frac{\partial x_k}{\partial x_j}
+     \frac{\partial\mathcal{F}_i}{\partial x_k}
+   + \frac{\partial t}{\partial x_j}
+   \frac{\partial\mathcal{F}_i}{\partial t}
+\]
+\_form#433=60x14:$\partial t/\partial x_j = 0$
+\_form#434=106x31:\[
+   \frac{\partial x_k}{\partial x_j} = \left\{
+     \begin{array}{c}
+       1 \mbox{ if } j = k \\
+       0 \mbox{ if } j \neq k
+     \end{array}
+   \right.
+\]
+\_form#435=115x31:\[
+  \frac{d\mathcal{F}_i}{dx_j} =
+    \alpha \frac{\partial\mathcal{F}_i}{\partial \dot{x}_j}
+  + \beta \frac{\partial\mathcal{F}_i}{\partial x_j}
+\]
+\_form#436=321x33:\[
+  \alpha = \left\{
+    \begin{array}{cl}
+      \frac{\partial\dot{x}_i}{\partial x_j} & \mbox{ if } i = j \\
+      0 & \mbox{ if } i \neq j
+    \end{array} \right.
+  \;\;\;\; \mbox{ and } \;\;\;\;
+  \beta = \left\{
+  \begin{array}{cl}
+    \frac{\partial x_k}{\partial x_j} = 1 & \mbox{ if } j = k \\
+    0 & \mbox{ if } j \neq k
+  \end{array} \right.
+\]
+\_form#437=240x126:\begin{eqnarray*}
+  W_{00} = \alpha \frac{\partial\mathcal{F}_0}{\partial \dot{x}_0}
+          + \beta \frac{\partial\mathcal{F}_0}{\partial x_0}
+       & = & \alpha \\
+  W_{01} = \alpha \frac{\partial\mathcal{F}_0}{\partial \dot{x}_1}
+          + \beta \frac{\partial\mathcal{F}_0}{\partial x_1}
+       & = & -\beta \\
+  W_{10} = \alpha \frac{\partial\mathcal{F}_1}{\partial \dot{x}_0}
+          + \beta \frac{\partial\mathcal{F}_1}{\partial x_0}
+       & = & \beta (2 x_0 x_1 + 1)/\epsilon \\
+  W_{11} = \alpha \frac{\partial\mathcal{F}_1}{\partial \dot{x}_1}
+          + \beta \frac{\partial\mathcal{F}_1}{\partial x_1}
+       & = & \alpha + \beta (x^2_0 - 1)/\epsilon \\
+\end{eqnarray*}
+\_form#438=93x15:\[
+   \mathbf{\dot{x}} = \lambda \mathbf{x} = \bar{f}(x,t).
+ \]
+\_form#439=39x10:$\lambda = -1$
+\_form#440=81x14:\[
+   \mathbf{x}(t) = \exp{[\lambda t]}.
+ \]
+\_form#441=250x81:\begin{eqnarray*}
+   X_{i} & = & x_{n-1} +
+    \Delta t\,\sum_{j=1}^{i-1} a_{ij}\,\bar{f}(X_{j},t_{n-1}+c_{j}\Delta t)\\
+   x_{n} & = & x_{n-1}
+   + \Delta t\,\sum_{i=1}^{s}b_{i}\,\bar{f}(X_{i},t_{n-1}+c_{i}\Delta t)
+ \end{eqnarray*}
+\_form#442=164x91:\[
+   \begin{array}{c|cccc}  0  & 0    &     &     &     \\
+                         1/2 & 1/2  & 0   &     &     \\
+                         3/4 & 0    & 3/4 & 0   &     \\
+                          1  & 2/9  & 1/3 & 4/9 & 0   \\ \hline
+                             & 2/9  & 1/3 & 4/9 & 0   \\
+                             & 7/24 & 1/4 & 1/3 & 1/8 \end{array}
+ \]
+\_form#443=38x10:$\Delta t = 1$
+\_form#444=559x69:\begin{eqnarray*}
+   X_1 & = & x_0 \\
+   X_2 & = & x_0 + \Delta t\,(1/2)\,\bar{f}(X_1,t_0+( 0 )\Delta t) \\
+   X_3 & = & x_0 + \Delta t\,(3/4)\,\bar{f}(X_2,t_0+(1/2)\Delta t) \\
+   X_4 & = & x_0 + \Delta t\,(2/9)\,\bar{f}(X_1,t_0+( 0 )\Delta t)
+                 + \Delta t\,(1/3)\,\bar{f}(X_2,t_0+(1/2)\Delta t)
+                 + \Delta t\,(4/9)\,\bar{f}(X_3,t_0+(3/4)\Delta t)
+ \end{eqnarray*}
+\_form#445=556x33:\begin{eqnarray*}
+   x_1 & = & x_0   + \Delta t\,(2/9)\,\bar{f}(X_1,t_0+( 0 )\Delta t)
+                   + \Delta t\,(1/3)\,\bar{f}(X_2,t_0+(1/2)\Delta t)
+                   + \Delta t\,(4/9)\,\bar{f}(X_3,t_0+(3/4)\Delta t) \\
+   x_1 & = & X_4
+ \end{eqnarray*}
+\_form#446=401x368:\begin{eqnarray*}
+                   t_0 & = & 0 \\
+              \Delta t & = & 1 \\
+   \mathbf{x}(0) = x_0 & = & 1 \\
+                 X_{1} & = & x_0 \\
+                       & = & 1 \\
+      \bar{f}(X_1, 0 ) & = & \lambda X_1 = (-1)(1) \\
+                       & = & -1 \\
+                 X_{2} & = & x_0 + (1/2)\,\bar{f}(X_1, 0 ) = 1 + 1/2(-1) \\
+                       & = & 1/2 \\
+      \bar{f}(X_2,1/2) & = & \lambda X_2 = (-1)(1/2) \\
+                       & = & -1/2 \\
+                   X_3 & = & x_0 + (3/4)\,\bar{f}(X_2,1/2) = 1 +
+(3/4)(-1/2)\\
+                       & = & 5/8 \\
+      \bar{f}(X_3,3/4) & = & \lambda X_3 = (-1)(5/8) \\
+                       & = & -5/8 \\
+                   X_4 & = & x_0 + (2/9)\,\bar{f}(X_1,0)
+                                 + (1/3)\,\bar{f}(X_2,1/2)
+                                 + (4/9)\,\bar{f}(X_3,3/4) \\
+                       & = & 1 + (2/9)(-1) + (1/3)(-1/2) + (4/9)(-5/8) \\
+                       & = & 1/3 \\
+                   x_1 & = & X_4 = 1/3 \\
+      \bar{f}(X_4, 1 ) & = & \lambda X_4 = (-1/3)
+ \end{eqnarray*}
+\_form#447=233x74:\begin{eqnarray*}
+           E & = & |e/\tilde{u}|  \\
+           e & = & \sum_{i=1}^{s} \left[
+                     \left( b_i - b^\ast_i \right) \Delta t
+                     \bar{f}(X_{i},t_{n-1}+c_{i}\Delta t \right] \\
+   \tilde{u} & = & A_{tol} + max(|u^n|, |u^{n+1}| ) * R_{tol}
+ \end{eqnarray*}
+\_form#448=46x13:$A_{tol} = 0 $
+\_form#449=44x13:$R_{tol} = 1$
+\_form#450=60x11:$\tilde{u} = x_0 = 1$
+\_form#451=539x54:\begin{eqnarray*}
+           e & = & \sum_{i=1}^{s} \left[
+                     \left( b_i - b^\ast_i \right) \Delta t
+                     \bar{f}(X_{i},t_{n-1}+c_{i}\Delta t \right] \\
+             & = & (2/9 - 7/24)*(-1)
+                 + (1/3 - 1/4 )*(-1/2)
+                 + (4/9 - 1/3 )*(-5/8)
+                 + ( 0  - 1/8 )*(-1/3) = 0
+\end{eqnarray*}
+\_form#452=59x14:$ \dot{x} = f(x,t)$
+\_form#453=194x33:\begin{eqnarray*}
+  \dot{x}_0(t) & = & f_0 = x_1(t) \\
+  \dot{x}_1(t) & = & f_1 = [(1-x_0^2)x_1-x_0]/\epsilon
+\end{eqnarray*}
+\_form#454=8x9:$ \dot{x} $
+\_form#455=34x14:$ f(x,t) $
+\_form#456=26x11:$ x^{n+1} $
+\_form#457=14x9:$ x^n $
+\_form#458=5x9:$t$
+\_form#459=38x9:$\epsilon=0.1$
+\_form#460=34x11:$t_0=0$
+\_form#461=79x14:$x_0(t_0=0) = 2$
+\_form#462=79x14:$x_1(t_0=0) = 0$
+\_form#463=79x14:$\dot{x}_0(t_0=0) = 0$
+\_form#464=100x14:$\dot{x}_1(t_0=0) = -2/\epsilon$
+\_form#465=194x33:\begin{eqnarray*}
+  \mathcal{F}_0 & = & \dot{x}_0(t) - x_1(t) \\
+  \mathcal{F}_1 & = & \dot{x}_1(t) - [(1-x_0^2)x_1-x_0]/\epsilon
+\end{eqnarray*}
+\_form#466=36x11:$x_0 = 2$
+\_form#467=36x11:$x_1 = 0$

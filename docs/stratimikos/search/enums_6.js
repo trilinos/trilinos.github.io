@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['scaletype_0',['scaletype',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/epetraext/doc/html/classEpetraExt_1_1LinearProblem__Scale.html#af19936e24c0a88a8cb7b4909d4726bf6',1,'EpetraExt::LinearProblem_Scale::ScaleType'],['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/aztecoo/doc/html/classAztecOO__StatusTestResNorm.html#a49884bd281af874e277c7e14cf4f52fe',1,'AztecOO_StatusTestResNorm::ScaleType'],['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/belos/doc/html/namespaceBelos.html#ab2a257ae715c1d7d646de3bd67d3d9b3',1,'Belos::ScaleType']]],
+  ['solvertype_1',['SolverType',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/aztecoo/doc/html/classAztecOOConditionNumber.html#a78191643e02acb922487b1cd69d6ed76',1,'AztecOOConditionNumber']]],
+  ['statustype_2',['StatusType',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/belos/doc/html/namespaceBelos.html#a342eae302936d58ef9d7426063340863',1,'Belos']]]
+];

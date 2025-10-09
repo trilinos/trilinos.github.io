@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['gausspattersonexponentialgrowthrule_0',['GaussPattersonExponentialGrowthRule',['../classStokhos_1_1GaussPattersonExponentialGrowthRule.html',1,'Stokhos']]],
+  ['gausspattersonlegendrebasis_1',['GaussPattersonLegendreBasis',['../classStokhos_1_1GaussPattersonLegendreBasis.html',1,'Stokhos']]],
+  ['generalfad_3c_20sacado_3a_3amp_3a_3avector_3c_20stokhos_3a_3astaticfixedstorage_3c_20ord_2c_20val_2c_20vecnum_2c_20dev_20_3e_20_3e_2c_20storage_20_3e_2',['GeneralFad&lt; Sacado::MP::Vector&lt; Stokhos::StaticFixedStorage&lt; Ord, Val, VecNum, Dev &gt; &gt;, Storage &gt;',['../classSacado_1_1Fad_1_1GeneralFad_3_01Sacado_1_1MP_1_1Vector_3_01Stokhos_1_1StaticFixedStorage_3_2fe0c325d884f583e325f443d4a10d2a.html',1,'Sacado::Fad']]],
+  ['getmeanvalsfunc_3',['GetMeanValsFunc',['../classStokhos_1_1GetMeanValsFunc.html',1,'Stokhos']]],
+  ['getmeanvalsfunc_3c_20kokkos_3a_3aview_3c_20sacado_3a_3amp_3a_3avector_3c_20storage_20_3e_20_2a_2c_20p_2e_2e_2e_20_3e_20_3e_4',['GetMeanValsFunc&lt; Kokkos::View&lt; Sacado::MP::Vector&lt; Storage &gt; *, P... &gt; &gt;',['../classStokhos_1_1GetMeanValsFunc_3_01Kokkos_1_1View_3_01Sacado_1_1MP_1_1Vector_3_01Storage_01_4_01_5_00_01P_8_8_8_01_4_01_4.html',1,'Stokhos']]],
+  ['getmeanvalsfunc_3c_20kokkos_3a_3aview_3c_20sacado_3a_3auq_3a_3apce_3c_20storage_20_3e_20_2a_2c_20p_2e_2e_2e_20_3e_20_3e_5',['GetMeanValsFunc&lt; Kokkos::View&lt; Sacado::UQ::PCE&lt; Storage &gt; *, P... &gt; &gt;',['../classStokhos_1_1GetMeanValsFunc_3_01Kokkos_1_1View_3_01Sacado_1_1UQ_1_1PCE_3_01Storage_01_4_01_5_00_01P_8_8_8_01_4_01_4.html',1,'Stokhos']]],
+  ['getsacadosize_6',['GetSacadoSize',['../structKokkos_1_1Impl_1_1GetSacadoSize.html',1,'Kokkos::Impl']]],
+  ['getsacadosize_3c_200_20_3e_7',['GetSacadoSize&lt; 0 &gt;',['../structKokkos_1_1Impl_1_1GetSacadoSize_3_010_01_4.html',1,'Kokkos::Impl']]],
+  ['getsacadosize_3c_201_20_3e_8',['GetSacadoSize&lt; 1 &gt;',['../structKokkos_1_1Impl_1_1GetSacadoSize_3_011_01_4.html',1,'Kokkos::Impl']]],
+  ['getsacadosize_3c_202_20_3e_9',['GetSacadoSize&lt; 2 &gt;',['../structKokkos_1_1Impl_1_1GetSacadoSize_3_012_01_4.html',1,'Kokkos::Impl']]],
+  ['getsacadosize_3c_203_20_3e_10',['GetSacadoSize&lt; 3 &gt;',['../structKokkos_1_1Impl_1_1GetSacadoSize_3_013_01_4.html',1,'Kokkos::Impl']]],
+  ['getsacadosize_3c_204_20_3e_11',['GetSacadoSize&lt; 4 &gt;',['../structKokkos_1_1Impl_1_1GetSacadoSize_3_014_01_4.html',1,'Kokkos::Impl']]],
+  ['getsacadosize_3c_205_20_3e_12',['GetSacadoSize&lt; 5 &gt;',['../structKokkos_1_1Impl_1_1GetSacadoSize_3_015_01_4.html',1,'Kokkos::Impl']]],
+  ['getsacadosize_3c_206_20_3e_13',['GetSacadoSize&lt; 6 &gt;',['../structKokkos_1_1Impl_1_1GetSacadoSize_3_016_01_4.html',1,'Kokkos::Impl']]],
+  ['getsacadosize_3c_207_20_3e_14',['GetSacadoSize&lt; 7 &gt;',['../structKokkos_1_1Impl_1_1GetSacadoSize_3_017_01_4.html',1,'Kokkos::Impl']]],
+  ['getscalarmeanvalsfunc_15',['GetScalarMeanValsFunc',['../classStokhos_1_1GetScalarMeanValsFunc.html',1,'Stokhos']]],
+  ['getscalarmeanvalsfunc_3c_20kokkos_3a_3aview_3c_20sacado_3a_3amp_3a_3avector_3c_20storage_20_3e_20_2a_2c_20p_2e_2e_2e_20_3e_20_3e_16',['GetScalarMeanValsFunc&lt; Kokkos::View&lt; Sacado::MP::Vector&lt; Storage &gt; *, P... &gt; &gt;',['../classStokhos_1_1GetScalarMeanValsFunc_3_01Kokkos_1_1View_3_01Sacado_1_1MP_1_1Vector_3_01Storage_e57c69c6dbe61b78aafdafd33e300068.html',1,'Stokhos']]],
+  ['getscalarmeanvalsfunc_3c_20kokkos_3a_3aview_3c_20sacado_3a_3auq_3a_3apce_3c_20storage_20_3e_20_2a_2c_20p_2e_2e_2e_20_3e_20_3e_17',['GetScalarMeanValsFunc&lt; Kokkos::View&lt; Sacado::UQ::PCE&lt; Storage &gt; *, P... &gt; &gt;',['../classStokhos_1_1GetScalarMeanValsFunc_3_01Kokkos_1_1View_3_01Sacado_1_1UQ_1_1PCE_3_01Storage_01_4_01_5_00_01P_8_8_8_01_4_01_4.html',1,'Stokhos']]],
+  ['givensrotator_3c_20sacado_3a_3amp_3a_3avector_3c_20storage_20_3e_2c_20false_20_3e_18',['GivensRotator&lt; Sacado::MP::Vector&lt; Storage &gt;, false &gt;',['../classTeuchos_1_1details_1_1GivensRotator_3_01Sacado_1_1MP_1_1Vector_3_01Storage_01_4_00_01false_01_4.html',1,'Teuchos::details']]],
+  ['givensrotator_3c_20sacado_3a_3auq_3a_3apce_3c_20storage_20_3e_2c_20false_20_3e_19',['GivensRotator&lt; Sacado::UQ::PCE&lt; Storage &gt;, false &gt;',['../classTeuchos_1_1details_1_1GivensRotator_3_01Sacado_1_1UQ_1_1PCE_3_01Storage_01_4_00_01false_01_4.html',1,'Teuchos::details']]],
+  ['gmresdivisionexpansionstrategy_20',['GMRESDivisionExpansionStrategy',['../classStokhos_1_1GMRESDivisionExpansionStrategy.html',1,'Stokhos']]],
+  ['gramschmidtbasis_21',['GramSchmidtBasis',['../classStokhos_1_1GramSchmidtBasis.html',1,'Stokhos']]],
+  ['growthrule_22',['GrowthRule',['../classStokhos_1_1GrowthRule.html',1,'Stokhos']]],
+  ['gspreconditioner_23',['GSPreconditioner',['../classStokhos_1_1GSPreconditioner.html',1,'Stokhos']]],
+  ['gsreducedpcebasisbase_24',['GSReducedPCEBasisBase',['../classStokhos_1_1GSReducedPCEBasisBase.html',1,'Stokhos']]]
+];

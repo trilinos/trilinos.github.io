@@ -1,0 +1,25 @@
+var classMueLu_1_1MatrixConstruction_1_1VectorCountingFunctor_3_01local__matrix__type_00_01functor__type_01_4 =
+[
+    [ "scalar_type", "classMueLu_1_1MatrixConstruction_1_1VectorCountingFunctor_3_01local__matrix__type_00_01functor__type_01_4.html#abd75ddb9d0db421ab9cc95c340372eff", null ],
+    [ "local_ordinal_type", "classMueLu_1_1MatrixConstruction_1_1VectorCountingFunctor_3_01local__matrix__type_00_01functor__type_01_4.html#af91bf67d9f5c56d1762a1d3d82ba0086", null ],
+    [ "memory_space", "classMueLu_1_1MatrixConstruction_1_1VectorCountingFunctor_3_01local__matrix__type_00_01functor__type_01_4.html#a9a89dc1f88c86a6b68cb447e0c9b1d89", null ],
+    [ "results_view", "classMueLu_1_1MatrixConstruction_1_1VectorCountingFunctor_3_01local__matrix__type_00_01functor__type_01_4.html#a67ae6bfe9e84a5cdf56c0e3a9aceaf5c", null ],
+    [ "block_indices_view_type", "classMueLu_1_1MatrixConstruction_1_1VectorCountingFunctor_3_01local__matrix__type_00_01functor__type_01_4.html#ad29d68994e8fcb616771ca714d6651cd", null ],
+    [ "permutation_type", "classMueLu_1_1MatrixConstruction_1_1VectorCountingFunctor_3_01local__matrix__type_00_01functor__type_01_4.html#a8ba04fff411fbe0e82ff814fecb1d254", null ],
+    [ "rowptr_type", "classMueLu_1_1MatrixConstruction_1_1VectorCountingFunctor_3_01local__matrix__type_00_01functor__type_01_4.html#a05bd37267379f97b2a96fc6db0193b4e", null ],
+    [ "ATS", "classMueLu_1_1MatrixConstruction_1_1VectorCountingFunctor_3_01local__matrix__type_00_01functor__type_01_4.html#a26f63592338e60ee10827991aa2cb246", null ],
+    [ "VectorCountingFunctor", "classMueLu_1_1MatrixConstruction_1_1VectorCountingFunctor_3_01local__matrix__type_00_01functor__type_01_4.html#ab9c7c3cb07b6f95a938b80eb6bd441ce", null ],
+    [ "join", "classMueLu_1_1MatrixConstruction_1_1VectorCountingFunctor_3_01local__matrix__type_00_01functor__type_01_4.html#a08bd9fa428590701f121156cad4de58c", null ],
+    [ "operatorRow", "classMueLu_1_1MatrixConstruction_1_1VectorCountingFunctor_3_01local__matrix__type_00_01functor__type_01_4.html#aa71c2f373cc5d14d1e165a25f8599a3d", null ],
+    [ "operator()", "classMueLu_1_1MatrixConstruction_1_1VectorCountingFunctor_3_01local__matrix__type_00_01functor__type_01_4.html#a0f73cbc67ab858087eae25a8b0c2c706", null ],
+    [ "A", "classMueLu_1_1MatrixConstruction_1_1VectorCountingFunctor_3_01local__matrix__type_00_01functor__type_01_4.html#ad6d6ce31f2eba41d4d8ff4c0cd236058", null ],
+    [ "blockSize", "classMueLu_1_1MatrixConstruction_1_1VectorCountingFunctor_3_01local__matrix__type_00_01functor__type_01_4.html#a4ab5dfbb43508d78f77a3d0363204354", null ],
+    [ "ghosted_point_to_block", "classMueLu_1_1MatrixConstruction_1_1VectorCountingFunctor_3_01local__matrix__type_00_01functor__type_01_4.html#a1e8e459c8ee5e0462dda0a4d3c33ca06", null ],
+    [ "results", "classMueLu_1_1MatrixConstruction_1_1VectorCountingFunctor_3_01local__matrix__type_00_01functor__type_01_4.html#a1912a2f3dcdbc860ab869df23d3e971b", null ],
+    [ "filtered_rowptr", "classMueLu_1_1MatrixConstruction_1_1VectorCountingFunctor_3_01local__matrix__type_00_01functor__type_01_4.html#ab39c1d189446473d380ec84a11a03438", null ],
+    [ "graph_rowptr", "classMueLu_1_1MatrixConstruction_1_1VectorCountingFunctor_3_01local__matrix__type_00_01functor__type_01_4.html#a6b07fb5b6f4b94c8196d1172d616d881", null ],
+    [ "firstFunctor", "classMueLu_1_1MatrixConstruction_1_1VectorCountingFunctor_3_01local__matrix__type_00_01functor__type_01_4.html#a8e5ea31e866579873025d6b193361753", null ],
+    [ "functor", "classMueLu_1_1MatrixConstruction_1_1VectorCountingFunctor_3_01local__matrix__type_00_01functor__type_01_4.html#a1f14d972e4acebcf647cd7e26d8d56e7", null ],
+    [ "comparison", "classMueLu_1_1MatrixConstruction_1_1VectorCountingFunctor_3_01local__matrix__type_00_01functor__type_01_4.html#a25f5f3bb95b44deb5df772f2b3762479", null ],
+    [ "permutation", "classMueLu_1_1MatrixConstruction_1_1VectorCountingFunctor_3_01local__matrix__type_00_01functor__type_01_4.html#aa6dfbd8660e44acf80d713f7ab958163", null ]
+];
