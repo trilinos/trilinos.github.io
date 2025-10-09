@@ -3,11 +3,14 @@
     {{ page.title }} contact: {{ page.contact }} <br>
     <a href="contact.html">Trilinos contact</a>
 </div>
+<div id="sidebar-code">
+    <h3>Code</h3>
+    <a href={{ "https://github.com/trilinos/Trilinos/tree/master/packages/" | append: page.package }}>Code for {{ page.package }}</a><br>
+</div>
 <div id="sidebar-documentation">
     <h3>Documentation</h3>
     {% if page.doxygen %}
-    <a href={{ "https://trilinos.org/docs/dev/packages/" | append: page.package | append: "/doc/html/index.html" }}>Dev {{ page.package }} Doxygen</a><br>
-    <a href={{ "https://trilinos.org/docs/latest-release/packages/" | append: page.package | append: "/doc/html/index.html" }}>Release {{ page.package }} Doxygen</a><br>
+    <a href={{ "docs/" | append: page.package | append: "/index.html" }}>{{ page.package }} Doxygen</a><br>
     {% endif %}
     <a href="documentation.html">Trilinos documentation</a>
 </div>

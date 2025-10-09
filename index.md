@@ -37,13 +37,6 @@ Trilinos is targeted for all major parallel architectures, including distributed
 ### Trilinos Packages
 Trilinos is organized around fundamental software elements called <a href="#" data-toggle="tooltip" data-original-title="{{site.data.definitions.trilinos_package}}">packages</a>.  The Trilinos package architecture enables simultaneous development of many new capabilities in a federated system.  Each package has its own name and identity within the research community, giving the package team recognition outside of Trilinos itself.
 
-### Trilinos Product Suites
-Trilinos contains many packages, organized in [five product suites](product.html):
-- Data services: Vectors, matrices, graphs and similar data containers, and related operations.
-- Linear and Eigenproblem solvers: For large, distributed systems of equations.
-- Nonlinear solvers and analysis tools: Includes basic nonlinear approaches, continuation methods and similar.
-- Discretizations: Tools for the discretization of integral and differential equations.
-- Framework: Tools for building, testing and integrating Trilinos capabilities.
 
 ### Related sites for Trilinos:
 
