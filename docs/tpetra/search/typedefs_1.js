@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['blockcrsmatrixlittleblockarraylayout_0',['BlockCrsMatrixLittleBlockArrayLayout',['../namespaceTpetra_1_1Impl.html#acb3ece3fbc7d88e0909ca034066d9a10',1,'Tpetra::Impl']]],
+  ['buffer_5fdevice_5ftype_1',['buffer_device_type',['../classTpetra_1_1BlockCrsMatrix.html#ac8e9e4771edb8c1f37a1a8e20744c299',1,'Tpetra::BlockCrsMatrix::buffer_device_type'],['../classTpetra_1_1BlockMultiVector.html#a921098a19077b2db2ca3875e518970db',1,'Tpetra::BlockMultiVector::buffer_device_type'],['../classTpetra_1_1CrsGraph.html#aa59563b0edeaa946569fcd37eeaa43cf',1,'Tpetra::CrsGraph::buffer_device_type'],['../classTpetra_1_1CrsMatrix.html#a433eeae311a6d4a7e2c87dbaf85089f9',1,'Tpetra::CrsMatrix::buffer_device_type'],['../classTpetra_1_1DistObject.html#a66edb1059ed7db04325605df64fe64c5',1,'Tpetra::DistObject::buffer_device_type'],['../classTpetra_1_1MultiVector.html#a6576557039b8bae3b2cc06aeefd8c8d7',1,'Tpetra::MultiVector::buffer_device_type'],['../classTpetra_1_1Details_1_1CooMatrix.html#a2aa477dcf7a019efb3960cca733f3297',1,'Tpetra::Details::CooMatrix::buffer_device_type']]],
+  ['buffer_5fmemory_5fspace_2',['buffer_memory_space',['../classTpetra_1_1DistObject.html#a142f6b49db9d7bc4cb94e8488f89309c',1,'Tpetra::DistObject']]]
+];

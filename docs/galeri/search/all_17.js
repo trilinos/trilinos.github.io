@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['_7eabstractgrid_0',['~AbstractGrid',['../classGaleri_1_1FiniteElements_1_1AbstractGrid.html#ac999baffb74f12958386d0b107892df7',1,'Galeri::FiniteElements::AbstractGrid']]],
+  ['_7eabstractproblem_1',['~AbstractProblem',['../classGaleri_1_1FiniteElements_1_1AbstractProblem.html#a104f97eeb66bc90005e715c4e357fac1',1,'Galeri::FiniteElements::AbstractProblem']]],
+  ['_7eabstractquadrature_2',['~AbstractQuadrature',['../classGaleri_1_1FiniteElements_1_1AbstractQuadrature.html#a7a0b83692458570a04047ff39f5df942',1,'Galeri::FiniteElements::AbstractQuadrature']]],
+  ['_7eabstractvariational_3',['~AbstractVariational',['../classGaleri_1_1FiniteElements_1_1AbstractVariational.html#ad91d387d38c04d34f7283b09c609825d',1,'Galeri::FiniteElements::AbstractVariational']]],
+  ['_7eelement_4',['~element',['../classGaleri_1_1grid_1_1Element.html#aef5a95a03d0e725e0438af14f712c4ac',1,'Galeri::grid::Element::~Element()'],['../classGaleri_1_1quadrature_1_1Element.html#abc576b60e74214a5b9459aa6a2b326c9',1,'Galeri::quadrature::Element::~Element()']]],
+  ['_7egalerkinvariational_5',['~GalerkinVariational',['../classGaleri_1_1FiniteElements_1_1GalerkinVariational.html#ab65959ab35a34da712e0f80f50190fdc',1,'Galeri::FiniteElements::GalerkinVariational']]],
+  ['_7ehex_6',['~Hex',['../classGaleri_1_1quadrature_1_1Hex.html#acc0bc35dad95af214e7e20d55fdceede',1,'Galeri::quadrature::Hex']]],
+  ['_7ehexcubegrid_7',['~HexCubeGrid',['../classGaleri_1_1FiniteElements_1_1HexCubeGrid.html#ade7229a6a5b22a976fec5a54ae8af060',1,'Galeri::FiniteElements::HexCubeGrid']]],
+  ['_7elinearproblem_8',['~LinearProblem',['../classGaleri_1_1FiniteElements_1_1LinearProblem.html#ae66040198a8fe0da0a8a19128a3b70a2',1,'Galeri::FiniteElements::LinearProblem']]],
+  ['_7eloadable_9',['~Loadable',['../classGaleri_1_1grid_1_1Loadable.html#a57f95d3cc24bd647ff54d2161be575c3',1,'Galeri::grid::Loadable']]],
+  ['_7eobject_10',['~Object',['../classGaleri_1_1core_1_1Object.html#af62e49f34d632b7bf0168ed849075465',1,'Galeri::core::Object']]],
+  ['_7equad_11',['~Quad',['../classGaleri_1_1quadrature_1_1Quad.html#af13f4f7ff540db4a5598e3bf4c7390ee',1,'Galeri::quadrature::Quad']]],
+  ['_7equadquadrature_12',['~QuadQuadrature',['../classGaleri_1_1FiniteElements_1_1QuadQuadrature.html#a776a10e6f3434f8bf236dd6efc0f754c',1,'Galeri::FiniteElements::QuadQuadrature']]],
+  ['_7equadrectanglegrid_13',['~QuadRectangleGrid',['../classGaleri_1_1FiniteElements_1_1QuadRectangleGrid.html#a5fe8bba7dc8b66c6d770aff53dd100d8',1,'Galeri::FiniteElements::QuadRectangleGrid']]],
+  ['_7esegment_14',['~Segment',['../classGaleri_1_1quadrature_1_1Segment.html#a64d9b726980cdce51f675f734f857b83',1,'Galeri::quadrature::Segment']]],
+  ['_7esupgvariational_15',['~SUPGVariational',['../classGaleri_1_1FiniteElements_1_1SUPGVariational.html#a54c5268f77d41ed79d660d01eb71bd5a',1,'Galeri::FiniteElements::SUPGVariational']]],
+  ['_7etet_16',['~Tet',['../classGaleri_1_1quadrature_1_1Tet.html#a3b3c4b914f135f32eb87fc12399e4c11',1,'Galeri::quadrature::Tet']]],
+  ['_7etetcubegrid_17',['~TetCubeGrid',['../classGaleri_1_1FiniteElements_1_1TetCubeGrid.html#a6e187f2278b5a5bf99e00174472c8356',1,'Galeri::FiniteElements::TetCubeGrid']]],
+  ['_7etriangle_18',['~Triangle',['../classGaleri_1_1quadrature_1_1Triangle.html#a75722bcf784d53629c77b453750adf09',1,'Galeri::quadrature::Triangle']]],
+  ['_7etrianglequadrature_19',['~TriangleQuadrature',['../classGaleri_1_1FiniteElements_1_1TriangleQuadrature.html#af3e118a81c561de635fe5ff3d6660de7',1,'Galeri::FiniteElements::TriangleQuadrature']]],
+  ['_7eworkspace_20',['~Workspace',['../classGaleri_1_1core_1_1Workspace.html#a2ad61ee703bb7a4d9987063ea86d49b8',1,'Galeri::core::Workspace']]]
+];

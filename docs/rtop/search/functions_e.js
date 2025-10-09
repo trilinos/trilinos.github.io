@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['uninitialize_0',['uninitialize',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/rtop/doc/../../../packages/rtop/src/interfaces/doc/html/classRTOpPack_1_1ConstSubMultiVectorView.html#a62ddaa5c4019211e8bda412d1a1a9868',1,'RTOpPack::ConstSubMultiVectorView::uninitialize()'],['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/rtop/doc/../../../packages/rtop/src/interfaces/doc/html/classRTOpPack_1_1ConstSubVectorView.html#a98bcfa680895c47f7b32203d6ef472db',1,'RTOpPack::ConstSubVectorView::uninitialize()'],['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/rtop/doc/../../../packages/rtop/src/support/doc/html/classRTOpPack_1_1SparseSubVectorT.html#a51ab021f289448c4e3c4a8f182bc2b16',1,'RTOpPack::SparseSubVectorT::uninitialize()']]]
+];

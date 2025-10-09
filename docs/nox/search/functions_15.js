@@ -1,0 +1,7 @@
+var searchData=
+[
+  ['walltime_0',['WallTime',['../../../../epetra/doc/html/classEpetra__Time.html#a564dd80d315fd7ecfce847e547b431d2',1,'Epetra_Time']]],
+  ['weightedmeritfunction_1',['weightedmeritfunction',['../classNOX_1_1Thyra_1_1WeightedMeritFunction.html#ab278c1559fb79ee3f09c7da721806074',1,'NOX::Thyra::WeightedMeritFunction::WeightedMeritFunction(const Teuchos::RCP&lt; const ::Thyra::VectorBase&lt; double &gt; &gt; weights, bool optimizeSlopeCalc=true)'],['../classNOX_1_1Thyra_1_1WeightedMeritFunction.html#aacb5d05145e46be25c4ffaae33496696',1,'NOX::Thyra::WeightedMeritFunction::WeightedMeritFunction(const WeightedMeritFunction &amp;source)']]],
+  ['withinthreshold_2',['withinthreshold',['../classLOCA_1_1Epetra_1_1AdaptiveStepper.html#a51c8513b6d4ffc80af587659c26d76b6',1,'LOCA::Epetra::AdaptiveStepper::withinThreshold()'],['../classLOCA_1_1AdaptiveStepper.html#abf5f8115f5ad4099a0ccf0b305376e83',1,'LOCA::AdaptiveStepper::withinThreshold()'],['../classLOCA_1_1Stepper.html#a973e5279d95021b6753200af7cfd3525',1,'LOCA::Stepper::withinThreshold()']]],
+  ['wrapper_3',['wrapper',['../classLOCA_1_1Solver_1_1Wrapper.html#a0dc2f9d1ccdfd26eb34b01161b0c13a0',1,'LOCA::Solver::Wrapper::Wrapper(const Teuchos::RCP&lt; NOX::Solver::Generic &gt; &amp;solver)'],['../classLOCA_1_1Solver_1_1Wrapper.html#a568985d042d0f10ffa3aa078751e9a89',1,'LOCA::Solver::Wrapper::Wrapper(const Teuchos::RCP&lt; const NOX::Solver::Generic &gt; &amp;solver)'],['../classLOCA_1_1StatusTest_1_1Wrapper.html#aff2d75a5feb726f8b030f457ba96c6b9',1,'LOCA::StatusTest::Wrapper::Wrapper()']]]
+];

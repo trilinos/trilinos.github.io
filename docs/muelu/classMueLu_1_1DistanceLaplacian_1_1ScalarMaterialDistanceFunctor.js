@@ -1,0 +1,26 @@
+var classMueLu_1_1DistanceLaplacian_1_1ScalarMaterialDistanceFunctor =
+[
+    [ "matrix_type", "classMueLu_1_1DistanceLaplacian_1_1ScalarMaterialDistanceFunctor.html#a64cb8ab6037863aa217f91e17d606af5", null ],
+    [ "local_matrix_type", "classMueLu_1_1DistanceLaplacian_1_1ScalarMaterialDistanceFunctor.html#abb98b151cf600c91089ae6db1ef5a32c", null ],
+    [ "scalar_type", "classMueLu_1_1DistanceLaplacian_1_1ScalarMaterialDistanceFunctor.html#a83a0ceb83980d0fb76c3e33fa27a17c9", null ],
+    [ "local_ordinal_type", "classMueLu_1_1DistanceLaplacian_1_1ScalarMaterialDistanceFunctor.html#a60bea1c47580c040b5be0018ee6a47d3", null ],
+    [ "ATS", "classMueLu_1_1DistanceLaplacian_1_1ScalarMaterialDistanceFunctor.html#abeaafa7bf0c3c1408b392ed038b48613", null ],
+    [ "impl_scalar_type", "classMueLu_1_1DistanceLaplacian_1_1ScalarMaterialDistanceFunctor.html#aed82bab3bb96b5ece9888ebf44f0618a", null ],
+    [ "implATS", "classMueLu_1_1DistanceLaplacian_1_1ScalarMaterialDistanceFunctor.html#afdfe283f0b09523bf8a73b4e210c5232", null ],
+    [ "magnitudeType", "classMueLu_1_1DistanceLaplacian_1_1ScalarMaterialDistanceFunctor.html#a4894dd18e9df9cc051cb562d7eea9128", null ],
+    [ "magATS", "classMueLu_1_1DistanceLaplacian_1_1ScalarMaterialDistanceFunctor.html#aa5dbadd370c831ec3c14333a8fbc0716", null ],
+    [ "coords_type", "classMueLu_1_1DistanceLaplacian_1_1ScalarMaterialDistanceFunctor.html#a36d67c3d2b5b538ef048a8ecacf5c2c5", null ],
+    [ "local_coords_type", "classMueLu_1_1DistanceLaplacian_1_1ScalarMaterialDistanceFunctor.html#a4a359c038c4de53426fe44387d816ef0", null ],
+    [ "material_type", "classMueLu_1_1DistanceLaplacian_1_1ScalarMaterialDistanceFunctor.html#a2a571eb0b6f447e761e51172c13a0e28", null ],
+    [ "local_material_type", "classMueLu_1_1DistanceLaplacian_1_1ScalarMaterialDistanceFunctor.html#a8630eb67ffa427f73e58fc59686390fd", null ],
+    [ "ScalarMaterialDistanceFunctor", "classMueLu_1_1DistanceLaplacian_1_1ScalarMaterialDistanceFunctor.html#a4f330150c2458974c683315622c8db2b", null ],
+    [ "distance2", "classMueLu_1_1DistanceLaplacian_1_1ScalarMaterialDistanceFunctor.html#a3e2fb18e68d5877c2a4f5010cc6f16b9", null ],
+    [ "coordsMV", "classMueLu_1_1DistanceLaplacian_1_1ScalarMaterialDistanceFunctor.html#a3f5229a7d6488389b10082fdad2f384f", null ],
+    [ "ghostedCoordsMV", "classMueLu_1_1DistanceLaplacian_1_1ScalarMaterialDistanceFunctor.html#ae97da0509b4c9177162d7307b25f90a7", null ],
+    [ "coords", "classMueLu_1_1DistanceLaplacian_1_1ScalarMaterialDistanceFunctor.html#a0fcb4e6f786e22cd978a55e03d4610a8", null ],
+    [ "ghostedCoords", "classMueLu_1_1DistanceLaplacian_1_1ScalarMaterialDistanceFunctor.html#a68a5005305bf81d64911482cacaa4df0", null ],
+    [ "materialMV", "classMueLu_1_1DistanceLaplacian_1_1ScalarMaterialDistanceFunctor.html#a2ec17187c094f6c6e2b88017805a247c", null ],
+    [ "ghostedMaterialMV", "classMueLu_1_1DistanceLaplacian_1_1ScalarMaterialDistanceFunctor.html#a0efac07da59ff0c4e75806fbac6e2fc6", null ],
+    [ "material", "classMueLu_1_1DistanceLaplacian_1_1ScalarMaterialDistanceFunctor.html#ac841895a86c5938a6efc80bb9360f492", null ],
+    [ "ghostedMaterial", "classMueLu_1_1DistanceLaplacian_1_1ScalarMaterialDistanceFunctor.html#a5a8821d39378a6f048f5dda392221de0", null ]
+];

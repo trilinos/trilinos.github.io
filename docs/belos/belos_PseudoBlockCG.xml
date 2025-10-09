@@ -1,0 +1,29 @@
+<?xml-stylesheet type="text/xsl" href="common/parameterList/parameterList.xsl"?>
+<ParameterList name="ANONYMOUS">
+  <Parameter docString="The relative residual tolerance that needs to be achieved by the
+iterative solver in order for the linear system to be declared converged." id="0" isDefault="false" isUsed="true" name="Convergence Tolerance" type="double" value="1.00000000000000002e-08"/>
+  <Parameter docString="The maximum number of block iterations allowed for each
+set of RHS solved." id="1" isDefault="false" isUsed="true" name="Maximum Iterations" type="int" value="1000"/>
+  <Parameter docString="Whether or not to assert that the linear operator
+and the preconditioner are indeed positive definite." id="2" isDefault="false" isUsed="true" name="Assert Positive Definiteness" type="bool" value="true"/>
+  <Parameter docString="What type(s) of solver information should be outputted
+to the output stream." id="3" isDefault="false" isUsed="true" name="Verbosity" type="int" value="0"/>
+  <Parameter docString="What style is used for the solver information outputted
+to the output stream." id="4" isDefault="false" isUsed="true" name="Output Style" type="int" value="0"/>
+  <Parameter docString="How often convergence information should be outputted
+to the output stream." id="5" isDefault="false" isUsed="true" name="Output Frequency" type="int" value="-1"/>
+  <Parameter docString="The number of linear systems that need to converge before
+they are deflated.  This number should be &lt;= block size." id="6" isDefault="false" isUsed="true" name="Deflation Quorum" type="int" value="1"/>
+  <Parameter docString="A reference-counted pointer to the output stream where all
+solver output is sent." id="7" isDefault="false" isUsed="true" name="Output Stream" type="any" value="Teuchos::RCP&lt;std::ostream>{ptr=0x55cd507c1bc0,node=0x55cd69da4350,strong_count=1,weak_count=0}"/>
+  <Parameter docString="When convergence information is printed, only show the maximum
+relative residual norm when the block size is greater than one." id="8" isDefault="false" isUsed="true" name="Show Maximum Residual Norm Only" type="bool" value="false"/>
+  <Parameter docString="The type of scaling used in the residual convergence test." id="9" isDefault="false" isUsed="true" name="Implicit Residual Scaling" type="string" value="Norm of Initial Residual"/>
+  <Parameter docString="Whether or not to estimate the condition number of the preconditioned system." id="10" isDefault="false" isUsed="true" name="Estimate Condition Number" type="bool" value="false"/>
+  <Parameter docString='The type of scaling used in the residual convergence test.  This name is deprecated; the new name is "Implicit Residual Scaling".' id="11" isDefault="false" isUsed="true" name="Residual Scaling" type="string" value="Norm of Initial Residual"/>
+  <Parameter docString="The string to use as a prefix for the timer labels." id="12" isDefault="false" isUsed="true" name="Timer Label" type="string" value="Belos"/>
+  <Parameter docString="Merge the allreduce for convergence detection with the one for CG.
+This saves one all-reduce, but incurs more computation." id="13" isDefault="false" isUsed="true" name="Fold Convergence Detection Into Allreduce" type="bool" value="false"/>
+  <Validators/>
+</ParameterList>
+

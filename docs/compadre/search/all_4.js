@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['data_0',['data',['..//home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/compadre/examples/GMLS_Manifold.hpp#ex4',1,'Apply GMLS Alphas To Data'],['..//home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/compadre/examples/GMLS_Manifold.hpp#ex2',1,'Creating The Data']]],
+  ['densesolvertype_1',['DenseSolverType',['../namespace_compadre.html#aa9f6f8690fcb1e67b5dbe42d60cb75fc',1,'Compadre']]],
+  ['device_20views_2',['GMLS Example with Device Views',['..//home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/compadre/examples/GMLS_Manifold.hpp#ex',1,'']]],
+  ['device_5fexecution_5fspace_3',['device_execution_space',['../namespace_compadre.html#ae286572bcbe783b8287842ec046236a3',1,'Compadre']]],
+  ['device_5fmanaged_5flocal_5findex_5ftype_4',['device_managed_local_index_type',['../namespace_compadre.html#a06abc37a354c3dcd50f35d2ee6a701b7',1,'Compadre']]],
+  ['device_5fmanaged_5fmatrix_5fleft_5ftype_5',['device_managed_matrix_left_type',['../namespace_compadre.html#ae97ebdec7f44d2142d89f47671c8b2d1',1,'Compadre']]],
+  ['device_5fmanaged_5fmatrix_5fright_5ftype_6',['device_managed_matrix_right_type',['../namespace_compadre.html#a3a9a3b89f6d8de4202b3be3212bb8afd',1,'Compadre']]],
+  ['device_5fmanaged_5fvector_5ftype_7',['device_managed_vector_type',['../namespace_compadre.html#a5f134b18877e69de5469f241e5d098b0',1,'Compadre']]],
+  ['device_5fmax_8',['device_max',['../_g_m_l_s___manifold_8hpp.html#afd7d4a494bdb8227bf7d60bc00d387db',1,'device_max(double d1, double d2):&#160;GMLS_Manifold.hpp'],['../_g_m_l_s___tutorial_8hpp.html#afd7d4a494bdb8227bf7d60bc00d387db',1,'device_max(double d1, double d2):&#160;GMLS_Tutorial.hpp']]],
+  ['device_5fmemory_5fspace_9',['device_memory_space',['../namespace_compadre.html#adb53768ff5fee611431cfb25fb76d5ed',1,'Compadre']]],
+  ['device_5fmirror_5fsource_5fview_5ftype_10',['device_mirror_source_view_type',['../struct_compadre_1_1_point_connections.html#a934763052ebdd46e5e68fa377429df83',1,'Compadre::PointConnections']]],
+  ['device_5fmirror_5ftarget_5fview_5ftype_11',['device_mirror_target_view_type',['../struct_compadre_1_1_point_connections.html#a368e8d0b65336d23559ce3b27261254d',1,'Compadre::PointConnections']]],
+  ['differenteachneighbor_12',['DifferentEachNeighbor',['../namespace_compadre.html#ab90f532830fbb4deb58bf2ec4c557424a4a5f31a07809f6abad03b7d71d9f94a9',1,'Compadre']]],
+  ['differenteachtarget_13',['DifferentEachTarget',['../namespace_compadre.html#ab90f532830fbb4deb58bf2ec4c557424aa96f53f2ba3817c215344f27b66da798',1,'Compadre']]],
+  ['dimension_14',['dimension',['../struct_command_line_processor.html#a92d6ba12766a02d2af2a759ea596f77d',1,'CommandLineProcessor']]],
+  ['discretization_20and_20remap_20toolkit_15',['COMpatible PArticle Discretization and REmap Toolkit',['../index.html',1,'']]],
+  ['distancetype_16',['DistanceType',['../class_compadre_1_1_radius_result_set.html#a037f544512f52cb86b4f2b36f88e1524',1,'Compadre::RadiusResultSet']]],
+  ['divergencefreevectortaylorpolynomial_17',['DivergenceFreeVectorTaylorPolynomial',['../namespace_compadre.html#a64bb4f79de16fc9728def7ec3f4a120ea0c90fc1e08ab9f59c5dd4b884b1ed8be',1,'Compadre']]],
+  ['divergenceofvectorpointevaluation_18',['DivergenceOfVectorPointEvaluation',['../namespace_compadre.html#ac613f05c82282085cc91ecb265feeed2a9018d362d05e563509a8ce529bd4e604',1,'Compadre']]],
+  ['divergencetestsamples_19',['divergenceTestSamples',['../_g_m_l_s___tutorial_8hpp.html#a8d07c12f867c23dcc248b081d529be7e',1,'GMLS_Tutorial.hpp']]],
+  ['divergencetestsolution_20',['divergenceTestSolution',['../_g_m_l_s___tutorial_8hpp.html#a1a0bfeff79cc5fe6655e39e6df469d56',1,'GMLS_Tutorial.hpp']]],
+  ['divfreetestsolution_5fsingle_5fpolynomial_21',['divfreeTestSolution_single_polynomial',['../_g_m_l_s___tutorial_8hpp.html#a1de85aa68fdaf023817c959cfe7e0ea1',1,'GMLS_Tutorial.hpp']]],
+  ['divfreetestsolution_5fspan_5fbasis_22',['divfreeTestSolution_span_basis',['../_g_m_l_s___tutorial_8hpp.html#adfb95a486536ed06bdf1e7c90022ad25',1,'GMLS_Tutorial.hpp']]],
+  ['documentation_20and_20tutorials_23',['Documentation and Tutorials',['../index.html#autotoc_md8',1,'']]],
+  ['dry_20run_20mode_3a_24',['dry run mode:',['../class_compadre_1_1_point_cloud_search.html#autotoc_md0',1,'When in dry-run mode:'],['../class_compadre_1_1_point_cloud_search.html#autotoc_md1',1,'When not in dry-run mode:']]]
+];

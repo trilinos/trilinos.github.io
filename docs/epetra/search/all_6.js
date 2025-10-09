@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['factor_0',['factor',['../classEpetra__SerialSpdDenseSolver.html#a3128531231c288e62c50d4fa93b74560',1,'Epetra_SerialSpdDenseSolver::Factor()'],['../classEpetra__SerialDenseSolver.html#a045cb0339c25fa35a6c0012a5cdea53a',1,'Epetra_SerialDenseSolver::Factor(void)']]],
+  ['factored_1',['factored',['../classEpetra__SerialDenseSolver.html#acdb233a5bf41eaf162117bbc738ad2b7',1,'Epetra_SerialDenseSolver::Factored()'],['../classEpetra__SerialDenseSVD.html#af742206e5e89f3b47740f3509f7b9f26',1,'Epetra_SerialDenseSVD::Factored()']]],
+  ['factoredmatrix_2',['FactoredMatrix',['../classEpetra__SerialDenseSolver.html#a8aea00e28f40087269f66e1b85d22485',1,'Epetra_SerialDenseSolver']]],
+  ['factorwithequilibration_3',['FactorWithEquilibration',['../classEpetra__SerialDenseSolver.html#afdcdce6b9d0a5eabbb3f2646675beb64',1,'Epetra_SerialDenseSolver']]],
+  ['ferr_4',['FERR',['../classEpetra__SerialDenseSolver.html#a9a9179c0e5e26d4d64eae884c0414bf1',1,'Epetra_SerialDenseSolver']]],
+  ['fill_5',['fill',['../Epetra_Lesson04.html',1,'Epetra Lesson 04: Sparse matrix fill'],['../Epetra_Lesson04.html#Epetra_Lesson04_Phases',1,'Phases of fill']]],
+  ['fillcomplete_6',['fillcomplete',['../Epetra_Lesson03.html#Epetra_Lesson03_Fill_FillComplete',1,'Calling \c FillComplete()'],['../classEpetra__CrsMatrix.html#a355b4e8d1e28b16bacf37ab637ac0c3f',1,'Epetra_CrsMatrix::FillComplete(bool OptimizeDataStorage=true)'],['../classEpetra__CrsMatrix.html#aac3c13275e8dbe80826e820abbb8e49c',1,'Epetra_CrsMatrix::FillComplete(const Epetra_Map &amp;DomainMap, const Epetra_Map &amp;RangeMap, bool OptimizeDataStorage=true)'],['../classEpetra__VbrMatrix.html#a7948f79031b83b65aa8935abd4d5f2ec',1,'Epetra_VbrMatrix::FillComplete()'],['../classEpetra__VbrMatrix.html#a0374ef908a53659fb8626d49f6306af5',1,'Epetra_VbrMatrix::FillComplete(const Epetra_BlockMap &amp;DomainMap, const Epetra_BlockMap &amp;RangeMap)'],['../classEpetra__CrsGraph.html#a7a77f6a61a80ce90943988ee3aa537ae',1,'Epetra_CrsGraph::FillComplete()'],['../classEpetra__CrsGraph.html#aab6e321eb0f306df52b73b94d563dbfd',1,'Epetra_CrsGraph::FillComplete(const Epetra_BlockMap &amp;DomainMap, const Epetra_BlockMap &amp;RangeMap)']]],
+  ['filled_7',['filled',['../classEpetra__VbrMatrix.html#a226c0bee2260ca0f6d6b5b60309e1fc1',1,'Epetra_VbrMatrix::Filled()'],['../classEpetra__MsrMatrix.html#a56e9213c6e47beec90ecbd115673a37a',1,'Epetra_MsrMatrix::Filled()'],['../classEpetra__RowMatrix.html#ac97ccf32269dbefd7a7c21b44a993cb9',1,'Epetra_RowMatrix::Filled()'],['../classEpetra__CrsMatrix.html#a08b8858f8fc28dcc45bf523ccad2cb50',1,'Epetra_CrsMatrix::Filled()'],['../classEpetra__CrsGraph.html#a009d2ee81e24fa0b9ca5d82236b6892b',1,'Epetra_CrsGraph::Filled()'],['../classEpetra__BasicRowMatrix.html#ad786de82672f7b48f945e7bd5b00f609',1,'Epetra_BasicRowMatrix::Filled()']]],
+  ['filling_20a_20sparse_20matrix_8',['filling a sparse matrix',['../Epetra_Lesson03.html#Epetra_Lesson03_Fill',1,'Creating and filling a sparse matrix'],['../Epetra_Lesson04.html#Epetra_Lesson04_Fill',1,'Filling a sparse matrix']]],
+  ['findlocalelementid_9',['FindLocalElementID',['../classEpetra__BlockMap.html#ab641e3bf336a34390b3905bf31a63fce',1,'Epetra_BlockMap']]],
+  ['firstpointinelement_10',['FirstPointInElement',['../classEpetra__BlockMap.html#adbf56009a4616b5d281c8e4426a9bb71',1,'Epetra_BlockMap']]],
+  ['firstpointinelementlist_11',['firstpointinelementlist',['../classEpetra__BlockMap.html#ad7b539d91f27c6b0afadcc0a2a1afae4',1,'Epetra_BlockMap::FirstPointInElementList(int *FirstPointInElementList) const'],['../classEpetra__BlockMap.html#a9656f504b645c02dc262e2ddac4940c1',1,'Epetra_BlockMap::FirstPointInElementList() const']]],
+  ['flexibility_20and_20performance_12',['Trade-offs between flexibility and performance',['../Epetra_Lesson04.html#Epetra_Lesson04_Tradeoffs',1,'']]],
+  ['flops_13',['flops',['../classEpetra__Flops.html#acfcefb30f7b846433948640973cdb799',1,'Epetra_Flops::Flops()'],['../classEpetra__CompObject.html#a8326f0873a8866ac9f15f08f5ef31b0d',1,'Epetra_CompObject::Flops()']]],
+  ['for_20a_20code_20that_20only_20uses_20mpi_20through_20trilinos_14',['Initialization for a code that only uses MPI through Trilinos',['../Epetra_Lesson01.html#Epetra_Lesson01_MpiOnlyThroughTrilinos',1,'']]],
+  ['for_20an_20existing_20mpi_20code_15',['Initialization for an existing MPI code',['../Epetra_Lesson01.html#Epetra_Lesson01_ExistingMpiCode',1,'']]],
+  ['for_20an_20existing_20non_20mpi_20code_16',['Initialization for an existing non-MPI code',['../Epetra_Lesson01.html#Epetra_Lesson01_ExistingNonMpiCode',1,'']]],
+  ['for_20current_20aztec_20users_17',['Transition support for current Aztec users',['../index.html#Epetra_aztec2trilinos',1,'']]],
+  ['for_20performance_20reasons_18',['We expose local indices for performance reasons',['../Epetra_Lesson02.html#Epetra_Lesson02_Map_assigns_exposeLIDs',1,'']]],
+  ['for_20thyra_20and_20pytrilinos_19',['Epetra adapters for Thyra and PyTrilinos',['../index.html#Epetra_adapters',1,'']]],
+  ['fortran_20and_20c_20support_20',['Fortran and C Support',['../index.html#Epetra_wrappers',1,'']]],
+  ['fullmatrix_21',['FullMatrix',['../classEpetra__CrsSingletonFilter.html#ab2d6104751f355a71dff0d3d36b67a1f',1,'Epetra_CrsSingletonFilter']]],
+  ['fullproblem_22',['FullProblem',['../classEpetra__CrsSingletonFilter.html#a8f679fb255acf6032cf40483959a625b',1,'Epetra_CrsSingletonFilter']]],
+  ['functionality_23',['Extending Epetra functionality',['../index.html#Epetra_extending',1,'']]]
+];

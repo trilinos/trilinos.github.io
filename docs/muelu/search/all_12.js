@@ -1,0 +1,10 @@
+var searchData=
+[
+  ['q2q1mkprecond_0',['Q2Q1MkPrecond',['../classThyra_1_1MueLuTpetraQ2Q1PreconditionerFactory.html#a867f2f7e4cd64b844af51db2a450f406',1,'Thyra::MueLuTpetraQ2Q1PreconditionerFactory']]],
+  ['q2q1q2coarsegridfactory_1',['q2q1q2coarsegridfactory',['../classMueLu_1_1Q2Q1Q2CoarseGridFactory.html',1,'MueLu::Q2Q1Q2CoarseGridFactory&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;'],['../classMueLu_1_1Q2Q1Q2CoarseGridFactory.html#a9d9925ca99f2e6586a8d9978eabd4d5f',1,'MueLu::Q2Q1Q2CoarseGridFactory::Q2Q1Q2CoarseGridFactory()']]],
+  ['quadrature_2',['quadrature',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/epetraext/doc/html/classStokhos_1_1Quadrature.html',1,'Stokhos::Quadrature&lt; typename ordinal_type, typename scalar_type &gt;'],['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/epetraext/doc/html/namespaceGLpApp.html#a5f6e450817642810396365b6e5288633',1,'GLpApp::quadrature()']]],
+  ['qualities_5f_3',['qualities_',['../classMueLu_1_1AggregationExportFactory.html#a7be0f5e277d750dc8b2c976cf89a19d6',1,'MueLu::AggregationExportFactory']]],
+  ['query_4',['query',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/amesos/doc/html/classAmesos.html#a9929aa33f9b760a4a3a04dba8f9a75b1',1,'Amesos::Query(const char *ClassType)'],['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/amesos/doc/html/classAmesos.html#a3f735ee973b11c6623f86d421c24388b',1,'Amesos::Query(const std::string CT)']]],
+  ['questions_20and_20comments_5',['For All Questions and Comments...',['../index.html#muelu_questions',1,'']]],
+  ['quickpart_5flist_5finc_5fint_6',['quickpart_list_inc_int',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/epetraext/doc/html/namespaceEpetraExt.html#ae8bf76c9675c7b84e09eec7b239fbe65',1,'EpetraExt']]]
+];

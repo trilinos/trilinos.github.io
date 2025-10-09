@@ -1,0 +1,25 @@
+var classXpetra_1_1TpetraImport =
+[
+    [ "map_type", "classXpetra_1_1TpetraImport.html#aca098ad177ea0b49a9d5ed58394a4fe1", null ],
+    [ "TpetraImport", "classXpetra_1_1TpetraImport.html#a7560100e076420a2a40130714ca229be", null ],
+    [ "TpetraImport", "classXpetra_1_1TpetraImport.html#a7859e3b981f71add95bcb84dad700fee", null ],
+    [ "TpetraImport", "classXpetra_1_1TpetraImport.html#a4c377f58b3d4ef8a05e0337dd3e97a90", null ],
+    [ "~TpetraImport", "classXpetra_1_1TpetraImport.html#a7238d228cb476f296af4177e9c5b4449", null ],
+    [ "TpetraImport", "classXpetra_1_1TpetraImport.html#a99d14bd20691c730067e9280e4ba5859", null ],
+    [ "createRemoteOnlyImport", "classXpetra_1_1TpetraImport.html#a46260079bf082fdaf4a5d35cbb5b1453", null ],
+    [ "getNumSameIDs", "classXpetra_1_1TpetraImport.html#a16fd62bd6cfe11fb66ed7bb90c586827", null ],
+    [ "getNumPermuteIDs", "classXpetra_1_1TpetraImport.html#af978a659b0eba3b3988221b1968b91ff", null ],
+    [ "getPermuteFromLIDs", "classXpetra_1_1TpetraImport.html#aa7033563ec6e037d47f57a8303c641f1", null ],
+    [ "getPermuteToLIDs", "classXpetra_1_1TpetraImport.html#a132d2f1092ecc053a650da48b633f55e", null ],
+    [ "getNumRemoteIDs", "classXpetra_1_1TpetraImport.html#acf3847081ab2b75d623830b7405bb280", null ],
+    [ "getRemoteLIDs", "classXpetra_1_1TpetraImport.html#ace6466e7294c4a50e6a582983c71d018", null ],
+    [ "setDistributorParameters", "classXpetra_1_1TpetraImport.html#a0631c41237f721aedf76b2ca472a65c9", null ],
+    [ "getNumExportIDs", "classXpetra_1_1TpetraImport.html#aff31587922ed9778b81d2ad3e4b5dbb6", null ],
+    [ "getExportLIDs", "classXpetra_1_1TpetraImport.html#a2f022b3dd3c8eed3701d188a9ee3facd", null ],
+    [ "getExportPIDs", "classXpetra_1_1TpetraImport.html#af960ce8148d4b597ae74fc062f8d3355", null ],
+    [ "getSourceMap", "classXpetra_1_1TpetraImport.html#ad08ec0b11736c25fd7cd387d81279c2d", null ],
+    [ "getTargetMap", "classXpetra_1_1TpetraImport.html#a085637b95ec8bf1d5d16ae8f8fb98f95", null ],
+    [ "print", "classXpetra_1_1TpetraImport.html#aa63cbcd90397c066b4fce8399ae58cc8", null ],
+    [ "getTpetra_Import", "classXpetra_1_1TpetraImport.html#a0a4d2aa1b0902e0a74a84315b5e102fe", null ],
+    [ "import_", "classXpetra_1_1TpetraImport.html#a6d6a713ed9478ceaf1b45f6bc1ccb1a3", null ]
+];

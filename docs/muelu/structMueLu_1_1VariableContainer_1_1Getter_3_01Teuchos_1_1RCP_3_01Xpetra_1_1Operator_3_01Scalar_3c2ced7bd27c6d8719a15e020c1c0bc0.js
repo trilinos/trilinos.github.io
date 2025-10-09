@@ -1,0 +1,6 @@
+var structMueLu_1_1VariableContainer_1_1Getter_3_01Teuchos_1_1RCP_3_01Xpetra_1_1Operator_3_01Scalar_3c2ced7bd27c6d8719a15e020c1c0bc0 =
+[
+    [ "Operator", "structMueLu_1_1VariableContainer_1_1Getter_3_01Teuchos_1_1RCP_3_01Xpetra_1_1Operator_3_01Scalar_3c2ced7bd27c6d8719a15e020c1c0bc0.html#ad84bfe8503f3d226277bd2ddbdfdf4ea", null ],
+    [ "Matrix", "structMueLu_1_1VariableContainer_1_1Getter_3_01Teuchos_1_1RCP_3_01Xpetra_1_1Operator_3_01Scalar_3c2ced7bd27c6d8719a15e020c1c0bc0.html#aba1fcd64eda95ffda063e3a21b3dfe77", null ],
+    [ "get", "structMueLu_1_1VariableContainer_1_1Getter_3_01Teuchos_1_1RCP_3_01Xpetra_1_1Operator_3_01Scalar_3c2ced7bd27c6d8719a15e020c1c0bc0.html#aa7dba355d57270ec8f03cc5cbd294fd0", null ]
+];

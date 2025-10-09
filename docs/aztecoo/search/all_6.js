@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['getallaztecoptions_0',['GetAllAztecOptions',['../classAztecOO.html#a6e7537d4c385753b48a9cdf6f834a035',1,'AztecOO']]],
+  ['getallaztecparams_1',['GetAllAztecParams',['../classAztecOO.html#ab3fe6781773ce9ad83232d81ea93880b',1,'AztecOO']]],
+  ['getallaztecstatus_2',['GetAllAztecStatus',['../classAztecOO.html#adee07fa9c570f08e083808fc588c73ec',1,'AztecOO']]],
+  ['getaztecoption_3',['GetAztecOption',['../classAztecOO.html#ada10722e29b0bf6a8fb9582523f4710a',1,'AztecOO']]],
+  ['getaztecstatus_4',['GetAztecStatus',['../classAztecOO.html#afbd4b207076a0d54596c1584e043e88a',1,'AztecOO']]],
+  ['getcombotype_5',['GetComboType',['../classAztecOO__StatusTestCombo.html#ac91c6f580bd7ebb9899a93ec5533f67c',1,'AztecOO_StatusTestCombo']]],
+  ['getconditionnumber_6',['getConditionNumber',['../classAztecOOConditionNumber.html#aa7d36104d3debd82c7c053c409f077e2',1,'AztecOOConditionNumber']]],
+  ['getlabel_7',['GetLabel',['../classAztecOO.html#a6becfc7aba5cbd3b9545efc93a8a1477',1,'AztecOO']]],
+  ['getlhs_8',['GetLHS',['../classAztecOO.html#a9359e201cc7a66722f53ee68abf17134',1,'AztecOO']]],
+  ['getmaxiters_9',['GetMaxIters',['../classAztecOO__StatusTestMaxIters.html#a5025121fda9347b59db071c49b908bbe',1,'AztecOO_StatusTestMaxIters']]],
+  ['getmaxnumextraiterations_10',['GetMaxNumExtraIterations',['../classAztecOO__StatusTestResNorm.html#acff00ff388a9d8351e92b506c4491810',1,'AztecOO_StatusTestResNorm']]],
+  ['getnumiters_11',['GetNumIters',['../classAztecOO__StatusTestMaxIters.html#a286b2dfb6221005c3822d68fda439e67',1,'AztecOO_StatusTestMaxIters']]],
+  ['getprecmatrix_12',['GetPrecMatrix',['../classAztecOO.html#a476ff5d8302f6270e378bccbf951b47d',1,'AztecOO']]],
+  ['getprecoperator_13',['GetPrecOperator',['../classAztecOO.html#a9dcb995826089e3914316e79b39984fd',1,'AztecOO']]],
+  ['getproblem_14',['GetProblem',['../classAztecOO.html#af24ef5d53e584dda99039babe217b497',1,'AztecOO']]],
+  ['getresnormvalue_15',['GetResNormValue',['../classAztecOO__StatusTestResNorm.html#a781eb38ecd3596fc63c797ef92d6dee4',1,'AztecOO_StatusTestResNorm']]],
+  ['getrhs_16',['GetRHS',['../classAztecOO.html#a7c673b7fe0a79bec579b730f1c074352',1,'AztecOO']]],
+  ['getscalednormvalue_17',['GetScaledNormValue',['../classAztecOO__StatusTestResNorm.html#ae28c31e941ce85ef3c35ad77aff8d828',1,'AztecOO_StatusTestResNorm']]],
+  ['getstatus_18',['getstatus',['../classAztecOO__StatusTest.html#a6e611d690e88074274b10a0051fa29ef',1,'AztecOO_StatusTest::GetStatus()'],['../classAztecOO__StatusTestCombo.html#aabfd850d63aff24bd9d5c4ef697e2cc0',1,'AztecOO_StatusTestCombo::GetStatus()'],['../classAztecOO__StatusTestMaxIters.html#ae316a99036c363fadfc05000a8af6d9e',1,'AztecOO_StatusTestMaxIters::GetStatus()'],['../classAztecOO__StatusTestResNorm.html#a3908245d04d0aca453009c4b673e67d6',1,'AztecOO_StatusTestResNorm::GetStatus() const']]],
+  ['gettestvalue_19',['GetTestValue',['../classAztecOO__StatusTestResNorm.html#abe19afa41e0ac882a71170b0fb72807a',1,'AztecOO_StatusTestResNorm']]],
+  ['gettolerance_20',['GetTolerance',['../classAztecOO__StatusTestResNorm.html#a6f077b46203a162b102c3cb2e0e42bc5',1,'AztecOO_StatusTestResNorm']]],
+  ['getusermatrix_21',['GetUserMatrix',['../classAztecOO.html#a329210475e1d2a7b69259d2ff14239f2',1,'AztecOO']]],
+  ['getuseroperator_22',['GetUserOperator',['../classAztecOO.html#ad5cc605ac79de7f96207f93bddfb549a',1,'AztecOO']]],
+  ['gmres_5f_23',['GMRES_',['../classAztecOOConditionNumber.html#a78191643e02acb922487b1cd69d6ed76aa1753422112e034ab101c52c2cb271c4',1,'AztecOOConditionNumber']]],
+  ['grid_5flevel_24',['grid_level',['../structgrid__level.html',1,'']]]
+];

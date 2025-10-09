@@ -1,0 +1,10 @@
+var searchData=
+[
+  ['floating_20point_20trapping_20support_20code_0',['Floating Point Trapping Support Code',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/teuchos/doc/html/group__Teuchos__FloatingPointTrap__grp.html',1,'']]],
+  ['for_20allocating_20temporary_20workspace_1',['Set of utilities for allocating temporary workspace.',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/teuchos/doc/html/group__Teuchos__Workspace__grp.html',1,'']]],
+  ['for_20character_20inputs_20in_20teuchos_3a_3ablas_20methods_2',['Enumerations for character inputs in Teuchos::BLAS methods',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/teuchos/doc/html/group__BLASEnum__grp.html',1,'']]],
+  ['for_20going_20between_20teuchos_3a_3arcp_20and_20boost_3a_3ashared_5fptr_3',['Conversion utilities for going between Teuchos::RCP and boost::shared_ptr.',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/teuchos/doc/html/group__Teuchos__RCPBoostSharedPtrConversions__grp.html',1,'']]],
+  ['for_20going_20between_20teuchos_3a_3arcp_20and_20std_3a_3ashared_5fptr_4',['Conversion utilities for going between Teuchos::RCP and std::shared_ptr.',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/teuchos/doc/html/group__Teuchos__RCPStdSharedPtrConversions__grp.html',1,'']]],
+  ['for_20testing_20assertions_20at_20compile_20time_5',['Template classes for testing assertions at compile time.',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/teuchos/doc/html/group__CompileTimeAssert__grp.html',1,'']]],
+  ['for_20throwing_20exceptions_20and_20setting_20breakpoints_6',['Utility code for throwing exceptions and setting breakpoints.',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/teuchos/doc/html/group__TestForException__grp.html',1,'']]]
+];

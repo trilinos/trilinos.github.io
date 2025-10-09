@@ -1,0 +1,11 @@
+var classBelos_1_1StatusTestGenResSubNorm_3_01Scalar_00_01Xpetra_1_1MultiVector_3_01Scalar_00_01Loca166257dece5c4571c448ec46e50227e4 =
+[
+    [ "MV", "classBelos_1_1StatusTestGenResSubNorm_3_01Scalar_00_01Xpetra_1_1MultiVector_3_01Scalar_00_01Loca166257dece5c4571c448ec46e50227e4.html#a80d6185becf96b1f35f925493635fb23", null ],
+    [ "BCRS", "classBelos_1_1StatusTestGenResSubNorm_3_01Scalar_00_01Xpetra_1_1MultiVector_3_01Scalar_00_01Loca166257dece5c4571c448ec46e50227e4.html#a9152b1ce23997bc67bf86dd8bc60216d", null ],
+    [ "ME", "classBelos_1_1StatusTestGenResSubNorm_3_01Scalar_00_01Xpetra_1_1MultiVector_3_01Scalar_00_01Loca166257dece5c4571c448ec46e50227e4.html#a7b21c044856059058c541da6abb896ac", null ],
+    [ "OP", "classBelos_1_1StatusTestGenResSubNorm_3_01Scalar_00_01Xpetra_1_1MultiVector_3_01Scalar_00_01Loca166257dece5c4571c448ec46e50227e4.html#a6ba07835ef2258912d17768989294c8d", null ],
+    [ "SCT", "classBelos_1_1StatusTestGenResSubNorm_3_01Scalar_00_01Xpetra_1_1MultiVector_3_01Scalar_00_01Loca166257dece5c4571c448ec46e50227e4.html#a3f0f2507c091aff586ce5a2650200c75", null ],
+    [ "MagnitudeType", "classBelos_1_1StatusTestGenResSubNorm_3_01Scalar_00_01Xpetra_1_1MultiVector_3_01Scalar_00_01Loca166257dece5c4571c448ec46e50227e4.html#a0e11abe36e204a5b79a1421de8bffb51", null ],
+    [ "MVT", "classBelos_1_1StatusTestGenResSubNorm_3_01Scalar_00_01Xpetra_1_1MultiVector_3_01Scalar_00_01Loca166257dece5c4571c448ec46e50227e4.html#ad482ee989a3d7264cd675f2ea15a5b87", null ],
+    [ "OT", "classBelos_1_1StatusTestGenResSubNorm_3_01Scalar_00_01Xpetra_1_1MultiVector_3_01Scalar_00_01Loca166257dece5c4571c448ec46e50227e4.html#ac4441b7f78e151eff335613769a40b65", null ]
+];

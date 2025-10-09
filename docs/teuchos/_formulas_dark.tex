@@ -1,0 +1,133 @@
+\documentclass{article}
+\usepackage{ifthen}
+\usepackage{epsfig}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\color{white}
+\pagecolor{black}
+\usepackage{newunicodechar}
+  \makeatletter
+    \def\doxynewunicodechar#1#2{%
+    \@tempswafalse
+    \edef\nuc@tempa{\detokenize{#1}}%
+    \if\relax\nuc@tempa\relax
+      \nuc@emptyargerr
+    \else
+      \edef\@tempb{\expandafter\@car\nuc@tempa\@nil}%
+      \nuc@check
+      \if@tempswa
+        \@namedef{u8:\nuc@tempa}{#2}%
+      \fi
+    \fi
+  }
+  \makeatother
+  \doxynewunicodechar{⁻}{${}^{-}$}% Superscript minus
+  \doxynewunicodechar{²}{${}^{2}$}% Superscript two
+  \doxynewunicodechar{³}{${}^{3}$}% Superscript three
+
+\pagestyle{empty}
+\begin{document}
+$ O(1)$
+\pagebreak
+
+$0, 1, \dots, n-1$
+\pagebreak
+
+$1.05457168e-34$
+\pagebreak
+
+$w =
+max(u,v)$
+\pagebreak
+
+\[
+  k = \begin{cases}
+    i         & \text{if $u > v$}, \\
+    \min(i,j) & \text{if $u = v$}, \\
+    j         & \text{if $u < v$}. \\
+\end{cases}
+\]
+\pagebreak
+
+\[
+  w = \begin{cases}
+    u     & \text{if $u > v$}, \\
+    v     & \text{if $u < v$}. \\
+    u     & \text{otherwise}. \\
+  \end{cases}
+\]
+\pagebreak
+
+\[
+  k = \begin{cases}
+    i         & \text{if $u > v$}, \\
+    j         & \text{if $u < v$}. \\
+    \min(i,j) & \text{otherwise}. \\
+  \end{cases}
+\]
+\pagebreak
+
+$w =
+min(u,v)$
+\pagebreak
+
+\[
+  k = \begin{cases}
+    i         & \text{if $u < v$}, \\
+    \min(i,j) & \text{if $u = v$}, \\
+    j         & \text{if $u > v$}. \\
+  \end{cases}
+\]
+\pagebreak
+
+$P$
+\pagebreak
+
+$N$
+\pagebreak
+
+$O(\log P)$
+\pagebreak
+
+$O(1)$
+\pagebreak
+
+$O(N)$
+\pagebreak
+
+$O(N (\log N) (\log P))$
+\pagebreak
+
+$N \log N$
+\pagebreak
+
+\[
+    x(t) = \sum_{i=0}^d x_i t^i
+\]
+\pagebreak
+
+$d$
+\pagebreak
+
+$t$
+\pagebreak
+
+$x_i$
+\pagebreak
+
+$i=0,\dots,d$
+\pagebreak
+
+$Ax=b$
+\pagebreak
+
+$b - A \tilde{x}$
+\pagebreak
+
+$\tilde{x}$
+\pagebreak
+
+$Ax = b$
+\pagebreak
+
+\end{document}

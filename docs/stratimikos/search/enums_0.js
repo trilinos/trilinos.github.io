@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['coloringalgorithm_0',['ColoringAlgorithm',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/epetraext/doc/html/classEpetraExt_1_1CrsGraph__MapColoring.html#ac3358e38bf47b5da6a0c8a76393ba3ea',1,'EpetraExt::CrsGraph_MapColoring']]],
+  ['combotype_1',['combotype',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/aztecoo/doc/html/classAztecOO__StatusTestCombo.html#a2d37fb53673826c2a98be1c4c5417c96',1,'AztecOO_StatusTestCombo::ComboType'],['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/belos/doc/html/classBelos_1_1StatusTestCombo.html#a0d2b491520f3106f4e50890f1770e2fe',1,'Belos::StatusTestCombo::ComboType'],['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/belos/doc/html/classBelos_1_1StatusTestCombo.html#a0d2b491520f3106f4e50890f1770e2fe',1,'Belos::StatusTestCombo::ComboType']]],
+  ['conjtype_2',['ConjType',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/belos/doc/html/namespaceBelos.html#a9f2db8340061d855f6052134d28bdf63',1,'Belos']]]
+];

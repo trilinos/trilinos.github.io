@@ -1,0 +1,12 @@
+var searchData=
+[
+  ['gamma_5ffit_5flinear_0',['GAMMA_FIT_LINEAR',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/epetraext/doc/html/classEpetraExt_1_1DiagonalTransientModel.html#ad2b21f2421cc6af9cee09ad659324909af73b8fcc9576f4d2b7d866b5d163f952',1,'EpetraExt::DiagonalTransientModel']]],
+  ['gamma_5ffit_5frandom_1',['GAMMA_FIT_RANDOM',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/epetraext/doc/html/classEpetraExt_1_1DiagonalTransientModel.html#ad2b21f2421cc6af9cee09ad659324909aadbf9047d6df147d0e2f04434c764f60',1,'EpetraExt::DiagonalTransientModel']]],
+  ['gcrodr_5fname_2',['GCRODR_name',['../classThyra_1_1BelosLinearOpWithSolveFactory.html#a5c5e1f67489649c4e5f5155eda5f5fcf',1,'Thyra::BelosLinearOpWithSolveFactory']]],
+  ['general_3',['General',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/belos/doc/html/namespaceBelos.html#a9ced295f4b474d2c545f344204940f41a0eddfe02212ef31773fb73531263d6db',1,'Belos']]],
+  ['glp_5fpi_4',['GLp_pi',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/epetraext/doc/html/namespaceGLpApp.html#ac8a4bb01f5c18afc1c5e7863b77acc51',1,'GLpApp']]],
+  ['gmres_5f_5',['GMRES_',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/aztecoo/doc/html/classAztecOOConditionNumber.html#a78191643e02acb922487b1cd69d6ed76aa1753422112e034ab101c52c2cb271c4',1,'AztecOOConditionNumber']]],
+  ['graph_5f_6',['Graph_',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/ifpack/doc/html/classIfpack__OverlappingPartitioner.html#aeb47ba8c3f928940a3281a51d2f8b049',1,'Ifpack_OverlappingPartitioner']]],
+  ['greedy_7',['GREEDY',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/epetraext/doc/html/classEpetraExt_1_1CrsGraph__MapColoring.html#ac3358e38bf47b5da6a0c8a76393ba3eaa2765e3130a77ec8737f12c26ad40810c',1,'EpetraExt::CrsGraph_MapColoring']]],
+  ['grid_5f_8',['grid_',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/amesos/doc/html/classAmesos__Superlu__Pimpl.html#a703ecd995210726f06e9b824e6b719c6',1,'Amesos_Superlu_Pimpl']]]
+];

@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['center_0',['center',['../classGeometricGen_1_1Hole.html#a5db53387c0974eb9d86b732f547277d2',1,'GeometricGen::Hole::center'],['../classGeometricGen_1_1CoordinateNormalDistribution.html#a47717033353853c3c2cf4d76dfceab73',1,'GeometricGen::CoordinateNormalDistribution::center'],['../classZoltan2_1_1KMeansCluster.html#adfe4d794e67d47aa73c4c7a605954cdc',1,'Zoltan2::KMeansCluster::center']]],
+  ['colidsdevice_5f_1',['colIdsDevice_',['../classZoltan2_1_1TpetraRowMatrixAdapter.html#a10f2dedebab0410e36fa258c35d13720',1,'Zoltan2::TpetraRowMatrixAdapter']]],
+  ['colidshost_5f_2',['colIdsHost_',['../classZoltan2_1_1TpetraRowMatrixAdapter.html#a3fabb7f4211dc4db160cfd510c38ab3b',1,'Zoltan2::TpetraRowMatrixAdapter']]],
+  ['colors_5f_3',['colors_',['../classZoltan2_1_1ColoringSolution.html#a144a0c10e1212f368aea3554703fb206',1,'Zoltan2::ColoringSolution']]],
+  ['columnids_5f_4',['columnIds_',['../classZoltan2_1_1TpetraRowMatrixAdapter.html#af6a7e2a0855ac343a4d25fa4550788c4',1,'Zoltan2::TpetraRowMatrixAdapter']]],
+  ['comm_5',['comm',['../classZoltan2_1_1AlgTwoGhostLayer.html#af02c0316f29dfa979a591fbaecd4ab30',1,'Zoltan2::AlgTwoGhostLayer::comm'],['../classZoltan2_1_1Zoltan2__Directory.html#a70847ddc4e393eac4cd2c95f4c2bc689',1,'Zoltan2::Zoltan2_Directory::comm'],['../classZoltan2_1_1Zoltan2__Directory__Plan.html#a724f4bd8d5b56315be9c4f02ce2b9388',1,'Zoltan2::Zoltan2_Directory_Plan::comm'],['../classZoltan2_1_1PartitionMapping.html#a38d4ac395fe00f06565831e1e34cc9b1',1,'Zoltan2::PartitionMapping::comm'],['../classZoltan2_1_1IDs.html#a5197e59140e14473b9214d6791511403',1,'Zoltan2::IDs::comm']]],
+  ['comm_5f_6',['comm_',['../classZoltan2_1_1Environment.html#a7a8d5050ae613df46e53478f6056a274',1,'Zoltan2::Environment::comm_'],['../classZoltan2_1_1Problem.html#adde4520b5fe79914589860db46e047f6',1,'Zoltan2::Problem::comm_']]],
+  ['commcost_7',['commCost',['../classZoltan2_1_1CommunicationModel.html#a940422f8c8e239216ed4946781340e49',1,'Zoltan2::CommunicationModel']]],
+  ['concurrent_5fcurrent_5fpart_8',['concurrent_current_part',['../structZoltan2_1_1ReduceWeightsFunctor.html#a5417b892683a4cb92e350011a97650fc',1,'Zoltan2::ReduceWeightsFunctor::concurrent_current_part'],['../structZoltan2_1_1ReduceArrayFunctor.html#a9ec82a45e42ea263cd342da82568e052',1,'Zoltan2::ReduceArrayFunctor::concurrent_current_part']]],
+  ['coordflags_5f_9',['coordFlags_',['../classZoltan2_1_1PartitioningProblem.html#af2f6198c69c60a883a18227f9d72b551',1,'Zoltan2::PartitioningProblem']]],
+  ['coordinate_10',['coordinate',['../structAdapterWithOptionalCoordinateAdapter.html#a52156f0f2f0f8e146d765862c0690c12',1,'AdapterWithOptionalCoordinateAdapter']]],
+  ['coordinates_11',['coordinates',['../structZoltan2_1_1ReduceWeightsFunctor.html#a9186fba6c0540f303b42c90c367747c7',1,'Zoltan2::ReduceWeightsFunctor::coordinates'],['../structZoltan2_1_1ReduceArrayFunctor.html#a81423e06057d5315fcada2332dcac1bc',1,'Zoltan2::ReduceArrayFunctor::coordinates'],['../classGeometricGen_1_1DOTS.html#a2e7f858874a9294a8328289147c8a9e5',1,'GeometricGen::DOTS::coordinates'],['../structdots.html#abc78b794940c0998f130343a84df09df',1,'dots::coordinates'],['../partition_2rcbPerformanceZ1_8cpp.html#a4bbb8b2649154a4d4ea9e35cf7c8af34',1,'coordinates:&#160;rcbPerformanceZ1.cpp']]],
+  ['count_12',['count',['../classZoltan2_1_1uMultiSortItem.html#afd960b84e4cd104dd2410789c7a00a58',1,'Zoltan2::uMultiSortItem']]],
+  ['current_5fconcurrent_5fnum_5fparts_13',['current_concurrent_num_parts',['../structZoltan2_1_1ReduceWeightsFunctor.html#a8a7d2371c40b362e38f3777637e79f40',1,'Zoltan2::ReduceWeightsFunctor']]],
+  ['current_5fwork_5fpart_14',['current_work_part',['../structZoltan2_1_1ReduceWeightsFunctor.html#a5a6bf56b6282c604f2887291ea223f8c',1,'Zoltan2::ReduceWeightsFunctor']]],
+  ['cut_5fcoordinates_15',['cut_coordinates',['../structZoltan2_1_1ReduceWeightsFunctor.html#a00307eb9602200b9f647eec838f059b3',1,'Zoltan2::ReduceWeightsFunctor']]]
+];

@@ -1,0 +1,759 @@
+\_form#0=24x13:$DF_{c}$
+\_form#1=289x14:\[
+        \mbox{jacobian}(c,p,i,j) = [DF_{c}(\mbox{points}(p))]_{ij} \quad c=0,\ldots, C
+\]
+\_form#2=299x14:\[
+        \mbox{jacobian}(c,p,i,j) = [DF_{c}(\mbox{points}(c,p))]_{ij} \quad c=0,\ldots, C
+\]
+\_form#3=319x16:\[
+\mbox{jacobianInv}(c,p,*,*) = \mbox{jacobian}^{-1}(c,p,*,*) \quad c = 0,\ldots, C
+\]
+\_form#4=311x14:\[
+\mbox{jacobianDet}(c,p) = \mbox{det}(\mbox{jacobian}(c,p,*,*)) \quad c=0,\ldots, C
+\]
+\_form#5=196x30:\[
+{refEdgeTangent}(*) = \hat{\bf t}_i = {\partial\hat{\Phi}_i(t)\over\partial t}\,,
+\]
+\_form#6=114x16:$\hat{\Phi}_i : R =[-1,1]\mapsto \hat{\mathcal E}_i$
+\_form#7=11x15:$\hat{\mathcal E}_i$
+\_form#8=256x39:\[
+\hat{\Phi}_i(t) = \left\{\begin{array}{ll}
+(\hat{x}(t),\hat{y}(t),\hat{z}(t)) & \mbox{for 3D parent cells} \\[1ex]
+(\hat{x}(t),\hat{y}(t))            & \mbox{for 2D parent cells} \\[1ex]
+\end{array}\right.
+\]
+\_form#9=65x26:\[
+|\hat{\bf t}_i | = {1\over 2} |\hat{\mathcal E}_i |\,.
+\]
+\_form#10=389x34:\[
+{refFaceTanU}(*) = \hat{\bf t}_{i,u} = {\partial\hat{\Phi}_i(u,v)\over\partial u} =
+\left({\partial\hat{x}(u,v)\over\partial u},
+{\partial\hat{y}(u,v)\over\partial u},
+{\partial\hat{z}(u,v)\over\partial u} \right) ;
+\]
+\_form#11=390x34:\[
+{refFaceTanV}(*) = \hat{\bf t}_{i,v} = {\partial\hat{\Phi}_i(u,v)\over \partial v} =
+\left({\partial\hat{x}(u,v)\over\partial v},
+{\partial\hat{y}(u,v)\over\partial v},
+{\partial\hat{z}(u,v)\over\partial v} \right)\,;
+\]
+\_form#12=65x15:$\hat{\Phi}_i: R \mapsto \hat{\mathcal F}_i$
+\_form#13=14x15:$\hat{\mathcal F}_i$
+\_form#14=185x16:\[
+\hat{\Phi}_i(u,v) =(\hat{x}(u,v),\hat{y}(u,v),\hat{z}(u,v))
+\]
+\_form#15=280x39:\[
+R = \left\{\begin{array}{rl}
+\{(0,0),(1,0),(0,1)\} & \mbox{if $\hat{\mathcal F}_i$  is Triangle} \\[1ex]
+[-1,1]\times [-1,1] & \mbox{if $\hat{\mathcal F}_i$ is Quadrilateral} \,.
+\end{array}\right.
+\]
+\_form#16=33x13:$\hat{x},\hat{y},\hat{z}$
+\_form#17=346x71:\[
+{refSideNormal}(*) = \hat{\bf n}_i =
+\left\{\begin{array}{rl}
+\displaystyle
+\left({\partial\hat{\Phi}_i(t)\over\partial t}\right)^{\perp}
+& \mbox{for 2D parent cells} \\[2ex]
+\displaystyle
+{\partial\hat{\Phi}_{i}\over\partial u} \times
+{\partial\hat{\Phi}_{i}\over\partial v}   & \mbox{for 3D parent cells}
+\end{array}\right.
+\]
+\_form#18=115x15:$ (u_1,u_2)^\perp = (u_2, -u_1)$
+\_form#19=64x15:$\hat{\Phi}_i: R \mapsto \hat{\mathcal S}_i$
+\_form#20=13x15:$\hat{\mathcal S}_i$
+\_form#21=316x39:\[
+\hat{\Phi}_i(u,v) =
+\left\{\begin{array}{rl}
+(\hat{x}(t),\hat{y}(t))                   & \mbox{for 2D parent cells} \\[1ex]
+(\hat{x}(u,v),\hat{y}(u,v),\hat{z}(u,v))  & \mbox{for 3D parent cells}
+\end{array}\right.
+\]
+\_form#22=279x39:\[
+R = \left\{\begin{array}{rl}
+\{(0,0),(1,0),(0,1)\}   & \mbox{if $\hat{\mathcal S}_i$ is Triangle} \\[1ex]
+[-1,1]\times [-1,1] & \mbox{if $\hat{\mathcal S}_i$ is Quadrilateral} \,.
+\end{array}\right.
+\]
+\_form#23=238x39:\[
+|\hat{\bf n}_i | = \left\{\begin{array}{rl}
+2 \mbox{Area}(\hat{\mathcal F}_i) & \mbox{if $\hat{\mathcal F}_i$  is Triangle} \\[1ex]
+\mbox{Area}(\hat{\mathcal F}_i) & \mbox{if $\hat{\mathcal F}_i$ is Quadrilateral} \,.
+\end{array}\right.
+\]
+\_form#24=69x26:\[
+|\hat{\bf n}_i | = {1\over 2} |\hat{\mathcal F}_i |\,.
+\]
+\_form#25=99x16:$\hat{{\bf n}}= \hat{\bf t}^\perp = (t_2,-t_1)$
+\_form#26=58x16:$\hat{{\bf t}}=(t_1,t_2)$
+\_form#27=28x16:$(\hat{{\bf n}},\hat{{\bf t}})$
+\_form#28=215x30:\[
+{refFaceNormal}(*) = \hat{\bf n}_i = {\partial\hat{\Phi}_{i}\over\partial u} \times
+{\partial\hat{\Phi}_{i}\over\partial v}
+\]
+\_form#29=278x39:\[
+R = \left\{\begin{array}{rl}
+\{(0,0),(1,0),(0,1)\} & \mbox{if ${\mathcal F}$  is Triangle} \\[1ex]
+[-1,1]\times [-1,1] & \mbox{if ${\mathcal F}$ is Quadrilateral} \,.
+\end{array}\right.
+\]
+\_form#30=41x16:${\partial\hat{\Phi}_{i}/\partial u}$
+\_form#31=40x16:${\partial\hat{\Phi}_{i}/\partial v}$
+\_form#32=48x15:$\{\mathcal{E}_{c,i}\}_{c=0}^{N}$
+\_form#33=120x16:${\bf x}_p = F_c(\hat{\Phi}_i(t_p))\in\mathcal{E}_{c,i}$
+\_form#34=19x14:$\mathcal{E}_{c,i}$
+\_form#35=320x30:\[
+{edgeTangents}(c,p,d) =
+DF_c(\hat{\Phi}_i(t_p))\cdot {\partial{\hat{\Phi}}_{i}(t_p)\over\partial t}\,; \qquad t_p \in R
+\]
+\_form#36=24x13:$ DF_c $
+\_form#37=9x11:${\mathcal C}$
+\_form#38=19x14:${\mathcal E}_{c,i}$
+\_form#39=39x16:$ {\partial{\hat{\Phi}}_{i}/\partial t}$
+\_form#40=53x15:$ \hat{\Phi}_i R\mapsto\hat{\mathcal E}_i $
+\_form#41=65x16:$DF_c(\hat{\Phi}_i(t_p))$
+\_form#42=86x14:$ t_p \in R=[-1,1] $
+\_form#43=50x15:$\{\mathcal{F}_{c,i}\}_{c=0}^{N}$
+\_form#44=143x16:${\bf x}_p = F_c(\hat{\Phi}_i(u_p,v_p))\in\mathcal{F}_{c,i}$
+\_form#45=21x14:$\mathcal{F}_{c,i}$
+\_form#46=586x30:\[
+{faceTanU}(c,p,d) = DF_c(\hat{\Phi}_i(u_p, v_p))\cdot {\partial\hat{\Phi}_i\over\partial u};\qquad
+{faceTanV}(c,p,d) = DF_c(\hat{\Phi}_i(u_p, v_p))\cdot {\partial\hat{\Phi}_{i}\over\partial v}\,;
+\qquad (u_p, v_p) \in R \,.
+\]
+\_form#47=21x14:${\mathcal F}_{c,i}$
+\_form#48=86x16:$ {\partial\hat{\Phi}_i/\partial u}, {\partial\hat{\Phi}_i/\partial v}$
+\_form#49=65x15:$ \hat{\Phi}_i : R\mapsto \hat{\mathcal F}_i$
+\_form#50=276x39:\[
+R =
+\left\{\begin{array}{rl}
+\{(0,0),(1,0),(0,1)\} & \mbox{if $\hat{\mathcal F}_i$ is Triangle} \\[1ex]
+[-1,1]\times [-1,1] & \mbox{if $\hat{\mathcal F}_i$ is Quadrilateral}
+\end{array}\right.
+\]
+\_form#51=85x16:$DF_c(\hat{\Phi}_i(u_p,v_p))$
+\_form#52=65x14:$(u_p,v_p)\in R$
+\_form#53=49x15:$\{\mathcal{S}_{c,i}\}_{c=0}^{N}$
+\_form#54=124x16:${\bf x}_p = F_c(\hat{\Phi}_i(P_p))\in\mathcal{S}_{c,i}$
+\_form#55=20x14:$\mathcal{S}_{c,i}$
+\_form#56=598x79:\[
+{sideNormals}(c,p,d) =
+\left\{\begin{array}{crl}
+\displaystyle
+\left(DF_c(\hat{\Phi}_i(t_p))\cdot
+{\partial{\hat{\Phi}}_{i}(t_p)\over\partial t}\right)^{\perp} &  t_p\in R
+& \mbox{for 2D parent cells} \\[2ex]
+\displaystyle
+\left( DF_c(\hat{\Phi}_i(u_p, v_p))\cdot {\partial\hat{\Phi}_i\over\partial u}\right) \times
+\left( DF_c(\hat{\Phi}_i(u_p, v_p))\cdot {\partial\hat{\Phi}_i\over\partial v}\right) \,;
+& (u_p, v_p) \in R                          & \mbox{for 3D parent cells}
+\end{array}\right.
+\]
+\_form#57=20x14:${\mathcal S}_{c,i}$
+\_form#58=64x15:$ \hat{\Phi}_i : R\mapsto \hat{\mathcal S}_i$
+\_form#59=275x39:\[
+R = \left\{\begin{array}{rl}
+\{(0,0),(1,0),(0,1)\} & \mbox{if $\hat{\mathcal S}_i$ is Triangle} \\[1ex]
+[-1,1]\times [-1,1] & \mbox{if $\hat{\mathcal S}_i$ is Quadrilateral}
+\end{array}\right.
+\]
+\_form#60=69x14:${\bf n}=(t_2,-t_1)$
+\_form#61=58x14:${\bf t}=(t_1,t_2)$
+\_form#62=28x14:$({\bf n},{\bf t})$
+\_form#63=69x16:$DF_c(\hat{\Phi}_i(P_p))$
+\_form#64=39x14:$P_p\in R$
+\_form#65=523x39:\[
+{faceNormals}(c,p,d) =
+\left( DF_c(\hat{\Phi}_i(u_p, v_p))\cdot {\partial\hat{\Phi}_i\over\partial u}\right) \times
+\left( DF_c(\hat{\Phi}_i(u_p, v_p))\cdot {\partial\hat{\Phi}_i\over\partial v}\right) \,;
+\qquad (u_p, v_p) \in R \,.
+\]
+\_form#66=276x39:\[
+R = \left\{\begin{array}{rl}
+\{(0,0),(1,0),(0,1)\} & \mbox{if $\hat{\mathcal F}_i$ is Triangle} \\[1ex]
+[-1,1]\times [-1,1] & \mbox{if $\hat{\mathcal F}_i$ is Quadrilateral}
+\end{array}\right.
+\]
+\_form#67=13x13:$ F_{c} $
+\_form#68=309x24:\[
+\mbox{physPoints}(c,p,d) = \Big(F_c(\mbox{refPoint}(p,*)) \Big)_d \quad c=0,\ldots, C
+\]
+\_form#69=319x24:\[
+\mbox{physPoints}(c,p,d) = \Big(F_c(\mbox{refPoint}(c,p,*)) \Big)_d \quad c=0,\ldots, C
+\]
+\_form#70=13x15:$\hat{\Phi}_i$
+\_form#71=13x15:$\hat{\mathcal{S}}_i$
+\_form#72=591x39:\[
+{subcellPoints}(p,*) = \hat{\Phi}_i(t_p) \quad\mbox{and}\quad
+\hat{\Phi}_i(t_p) = \left\{
+\begin{array}{ll}
+(\hat{x}(t_p),\hat{y}(t_p),\hat{z}(t_p)) & \mbox{for 3D parent cells}\\[1.5ex]
+(\hat{x}(t_p),\hat{y}(t_p))              & \mbox{for 2D parent cells}
+\end{array} \right.
+\quad t_p \in R = [-1,1] \,;
+\]
+\_form#73=525x16:\[
+{subcellPoints}(p,*) = \hat{\Phi}_i(u_p,v_p)\quad\mbox{and}\quad
+\hat{\Phi}_i(u_p,v_p) = (\hat{x}(u_p,v_p), \hat{y}(u_p,v_p), \hat{z}(u_p, v_p))
+\quad (u_p,v_p)\in R
+\]
+\_form#74=284x39:\[
+R = \left\{\begin{array}{rl}
+\{(0,0),(1,0),(0,1)\} & \mbox{if face is Triangle} \\[1ex]
+[-1,1]\times [-1,1] & \mbox{if face is Quadrilateral}
+\end{array}\right.
+\]
+\_form#75=75x16:$ \Phi_{c,i} =  F_{c}\circ\hat{\Phi}_i $
+\_form#76=23x15:$ F^{-1}_{c} $
+\_form#77=254x24:\[
+\mbox{refPoints}(c,p,d) = \Big(F^{-1}_c(physPoint(c,p,*)) \Big)_d
+\]
+\_form#78=231x24:\[
+\mbox{refPoints}(p,d) = \Big(F^{-1}_c(physPoint(p,*)) \Big)_d
+\]
+\_form#79=64x14:$ \{ {\bf v}_0,\ldots {\bf v}_V\} $
+\_form#80=64x14:$\{ {\bf p}_0,\ldots {\bf p}_P\} $
+\_form#81=141x14:$ \{ {\bf v}_0,\ldots {\bf v}_V\}\cup \{ {\bf p}_0,\ldots {\bf p}_P\} $
+\_form#82=70x14:$\{{\bf q}_0,\ldots,{\bf q}_N\}$
+\_form#83=63x11:$N = V + P$
+\_form#84=208x14:\[ 
+  \{{\bf q}_0,\ldots,{\bf q}_N\} = \{ {\bf v}_0,\ldots {\bf v}_V,{\bf p}_0,\ldots {\bf p}_P\} 
+  \]
+\_form#85=9x14:$ \hat{\mathcal{C}} $
+\_form#86=70x14:$\{\hat{{\bf q}}_0,\ldots,\hat{{\bf q}}_{N}\}$
+\_form#87=40x16:$ \{\hat{\phi}_i\}_{i=0}^{N} $
+\_form#88=64x16:$ \hat{\phi}_i( \hat{{\bf q}}_j)=\delta_{ij} $
+\_form#89=9x11:$\mathcal{C}$
+\_form#90=9x14:$\hat{\mathcal{C}}$
+\_form#91=140x38:\[               
+  F_\mathcal{C}(\hat{\bf x}) = \sum_{m=0}^{N}  {\bf q}_m(\mathcal{C})  \hat{\phi}_m(\hat{\bf x})          
+\]
+\_form#92=104x14:$\{{\bf q}_0(\mathcal{C}),\ldots,{\bf q}_N(\mathcal{C})\}$
+\_form#93=170x38:\[        
+  \big(F_{\mathcal{C}}(\hat{\bf x})\big)_i = 
+              \sum_{m=0}^{N}  \big({\bf q}_m(\mathcal{C})\big)_i\hat{\phi}_m(\hat{\bf x})           
+\]
+\_form#94=48x16:$ \big({\bf q}_m(\mathcal{C})\big)_i $
+\_form#95=71x14:$F(\hat{\bf x})\ \mbox{and}\ {\bf q}_m$
+\_form#96=26x14:$F(\hat{\bf x})$
+\_form#97=39x15:$F^{-1}({\bf x})$
+\_form#98=100x31:\[                    
+      DF_{ij}(\hat{{\bf x}}) = \frac{\partial F_i(\hat{{\bf x}})}{\partial\hat{{\bf x}}_j}                    
+\]
+\_form#99=164x38:\[  
+      DF_{ij}(\hat{{\bf x}}) = \sum_{m=0}^{N}
+                ({\bf q}_m)_i\frac{\partial\hat{\phi}_m(\hat{{\bf x}})}{\partial\hat{{\bf x}}_j} \,.       
+\]
+\_form#100=44x14:$DF_{ij}(\hat{{\bf x}}) $
+\_form#101=50x18:$DF_{ij}^{-1}(\hat{{\bf x}}) $
+\_form#102=63x14:$\mbox{det} DF_{ij}(\hat{{\bf x}}) $
+\_form#103=13x13:$\mathcal{S}_i$
+\_form#104=61x10:\[
+    \Phi : R \mapsto \mathcal{S} \,.
+\]
+\_form#105=9x14:$\mathcal{\hat{C}}$
+\_form#106=65x15:\[
+    \hat{\Phi} : R \mapsto \hat{\mathcal{S}}_i \,.
+\]
+\_form#107=61x15:\[
+    \Phi = F\circ \hat{\Phi} \,,
+\]
+\_form#108=66x14:\[
+      R = [-1,1]\,.
+\]
+\_form#109=306x39:\[
+      R = \left\{\begin{array}{rl} 
+          \{(0,0),(1,0),(0,1)\} & \mbox{if the face is Triangle} \\[1ex]
+            [-1,1]\times [-1,1] & \mbox{if the face is Quadrilateral}
+          \end{array}\right.
+\]
+\_form#110=59x13:$ \Phi : R \mapsto {\mathcal{S}}_i $
+\_form#111=59x15:$\hat{\Phi}: R \mapsto \hat{\mathcal{S}}_i$
+\_form#112=49x15:$ \{\mathcal{S}_{c,i}\}_{c=0}^N $
+\_form#113=38x14:$i()            = 0$
+\_form#114=103x14:$i(yMult)      =yMult$
+\_form#115=223x18:$i(yMult,zMult)=zMult+\sum_{r = 0}^{k-xMult} r$
+\_form#116=184x18:\[
+P^{\alpha,\beta}_{n+1} = \left( a_n + b_n x\right) P^{\alpha,\beta}_n - c_n P^{\alpha,\beta}_{n-1}
+\]
+\_form#117=49x16:\[
+P^{\alpha,\beta}_0 = 1
+\]
+\_form#118=124x31:$\displaystyle D\{1,2,1\}f = \frac{d^4 f}{dx dy^2 dz}$
+\_form#119=43x14:$\{x, y, z\}$
+\_form#120=41x14:$\{1,2,1\}$
+\_form#121=114x31:\[       \begin{pmatrix} spaceDim + k - 1 \\ spaceDim - 1 \end{pmatrix}              \]
+\_form#122=6x9:${\bf t}$
+\_form#123=8x6:${\bf n}$
+\_form#124=9x6:$n$
+\_form#125=30x10:$n+1$
+\_form#126=8x6:$ \alpha $
+\_form#127=9x13:$ \beta $
+\_form#128=9x6:$ n $
+\_form#129=410x35:\[
+P_n^{(\alpha,\beta)} (z) = 
+\frac{\Gamma (\alpha+n+1)}{n!\Gamma (\alpha+\beta+n+1)}
+\sum_{m=0}^n {n\choose m}
+\frac{\Gamma (\alpha + \beta + n + m + 1)}{\Gamma (\alpha + m + 1)} \left(\frac{z-1}{2}\right)^m
+\]
+\_form#130=33x19:$ P_0^{(\alpha,\beta)} $
+\_form#131=71x19:$ P_0^{(\alpha,\beta)}, P_1^{(\alpha,\beta)} $
+\_form#132=111x19:$ P_0^{(\alpha,\beta)}, P_1^{(\alpha,\beta)}, P_2^{(\alpha,\beta)} $
+\_form#133=126x19:$ P_0^{(\alpha,\beta)}, P_1^{(\alpha,\beta)}, ..., P_3^{(\alpha,\beta)} $
+\_form#134=126x19:$ P_0^{(\alpha,\beta)}, P_1^{(\alpha,\beta)}, ..., P_n^{(\alpha,\beta)} $
+\_form#135=55x13:$\alpha=\beta=0$
+\_form#136=5x9:$ 1 $
+\_form#137=8x6:$ x $
+\_form#138=58x16:$ \frac{1}{2} (3x^2-1) $
+\_form#139=64x16:$ \frac{1}{2} (5x^3-3x) $
+\_form#140=104x16:$ \frac{1}{8} (35x^4-30x^2+3) $
+\_form#141=118x16:$ \frac{1}{8} (63x^5-70x^3+15x) $
+\_form#142=168x16:$ \frac{1}{16} (231x^6-315x^4+105x^2-5) $
+\_form#143=181x16:$ \frac{1}{16} (429x^7-693x^5+315x^3-35x) $
+\_form#144=256x16:$ \frac{1}{128} (6435x^8-12012x^6+6930x^4-1260x^2+35) $
+\_form#145=283x16:$ \frac{1}{128} (12155x^9-25740x^7+18018x^5-4620x^3+315x) $
+\_form#146=339x16:$ \frac{1}{128} (46189x^{10}-109395x^8+90090x^6-30030x^4+3465x^2-63) $
+\_form#147=60x14:$H(grad,\Omega)$
+\_form#148=58x14:$H(curl,\Omega)$
+\_form#149=51x14:$H(div,\Omega)$
+\_form#150=31x15:$L^2(\Omega)$
+\_form#151=10x15:$\widehat{{\mathcal C}}$
+\_form#152=49x18:$\{\widehat{{\mathcal C}},\widehat{P},\widehat{\Lambda}\}$
+\_form#153=40x14:$\{\widehat{u}_i\}_{i=0}^n$
+\_form#154=40x14:$\{{u}_i\}_{i=0}^n$
+\_form#155=48x14:$\{{\mathcal C},P,\Lambda\}$
+\_form#156=174x14:\[
+u_i = \sigma_i \Phi^*(\widehat{u}_i), \qquad i=1,\ldots,n \,.
+\]
+\_form#157=40x14:$\{\sigma_i\}_{i=0}^n$
+\_form#158=43x11:$\sigma_i = \pm 1$
+\_form#159=14x10:$\Phi^*$
+\_form#160=14x13:$F_{\mathcal C}$
+\_form#161=24x13:$DF_{\mathcal C}$
+\_form#162=81x14:$J_{\mathcal C} = \det(DF_{\mathcal C})$
+\_form#163=384x100:\[
+\begin{array}{ll}
+\Phi^*_G : HGRAD(\widehat{{\mathcal C}}) \mapsto HGRAD({\mathcal C})&
+\qquad \Phi^*_G(\widehat{u}) = \widehat{u}\circ F^{-1}_{\mathcal C} \\[2ex]
+\Phi^*_C : HCURL(\widehat{{\mathcal C}}) \mapsto HCURL({\mathcal C})&
+\qquad \Phi^*_C(\widehat{\bf u}) = \left((DF_{\mathcal C})^{-{\sf T}}\cdot\widehat{\bf u}\right)\circ F^{-1}_{\mathcal C} \\[2ex]
+\Phi^*_D : HDIV(\widehat{{\mathcal C}}) \mapsto HDIV({\mathcal C})&
+\qquad \Phi^*_D(\widehat{\bf u}) = \left(J^{-1}_{\mathcal C} DF_{\mathcal C}\cdot\widehat{\bf u}\right)\circ F^{-1}_{\mathcal C} 
+\\[2ex]
+\Phi^*_S : HVOL(\widehat{{\mathcal C}}) \mapsto HVOL({\mathcal C})&
+\qquad \Phi^*_S(\widehat{u}) = \left(J^{-1}_{\mathcal C} \widehat{u}\right) \circ F^{-1}_{\mathcal C} \,.
+\end{array}
+\]
+\_form#164=158x30:\[
+\int_{{\mathcal C}} f(x) dx = \int_{\widehat{{\mathcal C}}} f(F(\widehat{x})) |J | d\widehat{x}
+\]
+\_form#165=11x11:$\mathcal{F}$
+\_form#166=244x31:\[
+\int_{\mathcal{F}} f(x) dx = \int_{R} f(\Phi(u,v)) 
+\left\|\frac{\partial\Phi}{\partial u}\times \frac{\partial\Phi}{\partial v}\right\| du\,dv
+\]
+\_form#167=9x10:$\mathcal{E}$
+\_form#168=166x30:\[
+\int_{\mathcal{E}} f(x) dx = \int_{R} f(\Phi(s)) \|\Phi'\| ds
+\]
+\_form#169=40x14:$\{{\bf u}_i\}_{i=0}^n$
+\_form#170=38x14:$\{c_i\}_{i=0}^n$
+\_form#171=111x36:\[
+{\bf u}^h(x) = \sum_{i=0}^n c_i {\bf u}_i(x) \,.
+\]
+\_form#172=391x36:\[
+{\bf u}^h(x) = \sum_{i=0}^n c_i \sigma_i
+\left((DF_{\mathcal C})^{-{\sf T}}\cdot\widehat{\bf u}_i\right)\circ 
+F^{-1}_{\mathcal C}(x) 
+= \sum_{i=0}^n c_i \sigma_i 
+(DF_{\mathcal C}(\widehat{x}))^{-{\sf T}}\cdot\widehat{\bf u}_i(\widehat{x})\,,
+\]
+\_form#173=89x18:$ \widehat{x} = F^{-1}_{\mathcal C}(x) \in \widehat{\mathcal C} $
+\_form#174=68x16:$\{x_p\}_{p=0}^P \subset {\mathcal C}$
+\_form#175=23x16:$F^{-1}_{\mathcal C}$
+\_form#176=43x16:$\{\widehat{x}_p\}_{p=0}^P$
+\_form#177=10x15:$\widehat{\mathcal{C}}$
+\_form#178=40x14:$\{\widehat{\bf u}_i\}_{i=1}^n$
+\_form#179=170x30:\[
+\mathbf{K}^{\mathcal{C}}_{i,j} = \int_{\mathcal C} {\mathcal L}_L {\bf u}_i(x)\, {\mathcal L}_R {\bf u}_j(x) \, dx \,.
+\]
+\_form#180=16x13:${\mathcal L}_L$
+\_form#181=18x13:${\mathcal L}_R $
+\_form#182=313x30:\[
+\mathbf{K}^{\mathcal{C}}_{i,j} = \int_{\widehat{\mathcal C}} \sigma_i \sigma_j
+(DF_{\mathcal C}(\widehat{x}))^{-{\sf T}}\cdot\widehat{\bf u}_i(\widehat{x})\cdot
+(DF_{\mathcal C}(\widehat{x}))^{-{\sf T}}\cdot\widehat{\bf u}_i(\widehat{x})\,d\widehat{x}
+\]
+\_form#183=230x19:\[
+\mathbf{K}^{\mathcal{C}}_{i,j} = 
+\mbox{diag}(\sigma_0,\ldots,\sigma_n)\widehat{\mathbf{K}}^{\mathcal{C}}\mbox{diag}(\sigma_0,\ldots,\sigma_n)
+\]
+\_form#184=288x30:\[ 
+\widehat{\mathbf{K}}^{\mathcal{C}}_{i,j} = \int_{\widehat{\mathcal C}}
+(DF_{\mathcal C}(\widehat{x}))^{-{\sf T}}\cdot\widehat{\bf u}_i(\widehat{x})\cdot
+(DF_{\mathcal C}(\widehat{x}))^{-{\sf T}}\cdot\widehat{\bf u}_i(\widehat{x})\,d\widehat{x}
+\]
+\_form#185=134x30:\[
+\mathbf{f}^{\mathcal{C}}_{i} = \int_{\mathcal C} f(x) {\mathcal L}_R u_i(x) \, dx \,.
+\]
+\_form#186=134x18:\[
+\mathbf{f}^{\mathcal{C}} = 
+\mbox{diag}(\sigma_0,\ldots,\sigma_n)\widehat{\mathbf{f}}^{\mathcal{C}}\,,
+\]
+\_form#187=216x30:\[
+\widehat{\mathbf{f}}^{\mathcal{C}} = \int_{\widehat{\mathcal C}}
+\mathbf{f}\circ F_{\mathcal C}(\widehat{x}) 
+(DF_{\mathcal C}(\widehat{x}))^{-{\sf T}}\cdot\widehat{\bf u}_i(\widehat{x})\,d\widehat{x}
+\]
+\_form#188=191x16:$\Phi^*(\nabla\widehat{u}_f) = \left((DF_c)^{-{\sf T}}\cdot\nabla\widehat{u}_f\right)\circ F^{-1}_{c}$
+\_form#189=219x18:\[
+     \{ x_{c,p} \}_{p=0}^P = \{ F_{c} (\widehat{x}_p) \}_{p=0}^{P}\qquad 0\le c < C \,.
+     \]
+\_form#190=83x15:$ F^{-1}_{c}(x_{c,p}) = \widehat{x}_p $
+\_form#191=44x18:$\{\widehat{u}_f\}_{f=0}^{F}$
+\_form#192=165x14:\[
+     inputVals(f,p,*) = \nabla\widehat{u}_f(\widehat{x}_p) \,.
+     \]
+\_form#193=503x18:\[
+     outputVals(c,f,p,*)
+     = \left((DF_c)^{-{\sf T}}\cdot\nabla\widehat{u}_f\right)\circ F^{-1}_{c}(x_{c,p})
+     = (DF_c)^{-{\sf T}}(\widehat{x}_p)\cdot\nabla\widehat{u}_f(\widehat{x}_p) \qquad 0\le c < C \,.
+     \]
+\_form#194=101x15:$\Phi^*(\widehat{u}_f) = \widehat{u}_f\circ F^{-1}_{c} $
+\_form#195=219x18:\[
+\{ x_{c,p} \}_{p=0}^P = \{ F_{c} (\widehat{x}_p) \}_{p=0}^{P}\qquad 0\le c < C \,.
+\]
+\_form#196=116x14:\[
+input(f,p) = \widehat{u}_f(\widehat{x}_p) \,.
+\]
+\_form#197=381x16:\[
+output(c,f,p)
+= \widehat{u}_f\circ F^{-1}_{c}(x_{c,p})
+= \widehat{u}_f(\widehat{x}_p) =  input(f,p) \qquad 0\le c < C \,,
+\]
+\_form#198=173x16:$\Phi^*(\widehat{\bf u}_f) = \left((DF_c)^{-{\sf T}}\cdot\widehat{\bf u}_f\right)\circ F^{-1}_{c}$
+\_form#199=45x18:$\{\widehat{\bf u}_f\}_{f=0}^{F}$
+\_form#200=155x14:\[
+inputVals(f,p,*) = \widehat{\bf u}_f(\widehat{x}_p) \,.
+\]
+\_form#201=484x18:\[
+outputVals(c,f,p,*)
+= \left((DF_c)^{-{\sf T}}\cdot\widehat{\bf u}_f\right)\circ F^{-1}_{c}(x_{c,p})
+= (DF_c)^{-{\sf T}}(\widehat{x}_p)\cdot\widehat{\bf u}_f(\widehat{x}_p) \qquad 0\le c < C \,.
+\]
+\_form#202=195x16:$\Phi^*(\widehat{\bf u}_f) = \left(J^{-1}_{c} DF_{c}\cdot\nabla\times\widehat{\bf u}_f\right)\circ F^{-1}_{c}$
+\_form#203=219x18:\[
+   \{ x_{c,p} \}_{p=0}^P = \{ F_{c} (\widehat{x}_p) \}_{p=0}^{P}\qquad 0\le c < C \,.
+   \]
+\_form#204=181x14:\[
+   inputVals(f,p,*) = \nabla\times\widehat{\bf u}_f(\widehat{x}_p) \,.
+   \]
+\_form#205=546x18:\[
+   outputVals(c,f,p,*)
+   = \left(J^{-1}_{c} DF_{c}\cdot\nabla\times\widehat{\bf u}_f\right)\circ F^{-1}_{c}(x_{c,p})
+   = J^{-1}_{c}(\widehat{x}_p) DF_{c}(\widehat{x}_p)\cdot\nabla\times\widehat{\bf u}_f(\widehat{x}_p)
+   \qquad 0\le c < C \,.
+   \]
+\_form#206=163x16:$\Phi^*(\widehat{\bf u}_f) = \left(J^{-1}_{c}\nabla\times\widehat{\bf u}_{f}\right) \circ F^{-1}_{c} $
+\_form#207=169x14:\[
+inputVals(f,p) = \nabla\times\widehat{\bf u}_f(\widehat{x}_p) \,.
+\]
+\_form#208=464x18:\[
+outputVals(c,f,p,*)
+= \left(J^{-1}_{c}\nabla\times\widehat{\bf u}_{f}\right) \circ F^{-1}_{c} (x_{c,p})
+= J^{-1}_{c}(\widehat{x}_p) \nabla\times\widehat{\bf u}_{f} (\widehat{x}_p)
+\qquad 0\le c < C \,.
+\]
+\_form#209=169x16:$\Phi^*(\widehat{\bf u}_f) = \left(J^{-1}_{c} DF_{c}\cdot\widehat{\bf u}_f\right)\circ F^{-1}_{c} $
+\_form#210=155x14:\[
+   inputVals(f,p,*) = \widehat{\bf u}_f(\widehat{x}_p) \,.
+   \]
+\_form#211=500x18:\[
+   outputVals(c,f,p,*)
+   = \left(J^{-1}_{c} DF_{c}\cdot \widehat{\bf u}_f\right)\circ F^{-1}_{c}(x_{c,p})
+   = J^{-1}_{c}(\widehat{x}_p) DF_{c}(\widehat{x}_p)\cdot\widehat{\bf u}_f(\widehat{x}_p)
+   \qquad 0\le c < C \,.
+   \]
+\_form#212=156x16:$\Phi^*(\widehat{\bf u}_f) = \left(J^{-1}_{c}\nabla\cdot\widehat{\bf u}_{f}\right) \circ F^{-1}_{c} $
+\_form#213=219x18:\[
+      \{ x_{c,p} \}_{p=0}^P = \{ F_{c} (\widehat{x}_p) \}_{p=0}^{P}\qquad 0\le c < C \,.
+      \]
+\_form#214=163x14:\[
+      inputVals(f,p) = \nabla\cdot\widehat{\bf u}_f(\widehat{x}_p) \,.
+      \]
+\_form#215=451x18:\[
+      outputVals(c,f,p,*)
+      = \left(J^{-1}_{c}\nabla\cdot\widehat{\bf u}_{f}\right) \circ F^{-1}_{c} (x_{c,p})
+      = J^{-1}_{c}(\widehat{x}_p) \nabla\cdot\widehat{\bf u}_{f} (\widehat{x}_p)
+      \qquad 0\le c < C \,.
+      \]
+\_form#216=135x16:$\Phi^*(\widehat{u}_f) = \left(J^{-1}_{c}\widehat{u}_{f}\right) \circ F^{-1}_{c} $
+\_form#217=143x14:\[
+   inputVals(f,p) = \widehat{u}_f(\widehat{x}_p) \,.
+   \]
+\_form#218=423x18:\[
+   outputVals(c,f,p,*)
+   = \left(J^{-1}_{c}\widehat{u}_{f}\right) \circ F^{-1}_{c} (x_{c,p})
+   = J^{-1}_{c}(\widehat{x}_p) \widehat{u}_{f} (\widehat{x}_p)
+   \qquad 0\le c < C \,.
+   \]
+\_form#219=381x16:\[
+output(c,f,p) 
+= \widehat{u}_f\circ F^{-1}_{c}(x_{c,p}) 
+= \widehat{u}_f(\widehat{x}_p) =  input(f,p) \qquad 0\le c < C \,,
+\]
+\_form#220=76x14:$ \widehat{u}(\widehat{x}_p) = u(x_p) $
+\_form#221=30x14:$u(x_p)$
+\_form#222=30x14:$\widehat{u}(\widehat{x}_p)$
+\_form#223=14x10:$ x_p $
+\_form#224=14x14:$ \widehat{x}_p $
+\_form#225=165x14:\[
+inputVals(f,p,*) = \nabla\widehat{u}_f(\widehat{x}_p) \,.
+\]
+\_form#226=503x18:\[
+outputVals(c,f,p,*) 
+= \left((DF_c)^{-{\sf T}}\cdot\nabla\widehat{u}_f\right)\circ F^{-1}_{c}(x_{c,p}) 
+= (DF_c)^{-{\sf T}}(\widehat{x}_p)\cdot\nabla\widehat{u}_f(\widehat{x}_p) \qquad 0\le c < C \,.
+\]
+\_form#227=484x18:\[
+outputVals(c,f,p,*) 
+= \left((DF_c)^{-{\sf T}}\cdot\widehat{\bf u}_f\right)\circ F^{-1}_{c}(x_{c,p}) 
+= (DF_c)^{-{\sf T}}(\widehat{x}_p)\cdot\widehat{\bf u}_f(\widehat{x}_p) \qquad 0\le c < C \,.
+\]
+\_form#228=71x15:$\widehat{\bf u} = (DF)^{\sf T}\, {\bf u}$
+\_form#229=8x6:${\bf u}$
+\_form#230=8x10:$\widehat{\bf u}$
+\_form#231=14x14:$ \widehat{x}_p$
+\_form#232=14x10:$ x_p$
+\_form#233=10x10:$F$
+\_form#234=20x10:$DF$
+\_form#235=51x14:$ ({\bf u}_p \times {\bf n}_p) $
+\_form#236=13x14:$ \widehat{\bf u}_p $
+\_form#237=13x10:$ {\bf u}_p $
+\_form#238=14x10:$ {\bf x}_p $
+\_form#239=13x10:$ {\bf n}_p $
+\_form#240=14x10:${\bf x}_p $
+\_form#241=14x14:$ \widehat{\bf x}_p $
+\_form#242=286x31:\[
+\widehat{\bf u}_p = \left[ \begin{array}{cc} 0 & -1\\ 1 & 0 \end{array} \right] \sqrt{\text{det}(T^T T)}\; (T^T T)^{-1}\;  T^T\;  ({\bf u}_p \times {\bf n}_p )
+\]
+\_form#243=10x9:$ T $
+\_form#244=28x11:$T^T T$
+\_form#245=161x24:\[
+\widehat{\bf u}_p = - \sqrt{\text{det}(T^T T)} \;  ({\bf u}_p \times {\bf n}_p )
+\]
+\_form#246=181x14:\[
+inputVals(f,p,*) = \nabla\times\widehat{\bf u}_f(\widehat{x}_p) \,.
+\]
+\_form#247=546x18:\[
+outputVals(c,f,p,*) 
+= \left(J^{-1}_{c} DF_{c}\cdot\nabla\times\widehat{\bf u}_f\right)\circ F^{-1}_{c}(x_{c,p}) 
+= J^{-1}_{c}(\widehat{x}_p) DF_{c}(\widehat{x}_p)\cdot\nabla\times\widehat{\bf u}_f(\widehat{x}_p)
+\qquad 0\le c < C \,.
+\]
+\_form#248=546x18:\[
+outputVals(c,f,p,*)
+= \left(J^{-1}_{c} DF_{c}\cdot\nabla\times\widehat{\bf u}_f\right)\circ F^{-1}_{c}(x_{c,p})
+= J^{-1}_{c}(\widehat{x}_p) DF_{c}(\widehat{x}_p)\cdot\nabla\times\widehat{\bf u}_f(\widehat{x}_p)
+\qquad 0\le c < C \,.
+\]
+\_form#249=500x18:\[
+outputVals(c,f,p,*) 
+= \left(J^{-1}_{c} DF_{c}\cdot \widehat{\bf u}_f\right)\circ F^{-1}_{c}(x_{c,p}) 
+= J^{-1}_{c}(\widehat{x}_p) DF_{c}(\widehat{x}_p)\cdot\widehat{\bf u}_f(\widehat{x}_p)
+\qquad 0\le c < C \,.
+\]
+\_form#250=89x15:$\widehat{\bf u} = J\, (DF)^{-1}\,{\bf u}$
+\_form#251=8x10:$J$
+\_form#252=45x14:$ ({\bf u}_p \cdot {\bf n}_p) $
+\_form#253=145x24:\[
+\widehat{\bf u}_p = \sqrt{\text{det}(T^T T)}\; ({\bf u}_p \cdot {\bf n}_p )
+\]
+\_form#254=163x14:\[
+inputVals(f,p) = \nabla\cdot\widehat{\bf u}_f(\widehat{x}_p) \,.
+\]
+\_form#255=451x18:\[
+outputVals(c,f,p,*) 
+= \left(J^{-1}_{c}\nabla\cdot\widehat{\bf u}_{f}\right) \circ F^{-1}_{c} (x_{c,p}) 
+= J^{-1}_{c}(\widehat{x}_p) \nabla\cdot\widehat{\bf u}_{f} (\widehat{x}_p)
+\qquad 0\le c < C \,.
+\]
+\_form#256=143x14:\[
+inputVals(f,p) = \widehat{u}_f(\widehat{x}_p) \,.
+\]
+\_form#257=423x18:\[
+outputVals(c,f,p,*) 
+= \left(J^{-1}_{c}\widehat{u}_{f}\right) \circ F^{-1}_{c} (x_{c,p}) 
+= J^{-1}_{c}(\widehat{x}_p) \widehat{u}_{f} (\widehat{x}_p)
+\qquad 0\le c < C \,.
+\]
+\_form#258=43x10:$\widehat{u} = J\, u$
+\_form#259=9x6:$u$
+\_form#260=9x10:$\widehat{u}$
+\_form#261=203x14:\[
+\mbox{outputVals}(c,p)   = |\mbox{det}(DF_{c}(\widehat{x}_p))|\omega_{p} \,,
+\]
+\_form#262=54x14:$\{(\widehat{x}_p,\omega_p)\}$
+\_form#263=248x31:\[
+\mbox{outputVals}(c,p)   = 
+\left\|\frac{\partial\Phi_c(\widehat{x}_p)}{\partial u}\times 
+\frac{\partial\Phi_c(\widehat{x}_p)}{\partial v}\right\|\omega_{p} \,,
+\]
+\_form#264=11x15:$\widehat{\mathcal{F}}$
+\_form#265=64x13:$ \Phi_c : R \mapsto \mathcal{F} $
+\_form#266=166x31:\[
+\mbox{outVals}(c,p)   = 
+\left\|\frac{d \Phi_c(\widehat{x}_p)}{d s}\right\|\omega_{p} \,,
+\]
+\_form#267=10x14:$\widehat{\mathcal{E}}$
+\_form#268=61x13:$ \Phi_c : R \mapsto \mathcal{E} $
+\_form#269=74x14:$ diag(a,\ldots,a) $
+\_form#270=85x14:$ diag(a_1,\ldots,a_d) $
+\_form#271=28x14:$ \{a_{ij}\}$
+\_form#272=149x14:\[
+\mathbf{K}^{c} = \mbox{diag}(\sigma^c_0,\ldots,\sigma^c_{L-1}) \mathbf{K}^c 
+\]
+\_form#273=66x13:$\mathbf{K}^{c} \in \mathbf{R}^{L\times R}$
+\_form#274=44x16:$\{\sigma^c_l\}_{l=0}^{L-1}$
+\_form#275=150x14:\[
+\mathbf{K}^{c} = \mathbf{K}^c \mbox{diag}(\sigma^c_0,\ldots,\sigma^c_{R-1})
+\]
+\_form#276=45x16:$\{\sigma^c_r\}_{r=0}^{R-1}$
+\_form#277=339x14:\[    
+\mbox{inoutFunction}(c,f,*) = \mbox{fieldSigns}(c,f)*\mbox{inoutFunction}(c,f,*)
+\]
+\_form#278=231x40:\[
+outPointValues(c,p,*) = \sum_{f=0}^{F-1} \sigma_{c,f} u_{c,f}(x_p)
+\]
+\_form#279=54x19:$\{u_{c,f}\}_{f=0}^{F-1} $
+\_form#280=54x19:$\{\sigma_{c,f}\}_{f=0}^{F-1} $
+\_form#281=239x14:$\sum_k A_ik \psi_k(F_s (\eta_o (\xi_j))) \cdot (n_s det(J_\eta)) = \phi_i (\xi_j)$
+\_form#282=15x13:$\psi_k$
+\_form#283=11x13:$\phi_i$
+\_form#284=13x10:$n_j$
+\_form#285=13x13:$F_s$
+\_form#286=13x9:$\eta_o$
+\_form#287=13x14:$J_{\eta}$
+\_form#288=11x14:$\xi_j$
+\_form#289=169x14:$\sum_k A_ik \psi_k(F_s (\eta_o (\xi_j))) = \phi_i (\xi_j) $
+\_form#290=185x14:$\sum_k A_ik \psi_k(\eta_o (\xi_j)) det(J_\eta) = \phi_i (\xi_j) $
+\_form#291=14x13:$\mathcal I_h$
+\_form#292=180x28:\[
+\mathcal I_h(f) = \sum_i \alpha^f_i \phi_i, \quad \alpha_i^f := L_i(f),
+\]
+\_form#293=24x14:$\{\phi_i\}$
+\_form#294=14x16:$\alpha_i^f$
+\_form#295=11x13:$L_i$
+\_form#296=186x14:\[
+L_i(f) := f(\mathbf x_i) \cdot \beta_i, \quad L_i(\phi_j) = \delta_{ij},
+\]
+\_form#297=11x13:$\beta_i$
+\_form#298=13x9:$\mathbf x_i$
+\_form#299=8x13:$f$
+\_form#300=24x14:$\{\mathbf x_i\}$
+\_form#301=16x11:$H^1$
+\_form#302=25x11:$H^{\text{div}}$
+\_form#303=28x11:$H^{\text{curl}}$
+\_form#304=14x11:$L^2$
+\_form#305=19x15:$\Pi_h^X$
+\_form#306=259x28:\[
+\Pi_h^X(f) = \sum_i \alpha^f_i \phi_i, \quad X \in \{\text{grad},\, \text{div},\, \text{curl},\, \text{vol}\},
+\]
+\_form#307=24x11:$H^{-1}$
+\_form#308=55x13:$ \alpha = \beta = 0 $
+\_form#309=74x13:$ \alpha = \beta = -0.5 $
+\_form#310=41x16:$ P^{\alpha,\beta}_{np}(z)$
+\_form#311=91x18:$(1+z) P^{\alpha,\beta+1}_{np-1}(z)$
+\_form#312=141x18:$ (1-z)(1+z) P^{\alpha+1,\beta+1}_{np-2}(z) $
+\_form#313=201x19:$  \frac{du}{dz}(z[i]) =  \sum_{j=0}^{np-1} D[i*np+j] u(z[j]) $
+\_form#314=61x11:$ -1 \leq z \leq 1 $
+\_form#315=221x65:$
+\begin{array}{rcl}
+h_j(z) =  \left\{ \begin{array}{ll}
+\displaystyle \frac{P_{np}^{\alpha,\beta}(z)}
+{[P_{np}^{\alpha,\beta}(z_j)]^\prime
+(z-z_j)} & \mbox{if $z \ne z_j$}\\
+& \\
+1 & \mbox{if $z=z_j$}
+\end{array}
+\right.
+\end{array}
+$
+\_form#316=360x69:$ \begin{array}{rcl}
+h_j(z) = \left\{ \begin{array}{ll}
+\displaystyle \frac{(1+z) P_{np-1}^{\alpha,\beta+1}(z)}
+{((1+z_j) [P_{np-1}^{\alpha,\beta+1}(z_j)]^\prime +
+P_{np-1}^{\alpha,\beta+1}(z_j) ) (z-z_j)} & \mbox{if $z \ne z_j$}\\
+& \\
+1 & \mbox{if $z=z_j$}
+\end{array}
+\right.
+\end{array}   $
+\_form#317=360x69:$ \begin{array}{rcl}
+h_j(z) = \left\{ \begin{array}{ll}
+\displaystyle \frac{(1-z) P_{np-1}^{\alpha+1,\beta}(z)}
+{((1-z_j) [P_{np-1}^{\alpha+1,\beta}(z_j)]^\prime -
+P_{np-1}^{\alpha+1,\beta}(z_j) ) (z-z_j)} & \mbox{if $z \ne z_j$}\\
+& \\
+1 & \mbox{if $z=z_j$}
+\end{array}
+\right.
+\end{array}   $
+\_form#318=404x69:$ \begin{array}{rcl}
+h_j(z) = \left\{ \begin{array}{ll}
+\displaystyle \frac{(1-z^2) P_{np-2}^{\alpha+1,\beta+1}(z)}
+{((1-z^2_j) [P_{np-2}^{\alpha+1,\beta+1}(z_j)]^\prime -
+2 z_j P_{np-2}^{\alpha+1,\beta+1}(z_j) ) (z-z_j)}&\mbox{if $z \ne z_j$}\\
+& \\
+1 & \mbox{if $z=z_j$}
+\end{array}
+\right.
+\end{array}   $
+\_form#319=228x19:$
+u(zm[i]) = \sum_{j=0}^{nz-1} im[i*nz+j] \ u(zgj[j])
+$
+\_form#320=41x15:$
+P^{\alpha,\beta}_n(z) $
+\_form#321=54x18:$
+\frac{d}{dz} P^{\alpha,\beta}_n(z) $
+\_form#322=128x15:$ P^{\alpha,\beta}_n(z) \alpha > -1, \beta > -1 $
+\_form#323=343x110:$ \begin{array}{rcl}
+P^{\alpha,\beta}_0(z) &=& 1 \\
+P^{\alpha,\beta}_1(z) &=& \frac{1}{2} [ \alpha-\beta+(\alpha+\beta+2)z] \\
+a^1_n P^{\alpha,\beta}_{n+1}(z) &=& (a^2_n + a^3_n z)
+P^{\alpha,\beta}_n(z) - a^4_n P^{\alpha,\beta}_{n-1}(z) \\
+a^1_n &=& 2(n+1)(n+\alpha + \beta + 1)(2n + \alpha + \beta) \\
+a^2_n &=& (2n + \alpha + \beta + 1)(\alpha^2 - \beta^2)  \\
+a^3_n &=& (2n + \alpha + \beta)(2n + \alpha + \beta + 1)
+(2n + \alpha + \beta + 2)  \\
+a^4_n &=& 2(n+\alpha)(n+\beta)(2n + \alpha + \beta + 2)
+\end{array} $
+\_form#324=274x61:$ \begin{array}{rcl}
+b^1_n(z)\frac{d}{dz} P^{\alpha,\beta}_n(z)&=&b^2_n(z)P^{\alpha,\beta}_n(z)
++ b^3_n(z) P^{\alpha,\beta}_{n-1}(z) \hspace{2.2cm} \\
+b^1_n(z) &=& (2n+\alpha + \beta)(1-z^2) \\
+b^2_n(z) &=& n[\alpha - \beta - (2n+\alpha + \beta)z]\\
+b^3_n(z) &=& 2(n+\alpha)(n+\beta)
+\end{array} $
+\_form#325=63x16:$ P^(\alpha,\beta)_n(z)$
+\_form#326=205x18:$ \frac{d}{dz} P^{\alpha,\beta}_n(z)
+= \frac{1}{2} (\alpha + \beta + n + 1)  P^{\alpha,\beta}_n(z) $
+\_form#327=65x15:$ P_n^{\alpha,\beta}(z) = 0 $
+\_form#328=95x14:$( \alpha > -1, \beta > -1)$
+\_form#329=214x91:$ \left [  \begin{array}{ccccc}
+a[0] & b[0]   &        &        & \\
+b[0] & a[1]   & b[1]   &        & \\
+0   & \ddots & \ddots & \ddots &  \\
+&        & \ddots & \ddots & b[n-2] \\
+&        &        & b[n-2] & a[n-1] \end{array} \right ] $
+\_form#330=216x14:$  b_j p_j(z) = (z - a_j ) p_{j-1}(z) - b_{j-1}   p_{j-2}(z) $
+\_form#331=51x11:$ j=n+1$
+\_form#332=28x14:$p_j(z)$
+\_form#333=54x13:$ \alpha,\beta > -1$
+\_form#334=25x14:$ \Gamma(x)$
+\_form#335=25x14:$\Gamma(x)$
+\_form#336=288x14:$ \Gamma(x) = (x-1)!  \mbox{ or  }  \Gamma(x+1/2) = (x-1/2)\Gamma(x-1/2)$
+\_form#337=73x14:$ \Gamma(1/2) = \sqrt{\pi}$
+\_form#338=28x11:$A^T A$
+\_form#339=10x10:$A$

@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['h_0',['h',['../structBelos_1_1BlockGCRODRIterState.html#ae425e27e97d2efb4bebfc6f69714fc28',1,'Belos::BlockGCRODRIterState::H'],['../structBelos_1_1GCRODRIterState.html#a810b3e84911c04f2b2f26d8ea6675e95',1,'Belos::GCRODRIterState::H'],['../structBelos_1_1GmresIterationState.html#abd05d73f74c947f576ca4ff2a76ed184',1,'Belos::GmresIterationState::H'],['../classBelos_1_1details_1_1ProjectedLeastSquaresProblem.html#aa736d8bbc3aad714ddb3c11a1c33d8c6',1,'Belos::details::ProjectedLeastSquaresProblem::H'],['../structBelos_1_1PseudoBlockGmresIterState.html#a6e677768878bc74e342c517506c6aa56',1,'Belos::PseudoBlockGmresIterState::H']]],
+  ['hasapplytranspose_1',['hasapplytranspose',['../classBelos_1_1Operator.html#a82aebbc870fc602ba5aaff5914828a90',1,'Belos::Operator::HasApplyTranspose()'],['../classBelos_1_1OperatorTraits_3_01ScalarType_00_01MultiVec_3_01ScalarType_01_4_00_01Operator_3_01ScalarType_01_4_01_4.html#a213e05307f07da7ab01661018d8155c8',1,'Belos::OperatorTraits&lt; ScalarType, MultiVec&lt; ScalarType &gt;, Operator&lt; ScalarType &gt; &gt;::HasApplyTranspose()'],['../classBelos_1_1OperatorTraits.html#a9502748cb7385304333a7d638c64aca1',1,'Belos::OperatorTraits::HasApplyTranspose()']]],
+  ['hasconstantstride_2',['HasConstantStride',['../classBelos_1_1MultiVecTraits.html#a821058b700f6ba57ba9d970f4eee8736',1,'Belos::MultiVecTraits']]]
+];

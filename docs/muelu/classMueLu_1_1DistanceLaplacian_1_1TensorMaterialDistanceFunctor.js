@@ -1,0 +1,27 @@
+var classMueLu_1_1DistanceLaplacian_1_1TensorMaterialDistanceFunctor =
+[
+    [ "matrix_type", "classMueLu_1_1DistanceLaplacian_1_1TensorMaterialDistanceFunctor.html#a951256730f8f8a9df702cb7b3fad83bf", null ],
+    [ "local_matrix_type", "classMueLu_1_1DistanceLaplacian_1_1TensorMaterialDistanceFunctor.html#acbb6edf5d66186cbd6a0381371f4edb6", null ],
+    [ "scalar_type", "classMueLu_1_1DistanceLaplacian_1_1TensorMaterialDistanceFunctor.html#a4954f82421cf7e86be5418fb84e82515", null ],
+    [ "local_ordinal_type", "classMueLu_1_1DistanceLaplacian_1_1TensorMaterialDistanceFunctor.html#af9facf399cfb6a375a9d4a8f441507cf", null ],
+    [ "ATS", "classMueLu_1_1DistanceLaplacian_1_1TensorMaterialDistanceFunctor.html#a326e6680b4fd3172cdddc52029dfb75e", null ],
+    [ "impl_scalar_type", "classMueLu_1_1DistanceLaplacian_1_1TensorMaterialDistanceFunctor.html#a65a870b4e3c12bc0e851d3f3bda7bc5f", null ],
+    [ "implATS", "classMueLu_1_1DistanceLaplacian_1_1TensorMaterialDistanceFunctor.html#aa9e7e239e284089237b3c175a423674b", null ],
+    [ "magnitudeType", "classMueLu_1_1DistanceLaplacian_1_1TensorMaterialDistanceFunctor.html#afc5386687d170b8cf731220072f32a25", null ],
+    [ "magATS", "classMueLu_1_1DistanceLaplacian_1_1TensorMaterialDistanceFunctor.html#aed7d0c18632f638b4a8f9e9434db60b2", null ],
+    [ "coords_type", "classMueLu_1_1DistanceLaplacian_1_1TensorMaterialDistanceFunctor.html#ab99ab99c621eb8bec577ac92ee86b4df", null ],
+    [ "local_coords_type", "classMueLu_1_1DistanceLaplacian_1_1TensorMaterialDistanceFunctor.html#a54f538402f9b56d0252ef933dd8f917c", null ],
+    [ "material_type", "classMueLu_1_1DistanceLaplacian_1_1TensorMaterialDistanceFunctor.html#a8287a6b825c53a9899647f6eb86cda7f", null ],
+    [ "memory_space", "classMueLu_1_1DistanceLaplacian_1_1TensorMaterialDistanceFunctor.html#ab3bcd905266d41de5ba3171399506193", null ],
+    [ "local_material_type", "classMueLu_1_1DistanceLaplacian_1_1TensorMaterialDistanceFunctor.html#aa6efbdc742f0d1e98bade4122b91101a", null ],
+    [ "local_dist_type", "classMueLu_1_1DistanceLaplacian_1_1TensorMaterialDistanceFunctor.html#a2adc45184b53a13c6c1ea0423c132644", null ],
+    [ "TensorMaterialDistanceFunctor", "classMueLu_1_1DistanceLaplacian_1_1TensorMaterialDistanceFunctor.html#ac708acb40b12b963c1a95368a2a517e7", null ],
+    [ "distance2", "classMueLu_1_1DistanceLaplacian_1_1TensorMaterialDistanceFunctor.html#ac51976563dd037697e7a613e58e345a7", null ],
+    [ "coordsMV", "classMueLu_1_1DistanceLaplacian_1_1TensorMaterialDistanceFunctor.html#a12642827181d6125f3743a86d7f9896a", null ],
+    [ "ghostedCoordsMV", "classMueLu_1_1DistanceLaplacian_1_1TensorMaterialDistanceFunctor.html#aeed24374e081a41aa6e34aae6678df0e", null ],
+    [ "coords", "classMueLu_1_1DistanceLaplacian_1_1TensorMaterialDistanceFunctor.html#aff0fc47784602931a1784dbaced41846", null ],
+    [ "ghostedCoords", "classMueLu_1_1DistanceLaplacian_1_1TensorMaterialDistanceFunctor.html#a8583b963ed05535fcf4308794cfad5b6", null ],
+    [ "material", "classMueLu_1_1DistanceLaplacian_1_1TensorMaterialDistanceFunctor.html#aa01d0e8b26f27d74e6218db6040aa054", null ],
+    [ "lcl_dist", "classMueLu_1_1DistanceLaplacian_1_1TensorMaterialDistanceFunctor.html#a2abeb9f92686ce54b0a874081fea84ed", null ],
+    [ "one", "classMueLu_1_1DistanceLaplacian_1_1TensorMaterialDistanceFunctor.html#a9e6abcc3d4b84c62299a3bd0a5c0b8e6", null ]
+];

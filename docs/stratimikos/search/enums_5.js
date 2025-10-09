@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['resettype_0',['ResetType',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/belos/doc/html/namespaceBelos.html#ad8be32ab19b9ea8822407ca681ee021d',1,'Belos']]],
+  ['restype_1',['restype',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/aztecoo/doc/html/classAztecOO__StatusTestResNorm.html#ad1dc6cab3b18a9806ae25cd282eefed0',1,'AztecOO_StatusTestResNorm::ResType'],['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/belos/doc/html/classBelos_1_1StatusTestGenResNorm.html#ad8268a1af6b9cad38dfafa2f5ace40ac',1,'Belos::StatusTestGenResNorm::ResType'],['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/belos/doc/html/classBelos_1_1StatusTestGenResNorm.html#ad8268a1af6b9cad38dfafa2f5ace40ac',1,'Belos::StatusTestGenResNorm::ResType']]],
+  ['returntype_2',['ReturnType',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/belos/doc/html/namespaceBelos.html#a58f4f203f3b36e10cb1ffd4614bbd18b',1,'Belos']]]
+];

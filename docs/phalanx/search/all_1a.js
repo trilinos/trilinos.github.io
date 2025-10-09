@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['rankcount_0',['RankCount',['../structPHX_1_1RankCount.html',1,'PHX']]],
+  ['rankcount_3c_20typename_20std_3a_3aenable_5fif_3c_20is_5fextent_3c_20extent_20_3e_3a_3avalue_20_3e_3a_3atype_2c_20extent_2c_20props_2e_2e_2e_20_3e_1',['RankCount&lt; typename std::enable_if&lt; is_extent&lt; Extent &gt;::value &gt;::type, Extent, Props... &gt;',['../structPHX_1_1RankCount_3_01typename_01std_1_1enable__if_3_01is__extent_3_01Extent_01_4_1_1value_5b5f3c451e25b650cf7c570f2d06ab33.html',1,'PHX']]],
+  ['rankcount_3c_20typename_20std_3a_3aenable_5fif_3c_21is_5fextent_3c_20nonextent_20_3e_3a_3avalue_20_3e_3a_3atype_2c_20nonextent_2c_20props_2e_2e_2e_20_3e_2',['RankCount&lt; typename std::enable_if&lt;!is_extent&lt; NonExtent &gt;::value &gt;::type, NonExtent, Props... &gt;',['../structPHX_1_1RankCount_3_01typename_01std_1_1enable__if_3_9is__extent_3_01NonExtent_01_4_1_1valu8a3245dd56c65e59e50fcf4fdb230039.html',1,'PHX']]],
+  ['rankcount_3c_20void_20_3e_3',['RankCount&lt; void &gt;',['../structPHX_1_1RankCount_3_01void_01_4.html',1,'PHX']]],
+  ['rcp_4',['rcp',['../classPHX_1_1ConstTemplateIterator.html#aa88c6ae7db14d1d442164ca56a712685',1,'PHX::ConstTemplateIterator::rcp()'],['../classPHX_1_1TemplateIterator.html#aca2054cbb375678a9f47ea78fcc4379e',1,'PHX::TemplateIterator::rcp()']]],
+  ['rebuilddeviceevaluator_5',['rebuilddeviceevaluator',['../classPHX_1_1EvaluatorWithBaseImpl.html#a2d930ad516d9d2f2636123c0954659f7',1,'PHX::EvaluatorWithBaseImpl::rebuildDeviceEvaluator()'],['../classPHX_1_1Evaluator.html#adfa5102091d8ef20d96c8d25e3011845',1,'PHX::Evaluator::rebuildDeviceEvaluator()']]],
+  ['registerevaluator_6',['registerEvaluator',['../classPHX_1_1DagManager.html#af74462001ec622f7f55efa4d8dffdd54',1,'PHX::DagManager']]],
+  ['registerevaluators_7',['registerEvaluators',['../classPHX_1_1EvaluatorFactory.html#acdea6011f896ea39fe5faf580aadda30',1,'PHX::EvaluatorFactory']]],
+  ['registering_20evaluators_20manually_8',['A.1 Building and Registering Evaluators Manually.',['../user_guide.html#fmd1s1',1,'']]],
+  ['releasefielddata_9',['releaseFieldData',['../classPHX_1_1MDField.html#aeb51e2afe38f25938b6184b0351e7aad',1,'PHX::MDField']]],
+  ['remove_5fall_5fpointers_10',['remove_all_pointers',['../structPHX_1_1remove__all__pointers.html',1,'PHX']]],
+  ['remove_5fall_5fpointers_3c_20t_20_2a_20_3e_11',['remove_all_pointers&lt; T * &gt;',['../structPHX_1_1remove__all__pointers_3_01T_01_5_01_4.html',1,'PHX']]],
+  ['reporting_20bugs_20and_20making_20enhancement_20requests_12',['Reporting Bugs and Making Enhancement Requests',['../index.html#bugs',1,'']]],
+  ['request_20which_20fields_20to_20evaluate_13',['B. Request which Fields to Evaluate',['../user_guide.html#fmd2',1,'']]],
+  ['requests_14',['Reporting Bugs and Making Enhancement Requests',['../index.html#bugs',1,'']]],
+  ['require_20the_20same_20scalar_20type_15',['3. Why do evaluation types have arbitrary data types.  Shouldn&apos;t all fields of an evaluation type require the same scalar type?',['../faq.html#faq3',1,'']]],
+  ['required_5ffields_5f_16',['required_fields_',['../classPHX_1_1DagManager.html#ac6ec52129690e79dc0e117368323f9a3',1,'PHX::DagManager']]],
+  ['requirefield_17',['requirefield',['../classPHX_1_1DagManager.html#a1f1cf4686d08de3321964415840cd1b1',1,'PHX::DagManager::requireField()'],['../classPHX_1_1EvaluationContainer.html#a4517110f84d6eb4fdc175f028dd82350',1,'PHX::EvaluationContainer::requireField()']]],
+  ['requirements_18',['requirements',['../user_guide.html#ug_step1_general',1,'A. General Library Requirements'],['../user_guide.html#ug_step1_performance',1,'B. Performance Example Requirements'],['../user_guide.html#ug_step1_fem',1,'C. Nonlinear Finite Element Example Requirements']]],
+  ['requires_5fdynamic_5fhidden_5fdimension_19',['requires_dynamic_hidden_dimension',['../structPHX_1_1requires__dynamic__hidden__dimension.html',1,'PHX']]],
+  ['requires_5fdynamic_5fhidden_5fdimension_3c_20sacado_3a_3aelrcachefad_3a_3adfad_3c_20scalart_20_3e_20_3e_20',['requires_dynamic_hidden_dimension&lt; Sacado::ELRCacheFad::DFad&lt; ScalarT &gt; &gt;',['../structPHX_1_1requires__dynamic__hidden__dimension_3_01Sacado_1_1ELRCacheFad_1_1DFad_3_01ScalarT_01_4_01_4.html',1,'PHX']]],
+  ['requires_5fdynamic_5fhidden_5fdimension_3c_20sacado_3a_3afad_3a_3adfad_3c_20scalart_20_3e_20_3e_21',['requires_dynamic_hidden_dimension&lt; Sacado::Fad::DFad&lt; ScalarT &gt; &gt;',['../structPHX_1_1requires__dynamic__hidden__dimension_3_01Sacado_1_1Fad_1_1DFad_3_01ScalarT_01_4_01_4.html',1,'PHX']]],
+  ['requires_5fdynamic_5fhidden_5fdimension_3c_20sacado_3a_3afad_3a_3aslfad_3c_20scalart_2c_20n_20_3e_20_3e_22',['requires_dynamic_hidden_dimension&lt; Sacado::Fad::SLFad&lt; ScalarT, N &gt; &gt;',['../structPHX_1_1requires__dynamic__hidden__dimension_3_01Sacado_1_1Fad_1_1SLFad_3_01ScalarT_00_01N_01_4_01_4.html',1,'PHX']]],
+  ['rundevicedag_23',['RunDeviceDag',['../structPHX_1_1RunDeviceDag.html',1,'PHX']]],
+  ['running_20slow_20how_20can_20i_20speed_20it_20up_24',['6. My code seems to be running slow.  How can I speed it up?',['../faq.html#faq6',1,'']]]
+];

@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['rank_0',['rank',['../structEpetraExt_1_1ModelEvaluator_1_1DerivativeProperties.html#a091c86265759191ea45d4e2b9f26458a',1,'EpetraExt::ModelEvaluator::DerivativeProperties']]],
+  ['ratioofdimensions_5f_1',['RatioOfDimensions_',['../classEpetraExt_1_1LinearProblem__CrsSingletonFilter.html#adb001f64d52d360d1f738793ef1f0d8e',1,'EpetraExt::LinearProblem_CrsSingletonFilter']]],
+  ['ratioofnonzeros_5f_2',['RatioOfNonzeros_',['../classEpetraExt_1_1LinearProblem__CrsSingletonFilter.html#abb5c83087933c1d214fee2d9b636e0ba',1,'EpetraExt::LinearProblem_CrsSingletonFilter']]],
+  ['redistributedomainexporter_5f_3',['RedistributeDomainExporter_',['../classEpetraExt_1_1LinearProblem__CrsSingletonFilter.html#ac214bf66a74a5a61e4bd6f542f21c0bc',1,'EpetraExt::LinearProblem_CrsSingletonFilter']]],
+  ['redistributereducedlhs_5f_4',['RedistributeReducedLHS_',['../classEpetraExt_1_1LinearProblem__CrsSingletonFilter.html#a5f7d98b2c3413c522777bb9435015473',1,'EpetraExt::LinearProblem_CrsSingletonFilter']]],
+  ['reducedlhs_5f_5',['ReducedLHS_',['../classEpetraExt_1_1LinearProblem__CrsSingletonFilter.html#a75d2db374b56fcce5f1bc5ce88bf1776',1,'EpetraExt::LinearProblem_CrsSingletonFilter']]],
+  ['reducedmatrix_5f_6',['ReducedMatrix_',['../classEpetraExt_1_1LinearProblem__CrsSingletonFilter.html#a90972e7efe4f0920876c91a381211ad6',1,'EpetraExt::LinearProblem_CrsSingletonFilter']]],
+  ['reducedmatrixcolmap_5f_7',['ReducedMatrixColMap_',['../classEpetraExt_1_1LinearProblem__CrsSingletonFilter.html#aba6c8e632508f444dce0b97f32966c8e',1,'EpetraExt::LinearProblem_CrsSingletonFilter']]],
+  ['reducedmatrixdomainmap_5f_8',['ReducedMatrixDomainMap_',['../classEpetraExt_1_1LinearProblem__CrsSingletonFilter.html#a0362f4438478c70c7f6f3408e4921a45',1,'EpetraExt::LinearProblem_CrsSingletonFilter']]],
+  ['reducedmatrixrangemap_5f_9',['ReducedMatrixRangeMap_',['../classEpetraExt_1_1LinearProblem__CrsSingletonFilter.html#a72bd15cf09f8f1b8a960e12a370f8f46',1,'EpetraExt::LinearProblem_CrsSingletonFilter']]],
+  ['reducedmatrixrowmap_5f_10',['ReducedMatrixRowMap_',['../classEpetraExt_1_1LinearProblem__CrsSingletonFilter.html#a818fb36a837aa8142ef4caa61ff9f725',1,'EpetraExt::LinearProblem_CrsSingletonFilter']]],
+  ['reducedproblem_5f_11',['ReducedProblem_',['../classEpetraExt_1_1LinearProblem__CrsSingletonFilter.html#a6050c28c24b1b94dd011bf91f0b57a26',1,'EpetraExt::LinearProblem_CrsSingletonFilter']]],
+  ['reducedrhs_5f_12',['ReducedRHS_',['../classEpetraExt_1_1LinearProblem__CrsSingletonFilter.html#a11c3b477cda66ddae73277856b772f5f',1,'EpetraExt::LinearProblem_CrsSingletonFilter']]],
+  ['relativethreshold_5f_13',['RelativeThreshold_',['../classEpetraExt_1_1LinearProblem__CrsSingletonFilter.html#a2263be6521981eaef8182a253db3503a',1,'EpetraExt::LinearProblem_CrsSingletonFilter']]],
+  ['remote_14',['remote',['../classEpetraExt_1_1CrsMatrixStruct.html#a1c440a272cf25ce8c694f976173434d3',1,'EpetraExt::CrsMatrixStruct']]],
+  ['roffset_5f_15',['ROffset_',['../classEpetraExt_1_1BlockCrsMatrix.html#aa566c6d5f269a86e25570946d69fb49c',1,'EpetraExt::BlockCrsMatrix']]],
+  ['rowindices_5fint_5f_16',['RowIndices_int_',['../classEpetraExt_1_1BlockCrsMatrix.html#a05bed5c5ee5d61cd0a7d583cd9ba9307',1,'EpetraExt::BlockCrsMatrix']]],
+  ['rowindices_5fll_5f_17',['RowIndices_LL_',['../classEpetraExt_1_1BlockCrsMatrix.html#ac917ddaaaf4e0b456e5348925cb4dc4c',1,'EpetraExt::BlockCrsMatrix']]],
+  ['rowmap_18',['rowMap',['../classEpetraExt_1_1CrsMatrixStruct.html#a1fd164b16e4af2e2ac9febecff1aa8f7',1,'EpetraExt::CrsMatrixStruct']]],
+  ['rowmapcolors_5f_19',['RowMapColors_',['../classEpetraExt_1_1LinearProblem__CrsSingletonFilter.html#a9b576cb7928e6ce2f2747581bef26c0e',1,'EpetraExt::LinearProblem_CrsSingletonFilter']]],
+  ['rowmapep_5f_20',['RowMapEP_',['../classEpetraExt_1_1LightweightCrsMatrix.html#a0e396ce853d104c8c4ac462d016de8d5',1,'EpetraExt::LightweightCrsMatrix']]],
+  ['rowmaplw_5f_21',['RowMapLW_',['../classEpetraExt_1_1LightweightCrsMatrix.html#a61b0e5b03e096e5f52f9115c40418c45',1,'EpetraExt::LightweightCrsMatrix']]],
+  ['rowptr_5f_22',['rowptr_',['../classEpetraExt_1_1LightweightCrsMatrix.html#af89b5190acca4017126cf7f6a1f35b22',1,'EpetraExt::LightweightCrsMatrix']]],
+  ['rowstencil_5fint_5f_23',['RowStencil_int_',['../classEpetraExt_1_1BlockCrsMatrix.html#a2115c17538f0bfe326463ae53f30b716',1,'EpetraExt::BlockCrsMatrix']]],
+  ['rowstencil_5fll_5f_24',['RowStencil_LL_',['../classEpetraExt_1_1BlockCrsMatrix.html#a7bad5a94e79e0060b12f38b49467a55c',1,'EpetraExt::BlockCrsMatrix']]]
+];

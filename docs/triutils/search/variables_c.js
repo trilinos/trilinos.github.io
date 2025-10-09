@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['n_0',['n',['../structSPBLASMAT__STRUCT.html#a367622c513a57db896b44581d79534d2',1,'SPBLASMAT_STRUCT']]],
+  ['name_5f_1',['name_',['../classTrilinos__Util_1_1CrsMatrixGallery.html#ae0500fab7e59cc18393f5a4c6ee5f8aa',1,'Trilinos_Util::CrsMatrixGallery']]],
+  ['ncolvec_2',['ncolvec',['../structSPBLASMAT__STRUCT.html#a9abc468844ad9dd64c50a8b1392da550',1,'SPBLASMAT_STRUCT']]],
+  ['no_5ftrans_3',['NO_TRANS',['../../../../teuchos/doc/html/namespaceTeuchos.html#a47640ddd62f44887527617b4f2255c35a3547883feb9e2f4240a9ba8c959bb7b4',1,'Teuchos']]],
+  ['non_5funit_5fdiag_4',['NON_UNIT_DIAG',['../../../../teuchos/doc/html/namespaceTeuchos.html#a9903cb70d0f5393a37fde65059a73f97a5be3acb18d58a3898346dd569d38c39f',1,'Teuchos']]],
+  ['nonlocalcoefs_5f_5',['nonlocalCoefs_',['../../../../epetra/doc/html/classEpetra__FEVector.html#a67229f2d16b10d09041e92b1bb05ab91',1,'Epetra_FEVector']]],
+  ['nonlocalmap_5f_6',['nonlocalMap_',['../../../../epetra/doc/html/classEpetra__FEVector.html#a09622538a11a240cd2bbbbf05b30af17',1,'Epetra_FEVector']]],
+  ['nonlocalvector_5f_7',['nonlocalVector_',['../../../../epetra/doc/html/classEpetra__FEVector.html#a40e207f688d77c0883e2fd86ee260501',1,'Epetra_FEVector']]],
+  ['nops_5fper_5frhs_8',['nops_per_rhs',['../structSPBLASMAT__STRUCT.html#a3bf93cd4876c93608f303c5479a02164',1,'SPBLASMAT_STRUCT']]],
+  ['numglobalelements_5f_9',['NumGlobalElements_',['../classTrilinos__Util_1_1CrsMatrixGallery.html#ab11c33ac1ded612bcf61d23a3746942a',1,'Trilinos_Util::CrsMatrixGallery']]],
+  ['nummyelements_5f_10',['NumMyElements_',['../classTrilinos__Util_1_1CrsMatrixGallery.html#a71f9f2e2774572965150acb9a0cf1c6b',1,'Trilinos_Util::CrsMatrixGallery']]],
+  ['numpdeeqns_5f_11',['NumPDEEqns_',['../classTrilinos__Util_1_1CrsMatrixGallery.html#a1ec6deaa05be0e43dcee91fb9b819f28',1,'Trilinos_Util::CrsMatrixGallery']]],
+  ['numvectors_5f_12',['NumVectors_',['../classTrilinos__Util_1_1CrsMatrixGallery.html#aaa044f2a625494382f7548f5e934f018',1,'Trilinos_Util::CrsMatrixGallery']]],
+  ['nx_5f_13',['nx_',['../classTrilinos__Util_1_1CrsMatrixGallery.html#a4a5c195bdfbcf015e92b3341099e8d34',1,'Trilinos_Util::CrsMatrixGallery']]],
+  ['ny_5f_14',['ny_',['../classTrilinos__Util_1_1CrsMatrixGallery.html#ae92f26e643fa13cdd08f31859edc1018',1,'Trilinos_Util::CrsMatrixGallery']]],
+  ['nz_5f_15',['nz_',['../classTrilinos__Util_1_1CrsMatrixGallery.html#a0ba2686c45936328dc8dbcba09f4688c',1,'Trilinos_Util::CrsMatrixGallery']]]
+];

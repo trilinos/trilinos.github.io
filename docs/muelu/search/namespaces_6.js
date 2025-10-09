@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['matlab_0',['Matlab',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/epetraext/doc/html/namespaceMatlab.html',1,'']]],
+  ['muelu_1',['MueLu',['../namespaceMueLu.html',1,'']]],
+  ['muelu_3a_3aadaptivedetails_2',['AdaptiveDetails',['../namespaceMueLu_1_1AdaptiveDetails.html',1,'MueLu']]],
+  ['muelu_3a_3aboundarydetection_3',['BoundaryDetection',['../namespaceMueLu_1_1BoundaryDetection.html',1,'MueLu']]],
+  ['muelu_3a_3aclassicaldropping_4',['ClassicalDropping',['../namespaceMueLu_1_1ClassicalDropping.html',1,'MueLu']]],
+  ['muelu_3a_3acutdrop_5',['CutDrop',['../namespaceMueLu_1_1CutDrop.html',1,'MueLu']]],
+  ['muelu_3a_3adetails_6',['Details',['../namespaceMueLu_1_1Details.html',1,'MueLu']]],
+  ['muelu_3a_3adistancelaplacian_7',['DistanceLaplacian',['../namespaceMueLu_1_1DistanceLaplacian.html',1,'MueLu']]],
+  ['muelu_3a_3aexceptions_8',['Exceptions',['../namespaceMueLu_1_1Exceptions.html',1,'MueLu']]],
+  ['muelu_3a_3akokkostuningparams_9',['KokkosTuningParams',['../namespaceMueLu_1_1KokkosTuningParams.html',1,'MueLu']]],
+  ['muelu_3a_3amatrixconstruction_10',['MatrixConstruction',['../namespaceMueLu_1_1MatrixConstruction.html',1,'MueLu']]],
+  ['muelu_3a_3amemutils_11',['MemUtils',['../namespaceMueLu_1_1MemUtils.html',1,'MueLu']]],
+  ['muelu_3a_3amisc_12',['Misc',['../namespaceMueLu_1_1Misc.html',1,'MueLu']]],
+  ['muelu_3a_3amueluintrepid_13',['MueLuIntrepid',['../namespaceMueLu_1_1MueLuIntrepid.html',1,'MueLu']]],
+  ['muelu_3a_3anotayutils_14',['NotayUtils',['../namespaceMueLu_1_1NotayUtils.html',1,'MueLu']]],
+  ['muelu_3a_3aperfdetails_15',['PerfDetails',['../namespaceMueLu_1_1PerfDetails.html',1,'MueLu']]],
+  ['muelutests_16',['MueLuTests',['../namespaceMueLuTests.html',1,'']]]
+];

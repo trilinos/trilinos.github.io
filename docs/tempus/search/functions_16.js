@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['x1_0',['x1',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/classLOCA_1_1PhaseTransition_1_1ExtendedVector.html#a637c52ce4ec5ce27d98bdc44a9efe3d1',1,'LOCA::PhaseTransition::ExtendedVector::X1() const'],['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/classLOCA_1_1PhaseTransition_1_1ExtendedVector.html#ac67b931f283b758eaadf9cabb3f253ef',1,'LOCA::PhaseTransition::ExtendedVector::X1()']]],
+  ['x2_1',['x2',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/classLOCA_1_1PhaseTransition_1_1ExtendedVector.html#abb1f8c6a5b189a1f97c1cc75e18b9354',1,'LOCA::PhaseTransition::ExtendedVector::X2() const'],['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/classLOCA_1_1PhaseTransition_1_1ExtendedVector.html#a404c3dc2932ed3ed745374b420c2821d',1,'LOCA::PhaseTransition::ExtendedVector::X2()']]],
+  ['xyztprec_2',['xyztPrec',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/classLOCA_1_1Epetra_1_1xyztPrec.html#a0be06bb80e357a73ca7602cf11ca3741',1,'LOCA::Epetra::xyztPrec']]]
+];

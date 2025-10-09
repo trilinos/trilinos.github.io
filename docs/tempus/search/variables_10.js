@@ -1,0 +1,8 @@
+var searchData=
+[
+  ['qmat_0',['qMat',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/classNOX_1_1Solver_1_1AndersonAcceleration.html#a601ac112ec7c4aef606b25be30c4db48',1,'NOX::Solver::AndersonAcceleration']]],
+  ['qrfact_1',['qrfact',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/classLOCA_1_1BorderedSolver_1_1EpetraHouseholder.html#ae9be40d7f5357af95b3170cdf6c5eb7d',1,'LOCA::BorderedSolver::EpetraHouseholder::qrFact'],['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/classLOCA_1_1BorderedSolver_1_1TpetraHouseholder.html#a3a43bb971595d17e077c631cece65b08',1,'LOCA::BorderedSolver::TpetraHouseholder::qrFact']]],
+  ['quadmin_2',['QuadMin',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/classNOX_1_1Direction_1_1SteepestDescent.html#a4b2e53fe7769478bb6726469b3d0c583ad8ac5f7b30ad49d14dee36f0406eb04f',1,'NOX::Direction::SteepestDescent']]],
+  ['quadratic_3',['Quadratic',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/classNOX_1_1LineSearch_1_1Polynomial.html#aee14b043087f6a3c5a5bbd0607e14611aa378a1b76b44e921f8ad179050d3a140',1,'NOX::LineSearch::Polynomial']]],
+  ['quadratic3_4',['Quadratic3',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/classNOX_1_1LineSearch_1_1Polynomial.html#aee14b043087f6a3c5a5bbd0607e14611a339126c90cca0db69f2e979b96a984eb',1,'NOX::LineSearch::Polynomial']]]
+];

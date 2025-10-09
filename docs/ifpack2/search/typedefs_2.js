@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['dense_5fmatrix_5ftype_0',['dense_matrix_type',['../../../../belos/doc/html/classBelos_1_1details_1_1MultiVecTsqrAdapter.html#a4ed047a3ec13f0c8c1d35c2e4e1e0a3c',1,'Belos::details::MultiVecTsqrAdapter::dense_matrix_type'],['../../../../belos/doc/html/classBelos_1_1details_1_1StubTsqrAdapter.html#a157c76e8e761a8de2f82170b897d522b',1,'Belos::details::StubTsqrAdapter::dense_matrix_type']]],
+  ['device_5ftype_1',['device_type',['../classIfpack2_1_1Chebyshev.html#a762e5876f65d67574031dab28501f784',1,'Ifpack2::Chebyshev::device_type'],['../classIfpack2_1_1DatabaseSchwarz.html#ab5e3f6bc74f3bfe2397c0611e605b500',1,'Ifpack2::DatabaseSchwarz::device_type'],['../classIfpack2_1_1Details_1_1FastILU__Base.html#a1607eea9d4f930a1928383516701337e',1,'Ifpack2::Details::FastILU_Base::device_type'],['../classIfpack2_1_1MDF.html#ae974a0f0803a8428c4eda9558db220a9',1,'Ifpack2::MDF::device_type'],['../classIfpack2_1_1Relaxation.html#ab8951c7800fe09b0c3a6e6944f99aa47',1,'Ifpack2::Relaxation::device_type'],['../classIfpack2_1_1RILUK.html#ac4cef7ea67194cca8e6b919ce9012dc2',1,'Ifpack2::RILUK::device_type']]],
+  ['do_5fnot_5finitialize_5ftag_2',['do_not_initialize_tag',['../namespaceIfpack2_1_1BlockTriDiContainerDetails.html#ab7fae5f3ed4d78d567bb80656a9a4dea',1,'Ifpack2::BlockTriDiContainerDetails']]]
+];

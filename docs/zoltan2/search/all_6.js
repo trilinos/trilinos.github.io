@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['fail_0',['fail',['../findUniqueGids_8cpp.html#add6fff4ddfa3d0071f91409438fde65d',1,'fail:&#160;findUniqueGids.cpp'],['../namespaceZoltan2.html#a42abbd6c39a350f037b07165a093a278',1,'Zoltan2::fail']]],
+  ['femv_5fscalar_5ft_1',['femv_scalar_t',['../classZoltan2_1_1AlgTwoGhostLayer.html#a1d578ef3d1ebca39507f92a1b2078587',1,'Zoltan2::AlgTwoGhostLayer::femv_scalar_t'],['../classZoltan2_1_1AlgDistance1TwoGhostLayer.html#adfcdc6cdc743960e0473e34b09648e77',1,'Zoltan2::AlgDistance1TwoGhostLayer::femv_scalar_t'],['../classZoltan2_1_1AlgDistance1.html#aa68fb2a30816c5ab6b4cbba74948c1dd',1,'Zoltan2::AlgDistance1::femv_scalar_t'],['../classZoltan2_1_1AlgDistance2.html#a08cda357b8227baf42d3a361a40be5bd',1,'Zoltan2::AlgDistance2::femv_scalar_t'],['../classZoltan2_1_1AlgPartialDistance2.html#ac40478bc433af1fd0e37886369c116b2',1,'Zoltan2::AlgPartialDistance2::femv_scalar_t']]],
+  ['femv_5ft_2',['femv_t',['../classZoltan2_1_1AlgTwoGhostLayer.html#a8680b5f30340262b455c242d7cbe4784',1,'Zoltan2::AlgTwoGhostLayer::femv_t'],['../classZoltan2_1_1AlgDistance1TwoGhostLayer.html#a3d2361829ac44c72d72c6c58bb2ae40d',1,'Zoltan2::AlgDistance1TwoGhostLayer::femv_t'],['../classZoltan2_1_1AlgDistance1.html#a01485bdec59acf5b20e437f052348df2',1,'Zoltan2::AlgDistance1::femv_t'],['../classZoltan2_1_1AlgDistance2.html#aa7602b4698a7200696b436260d409218',1,'Zoltan2::AlgDistance2::femv_t'],['../classZoltan2_1_1AlgPartialDistance2.html#a440cddbdc3be4a3bdd580efb3c5f6e85',1,'Zoltan2::AlgPartialDistance2::femv_t']]],
+  ['filladjarrays_3',['fillAdjArrays',['../classZoltan2_1_1GridHash.html#a08343a5bed615351757c718072adc71b',1,'Zoltan2::GridHash']]],
+  ['fillcontinousarray_4',['fillContinousArray',['../namespaceZoltan2.html#a1075bc1de4d51047ab573b794dff9bd0',1,'Zoltan2']]],
+  ['find_5',['find',['../classZoltan2_1_1Zoltan2__Directory.html#af44755860a9b179a38100ad3a41559df',1,'Zoltan2::Zoltan2_Directory']]],
+  ['find_5fgids_6',['find_gids',['../classZoltan2_1_1IDs.html#aa5727734ca29e33484d1cf7b83549310',1,'Zoltan2::IDs']]],
+  ['find_5flids_7',['find_lids',['../classZoltan2_1_1IDs.html#a59bacb3bbfcf06e761250a65a3ec088c',1,'Zoltan2::IDs']]],
+  ['find_5flocal_8',['find_local',['../classZoltan2_1_1Zoltan2__Directory.html#abdce0dfd8ae32dd8e2847c0b779ca1ee',1,'Zoltan2::Zoltan2_Directory']]],
+  ['find_5fmsg_5fsize_9',['find_msg_size',['../classZoltan2_1_1Zoltan2__Directory.html#acaa27844e132ebbb73f98ce947d73dab',1,'Zoltan2::Zoltan2_Directory']]],
+  ['find_5fuser_10',['find_user',['../classZoltan2_1_1IDs.html#a6cdeb042ede08def4760053f29d716e7',1,'Zoltan2::IDs']]],
+  ['findlargestcomponent_11',['findLargestComponent',['../largestComponent2Binary_8cpp.html#a3f74155d2e486946adb7d8cf75defc71',1,'largestComponent2Binary.cpp']]],
+  ['finduniquegids_12',['finduniquegids',['../namespaceZoltan2.html#a1b037701500bc3db1f5bc7222ae64213',1,'Zoltan2::findUniqueGids(Tpetra::MultiVector&lt; gno_t, lno_t, gno_t &gt; &amp;keys, Tpetra::Vector&lt; gno_t, lno_t, gno_t &gt; &amp;gids)'],['../namespaceZoltan2.html#ac1657ada1e64ab27469e670507a25c15',1,'Zoltan2::findUniqueGids(std::vector&lt; key_t &gt; &amp;keys, std::vector&lt; gno_t &gt; &amp;gids, const Teuchos::Comm&lt; int &gt; &amp;comm)'],['../namespaceZoltan2.html#a9fb75ddb1704382cb95a76a8357d6ad3',1,'Zoltan2::findUniqueGids(const std::vector&lt; key_t &gt; &amp;keys, std::vector&lt; gno_t &gt; &amp;gids, Teuchos::RCP&lt; const Teuchos::Comm&lt; int &gt; &gt; &amp;comm)']]],
+  ['finduniquegids_2ecpp_13',['findUniqueGids.cpp',['../findUniqueGids_8cpp.html',1,'']]],
+  ['finduniquegidscommon_14',['findUniqueGidsCommon',['../namespaceZoltan2.html#a2fe328a669dc461217484f504029cd97',1,'Zoltan2']]],
+  ['fix2010_2ecpp_15',['fix2010.cpp',['../fix2010_8cpp.html',1,'']]],
+  ['fix4785_2ecpp_16',['fix4785.cpp',['../fix4785_8cpp.html',1,'']]],
+  ['fname_17',['fname',['../namespacevalidXML.html#a8f0041f4a4181ff8c48f3d167c70cee3',1,'validXML']]],
+  ['fnparams_18',['fnParams',['../AllParameters_8cpp.html#a4fa27468e87da22424189161d465526f',1,'AllParameters.cpp']]],
+  ['free_19',['free',['../classZoltan2_1_1Zoltan2__Directory__Node.html#ae7182de6d0ccf551cb39b4afdac90a2d',1,'Zoltan2::Zoltan2_Directory_Node']]],
+  ['freearrays_20',['freearrays',['../fix4785_8cpp.html#a838f3906a4781a3d416a41a23de0eb20',1,'freeArrays(A *&amp;a, B *b):&#160;fix4785.cpp'],['../fix4785_8cpp.html#aca2466b6e612d51c24d56b806b559795',1,'freeArrays(A *&amp;a, A *b):&#160;fix4785.cpp']]],
+  ['functionality_21',['functionality',['../coloringPage.html#coloring_functionality',1,'Coloring Functionality'],['../orderingPage.html#ordering_functionality',1,'Ordering Functionality'],['../partitionPage.html#z2_partition_function',1,'Partitioning Functionality']]]
+];

@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['defaultreducttarget_0',['defaultreducttarget',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/rtop/doc/../../../packages/rtop/src/support/doc/html/classRTOpPack_1_1DefaultReductTarget.html#a007d2e9a229363bb514ae152957d19f3',1,'RTOpPack::DefaultReductTarget::defaultReductTarget(const ConcreteReductObj &amp;concreteReductObj)'],['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/rtop/doc/../../../packages/rtop/src/support/doc/html/classRTOpPack_1_1DefaultReductTarget.html#abff53e046562f0c6cc45502f244b0afb',1,'RTOpPack::DefaultReductTarget::DefaultReductTarget(const ConcreteReductObj &amp;concreteReductObj)']]],
+  ['description_1',['description',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/rtop/doc/../../../packages/rtop/src/support/doc/html/classRTOpPack_1_1DefaultReductTarget.html#ad87a648289347ee128d34e9f2197c0a8',1,'RTOpPack::DefaultReductTarget']]],
+  ['deserialize_2',['deserialize',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/rtop/doc/../../../packages/rtop/src/support/doc/html/classRTOpPack_1_1ReductTargetSerializer.html#a3e5487fe9822727764fc2561183ba9f8',1,'RTOpPack::ReductTargetSerializer']]]
+];
