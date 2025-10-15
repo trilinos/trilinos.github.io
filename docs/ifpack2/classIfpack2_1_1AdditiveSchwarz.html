@@ -134,6 +134,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae34796005a5e5998796bde799f71fbbe" id="r_ae34796005a5e5998796bde799f71fbbe"><td class="memItemLeft" align="right" valign="top">virtual Teuchos::RCP&lt; const <a class="el" href="classIfpack2_1_1AdditiveSchwarz.html#afc8280a3834b6ab4cb867c1b11c9bf40">row_matrix_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIfpack2_1_1AdditiveSchwarz.html#ae34796005a5e5998796bde799f71fbbe">getMatrix</a> () const</td></tr>
 <tr class="memdesc:ae34796005a5e5998796bde799f71fbbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">The input matrix.  <br /></td></tr>
 <tr class="separator:ae34796005a5e5998796bde799f71fbbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a187d6484b55f763d7d0c2baf41b89658" id="r_a187d6484b55f763d7d0c2baf41b89658"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIfpack2_1_1AdditiveSchwarz.html#a187d6484b55f763d7d0c2baf41b89658">setCoord</a> (const Teuchos::RCP&lt; const <a class="el" href="classIfpack2_1_1AdditiveSchwarz.html#aca6cd2a2d3b94034c1de6b2c8f45ddd2">coord_type</a> &gt; &amp;Coordinates)</td></tr>
+<tr class="memdesc:a187d6484b55f763d7d0c2baf41b89658"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the matrix rows' coordinates.  <br /></td></tr>
+<tr class="separator:a187d6484b55f763d7d0c2baf41b89658"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74a18c2cd1bc23fd92c307b8132e3f87" id="r_a74a18c2cd1bc23fd92c307b8132e3f87"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; const <a class="el" href="classIfpack2_1_1AdditiveSchwarz.html#aca6cd2a2d3b94034c1de6b2c8f45ddd2">coord_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIfpack2_1_1AdditiveSchwarz.html#a74a18c2cd1bc23fd92c307b8132e3f87">getCoord</a> () const</td></tr>
+<tr class="memdesc:a74a18c2cd1bc23fd92c307b8132e3f87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the coordinates associated with the input matrix's rows.  <br /></td></tr>
+<tr class="separator:a74a18c2cd1bc23fd92c307b8132e3f87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add5bfd4d070f5a609550fb8db7eaa6bd" id="r_add5bfd4d070f5a609550fb8db7eaa6bd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIfpack2_1_1AdditiveSchwarz.html#add5bfd4d070f5a609550fb8db7eaa6bd">setParameters</a> (const Teuchos::ParameterList &amp;plist)</td></tr>
 <tr class="memdesc:add5bfd4d070f5a609550fb8db7eaa6bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the preconditioner's parameters.  <br /></td></tr>
 <tr class="separator:add5bfd4d070f5a609550fb8db7eaa6bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -210,9 +216,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a45d2b3d548504428b223de6304ca7082" id="r_a45d2b3d548504428b223de6304ca7082"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIfpack2_1_1AdditiveSchwarz.html#a45d2b3d548504428b223de6304ca7082">crs_matrix_type</a> = Tpetra::CrsMatrix&lt; <a class="el" href="classIfpack2_1_1AdditiveSchwarz.html#acf7c70ef80e46563df3dce419a942c12">scalar_type</a>, <a class="el" href="classIfpack2_1_1AdditiveSchwarz.html#a03cd0d9306aa5b0c198b290c22c55bd4">local_ordinal_type</a>, <a class="el" href="classIfpack2_1_1AdditiveSchwarz.html#a40f0a86bb9aa205906c0f8bb969652f1">global_ordinal_type</a>, <a class="el" href="classIfpack2_1_1AdditiveSchwarz.html#a91956faa61adf87bd84fdd10d1262bba">node_type</a> &gt;</td></tr>
 <tr class="memdesc:a45d2b3d548504428b223de6304ca7082"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Tpetra::CrsMatrix specialization that is a subclass of MatrixType.  <br /></td></tr>
 <tr class="separator:a45d2b3d548504428b223de6304ca7082"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca6cd2a2d3b94034c1de6b2c8f45ddd2" id="r_aca6cd2a2d3b94034c1de6b2c8f45ddd2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIfpack2_1_1AdditiveSchwarz.html#aca6cd2a2d3b94034c1de6b2c8f45ddd2">coord_type</a> = Tpetra::MultiVector&lt; <a class="el" href="classIfpack2_1_1AdditiveSchwarz.html#a8e1d91a1a28979d99448e8ae1f0d7510">magnitude_type</a>, <a class="el" href="classIfpack2_1_1AdditiveSchwarz.html#a03cd0d9306aa5b0c198b290c22c55bd4">local_ordinal_type</a>, <a class="el" href="classIfpack2_1_1AdditiveSchwarz.html#a40f0a86bb9aa205906c0f8bb969652f1">global_ordinal_type</a>, <a class="el" href="classIfpack2_1_1AdditiveSchwarz.html#a91956faa61adf87bd84fdd10d1262bba">node_type</a> &gt;</td></tr>
+<tr class="memdesc:aca6cd2a2d3b94034c1de6b2c8f45ddd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Tpetra::MultiVector specialization used for containing coordinates.  <br /></td></tr>
+<tr class="separator:aca6cd2a2d3b94034c1de6b2c8f45ddd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af180875edc793d4d6d7055b78d3817aa" id="r_af180875edc793d4d6d7055b78d3817aa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIfpack2_1_1AdditiveSchwarz.html#af180875edc793d4d6d7055b78d3817aa">AdditiveSchwarz</a> (const Teuchos::RCP&lt; const <a class="el" href="classIfpack2_1_1AdditiveSchwarz.html#afc8280a3834b6ab4cb867c1b11c9bf40">row_matrix_type</a> &gt; &amp;A)</td></tr>
 <tr class="memdesc:af180875edc793d4d6d7055b78d3817aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that takes a matrix.  <br /></td></tr>
 <tr class="separator:af180875edc793d4d6d7055b78d3817aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb9a33e7641b0668d2b3e65224cd0e9b" id="r_aeb9a33e7641b0668d2b3e65224cd0e9b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIfpack2_1_1AdditiveSchwarz.html#aeb9a33e7641b0668d2b3e65224cd0e9b">AdditiveSchwarz</a> (const Teuchos::RCP&lt; const <a class="el" href="classIfpack2_1_1AdditiveSchwarz.html#afc8280a3834b6ab4cb867c1b11c9bf40">row_matrix_type</a> &gt; &amp;A, const Teuchos::RCP&lt; const <a class="el" href="classIfpack2_1_1AdditiveSchwarz.html#aca6cd2a2d3b94034c1de6b2c8f45ddd2">coord_type</a> &gt; &amp;coordinates)</td></tr>
+<tr class="memdesc:aeb9a33e7641b0668d2b3e65224cd0e9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that takes a matrix and its rows' coordinates.  <br /></td></tr>
+<tr class="separator:aeb9a33e7641b0668d2b3e65224cd0e9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f313179d5e076ec15bef4a4266082e2" id="r_a8f313179d5e076ec15bef4a4266082e2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIfpack2_1_1AdditiveSchwarz.html#a8f313179d5e076ec15bef4a4266082e2">AdditiveSchwarz</a> (const Teuchos::RCP&lt; const <a class="el" href="classIfpack2_1_1AdditiveSchwarz.html#afc8280a3834b6ab4cb867c1b11c9bf40">row_matrix_type</a> &gt; &amp;A, const int overlapLevel)</td></tr>
 <tr class="memdesc:a8f313179d5e076ec15bef4a4266082e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that takes a matrix and the level of overlap.  <br /></td></tr>
 <tr class="separator:a8f313179d5e076ec15bef4a4266082e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -509,9 +521,27 @@ template&lt;class MatrixType , class LocalInverseType  = Preconditioner&lt;typen
 
 </div>
 </div>
+<a id="aca6cd2a2d3b94034c1de6b2c8f45ddd2" name="aca6cd2a2d3b94034c1de6b2c8f45ddd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca6cd2a2d3b94034c1de6b2c8f45ddd2">&#9670;&#160;</a></span>coord_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class MatrixType , class LocalInverseType  = Preconditioner&lt;typename MatrixType::scalar_type,                             typename MatrixType::local_ordinal_type,                             typename MatrixType::global_ordinal_type,                             typename MatrixType::node_type&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classIfpack2_1_1AdditiveSchwarz.html">Ifpack2::AdditiveSchwarz</a>&lt; MatrixType, LocalInverseType &gt;::coord_type =  Tpetra::MultiVector&lt;<a class="el" href="classIfpack2_1_1AdditiveSchwarz.html#a8e1d91a1a28979d99448e8ae1f0d7510">magnitude_type</a>, <a class="el" href="classIfpack2_1_1AdditiveSchwarz.html#a03cd0d9306aa5b0c198b290c22c55bd4">local_ordinal_type</a>, <a class="el" href="classIfpack2_1_1AdditiveSchwarz.html#a40f0a86bb9aa205906c0f8bb969652f1">global_ordinal_type</a>, <a class="el" href="classIfpack2_1_1AdditiveSchwarz.html#a91956faa61adf87bd84fdd10d1262bba">node_type</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The Tpetra::MultiVector specialization used for containing coordinates. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af180875edc793d4d6d7055b78d3817aa" name="af180875edc793d4d6d7055b78d3817aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af180875edc793d4d6d7055b78d3817aa">&#9670;&#160;</a></span>AdditiveSchwarz() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af180875edc793d4d6d7055b78d3817aa">&#9670;&#160;</a></span>AdditiveSchwarz() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -538,8 +568,47 @@ template&lt;class MatrixType , class LocalInverseType &gt; </div>
 
 </div>
 </div>
+<a id="aeb9a33e7641b0668d2b3e65224cd0e9b" name="aeb9a33e7641b0668d2b3e65224cd0e9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb9a33e7641b0668d2b3e65224cd0e9b">&#9670;&#160;</a></span>AdditiveSchwarz() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class MatrixType , class LocalInverseType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classIfpack2_1_1AdditiveSchwarz.html">Ifpack2::AdditiveSchwarz</a>&lt; MatrixType, LocalInverseType &gt;::AdditiveSchwarz </td>
+          <td>(</td>
+          <td class="paramtype">const Teuchos::RCP&lt; const <a class="el" href="classIfpack2_1_1AdditiveSchwarz.html#afc8280a3834b6ab4cb867c1b11c9bf40">row_matrix_type</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Teuchos::RCP&lt; const <a class="el" href="classIfpack2_1_1AdditiveSchwarz.html#aca6cd2a2d3b94034c1de6b2c8f45ddd2">coord_type</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>coordinates</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor that takes a matrix and its rows' coordinates. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>[in] The matrix to be preconditioned. </td></tr>
+    <tr><td class="paramname">coordinates</td><td>[in] Coordinates associated with matrix rows </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a8f313179d5e076ec15bef4a4266082e2" name="a8f313179d5e076ec15bef4a4266082e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f313179d5e076ec15bef4a4266082e2">&#9670;&#160;</a></span>AdditiveSchwarz() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f313179d5e076ec15bef4a4266082e2">&#9670;&#160;</a></span>AdditiveSchwarz() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -843,6 +912,55 @@ template&lt;class MatrixType , class LocalInverseType &gt; </div>
 <p>The input matrix. </p>
 
 <p>Implements <a class="el" href="classIfpack2_1_1Preconditioner.html#a4258d242e7ff6003c399da8f0a11d634">Ifpack2::Preconditioner&lt; MatrixType::scalar_type, MatrixType::local_ordinal_type, MatrixType::global_ordinal_type, MatrixType::node_type &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a187d6484b55f763d7d0c2baf41b89658" name="a187d6484b55f763d7d0c2baf41b89658"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a187d6484b55f763d7d0c2baf41b89658">&#9670;&#160;</a></span>setCoord()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class MatrixType , class LocalInverseType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classIfpack2_1_1AdditiveSchwarz.html">Ifpack2::AdditiveSchwarz</a>&lt; MatrixType, LocalInverseType &gt;::setCoord </td>
+          <td>(</td>
+          <td class="paramtype">const Teuchos::RCP&lt; const <a class="el" href="classIfpack2_1_1AdditiveSchwarz.html#aca6cd2a2d3b94034c1de6b2c8f45ddd2">coord_type</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>Coordinates</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the matrix rows' coordinates. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Coordinates</td><td>[in] Pointer to the coordinates multivector. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a74a18c2cd1bc23fd92c307b8132e3f87" name="a74a18c2cd1bc23fd92c307b8132e3f87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74a18c2cd1bc23fd92c307b8132e3f87">&#9670;&#160;</a></span>getCoord()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class MatrixType , class LocalInverseType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Teuchos::RCP&lt; const Tpetra::MultiVector&lt; typename Teuchos::ScalarTraits&lt; typename MatrixType::scalar_type &gt;::magnitudeType, typename MatrixType::local_ordinal_type, typename MatrixType::global_ordinal_type, typename MatrixType::node_type &gt; &gt; <a class="el" href="classIfpack2_1_1AdditiveSchwarz.html">Ifpack2::AdditiveSchwarz</a>&lt; MatrixType, LocalInverseType &gt;::getCoord </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the coordinates associated with the input matrix's rows. </p>
 
 </div>
 </div>

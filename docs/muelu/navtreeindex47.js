@@ -1,5 +1,13 @@
 var NAVTREEINDEX47 =
 {
+"structMueLu_1_1AggregationStructuredAlgorithm_1_1computeGraphDataConstantFunctor.html#a17fda3f393009e18456791ff9a5ce5d8":[8,0,3,24,0,4],
+"structMueLu_1_1AggregationStructuredAlgorithm_1_1computeGraphDataConstantFunctor.html#a17fda3f393009e18456791ff9a5ce5d8":[9,0,2,18,0,4],
+"structMueLu_1_1AggregationStructuredAlgorithm_1_1computeGraphDataConstantFunctor.html#a24ecf28135c30baf5547a6753e625976":[8,0,3,24,0,8],
+"structMueLu_1_1AggregationStructuredAlgorithm_1_1computeGraphDataConstantFunctor.html#a24ecf28135c30baf5547a6753e625976":[9,0,2,18,0,8],
+"structMueLu_1_1AggregationStructuredAlgorithm_1_1computeGraphDataConstantFunctor.html#a32e1b2608b0c0ff062c8cc1662fa6639":[8,0,3,24,0,1],
+"structMueLu_1_1AggregationStructuredAlgorithm_1_1computeGraphDataConstantFunctor.html#a32e1b2608b0c0ff062c8cc1662fa6639":[9,0,2,18,0,1],
+"structMueLu_1_1AggregationStructuredAlgorithm_1_1computeGraphDataConstantFunctor.html#a5f37ed83ab80403f4427f249feff653b":[8,0,3,24,0,0],
+"structMueLu_1_1AggregationStructuredAlgorithm_1_1computeGraphDataConstantFunctor.html#a5f37ed83ab80403f4427f249feff653b":[9,0,2,18,0,0],
 "structMueLu_1_1AggregationStructuredAlgorithm_1_1computeGraphDataConstantFunctor.html#a625ddaaa4dd35f295bf686c725f0e8c5":[9,0,2,18,0,5],
 "structMueLu_1_1AggregationStructuredAlgorithm_1_1computeGraphDataConstantFunctor.html#a625ddaaa4dd35f295bf686c725f0e8c5":[8,0,3,24,0,5],
 "structMueLu_1_1AggregationStructuredAlgorithm_1_1computeGraphDataConstantFunctor.html#a63924d089349db9008f2af49534d3b6b":[9,0,2,18,0,7],
@@ -241,13 +249,5 @@ var NAVTREEINDEX47 =
 "structMueLu_1_1CutDrop_1_1UnscaledDistanceLaplacianComparison_1_1Comparator.html#ab775185f928a26e80693ad22b9203416":[8,0,3,3,4,0,11],
 "structMueLu_1_1CutDrop_1_1UnscaledDistanceLaplacianComparison_1_1Comparator.html#ab775185f928a26e80693ad22b9203416":[9,0,2,2,4,0,11],
 "structMueLu_1_1CutDrop_1_1UnscaledDistanceLaplacianComparison_1_1Comparator.html#ad8cbf287f09237057262fbc138ce4fd4":[8,0,3,3,4,0,8],
-"structMueLu_1_1CutDrop_1_1UnscaledDistanceLaplacianComparison_1_1Comparator.html#ad8cbf287f09237057262fbc138ce4fd4":[9,0,2,2,4,0,8],
-"structMueLu_1_1CutDrop_1_1UnscaledDistanceLaplacianComparison_1_1Comparator.html#adcff1dbc6f95b3f3ff1f9571d644e2c0":[8,0,3,3,4,0,12],
-"structMueLu_1_1CutDrop_1_1UnscaledDistanceLaplacianComparison_1_1Comparator.html#adcff1dbc6f95b3f3ff1f9571d644e2c0":[9,0,2,2,4,0,12],
-"structMueLu_1_1CutDrop_1_1UnscaledDistanceLaplacianComparison_1_1Comparator.html#ade9cbad9a92bb067c17f5391c9b18ea1":[8,0,3,3,4,0,15],
-"structMueLu_1_1CutDrop_1_1UnscaledDistanceLaplacianComparison_1_1Comparator.html#ade9cbad9a92bb067c17f5391c9b18ea1":[9,0,2,2,4,0,15],
-"structMueLu_1_1CutDrop_1_1UnscaledDistanceLaplacianComparison_1_1Comparator.html#af526da40ced106f9777d79662a1aa0b0":[9,0,2,2,4,0,0],
-"structMueLu_1_1CutDrop_1_1UnscaledDistanceLaplacianComparison_1_1Comparator.html#af526da40ced106f9777d79662a1aa0b0":[8,0,3,3,4,0,0],
-"structMueLu_1_1CutDrop_1_1UnscaledDistanceLaplacianComparison_1_1Comparator.html#afd445b2a50c969675fa304cf6631769e":[8,0,3,3,4,0,1],
-"structMueLu_1_1CutDrop_1_1UnscaledDistanceLaplacianComparison_1_1Comparator.html#afd445b2a50c969675fa304cf6631769e":[9,0,2,2,4,0,1]
+"structMueLu_1_1CutDrop_1_1UnscaledDistanceLaplacianComparison_1_1Comparator.html#ad8cbf287f09237057262fbc138ce4fd4":[9,0,2,2,4,0,8]
 };

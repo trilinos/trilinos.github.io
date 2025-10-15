@@ -1,5 +1,13 @@
 var NAVTREEINDEX46 =
 {
+"namespaceMueLu.html#aa2e6058c0bae595f2930bf1f52b33557":[8,0,3,339],
+"namespaceMueLu.html#aa34d0a6ef844c7fc9e47cdbeba174c7c":[8,0,3,465],
+"namespaceMueLu.html#aa4e469333ab3779dadcad445912b6380":[8,0,3,322],
+"namespaceMueLu.html#aa591bd8bc40c05f52da9a2b076fac53f":[8,0,3,428],
+"namespaceMueLu.html#aa62a5a02a4a3b7fd4868de1c714bf9ec":[8,0,3,400],
+"namespaceMueLu.html#aa68346ea5444f8eadf1889604567b845":[8,0,3,517],
+"namespaceMueLu.html#aa766d8240582d236652f036749fe9311":[8,0,3,327],
+"namespaceMueLu.html#aa80760abd8cf70eb123834ba341c7ce4":[8,0,3,430],
 "namespaceMueLu.html#aa81bc865731259a39e0e7e3f9cbcce89":[8,0,3,514],
 "namespaceMueLu.html#aa96e85788f6bf15a013b3d6d07e0f2f2":[8,0,3,361],
 "namespaceMueLu.html#aac7f35cad7e3d32e8ebee8354ed3b61b":[8,0,3,409],
@@ -241,13 +249,5 @@ var NAVTREEINDEX46 =
 "namespaces.html":[8,0],
 "pages.html":[],
 "structMueLu_1_1AggregationStructuredAlgorithm_1_1computeGraphDataConstantFunctor.html":[8,0,3,24,0],
-"structMueLu_1_1AggregationStructuredAlgorithm_1_1computeGraphDataConstantFunctor.html":[9,0,2,18,0],
-"structMueLu_1_1AggregationStructuredAlgorithm_1_1computeGraphDataConstantFunctor.html#a17fda3f393009e18456791ff9a5ce5d8":[8,0,3,24,0,4],
-"structMueLu_1_1AggregationStructuredAlgorithm_1_1computeGraphDataConstantFunctor.html#a17fda3f393009e18456791ff9a5ce5d8":[9,0,2,18,0,4],
-"structMueLu_1_1AggregationStructuredAlgorithm_1_1computeGraphDataConstantFunctor.html#a24ecf28135c30baf5547a6753e625976":[8,0,3,24,0,8],
-"structMueLu_1_1AggregationStructuredAlgorithm_1_1computeGraphDataConstantFunctor.html#a24ecf28135c30baf5547a6753e625976":[9,0,2,18,0,8],
-"structMueLu_1_1AggregationStructuredAlgorithm_1_1computeGraphDataConstantFunctor.html#a32e1b2608b0c0ff062c8cc1662fa6639":[8,0,3,24,0,1],
-"structMueLu_1_1AggregationStructuredAlgorithm_1_1computeGraphDataConstantFunctor.html#a32e1b2608b0c0ff062c8cc1662fa6639":[9,0,2,18,0,1],
-"structMueLu_1_1AggregationStructuredAlgorithm_1_1computeGraphDataConstantFunctor.html#a5f37ed83ab80403f4427f249feff653b":[8,0,3,24,0,0],
-"structMueLu_1_1AggregationStructuredAlgorithm_1_1computeGraphDataConstantFunctor.html#a5f37ed83ab80403f4427f249feff653b":[9,0,2,18,0,0]
+"structMueLu_1_1AggregationStructuredAlgorithm_1_1computeGraphDataConstantFunctor.html":[9,0,2,18,0]
 };

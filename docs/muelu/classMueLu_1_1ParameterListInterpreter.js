@@ -41,6 +41,7 @@ var classMueLu_1_1ParameterListInterpreter =
     [ "WCycleStartLevel_", "classMueLu_1_1ParameterListInterpreter.html#a51be923fd3ce8acad1b9ba04ff0c30c9", null ],
     [ "scalingFactor_", "classMueLu_1_1ParameterListInterpreter.html#a8a28687ef2014a08e1ae128f320fad54", null ],
     [ "dofOffset_", "classMueLu_1_1ParameterListInterpreter.html#a3e0454fe9a505f52a186d3df4b2e8738", null ],
+    [ "hierarchyLabel_", "classMueLu_1_1ParameterListInterpreter.html#a5e894c4fe399e850c2d73aebcf1c0c43", null ],
     [ "changedPRrebalance_", "classMueLu_1_1ParameterListInterpreter.html#a1f240f9f5b2ab45e12eaa6af85863024", null ],
     [ "changedPRViaCopyrebalance_", "classMueLu_1_1ParameterListInterpreter.html#ac55de7863b516fa9b15f07968bba708e", null ],
     [ "changedImplicitTranspose_", "classMueLu_1_1ParameterListInterpreter.html#a0ca4e1dc131f41f746823e89aede34e3", null ],

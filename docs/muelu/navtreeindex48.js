@@ -1,5 +1,13 @@
 var NAVTREEINDEX48 =
 {
+"structMueLu_1_1CutDrop_1_1UnscaledDistanceLaplacianComparison_1_1Comparator.html#adcff1dbc6f95b3f3ff1f9571d644e2c0":[8,0,3,3,4,0,12],
+"structMueLu_1_1CutDrop_1_1UnscaledDistanceLaplacianComparison_1_1Comparator.html#adcff1dbc6f95b3f3ff1f9571d644e2c0":[9,0,2,2,4,0,12],
+"structMueLu_1_1CutDrop_1_1UnscaledDistanceLaplacianComparison_1_1Comparator.html#ade9cbad9a92bb067c17f5391c9b18ea1":[8,0,3,3,4,0,15],
+"structMueLu_1_1CutDrop_1_1UnscaledDistanceLaplacianComparison_1_1Comparator.html#ade9cbad9a92bb067c17f5391c9b18ea1":[9,0,2,2,4,0,15],
+"structMueLu_1_1CutDrop_1_1UnscaledDistanceLaplacianComparison_1_1Comparator.html#af526da40ced106f9777d79662a1aa0b0":[9,0,2,2,4,0,0],
+"structMueLu_1_1CutDrop_1_1UnscaledDistanceLaplacianComparison_1_1Comparator.html#af526da40ced106f9777d79662a1aa0b0":[8,0,3,3,4,0,0],
+"structMueLu_1_1CutDrop_1_1UnscaledDistanceLaplacianComparison_1_1Comparator.html#afd445b2a50c969675fa304cf6631769e":[8,0,3,3,4,0,1],
+"structMueLu_1_1CutDrop_1_1UnscaledDistanceLaplacianComparison_1_1Comparator.html#afd445b2a50c969675fa304cf6631769e":[9,0,2,2,4,0,1],
 "structMueLu_1_1CutDrop_1_1UnscaledDistanceLaplacianComparison_1_1Comparator.html#afeacf492b6b60fb765d40964e718ad1f":[8,0,3,3,4,0,2],
 "structMueLu_1_1CutDrop_1_1UnscaledDistanceLaplacianComparison_1_1Comparator.html#afeacf492b6b60fb765d40964e718ad1f":[9,0,2,2,4,0,2],
 "structMueLu_1_1Details_1_1DropTol.html":[9,0,2,3,0],
@@ -241,12 +249,5 @@ var NAVTREEINDEX48 =
 "structZoltan2_1_1InputTraits_3_01MueLu_1_1LWGraph_3_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4.html#a4a564b720e7121d4f60111ea01e30f26":[9,0,6,0,6],
 "structZoltan2_1_1InputTraits_3_01MueLu_1_1LWGraph_3_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4.html#a4a564b720e7121d4f60111ea01e30f26":[8,0,7,0,6],
 "structZoltan2_1_1InputTraits_3_01MueLu_1_1LWGraph_3_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4.html#a8fddcb49e3a44dffbc460e8a3e901e50":[8,0,7,0,5],
-"structZoltan2_1_1InputTraits_3_01MueLu_1_1LWGraph_3_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4.html#a8fddcb49e3a44dffbc460e8a3e901e50":[9,0,6,0,5],
-"structZoltan2_1_1InputTraits_3_01MueLu_1_1LWGraph_3_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4.html#aa49251311266669cfc64fc8ff8adefd8":[9,0,6,0,1],
-"structZoltan2_1_1InputTraits_3_01MueLu_1_1LWGraph_3_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4.html#aa49251311266669cfc64fc8ff8adefd8":[8,0,7,0,1],
-"structZoltan2_1_1InputTraits_3_01MueLu_1_1LWGraph_3_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4.html#add6f2a77779f65907283bd0fe98a0da5":[9,0,6,0,2],
-"structZoltan2_1_1InputTraits_3_01MueLu_1_1LWGraph_3_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4.html#add6f2a77779f65907283bd0fe98a0da5":[8,0,7,0,2],
-"structZoltan2_1_1InputTraits_3_01MueLu_1_1LWGraph_3_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4.html#afdec5c22e058c6b46cf95e4168132933":[9,0,6,0,0],
-"structZoltan2_1_1InputTraits_3_01MueLu_1_1LWGraph_3_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4.html#afdec5c22e058c6b46cf95e4168132933":[8,0,7,0,0],
-"todo.html":[7]
+"structZoltan2_1_1InputTraits_3_01MueLu_1_1LWGraph_3_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4.html#a8fddcb49e3a44dffbc460e8a3e901e50":[9,0,6,0,5]
 };

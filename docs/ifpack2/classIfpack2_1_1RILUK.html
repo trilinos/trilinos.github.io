@@ -144,6 +144,9 @@ Public Types</h2></td></tr>
 <tr class="memitem:a013fa638900f40d39012393b0494d910" id="r_a013fa638900f40d39012393b0494d910"><td class="memItemLeft" align="right" valign="top">typedef crs_matrix_type::impl_scalar_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIfpack2_1_1RILUK.html#a013fa638900f40d39012393b0494d910">impl_scalar_type</a></td></tr>
 <tr class="memdesc:a013fa638900f40d39012393b0494d910"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scalar type stored in Kokkos::Views (CrsMatrix and MultiVector)  <br /></td></tr>
 <tr class="separator:a013fa638900f40d39012393b0494d910"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05b93de9bd1342dde874bc405f87cc55" id="r_a05b93de9bd1342dde874bc405f87cc55"><td class="memItemLeft" align="right" valign="top">typedef Tpetra::MultiVector&lt; <a class="el" href="classIfpack2_1_1RILUK.html#a23c661b390233d88d32774cd8fd428d5">magnitude_type</a>, <a class="el" href="classIfpack2_1_1RILUK.html#ab36f2189fbed534cbbdea630aa74e1aa">local_ordinal_type</a>, <a class="el" href="classIfpack2_1_1RILUK.html#ac2ada3f6fe8e8480258a3000eb3afee4">global_ordinal_type</a>, <a class="el" href="classIfpack2_1_1RILUK.html#a747a932722227155880d659b8d996944">node_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIfpack2_1_1RILUK.html#a05b93de9bd1342dde874bc405f87cc55">coord_type</a></td></tr>
+<tr class="memdesc:a05b93de9bd1342dde874bc405f87cc55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tpetra::MultiVector specialization used for containing coordinates.  <br /></td></tr>
+<tr class="separator:a05b93de9bd1342dde874bc405f87cc55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classIfpack2_1_1Preconditioner"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classIfpack2_1_1Preconditioner')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classIfpack2_1_1Preconditioner.html">Ifpack2::Preconditioner&lt; MatrixType::scalar_type, MatrixType::local_ordinal_type, MatrixType::global_ordinal_type, MatrixType::node_type &gt;</a></td></tr>
 <tr class="memitem:a222c0e260ac8dc1226573e8a0773ac63 inherit pub_types_classIfpack2_1_1Preconditioner" id="r_a222c0e260ac8dc1226573e8a0773ac63"><td class="memItemLeft" align="right" valign="top">typedef Teuchos::ScalarTraits&lt; MatrixType::scalar_type &gt;::magnitudeType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIfpack2_1_1Preconditioner.html#a222c0e260ac8dc1226573e8a0773ac63">magnitude_type</a></td></tr>
 <tr class="memdesc:a222c0e260ac8dc1226573e8a0773ac63 inherit pub_types_classIfpack2_1_1Preconditioner"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of the magnitude (absolute value) of a matrix entry.  <br /></td></tr>
@@ -155,6 +158,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a512635465b0b40588793f1891b45a91e" id="r_a512635465b0b40588793f1891b45a91e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIfpack2_1_1RILUK.html#a512635465b0b40588793f1891b45a91e">setMatrix</a> (const Teuchos::RCP&lt; const <a class="el" href="classIfpack2_1_1RILUK.html#af1d08264f25ccadf5a202c604f0f99ac">row_matrix_type</a> &gt; &amp;A)</td></tr>
 <tr class="memdesc:a512635465b0b40588793f1891b45a91e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the matrix to be preconditioned.  <br /></td></tr>
 <tr class="separator:a512635465b0b40588793f1891b45a91e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a814a039f9284acbfe4106d0085471708" id="r_a814a039f9284acbfe4106d0085471708"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIfpack2_1_1RILUK.html#a814a039f9284acbfe4106d0085471708">setCoord</a> (const Teuchos::RCP&lt; const <a class="el" href="classIfpack2_1_1RILUK.html#a05b93de9bd1342dde874bc405f87cc55">coord_type</a> &gt; &amp;A_coordinates)</td></tr>
+<tr class="memdesc:a814a039f9284acbfe4106d0085471708"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the matrix rows' coordinates.  <br /></td></tr>
+<tr class="separator:a814a039f9284acbfe4106d0085471708"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implementation of Teuchos::Describable interface</div></td></tr>
 <tr class="memitem:a4ccdc58864f256fa85b6fb14a25c22f8" id="r_a4ccdc58864f256fa85b6fb14a25c22f8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIfpack2_1_1RILUK.html#a4ccdc58864f256fa85b6fb14a25c22f8">description</a> () const</td></tr>
 <tr class="memdesc:a4ccdc58864f256fa85b6fb14a25c22f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">A one-line description of this object.  <br /></td></tr>
@@ -175,12 +181,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abad9626e6fa50980dc192a4a63341c12 inherit pub_methods_classIfpack2_1_1Details_1_1CanChangeMatrix"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Implementation of Kokkos Kernels ILU(k).</h2></td></tr>
-<tr class="memitem:acf5cac91aeab107501fb7fd7d0627bae" id="r_acf5cac91aeab107501fb7fd7d0627bae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIfpack2_1_1RILUK.html#acf5cac91aeab107501fb7fd7d0627bae">RILUK</a> (const Teuchos::RCP&lt; const <a class="el" href="classIfpack2_1_1RILUK.html#af1d08264f25ccadf5a202c604f0f99ac">row_matrix_type</a> &gt; &amp;A_in)</td></tr>
-<tr class="memdesc:acf5cac91aeab107501fb7fd7d0627bae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that takes a Tpetra::RowMatrix.  <br /></td></tr>
-<tr class="separator:acf5cac91aeab107501fb7fd7d0627bae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a164b7f3e56288379e054371852be215d" id="r_a164b7f3e56288379e054371852be215d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIfpack2_1_1RILUK.html#a164b7f3e56288379e054371852be215d">RILUK</a> (const Teuchos::RCP&lt; const <a class="el" href="classIfpack2_1_1RILUK.html#a11ec31dfcd53096c3143aa7ecaa04853">crs_matrix_type</a> &gt; &amp;A_in)</td></tr>
-<tr class="memdesc:a164b7f3e56288379e054371852be215d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that takes a Tpetra::CrsMatrix.  <br /></td></tr>
-<tr class="separator:a164b7f3e56288379e054371852be215d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac803b31d31780bde4e5be8a6f78acca5" id="r_ac803b31d31780bde4e5be8a6f78acca5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIfpack2_1_1RILUK.html#ac803b31d31780bde4e5be8a6f78acca5">RILUK</a> (const Teuchos::RCP&lt; const <a class="el" href="classIfpack2_1_1RILUK.html#af1d08264f25ccadf5a202c604f0f99ac">row_matrix_type</a> &gt; &amp;A_in, const Teuchos::RCP&lt; const <a class="el" href="classIfpack2_1_1RILUK.html#a05b93de9bd1342dde874bc405f87cc55">coord_type</a> &gt; &amp;A_in_coordinates=Teuchos::null)</td></tr>
+<tr class="memdesc:ac803b31d31780bde4e5be8a6f78acca5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that takes a Tpetra::RowMatrix.  <br /></td></tr>
+<tr class="separator:ac803b31d31780bde4e5be8a6f78acca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9d14dd05c97b4c77f2093a738bb12bc" id="r_ae9d14dd05c97b4c77f2093a738bb12bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIfpack2_1_1RILUK.html#ae9d14dd05c97b4c77f2093a738bb12bc">RILUK</a> (const Teuchos::RCP&lt; const <a class="el" href="classIfpack2_1_1RILUK.html#a11ec31dfcd53096c3143aa7ecaa04853">crs_matrix_type</a> &gt; &amp;A_in, const Teuchos::RCP&lt; const <a class="el" href="classIfpack2_1_1RILUK.html#a05b93de9bd1342dde874bc405f87cc55">coord_type</a> &gt; &amp;A_in_coordinates=Teuchos::null)</td></tr>
+<tr class="memdesc:ae9d14dd05c97b4c77f2093a738bb12bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that takes a Tpetra::CrsMatrix.  <br /></td></tr>
+<tr class="separator:ae9d14dd05c97b4c77f2093a738bb12bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14bf0fe45360dd7ffad930f7e9ff7e81" id="r_a14bf0fe45360dd7ffad930f7e9ff7e81"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIfpack2_1_1RILUK.html#a14bf0fe45360dd7ffad930f7e9ff7e81">~RILUK</a> ()</td></tr>
 <tr class="memdesc:a14bf0fe45360dd7ffad930f7e9ff7e81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor (declared virtual for memory safety).  <br /></td></tr>
 <tr class="separator:a14bf0fe45360dd7ffad930f7e9ff7e81"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -224,6 +230,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4342e474a2f9ed45ef7a853739abe950" id="r_a4342e474a2f9ed45ef7a853739abe950"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; const <a class="el" href="classIfpack2_1_1RILUK.html#af1d08264f25ccadf5a202c604f0f99ac">row_matrix_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIfpack2_1_1RILUK.html#a4342e474a2f9ed45ef7a853739abe950">A_</a></td></tr>
 <tr class="memdesc:a4342e474a2f9ed45ef7a853739abe950"><td class="mdescLeft">&#160;</td><td class="mdescRight">The (original) input matrix for which to compute ILU(k).  <br /></td></tr>
 <tr class="separator:a4342e474a2f9ed45ef7a853739abe950"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a431ea1f893a8f632bc75b129169bceb9" id="r_a431ea1f893a8f632bc75b129169bceb9"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; const <a class="el" href="classIfpack2_1_1RILUK.html#a05b93de9bd1342dde874bc405f87cc55">coord_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIfpack2_1_1RILUK.html#a431ea1f893a8f632bc75b129169bceb9">A_coordinates_</a></td></tr>
+<tr class="separator:a431ea1f893a8f632bc75b129169bceb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf1f2f9e47d8fbac26dcf29d1f683bdc" id="r_acf1f2f9e47d8fbac26dcf29d1f683bdc"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; <a class="el" href="classIfpack2_1_1IlukGraph.html">iluk_graph_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIfpack2_1_1RILUK.html#acf1f2f9e47d8fbac26dcf29d1f683bdc">Graph_</a></td></tr>
 <tr class="memdesc:acf1f2f9e47d8fbac26dcf29d1f683bdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ILU(k) graph.  <br /></td></tr>
 <tr class="separator:acf1f2f9e47d8fbac26dcf29d1f683bdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -260,6 +268,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a86d8f0552971c5364d0d5c9adb9f900b" id="r_a86d8f0552971c5364d0d5c9adb9f900b"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; const <a class="el" href="classIfpack2_1_1RILUK.html#af1d08264f25ccadf5a202c604f0f99ac">row_matrix_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIfpack2_1_1RILUK.html#a86d8f0552971c5364d0d5c9adb9f900b">getMatrix</a> () const</td></tr>
 <tr class="memdesc:a86d8f0552971c5364d0d5c9adb9f900b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the input matrix.  <br /></td></tr>
 <tr class="separator:a86d8f0552971c5364d0d5c9adb9f900b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cee90ee3c9e9dff9c4af30071296aae" id="r_a5cee90ee3c9e9dff9c4af30071296aae"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; const <a class="el" href="classIfpack2_1_1RILUK.html#a05b93de9bd1342dde874bc405f87cc55">coord_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIfpack2_1_1RILUK.html#a5cee90ee3c9e9dff9c4af30071296aae">getCoord</a> () const</td></tr>
+<tr class="memdesc:a5cee90ee3c9e9dff9c4af30071296aae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the coordinates associated with the input matrix's rows.  <br /></td></tr>
+<tr class="separator:a5cee90ee3c9e9dff9c4af30071296aae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f8b0355a6235ec92501709a7a6c9c9f" id="r_a2f8b0355a6235ec92501709a7a6c9c9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classIfpack2_1_1RILUK.html#a23c661b390233d88d32774cd8fd428d5">magnitude_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIfpack2_1_1RILUK.html#a2f8b0355a6235ec92501709a7a6c9c9f">getRelaxValue</a> () const</td></tr>
 <tr class="memdesc:a2f8b0355a6235ec92501709a7a6c9c9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get RILU(k) relaxation parameter.  <br /></td></tr>
 <tr class="separator:a2f8b0355a6235ec92501709a7a6c9c9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -549,9 +560,27 @@ template&lt;class MatrixType &gt; </div>
 
 </div>
 </div>
+<a id="a05b93de9bd1342dde874bc405f87cc55" name="a05b93de9bd1342dde874bc405f87cc55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05b93de9bd1342dde874bc405f87cc55">&#9670;&#160;</a></span>coord_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class MatrixType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef Tpetra::MultiVector&lt;<a class="el" href="classIfpack2_1_1RILUK.html#a23c661b390233d88d32774cd8fd428d5">magnitude_type</a>, <a class="el" href="classIfpack2_1_1RILUK.html#ab36f2189fbed534cbbdea630aa74e1aa">local_ordinal_type</a>, <a class="el" href="classIfpack2_1_1RILUK.html#ac2ada3f6fe8e8480258a3000eb3afee4">global_ordinal_type</a>, <a class="el" href="classIfpack2_1_1RILUK.html#a747a932722227155880d659b8d996944">node_type</a>&gt; <a class="el" href="classIfpack2_1_1RILUK.html">Ifpack2::RILUK</a>&lt; MatrixType &gt;::coord_type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tpetra::MultiVector specialization used for containing coordinates. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="acf5cac91aeab107501fb7fd7d0627bae" name="acf5cac91aeab107501fb7fd7d0627bae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf5cac91aeab107501fb7fd7d0627bae">&#9670;&#160;</a></span>RILUK() <span class="overload">[1/2]</span></h2>
+<a id="ac803b31d31780bde4e5be8a6f78acca5" name="ac803b31d31780bde4e5be8a6f78acca5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac803b31d31780bde4e5be8a6f78acca5">&#9670;&#160;</a></span>RILUK() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -562,8 +591,18 @@ template&lt;class MatrixType &gt; </div>
           <td class="memname"><a class="el" href="classIfpack2_1_1RILUK.html">Ifpack2::RILUK</a>&lt; MatrixType &gt;::RILUK </td>
           <td>(</td>
           <td class="paramtype">const Teuchos::RCP&lt; const <a class="el" href="classIfpack2_1_1RILUK.html#af1d08264f25ccadf5a202c604f0f99ac">row_matrix_type</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>A_in</em></td><td>)</td>
+          <td class="paramname"><em>A_in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const Teuchos::RCP&lt; const <a class="el" href="classIfpack2_1_1RILUK.html#a05b93de9bd1342dde874bc405f87cc55">coord_type</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>A_in_coordinates</em> = <code>Teuchos::null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -578,8 +617,8 @@ template&lt;class MatrixType &gt; </div>
 
 </div>
 </div>
-<a id="a164b7f3e56288379e054371852be215d" name="a164b7f3e56288379e054371852be215d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a164b7f3e56288379e054371852be215d">&#9670;&#160;</a></span>RILUK() <span class="overload">[2/2]</span></h2>
+<a id="ae9d14dd05c97b4c77f2093a738bb12bc" name="ae9d14dd05c97b4c77f2093a738bb12bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9d14dd05c97b4c77f2093a738bb12bc">&#9670;&#160;</a></span>RILUK() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -590,8 +629,18 @@ template&lt;class MatrixType &gt; </div>
           <td class="memname"><a class="el" href="classIfpack2_1_1RILUK.html">Ifpack2::RILUK</a>&lt; MatrixType &gt;::RILUK </td>
           <td>(</td>
           <td class="paramtype">const Teuchos::RCP&lt; const <a class="el" href="classIfpack2_1_1RILUK.html#a11ec31dfcd53096c3143aa7ecaa04853">crs_matrix_type</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>A_in</em></td><td>)</td>
+          <td class="paramname"><em>A_in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const Teuchos::RCP&lt; const <a class="el" href="classIfpack2_1_1RILUK.html#a05b93de9bd1342dde874bc405f87cc55">coord_type</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>A_in_coordinates</em> = <code>Teuchos::null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1054,6 +1103,34 @@ template&lt;class MatrixType &gt; </div>
 
 </div>
 </div>
+<a id="a814a039f9284acbfe4106d0085471708" name="a814a039f9284acbfe4106d0085471708"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a814a039f9284acbfe4106d0085471708">&#9670;&#160;</a></span>setCoord()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class MatrixType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classIfpack2_1_1RILUK.html">Ifpack2::RILUK</a>&lt; MatrixType &gt;::setCoord </td>
+          <td>(</td>
+          <td class="paramtype">const Teuchos::RCP&lt; const <a class="el" href="classIfpack2_1_1RILUK.html#a05b93de9bd1342dde874bc405f87cc55">coord_type</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>A_coordinates</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the matrix rows' coordinates. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A_coordinates</td><td>[in] Pointer to the coordinates multivector. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a4ccdc58864f256fa85b6fb14a25c22f8" name="a4ccdc58864f256fa85b6fb14a25c22f8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4ccdc58864f256fa85b6fb14a25c22f8">&#9670;&#160;</a></span>description()</h2>
 
@@ -1244,6 +1321,27 @@ template&lt;class MatrixType &gt; </div>
 <p>Get the input matrix. </p>
 
 <p>Implements <a class="el" href="classIfpack2_1_1Preconditioner.html#a4258d242e7ff6003c399da8f0a11d634">Ifpack2::Preconditioner&lt; MatrixType::scalar_type, MatrixType::local_ordinal_type, MatrixType::global_ordinal_type, MatrixType::node_type &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a5cee90ee3c9e9dff9c4af30071296aae" name="a5cee90ee3c9e9dff9c4af30071296aae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cee90ee3c9e9dff9c4af30071296aae">&#9670;&#160;</a></span>getCoord()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class MatrixType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Teuchos::RCP&lt; const typename <a class="el" href="classIfpack2_1_1RILUK.html">RILUK</a>&lt; MatrixType &gt;<a class="el" href="classIfpack2_1_1RILUK.html#a05b93de9bd1342dde874bc405f87cc55">::coord_type</a> &gt; <a class="el" href="classIfpack2_1_1RILUK.html">Ifpack2::RILUK</a>&lt; MatrixType &gt;::getCoord </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the coordinates associated with the input matrix's rows. </p>
 
 </div>
 </div>
@@ -1589,6 +1687,31 @@ template&lt;class MatrixType &gt; </div>
 </div><div class="memdoc">
 
 <p>The (original) input matrix for which to compute ILU(k). </p>
+
+</div>
+</div>
+<a id="a431ea1f893a8f632bc75b129169bceb9" name="a431ea1f893a8f632bc75b129169bceb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a431ea1f893a8f632bc75b129169bceb9">&#9670;&#160;</a></span>A_coordinates_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class MatrixType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Teuchos::RCP&lt;const <a class="el" href="classIfpack2_1_1RILUK.html#a05b93de9bd1342dde874bc405f87cc55">coord_type</a>&gt; <a class="el" href="classIfpack2_1_1RILUK.html">Ifpack2::RILUK</a>&lt; MatrixType &gt;::A_coordinates_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Coordinates associated with rows of the input matrix (only used for RCB distribution into streams in <a class="el" href="classIfpack2_1_1RILUK.html" title="ILU(k) factorization of a given Tpetra::RowMatrix.">RILUK</a>) </p>
 
 </div>
 </div>
