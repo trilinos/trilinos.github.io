@@ -1,0 +1,67 @@
+name: muelu_tutorial
+
+on:
+  workflow_dispatch:
+
+env:
+  # Where we are getting the Trilinos source code from
+  TRILINOS_REPO: trilinos/Trilinos
+  TRILINOS_REF: develop
+
+  # directories relative to $GITHUB_WORKSPACE
+  WEBPAGES_DIR: trilinos.github.io  
+  TRILINOS_SOURCE: Trilinos
+  TRILINOS_BUILD: Trilinos-build
+
+permissions:
+  contents: write
+  pull-requests: write
+  pages: write
+  id-token: write
+  actions: write
+
+
+jobs:
+
+  docs:
+    name: MueLu tutorial
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Install Ubuntu packages
+      if: always()
+      run: |
+        sudo apt-get update
+        sudo apt-get install -yq python3 make python3-sphinx python3-sphinx-rtd-theme
+    
+    - name: Check out webpage repo
+      uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4.2.1
+      with:
+        path: ${{ env.WEBPAGES_DIR }}
+
+    - name: Check out Trilinos repo 
+      uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4.2.1
+      with:
+        repository: ${{ env.TRILINOS_REPO }}
+        ref: ${{ env.TRILINOS_REF }}
+        path: ${{ env.TRILINOS_SOURCE }}
+
+    - name: Run sphinx
+      run: |
+        pushd ${{ env.TRILINOS_SOURCE }}/packages/muelu/doc/Tutorial
+        rm -rf $GITHUB_WORKSPACE/${{ env.WEBPAGES_DIR}}/muelu-tutorial
+        SPHINXBUILD=sphinx-build BUILDDIR=$GITHUB_WORKSPACE/${{ env.WEBPAGES_DIR}}/muelu-tutorial make html
+        popd
+        
+    - name: Create PR
+      uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e # v7.0.8
+      with:
+        path: ${{ env.WEBPAGES_DIR }}
+        token: ${{ secrets.GITHUB_TOKEN }}
+        commit-message: "Update MueLu Tutorial"
+        title: "Update MueLu Tutorial"
+        body: |
+          This PR updates the MueLu tutorial.
+        branch: muelu-tutorial-update
+        base: master
+        delete-branch: true

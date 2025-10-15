@@ -41,7 +41,7 @@ If you are interested in using MueLu for your research or want to contribute, pl
 ### <span style="text-decoration: underline;">Helpful Links</span>
 
 *   MueLu is governed by a [simplified BSD license](docs//muelu/index.html#muelu_copyright).
-*   [Documentation](muelu_documentation.html "Documentation") (User’s Guide, [Tutorial](muelu_tutorial.html), [Doxygen](docs//muelu/index.html "MueLu Doxygen"))
+*   [Documentation](muelu_documentation.html "Documentation") (User’s Guide, [Tutorial](muelu-tutorial/html/index.html), [Doxygen](docs//muelu/index.html "MueLu Doxygen"))
 *   The [MueLu development team](muelu_team.html "MueLu Team").
 *   [How to contact](muelu_contact.html "MueLu Documentation") the MueLu team.
 *   [How to cite MueLu](muelu_citation.html "MueLu citation").
