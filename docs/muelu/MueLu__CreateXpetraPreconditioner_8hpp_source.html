@@ -162,164 +162,163 @@ $(document).ready(function(){initNavTree('MueLu__CreateXpetraPreconditioner_8hpp
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  std::string label;</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <span class="keywordflow">if</span> (hasParamList &amp;&amp; paramList.isParameter(<span class="stringliteral">&quot;hierarchy label&quot;</span>)) {</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    label = paramList.get&lt;std::string&gt;(<span class="stringliteral">&quot;hierarchy label&quot;</span>);</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    paramList.remove(<span class="stringliteral">&quot;hierarchy label&quot;</span>);</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  } <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    label = op-&gt;getObjectLabel();</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  RCP&lt;Teuchos::Time&gt; tm;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  std::string timerName;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <span class="comment">// Do Kokkos tuning, if requested</span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  <span class="keywordflow">if</span> (paramList.isSublist(<span class="stringliteral">&quot;kokkos tuning: muelu parameter mapping&quot;</span>) &amp;&amp;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>      paramList.sublist(<span class="stringliteral">&quot;kokkos tuning: muelu parameter mapping&quot;</span>).isParameter(<span class="stringliteral">&quot;kokkos context id&quot;</span>)) {</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="comment">// Time tuning separately</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordflow">if</span> (label != <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>      timerName = <span class="stringliteral">&quot;MueLu tuning time (&quot;</span> + label + <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      timerName = <span class="stringliteral">&quot;MueLu tuning time&quot;</span>;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    tm = Teuchos::TimeMonitor::getNewTimer(timerName);</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    tm-&gt;start();</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <a class="code hl_class" href="classMueLu_1_1KokkosTuningInterface.html">MueLu::KokkosTuningInterface</a> KokkosTuner(op-&gt;getMap()-&gt;getComm());</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    KokkosTuner.<a class="code hl_function" href="classMueLu_1_1KokkosTuningInterface.html#a2c282ff61608b51704c4ae697a3d1539">SetParameterList</a>(paramList);</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    KokkosTuner.<a class="code hl_function" href="classMueLu_1_1KokkosTuningInterface.html#acd8113c13df999af664962a60bb47806">SetMueLuParameters</a>(paramList);</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    tm-&gt;stop();</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    tm-&gt;incrementNumCalls();</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    tm = Teuchos::null;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  }</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="comment">// Setup Timer</span></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  <span class="keywordflow">if</span> (label != <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    timerName = <span class="stringliteral">&quot;MueLu setup time (&quot;</span> + label + <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    timerName = <span class="stringliteral">&quot;MueLu setup time&quot;</span>;</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  tm = Teuchos::TimeMonitor::getNewTimer(timerName);</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  tm-&gt;start();</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  std::string syntaxStr = <span class="stringliteral">&quot;parameterlist: syntax&quot;</span>;</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  <span class="keywordflow">if</span> (hasParamList &amp;&amp; paramList.isParameter(syntaxStr) &amp;&amp; paramList.get&lt;std::string&gt;(syntaxStr) == <span class="stringliteral">&quot;ml&quot;</span>) {</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    paramList.remove(syntaxStr);</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    std::string paramXML = <a class="code hl_function" href="classMueLu_1_1ML2MueLuParameterTranslator.html#a9acb881089bb8271a07736d6710855ae">MueLu::ML2MueLuParameterTranslator::translate</a>(paramList, <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    paramList            = *Teuchos::getParametersFromXmlString(paramXML);</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  }</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  mueLuFactory = rcp(<span class="keyword">new</span> <a class="code hl_class" href="classMueLu_1_1ParameterListInterpreter.html">ParameterListInterpreter</a>(paramList, op-&gt;getDomainMap()-&gt;getComm()));</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  <span class="comment">// Create Hierarchy</span></div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  RCP&lt;Hierarchy&gt; H = mueLuFactory-&gt;CreateHierarchy(label);</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  H-&gt;setlib(op-&gt;getDomainMap()-&gt;lib());</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  <span class="comment">// Set fine level operator</span></div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  H-&gt;GetLevel(0)-&gt;Set(<span class="stringliteral">&quot;A&quot;</span>, op);</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  H-&gt;SetProcRankVerbose(op-&gt;getDomainMap()-&gt;getComm()-&gt;getRank());</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  <span class="comment">// Stick the non-serializible data on the hierarchy.</span></div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  <a class="code hl_function" href="classMueLu_1_1HierarchyUtils.html#a469d4f1bb405d2958d4e805c9af257d8">HierarchyUtils::AddNonSerializableDataToHierarchy</a>(*mueLuFactory, *H, nonSerialList);</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  mueLuFactory-&gt;SetupHierarchy(*H);</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  tm-&gt;stop();</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  tm-&gt;incrementNumCalls();</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  <span class="keywordflow">if</span> (H-&gt;GetVerbLevel() &amp; <a class="code hl_enumvalue" href="namespaceMueLu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1faf487f4b7e739a4d39611284e8f24f05a">Statistics0</a>) {</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> alwaysWriteLocal = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> writeGlobalStats = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> writeZeroTimers  = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> ignoreZeroTimers = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keyword">const</span> std::string filter    = timerName;</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    Teuchos::TimeMonitor::summarize(op-&gt;getRowMap()-&gt;getComm().ptr(), H-&gt;GetOStream(<a class="code hl_enumvalue" href="namespaceMueLu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1faf487f4b7e739a4d39611284e8f24f05a">Statistics0</a>), alwaysWriteLocal, writeGlobalStats,</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                                    writeZeroTimers, Teuchos::Union, filter, ignoreZeroTimers);</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>  }</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>  tm-&gt;reset();</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>  <span class="keywordflow">return</span> H;</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>}</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    label = op-&gt;getObjectLabel();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  RCP&lt;Teuchos::Time&gt; tm;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  std::string timerName;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <span class="comment">// Do Kokkos tuning, if requested</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <span class="keywordflow">if</span> (paramList.isSublist(<span class="stringliteral">&quot;kokkos tuning: muelu parameter mapping&quot;</span>) &amp;&amp;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>      paramList.sublist(<span class="stringliteral">&quot;kokkos tuning: muelu parameter mapping&quot;</span>).isParameter(<span class="stringliteral">&quot;kokkos context id&quot;</span>)) {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="comment">// Time tuning separately</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordflow">if</span> (label != <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      timerName = <span class="stringliteral">&quot;MueLu tuning time (&quot;</span> + label + <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>      timerName = <span class="stringliteral">&quot;MueLu tuning time&quot;</span>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    tm = Teuchos::TimeMonitor::getNewTimer(timerName);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    tm-&gt;start();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <a class="code hl_class" href="classMueLu_1_1KokkosTuningInterface.html">MueLu::KokkosTuningInterface</a> KokkosTuner(op-&gt;getMap()-&gt;getComm());</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    KokkosTuner.<a class="code hl_function" href="classMueLu_1_1KokkosTuningInterface.html#a2c282ff61608b51704c4ae697a3d1539">SetParameterList</a>(paramList);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    KokkosTuner.<a class="code hl_function" href="classMueLu_1_1KokkosTuningInterface.html#acd8113c13df999af664962a60bb47806">SetMueLuParameters</a>(paramList);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    tm-&gt;stop();</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    tm-&gt;incrementNumCalls();</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    tm = Teuchos::null;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  }</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <span class="comment">// Setup Timer</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="keywordflow">if</span> (label != <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    timerName = <span class="stringliteral">&quot;MueLu setup time (&quot;</span> + label + <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    timerName = <span class="stringliteral">&quot;MueLu setup time&quot;</span>;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  tm = Teuchos::TimeMonitor::getNewTimer(timerName);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  tm-&gt;start();</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  std::string syntaxStr = <span class="stringliteral">&quot;parameterlist: syntax&quot;</span>;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  <span class="keywordflow">if</span> (hasParamList &amp;&amp; paramList.isParameter(syntaxStr) &amp;&amp; paramList.get&lt;std::string&gt;(syntaxStr) == <span class="stringliteral">&quot;ml&quot;</span>) {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    paramList.remove(syntaxStr);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    std::string paramXML = <a class="code hl_function" href="classMueLu_1_1ML2MueLuParameterTranslator.html#a9acb881089bb8271a07736d6710855ae">MueLu::ML2MueLuParameterTranslator::translate</a>(paramList, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    paramList            = *Teuchos::getParametersFromXmlString(paramXML);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  }</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  mueLuFactory = rcp(<span class="keyword">new</span> <a class="code hl_class" href="classMueLu_1_1ParameterListInterpreter.html">ParameterListInterpreter</a>(paramList, op-&gt;getDomainMap()-&gt;getComm()));</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  <span class="comment">// Create Hierarchy</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  RCP&lt;Hierarchy&gt; H = mueLuFactory-&gt;CreateHierarchy(label);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  H-&gt;setlib(op-&gt;getDomainMap()-&gt;lib());</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  <span class="comment">// Set fine level operator</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  H-&gt;GetLevel(0)-&gt;Set(<span class="stringliteral">&quot;A&quot;</span>, op);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  H-&gt;SetProcRankVerbose(op-&gt;getDomainMap()-&gt;getComm()-&gt;getRank());</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  <span class="comment">// Stick the non-serializible data on the hierarchy.</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  <a class="code hl_function" href="classMueLu_1_1HierarchyUtils.html#a469d4f1bb405d2958d4e805c9af257d8">HierarchyUtils::AddNonSerializableDataToHierarchy</a>(*mueLuFactory, *H, nonSerialList);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  mueLuFactory-&gt;SetupHierarchy(*H);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>  tm-&gt;stop();</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  tm-&gt;incrementNumCalls();</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  <span class="keywordflow">if</span> (H-&gt;GetVerbLevel() &amp; <a class="code hl_enumvalue" href="namespaceMueLu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1faf487f4b7e739a4d39611284e8f24f05a">Statistics0</a>) {</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> alwaysWriteLocal = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> writeGlobalStats = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> writeZeroTimers  = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> ignoreZeroTimers = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keyword">const</span> std::string filter    = timerName;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    Teuchos::TimeMonitor::summarize(op-&gt;getRowMap()-&gt;getComm().ptr(), H-&gt;GetOStream(<a class="code hl_enumvalue" href="namespaceMueLu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1faf487f4b7e739a4d39611284e8f24f05a">Statistics0</a>), alwaysWriteLocal, writeGlobalStats,</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                                    writeZeroTimers, Teuchos::Union, filter, ignoreZeroTimers);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  }</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>  tm-&gt;reset();</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>  <span class="keywordflow">return</span> H;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>}</div>
 </div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Scalar, <span class="keyword">class</span> LocalOrdinal, <span class="keyword">class</span> GlobalOrdinal, <span class="keyword">class</span> Node&gt;</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>Teuchos::RCP&lt;MueLu::Hierarchy&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;&gt;</div>
-<div class="foldopen" id="foldopen00152" data-start="{" data-end="}">
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="namespaceMueLu.html#a67006494afa214fee29ed9b8f3a73d80">  152</a></span><a class="code hl_function" href="namespaceMueLu.html#ab497ec5add70e6dbe3dbb16a7446c399">CreateXpetraPreconditioner</a>(Teuchos::RCP&lt;Xpetra::Matrix&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;&gt; op,</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                           <span class="keyword">const</span> std::string&amp; xmlFileName) {</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>  Teuchos::ParameterList paramList;</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>  Teuchos::updateParametersFromXmlFileAndBroadcast(xmlFileName, Teuchos::Ptr&lt;Teuchos::ParameterList&gt;(&amp;paramList), *op-&gt;getDomainMap()-&gt;getComm());</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>  <span class="keywordflow">return</span> CreateXpetraPreconditioner&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;(op, paramList);</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>}</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Scalar, <span class="keyword">class</span> LocalOrdinal, <span class="keyword">class</span> GlobalOrdinal, <span class="keyword">class</span> Node&gt;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>Teuchos::RCP&lt;MueLu::Hierarchy&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;&gt;</div>
+<div class="foldopen" id="foldopen00151" data-start="{" data-end="}">
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="namespaceMueLu.html#a67006494afa214fee29ed9b8f3a73d80">  151</a></span><a class="code hl_function" href="namespaceMueLu.html#ab497ec5add70e6dbe3dbb16a7446c399">CreateXpetraPreconditioner</a>(Teuchos::RCP&lt;Xpetra::Matrix&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;&gt; op,</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                           <span class="keyword">const</span> std::string&amp; xmlFileName) {</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>  Teuchos::ParameterList paramList;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>  Teuchos::updateParametersFromXmlFileAndBroadcast(xmlFileName, Teuchos::Ptr&lt;Teuchos::ParameterList&gt;(&amp;paramList), *op-&gt;getDomainMap()-&gt;getComm());</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>  <span class="keywordflow">return</span> CreateXpetraPreconditioner&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;(op, paramList);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>}</div>
 </div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Scalar, <span class="keyword">class</span> LocalOrdinal, <span class="keyword">class</span> GlobalOrdinal, <span class="keyword">class</span> Node&gt;</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>Teuchos::RCP&lt;MueLu::Hierarchy&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;&gt;</div>
-<div class="foldopen" id="foldopen00168" data-start="{" data-end="}">
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="namespaceMueLu.html#add9f79326435958f47a1e49447bdc57f">  168</a></span><a class="code hl_function" href="namespaceMueLu.html#ab497ec5add70e6dbe3dbb16a7446c399">CreateXpetraPreconditioner</a>(Teuchos::RCP&lt;Xpetra::Matrix&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;&gt; op) {</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>  Teuchos::ParameterList paramList;</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>  <span class="keywordflow">return</span> CreateXpetraPreconditioner&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;(op, paramList);</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>}</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Scalar, <span class="keyword">class</span> LocalOrdinal, <span class="keyword">class</span> GlobalOrdinal, <span class="keyword">class</span> Node&gt;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>Teuchos::RCP&lt;MueLu::Hierarchy&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;&gt;</div>
+<div class="foldopen" id="foldopen00167" data-start="{" data-end="}">
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="namespaceMueLu.html#add9f79326435958f47a1e49447bdc57f">  167</a></span><a class="code hl_function" href="namespaceMueLu.html#ab497ec5add70e6dbe3dbb16a7446c399">CreateXpetraPreconditioner</a>(Teuchos::RCP&lt;Xpetra::Matrix&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;&gt; op) {</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>  Teuchos::ParameterList paramList;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>  <span class="keywordflow">return</span> CreateXpetraPreconditioner&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;(op, paramList);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>}</div>
 </div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Scalar, <span class="keyword">class</span> LocalOrdinal, <span class="keyword">class</span> GlobalOrdinal, <span class="keyword">class</span> Node&gt;</div>
-<div class="foldopen" id="foldopen00181" data-start="{" data-end="}">
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="namespaceMueLu.html#a9073b14294cc082ef84f4cbfe89652ca">  181</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespaceMueLu.html#a9073b14294cc082ef84f4cbfe89652ca">ReuseXpetraPreconditioner</a>(<span class="keyword">const</span> Teuchos::RCP&lt;Xpetra::Matrix&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;&gt;&amp; A,</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>                               Teuchos::RCP&lt;<a class="code hl_class" href="classMueLu_1_1Hierarchy.html">MueLu::Hierarchy&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;</a>&gt;&amp; H) {</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>  std::string label = H-&gt;GetLevel(0)-&gt;getObjectLabel();</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>  std::string timerName;</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>  <span class="keywordflow">if</span> (label != <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    timerName = <span class="stringliteral">&quot;MueLu setup time (&quot;</span> + label + <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    timerName = <span class="stringliteral">&quot;MueLu setup time&quot;</span>;</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>  RCP&lt;Teuchos::Time&gt; tm = Teuchos::TimeMonitor::getNewTimer(timerName);</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  tm-&gt;start();</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>  <span class="keyword">typedef</span> <a class="code hl_typedef" href="MueLu__UseDefaultTypes_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a> SC;</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>  <span class="keyword">typedef</span> <a class="code hl_typedef" href="MueLu__UseDefaultTypes_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> LO;</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>  <span class="keyword">typedef</span> <a class="code hl_typedef" href="MueLu__UseDefaultTypes_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a> GO;</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>  <span class="keyword">typedef</span> <a class="code hl_typedef" href="MueLu__UseDefaultTypes_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> NO;</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>  <span class="keyword">typedef</span> Xpetra::Matrix&lt;SC, LO, GO, NO&gt; Matrix;</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>  <span class="keyword">typedef</span> Xpetra::Operator&lt;SC, LO, GO, NO&gt; Operator;</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>  TEUCHOS_TEST_FOR_EXCEPTION(!H-&gt;GetNumLevels(), <a class="code hl_class" href="classMueLu_1_1Exceptions_1_1RuntimeError.html">Exceptions::RuntimeError</a>,</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>                             <span class="stringliteral">&quot;MueLu::ReuseXpetraPreconditioner: Hierarchy has no levels in it&quot;</span>);</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>  TEUCHOS_TEST_FOR_EXCEPTION(!H-&gt;GetLevel(0)-&gt;IsAvailable(<span class="stringliteral">&quot;A&quot;</span>), <a class="code hl_class" href="classMueLu_1_1Exceptions_1_1RuntimeError.html">Exceptions::RuntimeError</a>,</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>                             <span class="stringliteral">&quot;MueLu::ReuseXpetraPreconditioner: Hierarchy has no fine level operator&quot;</span>);</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>  RCP&lt;Level&gt; level0 = H-&gt;GetLevel(0);</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>  RCP&lt;Operator&gt; O0 = level0-&gt;Get&lt;RCP&lt;Operator&gt;&gt;(<span class="stringliteral">&quot;A&quot;</span>);</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>  RCP&lt;Matrix&gt; A0   = Teuchos::rcp_dynamic_cast&lt;Matrix&gt;(O0);</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>  <span class="keywordflow">if</span> (!A0.is_null()) {</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <span class="comment">// If a user provided a &quot;number of equations&quot; argument in a parameter list</span></div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <span class="comment">// during the initial setup, we must honor that settings and reuse it for</span></div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <span class="comment">// all consequent setups.</span></div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    A-&gt;SetFixedBlockSize(A0-&gt;GetFixedBlockSize());</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>  }</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>  level0-&gt;Set(<span class="stringliteral">&quot;A&quot;</span>, A);</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>  H-&gt;SetupRe();</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>  tm-&gt;stop();</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>  tm-&gt;incrementNumCalls();</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>  <span class="keywordflow">if</span> (H-&gt;GetVerbLevel() &amp; <a class="code hl_enumvalue" href="namespaceMueLu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1faf487f4b7e739a4d39611284e8f24f05a">Statistics0</a>) {</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> alwaysWriteLocal = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> writeGlobalStats = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> writeZeroTimers  = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> ignoreZeroTimers = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    <span class="keyword">const</span> std::string filter    = timerName;</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    Teuchos::TimeMonitor::summarize(A-&gt;getRowMap()-&gt;getComm().ptr(), H-&gt;GetOStream(<a class="code hl_enumvalue" href="namespaceMueLu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1faf487f4b7e739a4d39611284e8f24f05a">Statistics0</a>), alwaysWriteLocal, writeGlobalStats,</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                                    writeZeroTimers, Teuchos::Union, filter, ignoreZeroTimers);</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>  }</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>  tm-&gt;reset();</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>}</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Scalar, <span class="keyword">class</span> LocalOrdinal, <span class="keyword">class</span> GlobalOrdinal, <span class="keyword">class</span> Node&gt;</div>
+<div class="foldopen" id="foldopen00180" data-start="{" data-end="}">
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="namespaceMueLu.html#a9073b14294cc082ef84f4cbfe89652ca">  180</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespaceMueLu.html#a9073b14294cc082ef84f4cbfe89652ca">ReuseXpetraPreconditioner</a>(<span class="keyword">const</span> Teuchos::RCP&lt;Xpetra::Matrix&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;&gt;&amp; A,</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>                               Teuchos::RCP&lt;<a class="code hl_class" href="classMueLu_1_1Hierarchy.html">MueLu::Hierarchy&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;</a>&gt;&amp; H) {</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>  std::string label = H-&gt;GetLevel(0)-&gt;getObjectLabel();</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>  std::string timerName;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>  <span class="keywordflow">if</span> (label != <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    timerName = <span class="stringliteral">&quot;MueLu setup time (&quot;</span> + label + <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>  <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    timerName = <span class="stringliteral">&quot;MueLu setup time&quot;</span>;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>  RCP&lt;Teuchos::Time&gt; tm = Teuchos::TimeMonitor::getNewTimer(timerName);</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>  tm-&gt;start();</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>  <span class="keyword">typedef</span> <a class="code hl_typedef" href="MueLu__UseDefaultTypes_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a> SC;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>  <span class="keyword">typedef</span> <a class="code hl_typedef" href="MueLu__UseDefaultTypes_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> LO;</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>  <span class="keyword">typedef</span> <a class="code hl_typedef" href="MueLu__UseDefaultTypes_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a> GO;</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>  <span class="keyword">typedef</span> <a class="code hl_typedef" href="MueLu__UseDefaultTypes_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> NO;</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>  <span class="keyword">typedef</span> Xpetra::Matrix&lt;SC, LO, GO, NO&gt; Matrix;</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>  <span class="keyword">typedef</span> Xpetra::Operator&lt;SC, LO, GO, NO&gt; Operator;</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>  TEUCHOS_TEST_FOR_EXCEPTION(!H-&gt;GetNumLevels(), <a class="code hl_class" href="classMueLu_1_1Exceptions_1_1RuntimeError.html">Exceptions::RuntimeError</a>,</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>                             <span class="stringliteral">&quot;MueLu::ReuseXpetraPreconditioner: Hierarchy has no levels in it&quot;</span>);</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>  TEUCHOS_TEST_FOR_EXCEPTION(!H-&gt;GetLevel(0)-&gt;IsAvailable(<span class="stringliteral">&quot;A&quot;</span>), <a class="code hl_class" href="classMueLu_1_1Exceptions_1_1RuntimeError.html">Exceptions::RuntimeError</a>,</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>                             <span class="stringliteral">&quot;MueLu::ReuseXpetraPreconditioner: Hierarchy has no fine level operator&quot;</span>);</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>  RCP&lt;Level&gt; level0 = H-&gt;GetLevel(0);</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>  RCP&lt;Operator&gt; O0 = level0-&gt;Get&lt;RCP&lt;Operator&gt;&gt;(<span class="stringliteral">&quot;A&quot;</span>);</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>  RCP&lt;Matrix&gt; A0   = Teuchos::rcp_dynamic_cast&lt;Matrix&gt;(O0);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>  <span class="keywordflow">if</span> (!A0.is_null()) {</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    <span class="comment">// If a user provided a &quot;number of equations&quot; argument in a parameter list</span></div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <span class="comment">// during the initial setup, we must honor that settings and reuse it for</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <span class="comment">// all consequent setups.</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    A-&gt;SetFixedBlockSize(A0-&gt;GetFixedBlockSize());</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>  }</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>  level0-&gt;Set(<span class="stringliteral">&quot;A&quot;</span>, A);</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>  H-&gt;SetupRe();</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>  tm-&gt;stop();</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>  tm-&gt;incrementNumCalls();</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> </div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>  <span class="keywordflow">if</span> (H-&gt;GetVerbLevel() &amp; <a class="code hl_enumvalue" href="namespaceMueLu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1faf487f4b7e739a4d39611284e8f24f05a">Statistics0</a>) {</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> alwaysWriteLocal = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> writeGlobalStats = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> writeZeroTimers  = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> ignoreZeroTimers = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <span class="keyword">const</span> std::string filter    = timerName;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    Teuchos::TimeMonitor::summarize(A-&gt;getRowMap()-&gt;getComm().ptr(), H-&gt;GetOStream(<a class="code hl_enumvalue" href="namespaceMueLu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1faf487f4b7e739a4d39611284e8f24f05a">Statistics0</a>), alwaysWriteLocal, writeGlobalStats,</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>                                    writeZeroTimers, Teuchos::Union, filter, ignoreZeroTimers);</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>  }</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>  tm-&gt;reset();</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>}</div>
 </div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>}  <span class="comment">// namespace MueLu</span></div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span> </div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno"><a class="line" href="MueLu__CreateXpetraPreconditioner_8hpp.html#a513dff8db3589114efc3a54be7ddbe23">  238</a></span><span class="preprocessor">#define XPETRA_CREATEXPETRAPRECONDITIONER_SHORT</span></div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span> </div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span><span class="preprocessor">#endif </span><span class="comment">/* PACKAGES_MUELU_ADAPTERS_XPETRA_MUELU_CREATEXPETRAPRECONDITIONER_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>}  <span class="comment">// namespace MueLu</span></div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno"><a class="line" href="MueLu__CreateXpetraPreconditioner_8hpp.html#a513dff8db3589114efc3a54be7ddbe23">  237</a></span><span class="preprocessor">#define XPETRA_CREATEXPETRAPRECONDITIONER_SHORT</span></div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span><span class="preprocessor">#endif </span><span class="comment">/* PACKAGES_MUELU_ADAPTERS_XPETRA_MUELU_CREATEXPETRAPRECONDITIONER_HPP_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="aMueLu_8hpp_html"><div class="ttname"><a href="MueLu_8hpp.html">MueLu.hpp</a></div></div>
 <div class="ttc" id="aMueLu__Exceptions_8hpp_html"><div class="ttname"><a href="MueLu__Exceptions_8hpp.html">MueLu_Exceptions.hpp</a></div></div>
 <div class="ttc" id="aMueLu__KokkosTuningInterface_8hpp_html"><div class="ttname"><a href="MueLu__KokkosTuningInterface_8hpp.html">MueLu_KokkosTuningInterface.hpp</a></div></div>
@@ -342,7 +341,7 @@ $(document).ready(function(){initNavTree('MueLu__CreateXpetraPreconditioner_8hpp
 <div class="ttc" id="anamespaceMueLu_html"><div class="ttname"><a href="namespaceMueLu.html">MueLu</a></div><div class="ttdoc">Namespace for MueLu classes and methods.</div><div class="ttdef"><b>Definition</b> <a href="MueLu__BrickAggregationFactory__decl_8hpp_source.html#l00042">MueLu_BrickAggregationFactory_decl.hpp:42</a></div></div>
 <div class="ttc" id="anamespaceMueLu_html_a1b81fa817bd38bc45cfaebaeafa1210b"><div class="ttname"><a href="namespaceMueLu.html#a1b81fa817bd38bc45cfaebaeafa1210b">MueLu::ExtractNonSerializableData</a></div><div class="ttdeci">long ExtractNonSerializableData(const Teuchos::ParameterList &amp;inList, Teuchos::ParameterList &amp;serialList, Teuchos::ParameterList &amp;nonSerialList)</div><div class="ttdoc">Extract non-serializable data from level-specific sublists and move it to a separate parameter list.</div><div class="ttdef"><b>Definition</b> <a href="MueLu__Utilities_8cpp_source.html#l00035">MueLu_Utilities.cpp:35</a></div></div>
 <div class="ttc" id="anamespaceMueLu_html_a1f14cd8d51f6e963d8e5a8dd03dbcf1faf487f4b7e739a4d39611284e8f24f05a"><div class="ttname"><a href="namespaceMueLu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1faf487f4b7e739a4d39611284e8f24f05a">MueLu::Statistics0</a></div><div class="ttdeci">@ Statistics0</div><div class="ttdoc">Print statistics that do not involve significant additional computation.</div><div class="ttdef"><b>Definition</b> <a href="MueLu__VerbosityLevel_8hpp_source.html#l00033">MueLu_VerbosityLevel.hpp:33</a></div></div>
-<div class="ttc" id="anamespaceMueLu_html_a9073b14294cc082ef84f4cbfe89652ca"><div class="ttname"><a href="namespaceMueLu.html#a9073b14294cc082ef84f4cbfe89652ca">MueLu::ReuseXpetraPreconditioner</a></div><div class="ttdeci">void ReuseXpetraPreconditioner(const Teuchos::RCP&lt; Xpetra::Matrix&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt; &gt; &amp;A, Teuchos::RCP&lt; MueLu::Hierarchy&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt; &gt; &amp;H)</div><div class="ttdoc">Helper function to reuse an existing MueLu preconditioner.</div><div class="ttdef"><b>Definition</b> <a href="MueLu__CreateXpetraPreconditioner_8hpp_source.html#l00181">MueLu_CreateXpetraPreconditioner.hpp:181</a></div></div>
+<div class="ttc" id="anamespaceMueLu_html_a9073b14294cc082ef84f4cbfe89652ca"><div class="ttname"><a href="namespaceMueLu.html#a9073b14294cc082ef84f4cbfe89652ca">MueLu::ReuseXpetraPreconditioner</a></div><div class="ttdeci">void ReuseXpetraPreconditioner(const Teuchos::RCP&lt; Xpetra::Matrix&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt; &gt; &amp;A, Teuchos::RCP&lt; MueLu::Hierarchy&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt; &gt; &amp;H)</div><div class="ttdoc">Helper function to reuse an existing MueLu preconditioner.</div><div class="ttdef"><b>Definition</b> <a href="MueLu__CreateXpetraPreconditioner_8hpp_source.html#l00180">MueLu_CreateXpetraPreconditioner.hpp:180</a></div></div>
 <div class="ttc" id="anamespaceMueLu_html_ab497ec5add70e6dbe3dbb16a7446c399"><div class="ttname"><a href="namespaceMueLu.html#ab497ec5add70e6dbe3dbb16a7446c399">MueLu::CreateXpetraPreconditioner</a></div><div class="ttdeci">Teuchos::RCP&lt; MueLu::Hierarchy&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt; &gt; CreateXpetraPreconditioner(Teuchos::RCP&lt; Xpetra::Matrix&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt; &gt; op, const Teuchos::ParameterList &amp;inParamList)</div><div class="ttdoc">Helper function to create a MueLu preconditioner that can be used by Xpetra.Given an Xpetra::Matrix,...</div><div class="ttdef"><b>Definition</b> <a href="MueLu__CreateXpetraPreconditioner_8hpp_source.html#l00045">MueLu_CreateXpetraPreconditioner.hpp:45</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -350,7 +349,7 @@ $(document).ready(function(){initNavTree('MueLu__CreateXpetraPreconditioner_8hpp
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_3c6487c16ad9d8a421b75b043df9f3e7.html">Operators</a></li><li class="navelem"><a class="el" href="MueLu__CreateXpetraPreconditioner_8hpp.html">MueLu_CreateXpetraPreconditioner.hpp</a></li>
-    <li class="footer">Generated on Thu Oct 9 2025 20:41:11 for MueLu by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

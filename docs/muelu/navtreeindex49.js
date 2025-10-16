@@ -1,0 +1,10 @@
+var NAVTREEINDEX49 =
+{
+"structZoltan2_1_1InputTraits_3_01MueLu_1_1LWGraph_3_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4.html#aa49251311266669cfc64fc8ff8adefd8":[9,0,6,0,1],
+"structZoltan2_1_1InputTraits_3_01MueLu_1_1LWGraph_3_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4.html#aa49251311266669cfc64fc8ff8adefd8":[8,0,7,0,1],
+"structZoltan2_1_1InputTraits_3_01MueLu_1_1LWGraph_3_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4.html#add6f2a77779f65907283bd0fe98a0da5":[9,0,6,0,2],
+"structZoltan2_1_1InputTraits_3_01MueLu_1_1LWGraph_3_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4.html#add6f2a77779f65907283bd0fe98a0da5":[8,0,7,0,2],
+"structZoltan2_1_1InputTraits_3_01MueLu_1_1LWGraph_3_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4.html#afdec5c22e058c6b46cf95e4168132933":[9,0,6,0,0],
+"structZoltan2_1_1InputTraits_3_01MueLu_1_1LWGraph_3_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4.html#afdec5c22e058c6b46cf95e4168132933":[8,0,7,0,0],
+"todo.html":[7]
+};

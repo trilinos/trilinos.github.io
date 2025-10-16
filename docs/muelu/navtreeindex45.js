@@ -1,5 +1,13 @@
 var NAVTREEINDEX45 =
 {
+"index.html#muelu_copyright":[5],
+"index.html#muelu_developers":[3],
+"index.html#muelu_documentation":[2],
+"index.html#muelu_index":[0],
+"index.html#muelu_overview":[1],
+"index.html#muelu_questions":[6],
+"muelu-trivial-adapter_8cpp.html":[10,0,0,7],
+"muelu-trivial-adapter_8cpp.html#a3bc930362af53525c4d53c891f571cb7":[10,0,0,7,0],
 "muelu-trivial-adapter_8cpp_source.html":[10,0,0,7],
 "namespaceAmesos2.html":[8,0,0],
 "namespaceBelos.html":[8,0,1],
@@ -241,13 +249,5 @@ var NAVTREEINDEX45 =
 "namespaceMueLu.html#aa0dbec2a89e828cbe9674cb259c8fc87":[8,0,3,275],
 "namespaceMueLu.html#aa228d3db3afd88cc515c74ca7cb9b579":[8,0,3,273],
 "namespaceMueLu.html#aa2511ccc55e6f51f8a4ccef975a4eae8":[8,0,3,484],
-"namespaceMueLu.html#aa2511ccc55e6f51f8a4ccef975a4eae8":[8,0,3,374],
-"namespaceMueLu.html#aa2e6058c0bae595f2930bf1f52b33557":[8,0,3,339],
-"namespaceMueLu.html#aa34d0a6ef844c7fc9e47cdbeba174c7c":[8,0,3,465],
-"namespaceMueLu.html#aa4e469333ab3779dadcad445912b6380":[8,0,3,322],
-"namespaceMueLu.html#aa591bd8bc40c05f52da9a2b076fac53f":[8,0,3,428],
-"namespaceMueLu.html#aa62a5a02a4a3b7fd4868de1c714bf9ec":[8,0,3,400],
-"namespaceMueLu.html#aa68346ea5444f8eadf1889604567b845":[8,0,3,517],
-"namespaceMueLu.html#aa766d8240582d236652f036749fe9311":[8,0,3,327],
-"namespaceMueLu.html#aa80760abd8cf70eb123834ba341c7ce4":[8,0,3,430]
+"namespaceMueLu.html#aa2511ccc55e6f51f8a4ccef975a4eae8":[8,0,3,374]
 };

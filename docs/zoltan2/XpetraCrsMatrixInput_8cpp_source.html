@@ -193,14 +193,14 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    }</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keyword">const</span> <span class="keyword">auto</span> nCols = ia.<a class="code hl_function" href="classZoltan2_1_1XpetraCrsMatrixAdapter.html#a7f06f37533e44ff302a6b33e1e9bbdf5">getLocalNumColumns</a>();</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="Zoltan2__TestHelpers_8hpp.html#aa98f00070dd9a80dc0373e4e13fdd45a">zgno_t</a> *colIds=<span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    ia.<a class="code hl_function" href="classZoltan2_1_1XpetraCrsMatrixAdapter.html#a9a3347325e9af19d3a01d02053dc40b5">getColumnIDsView</a>(colIds);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="Zoltan2__TestHelpers_8hpp.html#aa98f00070dd9a80dc0373e4e13fdd45a">zgno_t</a> *colIds2=<span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    ia.<a class="code hl_function" href="classZoltan2_1_1XpetraCrsMatrixAdapter.html#a9a3347325e9af19d3a01d02053dc40b5">getColumnIDsView</a>(colIds2);</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    ArrayRCP&lt;const zgno_t&gt; ccsRowIds;</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    ArrayRCP&lt;const offset_t&gt; ccsOffsets;</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    ia.<a class="code hl_function" href="classZoltan2_1_1XpetraCrsMatrixAdapter.html#a8c960d7c7cc986251b6bd7b00402e2b4">getCCSView</a>(ccsOffsets, ccsRowIds);</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    printMatrix&lt;offset_t&gt;(comm, nCols, colIds, ccsOffsets.getRawPtr(),</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    printMatrix&lt;offset_t&gt;(comm, nCols, colIds2, ccsOffsets.getRawPtr(),</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                          ccsRowIds.getRawPtr(), <a class="code hl_enumvalue" href="XpetraCrsMatrixInput_8cpp.html#a1d1cfd8ffb84e947f82999c682b666a7a01c401e3e42a0217b362e491ca1cbae7">Type::CCS</a>);</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  }</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="findUniqueGids_8cpp.html#add6fff4ddfa3d0071f91409438fde65d">fail</a>;</div>

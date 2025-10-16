@@ -105,9 +105,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7e8eb02e22a3af96c80b36dcca07fa4f" id="r_a7e8eb02e22a3af96c80b36dcca07fa4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classIfpack2_1_1Details_1_1LinearSolver.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIfpack2_1_1Details_1_1LinearSolver.html#a7e8eb02e22a3af96c80b36dcca07fa4f">setMatrix</a> (<a class="el" href="classIfpack2_1_1Details_1_1LinearSolver.html">const</a> Teuchos::RCP&lt; <a class="el" href="classIfpack2_1_1Details_1_1LinearSolver.html">const</a> OP &gt; &amp;A)</td></tr>
 <tr class="memdesc:a7e8eb02e22a3af96c80b36dcca07fa4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the solver's matrix.  <br /></td></tr>
 <tr class="separator:a7e8eb02e22a3af96c80b36dcca07fa4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b13b2337b7f891b2e3be872b46ba2f3" id="r_a0b13b2337b7f891b2e3be872b46ba2f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classIfpack2_1_1Details_1_1LinearSolver.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIfpack2_1_1Details_1_1LinearSolver.html#a0b13b2337b7f891b2e3be872b46ba2f3">setCoord</a> (<a class="el" href="classIfpack2_1_1Details_1_1LinearSolver.html">const</a> Teuchos::RCP&lt; <a class="el" href="classIfpack2_1_1Details_1_1LinearSolver.html">const</a> coord_type &gt; &amp;C)</td></tr>
+<tr class="memdesc:a0b13b2337b7f891b2e3be872b46ba2f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the matrix rows' coordinates.  <br /></td></tr>
+<tr class="separator:a0b13b2337b7f891b2e3be872b46ba2f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaffcd8786cea3c64361ac198fccd427c" id="r_aaffcd8786cea3c64361ac198fccd427c"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; <a class="el" href="classIfpack2_1_1Details_1_1LinearSolver.html">const</a> OP &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIfpack2_1_1Details_1_1LinearSolver.html#aaffcd8786cea3c64361ac198fccd427c">getMatrix</a> () <a class="el" href="classIfpack2_1_1Details_1_1LinearSolver.html">const</a></td></tr>
 <tr class="memdesc:aaffcd8786cea3c64361ac198fccd427c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the solver's matrix.  <br /></td></tr>
 <tr class="separator:aaffcd8786cea3c64361ac198fccd427c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a005ce71a2e27804e619c73c82147331f" id="r_a005ce71a2e27804e619c73c82147331f"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; <a class="el" href="classIfpack2_1_1Details_1_1LinearSolver.html">const</a> coord_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIfpack2_1_1Details_1_1LinearSolver.html#a005ce71a2e27804e619c73c82147331f">getCoord</a> () <a class="el" href="classIfpack2_1_1Details_1_1LinearSolver.html">const</a></td></tr>
+<tr class="memdesc:a005ce71a2e27804e619c73c82147331f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the coordinates associated with the solver's matrix rows.  <br /></td></tr>
+<tr class="separator:a005ce71a2e27804e619c73c82147331f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a726406282d170bc151cae678fde8dc46" id="r_a726406282d170bc151cae678fde8dc46"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classIfpack2_1_1Details_1_1LinearSolver.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIfpack2_1_1Details_1_1LinearSolver.html#a726406282d170bc151cae678fde8dc46">solve</a> (MV &amp;X, <a class="el" href="classIfpack2_1_1Details_1_1LinearSolver.html">const</a> MV &amp;B)</td></tr>
 <tr class="memdesc:a726406282d170bc151cae678fde8dc46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve the linear system AX=B for X.  <br /></td></tr>
 <tr class="separator:a726406282d170bc151cae678fde8dc46"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -240,6 +246,34 @@ template&lt;<a class="el" href="classIfpack2_1_1Details_1_1LinearSolver.html">cl
 
 </div>
 </div>
+<a id="a0b13b2337b7f891b2e3be872b46ba2f3" name="a0b13b2337b7f891b2e3be872b46ba2f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b13b2337b7f891b2e3be872b46ba2f3">&#9670;&#160;</a></span>setCoord()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="classIfpack2_1_1Details_1_1LinearSolver.html">class</a> SC , <a class="el" href="classIfpack2_1_1Details_1_1LinearSolver.html">class</a> LO , <a class="el" href="classIfpack2_1_1Details_1_1LinearSolver.html">class</a> GO , <a class="el" href="classIfpack2_1_1Details_1_1LinearSolver.html">class</a> NT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classIfpack2_1_1Details_1_1LinearSolver.html">void</a> <a class="el" href="classIfpack2_1_1Details_1_1LinearSolver.html">Ifpack2::Details::LinearSolver</a>&lt; SC, LO, GO, NT &gt;::setCoord </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classIfpack2_1_1Details_1_1LinearSolver.html">const</a> Teuchos::RCP&lt; <a class="el" href="classIfpack2_1_1Details_1_1LinearSolver.html">const</a> coord_type &gt; &amp;&#160;</td>
+          <td class="paramname"><em>C</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the matrix rows' coordinates. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">C</td><td>[in] Pointer to the coordinates multivector. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aaffcd8786cea3c64361ac198fccd427c" name="aaffcd8786cea3c64361ac198fccd427c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaffcd8786cea3c64361ac198fccd427c">&#9670;&#160;</a></span>getMatrix()</h2>
 
@@ -258,6 +292,27 @@ template&lt;<a class="el" href="classIfpack2_1_1Details_1_1LinearSolver.html">cl
 </div><div class="memdoc">
 
 <p>Get the solver's matrix. </p>
+
+</div>
+</div>
+<a id="a005ce71a2e27804e619c73c82147331f" name="a005ce71a2e27804e619c73c82147331f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a005ce71a2e27804e619c73c82147331f">&#9670;&#160;</a></span>getCoord()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="classIfpack2_1_1Details_1_1LinearSolver.html">class</a> SC , <a class="el" href="classIfpack2_1_1Details_1_1LinearSolver.html">class</a> LO , <a class="el" href="classIfpack2_1_1Details_1_1LinearSolver.html">class</a> GO , <a class="el" href="classIfpack2_1_1Details_1_1LinearSolver.html">class</a> NT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Teuchos::RCP&lt; <a class="el" href="classIfpack2_1_1Details_1_1LinearSolver.html">const</a> <a class="el" href="classIfpack2_1_1Details_1_1LinearSolver.html">typename</a> <a class="el" href="classIfpack2_1_1Details_1_1LinearSolver.html">LinearSolver</a>&lt; SC, LO, GO, NT &gt;::coord_type &gt; <a class="el" href="classIfpack2_1_1Details_1_1LinearSolver.html">Ifpack2::Details::LinearSolver</a>&lt; SC, LO, GO, NT &gt;::getCoord </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the coordinates associated with the solver's matrix rows. </p>
 
 </div>
 </div>
