@@ -25,8 +25,10 @@ var searchData=
   ['_7erowgraph_22',['~RowGraph',['../classTpetra_1_1RowGraph.html#ac02f946f2ade95fa006b3017982a522a',1,'Tpetra::RowGraph']]],
   ['_7erowmatrix_23',['~RowMatrix',['../classTpetra_1_1RowMatrix.html#a6e3eaaa17e340a634af1fac55d732ab2',1,'Tpetra::RowMatrix']]],
   ['_7escopeguard_24',['~ScopeGuard',['../classTpetra_1_1ScopeGuard.html#a5843caf9e9c483744890aa4b17c905db',1,'Tpetra::ScopeGuard']]],
-  ['_7esrcdistobject_25',['~SrcDistObject',['../classTpetra_1_1SrcDistObject.html#ae82dbe09f8ce660d7f107a1d1f10449f',1,'Tpetra::SrcDistObject']]],
-  ['_7etiebreak_26',['~TieBreak',['../classTpetra_1_1Details_1_1TieBreak.html#a3b5ac371f1950ca938d7365cbeb0f9d5',1,'Tpetra::Details::TieBreak']]],
-  ['_7etransfer_27',['~Transfer',['../classTpetra_1_1Details_1_1Transfer.html#a50b3b286585f277436f1125251e33267',1,'Tpetra::Details::Transfer']]],
-  ['_7evector_28',['~Vector',['../classTpetra_1_1Vector.html#a011ed45fa36e72b1181fc6e25449a0cf',1,'Tpetra::Vector']]]
+  ['_7esolvermap_5fcrsmatrix_25',['~SolverMap_CrsMatrix',['../classTpetra_1_1SolverMap__CrsMatrix.html#a094f139aa4a4356f28ac6f2791010bb1',1,'Tpetra::SolverMap_CrsMatrix']]],
+  ['_7esolvermap_5flinearproblem_26',['~SolverMap_LinearProblem',['../classTpetra_1_1SolverMap__LinearProblem.html#ae27d38e842e81dadc082280b51042e22',1,'Tpetra::SolverMap_LinearProblem']]],
+  ['_7esrcdistobject_27',['~SrcDistObject',['../classTpetra_1_1SrcDistObject.html#ae82dbe09f8ce660d7f107a1d1f10449f',1,'Tpetra::SrcDistObject']]],
+  ['_7etiebreak_28',['~TieBreak',['../classTpetra_1_1Details_1_1TieBreak.html#a3b5ac371f1950ca938d7365cbeb0f9d5',1,'Tpetra::Details::TieBreak']]],
+  ['_7etransfer_29',['~Transfer',['../classTpetra_1_1Details_1_1Transfer.html#a50b3b286585f277436f1125251e33267',1,'Tpetra::Details::Transfer']]],
+  ['_7evector_30',['~Vector',['../classTpetra_1_1Vector.html#a011ed45fa36e72b1181fc6e25449a0cf',1,'Tpetra::Vector']]]
 ];

@@ -10,6 +10,7 @@ var searchData=
   ['timing_7',['timing',['../classTpetra_1_1Details_1_1Behavior.html#a1280d9de31091297475375bc9cdc0272',1,'Tpetra::Details::Behavior::timing()'],['../classTpetra_1_1Details_1_1Behavior.html#a221772140a10c7107d0c60e66dbc6742',1,'Tpetra::Details::Behavior::timing(const char name[])']]],
   ['transfer_8',['transfer',['../classTpetra_1_1Details_1_1Transfer.html#aff1528725a3df27459db86cdf34a396e',1,'Tpetra::Details::Transfer::Transfer(const Teuchos::RCP&lt; const map_type &gt; &amp;source, const Teuchos::RCP&lt; const map_type &gt; &amp;target, const Teuchos::RCP&lt; Teuchos::FancyOStream &gt; &amp;out, const Teuchos::RCP&lt; Teuchos::ParameterList &gt; &amp;plist, const std::string &amp;className)'],['../classTpetra_1_1Details_1_1Transfer.html#a062d32a7f5ad8fea0c599ce64ff0b10d',1,'Tpetra::Details::Transfer::Transfer(const Transfer&lt; LO, GO, NT &gt; &amp;rhs, reverse_tag tag)']]],
   ['transferarrived_9',['transferArrived',['../classTpetra_1_1DistObject.html#a47ad53419477919faf1acdcfc4d65daa',1,'Tpetra::DistObject']]],
-  ['transformglobalvalues_10',['transformGlobalValues',['../classTpetra_1_1CrsMatrix.html#ac5c8517db7527db8ee1a720733366eff',1,'Tpetra::CrsMatrix']]],
-  ['transformlocalvalues_11',['transformLocalValues',['../classTpetra_1_1CrsMatrix.html#a3591b3cf1a8812abbbb67231359265cb',1,'Tpetra::CrsMatrix']]]
+  ['transform_10',['Transform',['../classTpetra_1_1Transform.html#a0257fd7f539608d99a3fa90548618acf',1,'Tpetra::Transform']]],
+  ['transformglobalvalues_11',['transformGlobalValues',['../classTpetra_1_1CrsMatrix.html#ac5c8517db7527db8ee1a720733366eff',1,'Tpetra::CrsMatrix']]],
+  ['transformlocalvalues_12',['transformLocalValues',['../classTpetra_1_1CrsMatrix.html#a3591b3cf1a8812abbbb67231359265cb',1,'Tpetra::CrsMatrix']]]
 ];

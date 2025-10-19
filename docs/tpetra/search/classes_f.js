@@ -6,5 +6,7 @@ var searchData=
   ['scalarviewtraits_3',['ScalarViewTraits',['../structTpetra_1_1Details_1_1ScalarViewTraits.html',1,'Tpetra::Details']]],
   ['scopeguard_4',['ScopeGuard',['../classTpetra_1_1ScopeGuard.html',1,'Tpetra']]],
   ['slot_5',['Slot',['../classTpetra_1_1Details_1_1Spaces_1_1Slot.html',1,'Tpetra::Details::Spaces']]],
-  ['srcdistobject_6',['SrcDistObject',['../classTpetra_1_1SrcDistObject.html',1,'Tpetra']]]
+  ['solvermap_5fcrsmatrix_6',['SolverMap_CrsMatrix',['../classTpetra_1_1SolverMap__CrsMatrix.html',1,'Tpetra']]],
+  ['solvermap_5flinearproblem_7',['SolverMap_LinearProblem',['../classTpetra_1_1SolverMap__LinearProblem.html',1,'Tpetra']]],
+  ['srcdistobject_8',['SrcDistObject',['../classTpetra_1_1SrcDistObject.html',1,'Tpetra']]]
 ];
