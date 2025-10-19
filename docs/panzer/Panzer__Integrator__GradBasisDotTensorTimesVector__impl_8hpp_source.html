@@ -330,11 +330,11 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>      {</div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> dim(0); dim &lt; numDim; ++dim)</div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        {</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>          tmp_(cell) = 0.0;</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>          tmp(cell) = 0.0;</div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> dim2(0); dim2 &lt; numDim; ++dim2)</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>            tmp_(cell) += kokkosTensor_(cell, qp, dim, dim2) * vector_(cell, qp, dim2);</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>            tmp(cell) += kokkosTensor_(cell, qp, dim, dim2) * vector_(cell, qp, dim2);</div>
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    Kokkos::parallel_for(Kokkos::TeamThreadRange(team,0,numBases), [&amp;] (<span class="keyword">const</span> <span class="keywordtype">int</span> basis) {</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>      tmp_field(basis) += basis_(cell, basis, qp, dim) * tmp_(cell);</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>      tmp_field(basis) += basis_(cell, basis, qp, dim) * tmp(cell);</div>
 <div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    });</div>
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        } <span class="comment">// end loop over the dimensions of the vector field</span></div>
 <div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>      } <span class="comment">// end loop over the quadrature points</span></div>
