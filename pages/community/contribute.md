@@ -22,6 +22,3 @@ Origin (DCO)](https://wiki.linuxfoundation.org/dco) for contributor
 agreements, and is part of the pull request process.  Additional
 information on copyrights and licenses could be found at [Guidance
 on Copyrights and Licenses](https://github.com/trilinos/Trilinos/wiki/Guidance-on-Copyrights-and-Licenses).
-
-If you are thinking about contributing, you may want to subscribe
-to our [mail lists](mail_lists "Mail lists").
