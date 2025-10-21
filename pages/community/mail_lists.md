@@ -4,13 +4,17 @@ permalink: mail_lists.html
 folder: community
 ---
 
-The Trilinos Project and related packages maintain a number of email lists that users can subscribe to. We recommend that users subscribe to the following mailing lists as appropriate.
+The following Trilinos mailing lists were discontinued on Oct. 31, 2025:
 
-*   [Trilinos-Announce Mailing List](https://trilinos.org/mailman/listinfo/trilinos-announce_trilinos.org) -- Low-volume, primarily for Trilinos release announcements. (Highly Recommended)
-    *   [Announce Archives](https://trilinos.org/mailman/archives/trilinos-announce_trilinos.org)
-*   [Trilinos-Users Mailing List](https://trilinos.org/mailman/listinfo/trilinos-users_trilinos.org) -- Discussion forum for users of Trilinos. (Recommended)
-    *   [User Archives](https://trilinos.org/mailman/archives/trilinos-users_trilinos.org)
+- Trilinos-Announce (trilinos-announce@trilinos.org)
+- Trilinos-Developers (trilinos-developers@trilinos.org)
+- Trilinos-Users (trilinos-users@trilinos.org)
+- Trilinos-Checkins (trilinos-checkins@trilinos.org)
+- Trilinos-Contributor (Private) (trilinos-contributor@trilinos.org)
+- Trilinos-Downloads (Private) (trilinos-downloads@trilinos.org)
 
-In addition to the Trilinos versions of these lists, each package typically has its own lists with the naming format: package-announce@software.sandia.gov and package-users@software.sandia.gov where “package” is the name of the package, e.g. epetra. Due to spam, we no longer maintain a complete list of mail lists. To subscribe to a list other than the two shown above, please modify this url accordingly for the specific package and list type you are interested in:
+We have preserved the mailing lists and their archives for future reference, should there be a need to recover past communications.
 
-https://software.sandia.gov/mailman/listinfo/package-announce
+While we will maintain a mailing list for broad announcements, we will primarily utilize GitHub Discussions and Announcements to share updates with the Trilinos community.
+
+If you have any questions, please feel free to post them in the comments on this GitHub [Discussion/Announcement](https://github.com/orgs/trilinos/discussions/14544).
