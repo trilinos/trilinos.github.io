@@ -87,150 +87,152 @@ $(function() {
 <code>#include &lt;<a class="el" href="Zoltan2__OrderingSolution_8hpp_source.html">Zoltan2_OrderingSolution.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="Zoltan2__Sort_8hpp_source.html">Zoltan2_Sort.hpp</a>&gt;</code><br />
 <code>#include &lt;queue&gt;</code><br />
+<code>#include &lt;KokkosKernels_Utils.hpp&gt;</code><br />
+<code>#include &lt;KokkosCompat_View.hpp&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Zoltan2_AlgRCM.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="Zoltan2__AlgRCM_8hpp__incl.png" border="0" usemap="#aZoltan2__AlgRCM_8hpp" alt=""/></div>
 <map name="aZoltan2__AlgRCM_8hpp" id="aZoltan2__AlgRCM_8hpp">
-<area shape="rect" title="RCM ordering of a graph (serial, local graph only)" alt="" coords="1694,5,1852,31"/>
-<area shape="rect" href="Zoltan2__Algorithm_8hpp.html" title=" " alt="" coords="1093,79,1264,104"/>
-<area shape="poly" title=" " alt="" coords="1694,31,1277,81,1277,76,1693,26"/>
-<area shape="rect" href="Zoltan2__OrderingSolution_8hpp.html" title="Defines the OrderingSolution class." alt="" coords="1280,240,1496,265"/>
-<area shape="poly" title=" " alt="" coords="1755,33,1420,235,1417,230,1752,29"/>
-<area shape="rect" href="Zoltan2__GraphModel_8hpp.html" title="Defines the GraphModel interface." alt="" coords="2253,321,2440,346"/>
-<area shape="poly" title=" " alt="" coords="1791,28,1909,102,2137,225,2312,312,2309,317,2135,229,1906,106,1789,33"/>
-<area shape="rect" href="Zoltan2__Sort_8hpp.html" title="Sort vector of pairs (key, value) by value." alt="" coords="1660,321,1793,346"/>
-<area shape="poly" title=" " alt="" coords="1775,31,1769,128,1762,196,1750,266,1738,309,1733,307,1745,265,1756,196,1764,128,1770,31"/>
-<area shape="rect" title=" " alt="" coords="1919,79,1982,104"/>
-<area shape="poly" title=" " alt="" coords="1802,28,1910,71,1908,76,1800,33"/>
-<area shape="rect" href="Zoltan2__Standards_8hpp.html" title="Gathering definitions used in software development." alt="" coords="1463,475,1635,500"/>
-<area shape="poly" title=" " alt="" coords="1181,104,1186,162,1203,249,1218,297,1238,344,1265,387,1299,425,1323,439,1360,451,1450,470,1449,475,1358,456,1321,443,1295,429,1261,390,1234,346,1213,299,1198,250,1181,163,1176,105"/>
-<area shape="rect" href="Zoltan2__ColoringSolution_8hpp.html" title="Defines the ColoringSolution class." alt="" coords="1520,240,1735,265"/>
-<area shape="poly" title=" " alt="" coords="1211,102,1583,233,1581,238,1210,107"/>
-<area shape="poly" title=" " alt="" coords="1196,102,1262,150,1364,229,1361,233,1259,154,1193,106"/>
-<area shape="rect" href="Zoltan2__PartitioningSolution_8hpp.html" title="Defines the PartitioningSolution class." alt="" coords="918,240,1153,265"/>
-<area shape="poly" title=" " alt="" coords="1172,105,1157,147,1146,171,1131,194,1102,219,1072,237,1069,232,1099,214,1127,190,1141,169,1152,145,1167,104"/>
-<area shape="rect" href="Zoltan2__CoordinatePartitioningGraph_8hpp.html" title=" " alt="" coords="438,313,662,353"/>
-<area shape="poly" title=" " alt="" coords="1093,97,986,103,866,113,757,129,714,141,682,154,642,186,609,225,584,266,565,302,561,300,579,264,605,222,638,182,680,150,712,136,756,124,866,107,986,97,1093,92"/>
-<area shape="rect" href="Zoltan2__MatrixPartitioningSolution_8hpp.html" title=" " alt="" coords="934,152,1129,192"/>
-<area shape="poly" title=" " alt="" coords="1158,107,1080,148,1078,143,1155,102"/>
-<area shape="rect" href="Zoltan2__MappingSolution_8hpp.html" title="Defines the MappingSolution class." alt="" coords="693,159,909,185"/>
-<area shape="poly" title=" " alt="" coords="1124,107,869,159,868,154,1123,101"/>
-<area shape="rect" href="Zoltan2__Version_8hpp.html" title="Implementation of Trilinos convention for versioning." alt="" coords="1466,548,1621,573"/>
-<area shape="poly" title=" " alt="" coords="1551,501,1548,535,1543,534,1545,500"/>
-<area shape="rect" title=" " alt="" coords="901,548,1032,573"/>
-<area shape="poly" title=" " alt="" coords="1463,501,1045,550,1045,545,1462,495"/>
-<area shape="rect" title=" " alt="" coords="1056,548,1189,573"/>
-<area shape="poly" title=" " alt="" coords="1481,503,1203,549,1202,543,1480,497"/>
-<area shape="rect" title=" " alt="" coords="2971,548,3114,573"/>
-<area shape="poly" title=" " alt="" coords="1635,496,1654,497,1851,509,2019,515,2304,519,2590,523,2759,531,2958,545,2957,551,2758,536,2590,528,2304,524,2018,521,1851,515,1654,503,1635,501"/>
-<area shape="rect" title=" " alt="" coords="1646,548,1788,573"/>
-<area shape="poly" title=" " alt="" coords="1577,498,1678,540,1676,545,1575,502"/>
-<area shape="rect" title=" " alt="" coords="1813,548,1981,573"/>
-<area shape="poly" title=" " alt="" coords="1605,497,1828,543,1827,548,1604,503"/>
-<area shape="rect" title=" " alt="" coords="2006,548,2180,573"/>
-<area shape="poly" title=" " alt="" coords="1635,497,1992,544,1991,549,1635,503"/>
-<area shape="rect" title=" " alt="" coords="227,548,426,573"/>
-<area shape="poly" title=" " alt="" coords="1463,495,1028,514,738,530,439,551,439,545,738,525,1028,509,1463,489"/>
-<area shape="rect" title=" " alt="" coords="2205,548,2413,573"/>
-<area shape="poly" title=" " alt="" coords="1635,495,1654,497,2191,545,2191,551,1654,503,1635,501"/>
-<area shape="rect" title=" " alt="" coords="677,548,877,573"/>
-<area shape="poly" title=" " alt="" coords="1463,499,891,551,890,545,1462,493"/>
-<area shape="rect" title=" " alt="" coords="50,548,202,573"/>
-<area shape="poly" title=" " alt="" coords="1463,493,940,508,584,525,216,551,216,545,583,520,940,503,1462,487"/>
-<area shape="rect" title=" " alt="" coords="450,548,653,573"/>
-<area shape="poly" title=" " alt="" coords="1463,496,1119,517,667,551,667,545,1119,512,1463,491"/>
-<area shape="rect" title=" " alt="" coords="2437,548,2597,573"/>
-<area shape="poly" title=" " alt="" coords="1635,496,1654,497,1869,513,2037,520,2206,529,2423,545,2423,551,2206,534,2037,526,1868,518,1654,503,1635,501"/>
-<area shape="rect" title=" " alt="" coords="2622,548,2751,573"/>
-<area shape="poly" title=" " alt="" coords="1635,496,1654,497,1921,513,2129,518,2339,525,2608,545,2608,551,2339,531,2129,524,1920,518,1654,503,1635,501"/>
-<area shape="rect" title=" " alt="" coords="2776,548,2946,573"/>
-<area shape="poly" title=" " alt="" coords="1635,496,1654,497,1964,515,2206,521,2450,527,2762,545,2762,551,2449,532,2206,526,1964,520,1654,503,1635,501"/>
-<area shape="rect" href="Zoltan2__Exceptions_8hpp.html" title="Defines exception handling macros." alt="" coords="1264,548,1442,573"/>
-<area shape="poly" title=" " alt="" coords="1518,503,1399,546,1397,541,1516,498"/>
-<area shape="rect" title=" " alt="" coords="592,621,672,647"/>
-<area shape="poly" title=" " alt="" coords="1264,573,685,630,685,625,1263,568"/>
-<area shape="rect" title=" " alt="" coords="1252,621,1326,647"/>
-<area shape="poly" title=" " alt="" coords="1344,575,1310,613,1306,609,1340,572"/>
-<area shape="poly" title=" " alt="" coords="1627,266,1599,354,1561,462,1556,461,1594,352,1622,265"/>
-<area shape="rect" href="Zoltan2__Solution_8hpp.html" title="Defines the Solution base class." alt="" coords="1425,321,1585,346"/>
-<area shape="poly" title=" " alt="" coords="1611,268,1536,315,1533,311,1608,263"/>
-<area shape="poly" title=" " alt="" coords="1515,345,1529,370,1542,401,1549,431,1551,460,1546,461,1543,432,1537,402,1524,372,1510,348"/>
-<area shape="poly" title=" " alt="" coords="1390,265,1396,306,1403,330,1415,352,1434,369,1453,376,1475,384,1497,399,1522,430,1540,461,1535,463,1518,433,1494,403,1472,389,1451,381,1431,373,1411,355,1398,332,1390,308,1385,266"/>
-<area shape="poly" title=" " alt="" coords="1406,263,1477,311,1475,315,1403,268"/>
-<area shape="poly" title=" " alt="" coords="1077,238,1116,219,1151,190,1171,154,1181,118,1186,119,1176,156,1155,194,1119,223,1079,242"/>
-<area shape="poly" title=" " alt="" coords="1072,263,1111,282,1148,311,1175,345,1192,376,1204,406,1211,436,1225,498,1237,533,1254,572,1275,608,1271,611,1249,575,1232,535,1220,500,1206,437,1199,408,1187,379,1170,348,1144,315,1108,287,1069,268"/>
-<area shape="poly" title=" " alt="" coords="1104,263,1423,316,1423,321,1103,268"/>
-<area shape="rect" href="Zoltan2__Environment_8hpp.html" title="Defines the Environment class." alt="" coords="694,475,884,500"/>
-<area shape="poly" title=" " alt="" coords="1059,263,1088,283,1116,312,1139,342,1155,370,1160,384,1160,399,1156,413,1146,428,1129,442,1106,453,1044,469,971,480,898,485,898,480,971,474,1043,464,1104,448,1126,437,1142,425,1151,411,1155,398,1154,385,1150,372,1134,345,1112,315,1085,287,1056,268"/>
-<area shape="rect" href="Zoltan2__GreedyMWM_8hpp.html" title="Greedy Maximal Weight Matching." alt="" coords="890,321,1080,346"/>
-<area shape="poly" title=" " alt="" coords="1030,267,1002,310,998,308,1026,264"/>
-<area shape="rect" title=" " alt="" coords="839,401,902,427"/>
-<area shape="poly" title=" " alt="" coords="958,268,915,285,896,298,880,315,872,332,867,350,868,387,863,388,862,350,867,330,876,312,893,294,913,281,956,263"/>
-<area shape="rect" title=" " alt="" coords="1046,401,1132,427"/>
-<area shape="poly" title=" " alt="" coords="1054,263,1077,284,1095,312,1101,332,1102,352,1098,388,1093,388,1097,352,1095,333,1090,314,1073,288,1050,267"/>
-<area shape="poly" title=" " alt="" coords="965,268,676,314,675,309,965,263"/>
-<area shape="rect" title=" " alt="" coords="618,401,680,427"/>
-<area shape="poly" title=" " alt="" coords="960,268,879,286,795,316,728,355,674,395,671,390,725,350,793,311,878,281,959,263"/>
-<area shape="rect" title=" " alt="" coords="705,401,764,427"/>
-<area shape="poly" title=" " alt="" coords="987,268,925,287,859,316,803,354,757,394,754,389,799,350,857,311,923,282,986,263"/>
-<area shape="poly" title=" " alt="" coords="818,498,926,540,924,545,816,502"/>
-<area shape="poly" title=" " alt="" coords="843,497,1055,542,1054,548,842,503"/>
-<area shape="poly" title=" " alt="" coords="715,503,415,549,414,543,714,497"/>
-<area shape="poly" title=" " alt="" coords="790,501,784,535,778,534,784,500"/>
-<area shape="poly" title=" " alt="" coords="694,501,216,551,215,551,215,545,215,545,693,495"/>
-<area shape="poly" title=" " alt="" coords="751,503,604,547,602,541,750,497"/>
-<area shape="poly" title=" " alt="" coords="969,348,900,396,897,391,966,344"/>
-<area shape="poly" title=" " alt="" coords="1002,344,1064,391,1061,395,999,348"/>
-<area shape="poly" title=" " alt="" coords="560,353,567,390,565,410,556,428,534,449,500,468,409,502,305,529,209,548,208,543,304,524,407,497,498,464,531,445,552,425,560,408,561,390,555,354"/>
-<area shape="poly" title=" " alt="" coords="456,356,419,375,404,387,391,403,383,424,385,444,396,464,413,482,461,515,510,540,508,545,458,520,410,486,391,467,380,446,377,423,387,400,400,384,416,370,453,351"/>
-<area shape="poly" title=" " alt="" coords="438,337,330,341,216,351,164,360,117,371,80,386,55,403,23,445,14,466,9,487,9,508,14,529,24,550,40,571,67,585,119,596,270,613,440,623,578,629,578,634,440,629,269,618,118,601,65,590,37,575,20,553,9,531,4,509,4,486,9,464,19,442,51,399,78,381,116,366,163,355,216,346,330,335,438,331"/>
-<area shape="poly" title=" " alt="" coords="627,351,826,399,824,404,626,356"/>
-<area shape="poly" title=" " alt="" coords="576,351,625,390,622,395,572,356"/>
-<area shape="poly" title=" " alt="" coords="595,351,696,393,694,398,593,356"/>
-<area shape="rect" title=" " alt="" coords="401,401,444,427"/>
-<area shape="poly" title=" " alt="" coords="521,356,454,396,451,392,518,351"/>
-<area shape="rect" title=" " alt="" coords="468,401,542,427"/>
-<area shape="poly" title=" " alt="" coords="542,355,521,391,516,388,537,352"/>
-<area shape="rect" href="Zoltan2__InputTraits_8hpp.html" title="Traits for application input objects." alt="" coords="1308,401,1483,427"/>
-<area shape="poly" title=" " alt="" coords="663,342,1295,401,1294,406,662,348"/>
-<area shape="poly" title=" " alt="" coords="1421,424,1513,466,1510,471,1419,429"/>
-<area shape="poly" title=" " alt="" coords="727,187,561,217,356,265,257,294,169,327,100,364,74,383,55,403,47,419,45,437,48,455,56,473,79,508,105,536,101,540,75,511,51,476,43,456,40,437,42,418,51,400,70,379,97,359,167,322,256,289,355,260,559,212,726,182"/>
-<area shape="poly" title=" " alt="" coords="836,182,989,233,988,238,834,187"/>
-<area shape="poly" title=" " alt="" coords="803,185,793,460,787,460,798,185"/>
-<area shape="rect" href="Zoltan2__MachineRepresentation_8hpp.html" title=" " alt="" coords="65,401,326,427"/>
-<area shape="poly" title=" " alt="" coords="770,187,621,241,427,316,234,398,232,393,425,311,619,236,768,182"/>
-<area shape="rect" title=" " alt="" coords="1711,401,1835,427"/>
-<area shape="poly" title=" " alt="" coords="868,182,922,189,1078,195,1339,201,1597,213,1693,223,1727,230,1749,238,1772,252,1787,268,1798,287,1807,313,1811,333,1807,354,1791,391,1786,389,1802,353,1806,333,1802,314,1793,289,1783,271,1768,256,1746,242,1725,235,1692,229,1597,219,1339,206,1078,200,922,195,867,187"/>
-<area shape="poly" title=" " alt="" coords="208,425,308,536,305,539,204,429"/>
-<area shape="poly" title=" " alt="" coords="192,428,140,537,135,534,187,426"/>
-<area shape="poly" title=" " alt="" coords="291,424,680,470,680,476,291,429"/>
-<area shape="poly" title=" " alt="" coords="2253,345,1497,407,1496,402,2252,340"/>
-<area shape="poly" title=" " alt="" coords="2258,349,1849,404,1848,399,2257,343"/>
-<area shape="rect" href="Zoltan2__Model_8hpp.html" title="Defines the Model interface." alt="" coords="2068,401,2214,427"/>
-<area shape="poly" title=" " alt="" coords="2317,349,2184,399,2183,394,2315,344"/>
-<area shape="rect" href="Zoltan2__ModelHelpers_8hpp.html" title="Defines helper functions for use in the models." alt="" coords="2478,401,2676,427"/>
-<area shape="poly" title=" " alt="" coords="2381,343,2531,394,2529,399,2379,349"/>
-<area shape="rect" href="Zoltan2__MeshAdapter_8hpp.html" title="Defines the MeshAdapter interface." alt="" coords="2532,475,2724,500"/>
-<area shape="poly" title=" " alt="" coords="2440,337,2512,345,2586,357,2649,374,2673,386,2690,400,2696,418,2690,437,2676,454,2658,469,2655,465,2672,450,2685,434,2691,418,2685,403,2670,390,2647,379,2585,362,2512,350,2439,343"/>
-<area shape="rect" href="Zoltan2__MatrixAdapter_8hpp.html" title="Defines the MatrixAdapter interface." alt="" coords="3022,401,3220,427"/>
-<area shape="poly" title=" " alt="" coords="2440,341,3008,398,3007,404,2439,347"/>
-<area shape="rect" href="Zoltan2__VectorAdapter_8hpp.html" title="Defines the VectorAdapter interface." alt="" coords="2800,475,2999,500"/>
-<area shape="poly" title=" " alt="" coords="2440,343,2569,364,2640,380,2710,399,2796,432,2868,466,2865,471,2794,437,2708,404,2639,385,2568,370,2439,348"/>
-<area shape="rect" href="Zoltan2__GraphAdapter_8hpp.html" title="Defines the GraphAdapter interface." alt="" coords="2802,401,2998,427"/>
-<area shape="poly" title=" " alt="" coords="2427,343,2806,397,2805,402,2426,349"/>
-<area shape="rect" href="Zoltan2__IdentifierAdapter_8hpp.html" title="Defines the IdentifierAdapter interface." alt="" coords="2239,401,2454,427"/>
-<area shape="poly" title=" " alt="" coords="2349,346,2349,387,2344,387,2344,346"/>
-<area shape="rect" href="Zoltan2__StridedData_8hpp.html" title="This file defines the StridedData class." alt="" coords="1860,401,2044,427"/>
-<area shape="poly" title=" " alt="" coords="2289,349,2023,401,2022,396,2288,343"/>
-<area shape="poly" title=" " alt="" coords="2068,428,2056,429,1649,477,1648,472,2055,424,2067,423"/>
-<area shape="poly" title=" " alt="" coords="2587,425,2614,462,2609,465,2583,429"/>
-<area shape="poly" title=" " alt="" coords="3086,429,2949,473,2947,468,3084,424"/>
-<area shape="poly" title=" " alt="" coords="2902,427,2902,461,2897,461,2897,427"/>
-<area shape="poly" title=" " alt="" coords="1887,429,1627,475,1626,470,1886,424"/>
-<area shape="poly" title=" " alt="" coords="1859,428,1848,429,1580,449,1315,465,898,484,898,479,1315,459,1580,444,1847,424,1859,423"/>
-<area shape="poly" title=" " alt="" coords="1719,348,1707,365,1697,386,1694,407,1702,425,1728,442,1773,458,1834,471,1908,483,2087,503,2291,517,2693,534,2957,545,2957,551,2692,539,2291,522,2087,508,1907,489,1833,477,1771,463,1726,447,1697,428,1689,407,1692,384,1703,362,1714,345"/>
-<area shape="poly" title=" " alt="" coords="1659,347,1597,356,1146,409,1145,404,1597,351,1659,342"/>
+<area shape="rect" title="RCM ordering of a graph (serial, local graph only)" alt="" coords="1572,5,1731,31"/>
+<area shape="rect" href="Zoltan2__Algorithm_8hpp.html" title=" " alt="" coords="998,79,1169,104"/>
+<area shape="poly" title=" " alt="" coords="1572,32,1183,80,1182,75,1572,27"/>
+<area shape="rect" href="Zoltan2__OrderingSolution_8hpp.html" title="Defines the OrderingSolution class." alt="" coords="1057,240,1273,265"/>
+<area shape="poly" title=" " alt="" coords="1634,33,1508,105,1420,151,1329,194,1214,238,1212,233,1327,190,1417,146,1505,100,1631,29"/>
+<area shape="rect" href="Zoltan2__GraphModel_8hpp.html" title="Defines the GraphModel interface." alt="" coords="2130,321,2317,346"/>
+<area shape="poly" title=" " alt="" coords="1655,30,1661,65,1669,85,1680,102,1730,148,1785,188,1845,222,1907,250,1969,273,2029,291,2133,316,2132,321,2027,296,1967,278,1905,255,1843,227,1782,193,1726,153,1676,106,1664,87,1656,67,1650,31"/>
+<area shape="rect" href="Zoltan2__Sort_8hpp.html" title="Sort vector of pairs (key, value) by value." alt="" coords="45,321,178,346"/>
+<area shape="poly" title=" " alt="" coords="1572,27,1278,49,1083,67,874,90,667,119,476,154,315,195,250,218,198,242,177,257,158,275,129,311,125,307,154,271,174,253,196,238,248,213,313,190,475,149,666,114,874,85,1082,62,1277,43,1572,21"/>
+<area shape="rect" title=" " alt="" coords="1690,79,1752,104"/>
+<area shape="poly" title=" " alt="" coords="1665,29,1702,67,1698,71,1661,33"/>
+<area shape="rect" title=" " alt="" coords="1777,79,1958,104"/>
+<area shape="poly" title=" " alt="" coords="1687,28,1820,72,1819,77,1686,33"/>
+<area shape="rect" title=" " alt="" coords="1983,79,2168,104"/>
+<area shape="poly" title=" " alt="" coords="1720,28,1994,74,1994,79,1719,33"/>
+<area shape="rect" href="Zoltan2__Standards_8hpp.html" title="Gathering definitions used in software development." alt="" coords="1464,475,1636,500"/>
+<area shape="poly" title=" " alt="" coords="1170,101,1286,122,1411,153,1466,173,1511,195,1542,221,1550,236,1553,251,1553,335,1553,461,1548,461,1548,335,1548,252,1545,238,1537,225,1508,200,1464,177,1410,158,1285,127,1169,107"/>
+<area shape="rect" href="Zoltan2__ColoringSolution_8hpp.html" title="Defines the ColoringSolution class." alt="" coords="1298,240,1512,265"/>
+<area shape="poly" title=" " alt="" coords="1170,97,1250,114,1291,129,1329,150,1350,167,1368,187,1395,226,1391,229,1364,190,1347,171,1326,154,1289,134,1249,120,1169,102"/>
+<area shape="poly" title=" " alt="" coords="1087,104,1094,144,1111,191,1126,211,1142,229,1138,232,1121,214,1107,193,1089,145,1082,105"/>
+<area shape="rect" href="Zoltan2__PartitioningSolution_8hpp.html" title="Defines the PartitioningSolution class." alt="" coords="556,240,790,265"/>
+<area shape="poly" title=" " alt="" coords="998,99,916,105,828,115,751,131,721,142,700,154,686,170,677,188,669,227,664,226,672,187,682,167,697,150,719,137,749,126,827,110,915,99,998,93"/>
+<area shape="rect" href="Zoltan2__CoordinatePartitioningGraph_8hpp.html" title=" " alt="" coords="761,313,985,353"/>
+<area shape="poly" title=" " alt="" coords="1076,106,901,305,897,301,1071,102"/>
+<area shape="rect" href="Zoltan2__MatrixPartitioningSolution_8hpp.html" title=" " alt="" coords="1121,152,1316,192"/>
+<area shape="poly" title=" " alt="" coords="1105,102,1175,143,1173,147,1102,106"/>
+<area shape="rect" href="Zoltan2__MappingSolution_8hpp.html" title="Defines the MappingSolution class." alt="" coords="722,159,938,185"/>
+<area shape="poly" title=" " alt="" coords="1048,107,881,158,880,153,1046,101"/>
+<area shape="rect" href="Zoltan2__Version_8hpp.html" title="Implementation of Trilinos convention for versioning." alt="" coords="1804,548,1958,573"/>
+<area shape="poly" title=" " alt="" coords="1604,497,1815,542,1814,548,1603,503"/>
+<area shape="rect" title=" " alt="" coords="1289,548,1420,573"/>
+<area shape="poly" title=" " alt="" coords="1520,503,1400,546,1398,541,1518,498"/>
+<area shape="rect" title=" " alt="" coords="1444,548,1577,573"/>
+<area shape="poly" title=" " alt="" coords="1546,502,1526,537,1521,535,1541,499"/>
+<area shape="rect" title=" " alt="" coords="147,548,290,573"/>
+<area shape="poly" title=" " alt="" coords="1464,495,1000,517,377,551,303,556,303,550,377,545,1000,511,1464,490"/>
+<area shape="rect" title=" " alt="" coords="1983,548,2126,573"/>
+<area shape="poly" title=" " alt="" coords="1632,497,1970,545,1969,550,1631,503"/>
+<area shape="rect" title=" " alt="" coords="2150,548,2318,573"/>
+<area shape="poly" title=" " alt="" coords="1637,494,2137,545,2136,550,1636,500"/>
+<area shape="rect" title=" " alt="" coords="2343,548,2518,573"/>
+<area shape="poly" title=" " alt="" coords="1637,492,1938,513,2329,545,2329,551,1938,518,1636,497"/>
+<area shape="rect" title=" " alt="" coords="615,548,814,573"/>
+<area shape="poly" title=" " alt="" coords="1464,498,828,551,827,545,1464,493"/>
+<area shape="rect" title=" " alt="" coords="2542,548,2750,573"/>
+<area shape="poly" title=" " alt="" coords="1637,490,2019,511,2529,545,2528,551,2019,516,1637,495"/>
+<area shape="rect" title=" " alt="" coords="1065,548,1265,573"/>
+<area shape="poly" title=" " alt="" coords="1489,503,1241,548,1240,543,1488,497"/>
+<area shape="rect" title=" " alt="" coords="389,548,541,573"/>
+<area shape="poly" title=" " alt="" coords="1464,496,1090,518,603,551,555,554,555,549,602,545,1090,513,1464,491"/>
+<area shape="rect" title=" " alt="" coords="838,548,1041,573"/>
+<area shape="poly" title=" " alt="" coords="1464,501,1052,549,1051,544,1464,496"/>
+<area shape="rect" title=" " alt="" coords="2774,548,2934,573"/>
+<area shape="poly" title=" " alt="" coords="1637,488,2111,505,2431,522,2761,545,2761,551,2431,527,2111,510,1636,493"/>
+<area shape="rect" title=" " alt="" coords="2959,548,3088,573"/>
+<area shape="poly" title=" " alt="" coords="1637,487,1862,490,2184,499,2559,517,2946,545,2945,551,2559,522,2184,505,1862,495,1637,492"/>
+<area shape="rect" title=" " alt="" coords="3113,548,3284,573"/>
+<area shape="poly" title=" " alt="" coords="1637,487,2243,501,2665,518,3100,545,3099,551,2665,524,2243,506,1637,492"/>
+<area shape="rect" href="Zoltan2__Exceptions_8hpp.html" title="Defines exception handling macros." alt="" coords="1601,548,1780,573"/>
+<area shape="poly" title=" " alt="" coords="1574,498,1657,539,1654,544,1572,502"/>
+<area shape="rect" title=" " alt="" coords="1094,621,1174,647"/>
+<area shape="poly" title=" " alt="" coords="1601,576,1188,629,1188,623,1601,571"/>
+<area shape="rect" title=" " alt="" coords="774,621,849,647"/>
+<area shape="poly" title=" " alt="" coords="1601,575,1589,576,1170,611,863,632,863,627,1170,605,1589,571,1601,570"/>
+<area shape="poly" title=" " alt="" coords="1399,267,1375,303,1347,350,1328,395,1325,413,1329,425,1347,439,1377,451,1454,470,1453,475,1375,456,1344,444,1324,428,1320,413,1322,394,1342,347,1370,300,1394,264"/>
+<area shape="rect" href="Zoltan2__Solution_8hpp.html" title="Defines the Solution base class." alt="" coords="1161,321,1321,346"/>
+<area shape="poly" title=" " alt="" coords="1382,268,1278,317,1276,312,1380,263"/>
+<area shape="poly" title=" " alt="" coords="1245,346,1256,385,1267,407,1283,425,1310,439,1352,452,1451,471,1450,476,1350,457,1308,444,1279,429,1263,410,1251,387,1240,347"/>
+<area shape="poly" title=" " alt="" coords="1161,267,1147,307,1145,330,1151,352,1171,381,1193,398,1255,424,1304,442,1354,456,1451,474,1450,479,1353,461,1302,447,1253,429,1191,403,1167,385,1147,354,1140,330,1142,305,1156,265"/>
+<area shape="poly" title=" " alt="" coords="1178,264,1222,309,1218,313,1174,267"/>
+<area shape="poly" title=" " alt="" coords="678,239,691,195,703,171,721,150,740,138,766,128,833,113,910,102,985,95,985,101,911,107,834,118,768,133,742,143,724,154,708,174,696,197,683,240"/>
+<area shape="poly" title=" " alt="" coords="555,260,406,267,244,278,107,294,60,304,35,315,17,336,10,357,10,413,10,488,13,510,21,526,32,537,48,546,88,558,135,571,189,585,262,596,440,614,621,624,761,629,761,634,621,629,439,619,261,602,188,590,134,576,87,563,46,550,29,541,16,529,8,512,5,489,5,413,5,357,12,334,31,311,59,299,106,289,243,273,406,262,555,255"/>
+<area shape="poly" title=" " alt="" coords="756,263,1148,316,1147,322,755,268"/>
+<area shape="rect" href="Zoltan2__Environment_8hpp.html" title="Defines the Environment class." alt="" coords="978,475,1168,500"/>
+<area shape="poly" title=" " alt="" coords="791,261,912,280,963,294,999,311,1018,337,1037,377,1068,460,1063,462,1033,379,1014,340,995,315,962,299,911,285,790,267"/>
+<area shape="rect" href="Zoltan2__GreedyMWM_8hpp.html" title="Greedy Maximal Weight Matching." alt="" coords="394,321,584,346"/>
+<area shape="poly" title=" " alt="" coords="647,268,529,318,527,313,645,263"/>
+<area shape="rect" title=" " alt="" coords="568,401,631,427"/>
+<area shape="poly" title=" " alt="" coords="670,267,613,390,608,388,665,264"/>
+<area shape="rect" title=" " alt="" coords="458,401,544,427"/>
+<area shape="poly" title=" " alt="" coords="556,266,502,273,451,284,409,297,383,315,377,324,376,333,383,352,396,367,411,379,447,397,444,402,408,384,392,371,379,355,371,333,372,322,379,311,406,293,449,278,501,268,555,260"/>
+<area shape="poly" title=" " alt="" coords="703,263,813,306,811,311,701,268"/>
+<area shape="rect" title=" " alt="" coords="655,401,718,427"/>
+<area shape="poly" title=" " alt="" coords="677,265,687,387,682,388,671,266"/>
+<area shape="rect" title=" " alt="" coords="742,401,801,427"/>
+<area shape="poly" title=" " alt="" coords="682,264,759,388,755,391,678,267"/>
+<area shape="poly" title=" " alt="" coords="1119,497,1296,542,1295,547,1118,503"/>
+<area shape="poly" title=" " alt="" coords="1144,497,1431,544,1430,549,1143,503"/>
+<area shape="poly" title=" " alt="" coords="1016,503,786,548,785,543,1015,497"/>
+<area shape="poly" title=" " alt="" coords="1089,498,1141,537,1138,542,1086,502"/>
+<area shape="poly" title=" " alt="" coords="978,502,555,552,555,546,977,497"/>
+<area shape="poly" title=" " alt="" coords="1053,502,975,544,972,539,1050,498"/>
+<area shape="poly" title=" " alt="" coords="507,344,573,391,570,395,504,348"/>
+<area shape="poly" title=" " alt="" coords="493,346,500,388,495,388,488,347"/>
+<area shape="poly" title=" " alt="" coords="867,355,847,392,832,411,815,429,748,473,675,506,604,531,541,548,539,542,602,526,673,501,745,468,811,425,828,408,842,389,863,352"/>
+<area shape="poly" title=" " alt="" coords="887,353,910,400,929,473,939,534,934,535,924,474,905,402,882,355"/>
+<area shape="poly" title=" " alt="" coords="873,354,865,390,846,428,820,456,795,473,731,502,693,515,659,518,630,526,617,535,605,549,600,561,604,572,628,583,673,594,805,611,956,622,1081,628,1080,633,956,627,805,616,672,599,626,588,600,575,594,561,600,547,614,531,628,521,658,513,692,509,729,498,792,469,816,452,841,425,860,389,868,353"/>
+<area shape="poly" title=" " alt="" coords="808,356,645,403,643,397,807,351"/>
+<area shape="poly" title=" " alt="" coords="829,356,727,398,725,393,827,351"/>
+<area shape="poly" title=" " alt="" coords="850,356,799,395,796,390,847,351"/>
+<area shape="rect" href="Zoltan2__InputTraits_8hpp.html" title="Traits for application input objects." alt="" coords="1338,401,1512,427"/>
+<area shape="poly" title=" " alt="" coords="985,348,1331,397,1330,402,985,353"/>
+<area shape="poly" title=" " alt="" coords="1446,424,1519,465,1517,470,1444,429"/>
+<area shape="poly" title=" " alt="" coords="722,184,587,204,514,221,443,243,352,271,279,295,247,311,218,332,190,362,163,403,156,418,154,433,155,446,160,458,180,481,210,500,248,516,290,529,376,546,375,551,289,534,246,521,207,505,176,485,155,461,150,447,148,433,151,417,159,400,186,359,215,328,245,306,277,290,351,266,442,237,513,216,586,199,722,179"/>
+<area shape="poly" title=" " alt="" coords="809,187,709,236,707,232,806,182"/>
+<area shape="poly" title=" " alt="" coords="858,182,896,202,943,230,991,267,1031,312,1051,349,1064,390,1075,461,1070,461,1059,391,1047,351,1027,315,987,271,940,235,894,206,855,187"/>
+<area shape="rect" href="Zoltan2__MachineRepresentation_8hpp.html" title=" " alt="" coords="173,401,434,427"/>
+<area shape="poly" title=" " alt="" coords="723,185,639,199,546,224,499,241,454,262,410,286,371,315,338,352,316,390,312,388,334,349,367,311,408,282,451,257,497,236,545,219,638,194,722,180"/>
+<area shape="rect" title=" " alt="" coords="1588,401,1712,427"/>
+<area shape="poly" title=" " alt="" coords="939,179,1293,208,1450,224,1526,238,1568,270,1601,311,1626,353,1643,388,1638,390,1622,355,1597,314,1564,274,1524,242,1449,229,1293,213,938,184"/>
+<area shape="poly" title=" " alt="" coords="337,424,670,541,668,546,335,429"/>
+<area shape="poly" title=" " alt="" coords="319,425,444,537,440,541,315,429"/>
+<area shape="poly" title=" " alt="" coords="428,424,965,473,964,479,427,429"/>
+<area shape="poly" title=" " alt="" coords="2130,346,1527,405,1526,400,2130,341"/>
+<area shape="poly" title=" " alt="" coords="2135,349,1726,404,1726,399,2135,343"/>
+<area shape="rect" href="Zoltan2__Model_8hpp.html" title="Defines the Model interface." alt="" coords="1945,401,2092,427"/>
+<area shape="poly" title=" " alt="" coords="2195,349,2062,399,2060,394,2193,344"/>
+<area shape="rect" href="Zoltan2__ModelHelpers_8hpp.html" title="Defines helper functions for use in the models." alt="" coords="2850,401,3048,427"/>
+<area shape="poly" title=" " alt="" coords="2317,342,2837,398,2836,403,2317,347"/>
+<area shape="rect" href="Zoltan2__MeshAdapter_8hpp.html" title="Defines the MeshAdapter interface." alt="" coords="2921,475,3113,500"/>
+<area shape="poly" title=" " alt="" coords="2317,332,2514,336,2748,346,2858,355,2952,366,3023,381,3047,389,3062,400,3069,416,3066,434,3056,451,3043,466,3039,463,3051,448,3061,432,3064,417,3058,403,3044,394,3021,386,2952,371,2857,360,2748,352,2514,341,2317,338"/>
+<area shape="rect" href="Zoltan2__MatrixAdapter_8hpp.html" title="Defines the MatrixAdapter interface." alt="" coords="2627,401,2826,427"/>
+<area shape="poly" title=" " alt="" coords="2297,343,2640,397,2639,402,2296,349"/>
+<area shape="rect" href="Zoltan2__VectorAdapter_8hpp.html" title="Defines the VectorAdapter interface." alt="" coords="2406,475,2604,500"/>
+<area shape="poly" title=" " alt="" coords="2246,344,2473,466,2471,470,2244,348"/>
+<area shape="rect" href="Zoltan2__GraphAdapter_8hpp.html" title="Defines the GraphAdapter interface." alt="" coords="2407,401,2603,427"/>
+<area shape="poly" title=" " alt="" coords="2265,343,2452,395,2450,400,2264,349"/>
+<area shape="rect" href="Zoltan2__IdentifierAdapter_8hpp.html" title="Defines the IdentifierAdapter interface." alt="" coords="2116,401,2331,427"/>
+<area shape="poly" title=" " alt="" coords="2226,346,2226,387,2221,387,2221,346"/>
+<area shape="rect" href="Zoltan2__StridedData_8hpp.html" title="This file defines the StridedData class." alt="" coords="1737,401,1921,427"/>
+<area shape="poly" title=" " alt="" coords="2167,349,1900,401,1899,396,2166,343"/>
+<area shape="poly" title=" " alt="" coords="1945,429,1639,475,1638,470,1944,424"/>
+<area shape="poly" title=" " alt="" coords="2962,425,2998,463,2994,466,2958,429"/>
+<area shape="poly" title=" " alt="" coords="2692,429,2554,473,2553,468,2690,424"/>
+<area shape="poly" title=" " alt="" coords="2508,427,2508,461,2502,461,2502,427"/>
+<area shape="poly" title=" " alt="" coords="1785,429,1609,474,1608,469,1784,424"/>
+<area shape="poly" title=" " alt="" coords="1737,428,1725,429,1182,479,1182,474,1725,424,1736,423"/>
+<area shape="poly" title=" " alt="" coords="111,347,105,375,102,415,105,458,110,479,119,499,141,523,170,540,167,545,138,527,115,501,105,481,99,459,96,415,100,375,106,346"/>
+<area shape="poly" title=" " alt="" coords="170,343,445,398,444,404,169,349"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
