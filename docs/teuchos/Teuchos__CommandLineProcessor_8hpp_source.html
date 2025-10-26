@@ -358,249 +358,251 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span>  <span class="keywordtype">int</span>   output_to_root_rank_only_;</div>
 <div class="line"><a id="l00516" name="l00516"></a><span class="lineno">  516</span>  <span class="keywordtype">bool</span>  print_rcpnode_statistics_on_exit_;</div>
 <div class="line"><a id="l00517" name="l00517"></a><span class="lineno">  517</span>  <span class="keywordtype">bool</span>  show_timer_summary_on_exit_;</div>
-<div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span> </div>
-<div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span>  <span class="keywordtype">bool</span> printed_timer_summary_;</div>
-<div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span> </div>
-<div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span>  <span class="keywordtype">bool</span>  added_extra_output_setup_options_;</div>
-<div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>  <span class="keywordtype">bool</span>  in_add_extra_output_setup_options_;</div>
-<div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span> </div>
-<div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span>  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span>  output_all_front_matter_default_;</div>
-<div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span>  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span>  output_show_line_prefix_default_;</div>
-<div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span>  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span>  output_show_tab_count_default_;</div>
-<div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span>  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span>  output_show_proc_rank_default_;</div>
-<div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span>  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span>   output_to_root_rank_only_default_;</div>
-<div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span>  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span>  print_rcpnode_statistics_on_exit_default_;</div>
-<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span>  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span>  show_timer_summary_on_exit_default_;</div>
-<div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span> </div>
-<div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span>  <span class="comment">// /////////////////////////////////</span></div>
-<div class="line"><a id="l00533" name="l00533"></a><span class="lineno">  533</span>  <span class="comment">// Private member functions</span></div>
-<div class="line"><a id="l00534" name="l00534"></a><span class="lineno">  534</span> </div>
-<div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span>  <span class="comment">// Set the extra output setup options</span></div>
-<div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span>  <span class="keywordtype">void</span> add_extra_output_setup_options() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span> </div>
-<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>  <span class="comment">// Set an integer enumeration option</span></div>
-<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>  <span class="keywordtype">void</span> setEnumOption(</div>
-<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> enum_option_name[],</div>
-<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>    <span class="keywordtype">int</span>* enum_option_val,</div>
-<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> num_enum_opt_values,</div>
-<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> enum_opt_values[],</div>
-<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> * <span class="keyword">const</span> enum_opt_names[],</div>
-<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> documentation[],</div>
-<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> required</div>
-<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>    );</div>
-<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span> </div>
-<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>  <span class="comment">// Set an enum int option</span></div>
-<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>  <span class="keywordtype">bool</span> set_enum_value(</div>
-<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>    <span class="keywordtype">int</span>                  argv_i</div>
-<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>    ,<span class="keywordtype">char</span>*               argv[]</div>
-<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>    ,<span class="keyword">const</span> std::string   &amp;enum_opt_name</div>
-<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>    ,<span class="keyword">const</span> <span class="keywordtype">int</span>           enum_id</div>
-<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>    ,<span class="keyword">const</span> std::string   &amp;enum_str_val</div>
-<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>    ,std::ostream        *errout</div>
-<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>    ) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span> </div>
-<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>  <span class="comment">// Print the valid enum values</span></div>
-<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>  <span class="keywordtype">void</span> print_enum_opt_names(</div>
-<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>    <span class="keyword">const</span> <span class="keywordtype">int</span>            enum_id</div>
-<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>    ,std::ostream        &amp;out</div>
-<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>    ) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span> </div>
-<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>  <span class="comment">// Return the name of the default value for an enum</span></div>
-<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>  std::string enum_opt_default_val_name(</div>
-<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>    <span class="keyword">const</span> std::string    &amp;enum_name</div>
-<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>    ,<span class="keyword">const</span> <span class="keywordtype">int</span>           enum_id</div>
-<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>    ,std::ostream        *errout</div>
-<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>    ) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span> </div>
-<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>  <span class="comment">// Return the index given and option value</span></div>
-<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>  <span class="keywordtype">int</span> find_enum_opt_index(</div>
-<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>    <span class="keyword">const</span> std::string           &amp;enum_opt_name</div>
-<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>    ,<span class="keyword">const</span> <span class="keywordtype">int</span>                  opt_value</div>
-<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>    ,<span class="keyword">const</span> enum_opt_data_t      &amp;enum_data</div>
-<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>    ,std::ostream               *errout</div>
-<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>    ) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span> </div>
-<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span>  <span class="comment">// Get the option and the value from an entry in argv[].</span></div>
-<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span>  <span class="comment">// Will return false if entry is not formated properly.</span></div>
-<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span>  <span class="keywordtype">bool</span> get_opt_val(</div>
-<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>     str[]</div>
-<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span>    ,std::string   *opt_name</div>
-<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>    ,std::string   *opt_val_str <span class="comment">// May be empty on return</span></div>
-<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>    ) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span> </div>
-<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>  <span class="comment">// String for option type</span></div>
-<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>  std::string opt_type_str( EOptType ) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span> </div>
-<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>  <span class="comment">// Print bad option</span></div>
-<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>  <span class="keywordtype">void</span> print_bad_opt(</div>
-<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>    <span class="keywordtype">int</span>             argv_i</div>
-<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span>    ,<span class="keywordtype">char</span>*          argv[]</div>
-<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span>    ,std::ostream   *errout</div>
-<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span>    ) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span> </div>
-<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span><span class="keyword">public</span>: <span class="comment">// Hidden implementation stuff that clients should never see</span></div>
+<div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>  <span class="keywordtype">bool</span>  print_system_info_;</div>
+<div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span> </div>
+<div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span>  <span class="keywordtype">bool</span> printed_timer_summary_;</div>
+<div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span> </div>
+<div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>  <span class="keywordtype">bool</span>  added_extra_output_setup_options_;</div>
+<div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span>  <span class="keywordtype">bool</span>  in_add_extra_output_setup_options_;</div>
+<div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span> </div>
+<div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span>  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span>  output_all_front_matter_default_;</div>
+<div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span>  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span>  output_show_line_prefix_default_;</div>
+<div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span>  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span>  output_show_tab_count_default_;</div>
+<div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span>  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span>  output_show_proc_rank_default_;</div>
+<div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span>  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span>   output_to_root_rank_only_default_;</div>
+<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span>  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span>  print_rcpnode_statistics_on_exit_default_;</div>
+<div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span>  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span>  show_timer_summary_on_exit_default_;</div>
+<div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span>  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span>  print_system_info_default_;</div>
+<div class="line"><a id="l00533" name="l00533"></a><span class="lineno">  533</span> </div>
+<div class="line"><a id="l00534" name="l00534"></a><span class="lineno">  534</span>  <span class="comment">// /////////////////////////////////</span></div>
+<div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span>  <span class="comment">// Private member functions</span></div>
+<div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span> </div>
+<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>  <span class="comment">// Set the extra output setup options</span></div>
+<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>  <span class="keywordtype">void</span> add_extra_output_setup_options() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span> </div>
+<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>  <span class="comment">// Set an integer enumeration option</span></div>
+<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>  <span class="keywordtype">void</span> setEnumOption(</div>
+<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> enum_option_name[],</div>
+<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>    <span class="keywordtype">int</span>* enum_option_val,</div>
+<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> num_enum_opt_values,</div>
+<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> enum_opt_values[],</div>
+<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> * <span class="keyword">const</span> enum_opt_names[],</div>
+<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> documentation[],</div>
+<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> required</div>
+<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>    );</div>
+<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span> </div>
+<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>  <span class="comment">// Set an enum int option</span></div>
+<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>  <span class="keywordtype">bool</span> set_enum_value(</div>
+<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>    <span class="keywordtype">int</span>                  argv_i</div>
+<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>    ,<span class="keywordtype">char</span>*               argv[]</div>
+<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>    ,<span class="keyword">const</span> std::string   &amp;enum_opt_name</div>
+<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>    ,<span class="keyword">const</span> <span class="keywordtype">int</span>           enum_id</div>
+<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>    ,<span class="keyword">const</span> std::string   &amp;enum_str_val</div>
+<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>    ,std::ostream        *errout</div>
+<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>    ) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span> </div>
+<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>  <span class="comment">// Print the valid enum values</span></div>
+<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>  <span class="keywordtype">void</span> print_enum_opt_names(</div>
+<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>    <span class="keyword">const</span> <span class="keywordtype">int</span>            enum_id</div>
+<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>    ,std::ostream        &amp;out</div>
+<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>    ) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span> </div>
+<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>  <span class="comment">// Return the name of the default value for an enum</span></div>
+<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>  std::string enum_opt_default_val_name(</div>
+<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>    <span class="keyword">const</span> std::string    &amp;enum_name</div>
+<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>    ,<span class="keyword">const</span> <span class="keywordtype">int</span>           enum_id</div>
+<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>    ,std::ostream        *errout</div>
+<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>    ) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span> </div>
+<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>  <span class="comment">// Return the index given and option value</span></div>
+<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>  <span class="keywordtype">int</span> find_enum_opt_index(</div>
+<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>    <span class="keyword">const</span> std::string           &amp;enum_opt_name</div>
+<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>    ,<span class="keyword">const</span> <span class="keywordtype">int</span>                  opt_value</div>
+<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>    ,<span class="keyword">const</span> enum_opt_data_t      &amp;enum_data</div>
+<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>    ,std::ostream               *errout</div>
+<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span>    ) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span> </div>
+<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span>  <span class="comment">// Get the option and the value from an entry in argv[].</span></div>
+<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>  <span class="comment">// Will return false if entry is not formated properly.</span></div>
+<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span>  <span class="keywordtype">bool</span> get_opt_val(</div>
+<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>     str[]</div>
+<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>    ,std::string   *opt_name</div>
+<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>    ,std::string   *opt_val_str <span class="comment">// May be empty on return</span></div>
+<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>    ) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span> </div>
+<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>  <span class="comment">// String for option type</span></div>
+<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>  std::string opt_type_str( EOptType ) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span> </div>
+<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>  <span class="comment">// Print bad option</span></div>
+<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span>  <span class="keywordtype">void</span> print_bad_opt(</div>
+<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span>    <span class="keywordtype">int</span>             argv_i</div>
+<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span>    ,<span class="keywordtype">char</span>*          argv[]</div>
+<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span>    ,std::ostream   *errout</div>
+<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span>    ) <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span> </div>
-<div class="foldopen" id="foldopen00634" data-start="{" data-end="};">
-<div class="line"><a id="l00634" name="l00634"></a><span class="lineno"><a class="line" href="classTeuchos_1_1CommandLineProcessor_1_1TimeMonitorSurrogate.html">  634</a></span>  <span class="keyword">class </span><a class="code hl_class" href="classTeuchos_1_1CommandLineProcessor_1_1TimeMonitorSurrogate.html">TimeMonitorSurrogate</a> {</div>
-<div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span>  <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00637" name="l00637"></a><span class="lineno"><a class="line" href="classTeuchos_1_1CommandLineProcessor_1_1TimeMonitorSurrogate.html#a4051dd0486eb186f2414b4f210d7aa1c">  637</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="classTeuchos_1_1CommandLineProcessor_1_1TimeMonitorSurrogate.html#a4051dd0486eb186f2414b4f210d7aa1c">~TimeMonitorSurrogate</a>() {}</div>
-<div class="line"><a id="l00639" name="l00639"></a><span class="lineno"><a class="line" href="classTeuchos_1_1CommandLineProcessor_1_1TimeMonitorSurrogate.html#aa83f43cc3af33f0ee7add7572253d06f">  639</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTeuchos_1_1CommandLineProcessor_1_1TimeMonitorSurrogate.html#aa83f43cc3af33f0ee7add7572253d06f">summarize</a>(std::ostream &amp;out=std::cout) = 0;</div>
-<div class="line"><a id="l00640" name="l00640"></a><span class="lineno">  640</span>  };</div>
+<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span><span class="keyword">public</span>: <span class="comment">// Hidden implementation stuff that clients should never see</span></div>
+<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span> </div>
+<div class="foldopen" id="foldopen00636" data-start="{" data-end="};">
+<div class="line"><a id="l00636" name="l00636"></a><span class="lineno"><a class="line" href="classTeuchos_1_1CommandLineProcessor_1_1TimeMonitorSurrogate.html">  636</a></span>  <span class="keyword">class </span><a class="code hl_class" href="classTeuchos_1_1CommandLineProcessor_1_1TimeMonitorSurrogate.html">TimeMonitorSurrogate</a> {</div>
+<div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00639" name="l00639"></a><span class="lineno"><a class="line" href="classTeuchos_1_1CommandLineProcessor_1_1TimeMonitorSurrogate.html#a4051dd0486eb186f2414b4f210d7aa1c">  639</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="classTeuchos_1_1CommandLineProcessor_1_1TimeMonitorSurrogate.html#a4051dd0486eb186f2414b4f210d7aa1c">~TimeMonitorSurrogate</a>() {}</div>
+<div class="line"><a id="l00641" name="l00641"></a><span class="lineno"><a class="line" href="classTeuchos_1_1CommandLineProcessor_1_1TimeMonitorSurrogate.html#aa83f43cc3af33f0ee7add7572253d06f">  641</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTeuchos_1_1CommandLineProcessor_1_1TimeMonitorSurrogate.html#aa83f43cc3af33f0ee7add7572253d06f">summarize</a>(std::ostream &amp;out=std::cout) = 0;</div>
+<div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span>  };</div>
 </div>
-<div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span> </div>
-<div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span>  <span class="keyword">static</span> <span class="keywordtype">void</span> setTimeMonitorSurrogate(<span class="keyword">const</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;TimeMonitorSurrogate&gt;</a> &amp;<a class="code hl_class" href="classTeuchos_1_1RCP.html">timeMonitorSurrogate</a>);</div>
 <div class="line"><a id="l00643" name="l00643"></a><span class="lineno">  643</span> </div>
-<div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span>  <span class="keyword">static</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;TimeMonitorSurrogate&gt;</a> getTimeMonitorSurrogate();</div>
+<div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span>  <span class="keyword">static</span> <span class="keywordtype">void</span> setTimeMonitorSurrogate(<span class="keyword">const</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;TimeMonitorSurrogate&gt;</a> &amp;<a class="code hl_class" href="classTeuchos_1_1RCP.html">timeMonitorSurrogate</a>);</div>
 <div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span> </div>
-<div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span>  <span class="keyword">static</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;TimeMonitorSurrogate&gt;</a> getTimeMonitorSurrogate();</div>
 <div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span> </div>
-<div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span>  <span class="keyword">static</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;TimeMonitorSurrogate&gt;</a>&amp; getRawTimeMonitorSurrogate();</div>
+<div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span><span class="keyword">private</span>:</div>
 <div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span> </div>
-<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span>}; <span class="comment">// end class CommandLineProcessor</span></div>
-</div>
+<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span>  <span class="keyword">static</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;TimeMonitorSurrogate&gt;</a>&amp; getRawTimeMonitorSurrogate();</div>
 <div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span> </div>
-<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span> </div>
-<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span><span class="comment">// /////////////////////////</span></div>
-<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span><span class="comment">// Inline members</span></div>
-<div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span> </div>
-<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span> </div>
-<div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span><span class="comment">// Behavior modes</span></div>
+<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span>}; <span class="comment">// end class CommandLineProcessor</span></div>
+</div>
+<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span> </div>
+<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span> </div>
+<div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span><span class="comment">// /////////////////////////</span></div>
+<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span><span class="comment">// Inline members</span></div>
+<div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span> </div>
 <div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span> </div>
-<div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span> </div>
-<div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span><span class="keyword">inline</span></div>
-<div class="foldopen" id="foldopen00661" data-start="{" data-end="}">
-<div class="line"><a id="l00661" name="l00661"></a><span class="lineno"><a class="line" href="classTeuchos_1_1CommandLineProcessor.html#a4e9be49bee2232f7f458cecf4aafbefa">  661</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classTeuchos_1_1CommandLineProcessor.html#a3f780a480dcf4e2d510c292794553ebe">CommandLineProcessor::throwExceptions</a>( <span class="keyword">const</span> <span class="keywordtype">bool</span> &amp; <a class="code hl_class" href="classTeuchos_1_1RCP.html">throwExceptions_in</a> )</div>
-<div class="line"><a id="l00662" name="l00662"></a><span class="lineno">  662</span>{ throwExceptions_ = <a class="code hl_class" href="classTeuchos_1_1RCP.html">throwExceptions_in</a>; }</div>
+<div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span><span class="comment">// Behavior modes</span></div>
+<div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span> </div>
+<div class="line"><a id="l00661" name="l00661"></a><span class="lineno">  661</span> </div>
+<div class="line"><a id="l00662" name="l00662"></a><span class="lineno">  662</span><span class="keyword">inline</span></div>
+<div class="foldopen" id="foldopen00663" data-start="{" data-end="}">
+<div class="line"><a id="l00663" name="l00663"></a><span class="lineno"><a class="line" href="classTeuchos_1_1CommandLineProcessor.html#a4e9be49bee2232f7f458cecf4aafbefa">  663</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classTeuchos_1_1CommandLineProcessor.html#a3f780a480dcf4e2d510c292794553ebe">CommandLineProcessor::throwExceptions</a>( <span class="keyword">const</span> <span class="keywordtype">bool</span> &amp; <a class="code hl_class" href="classTeuchos_1_1RCP.html">throwExceptions_in</a> )</div>
+<div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span>{ throwExceptions_ = <a class="code hl_class" href="classTeuchos_1_1RCP.html">throwExceptions_in</a>; }</div>
 </div>
-<div class="line"><a id="l00663" name="l00663"></a><span class="lineno">  663</span> </div>
-<div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span> </div>
-<div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span><span class="keyword">inline</span></div>
-<div class="foldopen" id="foldopen00666" data-start="{" data-end="}">
-<div class="line"><a id="l00666" name="l00666"></a><span class="lineno"><a class="line" href="classTeuchos_1_1CommandLineProcessor.html#a3f780a480dcf4e2d510c292794553ebe">  666</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classTeuchos_1_1CommandLineProcessor.html#a3f780a480dcf4e2d510c292794553ebe">CommandLineProcessor::throwExceptions</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span><span class="keyword"></span>{ <span class="keywordflow">return</span> throwExceptions_; }</div>
+<div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span> </div>
+<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span> </div>
+<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span><span class="keyword">inline</span></div>
+<div class="foldopen" id="foldopen00668" data-start="{" data-end="}">
+<div class="line"><a id="l00668" name="l00668"></a><span class="lineno"><a class="line" href="classTeuchos_1_1CommandLineProcessor.html#a3f780a480dcf4e2d510c292794553ebe">  668</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classTeuchos_1_1CommandLineProcessor.html#a3f780a480dcf4e2d510c292794553ebe">CommandLineProcessor::throwExceptions</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span><span class="keyword"></span>{ <span class="keywordflow">return</span> throwExceptions_; }</div>
 </div>
-<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span> </div>
-<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span> </div>
-<div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span><span class="keyword">inline</span></div>
-<div class="foldopen" id="foldopen00671" data-start="{" data-end="}">
-<div class="line"><a id="l00671" name="l00671"></a><span class="lineno"><a class="line" href="classTeuchos_1_1CommandLineProcessor.html#a83d412b3c4e7d03f18732bd1e833fe67">  671</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classTeuchos_1_1CommandLineProcessor.html#aefa19f44ccc4e4c189c7cd57e6df8b71">CommandLineProcessor::recogniseAllOptions</a>( <span class="keyword">const</span> <span class="keywordtype">bool</span> &amp; <a class="code hl_class" href="classTeuchos_1_1RCP.html">recogniseAllOptions_in</a> )</div>
-<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span>{ recogniseAllOptions_ = <a class="code hl_class" href="classTeuchos_1_1RCP.html">recogniseAllOptions_in</a>; }</div>
+<div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span> </div>
+<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span> </div>
+<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span><span class="keyword">inline</span></div>
+<div class="foldopen" id="foldopen00673" data-start="{" data-end="}">
+<div class="line"><a id="l00673" name="l00673"></a><span class="lineno"><a class="line" href="classTeuchos_1_1CommandLineProcessor.html#a83d412b3c4e7d03f18732bd1e833fe67">  673</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classTeuchos_1_1CommandLineProcessor.html#aefa19f44ccc4e4c189c7cd57e6df8b71">CommandLineProcessor::recogniseAllOptions</a>( <span class="keyword">const</span> <span class="keywordtype">bool</span> &amp; <a class="code hl_class" href="classTeuchos_1_1RCP.html">recogniseAllOptions_in</a> )</div>
+<div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span>{ recogniseAllOptions_ = <a class="code hl_class" href="classTeuchos_1_1RCP.html">recogniseAllOptions_in</a>; }</div>
 </div>
-<div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span> </div>
-<div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span> </div>
-<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span><span class="keyword">inline</span></div>
-<div class="foldopen" id="foldopen00676" data-start="{" data-end="}">
-<div class="line"><a id="l00676" name="l00676"></a><span class="lineno"><a class="line" href="classTeuchos_1_1CommandLineProcessor.html#aefa19f44ccc4e4c189c7cd57e6df8b71">  676</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classTeuchos_1_1CommandLineProcessor.html#aefa19f44ccc4e4c189c7cd57e6df8b71">CommandLineProcessor::recogniseAllOptions</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span><span class="keyword"></span>{ <span class="keywordflow">return</span> recogniseAllOptions_; }</div>
+<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span> </div>
+<div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span> </div>
+<div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span><span class="keyword">inline</span></div>
+<div class="foldopen" id="foldopen00678" data-start="{" data-end="}">
+<div class="line"><a id="l00678" name="l00678"></a><span class="lineno"><a class="line" href="classTeuchos_1_1CommandLineProcessor.html#aefa19f44ccc4e4c189c7cd57e6df8b71">  678</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classTeuchos_1_1CommandLineProcessor.html#aefa19f44ccc4e4c189c7cd57e6df8b71">CommandLineProcessor::recogniseAllOptions</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span><span class="keyword"></span>{ <span class="keywordflow">return</span> recogniseAllOptions_; }</div>
 </div>
-<div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span> </div>
-<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span> </div>
-<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span><span class="keyword">inline</span></div>
-<div class="foldopen" id="foldopen00681" data-start="{" data-end="}">
-<div class="line"><a id="l00681" name="l00681"></a><span class="lineno"><a class="line" href="classTeuchos_1_1CommandLineProcessor.html#a44fdfd9252f293105e427d71cb586918">  681</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classTeuchos_1_1CommandLineProcessor.html#a93f0db6a90819930b8f41400a85a3da9">CommandLineProcessor::addOutputSetupOptions</a>( <span class="keyword">const</span> <span class="keywordtype">bool</span> &amp;<a class="code hl_class" href="classTeuchos_1_1RCP.html">addOutputSetupOptions_in</a> )</div>
-<div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span>{ addOutputSetupOptions_ = <a class="code hl_class" href="classTeuchos_1_1RCP.html">addOutputSetupOptions_in</a>; }</div>
+<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span> </div>
+<div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span> </div>
+<div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span><span class="keyword">inline</span></div>
+<div class="foldopen" id="foldopen00683" data-start="{" data-end="}">
+<div class="line"><a id="l00683" name="l00683"></a><span class="lineno"><a class="line" href="classTeuchos_1_1CommandLineProcessor.html#a44fdfd9252f293105e427d71cb586918">  683</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classTeuchos_1_1CommandLineProcessor.html#a93f0db6a90819930b8f41400a85a3da9">CommandLineProcessor::addOutputSetupOptions</a>( <span class="keyword">const</span> <span class="keywordtype">bool</span> &amp;<a class="code hl_class" href="classTeuchos_1_1RCP.html">addOutputSetupOptions_in</a> )</div>
+<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>{ addOutputSetupOptions_ = <a class="code hl_class" href="classTeuchos_1_1RCP.html">addOutputSetupOptions_in</a>; }</div>
 </div>
-<div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span> </div>
-<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span> </div>
-<div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span><span class="keyword">inline</span></div>
-<div class="foldopen" id="foldopen00686" data-start="{" data-end="}">
-<div class="line"><a id="l00686" name="l00686"></a><span class="lineno"><a class="line" href="classTeuchos_1_1CommandLineProcessor.html#a93f0db6a90819930b8f41400a85a3da9">  686</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classTeuchos_1_1CommandLineProcessor.html#a93f0db6a90819930b8f41400a85a3da9">CommandLineProcessor::addOutputSetupOptions</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span><span class="keyword"></span>{ <span class="keywordflow">return</span> addOutputSetupOptions_; }</div>
+<div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span> </div>
+<div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span> </div>
+<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span><span class="keyword">inline</span></div>
+<div class="foldopen" id="foldopen00688" data-start="{" data-end="}">
+<div class="line"><a id="l00688" name="l00688"></a><span class="lineno"><a class="line" href="classTeuchos_1_1CommandLineProcessor.html#a93f0db6a90819930b8f41400a85a3da9">  688</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classTeuchos_1_1CommandLineProcessor.html#a93f0db6a90819930b8f41400a85a3da9">CommandLineProcessor::addOutputSetupOptions</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span><span class="keyword"></span>{ <span class="keywordflow">return</span> addOutputSetupOptions_; }</div>
 </div>
-<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span> </div>
-<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span> </div>
-<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> EType&gt;</div>
-<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span><span class="keyword">inline</span></div>
-<div class="foldopen" id="foldopen00692" data-start="{" data-end="}">
-<div class="line"><a id="l00692" name="l00692"></a><span class="lineno"><a class="line" href="classTeuchos_1_1CommandLineProcessor.html#a32a6bee8d17f25f333f2b6b354f1b648">  692</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classTeuchos_1_1CommandLineProcessor.html#a6549f7ba938bc3d21a3b9a571c7efd68">CommandLineProcessor::setOption</a>(</div>
-<div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">enum_option_name</a>[],</div>
-<div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span>  <a class="code hl_enumeration" href="namespaceTeuchos.html#ae30232414abdd924787afce923a24d48">EType</a>* enum_option_val,</div>
-<div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> num_enum_opt_values,</div>
-<div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span>  <span class="keyword">const</span> <a class="code hl_enumeration" href="namespaceTeuchos.html#ae30232414abdd924787afce923a24d48">EType</a>  enum_opt_values[],</div>
-<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> * <span class="keyword">const</span> enum_opt_names[],</div>
-<div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> documentation[],</div>
-<div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> required</div>
-<div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span>  )</div>
-<div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span>{</div>
-<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span>  <span class="comment">// RAB: 2004/05/25: Every C++ implementation that I know of just</span></div>
-<div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span>  <span class="comment">// represents enumerations as int&#39;s and therefore this will compile</span></div>
-<div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span>  <span class="comment">// just fine.  However, the ISO/ANSI C++ standard says that</span></div>
-<div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span>  <span class="comment">// compilers are allowed to use a smaller storage type for an enum</span></div>
-<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span>  <span class="comment">// but must not require storage any larger than an &#39;int&#39;.  If the</span></div>
-<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span>  <span class="comment">// below compile-time assertion does not compile then we need to do</span></div>
-<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span>  <span class="comment">// something different but it will be a lot of work!</span></div>
-<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span>  <a class="code hl_class" href="classTeuchos_1_1CompileTimeAssert.html">CompileTimeAssert</a>&lt;<span class="keyword">sizeof</span>(<a class="code hl_class" href="classTeuchos_1_1RCP.html">int</a>)-<span class="keyword">sizeof</span>(<a class="code hl_enumeration" href="namespaceTeuchos.html#ae30232414abdd924787afce923a24d48">EType</a>)&gt;();</div>
-<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span>  <span class="comment">//CompileTimeAssert&lt;sizeof(int)-sizeof(EType)-1&gt;(); // Uncomment to see compilation error</span></div>
-<div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span>  setEnumOption(</div>
-<div class="line"><a id="l00712" name="l00712"></a><span class="lineno">  712</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">enum_option_name</a>,</div>
-<div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span>    <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">int</span>*<span class="keyword">&gt;</span>(enum_option_val),</div>
-<div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span>    num_enum_opt_values,</div>
-<div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span>    <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">int</span>*<span class="keyword">&gt;</span>(enum_opt_values),</div>
-<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span>    enum_opt_names,</div>
-<div class="line"><a id="l00717" name="l00717"></a><span class="lineno">  717</span>    documentation,</div>
-<div class="line"><a id="l00718" name="l00718"></a><span class="lineno">  718</span>    required );</div>
-<div class="line"><a id="l00719" name="l00719"></a><span class="lineno">  719</span>}</div>
+<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span> </div>
+<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span> </div>
+<div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> EType&gt;</div>
+<div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span><span class="keyword">inline</span></div>
+<div class="foldopen" id="foldopen00694" data-start="{" data-end="}">
+<div class="line"><a id="l00694" name="l00694"></a><span class="lineno"><a class="line" href="classTeuchos_1_1CommandLineProcessor.html#a32a6bee8d17f25f333f2b6b354f1b648">  694</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classTeuchos_1_1CommandLineProcessor.html#a6549f7ba938bc3d21a3b9a571c7efd68">CommandLineProcessor::setOption</a>(</div>
+<div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">enum_option_name</a>[],</div>
+<div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span>  <a class="code hl_enumeration" href="namespaceTeuchos.html#ae30232414abdd924787afce923a24d48">EType</a>* enum_option_val,</div>
+<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> num_enum_opt_values,</div>
+<div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span>  <span class="keyword">const</span> <a class="code hl_enumeration" href="namespaceTeuchos.html#ae30232414abdd924787afce923a24d48">EType</a>  enum_opt_values[],</div>
+<div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> * <span class="keyword">const</span> enum_opt_names[],</div>
+<div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> documentation[],</div>
+<div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> required</div>
+<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span>  )</div>
+<div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span>{</div>
+<div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span>  <span class="comment">// RAB: 2004/05/25: Every C++ implementation that I know of just</span></div>
+<div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span>  <span class="comment">// represents enumerations as int&#39;s and therefore this will compile</span></div>
+<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span>  <span class="comment">// just fine.  However, the ISO/ANSI C++ standard says that</span></div>
+<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span>  <span class="comment">// compilers are allowed to use a smaller storage type for an enum</span></div>
+<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span>  <span class="comment">// but must not require storage any larger than an &#39;int&#39;.  If the</span></div>
+<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span>  <span class="comment">// below compile-time assertion does not compile then we need to do</span></div>
+<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span>  <span class="comment">// something different but it will be a lot of work!</span></div>
+<div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span>  <a class="code hl_class" href="classTeuchos_1_1CompileTimeAssert.html">CompileTimeAssert</a>&lt;<span class="keyword">sizeof</span>(<a class="code hl_class" href="classTeuchos_1_1RCP.html">int</a>)-<span class="keyword">sizeof</span>(<a class="code hl_enumeration" href="namespaceTeuchos.html#ae30232414abdd924787afce923a24d48">EType</a>)&gt;();</div>
+<div class="line"><a id="l00712" name="l00712"></a><span class="lineno">  712</span>  <span class="comment">//CompileTimeAssert&lt;sizeof(int)-sizeof(EType)-1&gt;(); // Uncomment to see compilation error</span></div>
+<div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span>  setEnumOption(</div>
+<div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">enum_option_name</a>,</div>
+<div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span>    <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">int</span>*<span class="keyword">&gt;</span>(enum_option_val),</div>
+<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span>    num_enum_opt_values,</div>
+<div class="line"><a id="l00717" name="l00717"></a><span class="lineno">  717</span>    <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">int</span>*<span class="keyword">&gt;</span>(enum_opt_values),</div>
+<div class="line"><a id="l00718" name="l00718"></a><span class="lineno">  718</span>    enum_opt_names,</div>
+<div class="line"><a id="l00719" name="l00719"></a><span class="lineno">  719</span>    documentation,</div>
+<div class="line"><a id="l00720" name="l00720"></a><span class="lineno">  720</span>    required );</div>
+<div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span>}</div>
 </div>
-<div class="line"><a id="l00720" name="l00720"></a><span class="lineno">  720</span> </div>
-<div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span> </div>
-<div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span><span class="keyword">inline</span></div>
-<div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span>std::string CommandLineProcessor::opt_type_str( EOptType opt_type )<span class="keyword"> const</span></div>
-<div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span>  std::string <a class="code hl_class" href="classTeuchos_1_1RCP.html">str</a>;</div>
-<div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span>  <span class="keywordflow">switch</span>( opt_type ) {</div>
-<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span>    <span class="keywordflow">case</span> OPT_BOOL_TRUE:</div>
-<div class="line"><a id="l00728" name="l00728"></a><span class="lineno">  728</span>      <a class="code hl_class" href="classTeuchos_1_1RCP.html">str</a> = <span class="stringliteral">&quot;bool&quot;</span>;</div>
-<div class="line"><a id="l00729" name="l00729"></a><span class="lineno">  729</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00730" name="l00730"></a><span class="lineno">  730</span>    <span class="keywordflow">case</span> OPT_INT:</div>
-<div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span>      <a class="code hl_class" href="classTeuchos_1_1RCP.html">str</a> = <span class="stringliteral">&quot;int&quot;</span>;</div>
-<div class="line"><a id="l00732" name="l00732"></a><span class="lineno">  732</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span>    <span class="keywordflow">case</span> OPT_LONG_INT:</div>
-<div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span>      <a class="code hl_class" href="classTeuchos_1_1RCP.html">str</a> = <span class="stringliteral">&quot;long int&quot;</span>;</div>
-<div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span>    <span class="keywordflow">case</span> OPT_SIZE_T:</div>
-<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>      <a class="code hl_class" href="classTeuchos_1_1RCP.html">str</a> = <span class="stringliteral">&quot;size_t&quot;</span>;</div>
-<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span>    <span class="keywordflow">case</span> OPT_LONG_LONG_INT:</div>
-<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span>      <a class="code hl_class" href="classTeuchos_1_1RCP.html">str</a> = <span class="stringliteral">&quot;long long int&quot;</span>;</div>
-<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>    <span class="keywordflow">case</span> OPT_DOUBLE:</div>
-<div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span>      <a class="code hl_class" href="classTeuchos_1_1RCP.html">str</a> = <span class="stringliteral">&quot;double&quot;</span>;</div>
-<div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span>    <span class="keywordflow">case</span> OPT_FLOAT:</div>
-<div class="line"><a id="l00746" name="l00746"></a><span class="lineno">  746</span>      <a class="code hl_class" href="classTeuchos_1_1RCP.html">str</a> = <span class="stringliteral">&quot;float&quot;</span>;</div>
-<div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>    <span class="keywordflow">case</span> OPT_STRING:</div>
-<div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>      <a class="code hl_class" href="classTeuchos_1_1RCP.html">str</a> = <span class="stringliteral">&quot;string&quot;</span>;</div>
-<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span>    <span class="keywordflow">case</span> OPT_ENUM_INT:</div>
-<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span>      <a class="code hl_class" href="classTeuchos_1_1RCP.html">str</a> = <span class="stringliteral">&quot;enum&quot;</span>;</div>
-<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span>    <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span>      <a class="code hl_class" href="classTeuchos_1_1RCP.html">assert</a>(0); <span class="comment">// Local programming error only</span></div>
-<div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span>  }</div>
-<div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span>  <span class="keywordflow">return</span> str;</div>
-<div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span>}</div>
-<div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span> </div>
-<div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span> </div>
-<div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span>} <span class="comment">// end namespace Teuchos</span></div>
+<div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span> </div>
+<div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span> </div>
+<div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span><span class="keyword">inline</span></div>
+<div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span>std::string CommandLineProcessor::opt_type_str( EOptType opt_type )<span class="keyword"> const</span></div>
+<div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span>  std::string <a class="code hl_class" href="classTeuchos_1_1RCP.html">str</a>;</div>
+<div class="line"><a id="l00728" name="l00728"></a><span class="lineno">  728</span>  <span class="keywordflow">switch</span>( opt_type ) {</div>
+<div class="line"><a id="l00729" name="l00729"></a><span class="lineno">  729</span>    <span class="keywordflow">case</span> OPT_BOOL_TRUE:</div>
+<div class="line"><a id="l00730" name="l00730"></a><span class="lineno">  730</span>      <a class="code hl_class" href="classTeuchos_1_1RCP.html">str</a> = <span class="stringliteral">&quot;bool&quot;</span>;</div>
+<div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00732" name="l00732"></a><span class="lineno">  732</span>    <span class="keywordflow">case</span> OPT_INT:</div>
+<div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span>      <a class="code hl_class" href="classTeuchos_1_1RCP.html">str</a> = <span class="stringliteral">&quot;int&quot;</span>;</div>
+<div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span>    <span class="keywordflow">case</span> OPT_LONG_INT:</div>
+<div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span>      <a class="code hl_class" href="classTeuchos_1_1RCP.html">str</a> = <span class="stringliteral">&quot;long int&quot;</span>;</div>
+<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>    <span class="keywordflow">case</span> OPT_SIZE_T:</div>
+<div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span>      <a class="code hl_class" href="classTeuchos_1_1RCP.html">str</a> = <span class="stringliteral">&quot;size_t&quot;</span>;</div>
+<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span>    <span class="keywordflow">case</span> OPT_LONG_LONG_INT:</div>
+<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>      <a class="code hl_class" href="classTeuchos_1_1RCP.html">str</a> = <span class="stringliteral">&quot;long long int&quot;</span>;</div>
+<div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span>    <span class="keywordflow">case</span> OPT_DOUBLE:</div>
+<div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span>      <a class="code hl_class" href="classTeuchos_1_1RCP.html">str</a> = <span class="stringliteral">&quot;double&quot;</span>;</div>
+<div class="line"><a id="l00746" name="l00746"></a><span class="lineno">  746</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span>    <span class="keywordflow">case</span> OPT_FLOAT:</div>
+<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>      <a class="code hl_class" href="classTeuchos_1_1RCP.html">str</a> = <span class="stringliteral">&quot;float&quot;</span>;</div>
+<div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>    <span class="keywordflow">case</span> OPT_STRING:</div>
+<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span>      <a class="code hl_class" href="classTeuchos_1_1RCP.html">str</a> = <span class="stringliteral">&quot;string&quot;</span>;</div>
+<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>    <span class="keywordflow">case</span> OPT_ENUM_INT:</div>
+<div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span>      <a class="code hl_class" href="classTeuchos_1_1RCP.html">str</a> = <span class="stringliteral">&quot;enum&quot;</span>;</div>
+<div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span>    <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span>      <a class="code hl_class" href="classTeuchos_1_1RCP.html">assert</a>(0); <span class="comment">// Local programming error only</span></div>
+<div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span>  }</div>
+<div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span>  <span class="keywordflow">return</span> str;</div>
+<div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span>}</div>
+<div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span> </div>
 <div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span> </div>
-<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span> </div>
-<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span><span class="preprocessor">#endif </span><span class="comment">// TEUCHOS_COMMAND_LINE_PROCESSOR_HPP</span></div>
+<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>} <span class="comment">// end namespace Teuchos</span></div>
+<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span> </div>
+<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span> </div>
+<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span><span class="preprocessor">#endif </span><span class="comment">// TEUCHOS_COMMAND_LINE_PROCESSOR_HPP</span></div>
 <div class="ttc" id="aTeuchos__CompileTimeAssert_8hpp_html"><div class="ttname"><a href="Teuchos__CompileTimeAssert_8hpp.html">Teuchos_CompileTimeAssert.hpp</a></div><div class="ttdoc">Template classes for testing assertions at compile time.</div></div>
 <div class="ttc" id="aTeuchos__any_8hpp_html"><div class="ttname"><a href="Teuchos__any_8hpp.html">Teuchos_any.hpp</a></div><div class="ttdoc">Modified boost::any class for holding a templated value.</div></div>
 <div class="ttc" id="aTeuchos__map_8hpp_html"><div class="ttname"><a href="Teuchos__map_8hpp.html">Teuchos_map.hpp</a></div><div class="ttdoc">Provides std::map class for deficient platforms.</div></div>
 <div class="ttc" id="aclassTeuchos_1_1CommandLineProcessor_1_1HelpPrinted_html"><div class="ttname"><a href="classTeuchos_1_1CommandLineProcessor_1_1HelpPrinted.html">Teuchos::CommandLineProcessor::HelpPrinted</a></div><div class="ttdoc">Thrown if –help was specified and throwExceptions==true.</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__CommandLineProcessor_8hpp_source.html#l00055">Teuchos_CommandLineProcessor.hpp:56</a></div></div>
 <div class="ttc" id="aclassTeuchos_1_1CommandLineProcessor_1_1ParseError_html"><div class="ttname"><a href="classTeuchos_1_1CommandLineProcessor_1_1ParseError.html">Teuchos::CommandLineProcessor::ParseError</a></div><div class="ttdoc">Thrown if a parse std::exception occurs and throwExceptions==true.</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__CommandLineProcessor_8hpp_source.html#l00051">Teuchos_CommandLineProcessor.hpp:52</a></div></div>
-<div class="ttc" id="aclassTeuchos_1_1CommandLineProcessor_1_1TimeMonitorSurrogate_html"><div class="ttname"><a href="classTeuchos_1_1CommandLineProcessor_1_1TimeMonitorSurrogate.html">Teuchos::CommandLineProcessor::TimeMonitorSurrogate</a></div><div class="ttdoc">Interface by which CommandLineProcessor may use TimeMonitor.</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__CommandLineProcessor_8hpp_source.html#l00634">Teuchos_CommandLineProcessor.hpp:634</a></div></div>
-<div class="ttc" id="aclassTeuchos_1_1CommandLineProcessor_1_1TimeMonitorSurrogate_html_a4051dd0486eb186f2414b4f210d7aa1c"><div class="ttname"><a href="classTeuchos_1_1CommandLineProcessor_1_1TimeMonitorSurrogate.html#a4051dd0486eb186f2414b4f210d7aa1c">Teuchos::CommandLineProcessor::TimeMonitorSurrogate::~TimeMonitorSurrogate</a></div><div class="ttdeci">virtual ~TimeMonitorSurrogate()</div><div class="ttdoc">! brief.</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__CommandLineProcessor_8hpp_source.html#l00637">Teuchos_CommandLineProcessor.hpp:637</a></div></div>
+<div class="ttc" id="aclassTeuchos_1_1CommandLineProcessor_1_1TimeMonitorSurrogate_html"><div class="ttname"><a href="classTeuchos_1_1CommandLineProcessor_1_1TimeMonitorSurrogate.html">Teuchos::CommandLineProcessor::TimeMonitorSurrogate</a></div><div class="ttdoc">Interface by which CommandLineProcessor may use TimeMonitor.</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__CommandLineProcessor_8hpp_source.html#l00636">Teuchos_CommandLineProcessor.hpp:636</a></div></div>
+<div class="ttc" id="aclassTeuchos_1_1CommandLineProcessor_1_1TimeMonitorSurrogate_html_a4051dd0486eb186f2414b4f210d7aa1c"><div class="ttname"><a href="classTeuchos_1_1CommandLineProcessor_1_1TimeMonitorSurrogate.html#a4051dd0486eb186f2414b4f210d7aa1c">Teuchos::CommandLineProcessor::TimeMonitorSurrogate::~TimeMonitorSurrogate</a></div><div class="ttdeci">virtual ~TimeMonitorSurrogate()</div><div class="ttdoc">! brief.</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__CommandLineProcessor_8hpp_source.html#l00639">Teuchos_CommandLineProcessor.hpp:639</a></div></div>
 <div class="ttc" id="aclassTeuchos_1_1CommandLineProcessor_1_1TimeMonitorSurrogate_html_aa83f43cc3af33f0ee7add7572253d06f"><div class="ttname"><a href="classTeuchos_1_1CommandLineProcessor_1_1TimeMonitorSurrogate.html#aa83f43cc3af33f0ee7add7572253d06f">Teuchos::CommandLineProcessor::TimeMonitorSurrogate::summarize</a></div><div class="ttdeci">virtual void summarize(std::ostream &amp;out=std::cout)=0</div><div class="ttdoc">Summarize timings over all process(es) to the given output stream.</div></div>
 <div class="ttc" id="aclassTeuchos_1_1CommandLineProcessor_1_1UnrecognizedOption_html"><div class="ttname"><a href="classTeuchos_1_1CommandLineProcessor_1_1UnrecognizedOption.html">Teuchos::CommandLineProcessor::UnrecognizedOption</a></div><div class="ttdoc">Thrown if an unrecognized option was found and throwExceptions==true.</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__CommandLineProcessor_8hpp_source.html#l00059">Teuchos_CommandLineProcessor.hpp:60</a></div></div>
 <div class="ttc" id="aclassTeuchos_1_1CommandLineProcessor_html"><div class="ttname"><a href="classTeuchos_1_1CommandLineProcessor.html">Teuchos::CommandLineProcessor</a></div><div class="ttdoc">Class that helps parse command line input arguments from (argc,argv[]) and set options.</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__CommandLineProcessor_8hpp_source.html#l00044">Teuchos_CommandLineProcessor.hpp:44</a></div></div>
-<div class="ttc" id="aclassTeuchos_1_1CommandLineProcessor_html_a3f780a480dcf4e2d510c292794553ebe"><div class="ttname"><a href="classTeuchos_1_1CommandLineProcessor.html#a3f780a480dcf4e2d510c292794553ebe">Teuchos::CommandLineProcessor::throwExceptions</a></div><div class="ttdeci">bool throwExceptions() const</div><div class="ttdoc">Returns true if an std::exception is thrown, there is a parse error, or help is printed.</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__CommandLineProcessor_8hpp_source.html#l00666">Teuchos_CommandLineProcessor.hpp:666</a></div></div>
-<div class="ttc" id="aclassTeuchos_1_1CommandLineProcessor_html_a6549f7ba938bc3d21a3b9a571c7efd68"><div class="ttname"><a href="classTeuchos_1_1CommandLineProcessor.html#a6549f7ba938bc3d21a3b9a571c7efd68">Teuchos::CommandLineProcessor::setOption</a></div><div class="ttdeci">void setOption(const char option_true[], const char option_false[], bool *option_val, const char documentation[]=NULL)</div><div class="ttdoc">Set a boolean option.</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__CommandLineProcessor_8cpp_source.html#l00102">Teuchos_CommandLineProcessor.cpp:102</a></div></div>
+<div class="ttc" id="aclassTeuchos_1_1CommandLineProcessor_html_a3f780a480dcf4e2d510c292794553ebe"><div class="ttname"><a href="classTeuchos_1_1CommandLineProcessor.html#a3f780a480dcf4e2d510c292794553ebe">Teuchos::CommandLineProcessor::throwExceptions</a></div><div class="ttdeci">bool throwExceptions() const</div><div class="ttdoc">Returns true if an std::exception is thrown, there is a parse error, or help is printed.</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__CommandLineProcessor_8hpp_source.html#l00668">Teuchos_CommandLineProcessor.hpp:668</a></div></div>
+<div class="ttc" id="aclassTeuchos_1_1CommandLineProcessor_html_a6549f7ba938bc3d21a3b9a571c7efd68"><div class="ttname"><a href="classTeuchos_1_1CommandLineProcessor.html#a6549f7ba938bc3d21a3b9a571c7efd68">Teuchos::CommandLineProcessor::setOption</a></div><div class="ttdeci">void setOption(const char option_true[], const char option_false[], bool *option_val, const char documentation[]=NULL)</div><div class="ttdoc">Set a boolean option.</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__CommandLineProcessor_8cpp_source.html#l00107">Teuchos_CommandLineProcessor.cpp:107</a></div></div>
 <div class="ttc" id="aclassTeuchos_1_1CommandLineProcessor_html_a6cc552d91952f7e4262eb60bd9ba381d"><div class="ttname"><a href="classTeuchos_1_1CommandLineProcessor.html#a6cc552d91952f7e4262eb60bd9ba381d">Teuchos::CommandLineProcessor::EParseCommandLineReturn</a></div><div class="ttdeci">EParseCommandLineReturn</div><div class="ttdoc">Return value for CommandLineProcessor::parse(). Note: These enums are all given non-negative values s...</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__CommandLineProcessor_8hpp_source.html#l00066">Teuchos_CommandLineProcessor.hpp:66</a></div></div>
-<div class="ttc" id="aclassTeuchos_1_1CommandLineProcessor_html_a93f0db6a90819930b8f41400a85a3da9"><div class="ttname"><a href="classTeuchos_1_1CommandLineProcessor.html#a93f0db6a90819930b8f41400a85a3da9">Teuchos::CommandLineProcessor::addOutputSetupOptions</a></div><div class="ttdeci">bool addOutputSetupOptions() const</div><div class="ttdoc">Returns true options will be automatically added to setup Teuchos::VerboseObjectBase::getDefaultOStre...</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__CommandLineProcessor_8hpp_source.html#l00686">Teuchos_CommandLineProcessor.hpp:686</a></div></div>
-<div class="ttc" id="aclassTeuchos_1_1CommandLineProcessor_html_aefa19f44ccc4e4c189c7cd57e6df8b71"><div class="ttname"><a href="classTeuchos_1_1CommandLineProcessor.html#aefa19f44ccc4e4c189c7cd57e6df8b71">Teuchos::CommandLineProcessor::recogniseAllOptions</a></div><div class="ttdeci">bool recogniseAllOptions() const</div><div class="ttdoc">Returns true if all options must be recognized by the parser.</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__CommandLineProcessor_8hpp_source.html#l00676">Teuchos_CommandLineProcessor.hpp:676</a></div></div>
+<div class="ttc" id="aclassTeuchos_1_1CommandLineProcessor_html_a93f0db6a90819930b8f41400a85a3da9"><div class="ttname"><a href="classTeuchos_1_1CommandLineProcessor.html#a93f0db6a90819930b8f41400a85a3da9">Teuchos::CommandLineProcessor::addOutputSetupOptions</a></div><div class="ttdeci">bool addOutputSetupOptions() const</div><div class="ttdoc">Returns true options will be automatically added to setup Teuchos::VerboseObjectBase::getDefaultOStre...</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__CommandLineProcessor_8hpp_source.html#l00688">Teuchos_CommandLineProcessor.hpp:688</a></div></div>
+<div class="ttc" id="aclassTeuchos_1_1CommandLineProcessor_html_aefa19f44ccc4e4c189c7cd57e6df8b71"><div class="ttname"><a href="classTeuchos_1_1CommandLineProcessor.html#aefa19f44ccc4e4c189c7cd57e6df8b71">Teuchos::CommandLineProcessor::recogniseAllOptions</a></div><div class="ttdeci">bool recogniseAllOptions() const</div><div class="ttdoc">Returns true if all options must be recognized by the parser.</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__CommandLineProcessor_8hpp_source.html#l00678">Teuchos_CommandLineProcessor.hpp:678</a></div></div>
 <div class="ttc" id="aclassTeuchos_1_1CompileTimeAssert_html"><div class="ttname"><a href="classTeuchos_1_1CompileTimeAssert.html">Teuchos::CompileTimeAssert</a></div><div class="ttdoc">If instantiated (for Test!=0) then this should not compile!</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__CompileTimeAssert_8hpp_source.html#l00028">Teuchos_CompileTimeAssert.hpp:28</a></div></div>
 <div class="ttc" id="aclassTeuchos_1_1RCP_html"><div class="ttname"><a href="classTeuchos_1_1RCP.html">Teuchos::RCP</a></div><div class="ttdoc">Smart reference counting pointer class for automatic garbage collection.</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__RCPDecl_8hpp_source.html#l00397">Teuchos_RCPDecl.hpp:397</a></div></div>
 <div class="ttc" id="anamespaceTeuchos_html"><div class="ttname"><a href="namespaceTeuchos.html">Teuchos</a></div><div class="ttdoc">The Teuchos namespace contains all of the classes, structs and enums used by Teuchos,...</div></div>
