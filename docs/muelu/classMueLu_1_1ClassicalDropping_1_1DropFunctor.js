@@ -2,7 +2,7 @@ var classMueLu_1_1ClassicalDropping_1_1DropFunctor =
 [
     [ "matrix_type", "classMueLu_1_1ClassicalDropping_1_1DropFunctor.html#a12399ba6d7d7dc373d5ac5d2923bab62", null ],
     [ "diag_vec_type", "classMueLu_1_1ClassicalDropping_1_1DropFunctor.html#ab8cc7499119136c004e8f520f635ba6a", null ],
-    [ "local_matrix_type", "classMueLu_1_1ClassicalDropping_1_1DropFunctor.html#abab13f9bf8b2bebf632ab7031e3c19df", null ],
+    [ "local_matrix_type", "classMueLu_1_1ClassicalDropping_1_1DropFunctor.html#a0b9c25fc21822bd1109783d239c2d562", null ],
     [ "scalar_type", "classMueLu_1_1ClassicalDropping_1_1DropFunctor.html#a382d3d3a48bcd47a885159a138c8c917", null ],
     [ "local_ordinal_type", "classMueLu_1_1ClassicalDropping_1_1DropFunctor.html#a520e1e4f08b32b11692667cbb77298b5", null ],
     [ "memory_space", "classMueLu_1_1ClassicalDropping_1_1DropFunctor.html#a4c78c31eda71d0afe701a33eab304303", null ],

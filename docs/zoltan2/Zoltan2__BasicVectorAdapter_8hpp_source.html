@@ -260,161 +260,162 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    <span class="keyword">const</span> <span class="keyword">auto</span> size = kWeights_.extent(0);</div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    deviceWgts = <span class="keyword">typename</span> Base::WeightsDeviceView1D(<span class="stringliteral">&quot;weights&quot;</span>, size);</div>
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    Kokkos::parallel_for(</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>        size, KOKKOS_CLASS_LAMBDA(<span class="keyword">const</span> <span class="keywordtype">int</span> <span class="keywordtype">id</span>) {</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>          deviceWgts(<span class="keywordtype">id</span>) = kWeights_(<span class="keywordtype">id</span>, idx);</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        });</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span> </div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    Kokkos::fence();</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>  }</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    <span class="keyword">auto</span> kWeights = this-&gt;kWeights_;</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    Kokkos::parallel_for(</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        size, KOKKOS_LAMBDA(<span class="keyword">const</span> <span class="keywordtype">int</span> <span class="keywordtype">id</span>) {</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>          deviceWgts(<span class="keywordtype">id</span>) = kWeights(<span class="keywordtype">id</span>, idx);</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        });</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span> </div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    Kokkos::fence();</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>  }</div>
 </div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span> </div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>  <span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen00266" data-start="{" data-end="}">
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno"><a class="line" href="classZoltan2_1_1BasicVectorAdapter.html#a47587f6d91cd41bed69d987f11c8fba9">  266</a></span>  <a class="code hl_function" href="classZoltan2_1_1BasicVectorAdapter.html#a47587f6d91cd41bed69d987f11c8fba9">getWeightsDeviceView</a>(<span class="keyword">typename</span> Base::WeightsDeviceView &amp;wgts)<span class="keyword"> const override </span>{</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    wgts = kWeights_;</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>  }</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> </div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>  <span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00267" data-start="{" data-end="}">
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno"><a class="line" href="classZoltan2_1_1BasicVectorAdapter.html#a47587f6d91cd41bed69d987f11c8fba9">  267</a></span>  <a class="code hl_function" href="classZoltan2_1_1BasicVectorAdapter.html#a47587f6d91cd41bed69d987f11c8fba9">getWeightsDeviceView</a>(<span class="keyword">typename</span> Base::WeightsDeviceView &amp;wgts)<span class="keyword"> const override </span>{</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    wgts = kWeights_;</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>  }</div>
 </div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>  <span class="comment">// The VectorAdapter interface.</span></div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno"><a class="line" href="classZoltan2_1_1BasicVectorAdapter.html#afacd0ecb11eec26d8693cbe43b753a9a">  274</a></span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classZoltan2_1_1BasicVectorAdapter.html#afacd0ecb11eec26d8693cbe43b753a9a">getNumEntriesPerID</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> numEntriesPerID_; }</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span> </div>
-<div class="foldopen" id="foldopen00276" data-start="{" data-end="}">
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno"><a class="line" href="classZoltan2_1_1BasicVectorAdapter.html#a3fa98d91ac09eb7465f7632eda63782f">  276</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classZoltan2_1_1BasicVectorAdapter.html#a3fa98d91ac09eb7465f7632eda63782f">getEntriesView</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="classZoltan2_1_1AdapterWithCoords.html#a512d81558bb10493ef9429304b379836">scalar_t</a> *&amp;entries, <span class="keywordtype">int</span> &amp;stride,</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>                      <span class="keywordtype">int</span> idx = 0)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    <span class="keywordflow">if</span> (idx &lt; 0 || idx &gt;= numEntriesPerID_) {</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>      std::ostringstream emsg;</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>      emsg &lt;&lt; __FILE__ &lt;&lt; <span class="stringliteral">&quot;:&quot;</span> &lt;&lt; __LINE__ &lt;&lt; <span class="stringliteral">&quot;  Invalid vector index &quot;</span> &lt;&lt; idx</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>           &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>      <span class="keywordflow">throw</span> std::runtime_error(emsg.str());</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    }</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    <span class="keywordtype">size_t</span> length;</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    entries_[idx].getStridedList(length, entries, stride);</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>  }</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span> </div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>  <span class="comment">// The VectorAdapter interface.</span></div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span> </div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno"><a class="line" href="classZoltan2_1_1BasicVectorAdapter.html#afacd0ecb11eec26d8693cbe43b753a9a">  275</a></span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classZoltan2_1_1BasicVectorAdapter.html#afacd0ecb11eec26d8693cbe43b753a9a">getNumEntriesPerID</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> numEntriesPerID_; }</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> </div>
+<div class="foldopen" id="foldopen00277" data-start="{" data-end="}">
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno"><a class="line" href="classZoltan2_1_1BasicVectorAdapter.html#a3fa98d91ac09eb7465f7632eda63782f">  277</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classZoltan2_1_1BasicVectorAdapter.html#a3fa98d91ac09eb7465f7632eda63782f">getEntriesView</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="classZoltan2_1_1AdapterWithCoords.html#a512d81558bb10493ef9429304b379836">scalar_t</a> *&amp;entries, <span class="keywordtype">int</span> &amp;stride,</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>                      <span class="keywordtype">int</span> idx = 0)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    <span class="keywordflow">if</span> (idx &lt; 0 || idx &gt;= numEntriesPerID_) {</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>      std::ostringstream emsg;</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>      emsg &lt;&lt; __FILE__ &lt;&lt; <span class="stringliteral">&quot;:&quot;</span> &lt;&lt; __LINE__ &lt;&lt; <span class="stringliteral">&quot;  Invalid vector index &quot;</span> &lt;&lt; idx</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>           &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>      <span class="keywordflow">throw</span> std::runtime_error(emsg.str());</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    }</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    <span class="keywordtype">size_t</span> length;</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    entries_[idx].getStridedList(length, entries, stride);</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>  }</div>
 </div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span> </div>
-<div class="foldopen" id="foldopen00288" data-start="{" data-end="}">
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno"><a class="line" href="classZoltan2_1_1BasicVectorAdapter.html#a164e3aa0896ec68620665f5b25bca7f4">  288</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classZoltan2_1_1BasicVectorAdapter.html#a164e3aa0896ec68620665f5b25bca7f4">getEntriesKokkosView</a>(</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>      <span class="keyword">typename</span> <a class="code hl_typedef" href="classZoltan2_1_1AdapterWithCoords.html#a3c21decaba199fc13b1697ea4b2a58ba">AdapterWithCoords&lt;User&gt;::CoordsDeviceView</a> &amp;entries)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    entries = kEntries_;</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>  }</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span> </div>
+<div class="foldopen" id="foldopen00289" data-start="{" data-end="}">
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno"><a class="line" href="classZoltan2_1_1BasicVectorAdapter.html#a164e3aa0896ec68620665f5b25bca7f4">  289</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classZoltan2_1_1BasicVectorAdapter.html#a164e3aa0896ec68620665f5b25bca7f4">getEntriesKokkosView</a>(</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>      <span class="keyword">typename</span> <a class="code hl_typedef" href="classZoltan2_1_1AdapterWithCoords.html#a3c21decaba199fc13b1697ea4b2a58ba">AdapterWithCoords&lt;User&gt;::CoordsDeviceView</a> &amp;entries)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    entries = kEntries_;</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>  }</div>
 </div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span> </div>
-<div class="foldopen" id="foldopen00293" data-start="{" data-end="}">
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno"><a class="line" href="classZoltan2_1_1BasicVectorAdapter.html#a0f8074b6243036ea5faa66063474d991">  293</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classZoltan2_1_1BasicVectorAdapter.html#a0f8074b6243036ea5faa66063474d991">getEntriesHostView</a>(<span class="keyword">typename</span> <a class="code hl_typedef" href="classZoltan2_1_1AdapterWithCoords.html#accfb6c3feb2128173fb5211c99cf7a56">AdapterWithCoords&lt;User&gt;::CoordsHostView</a></div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>                              &amp;entries)<span class="keyword"> const override </span>{</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    <span class="keyword">auto</span> hostEntries = Kokkos::create_mirror_view(kEntries_);</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    Kokkos::deep_copy(hostEntries, kEntries_);</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    entries = hostEntries;</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>  }</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span> </div>
+<div class="foldopen" id="foldopen00294" data-start="{" data-end="}">
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno"><a class="line" href="classZoltan2_1_1BasicVectorAdapter.html#a0f8074b6243036ea5faa66063474d991">  294</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classZoltan2_1_1BasicVectorAdapter.html#a0f8074b6243036ea5faa66063474d991">getEntriesHostView</a>(<span class="keyword">typename</span> <a class="code hl_typedef" href="classZoltan2_1_1AdapterWithCoords.html#accfb6c3feb2128173fb5211c99cf7a56">AdapterWithCoords&lt;User&gt;::CoordsHostView</a></div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>                              &amp;entries)<span class="keyword"> const override </span>{</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    <span class="keyword">auto</span> hostEntries = Kokkos::create_mirror_view(kEntries_);</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    Kokkos::deep_copy(hostEntries, kEntries_);</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    entries = hostEntries;</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>  }</div>
 </div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> </div>
-<div class="foldopen" id="foldopen00300" data-start="{" data-end="}">
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno"><a class="line" href="classZoltan2_1_1BasicVectorAdapter.html#a628d04e5b9daa6b81a7ddcea2b372f19">  300</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classZoltan2_1_1BasicVectorAdapter.html#a628d04e5b9daa6b81a7ddcea2b372f19">getEntriesDeviceView</a>(<span class="keyword">typename</span> <a class="code hl_typedef" href="classZoltan2_1_1AdapterWithCoords.html#a3c21decaba199fc13b1697ea4b2a58ba">AdapterWithCoords&lt;User&gt;::CoordsDeviceView</a></div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>                                &amp;entries)<span class="keyword"> const override </span>{</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    entries = kEntries_;</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>  }</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span> </div>
+<div class="foldopen" id="foldopen00301" data-start="{" data-end="}">
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno"><a class="line" href="classZoltan2_1_1BasicVectorAdapter.html#a628d04e5b9daa6b81a7ddcea2b372f19">  301</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classZoltan2_1_1BasicVectorAdapter.html#a628d04e5b9daa6b81a7ddcea2b372f19">getEntriesDeviceView</a>(<span class="keyword">typename</span> <a class="code hl_typedef" href="classZoltan2_1_1AdapterWithCoords.html#a3c21decaba199fc13b1697ea4b2a58ba">AdapterWithCoords&lt;User&gt;::CoordsDeviceView</a></div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>                                &amp;entries)<span class="keyword"> const override </span>{</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    entries = kEntries_;</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>  }</div>
 </div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span> </div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>  <a class="code hl_typedef" href="mapRemotes_8cpp.html#a78e717933cd41c3f26b52bc5966ec1e6">lno_t</a> numIds_;</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>  <span class="keyword">const</span> <a class="code hl_typedef" href="mapRemotes_8cpp.html#ae82f112ec3e63100c4a833ff6343e0ac">gno_t</a> *idList_;</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span> </div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>  <span class="keywordtype">int</span> numEntriesPerID_;</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>  <span class="keywordtype">int</span> numWeights_;</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span> </div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>  <span class="comment">// Old API variable members</span></div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>  ArrayRCP&lt;StridedData&lt;lno_t, scalar_t&gt;&gt; entries_;</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>  ArrayRCP&lt;StridedData&lt;lno_t, scalar_t&gt;&gt; weights_;</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span> </div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>  <span class="comment">// New API variable members</span></div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>  <span class="keyword">typename</span> Base::IdsDeviceView kIds_;</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>  <span class="keyword">typename</span> <a class="code hl_typedef" href="classZoltan2_1_1AdapterWithCoords.html#a3c21decaba199fc13b1697ea4b2a58ba">AdapterWithCoords&lt;User&gt;::CoordsDeviceView</a> kEntries_;</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>  <span class="keyword">typename</span> Base::WeightsDeviceView kWeights_;</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span> </div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>  <span class="keywordtype">void</span> createBasicVector(std::vector&lt;const scalar_t *&gt; &amp;entries,</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>                         std::vector&lt;int&gt; &amp;entryStride,</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>                         std::vector&lt;const scalar_t *&gt; &amp;<a class="code hl_variable" href="partition_2rcbPerformanceZ1_8cpp.html#a894037866610a2502f9ec03a200d218c">weights</a>,</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>                         std::vector&lt;int&gt; &amp;weightStrides) {</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    <span class="keyword">typedef</span> <a class="code hl_class" href="classZoltan2_1_1StridedData.html">StridedData&lt;lno_t, scalar_t&gt;</a> input_t;</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span> </div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>    <span class="keywordflow">if</span> (numIds_) {</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>      <span class="comment">// make kokkos ids</span></div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>      kIds_ = <span class="keyword">typename</span> Base::IdsDeviceView(</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>          Kokkos::ViewAllocateWithoutInitializing(<span class="stringliteral">&quot;ids&quot;</span>), numIds_);</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>      <span class="keyword">auto</span> host_kIds_ = Kokkos::create_mirror_view(kIds_);</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> n = 0; n &lt; numIds_; ++n) {</div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>        host_kIds_(n) = idList_[n];</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>      }</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>      Kokkos::deep_copy(kIds_, host_kIds_);</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span> </div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>      <span class="comment">// make coordinates</span></div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>      <span class="keywordtype">int</span> stride = 1;</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>      entries_ = arcp(<span class="keyword">new</span> input_t[numEntriesPerID_], 0, numEntriesPerID_, <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> v = 0; v &lt; numEntriesPerID_; v++) {</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>        <span class="keywordflow">if</span> (entryStride.size())</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>          stride = entryStride[v];</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>        ArrayRCP&lt;const scalar_t&gt; eltV(entries[v], 0, stride * numIds_, <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>        entries_[v] = input_t(eltV, stride);</div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>      }</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span> </div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>      <span class="comment">// setup kokkos entries</span></div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>      kEntries_ = <span class="keyword">typename</span> <a class="code hl_typedef" href="classZoltan2_1_1AdapterWithCoords.html#a3c21decaba199fc13b1697ea4b2a58ba">AdapterWithCoords&lt;User&gt;::CoordsDeviceView</a>(</div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>          Kokkos::ViewAllocateWithoutInitializing(<span class="stringliteral">&quot;entries&quot;</span>), numIds_,</div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>          numEntriesPerID_);</div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span> </div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>      <span class="keywordtype">size_t</span> length;</div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>      <span class="keyword">const</span> <a class="code hl_typedef" href="classZoltan2_1_1AdapterWithCoords.html#a512d81558bb10493ef9429304b379836">scalar_t</a> *entriesPtr;</div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span> </div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>      <span class="keyword">auto</span> host_kokkos_entries = Kokkos::create_mirror_view(this-&gt;kEntries_);</div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span> </div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> idx = 0; idx &lt; numEntriesPerID_; idx++) {</div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>        entries_[idx].getStridedList(length, entriesPtr, stride);</div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>        <span class="keywordtype">size_t</span> fill_index = 0;</div>
-<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> n = 0; n &lt; numIds_; ++n) {</div>
-<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>          host_kokkos_entries(fill_index++, idx) = entriesPtr[n * stride];</div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>        }</div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>      }</div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>      Kokkos::deep_copy(this-&gt;kEntries_, host_kokkos_entries);</div>
-<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>    }</div>
-<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span> </div>
-<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>    <span class="keywordflow">if</span> (numWeights_) {</div>
-<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>      <span class="keywordtype">int</span> stride = 1;</div>
-<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>      weights_ = arcp(<span class="keyword">new</span> input_t[numWeights_], 0, numWeights_, <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> w = 0; w &lt; numWeights_; w++) {</div>
-<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>        <span class="keywordflow">if</span> (weightStrides.size())</div>
-<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>          stride = weightStrides[w];</div>
-<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>        ArrayRCP&lt;const scalar_t&gt; wgtV(<a class="code hl_variable" href="partition_2rcbPerformanceZ1_8cpp.html#a894037866610a2502f9ec03a200d218c">weights</a>[w], 0, stride * numIds_, <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>        weights_[w] = input_t(wgtV, stride);</div>
-<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>      }</div>
-<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span> </div>
-<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>      <span class="comment">// set up final view with weights</span></div>
-<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>      kWeights_ = <span class="keyword">typename</span> Base::WeightsDeviceView(</div>
-<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>          Kokkos::ViewAllocateWithoutInitializing(<span class="stringliteral">&quot;kokkos weights&quot;</span>), numIds_,</div>
-<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>          numWeights_);</div>
-<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span> </div>
-<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>      <span class="comment">// setup weights</span></div>
-<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>      <span class="keyword">auto</span> host_weight_temp_values =</div>
-<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>          Kokkos::create_mirror_view(this-&gt;kWeights_);</div>
-<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> idx = 0; idx &lt; numWeights_; ++idx) {</div>
-<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="classZoltan2_1_1AdapterWithCoords.html#a512d81558bb10493ef9429304b379836">scalar_t</a> *weightsPtr;</div>
-<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>        <span class="keywordtype">size_t</span> length;</div>
-<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>        weights_[idx].getStridedList(length, weightsPtr, stride);</div>
-<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>        <span class="keywordtype">size_t</span> fill_index = 0;</div>
-<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> n = 0; n &lt; length; n += stride) {</div>
-<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>          host_weight_temp_values(fill_index++, idx) = weightsPtr[n];</div>
-<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>        }</div>
-<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>      }</div>
-<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>      Kokkos::deep_copy(this-&gt;kWeights_, host_weight_temp_values);</div>
-<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>    }</div>
-<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>  }</div>
-<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>};</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span> </div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>  <a class="code hl_typedef" href="mapRemotes_8cpp.html#a78e717933cd41c3f26b52bc5966ec1e6">lno_t</a> numIds_;</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>  <span class="keyword">const</span> <a class="code hl_typedef" href="mapRemotes_8cpp.html#ae82f112ec3e63100c4a833ff6343e0ac">gno_t</a> *idList_;</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span> </div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>  <span class="keywordtype">int</span> numEntriesPerID_;</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>  <span class="keywordtype">int</span> numWeights_;</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span> </div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>  <span class="comment">// Old API variable members</span></div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>  ArrayRCP&lt;StridedData&lt;lno_t, scalar_t&gt;&gt; entries_;</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>  ArrayRCP&lt;StridedData&lt;lno_t, scalar_t&gt;&gt; weights_;</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span> </div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>  <span class="comment">// New API variable members</span></div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>  <span class="keyword">typename</span> Base::IdsDeviceView kIds_;</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>  <span class="keyword">typename</span> <a class="code hl_typedef" href="classZoltan2_1_1AdapterWithCoords.html#a3c21decaba199fc13b1697ea4b2a58ba">AdapterWithCoords&lt;User&gt;::CoordsDeviceView</a> kEntries_;</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>  <span class="keyword">typename</span> Base::WeightsDeviceView kWeights_;</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span> </div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>  <span class="keywordtype">void</span> createBasicVector(std::vector&lt;const scalar_t *&gt; &amp;entries,</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>                         std::vector&lt;int&gt; &amp;entryStride,</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>                         std::vector&lt;const scalar_t *&gt; &amp;<a class="code hl_variable" href="partition_2rcbPerformanceZ1_8cpp.html#a894037866610a2502f9ec03a200d218c">weights</a>,</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>                         std::vector&lt;int&gt; &amp;weightStrides) {</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>    <span class="keyword">typedef</span> <a class="code hl_class" href="classZoltan2_1_1StridedData.html">StridedData&lt;lno_t, scalar_t&gt;</a> input_t;</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span> </div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    <span class="keywordflow">if</span> (numIds_) {</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>      <span class="comment">// make kokkos ids</span></div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>      kIds_ = <span class="keyword">typename</span> Base::IdsDeviceView(</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>          Kokkos::ViewAllocateWithoutInitializing(<span class="stringliteral">&quot;ids&quot;</span>), numIds_);</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>      <span class="keyword">auto</span> host_kIds_ = Kokkos::create_mirror_view(kIds_);</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> n = 0; n &lt; numIds_; ++n) {</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>        host_kIds_(n) = idList_[n];</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>      }</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>      Kokkos::deep_copy(kIds_, host_kIds_);</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span> </div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>      <span class="comment">// make coordinates</span></div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>      <span class="keywordtype">int</span> stride = 1;</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>      entries_ = arcp(<span class="keyword">new</span> input_t[numEntriesPerID_], 0, numEntriesPerID_, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> v = 0; v &lt; numEntriesPerID_; v++) {</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>        <span class="keywordflow">if</span> (entryStride.size())</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>          stride = entryStride[v];</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>        ArrayRCP&lt;const scalar_t&gt; eltV(entries[v], 0, stride * numIds_, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>        entries_[v] = input_t(eltV, stride);</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>      }</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span> </div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>      <span class="comment">// setup kokkos entries</span></div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>      kEntries_ = <span class="keyword">typename</span> <a class="code hl_typedef" href="classZoltan2_1_1AdapterWithCoords.html#a3c21decaba199fc13b1697ea4b2a58ba">AdapterWithCoords&lt;User&gt;::CoordsDeviceView</a>(</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>          Kokkos::ViewAllocateWithoutInitializing(<span class="stringliteral">&quot;entries&quot;</span>), numIds_,</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>          numEntriesPerID_);</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span> </div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>      <span class="keywordtype">size_t</span> length;</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>      <span class="keyword">const</span> <a class="code hl_typedef" href="classZoltan2_1_1AdapterWithCoords.html#a512d81558bb10493ef9429304b379836">scalar_t</a> *entriesPtr;</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span> </div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>      <span class="keyword">auto</span> host_kokkos_entries = Kokkos::create_mirror_view(this-&gt;kEntries_);</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span> </div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> idx = 0; idx &lt; numEntriesPerID_; idx++) {</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>        entries_[idx].getStridedList(length, entriesPtr, stride);</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>        <span class="keywordtype">size_t</span> fill_index = 0;</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> n = 0; n &lt; numIds_; ++n) {</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>          host_kokkos_entries(fill_index++, idx) = entriesPtr[n * stride];</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>        }</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>      }</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>      Kokkos::deep_copy(this-&gt;kEntries_, host_kokkos_entries);</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>    }</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span> </div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>    <span class="keywordflow">if</span> (numWeights_) {</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>      <span class="keywordtype">int</span> stride = 1;</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>      weights_ = arcp(<span class="keyword">new</span> input_t[numWeights_], 0, numWeights_, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> w = 0; w &lt; numWeights_; w++) {</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>        <span class="keywordflow">if</span> (weightStrides.size())</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>          stride = weightStrides[w];</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>        ArrayRCP&lt;const scalar_t&gt; wgtV(<a class="code hl_variable" href="partition_2rcbPerformanceZ1_8cpp.html#a894037866610a2502f9ec03a200d218c">weights</a>[w], 0, stride * numIds_, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>        weights_[w] = input_t(wgtV, stride);</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>      }</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span> </div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>      <span class="comment">// set up final view with weights</span></div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>      kWeights_ = <span class="keyword">typename</span> Base::WeightsDeviceView(</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>          Kokkos::ViewAllocateWithoutInitializing(<span class="stringliteral">&quot;kokkos weights&quot;</span>), numIds_,</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>          numWeights_);</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span> </div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>      <span class="comment">// setup weights</span></div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>      <span class="keyword">auto</span> host_weight_temp_values =</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>          Kokkos::create_mirror_view(this-&gt;kWeights_);</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> idx = 0; idx &lt; numWeights_; ++idx) {</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="classZoltan2_1_1AdapterWithCoords.html#a512d81558bb10493ef9429304b379836">scalar_t</a> *weightsPtr;</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>        <span class="keywordtype">size_t</span> length;</div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>        weights_[idx].getStridedList(length, weightsPtr, stride);</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>        <span class="keywordtype">size_t</span> fill_index = 0;</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> n = 0; n &lt; length; n += stride) {</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>          host_weight_temp_values(fill_index++, idx) = weightsPtr[n];</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>        }</div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>      }</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>      Kokkos::deep_copy(this-&gt;kWeights_, host_weight_temp_values);</div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>    }</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>  }</div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>};</div>
 </div>
-<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span> </div>
-<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>} <span class="comment">// namespace Zoltan2</span></div>
-<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span> </div>
-<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span> </div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>} <span class="comment">// namespace Zoltan2</span></div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span> </div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aZoltan2__Adapter_8hpp_html"><div class="ttname"><a href="Zoltan2__Adapter_8hpp.html">Zoltan2_Adapter.hpp</a></div></div>
 <div class="ttc" id="aZoltan2__StridedData_8hpp_html"><div class="ttname"><a href="Zoltan2__StridedData_8hpp.html">Zoltan2_StridedData.hpp</a></div><div class="ttdoc">This file defines the StridedData class.</div></div>
 <div class="ttc" id="aZoltan2__VectorAdapter_8hpp_html"><div class="ttname"><a href="Zoltan2__VectorAdapter_8hpp.html">Zoltan2_VectorAdapter.hpp</a></div><div class="ttdoc">Defines the VectorAdapter interface.</div></div>
@@ -429,16 +430,16 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclassZoltan2_1_1BasicVectorAdapter_html"><div class="ttname"><a href="classZoltan2_1_1BasicVectorAdapter.html">Zoltan2::BasicVectorAdapter</a></div><div class="ttdoc">BasicVectorAdapter represents a vector (plus optional weights) supplied by the user as pointers to st...</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__BasicVectorAdapter_8hpp_source.html#l00050">Zoltan2_BasicVectorAdapter.hpp:50</a></div></div>
 <div class="ttc" id="aclassZoltan2_1_1BasicVectorAdapter_html_a04d1be1a7bf85e6c2c77a33510ab2ace"><div class="ttname"><a href="classZoltan2_1_1BasicVectorAdapter.html#a04d1be1a7bf85e6c2c77a33510ab2ace">Zoltan2::BasicVectorAdapter::BasicVectorAdapter</a></div><div class="ttdeci">BasicVectorAdapter(lno_t numIds, const gno_t *ids, std::vector&lt; const scalar_t * &gt; &amp;entries, std::vector&lt; int &gt; &amp;entryStride, std::vector&lt; const scalar_t * &gt; &amp;weights, std::vector&lt; int &gt; &amp;weightStrides)</div><div class="ttdoc">Constructor for multivector (a set of vectors sharing the same global numbering and data distribution...</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__BasicVectorAdapter_8hpp_source.html#l00126">Zoltan2_BasicVectorAdapter.hpp:126</a></div></div>
 <div class="ttc" id="aclassZoltan2_1_1BasicVectorAdapter_html_a0d88a0468e4b67ab290a5f21ff53130b"><div class="ttname"><a href="classZoltan2_1_1BasicVectorAdapter.html#a0d88a0468e4b67ab290a5f21ff53130b">Zoltan2::BasicVectorAdapter::getWeightsHostView</a></div><div class="ttdeci">void getWeightsHostView(typename Base::WeightsHostView &amp;wgts) const override</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__BasicVectorAdapter_8hpp_source.html#l00243">Zoltan2_BasicVectorAdapter.hpp:243</a></div></div>
-<div class="ttc" id="aclassZoltan2_1_1BasicVectorAdapter_html_a0f8074b6243036ea5faa66063474d991"><div class="ttname"><a href="classZoltan2_1_1BasicVectorAdapter.html#a0f8074b6243036ea5faa66063474d991">Zoltan2::BasicVectorAdapter::getEntriesHostView</a></div><div class="ttdeci">void getEntriesHostView(typename AdapterWithCoords&lt; User &gt;::CoordsHostView &amp;entries) const override</div><div class="ttdoc">Provide a Kokkos view (Host side) to the elements of the specified vector.</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__BasicVectorAdapter_8hpp_source.html#l00293">Zoltan2_BasicVectorAdapter.hpp:293</a></div></div>
+<div class="ttc" id="aclassZoltan2_1_1BasicVectorAdapter_html_a0f8074b6243036ea5faa66063474d991"><div class="ttname"><a href="classZoltan2_1_1BasicVectorAdapter.html#a0f8074b6243036ea5faa66063474d991">Zoltan2::BasicVectorAdapter::getEntriesHostView</a></div><div class="ttdeci">void getEntriesHostView(typename AdapterWithCoords&lt; User &gt;::CoordsHostView &amp;entries) const override</div><div class="ttdoc">Provide a Kokkos view (Host side) to the elements of the specified vector.</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__BasicVectorAdapter_8hpp_source.html#l00294">Zoltan2_BasicVectorAdapter.hpp:294</a></div></div>
 <div class="ttc" id="aclassZoltan2_1_1BasicVectorAdapter_html_a0fdef07d3811790a5294b82b21b872f9"><div class="ttname"><a href="classZoltan2_1_1BasicVectorAdapter.html#a0fdef07d3811790a5294b82b21b872f9">Zoltan2::BasicVectorAdapter::getWeightsHostView</a></div><div class="ttdeci">void getWeightsHostView(typename Base::WeightsHostView1D &amp;hostWgts, int idx=0) const override</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__BasicVectorAdapter_8hpp_source.html#l00230">Zoltan2_BasicVectorAdapter.hpp:230</a></div></div>
-<div class="ttc" id="aclassZoltan2_1_1BasicVectorAdapter_html_a164e3aa0896ec68620665f5b25bca7f4"><div class="ttname"><a href="classZoltan2_1_1BasicVectorAdapter.html#a164e3aa0896ec68620665f5b25bca7f4">Zoltan2::BasicVectorAdapter::getEntriesKokkosView</a></div><div class="ttdeci">void getEntriesKokkosView(typename AdapterWithCoords&lt; User &gt;::CoordsDeviceView &amp;entries) const</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__BasicVectorAdapter_8hpp_source.html#l00288">Zoltan2_BasicVectorAdapter.hpp:288</a></div></div>
+<div class="ttc" id="aclassZoltan2_1_1BasicVectorAdapter_html_a164e3aa0896ec68620665f5b25bca7f4"><div class="ttname"><a href="classZoltan2_1_1BasicVectorAdapter.html#a164e3aa0896ec68620665f5b25bca7f4">Zoltan2::BasicVectorAdapter::getEntriesKokkosView</a></div><div class="ttdeci">void getEntriesKokkosView(typename AdapterWithCoords&lt; User &gt;::CoordsDeviceView &amp;entries) const</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__BasicVectorAdapter_8hpp_source.html#l00289">Zoltan2_BasicVectorAdapter.hpp:289</a></div></div>
 <div class="ttc" id="aclassZoltan2_1_1BasicVectorAdapter_html_a34217f80eddda62d000f08b7d875a923"><div class="ttname"><a href="classZoltan2_1_1BasicVectorAdapter.html#a34217f80eddda62d000f08b7d875a923">Zoltan2::BasicVectorAdapter::getLocalNumIDs</a></div><div class="ttdeci">size_t getLocalNumIDs() const</div><div class="ttdoc">Returns the number of objects on this process.</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__BasicVectorAdapter_8hpp_source.html#l00197">Zoltan2_BasicVectorAdapter.hpp:197</a></div></div>
-<div class="ttc" id="aclassZoltan2_1_1BasicVectorAdapter_html_a3fa98d91ac09eb7465f7632eda63782f"><div class="ttname"><a href="classZoltan2_1_1BasicVectorAdapter.html#a3fa98d91ac09eb7465f7632eda63782f">Zoltan2::BasicVectorAdapter::getEntriesView</a></div><div class="ttdeci">void getEntriesView(const scalar_t *&amp;entries, int &amp;stride, int idx=0) const</div><div class="ttdoc">Provide a pointer to the elements of the specified vector.</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__BasicVectorAdapter_8hpp_source.html#l00276">Zoltan2_BasicVectorAdapter.hpp:276</a></div></div>
+<div class="ttc" id="aclassZoltan2_1_1BasicVectorAdapter_html_a3fa98d91ac09eb7465f7632eda63782f"><div class="ttname"><a href="classZoltan2_1_1BasicVectorAdapter.html#a3fa98d91ac09eb7465f7632eda63782f">Zoltan2::BasicVectorAdapter::getEntriesView</a></div><div class="ttdeci">void getEntriesView(const scalar_t *&amp;entries, int &amp;stride, int idx=0) const</div><div class="ttdoc">Provide a pointer to the elements of the specified vector.</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__BasicVectorAdapter_8hpp_source.html#l00277">Zoltan2_BasicVectorAdapter.hpp:277</a></div></div>
 <div class="ttc" id="aclassZoltan2_1_1BasicVectorAdapter_html_a423602b869bbf2a638cbd755ab338451"><div class="ttname"><a href="classZoltan2_1_1BasicVectorAdapter.html#a423602b869bbf2a638cbd755ab338451">Zoltan2::BasicVectorAdapter::getWeightsDeviceView</a></div><div class="ttdeci">void getWeightsDeviceView(typename Base::WeightsDeviceView1D &amp;deviceWgts, int idx=0) const override</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__BasicVectorAdapter_8hpp_source.html#l00249">Zoltan2_BasicVectorAdapter.hpp:249</a></div></div>
-<div class="ttc" id="aclassZoltan2_1_1BasicVectorAdapter_html_a47587f6d91cd41bed69d987f11c8fba9"><div class="ttname"><a href="classZoltan2_1_1BasicVectorAdapter.html#a47587f6d91cd41bed69d987f11c8fba9">Zoltan2::BasicVectorAdapter::getWeightsDeviceView</a></div><div class="ttdeci">void getWeightsDeviceView(typename Base::WeightsDeviceView &amp;wgts) const override</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__BasicVectorAdapter_8hpp_source.html#l00266">Zoltan2_BasicVectorAdapter.hpp:266</a></div></div>
+<div class="ttc" id="aclassZoltan2_1_1BasicVectorAdapter_html_a47587f6d91cd41bed69d987f11c8fba9"><div class="ttname"><a href="classZoltan2_1_1BasicVectorAdapter.html#a47587f6d91cd41bed69d987f11c8fba9">Zoltan2::BasicVectorAdapter::getWeightsDeviceView</a></div><div class="ttdeci">void getWeightsDeviceView(typename Base::WeightsDeviceView &amp;wgts) const override</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__BasicVectorAdapter_8hpp_source.html#l00267">Zoltan2_BasicVectorAdapter.hpp:267</a></div></div>
 <div class="ttc" id="aclassZoltan2_1_1BasicVectorAdapter_html_a50a2cbdc0b966a3be4600a636bb1151e"><div class="ttname"><a href="classZoltan2_1_1BasicVectorAdapter.html#a50a2cbdc0b966a3be4600a636bb1151e">Zoltan2::BasicVectorAdapter::getIDsHostView</a></div><div class="ttdeci">void getIDsHostView(typename Base::ConstIdsHostView &amp;ids) const override</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__BasicVectorAdapter_8hpp_source.html#l00205">Zoltan2_BasicVectorAdapter.hpp:205</a></div></div>
 <div class="ttc" id="aclassZoltan2_1_1BasicVectorAdapter_html_a56b4beb43935f8e4cce338f3be82346d"><div class="ttname"><a href="classZoltan2_1_1BasicVectorAdapter.html#a56b4beb43935f8e4cce338f3be82346d">Zoltan2::BasicVectorAdapter::getNumWeightsPerID</a></div><div class="ttdeci">int getNumWeightsPerID() const</div><div class="ttdoc">Returns the number of weights per object. Number of weights per object should be zero or greater....</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__BasicVectorAdapter_8hpp_source.html#l00215">Zoltan2_BasicVectorAdapter.hpp:215</a></div></div>
-<div class="ttc" id="aclassZoltan2_1_1BasicVectorAdapter_html_a628d04e5b9daa6b81a7ddcea2b372f19"><div class="ttname"><a href="classZoltan2_1_1BasicVectorAdapter.html#a628d04e5b9daa6b81a7ddcea2b372f19">Zoltan2::BasicVectorAdapter::getEntriesDeviceView</a></div><div class="ttdeci">void getEntriesDeviceView(typename AdapterWithCoords&lt; User &gt;::CoordsDeviceView &amp;entries) const override</div><div class="ttdoc">Provide a Kokkos view (Device side) to the elements of the specified vector.</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__BasicVectorAdapter_8hpp_source.html#l00300">Zoltan2_BasicVectorAdapter.hpp:300</a></div></div>
+<div class="ttc" id="aclassZoltan2_1_1BasicVectorAdapter_html_a628d04e5b9daa6b81a7ddcea2b372f19"><div class="ttname"><a href="classZoltan2_1_1BasicVectorAdapter.html#a628d04e5b9daa6b81a7ddcea2b372f19">Zoltan2::BasicVectorAdapter::getEntriesDeviceView</a></div><div class="ttdeci">void getEntriesDeviceView(typename AdapterWithCoords&lt; User &gt;::CoordsDeviceView &amp;entries) const override</div><div class="ttdoc">Provide a Kokkos view (Device side) to the elements of the specified vector.</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__BasicVectorAdapter_8hpp_source.html#l00301">Zoltan2_BasicVectorAdapter.hpp:301</a></div></div>
 <div class="ttc" id="aclassZoltan2_1_1BasicVectorAdapter_html_a8cfb07eede8b308e55083d8d9e5e30ca"><div class="ttname"><a href="classZoltan2_1_1BasicVectorAdapter.html#a8cfb07eede8b308e55083d8d9e5e30ca">Zoltan2::BasicVectorAdapter::BasicVectorAdapter</a></div><div class="ttdeci">BasicVectorAdapter(lno_t numIds, const gno_t *ids, const scalar_t *entries, int entryStride=1, bool usewgts=false, const scalar_t *wgts=NULL, int wgtStride=1)</div><div class="ttdoc">Constructor for one vector with (optionally) one weight.</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__BasicVectorAdapter_8hpp_source.html#l00081">Zoltan2_BasicVectorAdapter.hpp:81</a></div></div>
 <div class="ttc" id="aclassZoltan2_1_1BasicVectorAdapter_html_a8fc5adaf6ddf873adc88e3296762204d"><div class="ttname"><a href="classZoltan2_1_1BasicVectorAdapter.html#a8fc5adaf6ddf873adc88e3296762204d">Zoltan2::BasicVectorAdapter::getWeightsView</a></div><div class="ttdeci">void getWeightsView(const scalar_t *&amp;weights, int &amp;stride, int idx) const</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__BasicVectorAdapter_8hpp_source.html#l00222">Zoltan2_BasicVectorAdapter.hpp:222</a></div></div>
 <div class="ttc" id="aclassZoltan2_1_1BasicVectorAdapter_html_a98562006532adac0dc171c49128922c2"><div class="ttname"><a href="classZoltan2_1_1BasicVectorAdapter.html#a98562006532adac0dc171c49128922c2">Zoltan2::BasicVectorAdapter::getWeightsKokkos2dView</a></div><div class="ttdeci">virtual void getWeightsKokkos2dView(typename Base::WeightsDeviceView &amp;wgt) const</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__BasicVectorAdapter_8hpp_source.html#l00218">Zoltan2_BasicVectorAdapter.hpp:218</a></div></div>
@@ -446,7 +447,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclassZoltan2_1_1BasicVectorAdapter_html_ac649e4103bc75e770ea687bbb3f65366"><div class="ttname"><a href="classZoltan2_1_1BasicVectorAdapter.html#ac649e4103bc75e770ea687bbb3f65366">Zoltan2::BasicVectorAdapter::getIDsDeviceView</a></div><div class="ttdeci">void getIDsDeviceView(typename Base::ConstIdsDeviceView &amp;ids) const override</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__BasicVectorAdapter_8hpp_source.html#l00211">Zoltan2_BasicVectorAdapter.hpp:211</a></div></div>
 <div class="ttc" id="aclassZoltan2_1_1BasicVectorAdapter_html_acd29f0286dda413de5c9c351e9d3ef9e"><div class="ttname"><a href="classZoltan2_1_1BasicVectorAdapter.html#acd29f0286dda413de5c9c351e9d3ef9e">Zoltan2::BasicVectorAdapter::BasicVectorAdapter</a></div><div class="ttdeci">BasicVectorAdapter(lno_t numIds, const gno_t *ids, const scalar_t *x, const scalar_t *y, const scalar_t *z, int xStride=1, int yStride=1, int zStride=1, bool usewgts=false, const scalar_t *wgts=NULL, int wgtStride=1)</div><div class="ttdoc">A simple constructor for coordinate-based problems with dimension 1, 2 or 3 and (optionally) one weig...</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__BasicVectorAdapter_8hpp_source.html#l00162">Zoltan2_BasicVectorAdapter.hpp:162</a></div></div>
 <div class="ttc" id="aclassZoltan2_1_1BasicVectorAdapter_html_ad7c9ace97bd2694ec9ff4132007502d9"><div class="ttname"><a href="classZoltan2_1_1BasicVectorAdapter.html#ad7c9ace97bd2694ec9ff4132007502d9">Zoltan2::BasicVectorAdapter::getIDsView</a></div><div class="ttdeci">void getIDsView(const gno_t *&amp;ids) const</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__BasicVectorAdapter_8hpp_source.html#l00199">Zoltan2_BasicVectorAdapter.hpp:199</a></div></div>
-<div class="ttc" id="aclassZoltan2_1_1BasicVectorAdapter_html_afacd0ecb11eec26d8693cbe43b753a9a"><div class="ttname"><a href="classZoltan2_1_1BasicVectorAdapter.html#afacd0ecb11eec26d8693cbe43b753a9a">Zoltan2::BasicVectorAdapter::getNumEntriesPerID</a></div><div class="ttdeci">int getNumEntriesPerID() const</div><div class="ttdoc">Return the number of vectors.</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__BasicVectorAdapter_8hpp_source.html#l00274">Zoltan2_BasicVectorAdapter.hpp:274</a></div></div>
+<div class="ttc" id="aclassZoltan2_1_1BasicVectorAdapter_html_afacd0ecb11eec26d8693cbe43b753a9a"><div class="ttname"><a href="classZoltan2_1_1BasicVectorAdapter.html#afacd0ecb11eec26d8693cbe43b753a9a">Zoltan2::BasicVectorAdapter::getNumEntriesPerID</a></div><div class="ttdeci">int getNumEntriesPerID() const</div><div class="ttdoc">Return the number of vectors.</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__BasicVectorAdapter_8hpp_source.html#l00275">Zoltan2_BasicVectorAdapter.hpp:275</a></div></div>
 <div class="ttc" id="aclassZoltan2_1_1StridedData_html"><div class="ttname"><a href="classZoltan2_1_1StridedData.html">Zoltan2::StridedData</a></div><div class="ttdoc">The StridedData class manages lists of weights or coordinates.</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__StridedData_8hpp_source.html#l00041">Zoltan2_StridedData.hpp:41</a></div></div>
 <div class="ttc" id="aclassZoltan2_1_1VectorAdapter_html"><div class="ttname"><a href="classZoltan2_1_1VectorAdapter.html">Zoltan2::VectorAdapter</a></div><div class="ttdoc">VectorAdapter defines the interface for vector input.</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__VectorAdapter_8hpp_source.html#l00062">Zoltan2_VectorAdapter.hpp:62</a></div></div>
 <div class="ttc" id="amapRemotes_8cpp_html_a78e717933cd41c3f26b52bc5966ec1e6"><div class="ttname"><a href="mapRemotes_8cpp.html#a78e717933cd41c3f26b52bc5966ec1e6">lno_t</a></div><div class="ttdeci">map_t::local_ordinal_type lno_t</div><div class="ttdef"><b>Definition</b> <a href="mapRemotes_8cpp_source.html#l00026">mapRemotes.cpp:26</a></div></div>

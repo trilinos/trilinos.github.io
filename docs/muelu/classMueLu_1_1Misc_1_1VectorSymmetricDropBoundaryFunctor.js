@@ -1,6 +1,6 @@
 var classMueLu_1_1Misc_1_1VectorSymmetricDropBoundaryFunctor =
 [
-    [ "local_matrix_type", "classMueLu_1_1Misc_1_1VectorSymmetricDropBoundaryFunctor.html#ad164f8c38d3d44d23b0229ecedbad43f", null ],
+    [ "local_matrix_type", "classMueLu_1_1Misc_1_1VectorSymmetricDropBoundaryFunctor.html#a8623ee77eb465e224863f3ac027b4e1a", null ],
     [ "scalar_type", "classMueLu_1_1Misc_1_1VectorSymmetricDropBoundaryFunctor.html#a3a31f95b7c409c817656f1500b4350ee", null ],
     [ "local_ordinal_type", "classMueLu_1_1Misc_1_1VectorSymmetricDropBoundaryFunctor.html#ac98610003e31fbf38b89e5bdf3ca8b32", null ],
     [ "memory_space", "classMueLu_1_1Misc_1_1VectorSymmetricDropBoundaryFunctor.html#a778daeb3744fe3c89791c45edf730fcb", null ],

@@ -48,12 +48,12 @@ var classXpetra_1_1EpetraMultiVectorT_3_01int_00_01EpetraNode_01_4 =
     [ "replaceMap", "classXpetra_1_1EpetraMultiVectorT_3_01int_00_01EpetraNode_01_4.html#a189f21a48d596d8090fc6c82449cbdce", null ],
     [ "getEpetra_MultiVector", "classXpetra_1_1EpetraMultiVectorT_3_01int_00_01EpetraNode_01_4.html#a1a146065ff1ba12bb535d7b55f9b2021", null ],
     [ "setSeed", "classXpetra_1_1EpetraMultiVectorT_3_01int_00_01EpetraNode_01_4.html#a4af0a0aa05c3efeab24f6ab5bacdf1c6", null ],
-    [ "getLocalViewHost", "classXpetra_1_1EpetraMultiVectorT_3_01int_00_01EpetraNode_01_4.html#ae551caf3c05429b774df9f29e51eaa7a", null ],
-    [ "getLocalViewDevice", "classXpetra_1_1EpetraMultiVectorT_3_01int_00_01EpetraNode_01_4.html#a361608fcfec1bc76bcce4815dfa96da0", null ],
-    [ "getLocalViewHost", "classXpetra_1_1EpetraMultiVectorT_3_01int_00_01EpetraNode_01_4.html#a88c2a4ae028b25938d53ca6fd57eeed5", null ],
-    [ "getLocalViewDevice", "classXpetra_1_1EpetraMultiVectorT_3_01int_00_01EpetraNode_01_4.html#a3e7b37dd5d068c2f779af0da98e9867d", null ],
-    [ "getLocalViewHost", "classXpetra_1_1EpetraMultiVectorT_3_01int_00_01EpetraNode_01_4.html#ab32a78286fbb368f1cd360c71d7c1707", null ],
-    [ "getLocalViewDevice", "classXpetra_1_1EpetraMultiVectorT_3_01int_00_01EpetraNode_01_4.html#aeeac5d37f632c92a9959b0c7ae3f8891", null ],
+    [ "getLocalViewHost", "classXpetra_1_1EpetraMultiVectorT_3_01int_00_01EpetraNode_01_4.html#ab9b851caa181458a8cd1185eacf41d3e", null ],
+    [ "getLocalViewDevice", "classXpetra_1_1EpetraMultiVectorT_3_01int_00_01EpetraNode_01_4.html#ab30bafede5c0232a1ae8dcfd8dfc9b12", null ],
+    [ "getLocalViewHost", "classXpetra_1_1EpetraMultiVectorT_3_01int_00_01EpetraNode_01_4.html#a69b9cc75e95cc758149b40395bd2c73e", null ],
+    [ "getLocalViewDevice", "classXpetra_1_1EpetraMultiVectorT_3_01int_00_01EpetraNode_01_4.html#a8050153f7c43a856466ca95525205ff4", null ],
+    [ "getLocalViewHost", "classXpetra_1_1EpetraMultiVectorT_3_01int_00_01EpetraNode_01_4.html#af262d59108170393597987be3537cc3b", null ],
+    [ "getLocalViewDevice", "classXpetra_1_1EpetraMultiVectorT_3_01int_00_01EpetraNode_01_4.html#a5811c434ed77cb82d51e961f3f4e0152", null ],
     [ "assign", "classXpetra_1_1EpetraMultiVectorT_3_01int_00_01EpetraNode_01_4.html#ae4c8e871c0ba24b2d5e6af550148e0b3", null ],
     [ "vec_", "classXpetra_1_1EpetraMultiVectorT_3_01int_00_01EpetraNode_01_4.html#a809649f826d00431eec9ab3f6e018e87", null ]
 ];

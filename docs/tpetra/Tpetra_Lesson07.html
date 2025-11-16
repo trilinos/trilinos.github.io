@@ -119,7 +119,7 @@ Code example</h1>
 <div class="line">  <span class="comment">// by hand.</span></div>
 <div class="line">  <span class="keyword">const</span> <span class="keywordtype">double</span> convTol = std::max(dx * dx, 1.0e-8);</div>
 <div class="line">  <span class="comment">// Don&#39;t do more CG iterations than the problem&#39;s dimension.</span></div>
-<div class="line">  <span class="keyword">const</span> <span class="keywordtype">int</span> maxNumIters = std::min(<span class="keyword">static_cast&lt;</span><a class="code hl_class" href="classTpetra_1_1CrsMatrixStruct.html">Tpetra::global_size_t</a><span class="keyword">&gt;</span>(100),</div>
+<div class="line">  <span class="keyword">const</span> <span class="keywordtype">int</span> maxNumIters = std::min(<span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespaceTpetra.html#a9bf6069ab0d0c54962569526f3cc9cf5">Tpetra::global_size_t</a><span class="keyword">&gt;</span>(100),</div>
 <div class="line">                                   A.getGlobalNumRows());</div>
 <div class="line">  VectorType r(A.getRangeMap());</div>
 <div class="line">  A.apply(x, r);</div>
@@ -416,7 +416,7 @@ Code example</h1>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Flag to tell Tpetra::Map to compute the global number of</span></div>
 <div class="line">    <span class="comment">// indices in the Map.</span></div>
-<div class="line">    <span class="keyword">const</span> <a class="code hl_class" href="classTpetra_1_1CrsMatrixStruct.html">Tpetra::global_size_t</a> INV =</div>
+<div class="line">    <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceTpetra.html#a9bf6069ab0d0c54962569526f3cc9cf5">Tpetra::global_size_t</a> INV =</div>
 <div class="line">        Teuchos::OrdinalTraits&lt;Tpetra::global_size_t&gt;::invalid();</div>
 <div class="line">    RCP&lt;const Tpetra::Map&lt;&gt; &gt; colMap =</div>
 <div class="line">        rcp(<span class="keyword">new</span> <a class="code hl_class" href="classTpetra_1_1CrsMatrixStruct.html">Tpetra::Map&lt;&gt;</a>(INV, colInds.data(), colInds.extent(0), indexBase, comm));</div>
@@ -495,6 +495,7 @@ Code example</h1>
 <div class="ttc" id="aclassTpetra_1_1CrsMatrix_html"><div class="ttname"><a href="classTpetra_1_1CrsMatrix.html">Tpetra::CrsMatrix</a></div><div class="ttdoc">Sparse matrix that presents a row-oriented interface that lets users read or modify entries.</div><div class="ttdef"><b>Definition</b> <a href="Tpetra__CrsMatrix__decl_8hpp_source.html#l00397">Tpetra_CrsMatrix_decl.hpp:399</a></div></div>
 <div class="ttc" id="aclassTpetra_1_1Map_html_a29e003133a7ac66aa92439e07c455af4"><div class="ttname"><a href="classTpetra_1_1Map.html#a29e003133a7ac66aa92439e07c455af4">Tpetra::Map::node_type</a></div><div class="ttdeci">Node node_type</div><div class="ttdoc">Legacy typedef that will go away at some point.</div><div class="ttdef"><b>Definition</b> <a href="Tpetra__Map__decl_8hpp_source.html#l00222">Tpetra_Map_decl.hpp:222</a></div></div>
 <div class="ttc" id="aclassTpetra_1_1ScopeGuard_html"><div class="ttname"><a href="classTpetra_1_1ScopeGuard.html">Tpetra::ScopeGuard</a></div><div class="ttdoc">Scope guard whose destructor automatically calls Tpetra::finalize for you.</div><div class="ttdef"><b>Definition</b> <a href="Tpetra__Core_8hpp_source.html#l00188">Tpetra_Core.hpp:188</a></div></div>
+<div class="ttc" id="anamespaceTpetra_html_a9bf6069ab0d0c54962569526f3cc9cf5"><div class="ttname"><a href="namespaceTpetra.html#a9bf6069ab0d0c54962569526f3cc9cf5">Tpetra::global_size_t</a></div><div class="ttdeci">size_t global_size_t</div><div class="ttdoc">Global size_t object.</div><div class="ttdef"><b>Definition</b> <a href="Tpetra__ConfigDefs_8hpp_source.html#l00070">Tpetra_ConfigDefs.hpp:70</a></div></div>
 <div class="ttc" id="anamespaceTpetra_html_ab0f27babe7678e67ee420a36029ae10a"><div class="ttname"><a href="namespaceTpetra.html#ab0f27babe7678e67ee420a36029ae10a">Tpetra::getDefaultComm</a></div><div class="ttdeci">Teuchos::RCP&lt; const Teuchos::Comm&lt; int &gt; &gt; getDefaultComm()</div><div class="ttdoc">Get Tpetra's default communicator.</div><div class="ttdef"><b>Definition</b> <a href="Tpetra__Core_8cpp_source.html#l00170">Tpetra_Core.cpp:170</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->

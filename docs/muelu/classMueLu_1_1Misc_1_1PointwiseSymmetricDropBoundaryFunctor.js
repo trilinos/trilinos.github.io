@@ -1,6 +1,6 @@
 var classMueLu_1_1Misc_1_1PointwiseSymmetricDropBoundaryFunctor =
 [
-    [ "local_matrix_type", "classMueLu_1_1Misc_1_1PointwiseSymmetricDropBoundaryFunctor.html#a996046724ff68a2f59011b727207a8cf", null ],
+    [ "local_matrix_type", "classMueLu_1_1Misc_1_1PointwiseSymmetricDropBoundaryFunctor.html#a3c94732eaf594295b3e7bee24e2991d9", null ],
     [ "scalar_type", "classMueLu_1_1Misc_1_1PointwiseSymmetricDropBoundaryFunctor.html#a4d905c1581f2dd85c65a608c018586d6", null ],
     [ "local_ordinal_type", "classMueLu_1_1Misc_1_1PointwiseSymmetricDropBoundaryFunctor.html#a9601f12b72007bbf9674365d90125a11", null ],
     [ "memory_space", "classMueLu_1_1Misc_1_1PointwiseSymmetricDropBoundaryFunctor.html#ae105c9a2d3c8801b38ddaaaf87614742", null ],

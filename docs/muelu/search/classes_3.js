@@ -55,11 +55,12 @@ var searchData=
   ['crsmatrix_5fsubcopy_52',['CrsMatrix_SubCopy',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/epetraext/doc/html/classEpetraExt_1_1CrsMatrix__SubCopy.html',1,'EpetraExt']]],
   ['crsmatrix_5fview_53',['CrsMatrix_View',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/epetraext/doc/html/classEpetraExt_1_1CrsMatrix__View.html',1,'EpetraExt']]],
   ['crsmatrixstruct_54',['CrsMatrixStruct',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/epetraext/doc/html/classEpetraExt_1_1CrsMatrixStruct.html',1,'EpetraExt']]],
-  ['crswrapper_55',['CrsWrapper',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/epetraext/doc/html/classEpetraExt_1_1CrsWrapper.html',1,'EpetraExt']]],
-  ['crswrapper_5fepetra_5fcrsmatrix_56',['CrsWrapper_Epetra_CrsMatrix',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/epetraext/doc/html/classEpetraExt_1_1CrsWrapper__Epetra__CrsMatrix.html',1,'EpetraExt']]],
-  ['crswrapper_5fgraphbuilder_57',['CrsWrapper_GraphBuilder',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/epetraext/doc/html/classEpetraExt_1_1CrsWrapper__GraphBuilder.html',1,'EpetraExt']]],
-  ['cs_5fsymbolic_58',['cs_symbolic',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack/doc/html/structcs__symbolic.html',1,'']]],
-  ['csr_5fdmperm_5fresults_59',['csr_dmperm_results',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack/doc/html/structcsr__dmperm__results.html',1,'']]],
-  ['csr_5fnumeric_60',['csr_numeric',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack/doc/html/structcsr__numeric.html',1,'']]],
-  ['cutdropfunctor_61',['CutDropFunctor',['../classMueLu_1_1CutDrop_1_1CutDropFunctor.html',1,'MueLu::CutDrop']]]
+  ['crsmatrixutils_55',['CrsMatrixUtils',['../classXpetra_1_1CrsMatrixUtils.html',1,'Xpetra']]],
+  ['crswrapper_56',['CrsWrapper',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/epetraext/doc/html/classEpetraExt_1_1CrsWrapper.html',1,'EpetraExt']]],
+  ['crswrapper_5fepetra_5fcrsmatrix_57',['CrsWrapper_Epetra_CrsMatrix',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/epetraext/doc/html/classEpetraExt_1_1CrsWrapper__Epetra__CrsMatrix.html',1,'EpetraExt']]],
+  ['crswrapper_5fgraphbuilder_58',['CrsWrapper_GraphBuilder',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/epetraext/doc/html/classEpetraExt_1_1CrsWrapper__GraphBuilder.html',1,'EpetraExt']]],
+  ['cs_5fsymbolic_59',['cs_symbolic',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack/doc/html/structcs__symbolic.html',1,'']]],
+  ['csr_5fdmperm_5fresults_60',['csr_dmperm_results',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack/doc/html/structcsr__dmperm__results.html',1,'']]],
+  ['csr_5fnumeric_61',['csr_numeric',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack/doc/html/structcsr__numeric.html',1,'']]],
+  ['cutdropfunctor_62',['CutDropFunctor',['../classMueLu_1_1CutDrop_1_1CutDropFunctor.html',1,'MueLu::CutDrop']]]
 ];

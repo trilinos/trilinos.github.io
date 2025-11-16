@@ -197,9 +197,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  *ierr = ZOLTAN_OK;</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  <a class="code hl_typedef" href="zoltanCompare_8cpp.html#a316474c3f950c0852271fa46c768886e">tMVector_t</a> *vec = (<a class="code hl_typedef" href="zoltanCompare_8cpp.html#a316474c3f950c0852271fa46c768886e">tMVector_t</a> *) data;</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  <span class="keywordtype">size_t</span> n = vec-&gt;getLocalLength();</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  <a class="code hl_typedef" href="Zoltan2__TestHelpers_8hpp.html#aa98f00070dd9a80dc0373e4e13fdd45a">zgno_t</a> vgid = 0;</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; n; i++) {</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <a class="code hl_typedef" href="Zoltan2__TestHelpers_8hpp.html#aa98f00070dd9a80dc0373e4e13fdd45a">zgno_t</a> vgid = vec-&gt;getMap()-&gt;getGlobalElement(i);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    vgid = vec-&gt;getMap()-&gt;getGlobalElement(i);</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    ZOLTAN_ID_PTR vgidptr = (ZOLTAN_ID_PTR) &amp;vgid;</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <a class="code hl_define" href="zoltanCompare_8cpp.html#ae268aff67ece3b15dee9bbc245f885fd">SET_ZID</a>(<a class="code hl_variable" href="zoltanCompare_8cpp.html#aa41b54cc91980889e06dbc82232e8ffd">znGidEnt</a>, &amp;(gids[i*<a class="code hl_variable" href="zoltanCompare_8cpp.html#aa41b54cc91980889e06dbc82232e8ffd">znGidEnt</a>]), vgidptr);</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    lids[i] = i;</div>

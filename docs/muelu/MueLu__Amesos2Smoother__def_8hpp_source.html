@@ -151,7 +151,7 @@ $(document).ready(function(){initNavTree('MueLu__Amesos2Smoother__def_8hpp_sourc
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  Kokkos::View&lt;Scalar**, Kokkos::LayoutLeft, Kokkos::HostSpace&gt; Q(<span class="stringliteral">&quot;Q&quot;</span>, Nullspace-&gt;getNumVectors(), Nullspace-&gt;getNumVectors());</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="keywordtype">int</span> LDQ;</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">auto</span> dots = tempMV-&gt;getLocalViewHost(Xpetra::Access::ReadOnly);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">auto</span> dots = tempMV-&gt;getLocalViewHost(Tpetra::Access::ReadOnly);</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    Kokkos::deep_copy(Q, dots);</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    LDQ = Q.stride(1);</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  }</div>
@@ -184,7 +184,7 @@ $(document).ready(function(){initNavTree('MueLu__Amesos2Smoother__def_8hpp_sourc
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <span class="comment">// Nullspace_ ^T * X</span></div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  Teuchos::RCP&lt;Xpetra::MultiVector&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt; &gt; tempMV = Xpetra::MultiVectorFactory&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;::Build(localMap_, X.getNumVectors());</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  tempMV-&gt;multiply(Teuchos::CONJ_TRANS, Teuchos::NO_TRANS, ONE, *Nullspace_, X, ZERO);</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  <span class="keyword">auto</span> dots      = tempMV-&gt;getLocalViewHost(Xpetra::Access::ReadOnly);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  <span class="keyword">auto</span> dots      = tempMV-&gt;getLocalViewHost(Tpetra::Access::ReadOnly);</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  <span class="keywordtype">bool</span> doProject = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; X.getNumVectors(); i++) {</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; Nullspace_-&gt;getNumVectors(); j++) {</div>
@@ -333,7 +333,7 @@ $(document).ready(function(){initNavTree('MueLu__Amesos2Smoother__def_8hpp_sourc
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    <span class="keyword">using </span>range_type = Kokkos::RangePolicy&lt;LO, typename NO::execution_space&gt;;</div>
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    <span class="keyword">typedef</span> <span class="keyword">typename</span> Matrix::local_matrix_type KCRS;</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    <span class="keyword">typedef</span> <span class="keyword">typename</span> Matrix::local_matrix_device_type KCRS;</div>
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    <span class="keyword">typedef</span> <span class="keyword">typename</span> KCRS::StaticCrsGraphType graph_t;</div>
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    <span class="keyword">typedef</span> <span class="keyword">typename</span> graph_t::row_map_type::non_const_type lno_view_t;</div>
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    <span class="keyword">typedef</span> <span class="keyword">typename</span> graph_t::entries_type::non_const_type lno_nnz_view_t;</div>
@@ -356,8 +356,8 @@ $(document).ready(function(){initNavTree('MueLu__Amesos2Smoother__def_8hpp_sourc
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span> </div>
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    <span class="comment">// form normalization * nullspace * nullspace^T</span></div>
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    {</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>      <span class="keyword">auto</span> lclNullspace        = Nullspace-&gt;getLocalViewDevice(Xpetra::Access::ReadOnly);</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>      <span class="keyword">auto</span> lclGhostedNullspace = ghostedNullspace-&gt;getLocalViewDevice(Xpetra::Access::ReadOnly);</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>      <span class="keyword">auto</span> lclNullspace        = Nullspace-&gt;getLocalViewDevice(Tpetra::Access::ReadOnly);</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>      <span class="keyword">auto</span> lclGhostedNullspace = ghostedNullspace-&gt;getLocalViewDevice(Tpetra::Access::ReadOnly);</div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>      Kokkos::parallel_for(</div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>          <span class="stringliteral">&quot;MueLu:Amesos2Smoother::fixNullspace_1&quot;</span>, range_type(0, lclNumRows + 1),</div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>          KOKKOS_LAMBDA(<span class="keyword">const</span> <span class="keywordtype">size_t</span> i) {</div>

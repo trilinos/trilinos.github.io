@@ -507,8 +507,8 @@ $(document).ready(function(){initNavTree('MueLu__UncoupledAggregationFactory__de
 <div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>            });</div>
 <div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>      }</div>
 <div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span> </div>
-<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>      <span class="keyword">auto</span> vertex2AggId = aggregates-&gt;GetVertex2AggId()-&gt;getLocalViewDevice(Xpetra::Access::ReadWrite);</div>
-<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>      <span class="keyword">auto</span> procWinner   = aggregates-&gt;GetProcWinner()-&gt;getLocalViewDevice(Xpetra::Access::OverwriteAll);</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>      <span class="keyword">auto</span> vertex2AggId = aggregates-&gt;GetVertex2AggId()-&gt;getLocalViewDevice(Tpetra::Access::ReadWrite);</div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>      <span class="keyword">auto</span> procWinner   = aggregates-&gt;GetProcWinner()-&gt;getLocalViewDevice(Tpetra::Access::OverwriteAll);</div>
 <div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>      <span class="keywordtype">int</span> rank          = comm-&gt;getRank();</div>
 <div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>      Kokkos::parallel_for(</div>
 <div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>          Kokkos::RangePolicy&lt;exec_space&gt;(0, numRows),</div>

@@ -35,6 +35,7 @@ var hierarchy =
     [ "MueLu::constraintKernel< local_matrix_type >", "structMueLu_1_1constraintKernel.html", null ],
     [ "MueLu::Hierarchy< Scalar, LocalOrdinal, GlobalOrdinal, Node >::ConvData", "structMueLu_1_1Hierarchy_1_1ConvData.html", null ],
     [ "MueLu::CountUnggregatedByColor< AggStatType, ColorsType, LO >", "classMueLu_1_1CountUnggregatedByColor.html", null ],
+    [ "Xpetra::CrsMatrixUtils< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "classXpetra_1_1CrsMatrixUtils.html", null ],
     [ "MueLu::CutDrop::CutDropFunctor< comparison_type >", "classMueLu_1_1CutDrop_1_1CutDropFunctor.html", null ],
     [ "MueLu::VariableContainer::DataBase", "classMueLu_1_1VariableContainer_1_1DataBase.html", [
       [ "MueLu::VariableContainer::Data< T >", "classMueLu_1_1VariableContainer_1_1Data.html", null ]
@@ -314,7 +315,9 @@ var hierarchy =
     [ "MueLu::GraphBase< LocalOrdinal, GlobalOrdinal, Node >", "classMueLu_1_1GraphBase.html", null ],
     [ "MueLu::MatrixConstruction::GraphConstruction< local_matrix_type, local_graph_type >", "classMueLu_1_1MatrixConstruction_1_1GraphConstruction.html", null ],
     [ "MueLu::HierarchyUtils< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "classMueLu_1_1HierarchyUtils.html", null ],
+    [ "MueLu::ImportUtils< LocalOrdinal, GlobalOrdinal, Node >", "classMueLu_1_1ImportUtils.html", null ],
     [ "Zoltan2::InputTraits< MueLu::LWGraph< LocalOrdinal, GlobalOrdinal, Node > >", "structZoltan2_1_1InputTraits_3_01MueLu_1_1LWGraph_3_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4.html", null ],
+    [ "MueLu::IteratorOps< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "classMueLu_1_1IteratorOps.html", null ],
     [ "MueLu::Misc::KeepDiagonalFunctor< local_matrix_type >", "classMueLu_1_1Misc_1_1KeepDiagonalFunctor.html", null ],
     [ "MueLu::LeftoverAggregationAlgorithm< LocalOrdinal, GlobalOrdinal, Node >", "classMueLu_1_1LeftoverAggregationAlgorithm.html", null ],
     [ "Thyra::LinearOpDefaultBase", null, [

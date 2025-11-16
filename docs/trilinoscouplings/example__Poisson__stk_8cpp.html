@@ -92,17 +92,18 @@ $(function() {
 <code>#include &lt;Teuchos_CommandLineProcessor.hpp&gt;</code><br />
 <code>#include &lt;Teuchos_DefaultMpiComm.hpp&gt;</code><br />
 <code>#include &lt;Teuchos_TimeMonitor.hpp&gt;</code><br />
-<code>#include &quot;Intrepid_FunctionSpaceTools.hpp&quot;</code><br />
-<code>#include &quot;Intrepid_CellTools.hpp&quot;</code><br />
-<code>#include &quot;Intrepid_ArrayTools.hpp&quot;</code><br />
-<code>#include &quot;Intrepid_Basis.hpp&quot;</code><br />
-<code>#include &quot;Intrepid_HGRAD_HEX_C1_FEM.hpp&quot;</code><br />
-<code>#include &quot;Intrepid_HGRAD_TET_C1_FEM.hpp&quot;</code><br />
-<code>#include &quot;Intrepid_HGRAD_QUAD_C1_FEM.hpp&quot;</code><br />
-<code>#include &quot;Intrepid_HGRAD_TRI_C1_FEM.hpp&quot;</code><br />
-<code>#include &quot;Intrepid_RealSpaceTools.hpp&quot;</code><br />
-<code>#include &quot;Intrepid_DefaultCubatureFactory.hpp&quot;</code><br />
-<code>#include &quot;Intrepid_Utils.hpp&quot;</code><br />
+<code>#include &quot;Intrepid2_ArrayTools.hpp&quot;</code><br />
+<code>#include &quot;Intrepid2_CellTools.hpp&quot;</code><br />
+<code>#include &quot;Intrepid2_DefaultCubatureFactory.hpp&quot;</code><br />
+<code>#include &quot;Intrepid2_FunctionSpaceTools.hpp&quot;</code><br />
+<code>#include &quot;Intrepid2_HGRAD_HEX_C1_FEM.hpp&quot;</code><br />
+<code>#include &quot;Intrepid2_RealSpaceTools.hpp&quot;</code><br />
+<code>#include &quot;Intrepid2_Utils.hpp&quot;</code><br />
+<code>#include &quot;Intrepid2_CellGeometry.hpp&quot;</code><br />
+<code>#include &quot;Intrepid2_Basis.hpp&quot;</code><br />
+<code>#include &quot;Intrepid2_HGRAD_TET_C1_FEM.hpp&quot;</code><br />
+<code>#include &quot;Intrepid2_HGRAD_QUAD_C1_FEM.hpp&quot;</code><br />
+<code>#include &quot;Intrepid2_HGRAD_TRI_C1_FEM.hpp&quot;</code><br />
 <code>#include &quot;Tpetra_Map.hpp&quot;</code><br />
 <code>#include &quot;Tpetra_FECrsMatrix.hpp&quot;</code><br />
 <code>#include &quot;Tpetra_FECrsGraph.hpp&quot;</code><br />
@@ -119,7 +120,7 @@ $(function() {
 <code>#include &quot;MueLu.hpp&quot;</code><br />
 <code>#include &quot;MueLu_ParameterListInterpreter.hpp&quot;</code><br />
 <code>#include &quot;MueLu_CreateTpetraPreconditioner.hpp&quot;</code><br />
-<code>#include &quot;Sacado_No_Kokkos.hpp&quot;</code><br />
+<code>#include &quot;Sacado.hpp&quot;</code><br />
 <code>#include &quot;Ionit_Initializer.h&quot;</code><br />
 <code>#include &quot;Ioss_SubSystem.h&quot;</code><br />
 <code>#include &quot;stk_io/IossBridge.hpp&quot;</code><br />
@@ -134,25 +135,30 @@ $(function() {
 <code>#include &quot;stk_mesh/base/Bucket.hpp&quot;</code><br />
 <code>#include &quot;stk_mesh/base/Entity.hpp&quot;</code><br />
 <code>#include &quot;stk_mesh/base/Field.hpp&quot;</code><br />
-<code>#include &quot;TrilinosCouplings_Statistics.hpp&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:a7335c88ecff10907ae48026b77f5c8e8" id="r_a7335c88ecff10907ae48026b77f5c8e8"><td class="memItemLeft" align="right" valign="top"><a id="a7335c88ecff10907ae48026b77f5c8e8" name="a7335c88ecff10907ae48026b77f5c8e8"></a>
+typedef Tpetra::Map&#160;</td><td class="memItemRight" valign="bottom"><b>Map</b></td></tr>
+<tr class="separator:a7335c88ecff10907ae48026b77f5c8e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5e8e6b40719f2872644079229f95e2e" id="r_ab5e8e6b40719f2872644079229f95e2e"><td class="memItemLeft" align="right" valign="top"><a id="ab5e8e6b40719f2872644079229f95e2e" name="ab5e8e6b40719f2872644079229f95e2e"></a>
+typedef Map::node_type::memory_space&#160;</td><td class="memItemRight" valign="bottom"><b>memory_space</b></td></tr>
+<tr class="separator:ab5e8e6b40719f2872644079229f95e2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a565e870664cfcbcbbe53dd855076f2fb" id="r_a565e870664cfcbcbbe53dd855076f2fb"><td class="memItemLeft" align="right" valign="top"><a id="a565e870664cfcbcbbe53dd855076f2fb" name="a565e870664cfcbcbbe53dd855076f2fb"></a>
+typedef Map::node_type::device_type&#160;</td><td class="memItemRight" valign="bottom"><b>device_type</b></td></tr>
+<tr class="separator:a565e870664cfcbcbbe53dd855076f2fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1d4377af4a5ff0a2cef102903bf0fb9" id="r_ad1d4377af4a5ff0a2cef102903bf0fb9"><td class="memItemLeft" align="right" valign="top"><a id="ad1d4377af4a5ff0a2cef102903bf0fb9" name="ad1d4377af4a5ff0a2cef102903bf0fb9"></a>
 typedef shards::CellTopology&#160;</td><td class="memItemRight" valign="bottom"><b>ShardsCellTopology</b></td></tr>
 <tr class="separator:ad1d4377af4a5ff0a2cef102903bf0fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adda1739cea110543aacd2570a170bc6e" id="r_adda1739cea110543aacd2570a170bc6e"><td class="memItemLeft" align="right" valign="top"><a id="adda1739cea110543aacd2570a170bc6e" name="adda1739cea110543aacd2570a170bc6e"></a>
-typedef Intrepid::FunctionSpaceTools&#160;</td><td class="memItemRight" valign="bottom"><b>IntrepidFSTools</b></td></tr>
-<tr class="separator:adda1739cea110543aacd2570a170bc6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb796cf323403440988ee7a695710af1" id="r_aeb796cf323403440988ee7a695710af1"><td class="memItemLeft" align="right" valign="top"><a id="aeb796cf323403440988ee7a695710af1" name="aeb796cf323403440988ee7a695710af1"></a>
-typedef Intrepid::RealSpaceTools&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>IntrepidRSTools</b></td></tr>
-<tr class="separator:aeb796cf323403440988ee7a695710af1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f0fe32769da9c6da24a4d0d2e6f802e" id="r_a5f0fe32769da9c6da24a4d0d2e6f802e"><td class="memItemLeft" align="right" valign="top"><a id="a5f0fe32769da9c6da24a4d0d2e6f802e" name="a5f0fe32769da9c6da24a4d0d2e6f802e"></a>
-typedef Intrepid::CellTools&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>IntrepidCTools</b></td></tr>
-<tr class="separator:a5f0fe32769da9c6da24a4d0d2e6f802e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1091ae7e5c441f135e415d705a109752" id="r_a1091ae7e5c441f135e415d705a109752"><td class="memItemLeft" align="right" valign="top"><a id="a1091ae7e5c441f135e415d705a109752" name="a1091ae7e5c441f135e415d705a109752"></a>
-typedef Intrepid::FieldContainer&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>IntrepidFieldContainer</b></td></tr>
-<tr class="separator:a1091ae7e5c441f135e415d705a109752"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1a7604841a98a6ce7317a0f77433d44" id="r_ab1a7604841a98a6ce7317a0f77433d44"><td class="memItemLeft" align="right" valign="top"><a id="ab1a7604841a98a6ce7317a0f77433d44" name="ab1a7604841a98a6ce7317a0f77433d44"></a>
+typedef Intrepid2::FunctionSpaceTools&lt; device_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Intrepid2FSTools</b></td></tr>
+<tr class="separator:ab1a7604841a98a6ce7317a0f77433d44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2592361791ee6f1433272db039cae605" id="r_a2592361791ee6f1433272db039cae605"><td class="memItemLeft" align="right" valign="top"><a id="a2592361791ee6f1433272db039cae605" name="a2592361791ee6f1433272db039cae605"></a>
+typedef Intrepid2::CellTools&lt; device_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Intrepid2CTools</b></td></tr>
+<tr class="separator:a2592361791ee6f1433272db039cae605"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac98836e51e850adfd745c91c536bf37f" id="r_ac98836e51e850adfd745c91c536bf37f"><td class="memItemLeft" align="right" valign="top"><a id="ac98836e51e850adfd745c91c536bf37f" name="ac98836e51e850adfd745c91c536bf37f"></a>
+typedef Intrepid2::ScalarView&lt; double, memory_space &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Intrepid2ScalarView</b></td></tr>
+<tr class="separator:ac98836e51e850adfd745c91c536bf37f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ac50f67d93e38694587649313cf8469" id="r_a4ac50f67d93e38694587649313cf8469"><td class="memItemLeft" align="right" valign="top"><a id="a4ac50f67d93e38694587649313cf8469" name="a4ac50f67d93e38694587649313cf8469"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>Tpetra_CrsMatrix</b> = Tpetra::CrsMatrix&lt;&gt;</td></tr>
 <tr class="separator:a4ac50f67d93e38694587649313cf8469"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -200,11 +206,8 @@ Functions</h2></td></tr>
 <tr class="memitem:a30c96d09d964ed34390c8bcb51e0a628" id="r_a30c96d09d964ed34390c8bcb51e0a628"><td class="memItemLeft" align="right" valign="top"><a id="a30c96d09d964ed34390c8bcb51e0a628" name="a30c96d09d964ed34390c8bcb51e0a628"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>TestMultiLevelPreconditioner</b> (char ProblemType[], Teuchos::ParameterList &amp;MLList, Teuchos::RCP&lt; Tpetra_CrsMatrix &gt; &amp;A, Teuchos::RCP&lt; Tpetra_Vector &gt; &amp;xexact, Teuchos::RCP&lt; Tpetra_MultiVector &gt; &amp;b, Teuchos::RCP&lt; Tpetra_MultiVector &gt; &amp;uh, Teuchos::RCP&lt; Tpetra_MultiVector &gt; &amp;coords, double &amp;TotalErrorResidual, double &amp;TotalErrorExactSol)</td></tr>
 <tr class="separator:a30c96d09d964ed34390c8bcb51e0a628"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb088ebdfdbdd51645081ad684bf9ae0" id="r_acb088ebdfdbdd51645081ad684bf9ae0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="example__Poisson__stk_8cpp.html#acb088ebdfdbdd51645081ad684bf9ae0">getBasis</a> (Teuchos::RCP&lt; Intrepid::Basis&lt; double, IntrepidFieldContainer &gt; &gt; &amp;basis, const ShardsCellTopology &amp;cellTopology, int order)</td></tr>
-<tr class="memdesc:acb088ebdfdbdd51645081ad684bf9ae0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple factory that chooses basis function based on cell topology.  <br /></td></tr>
-<tr class="separator:acb088ebdfdbdd51645081ad684bf9ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f7be345cdc646ae3b5c63d0ea5d312a" id="r_a2f7be345cdc646ae3b5c63d0ea5d312a"><td class="memItemLeft" align="right" valign="top"><a id="a2f7be345cdc646ae3b5c63d0ea5d312a" name="a2f7be345cdc646ae3b5c63d0ea5d312a"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getDimension</b> (const ShardsCellTopology &amp;cellTopology)</td></tr>
+<tr class="memitem:a2f7be345cdc646ae3b5c63d0ea5d312a" id="r_a2f7be345cdc646ae3b5c63d0ea5d312a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="example__Poisson__stk_8cpp.html#a2f7be345cdc646ae3b5c63d0ea5d312a">getDimension</a> (const ShardsCellTopology &amp;cellTopology)</td></tr>
+<tr class="memdesc:a2f7be345cdc646ae3b5c63d0ea5d312a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple factory that chooses basis function based on cell topology.  <br /></td></tr>
 <tr class="separator:a2f7be345cdc646ae3b5c63d0ea5d312a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e3fc96f36582eeb58451bd58356dd99" id="r_a8e3fc96f36582eeb58451bd58356dd99"><td class="memItemLeft" align="right" valign="top"><a id="a8e3fc96f36582eeb58451bd58356dd99" name="a8e3fc96f36582eeb58451bd58356dd99"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>mesh_read_write</b> (const std::string &amp;type, const std::string &amp;working_directory, const std::string &amp;filename, stk::io::StkMeshIoBroker &amp;broker, int db_integer_size, stk::io::HeartbeatType hb_type)</td></tr>
@@ -512,34 +515,18 @@ template&lt;typename Scalar &gt; </div>
 
 </div>
 </div>
-<a id="acb088ebdfdbdd51645081ad684bf9ae0" name="acb088ebdfdbdd51645081ad684bf9ae0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb088ebdfdbdd51645081ad684bf9ae0">&#9670;&#160;</a></span>getBasis()</h2>
+<a id="a2f7be345cdc646ae3b5c63d0ea5d312a" name="a2f7be345cdc646ae3b5c63d0ea5d312a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f7be345cdc646ae3b5c63d0ea5d312a">&#9670;&#160;</a></span>getDimension()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void getBasis </td>
+          <td class="memname">int getDimension </td>
           <td>(</td>
-          <td class="paramtype">Teuchos::RCP&lt; Intrepid::Basis&lt; double, IntrepidFieldContainer &gt; &gt; &amp;&#160;</td>
-          <td class="paramname"><em>basis</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">const ShardsCellTopology &amp;&#160;</td>
-          <td class="paramname"><em>cellTopology</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>cellTopology</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>order</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
