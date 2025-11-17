@@ -5,6 +5,8 @@ var classXpetra_1_1EpetraCrsMatrixT_3_01long_01long_00_01EpetraNode_01_4 =
     [ "Scalar", "classXpetra_1_1EpetraCrsMatrixT_3_01long_01long_00_01EpetraNode_01_4.html#a9a11779e9c5987549ee3329cd3b2aaad", null ],
     [ "LocalOrdinal", "classXpetra_1_1EpetraCrsMatrixT_3_01long_01long_00_01EpetraNode_01_4.html#abc85c09f1e70c27ff5e94ffcb58b8d89", null ],
     [ "local_matrix_type", "classXpetra_1_1EpetraCrsMatrixT_3_01long_01long_00_01EpetraNode_01_4.html#a5effd8f46829d7936ceda3d2ba0036d1", null ],
+    [ "local_matrix_device_type", "classXpetra_1_1EpetraCrsMatrixT_3_01long_01long_00_01EpetraNode_01_4.html#a82a202e9500a9910410fb6bc22b25fd1", null ],
+    [ "local_matrix_host_type", "classXpetra_1_1EpetraCrsMatrixT_3_01long_01long_00_01EpetraNode_01_4.html#a31defbcbe54ca3b2766c75684e49c0bb", null ],
     [ "node_type", "classXpetra_1_1EpetraCrsMatrixT_3_01long_01long_00_01EpetraNode_01_4.html#a922c77e5f76c996773e8dbabc3066c7e", null ],
     [ "EpetraCrsMatrixT", "classXpetra_1_1EpetraCrsMatrixT_3_01long_01long_00_01EpetraNode_01_4.html#a2283fa40bc13138af87bb944a3e03ebc", null ],
     [ "EpetraCrsMatrixT", "classXpetra_1_1EpetraCrsMatrixT_3_01long_01long_00_01EpetraNode_01_4.html#a34f5ee924ee961393092fcfb71effa00", null ],

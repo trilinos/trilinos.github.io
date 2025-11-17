@@ -1,7 +1,7 @@
 var classMueLu_1_1DistanceLaplacian_1_1WeightedDistanceFunctor =
 [
     [ "matrix_type", "classMueLu_1_1DistanceLaplacian_1_1WeightedDistanceFunctor.html#a2b76218dcf524312942df355cd766dde", null ],
-    [ "local_matrix_type", "classMueLu_1_1DistanceLaplacian_1_1WeightedDistanceFunctor.html#a0d5da241a4ae7a5a699f3be70a8ab918", null ],
+    [ "local_matrix_type", "classMueLu_1_1DistanceLaplacian_1_1WeightedDistanceFunctor.html#ac58c8071e346476bbb6a00cfe64a49f5", null ],
     [ "scalar_type", "classMueLu_1_1DistanceLaplacian_1_1WeightedDistanceFunctor.html#a033166c334e6c41d814b130c750fdef6", null ],
     [ "local_ordinal_type", "classMueLu_1_1DistanceLaplacian_1_1WeightedDistanceFunctor.html#a360d8a66f4bcd85c686e953df37ba4da", null ],
     [ "ATS", "classMueLu_1_1DistanceLaplacian_1_1WeightedDistanceFunctor.html#aba28da5229da8bc57d92c1889b77e0d2", null ],

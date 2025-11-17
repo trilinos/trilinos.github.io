@@ -10,8 +10,6 @@ var hierarchy =
     [ "Xpetra::CrsMatrixFactory< double, int, int, EpetraNode >", "classXpetra_1_1CrsMatrixFactory_3_01double_00_01int_00_01int_00_01EpetraNode_01_4.html", null ],
     [ "Xpetra::CrsMatrixFactory< double, int, long long, EpetraNode >", "classXpetra_1_1CrsMatrixFactory_3_01double_00_01int_00_01long_01long_00_01EpetraNode_01_4.html", null ],
     [ "Xpetra::CrsMatrixUtils< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "classXpetra_1_1CrsMatrixUtils.html", null ],
-    [ "Xpetra::CrsMatrixUtils< double, int, int, EpetraNode >", "classXpetra_1_1CrsMatrixUtils_3_01double_00_01int_00_01int_00_01EpetraNode_01_4.html", null ],
-    [ "Xpetra::CrsMatrixUtils< double, int, long long, EpetraNode >", "classXpetra_1_1CrsMatrixUtils_3_01double_00_01int_00_01long_01long_00_01EpetraNode_01_4.html", null ],
     [ "Xpetra::DefaultPlatform", "classXpetra_1_1DefaultPlatform.html", null ],
     [ "Xpetra::EpetraOperatorT< GO >", "classXpetra_1_1EpetraOperatorT.html", null ],
     [ "Teuchos::ExceptionBase", "/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/teuchos/doc/html/classTeuchos_1_1ExceptionBase.html", [
@@ -28,12 +26,8 @@ var hierarchy =
     [ "Xpetra::ImportFactory< LocalOrdinal, GlobalOrdinal, Node >", "classXpetra_1_1ImportFactory.html", null ],
     [ "Xpetra::ImportFactory< int, int, EpetraNode >", "classXpetra_1_1ImportFactory_3_01int_00_01int_00_01EpetraNode_01_4.html", null ],
     [ "Xpetra::ImportFactory< int, long long, EpetraNode >", "classXpetra_1_1ImportFactory_3_01int_00_01long_01long_00_01EpetraNode_01_4.html", null ],
-    [ "Xpetra::ImportUtils< LocalOrdinal, GlobalOrdinal, Node >", "classXpetra_1_1ImportUtils.html", null ],
-    [ "Xpetra::ImportUtils< int, int, EpetraNode >", "classXpetra_1_1ImportUtils_3_01int_00_01int_00_01EpetraNode_01_4.html", null ],
-    [ "Xpetra::ImportUtils< int, long long, EpetraNode >", "classXpetra_1_1ImportUtils_3_01int_00_01long_01long_00_01EpetraNode_01_4.html", null ],
     [ "Xpetra::IO< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "classXpetra_1_1IO.html", null ],
     [ "Xpetra::IO< Scalar, int, int, EpetraNode >", "classXpetra_1_1IO_3_01Scalar_00_01int_00_01int_00_01EpetraNode_01_4.html", null ],
-    [ "Xpetra::IteratorOps< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "classXpetra_1_1IteratorOps.html", null ],
     [ "Teuchos::LabeledObject", "/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/teuchos/doc/html/classTeuchos_1_1LabeledObject.html", [
       [ "Teuchos::Describable", "/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/teuchos/doc/html/classTeuchos_1_1Describable.html", [
         [ "Xpetra::DistObject< Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosClassic::DefaultNode::DefaultNodeType >", "classXpetra_1_1DistObject.html", null ],
@@ -280,9 +274,6 @@ var hierarchy =
     [ "Xpetra::MultiVectorFactory< double, int, long long, EpetraNode >", "classXpetra_1_1MultiVectorFactory_3_01double_00_01int_00_01long_01long_00_01EpetraNode_01_4.html", null ],
     [ "Xpetra::MultiVectorFactory< int, int, int, EpetraNode >", "classXpetra_1_1MultiVectorFactory_3_01int_00_01int_00_01int_00_01EpetraNode_01_4.html", null ],
     [ "Xpetra::MultiVectorFactory< int, int, long long, EpetraNode >", "classXpetra_1_1MultiVectorFactory_3_01int_00_01int_00_01long_01long_00_01EpetraNode_01_4.html", null ],
-    [ "Xpetra::Access::OverwriteAllStruct", "structXpetra_1_1Access_1_1OverwriteAllStruct.html", null ],
-    [ "Xpetra::Access::ReadOnlyStruct", "structXpetra_1_1Access_1_1ReadOnlyStruct.html", null ],
-    [ "Xpetra::Access::ReadWriteStruct", "structXpetra_1_1Access_1_1ReadWriteStruct.html", null ],
     [ "Xpetra::RowInfo", "structXpetra_1_1RowInfo.html", null ],
     [ "Xpetra::secondArg< Arg1, Arg2 >", "classXpetra_1_1secondArg.html", null ],
     [ "Xpetra::StridedMapFactory< LocalOrdinal, GlobalOrdinal, Node >", "classXpetra_1_1StridedMapFactory.html", null ],

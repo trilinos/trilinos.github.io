@@ -63,8 +63,6 @@ var searchData=
   ['crsmatrixfactory_3c_20double_2c_20int_2c_20int_2c_20epetranode_20_3e_60',['CrsMatrixFactory&lt; double, int, int, EpetraNode &gt;',['../classXpetra_1_1CrsMatrixFactory_3_01double_00_01int_00_01int_00_01EpetraNode_01_4.html',1,'Xpetra']]],
   ['crsmatrixfactory_3c_20double_2c_20int_2c_20long_20long_2c_20epetranode_20_3e_61',['CrsMatrixFactory&lt; double, int, long long, EpetraNode &gt;',['../classXpetra_1_1CrsMatrixFactory_3_01double_00_01int_00_01long_01long_00_01EpetraNode_01_4.html',1,'Xpetra']]],
   ['crsmatrixutils_62',['CrsMatrixUtils',['../classXpetra_1_1CrsMatrixUtils.html',1,'Xpetra']]],
-  ['crsmatrixutils_3c_20double_2c_20int_2c_20int_2c_20epetranode_20_3e_63',['CrsMatrixUtils&lt; double, int, int, EpetraNode &gt;',['../classXpetra_1_1CrsMatrixUtils_3_01double_00_01int_00_01int_00_01EpetraNode_01_4.html',1,'Xpetra']]],
-  ['crsmatrixutils_3c_20double_2c_20int_2c_20long_20long_2c_20epetranode_20_3e_64',['CrsMatrixUtils&lt; double, int, long long, EpetraNode &gt;',['../classXpetra_1_1CrsMatrixUtils_3_01double_00_01int_00_01long_01long_00_01EpetraNode_01_4.html',1,'Xpetra']]],
-  ['crsmatrixwrap_65',['CrsMatrixWrap',['../classXpetra_1_1CrsMatrixWrap.html',1,'Xpetra']]],
-  ['cwrappererrorhandling_66',['CWrapperErrorHandling',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/teuchos/doc/html/classTeuchos_1_1CWrapperErrorHandling.html',1,'Teuchos']]]
+  ['crsmatrixwrap_63',['CrsMatrixWrap',['../classXpetra_1_1CrsMatrixWrap.html',1,'Xpetra']]],
+  ['cwrappererrorhandling_64',['CWrapperErrorHandling',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/teuchos/doc/html/classTeuchos_1_1CWrapperErrorHandling.html',1,'Teuchos']]]
 ];

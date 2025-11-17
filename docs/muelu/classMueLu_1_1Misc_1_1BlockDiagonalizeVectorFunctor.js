@@ -1,7 +1,7 @@
 var classMueLu_1_1Misc_1_1BlockDiagonalizeVectorFunctor =
 [
     [ "matrix_type", "classMueLu_1_1Misc_1_1BlockDiagonalizeVectorFunctor.html#a55c110c6cd83db39daafd689648356eb", null ],
-    [ "local_matrix_type", "classMueLu_1_1Misc_1_1BlockDiagonalizeVectorFunctor.html#ab8f020af741df8c0141a9b82c7358a2b", null ],
+    [ "local_matrix_type", "classMueLu_1_1Misc_1_1BlockDiagonalizeVectorFunctor.html#ad006c71ce847283d56452ac7d56b1e81", null ],
     [ "scalar_type", "classMueLu_1_1Misc_1_1BlockDiagonalizeVectorFunctor.html#a84e9419d6d521104e71334af3c280db2", null ],
     [ "local_ordinal_type", "classMueLu_1_1Misc_1_1BlockDiagonalizeVectorFunctor.html#aa3c6aeed40d537d4aee3ed8b0b280401", null ],
     [ "memory_space", "classMueLu_1_1Misc_1_1BlockDiagonalizeVectorFunctor.html#a31c7de51f58b4c3c973872c9b6aba756", null ],

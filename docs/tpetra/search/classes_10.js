@@ -6,6 +6,7 @@ var searchData=
   ['transform_3',['Transform',['../classTpetra_1_1Transform.html',1,'Tpetra']]],
   ['transform_3c_20crsmatrix_3c_20scalar_2c_20localordinal_2c_20globalordinal_2c_20node_20_3e_2c_20crsmatrix_3c_20scalar_2c_20localordinal_2c_20globalordinal_2c_20node_20_3e_20_3e_4',['Transform&lt; CrsMatrix&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;, CrsMatrix&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt; &gt;',['../classTpetra_1_1Transform.html',1,'Tpetra']]],
   ['transform_3c_20linearproblem_3c_20scalar_2c_20localordinal_2c_20globalordinal_2c_20node_20_3e_2c_20linearproblem_3c_20scalar_2c_20localordinal_2c_20globalordinal_2c_20node_20_3e_20_3e_5',['Transform&lt; LinearProblem&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;, LinearProblem&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt; &gt;',['../classTpetra_1_1Transform.html',1,'Tpetra']]],
-  ['transform_3c_20t_2c_20t_20_3e_6',['Transform&lt; T, T &gt;',['../classTpetra_1_1Transform.html',1,'Tpetra']]],
-  ['triplet_7',['Triplet',['../structTpetra_1_1Details_1_1TieBreak_1_1Triplet.html',1,'Tpetra::Details::TieBreak']]]
+  ['transform_3c_20multivector_3c_20scalar_2c_20localordinal_2c_20globalordinal_2c_20node_20_3e_2c_20multivector_3c_20scalar_2c_20localordinal_2c_20globalordinal_2c_20node_20_3e_20_3e_6',['Transform&lt; MultiVector&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;, MultiVector&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt; &gt;',['../classTpetra_1_1Transform.html',1,'Tpetra']]],
+  ['transform_3c_20t_2c_20t_20_3e_7',['Transform&lt; T, T &gt;',['../classTpetra_1_1Transform.html',1,'Tpetra']]],
+  ['triplet_8',['Triplet',['../structTpetra_1_1Details_1_1TieBreak_1_1Triplet.html',1,'Tpetra::Details::TieBreak']]]
 ];

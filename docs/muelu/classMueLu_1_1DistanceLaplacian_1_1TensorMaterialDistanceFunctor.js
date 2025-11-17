@@ -1,7 +1,7 @@
 var classMueLu_1_1DistanceLaplacian_1_1TensorMaterialDistanceFunctor =
 [
     [ "matrix_type", "classMueLu_1_1DistanceLaplacian_1_1TensorMaterialDistanceFunctor.html#a951256730f8f8a9df702cb7b3fad83bf", null ],
-    [ "local_matrix_type", "classMueLu_1_1DistanceLaplacian_1_1TensorMaterialDistanceFunctor.html#acbb6edf5d66186cbd6a0381371f4edb6", null ],
+    [ "local_matrix_type", "classMueLu_1_1DistanceLaplacian_1_1TensorMaterialDistanceFunctor.html#aa1fac44eccf9fc77ba0b346e7915e9c9", null ],
     [ "scalar_type", "classMueLu_1_1DistanceLaplacian_1_1TensorMaterialDistanceFunctor.html#a4954f82421cf7e86be5418fb84e82515", null ],
     [ "local_ordinal_type", "classMueLu_1_1DistanceLaplacian_1_1TensorMaterialDistanceFunctor.html#af9facf399cfb6a375a9d4a8f441507cf", null ],
     [ "ATS", "classMueLu_1_1DistanceLaplacian_1_1TensorMaterialDistanceFunctor.html#a326e6680b4fd3172cdddc52029dfb75e", null ],

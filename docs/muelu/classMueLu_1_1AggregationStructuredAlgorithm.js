@@ -11,7 +11,7 @@ var classMueLu_1_1AggregationStructuredAlgorithm =
     [ "device_type", "classMueLu_1_1AggregationStructuredAlgorithm.html#a932641b38d92b0affc7dcf285ee41673", null ],
     [ "execution_space", "classMueLu_1_1AggregationStructuredAlgorithm.html#a2ded32e3b8e61d413a74d3b68704e1ee", null ],
     [ "memory_space", "classMueLu_1_1AggregationStructuredAlgorithm.html#ae6486cc53ce5ed0de2b4096eb20d91bb", null ],
-    [ "LOVectorView", "classMueLu_1_1AggregationStructuredAlgorithm.html#a07a86553b3989b1fc80316cfafbfd112", null ],
+    [ "LOVectorView", "classMueLu_1_1AggregationStructuredAlgorithm.html#a0070f3ea7a81a40e2c6374f5172835cc", null ],
     [ "constIntTupleView", "classMueLu_1_1AggregationStructuredAlgorithm.html#a2622eb2d8922844c7b55afb9276de3b7", null ],
     [ "constLOTupleView", "classMueLu_1_1AggregationStructuredAlgorithm.html#a703f6f9c386ac9cfb33c8f156eb75fab", null ],
     [ "AggregationStructuredAlgorithm", "classMueLu_1_1AggregationStructuredAlgorithm.html#aa3bd72a1cd9810f5d193b7cdc15185b7", null ],

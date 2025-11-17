@@ -164,6 +164,9 @@ var NAVTREEINDEX1 =
 "MueLu__CreateXpetraPreconditioner_8hpp.html#ab497ec5add70e6dbe3dbb16a7446c399":[10,0,2,5,0,1],
 "MueLu__CreateXpetraPreconditioner_8hpp.html#add9f79326435958f47a1e49447bdc57f":[10,0,2,5,0,3],
 "MueLu__CreateXpetraPreconditioner_8hpp_source.html":[10,0,2,5,0],
+"MueLu__CrsMatrixUtils_8hpp.html":[10,0,2,9,14],
+"MueLu__CrsMatrixUtils_8hpp.html#adcd39fff23b916562c08d762db4b536f":[10,0,2,9,14,1],
+"MueLu__CrsMatrixUtils_8hpp_source.html":[10,0,2,9,14],
 "MueLu__CutDrop_8hpp.html":[10,0,2,0,3,10],
 "MueLu__CutDrop_8hpp.html#a1d729a1271bcf6e415aa76ffab90d1c5":[10,0,2,0,3,10,10],
 "MueLu__CutDrop_8hpp.html#a5cc8e5302ea11b4640a6e4bdbc835842":[10,0,2,0,3,10,11],
@@ -219,8 +222,8 @@ var NAVTREEINDEX1 =
 "MueLu__DirectSolver__fwd_8hpp.html":[10,0,2,9,0,40],
 "MueLu__DirectSolver__fwd_8hpp.html#a1338cb4e6ace01aeb2e27af3c5d71ef2":[10,0,2,9,0,40,0],
 "MueLu__DirectSolver__fwd_8hpp_source.html":[10,0,2,9,0,40],
-"MueLu__DisableMultipleCallCheck_8hpp.html":[10,0,2,9,14],
-"MueLu__DisableMultipleCallCheck_8hpp_source.html":[10,0,2,9,14],
+"MueLu__DisableMultipleCallCheck_8hpp.html":[10,0,2,9,15],
+"MueLu__DisableMultipleCallCheck_8hpp_source.html":[10,0,2,9,15],
 "MueLu__DistanceLaplacianDropping_8hpp.html":[10,0,2,0,3,11],
 "MueLu__DistanceLaplacianDropping_8hpp.html#a67980cdf88a5d1a3bdd9e40b69e90e9b":[10,0,2,0,3,11,8],
 "MueLu__DistanceLaplacianDropping_8hpp.html#a6d72fe4e53a8224698b0372c7ca6854f":[10,0,2,0,3,11,9],
@@ -246,8 +249,5 @@ var NAVTREEINDEX1 =
 "MueLu__DroppingCommon_8hpp.html#a50d23566733a68433eeb5eb474fbf7e5a800d1875b071134e44cab2293ac01568":[10,0,2,0,3,12,15,1],
 "MueLu__DroppingCommon_8hpp.html#a50d23566733a68433eeb5eb474fbf7e5ab4508b354ec60893aa484b277c5f1ed6":[10,0,2,0,3,12,15,0],
 "MueLu__DroppingCommon_8hpp.html#a50d23566733a68433eeb5eb474fbf7e5ae758e1cb7a9125a0779422e533d613d3":[10,0,2,0,3,12,15,3],
-"MueLu__DroppingCommon_8hpp.html#a6885fdcb5195a495f93a25255638e911a4cc203a4812f8f710c7d2ed62289e4c5":[10,0,2,0,3,12,14,3],
-"MueLu__DroppingCommon_8hpp.html#a68ae14477561647a8c38a292b7fb6c59":[10,0,2,0,3,12,14],
-"MueLu__DroppingCommon_8hpp.html#a68ae14477561647a8c38a292b7fb6c59a482ff335ec48374518484e1af0428315":[10,0,2,0,3,12,14,0],
-"MueLu__DroppingCommon_8hpp.html#a68ae14477561647a8c38a292b7fb6c59a49e6002b873efc347f57bea4aebb1422":[10,0,2,0,3,12,14,2]
+"MueLu__DroppingCommon_8hpp.html#a6885fdcb5195a495f93a25255638e911a4cc203a4812f8f710c7d2ed62289e4c5":[10,0,2,0,3,12,14,3]
 };

@@ -1,7 +1,7 @@
 var classMueLu_1_1DistanceLaplacian_1_1ScalarMaterialDistanceFunctor =
 [
     [ "matrix_type", "classMueLu_1_1DistanceLaplacian_1_1ScalarMaterialDistanceFunctor.html#a64cb8ab6037863aa217f91e17d606af5", null ],
-    [ "local_matrix_type", "classMueLu_1_1DistanceLaplacian_1_1ScalarMaterialDistanceFunctor.html#abb98b151cf600c91089ae6db1ef5a32c", null ],
+    [ "local_matrix_type", "classMueLu_1_1DistanceLaplacian_1_1ScalarMaterialDistanceFunctor.html#afc44617eeadd494f554c249b7cac9d5b", null ],
     [ "scalar_type", "classMueLu_1_1DistanceLaplacian_1_1ScalarMaterialDistanceFunctor.html#a83a0ceb83980d0fb76c3e33fa27a17c9", null ],
     [ "local_ordinal_type", "classMueLu_1_1DistanceLaplacian_1_1ScalarMaterialDistanceFunctor.html#a60bea1c47580c040b5be0018ee6a47d3", null ],
     [ "ATS", "classMueLu_1_1DistanceLaplacian_1_1ScalarMaterialDistanceFunctor.html#abeaafa7bf0c3c1408b392ed038b48613", null ],

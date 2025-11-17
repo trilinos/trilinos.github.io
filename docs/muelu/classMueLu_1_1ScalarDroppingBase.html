@@ -124,10 +124,10 @@ Public Types</h2></td></tr>
 <tr class="separator:a4608bc011925d0fff494debb17927eae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd3de9556097250f57a13e1e844f7998" id="r_abd3de9556097250f57a13e1e844f7998"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMueLu_1_1ScalarDroppingBase.html#abd3de9556097250f57a13e1e844f7998">GraphType</a> = Xpetra::CrsGraph&lt; <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt;</td></tr>
 <tr class="separator:abd3de9556097250f57a13e1e844f7998"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7194f56d55f2b883d5466bb3a4d5cc87" id="r_a7194f56d55f2b883d5466bb3a4d5cc87"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMueLu_1_1ScalarDroppingBase.html#a7194f56d55f2b883d5466bb3a4d5cc87">local_matrix_type</a> = typename crs_matrix_type::local_matrix_type</td></tr>
-<tr class="separator:a7194f56d55f2b883d5466bb3a4d5cc87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ea81b73cab45834ec95578ab2aa8961" id="r_a7ea81b73cab45834ec95578ab2aa8961"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMueLu_1_1ScalarDroppingBase.html#a7ea81b73cab45834ec95578ab2aa8961">local_graph_type</a> = typename GraphType::local_graph_type</td></tr>
-<tr class="separator:a7ea81b73cab45834ec95578ab2aa8961"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a983be0decfe94a0de1be50effbab7afd" id="r_a983be0decfe94a0de1be50effbab7afd"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMueLu_1_1ScalarDroppingBase.html#a983be0decfe94a0de1be50effbab7afd">local_matrix_type</a> = typename crs_matrix_type::local_matrix_device_type</td></tr>
+<tr class="separator:a983be0decfe94a0de1be50effbab7afd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4654585a33783df6059344a77985716" id="r_ac4654585a33783df6059344a77985716"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMueLu_1_1ScalarDroppingBase.html#ac4654585a33783df6059344a77985716">local_graph_type</a> = typename GraphType::local_graph_device_type</td></tr>
+<tr class="separator:ac4654585a33783df6059344a77985716"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2eb4ea468d27f02c4cf0a630d265a9df" id="r_a2eb4ea468d27f02c4cf0a630d265a9df"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMueLu_1_1ScalarDroppingBase.html#a2eb4ea468d27f02c4cf0a630d265a9df">rowptr_type</a> = typename local_graph_type::row_map_type::non_const_type</td></tr>
 <tr class="separator:a2eb4ea468d27f02c4cf0a630d265a9df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5566ec68ac7d4d67a62ca9171460f60" id="r_ac5566ec68ac7d4d67a62ca9171460f60"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMueLu_1_1ScalarDroppingBase.html#ac5566ec68ac7d4d67a62ca9171460f60">device_type</a> = typename Node::device_type</td></tr>
@@ -148,7 +148,7 @@ Public Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:aa0c0b9c5e80a8ab7c6c5eb08605e9b83" id="r_aa0c0b9c5e80a8ab7c6c5eb08605e9b83"><td class="memTemplParams" colspan="2">template&lt;class... Functors&gt; </td></tr>
-<tr class="memitem:aa0c0b9c5e80a8ab7c6c5eb08605e9b83"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classMueLu_1_1ScalarDroppingBase.html#aa0c0b9c5e80a8ab7c6c5eb08605e9b83">runDroppingFunctorsImpl</a> (<a class="el" href="classMueLu_1_1ScalarDroppingBase.html#a7194f56d55f2b883d5466bb3a4d5cc87">local_matrix_type</a> &amp;lclA, <a class="el" href="classMueLu_1_1ScalarDroppingBase.html#a211f81cb99e19f6e1bf99bfcb049fb6a">results_view</a> &amp;results, <a class="el" href="classMueLu_1_1ScalarDroppingBase.html#a2eb4ea468d27f02c4cf0a630d265a9df">rowptr_type</a> &amp;filtered_rowptr, <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> &amp;nnz_filtered, Functors &amp;... functors)</td></tr>
+<tr class="memitem:aa0c0b9c5e80a8ab7c6c5eb08605e9b83"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classMueLu_1_1ScalarDroppingBase.html#aa0c0b9c5e80a8ab7c6c5eb08605e9b83">runDroppingFunctorsImpl</a> (<a class="el" href="classMueLu_1_1ScalarDroppingBase.html#a983be0decfe94a0de1be50effbab7afd">local_matrix_type</a> &amp;lclA, <a class="el" href="classMueLu_1_1ScalarDroppingBase.html#a211f81cb99e19f6e1bf99bfcb049fb6a">results_view</a> &amp;results, <a class="el" href="classMueLu_1_1ScalarDroppingBase.html#a2eb4ea468d27f02c4cf0a630d265a9df">rowptr_type</a> &amp;filtered_rowptr, <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> &amp;nnz_filtered, Functors &amp;... functors)</td></tr>
 <tr class="separator:aa0c0b9c5e80a8ab7c6c5eb08605e9b83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d692687930685292847c7f7ff9cea85" id="r_a9d692687930685292847c7f7ff9cea85"><td class="memTemplParams" colspan="2">template&lt;class... Functors&gt; </td></tr>
 <tr class="memitem:a9d692687930685292847c7f7ff9cea85"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classMueLu_1_1ScalarDroppingBase.html#a9d692687930685292847c7f7ff9cea85">runDroppingFunctors</a> (<a class="el" href="classMueLu_1_1ScalarDroppingBase.html#add943259685fb60433babd3855fe8810">matrix_type</a> &amp;A, <a class="el" href="classMueLu_1_1ScalarDroppingBase.html#a211f81cb99e19f6e1bf99bfcb049fb6a">results_view</a> &amp;results, <a class="el" href="classMueLu_1_1ScalarDroppingBase.html#a2eb4ea468d27f02c4cf0a630d265a9df">rowptr_type</a> &amp;filtered_rowptr, <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> &amp;nnz_filtered, const bool useBlocking, <a class="el" href="classMueLu_1_1ScalarDroppingBase.html#a5c46519d807bc841b594aa4caa92a06b">Level</a> &amp;level, const <a class="el" href="classMueLu_1_1Factory.html">Factory</a> &amp;factory, Functors &amp;... functors)</td></tr>
@@ -213,8 +213,8 @@ template&lt;class <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#a227573c7
 
 </div>
 </div>
-<a id="a7194f56d55f2b883d5466bb3a4d5cc87" name="a7194f56d55f2b883d5466bb3a4d5cc87"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7194f56d55f2b883d5466bb3a4d5cc87">&#9670;&#160;</a></span>local_matrix_type</h2>
+<a id="a983be0decfe94a0de1be50effbab7afd" name="a983be0decfe94a0de1be50effbab7afd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a983be0decfe94a0de1be50effbab7afd">&#9670;&#160;</a></span>local_matrix_type</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -222,7 +222,7 @@ template&lt;class <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#a227573c7
 template&lt;class <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a> , class <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> , class <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a> , class <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classMueLu_1_1ScalarDroppingBase.html">MueLu::ScalarDroppingBase</a>&lt; <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>, <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt;::local_matrix_type =  typename crs_matrix_type::local_matrix_type</td>
+          <td class="memname">using <a class="el" href="classMueLu_1_1ScalarDroppingBase.html">MueLu::ScalarDroppingBase</a>&lt; <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>, <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt;::local_matrix_type =  typename crs_matrix_type::local_matrix_device_type</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -231,8 +231,8 @@ template&lt;class <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#a227573c7
 
 </div>
 </div>
-<a id="a7ea81b73cab45834ec95578ab2aa8961" name="a7ea81b73cab45834ec95578ab2aa8961"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ea81b73cab45834ec95578ab2aa8961">&#9670;&#160;</a></span>local_graph_type</h2>
+<a id="ac4654585a33783df6059344a77985716" name="ac4654585a33783df6059344a77985716"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4654585a33783df6059344a77985716">&#9670;&#160;</a></span>local_graph_type</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -240,7 +240,7 @@ template&lt;class <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#a227573c7
 template&lt;class <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a> , class <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> , class <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a> , class <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classMueLu_1_1ScalarDroppingBase.html">MueLu::ScalarDroppingBase</a>&lt; <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>, <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt;::local_graph_type =  typename GraphType::local_graph_type</td>
+          <td class="memname">using <a class="el" href="classMueLu_1_1ScalarDroppingBase.html">MueLu::ScalarDroppingBase</a>&lt; <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>, <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt;::local_graph_type =  typename GraphType::local_graph_device_type</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -410,7 +410,7 @@ template&lt;class... Functors&gt; </div>
         <tr>
           <td class="memname">static void <a class="el" href="classMueLu_1_1ScalarDroppingBase.html">MueLu::ScalarDroppingBase</a>&lt; <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>, <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="MueLu__UseDefaultTypes_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt;::runDroppingFunctorsImpl </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classMueLu_1_1ScalarDroppingBase.html#a7194f56d55f2b883d5466bb3a4d5cc87">local_matrix_type</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classMueLu_1_1ScalarDroppingBase.html#a983be0decfe94a0de1be50effbab7afd">local_matrix_type</a> &amp;&#160;</td>
           <td class="paramname"><em>lclA</em>, </td>
         </tr>
         <tr>

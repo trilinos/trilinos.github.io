@@ -45,11 +45,11 @@ var classXpetra_1_1MultiVector =
     [ "randomize", "classXpetra_1_1MultiVector.html#a02a0565540719825271d30f308e89cb9", null ],
     [ "Xpetra_randomize", "classXpetra_1_1MultiVector.html#a9d138914d90a0d908564203404b890f9", null ],
     [ "Xpetra_randomize", "classXpetra_1_1MultiVector.html#aa21b44cb43ecc39a67d97a2d21dbef1a", null ],
-    [ "getLocalViewHost", "classXpetra_1_1MultiVector.html#a9965c423ae796bb38b1809f04685159e", null ],
-    [ "getLocalViewDevice", "classXpetra_1_1MultiVector.html#a9dd69493a248fa0519f144ba6c4c2cc5", null ],
-    [ "getLocalViewHost", "classXpetra_1_1MultiVector.html#afd1f5dd17d88bafa7595eb3ab3f2d987", null ],
-    [ "getLocalViewDevice", "classXpetra_1_1MultiVector.html#a0b1dd26bd8a945b0d88f9cf41c64f750", null ],
-    [ "getLocalViewHost", "classXpetra_1_1MultiVector.html#ae041d0ffe6c5338f89a2cf9fcfbf9dfb", null ],
-    [ "getLocalViewDevice", "classXpetra_1_1MultiVector.html#a7878935e2cf17fc559cadfee5424c180", null ],
+    [ "getLocalViewHost", "classXpetra_1_1MultiVector.html#a6e53da43807f982da3c9c761c52b2475", null ],
+    [ "getLocalViewDevice", "classXpetra_1_1MultiVector.html#ab2f36a37de02532a69fbef91a41b2c72", null ],
+    [ "getLocalViewHost", "classXpetra_1_1MultiVector.html#a569a4514d219d2216cf7ccd608d7256c", null ],
+    [ "getLocalViewDevice", "classXpetra_1_1MultiVector.html#a48490789b75e089df66b3bd8477ec452", null ],
+    [ "getLocalViewHost", "classXpetra_1_1MultiVector.html#a2a1f1f7d5712e603133c2e43482500d8", null ],
+    [ "getLocalViewDevice", "classXpetra_1_1MultiVector.html#ae4a6c911a9a3088c81d55ae417befb9f", null ],
     [ "assign", "classXpetra_1_1MultiVector.html#abfa1fa05ccfb589c0398bb85c00c0764", null ]
 ];

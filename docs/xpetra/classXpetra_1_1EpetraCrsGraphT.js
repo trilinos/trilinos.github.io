@@ -2,7 +2,9 @@ var classXpetra_1_1EpetraCrsGraphT =
 [
     [ "LocalOrdinal", "classXpetra_1_1EpetraCrsGraphT.html#a761435220a2b122533c31148d41b5567", null ],
     [ "map_type", "classXpetra_1_1EpetraCrsGraphT.html#a8270f1d62eb096419720644c794a6388", null ],
-    [ "local_graph_type", "classXpetra_1_1EpetraCrsGraphT.html#a1af1e8c7e66a575e7cf2f9932d2cf6b3", null ],
+    [ "local_graph_type", "classXpetra_1_1EpetraCrsGraphT.html#a5fa8eede4e953c142af255fe9ff5ea23", null ],
+    [ "local_graph_device_type", "classXpetra_1_1EpetraCrsGraphT.html#a8c9891eb73955e1b1c95156b7f8b27e4", null ],
+    [ "local_graph_host_type", "classXpetra_1_1EpetraCrsGraphT.html#ae9842dbc9bca7dee6b08593b5268bdcb", null ],
     [ "node_type", "classXpetra_1_1EpetraCrsGraphT.html#ad4195c5f46924115af96b711034ed115", null ],
     [ "execution_space", "classXpetra_1_1EpetraCrsGraphT.html#a8cdcdf618b4c4992bf41aedf08939e95", null ],
     [ "EpetraCrsGraphT", "classXpetra_1_1EpetraCrsGraphT.html#a28f79e16263e56dcc25ab207f2e60ae4", null ],

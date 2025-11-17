@@ -117,7 +117,7 @@ $(document).ready(function(){initNavTree('MueLu__GeometricInterpolationPFactory_
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define MUELU_GEOMETRICINTERPOLATIONPFACTORY_KOKKOS_DEF_HPP</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;Xpetra_CrsGraph.hpp&quot;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;Xpetra_CrsMatrixUtils.hpp&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="MueLu__CrsMatrixUtils_8hpp.html">MueLu_CrsMatrixUtils.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="MueLu__MasterList_8hpp.html">MueLu_MasterList.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="MueLu__Monitor_8hpp.html">MueLu_Monitor.hpp</a>&quot;</span></div>
@@ -240,8 +240,8 @@ $(document).ready(function(){initNavTree('MueLu__GeometricInterpolationPFactory_
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="comment">// Construct and launch functor to fill coarse coordinates values</span></div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="comment">// function should take a const view really</span></div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <a class="code hl_struct" href="structMueLu_1_1GeometricInterpolationPFactory__kokkos_1_1coarseCoordinatesBuilderFunctor.html">coarseCoordinatesBuilderFunctor</a> myCoarseCoordinatesBuilder(geoData,</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                                                               fineCoordinates-&gt;getLocalViewDevice(Xpetra::Access::ReadWrite),</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                                                               coarseCoordinates-&gt;getLocalViewDevice(Xpetra::Access::OverwriteAll));</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                                                               fineCoordinates-&gt;getLocalViewDevice(Tpetra::Access::ReadWrite),</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                                                               coarseCoordinates-&gt;getLocalViewDevice(Tpetra::Access::OverwriteAll));</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    Kokkos::parallel_for(<span class="stringliteral">&quot;GeometricInterpolation: build coarse coordinates&quot;</span>,</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                         Kokkos::RangePolicy&lt;execution_space&gt;(0, geoData-&gt;getNumCoarseNodes()),</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                         myCoarseCoordinatesBuilder);</div>
@@ -343,12 +343,12 @@ $(document).ready(function(){initNavTree('MueLu__GeometricInterpolationPFactory_
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    <span class="keywordflow">if</span> (P_tpetra.is_null()) <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;BuildConstantP: Matrix factory did not return a Tpetra::BlockCrsMatrix&quot;</span>);</div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    RCP&lt;CrsMatrixWrap&gt; P_wrap = rcp(<span class="keyword">new</span> CrsMatrixWrap(P_xpetra));</div>
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    <span class="keyword">const</span> LO stride                                 = strideInfo[0] * strideInfo[0];</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    <span class="keyword">const</span> LO in_stride                              = strideInfo[0];</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    <span class="keyword">typename</span> CrsMatrix::local_graph_type localGraph = prolongatorGraph-&gt;getLocalGraphDevice();</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    <span class="keyword">auto</span> rowptr                                     = localGraph.row_map;</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    <span class="keyword">auto</span> indices                                    = localGraph.entries;</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    <span class="keyword">auto</span> values                                     = P_tpetra-&gt;getTpetra_BlockCrsMatrix()-&gt;getValuesDeviceNonConst();</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    <span class="keyword">const</span> LO stride                                        = strideInfo[0] * strideInfo[0];</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    <span class="keyword">const</span> LO in_stride                                     = strideInfo[0];</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    <span class="keyword">typename</span> CrsMatrix::local_graph_device_type localGraph = prolongatorGraph-&gt;getLocalGraphDevice();</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    <span class="keyword">auto</span> rowptr                                            = localGraph.row_map;</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    <span class="keyword">auto</span> indices                                           = localGraph.entries;</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    <span class="keyword">auto</span> values                                            = P_tpetra-&gt;getTpetra_BlockCrsMatrix()-&gt;getValuesDeviceNonConst();</div>
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span> </div>
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    <span class="keyword">using </span>ISC = <span class="keyword">typename</span> Tpetra::BlockCrsMatrix&lt;SC, LO, GO, NO&gt;::impl_scalar_type;</div>
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    ISC one   = Teuchos::ScalarTraits&lt;ISC&gt;::one();</div>
@@ -699,6 +699,7 @@ $(document).ready(function(){initNavTree('MueLu__GeometricInterpolationPFactory_
 <div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span> </div>
 <div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span><span class="preprocessor">#endif  </span><span class="comment">// MUELU_GEOMETRICINTERPOLATIONPFACTORY_KOKKOS_DEF_HPP</span></div>
 <div class="ttc" id="aMueLu__BrickAggregationFactory__def_8hpp_html_af6a857c25bcca4f300e01312cd6d4331"><div class="ttname"><a href="MueLu__BrickAggregationFactory__def_8hpp.html#af6a857c25bcca4f300e01312cd6d4331">SET_VALID_ENTRY</a></div><div class="ttdeci">#define SET_VALID_ENTRY(name)</div></div>
+<div class="ttc" id="aMueLu__CrsMatrixUtils_8hpp_html"><div class="ttname"><a href="MueLu__CrsMatrixUtils_8hpp.html">MueLu_CrsMatrixUtils.hpp</a></div></div>
 <div class="ttc" id="aMueLu__GeometricInterpolationPFactory__kokkos__decl_8hpp_html"><div class="ttname"><a href="MueLu__GeometricInterpolationPFactory__kokkos__decl_8hpp.html">MueLu_GeometricInterpolationPFactory_kokkos_decl.hpp</a></div></div>
 <div class="ttc" id="aMueLu__MasterList_8hpp_html"><div class="ttname"><a href="MueLu__MasterList_8hpp.html">MueLu_MasterList.hpp</a></div></div>
 <div class="ttc" id="aMueLu__Monitor_8hpp_html"><div class="ttname"><a href="MueLu__Monitor_8hpp.html">MueLu_Monitor.hpp</a></div></div>

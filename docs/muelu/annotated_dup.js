@@ -171,6 +171,7 @@ var annotated_dup =
       [ "Ifpack2Smoother", "classMueLu_1_1Ifpack2Smoother.html", "classMueLu_1_1Ifpack2Smoother" ],
       [ "Ifpack2Smoother< double, int, int, Xpetra::EpetraNode >", "classMueLu_1_1Ifpack2Smoother_3_01double_00_01int_00_01int_00_01Xpetra_1_1EpetraNode_01_4.html", "classMueLu_1_1Ifpack2Smoother_3_01double_00_01int_00_01int_00_01Xpetra_1_1EpetraNode_01_4" ],
       [ "IfpackSmoother", "classMueLu_1_1IfpackSmoother.html", "classMueLu_1_1IfpackSmoother" ],
+      [ "ImportUtils", "classMueLu_1_1ImportUtils.html", "classMueLu_1_1ImportUtils" ],
       [ "IndefBlockedDiagonalSmoother", "classMueLu_1_1IndefBlockedDiagonalSmoother.html", "classMueLu_1_1IndefBlockedDiagonalSmoother" ],
       [ "IndexManager", "classMueLu_1_1IndexManager.html", "classMueLu_1_1IndexManager" ],
       [ "IndexManager_kokkos", "classMueLu_1_1IndexManager__kokkos.html", "classMueLu_1_1IndexManager__kokkos" ],
@@ -181,6 +182,7 @@ var annotated_dup =
       [ "IntrepidPCoarsenFactory", "classMueLu_1_1IntrepidPCoarsenFactory.html", "classMueLu_1_1IntrepidPCoarsenFactory" ],
       [ "InverseApproximationFactory", "classMueLu_1_1InverseApproximationFactory.html", "classMueLu_1_1InverseApproximationFactory" ],
       [ "IsorropiaInterface", "classMueLu_1_1IsorropiaInterface.html", "classMueLu_1_1IsorropiaInterface" ],
+      [ "IteratorOps", "classMueLu_1_1IteratorOps.html", "classMueLu_1_1IteratorOps" ],
       [ "KokkosTuningInterface", "classMueLu_1_1KokkosTuningInterface.html", "classMueLu_1_1KokkosTuningInterface" ],
       [ "LeftoverAggregationAlgorithm", "classMueLu_1_1LeftoverAggregationAlgorithm.html", null ],
       [ "Level", "classMueLu_1_1Level.html", "classMueLu_1_1Level" ],
@@ -344,6 +346,9 @@ var annotated_dup =
     [ "Thyra", "namespaceThyra.html", [
       [ "MueLuTpetraQ2Q1PreconditionerFactory", "classThyra_1_1MueLuTpetraQ2Q1PreconditionerFactory.html", "classThyra_1_1MueLuTpetraQ2Q1PreconditionerFactory" ],
       [ "XpetraLinearOp", "classThyra_1_1XpetraLinearOp.html", "classThyra_1_1XpetraLinearOp" ]
+    ] ],
+    [ "Xpetra", "namespaceXpetra.html", [
+      [ "CrsMatrixUtils", "classXpetra_1_1CrsMatrixUtils.html", "classXpetra_1_1CrsMatrixUtils" ]
     ] ],
     [ "Zoltan2", "namespaceZoltan2.html", [
       [ "InputTraits< MueLu::LWGraph< LocalOrdinal, GlobalOrdinal, Node > >", "structZoltan2_1_1InputTraits_3_01MueLu_1_1LWGraph_3_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4.html", "structZoltan2_1_1InputTraits_3_01MueLu_1_1LWGraph_3_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4" ]

@@ -1,6 +1,6 @@
 var classMueLu_1_1NotayAggregationFactory =
 [
-    [ "local_matrix_type", "classMueLu_1_1NotayAggregationFactory.html#a7b0d09e01d2b7ee72db97abb9625b186", null ],
+    [ "local_matrix_type", "classMueLu_1_1NotayAggregationFactory.html#a4de3ac2a4ae79f0180753f6f1341acff", null ],
     [ "device_type", "classMueLu_1_1NotayAggregationFactory.html#a6d4bf07b40db8291828c8c97760b0889", null ],
     [ "execution_space", "classMueLu_1_1NotayAggregationFactory.html#a5b22f6c71ddfd30791e0d27e622ff4b9", null ],
     [ "magnitude_type", "classMueLu_1_1NotayAggregationFactory.html#a198585ab34cf5be777bc8aaf6833e5f1", null ],

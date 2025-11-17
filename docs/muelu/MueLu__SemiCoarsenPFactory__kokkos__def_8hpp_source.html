@@ -441,14 +441,14 @@ $(document).ready(function(){initNavTree('MueLu__SemiCoarsenPFactory__kokkos__de
 <div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>    importer = ImportFactory::Build(Amat-&gt;getDomainMap(), Amat-&gt;getColMap());</div>
 <div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>  {</div>
 <div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    <span class="comment">// Fill local temp with layer ids and fill ghost nodes</span></div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    <span class="keyword">const</span> <span class="keyword">auto</span> localTempHost = localTemp-&gt;getLocalViewHost(Xpetra::Access::ReadWrite);</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    <span class="keyword">const</span> <span class="keyword">auto</span> localTempHost = localTemp-&gt;getLocalViewHost(Tpetra::Access::ReadWrite);</div>
 <div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> row = 0; row &lt; NFRows; row++)</div>
 <div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>      localTempHost(row, 0) = LayerId[row / DofsPerNode];</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    <span class="keyword">const</span> <span class="keyword">auto</span> localTempView = localTemp-&gt;getLocalViewDevice(Xpetra::Access::ReadWrite);</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    <span class="keyword">const</span> <span class="keyword">auto</span> localTempView = localTemp-&gt;getLocalViewDevice(Tpetra::Access::ReadWrite);</div>
 <div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>    Kokkos::deep_copy(localTempView, localTempHost);</div>
 <div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>    FCol2LayerVector-&gt;doImport(*localTemp, *(importer), Xpetra::INSERT);</div>
 <div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>  }</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>  <span class="keyword">const</span> <span class="keyword">auto</span> FCol2LayerView = FCol2LayerVector-&gt;getLocalViewDevice(Xpetra::Access::ReadOnly);</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>  <span class="keyword">const</span> <span class="keyword">auto</span> FCol2LayerView = FCol2LayerVector-&gt;getLocalViewDevice(Tpetra::Access::ReadOnly);</div>
 <div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>  <span class="keyword">const</span> <span class="keyword">auto</span> FCol2Layer     = Kokkos::subview(FCol2LayerView, Kokkos::ALL(), 0);</div>
 <div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span> </div>
 <div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>  <span class="comment">// Construct a map from fine level column to local dof per node id (including</span></div>
@@ -457,14 +457,14 @@ $(document).ready(function(){initNavTree('MueLu__SemiCoarsenPFactory__kokkos__de
 <div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>      Xpetra::VectorFactory&lt;LO, LO, GO, NO&gt;::Build(Amat-&gt;getColMap());</div>
 <div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>  {</div>
 <div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>    <span class="comment">// Fill local temp with local dof per node ids and fill ghost nodes</span></div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>    <span class="keyword">const</span> <span class="keyword">auto</span> localTempHost = localTemp-&gt;getLocalViewHost(Xpetra::Access::ReadWrite);</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>    <span class="keyword">const</span> <span class="keyword">auto</span> localTempHost = localTemp-&gt;getLocalViewHost(Tpetra::Access::ReadWrite);</div>
 <div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> row = 0; row &lt; NFRows; row++)</div>
 <div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>      localTempHost(row, 0) = row % DofsPerNode;</div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>    <span class="keyword">const</span> <span class="keyword">auto</span> localTempView = localTemp-&gt;getLocalViewDevice(Xpetra::Access::ReadWrite);</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>    <span class="keyword">const</span> <span class="keyword">auto</span> localTempView = localTemp-&gt;getLocalViewDevice(Tpetra::Access::ReadWrite);</div>
 <div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    Kokkos::deep_copy(localTempView, localTempHost);</div>
 <div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>    FCol2DofVector-&gt;doImport(*localTemp, *(importer), Xpetra::INSERT);</div>
 <div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>  }</div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>  <span class="keyword">const</span> <span class="keyword">auto</span> FCol2DofView = FCol2DofVector-&gt;getLocalViewDevice(Xpetra::Access::ReadOnly);</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>  <span class="keyword">const</span> <span class="keyword">auto</span> FCol2DofView = FCol2DofVector-&gt;getLocalViewDevice(Tpetra::Access::ReadOnly);</div>
 <div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>  <span class="keyword">const</span> <span class="keyword">auto</span> FCol2Dof     = Kokkos::subview(FCol2DofView, Kokkos::ALL(), 0);</div>
 <div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span> </div>
 <div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>  <span class="comment">// Compute NVertLines</span></div>
@@ -750,8 +750,8 @@ $(document).ready(function(){initNavTree('MueLu__SemiCoarsenPFactory__kokkos__de
 <div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span>  coarseNullspace =</div>
 <div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span>      MultiVectorFactory::Build(coarseMap, fineNullspace-&gt;getNumVectors());</div>
 <div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> numVectors           = fineNullspace-&gt;getNumVectors();</div>
-<div class="line"><a id="l00638" name="l00638"></a><span class="lineno">  638</span>  <span class="keyword">const</span> <span class="keyword">auto</span> fineNullspaceView   = fineNullspace-&gt;getLocalViewDevice(Xpetra::Access::ReadOnly);</div>
-<div class="line"><a id="l00639" name="l00639"></a><span class="lineno">  639</span>  <span class="keyword">const</span> <span class="keyword">auto</span> coarseNullspaceView = coarseNullspace-&gt;getLocalViewDevice(Xpetra::Access::ReadWrite);</div>
+<div class="line"><a id="l00638" name="l00638"></a><span class="lineno">  638</span>  <span class="keyword">const</span> <span class="keyword">auto</span> fineNullspaceView   = fineNullspace-&gt;getLocalViewDevice(Tpetra::Access::ReadOnly);</div>
+<div class="line"><a id="l00639" name="l00639"></a><span class="lineno">  639</span>  <span class="keyword">const</span> <span class="keyword">auto</span> coarseNullspaceView = coarseNullspace-&gt;getLocalViewDevice(Tpetra::Access::ReadWrite);</div>
 <div class="line"><a id="l00640" name="l00640"></a><span class="lineno">  640</span>  <span class="keyword">using </span>range_policy             = Kokkos::RangePolicy&lt;execution_space&gt;;</div>
 <div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span>  Kokkos::parallel_for(</div>
 <div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span>      <span class="stringliteral">&quot;MueLu::SemiCoarsenPFactory_kokkos::BuildSemiCoarsenP Inject Nullspace&quot;</span>,</div>

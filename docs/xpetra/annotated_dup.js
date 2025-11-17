@@ -1,11 +1,6 @@
 var annotated_dup =
 [
     [ "Xpetra", "namespaceXpetra.html", [
-      [ "Access", "namespaceXpetra_1_1Access.html", [
-        [ "OverwriteAllStruct", "structXpetra_1_1Access_1_1OverwriteAllStruct.html", null ],
-        [ "ReadOnlyStruct", "structXpetra_1_1Access_1_1ReadOnlyStruct.html", null ],
-        [ "ReadWriteStruct", "structXpetra_1_1Access_1_1ReadWriteStruct.html", null ]
-      ] ],
       [ "Exceptions", "namespaceXpetra_1_1Exceptions.html", [
         [ "BadCast", "classXpetra_1_1Exceptions_1_1BadCast.html", "classXpetra_1_1Exceptions_1_1BadCast" ],
         [ "Incompatible", "classXpetra_1_1Exceptions_1_1Incompatible.html", "classXpetra_1_1Exceptions_1_1Incompatible" ],
@@ -26,9 +21,7 @@ var annotated_dup =
       [ "CrsMatrixFactory", "classXpetra_1_1CrsMatrixFactory.html", "classXpetra_1_1CrsMatrixFactory" ],
       [ "CrsMatrixFactory< double, int, int, EpetraNode >", "classXpetra_1_1CrsMatrixFactory_3_01double_00_01int_00_01int_00_01EpetraNode_01_4.html", "classXpetra_1_1CrsMatrixFactory_3_01double_00_01int_00_01int_00_01EpetraNode_01_4" ],
       [ "CrsMatrixFactory< double, int, long long, EpetraNode >", "classXpetra_1_1CrsMatrixFactory_3_01double_00_01int_00_01long_01long_00_01EpetraNode_01_4.html", "classXpetra_1_1CrsMatrixFactory_3_01double_00_01int_00_01long_01long_00_01EpetraNode_01_4" ],
-      [ "CrsMatrixUtils", "classXpetra_1_1CrsMatrixUtils.html", "classXpetra_1_1CrsMatrixUtils" ],
-      [ "CrsMatrixUtils< double, int, int, EpetraNode >", "classXpetra_1_1CrsMatrixUtils_3_01double_00_01int_00_01int_00_01EpetraNode_01_4.html", "classXpetra_1_1CrsMatrixUtils_3_01double_00_01int_00_01int_00_01EpetraNode_01_4" ],
-      [ "CrsMatrixUtils< double, int, long long, EpetraNode >", "classXpetra_1_1CrsMatrixUtils_3_01double_00_01int_00_01long_01long_00_01EpetraNode_01_4.html", "classXpetra_1_1CrsMatrixUtils_3_01double_00_01int_00_01long_01long_00_01EpetraNode_01_4" ],
+      [ "CrsMatrixUtils", "classXpetra_1_1CrsMatrixUtils.html", null ],
       [ "CrsMatrixWrap", "classXpetra_1_1CrsMatrixWrap.html", "classXpetra_1_1CrsMatrixWrap" ],
       [ "DefaultPlatform", "classXpetra_1_1DefaultPlatform.html", "classXpetra_1_1DefaultPlatform" ],
       [ "DistObject", "classXpetra_1_1DistObject.html", "classXpetra_1_1DistObject" ],
@@ -68,12 +61,8 @@ var annotated_dup =
       [ "ImportFactory", "classXpetra_1_1ImportFactory.html", "classXpetra_1_1ImportFactory" ],
       [ "ImportFactory< int, int, EpetraNode >", "classXpetra_1_1ImportFactory_3_01int_00_01int_00_01EpetraNode_01_4.html", "classXpetra_1_1ImportFactory_3_01int_00_01int_00_01EpetraNode_01_4" ],
       [ "ImportFactory< int, long long, EpetraNode >", "classXpetra_1_1ImportFactory_3_01int_00_01long_01long_00_01EpetraNode_01_4.html", "classXpetra_1_1ImportFactory_3_01int_00_01long_01long_00_01EpetraNode_01_4" ],
-      [ "ImportUtils", "classXpetra_1_1ImportUtils.html", "classXpetra_1_1ImportUtils" ],
-      [ "ImportUtils< int, int, EpetraNode >", "classXpetra_1_1ImportUtils_3_01int_00_01int_00_01EpetraNode_01_4.html", "classXpetra_1_1ImportUtils_3_01int_00_01int_00_01EpetraNode_01_4" ],
-      [ "ImportUtils< int, long long, EpetraNode >", "classXpetra_1_1ImportUtils_3_01int_00_01long_01long_00_01EpetraNode_01_4.html", "classXpetra_1_1ImportUtils_3_01int_00_01long_01long_00_01EpetraNode_01_4" ],
       [ "IO", "classXpetra_1_1IO.html", "classXpetra_1_1IO" ],
       [ "IO< Scalar, int, int, EpetraNode >", "classXpetra_1_1IO_3_01Scalar_00_01int_00_01int_00_01EpetraNode_01_4.html", "classXpetra_1_1IO_3_01Scalar_00_01int_00_01int_00_01EpetraNode_01_4" ],
-      [ "IteratorOps", "classXpetra_1_1IteratorOps.html", "classXpetra_1_1IteratorOps" ],
       [ "Map", "classXpetra_1_1Map.html", "classXpetra_1_1Map" ],
       [ "MapExtractor", "classXpetra_1_1MapExtractor.html", "classXpetra_1_1MapExtractor" ],
       [ "MapExtractorFactory", "classXpetra_1_1MapExtractorFactory.html", "classXpetra_1_1MapExtractorFactory" ],

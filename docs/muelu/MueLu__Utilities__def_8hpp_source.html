@@ -398,8 +398,8 @@ $(document).ready(function(){initNavTree('MueLu__Utilities__def_8hpp_source.html
 <div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>      (<span class="keyword">typeid</span>(<a class="code hl_typedef" href="MueLu__UseDefaultTypes_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>).name() == <span class="keyword">typeid</span>(std::complex&lt;float&gt;).name())) {</div>
 <div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    <span class="keywordtype">size_t</span> numVecs  = X-&gt;getNumVectors();</div>
 <div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    Xscalar         = Xpetra::MultiVectorFactory&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;::Build(X-&gt;getMap(), numVecs);</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    <span class="keyword">auto</span> XVec       = X-&gt;getLocalViewDevice(Xpetra::Access::ReadOnly);</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    <span class="keyword">auto</span> XVecScalar = Xscalar-&gt;getLocalViewDevice(Xpetra::Access::ReadWrite);</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    <span class="keyword">auto</span> XVec       = X-&gt;getLocalViewDevice(Tpetra::Access::ReadOnly);</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    <span class="keyword">auto</span> XVecScalar = Xscalar-&gt;getLocalViewDevice(Tpetra::Access::ReadWrite);</div>
 <div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span> </div>
 <div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    Kokkos::parallel_for(</div>
 <div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        <span class="stringliteral">&quot;MueLu:Utils::RealValuedToScalarMultiVector&quot;</span>, range_type(0, X-&gt;getLocalLength()),</div>

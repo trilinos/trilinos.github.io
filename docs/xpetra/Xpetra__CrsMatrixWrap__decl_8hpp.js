@@ -25,5 +25,11 @@ var Xpetra__CrsMatrixWrap__decl_8hpp =
     [ "toTpetraRowMatrix", "Xpetra__CrsMatrixWrap__decl_8hpp.html#ad288e577c2eda0d440a262c43cbb83db", null ],
     [ "toTpetraRowMatrix", "Xpetra__CrsMatrixWrap__decl_8hpp.html#ae25cdcc07faa0a480e047076ec901af9", null ],
     [ "toTpetraRowMatrix", "Xpetra__CrsMatrixWrap__decl_8hpp.html#ab15d85d7a463c180753e4ef99afeaa60", null ],
-    [ "toTpetraRowMatrix", "Xpetra__CrsMatrixWrap__decl_8hpp.html#a65fac9aa537ae195657bce8529ff214f", null ]
+    [ "toTpetraRowMatrix", "Xpetra__CrsMatrixWrap__decl_8hpp.html#a65fac9aa537ae195657bce8529ff214f", null ],
+    [ "applyFilter_vals", "Xpetra__CrsMatrixWrap__decl_8hpp.html#a65fcfaf4c5e4c0fda7d468774d5b76e9", null ],
+    [ "applyFilter_vals", "Xpetra__CrsMatrixWrap__decl_8hpp.html#a20a91f2217516667715310ba8027ee30", null ],
+    [ "applyFilter_LID", "Xpetra__CrsMatrixWrap__decl_8hpp.html#a916d8b314cd0d26e7aabd819da36dc44", null ],
+    [ "applyFilter_LID", "Xpetra__CrsMatrixWrap__decl_8hpp.html#a0ec933dc30a230bdd125116b2dd1fe1e", null ],
+    [ "applyFilter_GID", "Xpetra__CrsMatrixWrap__decl_8hpp.html#aa6399ebc998253bcf61dcae11233dc5f", null ],
+    [ "applyFilter_GID", "Xpetra__CrsMatrixWrap__decl_8hpp.html#ae6e00343d895fe497580b08da648730a", null ]
 ];

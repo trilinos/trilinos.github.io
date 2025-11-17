@@ -152,13 +152,13 @@ $(document).ready(function(){initNavTree('MueLu__MatrixFreeTentativeP__def_8hpp_
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="comment">// TODO: probably smarter to sqrt the whole aggSizes once, but may be slower if it&#39;s done in a separate kernel launch?</span></div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <span class="keyword">typename</span> Aggregates::aggregates_sizes_type::const_type aggSizes = aggregates_-&gt;ComputeAggregateSizes();</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <span class="keyword">auto</span> kokkos_view_X = X.getLocalViewDevice(Xpetra::Access::ReadOnly);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="keyword">auto</span> kokkos_view_Y = Y.getLocalViewDevice(Xpetra::Access::ReadWrite);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <span class="keyword">auto</span> kokkos_view_X = X.getLocalViewDevice(Tpetra::Access::ReadOnly);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="keyword">auto</span> kokkos_view_Y = Y.getLocalViewDevice(Tpetra::Access::ReadWrite);</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  LO numCols         = kokkos_view_X.extent(1);</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keywordflow">if</span> (mode == Teuchos::TRANS) {  <span class="comment">// if we&#39;re in restrictor mode</span></div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">auto</span> vertex2AggId     = aggregates_-&gt;GetVertex2AggId();</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">auto</span> vertex2AggIdView = vertex2AggId-&gt;getLocalViewDevice(Xpetra::Access::ReadOnly);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">auto</span> vertex2AggIdView = vertex2AggId-&gt;getLocalViewDevice(Tpetra::Access::ReadOnly);</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    LO numNodes           = kokkos_view_X.extent(0);</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">// Step 2: Compute Y=Y+alpha*R*X</span></div>
@@ -173,7 +173,7 @@ $(document).ready(function(){initNavTree('MueLu__MatrixFreeTentativeP__def_8hpp_
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        });</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  } <span class="keywordflow">else</span> {  <span class="comment">// if we&#39;re in prolongator mode</span></div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keyword">const</span> <span class="keyword">auto</span> vertex2Agg = aggregates_-&gt;GetVertex2AggId();</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keyword">auto</span> vertex2AggView   = vertex2Agg-&gt;getLocalViewDevice(Xpetra::Access::ReadOnly);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keyword">auto</span> vertex2AggView   = vertex2Agg-&gt;getLocalViewDevice(Tpetra::Access::ReadOnly);</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    LO numNodes           = kokkos_view_Y.extent(0);</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="comment">// Step 2: Compute Y=Y+alpha*P*X</span></div>

@@ -6,7 +6,7 @@ var searchData=
   ['matrix_3c_20double_20_3e_3',['Matrix&lt; double &gt;',['../classNOX_1_1LAPACK_1_1Matrix.html',1,'NOX::LAPACK']]],
   ['matrixfree_4',['MatrixFree',['../classNOX_1_1Epetra_1_1MatrixFree.html',1,'NOX::Epetra']]],
   ['matrixfreejacobianoperator_5',['MatrixFreeJacobianOperator',['../classNOX_1_1Thyra_1_1MatrixFreeJacobianOperator.html',1,'NOX::Thyra']]],
-  ['matrixfreemodelevaluatordecorator_6',['matrixfreemodelevaluatordecorator',['../classnox_1_1MatrixFreeModelEvaluatorDecorator.html',1,'nox::MatrixFreeModelEvaluatorDecorator&lt; ScalarT &gt;'],['../classNOX_1_1MatrixFreeModelEvaluatorDecorator.html',1,'NOX::MatrixFreeModelEvaluatorDecorator&lt; ScalarT &gt;']]],
+  ['matrixfreemodelevaluatordecorator_6',['MatrixFreeModelEvaluatorDecorator',['../classNOX_1_1MatrixFreeModelEvaluatorDecorator.html',1,'NOX']]],
   ['maxiters_7',['maxiters',['../classLOCA_1_1StatusTest_1_1MaxIters.html',1,'LOCA::StatusTest::MaxIters'],['../classNOX_1_1StatusTest_1_1MaxIters.html',1,'NOX::StatusTest::MaxIters']]],
   ['modelevaluator_8',['ModelEvaluator',['../classThyra_1_1ModelEvaluator.html',1,'Thyra']]],
   ['modelevaluatorinterface_9',['ModelEvaluatorInterface',['../classLOCA_1_1Epetra_1_1ModelEvaluatorInterface.html',1,'LOCA::Epetra']]],

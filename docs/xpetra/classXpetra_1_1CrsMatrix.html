@@ -162,13 +162,21 @@ Public Types</h2></td></tr>
 <tr class="separator:a7ac069ce859c9cbcd4428017ccab0eb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37f5f849551742f80b367af00301e818" id="r_a37f5f849551742f80b367af00301e818"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classXpetra_1_1CrsMatrix.html#a37f5f849551742f80b367af00301e818">local_graph_type</a> = KokkosSparse::StaticCrsGraph&lt; LocalOrdinal, Kokkos::LayoutLeft, <a class="el" href="classXpetra_1_1CrsMatrix.html#a7ac069ce859c9cbcd4428017ccab0eb7">execution_space</a>, void, size_t &gt;</td></tr>
 <tr class="separator:a37f5f849551742f80b367af00301e818"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a430c015978727ff491c165a5ecd32633" id="r_a430c015978727ff491c165a5ecd32633"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classXpetra_1_1CrsMatrix.html#a430c015978727ff491c165a5ecd32633">local_graph_device_type</a> = KokkosSparse::StaticCrsGraph&lt; LocalOrdinal, Kokkos::LayoutLeft, <a class="el" href="classXpetra_1_1CrsMatrix.html#a7ac069ce859c9cbcd4428017ccab0eb7">execution_space</a>, void, size_t &gt;</td></tr>
+<tr class="separator:a430c015978727ff491c165a5ecd32633"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affa19ca079e4c79d90b32a65519faec0" id="r_affa19ca079e4c79d90b32a65519faec0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classXpetra_1_1CrsMatrix.html#affa19ca079e4c79d90b32a65519faec0">local_graph_host_type</a> = typename local_graph_device_type::HostMirror</td></tr>
+<tr class="separator:affa19ca079e4c79d90b32a65519faec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1882b43c44140c61280b1128c2b2e4fa" id="r_a1882b43c44140c61280b1128c2b2e4fa"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classXpetra_1_1CrsMatrix.html#a1882b43c44140c61280b1128c2b2e4fa">local_matrix_type</a> = KokkosSparse::CrsMatrix&lt; <a class="el" href="classXpetra_1_1CrsMatrix.html#a4a178bb9d31484dddbd1eaac2b30a588">impl_scalar_type</a>, LocalOrdinal, <a class="el" href="classXpetra_1_1CrsMatrix.html#a7ac069ce859c9cbcd4428017ccab0eb7">execution_space</a>, void, typename local_graph_type::size_type &gt;</td></tr>
 <tr class="memdesc:a1882b43c44140c61280b1128c2b2e4fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">The specialization of Kokkos::CrsMatrix that represents the part of the sparse matrix on each MPI process. The same as for Tpetra.  <br /></td></tr>
 <tr class="separator:a1882b43c44140c61280b1128c2b2e4fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe936caffab530fca9ca4997576a26ca" id="r_afe936caffab530fca9ca4997576a26ca"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classXpetra_1_1CrsMatrix.html#a1882b43c44140c61280b1128c2b2e4fa">local_matrix_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classXpetra_1_1CrsMatrix.html#afe936caffab530fca9ca4997576a26ca">getLocalMatrixDevice</a> () const =0</td></tr>
-<tr class="separator:afe936caffab530fca9ca4997576a26ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a255a0f762930b05aeae587fcfedaa0" id="r_a8a255a0f762930b05aeae587fcfedaa0"><td class="memItemLeft" align="right" valign="top">virtual local_matrix_type::HostMirror&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classXpetra_1_1CrsMatrix.html#a8a255a0f762930b05aeae587fcfedaa0">getLocalMatrixHost</a> () const =0</td></tr>
-<tr class="separator:a8a255a0f762930b05aeae587fcfedaa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f9ed0cc4c3f95acd1f3492c5e650219" id="r_a3f9ed0cc4c3f95acd1f3492c5e650219"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classXpetra_1_1CrsMatrix.html#a3f9ed0cc4c3f95acd1f3492c5e650219">local_matrix_device_type</a> = KokkosSparse::CrsMatrix&lt; <a class="el" href="classXpetra_1_1CrsMatrix.html#a4a178bb9d31484dddbd1eaac2b30a588">impl_scalar_type</a>, LocalOrdinal, <a class="el" href="classXpetra_1_1CrsMatrix.html#a7ac069ce859c9cbcd4428017ccab0eb7">execution_space</a>, void, typename local_graph_type::size_type &gt;</td></tr>
+<tr class="separator:a3f9ed0cc4c3f95acd1f3492c5e650219"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1d30bd800548a5d14aee31fcdc890ba" id="r_af1d30bd800548a5d14aee31fcdc890ba"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classXpetra_1_1CrsMatrix.html#af1d30bd800548a5d14aee31fcdc890ba">local_matrix_host_type</a> = typename local_matrix_device_type::HostMirror</td></tr>
+<tr class="separator:af1d30bd800548a5d14aee31fcdc890ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefab3013683588137a9d8ebb6932542b" id="r_aefab3013683588137a9d8ebb6932542b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classXpetra_1_1CrsMatrix.html#a3f9ed0cc4c3f95acd1f3492c5e650219">local_matrix_device_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classXpetra_1_1CrsMatrix.html#aefab3013683588137a9d8ebb6932542b">getLocalMatrixDevice</a> () const =0</td></tr>
+<tr class="separator:aefab3013683588137a9d8ebb6932542b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20df6da98fc0e91dffe7c5b5be27887b" id="r_a20df6da98fc0e91dffe7c5b5be27887b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classXpetra_1_1CrsMatrix.html#af1d30bd800548a5d14aee31fcdc890ba">local_matrix_host_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classXpetra_1_1CrsMatrix.html#a20df6da98fc0e91dffe7c5b5be27887b">getLocalMatrixHost</a> () const =0</td></tr>
+<tr class="separator:a20df6da98fc0e91dffe7c5b5be27887b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f4701b7f9171239750a7acc6eb93ecc" id="r_a0f4701b7f9171239750a7acc6eb93ecc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classXpetra_1_1CrsMatrix.html#a0f4701b7f9171239750a7acc6eb93ecc">setAllValues</a> (const typename local_matrix_type::row_map_type &amp;ptr, const typename local_graph_type::entries_type::non_const_type &amp;ind, const typename local_matrix_type::values_type &amp;val)=0</td></tr>
 <tr class="separator:a0f4701b7f9171239750a7acc6eb93ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa976fa8fa0acec5fc69bf56396e2c54b" id="r_aa976fa8fa0acec5fc69bf56396e2c54b"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classXpetra_1_1CrsMatrix.html#aa976fa8fa0acec5fc69bf56396e2c54b">getLocalNumCols</a> () const =0</td></tr>
@@ -567,6 +575,42 @@ template&lt;class Scalar , class LocalOrdinal , class GlobalOrdinal , class Node
 
 </div>
 </div>
+<a id="a430c015978727ff491c165a5ecd32633" name="a430c015978727ff491c165a5ecd32633"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a430c015978727ff491c165a5ecd32633">&#9670;&#160;</a></span>local_graph_device_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Scalar , class LocalOrdinal , class GlobalOrdinal , class Node  = Tpetra::KokkosClassic::DefaultNode::DefaultNodeType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classXpetra_1_1CrsMatrix.html">Xpetra::CrsMatrix</a>&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;::local_graph_device_type =  KokkosSparse::StaticCrsGraph&lt;LocalOrdinal, Kokkos::LayoutLeft, <a class="el" href="classXpetra_1_1CrsMatrix.html#a7ac069ce859c9cbcd4428017ccab0eb7">execution_space</a>, void, size_t&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Xpetra__CrsMatrix_8hpp_source.html#l00289">289</a> of file <a class="el" href="Xpetra__CrsMatrix_8hpp_source.html">Xpetra_CrsMatrix.hpp</a>.</p>
+
+</div>
+</div>
+<a id="affa19ca079e4c79d90b32a65519faec0" name="affa19ca079e4c79d90b32a65519faec0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affa19ca079e4c79d90b32a65519faec0">&#9670;&#160;</a></span>local_graph_host_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Scalar , class LocalOrdinal , class GlobalOrdinal , class Node  = Tpetra::KokkosClassic::DefaultNode::DefaultNodeType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classXpetra_1_1CrsMatrix.html">Xpetra::CrsMatrix</a>&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;::local_graph_host_type =  typename local_graph_device_type::HostMirror</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Xpetra__CrsMatrix_8hpp_source.html#l00297">297</a> of file <a class="el" href="Xpetra__CrsMatrix_8hpp_source.html">Xpetra_CrsMatrix.hpp</a>.</p>
+
+</div>
+</div>
 <a id="a1882b43c44140c61280b1128c2b2e4fa" name="a1882b43c44140c61280b1128c2b2e4fa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1882b43c44140c61280b1128c2b2e4fa">&#9670;&#160;</a></span>local_matrix_type</h2>
 
@@ -583,7 +627,43 @@ template&lt;class Scalar , class LocalOrdinal , class GlobalOrdinal , class Node
 
 <p>The specialization of Kokkos::CrsMatrix that represents the part of the sparse matrix on each MPI process. The same as for Tpetra. </p>
 
-<p class="definition">Definition at line <a class="el" href="Xpetra__CrsMatrix_8hpp_source.html#l00292">292</a> of file <a class="el" href="Xpetra__CrsMatrix_8hpp_source.html">Xpetra_CrsMatrix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Xpetra__CrsMatrix_8hpp_source.html#l00303">303</a> of file <a class="el" href="Xpetra__CrsMatrix_8hpp_source.html">Xpetra_CrsMatrix.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a3f9ed0cc4c3f95acd1f3492c5e650219" name="a3f9ed0cc4c3f95acd1f3492c5e650219"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f9ed0cc4c3f95acd1f3492c5e650219">&#9670;&#160;</a></span>local_matrix_device_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Scalar , class LocalOrdinal , class GlobalOrdinal , class Node  = Tpetra::KokkosClassic::DefaultNode::DefaultNodeType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classXpetra_1_1CrsMatrix.html">Xpetra::CrsMatrix</a>&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;::local_matrix_device_type =  KokkosSparse::CrsMatrix&lt;<a class="el" href="classXpetra_1_1CrsMatrix.html#a4a178bb9d31484dddbd1eaac2b30a588">impl_scalar_type</a>, LocalOrdinal, <a class="el" href="classXpetra_1_1CrsMatrix.html#a7ac069ce859c9cbcd4428017ccab0eb7">execution_space</a>, void, typename local_graph_type::size_type&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Xpetra__CrsMatrix_8hpp_source.html#l00305">305</a> of file <a class="el" href="Xpetra__CrsMatrix_8hpp_source.html">Xpetra_CrsMatrix.hpp</a>.</p>
+
+</div>
+</div>
+<a id="af1d30bd800548a5d14aee31fcdc890ba" name="af1d30bd800548a5d14aee31fcdc890ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1d30bd800548a5d14aee31fcdc890ba">&#9670;&#160;</a></span>local_matrix_host_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Scalar , class LocalOrdinal , class GlobalOrdinal , class Node  = Tpetra::KokkosClassic::DefaultNode::DefaultNodeType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classXpetra_1_1CrsMatrix.html">Xpetra::CrsMatrix</a>&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;::local_matrix_host_type =  typename local_matrix_device_type::HostMirror</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Xpetra__CrsMatrix_8hpp_source.html#l00310">310</a> of file <a class="el" href="Xpetra__CrsMatrix_8hpp_source.html">Xpetra_CrsMatrix.hpp</a>.</p>
 
 </div>
 </div>
@@ -2673,8 +2753,8 @@ template&lt;class Scalar , class LocalOrdinal , class GlobalOrdinal , class Node
 
 </div>
 </div>
-<a id="afe936caffab530fca9ca4997576a26ca" name="afe936caffab530fca9ca4997576a26ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe936caffab530fca9ca4997576a26ca">&#9670;&#160;</a></span>getLocalMatrixDevice()</h2>
+<a id="aefab3013683588137a9d8ebb6932542b" name="aefab3013683588137a9d8ebb6932542b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefab3013683588137a9d8ebb6932542b">&#9670;&#160;</a></span>getLocalMatrixDevice()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2685,7 +2765,7 @@ template&lt;class Scalar , class LocalOrdinal , class GlobalOrdinal , class Node
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classXpetra_1_1CrsMatrix.html#a1882b43c44140c61280b1128c2b2e4fa">local_matrix_type</a> <a class="el" href="classXpetra_1_1CrsMatrix.html">Xpetra::CrsMatrix</a>&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;::getLocalMatrixDevice </td>
+          <td class="memname">virtual <a class="el" href="classXpetra_1_1CrsMatrix.html#a3f9ed0cc4c3f95acd1f3492c5e650219">local_matrix_device_type</a> <a class="el" href="classXpetra_1_1CrsMatrix.html">Xpetra::CrsMatrix</a>&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;::getLocalMatrixDevice </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -2702,8 +2782,8 @@ template&lt;class Scalar , class LocalOrdinal , class GlobalOrdinal , class Node
 
 </div>
 </div>
-<a id="a8a255a0f762930b05aeae587fcfedaa0" name="a8a255a0f762930b05aeae587fcfedaa0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a255a0f762930b05aeae587fcfedaa0">&#9670;&#160;</a></span>getLocalMatrixHost()</h2>
+<a id="a20df6da98fc0e91dffe7c5b5be27887b" name="a20df6da98fc0e91dffe7c5b5be27887b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20df6da98fc0e91dffe7c5b5be27887b">&#9670;&#160;</a></span>getLocalMatrixHost()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2714,7 +2794,7 @@ template&lt;class Scalar , class LocalOrdinal , class GlobalOrdinal , class Node
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual local_matrix_type::HostMirror <a class="el" href="classXpetra_1_1CrsMatrix.html">Xpetra::CrsMatrix</a>&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;::getLocalMatrixHost </td>
+          <td class="memname">virtual <a class="el" href="classXpetra_1_1CrsMatrix.html#af1d30bd800548a5d14aee31fcdc890ba">local_matrix_host_type</a> <a class="el" href="classXpetra_1_1CrsMatrix.html">Xpetra::CrsMatrix</a>&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;::getLocalMatrixHost </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>

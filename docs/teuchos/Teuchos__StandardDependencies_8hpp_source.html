@@ -1086,403 +1086,405 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01727" name="l01727"></a><span class="lineno"> 1727</span>      );</div>
 <div class="line"><a id="l01728" name="l01728"></a><span class="lineno"> 1728</span>  }</div>
 <div class="line"><a id="l01729" name="l01729"></a><span class="lineno"> 1729</span> </div>
-<div class="line"><a id="l01730" name="l01730"></a><span class="lineno"> 1730</span>  <a class="code hl_define" href="group__TestForException__grp.html#gaadb9556c5c1ba7da1c141e7529a8ebdf">TEUCHOS_TEST_FOR_EXCEPTION</a>(</div>
-<div class="line"><a id="l01731" name="l01731"></a><span class="lineno"> 1731</span>    <a class="code hl_function" href="classTeuchos_1_1RCP.html#ad792756b35ab5a2fa8c1d1d608763aec">nonnull</a>(defaultValidator_)</div>
-<div class="line"><a id="l01732" name="l01732"></a><span class="lineno"> 1732</span>    &amp;&amp;</div>
-<div class="line"><a id="l01733" name="l01733"></a><span class="lineno"> 1733</span>    <span class="keyword">typeid</span>(*<a class="code hl_class" href="classTeuchos_1_1RCP.html">rawValidatorPtr</a>) != <span class="keyword">typeid</span>(*defaultValidator_),</div>
-<div class="line"><a id="l01734" name="l01734"></a><span class="lineno"> 1734</span>    <a class="code hl_class" href="classTeuchos_1_1InvalidDependencyException.html">InvalidDependencyException</a>,</div>
-<div class="line"><a id="l01735" name="l01735"></a><span class="lineno"> 1735</span>    <span class="stringliteral">&quot;Ay no! The default validator of a RangeValidatorDependency &quot;</span></div>
-<div class="line"><a id="l01736" name="l01736"></a><span class="lineno"> 1736</span>    <span class="stringliteral">&quot;must have the same type as the validators in rangesAndValidators map.&quot;</span></div>
-<div class="line"><a id="l01737" name="l01737"></a><span class="lineno"> 1737</span>  );</div>
-<div class="line"><a id="l01738" name="l01738"></a><span class="lineno"> 1738</span> </div>
-<div class="line"><a id="l01739" name="l01739"></a><span class="lineno"> 1739</span>}</div>
-</div>
+<div class="line"><a id="l01730" name="l01730"></a><span class="lineno"> 1730</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="classTeuchos_1_1RCP.html#ad792756b35ab5a2fa8c1d1d608763aec">nonnull</a>(defaultValidator_)) {</div>
+<div class="line"><a id="l01731" name="l01731"></a><span class="lineno"> 1731</span>    <span class="comment">// Get raw reference for default validator to avoid typeid side-effect warning</span></div>
+<div class="line"><a id="l01732" name="l01732"></a><span class="lineno"> 1732</span>    <span class="keyword">const</span> <a class="code hl_class" href="classTeuchos_1_1ParameterEntryValidator.html">ParameterEntryValidator</a> &amp;<a class="code hl_class" href="classTeuchos_1_1RCP.html">defaultValidatorRef</a> = *defaultValidator_;</div>
+<div class="line"><a id="l01733" name="l01733"></a><span class="lineno"> 1733</span>    <a class="code hl_define" href="group__TestForException__grp.html#gaadb9556c5c1ba7da1c141e7529a8ebdf">TEUCHOS_TEST_FOR_EXCEPTION</a>(</div>
+<div class="line"><a id="l01734" name="l01734"></a><span class="lineno"> 1734</span>      <span class="keyword">typeid</span>(*<a class="code hl_class" href="classTeuchos_1_1RCP.html">rawValidatorPtr</a>) != <span class="keyword">typeid</span>(<a class="code hl_class" href="classTeuchos_1_1RCP.html">defaultValidatorRef</a>),</div>
+<div class="line"><a id="l01735" name="l01735"></a><span class="lineno"> 1735</span>      <a class="code hl_class" href="classTeuchos_1_1InvalidDependencyException.html">InvalidDependencyException</a>,</div>
+<div class="line"><a id="l01736" name="l01736"></a><span class="lineno"> 1736</span>      <span class="stringliteral">&quot;Ay no! The default validator of a RangeValidatorDependency &quot;</span></div>
+<div class="line"><a id="l01737" name="l01737"></a><span class="lineno"> 1737</span>      <span class="stringliteral">&quot;must have the same type as the validators in rangesAndValidators map.&quot;</span></div>
+<div class="line"><a id="l01738" name="l01738"></a><span class="lineno"> 1738</span>    );</div>
+<div class="line"><a id="l01739" name="l01739"></a><span class="lineno"> 1739</span>  }</div>
 <div class="line"><a id="l01740" name="l01740"></a><span class="lineno"> 1740</span> </div>
-<div class="line"><a id="l01741" name="l01741"></a><span class="lineno"> 1741</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a id="l01742" name="l01742"></a><span class="lineno"> 1742</span><span class="keywordtype">void</span> <a class="code hl_class" href="classTeuchos_1_1RangeValidatorDependency.html">RangeValidatorDependency&lt;T&gt;::setDependentsToValidator</a>(</div>
-<div class="line"><a id="l01743" name="l01743"></a><span class="lineno"> 1743</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;const ParameterEntryValidator&gt;</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">toSet</a>)</div>
-<div class="line"><a id="l01744" name="l01744"></a><span class="lineno"> 1744</span>{</div>
-<div class="line"><a id="l01745" name="l01745"></a><span class="lineno"> 1745</span>  <span class="keyword">typename</span> ParameterEntryList::const_iterator <a class="code hl_class" href="classTeuchos_1_1RCP.html">it</a>;</div>
-<div class="line"><a id="l01746" name="l01746"></a><span class="lineno"> 1746</span>  <span class="keywordflow">for</span>(</div>
-<div class="line"><a id="l01747" name="l01747"></a><span class="lineno"> 1747</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">it</a> = getDependents().begin();</div>
-<div class="line"><a id="l01748" name="l01748"></a><span class="lineno"> 1748</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">it</a> != getDependents().end();</div>
-<div class="line"><a id="l01749" name="l01749"></a><span class="lineno"> 1749</span>    ++<a class="code hl_class" href="classTeuchos_1_1RCP.html">it</a>)</div>
-<div class="line"><a id="l01750" name="l01750"></a><span class="lineno"> 1750</span>  {</div>
-<div class="line"><a id="l01751" name="l01751"></a><span class="lineno"> 1751</span>    (*it)-&gt;setValidator(<a class="code hl_class" href="classTeuchos_1_1RCP.html">toSet</a>);</div>
-<div class="line"><a id="l01752" name="l01752"></a><span class="lineno"> 1752</span>  }</div>
-<div class="line"><a id="l01753" name="l01753"></a><span class="lineno"> 1753</span>}</div>
-<div class="line"><a id="l01754" name="l01754"></a><span class="lineno"> 1754</span> </div>
-<div class="line"><a id="l01760" name="l01760"></a><span class="lineno"> 1760</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="foldopen" id="foldopen01761" data-start="{" data-end="};">
-<div class="line"><a id="l01761" name="l01761"></a><span class="lineno"><a class="line" href="classTeuchos_1_1DummyObjectGetter_3_01RangeValidatorDependency_3_01T_01_4_01_4.html"> 1761</a></span><span class="keyword">class </span><a class="code hl_class" href="classTeuchos_1_1DummyObjectGetter.html">DummyObjectGetter</a>&lt;<a class="code hl_class" href="classTeuchos_1_1RangeValidatorDependency.html">RangeValidatorDependency</a>&lt;<a class="code hl_class" href="classTeuchos_1_1RCP.html">T</a>&gt; &gt;{</div>
-<div class="line"><a id="l01762" name="l01762"></a><span class="lineno"> 1762</span> </div>
-<div class="line"><a id="l01763" name="l01763"></a><span class="lineno"> 1763</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l01741" name="l01741"></a><span class="lineno"> 1741</span>}</div>
+</div>
+<div class="line"><a id="l01742" name="l01742"></a><span class="lineno"> 1742</span> </div>
+<div class="line"><a id="l01743" name="l01743"></a><span class="lineno"> 1743</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l01744" name="l01744"></a><span class="lineno"> 1744</span><span class="keywordtype">void</span> <a class="code hl_class" href="classTeuchos_1_1RangeValidatorDependency.html">RangeValidatorDependency&lt;T&gt;::setDependentsToValidator</a>(</div>
+<div class="line"><a id="l01745" name="l01745"></a><span class="lineno"> 1745</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;const ParameterEntryValidator&gt;</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">toSet</a>)</div>
+<div class="line"><a id="l01746" name="l01746"></a><span class="lineno"> 1746</span>{</div>
+<div class="line"><a id="l01747" name="l01747"></a><span class="lineno"> 1747</span>  <span class="keyword">typename</span> ParameterEntryList::const_iterator <a class="code hl_class" href="classTeuchos_1_1RCP.html">it</a>;</div>
+<div class="line"><a id="l01748" name="l01748"></a><span class="lineno"> 1748</span>  <span class="keywordflow">for</span>(</div>
+<div class="line"><a id="l01749" name="l01749"></a><span class="lineno"> 1749</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">it</a> = getDependents().begin();</div>
+<div class="line"><a id="l01750" name="l01750"></a><span class="lineno"> 1750</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">it</a> != getDependents().end();</div>
+<div class="line"><a id="l01751" name="l01751"></a><span class="lineno"> 1751</span>    ++<a class="code hl_class" href="classTeuchos_1_1RCP.html">it</a>)</div>
+<div class="line"><a id="l01752" name="l01752"></a><span class="lineno"> 1752</span>  {</div>
+<div class="line"><a id="l01753" name="l01753"></a><span class="lineno"> 1753</span>    (*it)-&gt;setValidator(<a class="code hl_class" href="classTeuchos_1_1RCP.html">toSet</a>);</div>
+<div class="line"><a id="l01754" name="l01754"></a><span class="lineno"> 1754</span>  }</div>
+<div class="line"><a id="l01755" name="l01755"></a><span class="lineno"> 1755</span>}</div>
+<div class="line"><a id="l01756" name="l01756"></a><span class="lineno"> 1756</span> </div>
+<div class="line"><a id="l01762" name="l01762"></a><span class="lineno"> 1762</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="foldopen" id="foldopen01763" data-start="{" data-end="};">
+<div class="line"><a id="l01763" name="l01763"></a><span class="lineno"><a class="line" href="classTeuchos_1_1DummyObjectGetter_3_01RangeValidatorDependency_3_01T_01_4_01_4.html"> 1763</a></span><span class="keyword">class </span><a class="code hl_class" href="classTeuchos_1_1DummyObjectGetter.html">DummyObjectGetter</a>&lt;<a class="code hl_class" href="classTeuchos_1_1RangeValidatorDependency.html">RangeValidatorDependency</a>&lt;<a class="code hl_class" href="classTeuchos_1_1RCP.html">T</a>&gt; &gt;{</div>
 <div class="line"><a id="l01764" name="l01764"></a><span class="lineno"> 1764</span> </div>
-<div class="line"><a id="l01767" name="l01767"></a><span class="lineno"> 1767</span> </div>
-<div class="line"><a id="l01771" name="l01771"></a><span class="lineno"> 1771</span>  <span class="keyword">static</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;RangeValidatorDependency&lt;T&gt;</a> &gt; <a class="code hl_function" href="classTeuchos_1_1DummyObjectGetter.html#a3f658421bb64cab3bb1d376fae900702">getDummyObject</a>();</div>
-<div class="line"><a id="l01772" name="l01772"></a><span class="lineno"> 1772</span> </div>
+<div class="line"><a id="l01765" name="l01765"></a><span class="lineno"> 1765</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l01766" name="l01766"></a><span class="lineno"> 1766</span> </div>
+<div class="line"><a id="l01769" name="l01769"></a><span class="lineno"> 1769</span> </div>
+<div class="line"><a id="l01773" name="l01773"></a><span class="lineno"> 1773</span>  <span class="keyword">static</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;RangeValidatorDependency&lt;T&gt;</a> &gt; <a class="code hl_function" href="classTeuchos_1_1DummyObjectGetter.html#a3f658421bb64cab3bb1d376fae900702">getDummyObject</a>();</div>
 <div class="line"><a id="l01774" name="l01774"></a><span class="lineno"> 1774</span> </div>
-<div class="line"><a id="l01775" name="l01775"></a><span class="lineno"> 1775</span>};</div>
-</div>
 <div class="line"><a id="l01776" name="l01776"></a><span class="lineno"> 1776</span> </div>
-<div class="line"><a id="l01777" name="l01777"></a><span class="lineno"> 1777</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a id="l01778" name="l01778"></a><span class="lineno"> 1778</span><a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;RangeValidatorDependency&lt;T&gt;</a> &gt;</div>
-<div class="foldopen" id="foldopen01779" data-start="{" data-end="}">
-<div class="line"><a id="l01779" name="l01779"></a><span class="lineno"><a class="line" href="classTeuchos_1_1DummyObjectGetter_3_01RangeValidatorDependency_3_01T_01_4_01_4.html#ac8e665b27ca658b8f4713959a0f8faaa"> 1779</a></span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">DummyObjectGetter&lt;RangeValidatorDependency&lt;T&gt;</a> &gt;::getDummyObject()</div>
-<div class="line"><a id="l01780" name="l01780"></a><span class="lineno"> 1780</span>{</div>
-<div class="line"><a id="l01781" name="l01781"></a><span class="lineno"> 1781</span>  <span class="keyword">typename</span> <a class="code hl_typedef" href="classTeuchos_1_1RangeValidatorDependency.html#a8f4ecc5480707ee5707e60a499367a9a">RangeValidatorDependency&lt;T&gt;::RangeToValidatorMap</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">dummyMap</a>;</div>
-<div class="line"><a id="l01782" name="l01782"></a><span class="lineno"> 1782</span>  <span class="keyword">typename</span> <a class="code hl_typedef" href="classTeuchos_1_1RangeValidatorDependency.html#af37ea84fe3f8acef784aa5b0c2db3aef">RangeValidatorDependency&lt;T&gt;::Range</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">dummyRange</a>(</div>
-<div class="line"><a id="l01783" name="l01783"></a><span class="lineno"> 1783</span>    <a class="code hl_struct" href="structTeuchos_1_1ScalarTraits.html">ScalarTraits&lt;T&gt;::zero</a>(), <a class="code hl_struct" href="structTeuchos_1_1ScalarTraits.html">ScalarTraits&lt;T&gt;::one</a>());</div>
-<div class="line"><a id="l01784" name="l01784"></a><span class="lineno"> 1784</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;FileNameValidator&gt;</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">dummyValidator</a> =</div>
-<div class="line"><a id="l01785" name="l01785"></a><span class="lineno"> 1785</span>    <a class="code hl_function" href="classTeuchos_1_1DummyObjectGetter.html#a3f658421bb64cab3bb1d376fae900702">DummyObjectGetter&lt;FileNameValidator&gt;::getDummyObject</a>();</div>
-<div class="line"><a id="l01786" name="l01786"></a><span class="lineno"> 1786</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">dummyMap</a>.insert(<span class="keyword">typename</span> <a class="code hl_typedef" href="classTeuchos_1_1RangeValidatorDependency.html#a28f937e9a9ea9c821a5e2c7208524356">RangeValidatorDependency&lt;T&gt;::RangeValidatorPair</a>(</div>
-<div class="line"><a id="l01787" name="l01787"></a><span class="lineno"> 1787</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">dummyRange</a>, <a class="code hl_class" href="classTeuchos_1_1RCP.html">dummyValidator</a>));</div>
-<div class="line"><a id="l01788" name="l01788"></a><span class="lineno"> 1788</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceTeuchos.html#a39378f1892f1d484eb697574a8a8c5af">rcp</a>(<span class="keyword">new</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">RangeValidatorDependency&lt;T&gt;</a>(</div>
-<div class="line"><a id="l01789" name="l01789"></a><span class="lineno"> 1789</span>    <a class="code hl_function" href="namespaceTeuchos.html#a39378f1892f1d484eb697574a8a8c5af">rcp</a>(<span class="keyword">new</span> <a class="code hl_class" href="classTeuchos_1_1ParameterEntry.html">ParameterEntry</a>(<a class="code hl_struct" href="structTeuchos_1_1ScalarTraits.html">ScalarTraits&lt;T&gt;::zero</a>())),</div>
-<div class="line"><a id="l01790" name="l01790"></a><span class="lineno"> 1790</span>    <a class="code hl_class" href="classTeuchos_1_1DummyObjectGetter.html">DummyObjectGetter&lt;ParameterEntry&gt;::getDummyObject</a>(),</div>
-<div class="line"><a id="l01791" name="l01791"></a><span class="lineno"> 1791</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">dummyMap</a>));</div>
-<div class="line"><a id="l01792" name="l01792"></a><span class="lineno"> 1792</span>}</div>
+<div class="line"><a id="l01777" name="l01777"></a><span class="lineno"> 1777</span>};</div>
 </div>
-<div class="line"><a id="l01793" name="l01793"></a><span class="lineno"> 1793</span> </div>
-<div class="line"><a id="l01798" name="l01798"></a><span class="lineno"> 1798</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> DependeeType, <span class="keyword">class</span> DependentType&gt;</div>
-<div class="foldopen" id="foldopen01799" data-start="{" data-end="};">
-<div class="line"><a id="l01799" name="l01799"></a><span class="lineno"><a class="line" href="classTeuchos_1_1TwoDArrayModifierDependency.html"> 1799</a></span><span class="keyword">class </span><a class="code hl_class" href="classTeuchos_1_1TwoDArrayModifierDependency.html">TwoDArrayModifierDependency</a> :</div>
-<div class="line"><a id="l01800" name="l01800"></a><span class="lineno"> 1800</span>  <span class="keyword">public</span> <a class="code hl_class" href="classTeuchos_1_1ArrayModifierDependency.html">ArrayModifierDependency</a>&lt;DependeeType, DependentType&gt;</div>
-<div class="line"><a id="l01801" name="l01801"></a><span class="lineno"> 1801</span>{</div>
-<div class="line"><a id="l01802" name="l01802"></a><span class="lineno"> 1802</span> </div>
-<div class="line"><a id="l01803" name="l01803"></a><span class="lineno"> 1803</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l01778" name="l01778"></a><span class="lineno"> 1778</span> </div>
+<div class="line"><a id="l01779" name="l01779"></a><span class="lineno"> 1779</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l01780" name="l01780"></a><span class="lineno"> 1780</span><a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;RangeValidatorDependency&lt;T&gt;</a> &gt;</div>
+<div class="foldopen" id="foldopen01781" data-start="{" data-end="}">
+<div class="line"><a id="l01781" name="l01781"></a><span class="lineno"><a class="line" href="classTeuchos_1_1DummyObjectGetter_3_01RangeValidatorDependency_3_01T_01_4_01_4.html#ac8e665b27ca658b8f4713959a0f8faaa"> 1781</a></span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">DummyObjectGetter&lt;RangeValidatorDependency&lt;T&gt;</a> &gt;::getDummyObject()</div>
+<div class="line"><a id="l01782" name="l01782"></a><span class="lineno"> 1782</span>{</div>
+<div class="line"><a id="l01783" name="l01783"></a><span class="lineno"> 1783</span>  <span class="keyword">typename</span> <a class="code hl_typedef" href="classTeuchos_1_1RangeValidatorDependency.html#a8f4ecc5480707ee5707e60a499367a9a">RangeValidatorDependency&lt;T&gt;::RangeToValidatorMap</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">dummyMap</a>;</div>
+<div class="line"><a id="l01784" name="l01784"></a><span class="lineno"> 1784</span>  <span class="keyword">typename</span> <a class="code hl_typedef" href="classTeuchos_1_1RangeValidatorDependency.html#af37ea84fe3f8acef784aa5b0c2db3aef">RangeValidatorDependency&lt;T&gt;::Range</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">dummyRange</a>(</div>
+<div class="line"><a id="l01785" name="l01785"></a><span class="lineno"> 1785</span>    <a class="code hl_struct" href="structTeuchos_1_1ScalarTraits.html">ScalarTraits&lt;T&gt;::zero</a>(), <a class="code hl_struct" href="structTeuchos_1_1ScalarTraits.html">ScalarTraits&lt;T&gt;::one</a>());</div>
+<div class="line"><a id="l01786" name="l01786"></a><span class="lineno"> 1786</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;FileNameValidator&gt;</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">dummyValidator</a> =</div>
+<div class="line"><a id="l01787" name="l01787"></a><span class="lineno"> 1787</span>    <a class="code hl_function" href="classTeuchos_1_1DummyObjectGetter.html#a3f658421bb64cab3bb1d376fae900702">DummyObjectGetter&lt;FileNameValidator&gt;::getDummyObject</a>();</div>
+<div class="line"><a id="l01788" name="l01788"></a><span class="lineno"> 1788</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">dummyMap</a>.insert(<span class="keyword">typename</span> <a class="code hl_typedef" href="classTeuchos_1_1RangeValidatorDependency.html#a28f937e9a9ea9c821a5e2c7208524356">RangeValidatorDependency&lt;T&gt;::RangeValidatorPair</a>(</div>
+<div class="line"><a id="l01789" name="l01789"></a><span class="lineno"> 1789</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">dummyRange</a>, <a class="code hl_class" href="classTeuchos_1_1RCP.html">dummyValidator</a>));</div>
+<div class="line"><a id="l01790" name="l01790"></a><span class="lineno"> 1790</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceTeuchos.html#a39378f1892f1d484eb697574a8a8c5af">rcp</a>(<span class="keyword">new</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">RangeValidatorDependency&lt;T&gt;</a>(</div>
+<div class="line"><a id="l01791" name="l01791"></a><span class="lineno"> 1791</span>    <a class="code hl_function" href="namespaceTeuchos.html#a39378f1892f1d484eb697574a8a8c5af">rcp</a>(<span class="keyword">new</span> <a class="code hl_class" href="classTeuchos_1_1ParameterEntry.html">ParameterEntry</a>(<a class="code hl_struct" href="structTeuchos_1_1ScalarTraits.html">ScalarTraits&lt;T&gt;::zero</a>())),</div>
+<div class="line"><a id="l01792" name="l01792"></a><span class="lineno"> 1792</span>    <a class="code hl_class" href="classTeuchos_1_1DummyObjectGetter.html">DummyObjectGetter&lt;ParameterEntry&gt;::getDummyObject</a>(),</div>
+<div class="line"><a id="l01793" name="l01793"></a><span class="lineno"> 1793</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">dummyMap</a>));</div>
+<div class="line"><a id="l01794" name="l01794"></a><span class="lineno"> 1794</span>}</div>
+</div>
+<div class="line"><a id="l01795" name="l01795"></a><span class="lineno"> 1795</span> </div>
+<div class="line"><a id="l01800" name="l01800"></a><span class="lineno"> 1800</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> DependeeType, <span class="keyword">class</span> DependentType&gt;</div>
+<div class="foldopen" id="foldopen01801" data-start="{" data-end="};">
+<div class="line"><a id="l01801" name="l01801"></a><span class="lineno"><a class="line" href="classTeuchos_1_1TwoDArrayModifierDependency.html"> 1801</a></span><span class="keyword">class </span><a class="code hl_class" href="classTeuchos_1_1TwoDArrayModifierDependency.html">TwoDArrayModifierDependency</a> :</div>
+<div class="line"><a id="l01802" name="l01802"></a><span class="lineno"> 1802</span>  <span class="keyword">public</span> <a class="code hl_class" href="classTeuchos_1_1ArrayModifierDependency.html">ArrayModifierDependency</a>&lt;DependeeType, DependentType&gt;</div>
+<div class="line"><a id="l01803" name="l01803"></a><span class="lineno"> 1803</span>{</div>
 <div class="line"><a id="l01804" name="l01804"></a><span class="lineno"> 1804</span> </div>
-<div class="line"><a id="l01807" name="l01807"></a><span class="lineno"> 1807</span> </div>
-<div class="foldopen" id="foldopen01816" data-start="{" data-end="}">
-<div class="line"><a id="l01816" name="l01816"></a><span class="lineno"><a class="line" href="classTeuchos_1_1TwoDArrayModifierDependency.html#ae7bf4be938bf8ffcde8b663c6c312484"> 1816</a></span>  <a class="code hl_function" href="classTeuchos_1_1TwoDArrayModifierDependency.html#ae7bf4be938bf8ffcde8b663c6c312484">TwoDArrayModifierDependency</a>(</div>
-<div class="line"><a id="l01817" name="l01817"></a><span class="lineno"> 1817</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;const ParameterEntry&gt;</a> dependee,</div>
-<div class="line"><a id="l01818" name="l01818"></a><span class="lineno"> 1818</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;ParameterEntry&gt;</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependent</a>,</div>
-<div class="line"><a id="l01819" name="l01819"></a><span class="lineno"> 1819</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP</a>&lt;<span class="keyword">const</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">SimpleFunctionObject&lt;DependeeType&gt;</a> &gt; <a class="code hl_class" href="classTeuchos_1_1RCP.html">func</a>=null):</div>
-<div class="line"><a id="l01820" name="l01820"></a><span class="lineno"> 1820</span>    <a class="code hl_class" href="classTeuchos_1_1ArrayModifierDependency.html">ArrayModifierDependency</a>&lt;<a class="code hl_class" href="classTeuchos_1_1RCP.html">DependeeType</a>, <a class="code hl_class" href="classTeuchos_1_1RCP.html">DependentType</a>&gt;(</div>
-<div class="line"><a id="l01821" name="l01821"></a><span class="lineno"> 1821</span>      dependee,</div>
-<div class="line"><a id="l01822" name="l01822"></a><span class="lineno"> 1822</span>      <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependent</a>,</div>
-<div class="line"><a id="l01823" name="l01823"></a><span class="lineno"> 1823</span>      <a class="code hl_class" href="classTeuchos_1_1RCP.html">func</a>)</div>
-<div class="line"><a id="l01824" name="l01824"></a><span class="lineno"> 1824</span>  {}</div>
+<div class="line"><a id="l01805" name="l01805"></a><span class="lineno"> 1805</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l01806" name="l01806"></a><span class="lineno"> 1806</span> </div>
+<div class="line"><a id="l01809" name="l01809"></a><span class="lineno"> 1809</span> </div>
+<div class="foldopen" id="foldopen01818" data-start="{" data-end="}">
+<div class="line"><a id="l01818" name="l01818"></a><span class="lineno"><a class="line" href="classTeuchos_1_1TwoDArrayModifierDependency.html#ae7bf4be938bf8ffcde8b663c6c312484"> 1818</a></span>  <a class="code hl_function" href="classTeuchos_1_1TwoDArrayModifierDependency.html#ae7bf4be938bf8ffcde8b663c6c312484">TwoDArrayModifierDependency</a>(</div>
+<div class="line"><a id="l01819" name="l01819"></a><span class="lineno"> 1819</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;const ParameterEntry&gt;</a> dependee,</div>
+<div class="line"><a id="l01820" name="l01820"></a><span class="lineno"> 1820</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;ParameterEntry&gt;</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependent</a>,</div>
+<div class="line"><a id="l01821" name="l01821"></a><span class="lineno"> 1821</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP</a>&lt;<span class="keyword">const</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">SimpleFunctionObject&lt;DependeeType&gt;</a> &gt; <a class="code hl_class" href="classTeuchos_1_1RCP.html">func</a>=null):</div>
+<div class="line"><a id="l01822" name="l01822"></a><span class="lineno"> 1822</span>    <a class="code hl_class" href="classTeuchos_1_1ArrayModifierDependency.html">ArrayModifierDependency</a>&lt;<a class="code hl_class" href="classTeuchos_1_1RCP.html">DependeeType</a>, <a class="code hl_class" href="classTeuchos_1_1RCP.html">DependentType</a>&gt;(</div>
+<div class="line"><a id="l01823" name="l01823"></a><span class="lineno"> 1823</span>      dependee,</div>
+<div class="line"><a id="l01824" name="l01824"></a><span class="lineno"> 1824</span>      <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependent</a>,</div>
+<div class="line"><a id="l01825" name="l01825"></a><span class="lineno"> 1825</span>      <a class="code hl_class" href="classTeuchos_1_1RCP.html">func</a>)</div>
+<div class="line"><a id="l01826" name="l01826"></a><span class="lineno"> 1826</span>  {}</div>
 </div>
-<div class="line"><a id="l01825" name="l01825"></a><span class="lineno"> 1825</span> </div>
-<div class="line"><a id="l01826" name="l01826"></a><span class="lineno"> 1826</span> </div>
-<div class="foldopen" id="foldopen01835" data-start="{" data-end="}">
-<div class="line"><a id="l01835" name="l01835"></a><span class="lineno"><a class="line" href="classTeuchos_1_1TwoDArrayModifierDependency.html#a99d43f0a4e6955565dd935d08f885071"> 1835</a></span>  <a class="code hl_function" href="classTeuchos_1_1TwoDArrayModifierDependency.html#a99d43f0a4e6955565dd935d08f885071">TwoDArrayModifierDependency</a>(</div>
-<div class="line"><a id="l01836" name="l01836"></a><span class="lineno"> 1836</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;const ParameterEntry&gt;</a> dependee,</div>
-<div class="line"><a id="l01837" name="l01837"></a><span class="lineno"> 1837</span>    <a class="code hl_typedef" href="classTeuchos_1_1Dependency.html#a394c48f8a76439c075e3b2acc76d0c13">Dependency::ParameterEntryList</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependents</a>,</div>
-<div class="line"><a id="l01838" name="l01838"></a><span class="lineno"> 1838</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP</a>&lt;<span class="keyword">const</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">SimpleFunctionObject&lt;DependeeType&gt;</a> &gt; <a class="code hl_class" href="classTeuchos_1_1RCP.html">func</a>=null):</div>
-<div class="line"><a id="l01839" name="l01839"></a><span class="lineno"> 1839</span>    <a class="code hl_class" href="classTeuchos_1_1ArrayModifierDependency.html">ArrayModifierDependency</a>&lt;<a class="code hl_class" href="classTeuchos_1_1RCP.html">DependeeType</a>, <a class="code hl_class" href="classTeuchos_1_1RCP.html">DependentType</a>&gt;(</div>
-<div class="line"><a id="l01840" name="l01840"></a><span class="lineno"> 1840</span>      dependee,</div>
-<div class="line"><a id="l01841" name="l01841"></a><span class="lineno"> 1841</span>      <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependents</a>,</div>
-<div class="line"><a id="l01842" name="l01842"></a><span class="lineno"> 1842</span>      <a class="code hl_class" href="classTeuchos_1_1RCP.html">func</a>)</div>
-<div class="line"><a id="l01843" name="l01843"></a><span class="lineno"> 1843</span>  {}</div>
+<div class="line"><a id="l01827" name="l01827"></a><span class="lineno"> 1827</span> </div>
+<div class="line"><a id="l01828" name="l01828"></a><span class="lineno"> 1828</span> </div>
+<div class="foldopen" id="foldopen01837" data-start="{" data-end="}">
+<div class="line"><a id="l01837" name="l01837"></a><span class="lineno"><a class="line" href="classTeuchos_1_1TwoDArrayModifierDependency.html#a99d43f0a4e6955565dd935d08f885071"> 1837</a></span>  <a class="code hl_function" href="classTeuchos_1_1TwoDArrayModifierDependency.html#a99d43f0a4e6955565dd935d08f885071">TwoDArrayModifierDependency</a>(</div>
+<div class="line"><a id="l01838" name="l01838"></a><span class="lineno"> 1838</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;const ParameterEntry&gt;</a> dependee,</div>
+<div class="line"><a id="l01839" name="l01839"></a><span class="lineno"> 1839</span>    <a class="code hl_typedef" href="classTeuchos_1_1Dependency.html#a394c48f8a76439c075e3b2acc76d0c13">Dependency::ParameterEntryList</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependents</a>,</div>
+<div class="line"><a id="l01840" name="l01840"></a><span class="lineno"> 1840</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP</a>&lt;<span class="keyword">const</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">SimpleFunctionObject&lt;DependeeType&gt;</a> &gt; <a class="code hl_class" href="classTeuchos_1_1RCP.html">func</a>=null):</div>
+<div class="line"><a id="l01841" name="l01841"></a><span class="lineno"> 1841</span>    <a class="code hl_class" href="classTeuchos_1_1ArrayModifierDependency.html">ArrayModifierDependency</a>&lt;<a class="code hl_class" href="classTeuchos_1_1RCP.html">DependeeType</a>, <a class="code hl_class" href="classTeuchos_1_1RCP.html">DependentType</a>&gt;(</div>
+<div class="line"><a id="l01842" name="l01842"></a><span class="lineno"> 1842</span>      dependee,</div>
+<div class="line"><a id="l01843" name="l01843"></a><span class="lineno"> 1843</span>      <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependents</a>,</div>
+<div class="line"><a id="l01844" name="l01844"></a><span class="lineno"> 1844</span>      <a class="code hl_class" href="classTeuchos_1_1RCP.html">func</a>)</div>
+<div class="line"><a id="l01845" name="l01845"></a><span class="lineno"> 1845</span>  {}</div>
 </div>
-<div class="line"><a id="l01844" name="l01844"></a><span class="lineno"> 1844</span> </div>
 <div class="line"><a id="l01846" name="l01846"></a><span class="lineno"> 1846</span> </div>
-<div class="line"><a id="l01847" name="l01847"></a><span class="lineno"> 1847</span><span class="keyword">protected</span>:</div>
 <div class="line"><a id="l01848" name="l01848"></a><span class="lineno"> 1848</span> </div>
-<div class="line"><a id="l01851" name="l01851"></a><span class="lineno"> 1851</span> </div>
-<div class="line"><a id="l01852" name="l01852"></a><span class="lineno"> 1852</span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTeuchos_1_1TwoDArrayModifierDependency.html#a7e5700fd4471719ff63b791b74c9a40e">validateDep</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l01849" name="l01849"></a><span class="lineno"> 1849</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l01850" name="l01850"></a><span class="lineno"> 1850</span> </div>
 <div class="line"><a id="l01853" name="l01853"></a><span class="lineno"> 1853</span> </div>
+<div class="line"><a id="l01854" name="l01854"></a><span class="lineno"> 1854</span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTeuchos_1_1TwoDArrayModifierDependency.html#a7e5700fd4471719ff63b791b74c9a40e">validateDep</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l01855" name="l01855"></a><span class="lineno"> 1855</span> </div>
-<div class="line"><a id="l01856" name="l01856"></a><span class="lineno"> 1856</span>};</div>
-</div>
 <div class="line"><a id="l01857" name="l01857"></a><span class="lineno"> 1857</span> </div>
-<div class="line"><a id="l01858" name="l01858"></a><span class="lineno"> 1858</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> DependeeType, <span class="keyword">class</span> DependentType&gt;</div>
-<div class="line"><a id="l01859" name="l01859"></a><span class="lineno"> 1859</span><span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen01860" data-start="{" data-end="}">
-<div class="line"><a id="l01860" name="l01860"></a><span class="lineno"><a class="line" href="classTeuchos_1_1TwoDArrayModifierDependency.html#a7e5700fd4471719ff63b791b74c9a40e"> 1860</a></span><a class="code hl_function" href="classTeuchos_1_1TwoDArrayModifierDependency.html#a7e5700fd4471719ff63b791b74c9a40e">TwoDArrayModifierDependency&lt;DependeeType, DependentType&gt;::validateDep</a>()<span class="keyword"></span></div>
-<div class="line"><a id="l01861" name="l01861"></a><span class="lineno"> 1861</span><span class="keyword">  const</span></div>
-<div class="line"><a id="l01862" name="l01862"></a><span class="lineno"> 1862</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l01863" name="l01863"></a><span class="lineno"> 1863</span>  <a class="code hl_function" href="classTeuchos_1_1ArrayModifierDependency.html#ab0e678d84aa94beb8b1867ada7cd2d08">ArrayModifierDependency&lt;DependeeType, DependentType&gt;::validateDep</a>();</div>
-<div class="line"><a id="l01864" name="l01864"></a><span class="lineno"> 1864</span>  <span class="keywordflow">for</span>(</div>
-<div class="line"><a id="l01865" name="l01865"></a><span class="lineno"> 1865</span>    Dependency::ConstParameterEntryList::const_iterator <a class="code hl_class" href="classTeuchos_1_1RCP.html">it</a> =</div>
-<div class="line"><a id="l01866" name="l01866"></a><span class="lineno"> 1866</span>      this-&gt;getDependents().begin();</div>
-<div class="line"><a id="l01867" name="l01867"></a><span class="lineno"> 1867</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">it</a> != this-&gt;getDependents().end();</div>
-<div class="line"><a id="l01868" name="l01868"></a><span class="lineno"> 1868</span>    ++<a class="code hl_class" href="classTeuchos_1_1RCP.html">it</a>)</div>
-<div class="line"><a id="l01869" name="l01869"></a><span class="lineno"> 1869</span>  {</div>
-<div class="line"><a id="l01870" name="l01870"></a><span class="lineno"> 1870</span>    <a class="code hl_define" href="group__TestForException__grp.html#gaadb9556c5c1ba7da1c141e7529a8ebdf">TEUCHOS_TEST_FOR_EXCEPTION</a>(</div>
-<div class="line"><a id="l01871" name="l01871"></a><span class="lineno"> 1871</span>      <span class="keyword">typeid</span>(<a class="code hl_class" href="classTeuchos_1_1RCP.html">Teuchos::TwoDArray&lt;DependentType&gt;</a>) != (*it)-&gt;getAny().type(),</div>
-<div class="line"><a id="l01872" name="l01872"></a><span class="lineno"> 1872</span>        <a class="code hl_class" href="classTeuchos_1_1InvalidDependencyException.html">InvalidDependencyException</a>,</div>
-<div class="line"><a id="l01873" name="l01873"></a><span class="lineno"> 1873</span>        <span class="stringliteral">&quot;Ay no! The dependent parameter types don&#39;t match.&quot;</span> &lt;&lt; std::endl &lt;&lt;</div>
-<div class="line"><a id="l01874" name="l01874"></a><span class="lineno"> 1874</span>        <span class="stringliteral">&quot;Dependent Template Type: &quot;</span> &lt;&lt;</div>
-<div class="line"><a id="l01875" name="l01875"></a><span class="lineno"> 1875</span>        <a class="code hl_class" href="classTeuchos_1_1TypeNameTraits.html">TypeNameTraits&lt;DependentType&gt;::name</a>() &lt;&lt; std::endl &lt;&lt;</div>
-<div class="line"><a id="l01876" name="l01876"></a><span class="lineno"> 1876</span>        <span class="stringliteral">&quot;Dependent Parameter Type: &quot;</span> &lt;&lt;</div>
-<div class="line"><a id="l01877" name="l01877"></a><span class="lineno"> 1877</span>        (*it)-&gt;getAny().typeName() &lt;&lt; std::endl &lt;&lt; std::endl);</div>
-<div class="line"><a id="l01878" name="l01878"></a><span class="lineno"> 1878</span>  }</div>
-<div class="line"><a id="l01879" name="l01879"></a><span class="lineno"> 1879</span>}</div>
+<div class="line"><a id="l01858" name="l01858"></a><span class="lineno"> 1858</span>};</div>
 </div>
-<div class="line"><a id="l01880" name="l01880"></a><span class="lineno"> 1880</span> </div>
-<div class="line"><a id="l01881" name="l01881"></a><span class="lineno"> 1881</span> </div>
-<div class="line"><a id="l01889" name="l01889"></a><span class="lineno"> 1889</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> DependeeType, <span class="keyword">class</span> DependentType&gt;</div>
-<div class="foldopen" id="foldopen01890" data-start="{" data-end="};">
-<div class="line"><a id="l01890" name="l01890"></a><span class="lineno"><a class="line" href="classTeuchos_1_1TwoDRowDependency.html"> 1890</a></span><span class="keyword">class </span><a class="code hl_class" href="classTeuchos_1_1TwoDRowDependency.html">TwoDRowDependency</a> :</div>
-<div class="line"><a id="l01891" name="l01891"></a><span class="lineno"> 1891</span>  <span class="keyword">public</span> <a class="code hl_class" href="classTeuchos_1_1TwoDArrayModifierDependency.html">TwoDArrayModifierDependency</a>&lt;DependeeType, DependentType&gt;</div>
-<div class="line"><a id="l01892" name="l01892"></a><span class="lineno"> 1892</span>{</div>
-<div class="line"><a id="l01893" name="l01893"></a><span class="lineno"> 1893</span> </div>
-<div class="line"><a id="l01894" name="l01894"></a><span class="lineno"> 1894</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l01859" name="l01859"></a><span class="lineno"> 1859</span> </div>
+<div class="line"><a id="l01860" name="l01860"></a><span class="lineno"> 1860</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> DependeeType, <span class="keyword">class</span> DependentType&gt;</div>
+<div class="line"><a id="l01861" name="l01861"></a><span class="lineno"> 1861</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen01862" data-start="{" data-end="}">
+<div class="line"><a id="l01862" name="l01862"></a><span class="lineno"><a class="line" href="classTeuchos_1_1TwoDArrayModifierDependency.html#a7e5700fd4471719ff63b791b74c9a40e"> 1862</a></span><a class="code hl_function" href="classTeuchos_1_1TwoDArrayModifierDependency.html#a7e5700fd4471719ff63b791b74c9a40e">TwoDArrayModifierDependency&lt;DependeeType, DependentType&gt;::validateDep</a>()<span class="keyword"></span></div>
+<div class="line"><a id="l01863" name="l01863"></a><span class="lineno"> 1863</span><span class="keyword">  const</span></div>
+<div class="line"><a id="l01864" name="l01864"></a><span class="lineno"> 1864</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l01865" name="l01865"></a><span class="lineno"> 1865</span>  <a class="code hl_function" href="classTeuchos_1_1ArrayModifierDependency.html#ab0e678d84aa94beb8b1867ada7cd2d08">ArrayModifierDependency&lt;DependeeType, DependentType&gt;::validateDep</a>();</div>
+<div class="line"><a id="l01866" name="l01866"></a><span class="lineno"> 1866</span>  <span class="keywordflow">for</span>(</div>
+<div class="line"><a id="l01867" name="l01867"></a><span class="lineno"> 1867</span>    Dependency::ConstParameterEntryList::const_iterator <a class="code hl_class" href="classTeuchos_1_1RCP.html">it</a> =</div>
+<div class="line"><a id="l01868" name="l01868"></a><span class="lineno"> 1868</span>      this-&gt;getDependents().begin();</div>
+<div class="line"><a id="l01869" name="l01869"></a><span class="lineno"> 1869</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">it</a> != this-&gt;getDependents().end();</div>
+<div class="line"><a id="l01870" name="l01870"></a><span class="lineno"> 1870</span>    ++<a class="code hl_class" href="classTeuchos_1_1RCP.html">it</a>)</div>
+<div class="line"><a id="l01871" name="l01871"></a><span class="lineno"> 1871</span>  {</div>
+<div class="line"><a id="l01872" name="l01872"></a><span class="lineno"> 1872</span>    <a class="code hl_define" href="group__TestForException__grp.html#gaadb9556c5c1ba7da1c141e7529a8ebdf">TEUCHOS_TEST_FOR_EXCEPTION</a>(</div>
+<div class="line"><a id="l01873" name="l01873"></a><span class="lineno"> 1873</span>      <span class="keyword">typeid</span>(<a class="code hl_class" href="classTeuchos_1_1RCP.html">Teuchos::TwoDArray&lt;DependentType&gt;</a>) != (*it)-&gt;getAny().type(),</div>
+<div class="line"><a id="l01874" name="l01874"></a><span class="lineno"> 1874</span>        <a class="code hl_class" href="classTeuchos_1_1InvalidDependencyException.html">InvalidDependencyException</a>,</div>
+<div class="line"><a id="l01875" name="l01875"></a><span class="lineno"> 1875</span>        <span class="stringliteral">&quot;Ay no! The dependent parameter types don&#39;t match.&quot;</span> &lt;&lt; std::endl &lt;&lt;</div>
+<div class="line"><a id="l01876" name="l01876"></a><span class="lineno"> 1876</span>        <span class="stringliteral">&quot;Dependent Template Type: &quot;</span> &lt;&lt;</div>
+<div class="line"><a id="l01877" name="l01877"></a><span class="lineno"> 1877</span>        <a class="code hl_class" href="classTeuchos_1_1TypeNameTraits.html">TypeNameTraits&lt;DependentType&gt;::name</a>() &lt;&lt; std::endl &lt;&lt;</div>
+<div class="line"><a id="l01878" name="l01878"></a><span class="lineno"> 1878</span>        <span class="stringliteral">&quot;Dependent Parameter Type: &quot;</span> &lt;&lt;</div>
+<div class="line"><a id="l01879" name="l01879"></a><span class="lineno"> 1879</span>        (*it)-&gt;getAny().typeName() &lt;&lt; std::endl &lt;&lt; std::endl);</div>
+<div class="line"><a id="l01880" name="l01880"></a><span class="lineno"> 1880</span>  }</div>
+<div class="line"><a id="l01881" name="l01881"></a><span class="lineno"> 1881</span>}</div>
+</div>
+<div class="line"><a id="l01882" name="l01882"></a><span class="lineno"> 1882</span> </div>
+<div class="line"><a id="l01883" name="l01883"></a><span class="lineno"> 1883</span> </div>
+<div class="line"><a id="l01891" name="l01891"></a><span class="lineno"> 1891</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> DependeeType, <span class="keyword">class</span> DependentType&gt;</div>
+<div class="foldopen" id="foldopen01892" data-start="{" data-end="};">
+<div class="line"><a id="l01892" name="l01892"></a><span class="lineno"><a class="line" href="classTeuchos_1_1TwoDRowDependency.html"> 1892</a></span><span class="keyword">class </span><a class="code hl_class" href="classTeuchos_1_1TwoDRowDependency.html">TwoDRowDependency</a> :</div>
+<div class="line"><a id="l01893" name="l01893"></a><span class="lineno"> 1893</span>  <span class="keyword">public</span> <a class="code hl_class" href="classTeuchos_1_1TwoDArrayModifierDependency.html">TwoDArrayModifierDependency</a>&lt;DependeeType, DependentType&gt;</div>
+<div class="line"><a id="l01894" name="l01894"></a><span class="lineno"> 1894</span>{</div>
 <div class="line"><a id="l01895" name="l01895"></a><span class="lineno"> 1895</span> </div>
-<div class="line"><a id="l01898" name="l01898"></a><span class="lineno"> 1898</span> </div>
-<div class="line"><a id="l01907" name="l01907"></a><span class="lineno"> 1907</span>  <a class="code hl_class" href="classTeuchos_1_1TwoDRowDependency.html">TwoDRowDependency</a>(</div>
-<div class="line"><a id="l01908" name="l01908"></a><span class="lineno"> 1908</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;const ParameterEntry&gt;</a> dependee,</div>
-<div class="line"><a id="l01909" name="l01909"></a><span class="lineno"> 1909</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;ParameterEntry&gt;</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependent</a>,</div>
-<div class="line"><a id="l01910" name="l01910"></a><span class="lineno"> 1910</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP</a>&lt;<span class="keyword">const</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">SimpleFunctionObject&lt;DependeeType&gt;</a> &gt; <a class="code hl_class" href="classTeuchos_1_1RCP.html">func</a>=null);</div>
-<div class="line"><a id="l01911" name="l01911"></a><span class="lineno"> 1911</span> </div>
-<div class="line"><a id="l01912" name="l01912"></a><span class="lineno"> 1912</span> </div>
-<div class="line"><a id="l01921" name="l01921"></a><span class="lineno"> 1921</span>  <a class="code hl_class" href="classTeuchos_1_1TwoDRowDependency.html">TwoDRowDependency</a>(</div>
-<div class="line"><a id="l01922" name="l01922"></a><span class="lineno"> 1922</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;const ParameterEntry&gt;</a> dependee,</div>
-<div class="line"><a id="l01923" name="l01923"></a><span class="lineno"> 1923</span>    <a class="code hl_typedef" href="classTeuchos_1_1Dependency.html#a394c48f8a76439c075e3b2acc76d0c13">Dependency::ParameterEntryList</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependents</a>,</div>
-<div class="line"><a id="l01924" name="l01924"></a><span class="lineno"> 1924</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP</a>&lt;<span class="keyword">const</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">SimpleFunctionObject&lt;DependeeType&gt;</a> &gt; <a class="code hl_class" href="classTeuchos_1_1RCP.html">func</a>=null);</div>
-<div class="line"><a id="l01925" name="l01925"></a><span class="lineno"> 1925</span> </div>
+<div class="line"><a id="l01896" name="l01896"></a><span class="lineno"> 1896</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l01897" name="l01897"></a><span class="lineno"> 1897</span> </div>
+<div class="line"><a id="l01900" name="l01900"></a><span class="lineno"> 1900</span> </div>
+<div class="line"><a id="l01909" name="l01909"></a><span class="lineno"> 1909</span>  <a class="code hl_class" href="classTeuchos_1_1TwoDRowDependency.html">TwoDRowDependency</a>(</div>
+<div class="line"><a id="l01910" name="l01910"></a><span class="lineno"> 1910</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;const ParameterEntry&gt;</a> dependee,</div>
+<div class="line"><a id="l01911" name="l01911"></a><span class="lineno"> 1911</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;ParameterEntry&gt;</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependent</a>,</div>
+<div class="line"><a id="l01912" name="l01912"></a><span class="lineno"> 1912</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP</a>&lt;<span class="keyword">const</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">SimpleFunctionObject&lt;DependeeType&gt;</a> &gt; <a class="code hl_class" href="classTeuchos_1_1RCP.html">func</a>=null);</div>
+<div class="line"><a id="l01913" name="l01913"></a><span class="lineno"> 1913</span> </div>
+<div class="line"><a id="l01914" name="l01914"></a><span class="lineno"> 1914</span> </div>
+<div class="line"><a id="l01923" name="l01923"></a><span class="lineno"> 1923</span>  <a class="code hl_class" href="classTeuchos_1_1TwoDRowDependency.html">TwoDRowDependency</a>(</div>
+<div class="line"><a id="l01924" name="l01924"></a><span class="lineno"> 1924</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;const ParameterEntry&gt;</a> dependee,</div>
+<div class="line"><a id="l01925" name="l01925"></a><span class="lineno"> 1925</span>    <a class="code hl_typedef" href="classTeuchos_1_1Dependency.html#a394c48f8a76439c075e3b2acc76d0c13">Dependency::ParameterEntryList</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependents</a>,</div>
+<div class="line"><a id="l01926" name="l01926"></a><span class="lineno"> 1926</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP</a>&lt;<span class="keyword">const</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">SimpleFunctionObject&lt;DependeeType&gt;</a> &gt; <a class="code hl_class" href="classTeuchos_1_1RCP.html">func</a>=null);</div>
 <div class="line"><a id="l01927" name="l01927"></a><span class="lineno"> 1927</span> </div>
-<div class="line"><a id="l01930" name="l01930"></a><span class="lineno"> 1930</span> </div>
-<div class="line"><a id="l01932" name="l01932"></a><span class="lineno"> 1932</span>  std::string <a class="code hl_function" href="classTeuchos_1_1TwoDRowDependency.html#ac1449cf9eaeb41fb566e507e5a6bbdf5">getTypeAttributeValue</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l01933" name="l01933"></a><span class="lineno"> 1933</span> </div>
+<div class="line"><a id="l01929" name="l01929"></a><span class="lineno"> 1929</span> </div>
+<div class="line"><a id="l01932" name="l01932"></a><span class="lineno"> 1932</span> </div>
+<div class="line"><a id="l01934" name="l01934"></a><span class="lineno"> 1934</span>  std::string <a class="code hl_function" href="classTeuchos_1_1TwoDRowDependency.html#ac1449cf9eaeb41fb566e507e5a6bbdf5">getTypeAttributeValue</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l01935" name="l01935"></a><span class="lineno"> 1935</span> </div>
-<div class="line"><a id="l01936" name="l01936"></a><span class="lineno"> 1936</span><span class="keyword">protected</span>:</div>
 <div class="line"><a id="l01937" name="l01937"></a><span class="lineno"> 1937</span> </div>
-<div class="line"><a id="l01940" name="l01940"></a><span class="lineno"> 1940</span> </div>
-<div class="line"><a id="l01942" name="l01942"></a><span class="lineno"> 1942</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classTeuchos_1_1TwoDRowDependency.html#a023c063097e5af33039ce8323f3ea422">modifyArray</a>(</div>
-<div class="line"><a id="l01943" name="l01943"></a><span class="lineno"> 1943</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">DependeeType</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">newAmount</a>, <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;ParameterEntry&gt;</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependentToModify</a>);</div>
-<div class="line"><a id="l01944" name="l01944"></a><span class="lineno"> 1944</span> </div>
-<div class="line"><a id="l01946" name="l01946"></a><span class="lineno"> 1946</span>  std::string <a class="code hl_function" href="classTeuchos_1_1TwoDRowDependency.html#a3bfaac4d1691c89630c3d48372d4b71d">getBadDependentValueErrorMessage</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l01948" name="l01948"></a><span class="lineno"> 1948</span> </div>
-<div class="line"><a id="l01949" name="l01949"></a><span class="lineno"> 1949</span>};</div>
-</div>
+<div class="line"><a id="l01938" name="l01938"></a><span class="lineno"> 1938</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l01939" name="l01939"></a><span class="lineno"> 1939</span> </div>
+<div class="line"><a id="l01942" name="l01942"></a><span class="lineno"> 1942</span> </div>
+<div class="line"><a id="l01944" name="l01944"></a><span class="lineno"> 1944</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classTeuchos_1_1TwoDRowDependency.html#a023c063097e5af33039ce8323f3ea422">modifyArray</a>(</div>
+<div class="line"><a id="l01945" name="l01945"></a><span class="lineno"> 1945</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">DependeeType</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">newAmount</a>, <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;ParameterEntry&gt;</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependentToModify</a>);</div>
+<div class="line"><a id="l01946" name="l01946"></a><span class="lineno"> 1946</span> </div>
+<div class="line"><a id="l01948" name="l01948"></a><span class="lineno"> 1948</span>  std::string <a class="code hl_function" href="classTeuchos_1_1TwoDRowDependency.html#a3bfaac4d1691c89630c3d48372d4b71d">getBadDependentValueErrorMessage</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l01950" name="l01950"></a><span class="lineno"> 1950</span> </div>
-<div class="line"><a id="l01951" name="l01951"></a><span class="lineno"> 1951</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> DependeeType, <span class="keyword">class</span> DependentType&gt;</div>
-<div class="foldopen" id="foldopen01952" data-start="{" data-end="}">
-<div class="line"><a id="l01952" name="l01952"></a><span class="lineno"><a class="line" href="classTeuchos_1_1TwoDRowDependency.html#aad51af1e95616a271abc620f1232c63d"> 1952</a></span><a class="code hl_function" href="classTeuchos_1_1TwoDRowDependency.html#aad51af1e95616a271abc620f1232c63d">TwoDRowDependency&lt;DependeeType, DependentType&gt;::TwoDRowDependency</a>(</div>
-<div class="line"><a id="l01953" name="l01953"></a><span class="lineno"> 1953</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;const ParameterEntry&gt;</a> dependee,</div>
-<div class="line"><a id="l01954" name="l01954"></a><span class="lineno"> 1954</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;ParameterEntry&gt;</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependent</a>,</div>
-<div class="line"><a id="l01955" name="l01955"></a><span class="lineno"> 1955</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP</a>&lt;<span class="keyword">const</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">SimpleFunctionObject&lt;DependeeType&gt;</a> &gt; <a class="code hl_class" href="classTeuchos_1_1RCP.html">func</a>):</div>
-<div class="line"><a id="l01956" name="l01956"></a><span class="lineno"> 1956</span>  <a class="code hl_class" href="classTeuchos_1_1TwoDArrayModifierDependency.html">TwoDArrayModifierDependency</a>&lt;<a class="code hl_class" href="classTeuchos_1_1RCP.html">DependeeType</a>, <a class="code hl_class" href="classTeuchos_1_1RCP.html">DependentType</a>&gt;(</div>
-<div class="line"><a id="l01957" name="l01957"></a><span class="lineno"> 1957</span>    dependee, <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependent</a>, <a class="code hl_class" href="classTeuchos_1_1RCP.html">func</a>)</div>
-<div class="line"><a id="l01958" name="l01958"></a><span class="lineno"> 1958</span>{</div>
-<div class="line"><a id="l01959" name="l01959"></a><span class="lineno"> 1959</span>  this-&gt;<a class="code hl_function" href="classTeuchos_1_1TwoDArrayModifierDependency.html#a7e5700fd4471719ff63b791b74c9a40e">validateDep</a>();</div>
-<div class="line"><a id="l01960" name="l01960"></a><span class="lineno"> 1960</span>}</div>
+<div class="line"><a id="l01951" name="l01951"></a><span class="lineno"> 1951</span>};</div>
 </div>
-<div class="line"><a id="l01961" name="l01961"></a><span class="lineno"> 1961</span> </div>
-<div class="line"><a id="l01962" name="l01962"></a><span class="lineno"> 1962</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> DependeeType, <span class="keyword">class</span> DependentType&gt;</div>
-<div class="foldopen" id="foldopen01963" data-start="{" data-end="}">
-<div class="line"><a id="l01963" name="l01963"></a><span class="lineno"><a class="line" href="classTeuchos_1_1TwoDRowDependency.html#aaeec21c79fead9f7d08ceb1fd199af80"> 1963</a></span><a class="code hl_function" href="classTeuchos_1_1TwoDRowDependency.html#aad51af1e95616a271abc620f1232c63d">TwoDRowDependency&lt;DependeeType, DependentType&gt;::TwoDRowDependency</a>(</div>
-<div class="line"><a id="l01964" name="l01964"></a><span class="lineno"> 1964</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;const ParameterEntry&gt;</a> dependee,</div>
-<div class="line"><a id="l01965" name="l01965"></a><span class="lineno"> 1965</span>  <a class="code hl_typedef" href="classTeuchos_1_1Dependency.html#a394c48f8a76439c075e3b2acc76d0c13">Dependency::ParameterEntryList</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependents</a>,</div>
-<div class="line"><a id="l01966" name="l01966"></a><span class="lineno"> 1966</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP</a>&lt;<span class="keyword">const</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">SimpleFunctionObject&lt;DependeeType&gt;</a> &gt; <a class="code hl_class" href="classTeuchos_1_1RCP.html">func</a>):</div>
-<div class="line"><a id="l01967" name="l01967"></a><span class="lineno"> 1967</span>  <a class="code hl_class" href="classTeuchos_1_1TwoDArrayModifierDependency.html">TwoDArrayModifierDependency</a>&lt;<a class="code hl_class" href="classTeuchos_1_1RCP.html">DependeeType</a>, <a class="code hl_class" href="classTeuchos_1_1RCP.html">DependentType</a>&gt;(</div>
-<div class="line"><a id="l01968" name="l01968"></a><span class="lineno"> 1968</span>    dependee, <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependents</a>, <a class="code hl_class" href="classTeuchos_1_1RCP.html">func</a>)</div>
-<div class="line"><a id="l01969" name="l01969"></a><span class="lineno"> 1969</span>{</div>
-<div class="line"><a id="l01970" name="l01970"></a><span class="lineno"> 1970</span>  this-&gt;<a class="code hl_function" href="classTeuchos_1_1TwoDArrayModifierDependency.html#a7e5700fd4471719ff63b791b74c9a40e">validateDep</a>();</div>
-<div class="line"><a id="l01971" name="l01971"></a><span class="lineno"> 1971</span>}</div>
+<div class="line"><a id="l01952" name="l01952"></a><span class="lineno"> 1952</span> </div>
+<div class="line"><a id="l01953" name="l01953"></a><span class="lineno"> 1953</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> DependeeType, <span class="keyword">class</span> DependentType&gt;</div>
+<div class="foldopen" id="foldopen01954" data-start="{" data-end="}">
+<div class="line"><a id="l01954" name="l01954"></a><span class="lineno"><a class="line" href="classTeuchos_1_1TwoDRowDependency.html#aad51af1e95616a271abc620f1232c63d"> 1954</a></span><a class="code hl_function" href="classTeuchos_1_1TwoDRowDependency.html#aad51af1e95616a271abc620f1232c63d">TwoDRowDependency&lt;DependeeType, DependentType&gt;::TwoDRowDependency</a>(</div>
+<div class="line"><a id="l01955" name="l01955"></a><span class="lineno"> 1955</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;const ParameterEntry&gt;</a> dependee,</div>
+<div class="line"><a id="l01956" name="l01956"></a><span class="lineno"> 1956</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;ParameterEntry&gt;</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependent</a>,</div>
+<div class="line"><a id="l01957" name="l01957"></a><span class="lineno"> 1957</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP</a>&lt;<span class="keyword">const</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">SimpleFunctionObject&lt;DependeeType&gt;</a> &gt; <a class="code hl_class" href="classTeuchos_1_1RCP.html">func</a>):</div>
+<div class="line"><a id="l01958" name="l01958"></a><span class="lineno"> 1958</span>  <a class="code hl_class" href="classTeuchos_1_1TwoDArrayModifierDependency.html">TwoDArrayModifierDependency</a>&lt;<a class="code hl_class" href="classTeuchos_1_1RCP.html">DependeeType</a>, <a class="code hl_class" href="classTeuchos_1_1RCP.html">DependentType</a>&gt;(</div>
+<div class="line"><a id="l01959" name="l01959"></a><span class="lineno"> 1959</span>    dependee, <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependent</a>, <a class="code hl_class" href="classTeuchos_1_1RCP.html">func</a>)</div>
+<div class="line"><a id="l01960" name="l01960"></a><span class="lineno"> 1960</span>{</div>
+<div class="line"><a id="l01961" name="l01961"></a><span class="lineno"> 1961</span>  this-&gt;<a class="code hl_function" href="classTeuchos_1_1TwoDArrayModifierDependency.html#a7e5700fd4471719ff63b791b74c9a40e">validateDep</a>();</div>
+<div class="line"><a id="l01962" name="l01962"></a><span class="lineno"> 1962</span>}</div>
 </div>
-<div class="line"><a id="l01972" name="l01972"></a><span class="lineno"> 1972</span> </div>
-<div class="line"><a id="l01973" name="l01973"></a><span class="lineno"> 1973</span> </div>
-<div class="line"><a id="l01974" name="l01974"></a><span class="lineno"> 1974</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> DependeeType, <span class="keyword">class</span> DependentType&gt;</div>
-<div class="line"><a id="l01975" name="l01975"></a><span class="lineno"> 1975</span>std::string</div>
-<div class="foldopen" id="foldopen01976" data-start="{" data-end="}">
-<div class="line"><a id="l01976" name="l01976"></a><span class="lineno"><a class="line" href="classTeuchos_1_1TwoDRowDependency.html#ac1449cf9eaeb41fb566e507e5a6bbdf5"> 1976</a></span><a class="code hl_function" href="classTeuchos_1_1TwoDRowDependency.html#ac1449cf9eaeb41fb566e507e5a6bbdf5">TwoDRowDependency&lt;DependeeType, DependentType&gt;::getTypeAttributeValue</a>()<span class="keyword"></span></div>
-<div class="line"><a id="l01977" name="l01977"></a><span class="lineno"> 1977</span><span class="keyword">const</span></div>
-<div class="line"><a id="l01978" name="l01978"></a><span class="lineno"> 1978</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l01979" name="l01979"></a><span class="lineno"> 1979</span>  <span class="keywordflow">return</span> <span class="stringliteral">&quot;TwoDRowDependency(&quot;</span> +</div>
-<div class="line"><a id="l01980" name="l01980"></a><span class="lineno"> 1980</span>    <a class="code hl_function" href="classTeuchos_1_1TypeNameTraits.html#acd376f70f0fd37929269c42db3a0b641">TypeNameTraits&lt;DependeeType&gt;::name</a>() + <span class="stringliteral">&quot;, &quot;</span> +</div>
-<div class="line"><a id="l01981" name="l01981"></a><span class="lineno"> 1981</span>    <a class="code hl_function" href="classTeuchos_1_1TypeNameTraits.html#acd376f70f0fd37929269c42db3a0b641">TypeNameTraits&lt;DependentType&gt;::name</a>() +<span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><a id="l01982" name="l01982"></a><span class="lineno"> 1982</span>}</div>
+<div class="line"><a id="l01963" name="l01963"></a><span class="lineno"> 1963</span> </div>
+<div class="line"><a id="l01964" name="l01964"></a><span class="lineno"> 1964</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> DependeeType, <span class="keyword">class</span> DependentType&gt;</div>
+<div class="foldopen" id="foldopen01965" data-start="{" data-end="}">
+<div class="line"><a id="l01965" name="l01965"></a><span class="lineno"><a class="line" href="classTeuchos_1_1TwoDRowDependency.html#aaeec21c79fead9f7d08ceb1fd199af80"> 1965</a></span><a class="code hl_function" href="classTeuchos_1_1TwoDRowDependency.html#aad51af1e95616a271abc620f1232c63d">TwoDRowDependency&lt;DependeeType, DependentType&gt;::TwoDRowDependency</a>(</div>
+<div class="line"><a id="l01966" name="l01966"></a><span class="lineno"> 1966</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;const ParameterEntry&gt;</a> dependee,</div>
+<div class="line"><a id="l01967" name="l01967"></a><span class="lineno"> 1967</span>  <a class="code hl_typedef" href="classTeuchos_1_1Dependency.html#a394c48f8a76439c075e3b2acc76d0c13">Dependency::ParameterEntryList</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependents</a>,</div>
+<div class="line"><a id="l01968" name="l01968"></a><span class="lineno"> 1968</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP</a>&lt;<span class="keyword">const</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">SimpleFunctionObject&lt;DependeeType&gt;</a> &gt; <a class="code hl_class" href="classTeuchos_1_1RCP.html">func</a>):</div>
+<div class="line"><a id="l01969" name="l01969"></a><span class="lineno"> 1969</span>  <a class="code hl_class" href="classTeuchos_1_1TwoDArrayModifierDependency.html">TwoDArrayModifierDependency</a>&lt;<a class="code hl_class" href="classTeuchos_1_1RCP.html">DependeeType</a>, <a class="code hl_class" href="classTeuchos_1_1RCP.html">DependentType</a>&gt;(</div>
+<div class="line"><a id="l01970" name="l01970"></a><span class="lineno"> 1970</span>    dependee, <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependents</a>, <a class="code hl_class" href="classTeuchos_1_1RCP.html">func</a>)</div>
+<div class="line"><a id="l01971" name="l01971"></a><span class="lineno"> 1971</span>{</div>
+<div class="line"><a id="l01972" name="l01972"></a><span class="lineno"> 1972</span>  this-&gt;<a class="code hl_function" href="classTeuchos_1_1TwoDArrayModifierDependency.html#a7e5700fd4471719ff63b791b74c9a40e">validateDep</a>();</div>
+<div class="line"><a id="l01973" name="l01973"></a><span class="lineno"> 1973</span>}</div>
 </div>
-<div class="line"><a id="l01983" name="l01983"></a><span class="lineno"> 1983</span> </div>
-<div class="line"><a id="l01984" name="l01984"></a><span class="lineno"> 1984</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> DependeeType, <span class="keyword">class</span> DependentType&gt;</div>
-<div class="line"><a id="l01985" name="l01985"></a><span class="lineno"> 1985</span><span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen01986" data-start="{" data-end="}">
-<div class="line"><a id="l01986" name="l01986"></a><span class="lineno"><a class="line" href="classTeuchos_1_1TwoDRowDependency.html#a023c063097e5af33039ce8323f3ea422"> 1986</a></span><a class="code hl_function" href="classTeuchos_1_1TwoDRowDependency.html#a023c063097e5af33039ce8323f3ea422">TwoDRowDependency&lt;DependeeType, DependentType&gt;::modifyArray</a>(</div>
-<div class="line"><a id="l01987" name="l01987"></a><span class="lineno"> 1987</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">DependeeType</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">newAmount</a>,</div>
-<div class="line"><a id="l01988" name="l01988"></a><span class="lineno"> 1988</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;ParameterEntry&gt;</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependentToModify</a>)</div>
-<div class="line"><a id="l01989" name="l01989"></a><span class="lineno"> 1989</span>{</div>
-<div class="line"><a id="l01990" name="l01990"></a><span class="lineno"> 1990</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">TwoDArray&lt;DependentType&gt;</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">originalArray</a> =</div>
-<div class="line"><a id="l01991" name="l01991"></a><span class="lineno"> 1991</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">any_cast&lt;TwoDArray&lt;DependentType&gt;</a> &gt;(<a class="code hl_class" href="classTeuchos_1_1RCP.html">dependentToModify</a>-&gt;getAny());</div>
-<div class="line"><a id="l01992" name="l01992"></a><span class="lineno"> 1992</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">originalArray</a>.resizeRows(<a class="code hl_class" href="classTeuchos_1_1RCP.html">newAmount</a>);</div>
-<div class="line"><a id="l01993" name="l01993"></a><span class="lineno"> 1993</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependentToModify</a>-&gt;setValue(<a class="code hl_class" href="classTeuchos_1_1RCP.html">originalArray</a>,</div>
-<div class="line"><a id="l01994" name="l01994"></a><span class="lineno"> 1994</span>    <span class="keyword">false</span>, <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependentToModify</a>-&gt;docString(), <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependentToModify</a>-&gt;validator());</div>
-<div class="line"><a id="l01995" name="l01995"></a><span class="lineno"> 1995</span>}</div>
+<div class="line"><a id="l01974" name="l01974"></a><span class="lineno"> 1974</span> </div>
+<div class="line"><a id="l01975" name="l01975"></a><span class="lineno"> 1975</span> </div>
+<div class="line"><a id="l01976" name="l01976"></a><span class="lineno"> 1976</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> DependeeType, <span class="keyword">class</span> DependentType&gt;</div>
+<div class="line"><a id="l01977" name="l01977"></a><span class="lineno"> 1977</span>std::string</div>
+<div class="foldopen" id="foldopen01978" data-start="{" data-end="}">
+<div class="line"><a id="l01978" name="l01978"></a><span class="lineno"><a class="line" href="classTeuchos_1_1TwoDRowDependency.html#ac1449cf9eaeb41fb566e507e5a6bbdf5"> 1978</a></span><a class="code hl_function" href="classTeuchos_1_1TwoDRowDependency.html#ac1449cf9eaeb41fb566e507e5a6bbdf5">TwoDRowDependency&lt;DependeeType, DependentType&gt;::getTypeAttributeValue</a>()<span class="keyword"></span></div>
+<div class="line"><a id="l01979" name="l01979"></a><span class="lineno"> 1979</span><span class="keyword">const</span></div>
+<div class="line"><a id="l01980" name="l01980"></a><span class="lineno"> 1980</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l01981" name="l01981"></a><span class="lineno"> 1981</span>  <span class="keywordflow">return</span> <span class="stringliteral">&quot;TwoDRowDependency(&quot;</span> +</div>
+<div class="line"><a id="l01982" name="l01982"></a><span class="lineno"> 1982</span>    <a class="code hl_function" href="classTeuchos_1_1TypeNameTraits.html#acd376f70f0fd37929269c42db3a0b641">TypeNameTraits&lt;DependeeType&gt;::name</a>() + <span class="stringliteral">&quot;, &quot;</span> +</div>
+<div class="line"><a id="l01983" name="l01983"></a><span class="lineno"> 1983</span>    <a class="code hl_function" href="classTeuchos_1_1TypeNameTraits.html#acd376f70f0fd37929269c42db3a0b641">TypeNameTraits&lt;DependentType&gt;::name</a>() +<span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><a id="l01984" name="l01984"></a><span class="lineno"> 1984</span>}</div>
 </div>
-<div class="line"><a id="l01996" name="l01996"></a><span class="lineno"> 1996</span> </div>
-<div class="line"><a id="l01997" name="l01997"></a><span class="lineno"> 1997</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> DependeeType, <span class="keyword">class</span> DependentType&gt;</div>
-<div class="line"><a id="l01998" name="l01998"></a><span class="lineno"> 1998</span>std::string</div>
-<div class="foldopen" id="foldopen01999" data-start="{" data-end="}">
-<div class="line"><a id="l01999" name="l01999"></a><span class="lineno"><a class="line" href="classTeuchos_1_1TwoDRowDependency.html#a3bfaac4d1691c89630c3d48372d4b71d"> 1999</a></span><a class="code hl_function" href="classTeuchos_1_1TwoDRowDependency.html#a3bfaac4d1691c89630c3d48372d4b71d">TwoDRowDependency&lt;DependeeType, DependentType&gt;::getBadDependentValueErrorMessage</a>()<span class="keyword"> const</span>{</div>
-<div class="line"><a id="l02000" name="l02000"></a><span class="lineno"> 2000</span>  std::ostringstream os;</div>
-<div class="line"><a id="l02001" name="l02001"></a><span class="lineno"> 2001</span>  os &lt;&lt;</div>
-<div class="line"><a id="l02002" name="l02002"></a><span class="lineno"> 2002</span>    <span class="stringliteral">&quot;Ruh Roh Shaggy! Looks like a dependency tried to set the number of &quot;</span></div>
-<div class="line"><a id="l02003" name="l02003"></a><span class="lineno"> 2003</span>    <span class="stringliteral">&quot;rows in TwoDArray(s) to a negative number. Silly. You can&#39;t have &quot;</span></div>
-<div class="line"><a id="l02004" name="l02004"></a><span class="lineno"> 2004</span>    <span class="stringliteral">&quot;a TwoDArray with a negative number of rows!&quot;</span> &lt;&lt; std::endl &lt;&lt; std::endl &lt;&lt;</div>
-<div class="line"><a id="l02005" name="l02005"></a><span class="lineno"> 2005</span>    <span class="stringliteral">&quot;Error:&quot;</span> &lt;&lt; std::endl &lt;&lt;</div>
-<div class="line"><a id="l02006" name="l02006"></a><span class="lineno"> 2006</span>    <span class="stringliteral">&quot;An attempt was made to set the number of rows of a TwoDArray to a negative &quot;</span></div>
-<div class="line"><a id="l02007" name="l02007"></a><span class="lineno"> 2007</span>    <span class="stringliteral">&quot;number by a TwoDRowDependency&quot;</span> &lt;&lt; std::endl &lt;&lt; std::endl;</div>
-<div class="line"><a id="l02008" name="l02008"></a><span class="lineno"> 2008</span>  <span class="keywordflow">return</span> os.str();</div>
-<div class="line"><a id="l02009" name="l02009"></a><span class="lineno"> 2009</span>}</div>
+<div class="line"><a id="l01985" name="l01985"></a><span class="lineno"> 1985</span> </div>
+<div class="line"><a id="l01986" name="l01986"></a><span class="lineno"> 1986</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> DependeeType, <span class="keyword">class</span> DependentType&gt;</div>
+<div class="line"><a id="l01987" name="l01987"></a><span class="lineno"> 1987</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen01988" data-start="{" data-end="}">
+<div class="line"><a id="l01988" name="l01988"></a><span class="lineno"><a class="line" href="classTeuchos_1_1TwoDRowDependency.html#a023c063097e5af33039ce8323f3ea422"> 1988</a></span><a class="code hl_function" href="classTeuchos_1_1TwoDRowDependency.html#a023c063097e5af33039ce8323f3ea422">TwoDRowDependency&lt;DependeeType, DependentType&gt;::modifyArray</a>(</div>
+<div class="line"><a id="l01989" name="l01989"></a><span class="lineno"> 1989</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">DependeeType</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">newAmount</a>,</div>
+<div class="line"><a id="l01990" name="l01990"></a><span class="lineno"> 1990</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;ParameterEntry&gt;</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependentToModify</a>)</div>
+<div class="line"><a id="l01991" name="l01991"></a><span class="lineno"> 1991</span>{</div>
+<div class="line"><a id="l01992" name="l01992"></a><span class="lineno"> 1992</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">TwoDArray&lt;DependentType&gt;</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">originalArray</a> =</div>
+<div class="line"><a id="l01993" name="l01993"></a><span class="lineno"> 1993</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">any_cast&lt;TwoDArray&lt;DependentType&gt;</a> &gt;(<a class="code hl_class" href="classTeuchos_1_1RCP.html">dependentToModify</a>-&gt;getAny());</div>
+<div class="line"><a id="l01994" name="l01994"></a><span class="lineno"> 1994</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">originalArray</a>.resizeRows(<a class="code hl_class" href="classTeuchos_1_1RCP.html">newAmount</a>);</div>
+<div class="line"><a id="l01995" name="l01995"></a><span class="lineno"> 1995</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependentToModify</a>-&gt;setValue(<a class="code hl_class" href="classTeuchos_1_1RCP.html">originalArray</a>,</div>
+<div class="line"><a id="l01996" name="l01996"></a><span class="lineno"> 1996</span>    <span class="keyword">false</span>, <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependentToModify</a>-&gt;docString(), <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependentToModify</a>-&gt;validator());</div>
+<div class="line"><a id="l01997" name="l01997"></a><span class="lineno"> 1997</span>}</div>
 </div>
-<div class="line"><a id="l02010" name="l02010"></a><span class="lineno"> 2010</span> </div>
-<div class="line"><a id="l02016" name="l02016"></a><span class="lineno"> 2016</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> DependeeType, <span class="keyword">class</span> DependentType&gt;</div>
-<div class="foldopen" id="foldopen02017" data-start="{" data-end="};">
-<div class="line"><a id="l02017" name="l02017"></a><span class="lineno"><a class="line" href="classTeuchos_1_1DummyObjectGetter_3_01TwoDRowDependency_3_01DependeeType_00_01DependentType_01_4_01_4.html"> 2017</a></span><span class="keyword">class </span><a class="code hl_class" href="classTeuchos_1_1DummyObjectGetter.html">DummyObjectGetter</a>&lt;<a class="code hl_class" href="classTeuchos_1_1TwoDRowDependency.html">TwoDRowDependency</a>&lt;<a class="code hl_class" href="classTeuchos_1_1RCP.html">DependeeType</a>, <a class="code hl_class" href="classTeuchos_1_1RCP.html">DependentType</a>&gt; &gt;{</div>
-<div class="line"><a id="l02018" name="l02018"></a><span class="lineno"> 2018</span> </div>
-<div class="line"><a id="l02019" name="l02019"></a><span class="lineno"> 2019</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l01998" name="l01998"></a><span class="lineno"> 1998</span> </div>
+<div class="line"><a id="l01999" name="l01999"></a><span class="lineno"> 1999</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> DependeeType, <span class="keyword">class</span> DependentType&gt;</div>
+<div class="line"><a id="l02000" name="l02000"></a><span class="lineno"> 2000</span>std::string</div>
+<div class="foldopen" id="foldopen02001" data-start="{" data-end="}">
+<div class="line"><a id="l02001" name="l02001"></a><span class="lineno"><a class="line" href="classTeuchos_1_1TwoDRowDependency.html#a3bfaac4d1691c89630c3d48372d4b71d"> 2001</a></span><a class="code hl_function" href="classTeuchos_1_1TwoDRowDependency.html#a3bfaac4d1691c89630c3d48372d4b71d">TwoDRowDependency&lt;DependeeType, DependentType&gt;::getBadDependentValueErrorMessage</a>()<span class="keyword"> const</span>{</div>
+<div class="line"><a id="l02002" name="l02002"></a><span class="lineno"> 2002</span>  std::ostringstream os;</div>
+<div class="line"><a id="l02003" name="l02003"></a><span class="lineno"> 2003</span>  os &lt;&lt;</div>
+<div class="line"><a id="l02004" name="l02004"></a><span class="lineno"> 2004</span>    <span class="stringliteral">&quot;Ruh Roh Shaggy! Looks like a dependency tried to set the number of &quot;</span></div>
+<div class="line"><a id="l02005" name="l02005"></a><span class="lineno"> 2005</span>    <span class="stringliteral">&quot;rows in TwoDArray(s) to a negative number. Silly. You can&#39;t have &quot;</span></div>
+<div class="line"><a id="l02006" name="l02006"></a><span class="lineno"> 2006</span>    <span class="stringliteral">&quot;a TwoDArray with a negative number of rows!&quot;</span> &lt;&lt; std::endl &lt;&lt; std::endl &lt;&lt;</div>
+<div class="line"><a id="l02007" name="l02007"></a><span class="lineno"> 2007</span>    <span class="stringliteral">&quot;Error:&quot;</span> &lt;&lt; std::endl &lt;&lt;</div>
+<div class="line"><a id="l02008" name="l02008"></a><span class="lineno"> 2008</span>    <span class="stringliteral">&quot;An attempt was made to set the number of rows of a TwoDArray to a negative &quot;</span></div>
+<div class="line"><a id="l02009" name="l02009"></a><span class="lineno"> 2009</span>    <span class="stringliteral">&quot;number by a TwoDRowDependency&quot;</span> &lt;&lt; std::endl &lt;&lt; std::endl;</div>
+<div class="line"><a id="l02010" name="l02010"></a><span class="lineno"> 2010</span>  <span class="keywordflow">return</span> os.str();</div>
+<div class="line"><a id="l02011" name="l02011"></a><span class="lineno"> 2011</span>}</div>
+</div>
+<div class="line"><a id="l02012" name="l02012"></a><span class="lineno"> 2012</span> </div>
+<div class="line"><a id="l02018" name="l02018"></a><span class="lineno"> 2018</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> DependeeType, <span class="keyword">class</span> DependentType&gt;</div>
+<div class="foldopen" id="foldopen02019" data-start="{" data-end="};">
+<div class="line"><a id="l02019" name="l02019"></a><span class="lineno"><a class="line" href="classTeuchos_1_1DummyObjectGetter_3_01TwoDRowDependency_3_01DependeeType_00_01DependentType_01_4_01_4.html"> 2019</a></span><span class="keyword">class </span><a class="code hl_class" href="classTeuchos_1_1DummyObjectGetter.html">DummyObjectGetter</a>&lt;<a class="code hl_class" href="classTeuchos_1_1TwoDRowDependency.html">TwoDRowDependency</a>&lt;<a class="code hl_class" href="classTeuchos_1_1RCP.html">DependeeType</a>, <a class="code hl_class" href="classTeuchos_1_1RCP.html">DependentType</a>&gt; &gt;{</div>
 <div class="line"><a id="l02020" name="l02020"></a><span class="lineno"> 2020</span> </div>
-<div class="line"><a id="l02023" name="l02023"></a><span class="lineno"> 2023</span> </div>
-<div class="line"><a id="l02027" name="l02027"></a><span class="lineno"> 2027</span>  <span class="keyword">static</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;TwoDRowDependency&lt;DependeeType, DependentType&gt;</a> &gt;</div>
-<div class="line"><a id="l02028" name="l02028"></a><span class="lineno"> 2028</span>    <a class="code hl_function" href="classTeuchos_1_1DummyObjectGetter.html#a3f658421bb64cab3bb1d376fae900702">getDummyObject</a>();</div>
-<div class="line"><a id="l02029" name="l02029"></a><span class="lineno"> 2029</span> </div>
+<div class="line"><a id="l02021" name="l02021"></a><span class="lineno"> 2021</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l02022" name="l02022"></a><span class="lineno"> 2022</span> </div>
+<div class="line"><a id="l02025" name="l02025"></a><span class="lineno"> 2025</span> </div>
+<div class="line"><a id="l02029" name="l02029"></a><span class="lineno"> 2029</span>  <span class="keyword">static</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;TwoDRowDependency&lt;DependeeType, DependentType&gt;</a> &gt;</div>
+<div class="line"><a id="l02030" name="l02030"></a><span class="lineno"> 2030</span>    <a class="code hl_function" href="classTeuchos_1_1DummyObjectGetter.html#a3f658421bb64cab3bb1d376fae900702">getDummyObject</a>();</div>
 <div class="line"><a id="l02031" name="l02031"></a><span class="lineno"> 2031</span> </div>
-<div class="line"><a id="l02032" name="l02032"></a><span class="lineno"> 2032</span>};</div>
-</div>
 <div class="line"><a id="l02033" name="l02033"></a><span class="lineno"> 2033</span> </div>
-<div class="line"><a id="l02034" name="l02034"></a><span class="lineno"> 2034</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> DependeeType, <span class="keyword">class</span> DependentType&gt;</div>
-<div class="line"><a id="l02035" name="l02035"></a><span class="lineno"> 2035</span><a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;TwoDRowDependency&lt;DependeeType, DependentType&gt;</a> &gt;</div>
-<div class="foldopen" id="foldopen02036" data-start="{" data-end="}">
-<div class="line"><a id="l02036" name="l02036"></a><span class="lineno"><a class="line" href="classTeuchos_1_1DummyObjectGetter_3_01TwoDRowDependency_3_01DependeeType_00_01DependentType_01_4_01_4.html#ad549649c680538abcc91be338cbacddb"> 2036</a></span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">DummyObjectGetter&lt;TwoDRowDependency&lt;DependeeType, DependentType&gt;</a> &gt;::getDummyObject()</div>
-<div class="line"><a id="l02037" name="l02037"></a><span class="lineno"> 2037</span>{</div>
-<div class="line"><a id="l02038" name="l02038"></a><span class="lineno"> 2038</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceTeuchos.html#a39378f1892f1d484eb697574a8a8c5af">rcp</a>(</div>
-<div class="line"><a id="l02039" name="l02039"></a><span class="lineno"> 2039</span>    <span class="keyword">new</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">TwoDRowDependency&lt;DependeeType, DependentType&gt;</a>(</div>
-<div class="line"><a id="l02040" name="l02040"></a><span class="lineno"> 2040</span>    <a class="code hl_function" href="namespaceTeuchos.html#a39378f1892f1d484eb697574a8a8c5af">rcp</a>(<span class="keyword">new</span> <a class="code hl_class" href="classTeuchos_1_1ParameterEntry.html">ParameterEntry</a>(<a class="code hl_struct" href="structTeuchos_1_1ScalarTraits.html">ScalarTraits&lt;DependeeType&gt;::zero</a>())),</div>
-<div class="line"><a id="l02041" name="l02041"></a><span class="lineno"> 2041</span>    <a class="code hl_function" href="namespaceTeuchos.html#a39378f1892f1d484eb697574a8a8c5af">rcp</a>(<span class="keyword">new</span> <a class="code hl_class" href="classTeuchos_1_1ParameterEntry.html">ParameterEntry</a>(<a class="code hl_class" href="classTeuchos_1_1RCP.html">TwoDArray&lt;DependentType&gt;</a>(1,1)))));</div>
-<div class="line"><a id="l02042" name="l02042"></a><span class="lineno"> 2042</span>}</div>
+<div class="line"><a id="l02034" name="l02034"></a><span class="lineno"> 2034</span>};</div>
 </div>
-<div class="line"><a id="l02043" name="l02043"></a><span class="lineno"> 2043</span> </div>
-<div class="line"><a id="l02044" name="l02044"></a><span class="lineno"> 2044</span> </div>
-<div class="line"><a id="l02052" name="l02052"></a><span class="lineno"> 2052</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> DependeeType, <span class="keyword">class</span> DependentType&gt;</div>
-<div class="foldopen" id="foldopen02053" data-start="{" data-end="};">
-<div class="line"><a id="l02053" name="l02053"></a><span class="lineno"><a class="line" href="classTeuchos_1_1TwoDColDependency.html"> 2053</a></span><span class="keyword">class </span><a class="code hl_class" href="classTeuchos_1_1TwoDColDependency.html">TwoDColDependency</a> :</div>
-<div class="line"><a id="l02054" name="l02054"></a><span class="lineno"> 2054</span>  <span class="keyword">public</span> <a class="code hl_class" href="classTeuchos_1_1TwoDArrayModifierDependency.html">TwoDArrayModifierDependency</a>&lt;DependeeType, DependentType&gt;</div>
-<div class="line"><a id="l02055" name="l02055"></a><span class="lineno"> 2055</span>{</div>
-<div class="line"><a id="l02056" name="l02056"></a><span class="lineno"> 2056</span> </div>
-<div class="line"><a id="l02057" name="l02057"></a><span class="lineno"> 2057</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l02035" name="l02035"></a><span class="lineno"> 2035</span> </div>
+<div class="line"><a id="l02036" name="l02036"></a><span class="lineno"> 2036</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> DependeeType, <span class="keyword">class</span> DependentType&gt;</div>
+<div class="line"><a id="l02037" name="l02037"></a><span class="lineno"> 2037</span><a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;TwoDRowDependency&lt;DependeeType, DependentType&gt;</a> &gt;</div>
+<div class="foldopen" id="foldopen02038" data-start="{" data-end="}">
+<div class="line"><a id="l02038" name="l02038"></a><span class="lineno"><a class="line" href="classTeuchos_1_1DummyObjectGetter_3_01TwoDRowDependency_3_01DependeeType_00_01DependentType_01_4_01_4.html#ad549649c680538abcc91be338cbacddb"> 2038</a></span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">DummyObjectGetter&lt;TwoDRowDependency&lt;DependeeType, DependentType&gt;</a> &gt;::getDummyObject()</div>
+<div class="line"><a id="l02039" name="l02039"></a><span class="lineno"> 2039</span>{</div>
+<div class="line"><a id="l02040" name="l02040"></a><span class="lineno"> 2040</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceTeuchos.html#a39378f1892f1d484eb697574a8a8c5af">rcp</a>(</div>
+<div class="line"><a id="l02041" name="l02041"></a><span class="lineno"> 2041</span>    <span class="keyword">new</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">TwoDRowDependency&lt;DependeeType, DependentType&gt;</a>(</div>
+<div class="line"><a id="l02042" name="l02042"></a><span class="lineno"> 2042</span>    <a class="code hl_function" href="namespaceTeuchos.html#a39378f1892f1d484eb697574a8a8c5af">rcp</a>(<span class="keyword">new</span> <a class="code hl_class" href="classTeuchos_1_1ParameterEntry.html">ParameterEntry</a>(<a class="code hl_struct" href="structTeuchos_1_1ScalarTraits.html">ScalarTraits&lt;DependeeType&gt;::zero</a>())),</div>
+<div class="line"><a id="l02043" name="l02043"></a><span class="lineno"> 2043</span>    <a class="code hl_function" href="namespaceTeuchos.html#a39378f1892f1d484eb697574a8a8c5af">rcp</a>(<span class="keyword">new</span> <a class="code hl_class" href="classTeuchos_1_1ParameterEntry.html">ParameterEntry</a>(<a class="code hl_class" href="classTeuchos_1_1RCP.html">TwoDArray&lt;DependentType&gt;</a>(1,1)))));</div>
+<div class="line"><a id="l02044" name="l02044"></a><span class="lineno"> 2044</span>}</div>
+</div>
+<div class="line"><a id="l02045" name="l02045"></a><span class="lineno"> 2045</span> </div>
+<div class="line"><a id="l02046" name="l02046"></a><span class="lineno"> 2046</span> </div>
+<div class="line"><a id="l02054" name="l02054"></a><span class="lineno"> 2054</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> DependeeType, <span class="keyword">class</span> DependentType&gt;</div>
+<div class="foldopen" id="foldopen02055" data-start="{" data-end="};">
+<div class="line"><a id="l02055" name="l02055"></a><span class="lineno"><a class="line" href="classTeuchos_1_1TwoDColDependency.html"> 2055</a></span><span class="keyword">class </span><a class="code hl_class" href="classTeuchos_1_1TwoDColDependency.html">TwoDColDependency</a> :</div>
+<div class="line"><a id="l02056" name="l02056"></a><span class="lineno"> 2056</span>  <span class="keyword">public</span> <a class="code hl_class" href="classTeuchos_1_1TwoDArrayModifierDependency.html">TwoDArrayModifierDependency</a>&lt;DependeeType, DependentType&gt;</div>
+<div class="line"><a id="l02057" name="l02057"></a><span class="lineno"> 2057</span>{</div>
 <div class="line"><a id="l02058" name="l02058"></a><span class="lineno"> 2058</span> </div>
-<div class="line"><a id="l02061" name="l02061"></a><span class="lineno"> 2061</span> </div>
-<div class="line"><a id="l02070" name="l02070"></a><span class="lineno"> 2070</span>  <a class="code hl_class" href="classTeuchos_1_1TwoDColDependency.html">TwoDColDependency</a>(</div>
-<div class="line"><a id="l02071" name="l02071"></a><span class="lineno"> 2071</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;const ParameterEntry&gt;</a> dependee,</div>
-<div class="line"><a id="l02072" name="l02072"></a><span class="lineno"> 2072</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;ParameterEntry&gt;</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependent</a>,</div>
-<div class="line"><a id="l02073" name="l02073"></a><span class="lineno"> 2073</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP</a>&lt;<span class="keyword">const</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">SimpleFunctionObject&lt;DependeeType&gt;</a> &gt; <a class="code hl_class" href="classTeuchos_1_1RCP.html">func</a>=null);</div>
-<div class="line"><a id="l02074" name="l02074"></a><span class="lineno"> 2074</span> </div>
-<div class="line"><a id="l02075" name="l02075"></a><span class="lineno"> 2075</span> </div>
-<div class="line"><a id="l02084" name="l02084"></a><span class="lineno"> 2084</span>  <a class="code hl_class" href="classTeuchos_1_1TwoDColDependency.html">TwoDColDependency</a>(</div>
-<div class="line"><a id="l02085" name="l02085"></a><span class="lineno"> 2085</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;const ParameterEntry&gt;</a> dependee,</div>
-<div class="line"><a id="l02086" name="l02086"></a><span class="lineno"> 2086</span>    <a class="code hl_typedef" href="classTeuchos_1_1Dependency.html#a394c48f8a76439c075e3b2acc76d0c13">Dependency::ParameterEntryList</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependents</a>,</div>
-<div class="line"><a id="l02087" name="l02087"></a><span class="lineno"> 2087</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP</a>&lt;<span class="keyword">const</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">SimpleFunctionObject&lt;DependeeType&gt;</a> &gt; <a class="code hl_class" href="classTeuchos_1_1RCP.html">func</a>=null);</div>
-<div class="line"><a id="l02088" name="l02088"></a><span class="lineno"> 2088</span> </div>
+<div class="line"><a id="l02059" name="l02059"></a><span class="lineno"> 2059</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l02060" name="l02060"></a><span class="lineno"> 2060</span> </div>
+<div class="line"><a id="l02063" name="l02063"></a><span class="lineno"> 2063</span> </div>
+<div class="line"><a id="l02072" name="l02072"></a><span class="lineno"> 2072</span>  <a class="code hl_class" href="classTeuchos_1_1TwoDColDependency.html">TwoDColDependency</a>(</div>
+<div class="line"><a id="l02073" name="l02073"></a><span class="lineno"> 2073</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;const ParameterEntry&gt;</a> dependee,</div>
+<div class="line"><a id="l02074" name="l02074"></a><span class="lineno"> 2074</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;ParameterEntry&gt;</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependent</a>,</div>
+<div class="line"><a id="l02075" name="l02075"></a><span class="lineno"> 2075</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP</a>&lt;<span class="keyword">const</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">SimpleFunctionObject&lt;DependeeType&gt;</a> &gt; <a class="code hl_class" href="classTeuchos_1_1RCP.html">func</a>=null);</div>
+<div class="line"><a id="l02076" name="l02076"></a><span class="lineno"> 2076</span> </div>
+<div class="line"><a id="l02077" name="l02077"></a><span class="lineno"> 2077</span> </div>
+<div class="line"><a id="l02086" name="l02086"></a><span class="lineno"> 2086</span>  <a class="code hl_class" href="classTeuchos_1_1TwoDColDependency.html">TwoDColDependency</a>(</div>
+<div class="line"><a id="l02087" name="l02087"></a><span class="lineno"> 2087</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;const ParameterEntry&gt;</a> dependee,</div>
+<div class="line"><a id="l02088" name="l02088"></a><span class="lineno"> 2088</span>    <a class="code hl_typedef" href="classTeuchos_1_1Dependency.html#a394c48f8a76439c075e3b2acc76d0c13">Dependency::ParameterEntryList</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependents</a>,</div>
+<div class="line"><a id="l02089" name="l02089"></a><span class="lineno"> 2089</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP</a>&lt;<span class="keyword">const</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">SimpleFunctionObject&lt;DependeeType&gt;</a> &gt; <a class="code hl_class" href="classTeuchos_1_1RCP.html">func</a>=null);</div>
 <div class="line"><a id="l02090" name="l02090"></a><span class="lineno"> 2090</span> </div>
-<div class="line"><a id="l02093" name="l02093"></a><span class="lineno"> 2093</span> </div>
-<div class="line"><a id="l02095" name="l02095"></a><span class="lineno"> 2095</span>  std::string <a class="code hl_function" href="classTeuchos_1_1TwoDColDependency.html#a44db2f27b28118ce3c0f6c6edc8d57cc">getTypeAttributeValue</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l02096" name="l02096"></a><span class="lineno"> 2096</span> </div>
+<div class="line"><a id="l02092" name="l02092"></a><span class="lineno"> 2092</span> </div>
+<div class="line"><a id="l02095" name="l02095"></a><span class="lineno"> 2095</span> </div>
+<div class="line"><a id="l02097" name="l02097"></a><span class="lineno"> 2097</span>  std::string <a class="code hl_function" href="classTeuchos_1_1TwoDColDependency.html#a44db2f27b28118ce3c0f6c6edc8d57cc">getTypeAttributeValue</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l02098" name="l02098"></a><span class="lineno"> 2098</span> </div>
-<div class="line"><a id="l02099" name="l02099"></a><span class="lineno"> 2099</span><span class="keyword">protected</span>:</div>
 <div class="line"><a id="l02100" name="l02100"></a><span class="lineno"> 2100</span> </div>
-<div class="line"><a id="l02103" name="l02103"></a><span class="lineno"> 2103</span> </div>
-<div class="line"><a id="l02105" name="l02105"></a><span class="lineno"> 2105</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classTeuchos_1_1TwoDColDependency.html#a6d234f245a0c9eb57389183a6187a27b">modifyArray</a>(</div>
-<div class="line"><a id="l02106" name="l02106"></a><span class="lineno"> 2106</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">DependeeType</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">newAmount</a>, <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;ParameterEntry&gt;</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependentToModify</a>);</div>
-<div class="line"><a id="l02107" name="l02107"></a><span class="lineno"> 2107</span> </div>
-<div class="line"><a id="l02109" name="l02109"></a><span class="lineno"> 2109</span>  std::string <a class="code hl_function" href="classTeuchos_1_1TwoDColDependency.html#add6f83291c013b9e75047316467995ad">getBadDependentValueErrorMessage</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l02111" name="l02111"></a><span class="lineno"> 2111</span> </div>
-<div class="line"><a id="l02112" name="l02112"></a><span class="lineno"> 2112</span>};</div>
-</div>
+<div class="line"><a id="l02101" name="l02101"></a><span class="lineno"> 2101</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l02102" name="l02102"></a><span class="lineno"> 2102</span> </div>
+<div class="line"><a id="l02105" name="l02105"></a><span class="lineno"> 2105</span> </div>
+<div class="line"><a id="l02107" name="l02107"></a><span class="lineno"> 2107</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classTeuchos_1_1TwoDColDependency.html#a6d234f245a0c9eb57389183a6187a27b">modifyArray</a>(</div>
+<div class="line"><a id="l02108" name="l02108"></a><span class="lineno"> 2108</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">DependeeType</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">newAmount</a>, <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;ParameterEntry&gt;</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependentToModify</a>);</div>
+<div class="line"><a id="l02109" name="l02109"></a><span class="lineno"> 2109</span> </div>
+<div class="line"><a id="l02111" name="l02111"></a><span class="lineno"> 2111</span>  std::string <a class="code hl_function" href="classTeuchos_1_1TwoDColDependency.html#add6f83291c013b9e75047316467995ad">getBadDependentValueErrorMessage</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l02113" name="l02113"></a><span class="lineno"> 2113</span> </div>
-<div class="line"><a id="l02114" name="l02114"></a><span class="lineno"> 2114</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> DependeeType, <span class="keyword">class</span> DependentType&gt;</div>
-<div class="foldopen" id="foldopen02115" data-start="{" data-end="}">
-<div class="line"><a id="l02115" name="l02115"></a><span class="lineno"><a class="line" href="classTeuchos_1_1TwoDColDependency.html#a0cd16fc1cf7aa6f04b77146a15436aea"> 2115</a></span><a class="code hl_function" href="classTeuchos_1_1TwoDColDependency.html#a0cd16fc1cf7aa6f04b77146a15436aea">TwoDColDependency&lt;DependeeType, DependentType&gt;::TwoDColDependency</a>(</div>
-<div class="line"><a id="l02116" name="l02116"></a><span class="lineno"> 2116</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;const ParameterEntry&gt;</a> dependee,</div>
-<div class="line"><a id="l02117" name="l02117"></a><span class="lineno"> 2117</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;ParameterEntry&gt;</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependent</a>,</div>
-<div class="line"><a id="l02118" name="l02118"></a><span class="lineno"> 2118</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP</a>&lt;<span class="keyword">const</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">SimpleFunctionObject&lt;DependeeType&gt;</a> &gt; <a class="code hl_class" href="classTeuchos_1_1RCP.html">func</a>):</div>
-<div class="line"><a id="l02119" name="l02119"></a><span class="lineno"> 2119</span>  <a class="code hl_class" href="classTeuchos_1_1TwoDArrayModifierDependency.html">TwoDArrayModifierDependency</a>&lt;<a class="code hl_class" href="classTeuchos_1_1RCP.html">DependeeType</a>, <a class="code hl_class" href="classTeuchos_1_1RCP.html">DependentType</a>&gt;(</div>
-<div class="line"><a id="l02120" name="l02120"></a><span class="lineno"> 2120</span>    dependee, <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependent</a>, <a class="code hl_class" href="classTeuchos_1_1RCP.html">func</a>)</div>
-<div class="line"><a id="l02121" name="l02121"></a><span class="lineno"> 2121</span>{</div>
-<div class="line"><a id="l02122" name="l02122"></a><span class="lineno"> 2122</span>  this-&gt;<a class="code hl_function" href="classTeuchos_1_1TwoDArrayModifierDependency.html#a7e5700fd4471719ff63b791b74c9a40e">validateDep</a>();</div>
-<div class="line"><a id="l02123" name="l02123"></a><span class="lineno"> 2123</span>}</div>
+<div class="line"><a id="l02114" name="l02114"></a><span class="lineno"> 2114</span>};</div>
 </div>
-<div class="line"><a id="l02124" name="l02124"></a><span class="lineno"> 2124</span> </div>
-<div class="line"><a id="l02125" name="l02125"></a><span class="lineno"> 2125</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> DependeeType, <span class="keyword">class</span> DependentType&gt;</div>
-<div class="foldopen" id="foldopen02126" data-start="{" data-end="}">
-<div class="line"><a id="l02126" name="l02126"></a><span class="lineno"><a class="line" href="classTeuchos_1_1TwoDColDependency.html#a2e0cb06814b5d77e442c202d57dd7317"> 2126</a></span><a class="code hl_function" href="classTeuchos_1_1TwoDColDependency.html#a0cd16fc1cf7aa6f04b77146a15436aea">TwoDColDependency&lt;DependeeType, DependentType&gt;::TwoDColDependency</a>(</div>
-<div class="line"><a id="l02127" name="l02127"></a><span class="lineno"> 2127</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;const ParameterEntry&gt;</a> dependee,</div>
-<div class="line"><a id="l02128" name="l02128"></a><span class="lineno"> 2128</span>  <a class="code hl_typedef" href="classTeuchos_1_1Dependency.html#a394c48f8a76439c075e3b2acc76d0c13">Dependency::ParameterEntryList</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependents</a>,</div>
-<div class="line"><a id="l02129" name="l02129"></a><span class="lineno"> 2129</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP</a>&lt;<span class="keyword">const</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">SimpleFunctionObject&lt;DependeeType&gt;</a> &gt; <a class="code hl_class" href="classTeuchos_1_1RCP.html">func</a>):</div>
-<div class="line"><a id="l02130" name="l02130"></a><span class="lineno"> 2130</span>  <a class="code hl_class" href="classTeuchos_1_1TwoDArrayModifierDependency.html">TwoDArrayModifierDependency</a>&lt;<a class="code hl_class" href="classTeuchos_1_1RCP.html">DependeeType</a>, <a class="code hl_class" href="classTeuchos_1_1RCP.html">DependentType</a>&gt;(</div>
-<div class="line"><a id="l02131" name="l02131"></a><span class="lineno"> 2131</span>    dependee, <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependents</a>, <a class="code hl_class" href="classTeuchos_1_1RCP.html">func</a>)</div>
-<div class="line"><a id="l02132" name="l02132"></a><span class="lineno"> 2132</span>{</div>
-<div class="line"><a id="l02133" name="l02133"></a><span class="lineno"> 2133</span>  this-&gt;<a class="code hl_function" href="classTeuchos_1_1TwoDArrayModifierDependency.html#a7e5700fd4471719ff63b791b74c9a40e">validateDep</a>();</div>
-<div class="line"><a id="l02134" name="l02134"></a><span class="lineno"> 2134</span>}</div>
+<div class="line"><a id="l02115" name="l02115"></a><span class="lineno"> 2115</span> </div>
+<div class="line"><a id="l02116" name="l02116"></a><span class="lineno"> 2116</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> DependeeType, <span class="keyword">class</span> DependentType&gt;</div>
+<div class="foldopen" id="foldopen02117" data-start="{" data-end="}">
+<div class="line"><a id="l02117" name="l02117"></a><span class="lineno"><a class="line" href="classTeuchos_1_1TwoDColDependency.html#a0cd16fc1cf7aa6f04b77146a15436aea"> 2117</a></span><a class="code hl_function" href="classTeuchos_1_1TwoDColDependency.html#a0cd16fc1cf7aa6f04b77146a15436aea">TwoDColDependency&lt;DependeeType, DependentType&gt;::TwoDColDependency</a>(</div>
+<div class="line"><a id="l02118" name="l02118"></a><span class="lineno"> 2118</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;const ParameterEntry&gt;</a> dependee,</div>
+<div class="line"><a id="l02119" name="l02119"></a><span class="lineno"> 2119</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;ParameterEntry&gt;</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependent</a>,</div>
+<div class="line"><a id="l02120" name="l02120"></a><span class="lineno"> 2120</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP</a>&lt;<span class="keyword">const</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">SimpleFunctionObject&lt;DependeeType&gt;</a> &gt; <a class="code hl_class" href="classTeuchos_1_1RCP.html">func</a>):</div>
+<div class="line"><a id="l02121" name="l02121"></a><span class="lineno"> 2121</span>  <a class="code hl_class" href="classTeuchos_1_1TwoDArrayModifierDependency.html">TwoDArrayModifierDependency</a>&lt;<a class="code hl_class" href="classTeuchos_1_1RCP.html">DependeeType</a>, <a class="code hl_class" href="classTeuchos_1_1RCP.html">DependentType</a>&gt;(</div>
+<div class="line"><a id="l02122" name="l02122"></a><span class="lineno"> 2122</span>    dependee, <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependent</a>, <a class="code hl_class" href="classTeuchos_1_1RCP.html">func</a>)</div>
+<div class="line"><a id="l02123" name="l02123"></a><span class="lineno"> 2123</span>{</div>
+<div class="line"><a id="l02124" name="l02124"></a><span class="lineno"> 2124</span>  this-&gt;<a class="code hl_function" href="classTeuchos_1_1TwoDArrayModifierDependency.html#a7e5700fd4471719ff63b791b74c9a40e">validateDep</a>();</div>
+<div class="line"><a id="l02125" name="l02125"></a><span class="lineno"> 2125</span>}</div>
 </div>
-<div class="line"><a id="l02135" name="l02135"></a><span class="lineno"> 2135</span> </div>
-<div class="line"><a id="l02136" name="l02136"></a><span class="lineno"> 2136</span> </div>
-<div class="line"><a id="l02137" name="l02137"></a><span class="lineno"> 2137</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> DependeeType, <span class="keyword">class</span> DependentType&gt;</div>
-<div class="line"><a id="l02138" name="l02138"></a><span class="lineno"> 2138</span>std::string</div>
-<div class="foldopen" id="foldopen02139" data-start="{" data-end="}">
-<div class="line"><a id="l02139" name="l02139"></a><span class="lineno"><a class="line" href="classTeuchos_1_1TwoDColDependency.html#a44db2f27b28118ce3c0f6c6edc8d57cc"> 2139</a></span><a class="code hl_function" href="classTeuchos_1_1TwoDColDependency.html#a44db2f27b28118ce3c0f6c6edc8d57cc">TwoDColDependency&lt;DependeeType, DependentType&gt;::getTypeAttributeValue</a>()<span class="keyword"></span></div>
-<div class="line"><a id="l02140" name="l02140"></a><span class="lineno"> 2140</span><span class="keyword">const</span></div>
-<div class="line"><a id="l02141" name="l02141"></a><span class="lineno"> 2141</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l02142" name="l02142"></a><span class="lineno"> 2142</span>  <span class="keywordflow">return</span> <span class="stringliteral">&quot;TwoDColDependency(&quot;</span> +</div>
-<div class="line"><a id="l02143" name="l02143"></a><span class="lineno"> 2143</span>    <a class="code hl_function" href="classTeuchos_1_1TypeNameTraits.html#acd376f70f0fd37929269c42db3a0b641">TypeNameTraits&lt;DependeeType&gt;::name</a>() + <span class="stringliteral">&quot;, &quot;</span> +</div>
-<div class="line"><a id="l02144" name="l02144"></a><span class="lineno"> 2144</span>    <a class="code hl_function" href="classTeuchos_1_1TypeNameTraits.html#acd376f70f0fd37929269c42db3a0b641">TypeNameTraits&lt;DependentType&gt;::name</a>() +<span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><a id="l02145" name="l02145"></a><span class="lineno"> 2145</span>}</div>
+<div class="line"><a id="l02126" name="l02126"></a><span class="lineno"> 2126</span> </div>
+<div class="line"><a id="l02127" name="l02127"></a><span class="lineno"> 2127</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> DependeeType, <span class="keyword">class</span> DependentType&gt;</div>
+<div class="foldopen" id="foldopen02128" data-start="{" data-end="}">
+<div class="line"><a id="l02128" name="l02128"></a><span class="lineno"><a class="line" href="classTeuchos_1_1TwoDColDependency.html#a2e0cb06814b5d77e442c202d57dd7317"> 2128</a></span><a class="code hl_function" href="classTeuchos_1_1TwoDColDependency.html#a0cd16fc1cf7aa6f04b77146a15436aea">TwoDColDependency&lt;DependeeType, DependentType&gt;::TwoDColDependency</a>(</div>
+<div class="line"><a id="l02129" name="l02129"></a><span class="lineno"> 2129</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;const ParameterEntry&gt;</a> dependee,</div>
+<div class="line"><a id="l02130" name="l02130"></a><span class="lineno"> 2130</span>  <a class="code hl_typedef" href="classTeuchos_1_1Dependency.html#a394c48f8a76439c075e3b2acc76d0c13">Dependency::ParameterEntryList</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependents</a>,</div>
+<div class="line"><a id="l02131" name="l02131"></a><span class="lineno"> 2131</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP</a>&lt;<span class="keyword">const</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">SimpleFunctionObject&lt;DependeeType&gt;</a> &gt; <a class="code hl_class" href="classTeuchos_1_1RCP.html">func</a>):</div>
+<div class="line"><a id="l02132" name="l02132"></a><span class="lineno"> 2132</span>  <a class="code hl_class" href="classTeuchos_1_1TwoDArrayModifierDependency.html">TwoDArrayModifierDependency</a>&lt;<a class="code hl_class" href="classTeuchos_1_1RCP.html">DependeeType</a>, <a class="code hl_class" href="classTeuchos_1_1RCP.html">DependentType</a>&gt;(</div>
+<div class="line"><a id="l02133" name="l02133"></a><span class="lineno"> 2133</span>    dependee, <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependents</a>, <a class="code hl_class" href="classTeuchos_1_1RCP.html">func</a>)</div>
+<div class="line"><a id="l02134" name="l02134"></a><span class="lineno"> 2134</span>{</div>
+<div class="line"><a id="l02135" name="l02135"></a><span class="lineno"> 2135</span>  this-&gt;<a class="code hl_function" href="classTeuchos_1_1TwoDArrayModifierDependency.html#a7e5700fd4471719ff63b791b74c9a40e">validateDep</a>();</div>
+<div class="line"><a id="l02136" name="l02136"></a><span class="lineno"> 2136</span>}</div>
 </div>
-<div class="line"><a id="l02146" name="l02146"></a><span class="lineno"> 2146</span> </div>
-<div class="line"><a id="l02147" name="l02147"></a><span class="lineno"> 2147</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> DependeeType, <span class="keyword">class</span> DependentType&gt;</div>
-<div class="line"><a id="l02148" name="l02148"></a><span class="lineno"> 2148</span><span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen02149" data-start="{" data-end="}">
-<div class="line"><a id="l02149" name="l02149"></a><span class="lineno"><a class="line" href="classTeuchos_1_1TwoDColDependency.html#a6d234f245a0c9eb57389183a6187a27b"> 2149</a></span><a class="code hl_function" href="classTeuchos_1_1TwoDColDependency.html#a6d234f245a0c9eb57389183a6187a27b">TwoDColDependency&lt;DependeeType, DependentType&gt;::modifyArray</a>(</div>
-<div class="line"><a id="l02150" name="l02150"></a><span class="lineno"> 2150</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">DependeeType</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">newAmount</a>,</div>
-<div class="line"><a id="l02151" name="l02151"></a><span class="lineno"> 2151</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;ParameterEntry&gt;</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependentToModify</a>)</div>
-<div class="line"><a id="l02152" name="l02152"></a><span class="lineno"> 2152</span>{</div>
-<div class="line"><a id="l02153" name="l02153"></a><span class="lineno"> 2153</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">TwoDArray&lt;DependentType&gt;</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">originalArray</a> =</div>
-<div class="line"><a id="l02154" name="l02154"></a><span class="lineno"> 2154</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">any_cast&lt;TwoDArray&lt;DependentType&gt;</a> &gt;(<a class="code hl_class" href="classTeuchos_1_1RCP.html">dependentToModify</a>-&gt;getAny());</div>
-<div class="line"><a id="l02155" name="l02155"></a><span class="lineno"> 2155</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">originalArray</a>.resizeCols(<a class="code hl_class" href="classTeuchos_1_1RCP.html">newAmount</a>);</div>
-<div class="line"><a id="l02156" name="l02156"></a><span class="lineno"> 2156</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependentToModify</a>-&gt;setValue(<a class="code hl_class" href="classTeuchos_1_1RCP.html">originalArray</a>,</div>
-<div class="line"><a id="l02157" name="l02157"></a><span class="lineno"> 2157</span>    <span class="keyword">false</span>, <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependentToModify</a>-&gt;docString(), <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependentToModify</a>-&gt;validator());</div>
-<div class="line"><a id="l02158" name="l02158"></a><span class="lineno"> 2158</span>}</div>
+<div class="line"><a id="l02137" name="l02137"></a><span class="lineno"> 2137</span> </div>
+<div class="line"><a id="l02138" name="l02138"></a><span class="lineno"> 2138</span> </div>
+<div class="line"><a id="l02139" name="l02139"></a><span class="lineno"> 2139</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> DependeeType, <span class="keyword">class</span> DependentType&gt;</div>
+<div class="line"><a id="l02140" name="l02140"></a><span class="lineno"> 2140</span>std::string</div>
+<div class="foldopen" id="foldopen02141" data-start="{" data-end="}">
+<div class="line"><a id="l02141" name="l02141"></a><span class="lineno"><a class="line" href="classTeuchos_1_1TwoDColDependency.html#a44db2f27b28118ce3c0f6c6edc8d57cc"> 2141</a></span><a class="code hl_function" href="classTeuchos_1_1TwoDColDependency.html#a44db2f27b28118ce3c0f6c6edc8d57cc">TwoDColDependency&lt;DependeeType, DependentType&gt;::getTypeAttributeValue</a>()<span class="keyword"></span></div>
+<div class="line"><a id="l02142" name="l02142"></a><span class="lineno"> 2142</span><span class="keyword">const</span></div>
+<div class="line"><a id="l02143" name="l02143"></a><span class="lineno"> 2143</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l02144" name="l02144"></a><span class="lineno"> 2144</span>  <span class="keywordflow">return</span> <span class="stringliteral">&quot;TwoDColDependency(&quot;</span> +</div>
+<div class="line"><a id="l02145" name="l02145"></a><span class="lineno"> 2145</span>    <a class="code hl_function" href="classTeuchos_1_1TypeNameTraits.html#acd376f70f0fd37929269c42db3a0b641">TypeNameTraits&lt;DependeeType&gt;::name</a>() + <span class="stringliteral">&quot;, &quot;</span> +</div>
+<div class="line"><a id="l02146" name="l02146"></a><span class="lineno"> 2146</span>    <a class="code hl_function" href="classTeuchos_1_1TypeNameTraits.html#acd376f70f0fd37929269c42db3a0b641">TypeNameTraits&lt;DependentType&gt;::name</a>() +<span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><a id="l02147" name="l02147"></a><span class="lineno"> 2147</span>}</div>
 </div>
-<div class="line"><a id="l02159" name="l02159"></a><span class="lineno"> 2159</span> </div>
-<div class="line"><a id="l02160" name="l02160"></a><span class="lineno"> 2160</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> DependeeType, <span class="keyword">class</span> DependentType&gt;</div>
-<div class="line"><a id="l02161" name="l02161"></a><span class="lineno"> 2161</span>std::string</div>
-<div class="foldopen" id="foldopen02162" data-start="{" data-end="}">
-<div class="line"><a id="l02162" name="l02162"></a><span class="lineno"><a class="line" href="classTeuchos_1_1TwoDColDependency.html#add6f83291c013b9e75047316467995ad"> 2162</a></span><a class="code hl_function" href="classTeuchos_1_1TwoDColDependency.html#add6f83291c013b9e75047316467995ad">TwoDColDependency&lt;DependeeType, DependentType&gt;::getBadDependentValueErrorMessage</a>()<span class="keyword"> const</span>{</div>
-<div class="line"><a id="l02163" name="l02163"></a><span class="lineno"> 2163</span>  std::ostringstream os;</div>
-<div class="line"><a id="l02164" name="l02164"></a><span class="lineno"> 2164</span>  os &lt;&lt;</div>
-<div class="line"><a id="l02165" name="l02165"></a><span class="lineno"> 2165</span>    <span class="stringliteral">&quot;Ruh Roh Shaggy! Looks like a dependency tried to set the number of &quot;</span></div>
-<div class="line"><a id="l02166" name="l02166"></a><span class="lineno"> 2166</span>    <span class="stringliteral">&quot;cols in TwoDArray(s) to a negative number. Silly. You can&#39;t have &quot;</span></div>
-<div class="line"><a id="l02167" name="l02167"></a><span class="lineno"> 2167</span>    <span class="stringliteral">&quot;a TwoDArray with a negative number of cols!&quot;</span> &lt;&lt; std::endl &lt;&lt; std::endl &lt;&lt;</div>
-<div class="line"><a id="l02168" name="l02168"></a><span class="lineno"> 2168</span>    <span class="stringliteral">&quot;Error:&quot;</span> &lt;&lt; std::endl &lt;&lt;</div>
-<div class="line"><a id="l02169" name="l02169"></a><span class="lineno"> 2169</span>    <span class="stringliteral">&quot;An attempt was made to set the number of columns of a TwoDArrayArray to a negative &quot;</span></div>
-<div class="line"><a id="l02170" name="l02170"></a><span class="lineno"> 2170</span>    <span class="stringliteral">&quot;number by a TwoDColDependency&quot;</span> &lt;&lt; std::endl &lt;&lt; std::endl;</div>
-<div class="line"><a id="l02171" name="l02171"></a><span class="lineno"> 2171</span>  <span class="keywordflow">return</span> os.str();</div>
-<div class="line"><a id="l02172" name="l02172"></a><span class="lineno"> 2172</span>}</div>
+<div class="line"><a id="l02148" name="l02148"></a><span class="lineno"> 2148</span> </div>
+<div class="line"><a id="l02149" name="l02149"></a><span class="lineno"> 2149</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> DependeeType, <span class="keyword">class</span> DependentType&gt;</div>
+<div class="line"><a id="l02150" name="l02150"></a><span class="lineno"> 2150</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen02151" data-start="{" data-end="}">
+<div class="line"><a id="l02151" name="l02151"></a><span class="lineno"><a class="line" href="classTeuchos_1_1TwoDColDependency.html#a6d234f245a0c9eb57389183a6187a27b"> 2151</a></span><a class="code hl_function" href="classTeuchos_1_1TwoDColDependency.html#a6d234f245a0c9eb57389183a6187a27b">TwoDColDependency&lt;DependeeType, DependentType&gt;::modifyArray</a>(</div>
+<div class="line"><a id="l02152" name="l02152"></a><span class="lineno"> 2152</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">DependeeType</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">newAmount</a>,</div>
+<div class="line"><a id="l02153" name="l02153"></a><span class="lineno"> 2153</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;ParameterEntry&gt;</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependentToModify</a>)</div>
+<div class="line"><a id="l02154" name="l02154"></a><span class="lineno"> 2154</span>{</div>
+<div class="line"><a id="l02155" name="l02155"></a><span class="lineno"> 2155</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">TwoDArray&lt;DependentType&gt;</a> <a class="code hl_class" href="classTeuchos_1_1RCP.html">originalArray</a> =</div>
+<div class="line"><a id="l02156" name="l02156"></a><span class="lineno"> 2156</span>    <a class="code hl_class" href="classTeuchos_1_1RCP.html">any_cast&lt;TwoDArray&lt;DependentType&gt;</a> &gt;(<a class="code hl_class" href="classTeuchos_1_1RCP.html">dependentToModify</a>-&gt;getAny());</div>
+<div class="line"><a id="l02157" name="l02157"></a><span class="lineno"> 2157</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">originalArray</a>.resizeCols(<a class="code hl_class" href="classTeuchos_1_1RCP.html">newAmount</a>);</div>
+<div class="line"><a id="l02158" name="l02158"></a><span class="lineno"> 2158</span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependentToModify</a>-&gt;setValue(<a class="code hl_class" href="classTeuchos_1_1RCP.html">originalArray</a>,</div>
+<div class="line"><a id="l02159" name="l02159"></a><span class="lineno"> 2159</span>    <span class="keyword">false</span>, <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependentToModify</a>-&gt;docString(), <a class="code hl_class" href="classTeuchos_1_1RCP.html">dependentToModify</a>-&gt;validator());</div>
+<div class="line"><a id="l02160" name="l02160"></a><span class="lineno"> 2160</span>}</div>
 </div>
-<div class="line"><a id="l02173" name="l02173"></a><span class="lineno"> 2173</span> </div>
-<div class="line"><a id="l02179" name="l02179"></a><span class="lineno"> 2179</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> DependeeType, <span class="keyword">class</span> DependentType&gt;</div>
-<div class="foldopen" id="foldopen02180" data-start="{" data-end="};">
-<div class="line"><a id="l02180" name="l02180"></a><span class="lineno"><a class="line" href="classTeuchos_1_1DummyObjectGetter_3_01TwoDColDependency_3_01DependeeType_00_01DependentType_01_4_01_4.html"> 2180</a></span><span class="keyword">class </span><a class="code hl_class" href="classTeuchos_1_1DummyObjectGetter.html">DummyObjectGetter</a>&lt;<a class="code hl_class" href="classTeuchos_1_1TwoDColDependency.html">TwoDColDependency</a>&lt;<a class="code hl_class" href="classTeuchos_1_1RCP.html">DependeeType</a>, <a class="code hl_class" href="classTeuchos_1_1RCP.html">DependentType</a>&gt; &gt;{</div>
-<div class="line"><a id="l02181" name="l02181"></a><span class="lineno"> 2181</span> </div>
-<div class="line"><a id="l02182" name="l02182"></a><span class="lineno"> 2182</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l02161" name="l02161"></a><span class="lineno"> 2161</span> </div>
+<div class="line"><a id="l02162" name="l02162"></a><span class="lineno"> 2162</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> DependeeType, <span class="keyword">class</span> DependentType&gt;</div>
+<div class="line"><a id="l02163" name="l02163"></a><span class="lineno"> 2163</span>std::string</div>
+<div class="foldopen" id="foldopen02164" data-start="{" data-end="}">
+<div class="line"><a id="l02164" name="l02164"></a><span class="lineno"><a class="line" href="classTeuchos_1_1TwoDColDependency.html#add6f83291c013b9e75047316467995ad"> 2164</a></span><a class="code hl_function" href="classTeuchos_1_1TwoDColDependency.html#add6f83291c013b9e75047316467995ad">TwoDColDependency&lt;DependeeType, DependentType&gt;::getBadDependentValueErrorMessage</a>()<span class="keyword"> const</span>{</div>
+<div class="line"><a id="l02165" name="l02165"></a><span class="lineno"> 2165</span>  std::ostringstream os;</div>
+<div class="line"><a id="l02166" name="l02166"></a><span class="lineno"> 2166</span>  os &lt;&lt;</div>
+<div class="line"><a id="l02167" name="l02167"></a><span class="lineno"> 2167</span>    <span class="stringliteral">&quot;Ruh Roh Shaggy! Looks like a dependency tried to set the number of &quot;</span></div>
+<div class="line"><a id="l02168" name="l02168"></a><span class="lineno"> 2168</span>    <span class="stringliteral">&quot;cols in TwoDArray(s) to a negative number. Silly. You can&#39;t have &quot;</span></div>
+<div class="line"><a id="l02169" name="l02169"></a><span class="lineno"> 2169</span>    <span class="stringliteral">&quot;a TwoDArray with a negative number of cols!&quot;</span> &lt;&lt; std::endl &lt;&lt; std::endl &lt;&lt;</div>
+<div class="line"><a id="l02170" name="l02170"></a><span class="lineno"> 2170</span>    <span class="stringliteral">&quot;Error:&quot;</span> &lt;&lt; std::endl &lt;&lt;</div>
+<div class="line"><a id="l02171" name="l02171"></a><span class="lineno"> 2171</span>    <span class="stringliteral">&quot;An attempt was made to set the number of columns of a TwoDArrayArray to a negative &quot;</span></div>
+<div class="line"><a id="l02172" name="l02172"></a><span class="lineno"> 2172</span>    <span class="stringliteral">&quot;number by a TwoDColDependency&quot;</span> &lt;&lt; std::endl &lt;&lt; std::endl;</div>
+<div class="line"><a id="l02173" name="l02173"></a><span class="lineno"> 2173</span>  <span class="keywordflow">return</span> os.str();</div>
+<div class="line"><a id="l02174" name="l02174"></a><span class="lineno"> 2174</span>}</div>
+</div>
+<div class="line"><a id="l02175" name="l02175"></a><span class="lineno"> 2175</span> </div>
+<div class="line"><a id="l02181" name="l02181"></a><span class="lineno"> 2181</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> DependeeType, <span class="keyword">class</span> DependentType&gt;</div>
+<div class="foldopen" id="foldopen02182" data-start="{" data-end="};">
+<div class="line"><a id="l02182" name="l02182"></a><span class="lineno"><a class="line" href="classTeuchos_1_1DummyObjectGetter_3_01TwoDColDependency_3_01DependeeType_00_01DependentType_01_4_01_4.html"> 2182</a></span><span class="keyword">class </span><a class="code hl_class" href="classTeuchos_1_1DummyObjectGetter.html">DummyObjectGetter</a>&lt;<a class="code hl_class" href="classTeuchos_1_1TwoDColDependency.html">TwoDColDependency</a>&lt;<a class="code hl_class" href="classTeuchos_1_1RCP.html">DependeeType</a>, <a class="code hl_class" href="classTeuchos_1_1RCP.html">DependentType</a>&gt; &gt;{</div>
 <div class="line"><a id="l02183" name="l02183"></a><span class="lineno"> 2183</span> </div>
-<div class="line"><a id="l02186" name="l02186"></a><span class="lineno"> 2186</span> </div>
-<div class="line"><a id="l02190" name="l02190"></a><span class="lineno"> 2190</span>  <span class="keyword">static</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;TwoDColDependency&lt;DependeeType, DependentType&gt;</a> &gt;</div>
-<div class="line"><a id="l02191" name="l02191"></a><span class="lineno"> 2191</span>    <a class="code hl_function" href="classTeuchos_1_1DummyObjectGetter.html#a3f658421bb64cab3bb1d376fae900702">getDummyObject</a>();</div>
-<div class="line"><a id="l02192" name="l02192"></a><span class="lineno"> 2192</span> </div>
+<div class="line"><a id="l02184" name="l02184"></a><span class="lineno"> 2184</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l02185" name="l02185"></a><span class="lineno"> 2185</span> </div>
+<div class="line"><a id="l02188" name="l02188"></a><span class="lineno"> 2188</span> </div>
+<div class="line"><a id="l02192" name="l02192"></a><span class="lineno"> 2192</span>  <span class="keyword">static</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;TwoDColDependency&lt;DependeeType, DependentType&gt;</a> &gt;</div>
+<div class="line"><a id="l02193" name="l02193"></a><span class="lineno"> 2193</span>    <a class="code hl_function" href="classTeuchos_1_1DummyObjectGetter.html#a3f658421bb64cab3bb1d376fae900702">getDummyObject</a>();</div>
 <div class="line"><a id="l02194" name="l02194"></a><span class="lineno"> 2194</span> </div>
-<div class="line"><a id="l02195" name="l02195"></a><span class="lineno"> 2195</span>};</div>
-</div>
 <div class="line"><a id="l02196" name="l02196"></a><span class="lineno"> 2196</span> </div>
-<div class="line"><a id="l02197" name="l02197"></a><span class="lineno"> 2197</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> DependeeType, <span class="keyword">class</span> DependentType&gt;</div>
-<div class="line"><a id="l02198" name="l02198"></a><span class="lineno"> 2198</span><a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;TwoDColDependency&lt;DependeeType, DependentType&gt;</a> &gt;</div>
-<div class="foldopen" id="foldopen02199" data-start="{" data-end="}">
-<div class="line"><a id="l02199" name="l02199"></a><span class="lineno"><a class="line" href="classTeuchos_1_1DummyObjectGetter_3_01TwoDColDependency_3_01DependeeType_00_01DependentType_01_4_01_4.html#a50f66655cc65910d410168e59fee067f"> 2199</a></span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">DummyObjectGetter&lt;TwoDColDependency&lt;DependeeType, DependentType&gt;</a> &gt;::getDummyObject()</div>
-<div class="line"><a id="l02200" name="l02200"></a><span class="lineno"> 2200</span>{</div>
-<div class="line"><a id="l02201" name="l02201"></a><span class="lineno"> 2201</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceTeuchos.html#a39378f1892f1d484eb697574a8a8c5af">rcp</a>(</div>
-<div class="line"><a id="l02202" name="l02202"></a><span class="lineno"> 2202</span>    <span class="keyword">new</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">TwoDColDependency&lt;DependeeType, DependentType&gt;</a>(</div>
-<div class="line"><a id="l02203" name="l02203"></a><span class="lineno"> 2203</span>    <a class="code hl_function" href="namespaceTeuchos.html#a39378f1892f1d484eb697574a8a8c5af">rcp</a>(<span class="keyword">new</span> <a class="code hl_class" href="classTeuchos_1_1ParameterEntry.html">ParameterEntry</a>(<a class="code hl_struct" href="structTeuchos_1_1ScalarTraits.html">ScalarTraits&lt;DependeeType&gt;::zero</a>())),</div>
-<div class="line"><a id="l02204" name="l02204"></a><span class="lineno"> 2204</span>    <a class="code hl_function" href="namespaceTeuchos.html#a39378f1892f1d484eb697574a8a8c5af">rcp</a>(<span class="keyword">new</span> <a class="code hl_class" href="classTeuchos_1_1ParameterEntry.html">ParameterEntry</a>(<a class="code hl_class" href="classTeuchos_1_1RCP.html">TwoDArray&lt;DependentType&gt;</a>(1,1)))));</div>
-<div class="line"><a id="l02205" name="l02205"></a><span class="lineno"> 2205</span>}</div>
+<div class="line"><a id="l02197" name="l02197"></a><span class="lineno"> 2197</span>};</div>
 </div>
-<div class="line"><a id="l02206" name="l02206"></a><span class="lineno"> 2206</span> </div>
-<div class="line"><a id="l02207" name="l02207"></a><span class="lineno"> 2207</span> </div>
+<div class="line"><a id="l02198" name="l02198"></a><span class="lineno"> 2198</span> </div>
+<div class="line"><a id="l02199" name="l02199"></a><span class="lineno"> 2199</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> DependeeType, <span class="keyword">class</span> DependentType&gt;</div>
+<div class="line"><a id="l02200" name="l02200"></a><span class="lineno"> 2200</span><a class="code hl_class" href="classTeuchos_1_1RCP.html">RCP&lt;TwoDColDependency&lt;DependeeType, DependentType&gt;</a> &gt;</div>
+<div class="foldopen" id="foldopen02201" data-start="{" data-end="}">
+<div class="line"><a id="l02201" name="l02201"></a><span class="lineno"><a class="line" href="classTeuchos_1_1DummyObjectGetter_3_01TwoDColDependency_3_01DependeeType_00_01DependentType_01_4_01_4.html#a50f66655cc65910d410168e59fee067f"> 2201</a></span>  <a class="code hl_class" href="classTeuchos_1_1RCP.html">DummyObjectGetter&lt;TwoDColDependency&lt;DependeeType, DependentType&gt;</a> &gt;::getDummyObject()</div>
+<div class="line"><a id="l02202" name="l02202"></a><span class="lineno"> 2202</span>{</div>
+<div class="line"><a id="l02203" name="l02203"></a><span class="lineno"> 2203</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceTeuchos.html#a39378f1892f1d484eb697574a8a8c5af">rcp</a>(</div>
+<div class="line"><a id="l02204" name="l02204"></a><span class="lineno"> 2204</span>    <span class="keyword">new</span> <a class="code hl_class" href="classTeuchos_1_1RCP.html">TwoDColDependency&lt;DependeeType, DependentType&gt;</a>(</div>
+<div class="line"><a id="l02205" name="l02205"></a><span class="lineno"> 2205</span>    <a class="code hl_function" href="namespaceTeuchos.html#a39378f1892f1d484eb697574a8a8c5af">rcp</a>(<span class="keyword">new</span> <a class="code hl_class" href="classTeuchos_1_1ParameterEntry.html">ParameterEntry</a>(<a class="code hl_struct" href="structTeuchos_1_1ScalarTraits.html">ScalarTraits&lt;DependeeType&gt;::zero</a>())),</div>
+<div class="line"><a id="l02206" name="l02206"></a><span class="lineno"> 2206</span>    <a class="code hl_function" href="namespaceTeuchos.html#a39378f1892f1d484eb697574a8a8c5af">rcp</a>(<span class="keyword">new</span> <a class="code hl_class" href="classTeuchos_1_1ParameterEntry.html">ParameterEntry</a>(<a class="code hl_class" href="classTeuchos_1_1RCP.html">TwoDArray&lt;DependentType&gt;</a>(1,1)))));</div>
+<div class="line"><a id="l02207" name="l02207"></a><span class="lineno"> 2207</span>}</div>
+</div>
 <div class="line"><a id="l02208" name="l02208"></a><span class="lineno"> 2208</span> </div>
-<div class="line"><a id="l02209" name="l02209"></a><span class="lineno"> 2209</span>} <span class="comment">//namespace Teuchos</span></div>
-<div class="line"><a id="l02210" name="l02210"></a><span class="lineno"> 2210</span><span class="preprocessor">#endif </span><span class="comment">//TEUCHOS_STANDARDDEPENDCIES_HPP_</span></div>
+<div class="line"><a id="l02209" name="l02209"></a><span class="lineno"> 2209</span> </div>
+<div class="line"><a id="l02210" name="l02210"></a><span class="lineno"> 2210</span> </div>
+<div class="line"><a id="l02211" name="l02211"></a><span class="lineno"> 2211</span>} <span class="comment">//namespace Teuchos</span></div>
+<div class="line"><a id="l02212" name="l02212"></a><span class="lineno"> 2212</span><span class="preprocessor">#endif </span><span class="comment">//TEUCHOS_STANDARDDEPENDCIES_HPP_</span></div>
 <div class="ttc" id="aTeuchos__OrdinalTraits_8hpp_html"><div class="ttname"><a href="Teuchos__OrdinalTraits_8hpp.html">Teuchos_OrdinalTraits.hpp</a></div><div class="ttdoc">Defines basic traits for the ordinal field type.</div></div>
 <div class="ttc" id="aTeuchos__ScalarTraits_8hpp_html"><div class="ttname"><a href="Teuchos__ScalarTraits_8hpp.html">Teuchos_ScalarTraits.hpp</a></div><div class="ttdoc">Defines basic traits for the scalar field type.</div></div>
 <div class="ttc" id="aTeuchos__StandardConditions_8hpp_html"><div class="ttname"><a href="Teuchos__StandardConditions_8hpp.html">Teuchos_StandardConditions.hpp</a></div><div class="ttdoc">Standard Conditions to be used.</div></div>
@@ -1539,20 +1541,20 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclassTeuchos_1_1StringValidatorDependency_html_affd856ff1a141e36e400d04d39ded1f3"><div class="ttname"><a href="classTeuchos_1_1StringValidatorDependency.html#affd856ff1a141e36e400d04d39ded1f3">Teuchos::StringValidatorDependency::ValueToValidatorMap</a></div><div class="ttdeci">std::map&lt; std::string, RCP&lt; const ParameterEntryValidator &gt; &gt; ValueToValidatorMap</div><div class="ttdoc">Conveniece typedef.</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__StandardDependencies_8hpp_source.html#l01224">Teuchos_StandardDependencies.hpp:1224</a></div></div>
 <div class="ttc" id="aclassTeuchos_1_1StringVisualDependency_html"><div class="ttname"><a href="classTeuchos_1_1StringVisualDependency.html">Teuchos::StringVisualDependency</a></div><div class="ttdoc">A string visual dependency says the following about the relationship between two elements in a Parame...</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__StandardDependencies_8hpp_source.html#l00210">Teuchos_StandardDependencies.hpp:210</a></div></div>
 <div class="ttc" id="aclassTeuchos_1_1StringVisualDependency_html_a01803dab637debb0987f0fe3d18fd8da"><div class="ttname"><a href="classTeuchos_1_1StringVisualDependency.html#a01803dab637debb0987f0fe3d18fd8da">Teuchos::StringVisualDependency::ValueList</a></div><div class="ttdeci">Array&lt; std::string &gt; ValueList</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__StandardDependencies_8hpp_source.html#l00220">Teuchos_StandardDependencies.hpp:220</a></div></div>
-<div class="ttc" id="aclassTeuchos_1_1TwoDArrayModifierDependency_html"><div class="ttname"><a href="classTeuchos_1_1TwoDArrayModifierDependency.html">Teuchos::TwoDArrayModifierDependency</a></div><div class="ttdoc">A dependency in which some attribute of a TwoDArray in a parameter depends on the value of another pa...</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__StandardDependencies_8hpp_source.html#l01799">Teuchos_StandardDependencies.hpp:1801</a></div></div>
-<div class="ttc" id="aclassTeuchos_1_1TwoDArrayModifierDependency_html_a7e5700fd4471719ff63b791b74c9a40e"><div class="ttname"><a href="classTeuchos_1_1TwoDArrayModifierDependency.html#a7e5700fd4471719ff63b791b74c9a40e">Teuchos::TwoDArrayModifierDependency::validateDep</a></div><div class="ttdeci">virtual void validateDep() const</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__StandardDependencies_8hpp_source.html#l01860">Teuchos_StandardDependencies.hpp:1860</a></div></div>
-<div class="ttc" id="aclassTeuchos_1_1TwoDArrayModifierDependency_html_a99d43f0a4e6955565dd935d08f885071"><div class="ttname"><a href="classTeuchos_1_1TwoDArrayModifierDependency.html#a99d43f0a4e6955565dd935d08f885071">Teuchos::TwoDArrayModifierDependency::TwoDArrayModifierDependency</a></div><div class="ttdeci">TwoDArrayModifierDependency(RCP&lt; const ParameterEntry &gt; dependee, Dependency::ParameterEntryList dependents, RCP&lt; const SimpleFunctionObject&lt; DependeeType &gt; &gt; func=null)</div><div class="ttdoc">Constructs a TwoDArrayModifierDependency.</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__StandardDependencies_8hpp_source.html#l01835">Teuchos_StandardDependencies.hpp:1835</a></div></div>
-<div class="ttc" id="aclassTeuchos_1_1TwoDArrayModifierDependency_html_ae7bf4be938bf8ffcde8b663c6c312484"><div class="ttname"><a href="classTeuchos_1_1TwoDArrayModifierDependency.html#ae7bf4be938bf8ffcde8b663c6c312484">Teuchos::TwoDArrayModifierDependency::TwoDArrayModifierDependency</a></div><div class="ttdeci">TwoDArrayModifierDependency(RCP&lt; const ParameterEntry &gt; dependee, RCP&lt; ParameterEntry &gt; dependent, RCP&lt; const SimpleFunctionObject&lt; DependeeType &gt; &gt; func=null)</div><div class="ttdoc">Constructs a TwoDArrayModifierDependency.</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__StandardDependencies_8hpp_source.html#l01816">Teuchos_StandardDependencies.hpp:1816</a></div></div>
-<div class="ttc" id="aclassTeuchos_1_1TwoDColDependency_html"><div class="ttname"><a href="classTeuchos_1_1TwoDColDependency.html">Teuchos::TwoDColDependency</a></div><div class="ttdoc">A dependency in which the number of rows in a parameter with a TwoDArray depends on the value of anot...</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__StandardDependencies_8hpp_source.html#l02053">Teuchos_StandardDependencies.hpp:2055</a></div></div>
-<div class="ttc" id="aclassTeuchos_1_1TwoDColDependency_html_a0cd16fc1cf7aa6f04b77146a15436aea"><div class="ttname"><a href="classTeuchos_1_1TwoDColDependency.html#a0cd16fc1cf7aa6f04b77146a15436aea">Teuchos::TwoDColDependency::TwoDColDependency</a></div><div class="ttdeci">TwoDColDependency(RCP&lt; const ParameterEntry &gt; dependee, RCP&lt; ParameterEntry &gt; dependent, RCP&lt; const SimpleFunctionObject&lt; DependeeType &gt; &gt; func=null)</div><div class="ttdoc">Constructs a TwoDColDependency.</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__StandardDependencies_8hpp_source.html#l02115">Teuchos_StandardDependencies.hpp:2115</a></div></div>
-<div class="ttc" id="aclassTeuchos_1_1TwoDColDependency_html_a44db2f27b28118ce3c0f6c6edc8d57cc"><div class="ttname"><a href="classTeuchos_1_1TwoDColDependency.html#a44db2f27b28118ce3c0f6c6edc8d57cc">Teuchos::TwoDColDependency::getTypeAttributeValue</a></div><div class="ttdeci">std::string getTypeAttributeValue() const</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__StandardDependencies_8hpp_source.html#l02139">Teuchos_StandardDependencies.hpp:2139</a></div></div>
-<div class="ttc" id="aclassTeuchos_1_1TwoDColDependency_html_a6d234f245a0c9eb57389183a6187a27b"><div class="ttname"><a href="classTeuchos_1_1TwoDColDependency.html#a6d234f245a0c9eb57389183a6187a27b">Teuchos::TwoDColDependency::modifyArray</a></div><div class="ttdeci">void modifyArray(DependeeType newAmount, RCP&lt; ParameterEntry &gt; dependentToModify)</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__StandardDependencies_8hpp_source.html#l02149">Teuchos_StandardDependencies.hpp:2149</a></div></div>
-<div class="ttc" id="aclassTeuchos_1_1TwoDColDependency_html_add6f83291c013b9e75047316467995ad"><div class="ttname"><a href="classTeuchos_1_1TwoDColDependency.html#add6f83291c013b9e75047316467995ad">Teuchos::TwoDColDependency::getBadDependentValueErrorMessage</a></div><div class="ttdeci">std::string getBadDependentValueErrorMessage() const</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__StandardDependencies_8hpp_source.html#l02162">Teuchos_StandardDependencies.hpp:2162</a></div></div>
-<div class="ttc" id="aclassTeuchos_1_1TwoDRowDependency_html"><div class="ttname"><a href="classTeuchos_1_1TwoDRowDependency.html">Teuchos::TwoDRowDependency</a></div><div class="ttdoc">A dependency in which the number of rows in a parameter with a TwoDArray depends on the value of anot...</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__StandardDependencies_8hpp_source.html#l01890">Teuchos_StandardDependencies.hpp:1892</a></div></div>
-<div class="ttc" id="aclassTeuchos_1_1TwoDRowDependency_html_a023c063097e5af33039ce8323f3ea422"><div class="ttname"><a href="classTeuchos_1_1TwoDRowDependency.html#a023c063097e5af33039ce8323f3ea422">Teuchos::TwoDRowDependency::modifyArray</a></div><div class="ttdeci">void modifyArray(DependeeType newAmount, RCP&lt; ParameterEntry &gt; dependentToModify)</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__StandardDependencies_8hpp_source.html#l01986">Teuchos_StandardDependencies.hpp:1986</a></div></div>
-<div class="ttc" id="aclassTeuchos_1_1TwoDRowDependency_html_a3bfaac4d1691c89630c3d48372d4b71d"><div class="ttname"><a href="classTeuchos_1_1TwoDRowDependency.html#a3bfaac4d1691c89630c3d48372d4b71d">Teuchos::TwoDRowDependency::getBadDependentValueErrorMessage</a></div><div class="ttdeci">std::string getBadDependentValueErrorMessage() const</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__StandardDependencies_8hpp_source.html#l01999">Teuchos_StandardDependencies.hpp:1999</a></div></div>
-<div class="ttc" id="aclassTeuchos_1_1TwoDRowDependency_html_aad51af1e95616a271abc620f1232c63d"><div class="ttname"><a href="classTeuchos_1_1TwoDRowDependency.html#aad51af1e95616a271abc620f1232c63d">Teuchos::TwoDRowDependency::TwoDRowDependency</a></div><div class="ttdeci">TwoDRowDependency(RCP&lt; const ParameterEntry &gt; dependee, RCP&lt; ParameterEntry &gt; dependent, RCP&lt; const SimpleFunctionObject&lt; DependeeType &gt; &gt; func=null)</div><div class="ttdoc">Constructs a TwoDRowDependency.</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__StandardDependencies_8hpp_source.html#l01952">Teuchos_StandardDependencies.hpp:1952</a></div></div>
-<div class="ttc" id="aclassTeuchos_1_1TwoDRowDependency_html_ac1449cf9eaeb41fb566e507e5a6bbdf5"><div class="ttname"><a href="classTeuchos_1_1TwoDRowDependency.html#ac1449cf9eaeb41fb566e507e5a6bbdf5">Teuchos::TwoDRowDependency::getTypeAttributeValue</a></div><div class="ttdeci">std::string getTypeAttributeValue() const</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__StandardDependencies_8hpp_source.html#l01976">Teuchos_StandardDependencies.hpp:1976</a></div></div>
+<div class="ttc" id="aclassTeuchos_1_1TwoDArrayModifierDependency_html"><div class="ttname"><a href="classTeuchos_1_1TwoDArrayModifierDependency.html">Teuchos::TwoDArrayModifierDependency</a></div><div class="ttdoc">A dependency in which some attribute of a TwoDArray in a parameter depends on the value of another pa...</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__StandardDependencies_8hpp_source.html#l01801">Teuchos_StandardDependencies.hpp:1803</a></div></div>
+<div class="ttc" id="aclassTeuchos_1_1TwoDArrayModifierDependency_html_a7e5700fd4471719ff63b791b74c9a40e"><div class="ttname"><a href="classTeuchos_1_1TwoDArrayModifierDependency.html#a7e5700fd4471719ff63b791b74c9a40e">Teuchos::TwoDArrayModifierDependency::validateDep</a></div><div class="ttdeci">virtual void validateDep() const</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__StandardDependencies_8hpp_source.html#l01862">Teuchos_StandardDependencies.hpp:1862</a></div></div>
+<div class="ttc" id="aclassTeuchos_1_1TwoDArrayModifierDependency_html_a99d43f0a4e6955565dd935d08f885071"><div class="ttname"><a href="classTeuchos_1_1TwoDArrayModifierDependency.html#a99d43f0a4e6955565dd935d08f885071">Teuchos::TwoDArrayModifierDependency::TwoDArrayModifierDependency</a></div><div class="ttdeci">TwoDArrayModifierDependency(RCP&lt; const ParameterEntry &gt; dependee, Dependency::ParameterEntryList dependents, RCP&lt; const SimpleFunctionObject&lt; DependeeType &gt; &gt; func=null)</div><div class="ttdoc">Constructs a TwoDArrayModifierDependency.</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__StandardDependencies_8hpp_source.html#l01837">Teuchos_StandardDependencies.hpp:1837</a></div></div>
+<div class="ttc" id="aclassTeuchos_1_1TwoDArrayModifierDependency_html_ae7bf4be938bf8ffcde8b663c6c312484"><div class="ttname"><a href="classTeuchos_1_1TwoDArrayModifierDependency.html#ae7bf4be938bf8ffcde8b663c6c312484">Teuchos::TwoDArrayModifierDependency::TwoDArrayModifierDependency</a></div><div class="ttdeci">TwoDArrayModifierDependency(RCP&lt; const ParameterEntry &gt; dependee, RCP&lt; ParameterEntry &gt; dependent, RCP&lt; const SimpleFunctionObject&lt; DependeeType &gt; &gt; func=null)</div><div class="ttdoc">Constructs a TwoDArrayModifierDependency.</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__StandardDependencies_8hpp_source.html#l01818">Teuchos_StandardDependencies.hpp:1818</a></div></div>
+<div class="ttc" id="aclassTeuchos_1_1TwoDColDependency_html"><div class="ttname"><a href="classTeuchos_1_1TwoDColDependency.html">Teuchos::TwoDColDependency</a></div><div class="ttdoc">A dependency in which the number of rows in a parameter with a TwoDArray depends on the value of anot...</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__StandardDependencies_8hpp_source.html#l02055">Teuchos_StandardDependencies.hpp:2057</a></div></div>
+<div class="ttc" id="aclassTeuchos_1_1TwoDColDependency_html_a0cd16fc1cf7aa6f04b77146a15436aea"><div class="ttname"><a href="classTeuchos_1_1TwoDColDependency.html#a0cd16fc1cf7aa6f04b77146a15436aea">Teuchos::TwoDColDependency::TwoDColDependency</a></div><div class="ttdeci">TwoDColDependency(RCP&lt; const ParameterEntry &gt; dependee, RCP&lt; ParameterEntry &gt; dependent, RCP&lt; const SimpleFunctionObject&lt; DependeeType &gt; &gt; func=null)</div><div class="ttdoc">Constructs a TwoDColDependency.</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__StandardDependencies_8hpp_source.html#l02117">Teuchos_StandardDependencies.hpp:2117</a></div></div>
+<div class="ttc" id="aclassTeuchos_1_1TwoDColDependency_html_a44db2f27b28118ce3c0f6c6edc8d57cc"><div class="ttname"><a href="classTeuchos_1_1TwoDColDependency.html#a44db2f27b28118ce3c0f6c6edc8d57cc">Teuchos::TwoDColDependency::getTypeAttributeValue</a></div><div class="ttdeci">std::string getTypeAttributeValue() const</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__StandardDependencies_8hpp_source.html#l02141">Teuchos_StandardDependencies.hpp:2141</a></div></div>
+<div class="ttc" id="aclassTeuchos_1_1TwoDColDependency_html_a6d234f245a0c9eb57389183a6187a27b"><div class="ttname"><a href="classTeuchos_1_1TwoDColDependency.html#a6d234f245a0c9eb57389183a6187a27b">Teuchos::TwoDColDependency::modifyArray</a></div><div class="ttdeci">void modifyArray(DependeeType newAmount, RCP&lt; ParameterEntry &gt; dependentToModify)</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__StandardDependencies_8hpp_source.html#l02151">Teuchos_StandardDependencies.hpp:2151</a></div></div>
+<div class="ttc" id="aclassTeuchos_1_1TwoDColDependency_html_add6f83291c013b9e75047316467995ad"><div class="ttname"><a href="classTeuchos_1_1TwoDColDependency.html#add6f83291c013b9e75047316467995ad">Teuchos::TwoDColDependency::getBadDependentValueErrorMessage</a></div><div class="ttdeci">std::string getBadDependentValueErrorMessage() const</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__StandardDependencies_8hpp_source.html#l02164">Teuchos_StandardDependencies.hpp:2164</a></div></div>
+<div class="ttc" id="aclassTeuchos_1_1TwoDRowDependency_html"><div class="ttname"><a href="classTeuchos_1_1TwoDRowDependency.html">Teuchos::TwoDRowDependency</a></div><div class="ttdoc">A dependency in which the number of rows in a parameter with a TwoDArray depends on the value of anot...</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__StandardDependencies_8hpp_source.html#l01892">Teuchos_StandardDependencies.hpp:1894</a></div></div>
+<div class="ttc" id="aclassTeuchos_1_1TwoDRowDependency_html_a023c063097e5af33039ce8323f3ea422"><div class="ttname"><a href="classTeuchos_1_1TwoDRowDependency.html#a023c063097e5af33039ce8323f3ea422">Teuchos::TwoDRowDependency::modifyArray</a></div><div class="ttdeci">void modifyArray(DependeeType newAmount, RCP&lt; ParameterEntry &gt; dependentToModify)</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__StandardDependencies_8hpp_source.html#l01988">Teuchos_StandardDependencies.hpp:1988</a></div></div>
+<div class="ttc" id="aclassTeuchos_1_1TwoDRowDependency_html_a3bfaac4d1691c89630c3d48372d4b71d"><div class="ttname"><a href="classTeuchos_1_1TwoDRowDependency.html#a3bfaac4d1691c89630c3d48372d4b71d">Teuchos::TwoDRowDependency::getBadDependentValueErrorMessage</a></div><div class="ttdeci">std::string getBadDependentValueErrorMessage() const</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__StandardDependencies_8hpp_source.html#l02001">Teuchos_StandardDependencies.hpp:2001</a></div></div>
+<div class="ttc" id="aclassTeuchos_1_1TwoDRowDependency_html_aad51af1e95616a271abc620f1232c63d"><div class="ttname"><a href="classTeuchos_1_1TwoDRowDependency.html#aad51af1e95616a271abc620f1232c63d">Teuchos::TwoDRowDependency::TwoDRowDependency</a></div><div class="ttdeci">TwoDRowDependency(RCP&lt; const ParameterEntry &gt; dependee, RCP&lt; ParameterEntry &gt; dependent, RCP&lt; const SimpleFunctionObject&lt; DependeeType &gt; &gt; func=null)</div><div class="ttdoc">Constructs a TwoDRowDependency.</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__StandardDependencies_8hpp_source.html#l01954">Teuchos_StandardDependencies.hpp:1954</a></div></div>
+<div class="ttc" id="aclassTeuchos_1_1TwoDRowDependency_html_ac1449cf9eaeb41fb566e507e5a6bbdf5"><div class="ttname"><a href="classTeuchos_1_1TwoDRowDependency.html#ac1449cf9eaeb41fb566e507e5a6bbdf5">Teuchos::TwoDRowDependency::getTypeAttributeValue</a></div><div class="ttdeci">std::string getTypeAttributeValue() const</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__StandardDependencies_8hpp_source.html#l01978">Teuchos_StandardDependencies.hpp:1978</a></div></div>
 <div class="ttc" id="aclassTeuchos_1_1TypeNameTraits_html"><div class="ttname"><a href="classTeuchos_1_1TypeNameTraits.html">Teuchos::TypeNameTraits</a></div><div class="ttdoc">Default traits class that just returns typeid(T).name().</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__TypeNameTraits_8hpp_source.html#l00053">Teuchos_TypeNameTraits.hpp:53</a></div></div>
 <div class="ttc" id="aclassTeuchos_1_1TypeNameTraits_html_acd376f70f0fd37929269c42db3a0b641"><div class="ttname"><a href="classTeuchos_1_1TypeNameTraits.html#acd376f70f0fd37929269c42db3a0b641">Teuchos::TypeNameTraits::name</a></div><div class="ttdeci">static std::string name()</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__TypeNameTraits_8hpp_source.html#l00056">Teuchos_TypeNameTraits.hpp:56</a></div></div>
 <div class="ttc" id="aclassTeuchos_1_1ValidatorDependency_html"><div class="ttname"><a href="classTeuchos_1_1ValidatorDependency.html">Teuchos::ValidatorDependency</a></div><div class="ttdoc">An abstract base class for all validator dependencies.</div><div class="ttdef"><b>Definition</b> <a href="Teuchos__StandardDependencies_8hpp_source.html#l00158">Teuchos_StandardDependencies.hpp:158</a></div></div>

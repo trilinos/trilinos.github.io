@@ -1,7 +1,7 @@
 var classMueLu_1_1DistanceLaplacian_1_1VectorDropFunctor =
 [
     [ "matrix_type", "classMueLu_1_1DistanceLaplacian_1_1VectorDropFunctor.html#a4b4e58b68df02dccabd7f87e8431d473", null ],
-    [ "local_matrix_type", "classMueLu_1_1DistanceLaplacian_1_1VectorDropFunctor.html#a7fbcb10297e1452872d2b4c91aab735f", null ],
+    [ "local_matrix_type", "classMueLu_1_1DistanceLaplacian_1_1VectorDropFunctor.html#ac61d8dc182ec8388d27469591b493d3c", null ],
     [ "scalar_type", "classMueLu_1_1DistanceLaplacian_1_1VectorDropFunctor.html#aabb997898e8086a2dd8c859393833946", null ],
     [ "local_ordinal_type", "classMueLu_1_1DistanceLaplacian_1_1VectorDropFunctor.html#a0a8cee2c551f37cdc8d9e131fe3d1678", null ],
     [ "memory_space", "classMueLu_1_1DistanceLaplacian_1_1VectorDropFunctor.html#a5f828d9923b4ca3786b52ceeac6471e7", null ],

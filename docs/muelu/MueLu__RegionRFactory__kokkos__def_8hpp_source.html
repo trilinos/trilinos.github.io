@@ -274,7 +274,7 @@ $(document).ready(function(){initNavTree('MueLu__RegionRFactory__kokkos__def_8hp
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            RCP&lt;Matrix&gt;&amp; R,</div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            RCP&lt;Xpetra::MultiVector&lt;<span class="keyword">typename</span> Teuchos::ScalarTraits&lt;Scalar&gt;::coordinateType, <a class="code hl_typedef" href="MueLu__UseDefaultTypes_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="code hl_typedef" href="MueLu__UseDefaultTypes_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="code hl_typedef" href="MueLu__UseDefaultTypes_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a>&gt; &gt;&amp; coarseCoordinates,</div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>            Teuchos::Array&lt;LocalOrdinal&gt;&amp; lCoarseNodesPerDim)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>  <span class="keyword">using </span>local_matrix_type = <span class="keyword">typename</span> CrsMatrix::local_matrix_type;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>  <span class="keyword">using </span>local_matrix_type = <span class="keyword">typename</span> CrsMatrix::local_matrix_device_type;</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>  <span class="keyword">using </span>local_graph_type  = <span class="keyword">typename</span> local_matrix_type::staticcrsgraph_type;</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>  <span class="keyword">using </span>row_map_type      = <span class="keyword">typename</span> local_matrix_type::row_map_type::non_const_type;</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>  <span class="keyword">using </span>entries_type      = <span class="keyword">typename</span> local_matrix_type::index_type::non_const_type;</div>
@@ -328,8 +328,8 @@ $(document).ready(function(){initNavTree('MueLu__RegionRFactory__kokkos__def_8hp
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>                                                                               numDimensions);</div>
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>  <span class="comment">// Get device views of coordinates</span></div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>  <span class="keyword">auto</span> fineCoordsView   = fineCoordinates-&gt;getLocalViewDevice(Xpetra::Access::ReadOnly);</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>  <span class="keyword">auto</span> coarseCoordsView = coarseCoordinates-&gt;getLocalViewDevice(Xpetra::Access::OverwriteAll);</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>  <span class="keyword">auto</span> fineCoordsView   = fineCoordinates-&gt;getLocalViewDevice(Tpetra::Access::ReadOnly);</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>  <span class="keyword">auto</span> coarseCoordsView = coarseCoordinates-&gt;getLocalViewDevice(Tpetra::Access::OverwriteAll);</div>
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span> </div>
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>  Array&lt;ArrayRCP&lt;const real_type&gt; &gt; fineCoordData(numDimensions);</div>
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>  Array&lt;ArrayRCP&lt;real_type&gt; &gt; coarseCoordData(numDimensions);</div>
