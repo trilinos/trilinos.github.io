@@ -1,10 +1,12 @@
 var NAVTREEINDEX35 =
 {
+"faq.html":[8],
+"faq.html#Questions":[8,0],
 "faq.html#faq1":[8,1],
 "faq.html#faq2":[8,2],
 "files.html":[11,0],
-"functions.html":[10,3,0],
 "functions.html":[10,3,0,0],
+"functions.html":[10,3,0],
 "functions_b.html":[10,3,0,1],
 "functions_c.html":[10,3,0,2],
 "functions_d.html":[10,3,0,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX35 =
 "namespaceXpetra.html#ae1fb9ac173d6fab874d70c7daf2449db":[9,0,0,199],
 "namespaceXpetra.html#ae25cdcc07faa0a480e047076ec901af9":[9,0,0,229],
 "namespaceXpetra.html#ae3176de61ab520fc477292ee29a5e385":[9,0,0,188],
-"namespaceXpetra.html#ae398e5da3ae17c66fac21ef47df51c44":[9,0,0,182],
-"namespaceXpetra.html#ae4158557b035b0d1b6e2fd00cb7eb428":[9,0,0,277],
-"namespaceXpetra.html#ae5477c7a805e07ddb877ea5883ce7aff":[9,0,0,210]
+"namespaceXpetra.html#ae398e5da3ae17c66fac21ef47df51c44":[9,0,0,182]
 };

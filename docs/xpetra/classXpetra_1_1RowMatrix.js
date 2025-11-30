@@ -4,6 +4,7 @@ var classXpetra_1_1RowMatrix =
     [ "local_ordinal_type", "classXpetra_1_1RowMatrix.html#ac8dca7b248681a1f86a51a19618e3213", null ],
     [ "global_ordinal_type", "classXpetra_1_1RowMatrix.html#a51384f0791baa825ef4d4c8761897c33", null ],
     [ "node_type", "classXpetra_1_1RowMatrix.html#ac523636e7d5f8c7ea06b707e9208691d", null ],
+    [ "impl_scalar_type", "classXpetra_1_1RowMatrix.html#ac8690019dc0c7546664c6aada90c3205", null ],
     [ "~RowMatrix", "classXpetra_1_1RowMatrix.html#a71869c72f820ae166ffd3033940c0781", null ],
     [ "getRowMap", "classXpetra_1_1RowMatrix.html#a4f724aeb6b657741a2ccf8913c6b1d52", null ],
     [ "getColMap", "classXpetra_1_1RowMatrix.html#a13b62a1bd2d9c6cb696cff0d69d03baa", null ],

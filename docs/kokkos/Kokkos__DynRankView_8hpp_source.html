@@ -508,7 +508,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span><span class="comment">// Inherit privately from View, this way we don&#39;t import anything funky</span></div>
 <div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span><span class="comment">// for example the rank member vs the rank() function of DynRankView</span></div>
 <div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> DataType, <span class="keyword">class</span>... Properties&gt;</div>
-<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span><span class="keyword">class </span>DynRankView : <span class="keyword">private</span> <a class="code hl_variableRef" href="../../../epetra/doc/html/Epetra__DataAccess_8h.html#ad1a985e79f94ad63030815a0d7d90928a688fad5d6c4f06f049549c2313e93cba">View</a>&lt;DataType*******, Properties...&gt; {</div>
+<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span><span class="keyword">class </span>DynRankView : <span class="keyword">private</span> View&lt;DataType*******, Properties...&gt; {</div>
 <div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>  <span class="keyword">static_assert</span>(!std::is_array_v&lt;DataType&gt; &amp;&amp; !std::is_pointer_v&lt;DataType&gt;,</div>
 <div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>                <span class="stringliteral">&quot;Cannot template DynRankView with array or pointer datatype - &quot;</span></div>
 <div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>                <span class="stringliteral">&quot;must be pod&quot;</span>);</div>
@@ -524,7 +524,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span>  <span class="keyword">using </span>drvtraits = ViewTraits&lt;DataType, Properties...&gt;;</div>
 <div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span> </div>
-<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span>  <span class="keyword">using </span>view_type = <a class="code hl_variableRef" href="../../../epetra/doc/html/Epetra__DataAccess_8h.html#ad1a985e79f94ad63030815a0d7d90928a688fad5d6c4f06f049549c2313e93cba">View</a>&lt;DataType*******, Properties...&gt;;</div>
+<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span>  <span class="keyword">using </span>view_type = View&lt;DataType*******, Properties...&gt;;</div>
 <div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span> </div>
 <div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span> <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span><span class="preprocessor">#ifdef KOKKOS_ENABLE_IMPL_VIEW_LEGACY</span></div>
@@ -945,7 +945,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00871" name="l00871"></a><span class="lineno">  871</span><span class="preprocessor">#else</span></div>
 <div class="line"><a id="l00872" name="l00872"></a><span class="lineno">  872</span>  <span class="keyword">template</span> &lt;<span class="keyword">class </span>RT, <span class="keyword">class</span>... RP&gt;</div>
 <div class="line"><a id="l00873" name="l00873"></a><span class="lineno">  873</span>  KOKKOS_FUNCTION DynRankView(<span class="keyword">const</span> View&lt;RT, RP...&gt;&amp; rhs, <span class="keywordtype">size_t</span> new_rank) {</div>
-<div class="line"><a id="l00874" name="l00874"></a><span class="lineno">  874</span>    <span class="keyword">using </span>SrcTraits = <span class="keyword">typename</span> <a class="code hl_variableRef" href="../../../epetra/doc/html/Epetra__DataAccess_8h.html#ad1a985e79f94ad63030815a0d7d90928a688fad5d6c4f06f049549c2313e93cba">View</a>&lt;RT, RP...&gt;::traits;</div>
+<div class="line"><a id="l00874" name="l00874"></a><span class="lineno">  874</span>    <span class="keyword">using </span>SrcTraits = <span class="keyword">typename</span> View&lt;RT, RP...&gt;::traits;</div>
 <div class="line"><a id="l00875" name="l00875"></a><span class="lineno">  875</span>    <span class="keyword">using </span>Mapping =</div>
 <div class="line"><a id="l00876" name="l00876"></a><span class="lineno">  876</span>        Kokkos::Impl::ViewMapping&lt;traits, SrcTraits,</div>
 <div class="line"><a id="l00877" name="l00877"></a><span class="lineno">  877</span>                                  <a class="code hl_struct" href="structKokkos_1_1Impl_1_1ViewToDynRankViewTag.html">Kokkos::Impl::ViewToDynRankViewTag</a>&gt;;</div>
@@ -961,7 +961,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00887" name="l00887"></a><span class="lineno">  887</span> </div>
 <div class="line"><a id="l00888" name="l00888"></a><span class="lineno">  888</span>  <span class="keyword">template</span> &lt;<span class="keyword">class </span>RT, <span class="keyword">class</span>... RP&gt;</div>
 <div class="line"><a id="l00889" name="l00889"></a><span class="lineno">  889</span>  KOKKOS_FUNCTION DynRankView&amp; operator=(<span class="keyword">const</span> View&lt;RT, RP...&gt;&amp; rhs) {</div>
-<div class="line"><a id="l00890" name="l00890"></a><span class="lineno">  890</span>    <span class="keyword">using </span>SrcTraits = <span class="keyword">typename</span> <a class="code hl_variableRef" href="../../../epetra/doc/html/Epetra__DataAccess_8h.html#ad1a985e79f94ad63030815a0d7d90928a688fad5d6c4f06f049549c2313e93cba">View</a>&lt;RT, RP...&gt;::traits;</div>
+<div class="line"><a id="l00890" name="l00890"></a><span class="lineno">  890</span>    <span class="keyword">using </span>SrcTraits = <span class="keyword">typename</span> View&lt;RT, RP...&gt;::traits;</div>
 <div class="line"><a id="l00891" name="l00891"></a><span class="lineno">  891</span>    <span class="keyword">using </span>Mapping =</div>
 <div class="line"><a id="l00892" name="l00892"></a><span class="lineno">  892</span>        Kokkos::Impl::ViewMapping&lt;traits, SrcTraits,</div>
 <div class="line"><a id="l00893" name="l00893"></a><span class="lineno">  893</span>                                  <a class="code hl_struct" href="structKokkos_1_1Impl_1_1ViewToDynRankViewTag.html">Kokkos::Impl::ViewToDynRankViewTag</a>&gt;;</div>
@@ -975,7 +975,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00901" name="l00901"></a><span class="lineno">  901</span> </div>
 <div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span>  <span class="keyword">template</span> &lt;<span class="keyword">class </span>RT, <span class="keyword">class</span>... RP&gt;</div>
 <div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span>  KOKKOS_FUNCTION DynRankView(<span class="keyword">const</span> View&lt;RT, RP...&gt;&amp; rhs)</div>
-<div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span>      : DynRankView(rhs, <a class="code hl_variableRef" href="../../../epetra/doc/html/Epetra__DataAccess_8h.html#ad1a985e79f94ad63030815a0d7d90928a688fad5d6c4f06f049549c2313e93cba">View</a>&lt;RT, RP...&gt;::rank()) {}</div>
+<div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span>      : DynRankView(rhs, View&lt;RT, RP...&gt;::rank()) {}</div>
 <div class="line"><a id="l00905" name="l00905"></a><span class="lineno">  905</span> </div>
 <div class="line"><a id="l00906" name="l00906"></a><span class="lineno">  906</span>  <span class="comment">//----------------------------------------</span></div>
 <div class="line"><a id="l00907" name="l00907"></a><span class="lineno">  907</span>  <span class="comment">// Allocation tracking properties</span></div>
@@ -2074,7 +2074,6 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l02001" name="l02001"></a><span class="lineno"> 2001</span><span class="preprocessor">#undef KOKKOS_IMPL_PUBLIC_INCLUDE_NOTDEFINED_DYNRANKVIEW</span></div>
 <div class="line"><a id="l02002" name="l02002"></a><span class="lineno"> 2002</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l02003" name="l02003"></a><span class="lineno"> 2003</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aEpetra__DataAccess_8h_html_ad1a985e79f94ad63030815a0d7d90928a688fad5d6c4f06f049549c2313e93cba"><div class="ttname"><a href="../../../epetra/doc/html/Epetra__DataAccess_8h.html#ad1a985e79f94ad63030815a0d7d90928a688fad5d6c4f06f049549c2313e93cba">View</a></div><div class="ttdeci">View</div><div class="ttdef"><b>Definition</b> <a href="Kokkos__View_8hpp_source.html#l00157">Kokkos_View.hpp:157</a></div></div>
 <div class="ttc" id="aclassKokkos_1_1Bitset_html"><div class="ttname"><a href="classKokkos_1_1Bitset.html">Kokkos::Bitset</a></div><div class="ttdoc">A thread safe view to a bitset.</div><div class="ttdef"><b>Definition</b> <a href="Kokkos__Bitset_8hpp_source.html#l00049">Kokkos_Bitset.hpp:49</a></div></div>
 <div class="ttc" id="anamespaceExperimental_html"><div class="ttname"><a href="../../../anasazi/doc/html/namespaceExperimental.html">Experimental</a></div></div>
 <div class="ttc" id="anamespaceKokkos_1_1Impl_html_a645d8ba6486e157ba5b01094ff339967"><div class="ttname"><a href="namespaceKokkos_1_1Impl.html#a645d8ba6486e157ba5b01094ff339967">Kokkos::Impl::dyn_rank_view_verify_operator_bounds</a></div><div class="ttdeci">KOKKOS_INLINE_FUNCTION bool dyn_rank_view_verify_operator_bounds(const iType0 &amp;, const MapType &amp;)</div><div class="ttdoc">Debug bounds-checking routines.</div><div class="ttdef"><b>Definition</b> <a href="Kokkos__DynRankView_8hpp_source.html#l00257">Kokkos_DynRankView.hpp:257</a></div></div>

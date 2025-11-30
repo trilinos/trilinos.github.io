@@ -400,6 +400,7 @@ var hierarchy =
     ] ],
     [ "MueLu::PRFactory< LocalOrdinal, GlobalOrdinal, Node >", "classMueLu_1_1PRFactory.html", null ],
     [ "MueLu::Projection< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "classMueLu_1_1Projection.html", null ],
+    [ "MueLu::RepartitionUtilities< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "structMueLu_1_1RepartitionUtilities.html", null ],
     [ "MueLuTests::ReplicatePFactoryTester< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "classMueLuTests_1_1ReplicatePFactoryTester.html", null ],
     [ "Tpetra::RowMatrix", null, [
       [ "MueLu::TpetraOperatorAsRowMatrix< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "classMueLu_1_1TpetraOperatorAsRowMatrix.html", null ]
@@ -461,5 +462,6 @@ var hierarchy =
       [ "MueLu::CoarseningVisualizationFactory< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "classMueLu_1_1CoarseningVisualizationFactory.html", null ]
     ] ],
     [ "MueLu::VisualizationHelpers< DefaultScalar, DefaultLocalOrdinal, DefaultGlobalOrdinal, DefaultNode >", "classMueLu_1_1VisualizationHelpers.html", null ],
-    [ "MueLu::DistanceLaplacian::WeightedDistanceFunctor< Scalar, LocalOrdinal, GlobalOrdinal, Node, weight_type >", "classMueLu_1_1DistanceLaplacian_1_1WeightedDistanceFunctor.html", null ]
+    [ "MueLu::DistanceLaplacian::WeightedDistanceFunctor< Scalar, LocalOrdinal, GlobalOrdinal, Node, weight_type >", "classMueLu_1_1DistanceLaplacian_1_1WeightedDistanceFunctor.html", null ],
+    [ "MueLu::Zoltan2Utilities< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "structMueLu_1_1Zoltan2Utilities.html", null ]
 ];

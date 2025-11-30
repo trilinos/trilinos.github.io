@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['3_3a_20call_20nox_20from_20your_20code_0',['Step 3: Call NOX from your code',['../step3.html',1,'']]]
+  ['4_3a_20link_20your_20code_20to_20nox_0',['Step 4: Link your code to NOX',['../step4.html',1,'']]]
 ];

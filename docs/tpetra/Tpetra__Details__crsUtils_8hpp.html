@@ -92,6 +92,7 @@ $(function() {
 <code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;unordered_map&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
 </div>
 <p><a href="Tpetra__Details__crsUtils_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -118,6 +119,10 @@ Functions</h2></td></tr>
 <tr class="memitem:aa07ee33d888368054fd6f197ac7de48b"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="Tpetra__Details__crsUtils_8hpp.html#aa07ee33d888368054fd6f197ac7de48b">Tpetra::Details::impl::find_crs_indices</a> (<a class="el" href="classTpetra_1_1CrsMatrixStruct.html">typename</a> Pointers::value_type <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">const</a> row, <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">Pointers</a> <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">const</a> &amp;<a class="el" href="classTpetra_1_1CrsMatrixStruct.html">row_ptrs</a>, <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">const</a> size_t <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">curNumEntries</a>, <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">Indices1</a> <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">const</a> &amp;<a class="el" href="classTpetra_1_1CrsMatrixStruct.html">cur_indices</a>, <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">Indices2</a> <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">const</a> &amp;<a class="el" href="classTpetra_1_1CrsMatrixStruct.html">new_indices</a>, <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">IndexMap</a> &amp;&amp;<a class="el" href="classTpetra_1_1CrsMatrixStruct.html">map</a>, <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">Callback</a> &amp;&amp;<a class="el" href="classTpetra_1_1CrsMatrixStruct.html">cb</a>)</td></tr>
 <tr class="memdesc:aa07ee33d888368054fd6f197ac7de48b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of findCrsIndices.  <br /></td></tr>
 <tr class="separator:aa07ee33d888368054fd6f197ac7de48b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7622ae078c36ba19af098f499a222e8" id="r_ad7622ae078c36ba19af098f499a222e8"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="classTpetra_1_1CrsMatrixStruct.html">class</a> <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">Pointers</a> , <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">class</a> <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">Indices1</a> , <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">class</a> <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">Indices2</a> , <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">class</a> <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">IndexMap</a> , <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">class</a> <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">Callback</a> &gt; </td></tr>
+<tr class="memitem:ad7622ae078c36ba19af098f499a222e8"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="Tpetra__Details__crsUtils_8hpp.html#ad7622ae078c36ba19af098f499a222e8">Tpetra::Details::impl::find_crs_indices_sorted</a> (<a class="el" href="classTpetra_1_1CrsMatrixStruct.html">typename</a> Pointers::value_type <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">const</a> row, <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">Pointers</a> <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">const</a> &amp;<a class="el" href="classTpetra_1_1CrsMatrixStruct.html">row_ptrs</a>, <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">const</a> size_t <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">curNumEntries</a>, <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">Indices1</a> <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">const</a> &amp;<a class="el" href="classTpetra_1_1CrsMatrixStruct.html">cur_indices</a>, <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">Indices2</a> <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">const</a> &amp;<a class="el" href="classTpetra_1_1CrsMatrixStruct.html">new_indices</a>, <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">IndexMap</a> &amp;&amp;<a class="el" href="classTpetra_1_1CrsMatrixStruct.html">map</a>, <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">Callback</a> &amp;&amp;<a class="el" href="classTpetra_1_1CrsMatrixStruct.html">cb</a>)</td></tr>
+<tr class="memdesc:ad7622ae078c36ba19af098f499a222e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of findCrsIndices.  <br /></td></tr>
+<tr class="separator:ad7622ae078c36ba19af098f499a222e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05fc2cbae4c93684401c85fcd7fc1659" id="r_a05fc2cbae4c93684401c85fcd7fc1659"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="classTpetra_1_1CrsMatrixStruct.html">class</a> <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">RowPtr</a> , <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">class</a> <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">Indices</a> , <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">class</a> <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">Padding</a> &gt; </td></tr>
 <tr class="memitem:a05fc2cbae4c93684401c85fcd7fc1659"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classTpetra_1_1CrsMatrixStruct.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceTpetra_1_1Details.html#a05fc2cbae4c93684401c85fcd7fc1659">Tpetra::Details::padCrsArrays</a> (<a class="el" href="classTpetra_1_1CrsMatrixStruct.html">const</a> <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">RowPtr</a> &amp;<a class="el" href="classTpetra_1_1CrsMatrixStruct.html">rowPtrBeg</a>, <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">const</a> <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">RowPtr</a> &amp;<a class="el" href="classTpetra_1_1CrsMatrixStruct.html">rowPtrEnd</a>, <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">Indices</a> &amp;<a class="el" href="classTpetra_1_1CrsMatrixStruct.html">indices_wdv</a>, <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">const</a> <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">Padding</a> &amp;<a class="el" href="classTpetra_1_1CrsMatrixStruct.html">padding</a>, <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">const</a> <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">int</a> <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">my_rank</a>, <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">const</a> <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">bool</a> verbose)</td></tr>
 <tr class="memdesc:a05fc2cbae4c93684401c85fcd7fc1659"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if the row pointers and indices arrays need to be resized to accommodate new entries. If they do need to be resized, resize the indices arrays and shift the existing contents to accommodate new entries. Modify values in the row pointers array to point to the newly shifted locations in the indices arrays.  <br /></td></tr>
@@ -211,7 +216,7 @@ template&lt;class RowPtr , class Indices , class Values , class Padding &gt; </d
 </dl>
 <p>Each row lclRow has row_ptr_end[lclRow] - row_ptr_beg[lclRow] entries. Offsets row_ptr_end[lclRow] to row_ptr_beg[lclRow+1] - 1 (inclusive) are extra space. </p>
 
-<p class="definition">Definition at line <a class="el" href="Tpetra__Details__crsUtils_8hpp_source.html#l00114">114</a> of file <a class="el" href="Tpetra__Details__crsUtils_8hpp_source.html">Tpetra_Details_crsUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Tpetra__Details__crsUtils_8hpp_source.html#l00115">115</a> of file <a class="el" href="Tpetra__Details__crsUtils_8hpp_source.html">Tpetra_Details_crsUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -275,7 +280,7 @@ template&lt;class Pointers , class InOutIndices , class InIndices , class IndexM
 
 <p>Implementation of insertCrsIndices. </p>
 
-<p class="definition">Definition at line <a class="el" href="Tpetra__Details__crsUtils_8hpp_source.html#l00371">371</a> of file <a class="el" href="Tpetra__Details__crsUtils_8hpp_source.html">Tpetra_Details_crsUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Tpetra__Details__crsUtils_8hpp_source.html#l00372">372</a> of file <a class="el" href="Tpetra__Details__crsUtils_8hpp_source.html">Tpetra_Details_crsUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -339,7 +344,71 @@ template&lt;class Pointers , class Indices1 , class Indices2 , class IndexMap , 
 
 <p>Implementation of findCrsIndices. </p>
 
-<p class="definition">Definition at line <a class="el" href="Tpetra__Details__crsUtils_8hpp_source.html#l00466">466</a> of file <a class="el" href="Tpetra__Details__crsUtils_8hpp_source.html">Tpetra_Details_crsUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Tpetra__Details__crsUtils_8hpp_source.html#l00467">467</a> of file <a class="el" href="Tpetra__Details__crsUtils_8hpp_source.html">Tpetra_Details_crsUtils.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ad7622ae078c36ba19af098f499a222e8" name="ad7622ae078c36ba19af098f499a222e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7622ae078c36ba19af098f499a222e8">&#9670;&#160;</a></span>find_crs_indices_sorted()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Pointers , class Indices1 , class Indices2 , class IndexMap , class Callback &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t Tpetra::Details::impl::find_crs_indices_sorted </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classTpetra_1_1CrsMatrixStruct.html">typename</a> Pointers::value_type <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">const</a>&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classTpetra_1_1CrsMatrixStruct.html">Pointers</a> <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">const</a> &amp;&#160;</td>
+          <td class="paramname"><em>row_ptrs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classTpetra_1_1CrsMatrixStruct.html">const</a> size_t&#160;</td>
+          <td class="paramname"><em>curNumEntries</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classTpetra_1_1CrsMatrixStruct.html">Indices1</a> <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">const</a> &amp;&#160;</td>
+          <td class="paramname"><em>cur_indices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classTpetra_1_1CrsMatrixStruct.html">Indices2</a> <a class="el" href="classTpetra_1_1CrsMatrixStruct.html">const</a> &amp;&#160;</td>
+          <td class="paramname"><em>new_indices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classTpetra_1_1CrsMatrixStruct.html">IndexMap</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>map</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classTpetra_1_1CrsMatrixStruct.html">Callback</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>cb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implementation of findCrsIndices. </p>
+
+<p class="definition">Definition at line <a class="el" href="Tpetra__Details__crsUtils_8hpp_source.html#l00503">503</a> of file <a class="el" href="Tpetra__Details__crsUtils_8hpp_source.html">Tpetra_Details_crsUtils.hpp</a>.</p>
 
 </div>
 </div>

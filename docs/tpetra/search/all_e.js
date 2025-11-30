@@ -30,5 +30,8 @@ var searchData=
   ['numpacketsandoffsetsfunctor_27',['numpacketsandoffsetsfunctor',['../classTpetra_1_1Details_1_1PackCrsMatrixImpl_1_1NumPacketsAndOffsetsFunctor.html',1,'Tpetra::Details::PackCrsMatrixImpl::NumPacketsAndOffsetsFunctor&lt; OutputOffsetsViewType, CountsViewType, InputOffsetsViewType, InputLocalRowIndicesViewType, InputLocalRowPidsViewType, debug &gt;'],['../classTpetra_1_1Details_1_1PackCrsGraphImpl_1_1NumPacketsAndOffsetsFunctor.html',1,'Tpetra::Details::PackCrsGraphImpl::NumPacketsAndOffsetsFunctor&lt; OutputOffsetsViewType, CountsViewType, InputOffsetsViewType, InputLocalRowIndicesViewType, InputLocalRowPidsViewType, debug &gt;']]],
   ['numpairs_28',['numPairs',['../classTpetra_1_1Details_1_1FixedHashTable.html#a79a594d7dc08a2a9eab3a6f8e5c06d3a',1,'Tpetra::Details::FixedHashTable']]],
   ['numsameids_5f_29',['numSameIDs_',['../classTpetra_1_1ImportExportData.html#ad7ec0ed5ae25a368154271b047c6579c',1,'Tpetra::ImportExportData']]],
-  ['numvaluesperscalar_30',['numValuesPerScalar',['../structTpetra_1_1Details_1_1PackTraits.html#a2c0ea93cf051f1ab44227a29b4b56866',1,'Tpetra::Details::PackTraits']]]
+  ['numsingletoncols_30',['NumSingletonCols',['../classTpetra_1_1CrsSingletonFilter__LinearProblem.html#af2b11aa0053f2112709482b30f73bb98',1,'Tpetra::CrsSingletonFilter_LinearProblem']]],
+  ['numsingletonrows_31',['NumSingletonRows',['../classTpetra_1_1CrsSingletonFilter__LinearProblem.html#a30f25211e8c33eb4282441488301f26c',1,'Tpetra::CrsSingletonFilter_LinearProblem']]],
+  ['numsingletons_32',['NumSingletons',['../classTpetra_1_1CrsSingletonFilter__LinearProblem.html#a120323f07bb6cd612bca74f5e7ae81f9',1,'Tpetra::CrsSingletonFilter_LinearProblem']]],
+  ['numvaluesperscalar_33',['numValuesPerScalar',['../structTpetra_1_1Details_1_1PackTraits.html#a2c0ea93cf051f1ab44227a29b4b56866',1,'Tpetra::Details::PackTraits']]]
 ];

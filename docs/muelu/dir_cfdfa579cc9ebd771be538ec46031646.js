@@ -140,6 +140,7 @@ var dir_cfdfa579cc9ebd771be538ec46031646 =
     [ "MueLu_RepartitionFactory_fwd.hpp", "MueLu__RepartitionFactory__fwd_8hpp.html", "MueLu__RepartitionFactory__fwd_8hpp" ],
     [ "MueLu_RepartitionHeuristicFactory_fwd.hpp", "MueLu__RepartitionHeuristicFactory__fwd_8hpp.html", "MueLu__RepartitionHeuristicFactory__fwd_8hpp" ],
     [ "MueLu_RepartitionInterface_fwd.hpp", "MueLu__RepartitionInterface__fwd_8hpp.html", "MueLu__RepartitionInterface__fwd_8hpp" ],
+    [ "MueLu_RepartitionUtilities_fwd.hpp", "MueLu__RepartitionUtilities__fwd_8hpp.html", "MueLu__RepartitionUtilities__fwd_8hpp" ],
     [ "MueLu_ReplicatePFactory_fwd.hpp", "MueLu__ReplicatePFactory__fwd_8hpp.html", "MueLu__ReplicatePFactory__fwd_8hpp" ],
     [ "MueLu_RFactory_fwd.hpp", "MueLu__RFactory__fwd_8hpp.html", "MueLu__RFactory__fwd_8hpp" ],
     [ "MueLu_RfromP_Or_TransP_fwd.hpp", "MueLu__RfromP__Or__TransP__fwd_8hpp.html", "MueLu__RfromP__Or__TransP__fwd_8hpp" ],

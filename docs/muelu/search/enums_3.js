@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['indexingtype_0',['IndexingType',['../namespaceMueLu.html#a01077b03f2e591becec32b504e9489dc',1,'MueLu']]]
+  ['keepenum_0',['KeepEnum',['../namespaceMueLu.html#a16a5d3ba44dac8c44bb095e39b731cbe',1,'MueLu']]]
 ];

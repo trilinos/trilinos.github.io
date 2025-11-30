@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['epetra_5fcombinemode_2eh_0',['Epetra_CombineMode.h',['../../../../epetra/doc/html/Epetra__CombineMode_8h.html',1,'']]],
-  ['epetra_5fdataaccess_2eh_1',['Epetra_DataAccess.h',['../../../../epetra/doc/html/Epetra__DataAccess_8h.html',1,'']]]
+  ['index_2edoc_0',['index.doc',['../../../../belos/doc/html/index_8doc.html',1,'']]]
 ];

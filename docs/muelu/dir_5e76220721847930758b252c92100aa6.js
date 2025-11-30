@@ -26,6 +26,8 @@ var dir_5e76220721847930758b252c92100aa6 =
     [ "MueLu_RepartitionHeuristicFactory_def.hpp", "MueLu__RepartitionHeuristicFactory__def_8hpp.html", "MueLu__RepartitionHeuristicFactory__def_8hpp" ],
     [ "MueLu_RepartitionInterface_decl.hpp", "MueLu__RepartitionInterface__decl_8hpp.html", "MueLu__RepartitionInterface__decl_8hpp" ],
     [ "MueLu_RepartitionInterface_def.hpp", "MueLu__RepartitionInterface__def_8hpp.html", null ],
+    [ "MueLu_RepartitionUtilities_decl.hpp", "MueLu__RepartitionUtilities__decl_8hpp.html", "MueLu__RepartitionUtilities__decl_8hpp" ],
+    [ "MueLu_RepartitionUtilities_def.hpp", "MueLu__RepartitionUtilities__def_8hpp.html", null ],
     [ "MueLu_Zoltan2Interface_decl.hpp", "MueLu__Zoltan2Interface__decl_8hpp.html", "MueLu__Zoltan2Interface__decl_8hpp" ],
     [ "MueLu_Zoltan2Interface_def.hpp", "MueLu__Zoltan2Interface__def_8hpp.html", null ],
     [ "MueLu_ZoltanInterface_decl.hpp", "MueLu__ZoltanInterface__decl_8hpp.html", "MueLu__ZoltanInterface__decl_8hpp" ],

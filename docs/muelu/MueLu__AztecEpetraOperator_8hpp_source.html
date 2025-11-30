@@ -124,7 +124,7 @@ $(document).ready(function(){initNavTree('MueLu__AztecEpetraOperator_8hpp_source
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceMueLu.html">MueLu</a> {</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">class </span>AztecEpetraOperator : <span class="keyword">public</span> <a class="code hl_classRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/epetra/doc/html/classEpetra__Operator.html">Epetra_Operator</a> {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">class </span>AztecEpetraOperator : <span class="keyword">public</span> Epetra_Operator {</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <span class="keyword">typedef</span> <span class="keywordtype">double</span> SC;</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <span class="keyword">typedef</span> <span class="keywordtype">int</span> LO;</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="keyword">typedef</span> <span class="keywordtype">int</span> GO;</div>
@@ -148,10 +148,10 @@ $(document).ready(function(){initNavTree('MueLu__AztecEpetraOperator_8hpp_source
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="keywordtype">int</span> Apply(<span class="keyword">const</span> <a class="code hl_classRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/epetra/doc/html/classEpetra__MultiVector.html">Epetra_MultiVector</a>&amp; <span class="comment">/* X */</span>, <a class="code hl_classRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/epetra/doc/html/classEpetra__MultiVector.html">Epetra_MultiVector</a>&amp; <span class="comment">/* Y */</span>)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> -1; }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="keywordtype">int</span> Apply(<span class="keyword">const</span> Epetra_MultiVector&amp; <span class="comment">/* X */</span>, Epetra_MultiVector&amp; <span class="comment">/* Y */</span>)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> -1; }</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  <span class="keywordtype">int</span> ApplyInverse(<span class="keyword">const</span> <a class="code hl_classRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/epetra/doc/html/classEpetra__MultiVector.html">Epetra_MultiVector</a>&amp; X, <a class="code hl_classRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/epetra/doc/html/classEpetra__MultiVector.html">Epetra_MultiVector</a>&amp; Y) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  <span class="keywordtype">int</span> ApplyInverse(<span class="keyword">const</span> Epetra_MultiVector&amp; X, Epetra_MultiVector&amp; Y) <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="comment">/* Returns the quantity \f$ \| A \|_\infty\f$ such that</span></div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">     \f[\| A \|_\infty = \max_{1\lei\lem} \sum_{j=1}^n |a_{ij}| \f].</span></div>
@@ -168,11 +168,11 @@ $(document).ready(function(){initNavTree('MueLu__AztecEpetraOperator_8hpp_source
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  <span class="keywordtype">bool</span> HasNormInf()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> 0; }</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <span class="keyword">const</span> <a class="code hl_classRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/epetra/doc/html/classEpetra__Comm.html">Epetra_Comm</a>&amp; Comm() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <span class="keyword">const</span> Epetra_Comm&amp; Comm() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  <span class="keyword">const</span> <a class="code hl_classRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/epetra/doc/html/classEpetra__Map.html">Epetra_Map</a>&amp; OperatorDomainMap() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  <span class="keyword">const</span> Epetra_Map&amp; OperatorDomainMap() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  <span class="keyword">const</span> <a class="code hl_classRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/epetra/doc/html/classEpetra__Map.html">Epetra_Map</a>&amp; OperatorRangeMap() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  <span class="keyword">const</span> Epetra_Map&amp; OperatorRangeMap() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
@@ -189,10 +189,6 @@ $(document).ready(function(){initNavTree('MueLu__AztecEpetraOperator_8hpp_source
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="preprocessor">#endif </span><span class="comment">/* PACKAGES_MUELU_ADAPTERS_AZTECOO_MUELU_AZTECEPETRAOPERATOR_HPP_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="aclassEpetra__Comm_html"><div class="ttname"><a href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/epetra/doc/html/classEpetra__Comm.html">Epetra_Comm</a></div></div>
-<div class="ttc" id="aclassEpetra__Map_html"><div class="ttname"><a href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/epetra/doc/html/classEpetra__Map.html">Epetra_Map</a></div></div>
-<div class="ttc" id="aclassEpetra__MultiVector_html"><div class="ttname"><a href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/epetra/doc/html/classEpetra__MultiVector.html">Epetra_MultiVector</a></div></div>
-<div class="ttc" id="aclassEpetra__Operator_html"><div class="ttname"><a href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/epetra/doc/html/classEpetra__Operator.html">Epetra_Operator</a></div></div>
 <div class="ttc" id="anamespaceMueLu_html"><div class="ttname"><a href="namespaceMueLu.html">MueLu</a></div><div class="ttdoc">Namespace for MueLu classes and methods.</div><div class="ttdef"><b>Definition</b> <a href="MueLu__BrickAggregationFactory__decl_8hpp_source.html#l00042">MueLu_BrickAggregationFactory_decl.hpp:42</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

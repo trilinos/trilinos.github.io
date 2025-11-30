@@ -23,5 +23,6 @@ var searchData=
   ['crsmatrixgetdiagcopyfunctor_20',['CrsMatrixGetDiagCopyFunctor',['../structTpetra_1_1Details_1_1CrsMatrixGetDiagCopyFunctor.html',1,'Tpetra::Details']]],
   ['crsmatrixmultiplyop_21',['CrsMatrixMultiplyOp',['../classTpetra_1_1CrsMatrixMultiplyOp.html',1,'Tpetra']]],
   ['crsmatrixstruct_22',['CrsMatrixStruct',['../classTpetra_1_1CrsMatrixStruct.html',1,'Tpetra']]],
-  ['crspadding_23',['CrsPadding',['../classTpetra_1_1Details_1_1CrsPadding.html',1,'Tpetra::Details']]]
+  ['crspadding_23',['CrsPadding',['../classTpetra_1_1Details_1_1CrsPadding.html',1,'Tpetra::Details']]],
+  ['crssingletonfilter_5flinearproblem_24',['CrsSingletonFilter_LinearProblem',['../classTpetra_1_1CrsSingletonFilter__LinearProblem.html',1,'Tpetra']]]
 ];

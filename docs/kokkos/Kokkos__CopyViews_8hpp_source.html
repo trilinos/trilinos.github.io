@@ -881,7 +881,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span><span class="keyword">inline</span> <span class="keywordtype">void</span> contiguous_fill(</div>
 <div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span>    <span class="keyword">const</span> ExecutionSpace&amp; exec_space, <span class="keyword">const</span> View&lt;DT, DP...&gt;&amp; dst,</div>
 <div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span>    <span class="keyword">typename</span> ViewTraits&lt;DT, DP...&gt;::const_value_type&amp; value) {</div>
-<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span>  <span class="keyword">using </span>ViewType     = <a class="code hl_variableRef" href="../../../epetra/doc/html/Epetra__DataAccess_8h.html#ad1a985e79f94ad63030815a0d7d90928a688fad5d6c4f06f049549c2313e93cba">View</a>&lt;DT, DP...&gt;;</div>
+<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span>  <span class="keyword">using </span>ViewType     = View&lt;DT, DP...&gt;;</div>
 <div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span>  <span class="keyword">using </span>ViewTypeFlat = Kokkos::View&lt;</div>
 <div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span>      <span class="keyword">typename</span> ViewType::value_type*, <a class="code hl_struct" href="structKokkos_1_1LayoutRight.html">Kokkos::LayoutRight</a>,</div>
 <div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span>      Kokkos::Device&lt;<span class="keyword">typename</span> ViewType::execution_space,</div>
@@ -968,7 +968,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00885" name="l00885"></a><span class="lineno">  885</span><span class="keywordtype">void</span> contiguous_fill_or_memset(</div>
 <div class="line"><a id="l00886" name="l00886"></a><span class="lineno">  886</span>    <span class="keyword">const</span> View&lt;DT, DP...&gt;&amp; dst,</div>
 <div class="line"><a id="l00887" name="l00887"></a><span class="lineno">  887</span>    <span class="keyword">typename</span> ViewTraits&lt;DT, DP...&gt;::const_value_type&amp; value) {</div>
-<div class="line"><a id="l00888" name="l00888"></a><span class="lineno">  888</span>  <span class="keyword">using </span>ViewType        = <a class="code hl_variableRef" href="../../../epetra/doc/html/Epetra__DataAccess_8h.html#ad1a985e79f94ad63030815a0d7d90928a688fad5d6c4f06f049549c2313e93cba">View</a>&lt;DT, DP...&gt;;</div>
+<div class="line"><a id="l00888" name="l00888"></a><span class="lineno">  888</span>  <span class="keyword">using </span>ViewType        = View&lt;DT, DP...&gt;;</div>
 <div class="line"><a id="l00889" name="l00889"></a><span class="lineno">  889</span>  <span class="keyword">using </span>exec_space_type = <span class="keyword">typename</span> ViewType::execution_space;</div>
 <div class="line"><a id="l00890" name="l00890"></a><span class="lineno">  890</span> </div>
 <div class="line"><a id="l00891" name="l00891"></a><span class="lineno">  891</span>  contiguous_fill_or_memset(exec_space_type(), dst, value);</div>
@@ -981,7 +981,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00899" name="l00899"></a><span class="lineno">  899</span>    <span class="keyword">typename</span> ViewTraits&lt;DT, DP...&gt;::const_value_type&amp; value,</div>
 <div class="line"><a id="l00900" name="l00900"></a><span class="lineno">  900</span>    std::enable_if_t&lt;std::is_same_v&lt;<span class="keyword">typename</span> ViewTraits&lt;DT, DP...&gt;::specialize,</div>
 <div class="line"><a id="l00901" name="l00901"></a><span class="lineno">  901</span>                                    <span class="keywordtype">void</span>&gt;&gt;* = <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span>  <span class="keyword">using </span>ViewType        = <a class="code hl_variableRef" href="../../../epetra/doc/html/Epetra__DataAccess_8h.html#ad1a985e79f94ad63030815a0d7d90928a688fad5d6c4f06f049549c2313e93cba">View</a>&lt;DT, DP...&gt;;</div>
+<div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span>  <span class="keyword">using </span>ViewType        = View&lt;DT, DP...&gt;;</div>
 <div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span>  <span class="keyword">using </span>exec_space_type = <span class="keyword">typename</span> ViewType::execution_space;</div>
 <div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span> </div>
 <div class="line"><a id="l00905" name="l00905"></a><span class="lineno">  905</span>  <span class="keywordflow">if</span> (Kokkos::Tools::Experimental::get_callbacks().begin_deep_copy != <span class="keyword">nullptr</span>) {</div>
@@ -1116,8 +1116,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01036" name="l01036"></a><span class="lineno"> 1036</span>         std::is_void_v&lt;<span class="keyword">typename</span> ViewTraits&lt;ST, SP...&gt;::specialize&gt; &amp;&amp;</div>
 <div class="line"><a id="l01037" name="l01037"></a><span class="lineno"> 1037</span>         (<span class="keywordtype">unsigned</span>(ViewTraits&lt;DT, DP...&gt;::rank) == <span class="keywordtype">unsigned</span>(0) &amp;&amp;</div>
 <div class="line"><a id="l01038" name="l01038"></a><span class="lineno"> 1038</span>          <span class="keywordtype">unsigned</span>(ViewTraits&lt;ST, SP...&gt;::rank) == <span class="keywordtype">unsigned</span>(0)))&gt;* = <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l01039" name="l01039"></a><span class="lineno"> 1039</span>  <span class="keyword">using </span>dst_type = <a class="code hl_variableRef" href="../../../epetra/doc/html/Epetra__DataAccess_8h.html#ad1a985e79f94ad63030815a0d7d90928a688fad5d6c4f06f049549c2313e93cba">View</a>&lt;DT, DP...&gt;;</div>
-<div class="line"><a id="l01040" name="l01040"></a><span class="lineno"> 1040</span>  <span class="keyword">using </span>src_type = <a class="code hl_variableRef" href="../../../epetra/doc/html/Epetra__DataAccess_8h.html#ad1a985e79f94ad63030815a0d7d90928a688fad5d6c4f06f049549c2313e93cba">View</a>&lt;ST, SP...&gt;;</div>
+<div class="line"><a id="l01039" name="l01039"></a><span class="lineno"> 1039</span>  <span class="keyword">using </span>dst_type = View&lt;DT, DP...&gt;;</div>
+<div class="line"><a id="l01040" name="l01040"></a><span class="lineno"> 1040</span>  <span class="keyword">using </span>src_type = View&lt;ST, SP...&gt;;</div>
 <div class="line"><a id="l01041" name="l01041"></a><span class="lineno"> 1041</span> </div>
 <div class="line"><a id="l01042" name="l01042"></a><span class="lineno"> 1042</span>  <span class="keyword">using </span>value_type       = <span class="keyword">typename</span> dst_type::value_type;</div>
 <div class="line"><a id="l01043" name="l01043"></a><span class="lineno"> 1043</span>  <span class="keyword">using </span>dst_memory_space = <span class="keyword">typename</span> dst_type::memory_space;</div>
@@ -1165,8 +1165,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01088" name="l01088"></a><span class="lineno"> 1088</span>         std::is_void_v&lt;<span class="keyword">typename</span> ViewTraits&lt;ST, SP...&gt;::specialize&gt; &amp;&amp;</div>
 <div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span>         (<span class="keywordtype">unsigned</span>(ViewTraits&lt;DT, DP...&gt;::rank) != 0 ||</div>
 <div class="line"><a id="l01090" name="l01090"></a><span class="lineno"> 1090</span>          <span class="keywordtype">unsigned</span>(ViewTraits&lt;ST, SP...&gt;::rank) != 0))&gt;* = <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l01091" name="l01091"></a><span class="lineno"> 1091</span>  <span class="keyword">using </span>dst_type         = <a class="code hl_variableRef" href="../../../epetra/doc/html/Epetra__DataAccess_8h.html#ad1a985e79f94ad63030815a0d7d90928a688fad5d6c4f06f049549c2313e93cba">View</a>&lt;DT, DP...&gt;;</div>
-<div class="line"><a id="l01092" name="l01092"></a><span class="lineno"> 1092</span>  <span class="keyword">using </span>src_type         = <a class="code hl_variableRef" href="../../../epetra/doc/html/Epetra__DataAccess_8h.html#ad1a985e79f94ad63030815a0d7d90928a688fad5d6c4f06f049549c2313e93cba">View</a>&lt;ST, SP...&gt;;</div>
+<div class="line"><a id="l01091" name="l01091"></a><span class="lineno"> 1091</span>  <span class="keyword">using </span>dst_type         = View&lt;DT, DP...&gt;;</div>
+<div class="line"><a id="l01092" name="l01092"></a><span class="lineno"> 1092</span>  <span class="keyword">using </span>src_type         = View&lt;ST, SP...&gt;;</div>
 <div class="line"><a id="l01093" name="l01093"></a><span class="lineno"> 1093</span>  <span class="keyword">using </span>dst_memory_space = <span class="keyword">typename</span> dst_type::memory_space;</div>
 <div class="line"><a id="l01094" name="l01094"></a><span class="lineno"> 1094</span>  <span class="keyword">using </span>src_memory_space = <span class="keyword">typename</span> src_type::memory_space;</div>
 <div class="line"><a id="l01095" name="l01095"></a><span class="lineno"> 1095</span>  <span class="keyword">using </span>dst_ptr_type     = <span class="keyword">decltype</span>(dst.data());</div>
@@ -2176,7 +2176,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l02105" name="l02105"></a><span class="lineno"> 2105</span>             !ViewTraits&lt;DT, DP...&gt;::impl_is_customized) {</div>
 <div class="line"><a id="l02106" name="l02106"></a><span class="lineno"> 2106</span>    Impl::contiguous_fill_or_memset(space, dst, value);</div>
 <div class="line"><a id="l02107" name="l02107"></a><span class="lineno"> 2107</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l02108" name="l02108"></a><span class="lineno"> 2108</span>    <span class="keyword">using </span>ViewType = <a class="code hl_variableRef" href="../../../epetra/doc/html/Epetra__DataAccess_8h.html#ad1a985e79f94ad63030815a0d7d90928a688fad5d6c4f06f049549c2313e93cba">View</a>&lt;DT, DP...&gt;;</div>
+<div class="line"><a id="l02108" name="l02108"></a><span class="lineno"> 2108</span>    <span class="keyword">using </span>ViewType = View&lt;DT, DP...&gt;;</div>
 <div class="line"><a id="l02109" name="l02109"></a><span class="lineno"> 2109</span>    <span class="comment">// Figure out iteration order to do the ViewFill</span></div>
 <div class="line"><a id="l02110" name="l02110"></a><span class="lineno"> 2110</span>    int64_t strides[ViewType::rank + 1];</div>
 <div class="line"><a id="l02111" name="l02111"></a><span class="lineno"> 2111</span>    dst.stride(strides);</div>
@@ -2260,9 +2260,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l02191" name="l02191"></a><span class="lineno"> 2191</span>      Impl::contiguous_fill_or_memset(fill_exec_space(), dst, value);</div>
 <div class="line"><a id="l02192" name="l02192"></a><span class="lineno"> 2192</span>    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l02193" name="l02193"></a><span class="lineno"> 2193</span>      <span class="keyword">using </span>ViewTypeUniform = std::conditional_t&lt;</div>
-<div class="line"><a id="l02194" name="l02194"></a><span class="lineno"> 2194</span>          <a class="code hl_variableRef" href="../../../epetra/doc/html/Epetra__DataAccess_8h.html#ad1a985e79f94ad63030815a0d7d90928a688fad5d6c4f06f049549c2313e93cba">View</a>&lt;DT, DP...&gt;::rank == 0,</div>
-<div class="line"><a id="l02195" name="l02195"></a><span class="lineno"> 2195</span>          <span class="keyword">typename</span> <a class="code hl_variableRef" href="../../../epetra/doc/html/Epetra__DataAccess_8h.html#ad1a985e79f94ad63030815a0d7d90928a688fad5d6c4f06f049549c2313e93cba">View</a>&lt;DT, DP...&gt;::uniform_runtime_type,</div>
-<div class="line"><a id="l02196" name="l02196"></a><span class="lineno"> 2196</span>          <span class="keyword">typename</span> <a class="code hl_variableRef" href="../../../epetra/doc/html/Epetra__DataAccess_8h.html#ad1a985e79f94ad63030815a0d7d90928a688fad5d6c4f06f049549c2313e93cba">View</a>&lt;DT, DP...&gt;::uniform_runtime_nomemspace_type&gt;;</div>
+<div class="line"><a id="l02194" name="l02194"></a><span class="lineno"> 2194</span>          View&lt;DT, DP...&gt;::rank == 0,</div>
+<div class="line"><a id="l02195" name="l02195"></a><span class="lineno"> 2195</span>          <span class="keyword">typename</span> View&lt;DT, DP...&gt;::uniform_runtime_type,</div>
+<div class="line"><a id="l02196" name="l02196"></a><span class="lineno"> 2196</span>          <span class="keyword">typename</span> View&lt;DT, DP...&gt;::uniform_runtime_nomemspace_type&gt;;</div>
 <div class="line"><a id="l02197" name="l02197"></a><span class="lineno"> 2197</span>      Kokkos::Impl::ViewFill&lt;ViewTypeUniform, <span class="keyword">typename</span> dst_traits::array_layout,</div>
 <div class="line"><a id="l02198" name="l02198"></a><span class="lineno"> 2198</span>                             fill_exec_space&gt;(dst, value, fill_exec_space());</div>
 <div class="line"><a id="l02199" name="l02199"></a><span class="lineno"> 2199</span>    }</div>
@@ -2368,8 +2368,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l02304" name="l02304"></a><span class="lineno"> 2304</span>         std::is_void_v&lt;<span class="keyword">typename</span> ViewTraits&lt;ST, SP...&gt;::specialize&gt; &amp;&amp;</div>
 <div class="line"><a id="l02305" name="l02305"></a><span class="lineno"> 2305</span>         (<span class="keywordtype">unsigned</span>(ViewTraits&lt;DT, DP...&gt;::rank) != 0 ||</div>
 <div class="line"><a id="l02306" name="l02306"></a><span class="lineno"> 2306</span>          <span class="keywordtype">unsigned</span>(ViewTraits&lt;ST, SP...&gt;::rank) != 0))&gt;* = <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l02307" name="l02307"></a><span class="lineno"> 2307</span>  <span class="keyword">using </span>dst_type = <a class="code hl_variableRef" href="../../../epetra/doc/html/Epetra__DataAccess_8h.html#ad1a985e79f94ad63030815a0d7d90928a688fad5d6c4f06f049549c2313e93cba">View</a>&lt;DT, DP...&gt;;</div>
-<div class="line"><a id="l02308" name="l02308"></a><span class="lineno"> 2308</span>  <span class="keyword">using </span>src_type = <a class="code hl_variableRef" href="../../../epetra/doc/html/Epetra__DataAccess_8h.html#ad1a985e79f94ad63030815a0d7d90928a688fad5d6c4f06f049549c2313e93cba">View</a>&lt;ST, SP...&gt;;</div>
+<div class="line"><a id="l02307" name="l02307"></a><span class="lineno"> 2307</span>  <span class="keyword">using </span>dst_type = View&lt;DT, DP...&gt;;</div>
+<div class="line"><a id="l02308" name="l02308"></a><span class="lineno"> 2308</span>  <span class="keyword">using </span>src_type = View&lt;ST, SP...&gt;;</div>
 <div class="line"><a id="l02309" name="l02309"></a><span class="lineno"> 2309</span> </div>
 <div class="line"><a id="l02310" name="l02310"></a><span class="lineno"> 2310</span>  <span class="keyword">static_assert</span>(std::is_same_v&lt;<span class="keyword">typename</span> dst_type::value_type,</div>
 <div class="line"><a id="l02311" name="l02311"></a><span class="lineno"> 2311</span>                               <span class="keyword">typename</span> dst_type::non_const_value_type&gt;,</div>
@@ -3109,7 +3109,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l03048" name="l03048"></a><span class="lineno"> 3048</span>    <span class="keywordflow">return</span> dst_type(prop_copy, src.layout());</div>
 <div class="line"><a id="l03049" name="l03049"></a><span class="lineno"> 3049</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l03050" name="l03050"></a><span class="lineno"> 3050</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l03051" name="l03051"></a><span class="lineno"> 3051</span>    <span class="keyword">using </span>dst_type = <span class="keyword">typename</span> <a class="code hl_variableRef" href="../../../epetra/doc/html/Epetra__DataAccess_8h.html#ad1a985e79f94ad63030815a0d7d90928a688fad5d6c4f06f049549c2313e93cba">View</a>&lt;T, P...&gt;::HostMirror;</div>
+<div class="line"><a id="l03051" name="l03051"></a><span class="lineno"> 3051</span>    <span class="keyword">using </span>dst_type = <span class="keyword">typename</span> View&lt;T, P...&gt;::HostMirror;</div>
 <div class="line"><a id="l03052" name="l03052"></a><span class="lineno"> 3052</span><span class="preprocessor">#ifndef KOKKOS_ENABLE_IMPL_VIEW_LEGACY</span></div>
 <div class="line"><a id="l03053" name="l03053"></a><span class="lineno"> 3053</span>    <span class="comment">// This is necessary because constructing non-const element type from</span></div>
 <div class="line"><a id="l03054" name="l03054"></a><span class="lineno"> 3054</span>    <span class="comment">// const element type accessors is not generally supported</span></div>
@@ -3181,7 +3181,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l03120" name="l03120"></a><span class="lineno"> 3120</span> </div>
 <div class="line"><a id="l03121" name="l03121"></a><span class="lineno"> 3121</span><span class="comment">// choose a `Kokkos::create_mirror` adapted for the provided view and the</span></div>
 <div class="line"><a id="l03122" name="l03122"></a><span class="lineno"> 3122</span><span class="comment">// provided arguments</span></div>
-<div class="line"><a id="l03123" name="l03123"></a><span class="lineno"> 3123</span><span class="keyword">template</span> &lt;<span class="keyword">class </span><a class="code hl_variableRef" href="../../../epetra/doc/html/Epetra__DataAccess_8h.html#ad1a985e79f94ad63030815a0d7d90928a688fad5d6c4f06f049549c2313e93cba">View</a>, <span class="keyword">class</span>... ViewCtorArgs&gt;</div>
+<div class="line"><a id="l03123" name="l03123"></a><span class="lineno"> 3123</span><span class="keyword">template</span> &lt;<span class="keyword">class </span>View, <span class="keyword">class</span>... ViewCtorArgs&gt;</div>
 <div class="line"><a id="l03124" name="l03124"></a><span class="lineno"> 3124</span><span class="keyword">inline</span> <span class="keyword">auto</span> choose_create_mirror(</div>
 <div class="line"><a id="l03125" name="l03125"></a><span class="lineno"> 3125</span>    <span class="keyword">const</span> View&amp; src, <span class="keyword">const</span> Impl::ViewCtorProp&lt;ViewCtorArgs...&gt;&amp; arg_prop) {</div>
 <div class="line"><a id="l03126" name="l03126"></a><span class="lineno"> 3126</span>  <span class="comment">// Due to the fact that users can overload `Kokkos::create_mirror`, but also</span></div>
@@ -3407,7 +3407,6 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l03346" name="l03346"></a><span class="lineno"> 3346</span><span class="comment">//----------------------------------------------------------------------------</span></div>
 <div class="line"><a id="l03347" name="l03347"></a><span class="lineno"> 3347</span> </div>
 <div class="line"><a id="l03348" name="l03348"></a><span class="lineno"> 3348</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aEpetra__DataAccess_8h_html_ad1a985e79f94ad63030815a0d7d90928a688fad5d6c4f06f049549c2313e93cba"><div class="ttname"><a href="../../../epetra/doc/html/Epetra__DataAccess_8h.html#ad1a985e79f94ad63030815a0d7d90928a688fad5d6c4f06f049549c2313e93cba">View</a></div><div class="ttdeci">View</div><div class="ttdef"><b>Definition</b> <a href="Kokkos__View_8hpp_source.html#l00157">Kokkos_View.hpp:157</a></div></div>
 <div class="ttc" id="aKokkos__Layout_8hpp_html"><div class="ttname"><a href="Kokkos__Layout_8hpp.html">Kokkos_Layout.hpp</a></div><div class="ttdoc">Declaration of various MemoryLayout options.</div></div>
 <div class="ttc" id="aKokkos__Parallel_8hpp_html"><div class="ttname"><a href="Kokkos__Parallel_8hpp.html">Kokkos_Parallel.hpp</a></div><div class="ttdoc">Declaration of parallel operators.</div></div>
 <div class="ttc" id="aclassKokkos_1_1Bitset_html"><div class="ttname"><a href="classKokkos_1_1Bitset.html">Kokkos::Bitset</a></div><div class="ttdoc">A thread safe view to a bitset.</div><div class="ttdef"><b>Definition</b> <a href="Kokkos__Bitset_8hpp_source.html#l00049">Kokkos_Bitset.hpp:49</a></div></div>

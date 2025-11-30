@@ -98,7 +98,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#ifdef PANZER_HAVE_EPETRA_STACK</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> EvalT&gt;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><a class="code hl_classRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/epetra/doc/html/classEpetra__Vector.html">Epetra_Vector</a> &amp; ResponseMESupport_Default&lt;EvalT&gt;::</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>Epetra_Vector &amp; ResponseMESupport_Default&lt;EvalT&gt;::</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>getEpetraVector()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>   TEUCHOS_ASSERT(useEpetra());</div>
@@ -133,9 +133,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <span class="comment">// lazily construct the map only as needed</span></div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="keywordflow">if</span>(map_==Teuchos::null) {</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordflow">if</span>(this-&gt;vectorIsDistributed())</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      map_ = Teuchos::rcp(<span class="keyword">new</span> <a class="code hl_classRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/epetra/doc/html/classEpetra__Map.html">Epetra_Map</a>(-1,(<span class="keywordtype">int</span>) this-&gt;localSizeRequired(),0,eComm_));</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      map_ = Teuchos::rcp(<span class="keyword">new</span> Epetra_Map(-1,(<span class="keywordtype">int</span>) this-&gt;localSizeRequired(),0,eComm_));</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>      map_ = Teuchos::rcp(<span class="keyword">new</span> <a class="code hl_classRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/epetra/doc/html/classEpetra__LocalMap.html">Epetra_LocalMap</a>((<span class="keywordtype">int</span>) this-&gt;localSizeRequired(),0,eComm_));</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>      map_ = Teuchos::rcp(<span class="keyword">new</span> Epetra_LocalMap((<span class="keywordtype">int</span>) this-&gt;localSizeRequired(),0,eComm_));</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  }</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <span class="keywordflow">return</span> map_;</div>
@@ -194,9 +194,6 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>}</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassEpetra__LocalMap_html"><div class="ttname"><a href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/epetra/doc/html/classEpetra__LocalMap.html">Epetra_LocalMap</a></div></div>
-<div class="ttc" id="aclassEpetra__Map_html"><div class="ttname"><a href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/epetra/doc/html/classEpetra__Map.html">Epetra_Map</a></div></div>
-<div class="ttc" id="aclassEpetra__Vector_html"><div class="ttname"><a href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/epetra/doc/html/classEpetra__Vector.html">Epetra_Vector</a></div></div>
 <div class="ttc" id="aclassThyra_1_1VectorBase_html"><div class="ttname"><a href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/classThyra_1_1VectorBase.html">Thyra::VectorBase</a></div></div>
 <div class="ttc" id="aclasspanzer_1_1ResponseMESupport__Default_html"><div class="ttname"><a href="classpanzer_1_1ResponseMESupport__Default.html">panzer::ResponseMESupport_Default</a></div><div class="ttdef"><b>Definition</b> <a href="Panzer__ResponseMESupport__Default_8hpp_source.html#l00034">Panzer_ResponseMESupport_Default.hpp:34</a></div></div>
 <div class="ttc" id="aclasspanzer_1_1ResponseMESupport__Default_html_aa0840aab0a84b276c4e2d1685bef8e8e"><div class="ttname"><a href="classpanzer_1_1ResponseMESupport__Default.html#aa0840aab0a84b276c4e2d1685bef8e8e">panzer::ResponseMESupport_Default::setVector</a></div><div class="ttdeci">void setVector(const Teuchos::RCP&lt; Thyra::VectorBase&lt; double &gt; &gt; &amp;destVec)</div><div class="ttdef"><b>Definition</b> <a href="Panzer__ResponseMESupport__Default__impl_8hpp_source.html#l00093">Panzer_ResponseMESupport_Default_impl.hpp:94</a></div></div>

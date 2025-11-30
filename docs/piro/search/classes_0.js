@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['adaptivesolutionmanager_0',['AdaptiveSolutionManager',['../classPiro_1_1Epetra_1_1AdaptiveSolutionManager.html',1,'Piro::Epetra']]]
+  ['customlbfgssecant_0',['customlbfgssecant',['../classPiro_1_1CustomLBFGSSecant.html',1,'Piro::CustomLBFGSSecant&lt; Real &gt;'],['../classROL_1_1CustomLBFGSSecant.html',1,'CustomLBFGSSecant']]]
 ];

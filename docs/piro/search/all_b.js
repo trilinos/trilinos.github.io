@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['label_0',['Label',['../classPiro_1_1Epetra_1_1SensitivityOperator.html#a9698de97be180689329da11efe9a73c7',1,'Piro::Epetra::SensitivityOperator']]],
-  ['locaadaptivesolver_1',['LOCAAdaptiveSolver',['../classPiro_1_1Epetra_1_1LOCAAdaptiveSolver.html',1,'Piro::Epetra']]],
-  ['locasolver_2',['locasolver',['../classPiro_1_1Epetra_1_1LOCASolver.html',1,'Piro::Epetra::LOCASolver'],['../classPiro_1_1LOCASolver.html',1,'Piro::LOCASolver&lt; Scalar &gt;'],['../classPiro_1_1Epetra_1_1LOCASolver.html#a6fc4fe5e80551e49c04d6a5bcdcd6dcb',1,'Piro::Epetra::LOCASolver::LOCASolver()'],['../classPiro_1_1LOCASolver.html#addd712858e39552e5343c1c95cdb3e44',1,'Piro::LOCASolver::LOCASolver()']]]
+  ['matrixfreedecorator_0',['matrixfreedecorator',['../classPiro_1_1MatrixFreeDecorator.html',1,'Piro::MatrixFreeDecorator&lt; Scalar &gt;'],['../classPiro_1_1MatrixFreeDecorator.html#ab12ce4d0f6493c2ebdf8041496bf8fdb',1,'Piro::MatrixFreeDecorator::MatrixFreeDecorator()']]],
+  ['matrixfreelinearop_1',['matrixfreelinearop',['../classPiro_1_1MatrixFreeLinearOp.html',1,'Piro::MatrixFreeLinearOp&lt; Scalar &gt;'],['../classPiro_1_1MatrixFreeLinearOp.html#a2ea7dbf45ff712c1a91d6efb94d7ab7b',1,'Piro::MatrixFreeLinearOp::MatrixFreeLinearOp(const Teuchos::RCP&lt; const Thyra::ModelEvaluator&lt; Scalar &gt; &gt; &amp;model, const double lambda)']]],
+  ['model_2',['model',['../classPiro_1_1MatrixFreeLinearOp.html#a2700b3101ba41cadec1a4121818ffeb8',1,'Piro::MatrixFreeLinearOp']]],
+  ['model_20evaluator_20confusion_3',['Model Evaluator Confusion',['../index.html#piro_me',1,'']]]
 ];

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['use_20case_0',['Piro Use Case',['../index.html#piro_use',1,'']]],
-  ['usetranspose_1',['UseTranspose',['../classPiro_1_1Epetra_1_1SensitivityOperator.html#ac045a58934a10e40f2599c70a56fd96f',1,'Piro::Epetra::SensitivityOperator']]]
+  ['value_0',['value',['../classPiro_1_1ThyraProductME__ROL__DynamicObjective.html#a32eac196aaac8c358addc4a43ddd4065',1,'Piro::ThyraProductME_ROL_DynamicObjective::value()'],['../classPiro_1_1ThyraProductME__TempusFinalObjective.html#aa80ec0bc3ebb0fcd2ca8a93f0c8eb067',1,'Piro::ThyraProductME_TempusFinalObjective::value()']]]
 ];

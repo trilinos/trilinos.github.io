@@ -21,6 +21,7 @@ var namespaces_dup =
       [ "enableMueLuTpetraQ2Q1", "namespaceStratimikos.html#a32b2b3334a4ad4ea60ac11e51e97e73b", null ],
       [ "enableMueLuTpetraQ2Q1", "namespaceStratimikos.html#ae8996dc6538ed328d700a41163c84b8b", null ]
     ] ],
+    [ "Teuchos", "namespaceTeuchos.html", "namespaceTeuchos" ],
     [ "Thyra", "namespaceThyra.html", "namespaceThyra" ],
     [ "Xpetra", "namespaceXpetra.html", "namespaceXpetra" ],
     [ "Zoltan2", "namespaceZoltan2.html", "namespaceZoltan2" ]

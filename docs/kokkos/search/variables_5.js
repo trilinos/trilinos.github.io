@@ -6,6 +6,5 @@ var searchData=
   ['evals_3',['evals',['../../../../anasazi/doc/html/structAnasazi_1_1GeneralizedDavidsonState.html#a6e3b3f9044cea3dc5af2bf749e916d47',1,'Anasazi::GeneralizedDavidsonState::eVals'],['../../../../anasazi/doc/html/structAnasazi_1_1Eigensolution.html#ac9d141d98adcba85fbad011a7b7bda6e',1,'Anasazi::Eigensolution::Evals']]],
   ['evecs_4',['Evecs',['../../../../anasazi/doc/html/structAnasazi_1_1Eigensolution.html#a2acb2a4d8a9e338116c764c55ec999b9',1,'Anasazi::Eigensolution']]],
   ['existu_5',['existU',['../../../../belos/doc/html/structBelos_1_1RCGIterState.html#a0801d6ef432f3cac0864df52f6c5c466',1,'Belos::RCGIterState']]],
-  ['explicit_6',['Explicit',['../../../../belos/doc/html/classBelos_1_1StatusTestGenResNorm.html#ad8268a1af6b9cad38dfafa2f5ace40aca930eed5093305dec09eb196d2debc221',1,'Belos::StatusTestGenResNorm']]],
-  ['exporter_5f_7',['exporter_',['../../../../epetra/doc/html/classEpetra__FEVector.html#a8823568e088de0c5b45f885b12d2d07e',1,'Epetra_FEVector']]]
+  ['explicit_6',['Explicit',['../../../../belos/doc/html/classBelos_1_1StatusTestGenResNorm.html#ad8268a1af6b9cad38dfafa2f5ace40aca930eed5093305dec09eb196d2debc221',1,'Belos::StatusTestGenResNorm']]]
 ];

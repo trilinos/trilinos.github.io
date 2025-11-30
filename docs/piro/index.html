@@ -97,7 +97,7 @@ Introduction</h1>
 <p>The name Piro is an acronym for "Parameters In -- Responses Out," which is a Tarzan-grammar description of the abstraction for a solved forward problem. It also is the name of a Native American Pueblo originally located near present day Socorro, New Mexico.</p>
 <h1><a class="anchor" id="piro_overview"></a>
 Piro Description</h1>
-<p>Piro attempts to unify the usage of the nonlinear analysis capabilities in Trilinos. It requires that the application code present itself using the ModelEvaluator interface abstraction (either the Thyra or EpetraExt version). The different <a class="el" href="group__Piro__solver__grp.html">Piro solvers</a> can be constructed using just an instance of <code>Thyra::ModelEvaluator</code> (or <code>EpetraExt::ModelEvaluator</code>) and a <code>Teuchos::ParameterList</code>, either directly or via a <a class="el" href="classPiro_1_1SolverFactory.html">factory</a> for Thyra-based models (and the Epetra <a class="el" href="classPiro_1_1Epetra_1_1SolverFactory.html">counterpart</a>) for added flexibility. Once created, the resulting solved models can be evaluated with a single <code>evalModel</code> call, or alternatively via the <a class="el" href="group__Piro__solve__driver__grp.html">forward solve routines</a> included in Piro.</p>
+<p>Piro attempts to unify the usage of the nonlinear analysis capabilities in Trilinos. It requires that the application code present itself using the ModelEvaluator interface. The different <a class="el" href="group__Piro__solver__grp.html">Piro solvers</a> can be constructed using just an instance of <code>Thyra::ModelEvaluator</code> and a <code>Teuchos::ParameterList</code>, either directly or via a <a class="el" href="classPiro_1_1SolverFactory.html">factory</a>. Once created, the resulting solved models can be evaluated with a single <code>evalModel</code> call, or alternatively via the <a class="el" href="group__Piro__solve__driver__grp.html">forward solve routines</a> included in Piro.</p>
 <p>The nonlinear analysis tools that are (or will be) wrapped by Piro include: </p><ul>
 <li>
 NOX: Nonlinear Solver </li>
@@ -106,7 +106,7 @@ LOCA: Continuation and Bifurcation Analysis Solver </li>
 <li>
 ROL: Tools for Numerical Optimization </li>
 </ul>
-<p>Each of these solvers not only takes a ModelEvaluator as the interface to the application code, but also itself inherits from the ModelEvaluator interface. These are of the ResponseOnlyModelEvaluator variety (which is currently a class in Thyra, but just a useful description for EpetraExt). A ResponseOnlyModelEvaluator takes parameters as inputs and produces responses as output (hence the PIRO acronym). In general, it may also produce gradients of the response with respect to the parameters, and, in the future, Hessians.</p>
+<p>Each of these solvers not only takes a ModelEvaluator as the interface to the application code, but also itself inherits from the ModelEvaluator interface. These are of the ResponseOnlyModelEvaluator variety. A ResponseOnlyModelEvaluator takes parameters as inputs and produces responses as output (hence the PIRO acronym). In general, it may also produce gradients of the response with respect to the parameters, and, in the future, Hessians.</p>
 <p>As a ResponseOnlyModelEvaluator, any Piro solver will satisfy the interface for non-intrusive optimization and UQ algorithms. In Trilinos, these include: </p><ul>
 <li>
 </li>
@@ -120,7 +120,7 @@ Wrap your application code in an <code>ModelEvaluator</code>, taking a solution 
 <li>
 Construct this model, and use it and a parameter list (specified in an XML file) to construct a <a class="el" href="classPiro_1_1NOXSolver.html">NOXSolver</a>. </li>
 <li>
-Call the <a class="el" href="group__Piro__Thyra__analysis__driver__grp.html#gac6957621c5abd0cba4049b7c34f2df2d">analysis routine</a> with this solver and a parameter list to perform optimization of this model. </li>
+Call the <a class="el" href="namespacePiro.html#ac6957621c5abd0cba4049b7c34f2df2d">analysis routine</a> with this solver and a parameter list to perform optimization of this model. </li>
 <li>
 Add support for time dependence to your model, construct the <a class="el" href="classPiro_1_1TempusSolver.html">TempusSolver</a> instead, and repeat optimization for transient application. </li>
 </ul>
