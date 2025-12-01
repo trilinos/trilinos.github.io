@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['weighteddistancefunctor_0',['WeightedDistanceFunctor',['../classMueLu_1_1DistanceLaplacian_1_1WeightedDistanceFunctor.html',1,'MueLu::DistanceLaplacian']]]
+  ['xpetralinearop_0',['XpetraLinearOp',['../classThyra_1_1XpetraLinearOp.html',1,'Thyra']]],
+  ['xpetraoperator_1',['XpetraOperator',['../classMueLu_1_1XpetraOperator.html',1,'MueLu']]]
 ];

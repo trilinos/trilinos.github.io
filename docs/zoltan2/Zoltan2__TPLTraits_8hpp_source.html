@@ -347,58 +347,64 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    <span class="keywordflow">case</span> 1:</div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>      a = <span class="keyword">static_cast&lt;</span>first_t<span class="keyword">&gt;</span>(b[0]);</div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>      first_t *tmp = (first_t *) b;</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>      a = *tmp;</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    }</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>  }</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>      a = <span class="keyword">static_cast&lt;</span>first_t<span class="keyword">&gt;</span>(b[0]);</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>      <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<span class="keyword">sizeof</span>(first_t) &gt; <span class="keyword">sizeof</span>(ZOLTAN_ID_TYPE))</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>        a += <span class="keyword">static_cast&lt;</span>first_t<span class="keyword">&gt;</span>(b[1]) &lt;&lt; (8*<span class="keyword">sizeof</span>(ZOLTAN_ID_TYPE));</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>      <span class="comment">// CAG: This code path is pretty suspicous and caused issues when used for NUM_ID == 2.</span></div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>      first_t *tmp = (first_t *) b;</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>      a = *tmp;</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    }</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>  }</div>
 </div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
-<div class="foldopen" id="foldopen00252" data-start="{" data-end="}">
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno"><a class="line" href="structZoltan2_1_1TPL__Traits_3_01first__t_00_01ZOLTAN__ID__PTR_01_4.html#a93fde4b42ef6170b8a7f99dd329cbd3b">  252</a></span>  <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structZoltan2_1_1TPL__Traits_3_01first__t_00_01ZOLTAN__ID__PTR_01_4.html#a93fde4b42ef6170b8a7f99dd329cbd3b">ASSIGN_ARRAY</a>(first_t *a, ArrayView&lt;ZOLTAN_ID_PTR&gt; &amp;b)</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>  {</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    <span class="keywordflow">throw</span> std::runtime_error(</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>               <span class="stringliteral">&quot;TPL_Traits::ASSIGN_ARRAY&lt;first_t,ZOLTAN_ID_PTR&gt; &quot;</span></div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>               <span class="stringliteral">&quot;is not implemented.&quot;</span>);</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>  }</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span> </div>
+<div class="foldopen" id="foldopen00258" data-start="{" data-end="}">
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno"><a class="line" href="structZoltan2_1_1TPL__Traits_3_01first__t_00_01ZOLTAN__ID__PTR_01_4.html#a93fde4b42ef6170b8a7f99dd329cbd3b">  258</a></span>  <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structZoltan2_1_1TPL__Traits_3_01first__t_00_01ZOLTAN__ID__PTR_01_4.html#a93fde4b42ef6170b8a7f99dd329cbd3b">ASSIGN_ARRAY</a>(first_t *a, ArrayView&lt;ZOLTAN_ID_PTR&gt; &amp;b)</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>  {</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    <span class="keywordflow">throw</span> std::runtime_error(</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>               <span class="stringliteral">&quot;TPL_Traits::ASSIGN_ARRAY&lt;first_t,ZOLTAN_ID_PTR&gt; &quot;</span></div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>               <span class="stringliteral">&quot;is not implemented.&quot;</span>);</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>  }</div>
 </div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
-<div class="foldopen" id="foldopen00259" data-start="{" data-end="}">
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno"><a class="line" href="structZoltan2_1_1TPL__Traits_3_01first__t_00_01ZOLTAN__ID__PTR_01_4.html#a8ddd6a401b808a25afb36254200abfe2">  259</a></span>  <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structZoltan2_1_1TPL__Traits_3_01first__t_00_01ZOLTAN__ID__PTR_01_4.html#a8ddd6a401b808a25afb36254200abfe2">SAVE_ARRAYRCP</a>(ArrayRCP&lt;first_t&gt; *a, ZOLTAN_ID_PTR b, </div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>                                         <span class="keywordtype">size_t</span> size)</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>  {</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    <span class="comment">// Here, size * NUM_ID == length of b; that is, size is the number of</span></div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    <span class="comment">// objects in b.</span></div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    <span class="comment">// Return in a an ArrayRCP of b.</span></div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    <span class="keywordflow">if</span> (size &gt; 0) {</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>      <span class="keywordflow">if</span> (NUM_ID == 1)</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>        *a = arcp(b, 0, size, <span class="keyword">true</span>);  <span class="comment">// Don&#39;t have to make a new copy</span></div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>      <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        first_t *tmp = <span class="keyword">new</span> first_t[size];</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; size; i++) <a class="code hl_function" href="structZoltan2_1_1TPL__Traits.html#a4e58ba55bac25acf9e19726c2afe7e2c">ASSIGN</a>(tmp[i], &amp;(b[i*NUM_ID]));</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        *a = arcp(tmp, 0, size, <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>      }</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    }</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>      *a = Teuchos::null;</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    }</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>  }</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span> </div>
+<div class="foldopen" id="foldopen00265" data-start="{" data-end="}">
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno"><a class="line" href="structZoltan2_1_1TPL__Traits_3_01first__t_00_01ZOLTAN__ID__PTR_01_4.html#a8ddd6a401b808a25afb36254200abfe2">  265</a></span>  <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structZoltan2_1_1TPL__Traits_3_01first__t_00_01ZOLTAN__ID__PTR_01_4.html#a8ddd6a401b808a25afb36254200abfe2">SAVE_ARRAYRCP</a>(ArrayRCP&lt;first_t&gt; *a, ZOLTAN_ID_PTR b, </div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>                                         <span class="keywordtype">size_t</span> size)</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>  {</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    <span class="comment">// Here, size * NUM_ID == length of b; that is, size is the number of</span></div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    <span class="comment">// objects in b.</span></div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    <span class="comment">// Return in a an ArrayRCP of b.</span></div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    <span class="keywordflow">if</span> (size &gt; 0) {</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>      <span class="keywordflow">if</span> (NUM_ID == 1)</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        *a = arcp(b, 0, size, <span class="keyword">true</span>);  <span class="comment">// Don&#39;t have to make a new copy</span></div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>      <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        first_t *tmp = <span class="keyword">new</span> first_t[size];</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; size; i++) <a class="code hl_function" href="structZoltan2_1_1TPL__Traits.html#a4e58ba55bac25acf9e19726c2afe7e2c">ASSIGN</a>(tmp[i], &amp;(b[i*NUM_ID]));</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        *a = arcp(tmp, 0, size, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>      }</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    }</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>      *a = Teuchos::null;</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    }</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>  }</div>
 </div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span> </div>
-<div class="foldopen" id="foldopen00279" data-start="{" data-end="}">
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno"><a class="line" href="structZoltan2_1_1TPL__Traits_3_01first__t_00_01ZOLTAN__ID__PTR_01_4.html#aec9a8c8dd4bc8ff18df79c3ea157aac6">  279</a></span>  <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structZoltan2_1_1TPL__Traits_3_01first__t_00_01ZOLTAN__ID__PTR_01_4.html#aec9a8c8dd4bc8ff18df79c3ea157aac6">DELETE_ARRAY</a>(first_t **a)</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>  {</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    <span class="comment">// Delete the copy made in ASSIGN_ARRAY.</span></div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    <span class="keywordflow">if</span> (NUM_ID != 1)</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>      <span class="keyword">delete</span> [] *a;</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>  }</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span> </div>
+<div class="foldopen" id="foldopen00285" data-start="{" data-end="}">
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno"><a class="line" href="structZoltan2_1_1TPL__Traits_3_01first__t_00_01ZOLTAN__ID__PTR_01_4.html#aec9a8c8dd4bc8ff18df79c3ea157aac6">  285</a></span>  <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structZoltan2_1_1TPL__Traits_3_01first__t_00_01ZOLTAN__ID__PTR_01_4.html#aec9a8c8dd4bc8ff18df79c3ea157aac6">DELETE_ARRAY</a>(first_t **a)</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>  {</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    <span class="comment">// Delete the copy made in ASSIGN_ARRAY.</span></div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    <span class="keywordflow">if</span> (NUM_ID != 1)</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>      <span class="keyword">delete</span> [] *a;</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>  }</div>
 </div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>};</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>};</div>
 </div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span> </div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>} <span class="comment">// namespace Zoltan2</span></div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span> </div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span> </div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>} <span class="comment">// namespace Zoltan2</span></div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span> </div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aZoltan2__Environment_8hpp_html"><div class="ttname"><a href="Zoltan2__Environment_8hpp.html">Zoltan2_Environment.hpp</a></div><div class="ttdoc">Defines the Environment class.</div></div>
 <div class="ttc" id="aZoltan2__Standards_8hpp_html"><div class="ttname"><a href="Zoltan2__Standards_8hpp.html">Zoltan2_Standards.hpp</a></div><div class="ttdoc">Gathering definitions used in software development.</div></div>
 <div class="ttc" id="anamespaceZoltan2_html"><div class="ttname"><a href="namespaceZoltan2.html">Zoltan2</a></div><div class="ttdoc">Created by mbenlioglu on Aug 31, 2020.</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__AlgHybrid2GL_8hpp_source.html#l00047">Zoltan2_AlgHybrid2GL.hpp:47</a></div></div>
@@ -407,10 +413,10 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="astructZoltan2_1_1TPL__Traits_3_01ZOLTAN__ID__PTR_00_01second__t_01_4_html_a3b9b697e873f4f6e89b465112306a5bf"><div class="ttname"><a href="structZoltan2_1_1TPL__Traits_3_01ZOLTAN__ID__PTR_00_01second__t_01_4.html#a3b9b697e873f4f6e89b465112306a5bf">Zoltan2::TPL_Traits&lt; ZOLTAN_ID_PTR, second_t &gt;::SAVE_ARRAYRCP</a></div><div class="ttdeci">static void SAVE_ARRAYRCP(ArrayRCP&lt; ZOLTAN_ID_PTR &gt; *a, second_t *b, size_t size)</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__TPLTraits_8hpp_source.html#l00204">Zoltan2_TPLTraits.hpp:204</a></div></div>
 <div class="ttc" id="astructZoltan2_1_1TPL__Traits_3_01ZOLTAN__ID__PTR_00_01second__t_01_4_html_accd89b49cb90c7e65285c43b1a3fce01"><div class="ttname"><a href="structZoltan2_1_1TPL__Traits_3_01ZOLTAN__ID__PTR_00_01second__t_01_4.html#accd89b49cb90c7e65285c43b1a3fce01">Zoltan2::TPL_Traits&lt; ZOLTAN_ID_PTR, second_t &gt;::ASSIGN_ARRAY</a></div><div class="ttdeci">static void ASSIGN_ARRAY(ZOLTAN_ID_PTR *a, ArrayView&lt; second_t &gt; &amp;b)</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__TPLTraits_8hpp_source.html#l00182">Zoltan2_TPLTraits.hpp:182</a></div></div>
 <div class="ttc" id="astructZoltan2_1_1TPL__Traits_3_01ZOLTAN__ID__PTR_00_01second__t_01_4_html_af45d7ce9bbc9961da17ec30400791c26"><div class="ttname"><a href="structZoltan2_1_1TPL__Traits_3_01ZOLTAN__ID__PTR_00_01second__t_01_4.html#af45d7ce9bbc9961da17ec30400791c26">Zoltan2::TPL_Traits&lt; ZOLTAN_ID_PTR, second_t &gt;::ASSIGN</a></div><div class="ttdeci">static void ASSIGN(ZOLTAN_ID_PTR &amp;a, second_t b)</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__TPLTraits_8hpp_source.html#l00163">Zoltan2_TPLTraits.hpp:163</a></div></div>
-<div class="ttc" id="astructZoltan2_1_1TPL__Traits_3_01first__t_00_01ZOLTAN__ID__PTR_01_4_html_a8ddd6a401b808a25afb36254200abfe2"><div class="ttname"><a href="structZoltan2_1_1TPL__Traits_3_01first__t_00_01ZOLTAN__ID__PTR_01_4.html#a8ddd6a401b808a25afb36254200abfe2">Zoltan2::TPL_Traits&lt; first_t, ZOLTAN_ID_PTR &gt;::SAVE_ARRAYRCP</a></div><div class="ttdeci">static void SAVE_ARRAYRCP(ArrayRCP&lt; first_t &gt; *a, ZOLTAN_ID_PTR b, size_t size)</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__TPLTraits_8hpp_source.html#l00259">Zoltan2_TPLTraits.hpp:259</a></div></div>
+<div class="ttc" id="astructZoltan2_1_1TPL__Traits_3_01first__t_00_01ZOLTAN__ID__PTR_01_4_html_a8ddd6a401b808a25afb36254200abfe2"><div class="ttname"><a href="structZoltan2_1_1TPL__Traits_3_01first__t_00_01ZOLTAN__ID__PTR_01_4.html#a8ddd6a401b808a25afb36254200abfe2">Zoltan2::TPL_Traits&lt; first_t, ZOLTAN_ID_PTR &gt;::SAVE_ARRAYRCP</a></div><div class="ttdeci">static void SAVE_ARRAYRCP(ArrayRCP&lt; first_t &gt; *a, ZOLTAN_ID_PTR b, size_t size)</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__TPLTraits_8hpp_source.html#l00265">Zoltan2_TPLTraits.hpp:265</a></div></div>
 <div class="ttc" id="astructZoltan2_1_1TPL__Traits_3_01first__t_00_01ZOLTAN__ID__PTR_01_4_html_a8f8f14387a62bd9af19286bbd0a0fb98"><div class="ttname"><a href="structZoltan2_1_1TPL__Traits_3_01first__t_00_01ZOLTAN__ID__PTR_01_4.html#a8f8f14387a62bd9af19286bbd0a0fb98">Zoltan2::TPL_Traits&lt; first_t, ZOLTAN_ID_PTR &gt;::OK_TO_CAST</a></div><div class="ttdeci">static bool OK_TO_CAST()</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__TPLTraits_8hpp_source.html#l00231">Zoltan2_TPLTraits.hpp:231</a></div></div>
-<div class="ttc" id="astructZoltan2_1_1TPL__Traits_3_01first__t_00_01ZOLTAN__ID__PTR_01_4_html_a93fde4b42ef6170b8a7f99dd329cbd3b"><div class="ttname"><a href="structZoltan2_1_1TPL__Traits_3_01first__t_00_01ZOLTAN__ID__PTR_01_4.html#a93fde4b42ef6170b8a7f99dd329cbd3b">Zoltan2::TPL_Traits&lt; first_t, ZOLTAN_ID_PTR &gt;::ASSIGN_ARRAY</a></div><div class="ttdeci">static void ASSIGN_ARRAY(first_t *a, ArrayView&lt; ZOLTAN_ID_PTR &gt; &amp;b)</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__TPLTraits_8hpp_source.html#l00252">Zoltan2_TPLTraits.hpp:252</a></div></div>
-<div class="ttc" id="astructZoltan2_1_1TPL__Traits_3_01first__t_00_01ZOLTAN__ID__PTR_01_4_html_aec9a8c8dd4bc8ff18df79c3ea157aac6"><div class="ttname"><a href="structZoltan2_1_1TPL__Traits_3_01first__t_00_01ZOLTAN__ID__PTR_01_4.html#aec9a8c8dd4bc8ff18df79c3ea157aac6">Zoltan2::TPL_Traits&lt; first_t, ZOLTAN_ID_PTR &gt;::DELETE_ARRAY</a></div><div class="ttdeci">static void DELETE_ARRAY(first_t **a)</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__TPLTraits_8hpp_source.html#l00279">Zoltan2_TPLTraits.hpp:279</a></div></div>
+<div class="ttc" id="astructZoltan2_1_1TPL__Traits_3_01first__t_00_01ZOLTAN__ID__PTR_01_4_html_a93fde4b42ef6170b8a7f99dd329cbd3b"><div class="ttname"><a href="structZoltan2_1_1TPL__Traits_3_01first__t_00_01ZOLTAN__ID__PTR_01_4.html#a93fde4b42ef6170b8a7f99dd329cbd3b">Zoltan2::TPL_Traits&lt; first_t, ZOLTAN_ID_PTR &gt;::ASSIGN_ARRAY</a></div><div class="ttdeci">static void ASSIGN_ARRAY(first_t *a, ArrayView&lt; ZOLTAN_ID_PTR &gt; &amp;b)</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__TPLTraits_8hpp_source.html#l00258">Zoltan2_TPLTraits.hpp:258</a></div></div>
+<div class="ttc" id="astructZoltan2_1_1TPL__Traits_3_01first__t_00_01ZOLTAN__ID__PTR_01_4_html_aec9a8c8dd4bc8ff18df79c3ea157aac6"><div class="ttname"><a href="structZoltan2_1_1TPL__Traits_3_01first__t_00_01ZOLTAN__ID__PTR_01_4.html#aec9a8c8dd4bc8ff18df79c3ea157aac6">Zoltan2::TPL_Traits&lt; first_t, ZOLTAN_ID_PTR &gt;::DELETE_ARRAY</a></div><div class="ttdeci">static void DELETE_ARRAY(first_t **a)</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__TPLTraits_8hpp_source.html#l00285">Zoltan2_TPLTraits.hpp:285</a></div></div>
 <div class="ttc" id="astructZoltan2_1_1TPL__Traits_3_01first__t_00_01ZOLTAN__ID__PTR_01_4_html_af63f68d5ca278a3971a82c73950a15d8"><div class="ttname"><a href="structZoltan2_1_1TPL__Traits_3_01first__t_00_01ZOLTAN__ID__PTR_01_4.html#af63f68d5ca278a3971a82c73950a15d8">Zoltan2::TPL_Traits&lt; first_t, ZOLTAN_ID_PTR &gt;::ASSIGN</a></div><div class="ttdeci">static void ASSIGN(first_t &amp;a, ZOLTAN_ID_PTR b)</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__TPLTraits_8hpp_source.html#l00240">Zoltan2_TPLTraits.hpp:240</a></div></div>
 <div class="ttc" id="astructZoltan2_1_1TPL__Traits_3_01first__t_00_01first__t_01_4_html_a0c7de7b67c0267d8524977ee79ec01db"><div class="ttname"><a href="structZoltan2_1_1TPL__Traits_3_01first__t_00_01first__t_01_4.html#a0c7de7b67c0267d8524977ee79ec01db">Zoltan2::TPL_Traits&lt; first_t, first_t &gt;::OK_TO_CAST</a></div><div class="ttdeci">static bool OK_TO_CAST()</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__TPLTraits_8hpp_source.html#l00107">Zoltan2_TPLTraits.hpp:107</a></div></div>
 <div class="ttc" id="astructZoltan2_1_1TPL__Traits_3_01first__t_00_01first__t_01_4_html_a358f31ab8a8c331dc89edcb6386c0699"><div class="ttname"><a href="structZoltan2_1_1TPL__Traits_3_01first__t_00_01first__t_01_4.html#a358f31ab8a8c331dc89edcb6386c0699">Zoltan2::TPL_Traits&lt; first_t, first_t &gt;::ASSIGN_ARRAY</a></div><div class="ttdeci">static void ASSIGN_ARRAY(first_t **a, ArrayView&lt; first_t &gt; &amp;b)</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__TPLTraits_8hpp_source.html#l00111">Zoltan2_TPLTraits.hpp:111</a></div></div>

@@ -1,12 +1,18 @@
 var searchData=
 [
-  ['range_0',['range',['../classPiro_1_1MatrixFreeLinearOp.html#a319c98e0f3eb16cde73bab1c3dc54c72',1,'Piro::MatrixFreeLinearOp']]],
-  ['release_20in_20trilinos_2011_204_1',['Disclaimer for Beta-Release in Trilinos 11.4',['../index.html#piro_disclaimer',1,'']]],
-  ['renamepreconditionerparamlist_2',['renamePreconditionerParamList',['../namespacePiro.html#a2844c5c6339c17fa9a3737aacdcc5304',1,'Piro']]],
-  ['reportfinalpoint_3',['reportFinalPoint',['../classPiro_1_1InvertMassMatrixDecorator.html#a1a9f21e35354839baf4451a13ce3cd60',1,'Piro::InvertMassMatrixDecorator']]],
-  ['resetresponsefnindex_4',['resetResponseFnIndex',['../classPiro_1_1TransientSolver.html#a5294faa5d322d52993bf9673cc3abf1a',1,'Piro::TransientSolver']]],
-  ['resetsensitivityparamindex_5',['resetSensitivityParamIndex',['../classPiro_1_1TransientSolver.html#a54b9177adcb2795a9f9042cdbf838122',1,'Piro::TransientSolver']]],
-  ['rol_5fobserverbase_6',['ROL_ObserverBase',['../classPiro_1_1ROL__ObserverBase.html',1,'Piro']]],
-  ['roloutputbuffer_7',['RolOutputBuffer',['../classPiro_1_1RolOutputBuffer.html',1,'Piro']]],
-  ['run_5ftempus_8',['run_tempus',['../classPiro_1_1ThyraProductME__TempusFinalObjective.html#a127d138159abcd1a7eda95f6f201c57d',1,'Piro::ThyraProductME_TempusFinalObjective']]]
+  ['set_5fdgdx_5fdotdot_0',['set_DgDx_dotdot',['../classPiro_1_1TransientDecorator.html#aa75ad61b80d5f38ded9090726f2c9f9b',1,'Piro::TransientDecorator']]],
+  ['setbase_1',['setBase',['../classPiro_1_1MatrixFreeLinearOp.html#aa2efd1ba78b1c0119591b3ed7859d18e',1,'Piro::MatrixFreeLinearOp']]],
+  ['setfinaltime_2',['setFinalTime',['../classPiro_1_1TempusSolver.html#a507dd25c9b1d8111910d6fab22174997',1,'Piro::TempusSolver']]],
+  ['setinitialguess_3',['setInitialGuess',['../classPiro_1_1TempusSolver.html#a922f23d01a81f52e331049c2161e0964',1,'Piro::TempusSolver']]],
+  ['setinitialstate_4',['setInitialState',['../classPiro_1_1TempusSolver.html#a08bf2449ecbe2f33dc7a434c42ec1bdb',1,'Piro::TempusSolver']]],
+  ['setinittimestep_5',['setInitTimeStep',['../classPiro_1_1TempusSolver.html#a1c6f0b65ca9ff50003a7861fd9676b48',1,'Piro::TempusSolver']]],
+  ['setpirotempusintegrator_6',['setPiroTempusIntegrator',['../classPiro_1_1TransientSolver.html#a0dc7f6825a21c3a963809e111515c9af',1,'Piro::TransientSolver']]],
+  ['setsensitivitymethod_7',['setsensitivitymethod',['../classPiro_1_1SteadyStateSolver.html#a3b7fa51c1777b27ca23e1e694e234ed1',1,'Piro::SteadyStateSolver::setSensitivityMethod()'],['../classPiro_1_1TransientSolver.html#a12e9a0e0c99bda1f8b656a72e1c80a5d',1,'Piro::TransientSolver::setSensitivityMethod()']]],
+  ['setstarttime_8',['setStartTime',['../classPiro_1_1TempusSolver.html#a0959b93537a57eafe83638235154f3fb',1,'Piro::TempusSolver']]],
+  ['solutionobserverbase_9',['SolutionObserverBase',['../classPiro_1_1SolutionObserverBase.html',1,'Piro']]],
+  ['solve_20drivers_10',['Piro solve drivers',['../group__Piro__solve__driver__grp.html',1,'']]],
+  ['solverfactory_11',['SolverFactory',['../classPiro_1_1SolverFactory.html',1,'Piro']]],
+  ['solvers_12',['Piro solvers',['../group__Piro__solver__grp.html',1,'']]],
+  ['steadystatesolver_13',['steadystatesolver',['../classPiro_1_1SteadyStateSolver.html#ae6e2d24d19982c28f77bed3d421003e6',1,'Piro::SteadyStateSolver::SteadyStateSolver(const Teuchos::RCP&lt; const Thyra::ModelEvaluator&lt; Scalar &gt; &gt; &amp;model, const Teuchos::RCP&lt; const Thyra::ModelEvaluator&lt; Scalar &gt; &gt; &amp;adjointModel)'],['../classPiro_1_1SteadyStateSolver.html#a57439ed1cd5f95c237dcd574774cb603',1,'Piro::SteadyStateSolver::SteadyStateSolver(const Teuchos::RCP&lt; const Thyra::ModelEvaluator&lt; Scalar &gt; &gt; &amp;model, const Teuchos::RCP&lt; const Thyra::ModelEvaluator&lt; Scalar &gt; &gt; &amp;adjointModel, int numParameters)'],['../classPiro_1_1SteadyStateSolver.html',1,'Piro::SteadyStateSolver&lt; Scalar &gt;']]],
+  ['strategy_20package_20for_20embedded_20analysis_20capabilitites_14',['Piro: Strategy package for embedded analysis capabilitites',['../index.html',1,'']]]
 ];

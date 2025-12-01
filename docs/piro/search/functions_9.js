@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['label_0',['Label',['../classPiro_1_1Epetra_1_1SensitivityOperator.html#a9698de97be180689329da11efe9a73c7',1,'Piro::Epetra::SensitivityOperator']]],
-  ['locasolver_1',['locasolver',['../classPiro_1_1Epetra_1_1LOCASolver.html#a6fc4fe5e80551e49c04d6a5bcdcd6dcb',1,'Piro::Epetra::LOCASolver::LOCASolver()'],['../classPiro_1_1LOCASolver.html#addd712858e39552e5343c1c95cdb3e44',1,'Piro::LOCASolver::LOCASolver()']]]
+  ['matrixfreedecorator_0',['MatrixFreeDecorator',['../classPiro_1_1MatrixFreeDecorator.html#ab12ce4d0f6493c2ebdf8041496bf8fdb',1,'Piro::MatrixFreeDecorator']]],
+  ['matrixfreelinearop_1',['MatrixFreeLinearOp',['../classPiro_1_1MatrixFreeLinearOp.html#a2ea7dbf45ff712c1a91d6efb94d7ab7b',1,'Piro::MatrixFreeLinearOp']]],
+  ['model_2',['model',['../classPiro_1_1MatrixFreeLinearOp.html#a2700b3101ba41cadec1a4121818ffeb8',1,'Piro::MatrixFreeLinearOp']]]
 ];

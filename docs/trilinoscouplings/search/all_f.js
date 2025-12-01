@@ -10,5 +10,7 @@ var searchData=
   ['trilinoscouplings_7',['trilinoscouplings',['../index.html#trilinoscouplings_startup',1,'Overview of TrilinosCouplings'],['../index.html',1,'Trilinos/packages/trilinoscouplings']]],
   ['trilinoscouplings_20as_20a_20single_20doxygen_20collection_8',['Browse all of trilinoscouplings as a single doxygen collection',['../index.html#trilinoscouplings_browser',1,'']]],
   ['trilinoscouplings_5fintrepidpoissonexample_5fsolvewithbelos_2ehpp_9',['TrilinosCouplings_IntrepidPoissonExample_SolveWithBelos.hpp',['../TrilinosCouplings__IntrepidPoissonExample__SolveWithBelos_8hpp.html',1,'']]],
-  ['trilinoscouplings_5fintrepidpoissonexamplehelpers_2ehpp_10',['TrilinosCouplings_IntrepidPoissonExampleHelpers.hpp',['../TrilinosCouplings__IntrepidPoissonExampleHelpers_8hpp.html',1,'']]]
+  ['trilinoscouplings_5fintrepidpoissonexamplehelpers_2ehpp_10',['TrilinosCouplings_IntrepidPoissonExampleHelpers.hpp',['../TrilinosCouplings__IntrepidPoissonExampleHelpers_8hpp.html',1,'']]],
+  ['trilinoscouplings_5frebalance_5flinearproblem_5fdecl_2ehpp_11',['TrilinosCouplings_Rebalance_LinearProblem_decl.hpp',['../TrilinosCouplings__Rebalance__LinearProblem__decl_8hpp.html',1,'']]],
+  ['trilinoscouplings_5frebalance_5flinearproblem_5fdef_2ehpp_12',['TrilinosCouplings_Rebalance_LinearProblem_def.hpp',['../TrilinosCouplings__Rebalance__LinearProblem__def_8hpp.html',1,'']]]
 ];

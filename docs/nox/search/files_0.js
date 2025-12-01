@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['epetra_5fcombinemode_2eh_0',['Epetra_CombineMode.h',['../../../../epetra/doc/html/Epetra__CombineMode_8h.html',1,'']]],
-  ['epetra_5fdataaccess_2eh_1',['Epetra_DataAccess.h',['../../../../epetra/doc/html/Epetra__DataAccess_8h.html',1,'']]]
+  ['nox_5flapack_5fvector_2eh_0',['NOX_LAPACK_Vector.H',['../NOX__LAPACK__Vector_8H.html',1,'']]],
+  ['nox_5fthyra_5fvector_2eh_1',['NOX_Thyra_Vector.H',['../NOX__Thyra__Vector_8H.html',1,'']]]
 ];

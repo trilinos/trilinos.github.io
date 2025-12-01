@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['y_5f_0',['Y_',['../classXpetra_1_1TpetraHalfPrecisionOperator.html#a4b9f86173db85e06f638d3f4505b4bd5',1,'Xpetra::TpetraHalfPrecisionOperator']]],
-  ['your_20question_20here_1',['2. Put your question here?',['../faq.html#faq2',1,'']]]
+  ['zero_0',['zero',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/teuchos/doc/html/structTeuchos_1_1OrdinalTraits.html#ad08b9e62103175f1441b928c100fccfb',1,'Teuchos::OrdinalTraits::zero()'],['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/teuchos/doc/html/structTeuchos_1_1ScalarTraits.html#a1d9fe4c2221fcd9df15a16cf525e0f24',1,'Teuchos::ScalarTraits::zero()']]],
+  ['zeroouttimers_1',['zeroOutTimers',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/teuchos/doc/html/classTeuchos_1_1TimeMonitor.html#a66dd36693c57658f28a99938587fdc70',1,'Teuchos::TimeMonitor']]]
 ];

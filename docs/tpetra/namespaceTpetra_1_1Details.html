@@ -1126,7 +1126,7 @@ template&lt;<a class="el" href="classTpetra_1_1CrsMatrixStruct.html">class</a> L
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the number of "bad" global column indices (that don't live in the column <a class="el" href="classTpetra_1_1Map.html" title="A parallel distribution of indices over processes.">Map</a> on the calling process). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Tpetra__CrsGraph__def_8hpp_source.html#l00177">177</a> of file <a class="el" href="Tpetra__CrsGraph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Tpetra__CrsGraph__def_8hpp_source.html#l00181">181</a> of file <a class="el" href="Tpetra__CrsGraph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -1992,7 +1992,7 @@ template&lt;<a class="el" href="classTpetra_1_1CrsMatrixStruct.html">class</a> <
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Tpetra__Details__crsUtils_8hpp_source.html#l00519">519</a> of file <a class="el" href="Tpetra__Details__crsUtils_8hpp_source.html">Tpetra_Details_crsUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Tpetra__Details__crsUtils_8hpp_source.html#l00559">559</a> of file <a class="el" href="Tpetra__Details__crsUtils_8hpp_source.html">Tpetra_Details_crsUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -2067,7 +2067,7 @@ template&lt;<a class="el" href="classTpetra_1_1CrsMatrixStruct.html">class</a> <
 <p>The optional function <code>cb</code> is called on every valid index. <code>cb</code> is sent the current loop index <code>k</code>, <code>rowPtrs</code>[k] (the start of the row), and the relative offset from <code>start</code> in to the <code>curIndices</code> array for <code>newIndices</code>[k]. This function could, for example, be used by <code><a class="el" href="classTpetra_1_1CrsMatrix.html" title="Sparse matrix that presents a row-oriented interface that lets users read or modify entries.">CrsMatrix</a></code> to fill the values array during <code>sumInto*Values</code> or <code>replace*Values</code>; Eg, <code><a class="el" href="classTpetra_1_1CrsMatrix.html#a3a0ad69c66c995fe6b2ceaa449a19e63" title="Sum into one or more sparse matrix entries, using local row and column indices.">CrsMatrix::sumIntoLocalValues</a></code> might have the following:</p>
 <p><code> CrsMatrix::sumIntoLocalValues(LO row, array&lt;LO&gt; cols, array&lt;S&gt; vals) { this-&gt;graph_-&gt;insertLocalValues(row, cols, [&amp;](size_t const k, size_t const start, size_t const offset){ this-&gt;values_[start+offset] += vals[k]; }); } </code> </p>
 
-<p class="definition">Definition at line <a class="el" href="Tpetra__Details__crsUtils_8hpp_source.html#l00596">596</a> of file <a class="el" href="Tpetra__Details__crsUtils_8hpp_source.html">Tpetra_Details_crsUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Tpetra__Details__crsUtils_8hpp_source.html#l00636">636</a> of file <a class="el" href="Tpetra__Details__crsUtils_8hpp_source.html">Tpetra_Details_crsUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -2140,7 +2140,7 @@ template&lt;<a class="el" href="classTpetra_1_1CrsMatrixStruct.html">class</a> <
 <p>The actual value of <code>newIndices</code>[k] that is inserted is the value returned from <code>map(newIndices[k])</code>. If an identity map is provided, <code>newIndices</code>[k] is directly inserted. However, any other map can be provided. For instance, for a locally indexed graph on which <code>insertGlobalIndices</code> is called, the <code>curIndices</code> array can be a view of the graph's local indices, the <code>newIndices</code> array are the new <em>global</em> indices, and <code>map</code> is the graph's column map to convert global indices to local. If this function is called through the overload below without the <code>map</code> argument, the identity map is provided.</p>
 <p>The function <code>cb</code> is called on every valid index. </p>
 
-<p class="definition">Definition at line <a class="el" href="Tpetra__Details__crsUtils_8hpp_source.html#l00663">663</a> of file <a class="el" href="Tpetra__Details__crsUtils_8hpp_source.html">Tpetra_Details_crsUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Tpetra__Details__crsUtils_8hpp_source.html#l00703">703</a> of file <a class="el" href="Tpetra__Details__crsUtils_8hpp_source.html">Tpetra_Details_crsUtils.hpp</a>.</p>
 
 </div>
 </div>

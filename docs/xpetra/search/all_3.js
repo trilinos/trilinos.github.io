@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['2_20put_20your_20question_20here_0',['2. Put your question here?',['../faq.html#faq2',1,'']]]
+  ['_5f_5fcplusplus_0',['__cplusplus',['../Xpetra__ConfigDefs_8hpp.html#a1b391bc7ed92f79666c4a5d840aa1edd',1,'Xpetra_ConfigDefs.hpp']]]
 ];

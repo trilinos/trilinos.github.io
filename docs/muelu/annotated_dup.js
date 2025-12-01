@@ -261,6 +261,7 @@ var annotated_dup =
       [ "RepartitionFactory", "classMueLu_1_1RepartitionFactory.html", "classMueLu_1_1RepartitionFactory" ],
       [ "RepartitionHeuristicFactory", "classMueLu_1_1RepartitionHeuristicFactory.html", "classMueLu_1_1RepartitionHeuristicFactory" ],
       [ "RepartitionInterface", "classMueLu_1_1RepartitionInterface.html", "classMueLu_1_1RepartitionInterface" ],
+      [ "RepartitionUtilities", "structMueLu_1_1RepartitionUtilities.html", "structMueLu_1_1RepartitionUtilities" ],
       [ "ReplicatePFactory", "classMueLu_1_1ReplicatePFactory.html", "classMueLu_1_1ReplicatePFactory" ],
       [ "RfromP_Or_TransP", "classMueLu_1_1RfromP__Or__TransP.html", "classMueLu_1_1RfromP__Or__TransP" ],
       [ "RigidBodyModeFactory", "classMueLu_1_1RigidBodyModeFactory.html", "classMueLu_1_1RigidBodyModeFactory" ],
@@ -331,6 +332,7 @@ var annotated_dup =
       [ "ZeroSubBlockAFactory", "classMueLu_1_1ZeroSubBlockAFactory.html", "classMueLu_1_1ZeroSubBlockAFactory" ],
       [ "Zoltan2Interface", "classMueLu_1_1Zoltan2Interface.html", "classMueLu_1_1Zoltan2Interface" ],
       [ "Zoltan2Interface< double, int, int, Xpetra::EpetraNode >", "classMueLu_1_1Zoltan2Interface_3_01double_00_01int_00_01int_00_01Xpetra_1_1EpetraNode_01_4.html", "classMueLu_1_1Zoltan2Interface_3_01double_00_01int_00_01int_00_01Xpetra_1_1EpetraNode_01_4" ],
+      [ "Zoltan2Utilities", "structMueLu_1_1Zoltan2Utilities.html", "structMueLu_1_1Zoltan2Utilities" ],
       [ "ZoltanInterface", "classMueLu_1_1ZoltanInterface.html", "classMueLu_1_1ZoltanInterface" ]
     ] ],
     [ "MueLuTests", "namespaceMueLuTests.html", [
@@ -340,7 +342,7 @@ var annotated_dup =
       [ "GeneralGeometricPFactoryTester", "classMueLuTests_1_1GeneralGeometricPFactoryTester.html", null ],
       [ "ReplicatePFactoryTester", "classMueLuTests_1_1ReplicatePFactoryTester.html", null ]
     ] ],
-    [ "Teuchos", null, [
+    [ "Teuchos", "namespaceTeuchos.html", [
       [ "Comm", "classTeuchos_1_1Comm.html", null ]
     ] ],
     [ "Thyra", "namespaceThyra.html", [

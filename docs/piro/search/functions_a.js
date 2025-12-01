@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['matrixfreedecorator_0',['matrixfreedecorator',['../classPiro_1_1Epetra_1_1MatrixFreeDecorator.html#aab83e860152af1ced4c6e1fa94a20cac',1,'Piro::Epetra::MatrixFreeDecorator::MatrixFreeDecorator()'],['../classPiro_1_1MatrixFreeDecorator.html#ab12ce4d0f6493c2ebdf8041496bf8fdb',1,'Piro::MatrixFreeDecorator::MatrixFreeDecorator()']]],
-  ['matrixfreelinearop_1',['MatrixFreeLinearOp',['../classPiro_1_1MatrixFreeLinearOp.html#a2ea7dbf45ff712c1a91d6efb94d7ab7b',1,'Piro::MatrixFreeLinearOp']]],
-  ['matrixfreeoperator_2',['MatrixFreeOperator',['../classPiro_1_1Epetra_1_1MatrixFreeOperator.html#afdfe387fd1417dfa7bdcebc91d4fdb60',1,'Piro::Epetra::MatrixFreeOperator']]],
-  ['model_3',['model',['../classPiro_1_1MatrixFreeLinearOp.html#a2700b3101ba41cadec1a4121818ffeb8',1,'Piro::MatrixFreeLinearOp']]]
+  ['ng_0',['Ng',['../classPiro_1_1ProductModelEvaluator.html#acefe4020979721b9c66754cdb05aae18',1,'Piro::ProductModelEvaluator']]],
+  ['nonnull_1',['nonnull',['../classPiro_1_1Provider.html#a4b73a2f7aa382efb2b98f400b03598d2',1,'Piro::Provider::nonnull() const'],['../classPiro_1_1Provider.html#a45dad972f027ba721a0ec7e97daa39b5',1,'Piro::Provider::nonnull(const Provider&lt; T &gt; &amp;handle)']]],
+  ['noxsolver_2',['NOXSolver',['../classPiro_1_1NOXSolver.html#a3fa326a0e66bb063b5d4aa04087856cc',1,'Piro::NOXSolver']]],
+  ['np_3',['Np',['../classPiro_1_1ProductModelEvaluator.html#abd58d12865cfd1506bbc19fac17f8a44',1,'Piro::ProductModelEvaluator']]],
+  ['num_5fg_4',['num_g',['../classPiro_1_1SteadyStateSolver.html#a85d04dc10ff4866c3aca59474b3b1c5c',1,'Piro::SteadyStateSolver::num_g()'],['../classPiro_1_1TransientSolver.html#ade038f4bcefe4434d9d2d4aeb4a9e4d3',1,'Piro::TransientSolver::num_g()']]],
+  ['num_5fp_5',['num_p',['../classPiro_1_1SteadyStateSolver.html#aff479f764c877b2e0b152499fdb655a5',1,'Piro::SteadyStateSolver::num_p()'],['../classPiro_1_1TransientSolver.html#a14ae4a5401916e54055ed7dae4bf6ae3',1,'Piro::TransientSolver::num_p()']]]
 ];
