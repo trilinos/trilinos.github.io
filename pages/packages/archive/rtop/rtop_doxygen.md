@@ -1,6 +1,6 @@
 ---
 title: RTOp Doxygen
-permalink: rotp_doxygen.html
+permalink: rtop_doxygen.html
 folder: archive
 show_sidebar: true
 contact: bartlettra@ornl.gov

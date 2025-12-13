@@ -74,8 +74,7 @@ Laplace problem is probably the most widely studied application, and a broad ran
 to validate a particular class, or to get a sense of the performances of a new method.
 
 Galeri’s Matrix generation capabilities can help to make examples shorter and easier to read, since they can produce challenging linear systems in a few code lines. Therefore, the attention of the example’s
-reader is not distracted by complicated instructions aiming to build this or that linear system. Since most linear algebra packages of Trilinos use Galeri, users will quickly become familiar with it. Galeri
-is used in the examples of the [Amesos](amesos.html), [IFPACK](ifpack.html), and [ML](ml.html) packages.
+reader is not distracted by complicated instructions aiming to build this or that linear system. Since most linear algebra packages of Trilinos use Galeri, users will quickly become familiar with it. 
 
 Finally, Galeri is very convenient for software testing. A large variety of problems can be produced, to understand or validate the performances of a given class. Galeri is used in the testing of
-[Amesos](amesos.html), [IFPACK](ifpack.html), [ML](ml.html), [MueLu](muelu.html), [Ifpack2](ifpack2.html), and [Zoltan2](zoltan2.html).
+[MueLu](muelu.html), [Ifpack2](ifpack2.html), and [Zoltan2](zoltan2.html).
