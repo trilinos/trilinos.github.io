@@ -51,7 +51,7 @@ A list of the presentations from EuroTUG 2012 is below. Abstracts and slides are
 *   MueLu: The next-generation Trilinos multigrid package (T. Wiesner) [pdf](pdfs/wiesner.pdf)
 *   Parallel multilevel incomplete factorization of saddlepoint matrices (J. Thies) [pdf](pdfs/thies.pdf)
 *   Domain decomposition techniques for hyperbolic equations on unstructured grids (A. Cervone) [pdf](pdfs/cervone-eurotug.pdf)
-*   Preconditioning for large scale micro finite element analyses of 3D poroelasticity using Trilinos (E. Turan) [pdf](pdfs/eurotug_2012/presentations/turan_eurotug.pdf)
+*   Preconditioning for large scale micro finite element analyses of 3D poroelasticity using Trilinos (E. Turan) [pdf](pdfs/turan_eurotug.pdf)
 *   Ginla: A Trilinos-based solver for the Ginzburg-Landau problem (N. Schloemer) [pdf](pdfs/schloemer.pdf)
 *   ForTrilinos: Bringing Trilinos to object-oriented Fortran parallel applications (K. Morris) [pdf](pdfs/ForTrilinos_EuroTUG2012_Website.pdf)
 *   Parallel preconditioners for saddle-point problems (G. Grandperrin) [pdf](pdfs/grandperrin-eurotug.pdf)

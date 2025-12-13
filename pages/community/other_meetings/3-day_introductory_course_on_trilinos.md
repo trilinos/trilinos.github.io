@@ -13,7 +13,6 @@ folder: community
 
 The course is intended for beginners and new users of Trilinos. The program is focused mainly on the basic Trilinos packages, handling vectors and matrices, defining maps, solution of systems of linear equations both in serial and parallel. Also, a few excercices on nonlinear problems and other useful Trilinos options will be shown.
 
-More information about this introductory Trilinos training opportunity, including registration details, can be found at the [Workshop Home Page](http://hpc.numerical-mechanics.com/TrilinosWorkshop/).
 
 ## Trilinos Background
 

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     {% include head.html %}
+    <link rel="stylesheet" href="{{ '/css/customstyles.css' | relative_url }}">
     <script>
         $(document).ready(function() {
             // Initialize navgoco with default options
@@ -61,14 +63,23 @@
     <!-- Content Row -->
     <div class="row">
         {% if page.show_sidebar %}
-        <div class="col-md-9">
-            {{content}}
-        </div>
-
-        <div class="col-md-3">
-          {% include sidebar.html %}
-        </div>
-
+           {% if page.sidebar == "nav" %}
+           <div class="col-md-3">
+             {% include sidebar-nav.html %}
+           </div>
+           <div class="col-md-9">
+               {{content}}
+           </div>
+           {% else %}
+           <div class="col-md-9">
+               {{content}}
+           </div>
+   
+           <div class="col-md-3">
+             {% include sidebar.html %}
+           </div>
+           {% endif %}
+   
         {% else %}
         <div class="col-md-12">
             {{content}}
