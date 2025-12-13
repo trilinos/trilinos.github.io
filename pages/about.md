@@ -1,24 +1,124 @@
 ---
-title: About the Trilinos Project
+title: About Trilinos
 permalink: about.html
+show_sidebar: true
+sidebar: nav
+keywords: About Trilinos, Trilinos Project, Scientific computing framework, Open-source software for HPC, High-performance computing tools, Modular software framework, Scalable scientific computing, Parallel computing architectures, Distributed memory systems, Multicore computing, GPU-based computing, Kokkos ecosystem, Software development philosophy, Interoperability in scientific computing, Scalability in engineering applications, Trilinos packages, Robust algorithms for HPC, Engineering and scientific applications, Performance portability, Configure Trilinos, Build Trilinos, Install Trilinos, TriBITS, CMake, Reference Guide, Software Development, Mathematical Software, Linear solvers, Nonlinear solvers, Eigensystems, Optimization problems, Uncertainty quantification, Sandia National Laboratories, Federated software development model, Modularity in software, Interoperability in Trilinos, Scalability in HPC, Accessibility in scientific computing, Rigorous software engineering practices, Testing in software development, Documentation in software development, Lean/agile lifecycle model, MPI, OpenMP, Pthreads, TBB, CUDA, HIP, SYCL, Vectorized computing, Kokkos abstractions, Parallel execution, Memory management, R&D 100 Award, SC2004 HPC Software Challenge Award, Awards and recognition, High Performance Software Foundation (HPSF), Linux Foundation, Trilinos governance, Trilinos Technical Steering Committee (TSC), Trilinos charter, Trilinos code of conduct, Trilinos community, Trilinos citation guidelines, Trilinos BibTeX entry, Trilinos package citation, Trilinos logos, Trilinos feedback, Trilinos support, Trilinos Homepage, Trilinos philosophy, Trilinos software engineering practices, Trilinos documentation, Trilinos user guide, Trilinos contacts, Trilinos feedback email, Trilinos scalability, Trilinos interoperability, Trilinos accessibility, Trilinos awards, Trilinos recognition, Trilinos targeted platforms, Trilinos accelerators, Trilinos vectorization, Trilinos performance portability, Trilinos user-developers, Trilinos developers, Trilinos users, Trilinos community-driven development, Trilinos collaboration, Trilinos testing, Trilinos maintainability, Trilinos adaptability, Trilinos emerging HPC architectures, Trilinos leadership-class supercomputers, Trilinos engineering applications, Trilinos scientific applications
 ---
 
-A core requirement of many engineering and scientific applications is the need to solve linear and non-linear systems of equations, eigensystems and other related problems. Thus it is no surprise that any part of the application that solves these problems is called a “solver.” The exact definition of what specifically constitutes a solver depends on many factors. However, a good working definition of a solver is the following: _any piece of software that finds unknown values for some set of discrete governing equations in an application._ Another characteristic of solvers is that we can often implement them in such a way that they are “general-purpose”, so that the details of how the discrete problem was formed are not specifically needed for the solver to work (although information about problem characteristics can often be vital to robust solutions.) Advanced solution techniques increasingly require more than “just a matrix” since a the matrix alone discards so much information about the origin of the problem and how it might best be solved. As a result solvers need compatible tools in differentiation, discretization and data partitioning. These tools are also essential for robust solutions in scalable computing environments.
+The Trilinos Project is a community-driven, open-source software framework designed to enable scalable scientific computing for complex engineering and scientific problems. It provides a modular collection of reusable libraries, known as packages, that support the development of high-performance algorithms for solving linear and nonlinear systems of equations, eigensystems, optimization problems, and uncertainty quantification. Trilinos is widely used in applications requiring robust and scalable solutions across diverse hardware architectures, from desktops to leadership-class supercomputers.
 
-The Trilinos Project grew out of a group of established algorithms efforts at Sandia, motivated by a recognition that a modest degree of coordination among these efforts could have a large positive impact on the quality and usability of the software we produce and therefore enhance the research, development and integration of new algorithms and enabling technologies into applications. Because of the tools and infrastructure that Trilinos provides, the degree of effort required to develop new algorithms and enabling technologies has been substantially reduced because our common base provides an excellent starting point. Furthermore, many applications are standardizing on the Trilinos APIs. As a result, these applications have access to all Trilinos solver components without any unnecessary interface modifications.
+Originally developed at Sandia National Laboratories in 2001, Trilinos has grown significantly and now encompasses nearly 40 packages, each contributing unique capabilities. The project emphasizes scalability, interoperability, and accessibility, fostering collaboration among developers and users.
 
-## Robust Implementation of Advanced Parallel Algorithms
+---
 
-Numerical methods are effective at solving a variety of problems on parallel computers. At the same time, there are many problems that cannot be solved by numerical methods, and there are good serial algorithms which have undesirable properties for parallel computing. An over-riding emphasis of the Trilinos Project is to develop robust algorithms for scientific and engineering applications on parallel computers, and make these algorithms accessible to application developers in the most effective way. All other Trilinos objectives are in some way derived from this primary goal.
+## Key Features
 
-Robust parallel numerical algorithms have long been an area of focus at Sandia and elsewhere, and will be in the future. Presently we are focused on the following algorithmic areas:
+- **Parallel Computing Support**: Optimized for high-performance computing environments, supporting MPI, OpenMP, and other parallel execution models.
+- **Wide Range of Solvers**: Includes linear, nonlinear, eigenvalue, and optimization solvers to address diverse computational challenges.
+- **Modular Architecture**: Composed of individual packages that can be used independently or integrated seamlessly to build custom solutions.
+- **Advanced Tools**: Offers capabilities for discretization, mesh manipulation, automatic differentiation, and uncertainty quantification.
+- **Performance Portability**: Achieved through the Kokkos ecosystem, enabling efficient execution across distributed, multicore, accelerator, and vectorized computing devices.
 
-*   Automatic differentiation
-*   Data partitioning for load balance and robustness
-*   Multi-level preconditioners
-*   Block iterative methods (linear and eigen solvers)
-*   Incomplete factorizations
-*   Solution of linear systems with successive and simultaneous right-hand-sides
-*   Nonlinear methods including continuation
-*   Large-scale optimization, e.g., SAND
-*   Time integration methods
+---
+
+## Who Should Use Trilinos?
+
+Trilinos is ideal for:
+- Researchers and engineers working on scientific computing problems.
+- Developers building scalable applications for high-performance computing environments.
+- Teams seeking modular and extensible tools for numerical analysis and simulation.
+
+---
+
+## Trilinos Philosophy
+
+### Software Development Philosophy
+Trilinos is built on a federated model of software development, emphasizing collaboration, modularity, and autonomy. Each package is developed by a focused team, allowing for specialization and innovation while adhering to common standards for interoperability and software quality.
+
+Key principles include:
+1. **Modularity**: Packages are semi-autonomous, with well-defined capabilities and interfaces.
+2. **Interoperability**: Designed to work seamlessly together, enabling users to combine capabilities algorithmically.
+3. **Scalability**: Optimized for parallel computing environments, ensuring efficient performance as problem sizes and processor counts increase.
+4. **Accessibility**: Available across major programming environments (C++, Fortran, Python) and portable across diverse hardware architectures.
+
+The Trilinos philosophy also emphasizes rigorous software engineering practices, including thorough testing, comprehensive documentation, and a lean/agile lifecycle model. This ensures Trilinos remains robust, maintainable, and adaptable to emerging challenges in scientific computing.
+
+---
+
+## Targeted Platforms and Architectures
+
+Trilinos supports all major parallel computing architectures:
+- **Distributed Memory Systems**: Using MPI for communication.
+- **Multicore Architectures**: Leveraging OpenMP, Pthreads, and TBB for shared-memory parallelism.
+- **Accelerators**: Supporting GPU-based systems through CUDA, HIP, and SYCL, as well as emerging hardware technologies.
+- **Vectorization**: Optimized for vectorized computing to maximize performance on modern processors.
+
+Performance portability is achieved through the Kokkos ecosystem, which provides abstractions for parallel execution and memory management.
+
+---
+
+## Awards and Recognition
+
+### R&D 100 Award (2004)
+Trilinos received a prestigious R&D 100 Award in 2004, recognizing it as one of the "100 most technologically significant products introduced in the past year." 
+
+- [R&D Magazine: R&D 100 Awards Software](http://www.rdmag.com/award-winners/2004/08/pearl-real-gem)
+- [Sandia National Labs News Center: Sandia wins two R&D 100 Awards](https://software.sandia.gov/trilinos/TrilinosRD100Newsnote.pdf)
+- [New Mexico Business Weekly: New Mexico firms, labs earn R&D awards](http://www.bizjournals.com/albuquerque/stories/2004/07/12/daily6.html)
+
+### SC2004 HPC Software Challenge Award
+Trilinos was awarded one of two HPC Software Challenge Awards at SC2004 for its commitment to professional software engineering practices and processes. 
+
+- [SC2004 HPC Software Challenge Details](http://www.sc-conference.org/sc2004/hpc_challenge.html)
+- [SC2004 Conference Award Winners](http://www.sc-conference.org/sc2004/awards.html)
+
+---
+
+## Governance and Community
+
+Trilinos is part of the High Performance Software Foundation (HPSF) and the Linux Foundation. Governance is managed through the following resources:
+- [Introduction](https://github.com/trilinos/governance/tree/main?tab=readme-ov-file#trilinos)
+- [Governance](https://github.com/trilinos/governance/blob/main/GOVERNANCE.md)
+- [Charter](https://github.com/trilinos/governance/blob/main/Trilinos_Technical_Charter_6-6-2024.pdf)
+- [Code of Conduct](https://github.com/trilinos/governance/blob/main/code-of-conduct.md)
+
+---
+
+## Citing Trilinos
+
+If you are using Trilinos, please cite our software in your publications. Below is a suitable BibTeX entry:
+
+```bibtex
+@Manual{trilinos-website,
+title = {The {T}rilinos {P}roject {W}ebsite},
+author = {The {T}rilinos {P}roject {T}eam}},
+year = {2020 (accessed May 22, 2020)},
+url = {https://trilinos.github.io}
+}
+```
+
+For specific packages, you may cite their individual webpages. For example:
+```
+@Manual{muelu-website,
+title = {The {M}uelu {P}roject {W}ebsite},
+author = {The {M}uelu {P}roject {T}eam}},
+year = {2020 (acccessed May 22, 2020)},
+url = {https://trilinos.github.io/muelu.html}
+}
+```
+
+---
+
+## Trilinos Logos
+
+For Trilinos logos, visit the [Trilinos Logos Repository](https://github.com/trilinos/Logos).
+
+## Contacts
+
+For support, visit the [Support page](support.html).
+
+## Feedback
+
+We value your feedback! Please share your <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:{{site.feedback_email}}?subject={{site.feedback_subject_line}} Feedback&body=I have some feedback about ... %0A';"><i class="fa fa-envelope-o"></i> thoughts or suggestions</a> about the Trilinos Homepage.
+

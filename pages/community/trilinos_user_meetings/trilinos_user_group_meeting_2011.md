@@ -213,13 +213,13 @@ In these cases, we list the time at which the specified talk starts, as well as 
 <tr>
 <th id="time-1" axis="time" width="16%"><abbr title="2011-11-03T08:30:00">8:30</abbr>–<abbr title="2011-11-03T08:50:00">8:50</abbr></th>
 <td headers="time-1 location-1">
-<div>Generalization and externalization of the Trilinos package-based system (R. Bartlett) <a href="/pdfs/TUG20111103_GeneralizationOfTrilinosSESystem.pptx">pptx</a></div>
+<div>Generalization and externalization of the Trilinos package-based system (R. Bartlett) </div>
 </td>
 </tr>
 <tr>
 <th id="time-2" axis="time"><abbr title="2011-11-03T08:50:00">8:50</abbr>–<abbr title="2011-11-03T09:10:00">9:10</abbr></th>
 <td headers="time-2 location-1">
-<div>Trilinos coding and documentation guidelines document (R. Bartlett) <a href="/pdfs/TUG20111103_TrilinosCodingDocGuidelines.pptx">pptx</a></div>
+<div>Trilinos coding and documentation guidelines document (R. Bartlett) </div>
 </td>
 </tr>
 <tr>
@@ -249,7 +249,7 @@ In these cases, we list the time at which the specified talk starts, as well as 
 <tr>
 <th id="time-9" axis="time"><abbr title="2011-11-03T11:00:00">11:00</abbr>–<abbr title="2011-11-03T12:00:00">12:00</abbr></th>
 <td headers="time-9 location-1">
-<div>Trilinos lifecycle model 2.0 (R. Bartlett) <a href="/pdfs/TUG20111103_TrilinosLifecycleModel2.0.pptx">pptx</a></div>
+<div>Trilinos lifecycle model 2.0 (R. Bartlett) </div>
 </td>
 </tr>
 <tr>
