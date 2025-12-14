@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['cg_5fflag_5fiterexceed_0',['CG_FLAG_ITEREXCEED',['../namespaceROL.html#a80bbf6d56d6c5927d0e18ec6af5f8004a0aad1e58a1593618745d0c07e7199ddd',1,'ROL']]],
+  ['cg_5fflag_5fnegcurve_1',['CG_FLAG_NEGCURVE',['../namespaceROL.html#a80bbf6d56d6c5927d0e18ec6af5f8004abcbf5577c470d0ee39d5f6fbb53f1944',1,'ROL']]],
+  ['cg_5fflag_5fsuccess_2',['CG_FLAG_SUCCESS',['../namespaceROL.html#a80bbf6d56d6c5927d0e18ec6af5f8004a917075a34024be2f8714875daa58b937',1,'ROL']]],
+  ['cg_5fflag_5ftrradex_3',['CG_FLAG_TRRADEX',['../namespaceROL.html#a80bbf6d56d6c5927d0e18ec6af5f8004adfc0fd663a7876c7008057b7381a2a73',1,'ROL']]],
+  ['cg_5fflag_5fundefined_4',['CG_FLAG_UNDEFINED',['../namespaceROL.html#a80bbf6d56d6c5927d0e18ec6af5f8004a77155edf22d4c8047f3cdecaedcb8f13',1,'ROL']]],
+  ['cg_5fflag_5fzerorhs_5',['CG_FLAG_ZERORHS',['../namespaceROL.html#a80bbf6d56d6c5927d0e18ec6af5f8004a28838f6a53e88b488e87f876a2371bb4',1,'ROL']]],
+  ['curvaturecondition_5fapproximatewolfe_6',['CURVATURECONDITION_APPROXIMATEWOLFE',['../namespaceROL.html#a55915452a678e4bde9969533bd645892a6d21f13764e9e40541403d4c6f871391',1,'ROL']]],
+  ['curvaturecondition_5fgeneralizedwolfe_7',['CURVATURECONDITION_GENERALIZEDWOLFE',['../namespaceROL.html#a55915452a678e4bde9969533bd645892a21192b1cc92ac890e7b111130d5cf6ea',1,'ROL']]],
+  ['curvaturecondition_5fgoldstein_8',['CURVATURECONDITION_GOLDSTEIN',['../namespaceROL.html#a55915452a678e4bde9969533bd645892aee021a1865913003dbf179fc8cc63390',1,'ROL']]],
+  ['curvaturecondition_5flast_9',['CURVATURECONDITION_LAST',['../namespaceROL.html#a55915452a678e4bde9969533bd645892a3d27ed8bd00c503bde491c0e4d6a34ec',1,'ROL']]],
+  ['curvaturecondition_5fnull_10',['CURVATURECONDITION_NULL',['../namespaceROL.html#a55915452a678e4bde9969533bd645892aae3ac34e2cef05c41e2649fa7463e1c4',1,'ROL']]],
+  ['curvaturecondition_5fstrongwolfe_11',['CURVATURECONDITION_STRONGWOLFE',['../namespaceROL.html#a55915452a678e4bde9969533bd645892ac3b9ecd43463e3c6a9d600a19c8b23fe',1,'ROL']]],
+  ['curvaturecondition_5fu_5fapproximatewolfe_12',['CURVATURECONDITION_U_APPROXIMATEWOLFE',['../namespaceROL.html#a45bf9d2c3f45ee00d7073352c967af4ca1536ca6f256f19163c211a01dd91c656',1,'ROL']]],
+  ['curvaturecondition_5fu_5fgeneralizedwolfe_13',['CURVATURECONDITION_U_GENERALIZEDWOLFE',['../namespaceROL.html#a45bf9d2c3f45ee00d7073352c967af4ca17978e43f0d545dfce68a782ebf242bb',1,'ROL']]],
+  ['curvaturecondition_5fu_5fgoldstein_14',['CURVATURECONDITION_U_GOLDSTEIN',['../namespaceROL.html#a45bf9d2c3f45ee00d7073352c967af4ca15e2e2e2f537434445782096a9778cb0',1,'ROL']]],
+  ['curvaturecondition_5fu_5flast_15',['CURVATURECONDITION_U_LAST',['../namespaceROL.html#a45bf9d2c3f45ee00d7073352c967af4ca2a2e35767193dfbb9386e3da637f6c86',1,'ROL']]],
+  ['curvaturecondition_5fu_5fnull_16',['CURVATURECONDITION_U_NULL',['../namespaceROL.html#a45bf9d2c3f45ee00d7073352c967af4ca88f7d81e1454ab72ff56ea9be36d74b6',1,'ROL']]],
+  ['curvaturecondition_5fu_5fstrongwolfe_17',['CURVATURECONDITION_U_STRONGWOLFE',['../namespaceROL.html#a45bf9d2c3f45ee00d7073352c967af4ca33a296b84a148d3c9269b72aa1ed1b77',1,'ROL']]],
+  ['curvaturecondition_5fu_5fwolfe_18',['CURVATURECONDITION_U_WOLFE',['../namespaceROL.html#a45bf9d2c3f45ee00d7073352c967af4ca9e9b7620ac6ff3ae169b7af942af387b',1,'ROL']]],
+  ['curvaturecondition_5fwolfe_19',['CURVATURECONDITION_WOLFE',['../namespaceROL.html#a55915452a678e4bde9969533bd645892a9065f4f32e16d200c09af9f7a0ac430c',1,'ROL']]]
+];

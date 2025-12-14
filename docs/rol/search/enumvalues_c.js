@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['secant_5fbarzilaiborwein_0',['SECANT_BARZILAIBORWEIN',['../namespaceROL.html#a5e778633e204e2268adc3b2dc8babe6bafe8ac339799d93adf96677d8cbb7aec9',1,'ROL']]],
+  ['secant_5flast_1',['SECANT_LAST',['../namespaceROL.html#a5e778633e204e2268adc3b2dc8babe6ba4cec8b6f31ee174101aa89f4dfe1b456',1,'ROL']]],
+  ['secant_5flbfgs_2',['SECANT_LBFGS',['../namespaceROL.html#a5e778633e204e2268adc3b2dc8babe6bad4dafaf72aaa91cbd1b01cadb715721d',1,'ROL']]],
+  ['secant_5fldfp_3',['SECANT_LDFP',['../namespaceROL.html#a5e778633e204e2268adc3b2dc8babe6bab1bd486e01999dc8093f82667c3d7bbc',1,'ROL']]],
+  ['secant_5flsr1_4',['SECANT_LSR1',['../namespaceROL.html#a5e778633e204e2268adc3b2dc8babe6ba0f1bd4484992339e2fa3f2da5d1f919a',1,'ROL']]],
+  ['secant_5fuserdefined_5',['SECANT_USERDEFINED',['../namespaceROL.html#a5e778633e204e2268adc3b2dc8babe6ba81758750181dbdbae7275f5f3b9d0d07',1,'ROL']]],
+  ['secantmode_5fboth_6',['SECANTMODE_BOTH',['../namespaceROL.html#a71fbfd8b4b4bc3bcd26ad02c95c39f60a62a31d94bbb76c05b4d72a4929b4d44f',1,'ROL']]],
+  ['secantmode_5fforward_7',['SECANTMODE_FORWARD',['../namespaceROL.html#a71fbfd8b4b4bc3bcd26ad02c95c39f60a2e9c0214de1e8d1a90983a100230b484',1,'ROL']]],
+  ['secantmode_5finverse_8',['SECANTMODE_INVERSE',['../namespaceROL.html#a71fbfd8b4b4bc3bcd26ad02c95c39f60a4337aaa82cb7a48d2813db1b1584d6b7',1,'ROL']]],
+  ['solve_5fillegal_5fvalue_9',['SOLVE_ILLEGAL_VALUE',['../classROL_1_1Lanczos.html#a5f0684ad781221889880db9f18c54bffa2034aadf75cf1530074667a34a4bb9de',1,'ROL::Lanczos']]],
+  ['solve_5flast_10',['SOLVE_LAST',['../classROL_1_1Lanczos.html#a5f0684ad781221889880db9f18c54bffa1ca3cc4a5e21f677376fb43f21ded82b',1,'ROL::Lanczos']]],
+  ['solve_5fsingular_5fu_11',['SOLVE_SINGULAR_U',['../classROL_1_1Lanczos.html#a5f0684ad781221889880db9f18c54bffa5d91bb7119a17776ea5070db00714b99',1,'ROL::Lanczos']]],
+  ['solve_5fsuccess_12',['SOLVE_SUCCESS',['../classROL_1_1Lanczos.html#a5f0684ad781221889880db9f18c54bffaf8dfeddba50201bec0045c6d9b5bef37',1,'ROL::Lanczos']]],
+  ['step_5faugmentedlagrangian_13',['STEP_AUGMENTEDLAGRANGIAN',['../namespaceROL.html#ac699171be1205edfaf056f5ed29123eba748d4eef76821dbafdcf66c81b16787b',1,'ROL']]],
+  ['step_5fbundle_14',['STEP_BUNDLE',['../namespaceROL.html#ac699171be1205edfaf056f5ed29123eba56220ce0bd3140b912f1d63ceb04469e',1,'ROL']]],
+  ['step_5fcompositestep_15',['STEP_COMPOSITESTEP',['../namespaceROL.html#ac699171be1205edfaf056f5ed29123eba7e219e09fa60f4e8073885ab8ada6caa',1,'ROL']]],
+  ['step_5ffletcher_16',['STEP_FLETCHER',['../namespaceROL.html#ac699171be1205edfaf056f5ed29123ebab0cb0dfa7ff0bac20e4873bbb76700d8',1,'ROL']]],
+  ['step_5finteriorpoint_17',['STEP_INTERIORPOINT',['../namespaceROL.html#ac699171be1205edfaf056f5ed29123ebaa097411135dbab739f7261fcd6e4436b',1,'ROL']]],
+  ['step_5flast_18',['STEP_LAST',['../namespaceROL.html#ac699171be1205edfaf056f5ed29123eba402149c150d35e9ff37b338dcf26250f',1,'ROL']]],
+  ['step_5flinesearch_19',['STEP_LINESEARCH',['../namespaceROL.html#ac699171be1205edfaf056f5ed29123eba7555c81cf20a122f247d6c04bd1b8d02',1,'ROL']]],
+  ['step_5fmoreauyosidapenalty_20',['STEP_MOREAUYOSIDAPENALTY',['../namespaceROL.html#ac699171be1205edfaf056f5ed29123ebae044f59e48f92f546438334eacd4ec83',1,'ROL']]],
+  ['step_5fprimaldualactiveset_21',['STEP_PRIMALDUALACTIVESET',['../namespaceROL.html#ac699171be1205edfaf056f5ed29123eba0e5f09ab677d4731d367ebf1ef6fb3e4',1,'ROL']]],
+  ['step_5ftrustregion_22',['STEP_TRUSTREGION',['../namespaceROL.html#ac699171be1205edfaf056f5ed29123ebaf97b4f8b124b21410712e4e884bfee86',1,'ROL']]],
+  ['success_23',['SUCCESS',['../namespaceROL_1_1TRUtils.html#ae27b7da9540e03d057aa50fe9e3c261ea0604fc9bc234866310d30ab722f840b3',1,'ROL::TRUtils']]]
+];

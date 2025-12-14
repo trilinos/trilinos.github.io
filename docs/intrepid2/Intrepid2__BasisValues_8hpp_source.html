@@ -305,110 +305,140 @@ $(document).ready(function() { init_codefold(0); });
 <div class="foldopen" id="foldopen00255" data-start="{" data-end="}">
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno"><a class="line" href="classIntrepid2_1_1BasisValues.html#a084bd199f6ea63bd5a8608afcd3d3561">  255</a></span>    Scalar <a class="code hl_function" href="classIntrepid2_1_1BasisValues.html#a084bd199f6ea63bd5a8608afcd3d3561">operator()</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;fieldOrdinal, <span class="keyword">const</span> <span class="keywordtype">int</span> &amp;pointOrdinal, <span class="keyword">const</span> <span class="keywordtype">int</span> &amp;dim)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span><span class="preprocessor">#ifdef HAVE_INTREPID2_DEBUG</span></div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>      <a class="code hl_define" href="Intrepid2__Utils_8hpp.html#ac10c59c3e5f7d12813cfdba00e63aa02">INTREPID2_TEST_FOR_EXCEPTION_DEVICE_SAFE</a>(! vectorData_.<a class="code hl_function" href="classIntrepid2_1_1VectorData.html#aa3cbf4087de4b3e1e00b4560cac6ff56">isValid</a>(), std::invalid_argument, <span class="stringliteral">&quot;VectorData object not initialized!&quot;</span>);</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> &amp;tensorFieldOrdinal = (ordinalFilter_.extent(0) &gt; 0) ? ordinalFilter_(fieldOrdinal) : fieldOrdinal;</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>      <span class="keywordflow">return</span> vectorData_(tensorFieldOrdinal, pointOrdinal, dim);</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    }</div>
-</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    </div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    KOKKOS_INLINE_FUNCTION</div>
-<div class="foldopen" id="foldopen00266" data-start="{" data-end="}">
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno"><a class="line" href="classIntrepid2_1_1BasisValues.html#a024d26a2e17dd77944ab36156c00f408">  266</a></span>    Scalar <a class="code hl_function" href="classIntrepid2_1_1BasisValues.html#a024d26a2e17dd77944ab36156c00f408">operator()</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;cellOrdinal, <span class="keyword">const</span> <span class="keywordtype">int</span> &amp;fieldOrdinal, <span class="keyword">const</span> <span class="keywordtype">int</span> &amp;pointOrdinal, <span class="keyword">const</span> <span class="keywordtype">int</span> &amp;dim)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>      <a class="code hl_define" href="Intrepid2__Utils_8hpp.html#ac10c59c3e5f7d12813cfdba00e63aa02">INTREPID2_TEST_FOR_EXCEPTION_DEVICE_SAFE</a>(<span class="keyword">true</span>, std::invalid_argument, <span class="stringliteral">&quot;CVFEM support not yet implemented in BasisValues&quot;</span>);</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>      <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    }</div>
-</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    </div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    KOKKOS_INLINE_FUNCTION</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    <span class="keywordtype">int</span> extent_int(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;i)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>      <span class="comment">// shape is (F,P) or (F,P,D)</span></div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>      <span class="keywordflow">if</span> (i == 0) <span class="comment">// field dimension</span></div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>      {</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>        <span class="keywordflow">if</span> (ordinalFilter_.extent_int(0) == 0)</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>        {</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>          <span class="keywordtype">int</span> numFields = 0;</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> familyOrdinal=0; familyOrdinal&lt;<a class="code hl_function" href="classIntrepid2_1_1BasisValues.html#ab246b59f38bd0f7c1e8de0594e607997">numFamilies</a>(); familyOrdinal++)</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>          {</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>            numFields += numFieldsInFamily(familyOrdinal);</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>          }</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>          <span class="keywordflow">return</span> numFields;</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        }</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>        {</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>          <span class="keywordflow">return</span> ordinalFilter_.extent_int(0);</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>      <span class="keywordflow">if</span> (vectorData_.<a class="code hl_function" href="classIntrepid2_1_1VectorData.html#aa3cbf4087de4b3e1e00b4560cac6ff56">isValid</a>())</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>      {</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> &amp;tensorFieldOrdinal = (ordinalFilter_.extent(0) &gt; 0) ? ordinalFilter_(fieldOrdinal) : fieldOrdinal;</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        <span class="keywordflow">return</span> vectorData_(tensorFieldOrdinal, pointOrdinal, dim);</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>      }</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>      <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>      {</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> &amp;tensorFieldOrdinal = (ordinalFilter_.extent(0) &gt; 0) ? ordinalFilter_(fieldOrdinal) : fieldOrdinal;</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>        <span class="keywordflow">if</span> (numTensorDataFamilies_ == 1)</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>        {</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span><span class="preprocessor">  #ifdef HAVE_INTREPID2_DEBUG</span></div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>          <a class="code hl_define" href="Intrepid2__Utils_8hpp.html#ac10c59c3e5f7d12813cfdba00e63aa02">INTREPID2_TEST_FOR_EXCEPTION_DEVICE_SAFE</a>(! tensorDataFamilies_[0].isValid(), std::invalid_argument, <span class="stringliteral">&quot;TensorData object not initialized!&quot;</span>);</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span><span class="preprocessor">  #endif</span></div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>          <span class="keywordflow">return</span> tensorDataFamilies_[0](tensorFieldOrdinal, pointOrdinal, dim);</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        }</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        {</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>          <span class="keywordtype">int</span> familyForField = -1;</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>          <span class="keywordtype">int</span> previousFamilyEnd = -1;</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>          <span class="keywordtype">int</span> fieldAdjustment = 0;</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>          <span class="comment">// this loop is written in such a way as to avoid branching for CUDA performance</span></div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> family=0; family&lt;numTensorDataFamilies_; family++)</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>          {</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> familyFieldCount = tensorDataFamilies_[family].extent_int(0);</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>            <span class="keyword">const</span> <span class="keywordtype">bool</span> fieldInRange    = (tensorFieldOrdinal &gt; previousFamilyEnd) &amp;&amp; (tensorFieldOrdinal &lt;= previousFamilyEnd + familyFieldCount);</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>            familyForField = fieldInRange ? family : familyForField;</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>            fieldAdjustment = fieldInRange ? previousFamilyEnd + 1 : fieldAdjustment;</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>            previousFamilyEnd += familyFieldCount;</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>          }</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span><span class="preprocessor">  #ifdef HAVE_INTREPID2_DEBUG</span></div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>          <a class="code hl_define" href="Intrepid2__Utils_8hpp.html#ac10c59c3e5f7d12813cfdba00e63aa02">INTREPID2_TEST_FOR_EXCEPTION_DEVICE_SAFE</a>( familyForField == -1, std::invalid_argument, <span class="stringliteral">&quot;fieldOrdinal appears to be out of range&quot;</span>);</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span><span class="preprocessor">  #endif</span></div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>          <span class="keywordflow">return</span> tensorDataFamilies_[familyForField](tensorFieldOrdinal-fieldAdjustment,pointOrdinal,dim);</div>
 <div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>        }</div>
 <div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>      }</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>      <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>      {</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>        <span class="keywordflow">if</span> (vectorData_.<a class="code hl_function" href="classIntrepid2_1_1VectorData.html#aa3cbf4087de4b3e1e00b4560cac6ff56">isValid</a>())</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>        {</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>          <span class="keywordflow">return</span> vectorData_.<a class="code hl_function" href="classIntrepid2_1_1VectorData.html#af1c91567928aa978b25e4ac02ac340a3">extent_int</a>(i);</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>        }</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tensorDataFamilies_[0].isValid())</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>        {</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>          <span class="keywordflow">return</span> tensorDataFamilies_[0].extent_int(i);</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>        }</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>        {</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>          <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>        }</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>      }</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    }</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>    </div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>    </div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    KOKKOS_INLINE_FUNCTION</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>    <span class="keywordtype">size_t</span> extent(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;i)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>      <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(extent_int(i));</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    }</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>    </div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    KOKKOS_INLINE_FUNCTION</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>    <span class="keywordtype">size_t</span> rank()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>      <span class="keywordflow">if</span> (vectorData_.<a class="code hl_function" href="classIntrepid2_1_1VectorData.html#aa3cbf4087de4b3e1e00b4560cac6ff56">isValid</a>())</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>      {</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>        <span class="keywordflow">return</span> vectorData_.<a class="code hl_function" href="classIntrepid2_1_1VectorData.html#a75bd982a7a2b3eb320ddfae2b786d2cf">rank</a>();</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>      }</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tensorDataFamilies_[0].isValid())</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>      {</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>        <span class="keywordflow">return</span> tensorDataFamilies_[0].rank();</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>      }</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>      <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>      {</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>      }</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>    }</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    </div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>    <span class="keywordtype">void</span> setOrdinalFilter(Kokkos::View&lt;ordinal_type*,DeviceType&gt; ordinalFilter)</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>    {</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>      ordinalFilter_ = ordinalFilter;</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>    }</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>    </div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    Kokkos::View&lt;ordinal_type*,DeviceType&gt; ordinalFilter()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>      <span class="keywordflow">return</span> ordinalFilter_;</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>    }</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>  };</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    }</div>
 </div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span> </div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>  <span class="keyword">template</span>&lt;<span class="keyword">class</span> Scalar, <span class="keyword">typename</span> DeviceType&gt;</div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>  KOKKOS_INLINE_FUNCTION <span class="keywordtype">unsigned</span> rank(<span class="keyword">const</span> BasisValues&lt;Scalar,DeviceType&gt; &amp;basisValues)</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>  {</div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    <span class="keywordflow">return</span> basisValues.rank();</div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>  }</div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>} <span class="comment">// namespace Intrepid2</span></div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span> </div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span><span class="preprocessor">#endif </span><span class="comment">/* Intrepid2_BasisValues_h */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    </div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    KOKKOS_INLINE_FUNCTION</div>
+<div class="foldopen" id="foldopen00296" data-start="{" data-end="}">
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno"><a class="line" href="classIntrepid2_1_1BasisValues.html#a024d26a2e17dd77944ab36156c00f408">  296</a></span>    Scalar <a class="code hl_function" href="classIntrepid2_1_1BasisValues.html#a024d26a2e17dd77944ab36156c00f408">operator()</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;cellOrdinal, <span class="keyword">const</span> <span class="keywordtype">int</span> &amp;fieldOrdinal, <span class="keyword">const</span> <span class="keywordtype">int</span> &amp;pointOrdinal, <span class="keyword">const</span> <span class="keywordtype">int</span> &amp;dim)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>      <a class="code hl_define" href="Intrepid2__Utils_8hpp.html#ac10c59c3e5f7d12813cfdba00e63aa02">INTREPID2_TEST_FOR_EXCEPTION_DEVICE_SAFE</a>(<span class="keyword">true</span>, std::invalid_argument, <span class="stringliteral">&quot;CVFEM support not yet implemented in BasisValues&quot;</span>);</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>      <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    }</div>
+</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    </div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    KOKKOS_INLINE_FUNCTION</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    <span class="keywordtype">int</span> extent_int(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;i)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>      <span class="comment">// shape is (F,P) or (F,P,D)</span></div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>      <span class="keywordflow">if</span> (i == 0) <span class="comment">// field dimension</span></div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>      {</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>        <span class="keywordflow">if</span> (ordinalFilter_.extent_int(0) == 0)</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>        {</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>          <span class="keywordtype">int</span> numFields = 0;</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> familyOrdinal=0; familyOrdinal&lt;<a class="code hl_function" href="classIntrepid2_1_1BasisValues.html#ab246b59f38bd0f7c1e8de0594e607997">numFamilies</a>(); familyOrdinal++)</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>          {</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>            numFields += numFieldsInFamily(familyOrdinal);</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>          }</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>          <span class="keywordflow">return</span> numFields;</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>        }</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>        {</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>          <span class="keywordflow">return</span> ordinalFilter_.extent_int(0);</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>        }</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>      }</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>      <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>      {</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>        <span class="keywordflow">if</span> (vectorData_.<a class="code hl_function" href="classIntrepid2_1_1VectorData.html#aa3cbf4087de4b3e1e00b4560cac6ff56">isValid</a>())</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>        {</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>          <span class="keywordflow">return</span> vectorData_.<a class="code hl_function" href="classIntrepid2_1_1VectorData.html#af1c91567928aa978b25e4ac02ac340a3">extent_int</a>(i);</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>        }</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tensorDataFamilies_[0].isValid())</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>        {</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>          <span class="keywordflow">return</span> tensorDataFamilies_[0].extent_int(i);</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>        }</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>        {</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>          <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>        }</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>      }</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>    }</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    </div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>    </div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    KOKKOS_INLINE_FUNCTION</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>    <span class="keywordtype">size_t</span> extent(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;i)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>      <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(extent_int(i));</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>    }</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>    </div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>    KOKKOS_INLINE_FUNCTION</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    <span class="keywordtype">size_t</span> rank()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>      <span class="keywordflow">if</span> (vectorData_.<a class="code hl_function" href="classIntrepid2_1_1VectorData.html#aa3cbf4087de4b3e1e00b4560cac6ff56">isValid</a>())</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>      {</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>        <span class="keywordflow">return</span> vectorData_.<a class="code hl_function" href="classIntrepid2_1_1VectorData.html#a75bd982a7a2b3eb320ddfae2b786d2cf">rank</a>();</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>      }</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tensorDataFamilies_[0].isValid())</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>      {</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>        <span class="keywordflow">return</span> tensorDataFamilies_[0].rank();</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>      }</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>      <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>      {</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>      }</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>    }</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>    </div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>    <span class="keywordtype">void</span> setOrdinalFilter(Kokkos::View&lt;ordinal_type*,DeviceType&gt; ordinalFilter)</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>    {</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>      ordinalFilter_ = ordinalFilter;</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>    }</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>    </div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>    Kokkos::View&lt;ordinal_type*,DeviceType&gt; ordinalFilter()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>      <span class="keywordflow">return</span> ordinalFilter_;</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>    }</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>  };</div>
+</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span> </div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>  <span class="keyword">template</span>&lt;<span class="keyword">class</span> Scalar, <span class="keyword">typename</span> DeviceType&gt;</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>  KOKKOS_INLINE_FUNCTION <span class="keywordtype">unsigned</span> rank(<span class="keyword">const</span> BasisValues&lt;Scalar,DeviceType&gt; &amp;basisValues)</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>  {</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>    <span class="keywordflow">return</span> basisValues.rank();</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>  }</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>} <span class="comment">// namespace Intrepid2</span></div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span> </div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span><span class="preprocessor">#endif </span><span class="comment">/* Intrepid2_BasisValues_h */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="aIntrepid2__TensorData_8hpp_html"><div class="ttname"><a href="Intrepid2__TensorData_8hpp.html">Intrepid2_TensorData.hpp</a></div><div class="ttdoc">View-like interface to tensor data; tensor components are stored separately and multiplied together a...</div></div>
 <div class="ttc" id="aIntrepid2__Utils_8hpp_html_ac10c59c3e5f7d12813cfdba00e63aa02"><div class="ttname"><a href="Intrepid2__Utils_8hpp.html#ac10c59c3e5f7d12813cfdba00e63aa02">INTREPID2_TEST_FOR_EXCEPTION_DEVICE_SAFE</a></div><div class="ttdeci">#define INTREPID2_TEST_FOR_EXCEPTION_DEVICE_SAFE(test, x, msg)</div><div class="ttdef"><b>Definition</b> <a href="Intrepid2__Utils_8hpp_source.html#l00070">Intrepid2_Utils.hpp:70</a></div></div>
 <div class="ttc" id="aIntrepid2__VectorData_8hpp_html"><div class="ttname"><a href="Intrepid2__VectorData_8hpp.html">Intrepid2_VectorData.hpp</a></div><div class="ttdoc">Reference-space field values for a basis, designed to support typical vector-valued bases.</div></div>
 <div class="ttc" id="aclassIntrepid2_1_1BasisValues_html"><div class="ttname"><a href="classIntrepid2_1_1BasisValues.html">Intrepid2::BasisValues</a></div><div class="ttdoc">The data containers in Intrepid2 that support sum factorization and other reduced-data optimizations ...</div><div class="ttdef"><b>Definition</b> <a href="Intrepid2__BasisValues_8hpp_source.html#l00035">Intrepid2_BasisValues.hpp:36</a></div></div>
-<div class="ttc" id="aclassIntrepid2_1_1BasisValues_html_a024d26a2e17dd77944ab36156c00f408"><div class="ttname"><a href="classIntrepid2_1_1BasisValues.html#a024d26a2e17dd77944ab36156c00f408">Intrepid2::BasisValues::operator()</a></div><div class="ttdeci">KOKKOS_INLINE_FUNCTION Scalar operator()(const int &amp;cellOrdinal, const int &amp;fieldOrdinal, const int &amp;pointOrdinal, const int &amp;dim) const</div><div class="ttdoc">operator() for (C,F,P,D) data, which arises in CVFEM; at present unimplemented, and only declared her...</div><div class="ttdef"><b>Definition</b> <a href="Intrepid2__BasisValues_8hpp_source.html#l00266">Intrepid2_BasisValues.hpp:266</a></div></div>
-<div class="ttc" id="aclassIntrepid2_1_1BasisValues_html_a084bd199f6ea63bd5a8608afcd3d3561"><div class="ttname"><a href="classIntrepid2_1_1BasisValues.html#a084bd199f6ea63bd5a8608afcd3d3561">Intrepid2::BasisValues::operator()</a></div><div class="ttdeci">KOKKOS_INLINE_FUNCTION Scalar operator()(const int &amp;fieldOrdinal, const int &amp;pointOrdinal, const int &amp;dim) const</div><div class="ttdoc">operator() for (F,P,D) vector data; throws an exception if this is not a vector-valued container</div><div class="ttdef"><b>Definition</b> <a href="Intrepid2__BasisValues_8hpp_source.html#l00255">Intrepid2_BasisValues.hpp:255</a></div></div>
+<div class="ttc" id="aclassIntrepid2_1_1BasisValues_html_a024d26a2e17dd77944ab36156c00f408"><div class="ttname"><a href="classIntrepid2_1_1BasisValues.html#a024d26a2e17dd77944ab36156c00f408">Intrepid2::BasisValues::operator()</a></div><div class="ttdeci">KOKKOS_INLINE_FUNCTION Scalar operator()(const int &amp;cellOrdinal, const int &amp;fieldOrdinal, const int &amp;pointOrdinal, const int &amp;dim) const</div><div class="ttdoc">operator() for (C,F,P,D) data, which arises in CVFEM; at present unimplemented, and only declared her...</div><div class="ttdef"><b>Definition</b> <a href="Intrepid2__BasisValues_8hpp_source.html#l00296">Intrepid2_BasisValues.hpp:296</a></div></div>
+<div class="ttc" id="aclassIntrepid2_1_1BasisValues_html_a084bd199f6ea63bd5a8608afcd3d3561"><div class="ttname"><a href="classIntrepid2_1_1BasisValues.html#a084bd199f6ea63bd5a8608afcd3d3561">Intrepid2::BasisValues::operator()</a></div><div class="ttdeci">KOKKOS_INLINE_FUNCTION Scalar operator()(const int &amp;fieldOrdinal, const int &amp;pointOrdinal, const int &amp;dim) const</div><div class="ttdoc">operator() for (F,P,D) vector data</div><div class="ttdef"><b>Definition</b> <a href="Intrepid2__BasisValues_8hpp_source.html#l00255">Intrepid2_BasisValues.hpp:255</a></div></div>
 <div class="ttc" id="aclassIntrepid2_1_1BasisValues_html_a0ccc23d533f6f6f323ddd356abfbe128"><div class="ttname"><a href="classIntrepid2_1_1BasisValues.html#a0ccc23d533f6f6f323ddd356abfbe128">Intrepid2::BasisValues::BasisValues</a></div><div class="ttdeci">BasisValues(const BasisValues&lt; Scalar, OtherDeviceType &gt; &amp;basisValues)</div><div class="ttdoc">copy-like constructor for differing execution spaces. This does a deep copy of underlying views.</div><div class="ttdef"><b>Definition</b> <a href="Intrepid2__BasisValues_8hpp_source.html#l00083">Intrepid2_BasisValues.hpp:83</a></div></div>
 <div class="ttc" id="aclassIntrepid2_1_1BasisValues_html_a346d81caabd33a07e5825cffac271d09"><div class="ttname"><a href="classIntrepid2_1_1BasisValues.html#a346d81caabd33a07e5825cffac271d09">Intrepid2::BasisValues::BasisValues</a></div><div class="ttdeci">BasisValues(TensorDataType tensorData)</div><div class="ttdoc">Constructor for scalar-valued BasisValues with a single family of values.</div><div class="ttdef"><b>Definition</b> <a href="Intrepid2__BasisValues_8hpp_source.html#l00051">Intrepid2_BasisValues.hpp:51</a></div></div>
 <div class="ttc" id="aclassIntrepid2_1_1BasisValues_html_a46f0f3cb15bcd4f6d793bfdc91021357"><div class="ttname"><a href="classIntrepid2_1_1BasisValues.html#a46f0f3cb15bcd4f6d793bfdc91021357">Intrepid2::BasisValues::tensorDataFamilies</a></div><div class="ttdeci">const Kokkos::Array&lt; TensorDataType, Parameters::MaxTensorComponents &gt; &amp; tensorDataFamilies() const</div><div class="ttdoc">TensorDataFamilies accessor.</div><div class="ttdef"><b>Definition</b> <a href="Intrepid2__BasisValues_8hpp_source.html#l00209">Intrepid2_BasisValues.hpp:209</a></div></div>
