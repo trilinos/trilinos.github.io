@@ -246,8 +246,8 @@ var NAVTREEINDEX6 =
 "MueLu__SaPFactory__fwd_8hpp.html":[10,0,2,9,0,145],
 "MueLu__SaPFactory__fwd_8hpp.html#af8fd576a1617c005fdaa3d2bdb221309":[10,0,2,9,0,145,0],
 "MueLu__SaPFactory__fwd_8hpp_source.html":[10,0,2,9,0,145],
-"MueLu__SaPFactory__kokkos__decl_8hpp.html":[10,0,2,8,12,8],
-"MueLu__SaPFactory__kokkos__decl_8hpp.html#ac0455afc0d59732a249023e2448c1c90":[10,0,2,8,12,8,1],
-"MueLu__SaPFactory__kokkos__decl_8hpp_source.html":[10,0,2,8,12,8],
-"MueLu__SaPFactory__kokkos__def_8hpp.html":[10,0,2,8,12,9]
+"MueLu__ScalarDroppingBase_8hpp.html":[10,0,2,0,3,18],
+"MueLu__ScalarDroppingBase_8hpp_source.html":[10,0,2,0,3,18],
+"MueLu__ScalarDroppingClassical__decl_8hpp.html":[10,0,2,0,3,19],
+"MueLu__ScalarDroppingClassical__decl_8hpp_source.html":[10,0,2,0,3,19]
 };
