@@ -4,7 +4,8 @@ permalink: events.html
 folder: community
 ---
 
-*   [US Trilinos User & Developer Meeting 2025](https://hpsf2025.sched.com/type/Trilinos+User-Developers+Group+%28TUG%29+Meeting) -- May 7, 2025, Chicago, IL, USA
+*   [US Trilinos User & Developer Group Meeting 2026](trilinos_user-developer_group_meeting_2026.html) -- Oct 30-Nov 2, 2023, Albuquerque, NM, USA
+*   [US Trilinos User & Developer Group Meeting 2025](https://hpsf2025.sched.com/type/Trilinos+User-Developers+Group+%28TUG%29+Meeting) -- May 7, 2025, Chicago, IL, USA
 *   [US Trilinos User Group 2024](trilinos_user-developer_group_meeting_2024.html) -- Oct 22-24, 2024, Albuquerque, NM, USA
 *   [European Trilinos & Kokkos User Group 2024](european_trilinos_kokkos_user_group_meeting_2024.html) -- June 24-26, 2024, Hamburg, Germany
 *   [US Trilinos User Group 2023](trilinos_user-developer_group_meeting_2023.html) -- Oct 30-Nov 2, 2023, Albuquerque, NM, USA
