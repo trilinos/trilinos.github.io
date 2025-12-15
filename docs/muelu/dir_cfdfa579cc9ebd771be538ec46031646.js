@@ -146,7 +146,6 @@ var dir_cfdfa579cc9ebd771be538ec46031646 =
     [ "MueLu_RfromP_Or_TransP_fwd.hpp", "MueLu__RfromP__Or__TransP__fwd_8hpp.html", "MueLu__RfromP__Or__TransP__fwd_8hpp" ],
     [ "MueLu_RigidBodyModeFactory_fwd.hpp", "MueLu__RigidBodyModeFactory__fwd_8hpp.html", "MueLu__RigidBodyModeFactory__fwd_8hpp" ],
     [ "MueLu_SaPFactory_fwd.hpp", "MueLu__SaPFactory__fwd_8hpp.html", "MueLu__SaPFactory__fwd_8hpp" ],
-    [ "MueLu_SaPFactory_kokkos_fwd.hpp", "MueLu__SaPFactory__kokkos__fwd_8hpp.html", null ],
     [ "MueLu_ScaledNullspaceFactory_fwd.hpp", "MueLu__ScaledNullspaceFactory__fwd_8hpp.html", "MueLu__ScaledNullspaceFactory__fwd_8hpp" ],
     [ "MueLu_SchurComplementFactory_fwd.hpp", "MueLu__SchurComplementFactory__fwd_8hpp.html", "MueLu__SchurComplementFactory__fwd_8hpp" ],
     [ "MueLu_SegregatedAFactory_fwd.hpp", "MueLu__SegregatedAFactory__fwd_8hpp.html", "MueLu__SegregatedAFactory__fwd_8hpp" ],

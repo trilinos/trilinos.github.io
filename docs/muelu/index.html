@@ -107,14 +107,28 @@ Table of Contents</h1>
 <ul>
 <li><a class="el" href="index.html#muelu_overview">MueLu Overview</a></li>
 <li><a class="el" href="index.html#muelu_documentation">Documentation</a></li>
-<li><a class="el" href="index.html#muelu_developers">Current Developers</a></li>
-<li><a class="el" href="index.html#muelu_authors">Authors and Contributors</a></li>
-<li><a class="el" href="index.html#muelu_copyright">Copyright and License</a></li>
+<li><a class="el" href="index.html#muelu_tutorial">Tutorial</a></li>
 <li><a class="el" href="index.html#muelu_questions">For All Questions and Comments...</a></li>
+<li><a class="el" href="index.html#muelu_cite">Citing</a></li>
+<li><a class="el" href="index.html#muelu_developers">Current Developers</a></li>
+<li><a class="el" href="index.html#muelu_authors_and_contributors">Authors and Contributors</a></li>
 </ul>
 <h1><a class="anchor" id="muelu_overview"></a>
 MueLu Overview</h1>
-<p><a class="el" href="namespaceMueLu.html" title="Namespace for MueLu classes and methods.">MueLu</a> is a flexible and extensible multigrid solver framework. It is intended for the research and development of new multigrid preconditioning techniques. More information can be found at <a href="https://trilinos.org/packages/muelu">https://trilinos.org/packages/muelu</a>.</p>
+<p><a class="el" href="namespaceMueLu.html" title="Namespace for MueLu classes and methods.">MueLu</a> is designed for the parallel solution of large sparse linear systems of equations arising from PDE discretizations. <a class="el" href="namespaceMueLu.html" title="Namespace for MueLu classes and methods.">MueLu</a> provides easy-to-use multigrid solvers and preconditioners based on smoothed aggregation algorithms. As a multigrid framework, <a class="el" href="namespaceMueLu.html" title="Namespace for MueLu classes and methods.">MueLu</a> supports the design of application-specific multigrid preconditioners. <a class="el" href="namespaceMueLu.html" title="Namespace for MueLu classes and methods.">MueLu</a> is extensible and allows for the research and development of novel multigrid preconditioning methods. Finally, <a class="el" href="namespaceMueLu.html" title="Namespace for MueLu classes and methods.">MueLu</a> is able to run on virtually all modern CPU and accelerator based architectures.</p>
+<p>If you're looking for something ready-to-use, <a class="el" href="namespaceMueLu.html" title="Namespace for MueLu classes and methods.">MueLu</a> provides scalable multigrid preconditioners for these problem classes: </p><pre class="fragment">Poisson
+Elasticity
+convection-diffusion
+Maxwell’s equations (eddy current formulation)
+</pre><p>Features:</p><ul>
+<li>Easy-to-use interface: <a class="el" href="namespaceMueLu.html" title="Namespace for MueLu classes and methods.">MueLu</a> has a user-friendly parameter input deck which covers most important use cases, with reasonable defaults provided for common problem types.</li>
+<li>Modern object-oriented software architecture: <a class="el" href="namespaceMueLu.html" title="Namespace for MueLu classes and methods.">MueLu</a> is written completely in C++ as a modular object-oriented multigrid framework, which provides flexibility to combine and reuse existing components to develop novel multigrid methods.</li>
+<li>Extensibility: Due to its flexible design, <a class="el" href="namespaceMueLu.html" title="Namespace for MueLu classes and methods.">MueLu</a> is an excellent toolkit for research on novel multigrid concepts. Experienced multigrid users have full access to the underlying framework through an advanced XML based interface. Expert users may use and extend the C++ API directly.</li>
+<li>Integration with Trilinos: As a package of Trilinos, Muelu is well integrated into the Trilinos environment and uses the Tpetra-based sparse linear algebra stack: Krylov solvers (<a class="el" href="namespaceBelos.html">Belos</a>), algebraic solvers (<a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/namespaceIfpack2.html">Ifpack2</a>), sparse direct solvers (<a class="el" href="namespaceAmesos2.html">Amesos2</a>), and load-balancing (<a class="el" href="namespaceZoltan2.html">Zoltan2</a>).</li>
+<li>Broad range of supported platforms: <a class="el" href="namespaceMueLu.html" title="Namespace for MueLu classes and methods.">MueLu</a> runs on wide variety of architectures, from desktop workstations to parallel Linux clusters and accelerator-based supercomputers.</li>
+<li>Open source: <a class="el" href="namespaceMueLu.html" title="Namespace for MueLu classes and methods.">MueLu</a> is freely available through a simplified BSD license.</li>
+</ul>
+<p>If you are interested in using <a class="el" href="namespaceMueLu.html" title="Namespace for MueLu classes and methods.">MueLu</a> for your research or want to contribute, please contact the <a class="el" href="namespaceMueLu.html" title="Namespace for MueLu classes and methods.">MueLu</a> team through github.</p>
 <h1><a class="anchor" id="muelu_documentation"></a>
 Documentation</h1>
 <p>Useful views of the Doxygen documentation are:</p><ul>
@@ -122,35 +136,44 @@ Documentation</h1>
 <li>Browsing the class documentation organized by logical groups. Choose the <a href="modules.html">Modules tab</a>.</li>
 </ul>
 <p>The <a class="el" href="namespaceMueLu.html" title="Namespace for MueLu classes and methods.">MueLu</a> User's Guide is located in muelu/doc/UsersGuide and at the <a href="https://trilinos.org/packages/muelu/muelu-documentation">MueLu home page</a>.</p>
+<h1><a class="anchor" id="muelu_tutorial"></a>
+Tutorial</h1>
+<p>The <a href="https://muelu.github.io">MueLu tutorial</a> describes the most important features of <a class="el" href="namespaceMueLu.html" title="Namespace for MueLu classes and methods.">MueLu</a>, from beginning information to advanced usage. It contains accompanying exercises where the interested user can do their own experiments with multigrid parameters. The <a class="el" href="namespaceMueLu.html" title="Namespace for MueLu classes and methods.">MueLu</a> tutorial is part of the Trilinos repository, and its examples are automatically tested to ensure that they compile and run.</p>
+<h1><a class="anchor" id="muelu_questions"></a>
+For All Questions and Comments...</h1>
+<pre class="fragment">Open an issue: https://github.com/trilinos/Trilinos/issues.
+Start a discussion: https://github.com/orgs/trilinos/discussions.
+</pre> <h1><a class="anchor" id="muelu_cite"></a>
+Citing</h1>
+<p>To cite <a class="el" href="namespaceMueLu.html" title="Namespace for MueLu classes and methods.">MueLu</a>, please use the following bibliography entry.</p>
+<p>@techreport{<a class="el" href="namespaceMueLu.html" title="Namespace for MueLu classes and methods.">MueLu</a>, title={Mue{L}u User’s Guide}, author={Luc Berger-Vergiat and Christian A. Glusa and Graham Harper and Jonathan J. Hu and Matthias Mayr and Peter Ohm and Andrey Prokopenko and Christopher M. Siefert and Raymond S. Tuminaro and Tobias A. Wiesner}, number={SAND2023-12265}, year={2023}, institution = {Sandia National Laboratories}, }</p>
 <h1><a class="anchor" id="muelu_developers"></a>
 Current Developers</h1>
 <ul>
+<li>Luc Berger-Vergiat, Sandia National Labs</li>
+<li>Max Firmbach, University of the Bundeswehr Munich</li>
+<li>Christian Glusa, Sandia National Labs</li>
+<li>Graham Harper, Sandia National Labs</li>
 <li>Jonathan Hu, Sandia National Labs</li>
 <li>Matthias Mayr, University of the Bundeswehr Munich</li>
+<li>Malachi Phillips, Sandia National Labs</li>
 <li>Chris Siefert, Sandia National Labs</li>
 <li>Ray Tuminaro, Sandia National Labs</li>
-<li>Christian Glusa, Sandia National Labs</li>
-<li>Luc Berger-Vergiat, Sandia National Labs</li>
-<li>Graham Harper, Sandia National Labs</li>
 </ul>
-<h1><a class="anchor" id="muelu_authors"></a>
+<h1><a class="anchor" id="muelu_authors_and_contributors"></a>
 Authors and Contributors</h1>
 <ul>
 <li>Tom Benson, LLNL</li>
 <li>Emily Furst, University of Washington (summer intern, 2015)</li>
-<li>Jeremie Gaidamour, INRIA (Nancy, France)</li>
+<li>Jeremie Gaidamour, INRIA</li>
 <li>Axel Gerstenberger, Rolls Royce</li>
-<li>Brian Kelley, Texas A&amp;M (summer intern, 2015)</li>
-<li>Andrey Prokopenko, Sandia National Labs</li>
+<li>Brian Kelley, Sandia National Labs</li>
+<li>Andrey Prokopenko, ORNL</li>
 <li>Paul Tsuji, LLNL</li>
-<li>Tobias Wiesner, Sandia National Labs</li>
-<li>Peter Ohm, RIKEN (Japan)</li>
+<li>Peter Ohm, RIKEN</li>
+<li>Jerry Watkins, Sandia National Labs</li>
+<li>Tobias Wiesner, Leica </li>
 </ul>
-<h1><a class="anchor" id="muelu_copyright"></a>
-Copyright and License</h1>
-<pre class="fragment"></pre><h1><a class="anchor" id="muelu_questions"></a>
-For All Questions and Comments...</h1>
-<p>Please contact the authors listed in the License above, or use one of the <a href="https://trilinos.org/packages/muelu/muelu-contact-us">MueLu mailing lists</a>. </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->

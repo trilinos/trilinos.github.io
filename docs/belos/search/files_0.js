@@ -98,6 +98,5 @@ var searchData=
   ['belostsqrorthomanagerimpl_2ehpp_95',['BelosTsqrOrthoManagerImpl.hpp',['../BelosTsqrOrthoManagerImpl_8hpp.html',1,'']]],
   ['belostypes_2ecpp_96',['BelosTypes.cpp',['../BelosTypes_8cpp.html',1,'']]],
   ['belostypes_2ehpp_97',['BelosTypes.hpp',['../BelosTypes_8hpp.html',1,'']]],
-  ['belosutils_2ehpp_98',['BelosUtils.hpp',['../BelosUtils_8hpp.html',1,'']]],
-  ['belosversion_2ecpp_99',['BelosVersion.cpp',['../BelosVersion_8cpp.html',1,'']]]
+  ['belosversion_2ecpp_98',['BelosVersion.cpp',['../BelosVersion_8cpp.html',1,'']]]
 ];

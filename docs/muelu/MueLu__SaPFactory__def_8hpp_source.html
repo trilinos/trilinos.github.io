@@ -202,8 +202,7 @@ $(document).ready(function(){initNavTree('MueLu__SaPFactory__def_8hpp_source.htm
 <div class="foldopen" id="foldopen00090" data-start="{" data-end="}">
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="classMueLu_1_1SaPFactory.html#ac34079d67be3b1bf158f7a37491f58b3">   90</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classMueLu_1_1SaPFactory.html#ac34079d67be3b1bf158f7a37491f58b3">SaPFactory&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;::BuildP</a>(<a class="code hl_class" href="classMueLu_1_1Level.html">Level</a>&amp; fineLevel, <a class="code hl_class" href="classMueLu_1_1Level.html">Level</a>&amp; coarseLevel)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  <a class="code hl_class" href="classMueLu_1_1FactoryMonitor.html">FactoryMonitor</a> m(*<span class="keyword">this</span>, <span class="stringliteral">&quot;Prolongator smoothing&quot;</span>, coarseLevel);</div>
-<div class="foldopen" id="foldopen00092" data-start="{" data-end="}">
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="classMueLu_1_1SaPFactory.html#aecdbe0f1a070653bf71cbbf1f2bb33d3">   92</a></span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  std::string levelIDs = <a class="code hl_function" href="namespaceMueLu.html#adffcd9a4c5dd0a4b2cbf6c8e77f27e6b">toString</a>(coarseLevel.<a class="code hl_function" href="classMueLu_1_1Level.html#a72e28575744e0454e8abe29007701b77">GetLevelID</a>());</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  <span class="keyword">const</span> std::string prefix = <span class="stringliteral">&quot;MueLu::SaPFactory(&quot;</span> + levelIDs + <span class="stringliteral">&quot;): &quot;</span>;</div>
@@ -216,26 +215,19 @@ $(document).ready(function(){initNavTree('MueLu__SaPFactory__def_8hpp_source.htm
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <span class="comment">// -- Warning: Do not use directly initialPFact_. Use initialPFact instead everywhere!</span></div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  RCP&lt;const FactoryBase&gt; initialPFact = GetFactory(<span class="stringliteral">&quot;P&quot;</span>);</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  <span class="keywordflow">if</span> (initialPFact == Teuchos::null) {</div>
-<div class="foldopen" id="foldopen00105" data-start="{" data-end="}">
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="classMueLu_1_1SaPFactory.html#a073222fd64fb0528898f69e6aa6c9c4e">  105</a></span>    initialPFact = coarseLevel.<a class="code hl_function" href="classMueLu_1_1Level.html#a545f12afa73314ebb0b9f8a71844cd0f">GetFactoryManager</a>()-&gt;GetFactory(<span class="stringliteral">&quot;Ptent&quot;</span>);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    initialPFact = coarseLevel.<a class="code hl_function" href="classMueLu_1_1Level.html#a545f12afa73314ebb0b9f8a71844cd0f">GetFactoryManager</a>()-&gt;GetFactory(<span class="stringliteral">&quot;Ptent&quot;</span>);</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  }</div>
-<div class="foldopen" id="foldopen00107" data-start="{" data-end="}">
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="classMueLu_1_1SaPFactory.html#ac34079d67be3b1bf158f7a37491f58b3">  107</a></span>  <span class="keyword">const</span> ParameterList&amp; pL = GetParameterList();</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  <span class="keyword">const</span> ParameterList&amp; pL = GetParameterList();</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
-<div class="foldopen" id="foldopen00109" data-start="{" data-end="}">
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="classMueLu_1_1SaPFactory.html#ad028a2ebaf543f176c83e05e93398015">  109</a></span>  <span class="comment">// Level Get</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  <span class="comment">// Level Get</span></div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  RCP&lt;Matrix&gt; A     = Get&lt;RCP&lt;Matrix&gt; &gt;(fineLevel, <span class="stringliteral">&quot;A&quot;</span>);</div>
-<div class="foldopen" id="foldopen00111" data-start="{" data-end="}">
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="classMueLu_1_1SaPFactory.html#a1856d975d1a0e316c43e543bb33b1e47">  111</a></span>  RCP&lt;Matrix&gt; Ptent = coarseLevel.<a class="code hl_function" href="classMueLu_1_1Level.html#a853f6afc1e1573b18d52262a652a3c6c">Get</a>&lt;RCP&lt;Matrix&gt; &gt;(<span class="stringliteral">&quot;P&quot;</span>, initialPFact.get());</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  RCP&lt;Matrix&gt; Ptent = coarseLevel.<a class="code hl_function" href="classMueLu_1_1Level.html#a853f6afc1e1573b18d52262a652a3c6c">Get</a>&lt;RCP&lt;Matrix&gt; &gt;(<span class="stringliteral">&quot;P&quot;</span>, initialPFact.get());</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  RCP&lt;Matrix&gt; finalP;</div>
-<div class="foldopen" id="foldopen00113" data-start="{" data-end="}">
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="classMueLu_1_1SaPFactory.html#a07141c58f342f637651b2a0999e6f490">  113</a></span>  <span class="comment">// If Tentative facctory bailed out (e.g., number of global aggregates is 0), then SaPFactory bails</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  <span class="comment">// If Tentative facctory bailed out (e.g., number of global aggregates is 0), then SaPFactory bails</span></div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  <span class="comment">//  This level will ultimately be removed in MueLu_Hierarchy_defs.h via a resize()</span></div>
-<div class="foldopen" id="foldopen00115" data-start="{" data-end="}">
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="classMueLu_1_1SaPFactory.html#a659269e45404c62a31fd0f2c2bd322b6">  115</a></span>  <span class="keywordflow">if</span> (Ptent == Teuchos::null) {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  <span class="keywordflow">if</span> (Ptent == Teuchos::null) {</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    finalP = Teuchos::null;</div>
-<div class="foldopen" id="foldopen00117" data-start="{" data-end="}">
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="classMueLu_1_1SaPFactory.html#a678c63d902096030c96ebda34e7ff9b9">  117</a></span>    Set(coarseLevel, <span class="stringliteral">&quot;P&quot;</span>, finalP);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    Set(coarseLevel, <span class="stringliteral">&quot;P&quot;</span>, finalP);</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  }</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
@@ -278,14 +270,14 @@ $(document).ready(function(){initNavTree('MueLu__SaPFactory__def_8hpp_source.htm
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> useAutomaticDiagTol           = pL.get&lt;<span class="keywordtype">bool</span>&gt;(<span class="stringliteral">&quot;sa: rowsumabs use automatic diagonal tolerance&quot;</span>);</div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>  <span class="comment">// Sanity checking</span></div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  TEUCHOS_TEST_FOR_EXCEPTION(<a class="code hl_variable" href="MueLu__TentativePFactory__kokkos__def_8hpp.html#a15bfb577184fa0cfc43f4694f138b102">doQRStep</a> &amp;&amp; enforceConstraints, Exceptions::RuntimeError,</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  TEUCHOS_TEST_FOR_EXCEPTION(<a class="code hl_variable" href="MueLu__TentativePFactory__kokkos__def_8hpp.html#a15bfb577184fa0cfc43f4694f138b102">doQRStep</a> &amp;&amp; enforceConstraints, <a class="code hl_class" href="classMueLu_1_1Exceptions_1_1RuntimeError.html">Exceptions::RuntimeError</a>,</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                             <span class="stringliteral">&quot;MueLu::TentativePFactory::MakeTentative: cannot use &#39;enforce constraints&#39; and &#39;calculate qr&#39; at the same time&quot;</span>);</div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>  <span class="keywordflow">if</span> (dampingFactor != Teuchos::ScalarTraits&lt;SC&gt;::zero()) {</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>  <span class="keywordflow">if</span> (<a class="code hl_variableRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/structIfpack2_1_1BlockTriDiContainer_3_01MatrixType_00_01BlockTriDiContainerDetails_1_1ImplSimdTag_01_4_1_1ApplyParameters.html#a328e1953f3f851c50fb882147bf73bfc">dampingFactor</a> != Teuchos::ScalarTraits&lt;SC&gt;::zero()) {</div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <a class="code hl_typedef" href="MueLu__UseDefaultTypes_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a> lambdaMax;</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    Teuchos::RCP&lt;Vector&gt; invDiag;</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keywordflow">if</span> (userDefinedMaxEigen == -1.) {</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>      SubFactoryMonitor m2(*<span class="keyword">this</span>, <span class="stringliteral">&quot;Eigenvalue estimate&quot;</span>, coarseLevel);</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>      <a class="code hl_class" href="classMueLu_1_1SubFactoryMonitor.html">SubFactoryMonitor</a> m2(*<span class="keyword">this</span>, <span class="stringliteral">&quot;Eigenvalue estimate&quot;</span>, coarseLevel);</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>      lambdaMax = A-&gt;GetMaxEigenvalueEstimate();</div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>      <span class="keywordflow">if</span> (lambdaMax == -Teuchos::ScalarTraits&lt;SC&gt;::one() || estimateMaxEigen) {</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        GetOStream(<a class="code hl_enumvalue" href="namespaceMueLu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1fa83a3214cf3b7416fa80a3de3d1965e73">Statistics1</a>) &lt;&lt; <span class="stringliteral">&quot;Calculating max eigenvalue estimate now (max iters = &quot;</span> &lt;&lt; maxEigenIterations &lt;&lt; ((useAbsValueRowSum) ? <span class="stringliteral">&quot;, use rowSumAbs diagonal)&quot;</span> : <span class="stringliteral">&quot;, use point diagonal)&quot;</span>) &lt;&lt; std::endl;</div>
@@ -297,7 +289,7 @@ $(document).ready(function(){initNavTree('MueLu__SaPFactory__def_8hpp_source.htm
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                                                                           diagonalReplacementValue,</div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>                                                                           replaceSingleEntryRowWithZero,</div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                                                                           useAutomaticDiagTol);</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>          TEUCHOS_TEST_FOR_EXCEPTION(invDiag.is_null(), Exceptions::RuntimeError,</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>          TEUCHOS_TEST_FOR_EXCEPTION(invDiag.is_null(), <a class="code hl_class" href="classMueLu_1_1Exceptions_1_1RuntimeError.html">Exceptions::RuntimeError</a>,</div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>                                     <span class="stringliteral">&quot;SaPFactory: eigenvalue estimate: diagonal reciprocal is null.&quot;</span>);</div>
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>          lambdaMax = <a class="code hl_function" href="classMueLu_1_1UtilitiesBase.html#a56ca409dd7f83de8595195f92358509e">Utilities::PowerMethod</a>(*A, invDiag, maxEigenIterations, stopTol);</div>
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        } <span class="keywordflow">else</span></div>
@@ -313,7 +305,7 @@ $(document).ready(function(){initNavTree('MueLu__SaPFactory__def_8hpp_source.htm
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    GetOStream(<a class="code hl_enumvalue" href="namespaceMueLu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1fa83a3214cf3b7416fa80a3de3d1965e73">Statistics1</a>) &lt;&lt; <span class="stringliteral">&quot;Prolongator damping factor = &quot;</span> &lt;&lt; <a class="code hl_variableRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/structIfpack2_1_1BlockTriDiContainer_3_01MatrixType_00_01BlockTriDiContainerDetails_1_1ImplSimdTag_01_4_1_1ApplyParameters.html#a328e1953f3f851c50fb882147bf73bfc">dampingFactor</a> / lambdaMax &lt;&lt; <span class="stringliteral">&quot; (&quot;</span> &lt;&lt; <a class="code hl_variableRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/structIfpack2_1_1BlockTriDiContainer_3_01MatrixType_00_01BlockTriDiContainerDetails_1_1ImplSimdTag_01_4_1_1ApplyParameters.html#a328e1953f3f851c50fb882147bf73bfc">dampingFactor</a> &lt;&lt; <span class="stringliteral">&quot; / &quot;</span> &lt;&lt; lambdaMax &lt;&lt; <span class="stringliteral">&quot;)&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    {</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>      SubFactoryMonitor m2(*<span class="keyword">this</span>, <span class="stringliteral">&quot;Fused (I-omega*D^{-1} A)*Ptent&quot;</span>, coarseLevel);</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>      <a class="code hl_class" href="classMueLu_1_1SubFactoryMonitor.html">SubFactoryMonitor</a> m2(*<span class="keyword">this</span>, <span class="stringliteral">&quot;Fused (I-omega*D^{-1} A)*Ptent&quot;</span>, coarseLevel);</div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>      <span class="keywordflow">if</span> (!useAbsValueRowSum)</div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        invDiag = <a class="code hl_function" href="classMueLu_1_1UtilitiesBase.html#a2c2b0c6a402fb999f06e358ff3f9f046">Utilities::GetMatrixDiagonalInverse</a>(*A);  <span class="comment">// default</span></div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (invDiag == Teuchos::null) {</div>
@@ -324,14 +316,14 @@ $(document).ready(function(){initNavTree('MueLu__SaPFactory__def_8hpp_source.htm
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>                                                                         diagonalReplacementValue,</div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>                                                                         replaceSingleEntryRowWithZero,</div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>                                                                         useAutomaticDiagTol);</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        TEUCHOS_TEST_FOR_EXCEPTION(invDiag.is_null(), Exceptions::RuntimeError, <span class="stringliteral">&quot;SaPFactory: diagonal reciprocal is null.&quot;</span>);</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        TEUCHOS_TEST_FOR_EXCEPTION(invDiag.is_null(), <a class="code hl_class" href="classMueLu_1_1Exceptions_1_1RuntimeError.html">Exceptions::RuntimeError</a>, <span class="stringliteral">&quot;SaPFactory: diagonal reciprocal is null.&quot;</span>);</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>      }</div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>      SC omega = <a class="code hl_variableRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/structIfpack2_1_1BlockTriDiContainer_3_01MatrixType_00_01BlockTriDiContainerDetails_1_1ImplSimdTag_01_4_1_1ApplyParameters.html#a328e1953f3f851c50fb882147bf73bfc">dampingFactor</a> / lambdaMax;</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>      TEUCHOS_TEST_FOR_EXCEPTION(!std::isfinite(Teuchos::ScalarTraits&lt;SC&gt;::magnitude(omega)), Exceptions::RuntimeError, <span class="stringliteral">&quot;Prolongator damping factor needs to be finite.&quot;</span>);</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>      TEUCHOS_TEST_FOR_EXCEPTION(!std::isfinite(Teuchos::ScalarTraits&lt;SC&gt;::magnitude(omega)), <a class="code hl_class" href="classMueLu_1_1Exceptions_1_1RuntimeError.html">Exceptions::RuntimeError</a>, <span class="stringliteral">&quot;Prolongator damping factor needs to be finite.&quot;</span>);</div>
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>      {</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        SubFactoryMonitor m3(*<span class="keyword">this</span>, <span class="stringliteral">&quot;MueLu::IteratorOps::Jacobi&quot;</span>, coarseLevel);</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        <a class="code hl_class" href="classMueLu_1_1SubFactoryMonitor.html">SubFactoryMonitor</a> m3(*<span class="keyword">this</span>, <span class="stringliteral">&quot;MueLu::IteratorOps::Jacobi&quot;</span>, coarseLevel);</div>
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        <span class="comment">// finalP = Ptent + (I - \omega D^{-1}A) Ptent</span></div>
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        finalP = <a class="code hl_function" href="classMueLu_1_1IteratorOps.html#a12f3ba50137f1bc0f7ab70386aadc20c">MueLu::IteratorOps&lt;SC, LO, GO, NO&gt;::Jacobi</a>(omega, *invDiag, *A, *Ptent, finalP, GetOStream(<a class="code hl_enumvalue" href="namespaceMueLu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1fa18d960e5bd7364c1ea53ae67f5891ff5">Statistics2</a>), std::string(<span class="stringliteral">&quot;MueLu::SaP-&quot;</span>) + <a class="code hl_function" href="namespaceMueLu.html#adffcd9a4c5dd0a4b2cbf6c8e77f27e6b">toString</a>(coarseLevel.<a class="code hl_function" href="classMueLu_1_1Level.html#a72e28575744e0454e8abe29007701b77">GetLevelID</a>()), APparams);</div>
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        <span class="keywordflow">if</span> (enforceConstraints) {</div>
@@ -375,7 +367,7 @@ $(document).ready(function(){initNavTree('MueLu__SaPFactory__def_8hpp_source.htm
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>  } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    <span class="comment">// prolongation factory is in restriction mode</span></div>
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    {</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>      SubFactoryMonitor m2(*<span class="keyword">this</span>, <span class="stringliteral">&quot;Transpose P&quot;</span>, coarseLevel);</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>      <a class="code hl_class" href="classMueLu_1_1SubFactoryMonitor.html">SubFactoryMonitor</a> m2(*<span class="keyword">this</span>, <span class="stringliteral">&quot;Transpose P&quot;</span>, coarseLevel);</div>
 <div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>      R = <a class="code hl_function" href="classMueLu_1_1Utilities.html#a3d58fab2795a0debf5bfaf28f52b8ab8">Utilities::Transpose</a>(*finalP, <span class="keyword">true</span>);</div>
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>      <span class="keywordflow">if</span> (!R.is_null()) {</div>
 <div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        std::ostringstream oss;</div>
@@ -399,6 +391,7 @@ $(document).ready(function(){initNavTree('MueLu__SaPFactory__def_8hpp_source.htm
 <div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>  }</div>
 <div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span> </div>
 <div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>}  <span class="comment">// Build()</span></div>
+</div>
 <div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span> </div>
 <div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span><span class="comment">// Analyze the grid transfer produced by smoothed aggregation and make</span></div>
 <div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span><span class="comment">// modifications if it does not look right. In particular, if there are</span></div>
@@ -820,7 +813,6 @@ $(document).ready(function(){initNavTree('MueLu__SaPFactory__def_8hpp_source.htm
 <div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span>  <span class="keywordflow">return</span> hasFeasibleSol;</div>
 <div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span>}</div>
 </div>
-</div>
 <div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span> </div>
 <div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> local_matrix_type&gt;</div>
 <div class="foldopen" id="foldopen00698" data-start="{" data-end="};">
@@ -1159,20 +1151,12 @@ $(document).ready(function(){initNavTree('MueLu__SaPFactory__def_8hpp_source.htm
 <div class="line"><a id="l01016" name="l01016"></a><span class="lineno"> 1016</span> </div>
 <div class="line"><a id="l01017" name="l01017"></a><span class="lineno"> 1017</span>}  <span class="comment">// SatsifyPConstraints()</span></div>
 </div>
-</div>
 <div class="line"><a id="l01018" name="l01018"></a><span class="lineno"> 1018</span> </div>
 <div class="line"><a id="l01019" name="l01019"></a><span class="lineno"> 1019</span>}  <span class="comment">// namespace MueLu</span></div>
 <div class="line"><a id="l01020" name="l01020"></a><span class="lineno"> 1020</span> </div>
 <div class="line"><a id="l01021" name="l01021"></a><span class="lineno"> 1021</span><span class="preprocessor">#endif  </span><span class="comment">// MUELU_SAPFACTORY_DEF_HPP</span></div>
 <div class="line"><a id="l01022" name="l01022"></a><span class="lineno"> 1022</span> </div>
 <div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span><span class="comment">// TODO: restrictionMode_ should use the parameter list.</span></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div class="ttc" id="aMueLu__BrickAggregationFactory__def_8hpp_html_af6a857c25bcca4f300e01312cd6d4331"><div class="ttname"><a href="MueLu__BrickAggregationFactory__def_8hpp.html#af6a857c25bcca4f300e01312cd6d4331">SET_VALID_ENTRY</a></div><div class="ttdeci">#define SET_VALID_ENTRY(name)</div></div>
 <div class="ttc" id="aMueLu__FactoryManagerBase_8hpp_html"><div class="ttname"><a href="MueLu__FactoryManagerBase_8hpp.html">MueLu_FactoryManagerBase.hpp</a></div></div>
 <div class="ttc" id="aMueLu__IteratorOps_8hpp_html"><div class="ttname"><a href="MueLu__IteratorOps_8hpp.html">MueLu_IteratorOps.hpp</a></div></div>

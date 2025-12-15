@@ -266,7 +266,6 @@ var annotated_dup =
       [ "RfromP_Or_TransP", "classMueLu_1_1RfromP__Or__TransP.html", "classMueLu_1_1RfromP__Or__TransP" ],
       [ "RigidBodyModeFactory", "classMueLu_1_1RigidBodyModeFactory.html", "classMueLu_1_1RigidBodyModeFactory" ],
       [ "SaPFactory", "classMueLu_1_1SaPFactory.html", "classMueLu_1_1SaPFactory" ],
-      [ "SaPFactory_kokkos", "classMueLu_1_1SaPFactory__kokkos.html", null ],
       [ "ScalarDroppingBase", "classMueLu_1_1ScalarDroppingBase.html", "classMueLu_1_1ScalarDroppingBase" ],
       [ "ScalarDroppingClassical", "classMueLu_1_1ScalarDroppingClassical.html", "classMueLu_1_1ScalarDroppingClassical" ],
       [ "ScalarDroppingDistanceLaplacian", "classMueLu_1_1ScalarDroppingDistanceLaplacian.html", "classMueLu_1_1ScalarDroppingDistanceLaplacian" ],
