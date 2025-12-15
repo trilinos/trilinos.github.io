@@ -184,9 +184,6 @@ var hierarchy =
                 [ "MueLu::MatrixAnalysisFactory< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "classMueLu_1_1MatrixAnalysisFactory.html", null ],
                 [ "MueLu::MultiVectorTransferFactory< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "classMueLu_1_1MultiVectorTransferFactory.html", null ],
                 [ "MueLu::PFactory", "classMueLu_1_1PFactory.html", [
-                  [ "MueLu::SaPFactory< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "classMueLu_1_1SaPFactory.html", [
-                    [ "MueLu::SaPFactory_kokkos< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "classMueLu_1_1SaPFactory__kokkos.html", null ]
-                  ] ],
                   [ "MueLu::BlackBoxPFactory< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "classMueLu_1_1BlackBoxPFactory.html", null ],
                   [ "MueLu::BlockedPFactory< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "classMueLu_1_1BlockedPFactory.html", null ],
                   [ "MueLu::ClassicalPFactory< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "classMueLu_1_1ClassicalPFactory.html", null ],

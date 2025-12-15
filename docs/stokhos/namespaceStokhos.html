@@ -1318,6 +1318,14 @@ template&lt;typename ordinal_type , typename scalar_type &gt; </td></tr>
 template&lt;typename ordinal_type , typename value_type &gt; </td></tr>
 <tr class="memitem:a906c2820d6058b6469b33afedd9b7d6d"><td class="memTemplItemLeft" align="right" valign="top">Teuchos::RCP&lt; <a class="el" href="classStokhos_1_1Sparse3Tensor.html">Sparse3Tensor</a>&lt; ordinal_type, value_type &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>computeTripleProductTensorLTO</b> (const <a class="el" href="classStokhos_1_1TotalOrderBasis.html">TotalOrderBasis</a>&lt; ordinal_type, value_type, <a class="el" href="classStokhos_1_1LexographicLess.html">LexographicLess</a>&lt; <a class="el" href="classStokhos_1_1MultiIndex.html">MultiIndex</a>&lt; ordinal_type &gt; &gt; &gt; &amp;product_basis, bool symmetric=false)</td></tr>
 <tr class="separator:a906c2820d6058b6469b33afedd9b7d6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4eddff5953ffb189e007eef9770d93ae" id="r_a4eddff5953ffb189e007eef9770d93ae"><td class="memTemplParams" colspan="2">template&lt;typename TpetraLocalOrdinal , typename TpetraGlobalOrdinal , typename TpetraNode , typename StokhosOrdinal , typename StokhosValue &gt; </td></tr>
+<tr class="memitem:a4eddff5953ffb189e007eef9770d93ae"><td class="memTemplItemLeft" align="right" valign="top">Teuchos::RCP&lt; Tpetra::CrsGraph&lt; TpetraLocalOrdinal, TpetraGlobalOrdinal, TpetraNode &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceStokhos.html#a4eddff5953ffb189e007eef9770d93ae">sparse3Tensor2TpetraCrsGraph</a> (const <a class="el" href="classStokhos_1_1OrthogPolyBasis.html">Stokhos::OrthogPolyBasis</a>&lt; StokhosOrdinal, StokhosValue &gt; &amp;basis, const <a class="el" href="classStokhos_1_1Sparse3Tensor.html">Stokhos::Sparse3Tensor</a>&lt; StokhosOrdinal, StokhosValue &gt; &amp;Cijk, const Teuchos::RCP&lt; const Teuchos::Comm&lt; int &gt; &gt; &amp;comm)</td></tr>
+<tr class="memdesc:a4eddff5953ffb189e007eef9770d93ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build an Tpetra::CrsGraph from a sparse 3 tensor.  <br /></td></tr>
+<tr class="separator:a4eddff5953ffb189e007eef9770d93ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f0ca33abc558a909cc171149021ecc6" id="r_a5f0ca33abc558a909cc171149021ecc6"><td class="memTemplParams" colspan="2"><a id="a5f0ca33abc558a909cc171149021ecc6" name="a5f0ca33abc558a909cc171149021ecc6"></a>
+template&lt;typename TpetraLocalOrdinal , typename TpetraGlobalOrdinal , typename TpetraNode , typename StokhosOrdinal , typename StokhosValue &gt; </td></tr>
+<tr class="memitem:a5f0ca33abc558a909cc171149021ecc6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sparse3Tensor2TpetraMatrixMarket</b> (const <a class="el" href="classStokhos_1_1OrthogPolyBasis.html">Stokhos::OrthogPolyBasis</a>&lt; StokhosOrdinal, StokhosValue &gt; &amp;basis, const <a class="el" href="classStokhos_1_1Sparse3Tensor.html">Stokhos::Sparse3Tensor</a>&lt; StokhosOrdinal, StokhosValue &gt; &amp;Cijk, const Teuchos::RCP&lt; const Teuchos::Comm&lt; int &gt; &gt; &amp;comm, const std::string &amp;file)</td></tr>
+<tr class="separator:a5f0ca33abc558a909cc171149021ecc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -1957,6 +1965,47 @@ template&lt;typename ordinal_type , typename value_type &gt; </div>
 <p>Builds a sparse graph from a sparse 3 tensor by summing over the third index. This graph then represents the sparsity pattern of the stochastic part of the block stochastic Galerkin operator. Redistributing the graph should then provide a suitable parallel distribution for block stochastic Galerkin linear solves. </p>
 
 <p class="reference">References <a class="el" href="classStokhos_1_1Sparse3Tensor.html#a8a4a436b22292a5a17d891012f070c0d">Stokhos::Sparse3Tensor&lt; ordinal_type, value_type &gt;::i_begin()</a>, <a class="el" href="classStokhos_1_1Sparse3Tensor.html#ab5584df2af46457926c1c7f85430a1f6">Stokhos::Sparse3Tensor&lt; ordinal_type, value_type &gt;::i_end()</a>, <a class="el" href="classStokhos_1_1Sparse3Tensor.html#aa066e1cc3710af12770a54e2820ed277">Stokhos::Sparse3Tensor&lt; ordinal_type, value_type &gt;::j_begin()</a>, <a class="el" href="classStokhos_1_1Sparse3Tensor.html#a39a9bdb9599a8f082a4d46bf28449c28">Stokhos::Sparse3Tensor&lt; ordinal_type, value_type &gt;::j_end()</a>, <a class="el" href="classStokhos_1_1Sparse3Tensor.html#a5d80c524f0af83b69ab67de289a11afc">Stokhos::Sparse3Tensor&lt; ordinal_type, value_type &gt;::k_begin()</a>, and <a class="el" href="classStokhos_1_1Sparse3Tensor.html#ae4add7501855cd74708fa255f26149bf">Stokhos::Sparse3Tensor&lt; ordinal_type, value_type &gt;::k_end()</a>.</p>
+
+</div>
+</div>
+<a id="a4eddff5953ffb189e007eef9770d93ae" name="a4eddff5953ffb189e007eef9770d93ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4eddff5953ffb189e007eef9770d93ae">&#9670;&#160;</a></span>sparse3Tensor2TpetraCrsGraph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TpetraLocalOrdinal , typename TpetraGlobalOrdinal , typename TpetraNode , typename StokhosOrdinal , typename StokhosValue &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Teuchos::RCP&lt; Tpetra::CrsGraph&lt; TpetraLocalOrdinal, TpetraGlobalOrdinal, TpetraNode &gt; &gt; Stokhos::sparse3Tensor2TpetraCrsGraph </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classStokhos_1_1OrthogPolyBasis.html">Stokhos::OrthogPolyBasis</a>&lt; StokhosOrdinal, StokhosValue &gt; &amp;&#160;</td>
+          <td class="paramname"><em>basis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classStokhos_1_1Sparse3Tensor.html">Stokhos::Sparse3Tensor</a>&lt; StokhosOrdinal, StokhosValue &gt; &amp;&#160;</td>
+          <td class="paramname"><em>Cijk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Teuchos::RCP&lt; const Teuchos::Comm&lt; int &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>comm</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Build an Tpetra::CrsGraph from a sparse 3 tensor. </p>
+<p>Builds a sparse graph from a sparse 3 tensor by summing over the third index. This graph then represents the sparsity pattern of the stochastic part of the block stochastic Galerkin operator. Redistributing the graph should then provide a suitable parallel distribution for block stochastic Galerkin linear solves. </p>
+
+<p class="reference">References <a class="el" href="classStokhos_1_1Sparse3Tensor.html#a8a4a436b22292a5a17d891012f070c0d">Stokhos::Sparse3Tensor&lt; ordinal_type, value_type &gt;::i_begin()</a>, <a class="el" href="classStokhos_1_1Sparse3Tensor.html#ab5584df2af46457926c1c7f85430a1f6">Stokhos::Sparse3Tensor&lt; ordinal_type, value_type &gt;::i_end()</a>, <a class="el" href="classStokhos_1_1Sparse3Tensor.html#aa066e1cc3710af12770a54e2820ed277">Stokhos::Sparse3Tensor&lt; ordinal_type, value_type &gt;::j_begin()</a>, <a class="el" href="classStokhos_1_1Sparse3Tensor.html#a39a9bdb9599a8f082a4d46bf28449c28">Stokhos::Sparse3Tensor&lt; ordinal_type, value_type &gt;::j_end()</a>, <a class="el" href="classStokhos_1_1Sparse3Tensor.html#a5d80c524f0af83b69ab67de289a11afc">Stokhos::Sparse3Tensor&lt; ordinal_type, value_type &gt;::k_begin()</a>, <a class="el" href="classStokhos_1_1Sparse3Tensor.html#ae4add7501855cd74708fa255f26149bf">Stokhos::Sparse3Tensor&lt; ordinal_type, value_type &gt;::k_end()</a>, and <a class="el" href="classStokhos_1_1OrthogPolyBasis.html#a9ec183b10345ceb6f99c1526929a8986">Stokhos::OrthogPolyBasis&lt; ordinal_type, value_type &gt;::size()</a>.</p>
 
 </div>
 </div>

@@ -1677,7 +1677,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01625" name="l01625"></a><span class="lineno"> 1625</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> d=0; d&lt;<a class="code hl_function" href="classIntrepid2_1_1Data.html#af2f7ca5aae6d7069a330e659e7e7e610">rank</a>; d++)</div>
 <div class="line"><a id="l01626" name="l01626"></a><span class="lineno"> 1626</span>      {</div>
 <div class="line"><a id="l01627" name="l01627"></a><span class="lineno"> 1627</span>        startingOrdinals[d] = 0;</div>
-<div class="line"><a id="l01628" name="l01628"></a><span class="lineno"> 1628</span>        extents[d] = <a class="code hl_function" href="classIntrepid2_1_1Data.html#a7f62d07ab6b038766bac8158b3cff642">getDataExtent</a>(d);</div>
+<div class="line"><a id="l01628" name="l01628"></a><span class="lineno"> 1628</span>        extents[d] = <a class="code hl_function" href="classIntrepid2_1_1Data.html#a7f62d07ab6b038766bac8158b3cff642">getDataExtent</a>(activeDims_[d]);</div>
 <div class="line"><a id="l01629" name="l01629"></a><span class="lineno"> 1629</span>      }</div>
 <div class="line"><a id="l01630" name="l01630"></a><span class="lineno"> 1630</span>      <span class="keyword">auto</span> policy = Kokkos::MDRangePolicy&lt;ExecutionSpace,Kokkos::Rank&lt;rank&gt;&gt;(startingOrdinals,extents);</div>
 <div class="line"><a id="l01631" name="l01631"></a><span class="lineno"> 1631</span>      <span class="keywordflow">return</span> policy;</div>
@@ -1696,7 +1696,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01643" name="l01643"></a><span class="lineno"> 1643</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> d=0; d&lt;6; d++)</div>
 <div class="line"><a id="l01644" name="l01644"></a><span class="lineno"> 1644</span>      {</div>
 <div class="line"><a id="l01645" name="l01645"></a><span class="lineno"> 1645</span>        startingOrdinals[d] = 0;</div>
-<div class="line"><a id="l01646" name="l01646"></a><span class="lineno"> 1646</span>        extents[d] = <a class="code hl_function" href="classIntrepid2_1_1Data.html#a7f62d07ab6b038766bac8158b3cff642">getDataExtent</a>(d);</div>
+<div class="line"><a id="l01646" name="l01646"></a><span class="lineno"> 1646</span>        extents[d] = <a class="code hl_function" href="classIntrepid2_1_1Data.html#a7f62d07ab6b038766bac8158b3cff642">getDataExtent</a>(activeDims_[d]);</div>
 <div class="line"><a id="l01647" name="l01647"></a><span class="lineno"> 1647</span>      }</div>
 <div class="line"><a id="l01648" name="l01648"></a><span class="lineno"> 1648</span>      <span class="keyword">auto</span> policy = Kokkos::MDRangePolicy&lt;ExecutionSpace,Kokkos::Rank&lt;6&gt;&gt;(startingOrdinals,extents);</div>
 <div class="line"><a id="l01649" name="l01649"></a><span class="lineno"> 1649</span>      <span class="keywordflow">return</span> policy;</div>
@@ -1709,7 +1709,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01655" name="l01655"></a><span class="lineno"> 1655</span>    <a class="code hl_function" href="classIntrepid2_1_1Data.html#a1eeb48487adf5891f2dc6fe50e13005b">dataExtentRangePolicy</a>()</div>
 <div class="line"><a id="l01656" name="l01656"></a><span class="lineno"> 1656</span>    {</div>
 <div class="line"><a id="l01657" name="l01657"></a><span class="lineno"> 1657</span>      <span class="keyword">using </span>ExecutionSpace = <span class="keyword">typename</span> DeviceType::execution_space;</div>
-<div class="line"><a id="l01658" name="l01658"></a><span class="lineno"> 1658</span>      Kokkos::RangePolicy&lt;ExecutionSpace&gt; policy(ExecutionSpace(),0,<a class="code hl_function" href="classIntrepid2_1_1Data.html#a7f62d07ab6b038766bac8158b3cff642">getDataExtent</a>(0));</div>
+<div class="line"><a id="l01658" name="l01658"></a><span class="lineno"> 1658</span>      Kokkos::RangePolicy&lt;ExecutionSpace&gt; policy(ExecutionSpace(),0,<a class="code hl_function" href="classIntrepid2_1_1Data.html#aae9242b1156028dbbcc00b5af4f9d109">getUnderlyingViewExtent</a>(0));</div>
 <div class="line"><a id="l01659" name="l01659"></a><span class="lineno"> 1659</span>      <span class="keywordflow">return</span> policy;</div>
 <div class="line"><a id="l01660" name="l01660"></a><span class="lineno"> 1660</span>    }</div>
 <div class="line"><a id="l01661" name="l01661"></a><span class="lineno"> 1661</span>    </div>

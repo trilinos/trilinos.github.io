@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['newconstraintmanager_0',['NewConstraintManager',['../classROL_1_1NewConstraintManager.html',1,'ROL']]],
+  ['newton_5fu_1',['Newton_U',['../classROL_1_1Newton__U.html',1,'ROL']]],
+  ['newtonkrylov_5fu_2',['NewtonKrylov_U',['../classROL_1_1NewtonKrylov__U.html',1,'ROL']]],
+  ['newtonkrylovalgorithm_3',['NewtonKrylovAlgorithm',['../classROL_1_1TypeB_1_1NewtonKrylovAlgorithm.html',1,'ROL::TypeB']]],
+  ['newtonkrylovstep_4',['NewtonKrylovStep',['../classROL_1_1NewtonKrylovStep.html',1,'ROL']]],
+  ['newtonobj_5',['NewtonObj',['../classROL_1_1TypeP_1_1InexactNewtonAlgorithm_1_1NewtonObj.html',1,'ROL::TypeP::InexactNewtonAlgorithm']]],
+  ['newtonstep_6',['NewtonStep',['../classROL_1_1NewtonStep.html',1,'ROL']]],
+  ['nodalbasis_7',['NodalBasis',['../structNodalBasis.html',1,'']]],
+  ['nonlinearcg_5fu_8',['NonlinearCG_U',['../classROL_1_1NonlinearCG__U.html',1,'ROL']]],
+  ['nonlinearcgstep_9',['NonlinearCGStep',['../classROL_1_1NonlinearCGStep.html',1,'ROL']]],
+  ['nonlinearleastsquaresobjective_10',['NonlinearLeastSquaresObjective',['../classROL_1_1NonlinearLeastSquaresObjective.html',1,'ROL']]],
+  ['nonlinearleastsquaresobjective_5fdynamic_11',['NonlinearLeastSquaresObjective_Dynamic',['../classROL_1_1NonlinearLeastSquaresObjective__Dynamic.html',1,'ROL']]],
+  ['normalization_5fconstraint_12',['Normalization_Constraint',['../classNormalization__Constraint.html',1,'']]],
+  ['notimplemented_13',['NotImplemented',['../classROL_1_1Exception_1_1NotImplemented.html',1,'ROL::Exception']]],
+  ['nullobjective_14',['NullObjective',['../classNullObjective.html',1,'']]],
+  ['nulloperator_15',['NullOperator',['../classROL_1_1NullOperator.html',1,'ROL']]],
+  ['nullspaceoperator_16',['NullSpaceOperator',['../classROL_1_1NullSpaceOperator.html',1,'ROL']]]
+];

@@ -160,7 +160,7 @@ $(function() {
 <div class="line">  <span class="keyword">virtual</span> ~StatusTestFolding() {};</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Check whether the test passed or failed</span></div>
-<div class="line">  <a class="code hl_enumeration" href="namespaceAnasazi.html#aecc89d0f13b3e478065ad8d8b53788c2">Anasazi::TestStatus</a> <a id="a1" name="a1"></a><a class="code hl_function" href="classAnasazi_1_1StatusTest.html#a5a0243628e67e1306ae6a73b1a7e726f">checkStatus</a> (<a id="_a2" name="_a2"></a><a class="code hl_class" href="classAnasazi_1_1Eigensolver.html">Anasazi::Eigensolver&lt;Scalar,TMV,TOP&gt;</a>* solver);</div>
+<div class="line">  <a class="code hl_enumeration" href="namespaceAnasazi.html#aecc89d0f13b3e478065ad8d8b53788c2">Anasazi::TestStatus</a> <a id="a1" name="a1"></a><a class="code hl_function" href="classAnasazi_1_1StatusTest.html#a5a0243628e67e1306ae6a73b1a7e726f">checkStatus</a> (<a id="_a2" name="_a2"></a><a class="code hl_class" href="classAnasazi_1_1Operator.html">Anasazi::Eigensolver&lt;Scalar,TMV,TOP&gt;</a>* solver);</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Return the result of the most recent checkStatus call</span></div>
 <div class="line">  <a class="code hl_enumeration" href="namespaceAnasazi.html#aecc89d0f13b3e478065ad8d8b53788c2">Anasazi::TestStatus</a> <a id="a3" name="a3"></a><a class="code hl_function" href="classAnasazi_1_1StatusTest.html#aff6f2ae02fb12ba1847fe4716d7b1e7d">getStatus</a> ()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> state_; }</div>
@@ -211,11 +211,11 @@ $(function() {
 <div class="line"> </div>
 <div class="line"><span class="comment">// Check whether the test passed or failed</span></div>
 <div class="line"><a class="code hl_enumeration" href="namespaceAnasazi.html#aecc89d0f13b3e478065ad8d8b53788c2">Anasazi::TestStatus</a></div>
-<div class="line">StatusTestFolding::checkStatus (<a class="code hl_class" href="classAnasazi_1_1Eigensolver.html">Anasazi::Eigensolver&lt;Scalar,TMV,TOP&gt;</a>* solver)</div>
+<div class="line">StatusTestFolding::checkStatus (<a class="code hl_class" href="classAnasazi_1_1Operator.html">Anasazi::Eigensolver&lt;Scalar,TMV,TOP&gt;</a>* solver)</div>
 <div class="line">{</div>
-<div class="line">  <span class="keyword">typedef</span> <a id="_a10" name="_a10"></a><a class="code hl_class" href="classAnasazi_1_1MultiVecTraits.html">Anasazi::MultiVecTraits&lt;Scalar, TMV&gt;</a> TMVT;</div>
+<div class="line">  <span class="keyword">typedef</span> <a class="code hl_class" href="classAnasazi_1_1Operator.html">Anasazi::MultiVecTraits&lt;Scalar, TMV&gt;</a> TMVT;</div>
 <div class="line"> </div>
-<div class="line">  RCP&lt;const TMV&gt; X = solver-&gt;<a id="a11" name="a11"></a><a class="code hl_function" href="classAnasazi_1_1Eigensolver.html#a85a7c2222125cb0bb6143ed7e89aafb5">getRitzVectors</a> ();</div>
+<div class="line">  RCP&lt;const TMV&gt; X = solver-&gt;getRitzVectors ();</div>
 <div class="line">  <span class="keyword">const</span> <span class="keywordtype">int</span> numev = X-&gt;getNumVectors ();</div>
 <div class="line">  std::vector&lt;Scalar&gt; res (numev);</div>
 <div class="line">  TMV AX (X-&gt;getMap (), numev, <span class="keyword">false</span>);</div>
@@ -242,7 +242,7 @@ $(function() {
 <div class="line">  }</div>
 <div class="line">  <span class="keyword">const</span> <span class="keywordtype">int</span> have = ind_.size ();</div>
 <div class="line">  <span class="keyword">const</span> <span class="keywordtype">int</span> need = (quorum_ == -1) ? numev : quorum_;</div>
-<div class="line">  state_ = (have &gt;= need) ? <a id="a12" name="a12"></a><a class="code hl_enumvalue" href="namespaceAnasazi.html#aecc89d0f13b3e478065ad8d8b53788c2a37e4db41c154382c42a280dfb2eebad8">Anasazi::Passed</a> : <a id="a13" name="a13"></a><a class="code hl_enumvalue" href="namespaceAnasazi.html#aecc89d0f13b3e478065ad8d8b53788c2a9b73a6d49abb67b1edcd2c524b9332e0">Anasazi::Failed</a>;</div>
+<div class="line">  state_ = (have &gt;= need) ? <a id="a10" name="a10"></a><a class="code hl_enumvalue" href="namespaceAnasazi.html#aecc89d0f13b3e478065ad8d8b53788c2a37e4db41c154382c42a280dfb2eebad8">Anasazi::Passed</a> : <a id="a11" name="a11"></a><a class="code hl_enumvalue" href="namespaceAnasazi.html#aecc89d0f13b3e478065ad8d8b53788c2a9b73a6d49abb67b1edcd2c524b9332e0">Anasazi::Failed</a>;</div>
 <div class="line">  <span class="keywordflow">return</span> state_;</div>
 <div class="line">}</div>
 <div class="line"> </div>
@@ -291,9 +291,9 @@ $(function() {
 <div class="line"><span class="keywordtype">int</span></div>
 <div class="line">main (<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div>
 <div class="line">{</div>
-<div class="line">  <span class="keyword">typedef</span> <a id="_a14" name="_a14"></a><a class="code hl_class" href="classAnasazi_1_1BasicEigenproblem.html">Anasazi::BasicEigenproblem&lt;Scalar,TMV,TOP&gt;</a> Problem;</div>
-<div class="line">  <span class="keyword">typedef</span> <a class="code hl_class" href="classAnasazi_1_1MultiVecTraits.html">Anasazi::MultiVecTraits&lt;Scalar, TMV&gt;</a> TMVT;</div>
-<div class="line">  <span class="keyword">typedef</span> <a id="_a15" name="_a15"></a><a class="code hl_class" href="classAnasazi_1_1OperatorTraits.html">Anasazi::OperatorTraits&lt;Scalar, TMV, TOP&gt;</a> TOPT;</div>
+<div class="line">  <span class="keyword">typedef</span> <a class="code hl_class" href="classAnasazi_1_1Operator.html">Anasazi::BasicEigenproblem&lt;Scalar,TMV,TOP&gt;</a> Problem;</div>
+<div class="line">  <span class="keyword">typedef</span> <a class="code hl_class" href="classAnasazi_1_1Operator.html">Anasazi::MultiVecTraits&lt;Scalar, TMV&gt;</a> TMVT;</div>
+<div class="line">  <span class="keyword">typedef</span> <a class="code hl_class" href="classAnasazi_1_1Operator.html">Anasazi::OperatorTraits&lt;Scalar, TMV, TOP&gt;</a> TOPT;</div>
 <div class="line">  <span class="keyword">typedef</span> Tpetra::CrsMatrix&lt;&gt; CrsMatrix;</div>
 <div class="line">  <span class="keyword">typedef</span> Tpetra::MatrixMarket::Reader&lt;CrsMatrix&gt;  Reader;</div>
 <div class="line"> </div>
@@ -333,7 +333,7 @@ $(function() {
 <div class="line">  MyPL.set (<span class="stringliteral">&quot;Convergence Tolerance&quot;</span>, tol );   <span class="comment">// How small do the residuals have to be</span></div>
 <div class="line">  MyPL.set (<span class="stringliteral">&quot;Relative Convergence Tolerance&quot;</span>, scaled);</div>
 <div class="line">  MyPL.set (<span class="stringliteral">&quot;Relative Locking Tolerance&quot;</span>, scaled);</div>
-<div class="line">  MyPL.set (<span class="stringliteral">&quot;Verbosity&quot;</span>, <a id="a16" name="a16"></a><a class="code hl_enumvalue" href="namespaceAnasazi.html#ac1cd930ca09987d38fe97bbb8c65507daa04bd73cdc419c447db8771af5d18f83">Anasazi::TimingDetails</a>);</div>
+<div class="line">  MyPL.set (<span class="stringliteral">&quot;Verbosity&quot;</span>, <a id="a12" name="a12"></a><a class="code hl_enumvalue" href="namespaceAnasazi.html#ac1cd930ca09987d38fe97bbb8c65507daa04bd73cdc419c447db8771af5d18f83">Anasazi::TimingDetails</a>);</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Create a MultiVector for an initial subspace to start the solver.</span></div>
 <div class="line">  RCP&lt;TMV&gt; ivec = rcp (<span class="keyword">new</span> TMV (A-&gt;getRowMap (), blockSize));</div>
@@ -352,7 +352,7 @@ $(function() {
 <div class="line">  MyProblem-&gt;setProblem ();</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Create the eigensolver and give it your problem and parameters.</span></div>
-<div class="line">  <a id="_a17" name="_a17"></a><a class="code hl_class" href="classAnasazi_1_1LOBPCGSolMgr.html">Anasazi::LOBPCGSolMgr&lt;Scalar,TMV,TOP&gt;</a> solver (MyProblem, MyPL);</div>
+<div class="line">  <a class="code hl_class" href="classAnasazi_1_1Operator.html">Anasazi::LOBPCGSolMgr&lt;Scalar,TMV,TOP&gt;</a> solver (MyProblem, MyPL);</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Give the eigensolver a status test consistent with the spectral transformation.</span></div>
 <div class="line">  RCP&lt;StatusTestFolding&gt; convTest =</div>
@@ -364,21 +364,21 @@ $(function() {
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Tell the solver to solve the eigenproblem.</span></div>
 <div class="line">  <a class="code hl_enumeration" href="namespaceAnasazi.html#a823537bb3d658892d7388be67cf036a6">Anasazi::ReturnType</a> returnCode = solver.solve ();</div>
-<div class="line">  <span class="keywordflow">if</span> (returnCode != <a id="a18" name="a18"></a><a class="code hl_enumvalue" href="namespaceAnasazi.html#a823537bb3d658892d7388be67cf036a6a43d6b459d6ecd3f2d638063a61c58880">Anasazi::Converged</a> &amp;&amp; myRank == 0) {</div>
+<div class="line">  <span class="keywordflow">if</span> (returnCode != <a id="a13" name="a13"></a><a class="code hl_enumvalue" href="namespaceAnasazi.html#a823537bb3d658892d7388be67cf036a6a43d6b459d6ecd3f2d638063a61c58880">Anasazi::Converged</a> &amp;&amp; myRank == 0) {</div>
 <div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;The solve did NOT converge.&quot;</span> &lt;&lt; endl;</div>
 <div class="line">  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (myRank == 0) {</div>
 <div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;The solve converged.&quot;</span> &lt;&lt; endl;</div>
 <div class="line">  }</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Get the eigenvalues and eigenvectors from the eigenproblem</span></div>
-<div class="line">  <a id="_a19" name="_a19"></a><a class="code hl_struct" href="structAnasazi_1_1Eigensolution.html">Anasazi::Eigensolution&lt;Scalar,TMV&gt;</a> sol = MyProblem-&gt;getSolution ();</div>
-<div class="line">  std::vector&lt;Anasazi::Value&lt;Scalar&gt; &gt; evals = sol.<a id="a20" name="a20"></a><a class="code hl_variable" href="structAnasazi_1_1Eigensolution.html#ac9d141d98adcba85fbad011a7b7bda6e">Evals</a>;</div>
-<div class="line">  RCP&lt;TMV&gt; evecs = sol.<a id="a21" name="a21"></a><a class="code hl_variable" href="structAnasazi_1_1Eigensolution.html#a2acb2a4d8a9e338116c764c55ec999b9">Evecs</a>;</div>
-<div class="line">  <span class="keywordtype">int</span> numev = sol.<a id="a22" name="a22"></a><a class="code hl_variable" href="structAnasazi_1_1Eigensolution.html#a9b41a067b19d410e7fd2c01b0a778fb5">numVecs</a>;</div>
+<div class="line">  <a class="code hl_class" href="classAnasazi_1_1Operator.html">Anasazi::Eigensolution&lt;Scalar,TMV&gt;</a> sol = MyProblem-&gt;getSolution ();</div>
+<div class="line">  std::vector&lt;Anasazi::Value&lt;Scalar&gt; &gt; evals = sol.Evals;</div>
+<div class="line">  RCP&lt;TMV&gt; evecs = sol.Evecs;</div>
+<div class="line">  <span class="keywordtype">int</span> numev = sol.numVecs;</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Compute the residual, just as a precaution</span></div>
 <div class="line">  <span class="keywordflow">if</span> (numev &gt; 0) {</div>
-<div class="line">    std::vector&lt;Scalar&gt; normR (sol.<a class="code hl_variable" href="structAnasazi_1_1Eigensolution.html#a9b41a067b19d410e7fd2c01b0a778fb5">numVecs</a>);</div>
+<div class="line">    std::vector&lt;Scalar&gt; normR (sol.numVecs);</div>
 <div class="line"> </div>
 <div class="line">    TMV Avec (A-&gt;getRowMap (), TMVT::GetNumberVecs (*evecs));</div>
 <div class="line">    TOPT::Apply (*A, *evecs, Avec);</div>
@@ -411,12 +411,7 @@ $(function() {
 <div class="ttc" id="aAnasaziStatusTestDecl_8hpp_html"><div class="ttname"><a href="AnasaziStatusTestDecl_8hpp.html">AnasaziStatusTestDecl.hpp</a></div><div class="ttdoc">Forward declaration of pure virtual base class Anasazi::StatusTest.</div></div>
 <div class="ttc" id="aAnasaziTpetraAdapter_8hpp_html"><div class="ttname"><a href="AnasaziTpetraAdapter_8hpp.html">AnasaziTpetraAdapter.hpp</a></div><div class="ttdoc">Partial specialization of Anasazi::MultiVecTraits and Anasazi::OperatorTraits for Tpetra objects.</div></div>
 <div class="ttc" id="aAnasaziTypes_8hpp_html"><div class="ttname"><a href="AnasaziTypes_8hpp.html">AnasaziTypes.hpp</a></div><div class="ttdoc">Types and exceptions used within Anasazi solvers and interfaces.</div></div>
-<div class="ttc" id="aclassAnasazi_1_1BasicEigenproblem_html"><div class="ttname"><a href="classAnasazi_1_1BasicEigenproblem.html">Anasazi::BasicEigenproblem</a></div><div class="ttdoc">This provides a basic implementation for defining standard or generalized eigenvalue problems.</div><div class="ttdef"><b>Definition</b> <a href="AnasaziBasicEigenproblem_8hpp_source.html#l00029">AnasaziBasicEigenproblem.hpp:29</a></div></div>
-<div class="ttc" id="aclassAnasazi_1_1Eigensolver_html"><div class="ttname"><a href="classAnasazi_1_1Eigensolver.html">Anasazi::Eigensolver</a></div><div class="ttdoc">The Eigensolver is a templated virtual base class that defines the basic interface that any eigensolv...</div><div class="ttdef"><b>Definition</b> <a href="AnasaziEigensolver_8hpp_source.html#l00035">AnasaziEigensolver.hpp:35</a></div></div>
-<div class="ttc" id="aclassAnasazi_1_1Eigensolver_html_a85a7c2222125cb0bb6143ed7e89aafb5"><div class="ttname"><a href="classAnasazi_1_1Eigensolver.html#a85a7c2222125cb0bb6143ed7e89aafb5">Anasazi::Eigensolver::getRitzVectors</a></div><div class="ttdeci">virtual Teuchos::RCP&lt; const MV &gt; getRitzVectors()=0</div><div class="ttdoc">Get the Ritz vectors from the previous iteration. These are indexed using getRitzIndex().</div></div>
-<div class="ttc" id="aclassAnasazi_1_1LOBPCGSolMgr_html"><div class="ttname"><a href="classAnasazi_1_1LOBPCGSolMgr.html">Anasazi::LOBPCGSolMgr</a></div><div class="ttdoc">User interface for the LOBPCG eigensolver.</div><div class="ttdef"><b>Definition</b> <a href="AnasaziLOBPCGSolMgr_8hpp_source.html#l00142">AnasaziLOBPCGSolMgr.hpp:142</a></div></div>
-<div class="ttc" id="aclassAnasazi_1_1MultiVecTraits_html"><div class="ttname"><a href="classAnasazi_1_1MultiVecTraits.html">Anasazi::MultiVecTraits</a></div><div class="ttdoc">Traits class which defines basic operations on multivectors.</div><div class="ttdef"><b>Definition</b> <a href="AnasaziMultiVecTraits_8hpp_source.html#l00095">AnasaziMultiVecTraits.hpp:95</a></div></div>
-<div class="ttc" id="aclassAnasazi_1_1OperatorTraits_html"><div class="ttname"><a href="classAnasazi_1_1OperatorTraits.html">Anasazi::OperatorTraits</a></div><div class="ttdoc">Virtual base class which defines basic traits for the operator type.</div><div class="ttdef"><b>Definition</b> <a href="AnasaziOperatorTraits_8hpp_source.html#l00052">AnasaziOperatorTraits.hpp:53</a></div></div>
+<div class="ttc" id="aclassAnasazi_1_1Operator_html"><div class="ttname"><a href="classAnasazi_1_1Operator.html">Anasazi::Operator</a></div><div class="ttdoc">Anasazi's templated virtual class for constructing an operator that can interface with the OperatorTr...</div><div class="ttdef"><b>Definition</b> <a href="AnasaziOperator_8hpp_source.html#l00035">AnasaziOperator.hpp:35</a></div></div>
 <div class="ttc" id="aclassAnasazi_1_1StatusTest_html"><div class="ttname"><a href="classAnasazi_1_1StatusTest.html">Anasazi::StatusTest</a></div><div class="ttdoc">Common interface of stopping criteria for Anasazi's solvers.</div><div class="ttdef"><b>Definition</b> <a href="AnasaziStatusTest_8hpp_source.html#l00043">AnasaziStatusTest.hpp:43</a></div></div>
 <div class="ttc" id="aclassAnasazi_1_1StatusTest_html_a1389be047d9edc9e5ae713687ff2e9f2"><div class="ttname"><a href="classAnasazi_1_1StatusTest.html#a1389be047d9edc9e5ae713687ff2e9f2">Anasazi::StatusTest::whichVecs</a></div><div class="ttdeci">virtual std::vector&lt; int &gt; whichVecs() const =0</div><div class="ttdoc">Get the indices for the vectors that passed the test.</div></div>
 <div class="ttc" id="aclassAnasazi_1_1StatusTest_html_a218e61618f32f0990e63c1ceec6f1c6d"><div class="ttname"><a href="classAnasazi_1_1StatusTest.html#a218e61618f32f0990e63c1ceec6f1c6d">Anasazi::StatusTest::howMany</a></div><div class="ttdeci">virtual int howMany() const =0</div><div class="ttdoc">Get the number of vectors that passed the test.</div></div>
@@ -432,10 +427,6 @@ $(function() {
 <div class="ttc" id="anamespaceAnasazi_html_aecc89d0f13b3e478065ad8d8b53788c2a0e0d7b1d4280c818d697128327e4f534"><div class="ttname"><a href="namespaceAnasazi.html#aecc89d0f13b3e478065ad8d8b53788c2a0e0d7b1d4280c818d697128327e4f534">Anasazi::Undefined</a></div><div class="ttdeci">@ Undefined</div><div class="ttdef"><b>Definition</b> <a href="AnasaziTypes_8hpp_source.html#l00114">AnasaziTypes.hpp:113</a></div></div>
 <div class="ttc" id="anamespaceAnasazi_html_aecc89d0f13b3e478065ad8d8b53788c2a37e4db41c154382c42a280dfb2eebad8"><div class="ttname"><a href="namespaceAnasazi.html#aecc89d0f13b3e478065ad8d8b53788c2a37e4db41c154382c42a280dfb2eebad8">Anasazi::Passed</a></div><div class="ttdeci">@ Passed</div><div class="ttdef"><b>Definition</b> <a href="AnasaziTypes_8hpp_source.html#l00111">AnasaziTypes.hpp:111</a></div></div>
 <div class="ttc" id="anamespaceAnasazi_html_aecc89d0f13b3e478065ad8d8b53788c2a9b73a6d49abb67b1edcd2c524b9332e0"><div class="ttname"><a href="namespaceAnasazi.html#aecc89d0f13b3e478065ad8d8b53788c2a9b73a6d49abb67b1edcd2c524b9332e0">Anasazi::Failed</a></div><div class="ttdeci">@ Failed</div><div class="ttdef"><b>Definition</b> <a href="AnasaziTypes_8hpp_source.html#l00112">AnasaziTypes.hpp:112</a></div></div>
-<div class="ttc" id="astructAnasazi_1_1Eigensolution_html"><div class="ttname"><a href="structAnasazi_1_1Eigensolution.html">Anasazi::Eigensolution</a></div><div class="ttdoc">Struct for storing an eigenproblem solution.</div><div class="ttdef"><b>Definition</b> <a href="AnasaziTypes_8hpp_source.html#l00058">AnasaziTypes.hpp:58</a></div></div>
-<div class="ttc" id="astructAnasazi_1_1Eigensolution_html_a2acb2a4d8a9e338116c764c55ec999b9"><div class="ttname"><a href="structAnasazi_1_1Eigensolution.html#a2acb2a4d8a9e338116c764c55ec999b9">Anasazi::Eigensolution::Evecs</a></div><div class="ttdeci">Teuchos::RCP&lt; MV &gt; Evecs</div><div class="ttdoc">The computed eigenvectors.</div><div class="ttdef"><b>Definition</b> <a href="AnasaziTypes_8hpp_source.html#l00060">AnasaziTypes.hpp:60</a></div></div>
-<div class="ttc" id="astructAnasazi_1_1Eigensolution_html_a9b41a067b19d410e7fd2c01b0a778fb5"><div class="ttname"><a href="structAnasazi_1_1Eigensolution.html#a9b41a067b19d410e7fd2c01b0a778fb5">Anasazi::Eigensolution::numVecs</a></div><div class="ttdeci">int numVecs</div><div class="ttdoc">The number of computed eigenpairs.</div><div class="ttdef"><b>Definition</b> <a href="AnasaziTypes_8hpp_source.html#l00075">AnasaziTypes.hpp:75</a></div></div>
-<div class="ttc" id="astructAnasazi_1_1Eigensolution_html_ac9d141d98adcba85fbad011a7b7bda6e"><div class="ttname"><a href="structAnasazi_1_1Eigensolution.html#ac9d141d98adcba85fbad011a7b7bda6e">Anasazi::Eigensolution::Evals</a></div><div class="ttdeci">std::vector&lt; Value&lt; ScalarType &gt; &gt; Evals</div><div class="ttdoc">The computed eigenvalues.</div><div class="ttdef"><b>Definition</b> <a href="AnasaziTypes_8hpp_source.html#l00064">AnasaziTypes.hpp:64</a></div></div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

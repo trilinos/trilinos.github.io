@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['testfunction_0',['testFunction',['../classROL_1_1Brents_1_1testFunction.html',1,'ROL::Brents']]],
+  ['testmulti_1',['TestMulti',['../classTestMulti.html',1,'']]],
+  ['testproblem_2',['TestProblem',['../classROL_1_1TestProblem.html',1,'ROL']]],
+  ['testsingle_3',['TestSingle',['../classTestSingle.html',1,'']]],
+  ['timestamp_4',['TimeStamp',['../structROL_1_1TimeStamp.html',1,'ROL']]],
+  ['triangle_5',['Triangle',['../classROL_1_1Triangle.html',1,'ROL']]],
+  ['tridiagonaltoeplitzoperator_6',['TridiagonalToeplitzOperator',['../classTridiagonalToeplitzOperator.html',1,'']]],
+  ['truncatedcg_7',['TruncatedCG',['../classROL_1_1TruncatedCG.html',1,'ROL']]],
+  ['truncatedcg_5fu_8',['TruncatedCG_U',['../classROL_1_1TruncatedCG__U.html',1,'ROL']]],
+  ['truncatedexponential_9',['TruncatedExponential',['../classROL_1_1TruncatedExponential.html',1,'ROL']]],
+  ['truncatedgaussian_10',['TruncatedGaussian',['../classROL_1_1TruncatedGaussian.html',1,'ROL']]],
+  ['truncatedmeanquadrangle_11',['TruncatedMeanQuadrangle',['../classROL_1_1TruncatedMeanQuadrangle.html',1,'ROL']]],
+  ['trustregion_12',['TrustRegion',['../classROL_1_1TrustRegion.html',1,'ROL']]],
+  ['trustregion_5fu_13',['TrustRegion_U',['../classROL_1_1TrustRegion__U.html',1,'ROL']]],
+  ['trustregionalgorithm_14',['trustregionalgorithm',['../classROL_1_1TypeP_1_1TrustRegionAlgorithm.html',1,'ROL::TypeP::TrustRegionAlgorithm&lt; Real &gt;'],['../classROL_1_1TypeU_1_1TrustRegionAlgorithm.html',1,'ROL::TypeU::TrustRegionAlgorithm&lt; Real &gt;']]],
+  ['trustregionmodel_15',['TrustRegionModel',['../classROL_1_1TrustRegionModel.html',1,'ROL']]],
+  ['trustregionmodel_5fu_16',['TrustRegionModel_U',['../classROL_1_1TrustRegionModel__U.html',1,'ROL']]],
+  ['trustregionspgalgorithm_17',['TrustRegionSPGAlgorithm',['../classROL_1_1TypeB_1_1TrustRegionSPGAlgorithm.html',1,'ROL::TypeB']]],
+  ['trustregionstep_18',['TrustRegionStep',['../classROL_1_1TrustRegionStep.html',1,'ROL']]],
+  ['typebindicatorobjective_19',['TypeBIndicatorObjective',['../classROL_1_1TypeBIndicatorObjective.html',1,'ROL']]],
+  ['typecaster_20',['TypeCaster',['../structROL_1_1TypeCaster.html',1,'ROL']]],
+  ['typecaster_3c_20double_2c_20float_20_3e_21',['TypeCaster&lt; double, float &gt;',['../structROL_1_1TypeCaster_3_01double_00_01float_01_4.html',1,'ROL']]],
+  ['typecaster_3c_20real_2c_20std_3a_3acomplex_3c_20real_20_3e_20_3e_22',['TypeCaster&lt; Real, std::complex&lt; Real &gt; &gt;',['../structROL_1_1TypeCaster_3_01Real_00_01std_1_1complex_3_01Real_01_4_01_4.html',1,'ROL']]]
+];
