@@ -282,7 +282,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        KernelHandle;</div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    <span class="comment">// Grab the  Kokkos::SparseCrsMatrices</span></div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <span class="keyword">const</span> KCRS&amp; Ak = Aview.origMatrix-&gt;getLocalMatrixDevice();</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <span class="keyword">const</span> KCRS Ak = Aview.origMatrix-&gt;getLocalMatrixDevice();</div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <span class="comment">// const KCRS &amp; Bk = Bview.origMatrix-&gt;getLocalMatrixDevice();</span></div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    <span class="comment">// Get the algorithm mode</span></div>
@@ -604,8 +604,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span>  <span class="keyword">const</span> matrix_t Bmerged = Tpetra::MMdetails::merge_matrices(Aview, Bview, Acol2Brow, Acol2Irow, Bcol2Ccol, Icol2Ccol, C.getColMap()-&gt;getLocalNumElements());</div>
 <div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span> </div>
 <div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span>  <span class="comment">// Get the properties and arrays of input matrices</span></div>
-<div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span>  <span class="keyword">const</span> matrix_t&amp; Amat = Aview.origMatrix-&gt;getLocalMatrixDevice();</div>
-<div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span>  <span class="keyword">const</span> matrix_t&amp; Bmat = Bview.origMatrix-&gt;getLocalMatrixDevice();</div>
+<div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span>  <span class="keyword">const</span> matrix_t Amat = Aview.origMatrix-&gt;getLocalMatrixDevice();</div>
+<div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span>  <span class="keyword">const</span> matrix_t Bmat = Bview.origMatrix-&gt;getLocalMatrixDevice();</div>
 <div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span> </div>
 <div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span>  <span class="keyword">typename</span> handle_t::nnz_lno_t AnumRows = Amat.numRows();</div>
 <div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span>  <span class="keyword">typename</span> handle_t::nnz_lno_t BnumRows = Bmerged.numRows();</div>
