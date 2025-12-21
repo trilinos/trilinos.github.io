@@ -231,8 +231,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>      <span class="keyword">typename</span> device_t::execution_space, <span class="keyword">typename</span> device_t::memory_space, <span class="keyword">typename</span> device_t::memory_space&gt;;</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  <span class="comment">// Grab the  Kokkos::SparseCrsMatrices</span></div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>  <span class="keyword">const</span> KCRS&amp; Amat = Aview.origMatrix-&gt;getLocalMatrixDevice();</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  <span class="keyword">const</span> KCRS&amp; Bmat = Bview.origMatrix-&gt;getLocalMatrixDevice();</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>  <span class="keyword">const</span> KCRS Amat = Aview.origMatrix-&gt;getLocalMatrixDevice();</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  <span class="keyword">const</span> KCRS Bmat = Bview.origMatrix-&gt;getLocalMatrixDevice();</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>  c_lno_view_t Arowptr         = Amat.graph.row_map,</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>               Browptr         = Bmat.graph.row_map;</div>
@@ -402,9 +402,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>  <span class="keywordtype">size_t</span> n                    = Ccolmap-&gt;getLocalNumElements();</div>
 <div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span> </div>
 <div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>  <span class="comment">// Grab the  Kokkos::SparseCrsMatrices &amp; inner stuff</span></div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>  <span class="keyword">const</span> KCRS&amp; Amat = Aview.origMatrix-&gt;getLocalMatrixHost();</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>  <span class="keyword">const</span> KCRS&amp; Bmat = Bview.origMatrix-&gt;getLocalMatrixHost();</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>  <span class="keyword">const</span> KCRS&amp; Cmat = C.getLocalMatrixHost();</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>  <span class="keyword">const</span> KCRS Amat = Aview.origMatrix-&gt;getLocalMatrixHost();</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>  <span class="keyword">const</span> KCRS Bmat = Bview.origMatrix-&gt;getLocalMatrixHost();</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>  <span class="keyword">const</span> KCRS Cmat = C.getLocalMatrixHost();</div>
 <div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span> </div>
 <div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>  c_lno_view_t Arowptr         = Amat.graph.row_map,</div>
 <div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>               Browptr         = Bmat.graph.row_map,</div>
@@ -626,9 +626,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>  <span class="keywordtype">size_t</span> n                    = Ccolmap-&gt;getLocalNumElements();</div>
 <div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span> </div>
 <div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>  <span class="comment">// Grab the  Kokkos::SparseCrsMatrices &amp; inner stuff</span></div>
-<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>  <span class="keyword">const</span> KCRS&amp; Amat = Aview.origMatrix-&gt;getLocalMatrixHost();</div>
-<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>  <span class="keyword">const</span> KCRS&amp; Bmat = Bview.origMatrix-&gt;getLocalMatrixHost();</div>
-<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>  <span class="keyword">const</span> KCRS&amp; Cmat = C.getLocalMatrixHost();</div>
+<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>  <span class="keyword">const</span> KCRS Amat = Aview.origMatrix-&gt;getLocalMatrixHost();</div>
+<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>  <span class="keyword">const</span> KCRS Bmat = Bview.origMatrix-&gt;getLocalMatrixHost();</div>
+<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>  <span class="keyword">const</span> KCRS Cmat = C.getLocalMatrixHost();</div>
 <div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span> </div>
 <div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>  c_lno_view_t Arowptr = Amat.graph.row_map, Browptr = Bmat.graph.row_map, Crowptr = Cmat.graph.row_map;</div>
 <div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>  <span class="keyword">const</span> lno_nnz_view_t Acolind = Amat.graph.entries, Bcolind = Bmat.graph.entries, Ccolind = Cmat.graph.entries;</div>
@@ -803,8 +803,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00720" name="l00720"></a><span class="lineno">  720</span>  <span class="keyword">const</span> matrix_t Bmerged = Tpetra::MMdetails::merge_matrices(Aview, Bview, Acol2Brow, Acol2Irow, Bcol2Ccol, Icol2Ccol, C.getColMap()-&gt;getLocalNumElements());</div>
 <div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span> </div>
 <div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span>  <span class="comment">// Get the properties and arrays of input matrices</span></div>
-<div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span>  <span class="keyword">const</span> matrix_t&amp; Amat = Aview.origMatrix-&gt;getLocalMatrixDevice();</div>
-<div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span>  <span class="keyword">const</span> matrix_t&amp; Bmat = Bview.origMatrix-&gt;getLocalMatrixDevice();</div>
+<div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span>  <span class="keyword">const</span> matrix_t Amat = Aview.origMatrix-&gt;getLocalMatrixDevice();</div>
+<div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span>  <span class="keyword">const</span> matrix_t Bmat = Bview.origMatrix-&gt;getLocalMatrixDevice();</div>
 <div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span> </div>
 <div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span>  <span class="keyword">typename</span> handle_t::nnz_lno_t AnumRows = Amat.numRows();</div>
 <div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span>  <span class="keyword">typename</span> handle_t::nnz_lno_t BnumRows = Bmerged.numRows();</div>

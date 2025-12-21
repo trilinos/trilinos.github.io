@@ -2050,8 +2050,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01957" name="l01957"></a><span class="lineno"> 1957</span>  <span class="keywordtype">size_t</span> b_max_nnz_per_row    = Bview.origMatrix-&gt;getLocalMaxNumRowEntries();</div>
 <div class="line"><a id="l01958" name="l01958"></a><span class="lineno"> 1958</span> </div>
 <div class="line"><a id="l01959" name="l01959"></a><span class="lineno"> 1959</span>  <span class="comment">// Grab the  Kokkos::SparseCrsMatrices &amp; inner stuff</span></div>
-<div class="line"><a id="l01960" name="l01960"></a><span class="lineno"> 1960</span>  <span class="keyword">const</span> KCRS&amp; Amat = Aview.origMatrix-&gt;getLocalMatrixHost();</div>
-<div class="line"><a id="l01961" name="l01961"></a><span class="lineno"> 1961</span>  <span class="keyword">const</span> KCRS&amp; Bmat = Bview.origMatrix-&gt;getLocalMatrixHost();</div>
+<div class="line"><a id="l01960" name="l01960"></a><span class="lineno"> 1960</span>  <span class="keyword">const</span> KCRS Amat = Aview.origMatrix-&gt;getLocalMatrixHost();</div>
+<div class="line"><a id="l01961" name="l01961"></a><span class="lineno"> 1961</span>  <span class="keyword">const</span> KCRS Bmat = Bview.origMatrix-&gt;getLocalMatrixHost();</div>
 <div class="line"><a id="l01962" name="l01962"></a><span class="lineno"> 1962</span> </div>
 <div class="line"><a id="l01963" name="l01963"></a><span class="lineno"> 1963</span>  c_lno_view_t Arowptr = Amat.graph.row_map, Browptr = Bmat.graph.row_map;</div>
 <div class="line"><a id="l01964" name="l01964"></a><span class="lineno"> 1964</span>  <span class="keyword">const</span> lno_nnz_view_t Acolind = Amat.graph.entries, Bcolind = Bmat.graph.entries;</div>
@@ -2343,9 +2343,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l02250" name="l02250"></a><span class="lineno"> 2250</span>  <span class="keywordtype">size_t</span> n                    = Ccolmap-&gt;getLocalNumElements();</div>
 <div class="line"><a id="l02251" name="l02251"></a><span class="lineno"> 2251</span> </div>
 <div class="line"><a id="l02252" name="l02252"></a><span class="lineno"> 2252</span>  <span class="comment">// Grab the  Kokkos::SparseCrsMatrices &amp; inner stuff</span></div>
-<div class="line"><a id="l02253" name="l02253"></a><span class="lineno"> 2253</span>  <span class="keyword">const</span> KCRS&amp; Amat = Aview.origMatrix-&gt;getLocalMatrixHost();</div>
-<div class="line"><a id="l02254" name="l02254"></a><span class="lineno"> 2254</span>  <span class="keyword">const</span> KCRS&amp; Bmat = Bview.origMatrix-&gt;getLocalMatrixHost();</div>
-<div class="line"><a id="l02255" name="l02255"></a><span class="lineno"> 2255</span>  <span class="keyword">const</span> KCRS&amp; Cmat = C.getLocalMatrixHost();</div>
+<div class="line"><a id="l02253" name="l02253"></a><span class="lineno"> 2253</span>  <span class="keyword">const</span> KCRS Amat = Aview.origMatrix-&gt;getLocalMatrixHost();</div>
+<div class="line"><a id="l02254" name="l02254"></a><span class="lineno"> 2254</span>  <span class="keyword">const</span> KCRS Bmat = Bview.origMatrix-&gt;getLocalMatrixHost();</div>
+<div class="line"><a id="l02255" name="l02255"></a><span class="lineno"> 2255</span>  <span class="keyword">const</span> KCRS Cmat = C.getLocalMatrixHost();</div>
 <div class="line"><a id="l02256" name="l02256"></a><span class="lineno"> 2256</span> </div>
 <div class="line"><a id="l02257" name="l02257"></a><span class="lineno"> 2257</span>  c_lno_view_t Arowptr = Amat.graph.row_map, Browptr = Bmat.graph.row_map, Crowptr = Cmat.graph.row_map;</div>
 <div class="line"><a id="l02258" name="l02258"></a><span class="lineno"> 2258</span>  <span class="keyword">const</span> lno_nnz_view_t Acolind = Amat.graph.entries, Bcolind = Bmat.graph.entries, Ccolind = Cmat.graph.entries;</div>
@@ -2646,8 +2646,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l02553" name="l02553"></a><span class="lineno"> 2553</span>  <span class="keywordtype">size_t</span> b_max_nnz_per_row    = Bview.origMatrix-&gt;getLocalMaxNumRowEntries();</div>
 <div class="line"><a id="l02554" name="l02554"></a><span class="lineno"> 2554</span> </div>
 <div class="line"><a id="l02555" name="l02555"></a><span class="lineno"> 2555</span>  <span class="comment">// Grab the  Kokkos::SparseCrsMatrices &amp; inner stuff</span></div>
-<div class="line"><a id="l02556" name="l02556"></a><span class="lineno"> 2556</span>  <span class="keyword">const</span> KCRS&amp; Amat = Aview.origMatrix-&gt;getLocalMatrixHost();</div>
-<div class="line"><a id="l02557" name="l02557"></a><span class="lineno"> 2557</span>  <span class="keyword">const</span> KCRS&amp; Bmat = Bview.origMatrix-&gt;getLocalMatrixHost();</div>
+<div class="line"><a id="l02556" name="l02556"></a><span class="lineno"> 2556</span>  <span class="keyword">const</span> KCRS Amat = Aview.origMatrix-&gt;getLocalMatrixHost();</div>
+<div class="line"><a id="l02557" name="l02557"></a><span class="lineno"> 2557</span>  <span class="keyword">const</span> KCRS Bmat = Bview.origMatrix-&gt;getLocalMatrixHost();</div>
 <div class="line"><a id="l02558" name="l02558"></a><span class="lineno"> 2558</span> </div>
 <div class="line"><a id="l02559" name="l02559"></a><span class="lineno"> 2559</span>  c_lno_view_t Arowptr = Amat.graph.row_map, Browptr = Bmat.graph.row_map;</div>
 <div class="line"><a id="l02560" name="l02560"></a><span class="lineno"> 2560</span>  <span class="keyword">const</span> lno_nnz_view_t Acolind = Amat.graph.entries, Bcolind = Bmat.graph.entries;</div>
@@ -2971,9 +2971,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l02878" name="l02878"></a><span class="lineno"> 2878</span>  <span class="keywordtype">size_t</span> n                    = Ccolmap-&gt;getLocalNumElements();</div>
 <div class="line"><a id="l02879" name="l02879"></a><span class="lineno"> 2879</span> </div>
 <div class="line"><a id="l02880" name="l02880"></a><span class="lineno"> 2880</span>  <span class="comment">// Grab the  Kokkos::SparseCrsMatrices &amp; inner stuff</span></div>
-<div class="line"><a id="l02881" name="l02881"></a><span class="lineno"> 2881</span>  <span class="keyword">const</span> KCRS&amp; Amat = Aview.origMatrix-&gt;getLocalMatrixHost();</div>
-<div class="line"><a id="l02882" name="l02882"></a><span class="lineno"> 2882</span>  <span class="keyword">const</span> KCRS&amp; Bmat = Bview.origMatrix-&gt;getLocalMatrixHost();</div>
-<div class="line"><a id="l02883" name="l02883"></a><span class="lineno"> 2883</span>  <span class="keyword">const</span> KCRS&amp; Cmat = C.getLocalMatrixHost();</div>
+<div class="line"><a id="l02881" name="l02881"></a><span class="lineno"> 2881</span>  <span class="keyword">const</span> KCRS Amat = Aview.origMatrix-&gt;getLocalMatrixHost();</div>
+<div class="line"><a id="l02882" name="l02882"></a><span class="lineno"> 2882</span>  <span class="keyword">const</span> KCRS Bmat = Bview.origMatrix-&gt;getLocalMatrixHost();</div>
+<div class="line"><a id="l02883" name="l02883"></a><span class="lineno"> 2883</span>  <span class="keyword">const</span> KCRS Cmat = C.getLocalMatrixHost();</div>
 <div class="line"><a id="l02884" name="l02884"></a><span class="lineno"> 2884</span> </div>
 <div class="line"><a id="l02885" name="l02885"></a><span class="lineno"> 2885</span>  c_lno_view_t Arowptr = Amat.graph.row_map, Browptr = Bmat.graph.row_map, Crowptr = Cmat.graph.row_map;</div>
 <div class="line"><a id="l02886" name="l02886"></a><span class="lineno"> 2886</span>  <span class="keyword">const</span> lno_nnz_view_t Acolind = Amat.graph.entries, Bcolind = Bmat.graph.entries, Ccolind = Cmat.graph.entries;</div>
@@ -3412,20 +3412,20 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l03319" name="l03319"></a><span class="lineno"> 3319</span>  <span class="keyword">typedef</span> <span class="keyword">typename</span> graph_t::entries_type::non_const_type lno_nnz_view_t;</div>
 <div class="line"><a id="l03320" name="l03320"></a><span class="lineno"> 3320</span>  <span class="keyword">typedef</span> <span class="keyword">typename</span> KCRS::values_type::non_const_type scalar_view_t;</div>
 <div class="line"><a id="l03321" name="l03321"></a><span class="lineno"> 3321</span>  <span class="comment">// Grab the  Kokkos::SparseCrsMatrices</span></div>
-<div class="line"><a id="l03322" name="l03322"></a><span class="lineno"> 3322</span>  <span class="keyword">const</span> KCRS&amp; Ak = Aview.<a class="code hl_variable" href="classTpetra_1_1CrsMatrixStruct.html#a3f1bb6e946883b266bee5742539aec49">origMatrix</a>-&gt;getLocalMatrixDevice();</div>
-<div class="line"><a id="l03323" name="l03323"></a><span class="lineno"> 3323</span>  <span class="keyword">const</span> KCRS&amp; Bk = Bview.origMatrix-&gt;getLocalMatrixDevice();</div>
+<div class="line"><a id="l03322" name="l03322"></a><span class="lineno"> 3322</span>  <span class="keyword">const</span> KCRS Ak = Aview.<a class="code hl_variable" href="classTpetra_1_1CrsMatrixStruct.html#a3f1bb6e946883b266bee5742539aec49">origMatrix</a>-&gt;getLocalMatrixDevice();</div>
+<div class="line"><a id="l03323" name="l03323"></a><span class="lineno"> 3323</span>  <span class="keyword">const</span> KCRS Bk = Bview.origMatrix-&gt;getLocalMatrixDevice();</div>
 <div class="line"><a id="l03324" name="l03324"></a><span class="lineno"> 3324</span> </div>
 <div class="line"><a id="l03325" name="l03325"></a><span class="lineno"> 3325</span>  <span class="comment">// We need to do this dance if either (a) We have Bimport or (b) We don&#39;t A&#39;s colMap is not the same as B&#39;s rowMap</span></div>
 <div class="line"><a id="l03326" name="l03326"></a><span class="lineno"> 3326</span>  <span class="keywordflow">if</span> (!Bview.importMatrix.is_null() || (Bview.importMatrix.is_null() &amp;&amp; (&amp;*Aview.origMatrix-&gt;getGraph()-&gt;getColMap() != &amp;*Bview.origMatrix-&gt;getGraph()-&gt;getRowMap()))) {</div>
 <div class="line"><a id="l03327" name="l03327"></a><span class="lineno"> 3327</span>    <span class="comment">// We do have a Bimport</span></div>
 <div class="line"><a id="l03328" name="l03328"></a><span class="lineno"> 3328</span>    <span class="comment">// NOTE: We&#39;re going merge Borig and Bimport into a single matrix and reindex the columns *before* we multiply.</span></div>
 <div class="line"><a id="l03329" name="l03329"></a><span class="lineno"> 3329</span>    <span class="comment">// This option was chosen because we know we don&#39;t have any duplicate entries, so we can allocate once.</span></div>
-<div class="line"><a id="l03330" name="l03330"></a><span class="lineno"> 3330</span>    RCP&lt;const KCRS&gt; Ik_;</div>
-<div class="line"><a id="l03331" name="l03331"></a><span class="lineno"> 3331</span>    <span class="keywordflow">if</span> (!Bview.importMatrix.is_null()) Ik_ = Teuchos::rcpFromRef&lt;const KCRS&gt;(Bview.importMatrix-&gt;getLocalMatrixDevice());</div>
-<div class="line"><a id="l03332" name="l03332"></a><span class="lineno"> 3332</span>    <span class="keyword">const</span> KCRS* Ik = Bview.importMatrix.is_null() ? 0 : &amp;*Ik_;</div>
-<div class="line"><a id="l03333" name="l03333"></a><span class="lineno"> 3333</span>    KCRS Iks;</div>
-<div class="line"><a id="l03334" name="l03334"></a><span class="lineno"> 3334</span>    <span class="keywordflow">if</span> (Ik != 0) Iks = *Ik;</div>
-<div class="line"><a id="l03335" name="l03335"></a><span class="lineno"> 3335</span>    <span class="keywordtype">size_t</span> merge_numrows = Ak.numCols();</div>
+<div class="line"><a id="l03330" name="l03330"></a><span class="lineno"> 3330</span> </div>
+<div class="line"><a id="l03331" name="l03331"></a><span class="lineno"> 3331</span>    KCRS Iks;</div>
+<div class="line"><a id="l03332" name="l03332"></a><span class="lineno"> 3332</span>    <span class="keywordflow">if</span> (!Bview.importMatrix.is_null()) Iks = Bview.importMatrix-&gt;getLocalMatrixDevice();</div>
+<div class="line"><a id="l03333" name="l03333"></a><span class="lineno"> 3333</span> </div>
+<div class="line"><a id="l03334" name="l03334"></a><span class="lineno"> 3334</span>    <span class="keywordtype">size_t</span> merge_numrows = Ak.numCols();</div>
+<div class="line"><a id="l03335" name="l03335"></a><span class="lineno"> 3335</span> </div>
 <div class="line"><a id="l03336" name="l03336"></a><span class="lineno"> 3336</span>    <span class="comment">// The last entry of this at least, need to be initialized</span></div>
 <div class="line"><a id="l03337" name="l03337"></a><span class="lineno"> 3337</span>    lno_view_t Mrowptr(<span class="stringliteral">&quot;Mrowptr&quot;</span>, merge_numrows + 1);</div>
 <div class="line"><a id="l03338" name="l03338"></a><span class="lineno"> 3338</span> </div>
@@ -3503,8 +3503,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l03410" name="l03410"></a><span class="lineno"> 3410</span>  <span class="keyword">typedef</span> <span class="keyword">typename</span> KBCRS::values_type::non_const_type scalar_view_t;</div>
 <div class="line"><a id="l03411" name="l03411"></a><span class="lineno"> 3411</span> </div>
 <div class="line"><a id="l03412" name="l03412"></a><span class="lineno"> 3412</span>  <span class="comment">// Grab the  KokkosSparse::BsrMatrix</span></div>
-<div class="line"><a id="l03413" name="l03413"></a><span class="lineno"> 3413</span>  <span class="keyword">const</span> KBCRS&amp; Ak = Aview.<a class="code hl_variable" href="classTpetra_1_1CrsMatrixStruct.html#a3f1bb6e946883b266bee5742539aec49">origMatrix</a>-&gt;getLocalMatrixDevice();</div>
-<div class="line"><a id="l03414" name="l03414"></a><span class="lineno"> 3414</span>  <span class="keyword">const</span> KBCRS&amp; Bk = Bview.origMatrix-&gt;getLocalMatrixDevice();</div>
+<div class="line"><a id="l03413" name="l03413"></a><span class="lineno"> 3413</span>  <span class="keyword">const</span> KBCRS Ak = Aview.<a class="code hl_variable" href="classTpetra_1_1CrsMatrixStruct.html#a3f1bb6e946883b266bee5742539aec49">origMatrix</a>-&gt;getLocalMatrixDevice();</div>
+<div class="line"><a id="l03414" name="l03414"></a><span class="lineno"> 3414</span>  <span class="keyword">const</span> KBCRS Bk = Bview.origMatrix-&gt;getLocalMatrixDevice();</div>
 <div class="line"><a id="l03415" name="l03415"></a><span class="lineno"> 3415</span> </div>
 <div class="line"><a id="l03416" name="l03416"></a><span class="lineno"> 3416</span>  <span class="comment">// We need to do this dance if either (a) We have Bimport or (b) A&#39;s colMap is not the same as B&#39;s rowMap</span></div>
 <div class="line"><a id="l03417" name="l03417"></a><span class="lineno"> 3417</span>  <span class="keywordflow">if</span> (!Bview.importMatrix.is_null() ||</div>
@@ -3513,353 +3513,350 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l03420" name="l03420"></a><span class="lineno"> 3420</span>    <span class="comment">// We do have a Bimport</span></div>
 <div class="line"><a id="l03421" name="l03421"></a><span class="lineno"> 3421</span>    <span class="comment">// NOTE: We&#39;re going merge Borig and Bimport into a single matrix and reindex the columns *before* we multiply.</span></div>
 <div class="line"><a id="l03422" name="l03422"></a><span class="lineno"> 3422</span>    <span class="comment">// This option was chosen because we know we don&#39;t have any duplicate entries, so we can allocate once.</span></div>
-<div class="line"><a id="l03423" name="l03423"></a><span class="lineno"> 3423</span>    RCP&lt;const KBCRS&gt; Ik_;</div>
-<div class="line"><a id="l03424" name="l03424"></a><span class="lineno"> 3424</span>    <span class="keywordflow">if</span> (!Bview.importMatrix.is_null()) Ik_ = Teuchos::rcpFromRef&lt;const KBCRS&gt;(Bview.importMatrix-&gt;getLocalMatrixDevice());</div>
-<div class="line"><a id="l03425" name="l03425"></a><span class="lineno"> 3425</span>    <span class="keyword">const</span> KBCRS* Ik = Bview.importMatrix.is_null() ? 0 : &amp;*Ik_;</div>
-<div class="line"><a id="l03426" name="l03426"></a><span class="lineno"> 3426</span>    KBCRS Iks;</div>
-<div class="line"><a id="l03427" name="l03427"></a><span class="lineno"> 3427</span>    <span class="keywordflow">if</span> (Ik != 0) Iks = *Ik;</div>
-<div class="line"><a id="l03428" name="l03428"></a><span class="lineno"> 3428</span>    <span class="keywordtype">size_t</span> merge_numrows = Ak.numCols();</div>
+<div class="line"><a id="l03423" name="l03423"></a><span class="lineno"> 3423</span>    KBCRS Iks;</div>
+<div class="line"><a id="l03424" name="l03424"></a><span class="lineno"> 3424</span>    <span class="keywordflow">if</span> (!Bview.importMatrix.is_null()) Iks = Bview.importMatrix-&gt;getLocalMatrixDevice();</div>
+<div class="line"><a id="l03425" name="l03425"></a><span class="lineno"> 3425</span>    <span class="keywordtype">size_t</span> merge_numrows = Ak.numCols();</div>
+<div class="line"><a id="l03426" name="l03426"></a><span class="lineno"> 3426</span> </div>
+<div class="line"><a id="l03427" name="l03427"></a><span class="lineno"> 3427</span>    <span class="comment">// The last entry of this at least, need to be initialized</span></div>
+<div class="line"><a id="l03428" name="l03428"></a><span class="lineno"> 3428</span>    lno_view_t Mrowptr(<span class="stringliteral">&quot;Mrowptr&quot;</span>, merge_numrows + 1);</div>
 <div class="line"><a id="l03429" name="l03429"></a><span class="lineno"> 3429</span> </div>
-<div class="line"><a id="l03430" name="l03430"></a><span class="lineno"> 3430</span>    <span class="comment">// The last entry of this at least, need to be initialized</span></div>
-<div class="line"><a id="l03431" name="l03431"></a><span class="lineno"> 3431</span>    lno_view_t Mrowptr(<span class="stringliteral">&quot;Mrowptr&quot;</span>, merge_numrows + 1);</div>
-<div class="line"><a id="l03432" name="l03432"></a><span class="lineno"> 3432</span> </div>
-<div class="line"><a id="l03433" name="l03433"></a><span class="lineno"> 3433</span>    <span class="keyword">const</span> LocalOrdinal LO_INVALID = Teuchos::OrdinalTraits&lt;LocalOrdinal&gt;::invalid();</div>
-<div class="line"><a id="l03434" name="l03434"></a><span class="lineno"> 3434</span> </div>
-<div class="line"><a id="l03435" name="l03435"></a><span class="lineno"> 3435</span>    <span class="comment">// Use a Kokkos::parallel_scan to build the rowptr</span></div>
-<div class="line"><a id="l03436" name="l03436"></a><span class="lineno"> 3436</span>    <span class="keyword">typedef</span> <span class="keyword">typename</span> Node::execution_space execution_space;</div>
-<div class="line"><a id="l03437" name="l03437"></a><span class="lineno"> 3437</span>    <span class="keyword">typedef</span> Kokkos::RangePolicy&lt;execution_space, size_t&gt; range_type;</div>
-<div class="line"><a id="l03438" name="l03438"></a><span class="lineno"> 3438</span>    Kokkos::parallel_scan(</div>
-<div class="line"><a id="l03439" name="l03439"></a><span class="lineno"> 3439</span>        <span class="stringliteral">&quot;Tpetra_MatrixMatrix_merge_matrices_buildRowptr&quot;</span>, range_type(0, merge_numrows),</div>
-<div class="line"><a id="l03440" name="l03440"></a><span class="lineno"> 3440</span>        KOKKOS_LAMBDA(<span class="keyword">const</span> <span class="keywordtype">size_t</span> i, <span class="keywordtype">size_t</span>&amp; update, <span class="keyword">const</span> <span class="keywordtype">bool</span> <span class="keyword">final</span>) {</div>
-<div class="line"><a id="l03441" name="l03441"></a><span class="lineno"> 3441</span>          <span class="keywordflow">if</span> (<span class="keyword">final</span>) Mrowptr(i) = update;</div>
-<div class="line"><a id="l03442" name="l03442"></a><span class="lineno"> 3442</span>          <span class="comment">// Get the row count</span></div>
-<div class="line"><a id="l03443" name="l03443"></a><span class="lineno"> 3443</span>          <span class="keywordtype">size_t</span> ct = 0;</div>
-<div class="line"><a id="l03444" name="l03444"></a><span class="lineno"> 3444</span>          <span class="keywordflow">if</span> (Acol2Brow(i) != LO_INVALID)</div>
-<div class="line"><a id="l03445" name="l03445"></a><span class="lineno"> 3445</span>            ct = Bk.graph.row_map(Acol2Brow(i) + 1) - Bk.graph.row_map(Acol2Brow(i));</div>
-<div class="line"><a id="l03446" name="l03446"></a><span class="lineno"> 3446</span>          <span class="keywordflow">else</span></div>
-<div class="line"><a id="l03447" name="l03447"></a><span class="lineno"> 3447</span>            ct = Iks.graph.row_map(Acol2Irow(i) + 1) - Iks.graph.row_map(Acol2Irow(i));</div>
-<div class="line"><a id="l03448" name="l03448"></a><span class="lineno"> 3448</span>          update += ct;</div>
-<div class="line"><a id="l03449" name="l03449"></a><span class="lineno"> 3449</span> </div>
-<div class="line"><a id="l03450" name="l03450"></a><span class="lineno"> 3450</span>          <span class="keywordflow">if</span> (<span class="keyword">final</span> &amp;&amp; i + 1 == merge_numrows)</div>
-<div class="line"><a id="l03451" name="l03451"></a><span class="lineno"> 3451</span>            Mrowptr(i + 1) = update;</div>
-<div class="line"><a id="l03452" name="l03452"></a><span class="lineno"> 3452</span>        });</div>
-<div class="line"><a id="l03453" name="l03453"></a><span class="lineno"> 3453</span> </div>
-<div class="line"><a id="l03454" name="l03454"></a><span class="lineno"> 3454</span>    <span class="comment">// Allocate nnz</span></div>
-<div class="line"><a id="l03455" name="l03455"></a><span class="lineno"> 3455</span>    <span class="keywordtype">size_t</span> merge_nnz    = ::Tpetra::Details::getEntryOnHost(Mrowptr, merge_numrows);</div>
-<div class="line"><a id="l03456" name="l03456"></a><span class="lineno"> 3456</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> blocksize = Ak.blockDim();</div>
-<div class="line"><a id="l03457" name="l03457"></a><span class="lineno"> 3457</span>    lno_nnz_view_t Mcolind(Kokkos::ViewAllocateWithoutInitializing(<span class="stringliteral">&quot;Mcolind&quot;</span>), merge_nnz);</div>
-<div class="line"><a id="l03458" name="l03458"></a><span class="lineno"> 3458</span>    scalar_view_t Mvalues(Kokkos::ViewAllocateWithoutInitializing(<span class="stringliteral">&quot;Mvals&quot;</span>), merge_nnz * blocksize * blocksize);</div>
-<div class="line"><a id="l03459" name="l03459"></a><span class="lineno"> 3459</span> </div>
-<div class="line"><a id="l03460" name="l03460"></a><span class="lineno"> 3460</span>    <span class="comment">// Use a Kokkos::parallel_for to fill the rowptr/colind arrays</span></div>
-<div class="line"><a id="l03461" name="l03461"></a><span class="lineno"> 3461</span>    <span class="keyword">typedef</span> Kokkos::RangePolicy&lt;execution_space, size_t&gt; range_type;</div>
-<div class="line"><a id="l03462" name="l03462"></a><span class="lineno"> 3462</span>    Kokkos::parallel_for(</div>
-<div class="line"><a id="l03463" name="l03463"></a><span class="lineno"> 3463</span>        <span class="stringliteral">&quot;Tpetra_MatrixMatrix_merg_matrices_buildColindValues&quot;</span>, range_type(0, merge_numrows), KOKKOS_LAMBDA(<span class="keyword">const</span> <span class="keywordtype">size_t</span> i) {</div>
-<div class="line"><a id="l03464" name="l03464"></a><span class="lineno"> 3464</span>          <span class="keywordflow">if</span> (Acol2Brow(i) != LO_INVALID) {</div>
-<div class="line"><a id="l03465" name="l03465"></a><span class="lineno"> 3465</span>            <span class="keywordtype">size_t</span> row   = Acol2Brow(i);</div>
-<div class="line"><a id="l03466" name="l03466"></a><span class="lineno"> 3466</span>            <span class="keywordtype">size_t</span> <a class="code hl_function" href="namespaceTpetra_1_1Details_1_1DeepCopyCounter.html#a9edd3c43450c395a83f9d8b5fb025eb2">start</a> = Bk.graph.row_map(row);</div>
-<div class="line"><a id="l03467" name="l03467"></a><span class="lineno"> 3467</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = Mrowptr(i); j &lt; Mrowptr(i + 1); j++) {</div>
-<div class="line"><a id="l03468" name="l03468"></a><span class="lineno"> 3468</span>              Mcolind(j) = Bcol2Ccol(Bk.graph.entries(j - Mrowptr(i) + start));</div>
-<div class="line"><a id="l03469" name="l03469"></a><span class="lineno"> 3469</span> </div>
-<div class="line"><a id="l03470" name="l03470"></a><span class="lineno"> 3470</span>              <span class="keywordflow">for</span> (<span class="keywordtype">int</span> b = 0; b &lt; blocksize * blocksize; ++b) {</div>
-<div class="line"><a id="l03471" name="l03471"></a><span class="lineno"> 3471</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> val_indx   = j * blocksize * blocksize + b;</div>
-<div class="line"><a id="l03472" name="l03472"></a><span class="lineno"> 3472</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> b_val_indx = (j - Mrowptr(i) + <a class="code hl_function" href="namespaceTpetra_1_1Details_1_1DeepCopyCounter.html#a9edd3c43450c395a83f9d8b5fb025eb2">start</a>) * blocksize * blocksize + b;</div>
-<div class="line"><a id="l03473" name="l03473"></a><span class="lineno"> 3473</span>                Mvalues(val_indx)    = Bk.values(b_val_indx);</div>
-<div class="line"><a id="l03474" name="l03474"></a><span class="lineno"> 3474</span>              }</div>
-<div class="line"><a id="l03475" name="l03475"></a><span class="lineno"> 3475</span>            }</div>
-<div class="line"><a id="l03476" name="l03476"></a><span class="lineno"> 3476</span>          } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l03477" name="l03477"></a><span class="lineno"> 3477</span>            <span class="keywordtype">size_t</span> row   = Acol2Irow(i);</div>
-<div class="line"><a id="l03478" name="l03478"></a><span class="lineno"> 3478</span>            <span class="keywordtype">size_t</span> <a class="code hl_function" href="namespaceTpetra_1_1Details_1_1DeepCopyCounter.html#a9edd3c43450c395a83f9d8b5fb025eb2">start</a> = Iks.graph.row_map(row);</div>
-<div class="line"><a id="l03479" name="l03479"></a><span class="lineno"> 3479</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = Mrowptr(i); j &lt; Mrowptr(i + 1); j++) {</div>
-<div class="line"><a id="l03480" name="l03480"></a><span class="lineno"> 3480</span>              Mcolind(j) = Icol2Ccol(Iks.graph.entries(j - Mrowptr(i) + start));</div>
-<div class="line"><a id="l03481" name="l03481"></a><span class="lineno"> 3481</span> </div>
-<div class="line"><a id="l03482" name="l03482"></a><span class="lineno"> 3482</span>              <span class="keywordflow">for</span> (<span class="keywordtype">int</span> b = 0; b &lt; blocksize * blocksize; ++b) {</div>
-<div class="line"><a id="l03483" name="l03483"></a><span class="lineno"> 3483</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> val_indx   = j * blocksize * blocksize + b;</div>
-<div class="line"><a id="l03484" name="l03484"></a><span class="lineno"> 3484</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> b_val_indx = (j - Mrowptr(i) + <a class="code hl_function" href="namespaceTpetra_1_1Details_1_1DeepCopyCounter.html#a9edd3c43450c395a83f9d8b5fb025eb2">start</a>) * blocksize * blocksize + b;</div>
-<div class="line"><a id="l03485" name="l03485"></a><span class="lineno"> 3485</span>                Mvalues(val_indx)    = Iks.values(b_val_indx);</div>
-<div class="line"><a id="l03486" name="l03486"></a><span class="lineno"> 3486</span>              }</div>
-<div class="line"><a id="l03487" name="l03487"></a><span class="lineno"> 3487</span>            }</div>
-<div class="line"><a id="l03488" name="l03488"></a><span class="lineno"> 3488</span>          }</div>
-<div class="line"><a id="l03489" name="l03489"></a><span class="lineno"> 3489</span>        });</div>
-<div class="line"><a id="l03490" name="l03490"></a><span class="lineno"> 3490</span> </div>
-<div class="line"><a id="l03491" name="l03491"></a><span class="lineno"> 3491</span>    <span class="comment">// Build and return merged KokkosSparse matrix</span></div>
-<div class="line"><a id="l03492" name="l03492"></a><span class="lineno"> 3492</span>    KBCRS newmat(<span class="stringliteral">&quot;CrsMatrix&quot;</span>, merge_numrows, mergedNodeNumCols, merge_nnz, Mvalues, Mrowptr, Mcolind, blocksize);</div>
-<div class="line"><a id="l03493" name="l03493"></a><span class="lineno"> 3493</span>    <span class="keywordflow">return</span> newmat;</div>
-<div class="line"><a id="l03494" name="l03494"></a><span class="lineno"> 3494</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l03495" name="l03495"></a><span class="lineno"> 3495</span>    <span class="comment">// We don&#39;t have a Bimport (the easy case)</span></div>
-<div class="line"><a id="l03496" name="l03496"></a><span class="lineno"> 3496</span>    <span class="keywordflow">return</span> Bk;</div>
-<div class="line"><a id="l03497" name="l03497"></a><span class="lineno"> 3497</span>  }</div>
-<div class="line"><a id="l03498" name="l03498"></a><span class="lineno"> 3498</span>}  <span class="comment">// end merge_matrices</span></div>
-<div class="line"><a id="l03499" name="l03499"></a><span class="lineno"> 3499</span> </div>
-<div class="line"><a id="l03500" name="l03500"></a><span class="lineno"> 3500</span><span class="comment">/*********************************************************************************************************/</span></div>
-<div class="line"><a id="l03501" name="l03501"></a><span class="lineno"> 3501</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> SC, <span class="keyword">typename</span> LO, <span class="keyword">typename</span> GO, <span class="keyword">typename</span> NO&gt;</div>
-<div class="line"><a id="l03502" name="l03502"></a><span class="lineno"> 3502</span><span class="keywordtype">void</span> AddKernels&lt;SC, LO, GO, NO&gt;::</div>
-<div class="line"><a id="l03503" name="l03503"></a><span class="lineno"> 3503</span>    addSorted(</div>
-<div class="line"><a id="l03504" name="l03504"></a><span class="lineno"> 3504</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::values_array&amp; Avals,</div>
-<div class="line"><a id="l03505" name="l03505"></a><span class="lineno"> 3505</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::row_ptrs_array_const&amp; Arowptrs,</div>
-<div class="line"><a id="l03506" name="l03506"></a><span class="lineno"> 3506</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::col_inds_array&amp; Acolinds,</div>
-<div class="line"><a id="l03507" name="l03507"></a><span class="lineno"> 3507</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::impl_scalar_type scalarA,</div>
-<div class="line"><a id="l03508" name="l03508"></a><span class="lineno"> 3508</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::values_array&amp; Bvals,</div>
-<div class="line"><a id="l03509" name="l03509"></a><span class="lineno"> 3509</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::row_ptrs_array_const&amp; Browptrs,</div>
-<div class="line"><a id="l03510" name="l03510"></a><span class="lineno"> 3510</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::col_inds_array&amp; Bcolinds,</div>
-<div class="line"><a id="l03511" name="l03511"></a><span class="lineno"> 3511</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::impl_scalar_type scalarB,</div>
-<div class="line"><a id="l03512" name="l03512"></a><span class="lineno"> 3512</span>        GO numGlobalCols,</div>
-<div class="line"><a id="l03513" name="l03513"></a><span class="lineno"> 3513</span>        <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::values_array&amp; Cvals,</div>
-<div class="line"><a id="l03514" name="l03514"></a><span class="lineno"> 3514</span>        <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::row_ptrs_array&amp; Crowptrs,</div>
-<div class="line"><a id="l03515" name="l03515"></a><span class="lineno"> 3515</span>        <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::col_inds_array&amp; Ccolinds) {</div>
-<div class="line"><a id="l03516" name="l03516"></a><span class="lineno"> 3516</span>  <span class="keyword">using </span>Teuchos::rcp;</div>
-<div class="line"><a id="l03517" name="l03517"></a><span class="lineno"> 3517</span>  <span class="keyword">using </span>Teuchos::TimeMonitor;</div>
-<div class="line"><a id="l03518" name="l03518"></a><span class="lineno"> 3518</span>  <span class="keyword">using </span>AddKern = MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;;</div>
-<div class="line"><a id="l03519" name="l03519"></a><span class="lineno"> 3519</span>  TEUCHOS_TEST_FOR_EXCEPTION(Arowptrs.extent(0) != Browptrs.extent(0), std::runtime_error, <span class="stringliteral">&quot;Can&#39;t add matrices with different numbers of rows.&quot;</span>);</div>
-<div class="line"><a id="l03520" name="l03520"></a><span class="lineno"> 3520</span>  <span class="keyword">auto</span> nrows = Arowptrs.extent(0) - 1;</div>
-<div class="line"><a id="l03521" name="l03521"></a><span class="lineno"> 3521</span>  Crowptrs   = row_ptrs_array(Kokkos::ViewAllocateWithoutInitializing(<span class="stringliteral">&quot;C row ptrs&quot;</span>), nrows + 1);</div>
-<div class="line"><a id="l03522" name="l03522"></a><span class="lineno"> 3522</span>  <span class="keyword">typename</span> AddKern::KKH handle;</div>
-<div class="line"><a id="l03523" name="l03523"></a><span class="lineno"> 3523</span>  handle.create_spadd_handle(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l03524" name="l03524"></a><span class="lineno"> 3524</span>  <span class="keyword">auto</span> addHandle = handle.get_spadd_handle();</div>
-<div class="line"><a id="l03525" name="l03525"></a><span class="lineno"> 3525</span> </div>
-<div class="line"><a id="l03526" name="l03526"></a><span class="lineno"> 3526</span>  <span class="keyword">auto</span> MM = rcp(<span class="keyword">new</span> <a class="code hl_class" href="classTpetra_1_1Details_1_1ProfilingRegion.html">Tpetra::Details::ProfilingRegion</a>(<span class="stringliteral">&quot;TpetraExt: add: sorted symbolic&quot;</span>));</div>
-<div class="line"><a id="l03527" name="l03527"></a><span class="lineno"> 3527</span> </div>
-<div class="line"><a id="l03528" name="l03528"></a><span class="lineno"> 3528</span>  KokkosSparse::spadd_symbolic(&amp;handle,</div>
-<div class="line"><a id="l03529" name="l03529"></a><span class="lineno"> 3529</span>                               nrows, numGlobalCols,</div>
-<div class="line"><a id="l03530" name="l03530"></a><span class="lineno"> 3530</span>                               Arowptrs, Acolinds, Browptrs, Bcolinds, Crowptrs);</div>
-<div class="line"><a id="l03531" name="l03531"></a><span class="lineno"> 3531</span>  <span class="comment">// KokkosKernels requires values to be zeroed</span></div>
-<div class="line"><a id="l03532" name="l03532"></a><span class="lineno"> 3532</span>  Cvals    = values_array(<span class="stringliteral">&quot;C values&quot;</span>, addHandle-&gt;get_c_nnz());</div>
-<div class="line"><a id="l03533" name="l03533"></a><span class="lineno"> 3533</span>  Ccolinds = col_inds_array(Kokkos::ViewAllocateWithoutInitializing(<span class="stringliteral">&quot;C colinds&quot;</span>), addHandle-&gt;get_c_nnz());</div>
-<div class="line"><a id="l03534" name="l03534"></a><span class="lineno"> 3534</span> </div>
-<div class="line"><a id="l03535" name="l03535"></a><span class="lineno"> 3535</span>  MM = Teuchos::null;</div>
-<div class="line"><a id="l03536" name="l03536"></a><span class="lineno"> 3536</span>  MM = rcp(<span class="keyword">new</span> <a class="code hl_class" href="classTpetra_1_1Details_1_1ProfilingRegion.html">Tpetra::Details::ProfilingRegion</a>(<span class="stringliteral">&quot;TpetraExt: add: sorted numeric&quot;</span>));</div>
-<div class="line"><a id="l03537" name="l03537"></a><span class="lineno"> 3537</span>  KokkosSparse::spadd_numeric(&amp;handle,</div>
-<div class="line"><a id="l03538" name="l03538"></a><span class="lineno"> 3538</span>                              nrows, numGlobalCols,</div>
-<div class="line"><a id="l03539" name="l03539"></a><span class="lineno"> 3539</span>                              Arowptrs, Acolinds, Avals, scalarA,</div>
-<div class="line"><a id="l03540" name="l03540"></a><span class="lineno"> 3540</span>                              Browptrs, Bcolinds, Bvals, scalarB,</div>
-<div class="line"><a id="l03541" name="l03541"></a><span class="lineno"> 3541</span>                              Crowptrs, Ccolinds, Cvals);</div>
-<div class="line"><a id="l03542" name="l03542"></a><span class="lineno"> 3542</span>}</div>
-<div class="line"><a id="l03543" name="l03543"></a><span class="lineno"> 3543</span> </div>
-<div class="line"><a id="l03544" name="l03544"></a><span class="lineno"> 3544</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> SC, <span class="keyword">typename</span> LO, <span class="keyword">typename</span> GO, <span class="keyword">typename</span> NO&gt;</div>
-<div class="line"><a id="l03545" name="l03545"></a><span class="lineno"> 3545</span><span class="keywordtype">void</span> AddKernels&lt;SC, LO, GO, NO&gt;::</div>
-<div class="line"><a id="l03546" name="l03546"></a><span class="lineno"> 3546</span>    addUnsorted(</div>
-<div class="line"><a id="l03547" name="l03547"></a><span class="lineno"> 3547</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::values_array&amp; Avals,</div>
-<div class="line"><a id="l03548" name="l03548"></a><span class="lineno"> 3548</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::row_ptrs_array_const&amp; Arowptrs,</div>
-<div class="line"><a id="l03549" name="l03549"></a><span class="lineno"> 3549</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::col_inds_array&amp; Acolinds,</div>
-<div class="line"><a id="l03550" name="l03550"></a><span class="lineno"> 3550</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::impl_scalar_type scalarA,</div>
-<div class="line"><a id="l03551" name="l03551"></a><span class="lineno"> 3551</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::values_array&amp; Bvals,</div>
-<div class="line"><a id="l03552" name="l03552"></a><span class="lineno"> 3552</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::row_ptrs_array_const&amp; Browptrs,</div>
-<div class="line"><a id="l03553" name="l03553"></a><span class="lineno"> 3553</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::col_inds_array&amp; Bcolinds,</div>
-<div class="line"><a id="l03554" name="l03554"></a><span class="lineno"> 3554</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::impl_scalar_type scalarB,</div>
-<div class="line"><a id="l03555" name="l03555"></a><span class="lineno"> 3555</span>        GO numGlobalCols,</div>
-<div class="line"><a id="l03556" name="l03556"></a><span class="lineno"> 3556</span>        <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::values_array&amp; Cvals,</div>
-<div class="line"><a id="l03557" name="l03557"></a><span class="lineno"> 3557</span>        <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::row_ptrs_array&amp; Crowptrs,</div>
-<div class="line"><a id="l03558" name="l03558"></a><span class="lineno"> 3558</span>        <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::col_inds_array&amp; Ccolinds) {</div>
-<div class="line"><a id="l03559" name="l03559"></a><span class="lineno"> 3559</span>  <span class="keyword">using </span>Teuchos::rcp;</div>
-<div class="line"><a id="l03560" name="l03560"></a><span class="lineno"> 3560</span>  <span class="keyword">using </span>Teuchos::TimeMonitor;</div>
-<div class="line"><a id="l03561" name="l03561"></a><span class="lineno"> 3561</span>  <span class="keyword">using </span>AddKern = MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;;</div>
-<div class="line"><a id="l03562" name="l03562"></a><span class="lineno"> 3562</span>  TEUCHOS_TEST_FOR_EXCEPTION(Arowptrs.extent(0) != Browptrs.extent(0), std::runtime_error, <span class="stringliteral">&quot;Can&#39;t add matrices with different numbers of rows.&quot;</span>);</div>
-<div class="line"><a id="l03563" name="l03563"></a><span class="lineno"> 3563</span>  <span class="keyword">auto</span> nrows = Arowptrs.extent(0) - 1;</div>
-<div class="line"><a id="l03564" name="l03564"></a><span class="lineno"> 3564</span>  Crowptrs   = row_ptrs_array(Kokkos::ViewAllocateWithoutInitializing(<span class="stringliteral">&quot;C row ptrs&quot;</span>), nrows + 1);</div>
-<div class="line"><a id="l03565" name="l03565"></a><span class="lineno"> 3565</span>  <span class="keyword">typedef</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt; AddKern;</div>
-<div class="line"><a id="l03566" name="l03566"></a><span class="lineno"> 3566</span>  <span class="keyword">typename</span> AddKern::KKH handle;</div>
-<div class="line"><a id="l03567" name="l03567"></a><span class="lineno"> 3567</span>  handle.create_spadd_handle(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l03568" name="l03568"></a><span class="lineno"> 3568</span>  <span class="keyword">auto</span> addHandle = handle.get_spadd_handle();</div>
-<div class="line"><a id="l03569" name="l03569"></a><span class="lineno"> 3569</span>  <span class="keyword">auto</span> MM        = rcp(<span class="keyword">new</span> <a class="code hl_class" href="classTpetra_1_1Details_1_1ProfilingRegion.html">Tpetra::Details::ProfilingRegion</a>(<span class="stringliteral">&quot;TpetraExt: add: unsorted symbolic&quot;</span>));</div>
-<div class="line"><a id="l03570" name="l03570"></a><span class="lineno"> 3570</span> </div>
-<div class="line"><a id="l03571" name="l03571"></a><span class="lineno"> 3571</span>  KokkosSparse::spadd_symbolic(&amp;handle,</div>
-<div class="line"><a id="l03572" name="l03572"></a><span class="lineno"> 3572</span>                               nrows, numGlobalCols,</div>
-<div class="line"><a id="l03573" name="l03573"></a><span class="lineno"> 3573</span>                               Arowptrs, Acolinds, Browptrs, Bcolinds, Crowptrs);</div>
-<div class="line"><a id="l03574" name="l03574"></a><span class="lineno"> 3574</span>  <span class="comment">// Cvals must be zeroed out</span></div>
-<div class="line"><a id="l03575" name="l03575"></a><span class="lineno"> 3575</span>  Cvals    = values_array(<span class="stringliteral">&quot;C values&quot;</span>, addHandle-&gt;get_c_nnz());</div>
-<div class="line"><a id="l03576" name="l03576"></a><span class="lineno"> 3576</span>  Ccolinds = col_inds_array(Kokkos::ViewAllocateWithoutInitializing(<span class="stringliteral">&quot;C colinds&quot;</span>), addHandle-&gt;get_c_nnz());</div>
-<div class="line"><a id="l03577" name="l03577"></a><span class="lineno"> 3577</span>  MM       = Teuchos::null;</div>
-<div class="line"><a id="l03578" name="l03578"></a><span class="lineno"> 3578</span>  MM       = rcp(<span class="keyword">new</span> <a class="code hl_class" href="classTpetra_1_1Details_1_1ProfilingRegion.html">Tpetra::Details::ProfilingRegion</a>(<span class="stringliteral">&quot;TpetraExt: add: unsorted numeric&quot;</span>));</div>
-<div class="line"><a id="l03579" name="l03579"></a><span class="lineno"> 3579</span>  KokkosSparse::spadd_numeric(&amp;handle,</div>
-<div class="line"><a id="l03580" name="l03580"></a><span class="lineno"> 3580</span>                              nrows, numGlobalCols,</div>
-<div class="line"><a id="l03581" name="l03581"></a><span class="lineno"> 3581</span>                              Arowptrs, Acolinds, Avals, scalarA,</div>
-<div class="line"><a id="l03582" name="l03582"></a><span class="lineno"> 3582</span>                              Browptrs, Bcolinds, Bvals, scalarB,</div>
-<div class="line"><a id="l03583" name="l03583"></a><span class="lineno"> 3583</span>                              Crowptrs, Ccolinds, Cvals);</div>
-<div class="line"><a id="l03584" name="l03584"></a><span class="lineno"> 3584</span>}</div>
-<div class="line"><a id="l03585" name="l03585"></a><span class="lineno"> 3585</span> </div>
-<div class="line"><a id="l03586" name="l03586"></a><span class="lineno"> 3586</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> GO,</div>
-<div class="line"><a id="l03587" name="l03587"></a><span class="lineno"> 3587</span>          <span class="keyword">typename</span> LocalIndicesType,</div>
-<div class="line"><a id="l03588" name="l03588"></a><span class="lineno"> 3588</span>          <span class="keyword">typename</span> GlobalIndicesType,</div>
-<div class="line"><a id="l03589" name="l03589"></a><span class="lineno"> 3589</span>          <span class="keyword">typename</span> ColMapType&gt;</div>
-<div class="line"><a id="l03590" name="l03590"></a><span class="lineno"> 3590</span><span class="keyword">struct </span>ConvertLocalToGlobalFunctor {</div>
-<div class="line"><a id="l03591" name="l03591"></a><span class="lineno"> 3591</span>  ConvertLocalToGlobalFunctor(</div>
-<div class="line"><a id="l03592" name="l03592"></a><span class="lineno"> 3592</span>      <span class="keyword">const</span> LocalIndicesType&amp; colindsOrig_,</div>
-<div class="line"><a id="l03593" name="l03593"></a><span class="lineno"> 3593</span>      <span class="keyword">const</span> GlobalIndicesType&amp; colindsConverted_,</div>
-<div class="line"><a id="l03594" name="l03594"></a><span class="lineno"> 3594</span>      <span class="keyword">const</span> ColMapType&amp; colmap_)</div>
-<div class="line"><a id="l03595" name="l03595"></a><span class="lineno"> 3595</span>    : colindsOrig(colindsOrig_)</div>
-<div class="line"><a id="l03596" name="l03596"></a><span class="lineno"> 3596</span>    , colindsConverted(colindsConverted_)</div>
-<div class="line"><a id="l03597" name="l03597"></a><span class="lineno"> 3597</span>    , colmap(colmap_) {}</div>
-<div class="line"><a id="l03598" name="l03598"></a><span class="lineno"> 3598</span>  KOKKOS_INLINE_FUNCTION <span class="keywordtype">void</span></div>
-<div class="line"><a id="l03599" name="l03599"></a><span class="lineno"> 3599</span>  operator()(<span class="keyword">const</span> GO i)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l03600" name="l03600"></a><span class="lineno"> 3600</span>    colindsConverted(i) = colmap.getGlobalElement(colindsOrig(i));</div>
-<div class="line"><a id="l03601" name="l03601"></a><span class="lineno"> 3601</span>  }</div>
-<div class="line"><a id="l03602" name="l03602"></a><span class="lineno"> 3602</span>  LocalIndicesType colindsOrig;</div>
-<div class="line"><a id="l03603" name="l03603"></a><span class="lineno"> 3603</span>  GlobalIndicesType colindsConverted;</div>
-<div class="line"><a id="l03604" name="l03604"></a><span class="lineno"> 3604</span>  ColMapType colmap;</div>
-<div class="line"><a id="l03605" name="l03605"></a><span class="lineno"> 3605</span>};</div>
-<div class="line"><a id="l03606" name="l03606"></a><span class="lineno"> 3606</span> </div>
-<div class="line"><a id="l03607" name="l03607"></a><span class="lineno"> 3607</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> SC, <span class="keyword">typename</span> LO, <span class="keyword">typename</span> GO, <span class="keyword">typename</span> NO&gt;</div>
-<div class="line"><a id="l03608" name="l03608"></a><span class="lineno"> 3608</span><span class="keywordtype">void</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::</div>
-<div class="line"><a id="l03609" name="l03609"></a><span class="lineno"> 3609</span>    convertToGlobalAndAdd(</div>
-<div class="line"><a id="l03610" name="l03610"></a><span class="lineno"> 3610</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::KCRS&amp; A,</div>
-<div class="line"><a id="l03611" name="l03611"></a><span class="lineno"> 3611</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::impl_scalar_type scalarA,</div>
-<div class="line"><a id="l03612" name="l03612"></a><span class="lineno"> 3612</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::KCRS&amp; B,</div>
-<div class="line"><a id="l03613" name="l03613"></a><span class="lineno"> 3613</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::impl_scalar_type scalarB,</div>
-<div class="line"><a id="l03614" name="l03614"></a><span class="lineno"> 3614</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::local_map_type&amp; AcolMap,</div>
-<div class="line"><a id="l03615" name="l03615"></a><span class="lineno"> 3615</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::local_map_type&amp; BcolMap,</div>
-<div class="line"><a id="l03616" name="l03616"></a><span class="lineno"> 3616</span>        <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::values_array&amp; Cvals,</div>
-<div class="line"><a id="l03617" name="l03617"></a><span class="lineno"> 3617</span>        <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::row_ptrs_array&amp; Crowptrs,</div>
-<div class="line"><a id="l03618" name="l03618"></a><span class="lineno"> 3618</span>        <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::global_col_inds_array&amp; Ccolinds) {</div>
-<div class="line"><a id="l03619" name="l03619"></a><span class="lineno"> 3619</span>  <span class="keyword">using </span>Teuchos::rcp;</div>
-<div class="line"><a id="l03620" name="l03620"></a><span class="lineno"> 3620</span>  <span class="keyword">using </span>Teuchos::TimeMonitor;</div>
-<div class="line"><a id="l03621" name="l03621"></a><span class="lineno"> 3621</span>  <span class="comment">// Need to use a different KokkosKernelsHandle type than other versions,</span></div>
-<div class="line"><a id="l03622" name="l03622"></a><span class="lineno"> 3622</span>  <span class="comment">// since the ordinals are now GO</span></div>
-<div class="line"><a id="l03623" name="l03623"></a><span class="lineno"> 3623</span>  <span class="keyword">using </span>KKH_GO = KokkosKernels::Experimental::KokkosKernelsHandle&lt;size_t, GO, impl_scalar_type,</div>
-<div class="line"><a id="l03624" name="l03624"></a><span class="lineno"> 3624</span>                                                                  <span class="keyword">typename</span> NO::execution_space, <span class="keyword">typename</span> NO::memory_space, <span class="keyword">typename</span> NO::memory_space&gt;;</div>
-<div class="line"><a id="l03625" name="l03625"></a><span class="lineno"> 3625</span> </div>
-<div class="line"><a id="l03626" name="l03626"></a><span class="lineno"> 3626</span>  <span class="keyword">const</span> values_array Avals      = A.values;</div>
-<div class="line"><a id="l03627" name="l03627"></a><span class="lineno"> 3627</span>  <span class="keyword">const</span> values_array Bvals      = B.values;</div>
-<div class="line"><a id="l03628" name="l03628"></a><span class="lineno"> 3628</span>  <span class="keyword">const</span> col_inds_array Acolinds = A.graph.entries;</div>
-<div class="line"><a id="l03629" name="l03629"></a><span class="lineno"> 3629</span>  <span class="keyword">const</span> col_inds_array Bcolinds = B.graph.entries;</div>
-<div class="line"><a id="l03630" name="l03630"></a><span class="lineno"> 3630</span>  <span class="keyword">auto</span> Arowptrs                 = A.graph.row_map;</div>
-<div class="line"><a id="l03631" name="l03631"></a><span class="lineno"> 3631</span>  <span class="keyword">auto</span> Browptrs                 = B.graph.row_map;</div>
-<div class="line"><a id="l03632" name="l03632"></a><span class="lineno"> 3632</span>  global_col_inds_array AcolindsConverted(Kokkos::ViewAllocateWithoutInitializing(<span class="stringliteral">&quot;A colinds (converted)&quot;</span>), Acolinds.extent(0));</div>
-<div class="line"><a id="l03633" name="l03633"></a><span class="lineno"> 3633</span>  global_col_inds_array BcolindsConverted(Kokkos::ViewAllocateWithoutInitializing(<span class="stringliteral">&quot;B colinds (converted)&quot;</span>), Bcolinds.extent(0));</div>
-<div class="line"><a id="l03634" name="l03634"></a><span class="lineno"> 3634</span> </div>
-<div class="line"><a id="l03635" name="l03635"></a><span class="lineno"> 3635</span>  <span class="keyword">auto</span> MM = rcp(<span class="keyword">new</span> <a class="code hl_class" href="classTpetra_1_1Details_1_1ProfilingRegion.html">Tpetra::Details::ProfilingRegion</a>(<span class="stringliteral">&quot;TpetraExt: add: diff col map kernel: column map conversion&quot;</span>));</div>
-<div class="line"><a id="l03636" name="l03636"></a><span class="lineno"> 3636</span> </div>
-<div class="line"><a id="l03637" name="l03637"></a><span class="lineno"> 3637</span>  ConvertLocalToGlobalFunctor&lt;GO, col_inds_array, global_col_inds_array, local_map_type&gt; convertA(Acolinds, AcolindsConverted, AcolMap);</div>
-<div class="line"><a id="l03638" name="l03638"></a><span class="lineno"> 3638</span>  Kokkos::parallel_for(<span class="stringliteral">&quot;Tpetra_MatrixMatrix_convertColIndsA&quot;</span>, range_type(0, Acolinds.extent(0)), convertA);</div>
-<div class="line"><a id="l03639" name="l03639"></a><span class="lineno"> 3639</span>  ConvertLocalToGlobalFunctor&lt;GO, col_inds_array, global_col_inds_array, local_map_type&gt; convertB(Bcolinds, BcolindsConverted, BcolMap);</div>
-<div class="line"><a id="l03640" name="l03640"></a><span class="lineno"> 3640</span>  Kokkos::parallel_for(<span class="stringliteral">&quot;Tpetra_MatrixMatrix_convertColIndsB&quot;</span>, range_type(0, Bcolinds.extent(0)), convertB);</div>
-<div class="line"><a id="l03641" name="l03641"></a><span class="lineno"> 3641</span>  KKH_GO handle;</div>
-<div class="line"><a id="l03642" name="l03642"></a><span class="lineno"> 3642</span>  handle.create_spadd_handle(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l03643" name="l03643"></a><span class="lineno"> 3643</span>  <span class="keyword">auto</span> addHandle = handle.get_spadd_handle();</div>
-<div class="line"><a id="l03644" name="l03644"></a><span class="lineno"> 3644</span>  MM             = Teuchos::null;</div>
-<div class="line"><a id="l03645" name="l03645"></a><span class="lineno"> 3645</span>  MM             = rcp(<span class="keyword">new</span> <a class="code hl_class" href="classTpetra_1_1Details_1_1ProfilingRegion.html">Tpetra::Details::ProfilingRegion</a>(<span class="stringliteral">&quot;TpetraExt: add: diff col map kernel: unsorted symbolic&quot;</span>));</div>
-<div class="line"><a id="l03646" name="l03646"></a><span class="lineno"> 3646</span>  <span class="keyword">auto</span> nrows     = Arowptrs.extent(0) - 1;</div>
-<div class="line"><a id="l03647" name="l03647"></a><span class="lineno"> 3647</span>  Crowptrs       = row_ptrs_array(Kokkos::ViewAllocateWithoutInitializing(<span class="stringliteral">&quot;C row ptrs&quot;</span>), nrows + 1);</div>
-<div class="line"><a id="l03648" name="l03648"></a><span class="lineno"> 3648</span>  KokkosSparse::spadd_symbolic(&amp;handle,</div>
-<div class="line"><a id="l03649" name="l03649"></a><span class="lineno"> 3649</span>                               nrows, A.numCols(),</div>
-<div class="line"><a id="l03650" name="l03650"></a><span class="lineno"> 3650</span>                               Arowptrs, AcolindsConverted, Browptrs, BcolindsConverted, Crowptrs);</div>
-<div class="line"><a id="l03651" name="l03651"></a><span class="lineno"> 3651</span>  Cvals    = values_array(<span class="stringliteral">&quot;C values&quot;</span>, addHandle-&gt;get_c_nnz());</div>
-<div class="line"><a id="l03652" name="l03652"></a><span class="lineno"> 3652</span>  Ccolinds = global_col_inds_array(Kokkos::ViewAllocateWithoutInitializing(<span class="stringliteral">&quot;C colinds&quot;</span>), addHandle-&gt;get_c_nnz());</div>
-<div class="line"><a id="l03653" name="l03653"></a><span class="lineno"> 3653</span> </div>
-<div class="line"><a id="l03654" name="l03654"></a><span class="lineno"> 3654</span>  MM = Teuchos::null;</div>
-<div class="line"><a id="l03655" name="l03655"></a><span class="lineno"> 3655</span>  MM = rcp(<span class="keyword">new</span> <a class="code hl_class" href="classTpetra_1_1Details_1_1ProfilingRegion.html">Tpetra::Details::ProfilingRegion</a>(<span class="stringliteral">&quot;TpetraExt: add: diff col map kernel: unsorted numeric&quot;</span>));</div>
-<div class="line"><a id="l03656" name="l03656"></a><span class="lineno"> 3656</span>  KokkosSparse::spadd_numeric(&amp;handle,</div>
-<div class="line"><a id="l03657" name="l03657"></a><span class="lineno"> 3657</span>                              nrows, A.numCols(),</div>
-<div class="line"><a id="l03658" name="l03658"></a><span class="lineno"> 3658</span>                              Arowptrs, AcolindsConverted, Avals, scalarA,</div>
-<div class="line"><a id="l03659" name="l03659"></a><span class="lineno"> 3659</span>                              Browptrs, BcolindsConverted, Bvals, scalarB,</div>
-<div class="line"><a id="l03660" name="l03660"></a><span class="lineno"> 3660</span>                              Crowptrs, Ccolinds, Cvals);</div>
-<div class="line"><a id="l03661" name="l03661"></a><span class="lineno"> 3661</span>}</div>
-<div class="line"><a id="l03662" name="l03662"></a><span class="lineno"> 3662</span> </div>
-<div class="line"><a id="l03663" name="l03663"></a><span class="lineno"> 3663</span>}  <span class="comment">// namespace MMdetails</span></div>
-<div class="line"><a id="l03664" name="l03664"></a><span class="lineno"> 3664</span> </div>
-<div class="line"><a id="l03665" name="l03665"></a><span class="lineno"> 3665</span>}  <span class="comment">// End namespace Tpetra</span></div>
-<div class="line"><a id="l03666" name="l03666"></a><span class="lineno"> 3666</span> </div>
-<div class="line"><a id="l03667" name="l03667"></a><span class="lineno"> 3667</span><span class="comment">/*********************************************************************************************************/</span></div>
-<div class="line"><a id="l03668" name="l03668"></a><span class="lineno"> 3668</span><span class="comment">//</span></div>
-<div class="line"><a id="l03669" name="l03669"></a><span class="lineno"> 3669</span><span class="comment">// Explicit instantiation macro</span></div>
-<div class="line"><a id="l03670" name="l03670"></a><span class="lineno"> 3670</span><span class="comment">//</span></div>
-<div class="line"><a id="l03671" name="l03671"></a><span class="lineno"> 3671</span><span class="comment">// Must be expanded from within the Tpetra namespace!</span></div>
-<div class="line"><a id="l03672" name="l03672"></a><span class="lineno"> 3672</span><span class="comment">//</span></div>
-<div class="line"><a id="l03673" name="l03673"></a><span class="lineno"> 3673</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceTpetra.html">Tpetra</a> {</div>
-<div class="line"><a id="l03674" name="l03674"></a><span class="lineno"> 3674</span> </div>
-<div class="line"><a id="l03675" name="l03675"></a><span class="lineno"> 3675</span><span class="preprocessor">#define TPETRA_MATRIXMATRIX_INSTANT(SCALAR, LO, GO, NODE)                                                                             \</span></div>
-<div class="line"><a id="l03676" name="l03676"></a><span class="lineno"> 3676</span><span class="preprocessor">  template void MatrixMatrix::Multiply(                                                                                               \</span></div>
-<div class="line"><a id="l03677" name="l03677"></a><span class="lineno"> 3677</span><span class="preprocessor">      const CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; A,                                                                                       \</span></div>
-<div class="line"><a id="l03678" name="l03678"></a><span class="lineno"> 3678</span><span class="preprocessor">      bool transposeA,                                                                                                                \</span></div>
-<div class="line"><a id="l03679" name="l03679"></a><span class="lineno"> 3679</span><span class="preprocessor">      const CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; B,                                                                                       \</span></div>
-<div class="line"><a id="l03680" name="l03680"></a><span class="lineno"> 3680</span><span class="preprocessor">      bool transposeB,                                                                                                                \</span></div>
-<div class="line"><a id="l03681" name="l03681"></a><span class="lineno"> 3681</span><span class="preprocessor">      CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; C,                                                                                             \</span></div>
-<div class="line"><a id="l03682" name="l03682"></a><span class="lineno"> 3682</span><span class="preprocessor">      bool call_FillComplete_on_result,                                                                                               \</span></div>
-<div class="line"><a id="l03683" name="l03683"></a><span class="lineno"> 3683</span><span class="preprocessor">      const std::string&amp; label,                                                                                                       \</span></div>
-<div class="line"><a id="l03684" name="l03684"></a><span class="lineno"> 3684</span><span class="preprocessor">      const Teuchos::RCP&lt;Teuchos::ParameterList&gt;&amp; params);                                                                            \</span></div>
-<div class="line"><a id="l03685" name="l03685"></a><span class="lineno"> 3685</span><span class="preprocessor">                                                                                                                                      \</span></div>
-<div class="line"><a id="l03686" name="l03686"></a><span class="lineno"> 3686</span><span class="preprocessor">  template void MatrixMatrix::Multiply(                                                                                               \</span></div>
-<div class="line"><a id="l03687" name="l03687"></a><span class="lineno"> 3687</span><span class="preprocessor">      const Teuchos::RCP&lt;const BlockCrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&gt;&amp; A,                                                              \</span></div>
-<div class="line"><a id="l03688" name="l03688"></a><span class="lineno"> 3688</span><span class="preprocessor">      bool transposeA,                                                                                                                \</span></div>
-<div class="line"><a id="l03689" name="l03689"></a><span class="lineno"> 3689</span><span class="preprocessor">      const Teuchos::RCP&lt;const BlockCrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&gt;&amp; B,                                                              \</span></div>
-<div class="line"><a id="l03690" name="l03690"></a><span class="lineno"> 3690</span><span class="preprocessor">      bool transposeB,                                                                                                                \</span></div>
-<div class="line"><a id="l03691" name="l03691"></a><span class="lineno"> 3691</span><span class="preprocessor">      Teuchos::RCP&lt;BlockCrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&gt;&amp; C,                                                                          \</span></div>
-<div class="line"><a id="l03692" name="l03692"></a><span class="lineno"> 3692</span><span class="preprocessor">      const std::string&amp; label);                                                                                                      \</span></div>
-<div class="line"><a id="l03693" name="l03693"></a><span class="lineno"> 3693</span><span class="preprocessor">                                                                                                                                      \</span></div>
-<div class="line"><a id="l03694" name="l03694"></a><span class="lineno"> 3694</span><span class="preprocessor">  template void MatrixMatrix::Jacobi(                                                                                                 \</span></div>
-<div class="line"><a id="l03695" name="l03695"></a><span class="lineno"> 3695</span><span class="preprocessor">      SCALAR omega,                                                                                                                   \</span></div>
-<div class="line"><a id="l03696" name="l03696"></a><span class="lineno"> 3696</span><span class="preprocessor">      const Vector&lt;SCALAR, LO, GO, NODE&gt;&amp; Dinv,                                                                                       \</span></div>
-<div class="line"><a id="l03697" name="l03697"></a><span class="lineno"> 3697</span><span class="preprocessor">      const CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; A,                                                                                       \</span></div>
-<div class="line"><a id="l03698" name="l03698"></a><span class="lineno"> 3698</span><span class="preprocessor">      const CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; B,                                                                                       \</span></div>
-<div class="line"><a id="l03699" name="l03699"></a><span class="lineno"> 3699</span><span class="preprocessor">      CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; C,                                                                                             \</span></div>
-<div class="line"><a id="l03700" name="l03700"></a><span class="lineno"> 3700</span><span class="preprocessor">      bool call_FillComplete_on_result,                                                                                               \</span></div>
-<div class="line"><a id="l03701" name="l03701"></a><span class="lineno"> 3701</span><span class="preprocessor">      const std::string&amp; label,                                                                                                       \</span></div>
-<div class="line"><a id="l03702" name="l03702"></a><span class="lineno"> 3702</span><span class="preprocessor">      const Teuchos::RCP&lt;Teuchos::ParameterList&gt;&amp; params);                                                                            \</span></div>
-<div class="line"><a id="l03703" name="l03703"></a><span class="lineno"> 3703</span><span class="preprocessor">                                                                                                                                      \</span></div>
-<div class="line"><a id="l03704" name="l03704"></a><span class="lineno"> 3704</span><span class="preprocessor">  template void MatrixMatrix::Add(                                                                                                    \</span></div>
-<div class="line"><a id="l03705" name="l03705"></a><span class="lineno"> 3705</span><span class="preprocessor">      const CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; A,                                                                                       \</span></div>
-<div class="line"><a id="l03706" name="l03706"></a><span class="lineno"> 3706</span><span class="preprocessor">      bool transposeA,                                                                                                                \</span></div>
-<div class="line"><a id="l03707" name="l03707"></a><span class="lineno"> 3707</span><span class="preprocessor">      SCALAR scalarA,                                                                                                                 \</span></div>
-<div class="line"><a id="l03708" name="l03708"></a><span class="lineno"> 3708</span><span class="preprocessor">      const CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; B,                                                                                       \</span></div>
-<div class="line"><a id="l03709" name="l03709"></a><span class="lineno"> 3709</span><span class="preprocessor">      bool transposeB,                                                                                                                \</span></div>
-<div class="line"><a id="l03710" name="l03710"></a><span class="lineno"> 3710</span><span class="preprocessor">      SCALAR scalarB,                                                                                                                 \</span></div>
-<div class="line"><a id="l03711" name="l03711"></a><span class="lineno"> 3711</span><span class="preprocessor">      Teuchos::RCP&lt;CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&gt;&amp; C);                                                                              \</span></div>
-<div class="line"><a id="l03712" name="l03712"></a><span class="lineno"> 3712</span><span class="preprocessor">                                                                                                                                      \</span></div>
-<div class="line"><a id="l03713" name="l03713"></a><span class="lineno"> 3713</span><span class="preprocessor">  template void MatrixMatrix::Add(                                                                                                    \</span></div>
-<div class="line"><a id="l03714" name="l03714"></a><span class="lineno"> 3714</span><span class="preprocessor">      const CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; A,                                                                                       \</span></div>
-<div class="line"><a id="l03715" name="l03715"></a><span class="lineno"> 3715</span><span class="preprocessor">      bool transposeA,                                                                                                                \</span></div>
-<div class="line"><a id="l03716" name="l03716"></a><span class="lineno"> 3716</span><span class="preprocessor">      SCALAR scalarA,                                                                                                                 \</span></div>
-<div class="line"><a id="l03717" name="l03717"></a><span class="lineno"> 3717</span><span class="preprocessor">      const CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; B,                                                                                       \</span></div>
-<div class="line"><a id="l03718" name="l03718"></a><span class="lineno"> 3718</span><span class="preprocessor">      bool transposeB,                                                                                                                \</span></div>
-<div class="line"><a id="l03719" name="l03719"></a><span class="lineno"> 3719</span><span class="preprocessor">      SCALAR scalarB,                                                                                                                 \</span></div>
-<div class="line"><a id="l03720" name="l03720"></a><span class="lineno"> 3720</span><span class="preprocessor">      const Teuchos::RCP&lt;CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&gt;&amp; C);                                                                        \</span></div>
-<div class="line"><a id="l03721" name="l03721"></a><span class="lineno"> 3721</span><span class="preprocessor">                                                                                                                                      \</span></div>
-<div class="line"><a id="l03722" name="l03722"></a><span class="lineno"> 3722</span><span class="preprocessor">  template void MatrixMatrix::Add(                                                                                                    \</span></div>
-<div class="line"><a id="l03723" name="l03723"></a><span class="lineno"> 3723</span><span class="preprocessor">      const CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; A,                                                                                       \</span></div>
-<div class="line"><a id="l03724" name="l03724"></a><span class="lineno"> 3724</span><span class="preprocessor">      bool transposeA,                                                                                                                \</span></div>
-<div class="line"><a id="l03725" name="l03725"></a><span class="lineno"> 3725</span><span class="preprocessor">      SCALAR scalarA,                                                                                                                 \</span></div>
-<div class="line"><a id="l03726" name="l03726"></a><span class="lineno"> 3726</span><span class="preprocessor">      CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; B,                                                                                             \</span></div>
-<div class="line"><a id="l03727" name="l03727"></a><span class="lineno"> 3727</span><span class="preprocessor">      SCALAR scalarB);                                                                                                                \</span></div>
-<div class="line"><a id="l03728" name="l03728"></a><span class="lineno"> 3728</span><span class="preprocessor">                                                                                                                                      \</span></div>
-<div class="line"><a id="l03729" name="l03729"></a><span class="lineno"> 3729</span><span class="preprocessor">  template Teuchos::RCP&lt;CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&gt;                                                                              \</span></div>
-<div class="line"><a id="l03730" name="l03730"></a><span class="lineno"> 3730</span><span class="preprocessor">  MatrixMatrix::add&lt;SCALAR, LO, GO, NODE&gt;(const SCALAR&amp; alpha,                                                                        \</span></div>
-<div class="line"><a id="l03731" name="l03731"></a><span class="lineno"> 3731</span><span class="preprocessor">                                          const bool transposeA,                                                                      \</span></div>
-<div class="line"><a id="l03732" name="l03732"></a><span class="lineno"> 3732</span><span class="preprocessor">                                          const CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; A,                                                   \</span></div>
-<div class="line"><a id="l03733" name="l03733"></a><span class="lineno"> 3733</span><span class="preprocessor">                                          const SCALAR&amp; beta,                                                                         \</span></div>
-<div class="line"><a id="l03734" name="l03734"></a><span class="lineno"> 3734</span><span class="preprocessor">                                          const bool transposeB,                                                                      \</span></div>
-<div class="line"><a id="l03735" name="l03735"></a><span class="lineno"> 3735</span><span class="preprocessor">                                          const CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; B,                                                   \</span></div>
-<div class="line"><a id="l03736" name="l03736"></a><span class="lineno"> 3736</span><span class="preprocessor">                                          const Teuchos::RCP&lt;const Map&lt;LO, GO, NODE&gt;&gt;&amp; domainMap,                                     \</span></div>
-<div class="line"><a id="l03737" name="l03737"></a><span class="lineno"> 3737</span><span class="preprocessor">                                          const Teuchos::RCP&lt;const Map&lt;LO, GO, NODE&gt;&gt;&amp; rangeMap,                                      \</span></div>
-<div class="line"><a id="l03738" name="l03738"></a><span class="lineno"> 3738</span><span class="preprocessor">                                          const Teuchos::RCP&lt;Teuchos::ParameterList&gt;&amp; params);                                        \</span></div>
-<div class="line"><a id="l03739" name="l03739"></a><span class="lineno"> 3739</span><span class="preprocessor">                                                                                                                                      \</span></div>
-<div class="line"><a id="l03740" name="l03740"></a><span class="lineno"> 3740</span><span class="preprocessor">  template void                                                                                                                       \</span></div>
-<div class="line"><a id="l03741" name="l03741"></a><span class="lineno"> 3741</span><span class="preprocessor">  MatrixMatrix::add&lt;SCALAR, LO, GO, NODE&gt;(const SCALAR&amp; alpha,                                                                        \</span></div>
-<div class="line"><a id="l03742" name="l03742"></a><span class="lineno"> 3742</span><span class="preprocessor">                                          const bool transposeA,                                                                      \</span></div>
-<div class="line"><a id="l03743" name="l03743"></a><span class="lineno"> 3743</span><span class="preprocessor">                                          const CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; A,                                                   \</span></div>
-<div class="line"><a id="l03744" name="l03744"></a><span class="lineno"> 3744</span><span class="preprocessor">                                          const SCALAR&amp; beta,                                                                         \</span></div>
-<div class="line"><a id="l03745" name="l03745"></a><span class="lineno"> 3745</span><span class="preprocessor">                                          const bool transposeB,                                                                      \</span></div>
-<div class="line"><a id="l03746" name="l03746"></a><span class="lineno"> 3746</span><span class="preprocessor">                                          const CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; B,                                                   \</span></div>
-<div class="line"><a id="l03747" name="l03747"></a><span class="lineno"> 3747</span><span class="preprocessor">                                          CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; C,                                                         \</span></div>
-<div class="line"><a id="l03748" name="l03748"></a><span class="lineno"> 3748</span><span class="preprocessor">                                          const Teuchos::RCP&lt;const Map&lt;LO, GO, NODE&gt;&gt;&amp; domainMap,                                     \</span></div>
-<div class="line"><a id="l03749" name="l03749"></a><span class="lineno"> 3749</span><span class="preprocessor">                                          const Teuchos::RCP&lt;const Map&lt;LO, GO, NODE&gt;&gt;&amp; rangeMap,                                      \</span></div>
-<div class="line"><a id="l03750" name="l03750"></a><span class="lineno"> 3750</span><span class="preprocessor">                                          const Teuchos::RCP&lt;Teuchos::ParameterList&gt;&amp; params);                                        \</span></div>
-<div class="line"><a id="l03751" name="l03751"></a><span class="lineno"> 3751</span><span class="preprocessor">                                                                                                                                      \</span></div>
-<div class="line"><a id="l03752" name="l03752"></a><span class="lineno"> 3752</span><span class="preprocessor">  template struct MMdetails::AddKernels&lt;SCALAR, LO, GO, NODE&gt;;                                                                        \</span></div>
-<div class="line"><a id="l03753" name="l03753"></a><span class="lineno"> 3753</span><span class="preprocessor">                                                                                                                                      \</span></div>
-<div class="line"><a id="l03754" name="l03754"></a><span class="lineno"> 3754</span><span class="preprocessor">  template void MMdetails::import_and_extract_views&lt;SCALAR, LO, GO, NODE&gt;(const CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; M,                   \</span></div>
-<div class="line"><a id="l03755" name="l03755"></a><span class="lineno"> 3755</span><span class="preprocessor">                                                                          Teuchos::RCP&lt;const Map&lt;LO, GO, NODE&gt;&gt; targetMap,            \</span></div>
-<div class="line"><a id="l03756" name="l03756"></a><span class="lineno"> 3756</span><span class="preprocessor">                                                                          CrsMatrixStruct&lt;SCALAR, LO, GO, NODE&gt;&amp; Mview,               \</span></div>
-<div class="line"><a id="l03757" name="l03757"></a><span class="lineno"> 3757</span><span class="preprocessor">                                                                          Teuchos::RCP&lt;const Import&lt;LO, GO, NODE&gt;&gt; prototypeImporter, \</span></div>
-<div class="line"><a id="l03758" name="l03758"></a><span class="lineno"> 3758</span><span class="preprocessor">                                                                          bool userAssertsThereAreNoRemotes,                          \</span></div>
-<div class="line"><a id="l03759" name="l03759"></a><span class="lineno"> 3759</span><span class="preprocessor">                                                                          const std::string&amp; label,                                   \</span></div>
-<div class="line"><a id="l03760" name="l03760"></a><span class="lineno"> 3760</span><span class="preprocessor">                                                                          const Teuchos::RCP&lt;Teuchos::ParameterList&gt;&amp; params);        \</span></div>
-<div class="line"><a id="l03761" name="l03761"></a><span class="lineno"> 3761</span><span class="preprocessor">                                                                                                                                      \</span></div>
-<div class="line"><a id="l03762" name="l03762"></a><span class="lineno"> 3762</span><span class="preprocessor">  template void MMdetails::import_and_extract_views&lt;SCALAR, LO, GO, NODE&gt;(const BlockCrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; M,              \</span></div>
-<div class="line"><a id="l03763" name="l03763"></a><span class="lineno"> 3763</span><span class="preprocessor">                                                                          Teuchos::RCP&lt;const Map&lt;LO, GO, NODE&gt;&gt; targetMap,            \</span></div>
-<div class="line"><a id="l03764" name="l03764"></a><span class="lineno"> 3764</span><span class="preprocessor">                                                                          BlockCrsMatrixStruct&lt;SCALAR, LO, GO, NODE&gt;&amp; Mview,          \</span></div>
-<div class="line"><a id="l03765" name="l03765"></a><span class="lineno"> 3765</span><span class="preprocessor">                                                                          Teuchos::RCP&lt;const Import&lt;LO, GO, NODE&gt;&gt; prototypeImporter, \</span></div>
-<div class="line"><a id="l03766" name="l03766"></a><span class="lineno"> 3766</span><span class="preprocessor">                                                                          bool userAssertsThereAreNoRemotes);</span></div>
-<div class="line"><a id="l03767" name="l03767"></a><span class="lineno"> 3767</span>}  <span class="comment">// End namespace Tpetra</span></div>
-<div class="line"><a id="l03768" name="l03768"></a><span class="lineno"> 3768</span> </div>
-<div class="line"><a id="l03769" name="l03769"></a><span class="lineno"> 3769</span><span class="preprocessor">#endif  </span><span class="comment">// TPETRA_MATRIXMATRIX_DEF_HPP</span></div>
+<div class="line"><a id="l03430" name="l03430"></a><span class="lineno"> 3430</span>    <span class="keyword">const</span> LocalOrdinal LO_INVALID = Teuchos::OrdinalTraits&lt;LocalOrdinal&gt;::invalid();</div>
+<div class="line"><a id="l03431" name="l03431"></a><span class="lineno"> 3431</span> </div>
+<div class="line"><a id="l03432" name="l03432"></a><span class="lineno"> 3432</span>    <span class="comment">// Use a Kokkos::parallel_scan to build the rowptr</span></div>
+<div class="line"><a id="l03433" name="l03433"></a><span class="lineno"> 3433</span>    <span class="keyword">typedef</span> <span class="keyword">typename</span> Node::execution_space execution_space;</div>
+<div class="line"><a id="l03434" name="l03434"></a><span class="lineno"> 3434</span>    <span class="keyword">typedef</span> Kokkos::RangePolicy&lt;execution_space, size_t&gt; range_type;</div>
+<div class="line"><a id="l03435" name="l03435"></a><span class="lineno"> 3435</span>    Kokkos::parallel_scan(</div>
+<div class="line"><a id="l03436" name="l03436"></a><span class="lineno"> 3436</span>        <span class="stringliteral">&quot;Tpetra_MatrixMatrix_merge_matrices_buildRowptr&quot;</span>, range_type(0, merge_numrows),</div>
+<div class="line"><a id="l03437" name="l03437"></a><span class="lineno"> 3437</span>        KOKKOS_LAMBDA(<span class="keyword">const</span> <span class="keywordtype">size_t</span> i, <span class="keywordtype">size_t</span>&amp; update, <span class="keyword">const</span> <span class="keywordtype">bool</span> <span class="keyword">final</span>) {</div>
+<div class="line"><a id="l03438" name="l03438"></a><span class="lineno"> 3438</span>          <span class="keywordflow">if</span> (<span class="keyword">final</span>) Mrowptr(i) = update;</div>
+<div class="line"><a id="l03439" name="l03439"></a><span class="lineno"> 3439</span>          <span class="comment">// Get the row count</span></div>
+<div class="line"><a id="l03440" name="l03440"></a><span class="lineno"> 3440</span>          <span class="keywordtype">size_t</span> ct = 0;</div>
+<div class="line"><a id="l03441" name="l03441"></a><span class="lineno"> 3441</span>          <span class="keywordflow">if</span> (Acol2Brow(i) != LO_INVALID)</div>
+<div class="line"><a id="l03442" name="l03442"></a><span class="lineno"> 3442</span>            ct = Bk.graph.row_map(Acol2Brow(i) + 1) - Bk.graph.row_map(Acol2Brow(i));</div>
+<div class="line"><a id="l03443" name="l03443"></a><span class="lineno"> 3443</span>          <span class="keywordflow">else</span></div>
+<div class="line"><a id="l03444" name="l03444"></a><span class="lineno"> 3444</span>            ct = Iks.graph.row_map(Acol2Irow(i) + 1) - Iks.graph.row_map(Acol2Irow(i));</div>
+<div class="line"><a id="l03445" name="l03445"></a><span class="lineno"> 3445</span>          update += ct;</div>
+<div class="line"><a id="l03446" name="l03446"></a><span class="lineno"> 3446</span> </div>
+<div class="line"><a id="l03447" name="l03447"></a><span class="lineno"> 3447</span>          <span class="keywordflow">if</span> (<span class="keyword">final</span> &amp;&amp; i + 1 == merge_numrows)</div>
+<div class="line"><a id="l03448" name="l03448"></a><span class="lineno"> 3448</span>            Mrowptr(i + 1) = update;</div>
+<div class="line"><a id="l03449" name="l03449"></a><span class="lineno"> 3449</span>        });</div>
+<div class="line"><a id="l03450" name="l03450"></a><span class="lineno"> 3450</span> </div>
+<div class="line"><a id="l03451" name="l03451"></a><span class="lineno"> 3451</span>    <span class="comment">// Allocate nnz</span></div>
+<div class="line"><a id="l03452" name="l03452"></a><span class="lineno"> 3452</span>    <span class="keywordtype">size_t</span> merge_nnz    = ::Tpetra::Details::getEntryOnHost(Mrowptr, merge_numrows);</div>
+<div class="line"><a id="l03453" name="l03453"></a><span class="lineno"> 3453</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> blocksize = Ak.blockDim();</div>
+<div class="line"><a id="l03454" name="l03454"></a><span class="lineno"> 3454</span>    lno_nnz_view_t Mcolind(Kokkos::ViewAllocateWithoutInitializing(<span class="stringliteral">&quot;Mcolind&quot;</span>), merge_nnz);</div>
+<div class="line"><a id="l03455" name="l03455"></a><span class="lineno"> 3455</span>    scalar_view_t Mvalues(Kokkos::ViewAllocateWithoutInitializing(<span class="stringliteral">&quot;Mvals&quot;</span>), merge_nnz * blocksize * blocksize);</div>
+<div class="line"><a id="l03456" name="l03456"></a><span class="lineno"> 3456</span> </div>
+<div class="line"><a id="l03457" name="l03457"></a><span class="lineno"> 3457</span>    <span class="comment">// Use a Kokkos::parallel_for to fill the rowptr/colind arrays</span></div>
+<div class="line"><a id="l03458" name="l03458"></a><span class="lineno"> 3458</span>    <span class="keyword">typedef</span> Kokkos::RangePolicy&lt;execution_space, size_t&gt; range_type;</div>
+<div class="line"><a id="l03459" name="l03459"></a><span class="lineno"> 3459</span>    Kokkos::parallel_for(</div>
+<div class="line"><a id="l03460" name="l03460"></a><span class="lineno"> 3460</span>        <span class="stringliteral">&quot;Tpetra_MatrixMatrix_merg_matrices_buildColindValues&quot;</span>, range_type(0, merge_numrows), KOKKOS_LAMBDA(<span class="keyword">const</span> <span class="keywordtype">size_t</span> i) {</div>
+<div class="line"><a id="l03461" name="l03461"></a><span class="lineno"> 3461</span>          <span class="keywordflow">if</span> (Acol2Brow(i) != LO_INVALID) {</div>
+<div class="line"><a id="l03462" name="l03462"></a><span class="lineno"> 3462</span>            <span class="keywordtype">size_t</span> row   = Acol2Brow(i);</div>
+<div class="line"><a id="l03463" name="l03463"></a><span class="lineno"> 3463</span>            <span class="keywordtype">size_t</span> <a class="code hl_function" href="namespaceTpetra_1_1Details_1_1DeepCopyCounter.html#a9edd3c43450c395a83f9d8b5fb025eb2">start</a> = Bk.graph.row_map(row);</div>
+<div class="line"><a id="l03464" name="l03464"></a><span class="lineno"> 3464</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = Mrowptr(i); j &lt; Mrowptr(i + 1); j++) {</div>
+<div class="line"><a id="l03465" name="l03465"></a><span class="lineno"> 3465</span>              Mcolind(j) = Bcol2Ccol(Bk.graph.entries(j - Mrowptr(i) + start));</div>
+<div class="line"><a id="l03466" name="l03466"></a><span class="lineno"> 3466</span> </div>
+<div class="line"><a id="l03467" name="l03467"></a><span class="lineno"> 3467</span>              <span class="keywordflow">for</span> (<span class="keywordtype">int</span> b = 0; b &lt; blocksize * blocksize; ++b) {</div>
+<div class="line"><a id="l03468" name="l03468"></a><span class="lineno"> 3468</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> val_indx   = j * blocksize * blocksize + b;</div>
+<div class="line"><a id="l03469" name="l03469"></a><span class="lineno"> 3469</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> b_val_indx = (j - Mrowptr(i) + <a class="code hl_function" href="namespaceTpetra_1_1Details_1_1DeepCopyCounter.html#a9edd3c43450c395a83f9d8b5fb025eb2">start</a>) * blocksize * blocksize + b;</div>
+<div class="line"><a id="l03470" name="l03470"></a><span class="lineno"> 3470</span>                Mvalues(val_indx)    = Bk.values(b_val_indx);</div>
+<div class="line"><a id="l03471" name="l03471"></a><span class="lineno"> 3471</span>              }</div>
+<div class="line"><a id="l03472" name="l03472"></a><span class="lineno"> 3472</span>            }</div>
+<div class="line"><a id="l03473" name="l03473"></a><span class="lineno"> 3473</span>          } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l03474" name="l03474"></a><span class="lineno"> 3474</span>            <span class="keywordtype">size_t</span> row   = Acol2Irow(i);</div>
+<div class="line"><a id="l03475" name="l03475"></a><span class="lineno"> 3475</span>            <span class="keywordtype">size_t</span> <a class="code hl_function" href="namespaceTpetra_1_1Details_1_1DeepCopyCounter.html#a9edd3c43450c395a83f9d8b5fb025eb2">start</a> = Iks.graph.row_map(row);</div>
+<div class="line"><a id="l03476" name="l03476"></a><span class="lineno"> 3476</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = Mrowptr(i); j &lt; Mrowptr(i + 1); j++) {</div>
+<div class="line"><a id="l03477" name="l03477"></a><span class="lineno"> 3477</span>              Mcolind(j) = Icol2Ccol(Iks.graph.entries(j - Mrowptr(i) + start));</div>
+<div class="line"><a id="l03478" name="l03478"></a><span class="lineno"> 3478</span> </div>
+<div class="line"><a id="l03479" name="l03479"></a><span class="lineno"> 3479</span>              <span class="keywordflow">for</span> (<span class="keywordtype">int</span> b = 0; b &lt; blocksize * blocksize; ++b) {</div>
+<div class="line"><a id="l03480" name="l03480"></a><span class="lineno"> 3480</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> val_indx   = j * blocksize * blocksize + b;</div>
+<div class="line"><a id="l03481" name="l03481"></a><span class="lineno"> 3481</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> b_val_indx = (j - Mrowptr(i) + <a class="code hl_function" href="namespaceTpetra_1_1Details_1_1DeepCopyCounter.html#a9edd3c43450c395a83f9d8b5fb025eb2">start</a>) * blocksize * blocksize + b;</div>
+<div class="line"><a id="l03482" name="l03482"></a><span class="lineno"> 3482</span>                Mvalues(val_indx)    = Iks.values(b_val_indx);</div>
+<div class="line"><a id="l03483" name="l03483"></a><span class="lineno"> 3483</span>              }</div>
+<div class="line"><a id="l03484" name="l03484"></a><span class="lineno"> 3484</span>            }</div>
+<div class="line"><a id="l03485" name="l03485"></a><span class="lineno"> 3485</span>          }</div>
+<div class="line"><a id="l03486" name="l03486"></a><span class="lineno"> 3486</span>        });</div>
+<div class="line"><a id="l03487" name="l03487"></a><span class="lineno"> 3487</span> </div>
+<div class="line"><a id="l03488" name="l03488"></a><span class="lineno"> 3488</span>    <span class="comment">// Build and return merged KokkosSparse matrix</span></div>
+<div class="line"><a id="l03489" name="l03489"></a><span class="lineno"> 3489</span>    KBCRS newmat(<span class="stringliteral">&quot;CrsMatrix&quot;</span>, merge_numrows, mergedNodeNumCols, merge_nnz, Mvalues, Mrowptr, Mcolind, blocksize);</div>
+<div class="line"><a id="l03490" name="l03490"></a><span class="lineno"> 3490</span>    <span class="keywordflow">return</span> newmat;</div>
+<div class="line"><a id="l03491" name="l03491"></a><span class="lineno"> 3491</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l03492" name="l03492"></a><span class="lineno"> 3492</span>    <span class="comment">// We don&#39;t have a Bimport (the easy case)</span></div>
+<div class="line"><a id="l03493" name="l03493"></a><span class="lineno"> 3493</span>    <span class="keywordflow">return</span> Bk;</div>
+<div class="line"><a id="l03494" name="l03494"></a><span class="lineno"> 3494</span>  }</div>
+<div class="line"><a id="l03495" name="l03495"></a><span class="lineno"> 3495</span>}  <span class="comment">// end merge_matrices</span></div>
+<div class="line"><a id="l03496" name="l03496"></a><span class="lineno"> 3496</span> </div>
+<div class="line"><a id="l03497" name="l03497"></a><span class="lineno"> 3497</span><span class="comment">/*********************************************************************************************************/</span></div>
+<div class="line"><a id="l03498" name="l03498"></a><span class="lineno"> 3498</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> SC, <span class="keyword">typename</span> LO, <span class="keyword">typename</span> GO, <span class="keyword">typename</span> NO&gt;</div>
+<div class="line"><a id="l03499" name="l03499"></a><span class="lineno"> 3499</span><span class="keywordtype">void</span> AddKernels&lt;SC, LO, GO, NO&gt;::</div>
+<div class="line"><a id="l03500" name="l03500"></a><span class="lineno"> 3500</span>    addSorted(</div>
+<div class="line"><a id="l03501" name="l03501"></a><span class="lineno"> 3501</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::values_array&amp; Avals,</div>
+<div class="line"><a id="l03502" name="l03502"></a><span class="lineno"> 3502</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::row_ptrs_array_const&amp; Arowptrs,</div>
+<div class="line"><a id="l03503" name="l03503"></a><span class="lineno"> 3503</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::col_inds_array&amp; Acolinds,</div>
+<div class="line"><a id="l03504" name="l03504"></a><span class="lineno"> 3504</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::impl_scalar_type scalarA,</div>
+<div class="line"><a id="l03505" name="l03505"></a><span class="lineno"> 3505</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::values_array&amp; Bvals,</div>
+<div class="line"><a id="l03506" name="l03506"></a><span class="lineno"> 3506</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::row_ptrs_array_const&amp; Browptrs,</div>
+<div class="line"><a id="l03507" name="l03507"></a><span class="lineno"> 3507</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::col_inds_array&amp; Bcolinds,</div>
+<div class="line"><a id="l03508" name="l03508"></a><span class="lineno"> 3508</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::impl_scalar_type scalarB,</div>
+<div class="line"><a id="l03509" name="l03509"></a><span class="lineno"> 3509</span>        GO numGlobalCols,</div>
+<div class="line"><a id="l03510" name="l03510"></a><span class="lineno"> 3510</span>        <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::values_array&amp; Cvals,</div>
+<div class="line"><a id="l03511" name="l03511"></a><span class="lineno"> 3511</span>        <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::row_ptrs_array&amp; Crowptrs,</div>
+<div class="line"><a id="l03512" name="l03512"></a><span class="lineno"> 3512</span>        <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::col_inds_array&amp; Ccolinds) {</div>
+<div class="line"><a id="l03513" name="l03513"></a><span class="lineno"> 3513</span>  <span class="keyword">using </span>Teuchos::rcp;</div>
+<div class="line"><a id="l03514" name="l03514"></a><span class="lineno"> 3514</span>  <span class="keyword">using </span>Teuchos::TimeMonitor;</div>
+<div class="line"><a id="l03515" name="l03515"></a><span class="lineno"> 3515</span>  <span class="keyword">using </span>AddKern = MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;;</div>
+<div class="line"><a id="l03516" name="l03516"></a><span class="lineno"> 3516</span>  TEUCHOS_TEST_FOR_EXCEPTION(Arowptrs.extent(0) != Browptrs.extent(0), std::runtime_error, <span class="stringliteral">&quot;Can&#39;t add matrices with different numbers of rows.&quot;</span>);</div>
+<div class="line"><a id="l03517" name="l03517"></a><span class="lineno"> 3517</span>  <span class="keyword">auto</span> nrows = Arowptrs.extent(0) - 1;</div>
+<div class="line"><a id="l03518" name="l03518"></a><span class="lineno"> 3518</span>  Crowptrs   = row_ptrs_array(Kokkos::ViewAllocateWithoutInitializing(<span class="stringliteral">&quot;C row ptrs&quot;</span>), nrows + 1);</div>
+<div class="line"><a id="l03519" name="l03519"></a><span class="lineno"> 3519</span>  <span class="keyword">typename</span> AddKern::KKH handle;</div>
+<div class="line"><a id="l03520" name="l03520"></a><span class="lineno"> 3520</span>  handle.create_spadd_handle(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l03521" name="l03521"></a><span class="lineno"> 3521</span>  <span class="keyword">auto</span> addHandle = handle.get_spadd_handle();</div>
+<div class="line"><a id="l03522" name="l03522"></a><span class="lineno"> 3522</span> </div>
+<div class="line"><a id="l03523" name="l03523"></a><span class="lineno"> 3523</span>  <span class="keyword">auto</span> MM = rcp(<span class="keyword">new</span> <a class="code hl_class" href="classTpetra_1_1Details_1_1ProfilingRegion.html">Tpetra::Details::ProfilingRegion</a>(<span class="stringliteral">&quot;TpetraExt: add: sorted symbolic&quot;</span>));</div>
+<div class="line"><a id="l03524" name="l03524"></a><span class="lineno"> 3524</span> </div>
+<div class="line"><a id="l03525" name="l03525"></a><span class="lineno"> 3525</span>  KokkosSparse::spadd_symbolic(&amp;handle,</div>
+<div class="line"><a id="l03526" name="l03526"></a><span class="lineno"> 3526</span>                               nrows, numGlobalCols,</div>
+<div class="line"><a id="l03527" name="l03527"></a><span class="lineno"> 3527</span>                               Arowptrs, Acolinds, Browptrs, Bcolinds, Crowptrs);</div>
+<div class="line"><a id="l03528" name="l03528"></a><span class="lineno"> 3528</span>  <span class="comment">// KokkosKernels requires values to be zeroed</span></div>
+<div class="line"><a id="l03529" name="l03529"></a><span class="lineno"> 3529</span>  Cvals    = values_array(<span class="stringliteral">&quot;C values&quot;</span>, addHandle-&gt;get_c_nnz());</div>
+<div class="line"><a id="l03530" name="l03530"></a><span class="lineno"> 3530</span>  Ccolinds = col_inds_array(Kokkos::ViewAllocateWithoutInitializing(<span class="stringliteral">&quot;C colinds&quot;</span>), addHandle-&gt;get_c_nnz());</div>
+<div class="line"><a id="l03531" name="l03531"></a><span class="lineno"> 3531</span> </div>
+<div class="line"><a id="l03532" name="l03532"></a><span class="lineno"> 3532</span>  MM = Teuchos::null;</div>
+<div class="line"><a id="l03533" name="l03533"></a><span class="lineno"> 3533</span>  MM = rcp(<span class="keyword">new</span> <a class="code hl_class" href="classTpetra_1_1Details_1_1ProfilingRegion.html">Tpetra::Details::ProfilingRegion</a>(<span class="stringliteral">&quot;TpetraExt: add: sorted numeric&quot;</span>));</div>
+<div class="line"><a id="l03534" name="l03534"></a><span class="lineno"> 3534</span>  KokkosSparse::spadd_numeric(&amp;handle,</div>
+<div class="line"><a id="l03535" name="l03535"></a><span class="lineno"> 3535</span>                              nrows, numGlobalCols,</div>
+<div class="line"><a id="l03536" name="l03536"></a><span class="lineno"> 3536</span>                              Arowptrs, Acolinds, Avals, scalarA,</div>
+<div class="line"><a id="l03537" name="l03537"></a><span class="lineno"> 3537</span>                              Browptrs, Bcolinds, Bvals, scalarB,</div>
+<div class="line"><a id="l03538" name="l03538"></a><span class="lineno"> 3538</span>                              Crowptrs, Ccolinds, Cvals);</div>
+<div class="line"><a id="l03539" name="l03539"></a><span class="lineno"> 3539</span>}</div>
+<div class="line"><a id="l03540" name="l03540"></a><span class="lineno"> 3540</span> </div>
+<div class="line"><a id="l03541" name="l03541"></a><span class="lineno"> 3541</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> SC, <span class="keyword">typename</span> LO, <span class="keyword">typename</span> GO, <span class="keyword">typename</span> NO&gt;</div>
+<div class="line"><a id="l03542" name="l03542"></a><span class="lineno"> 3542</span><span class="keywordtype">void</span> AddKernels&lt;SC, LO, GO, NO&gt;::</div>
+<div class="line"><a id="l03543" name="l03543"></a><span class="lineno"> 3543</span>    addUnsorted(</div>
+<div class="line"><a id="l03544" name="l03544"></a><span class="lineno"> 3544</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::values_array&amp; Avals,</div>
+<div class="line"><a id="l03545" name="l03545"></a><span class="lineno"> 3545</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::row_ptrs_array_const&amp; Arowptrs,</div>
+<div class="line"><a id="l03546" name="l03546"></a><span class="lineno"> 3546</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::col_inds_array&amp; Acolinds,</div>
+<div class="line"><a id="l03547" name="l03547"></a><span class="lineno"> 3547</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::impl_scalar_type scalarA,</div>
+<div class="line"><a id="l03548" name="l03548"></a><span class="lineno"> 3548</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::values_array&amp; Bvals,</div>
+<div class="line"><a id="l03549" name="l03549"></a><span class="lineno"> 3549</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::row_ptrs_array_const&amp; Browptrs,</div>
+<div class="line"><a id="l03550" name="l03550"></a><span class="lineno"> 3550</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::col_inds_array&amp; Bcolinds,</div>
+<div class="line"><a id="l03551" name="l03551"></a><span class="lineno"> 3551</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::impl_scalar_type scalarB,</div>
+<div class="line"><a id="l03552" name="l03552"></a><span class="lineno"> 3552</span>        GO numGlobalCols,</div>
+<div class="line"><a id="l03553" name="l03553"></a><span class="lineno"> 3553</span>        <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::values_array&amp; Cvals,</div>
+<div class="line"><a id="l03554" name="l03554"></a><span class="lineno"> 3554</span>        <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::row_ptrs_array&amp; Crowptrs,</div>
+<div class="line"><a id="l03555" name="l03555"></a><span class="lineno"> 3555</span>        <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::col_inds_array&amp; Ccolinds) {</div>
+<div class="line"><a id="l03556" name="l03556"></a><span class="lineno"> 3556</span>  <span class="keyword">using </span>Teuchos::rcp;</div>
+<div class="line"><a id="l03557" name="l03557"></a><span class="lineno"> 3557</span>  <span class="keyword">using </span>Teuchos::TimeMonitor;</div>
+<div class="line"><a id="l03558" name="l03558"></a><span class="lineno"> 3558</span>  <span class="keyword">using </span>AddKern = MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;;</div>
+<div class="line"><a id="l03559" name="l03559"></a><span class="lineno"> 3559</span>  TEUCHOS_TEST_FOR_EXCEPTION(Arowptrs.extent(0) != Browptrs.extent(0), std::runtime_error, <span class="stringliteral">&quot;Can&#39;t add matrices with different numbers of rows.&quot;</span>);</div>
+<div class="line"><a id="l03560" name="l03560"></a><span class="lineno"> 3560</span>  <span class="keyword">auto</span> nrows = Arowptrs.extent(0) - 1;</div>
+<div class="line"><a id="l03561" name="l03561"></a><span class="lineno"> 3561</span>  Crowptrs   = row_ptrs_array(Kokkos::ViewAllocateWithoutInitializing(<span class="stringliteral">&quot;C row ptrs&quot;</span>), nrows + 1);</div>
+<div class="line"><a id="l03562" name="l03562"></a><span class="lineno"> 3562</span>  <span class="keyword">typedef</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt; AddKern;</div>
+<div class="line"><a id="l03563" name="l03563"></a><span class="lineno"> 3563</span>  <span class="keyword">typename</span> AddKern::KKH handle;</div>
+<div class="line"><a id="l03564" name="l03564"></a><span class="lineno"> 3564</span>  handle.create_spadd_handle(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l03565" name="l03565"></a><span class="lineno"> 3565</span>  <span class="keyword">auto</span> addHandle = handle.get_spadd_handle();</div>
+<div class="line"><a id="l03566" name="l03566"></a><span class="lineno"> 3566</span>  <span class="keyword">auto</span> MM        = rcp(<span class="keyword">new</span> <a class="code hl_class" href="classTpetra_1_1Details_1_1ProfilingRegion.html">Tpetra::Details::ProfilingRegion</a>(<span class="stringliteral">&quot;TpetraExt: add: unsorted symbolic&quot;</span>));</div>
+<div class="line"><a id="l03567" name="l03567"></a><span class="lineno"> 3567</span> </div>
+<div class="line"><a id="l03568" name="l03568"></a><span class="lineno"> 3568</span>  KokkosSparse::spadd_symbolic(&amp;handle,</div>
+<div class="line"><a id="l03569" name="l03569"></a><span class="lineno"> 3569</span>                               nrows, numGlobalCols,</div>
+<div class="line"><a id="l03570" name="l03570"></a><span class="lineno"> 3570</span>                               Arowptrs, Acolinds, Browptrs, Bcolinds, Crowptrs);</div>
+<div class="line"><a id="l03571" name="l03571"></a><span class="lineno"> 3571</span>  <span class="comment">// Cvals must be zeroed out</span></div>
+<div class="line"><a id="l03572" name="l03572"></a><span class="lineno"> 3572</span>  Cvals    = values_array(<span class="stringliteral">&quot;C values&quot;</span>, addHandle-&gt;get_c_nnz());</div>
+<div class="line"><a id="l03573" name="l03573"></a><span class="lineno"> 3573</span>  Ccolinds = col_inds_array(Kokkos::ViewAllocateWithoutInitializing(<span class="stringliteral">&quot;C colinds&quot;</span>), addHandle-&gt;get_c_nnz());</div>
+<div class="line"><a id="l03574" name="l03574"></a><span class="lineno"> 3574</span>  MM       = Teuchos::null;</div>
+<div class="line"><a id="l03575" name="l03575"></a><span class="lineno"> 3575</span>  MM       = rcp(<span class="keyword">new</span> <a class="code hl_class" href="classTpetra_1_1Details_1_1ProfilingRegion.html">Tpetra::Details::ProfilingRegion</a>(<span class="stringliteral">&quot;TpetraExt: add: unsorted numeric&quot;</span>));</div>
+<div class="line"><a id="l03576" name="l03576"></a><span class="lineno"> 3576</span>  KokkosSparse::spadd_numeric(&amp;handle,</div>
+<div class="line"><a id="l03577" name="l03577"></a><span class="lineno"> 3577</span>                              nrows, numGlobalCols,</div>
+<div class="line"><a id="l03578" name="l03578"></a><span class="lineno"> 3578</span>                              Arowptrs, Acolinds, Avals, scalarA,</div>
+<div class="line"><a id="l03579" name="l03579"></a><span class="lineno"> 3579</span>                              Browptrs, Bcolinds, Bvals, scalarB,</div>
+<div class="line"><a id="l03580" name="l03580"></a><span class="lineno"> 3580</span>                              Crowptrs, Ccolinds, Cvals);</div>
+<div class="line"><a id="l03581" name="l03581"></a><span class="lineno"> 3581</span>}</div>
+<div class="line"><a id="l03582" name="l03582"></a><span class="lineno"> 3582</span> </div>
+<div class="line"><a id="l03583" name="l03583"></a><span class="lineno"> 3583</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> GO,</div>
+<div class="line"><a id="l03584" name="l03584"></a><span class="lineno"> 3584</span>          <span class="keyword">typename</span> LocalIndicesType,</div>
+<div class="line"><a id="l03585" name="l03585"></a><span class="lineno"> 3585</span>          <span class="keyword">typename</span> GlobalIndicesType,</div>
+<div class="line"><a id="l03586" name="l03586"></a><span class="lineno"> 3586</span>          <span class="keyword">typename</span> ColMapType&gt;</div>
+<div class="line"><a id="l03587" name="l03587"></a><span class="lineno"> 3587</span><span class="keyword">struct </span>ConvertLocalToGlobalFunctor {</div>
+<div class="line"><a id="l03588" name="l03588"></a><span class="lineno"> 3588</span>  ConvertLocalToGlobalFunctor(</div>
+<div class="line"><a id="l03589" name="l03589"></a><span class="lineno"> 3589</span>      <span class="keyword">const</span> LocalIndicesType&amp; colindsOrig_,</div>
+<div class="line"><a id="l03590" name="l03590"></a><span class="lineno"> 3590</span>      <span class="keyword">const</span> GlobalIndicesType&amp; colindsConverted_,</div>
+<div class="line"><a id="l03591" name="l03591"></a><span class="lineno"> 3591</span>      <span class="keyword">const</span> ColMapType&amp; colmap_)</div>
+<div class="line"><a id="l03592" name="l03592"></a><span class="lineno"> 3592</span>    : colindsOrig(colindsOrig_)</div>
+<div class="line"><a id="l03593" name="l03593"></a><span class="lineno"> 3593</span>    , colindsConverted(colindsConverted_)</div>
+<div class="line"><a id="l03594" name="l03594"></a><span class="lineno"> 3594</span>    , colmap(colmap_) {}</div>
+<div class="line"><a id="l03595" name="l03595"></a><span class="lineno"> 3595</span>  KOKKOS_INLINE_FUNCTION <span class="keywordtype">void</span></div>
+<div class="line"><a id="l03596" name="l03596"></a><span class="lineno"> 3596</span>  operator()(<span class="keyword">const</span> GO i)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l03597" name="l03597"></a><span class="lineno"> 3597</span>    colindsConverted(i) = colmap.getGlobalElement(colindsOrig(i));</div>
+<div class="line"><a id="l03598" name="l03598"></a><span class="lineno"> 3598</span>  }</div>
+<div class="line"><a id="l03599" name="l03599"></a><span class="lineno"> 3599</span>  LocalIndicesType colindsOrig;</div>
+<div class="line"><a id="l03600" name="l03600"></a><span class="lineno"> 3600</span>  GlobalIndicesType colindsConverted;</div>
+<div class="line"><a id="l03601" name="l03601"></a><span class="lineno"> 3601</span>  ColMapType colmap;</div>
+<div class="line"><a id="l03602" name="l03602"></a><span class="lineno"> 3602</span>};</div>
+<div class="line"><a id="l03603" name="l03603"></a><span class="lineno"> 3603</span> </div>
+<div class="line"><a id="l03604" name="l03604"></a><span class="lineno"> 3604</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> SC, <span class="keyword">typename</span> LO, <span class="keyword">typename</span> GO, <span class="keyword">typename</span> NO&gt;</div>
+<div class="line"><a id="l03605" name="l03605"></a><span class="lineno"> 3605</span><span class="keywordtype">void</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::</div>
+<div class="line"><a id="l03606" name="l03606"></a><span class="lineno"> 3606</span>    convertToGlobalAndAdd(</div>
+<div class="line"><a id="l03607" name="l03607"></a><span class="lineno"> 3607</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::KCRS A,</div>
+<div class="line"><a id="l03608" name="l03608"></a><span class="lineno"> 3608</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::impl_scalar_type scalarA,</div>
+<div class="line"><a id="l03609" name="l03609"></a><span class="lineno"> 3609</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::KCRS B,</div>
+<div class="line"><a id="l03610" name="l03610"></a><span class="lineno"> 3610</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::impl_scalar_type scalarB,</div>
+<div class="line"><a id="l03611" name="l03611"></a><span class="lineno"> 3611</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::local_map_type&amp; AcolMap,</div>
+<div class="line"><a id="l03612" name="l03612"></a><span class="lineno"> 3612</span>        <span class="keyword">const</span> <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::local_map_type&amp; BcolMap,</div>
+<div class="line"><a id="l03613" name="l03613"></a><span class="lineno"> 3613</span>        <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::values_array&amp; Cvals,</div>
+<div class="line"><a id="l03614" name="l03614"></a><span class="lineno"> 3614</span>        <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::row_ptrs_array&amp; Crowptrs,</div>
+<div class="line"><a id="l03615" name="l03615"></a><span class="lineno"> 3615</span>        <span class="keyword">typename</span> MMdetails::AddKernels&lt;SC, LO, GO, NO&gt;::global_col_inds_array&amp; Ccolinds) {</div>
+<div class="line"><a id="l03616" name="l03616"></a><span class="lineno"> 3616</span>  <span class="keyword">using </span>Teuchos::rcp;</div>
+<div class="line"><a id="l03617" name="l03617"></a><span class="lineno"> 3617</span>  <span class="keyword">using </span>Teuchos::TimeMonitor;</div>
+<div class="line"><a id="l03618" name="l03618"></a><span class="lineno"> 3618</span>  <span class="comment">// Need to use a different KokkosKernelsHandle type than other versions,</span></div>
+<div class="line"><a id="l03619" name="l03619"></a><span class="lineno"> 3619</span>  <span class="comment">// since the ordinals are now GO</span></div>
+<div class="line"><a id="l03620" name="l03620"></a><span class="lineno"> 3620</span>  <span class="keyword">using </span>KKH_GO = KokkosKernels::Experimental::KokkosKernelsHandle&lt;size_t, GO, impl_scalar_type,</div>
+<div class="line"><a id="l03621" name="l03621"></a><span class="lineno"> 3621</span>                                                                  <span class="keyword">typename</span> NO::execution_space, <span class="keyword">typename</span> NO::memory_space, <span class="keyword">typename</span> NO::memory_space&gt;;</div>
+<div class="line"><a id="l03622" name="l03622"></a><span class="lineno"> 3622</span> </div>
+<div class="line"><a id="l03623" name="l03623"></a><span class="lineno"> 3623</span>  <span class="keyword">const</span> values_array Avals      = A.values;</div>
+<div class="line"><a id="l03624" name="l03624"></a><span class="lineno"> 3624</span>  <span class="keyword">const</span> values_array Bvals      = B.values;</div>
+<div class="line"><a id="l03625" name="l03625"></a><span class="lineno"> 3625</span>  <span class="keyword">const</span> col_inds_array Acolinds = A.graph.entries;</div>
+<div class="line"><a id="l03626" name="l03626"></a><span class="lineno"> 3626</span>  <span class="keyword">const</span> col_inds_array Bcolinds = B.graph.entries;</div>
+<div class="line"><a id="l03627" name="l03627"></a><span class="lineno"> 3627</span>  <span class="keyword">auto</span> Arowptrs                 = A.graph.row_map;</div>
+<div class="line"><a id="l03628" name="l03628"></a><span class="lineno"> 3628</span>  <span class="keyword">auto</span> Browptrs                 = B.graph.row_map;</div>
+<div class="line"><a id="l03629" name="l03629"></a><span class="lineno"> 3629</span>  global_col_inds_array AcolindsConverted(Kokkos::ViewAllocateWithoutInitializing(<span class="stringliteral">&quot;A colinds (converted)&quot;</span>), Acolinds.extent(0));</div>
+<div class="line"><a id="l03630" name="l03630"></a><span class="lineno"> 3630</span>  global_col_inds_array BcolindsConverted(Kokkos::ViewAllocateWithoutInitializing(<span class="stringliteral">&quot;B colinds (converted)&quot;</span>), Bcolinds.extent(0));</div>
+<div class="line"><a id="l03631" name="l03631"></a><span class="lineno"> 3631</span> </div>
+<div class="line"><a id="l03632" name="l03632"></a><span class="lineno"> 3632</span>  <span class="keyword">auto</span> MM = rcp(<span class="keyword">new</span> <a class="code hl_class" href="classTpetra_1_1Details_1_1ProfilingRegion.html">Tpetra::Details::ProfilingRegion</a>(<span class="stringliteral">&quot;TpetraExt: add: diff col map kernel: column map conversion&quot;</span>));</div>
+<div class="line"><a id="l03633" name="l03633"></a><span class="lineno"> 3633</span> </div>
+<div class="line"><a id="l03634" name="l03634"></a><span class="lineno"> 3634</span>  ConvertLocalToGlobalFunctor&lt;GO, col_inds_array, global_col_inds_array, local_map_type&gt; convertA(Acolinds, AcolindsConverted, AcolMap);</div>
+<div class="line"><a id="l03635" name="l03635"></a><span class="lineno"> 3635</span>  Kokkos::parallel_for(<span class="stringliteral">&quot;Tpetra_MatrixMatrix_convertColIndsA&quot;</span>, range_type(0, Acolinds.extent(0)), convertA);</div>
+<div class="line"><a id="l03636" name="l03636"></a><span class="lineno"> 3636</span>  ConvertLocalToGlobalFunctor&lt;GO, col_inds_array, global_col_inds_array, local_map_type&gt; convertB(Bcolinds, BcolindsConverted, BcolMap);</div>
+<div class="line"><a id="l03637" name="l03637"></a><span class="lineno"> 3637</span>  Kokkos::parallel_for(<span class="stringliteral">&quot;Tpetra_MatrixMatrix_convertColIndsB&quot;</span>, range_type(0, Bcolinds.extent(0)), convertB);</div>
+<div class="line"><a id="l03638" name="l03638"></a><span class="lineno"> 3638</span>  KKH_GO handle;</div>
+<div class="line"><a id="l03639" name="l03639"></a><span class="lineno"> 3639</span>  handle.create_spadd_handle(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l03640" name="l03640"></a><span class="lineno"> 3640</span>  <span class="keyword">auto</span> addHandle = handle.get_spadd_handle();</div>
+<div class="line"><a id="l03641" name="l03641"></a><span class="lineno"> 3641</span>  MM             = Teuchos::null;</div>
+<div class="line"><a id="l03642" name="l03642"></a><span class="lineno"> 3642</span>  MM             = rcp(<span class="keyword">new</span> <a class="code hl_class" href="classTpetra_1_1Details_1_1ProfilingRegion.html">Tpetra::Details::ProfilingRegion</a>(<span class="stringliteral">&quot;TpetraExt: add: diff col map kernel: unsorted symbolic&quot;</span>));</div>
+<div class="line"><a id="l03643" name="l03643"></a><span class="lineno"> 3643</span>  <span class="keyword">auto</span> nrows     = Arowptrs.extent(0) - 1;</div>
+<div class="line"><a id="l03644" name="l03644"></a><span class="lineno"> 3644</span>  Crowptrs       = row_ptrs_array(Kokkos::ViewAllocateWithoutInitializing(<span class="stringliteral">&quot;C row ptrs&quot;</span>), nrows + 1);</div>
+<div class="line"><a id="l03645" name="l03645"></a><span class="lineno"> 3645</span>  KokkosSparse::spadd_symbolic(&amp;handle,</div>
+<div class="line"><a id="l03646" name="l03646"></a><span class="lineno"> 3646</span>                               nrows, A.numCols(),</div>
+<div class="line"><a id="l03647" name="l03647"></a><span class="lineno"> 3647</span>                               Arowptrs, AcolindsConverted, Browptrs, BcolindsConverted, Crowptrs);</div>
+<div class="line"><a id="l03648" name="l03648"></a><span class="lineno"> 3648</span>  Cvals    = values_array(<span class="stringliteral">&quot;C values&quot;</span>, addHandle-&gt;get_c_nnz());</div>
+<div class="line"><a id="l03649" name="l03649"></a><span class="lineno"> 3649</span>  Ccolinds = global_col_inds_array(Kokkos::ViewAllocateWithoutInitializing(<span class="stringliteral">&quot;C colinds&quot;</span>), addHandle-&gt;get_c_nnz());</div>
+<div class="line"><a id="l03650" name="l03650"></a><span class="lineno"> 3650</span> </div>
+<div class="line"><a id="l03651" name="l03651"></a><span class="lineno"> 3651</span>  MM = Teuchos::null;</div>
+<div class="line"><a id="l03652" name="l03652"></a><span class="lineno"> 3652</span>  MM = rcp(<span class="keyword">new</span> <a class="code hl_class" href="classTpetra_1_1Details_1_1ProfilingRegion.html">Tpetra::Details::ProfilingRegion</a>(<span class="stringliteral">&quot;TpetraExt: add: diff col map kernel: unsorted numeric&quot;</span>));</div>
+<div class="line"><a id="l03653" name="l03653"></a><span class="lineno"> 3653</span>  KokkosSparse::spadd_numeric(&amp;handle,</div>
+<div class="line"><a id="l03654" name="l03654"></a><span class="lineno"> 3654</span>                              nrows, A.numCols(),</div>
+<div class="line"><a id="l03655" name="l03655"></a><span class="lineno"> 3655</span>                              Arowptrs, AcolindsConverted, Avals, scalarA,</div>
+<div class="line"><a id="l03656" name="l03656"></a><span class="lineno"> 3656</span>                              Browptrs, BcolindsConverted, Bvals, scalarB,</div>
+<div class="line"><a id="l03657" name="l03657"></a><span class="lineno"> 3657</span>                              Crowptrs, Ccolinds, Cvals);</div>
+<div class="line"><a id="l03658" name="l03658"></a><span class="lineno"> 3658</span>}</div>
+<div class="line"><a id="l03659" name="l03659"></a><span class="lineno"> 3659</span> </div>
+<div class="line"><a id="l03660" name="l03660"></a><span class="lineno"> 3660</span>}  <span class="comment">// namespace MMdetails</span></div>
+<div class="line"><a id="l03661" name="l03661"></a><span class="lineno"> 3661</span> </div>
+<div class="line"><a id="l03662" name="l03662"></a><span class="lineno"> 3662</span>}  <span class="comment">// End namespace Tpetra</span></div>
+<div class="line"><a id="l03663" name="l03663"></a><span class="lineno"> 3663</span> </div>
+<div class="line"><a id="l03664" name="l03664"></a><span class="lineno"> 3664</span><span class="comment">/*********************************************************************************************************/</span></div>
+<div class="line"><a id="l03665" name="l03665"></a><span class="lineno"> 3665</span><span class="comment">//</span></div>
+<div class="line"><a id="l03666" name="l03666"></a><span class="lineno"> 3666</span><span class="comment">// Explicit instantiation macro</span></div>
+<div class="line"><a id="l03667" name="l03667"></a><span class="lineno"> 3667</span><span class="comment">//</span></div>
+<div class="line"><a id="l03668" name="l03668"></a><span class="lineno"> 3668</span><span class="comment">// Must be expanded from within the Tpetra namespace!</span></div>
+<div class="line"><a id="l03669" name="l03669"></a><span class="lineno"> 3669</span><span class="comment">//</span></div>
+<div class="line"><a id="l03670" name="l03670"></a><span class="lineno"> 3670</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceTpetra.html">Tpetra</a> {</div>
+<div class="line"><a id="l03671" name="l03671"></a><span class="lineno"> 3671</span> </div>
+<div class="line"><a id="l03672" name="l03672"></a><span class="lineno"> 3672</span><span class="preprocessor">#define TPETRA_MATRIXMATRIX_INSTANT(SCALAR, LO, GO, NODE)                                                                             \</span></div>
+<div class="line"><a id="l03673" name="l03673"></a><span class="lineno"> 3673</span><span class="preprocessor">  template void MatrixMatrix::Multiply(                                                                                               \</span></div>
+<div class="line"><a id="l03674" name="l03674"></a><span class="lineno"> 3674</span><span class="preprocessor">      const CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; A,                                                                                       \</span></div>
+<div class="line"><a id="l03675" name="l03675"></a><span class="lineno"> 3675</span><span class="preprocessor">      bool transposeA,                                                                                                                \</span></div>
+<div class="line"><a id="l03676" name="l03676"></a><span class="lineno"> 3676</span><span class="preprocessor">      const CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; B,                                                                                       \</span></div>
+<div class="line"><a id="l03677" name="l03677"></a><span class="lineno"> 3677</span><span class="preprocessor">      bool transposeB,                                                                                                                \</span></div>
+<div class="line"><a id="l03678" name="l03678"></a><span class="lineno"> 3678</span><span class="preprocessor">      CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; C,                                                                                             \</span></div>
+<div class="line"><a id="l03679" name="l03679"></a><span class="lineno"> 3679</span><span class="preprocessor">      bool call_FillComplete_on_result,                                                                                               \</span></div>
+<div class="line"><a id="l03680" name="l03680"></a><span class="lineno"> 3680</span><span class="preprocessor">      const std::string&amp; label,                                                                                                       \</span></div>
+<div class="line"><a id="l03681" name="l03681"></a><span class="lineno"> 3681</span><span class="preprocessor">      const Teuchos::RCP&lt;Teuchos::ParameterList&gt;&amp; params);                                                                            \</span></div>
+<div class="line"><a id="l03682" name="l03682"></a><span class="lineno"> 3682</span><span class="preprocessor">                                                                                                                                      \</span></div>
+<div class="line"><a id="l03683" name="l03683"></a><span class="lineno"> 3683</span><span class="preprocessor">  template void MatrixMatrix::Multiply(                                                                                               \</span></div>
+<div class="line"><a id="l03684" name="l03684"></a><span class="lineno"> 3684</span><span class="preprocessor">      const Teuchos::RCP&lt;const BlockCrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&gt;&amp; A,                                                              \</span></div>
+<div class="line"><a id="l03685" name="l03685"></a><span class="lineno"> 3685</span><span class="preprocessor">      bool transposeA,                                                                                                                \</span></div>
+<div class="line"><a id="l03686" name="l03686"></a><span class="lineno"> 3686</span><span class="preprocessor">      const Teuchos::RCP&lt;const BlockCrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&gt;&amp; B,                                                              \</span></div>
+<div class="line"><a id="l03687" name="l03687"></a><span class="lineno"> 3687</span><span class="preprocessor">      bool transposeB,                                                                                                                \</span></div>
+<div class="line"><a id="l03688" name="l03688"></a><span class="lineno"> 3688</span><span class="preprocessor">      Teuchos::RCP&lt;BlockCrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&gt;&amp; C,                                                                          \</span></div>
+<div class="line"><a id="l03689" name="l03689"></a><span class="lineno"> 3689</span><span class="preprocessor">      const std::string&amp; label);                                                                                                      \</span></div>
+<div class="line"><a id="l03690" name="l03690"></a><span class="lineno"> 3690</span><span class="preprocessor">                                                                                                                                      \</span></div>
+<div class="line"><a id="l03691" name="l03691"></a><span class="lineno"> 3691</span><span class="preprocessor">  template void MatrixMatrix::Jacobi(                                                                                                 \</span></div>
+<div class="line"><a id="l03692" name="l03692"></a><span class="lineno"> 3692</span><span class="preprocessor">      SCALAR omega,                                                                                                                   \</span></div>
+<div class="line"><a id="l03693" name="l03693"></a><span class="lineno"> 3693</span><span class="preprocessor">      const Vector&lt;SCALAR, LO, GO, NODE&gt;&amp; Dinv,                                                                                       \</span></div>
+<div class="line"><a id="l03694" name="l03694"></a><span class="lineno"> 3694</span><span class="preprocessor">      const CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; A,                                                                                       \</span></div>
+<div class="line"><a id="l03695" name="l03695"></a><span class="lineno"> 3695</span><span class="preprocessor">      const CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; B,                                                                                       \</span></div>
+<div class="line"><a id="l03696" name="l03696"></a><span class="lineno"> 3696</span><span class="preprocessor">      CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; C,                                                                                             \</span></div>
+<div class="line"><a id="l03697" name="l03697"></a><span class="lineno"> 3697</span><span class="preprocessor">      bool call_FillComplete_on_result,                                                                                               \</span></div>
+<div class="line"><a id="l03698" name="l03698"></a><span class="lineno"> 3698</span><span class="preprocessor">      const std::string&amp; label,                                                                                                       \</span></div>
+<div class="line"><a id="l03699" name="l03699"></a><span class="lineno"> 3699</span><span class="preprocessor">      const Teuchos::RCP&lt;Teuchos::ParameterList&gt;&amp; params);                                                                            \</span></div>
+<div class="line"><a id="l03700" name="l03700"></a><span class="lineno"> 3700</span><span class="preprocessor">                                                                                                                                      \</span></div>
+<div class="line"><a id="l03701" name="l03701"></a><span class="lineno"> 3701</span><span class="preprocessor">  template void MatrixMatrix::Add(                                                                                                    \</span></div>
+<div class="line"><a id="l03702" name="l03702"></a><span class="lineno"> 3702</span><span class="preprocessor">      const CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; A,                                                                                       \</span></div>
+<div class="line"><a id="l03703" name="l03703"></a><span class="lineno"> 3703</span><span class="preprocessor">      bool transposeA,                                                                                                                \</span></div>
+<div class="line"><a id="l03704" name="l03704"></a><span class="lineno"> 3704</span><span class="preprocessor">      SCALAR scalarA,                                                                                                                 \</span></div>
+<div class="line"><a id="l03705" name="l03705"></a><span class="lineno"> 3705</span><span class="preprocessor">      const CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; B,                                                                                       \</span></div>
+<div class="line"><a id="l03706" name="l03706"></a><span class="lineno"> 3706</span><span class="preprocessor">      bool transposeB,                                                                                                                \</span></div>
+<div class="line"><a id="l03707" name="l03707"></a><span class="lineno"> 3707</span><span class="preprocessor">      SCALAR scalarB,                                                                                                                 \</span></div>
+<div class="line"><a id="l03708" name="l03708"></a><span class="lineno"> 3708</span><span class="preprocessor">      Teuchos::RCP&lt;CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&gt;&amp; C);                                                                              \</span></div>
+<div class="line"><a id="l03709" name="l03709"></a><span class="lineno"> 3709</span><span class="preprocessor">                                                                                                                                      \</span></div>
+<div class="line"><a id="l03710" name="l03710"></a><span class="lineno"> 3710</span><span class="preprocessor">  template void MatrixMatrix::Add(                                                                                                    \</span></div>
+<div class="line"><a id="l03711" name="l03711"></a><span class="lineno"> 3711</span><span class="preprocessor">      const CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; A,                                                                                       \</span></div>
+<div class="line"><a id="l03712" name="l03712"></a><span class="lineno"> 3712</span><span class="preprocessor">      bool transposeA,                                                                                                                \</span></div>
+<div class="line"><a id="l03713" name="l03713"></a><span class="lineno"> 3713</span><span class="preprocessor">      SCALAR scalarA,                                                                                                                 \</span></div>
+<div class="line"><a id="l03714" name="l03714"></a><span class="lineno"> 3714</span><span class="preprocessor">      const CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; B,                                                                                       \</span></div>
+<div class="line"><a id="l03715" name="l03715"></a><span class="lineno"> 3715</span><span class="preprocessor">      bool transposeB,                                                                                                                \</span></div>
+<div class="line"><a id="l03716" name="l03716"></a><span class="lineno"> 3716</span><span class="preprocessor">      SCALAR scalarB,                                                                                                                 \</span></div>
+<div class="line"><a id="l03717" name="l03717"></a><span class="lineno"> 3717</span><span class="preprocessor">      const Teuchos::RCP&lt;CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&gt;&amp; C);                                                                        \</span></div>
+<div class="line"><a id="l03718" name="l03718"></a><span class="lineno"> 3718</span><span class="preprocessor">                                                                                                                                      \</span></div>
+<div class="line"><a id="l03719" name="l03719"></a><span class="lineno"> 3719</span><span class="preprocessor">  template void MatrixMatrix::Add(                                                                                                    \</span></div>
+<div class="line"><a id="l03720" name="l03720"></a><span class="lineno"> 3720</span><span class="preprocessor">      const CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; A,                                                                                       \</span></div>
+<div class="line"><a id="l03721" name="l03721"></a><span class="lineno"> 3721</span><span class="preprocessor">      bool transposeA,                                                                                                                \</span></div>
+<div class="line"><a id="l03722" name="l03722"></a><span class="lineno"> 3722</span><span class="preprocessor">      SCALAR scalarA,                                                                                                                 \</span></div>
+<div class="line"><a id="l03723" name="l03723"></a><span class="lineno"> 3723</span><span class="preprocessor">      CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; B,                                                                                             \</span></div>
+<div class="line"><a id="l03724" name="l03724"></a><span class="lineno"> 3724</span><span class="preprocessor">      SCALAR scalarB);                                                                                                                \</span></div>
+<div class="line"><a id="l03725" name="l03725"></a><span class="lineno"> 3725</span><span class="preprocessor">                                                                                                                                      \</span></div>
+<div class="line"><a id="l03726" name="l03726"></a><span class="lineno"> 3726</span><span class="preprocessor">  template Teuchos::RCP&lt;CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&gt;                                                                              \</span></div>
+<div class="line"><a id="l03727" name="l03727"></a><span class="lineno"> 3727</span><span class="preprocessor">  MatrixMatrix::add&lt;SCALAR, LO, GO, NODE&gt;(const SCALAR&amp; alpha,                                                                        \</span></div>
+<div class="line"><a id="l03728" name="l03728"></a><span class="lineno"> 3728</span><span class="preprocessor">                                          const bool transposeA,                                                                      \</span></div>
+<div class="line"><a id="l03729" name="l03729"></a><span class="lineno"> 3729</span><span class="preprocessor">                                          const CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; A,                                                   \</span></div>
+<div class="line"><a id="l03730" name="l03730"></a><span class="lineno"> 3730</span><span class="preprocessor">                                          const SCALAR&amp; beta,                                                                         \</span></div>
+<div class="line"><a id="l03731" name="l03731"></a><span class="lineno"> 3731</span><span class="preprocessor">                                          const bool transposeB,                                                                      \</span></div>
+<div class="line"><a id="l03732" name="l03732"></a><span class="lineno"> 3732</span><span class="preprocessor">                                          const CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; B,                                                   \</span></div>
+<div class="line"><a id="l03733" name="l03733"></a><span class="lineno"> 3733</span><span class="preprocessor">                                          const Teuchos::RCP&lt;const Map&lt;LO, GO, NODE&gt;&gt;&amp; domainMap,                                     \</span></div>
+<div class="line"><a id="l03734" name="l03734"></a><span class="lineno"> 3734</span><span class="preprocessor">                                          const Teuchos::RCP&lt;const Map&lt;LO, GO, NODE&gt;&gt;&amp; rangeMap,                                      \</span></div>
+<div class="line"><a id="l03735" name="l03735"></a><span class="lineno"> 3735</span><span class="preprocessor">                                          const Teuchos::RCP&lt;Teuchos::ParameterList&gt;&amp; params);                                        \</span></div>
+<div class="line"><a id="l03736" name="l03736"></a><span class="lineno"> 3736</span><span class="preprocessor">                                                                                                                                      \</span></div>
+<div class="line"><a id="l03737" name="l03737"></a><span class="lineno"> 3737</span><span class="preprocessor">  template void                                                                                                                       \</span></div>
+<div class="line"><a id="l03738" name="l03738"></a><span class="lineno"> 3738</span><span class="preprocessor">  MatrixMatrix::add&lt;SCALAR, LO, GO, NODE&gt;(const SCALAR&amp; alpha,                                                                        \</span></div>
+<div class="line"><a id="l03739" name="l03739"></a><span class="lineno"> 3739</span><span class="preprocessor">                                          const bool transposeA,                                                                      \</span></div>
+<div class="line"><a id="l03740" name="l03740"></a><span class="lineno"> 3740</span><span class="preprocessor">                                          const CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; A,                                                   \</span></div>
+<div class="line"><a id="l03741" name="l03741"></a><span class="lineno"> 3741</span><span class="preprocessor">                                          const SCALAR&amp; beta,                                                                         \</span></div>
+<div class="line"><a id="l03742" name="l03742"></a><span class="lineno"> 3742</span><span class="preprocessor">                                          const bool transposeB,                                                                      \</span></div>
+<div class="line"><a id="l03743" name="l03743"></a><span class="lineno"> 3743</span><span class="preprocessor">                                          const CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; B,                                                   \</span></div>
+<div class="line"><a id="l03744" name="l03744"></a><span class="lineno"> 3744</span><span class="preprocessor">                                          CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; C,                                                         \</span></div>
+<div class="line"><a id="l03745" name="l03745"></a><span class="lineno"> 3745</span><span class="preprocessor">                                          const Teuchos::RCP&lt;const Map&lt;LO, GO, NODE&gt;&gt;&amp; domainMap,                                     \</span></div>
+<div class="line"><a id="l03746" name="l03746"></a><span class="lineno"> 3746</span><span class="preprocessor">                                          const Teuchos::RCP&lt;const Map&lt;LO, GO, NODE&gt;&gt;&amp; rangeMap,                                      \</span></div>
+<div class="line"><a id="l03747" name="l03747"></a><span class="lineno"> 3747</span><span class="preprocessor">                                          const Teuchos::RCP&lt;Teuchos::ParameterList&gt;&amp; params);                                        \</span></div>
+<div class="line"><a id="l03748" name="l03748"></a><span class="lineno"> 3748</span><span class="preprocessor">                                                                                                                                      \</span></div>
+<div class="line"><a id="l03749" name="l03749"></a><span class="lineno"> 3749</span><span class="preprocessor">  template struct MMdetails::AddKernels&lt;SCALAR, LO, GO, NODE&gt;;                                                                        \</span></div>
+<div class="line"><a id="l03750" name="l03750"></a><span class="lineno"> 3750</span><span class="preprocessor">                                                                                                                                      \</span></div>
+<div class="line"><a id="l03751" name="l03751"></a><span class="lineno"> 3751</span><span class="preprocessor">  template void MMdetails::import_and_extract_views&lt;SCALAR, LO, GO, NODE&gt;(const CrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; M,                   \</span></div>
+<div class="line"><a id="l03752" name="l03752"></a><span class="lineno"> 3752</span><span class="preprocessor">                                                                          Teuchos::RCP&lt;const Map&lt;LO, GO, NODE&gt;&gt; targetMap,            \</span></div>
+<div class="line"><a id="l03753" name="l03753"></a><span class="lineno"> 3753</span><span class="preprocessor">                                                                          CrsMatrixStruct&lt;SCALAR, LO, GO, NODE&gt;&amp; Mview,               \</span></div>
+<div class="line"><a id="l03754" name="l03754"></a><span class="lineno"> 3754</span><span class="preprocessor">                                                                          Teuchos::RCP&lt;const Import&lt;LO, GO, NODE&gt;&gt; prototypeImporter, \</span></div>
+<div class="line"><a id="l03755" name="l03755"></a><span class="lineno"> 3755</span><span class="preprocessor">                                                                          bool userAssertsThereAreNoRemotes,                          \</span></div>
+<div class="line"><a id="l03756" name="l03756"></a><span class="lineno"> 3756</span><span class="preprocessor">                                                                          const std::string&amp; label,                                   \</span></div>
+<div class="line"><a id="l03757" name="l03757"></a><span class="lineno"> 3757</span><span class="preprocessor">                                                                          const Teuchos::RCP&lt;Teuchos::ParameterList&gt;&amp; params);        \</span></div>
+<div class="line"><a id="l03758" name="l03758"></a><span class="lineno"> 3758</span><span class="preprocessor">                                                                                                                                      \</span></div>
+<div class="line"><a id="l03759" name="l03759"></a><span class="lineno"> 3759</span><span class="preprocessor">  template void MMdetails::import_and_extract_views&lt;SCALAR, LO, GO, NODE&gt;(const BlockCrsMatrix&lt;SCALAR, LO, GO, NODE&gt;&amp; M,              \</span></div>
+<div class="line"><a id="l03760" name="l03760"></a><span class="lineno"> 3760</span><span class="preprocessor">                                                                          Teuchos::RCP&lt;const Map&lt;LO, GO, NODE&gt;&gt; targetMap,            \</span></div>
+<div class="line"><a id="l03761" name="l03761"></a><span class="lineno"> 3761</span><span class="preprocessor">                                                                          BlockCrsMatrixStruct&lt;SCALAR, LO, GO, NODE&gt;&amp; Mview,          \</span></div>
+<div class="line"><a id="l03762" name="l03762"></a><span class="lineno"> 3762</span><span class="preprocessor">                                                                          Teuchos::RCP&lt;const Import&lt;LO, GO, NODE&gt;&gt; prototypeImporter, \</span></div>
+<div class="line"><a id="l03763" name="l03763"></a><span class="lineno"> 3763</span><span class="preprocessor">                                                                          bool userAssertsThereAreNoRemotes);</span></div>
+<div class="line"><a id="l03764" name="l03764"></a><span class="lineno"> 3764</span>}  <span class="comment">// End namespace Tpetra</span></div>
+<div class="line"><a id="l03765" name="l03765"></a><span class="lineno"> 3765</span> </div>
+<div class="line"><a id="l03766" name="l03766"></a><span class="lineno"> 3766</span><span class="preprocessor">#endif  </span><span class="comment">// TPETRA_MATRIXMATRIX_DEF_HPP</span></div>
 <div class="ttc" id="aMatrixMarket__Tpetra_8hpp_html"><div class="ttname"><a href="MatrixMarket__Tpetra_8hpp.html">MatrixMarket_Tpetra.hpp</a></div><div class="ttdoc">Matrix Market file readers and writers for Tpetra objects.</div></div>
 <div class="ttc" id="aTpetraExt__MMHelpers__def_8hpp_html"><div class="ttname"><a href="TpetraExt__MMHelpers__def_8hpp.html">TpetraExt_MMHelpers_def.hpp</a></div></div>
 <div class="ttc" id="aTpetraExt__MatrixMatrix__decl_8hpp_html"><div class="ttname"><a href="TpetraExt__MatrixMatrix__decl_8hpp.html">TpetraExt_MatrixMatrix_decl.hpp</a></div></div>
