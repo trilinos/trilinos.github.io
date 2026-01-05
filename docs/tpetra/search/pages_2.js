@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['custom_20operator_0',['Tpetra Lesson 06: Custom Operator',['../Tpetra_Lesson06.html',1,'']]]
+  ['custom_20operator_0',['Tpetra Lesson 06: Custom Operator',['../_tpetra__lesson06.html',1,'']]]
 ];

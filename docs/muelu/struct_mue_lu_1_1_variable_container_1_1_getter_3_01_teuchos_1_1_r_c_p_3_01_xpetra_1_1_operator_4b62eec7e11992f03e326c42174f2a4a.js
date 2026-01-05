@@ -1,0 +1,6 @@
+var struct_mue_lu_1_1_variable_container_1_1_getter_3_01_teuchos_1_1_r_c_p_3_01_xpetra_1_1_operator_4b62eec7e11992f03e326c42174f2a4a =
+[
+    [ "Operator", "struct_mue_lu_1_1_variable_container_1_1_getter_3_01_teuchos_1_1_r_c_p_3_01_xpetra_1_1_operator_4b62eec7e11992f03e326c42174f2a4a.html#ad84bfe8503f3d226277bd2ddbdfdf4ea", null ],
+    [ "Matrix", "struct_mue_lu_1_1_variable_container_1_1_getter_3_01_teuchos_1_1_r_c_p_3_01_xpetra_1_1_operator_4b62eec7e11992f03e326c42174f2a4a.html#aba1fcd64eda95ffda063e3a21b3dfe77", null ],
+    [ "get", "struct_mue_lu_1_1_variable_container_1_1_getter_3_01_teuchos_1_1_r_c_p_3_01_xpetra_1_1_operator_4b62eec7e11992f03e326c42174f2a4a.html#aa7dba355d57270ec8f03cc5cbd294fd0", null ]
+];

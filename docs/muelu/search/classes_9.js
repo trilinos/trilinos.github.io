@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['keepdiagonalfunctor_0',['KeepDiagonalFunctor',['../classMueLu_1_1Misc_1_1KeepDiagonalFunctor.html',1,'MueLu::Misc']]],
-  ['kokkostuninginterface_1',['KokkosTuningInterface',['../classMueLu_1_1KokkosTuningInterface.html',1,'MueLu']]]
+  ['keepdiagonalfunctor_0',['KeepDiagonalFunctor',['../class_mue_lu_1_1_misc_1_1_keep_diagonal_functor.html',1,'MueLu::Misc']]],
+  ['kokkostuninginterface_1',['KokkosTuningInterface',['../class_mue_lu_1_1_kokkos_tuning_interface.html',1,'MueLu']]]
 ];

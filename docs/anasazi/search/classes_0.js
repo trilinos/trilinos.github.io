@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['anasazierror_0',['AnasaziError',['../classAnasazi_1_1AnasaziError.html',1,'Anasazi']]]
+  ['anasazierror_0',['AnasaziError',['../class_anasazi_1_1_anasazi_error.html',1,'Anasazi']]]
 ];

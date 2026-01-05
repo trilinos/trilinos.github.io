@@ -137,7 +137,7 @@ R^n $" src="form_1.png" width="71" height="10"/></picture> and <picture><source 
 <li>
 <p class="startli">Efficient evaluation of field data: Phalanx was designed to support the concept of worksets, although this is NOT REQUIRED. A workset is an arbitrarily sized block of cells (or egdesor faces or nodes) to be evaluated on the local processor. Phalanx evaluates all fields of interest at once for each block of cells. By using the contiguous allocator and correctly sizing the workset to fit in processor cache (if possible), one can arrange all fields to exist in a contiguous block of memory, independent of the data type objects used to store the data (one must still be careful of data alignement issues). By keeping all fields in cache, the code should run much faster. This workset idea will also, in the future, allow for multi-core distrubution of the cell evaluations. <br  />
 </p>
-<p class="interli">NOTE: with the transition to the <a class="el" href="classKokkos_1_1View.html">Kokkos::View</a> as the underlying data type, the contiguous memory allocation is no longer supported as Kokkos will control data placement to maximize hardware locality (NUMA).</p>
+<p class="interli">NOTE: with the transition to the <a class="el" href="class_kokkos_1_1_view.html">Kokkos::View</a> as the underlying data type, the contiguous memory allocation is no longer supported as Kokkos will control data placement to maximize hardware locality (NUMA).</p>
 <p class="endli"></p>
 </li>
 </ul>
@@ -150,7 +150,7 @@ R^n $" src="form_1.png" width="71" height="10"/></picture> and <picture><source 
 <p>Managing these trade-offs can result in application code that both performs well and supports rapid development and extensibility.</p>
 <h1><a class="anchor" id="news"></a>
 News</h1>
-<p>Phalanx has just completed the transition from shards::Array to the <a class="el" href="classKokkos_1_1View.html">Kokkos::View</a>. Leveraging Kokkos, Phalanx is now performance portable to GPUs. The examples and user guide, however, have not been updated to reflect the transition. Please look at the MultiDimensionalArray example and the unit tests for examples on how to use Phalanx. We will update the user guide and other examples asap.</p>
+<p>Phalanx has just completed the transition from shards::Array to the <a class="el" href="class_kokkos_1_1_view.html">Kokkos::View</a>. Leveraging Kokkos, Phalanx is now performance portable to GPUs. The examples and user guide, however, have not been updated to reflect the transition. Please look at the MultiDimensionalArray example and the unit tests for examples on how to use Phalanx. We will update the user guide and other examples asap.</p>
 <h1><a class="anchor" id="bugs"></a>
 Reporting Bugs and Making Enhancement Requests</h1>
 <p>To reports bugs or make enhancement requests, visit the <a href="http://software.sandia.gov/bugzilla/">Trilinos Bugzilla (Bug Tracking) Database</a>, and use the following instructions. </p><ul>

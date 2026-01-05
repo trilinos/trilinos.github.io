@@ -1,18 +1,18 @@
 var searchData=
 [
-  ['uncoupledaggregationfactory_0',['UncoupledAggregationFactory',['../classMueLu_1_1UncoupledAggregationFactory.html',1,'MueLu']]],
-  ['uncoupledindexmanager_1',['UncoupledIndexManager',['../classMueLu_1_1UncoupledIndexManager.html',1,'MueLu']]],
-  ['unscaledcomparison_2',['UnscaledComparison',['../classMueLu_1_1CutDrop_1_1UnscaledComparison.html',1,'MueLu::CutDrop']]],
-  ['unscaleddistancelaplaciancomparison_3',['UnscaledDistanceLaplacianComparison',['../classMueLu_1_1CutDrop_1_1UnscaledDistanceLaplacianComparison.html',1,'MueLu::CutDrop']]],
-  ['unsmooshfactory_4',['UnsmooshFactory',['../classMueLu_1_1UnsmooshFactory.html',1,'MueLu']]],
-  ['unweighteddistancefunctor_5',['UnweightedDistanceFunctor',['../classMueLu_1_1DistanceLaplacian_1_1UnweightedDistanceFunctor.html',1,'MueLu::DistanceLaplacian']]],
-  ['useraggregationfactory_6',['UserAggregationFactory',['../classMueLu_1_1UserAggregationFactory.html',1,'MueLu']]],
-  ['userpartitioner_7',['UserPartitioner',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/classIfpack2_1_1Details_1_1UserPartitioner.html',1,'Ifpack2::Details']]],
-  ['userpfactory_8',['UserPFactory',['../classMueLu_1_1UserPFactory.html',1,'MueLu']]],
-  ['utilities_9',['Utilities',['../classMueLu_1_1Utilities.html',1,'MueLu']]],
-  ['utilities_3c_20double_2c_20int_2c_20int_2c_20xpetra_3a_3aepetranode_20_3e_10',['Utilities&lt; double, int, int, Xpetra::EpetraNode &gt;',['../classMueLu_1_1Utilities_3_01double_00_01int_00_01int_00_01Xpetra_1_1EpetraNode_01_4.html',1,'MueLu']]],
-  ['utilitiesbase_11',['UtilitiesBase',['../classMueLu_1_1UtilitiesBase.html',1,'MueLu']]],
-  ['utilitiesbase_3c_20double_2c_20int_2c_20int_2c_20xpetra_3a_3aepetranode_20_3e_12',['UtilitiesBase&lt; double, int, int, Xpetra::EpetraNode &gt;',['../classMueLu_1_1UtilitiesBase.html',1,'MueLu']]],
-  ['utilitiesbase_3c_20scalar_2c_20defaultlocalordinal_2c_20defaultglobalordinal_2c_20defaultnode_20_3e_13',['UtilitiesBase&lt; Scalar, DefaultLocalOrdinal, DefaultGlobalOrdinal, DefaultNode &gt;',['../classMueLu_1_1UtilitiesBase.html',1,'MueLu']]],
-  ['uzawasmoother_14',['UzawaSmoother',['../classMueLu_1_1UzawaSmoother.html',1,'MueLu']]]
+  ['uncoupledaggregationfactory_0',['UncoupledAggregationFactory',['../class_mue_lu_1_1_uncoupled_aggregation_factory.html',1,'MueLu']]],
+  ['uncoupledindexmanager_1',['UncoupledIndexManager',['../class_mue_lu_1_1_uncoupled_index_manager.html',1,'MueLu']]],
+  ['unscaledcomparison_2',['UnscaledComparison',['../class_mue_lu_1_1_cut_drop_1_1_unscaled_comparison.html',1,'MueLu::CutDrop']]],
+  ['unscaleddistancelaplaciancomparison_3',['UnscaledDistanceLaplacianComparison',['../class_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison.html',1,'MueLu::CutDrop']]],
+  ['unsmooshfactory_4',['UnsmooshFactory',['../class_mue_lu_1_1_unsmoosh_factory.html',1,'MueLu']]],
+  ['unweighteddistancefunctor_5',['UnweightedDistanceFunctor',['../class_mue_lu_1_1_distance_laplacian_1_1_unweighted_distance_functor.html',1,'MueLu::DistanceLaplacian']]],
+  ['useraggregationfactory_6',['UserAggregationFactory',['../class_mue_lu_1_1_user_aggregation_factory.html',1,'MueLu']]],
+  ['userpartitioner_7',['UserPartitioner',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_ifpack2_1_1_details_1_1_user_partitioner.html',1,'Ifpack2::Details']]],
+  ['userpfactory_8',['UserPFactory',['../class_mue_lu_1_1_user_p_factory.html',1,'MueLu']]],
+  ['utilities_9',['Utilities',['../class_mue_lu_1_1_utilities.html',1,'MueLu']]],
+  ['utilities_3c_20double_2c_20int_2c_20int_2c_20xpetra_3a_3aepetranode_20_3e_10',['Utilities&lt; double, int, int, Xpetra::EpetraNode &gt;',['../class_mue_lu_1_1_utilities_3_01double_00_01int_00_01int_00_01_xpetra_1_1_epetra_node_01_4.html',1,'MueLu']]],
+  ['utilitiesbase_11',['UtilitiesBase',['../class_mue_lu_1_1_utilities_base.html',1,'MueLu']]],
+  ['utilitiesbase_3c_20double_2c_20int_2c_20int_2c_20xpetra_3a_3aepetranode_20_3e_12',['UtilitiesBase&lt; double, int, int, Xpetra::EpetraNode &gt;',['../class_mue_lu_1_1_utilities_base.html',1,'MueLu']]],
+  ['utilitiesbase_3c_20scalar_2c_20defaultlocalordinal_2c_20defaultglobalordinal_2c_20defaultnode_20_3e_13',['UtilitiesBase&lt; Scalar, DefaultLocalOrdinal, DefaultGlobalOrdinal, DefaultNode &gt;',['../class_mue_lu_1_1_utilities_base.html',1,'MueLu']]],
+  ['uzawasmoother_14',['UzawaSmoother',['../class_mue_lu_1_1_uzawa_smoother.html',1,'MueLu']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gaussseidelpreconditionerfactory_0',['GaussSeidelPreconditionerFactory',['../classTeko_1_1GaussSeidelPreconditionerFactory.html',1,'Teko']]]
+  ['gaussseidelpreconditionerfactory_0',['GaussSeidelPreconditionerFactory',['../class_teko_1_1_gauss_seidel_preconditioner_factory.html',1,'Teko']]]
 ];

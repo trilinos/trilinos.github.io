@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['householderqr_0',['HouseholderQR',['../classLOCA_1_1BorderedSolver_1_1HouseholderQR.html',1,'LOCA::BorderedSolver']]]
+  ['householderqr_0',['HouseholderQR',['../class_l_o_c_a_1_1_bordered_solver_1_1_householder_q_r.html',1,'LOCA::BorderedSolver']]]
 ];

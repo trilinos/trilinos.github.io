@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['onelevelfactory_0',['OneLevelFactory',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/classIfpack2_1_1Details_1_1OneLevelFactory.html',1,'Ifpack2::Details']]],
-  ['oneptaggregationalgorithm_1',['OnePtAggregationAlgorithm',['../classMueLu_1_1OnePtAggregationAlgorithm.html',1,'MueLu']]],
-  ['optimalsatisfyconstraintsforscalarpdeskernel_2',['optimalSatisfyConstraintsForScalarPDEsKernel',['../structMueLu_1_1optimalSatisfyConstraintsForScalarPDEsKernel.html',1,'MueLu']]],
-  ['overflow_3',['Overflow',['../classMueLu_1_1Exceptions_1_1Overflow.html',1,'MueLu::Exceptions']]],
-  ['overlapgraph_4',['OverlapGraph',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/classIfpack2_1_1OverlapGraph.html',1,'Ifpack2']]],
-  ['overlappingpartitioner_5',['OverlappingPartitioner',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/classIfpack2_1_1OverlappingPartitioner.html',1,'Ifpack2']]],
-  ['overlappingrowgraph_6',['OverlappingRowGraph',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/classIfpack2_1_1Details_1_1OverlappingRowGraph.html',1,'Ifpack2::Details']]],
-  ['overlappingrowmatrix_7',['OverlappingRowMatrix',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/classIfpack2_1_1OverlappingRowMatrix.html',1,'Ifpack2']]]
+  ['onelevelfactory_0',['OneLevelFactory',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_ifpack2_1_1_details_1_1_one_level_factory.html',1,'Ifpack2::Details']]],
+  ['oneptaggregationalgorithm_1',['OnePtAggregationAlgorithm',['../class_mue_lu_1_1_one_pt_aggregation_algorithm.html',1,'MueLu']]],
+  ['optimalsatisfyconstraintsforscalarpdeskernel_2',['optimalSatisfyConstraintsForScalarPDEsKernel',['../struct_mue_lu_1_1optimal_satisfy_constraints_for_scalar_p_d_es_kernel.html',1,'MueLu']]],
+  ['overflow_3',['Overflow',['../class_mue_lu_1_1_exceptions_1_1_overflow.html',1,'MueLu::Exceptions']]],
+  ['overlapgraph_4',['OverlapGraph',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_ifpack2_1_1_overlap_graph.html',1,'Ifpack2']]],
+  ['overlappingpartitioner_5',['OverlappingPartitioner',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_ifpack2_1_1_overlapping_partitioner.html',1,'Ifpack2']]],
+  ['overlappingrowgraph_6',['OverlappingRowGraph',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_ifpack2_1_1_details_1_1_overlapping_row_graph.html',1,'Ifpack2::Details']]],
+  ['overlappingrowmatrix_7',['OverlappingRowMatrix',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_ifpack2_1_1_overlapping_row_matrix.html',1,'Ifpack2']]]
 ];

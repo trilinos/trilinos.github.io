@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['x_5f_0',['X_',['../classBelos_1_1LinearProblem.html#adf09124fd53031b2aea32fb8125daded',1,'Belos::LinearProblem']]]
+  ['x_5f_0',['X_',['../class_belos_1_1_linear_problem.html#adf09124fd53031b2aea32fb8125daded',1,'Belos::LinearProblem']]]
 ];

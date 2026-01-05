@@ -207,7 +207,7 @@ Tangent (parameter sensitivity) </li>
 <li>
 <p class="startli"><b>Storage</b></p>
 <p class="interli">A DataContainer object stores all fields of a particular data type. Each EvaluationContainer holds a vector of DataContainers, one DataContainer for each vaid data type that is associated with that particular evaluation type. One EvaluationContainer is constructed for each evaluation type.</p>
-<p class="interli">NOTE: this concept was needed for memory allocation in the first generation Phalanx library when all fields for an evaluation type were stored contiguously in memory. Since the Kokkos transition, memory in now controlled by the <a class="el" href="classKokkos_1_1View.html">Kokkos::View</a>. We could remove this concept and corresponding code in the future. This object is not used by the user and is an underlying implementatino detail. It's removal will NOT result in changes to user code.</p>
+<p class="interli">NOTE: this concept was needed for memory allocation in the first generation Phalanx library when all fields for an evaluation type were stored contiguously in memory. Since the Kokkos transition, memory in now controlled by the <a class="el" href="class_kokkos_1_1_view.html">Kokkos::View</a>. We could remove this concept and corresponding code in the future. This object is not used by the user and is an underlying implementatino detail. It's removal will NOT result in changes to user code.</p>
 <p class="endli"></p>
 </li>
 <li>
@@ -241,16 +241,16 @@ Tangent (parameter sensitivity) </li>
 <p class="startli"><b>Multidimensional Array</b></p>
 <p class="interli">Instead of using the concept of an algebraic type that the user implements, it may be easier to use a multidimensional array. For example, suppose we have ten cells, and in each cell there are four points (specifically quadrature points) where we want to store a 3x3 matrix for the stress tensor. Using the concepts of algebraic types, we would use a user defined matrix in a Phalanx Field:</p>
 <div class="fragment"><div class="line">PHX::MDA::Layout&lt;Cell,QP&gt; layout(10,4);</div>
-<div class="line"><a class="code hl_class" href="classPHX_1_1Field.html">PHX::Field&lt; MyTensor&lt;double&gt;</a> &gt; stress(<span class="stringliteral">&quot;Stress&quot;</span>,layout);</div>
-<div class="ttc" id="aclassPHX_1_1Field_html"><div class="ttname"><a href="classPHX_1_1Field.html">PHX::Field</a></div><div class="ttdef"><b>Definition</b> Phalanx_Field.hpp:59</div></div>
+<div class="line"><a class="code hl_class" href="class_p_h_x_1_1_field.html">PHX::Field&lt; MyTensor&lt;double&gt;</a> &gt; stress(<span class="stringliteral">&quot;Stress&quot;</span>,layout);</div>
+<div class="ttc" id="aclass_p_h_x_1_1_field_html"><div class="ttname"><a href="class_p_h_x_1_1_field.html">PHX::Field</a></div><div class="ttdef"><b>Definition</b> Phalanx_Field.hpp:59</div></div>
 </div><!-- fragment --><p class="interli">However, Phalanx also implements the idea of a multidimensional array with optional compile time checking on rank accessors.</p>
 <div class="fragment"><div class="line">PHX::MDA::Layout&lt;Cell,QP,Dim,Dim&gt; layout(10,4,3,3);</div>
-<div class="line"><a class="code hl_class" href="classPHX_1_1MDField.html">PHX::MDField&lt;double,Cell,QP,Dim,Dim&gt;</a> stress(<span class="stringliteral">&quot;Stress&quot;</span>,layout);</div>
-<div class="ttc" id="aclassPHX_1_1MDField_html"><div class="ttname"><a href="classPHX_1_1MDField.html">PHX::MDField</a></div><div class="ttdef"><b>Definition</b> Phalanx_MDField.hpp:250</div></div>
+<div class="line"><a class="code hl_class" href="class_p_h_x_1_1_m_d_field.html">PHX::MDField&lt;double,Cell,QP,Dim,Dim&gt;</a> stress(<span class="stringliteral">&quot;Stress&quot;</span>,layout);</div>
+<div class="ttc" id="aclass_p_h_x_1_1_m_d_field_html"><div class="ttname"><a href="class_p_h_x_1_1_m_d_field.html">PHX::MDField</a></div><div class="ttdef"><b>Definition</b> Phalanx_MDField.hpp:250</div></div>
 </div><!-- fragment --><p class="interli">Here, the "Cell", "QP", and "Dim" objects are small structs that allow users to describe the ordinates associated with the multidimensional array.</p>
 <p class="interli">The benefits of using the multidimensional array are that (1) checking of the rank accessor at either compile time or runtime (runtime checking is only enabled for debug builds for efficiency) prevent coding errors and (2) the documentation of the ordinals is built into the code - no relying on comments that go out of date.</p>
 <p class="interli">The EnergyFlux example is reimplemented using the multidimensional array instead of the algebric types in the directory Trilinos/packages/phalanx/example/MultiDimensionalArray/.</p>
-<p class="interli">Our recomendation is to use the multidimensional array version as future codes plan to use this object. The <a class="el" href="classPHX_1_1MDField.html">PHX::MDField</a> is fully compatible with Intrepid whereas the <a class="el" href="classPHX_1_1Field.html">PHX::Field</a> is not. We keep the <a class="el" href="classPHX_1_1Field.html">PHX::Field</a> object around for performance measurements since it directly accesses the Teuchos::ArrayRCP object where the <a class="el" href="classPHX_1_1MDField.html">PHX::MDField</a> uses a shards::Array object. If the compiler optimizes correctly, there should be no difference in performance. By testing both the Field and MDField, we can test compiler optimization. <br  />
+<p class="interli">Our recomendation is to use the multidimensional array version as future codes plan to use this object. The <a class="el" href="class_p_h_x_1_1_m_d_field.html">PHX::MDField</a> is fully compatible with Intrepid whereas the <a class="el" href="class_p_h_x_1_1_field.html">PHX::Field</a> is not. We keep the <a class="el" href="class_p_h_x_1_1_field.html">PHX::Field</a> object around for performance measurements since it directly accesses the Teuchos::ArrayRCP object where the <a class="el" href="class_p_h_x_1_1_m_d_field.html">PHX::MDField</a> uses a shards::Array object. If the compiler optimizes correctly, there should be no difference in performance. By testing both the Field and MDField, we can test compiler optimization. <br  />
 </p>
 <p class="endli"></p>
 </li>
@@ -298,7 +298,7 @@ size_type dimension(size_type ordinate) - size of ordinate </li>
 <li>
 size_type size() - total size of array </li>
 </ul>
-<p>Phalanx implements the multidimensional array in the <a class="el" href="classPHX_1_1MDField.html">PHX::MDField</a> class and supports arrays with up to 8 ranks (one more than Fortran arrays support). More information can be found in the shards library.</p>
+<p>Phalanx implements the multidimensional array in the <a class="el" href="class_p_h_x_1_1_m_d_field.html">PHX::MDField</a> class and supports arrays with up to 8 ranks (one more than Fortran arrays support). More information can be found in the shards library.</p>
 <h1><a class="anchor" id="user_guide_step1"></a>
 Step 1: Configuring, Building, and installing Phalanx</h1>
 <h2><a class="anchor" id="ug_step1_general"></a>
@@ -363,7 +363,7 @@ MyTensor&lt; Sacado::Fad::DFad&lt;double&gt; &gt; </li>
 <h1><a class="anchor" id="user_guide_step3"></a>
 Step 3: Write the Traits Object</h1>
 <p>The Traits object is a struct that defines the evaluation types, the data types for each evaluation type, the allocator type, and the user defined types that will be passed through evaluator calls. We will go through each of these defninitions.</p>
-<p>The basic class should derive from the <a class="el" href="structPHX_1_1TraitsBase.html">PHX::TraitsBase</a> object.</p>
+<p>The basic class should derive from the <a class="el" href="struct_p_h_x_1_1_traits_base.html">PHX::TraitsBase</a> object.</p>
 <p><b> The Traits struct must define each of the following typedef members of the struct:</b></p>
 <ul>
 <li><b>EvalTypes</b> - an mpl::vector of user defined evaluation types. Each evaluation type must have a typedef member called ScalarT that provides the default scalar type. This is used to automate the building of evaluators for each evaluation type using the EvaluatorFactory.</li>
@@ -376,17 +376,17 @@ Step 3: Write the Traits Object</h1>
 </ul>
 <h2><a class="anchor" id="td1"></a>
 A. Basic Class</h2>
-<p>The basic outline of the traits struct is: </p><div class="fragment"><div class="line"><span class="keyword">struct </span>MyTraits : <span class="keyword">public</span> <a class="code hl_struct" href="structPHX_1_1TraitsBase.html">PHX::TraitsBase</a> {</div>
+<p>The basic outline of the traits struct is: </p><div class="fragment"><div class="line"><span class="keyword">struct </span>MyTraits : <span class="keyword">public</span> <a class="code hl_struct" href="struct_p_h_x_1_1_traits_base.html">PHX::TraitsBase</a> {</div>
 <div class="line">    .</div>
 <div class="line">    .</div>
 <div class="line">    .</div>
 <div class="line">};</div>
-<div class="ttc" id="astructPHX_1_1TraitsBase_html"><div class="ttname"><a href="structPHX_1_1TraitsBase.html">PHX::TraitsBase</a></div><div class="ttdef"><b>Definition</b> Phalanx_Traits.hpp:25</div></div>
+<div class="ttc" id="astruct_p_h_x_1_1_traits_base_html"><div class="ttname"><a href="struct_p_h_x_1_1_traits_base.html">PHX::TraitsBase</a></div><div class="ttdef"><b>Definition</b> Phalanx_Traits.hpp:25</div></div>
 </div><!-- fragment --><p>Inside this struct we need to implement all the typedefs listed above. The example we will follow is in the file Traits.hpp in "phalanx/example/EnergyFlux" directory.</p>
 <h2><a class="anchor" id="td2"></a>
 B. EvalTypes</h2>
 <p>First we need to know the evaluation types. Each evaluation type must include at least a typedef'd default scalar type argument as a public member called ScalarT. Here is the example code:</p>
-<div class="fragment"><div class="line"><span class="keyword">struct </span>MyTraits : <span class="keyword">public</span> <a class="code hl_struct" href="structPHX_1_1TraitsBase.html">PHX::TraitsBase</a> {</div>
+<div class="fragment"><div class="line"><span class="keyword">struct </span>MyTraits : <span class="keyword">public</span> <a class="code hl_struct" href="struct_p_h_x_1_1_traits_base.html">PHX::TraitsBase</a> {</div>
 <div class="line">  </div>
 <div class="line">  <span class="comment">// ******************************************************************</span></div>
 <div class="line">  <span class="comment">// *** Scalar Types</span></div>
@@ -521,8 +521,8 @@ Step 4: Specialize the PHX::TypeString Object</h1>
 <div class="line">}</div>
 </div><!-- fragment --><h1><a class="anchor" id="user_guide_step5"></a>
 Step 5: Write your Evaluators</h1>
-<p>Before Writing your evaluators, you must decide on how you plan to build the evaluators. In most cases you will want to build one Evaluator for each evaluation type. Phalanx provides an automated factory called the <a class="el" href="classPHX_1_1EvaluatorFactory.html">PHX::EvaluatorFactory</a> that will build an evaluator for each evaluation type automatically, but this places a restriction on the constructor of all evaluators built this way. If you plan to use the automated builder, the constructor for the Evaluator must contain only one argument - a Teuchos::ParameterList. This paramter list must contain a key called "Type" with an integer value corresponding to the type of Evaluator object to build. The parameterlist can contain any other information the user requires for proper construction of the Evaluator. You are not restricted to using the automated factory for every Evaluator. You can selectively use the automated factory where convenient.</p>
-<p>For each field, you will need an evaluator. Evaluators can evlauate multiple fields at the same time. You can derive from the base class <a class="el" href="classPHX_1_1Evaluator.html">PHX::Evaluator</a>, or you can derive from class <a class="el" href="classPHX_1_1EvaluatorWithBaseImpl.html" title="Class that implements helper functions for the pure virtual PHX::Evaluator class.">PHX::EvaluatorWithBaseImpl</a> that has most of the methods already implemented so that the same support code is not replicted in each evaluator. We STRONGLY recommend deriving from the class <a class="el" href="classPHX_1_1EvaluatorWithBaseImpl.html" title="Class that implements helper functions for the pure virtual PHX::Evaluator class.">PHX::EvaluatorWithBaseImpl</a>.</p>
+<p>Before Writing your evaluators, you must decide on how you plan to build the evaluators. In most cases you will want to build one Evaluator for each evaluation type. Phalanx provides an automated factory called the <a class="el" href="class_p_h_x_1_1_evaluator_factory.html">PHX::EvaluatorFactory</a> that will build an evaluator for each evaluation type automatically, but this places a restriction on the constructor of all evaluators built this way. If you plan to use the automated builder, the constructor for the Evaluator must contain only one argument - a Teuchos::ParameterList. This paramter list must contain a key called "Type" with an integer value corresponding to the type of Evaluator object to build. The parameterlist can contain any other information the user requires for proper construction of the Evaluator. You are not restricted to using the automated factory for every Evaluator. You can selectively use the automated factory where convenient.</p>
+<p>For each field, you will need an evaluator. Evaluators can evlauate multiple fields at the same time. You can derive from the base class <a class="el" href="class_p_h_x_1_1_evaluator.html">PHX::Evaluator</a>, or you can derive from class <a class="el" href="class_p_h_x_1_1_evaluator_with_base_impl.html" title="Class that implements helper functions for the pure virtual PHX::Evaluator class.">PHX::EvaluatorWithBaseImpl</a> that has most of the methods already implemented so that the same support code is not replicted in each evaluator. We STRONGLY recommend deriving from the class <a class="el" href="class_p_h_x_1_1_evaluator_with_base_impl.html" title="Class that implements helper functions for the pure virtual PHX::Evaluator class.">PHX::EvaluatorWithBaseImpl</a>.</p>
 <p>An example for evaluating the density field is:</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#ifndef PHX_EXAMPLE_VP_DENSITY_HPP</span></div>
 <div class="line"><span class="preprocessor">#define PHX_EXAMPLE_VP_DENSITY_HPP</span></div>
@@ -534,17 +534,17 @@ Step 5: Write your Evaluators</h1>
 <div class="line"> </div>
 <div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> EvalT, <span class="keyword">typename</span> Traits&gt;</div>
 <div class="line"><span class="keyword">class </span>Density : </div>
-<div class="line">  <span class="keyword">public</span> <a class="code hl_class" href="classPHX_1_1EvaluatorWithBaseImpl.html">PHX::EvaluatorWithBaseImpl</a>&lt;Traits&gt;,</div>
-<div class="line">  <span class="keyword">public</span> <a class="code hl_class" href="classPHX_1_1EvaluatorDerived.html">PHX::EvaluatorDerived</a>&lt;EvalT, Traits&gt; {</div>
+<div class="line">  <span class="keyword">public</span> <a class="code hl_class" href="class_p_h_x_1_1_evaluator_with_base_impl.html">PHX::EvaluatorWithBaseImpl</a>&lt;Traits&gt;,</div>
+<div class="line">  <span class="keyword">public</span> <a class="code hl_class" href="class_p_h_x_1_1_evaluator_derived.html">PHX::EvaluatorDerived</a>&lt;EvalT, Traits&gt; {</div>
 <div class="line">  </div>
 <div class="line"><span class="keyword">public</span>:</div>
 <div class="line">  </div>
 <div class="line">  Density(<span class="keyword">const</span> Teuchos::ParameterList&amp; p);</div>
 <div class="line">  </div>
-<div class="line">  <span class="keywordtype">void</span> <a class="code hl_function" href="classPHX_1_1EvaluatorWithBaseImpl.html#abfaf6c34a36fbf67d89de23471fe8bb5">postRegistrationSetup</a>(<span class="keyword">typename</span> Traits::SetupData d,</div>
-<div class="line">                 <a class="code hl_class" href="classPHX_1_1FieldManager.html">PHX::FieldManager&lt;Traits&gt;</a>&amp; vm);</div>
+<div class="line">  <span class="keywordtype">void</span> <a class="code hl_function" href="class_p_h_x_1_1_evaluator_with_base_impl.html#abfaf6c34a36fbf67d89de23471fe8bb5">postRegistrationSetup</a>(<span class="keyword">typename</span> Traits::SetupData d,</div>
+<div class="line">                 <a class="code hl_class" href="class_p_h_x_1_1_field_manager.html">PHX::FieldManager&lt;Traits&gt;</a>&amp; vm);</div>
 <div class="line">  </div>
-<div class="line">  <span class="keywordtype">void</span> <a class="code hl_function" href="classPHX_1_1EvaluatorWithBaseImpl.html#a2b3bbd25911665100eb0de94879a7903">evaluateFields</a>(<span class="keyword">typename</span> Traits::EvalData ud);</div>
+<div class="line">  <span class="keywordtype">void</span> <a class="code hl_function" href="class_p_h_x_1_1_evaluator_with_base_impl.html#a2b3bbd25911665100eb0de94879a7903">evaluateFields</a>(<span class="keyword">typename</span> Traits::EvalData ud);</div>
 <div class="line">  </div>
 <div class="line"><span class="keyword">private</span>:</div>
 <div class="line">  </div>
@@ -552,8 +552,8 @@ Step 5: Write your Evaluators</h1>
 <div class="line"> </div>
 <div class="line">  <span class="keywordtype">double</span> constant;</div>
 <div class="line"> </div>
-<div class="line">  <a class="code hl_class" href="classPHX_1_1Field.html">PHX::Field&lt;ScalarT&gt;</a> density;</div>
-<div class="line">  <a class="code hl_class" href="classPHX_1_1Field.html">PHX::Field&lt;ScalarT&gt;</a> temp;</div>
+<div class="line">  <a class="code hl_class" href="class_p_h_x_1_1_field.html">PHX::Field&lt;ScalarT&gt;</a> density;</div>
+<div class="line">  <a class="code hl_class" href="class_p_h_x_1_1_field.html">PHX::Field&lt;ScalarT&gt;</a> temp;</div>
 <div class="line"> </div>
 <div class="line">  std::size_t data_layout_size;</div>
 <div class="line"> </div>
@@ -562,12 +562,12 @@ Step 5: Write your Evaluators</h1>
 <div class="line"><span class="preprocessor">#include &quot;Evaluator_Density_Def.hpp&quot;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassPHX_1_1EvaluatorDerived_html"><div class="ttname"><a href="classPHX_1_1EvaluatorDerived.html">PHX::EvaluatorDerived</a></div><div class="ttdef"><b>Definition</b> Phalanx_Evaluator_Derived.hpp:22</div></div>
-<div class="ttc" id="aclassPHX_1_1EvaluatorWithBaseImpl_html"><div class="ttname"><a href="classPHX_1_1EvaluatorWithBaseImpl.html">PHX::EvaluatorWithBaseImpl</a></div><div class="ttdoc">Class that implements helper functions for the pure virtual PHX::Evaluator class.</div><div class="ttdef"><b>Definition</b> Phalanx_Evaluator_WithBaseImpl.hpp:34</div></div>
-<div class="ttc" id="aclassPHX_1_1EvaluatorWithBaseImpl_html_a2b3bbd25911665100eb0de94879a7903"><div class="ttname"><a href="classPHX_1_1EvaluatorWithBaseImpl.html#a2b3bbd25911665100eb0de94879a7903">PHX::EvaluatorWithBaseImpl::evaluateFields</a></div><div class="ttdeci">virtual void evaluateFields(typename Traits::EvalData d) override=0</div><div class="ttdoc">Evaluate all fields that the provider supplies.</div></div>
-<div class="ttc" id="aclassPHX_1_1EvaluatorWithBaseImpl_html_abfaf6c34a36fbf67d89de23471fe8bb5"><div class="ttname"><a href="classPHX_1_1EvaluatorWithBaseImpl.html#abfaf6c34a36fbf67d89de23471fe8bb5">PHX::EvaluatorWithBaseImpl::postRegistrationSetup</a></div><div class="ttdeci">virtual void postRegistrationSetup(typename Traits::SetupData d, PHX::FieldManager&lt; Traits &gt; &amp;vm) override</div><div class="ttdoc">Allows providers to grab pointers to data arrays.</div><div class="ttdef"><b>Definition</b> Phalanx_Evaluator_WithBaseImpl_Def.hpp:393</div></div>
-<div class="ttc" id="aclassPHX_1_1FieldManager_html"><div class="ttname"><a href="classPHX_1_1FieldManager.html">PHX::FieldManager</a></div><div class="ttdef"><b>Definition</b> Phalanx_FieldManager.hpp:43</div></div>
-</div><!-- fragment --><p>Note that if you want to use the automated factory <a class="el" href="classPHX_1_1EvaluatorFactory.html">PHX::EvaluatorFactory</a> to build an object of each evaluation type, you must derive from the <a class="el" href="classPHX_1_1EvaluatorDerived.html">PHX::EvaluatorDerived</a> class as shown in the example above. This allows the variable manager to store a vector of base object pointers for each evaluation type in a single stl vector.</p>
+<div class="ttc" id="aclass_p_h_x_1_1_evaluator_derived_html"><div class="ttname"><a href="class_p_h_x_1_1_evaluator_derived.html">PHX::EvaluatorDerived</a></div><div class="ttdef"><b>Definition</b> Phalanx_Evaluator_Derived.hpp:22</div></div>
+<div class="ttc" id="aclass_p_h_x_1_1_evaluator_with_base_impl_html"><div class="ttname"><a href="class_p_h_x_1_1_evaluator_with_base_impl.html">PHX::EvaluatorWithBaseImpl</a></div><div class="ttdoc">Class that implements helper functions for the pure virtual PHX::Evaluator class.</div><div class="ttdef"><b>Definition</b> Phalanx_Evaluator_WithBaseImpl.hpp:34</div></div>
+<div class="ttc" id="aclass_p_h_x_1_1_evaluator_with_base_impl_html_a2b3bbd25911665100eb0de94879a7903"><div class="ttname"><a href="class_p_h_x_1_1_evaluator_with_base_impl.html#a2b3bbd25911665100eb0de94879a7903">PHX::EvaluatorWithBaseImpl::evaluateFields</a></div><div class="ttdeci">virtual void evaluateFields(typename Traits::EvalData d) override=0</div><div class="ttdoc">Evaluate all fields that the provider supplies.</div></div>
+<div class="ttc" id="aclass_p_h_x_1_1_evaluator_with_base_impl_html_abfaf6c34a36fbf67d89de23471fe8bb5"><div class="ttname"><a href="class_p_h_x_1_1_evaluator_with_base_impl.html#abfaf6c34a36fbf67d89de23471fe8bb5">PHX::EvaluatorWithBaseImpl::postRegistrationSetup</a></div><div class="ttdeci">virtual void postRegistrationSetup(typename Traits::SetupData d, PHX::FieldManager&lt; Traits &gt; &amp;vm) override</div><div class="ttdoc">Allows providers to grab pointers to data arrays.</div><div class="ttdef"><b>Definition</b> Phalanx_Evaluator_WithBaseImpl_Def.hpp:393</div></div>
+<div class="ttc" id="aclass_p_h_x_1_1_field_manager_html"><div class="ttname"><a href="class_p_h_x_1_1_field_manager.html">PHX::FieldManager</a></div><div class="ttdef"><b>Definition</b> Phalanx_FieldManager.hpp:43</div></div>
+</div><!-- fragment --><p>Note that if you want to use the automated factory <a class="el" href="class_p_h_x_1_1_evaluator_factory.html">PHX::EvaluatorFactory</a> to build an object of each evaluation type, you must derive from the <a class="el" href="class_p_h_x_1_1_evaluator_derived.html">PHX::EvaluatorDerived</a> class as shown in the example above. This allows the variable manager to store a vector of base object pointers for each evaluation type in a single stl vector.</p>
 <p>Also note that we pull the scalar type, ScalarT, out of the evaluation type.</p>
 <p>The implementation is just as simple: </p><div class="fragment"><div class="line"><span class="comment">// **********************************************************************</span></div>
 <div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> EvalT, <span class="keyword">typename</span> Traits&gt; Density&lt;EvalT, Traits&gt;::</div>
@@ -584,7 +584,7 @@ Step 5: Write your Evaluators</h1>
 <div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> EvalT, <span class="keyword">typename</span> Traits&gt;</div>
 <div class="line"><span class="keywordtype">void</span> Density&lt;EvalT, Traits&gt;::</div>
 <div class="line">postRegistrationSetup(<span class="keyword">typename</span> Traits::SetupData d,</div>
-<div class="line">              <a class="code hl_class" href="classPHX_1_1FieldManager.html">PHX::FieldManager&lt;Traits&gt;</a>&amp; vm)</div>
+<div class="line">              <a class="code hl_class" href="class_p_h_x_1_1_field_manager.html">PHX::FieldManager&lt;Traits&gt;</a>&amp; vm)</div>
 <div class="line">{</div>
 <div class="line">  this-&gt;utils.setFieldData(density,vm);</div>
 <div class="line">  this-&gt;utils.setFieldData(temp,vm);</div>
@@ -614,8 +614,8 @@ Step 5: Write your Evaluators</h1>
 <div class="line"> </div>
 <div class="line">  <span class="keywordtype">double</span> constant;</div>
 <div class="line"> </div>
-<div class="line">  <a class="code hl_class" href="classPHX_1_1Field.html">PHX::Field&lt;ScalarT&gt;</a> density;</div>
-<div class="line">  <a class="code hl_class" href="classPHX_1_1Field.html">PHX::Field&lt;ScalarT&gt;</a> temp;</div>
+<div class="line">  <a class="code hl_class" href="class_p_h_x_1_1_field.html">PHX::Field&lt;ScalarT&gt;</a> density;</div>
+<div class="line">  <a class="code hl_class" href="class_p_h_x_1_1_field.html">PHX::Field&lt;ScalarT&gt;</a> temp;</div>
 <div class="line"> </div>
 <div class="line">  std::size_t data_layout_size;</div>
 <div class="line"> </div>
@@ -660,7 +660,7 @@ Step 6: Implement the FieldManager in your code</h1>
 <p>Adding the FieldManager to your code is broken into steps. You must build each Evaluator for each field type, register the evaluators with the FieldManager, and then call the evaluate routines. Continuing from our example:</p>
 <h2><a class="anchor" id="fmd1"></a>
 A. Building your Evaluators</h2>
-<p>Users can build their own Evaluators and register them with the FieldManager or they can use our automated factory, <a class="el" href="classPHX_1_1EvaluatorFactory.html">PHX::EvaluatorFactory</a> to handle this for them. Normally, users will want to build an evaluator for each evaluation type. The factory makes this very easy. Additionally, you are not restricted to using the automated factory for every Evaluator. You can selectively use the automated factory where convenient. The next two sections describe how to build the evaluators.</p>
+<p>Users can build their own Evaluators and register them with the FieldManager or they can use our automated factory, <a class="el" href="class_p_h_x_1_1_evaluator_factory.html">PHX::EvaluatorFactory</a> to handle this for them. Normally, users will want to build an evaluator for each evaluation type. The factory makes this very easy. Additionally, you are not restricted to using the automated factory for every Evaluator. You can selectively use the automated factory where convenient. The next two sections describe how to build the evaluators.</p>
 <h3><a class="anchor" id="fmd1s1"></a>
 A.1 Building and Registering Evaluators Manually.</h3>
 <p>To build an Evaluator manually, all you need to do is allocate the Evaluator on the heap using a reference counted smart pointer (Teuchos::RCP) to point ot the object. This will ensure proper memory management of the object. Here is an example of code to build a Density evaluator for each evaluation type and register it with the corresponding manager.</p>
@@ -685,7 +685,7 @@ A.1 Building and Registering Evaluators Manually.</h3>
 </div><!-- fragment --><p>As one can see, this becomes very tedious if there are many evaluation types. It is much better to use the automated factory to build one for each evalaution type. Where this method is useful is if you are in a class already templated on the evaluation type, and would like to build and register an evaluator in that peice of code.</p>
 <h3><a class="anchor" id="fmd1s2"></a>
 A.2 Using the Automated Factory</h3>
-<p>Phalanx provides an automated builder <a class="el" href="classPHX_1_1EvaluatorFactory.html">PHX::EvaluatorFactory</a> that will create an object of each evaluation type. The following requirements are placed on each and every Evaluator that a user writes if they plan to use the automated factory: </p><ol>
+<p>Phalanx provides an automated builder <a class="el" href="class_p_h_x_1_1_evaluator_factory.html">PHX::EvaluatorFactory</a> that will create an object of each evaluation type. The following requirements are placed on each and every Evaluator that a user writes if they plan to use the automated factory: </p><ol>
 <li>
 <p class="startli">The constructor of your Evaluator must take exactly one argument that is a Teuchos::ParamterList object. A Teuchos::ParameterList allows you to pass an arbitrary number of objects with arbitrary types.</p>
 <p class="endli"></p>
@@ -695,11 +695,11 @@ A.2 Using the Automated Factory</h3>
 <p class="endli"></p>
 </li>
 <li>
-<p class="startli">The Evaluator must derive from the <a class="el" href="classPHX_1_1EvaluatorDerived.html">PHX::EvaluatorDerived</a> class as shown in the example above. This allows the variable manager to store a vector of base object pointers for each evaluation type in a single stl vector yet be able to return the derived class.</p>
+<p class="startli">The Evaluator must derive from the <a class="el" href="class_p_h_x_1_1_evaluator_derived.html">PHX::EvaluatorDerived</a> class as shown in the example above. This allows the variable manager to store a vector of base object pointers for each evaluation type in a single stl vector yet be able to return the derived class.</p>
 <p class="endli"></p>
 </li>
 </ol>
-<p>To build an <a class="el" href="classPHX_1_1EvaluatorFactory.html">PHX::EvaluatorFactory</a>, you must provide a factory traits class that gives the factory a list of its evaluator types. An example of the factory traits class is the FactoryTraits object in the file FactoryTraits.hpp:</p>
+<p>To build an <a class="el" href="class_p_h_x_1_1_evaluator_factory.html">PHX::EvaluatorFactory</a>, you must provide a factory traits class that gives the factory a list of its evaluator types. An example of the factory traits class is the FactoryTraits object in the file FactoryTraits.hpp:</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#ifndef EXAMPLE_FACTORY_TRAITS_HPP</span></div>
 <div class="line"><span class="preprocessor">#define EXAMPLE_FACTORY_TRAITS_HPP</span></div>
 <div class="line"> </div>
@@ -938,10 +938,10 @@ F. Accessing Data</h2>
 <div class="line">fm.getFieldData&lt;MyVector&lt;double&gt;,MyTraits::Residual&gt;(ef);</div>
 </div><!-- fragment --><p>You do not need to use the Field objects to access field data. You can get the reference counted smart pointer to the data array directly by using the field tag:</p>
 <div class="fragment"><div class="line">RCP&lt;DataLayout&gt; qp = rcp(<span class="keyword">new</span> FlatLayout(<span class="stringliteral">&quot;QP&quot;</span>, 4));</div>
-<div class="line"><a class="code hl_class" href="classPHX_1_1FieldTag.html">PHX::FieldTag&lt;double&gt;</a> s(<span class="stringliteral">&quot;Nonlinear Source&quot;</span>, qp);</div>
+<div class="line"><a class="code hl_class" href="class_p_h_x_1_1_field_tag.html">PHX::FieldTag&lt;double&gt;</a> s(<span class="stringliteral">&quot;Nonlinear Source&quot;</span>, qp);</div>
 <div class="line">Teuchos::ArrayRCP&lt;double&gt; source_values;</div>
 <div class="line">fm.getFieldData&lt;double,MyTraits::Residual&gt;(s,source_values);</div>
-<div class="ttc" id="aclassPHX_1_1FieldTag_html"><div class="ttname"><a href="classPHX_1_1FieldTag.html">PHX::FieldTag</a></div><div class="ttdef"><b>Definition</b> Phalanx_FieldTag.hpp:24</div></div>
+<div class="ttc" id="aclass_p_h_x_1_1_field_tag_html"><div class="ttname"><a href="class_p_h_x_1_1_field_tag.html">PHX::FieldTag</a></div><div class="ttdef"><b>Definition</b> Phalanx_FieldTag.hpp:24</div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

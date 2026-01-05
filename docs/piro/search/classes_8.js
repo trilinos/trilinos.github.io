@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['solutionobserverbase_0',['SolutionObserverBase',['../classPiro_1_1SolutionObserverBase.html',1,'Piro']]],
-  ['solverfactory_1',['SolverFactory',['../classPiro_1_1SolverFactory.html',1,'Piro']]],
-  ['steadystatesolver_2',['SteadyStateSolver',['../classPiro_1_1SteadyStateSolver.html',1,'Piro']]]
+  ['solutionobserverbase_0',['SolutionObserverBase',['../class_piro_1_1_solution_observer_base.html',1,'Piro']]],
+  ['solverfactory_1',['SolverFactory',['../class_piro_1_1_solver_factory.html',1,'Piro']]],
+  ['steadystatesolver_2',['SteadyStateSolver',['../class_piro_1_1_steady_state_solver.html',1,'Piro']]]
 ];

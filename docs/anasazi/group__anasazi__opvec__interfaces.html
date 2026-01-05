@@ -77,51 +77,51 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnasazi_1_1HelperTraits.html">Anasazi::HelperTraits&lt; ScalarType &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class which defines basic traits for working with different scalar types.  <a href="classAnasazi_1_1HelperTraits.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anasazi_1_1_helper_traits.html">Anasazi::HelperTraits&lt; ScalarType &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class which defines basic traits for working with different scalar types.  <a href="class_anasazi_1_1_helper_traits.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnasazi_1_1MultiVecTraits.html">Anasazi::MultiVecTraits&lt; ScalarType, MV &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Traits class which defines basic operations on multivectors.  <a href="classAnasazi_1_1MultiVecTraits.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anasazi_1_1_multi_vec_traits.html">Anasazi::MultiVecTraits&lt; ScalarType, MV &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Traits class which defines basic operations on multivectors.  <a href="class_anasazi_1_1_multi_vec_traits.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnasazi_1_1OperatorTraits.html">Anasazi::OperatorTraits&lt; ScalarType, MV, OP &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual base class which defines basic traits for the operator type.  <a href="classAnasazi_1_1OperatorTraits.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_anasazi_1_1_operator_traits.html">Anasazi::OperatorTraits&lt; ScalarType, MV, OP &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual base class which defines basic traits for the operator type.  <a href="class_anasazi_1_1_operator_traits.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Anasazi utilizes abstract interfaces for operators and multivectors to enable the leveraging of existing linear algebra libraries. The choice in linear algebra is made through templating, and access to the functionality of the underlying objects is provided via the traits classes <a class="el" href="classAnasazi_1_1MultiVecTraits.html" title="Traits class which defines basic operations on multivectors.">Anasazi::MultiVecTraits</a> and <a class="el" href="classAnasazi_1_1OperatorTraits.html" title="Virtual base class which defines basic traits for the operator type.">Anasazi::OperatorTraits</a>.</p>
-<p><a class="el" href="classAnasazi_1_1MultiVecTraits.html" title="Traits class which defines basic operations on multivectors.">Anasazi::MultiVecTraits</a> requires two template arguments:</p>
+<p>Anasazi utilizes abstract interfaces for operators and multivectors to enable the leveraging of existing linear algebra libraries. The choice in linear algebra is made through templating, and access to the functionality of the underlying objects is provided via the traits classes <a class="el" href="class_anasazi_1_1_multi_vec_traits.html" title="Traits class which defines basic operations on multivectors.">Anasazi::MultiVecTraits</a> and <a class="el" href="class_anasazi_1_1_operator_traits.html" title="Virtual base class which defines basic traits for the operator type.">Anasazi::OperatorTraits</a>.</p>
+<p><a class="el" href="class_anasazi_1_1_multi_vec_traits.html" title="Traits class which defines basic operations on multivectors.">Anasazi::MultiVecTraits</a> requires two template arguments:</p>
 <ul>
 <li>a scalar class (<code>ScalarType</code>), describing the field over which the multivectors are defined, and</li>
 <li>a multivector class (<code>MV</code>).</li>
 </ul>
-<p>Because Anasazi implements block eigensolvers, the underlying primitive is a collection of column vectors (a multivector) instead of a single column vector. The purpose of <a class="el" href="classAnasazi_1_1MultiVecTraits.html" title="Traits class which defines basic operations on multivectors.">Anasazi::MultiVecTraits</a> is to provide an interface for performing multivector operations (e.g., multivector <code>AXPY</code>). An example illustrating the manipulation of an Epetra_MultiVector using <a class="el" href="classAnasazi_1_1MultiVecTraits.html" title="Traits class which defines basic operations on multivectors.">Anasazi::MultiVecTraits</a> follows:</p>
+<p>Because Anasazi implements block eigensolvers, the underlying primitive is a collection of column vectors (a multivector) instead of a single column vector. The purpose of <a class="el" href="class_anasazi_1_1_multi_vec_traits.html" title="Traits class which defines basic operations on multivectors.">Anasazi::MultiVecTraits</a> is to provide an interface for performing multivector operations (e.g., multivector <code>AXPY</code>). An example illustrating the manipulation of an Epetra_MultiVector using <a class="el" href="class_anasazi_1_1_multi_vec_traits.html" title="Traits class which defines basic operations on multivectors.">Anasazi::MultiVecTraits</a> follows:</p>
 <div class="fragment"><div class="line"><span class="comment">// build some Epetra_MultiVector objects...</span></div>
 <div class="line">Epetra_MultiVector A(...), B(...), C(...);</div>
 <div class="line"><span class="comment">// ...and a Teuchos::SerialDenseMatrix</span></div>
 <div class="line">Teuchos::SerialDenseMatrix&lt;int,double&gt; D(...);</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">typedef</span> <a class="code hl_class" href="classAnasazi_1_1Operator.html">Anasazi::MultiVecTraits&lt;double, Epetra_MultiVector&gt;</a> MVT;</div>
+<div class="line"><span class="keyword">typedef</span> <a class="code hl_class" href="class_anasazi_1_1_operator.html">Anasazi::MultiVecTraits&lt;double, Epetra_MultiVector&gt;</a> MVT;</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// perform C &lt;- 1.0*A + 0.5*B;</span></div>
 <div class="line">MVT::MvAddMv(1.0, A, 0.5, B, C);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// perform C &lt;- -2.0*A*D + 1.0*C</span></div>
 <div class="line">MVT::MvTimesMatAddMv(-2.0, A, D, 1.0, C);</div>
-<div class="ttc" id="aclassAnasazi_1_1Operator_html"><div class="ttname"><a href="classAnasazi_1_1Operator.html">Anasazi::Operator</a></div><div class="ttdoc">Anasazi's templated virtual class for constructing an operator that can interface with the OperatorTr...</div><div class="ttdef"><b>Definition</b> <a href="AnasaziOperator_8hpp_source.html#l00035">AnasaziOperator.hpp:35</a></div></div>
-</div><!-- fragment --><p>As is customary among large-scale eigenvalue software, Anasazi assumes matrix-free access to the problem operators, i.e., only matrix-vector products are needed. Therefore, <a class="el" href="classAnasazi_1_1OperatorTraits.html" title="Virtual base class which defines basic traits for the operator type.">Anasazi::OperatorTraits</a> requires three template arguments:</p>
+<div class="ttc" id="aclass_anasazi_1_1_operator_html"><div class="ttname"><a href="class_anasazi_1_1_operator.html">Anasazi::Operator</a></div><div class="ttdoc">Anasazi's templated virtual class for constructing an operator that can interface with the OperatorTr...</div><div class="ttdef"><b>Definition</b> <a href="_anasazi_operator_8hpp_source.html#l00035">AnasaziOperator.hpp:35</a></div></div>
+</div><!-- fragment --><p>As is customary among large-scale eigenvalue software, Anasazi assumes matrix-free access to the problem operators, i.e., only matrix-vector products are needed. Therefore, <a class="el" href="class_anasazi_1_1_operator_traits.html" title="Virtual base class which defines basic traits for the operator type.">Anasazi::OperatorTraits</a> requires three template arguments:</p>
 <ul>
 <li>a scalar class (<code>ScalarType</code>), describing the field over which the multivectors are defined,</li>
 <li>a multivector class (<code>MV</code>), describing the domain and range of the operator, and</li>
 <li>an operator class (<code>OP</code>).</li>
 </ul>
-<p>The <a class="el" href="classAnasazi_1_1OperatorTraits.html" title="Virtual base class which defines basic traits for the operator type.">Anasazi::OperatorTraits</a> interface provides a single mechanism: the ability to apply an operator of type <code>OP</code> to a multivector of type <code>MV</code>, yielding another multivector of type <code>MV</code>. This is performed as follows:</p>
+<p>The <a class="el" href="class_anasazi_1_1_operator_traits.html" title="Virtual base class which defines basic traits for the operator type.">Anasazi::OperatorTraits</a> interface provides a single mechanism: the ability to apply an operator of type <code>OP</code> to a multivector of type <code>MV</code>, yielding another multivector of type <code>MV</code>. This is performed as follows:</p>
 <div class="fragment"><div class="line"><span class="comment">// build some Epetra_MultiVector objects...</span></div>
 <div class="line">Epetra_MultiVector A(...), B(...);</div>
 <div class="line"><span class="comment">// ...and an Epetra operator</span></div>
 <div class="line">Epetra_Operator Op(...);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// apply the operation B &lt;- Op*A</span></div>
-<div class="line"><span class="keyword">typedef</span> <a class="code hl_class" href="classAnasazi_1_1Operator.html">Anasazi::OperatorTraits&lt;double, Epetra_MultiVector, Epetra_Operator&gt;</a> OPT;</div>
+<div class="line"><span class="keyword">typedef</span> <a class="code hl_class" href="class_anasazi_1_1_operator.html">Anasazi::OperatorTraits&lt;double, Epetra_MultiVector, Epetra_Operator&gt;</a> OPT;</div>
 <div class="line">OPT::Apply(Op,A,B);</div>
 </div><!-- fragment --><p>These interfaces are used throughout Anasazi to manipulate multivectors and apply operators, so that no low-level access to the underlying objects are needed. Hence, Anasazi is independent of the underlying linear algebra data structures (e.g., serial or parallel, real or complex). This allows the generic programming of algorithms for the solution of eigenvalue problems.</p>
 <p>Calling methods of MultiVecTraits&lt;ScalarType,MV&gt; requires that a specialization of MultiVecTraits has been implemented for classes <code>ScalarType</code> and <code>MV</code>. In the case of Epetra_MultiVector and Epetra_Operator (which are both defined on the field of doubles), this specialization is provided by the Anasazi adapters to Epetra. Specializations of these traits classes provided by Anasazi are:</p>
@@ -129,9 +129,9 @@ Classes</h2></td></tr>
 <li>Epetra_MultiVector and Epetra_Operator (with scalar type <code>double</code>)</li>
 <li>Thyra::MultiVectorBase and Thyra::LinearOpBase (with arbitrary scalar type). This allows Anasazi to be used with any classes that implement the abstract interfaces provided by the Thyra package.</li>
 <li>Tpetra::MultiVector and Tpetra::Operator (with arbitrary scalar type).</li>
-<li><a class="el" href="classAnasazi_1_1MultiVec.html" title="Interface for multivectors used by Anasazi&#39;s linear solvers.">Anasazi::MultiVec</a> and <a class="el" href="classAnasazi_1_1Operator.html" title="Anasazi&#39;s templated virtual class for constructing an operator that can interface with the OperatorTr...">Anasazi::Operator</a> (with arbitrary scalar type). This allows Anasazi to be used with any classes that implement the abstract base classes <a class="el" href="classAnasazi_1_1MultiVec.html" title="Interface for multivectors used by Anasazi&#39;s linear solvers.">Anasazi::MultiVec</a> and <a class="el" href="classAnasazi_1_1Operator.html" title="Anasazi&#39;s templated virtual class for constructing an operator that can interface with the OperatorTr...">Anasazi::Operator</a>.</li>
+<li><a class="el" href="class_anasazi_1_1_multi_vec.html" title="Interface for multivectors used by Anasazi&#39;s linear solvers.">Anasazi::MultiVec</a> and <a class="el" href="class_anasazi_1_1_operator.html" title="Anasazi&#39;s templated virtual class for constructing an operator that can interface with the OperatorTr...">Anasazi::Operator</a> (with arbitrary scalar type). This allows Anasazi to be used with any classes that implement the abstract base classes <a class="el" href="class_anasazi_1_1_multi_vec.html" title="Interface for multivectors used by Anasazi&#39;s linear solvers.">Anasazi::MultiVec</a> and <a class="el" href="class_anasazi_1_1_operator.html" title="Anasazi&#39;s templated virtual class for constructing an operator that can interface with the OperatorTr...">Anasazi::Operator</a>.</li>
 </ul>
-<p>Additional specializations of <a class="el" href="classAnasazi_1_1MultiVecTraits.html" title="Traits class which defines basic operations on multivectors.">Anasazi::MultiVecTraits</a> and <a class="el" href="classAnasazi_1_1OperatorTraits.html" title="Virtual base class which defines basic traits for the operator type.">Anasazi::OperatorTraits</a> may be created by the user for any other multivector and operator class. </p>
+<p>Additional specializations of <a class="el" href="class_anasazi_1_1_multi_vec_traits.html" title="Traits class which defines basic operations on multivectors.">Anasazi::MultiVecTraits</a> and <a class="el" href="class_anasazi_1_1_operator_traits.html" title="Virtual base class which defines basic traits for the operator type.">Anasazi::OperatorTraits</a> may be created by the user for any other multivector and operator class. </p>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

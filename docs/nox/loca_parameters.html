@@ -72,7 +72,7 @@ $(function() {
   <div class="headertitle"><div class="title">LOCA Parameter Reference Page</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>As in NOX, all parameters are passed to LOCA through parameter lists defined by the Teuchos::ParameterList class. All parameters are passed to the <a class="el" href="classLOCA_1_1Stepper.html" title="Implementation of LOCA::Abstract::Iterator for computing points along a continuation curve.">LOCA::Stepper</a> class during construction. Below is a listing of all of the parameters that can be passed to the stepper with links to relevant classes that use those parameters.</p>
+<div class="textblock"><p>As in NOX, all parameters are passed to LOCA through parameter lists defined by the Teuchos::ParameterList class. All parameters are passed to the <a class="el" href="class_l_o_c_a_1_1_stepper.html" title="Implementation of LOCA::Abstract::Iterator for computing points along a continuation curve.">LOCA::Stepper</a> class during construction. Below is a listing of all of the parameters that can be passed to the stepper with links to relevant classes that use those parameters.</p>
 <h1><a class="anchor" id="stepper_params"></a>
 Stepper Parameters</h1>
 <p>The parameter list passed to the Stepper has two sublists, "LOCA" and "NOX". The "LOCA" sublist contains parameters and sublists for the Stepper and various LOCA support classes, while the "NOX" sublist contains parameters and sublists specific to NOX solvers. The NOX sublist is passed directly to an instance of the NOX::Solver::Manager class in the Stepper and therefore has the same structure as any NOX solver parameter list hierarchy. Please see the <a href="./parameters.html">NOX Parameter Reference</a> page for more details on the structure of this list.</p>
@@ -82,13 +82,13 @@ Stepper Parameters</h1>
 <li>
 <b>"LOCA"</b> sublist <ul>
 <li>
-<b>"Stepper"</b> sublist &ndash; used by <a class="el" href="classLOCA_1_1Stepper.html" title="Implementation of LOCA::Abstract::Iterator for computing points along a continuation curve.">LOCA::Stepper</a> to set parameters relevant for continuation run <ul>
+<b>"Stepper"</b> sublist &ndash; used by <a class="el" href="class_l_o_c_a_1_1_stepper.html" title="Implementation of LOCA::Abstract::Iterator for computing points along a continuation curve.">LOCA::Stepper</a> to set parameters relevant for continuation run <ul>
 <li>
 <b>"Continuation Method"</b> &ndash; [string] (default: "Arc Length") Type of continuation to use. Choices are: <ul>
 <li>
-"Natural" &ndash; Natural continuation (<a class="el" href="classLOCA_1_1MultiContinuation_1_1NaturalGroup.html" title="Specialization of LOCA::MultiContinuation::ExtendedGroup to natural continuation.">LOCA::MultiContinuation::NaturalGroup</a>) </li>
+"Natural" &ndash; Natural continuation (<a class="el" href="class_l_o_c_a_1_1_multi_continuation_1_1_natural_group.html" title="Specialization of LOCA::MultiContinuation::ExtendedGroup to natural continuation.">LOCA::MultiContinuation::NaturalGroup</a>) </li>
 <li>
-"Arc Length" &ndash; Pseudo arc-length continuation using bordering (<a class="el" href="classLOCA_1_1MultiContinuation_1_1ArcLengthGroup.html" title="Specialization of LOCA::MultiContinuation::ExtendedGroup to pseudo-arclength continuation.">LOCA::MultiContinuation::ArcLengthGroup</a>) </li>
+"Arc Length" &ndash; Pseudo arc-length continuation using bordering (<a class="el" href="class_l_o_c_a_1_1_multi_continuation_1_1_arc_length_group.html" title="Specialization of LOCA::MultiContinuation::ExtendedGroup to pseudo-arclength continuation.">LOCA::MultiContinuation::ArcLengthGroup</a>) </li>
 </ul>
 </li>
 <li>
@@ -106,7 +106,7 @@ Stepper Parameters</h1>
 <li>
 <b>"Skip Parameter Derivative"</b> &ndash; [bool] (default: true) For natural continuation, skip the df/dp computation which is usually unnecessary. </li>
 <li>
-<b>"Enable Arc Length Scaling"</b> &ndash; [bool] (default: true) Enable arc-length scaling to equilibrate solution and parameter components to arc-length equations (see <a class="el" href="classLOCA_1_1MultiContinuation_1_1ArcLengthGroup.html" title="Specialization of LOCA::MultiContinuation::ExtendedGroup to pseudo-arclength continuation.">LOCA::MultiContinuation::ArcLengthGroup</a>) </li>
+<b>"Enable Arc Length Scaling"</b> &ndash; [bool] (default: true) Enable arc-length scaling to equilibrate solution and parameter components to arc-length equations (see <a class="el" href="class_l_o_c_a_1_1_multi_continuation_1_1_arc_length_group.html" title="Specialization of LOCA::MultiContinuation::ExtendedGroup to pseudo-arclength continuation.">LOCA::MultiContinuation::ArcLengthGroup</a>) </li>
 <li>
 <b>"Goal Arc Length Parameter Contribution"</b> &ndash; [double] (default: 0.5) Goal for parameter contribution to arc-length equation </li>
 <li>
@@ -122,11 +122,11 @@ Stepper Parameters</h1>
 <li>
 <b>"Tangent Factor Exponent"</b> &ndash; [double] (default: 1.0) Exponent on the cosine between two consecutive tangent vectors, which then modifies the step size </li>
 <li>
-<b>"Bordered Solver Method"</b> &ndash; [string] (default: "Bordering") Method for solving bordered system of equations. Used by <a class="el" href="classLOCA_1_1BorderedSolver_1_1Factory.html" title="Factory for creating BorderedSolver strategy objects.">LOCA::BorderedSolver::Factory</a>. Available choices are <ul>
+<b>"Bordered Solver Method"</b> &ndash; [string] (default: "Bordering") Method for solving bordered system of equations. Used by <a class="el" href="class_l_o_c_a_1_1_bordered_solver_1_1_factory.html" title="Factory for creating BorderedSolver strategy objects.">LOCA::BorderedSolver::Factory</a>. Available choices are <ul>
 <li>
-"Bordering" &ndash; Bordering (<a class="el" href="classLOCA_1_1BorderedSolver_1_1Bordering.html" title="Bordered system solver strategy based on bordering.">LOCA::BorderedSolver::Bordering</a>) </li>
+"Bordering" &ndash; Bordering (<a class="el" href="class_l_o_c_a_1_1_bordered_solver_1_1_bordering.html" title="Bordered system solver strategy based on bordering.">LOCA::BorderedSolver::Bordering</a>) </li>
 <li>
-"Nested" &ndash; Nested for method recursive bordered solves (<a class="el" href="classLOCA_1_1BorderedSolver_1_1Nested.html" title="Bordered system solver strategy for nested bordered systems.">LOCA::BorderedSolver::Nested</a>). This method is appropriate when the system is itself bordered, for example, when using the minimally augmented turning point formulation or when the system has constraints. This method combines the nested bordered rows and columns and forms one large bordered system. The solver used for the resulting bordered system is specified through the "Nested Bordered Solver" sublist. <ul>
+"Nested" &ndash; Nested for method recursive bordered solves (<a class="el" href="class_l_o_c_a_1_1_bordered_solver_1_1_nested.html" title="Bordered system solver strategy for nested bordered systems.">LOCA::BorderedSolver::Nested</a>). This method is appropriate when the system is itself bordered, for example, when using the minimally augmented turning point formulation or when the system has constraints. This method combines the nested bordered rows and columns and forms one large bordered system. The solver used for the resulting bordered system is specified through the "Nested Bordered Solver" sublist. <ul>
 <li>
 <b>"Nested Bordered Solver"</b> sublist &ndash; Specifies the solver for the resulting bordered system in a nested bordered system. Any valid bordered solver parameter may be used here. </li>
 </ul>
@@ -138,25 +138,25 @@ Stepper Parameters</h1>
 <li>
 <b>"Compute Eigenvalues On Target Step"</b> &ndash; [bool] (default: false) Compute eigenvalues after last continuation step when attempting to hit parameter target </li>
 <li>
-<b>"Eigensolver"</b> sublist &ndash; used by <a class="el" href="classLOCA_1_1Eigensolver_1_1Factory.html" title="Factory for creating Eigensolver strategy objects.">LOCA::Eigensolver::Factory</a> to determine eigensolver strategies <ul>
+<b>"Eigensolver"</b> sublist &ndash; used by <a class="el" href="class_l_o_c_a_1_1_eigensolver_1_1_factory.html" title="Factory for creating Eigensolver strategy objects.">LOCA::Eigensolver::Factory</a> to determine eigensolver strategies <ul>
 <li>
 <b>"Method"</b> &ndash; [string] (default "Default") Choices are <ul>
 <li>
-"Default" &ndash; No eigenvalues are computed (<a class="el" href="classLOCA_1_1Eigensolver_1_1DefaultStrategy.html" title="Default eigensolver strategy.">LOCA::Eigensolver::DefaultStrategy</a>) </li>
+"Default" &ndash; No eigenvalues are computed (<a class="el" href="class_l_o_c_a_1_1_eigensolver_1_1_default_strategy.html" title="Default eigensolver strategy.">LOCA::Eigensolver::DefaultStrategy</a>) </li>
 <li>
-"Anasazi" &ndash; Eigenvalues/vectors are computed using Anasazi (<a class="el" href="classLOCA_1_1Eigensolver_1_1AnasaziStrategy.html" title="Anasazi eigensolver strategy.">LOCA::Eigensolver::AnasaziStrategy</a>). Anasazi parameters are <ul>
+"Anasazi" &ndash; Eigenvalues/vectors are computed using Anasazi (<a class="el" href="class_l_o_c_a_1_1_eigensolver_1_1_anasazi_strategy.html" title="Anasazi eigensolver strategy.">LOCA::Eigensolver::AnasaziStrategy</a>). Anasazi parameters are <ul>
 <li>
-<b>"Operator"</b> &ndash; [string] (default: "Jacobian inverse") Operator to compute eigenvalues of. Used by <a class="el" href="classLOCA_1_1AnasaziOperator_1_1Factory.html" title="Factory for creating Anasazi operator strategy objects.">LOCA::AnasaziOperator::Factory</a>. Valid choices are: <ul>
+<b>"Operator"</b> &ndash; [string] (default: "Jacobian inverse") Operator to compute eigenvalues of. Used by <a class="el" href="class_l_o_c_a_1_1_anasazi_operator_1_1_factory.html" title="Factory for creating Anasazi operator strategy objects.">LOCA::AnasaziOperator::Factory</a>. Valid choices are: <ul>
 <li>
-"Jacobian Inverse" &ndash; Eigenvalues of <picture><source srcset="form_452_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$J^{-1}$" src="form_452.png" width="20" height="11"/></picture> (<a class="el" href="classLOCA_1_1AnasaziOperator_1_1JacobianInverse.html" title="Anasazi operator for computing eigenvalues of the inverse-Jacobian.">LOCA::AnasaziOperator::JacobianInverse</a>). </li>
+"Jacobian Inverse" &ndash; Eigenvalues of <picture><source srcset="form_452_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$J^{-1}$" src="form_452.png" width="20" height="11"/></picture> (<a class="el" href="class_l_o_c_a_1_1_anasazi_operator_1_1_jacobian_inverse.html" title="Anasazi operator for computing eigenvalues of the inverse-Jacobian.">LOCA::AnasaziOperator::JacobianInverse</a>). </li>
 <li>
-"Shift-Invert" &ndash; Eigenvalues of <picture><source srcset="form_453_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$(J-\sigma M)^{-1}M$" src="form_453.png" width="80" height="15"/></picture> (<a class="el" href="classLOCA_1_1AnasaziOperator_1_1ShiftInvert.html" title="Anasazi operator for computing generalized eigenvalues using shift-invert.">LOCA::AnasaziOperator::ShiftInvert</a>). <ul>
+"Shift-Invert" &ndash; Eigenvalues of <picture><source srcset="form_453_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$(J-\sigma M)^{-1}M$" src="form_453.png" width="80" height="15"/></picture> (<a class="el" href="class_l_o_c_a_1_1_anasazi_operator_1_1_shift_invert.html" title="Anasazi operator for computing generalized eigenvalues using shift-invert.">LOCA::AnasaziOperator::ShiftInvert</a>). <ul>
 <li>
 <b>"Shift"</b> &ndash; [double] (default 0.0) <picture><source srcset="form_352_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$\sigma$" src="form_352.png" width="8" height="6"/></picture> as defined above </li>
 </ul>
 </li>
 <li>
-"Cayley" &ndash; Eigenvalues of <picture><source srcset="form_454_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$(J-\sigma M)^{-1}(J - \mu M)$" src="form_454.png" width="120" height="15"/></picture> (<a class="el" href="classLOCA_1_1AnasaziOperator_1_1Cayley.html" title="Anasazi operator for computing generalized eigenvalues using Cayley transformations.">LOCA::AnasaziOperator::Cayley</a>). <ul>
+"Cayley" &ndash; Eigenvalues of <picture><source srcset="form_454_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$(J-\sigma M)^{-1}(J - \mu M)$" src="form_454.png" width="120" height="15"/></picture> (<a class="el" href="class_l_o_c_a_1_1_anasazi_operator_1_1_cayley.html" title="Anasazi operator for computing generalized eigenvalues using Cayley transformations.">LOCA::AnasaziOperator::Cayley</a>). <ul>
 <li>
 <b>"Cayley Pole"</b> &ndash; [double] (default 0.0) <picture><source srcset="form_352_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$\sigma$" src="form_352.png" width="8" height="6"/></picture> as defined above </li>
 <li>
@@ -186,21 +186,21 @@ Stepper Parameters</h1>
 <li>
 <b>"Verbosity"</b> &ndash; [Anasazi::MsgType] (default: Anasazi::Errors+Anasazi::Warnings+Anasazi::FinalSummary) Verbosity level </li>
 <li>
-<b>"Sorting Order"</b> &ndash; [string] (default: "LM") Sorting order of printed eigenvalues. Used by <a class="el" href="classLOCA_1_1EigenvalueSort_1_1Factory.html" title="Factory for creating EigenvalueSort strategy objects.">LOCA::EigenvalueSort::Factory</a>. Valid choices are: <ul>
+<b>"Sorting Order"</b> &ndash; [string] (default: "LM") Sorting order of printed eigenvalues. Used by <a class="el" href="class_l_o_c_a_1_1_eigenvalue_sort_1_1_factory.html" title="Factory for creating EigenvalueSort strategy objects.">LOCA::EigenvalueSort::Factory</a>. Valid choices are: <ul>
 <li>
-"LM" &ndash; Largest magnitude (<a class="el" href="classLOCA_1_1EigenvalueSort_1_1LargestMagnitude.html" title="Largest-magnitude sorting strategy.">LOCA::EigenvalueSort::LargestMagnitude</a>) </li>
+"LM" &ndash; Largest magnitude (<a class="el" href="class_l_o_c_a_1_1_eigenvalue_sort_1_1_largest_magnitude.html" title="Largest-magnitude sorting strategy.">LOCA::EigenvalueSort::LargestMagnitude</a>) </li>
 <li>
-"LR" &ndash; Largest real component (<a class="el" href="classLOCA_1_1EigenvalueSort_1_1LargestReal.html" title="Largest-real sorting strategy.">LOCA::EigenvalueSort::LargestReal</a>) </li>
+"LR" &ndash; Largest real component (<a class="el" href="class_l_o_c_a_1_1_eigenvalue_sort_1_1_largest_real.html" title="Largest-real sorting strategy.">LOCA::EigenvalueSort::LargestReal</a>) </li>
 <li>
-"LI" &ndash; Largest imaginary component (<a class="el" href="classLOCA_1_1EigenvalueSort_1_1LargestImaginary.html" title="Largest-imaginary sorting strategy.">LOCA::EigenvalueSort::LargestImaginary</a>) </li>
+"LI" &ndash; Largest imaginary component (<a class="el" href="class_l_o_c_a_1_1_eigenvalue_sort_1_1_largest_imaginary.html" title="Largest-imaginary sorting strategy.">LOCA::EigenvalueSort::LargestImaginary</a>) </li>
 <li>
-"SM" &ndash; Smallest magnitude (<a class="el" href="classLOCA_1_1EigenvalueSort_1_1SmallestMagnitude.html" title="Smallest-magnitude sorting strategy.">LOCA::EigenvalueSort::SmallestMagnitude</a>) </li>
+"SM" &ndash; Smallest magnitude (<a class="el" href="class_l_o_c_a_1_1_eigenvalue_sort_1_1_smallest_magnitude.html" title="Smallest-magnitude sorting strategy.">LOCA::EigenvalueSort::SmallestMagnitude</a>) </li>
 <li>
-"SR" &ndash; Smallest real component (<a class="el" href="classLOCA_1_1EigenvalueSort_1_1SmallestReal.html" title="Smallest-real sorting strategy.">LOCA::EigenvalueSort::SmallestReal</a>) </li>
+"SR" &ndash; Smallest real component (<a class="el" href="class_l_o_c_a_1_1_eigenvalue_sort_1_1_smallest_real.html" title="Smallest-real sorting strategy.">LOCA::EigenvalueSort::SmallestReal</a>) </li>
 <li>
-"SI" &ndash; Smallest imaginary component (<a class="el" href="classLOCA_1_1EigenvalueSort_1_1SmallestImaginary.html" title="Smallest-imaginary sorting strategy.">LOCA::EigenvalueSort::SmallestImaginary</a>) </li>
+"SI" &ndash; Smallest imaginary component (<a class="el" href="class_l_o_c_a_1_1_eigenvalue_sort_1_1_smallest_imaginary.html" title="Smallest-imaginary sorting strategy.">LOCA::EigenvalueSort::SmallestImaginary</a>) </li>
 <li>
-"CA" &ndash; Largest real part of inverse Cayley transformation (<a class="el" href="classLOCA_1_1EigenvalueSort_1_1LargestRealInverseCayley.html" title="Largest-Real Cayley sorting strategy.">LOCA::EigenvalueSort::LargestRealInverseCayley</a>) </li>
+"CA" &ndash; Largest real part of inverse Cayley transformation (<a class="el" href="class_l_o_c_a_1_1_eigenvalue_sort_1_1_largest_real_inverse_cayley.html" title="Largest-Real Cayley sorting strategy.">LOCA::EigenvalueSort::LargestRealInverseCayley</a>) </li>
 </ul>
 </li>
 </ul>
@@ -212,7 +212,7 @@ Stepper Parameters</h1>
 </ul>
 </li>
 <li>
-<b>"Bifurcation"</b> sublist &ndash; used by <a class="el" href="classLOCA_1_1Bifurcation_1_1Factory.html" title="Factory for creating bifurcation strategy objects.">LOCA::Bifurcation::Factory</a> to determine what type of bifurcation calculation, if any, to use <ul>
+<b>"Bifurcation"</b> sublist &ndash; used by <a class="el" href="class_l_o_c_a_1_1_bifurcation_1_1_factory.html" title="Factory for creating bifurcation strategy objects.">LOCA::Bifurcation::Factory</a> to determine what type of bifurcation calculation, if any, to use <ul>
 <li>
 <b>"Bifurcation Parameter"</b> &ndash; [string] (Must be supplied if <b>"Type"</b> is not <b>"None"</b>) Name of bifurcation parameter </li>
 <li>
@@ -224,9 +224,9 @@ Stepper Parameters</h1>
 <li>
 <b>"Formulation"</b> &ndash; Name of the bifurcation formulation. Valid choices are <ul>
 <li>
-"Moore-Spence" &ndash; [Default] Moore-Spence formulation (<a class="el" href="classLOCA_1_1TurningPoint_1_1MooreSpence_1_1ExtendedGroup.html" title="A group representing the Moore-Spence turning point equations.">LOCA::TurningPoint::MooreSpence::ExtendedGroup</a>) <ul>
+"Moore-Spence" &ndash; [Default] Moore-Spence formulation (<a class="el" href="class_l_o_c_a_1_1_turning_point_1_1_moore_spence_1_1_extended_group.html" title="A group representing the Moore-Spence turning point equations.">LOCA::TurningPoint::MooreSpence::ExtendedGroup</a>) <ul>
 <li>
-<b>"Length Normalization Vector"</b> &ndash; [Teuchos::RCP&lt;NOX::Abstract::Vector&gt;] (Must be supplied) Pointer to <a class="el" href="classNOX_1_1Abstract_1_1Vector.html" title="NOX&#39;s pure abstract vector interface for vectors that are used by the nonlinear solver.">NOX::Abstract::Vector</a> holding length normalization vector. </li>
+<b>"Length Normalization Vector"</b> &ndash; [Teuchos::RCP&lt;NOX::Abstract::Vector&gt;] (Must be supplied) Pointer to <a class="el" href="class_n_o_x_1_1_abstract_1_1_vector.html" title="NOX&#39;s pure abstract vector interface for vectors that are used by the nonlinear solver.">NOX::Abstract::Vector</a> holding length normalization vector. </li>
 <li>
 <b>"Initial Null Vector"</b> &ndash; [Teuchos::RCP&lt;NOX::Abstract::Vector&gt;] (Must be supplied) Initial guess for null vector. </li>
 <li>
@@ -236,9 +236,9 @@ Stepper Parameters</h1>
 <li>
 <b>"Solver Method"</b> &ndash; [string] (default: "Salinger Bordering") Solver method for solving extended turning point equations. Valid choices are <ul>
 <li>
-"Salinger Bordering" &ndash; Original bordering algorithm that uses (nearly) singular Jacobian solves (<a class="el" href="classLOCA_1_1TurningPoint_1_1MooreSpence_1_1SalingerBordering.html" title="Moore-Spence turning point solver strategy based on &quot;Salinger&quot; bordering. This is the classic 4-solve...">LOCA::TurningPoint::MooreSpence::SalingerBordering</a>). </li>
+"Salinger Bordering" &ndash; Original bordering algorithm that uses (nearly) singular Jacobian solves (<a class="el" href="class_l_o_c_a_1_1_turning_point_1_1_moore_spence_1_1_salinger_bordering.html" title="Moore-Spence turning point solver strategy based on &quot;Salinger&quot; bordering. This is the classic 4-solve...">LOCA::TurningPoint::MooreSpence::SalingerBordering</a>). </li>
 <li>
-"Phipps Bordering" &ndash; Bordering algorithm that uses nonsingular bordered matrix solves (<a class="el" href="classLOCA_1_1TurningPoint_1_1MooreSpence_1_1PhippsBordering.html" title="Moore-Spence turning point solver strategy based on &quot;Phipps&quot; bordering which is the 5-solve modified ...">LOCA::TurningPoint::MooreSpence::PhippsBordering</a>). <ul>
+"Phipps Bordering" &ndash; Bordering algorithm that uses nonsingular bordered matrix solves (<a class="el" href="class_l_o_c_a_1_1_turning_point_1_1_moore_spence_1_1_phipps_bordering.html" title="Moore-Spence turning point solver strategy based on &quot;Phipps&quot; bordering which is the 5-solve modified ...">LOCA::TurningPoint::MooreSpence::PhippsBordering</a>). <ul>
 <li>
 <b>"Bordered Solver Method"</b> &ndash; Method for solving bordered systems of equations. See description in the "Stepper" sublist above. </li>
 </ul>
@@ -248,7 +248,7 @@ Stepper Parameters</h1>
 </ul>
 </li>
 <li>
-"Minimally Augmented" &ndash; Minmally augmented formulation (<a class="el" href="classLOCA_1_1TurningPoint_1_1MinimallyAugmented_1_1ExtendedGroup.html" title="A group representing the minimally augemented turning point equations.">LOCA::TurningPoint::MinimallyAugmented::ExtendedGroup</a>) <ul>
+"Minimally Augmented" &ndash; Minmally augmented formulation (<a class="el" href="class_l_o_c_a_1_1_turning_point_1_1_minimally_augmented_1_1_extended_group.html" title="A group representing the minimally augemented turning point equations.">LOCA::TurningPoint::MinimallyAugmented::ExtendedGroup</a>) <ul>
 <li>
 <b>"Bordered Solver Method"</b> &ndash; Method for solving bordered systems of equations. See description in the "Stepper" sublist above. </li>
 <li>
@@ -256,9 +256,9 @@ Stepper Parameters</h1>
 <li>
 <b>"Constraint Method"</b> &ndash; [string] (default: "Default") Type of constraint method to use. Valid choices are <ul>
 <li>
-"Default" &ndash; Default method (<a class="el" href="classLOCA_1_1TurningPoint_1_1MinimallyAugmented_1_1Constraint.html" title="Implementation of LOCA::MultiContinuation::ConstraintInterfaceMVDX for computing turning points for t...">LOCA::TurningPoint::MinimallyAugmented::Constraint</a>) </li>
+"Default" &ndash; Default method (<a class="el" href="class_l_o_c_a_1_1_turning_point_1_1_minimally_augmented_1_1_constraint.html" title="Implementation of LOCA::MultiContinuation::ConstraintInterfaceMVDX for computing turning points for t...">LOCA::TurningPoint::MinimallyAugmented::Constraint</a>) </li>
 <li>
-"Modified" &ndash; A modified method that computes updates to the null vectors every nonlinear interation, instead of directly solving for them (<a class="el" href="classLOCA_1_1TurningPoint_1_1MinimallyAugmented_1_1ModifiedConstraint.html" title="Implementation of LOCA::MultiContinuation::ConstraintInterfaceMVDX for computing turning points for t...">LOCA::TurningPoint::MinimallyAugmented::ModifiedConstraint</a>) </li>
+"Modified" &ndash; A modified method that computes updates to the null vectors every nonlinear interation, instead of directly solving for them (<a class="el" href="class_l_o_c_a_1_1_turning_point_1_1_minimally_augmented_1_1_modified_constraint.html" title="Implementation of LOCA::MultiContinuation::ConstraintInterfaceMVDX for computing turning points for t...">LOCA::TurningPoint::MinimallyAugmented::ModifiedConstraint</a>) </li>
 </ul>
 </li>
 <li>
@@ -290,13 +290,13 @@ Stepper Parameters</h1>
 <li>
 <b>"Formulation"</b> &ndash; Name of the bifurcation formulation. Valid choices are <ul>
 <li>
-"Moore-Spence" [Default] &ndash; Moore-Spence formulation (<a class="el" href="classLOCA_1_1Pitchfork_1_1MooreSpence_1_1ExtendedGroup.html" title="A group representing the Moore-Spence pitchfork equations.">LOCA::Pitchfork::MooreSpence::ExtendedGroup</a>) <ul>
+"Moore-Spence" [Default] &ndash; Moore-Spence formulation (<a class="el" href="class_l_o_c_a_1_1_pitchfork_1_1_moore_spence_1_1_extended_group.html" title="A group representing the Moore-Spence pitchfork equations.">LOCA::Pitchfork::MooreSpence::ExtendedGroup</a>) <ul>
 <li>
-<b>"Length Normalization Vector"</b> &ndash; [Teuchos::RCP&lt;NOX::Abstract::Vector&gt;] (Must be supplied) Pointer to <a class="el" href="classNOX_1_1Abstract_1_1Vector.html" title="NOX&#39;s pure abstract vector interface for vectors that are used by the nonlinear solver.">NOX::Abstract::Vector</a> holding length normalization vector. </li>
+<b>"Length Normalization Vector"</b> &ndash; [Teuchos::RCP&lt;NOX::Abstract::Vector&gt;] (Must be supplied) Pointer to <a class="el" href="class_n_o_x_1_1_abstract_1_1_vector.html" title="NOX&#39;s pure abstract vector interface for vectors that are used by the nonlinear solver.">NOX::Abstract::Vector</a> holding length normalization vector. </li>
 <li>
 <b>"Initial Null Vector"</b> &ndash; [Teuchos::RCP&lt;NOX::Abstract::Vector&gt;] (Must be supplied) Initial guess for null vector. </li>
 <li>
-<b>"Asymmetric Vector"</b> &ndash; [Teuchos::RCP&lt;NOX::Abstract::Vector&gt;] (Must be supplied) Pointer to <a class="el" href="classNOX_1_1Abstract_1_1Vector.html" title="NOX&#39;s pure abstract vector interface for vectors that are used by the nonlinear solver.">NOX::Abstract::Vector</a> holding asymmetric vector <picture><source srcset="form_459_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$\psi$" src="form_459.png" width="10" height="13"/></picture> used in pitchfork algorithm. </li>
+<b>"Asymmetric Vector"</b> &ndash; [Teuchos::RCP&lt;NOX::Abstract::Vector&gt;] (Must be supplied) Pointer to <a class="el" href="class_n_o_x_1_1_abstract_1_1_vector.html" title="NOX&#39;s pure abstract vector interface for vectors that are used by the nonlinear solver.">NOX::Abstract::Vector</a> holding asymmetric vector <picture><source srcset="form_459_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$\psi$" src="form_459.png" width="10" height="13"/></picture> used in pitchfork algorithm. </li>
 <li>
 <b>"Perturb Initial Solution"</b> &ndash; [bool] (default: false) Flag indicating whether to apply an initial perturbation to the initial guess for the solution vector before starting bifurcation algorithm </li>
 <li>
@@ -304,9 +304,9 @@ Stepper Parameters</h1>
 <li>
 <b>"Solver Method"</b> &ndash; [string] (default: "Salinger Bordering") Solver method for solving extended turning point equations. Valid choices are <ul>
 <li>
-"Salinger Bordering" &ndash; Original bordering algorithm that uses (nearly) singular Jacobian solves (<a class="el" href="classLOCA_1_1Pitchfork_1_1MooreSpence_1_1SalingerBordering.html" title="Moore-Spence pitchfork solver strategy based on &quot;Salinger&quot; bordering. This is the classic 6-solve bor...">LOCA::Pitchfork::MooreSpence::SalingerBordering</a>). </li>
+"Salinger Bordering" &ndash; Original bordering algorithm that uses (nearly) singular Jacobian solves (<a class="el" href="class_l_o_c_a_1_1_pitchfork_1_1_moore_spence_1_1_salinger_bordering.html" title="Moore-Spence pitchfork solver strategy based on &quot;Salinger&quot; bordering. This is the classic 6-solve bor...">LOCA::Pitchfork::MooreSpence::SalingerBordering</a>). </li>
 <li>
-"Phipps Bordering" &ndash; Bordering algorithm that uses nonsingular bordered matrix solves (<a class="el" href="classLOCA_1_1Pitchfork_1_1MooreSpence_1_1PhippsBordering.html" title="Moore-Spence pitchfork solver strategy based on &quot;Phipps&quot; bordering which is the 7-solve modified pitc...">LOCA::Pitchfork::MooreSpence::PhippsBordering</a>). <ul>
+"Phipps Bordering" &ndash; Bordering algorithm that uses nonsingular bordered matrix solves (<a class="el" href="class_l_o_c_a_1_1_pitchfork_1_1_moore_spence_1_1_phipps_bordering.html" title="Moore-Spence pitchfork solver strategy based on &quot;Phipps&quot; bordering which is the 7-solve modified pitc...">LOCA::Pitchfork::MooreSpence::PhippsBordering</a>). <ul>
 <li>
 <b>"Bordered Solver Method"</b> &ndash; Method for solving bordered systems of equations. See description in the "Stepper" sublist above. </li>
 </ul>
@@ -316,13 +316,13 @@ Stepper Parameters</h1>
 </ul>
 </li>
 <li>
-"Minimally Augmented" &ndash; Minmally augmented formulation (<a class="el" href="classLOCA_1_1Pitchfork_1_1MinimallyAugmented_1_1ExtendedGroup.html" title="A group representing the minimally augemented pitchfork equations.">LOCA::Pitchfork::MinimallyAugmented::ExtendedGroup</a>) <ul>
+"Minimally Augmented" &ndash; Minmally augmented formulation (<a class="el" href="class_l_o_c_a_1_1_pitchfork_1_1_minimally_augmented_1_1_extended_group.html" title="A group representing the minimally augemented pitchfork equations.">LOCA::Pitchfork::MinimallyAugmented::ExtendedGroup</a>) <ul>
 <li>
 <b>"Bordered Solver Method"</b> &ndash; Method for solving bordered systems of equations. See description in the "Stepper" sublist above. </li>
 <li>
 <b>"Symmetric Jacobian"</b> &ndash; [bool] (default: false) Flag indicating whether Jacobian matrix is symmetric. </li>
 <li>
-<b>"Asymmetric Vector"</b> &ndash; [Teuchos::RCP&lt;NOX::Abstract::Vector&gt;] (Must be supplied) Pointer to <a class="el" href="classNOX_1_1Abstract_1_1Vector.html" title="NOX&#39;s pure abstract vector interface for vectors that are used by the nonlinear solver.">NOX::Abstract::Vector</a> holding asymmetric vector <picture><source srcset="form_459_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$\psi$" src="form_459.png" width="10" height="13"/></picture> used in pitchfork algorithm. </li>
+<b>"Asymmetric Vector"</b> &ndash; [Teuchos::RCP&lt;NOX::Abstract::Vector&gt;] (Must be supplied) Pointer to <a class="el" href="class_n_o_x_1_1_abstract_1_1_vector.html" title="NOX&#39;s pure abstract vector interface for vectors that are used by the nonlinear solver.">NOX::Abstract::Vector</a> holding asymmetric vector <picture><source srcset="form_459_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$\psi$" src="form_459.png" width="10" height="13"/></picture> used in pitchfork algorithm. </li>
 <li>
 <b>"Initial Null Vector Compuation"</b> &ndash; [string] (default: "User Provided") - Method to compute initial <picture><source srcset="form_455_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$a$" src="form_455.png" width="6" height="6"/></picture> and <picture><source srcset="form_456_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$b$" src="form_456.png" width="5" height="10"/></picture> vectors. Valid choices are: <ul>
 <li>
@@ -352,9 +352,9 @@ Stepper Parameters</h1>
 <li>
 <b>"Formulation"</b> &ndash; Name of the bifurcation formulation. Valid choices are <ul>
 <li>
-"Moore-Spence" &ndash; [Default] &ndash; Moore-Spence formulation (<a class="el" href="classLOCA_1_1Hopf_1_1MooreSpence_1_1ExtendedGroup.html" title="A group representing the Moore-Spence Hopf equations.">LOCA::Hopf::MooreSpence::ExtendedGroup</a>) <ul>
+"Moore-Spence" &ndash; [Default] &ndash; Moore-Spence formulation (<a class="el" href="class_l_o_c_a_1_1_hopf_1_1_moore_spence_1_1_extended_group.html" title="A group representing the Moore-Spence Hopf equations.">LOCA::Hopf::MooreSpence::ExtendedGroup</a>) <ul>
 <li>
-<b>"Length Normalization Vector"</b> &ndash; [Teuchos::RCP&lt;NOX::Abstract::Vector&gt;] (Must be supplied) Pointer to <a class="el" href="classNOX_1_1Abstract_1_1Vector.html" title="NOX&#39;s pure abstract vector interface for vectors that are used by the nonlinear solver.">NOX::Abstract::Vector</a> holding length normalization vector. </li>
+<b>"Length Normalization Vector"</b> &ndash; [Teuchos::RCP&lt;NOX::Abstract::Vector&gt;] (Must be supplied) Pointer to <a class="el" href="class_n_o_x_1_1_abstract_1_1_vector.html" title="NOX&#39;s pure abstract vector interface for vectors that are used by the nonlinear solver.">NOX::Abstract::Vector</a> holding length normalization vector. </li>
 <li>
 <b>"Initial Real Eigenvector"</b> &ndash; [Teuchos::RCP&lt;NOX::Abstract::Vector&gt;] (Must be supplied) Initial guess for real component of generalized eigenvector in Hopf algorithm </li>
 <li>
@@ -368,7 +368,7 @@ Stepper Parameters</h1>
 <li>
 <b>"Solver Method"</b> &ndash; [string] (default: "Salinger Bordering") Solver method for solving extended turning point equations. Valid choices are <ul>
 <li>
-"Salinger Bordering" &ndash; Original bordering algorithm that uses (nearly) singular matrix solves (<a class="el" href="classLOCA_1_1Hopf_1_1MooreSpence_1_1SalingerBordering.html" title="Moore-Spence Hopf solver strategy based on &quot;Salinger&quot; bordering. This is the classic 5-solve Hopf bor...">LOCA::Hopf::MooreSpence::SalingerBordering</a>). </li>
+"Salinger Bordering" &ndash; Original bordering algorithm that uses (nearly) singular matrix solves (<a class="el" href="class_l_o_c_a_1_1_hopf_1_1_moore_spence_1_1_salinger_bordering.html" title="Moore-Spence Hopf solver strategy based on &quot;Salinger&quot; bordering. This is the classic 5-solve Hopf bor...">LOCA::Hopf::MooreSpence::SalingerBordering</a>). </li>
 </ul>
 </li>
 </ul>
@@ -384,17 +384,17 @@ Stepper Parameters</h1>
 </ul>
 </li>
 <li>
-<b>"Predictor"</b> sublist &ndash; used by <a class="el" href="classLOCA_1_1MultiPredictor_1_1Factory.html" title="Factory for creating Predictor strategy objects.">LOCA::MultiPredictor::Factory</a> to determine what type of predictor to use for each continuation step <ul>
+<b>"Predictor"</b> sublist &ndash; used by <a class="el" href="class_l_o_c_a_1_1_multi_predictor_1_1_factory.html" title="Factory for creating Predictor strategy objects.">LOCA::MultiPredictor::Factory</a> to determine what type of predictor to use for each continuation step <ul>
 <li>
 <b>"Method"</b> &ndash; [string] (default: "Secant") Predictor method to use for computing the initial guess for each continuation step. Choices are <ul>
 <li>
-"Constant" &ndash; Use previous solution as initial guess for next step (<a class="el" href="classLOCA_1_1MultiPredictor_1_1Constant.html" title="Constant predictor strategy">LOCA::MultiPredictor::Constant</a>) </li>
+"Constant" &ndash; Use previous solution as initial guess for next step (<a class="el" href="class_l_o_c_a_1_1_multi_predictor_1_1_constant.html" title="Constant predictor strategy">LOCA::MultiPredictor::Constant</a>) </li>
 <li>
-"Secant" &ndash; Use secant vector to continuation curve to compute initial guess (<a class="el" href="classLOCA_1_1MultiPredictor_1_1Secant.html" title="Secant predictor strategy">LOCA::MultiPredictor::Secant</a>) </li>
+"Secant" &ndash; Use secant vector to continuation curve to compute initial guess (<a class="el" href="class_l_o_c_a_1_1_multi_predictor_1_1_secant.html" title="Secant predictor strategy">LOCA::MultiPredictor::Secant</a>) </li>
 <li>
-"Tangent" &ndash; Use tangent vector to continuation curve to compute initial guess (<a class="el" href="classLOCA_1_1MultiPredictor_1_1Tangent.html" title="Tangent predictor strategy">LOCA::MultiPredictor::Tangent</a>) </li>
+"Tangent" &ndash; Use tangent vector to continuation curve to compute initial guess (<a class="el" href="class_l_o_c_a_1_1_multi_predictor_1_1_tangent.html" title="Tangent predictor strategy">LOCA::MultiPredictor::Tangent</a>) </li>
 <li>
-"Random" &ndash; Use a random perturbation of previous solution to compute initial guess (<a class="el" href="classLOCA_1_1MultiPredictor_1_1Random.html" title="Random predictor strategy">LOCA::MultiPredictor::Random</a>) </li>
+"Random" &ndash; Use a random perturbation of previous solution to compute initial guess (<a class="el" href="class_l_o_c_a_1_1_multi_predictor_1_1_random.html" title="Random predictor strategy">LOCA::MultiPredictor::Random</a>) </li>
 </ul>
 </li>
 <li>
@@ -406,13 +406,13 @@ Stepper Parameters</h1>
 </ul>
 </li>
 <li>
-<b>"Step Size"</b> sublist &ndash; used by <a class="el" href="classLOCA_1_1StepSize_1_1Factory.html" title="Factory for creating step size control strategy objects.">LOCA::StepSize::Factory</a> to determine step size constrol strategies <ul>
+<b>"Step Size"</b> sublist &ndash; used by <a class="el" href="class_l_o_c_a_1_1_step_size_1_1_factory.html" title="Factory for creating step size control strategy objects.">LOCA::StepSize::Factory</a> to determine step size constrol strategies <ul>
 <li>
 <b>"Method"</b> &ndash; [string] (default: "Adaptive") Step size control strategy to use. Choices are <ul>
 <li>
-"Constant" &ndash; Use a constant step size in general, reducing the step size after a failure and increasing step size back up to original value after subsequent successes (see <a class="el" href="classLOCA_1_1StepSize_1_1Constant.html" title="Constant step size control strategy">LOCA::StepSize::Constant</a>) </li>
+"Constant" &ndash; Use a constant step size in general, reducing the step size after a failure and increasing step size back up to original value after subsequent successes (see <a class="el" href="class_l_o_c_a_1_1_step_size_1_1_constant.html" title="Constant step size control strategy">LOCA::StepSize::Constant</a>) </li>
 <li>
-"Adaptive" &ndash; Use an adaptive step size control strategy that adjusts step size according to the number of Newton iterations per step (see <a class="el" href="classLOCA_1_1StepSize_1_1Adaptive.html" title="Adaptive step size control strategy">LOCA::StepSize::Adaptive</a>) </li>
+"Adaptive" &ndash; Use an adaptive step size control strategy that adjusts step size according to the number of Newton iterations per step (see <a class="el" href="class_l_o_c_a_1_1_step_size_1_1_adaptive.html" title="Adaptive step size control strategy">LOCA::StepSize::Adaptive</a>) </li>
 </ul>
 </li>
 <li>
@@ -432,7 +432,7 @@ Stepper Parameters</h1>
 <li>
 <b>"Constraints"</b> sublist &ndash; Used to provide additional constraint equations. <ul>
 <li>
-<b>"Constraint Object"</b> &ndash; [Teuchos::RCP&lt;LOCA::MultiContinuation::ConstraintInterface&gt;] (Must be supplied) Pointer to object implementig constraint interface <a class="el" href="classLOCA_1_1MultiContinuation_1_1ConstraintInterface.html" title="Abstract interface for the constraint portion of a constrained nonlinear system.">LOCA::MultiContinuation::ConstraintInterface</a>. </li>
+<b>"Constraint Object"</b> &ndash; [Teuchos::RCP&lt;LOCA::MultiContinuation::ConstraintInterface&gt;] (Must be supplied) Pointer to object implementig constraint interface <a class="el" href="class_l_o_c_a_1_1_multi_continuation_1_1_constraint_interface.html" title="Abstract interface for the constraint portion of a constrained nonlinear system.">LOCA::MultiContinuation::ConstraintInterface</a>. </li>
 <li>
 <b>"Constraint Parameter Names"</b> &ndash; [Teuchos::RCP&lt; std::vector&lt;std::string&gt; &gt;] (Must be supplied) Pointer to vector of std::string names of parameters that become additional unkowns for solving constrained system. </li>
 <li>
@@ -444,23 +444,23 @@ Stepper Parameters</h1>
 </ul>
 <h1><a class="anchor" id="user_defined_list"></a>
 User-Defined Strategies Through Parameter Lists</h1>
-<p>Most strategy choices above have another available option that is not listed above for providing user-defined strategies. To use a user-defined strategy, one must implement the corresponding strategy abstract interface (e.g., <a class="el" href="classLOCA_1_1MultiPredictor_1_1AbstractStrategy.html" title="Abstract interface class for predictor strategies.">LOCA::MultiPredictor::AbstractStrategy</a>) and instantiate an object of the user-defined type. Then set the corrsponding "Method" (or similar) parameter of the relevant sublist to "User-Defined", set the parameter "User-Defined Name" to the parameter list name of the strategy (e.g., "My Predictor"), and set the parameter with that name to be a ref-count pointer to that object with the type of the abstract strategy interface (e.g., Teuchos::RCP&lt;LOCA::MultiPredictor::AbstractStrategy&gt;).</p>
+<p>Most strategy choices above have another available option that is not listed above for providing user-defined strategies. To use a user-defined strategy, one must implement the corresponding strategy abstract interface (e.g., <a class="el" href="class_l_o_c_a_1_1_multi_predictor_1_1_abstract_strategy.html" title="Abstract interface class for predictor strategies.">LOCA::MultiPredictor::AbstractStrategy</a>) and instantiate an object of the user-defined type. Then set the corrsponding "Method" (or similar) parameter of the relevant sublist to "User-Defined", set the parameter "User-Defined Name" to the parameter list name of the strategy (e.g., "My Predictor"), and set the parameter with that name to be a ref-count pointer to that object with the type of the abstract strategy interface (e.g., Teuchos::RCP&lt;LOCA::MultiPredictor::AbstractStrategy&gt;).</p>
 <h1><a class="anchor" id="user_defined_factory"></a>
 User-Defined Strategies Through Factories</h1>
-<p>Another option is available for providing user-defined strategies by implementing a factory to instantiate these strategies. This option is most appropriate when multiple user-defined strategies are available, and the user wishes to control which strategy is instantiated through parameter lists. This is often used when providing strategies that are specific to the underlying NOX group, for example the Epetra and LAPACK factories described below. In this case one imlements the <a class="el" href="classLOCA_1_1Abstract_1_1Factory.html" title="Abstract interface for providing a user-defined factory">LOCA::Abstract::Factory</a> by defining the relevant strategy creation methods and then passes a ref-count pointer to this factory in the LOCA::createGlobalData() call. Then the user can select these strategies just as if they were built in to LOCA.</p>
+<p>Another option is available for providing user-defined strategies by implementing a factory to instantiate these strategies. This option is most appropriate when multiple user-defined strategies are available, and the user wishes to control which strategy is instantiated through parameter lists. This is often used when providing strategies that are specific to the underlying NOX group, for example the Epetra and LAPACK factories described below. In this case one imlements the <a class="el" href="class_l_o_c_a_1_1_abstract_1_1_factory.html" title="Abstract interface for providing a user-defined factory">LOCA::Abstract::Factory</a> by defining the relevant strategy creation methods and then passes a ref-count pointer to this factory in the LOCA::createGlobalData() call. Then the user can select these strategies just as if they were built in to LOCA.</p>
 <h2><a class="anchor" id="epetra_factory"></a>
 Epetra Factory</h2>
-<p>The <a class="el" href="classLOCA_1_1Epetra_1_1Factory.html" title="Implementation of the LOCA::Abstract::Factory for Epetra groups.">LOCA::Epetra::Factory</a> provides strategies specific to the <a class="el" href="classNOX_1_1Epetra_1_1Group.html" title="Concrete implementation of NOX::Abstract::Group for Trilinos/Epetra.">NOX::Epetra::Group</a>. It provides the following strategies: </p><ul>
+<p>The <a class="el" href="class_l_o_c_a_1_1_epetra_1_1_factory.html" title="Implementation of the LOCA::Abstract::Factory for Epetra groups.">LOCA::Epetra::Factory</a> provides strategies specific to the <a class="el" href="class_n_o_x_1_1_epetra_1_1_group.html" title="Concrete implementation of NOX::Abstract::Group for Trilinos/Epetra.">NOX::Epetra::Group</a>. It provides the following strategies: </p><ul>
 <li>
-Methods for solving bordered systems of equations (<a class="el" href="classLOCA_1_1BorderedSolver_1_1Factory.html" title="Factory for creating BorderedSolver strategy objects.">LOCA::BorderedSolver::Factory</a>) <ul>
+Methods for solving bordered systems of equations (<a class="el" href="class_l_o_c_a_1_1_bordered_solver_1_1_factory.html" title="Factory for creating BorderedSolver strategy objects.">LOCA::BorderedSolver::Factory</a>) <ul>
 <li>
-<b>"Householder"</b> &ndash; Use the QR (a.k.a. Householder) method (<a class="el" href="classLOCA_1_1BorderedSolver_1_1EpetraHouseholder.html" title="Bordered system solver strategy based on Householder transformations.">LOCA::BorderedSolver::EpetraHouseholder</a>). <ul>
+<b>"Householder"</b> &ndash; Use the QR (a.k.a. Householder) method (<a class="el" href="class_l_o_c_a_1_1_bordered_solver_1_1_epetra_householder.html" title="Bordered system solver strategy based on Householder transformations.">LOCA::BorderedSolver::EpetraHouseholder</a>). <ul>
 <li>
 <b>"Include UV In Preconditioner"</b> &ndash; [bool] (default: false) Flag indicating whether to use the <picture><source srcset="form_341_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$U$" src="form_341.png" width="10" height="10"/></picture> and <picture><source srcset="form_342_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$V$" src="form_342.png" width="10" height="10"/></picture> terms in the preconditioner for <picture><source srcset="form_332_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$P$" src="form_332.png" width="10" height="10"/></picture> </li>
 <li>
-<b>"Use P For Preconditioner"</b> &ndash; [bool] (default: false) Flag indicating whether to use the representation of <picture><source srcset="form_332_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$P$" src="form_332.png" width="10" height="10"/></picture> as a <a class="el" href="classLOCA_1_1Epetra_1_1LowRankUpdateRowMatrix.html" title="An Epetra row matrix for implementing the operator .">LOCA::Epetra::LowRankUpdateRowMatrix</a> for computing the preconditioner. This is valid only for preconditioners that accept an Epetra_RowMatrix interface. </li>
+<b>"Use P For Preconditioner"</b> &ndash; [bool] (default: false) Flag indicating whether to use the representation of <picture><source srcset="form_332_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$P$" src="form_332.png" width="10" height="10"/></picture> as a <a class="el" href="class_l_o_c_a_1_1_epetra_1_1_low_rank_update_row_matrix.html" title="An Epetra row matrix for implementing the operator .">LOCA::Epetra::LowRankUpdateRowMatrix</a> for computing the preconditioner. This is valid only for preconditioners that accept an Epetra_RowMatrix interface. </li>
 <li>
-<b>"Transpose Solver Method"</b> &ndash; [string] (default: "Transpose Preconditioner") Method for preconditioning the transpose linear system (<a class="el" href="classLOCA_1_1Epetra_1_1TransposeLinearSystem_1_1Factory.html" title="Factory for creating transpose linear system strategy objects.">LOCA::Epetra::TransposeLinearSystem::Factory</a>). Available choices are: <ul>
+<b>"Transpose Solver Method"</b> &ndash; [string] (default: "Transpose Preconditioner") Method for preconditioning the transpose linear system (<a class="el" href="class_l_o_c_a_1_1_epetra_1_1_transpose_linear_system_1_1_factory.html" title="Factory for creating transpose linear system strategy objects.">LOCA::Epetra::TransposeLinearSystem::Factory</a>). Available choices are: <ul>
 <li>
 "Transpose Preconditioner" &ndash; Use the transpose of the preconditioner for the original system. </li>
 <li>
@@ -482,27 +482,27 @@ Methods for solving bordered systems of equations (<a class="el" href="classLOCA
 </ul>
 </li>
 <li>
-<b>"Augmented"</b> &ndash; Form an augmented linear problem implemented in a pseudo-matrix free mode (<a class="el" href="classLOCA_1_1BorderedSolver_1_1EpetraAugmented.html" title="Bordered system solver strategy based on augmenting the Jacobian operator.">LOCA::BorderedSolver::EpetraAugmented</a>). </li>
+<b>"Augmented"</b> &ndash; Form an augmented linear problem implemented in a pseudo-matrix free mode (<a class="el" href="class_l_o_c_a_1_1_bordered_solver_1_1_epetra_augmented.html" title="Bordered system solver strategy based on augmenting the Jacobian operator.">LOCA::BorderedSolver::EpetraAugmented</a>). </li>
 </ul>
 </li>
 </ul>
 <h2><a class="anchor" id="lapack_factory"></a>
 LAPACK Factory</h2>
-<p>The <a class="el" href="classLOCA_1_1LAPACK_1_1Factory.html" title="Implementation of the LOCA::Abstract::Factory for LAPACK groups.">LOCA::LAPACK::Factory</a> provides strategies specific to the <a class="el" href="classNOX_1_1LAPACK_1_1Group.html" title="A simple example of a group structure, based on BLAS/LAPACK.">NOX::LAPACK::Group</a>. It provides the following strategies: </p><ul>
+<p>The <a class="el" href="class_l_o_c_a_1_1_l_a_p_a_c_k_1_1_factory.html" title="Implementation of the LOCA::Abstract::Factory for LAPACK groups.">LOCA::LAPACK::Factory</a> provides strategies specific to the <a class="el" href="class_n_o_x_1_1_l_a_p_a_c_k_1_1_group.html" title="A simple example of a group structure, based on BLAS/LAPACK.">NOX::LAPACK::Group</a>. It provides the following strategies: </p><ul>
 <li>
-Methods for solving bordered systems of equations (<a class="el" href="classLOCA_1_1BorderedSolver_1_1Factory.html" title="Factory for creating BorderedSolver strategy objects.">LOCA::BorderedSolver::Factory</a>) <ul>
+Methods for solving bordered systems of equations (<a class="el" href="class_l_o_c_a_1_1_bordered_solver_1_1_factory.html" title="Factory for creating BorderedSolver strategy objects.">LOCA::BorderedSolver::Factory</a>) <ul>
 <li>
 <b>"LAPACK Direct Solve"</b> &ndash; Form the bordered system as a LAPACK matrix and solve via LAPACK. </li>
 </ul>
 </li>
 <li>
-Eigensolver methods (<a class="el" href="classLOCA_1_1Eigensolver_1_1Factory.html" title="Factory for creating Eigensolver strategy objects.">LOCA::Eigensolver::Factory</a>) <ul>
+Eigensolver methods (<a class="el" href="class_l_o_c_a_1_1_eigensolver_1_1_factory.html" title="Factory for creating Eigensolver strategy objects.">LOCA::Eigensolver::Factory</a>) <ul>
 <li>
 <b>"DGGEV"</b> &ndash; Use LAPACK's generalized eigenvalue solver DGGEV <ul>
 <li>
 <b>"Num Eigenvalues"</b> &ndash; [int] (default: 4) Number of eigenvalues to print </li>
 <li>
-<b>"Sorting Order"</b> &ndash; [string] (default: "LM") Sorting order of printed eigenvalues. Used by <a class="el" href="classLOCA_1_1EigenvalueSort_1_1Factory.html" title="Factory for creating EigenvalueSort strategy objects.">LOCA::EigenvalueSort::Factory</a>. See Eigensolver sublist above for a list of available options. </li>
+<b>"Sorting Order"</b> &ndash; [string] (default: "LM") Sorting order of printed eigenvalues. Used by <a class="el" href="class_l_o_c_a_1_1_eigenvalue_sort_1_1_factory.html" title="Factory for creating EigenvalueSort strategy objects.">LOCA::EigenvalueSort::Factory</a>. See Eigensolver sublist above for a list of available options. </li>
 </ul>
 </li>
 </ul>

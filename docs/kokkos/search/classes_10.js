@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['undefinedmultivectraits_0',['undefinedmultivectraits',['../../../../anasazi/doc/html/structAnasazi_1_1UndefinedMultiVecTraits.html',1,'Anasazi::UndefinedMultiVecTraits&lt; class ScalarType, class MV &gt;'],['../../../../belos/doc/html/structBelos_1_1UndefinedMultiVecTraits.html',1,'Belos::UndefinedMultiVecTraits&lt; class ScalarType, class MV &gt;']]],
-  ['undefinedoperatortraits_1',['undefinedoperatortraits',['../../../../anasazi/doc/html/structAnasazi_1_1UndefinedOperatorTraits.html',1,'Anasazi::UndefinedOperatorTraits&lt; class ScalarType, class MV, class OP &gt;'],['../../../../belos/doc/html/classBelos_1_1UndefinedOperatorTraits.html',1,'Belos::UndefinedOperatorTraits&lt; class ScalarType, class MV, class OP &gt;']]],
-  ['undefinedwrappertype_2',['UndefinedWrapperType',['../../../../belos/doc/html/classBelos_1_1UndefinedWrapperType.html',1,'Belos']]],
+  ['undefinedmultivectraits_0',['undefinedmultivectraits',['../../../../anasazi/doc/html/struct_anasazi_1_1_undefined_multi_vec_traits.html',1,'Anasazi::UndefinedMultiVecTraits&lt; class ScalarType, class MV &gt;'],['../../../../belos/doc/html/struct_belos_1_1_undefined_multi_vec_traits.html',1,'Belos::UndefinedMultiVecTraits&lt; class ScalarType, class MV &gt;']]],
+  ['undefinedoperatortraits_1',['undefinedoperatortraits',['../../../../anasazi/doc/html/struct_anasazi_1_1_undefined_operator_traits.html',1,'Anasazi::UndefinedOperatorTraits&lt; class ScalarType, class MV, class OP &gt;'],['../../../../belos/doc/html/class_belos_1_1_undefined_operator_traits.html',1,'Belos::UndefinedOperatorTraits&lt; class ScalarType, class MV, class OP &gt;']]],
+  ['undefinedwrappertype_2',['UndefinedWrapperType',['../../../../belos/doc/html/class_belos_1_1_undefined_wrapper_type.html',1,'Belos']]],
   ['uniquetoken_3',['UniqueToken',['../classKokkos_1_1Experimental_1_1UniqueToken.html',1,'Kokkos::Experimental']]],
   ['uniquetoken_3c_20exec_5fspace_20_3e_4',['UniqueToken&lt; exec_space &gt;',['../classKokkos_1_1Experimental_1_1UniqueToken.html',1,'Kokkos::Experimental']]],
   ['uniquetoken_3c_20exec_5fspace_2c_20uniquetokenscope_3a_3ainstance_20_3e_5',['UniqueToken&lt; exec_space, UniqueTokenScope::Instance &gt;',['../classKokkos_1_1Experimental_1_1UniqueToken.html',1,'Kokkos::Experimental']]],

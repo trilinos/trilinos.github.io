@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['undefinedmultivectraits_0',['UndefinedMultiVecTraits',['../structAnasazi_1_1UndefinedMultiVecTraits.html',1,'Anasazi']]],
-  ['undefinedoperatortraits_1',['UndefinedOperatorTraits',['../structAnasazi_1_1UndefinedOperatorTraits.html',1,'Anasazi']]]
+  ['undefinedmultivectraits_0',['UndefinedMultiVecTraits',['../struct_anasazi_1_1_undefined_multi_vec_traits.html',1,'Anasazi']]],
+  ['undefinedoperatortraits_1',['UndefinedOperatorTraits',['../struct_anasazi_1_1_undefined_operator_traits.html',1,'Anasazi']]]
 ];

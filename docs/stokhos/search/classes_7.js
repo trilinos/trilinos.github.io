@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['hermitebasis_0',['HermiteBasis',['../classStokhos_1_1HermiteBasis.html',1,'Stokhos']]],
-  ['housetridiagpcebasis_1',['HouseTriDiagPCEBasis',['../classStokhos_1_1HouseTriDiagPCEBasis.html',1,'Stokhos']]]
+  ['hermitebasis_0',['HermiteBasis',['../class_stokhos_1_1_hermite_basis.html',1,'Stokhos']]],
+  ['housetridiagpcebasis_1',['HouseTriDiagPCEBasis',['../class_stokhos_1_1_house_tri_diag_p_c_e_basis.html',1,'Stokhos']]]
 ];

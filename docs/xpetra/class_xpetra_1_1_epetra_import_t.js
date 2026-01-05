@@ -1,0 +1,26 @@
+var class_xpetra_1_1_epetra_import_t =
+[
+    [ "LocalOrdinal", "class_xpetra_1_1_epetra_import_t.html#a8215920d3193d39287915a734681700f", null ],
+    [ "GlobalOrdinal", "class_xpetra_1_1_epetra_import_t.html#a918b882036a7a092b3e5356a0808f82b", null ],
+    [ "map_type", "class_xpetra_1_1_epetra_import_t.html#a183c39e6922e014e8d8da761cf071527", null ],
+    [ "EpetraImportT", "class_xpetra_1_1_epetra_import_t.html#a9d26c2b38044241813110b751c57364a", null ],
+    [ "~EpetraImportT", "class_xpetra_1_1_epetra_import_t.html#a7efa37957d1f2c126572bcbce2c4b1dc", null ],
+    [ "EpetraImportT", "class_xpetra_1_1_epetra_import_t.html#ae1286f4acef3930a08998380b5fcf8e4", null ],
+    [ "createRemoteOnlyImport", "class_xpetra_1_1_epetra_import_t.html#a2b384c066663520ef7d137e3b25f0a70", null ],
+    [ "getNumSameIDs", "class_xpetra_1_1_epetra_import_t.html#a0e0d663babbf8248652f0605c9153018", null ],
+    [ "getNumPermuteIDs", "class_xpetra_1_1_epetra_import_t.html#af93e3fa29f161e5d60ed09644c88475e", null ],
+    [ "getPermuteFromLIDs", "class_xpetra_1_1_epetra_import_t.html#afb6ac64e500f8dbd2959c43ef400643c", null ],
+    [ "getPermuteToLIDs", "class_xpetra_1_1_epetra_import_t.html#ad7fbf2a7e9fbd78529cc905829e454af", null ],
+    [ "getNumRemoteIDs", "class_xpetra_1_1_epetra_import_t.html#a807e4c9d56eed797b93743c1d470c2d6", null ],
+    [ "getRemoteLIDs", "class_xpetra_1_1_epetra_import_t.html#ac2a686d931d167458d66009a7125705b", null ],
+    [ "getRemotePIDs", "class_xpetra_1_1_epetra_import_t.html#a868094ab3c52bfef54095a5ffef686ab", null ],
+    [ "getNumExportIDs", "class_xpetra_1_1_epetra_import_t.html#a6f61c277fa28b77da6fc7477d3bef861", null ],
+    [ "getExportLIDs", "class_xpetra_1_1_epetra_import_t.html#a2ea35ba9ad97cd76346f0cfba7d314b5", null ],
+    [ "getExportPIDs", "class_xpetra_1_1_epetra_import_t.html#a04cd2c5d506a9006f0907ab2740a52fd", null ],
+    [ "getSourceMap", "class_xpetra_1_1_epetra_import_t.html#a36aa13898c4655321f046113151d2d4f", null ],
+    [ "getTargetMap", "class_xpetra_1_1_epetra_import_t.html#a0bae3d55a88cae8ab79cdcd24762772a", null ],
+    [ "setDistributorParameters", "class_xpetra_1_1_epetra_import_t.html#a2c7a8eefb92c6946d1eda225b7d13e6a", null ],
+    [ "print", "class_xpetra_1_1_epetra_import_t.html#a86eade2a795e36b6bbcd4e7663301d3a", null ],
+    [ "getEpetra_Import", "class_xpetra_1_1_epetra_import_t.html#a9a601a4c49cfb921f83edc47b760f479", null ],
+    [ "import_", "class_xpetra_1_1_epetra_import_t.html#a98cd15d357d53edcab66e1af13ba8a73", null ]
+];

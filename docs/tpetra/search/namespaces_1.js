@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['matrixmarket_0',['MatrixMarket',['../namespaceMatrixMarket.html',1,'']]]
+  ['matrixmarket_0',['MatrixMarket',['../namespace_matrix_market.html',1,'']]]
 ];

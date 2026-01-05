@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['stratimikos_0',['Stratimikos',['../namespaceStratimikos.html',1,'']]]
+  ['stratimikos_0',['Stratimikos',['../namespace_stratimikos.html',1,'']]]
 ];
