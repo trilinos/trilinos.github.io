@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['initialize_0',['initialize',['../classGaleri_1_1grid_1_1Loadable.html#a0ffe914b3b7ad3d210ddd91621d1b8df',1,'Galeri::grid::Loadable']]],
-  ['integrateoverelement_1',['integrateoverelement',['../classGaleri_1_1FiniteElements_1_1AbstractVariational.html#a5adbb635ab9bb82c684fe5063da21fda',1,'Galeri::FiniteElements::AbstractVariational::IntegrateOverElement()'],['../classGaleri_1_1FiniteElements_1_1GalerkinVariational.html#a6778852cad1b13b97b137bcb8e4950ae',1,'Galeri::FiniteElements::GalerkinVariational::IntegrateOverElement()'],['../classGaleri_1_1FiniteElements_1_1SUPGVariational.html#a26742c59d90072d4c7334d398c4271e8',1,'Galeri::FiniteElements::SUPGVariational::IntegrateOverElement()']]]
+  ['initialize_0',['initialize',['../class_galeri_1_1grid_1_1_loadable.html#a0ffe914b3b7ad3d210ddd91621d1b8df',1,'Galeri::grid::Loadable']]],
+  ['integrateoverelement_1',['integrateoverelement',['../class_galeri_1_1_finite_elements_1_1_abstract_variational.html#a5adbb635ab9bb82c684fe5063da21fda',1,'Galeri::FiniteElements::AbstractVariational::IntegrateOverElement()'],['../class_galeri_1_1_finite_elements_1_1_galerkin_variational.html#a6778852cad1b13b97b137bcb8e4950ae',1,'Galeri::FiniteElements::GalerkinVariational::IntegrateOverElement()'],['../class_galeri_1_1_finite_elements_1_1_s_u_p_g_variational.html#a26742c59d90072d4c7334d398c4271e8',1,'Galeri::FiniteElements::SUPGVariational::IntegrateOverElement()']]]
 ];

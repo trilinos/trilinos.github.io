@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['epetrablockpreconditioner_0',['EpetraBlockPreconditioner',['../classTeko_1_1Epetra_1_1EpetraBlockPreconditioner.html',1,'Teko::Epetra']]],
-  ['epetraoperatorwrapper_1',['EpetraOperatorWrapper',['../classTeko_1_1Epetra_1_1EpetraOperatorWrapper.html',1,'Teko::Epetra']]]
+  ['epetrablockpreconditioner_0',['EpetraBlockPreconditioner',['../class_teko_1_1_epetra_1_1_epetra_block_preconditioner.html',1,'Teko::Epetra']]],
+  ['epetraoperatorwrapper_1',['EpetraOperatorWrapper',['../class_teko_1_1_epetra_1_1_epetra_operator_wrapper.html',1,'Teko::Epetra']]]
 ];

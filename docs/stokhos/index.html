@@ -69,7 +69,7 @@ $(function() {
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title"><a class="el" href="namespaceStokhos.html" title="Top-level namespace for Stokhos classes and functions.">Stokhos</a>: Stochastic Galerkin Uncertainty Quantification Methods </div></div>
+  <div class="headertitle"><div class="title"><a class="el" href="namespace_stokhos.html" title="Top-level namespace for Stokhos classes and functions.">Stokhos</a>: Stochastic Galerkin Uncertainty Quantification Methods </div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p> 
@@ -90,25 +90,25 @@ Introduction</h1>
 <p>Stokhos provides several types of capabilities</p>
 <ul>
 <li>
-Classes defining families of univariate and multivariate orthogonal polynomials: <a class="el" href="classStokhos_1_1OneDOrthogPolyBasis.html" title="Abstract base class for 1-D orthogonal polynomials.">Stokhos::OneDOrthogPolyBasis</a> and <a class="el" href="classStokhos_1_1OrthogPolyBasis.html" title="Abstract base class for multivariate orthogonal polynomials.">Stokhos::OrthogPolyBasis</a>. </li>
+Classes defining families of univariate and multivariate orthogonal polynomials: <a class="el" href="class_stokhos_1_1_one_d_orthog_poly_basis.html" title="Abstract base class for 1-D orthogonal polynomials.">Stokhos::OneDOrthogPolyBasis</a> and <a class="el" href="class_stokhos_1_1_orthog_poly_basis.html" title="Abstract base class for multivariate orthogonal polynomials.">Stokhos::OrthogPolyBasis</a>. </li>
 <li>
-Classes defining quadrature methods for orthogonal polynomials: <a class="el" href="classStokhos_1_1Quadrature.html" title="Abstract base class for quadrature methods.">Stokhos::Quadrature</a>. </li>
+Classes defining quadrature methods for orthogonal polynomials: <a class="el" href="class_stokhos_1_1_quadrature.html" title="Abstract base class for quadrature methods.">Stokhos::Quadrature</a>. </li>
 <li>
-Classes for generating stochastic residual coefficients using automatic differentiation with Sacado: <a class="el" href="classStokhos_1_1OrthogPolyExpansion.html" title="Abstract base class for orthogonal polynomial-based expansions.">Stokhos::OrthogPolyExpansion</a> </li>
+Classes for generating stochastic residual coefficients using automatic differentiation with Sacado: <a class="el" href="class_stokhos_1_1_orthog_poly_expansion.html" title="Abstract base class for orthogonal polynomial-based expansions.">Stokhos::OrthogPolyExpansion</a> </li>
 <li>
 Classes for forming and solving stochastic Galerkin linear systems: Stokhos::MatrixFreeEpetraOp and Stokhos::MeanEpetraOp. </li>
 <li>
-Classes for providing a nonlinear interface to nonlinear stochastic Galerkin problems: <a class="el" href="classStokhos_1_1SGModelEvaluator.html" title="Nonlinear, stochastic Galerkin ModelEvaluator.">Stokhos::SGModelEvaluator</a>. </li>
+Classes for providing a nonlinear interface to nonlinear stochastic Galerkin problems: <a class="el" href="class_stokhos_1_1_s_g_model_evaluator.html" title="Nonlinear, stochastic Galerkin ModelEvaluator.">Stokhos::SGModelEvaluator</a>. </li>
 </ul>
 <h1><a class="anchor" id="stokhos_tpl"></a>
 Third-Party Libraries</h1>
 <p>In addition to the standard Trilinos third-party libraries of BLAS, LAPACK, and MPI, Stokhos can make use of two more: the fortran UQ Toolkit of Debusschere et al, and <a href="http://www.cs.sandia.gov/DAKOTA/">Dakota</a>.</p>
 <h2><a class="anchor" id="stokhos_foruqtk"></a>
 Fortran UQ Toolkit</h2>
-<p>To enable the fortran UQ toolkit, add -D TPL_ENABLE_ForUQTK=ON to your cmake configure arguments and specify the library path to your installation via -D ForUQTK_LIBRARY_DIRS. This activates the expansion class <a class="el" href="classStokhos_1_1ForUQTKOrthogPolyExpansion.html">Stokhos::ForUQTKOrthogPolyExpansion</a> for generating stochastic galerkin residual coefficients using either time integration or Taylor series calculations.</p>
+<p>To enable the fortran UQ toolkit, add -D TPL_ENABLE_ForUQTK=ON to your cmake configure arguments and specify the library path to your installation via -D ForUQTK_LIBRARY_DIRS. This activates the expansion class <a class="el" href="class_stokhos_1_1_for_u_q_t_k_orthog_poly_expansion.html">Stokhos::ForUQTKOrthogPolyExpansion</a> for generating stochastic galerkin residual coefficients using either time integration or Taylor series calculations.</p>
 <h2><a class="anchor" id="stokhos_dakota"></a>
 Dakota</h2>
-<p>Dakota support is provided through the Trilinos package <a href="http://trilinos.sandia.gov/packages/TriKota/">TriKota</a> and currently, requires the development version of Dakota available <a href="http://www.cs.sandia.gov/DAKOTA/download.html">here</a>. To enable Dakota support, unpack a recent Dakota tarball in Trilinos/packages/TriKota and then add -D Trilinos_ENABLE_TriKota:BOOL=ON to your configure arguments. This activates sparse-grid quadrature methods based on Smolyak algorithms through <a class="el" href="classStokhos_1_1SparseGridQuadrature.html" title="Defines quadrature for a tensor product basis by Smolyak sparse grids.">Stokhos::SparseGridQuadrature</a>. See the <a href="http://trilinos.sandia.gov/packages/docs/dev/packages/TriKota/doc/html/index.html">TriKota package documentation</a> for more information on building and using TriKota.</p>
+<p>Dakota support is provided through the Trilinos package <a href="http://trilinos.sandia.gov/packages/TriKota/">TriKota</a> and currently, requires the development version of Dakota available <a href="http://www.cs.sandia.gov/DAKOTA/download.html">here</a>. To enable Dakota support, unpack a recent Dakota tarball in Trilinos/packages/TriKota and then add -D Trilinos_ENABLE_TriKota:BOOL=ON to your configure arguments. This activates sparse-grid quadrature methods based on Smolyak algorithms through <a class="el" href="class_stokhos_1_1_sparse_grid_quadrature.html" title="Defines quadrature for a tensor product basis by Smolyak sparse grids.">Stokhos::SparseGridQuadrature</a>. See the <a href="http://trilinos.sandia.gov/packages/docs/dev/packages/TriKota/doc/html/index.html">TriKota package documentation</a> for more information on building and using TriKota.</p>
 <h1><a class="anchor" id="stokhos_contacts"></a>
 Contacts</h1>
 <p>Stokhos is primarily developed and maintained by Eric Phipps with significant contributions by Bert Debusschere, Omar Knio, Chris Miller, and Habib Najm. </p>

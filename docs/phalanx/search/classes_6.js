@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['kokkosdimtype_0',['KokkosDimType',['../structPHX_1_1KokkosDimType.html',1,'PHX']]],
-  ['kokkosdimtype_3c_20datat_2c_200_20_3e_1',['KokkosDimType&lt; DataT, 0 &gt;',['../structPHX_1_1KokkosDimType_3_01DataT_00_010_01_4.html',1,'PHX']]],
-  ['kokkosviewcreatefunctor_2',['KokkosViewCreateFunctor',['../classPHX_1_1KokkosViewCreateFunctor.html',1,'PHX']]],
-  ['kokkosviewfactory_3',['KokkosViewFactory',['../classPHX_1_1KokkosViewFactory.html',1,'PHX']]],
-  ['kokkosviewfactory_3c_20sacado_3a_3aelrcachefad_3a_3adfad_3c_20scalart_20_3e_2c_20layout_2c_20device_20_3e_4',['KokkosViewFactory&lt; Sacado::ELRCacheFad::DFad&lt; ScalarT &gt;, Layout, Device &gt;',['../classPHX_1_1KokkosViewFactory_3_01Sacado_1_1ELRCacheFad_1_1DFad_3_01ScalarT_01_4_00_01Layout_00_01Device_01_4.html',1,'PHX']]],
-  ['kokkosviewfactory_3c_20sacado_3a_3afad_3a_3adfad_3c_20scalart_20_3e_2c_20layout_2c_20device_20_3e_5',['KokkosViewFactory&lt; Sacado::Fad::DFad&lt; ScalarT &gt;, Layout, Device &gt;',['../classPHX_1_1KokkosViewFactory_3_01Sacado_1_1Fad_1_1DFad_3_01ScalarT_01_4_00_01Layout_00_01Device_01_4.html',1,'PHX']]],
-  ['kokkosviewfactory_3c_20sacado_3a_3afad_3a_3aslfad_3c_20scalart_2c_20n_20_3e_2c_20layout_2c_20device_20_3e_6',['KokkosViewFactory&lt; Sacado::Fad::SLFad&lt; ScalarT, N &gt;, Layout, Device &gt;',['../classPHX_1_1KokkosViewFactory_3_01Sacado_1_1Fad_1_1SLFad_3_01ScalarT_00_01N_01_4_00_01Layout_00_01Device_01_4.html',1,'PHX']]],
-  ['kokkosviewfactoryfunctor_7',['KokkosViewFactoryFunctor',['../classPHX_1_1KokkosViewFactoryFunctor.html',1,'PHX']]],
-  ['kokkosviewsizefunctor_8',['KokkosViewSizeFunctor',['../classPHX_1_1KokkosViewSizeFunctor.html',1,'PHX']]]
+  ['kokkosdimtype_0',['KokkosDimType',['../struct_p_h_x_1_1_kokkos_dim_type.html',1,'PHX']]],
+  ['kokkosdimtype_3c_20datat_2c_200_20_3e_1',['KokkosDimType&lt; DataT, 0 &gt;',['../struct_p_h_x_1_1_kokkos_dim_type_3_01_data_t_00_010_01_4.html',1,'PHX']]],
+  ['kokkosviewcreatefunctor_2',['KokkosViewCreateFunctor',['../class_p_h_x_1_1_kokkos_view_create_functor.html',1,'PHX']]],
+  ['kokkosviewfactory_3',['KokkosViewFactory',['../class_p_h_x_1_1_kokkos_view_factory.html',1,'PHX']]],
+  ['kokkosviewfactory_3c_20sacado_3a_3aelrcachefad_3a_3adfad_3c_20scalart_20_3e_2c_20layout_2c_20device_20_3e_4',['KokkosViewFactory&lt; Sacado::ELRCacheFad::DFad&lt; ScalarT &gt;, Layout, Device &gt;',['../class_p_h_x_1_1_kokkos_view_factory_3_01_sacado_1_1_e_l_r_cache_fad_1_1_d_fad_3_01_scalar_t_01_4_00_01_layout_00_01_device_01_4.html',1,'PHX']]],
+  ['kokkosviewfactory_3c_20sacado_3a_3afad_3a_3adfad_3c_20scalart_20_3e_2c_20layout_2c_20device_20_3e_5',['KokkosViewFactory&lt; Sacado::Fad::DFad&lt; ScalarT &gt;, Layout, Device &gt;',['../class_p_h_x_1_1_kokkos_view_factory_3_01_sacado_1_1_fad_1_1_d_fad_3_01_scalar_t_01_4_00_01_layout_00_01_device_01_4.html',1,'PHX']]],
+  ['kokkosviewfactory_3c_20sacado_3a_3afad_3a_3aslfad_3c_20scalart_2c_20n_20_3e_2c_20layout_2c_20device_20_3e_6',['KokkosViewFactory&lt; Sacado::Fad::SLFad&lt; ScalarT, N &gt;, Layout, Device &gt;',['../class_p_h_x_1_1_kokkos_view_factory_3_01_sacado_1_1_fad_1_1_s_l_fad_3_01_scalar_t_00_01_n_01_4_00_01_layout_00_01_device_01_4.html',1,'PHX']]],
+  ['kokkosviewfactoryfunctor_7',['KokkosViewFactoryFunctor',['../class_p_h_x_1_1_kokkos_view_factory_functor.html',1,'PHX']]],
+  ['kokkosviewsizefunctor_8',['KokkosViewSizeFunctor',['../class_p_h_x_1_1_kokkos_view_size_functor.html',1,'PHX']]]
 ];

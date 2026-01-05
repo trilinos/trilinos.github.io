@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['experimental_0',['Experimental',['../../../../anasazi/doc/html/namespaceExperimental.html',1,'']]]
+  ['experimental_0',['Experimental',['../../../../anasazi/doc/html/namespace_experimental.html',1,'']]]
 ];

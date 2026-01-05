@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['filegrid_0',['FileGrid',['../classGaleri_1_1FiniteElements_1_1FileGrid.html',1,'Galeri::FiniteElements']]]
+  ['filegrid_0',['FileGrid',['../class_galeri_1_1_finite_elements_1_1_file_grid.html',1,'Galeri::FiniteElements']]]
 ];

@@ -1,7 +1,7 @@
 var dir_6d0941966393c11bd90ec42cc10d3b81 =
 [
-    [ "Xpetra_DefaultPlatform.cpp", "Xpetra__DefaultPlatform_8cpp.html", null ],
-    [ "Xpetra_DefaultPlatform.hpp", "Xpetra__DefaultPlatform_8hpp.html", "Xpetra__DefaultPlatform_8hpp" ],
-    [ "Xpetra_MpiPlatform.hpp", "Xpetra__MpiPlatform_8hpp.html", "Xpetra__MpiPlatform_8hpp" ],
-    [ "Xpetra_SerialPlatform.hpp", "Xpetra__SerialPlatform_8hpp.html", "Xpetra__SerialPlatform_8hpp" ]
+    [ "Xpetra_DefaultPlatform.cpp", "_xpetra___default_platform_8cpp.html", null ],
+    [ "Xpetra_DefaultPlatform.hpp", "_xpetra___default_platform_8hpp.html", "_xpetra___default_platform_8hpp" ],
+    [ "Xpetra_MpiPlatform.hpp", "_xpetra___mpi_platform_8hpp.html", "_xpetra___mpi_platform_8hpp" ],
+    [ "Xpetra_SerialPlatform.hpp", "_xpetra___serial_platform_8hpp.html", "_xpetra___serial_platform_8hpp" ]
 ];

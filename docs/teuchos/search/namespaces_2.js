@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['raw_0',['Raw',['../namespaceRaw.html',1,'']]]
+  ['raw_0',['Raw',['../namespace_raw.html',1,'']]]
 ];

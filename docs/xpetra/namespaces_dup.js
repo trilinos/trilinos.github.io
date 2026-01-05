@@ -1,5 +1,5 @@
 var namespaces_dup =
 [
-    [ "Xpetra", "namespaceXpetra.html", "namespaceXpetra" ],
-    [ "XpetraExamples", "namespaceXpetraExamples.html", null ]
+    [ "Xpetra", "namespace_xpetra.html", "namespace_xpetra" ],
+    [ "XpetraExamples", "namespace_xpetra_examples.html", null ]
 ];

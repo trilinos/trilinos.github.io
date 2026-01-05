@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['backtrack_0',['Backtrack',['../classNOX_1_1LineSearch_1_1Backtrack.html',1,'NOX::LineSearch']]],
-  ['borderedoperator_1',['BorderedOperator',['../classLOCA_1_1BorderedSolver_1_1BorderedOperator.html',1,'LOCA::BorderedSolver']]],
-  ['bordering_2',['Bordering',['../classLOCA_1_1BorderedSolver_1_1Bordering.html',1,'LOCA::BorderedSolver']]],
-  ['broyden_3',['Broyden',['../classNOX_1_1Direction_1_1Broyden.html',1,'NOX::Direction']]],
-  ['broydenmemory_4',['BroydenMemory',['../classNOX_1_1Direction_1_1Broyden_1_1BroydenMemory.html',1,'NOX::Direction::Broyden']]],
-  ['broydenmemoryunit_5',['BroydenMemoryUnit',['../classNOX_1_1Direction_1_1Broyden_1_1BroydenMemoryUnit.html',1,'NOX::Direction::Broyden']]],
-  ['broydenoperator_6',['BroydenOperator',['../classNOX_1_1Epetra_1_1BroydenOperator.html',1,'NOX::Epetra']]]
+  ['backtrack_0',['Backtrack',['../class_n_o_x_1_1_line_search_1_1_backtrack.html',1,'NOX::LineSearch']]],
+  ['borderedoperator_1',['BorderedOperator',['../class_l_o_c_a_1_1_bordered_solver_1_1_bordered_operator.html',1,'LOCA::BorderedSolver']]],
+  ['bordering_2',['Bordering',['../class_l_o_c_a_1_1_bordered_solver_1_1_bordering.html',1,'LOCA::BorderedSolver']]],
+  ['broyden_3',['Broyden',['../class_n_o_x_1_1_direction_1_1_broyden.html',1,'NOX::Direction']]],
+  ['broydenmemory_4',['BroydenMemory',['../class_n_o_x_1_1_direction_1_1_broyden_1_1_broyden_memory.html',1,'NOX::Direction::Broyden']]],
+  ['broydenmemoryunit_5',['BroydenMemoryUnit',['../class_n_o_x_1_1_direction_1_1_broyden_1_1_broyden_memory_unit.html',1,'NOX::Direction::Broyden']]],
+  ['broydenoperator_6',['BroydenOperator',['../class_n_o_x_1_1_epetra_1_1_broyden_operator.html',1,'NOX::Epetra']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['jacobipreconditionerfactory_0',['JacobiPreconditionerFactory',['../classTeko_1_1JacobiPreconditionerFactory.html',1,'Teko']]]
+  ['jacobipreconditionerfactory_0',['JacobiPreconditionerFactory',['../class_teko_1_1_jacobi_preconditioner_factory.html',1,'Teko']]]
 ];

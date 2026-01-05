@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wrapper_0',['Wrapper',['../classWrapper.html',1,'']]]
+  ['wrapper_0',['Wrapper',['../class_wrapper.html',1,'']]]
 ];

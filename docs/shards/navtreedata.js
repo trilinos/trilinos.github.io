@@ -46,8 +46,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"Shards__ArrayVector_8hpp_source.html",
-"structshards_1_1TypeListFirst.html"
+"_shards___array_8hpp_source.html",
+"structshards_1_1_type_list_first.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

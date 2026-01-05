@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['betatype_0',['BetaType',['../classNOX_1_1Epetra_1_1FiniteDifference.html#ad3e4bb3dbbe6e99ec620d99626163d97',1,'NOX::Epetra::FiniteDifference']]]
+  ['betatype_0',['BetaType',['../class_n_o_x_1_1_epetra_1_1_finite_difference.html#ad3e4bb3dbbe6e99ec620d99626163d97',1,'NOX::Epetra::FiniteDifference']]]
 ];

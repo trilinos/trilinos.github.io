@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['intrepidpoissonexample_0',['IntrepidPoissonExample',['../namespaceIntrepidPoissonExample.html',1,'']]]
+  ['intrepidpoissonexample_0',['IntrepidPoissonExample',['../namespace_intrepid_poisson_example.html',1,'']]]
 ];

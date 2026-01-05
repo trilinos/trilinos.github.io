@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['layout_0',['Layout',['../classPHX_1_1Layout.html',1,'PHX']]],
+  ['layout_0',['Layout',['../class_p_h_x_1_1_layout.html',1,'PHX']]],
   ['leak_20error_20in_20all_20evaluators_20when_20using_20the_20phx_3a_3acontiguousallocator_20with_20sacado_3a_3adfad_20based_20fields_20what_20is_20the_20problem_1',['8. Valgrind gives a memory leak error in all evaluators when using the PHX::ContiguousAllocator with Sacado::DFad based fields.  What is the problem?',['../faq.html#faq8',1,'']]],
   ['learn_20the_20phalanx_20nomenclature_2',['B. Learn the Phalanx Nomenclature',['../user_guide.html#ug_dummy_2',1,'']]],
   ['library_20requirements_3',['A. General Library Requirements',['../user_guide.html#ug_step1_general',1,'']]],

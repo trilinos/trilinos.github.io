@@ -8,5 +8,5 @@ var dir_7d6a65ce1b9dd88d61878b6298542596 =
     [ "StructuredAggregation", "dir_a1e93394881550b2609a4601907ddd00.html", "dir_a1e93394881550b2609a4601907ddd00" ],
     [ "UncoupledAggregation", "dir_68fca0d7dc6b1c656bcd8804416dedd6.html", "dir_68fca0d7dc6b1c656bcd8804416dedd6" ],
     [ "UserAggregation", "dir_1b90ebb00d812a1212786d772de6cda5.html", "dir_1b90ebb00d812a1212786d772de6cda5" ],
-    [ "MueLu_AggregationAlgorithmBase.hpp", "MueLu__AggregationAlgorithmBase_8hpp.html", "MueLu__AggregationAlgorithmBase_8hpp" ]
+    [ "MueLu_AggregationAlgorithmBase.hpp", "_mue_lu___aggregation_algorithm_base_8hpp.html", "_mue_lu___aggregation_algorithm_base_8hpp" ]
 ];

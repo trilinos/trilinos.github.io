@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['locasolver_0',['LOCASolver',['../classPiro_1_1LOCASolver.html',1,'Piro']]]
+  ['locasolver_0',['LOCASolver',['../class_piro_1_1_l_o_c_a_solver.html',1,'Piro']]]
 ];

@@ -84,9 +84,9 @@ $(function() {
 <div class="line"><span class="comment">// *****************************************************************************</span></div>
 <div class="line"><span class="comment">// @HEADER</span></div>
 <div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="Zoltan2__BasicIdentifierAdapter_8hpp.html">Zoltan2_BasicIdentifierAdapter.hpp</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="Zoltan2__PartitioningProblem_8hpp.html">Zoltan2_PartitioningProblem.hpp</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="Zoltan2__PartitioningSolution_8hpp.html">Zoltan2_PartitioningSolution.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_zoltan2___basic_identifier_adapter_8hpp.html">Zoltan2_BasicIdentifierAdapter.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_zoltan2___partitioning_problem_8hpp.html">Zoltan2_PartitioningProblem.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_zoltan2___partitioning_solution_8hpp.html">Zoltan2_PartitioningSolution.hpp</a>&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> <a id="a0" name="a0"></a><a class="code hl_function" href="absdefinitiontest_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]) {</div>
 <div class="line"><span class="preprocessor">#ifdef HAVE_ZOLTAN2_MPI</span></div>
@@ -130,10 +130,10 @@ $(function() {
 <div class="line">  <span class="comment">// Create a Zoltan2 input adapter with no weights</span></div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// TODO explain</span></div>
-<div class="line">  <span class="keyword">typedef</span> <a id="_a1" name="_a1"></a><a class="code hl_class" href="classZoltan2_1_1BasicUserTypes.html">Zoltan2::BasicUserTypes&lt;scalar_t, localId_t, globalId_t&gt;</a> myTypes;</div>
+<div class="line">  <span class="keyword">typedef</span> <a id="_a1" name="_a1"></a><a class="code hl_class" href="class_zoltan2_1_1_basic_user_types.html">Zoltan2::BasicUserTypes&lt;scalar_t, localId_t, globalId_t&gt;</a> myTypes;</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// TODO explain</span></div>
-<div class="line">  <span class="keyword">typedef</span> <a id="_a2" name="_a2"></a><a class="code hl_class" href="classZoltan2_1_1BasicIdentifierAdapter.html">Zoltan2::BasicIdentifierAdapter&lt;myTypes&gt;</a> inputAdapter_t;</div>
+<div class="line">  <span class="keyword">typedef</span> <a id="_a2" name="_a2"></a><a class="code hl_class" href="class_zoltan2_1_1_basic_identifier_adapter.html">Zoltan2::BasicIdentifierAdapter&lt;myTypes&gt;</a> inputAdapter_t;</div>
 <div class="line"> </div>
 <div class="line">  std::vector&lt;const scalar_t *&gt; noWeights;</div>
 <div class="line">  std::vector&lt;int&gt; noStrides;</div>
@@ -153,12 +153,12 @@ $(function() {
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Create a Zoltan2 partitioning problem</span></div>
 <div class="line"> </div>
-<div class="line">  <a id="_a3" name="_a3"></a><a class="code hl_class" href="classZoltan2_1_1PartitioningProblem.html">Zoltan2::PartitioningProblem&lt;inputAdapter_t&gt;</a> *problem = </div>
-<div class="line">      <span class="keyword">new</span> <a class="code hl_class" href="classZoltan2_1_1PartitioningProblem.html">Zoltan2::PartitioningProblem&lt;inputAdapter_t&gt;</a>(&amp;ia, &amp;params);</div>
+<div class="line">  <a id="_a3" name="_a3"></a><a class="code hl_class" href="class_zoltan2_1_1_partitioning_problem.html">Zoltan2::PartitioningProblem&lt;inputAdapter_t&gt;</a> *problem = </div>
+<div class="line">      <span class="keyword">new</span> <a class="code hl_class" href="class_zoltan2_1_1_partitioning_problem.html">Zoltan2::PartitioningProblem&lt;inputAdapter_t&gt;</a>(&amp;ia, &amp;params);</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Solve the problem - do the partitioning</span></div>
 <div class="line"> </div>
-<div class="line">  problem-&gt;<a id="a4" name="a4"></a><a class="code hl_function" href="classZoltan2_1_1PartitioningProblem.html#a7fbd58cf6f99192560035d494b5eee16">solve</a>();</div>
+<div class="line">  problem-&gt;<a id="a4" name="a4"></a><a class="code hl_function" href="class_zoltan2_1_1_partitioning_problem.html#a7fbd58cf6f99192560035d494b5eee16">solve</a>();</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Check and print the solution.</span></div>
 <div class="line">  <span class="comment">// Count number of IDs assigned to each part; compare to targetCount</span></div>
@@ -168,7 +168,7 @@ $(function() {
 <div class="line">  std::vector&lt;int&gt; partCounts(nprocs, 0), globalPartCounts(nprocs, 0);</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; ia.getLocalNumIDs(); i++) {</div>
-<div class="line">    <span class="keywordtype">int</span> pp = problem-&gt;<a id="a5" name="a5"></a><a class="code hl_function" href="classZoltan2_1_1PartitioningProblem.html#a4dd5d631101f6f1371d5d0020d50aeaf">getSolution</a>().getPartListView()[i];</div>
+<div class="line">    <span class="keywordtype">int</span> pp = problem-&gt;<a id="a5" name="a5"></a><a class="code hl_function" href="class_zoltan2_1_1_partitioning_problem.html#a4dd5d631101f6f1371d5d0020d50aeaf">getSolution</a>().getPartListView()[i];</div>
 <div class="line">    std::cout &lt;&lt; rank &lt;&lt; <span class="stringliteral">&quot; LID &quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot; GID &quot;</span> &lt;&lt; ids[i]</div>
 <div class="line">              &lt;&lt; <span class="stringliteral">&quot; PART &quot;</span> &lt;&lt; pp &lt;&lt; std::endl;</div>
 <div class="line">    partCounts[pp]++;</div>
@@ -201,15 +201,15 @@ $(function() {
 <div class="line">  MPI_Finalize();</div>
 <div class="line"><span class="preprocessor">#endif</span></div>
 <div class="line">}</div>
-<div class="ttc" id="aZoltan2__BasicIdentifierAdapter_8hpp_html"><div class="ttname"><a href="Zoltan2__BasicIdentifierAdapter_8hpp.html">Zoltan2_BasicIdentifierAdapter.hpp</a></div><div class="ttdoc">Defines the BasicIdentifierAdapter class.</div></div>
-<div class="ttc" id="aZoltan2__PartitioningProblem_8hpp_html"><div class="ttname"><a href="Zoltan2__PartitioningProblem_8hpp.html">Zoltan2_PartitioningProblem.hpp</a></div><div class="ttdoc">Defines the PartitioningProblem class.</div></div>
-<div class="ttc" id="aZoltan2__PartitioningSolution_8hpp_html"><div class="ttname"><a href="Zoltan2__PartitioningSolution_8hpp.html">Zoltan2_PartitioningSolution.hpp</a></div><div class="ttdoc">Defines the PartitioningSolution class.</div></div>
+<div class="ttc" id="a_zoltan2___basic_identifier_adapter_8hpp_html"><div class="ttname"><a href="_zoltan2___basic_identifier_adapter_8hpp.html">Zoltan2_BasicIdentifierAdapter.hpp</a></div><div class="ttdoc">Defines the BasicIdentifierAdapter class.</div></div>
+<div class="ttc" id="a_zoltan2___partitioning_problem_8hpp_html"><div class="ttname"><a href="_zoltan2___partitioning_problem_8hpp.html">Zoltan2_PartitioningProblem.hpp</a></div><div class="ttdoc">Defines the PartitioningProblem class.</div></div>
+<div class="ttc" id="a_zoltan2___partitioning_solution_8hpp_html"><div class="ttname"><a href="_zoltan2___partitioning_solution_8hpp.html">Zoltan2_PartitioningSolution.hpp</a></div><div class="ttdoc">Defines the PartitioningSolution class.</div></div>
 <div class="ttc" id="aabsdefinitiontest_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="absdefinitiontest_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition</b> <a href="absdefinitiontest_8cpp_source.html#l00015">absdefinitiontest.cpp:15</a></div></div>
-<div class="ttc" id="aclassZoltan2_1_1BasicIdentifierAdapter_html"><div class="ttname"><a href="classZoltan2_1_1BasicIdentifierAdapter.html">Zoltan2::BasicIdentifierAdapter</a></div><div class="ttdoc">This class represents a collection of global Identifiers and their associated weights,...</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__BasicIdentifierAdapter_8hpp_source.html#l00046">Zoltan2_BasicIdentifierAdapter.hpp:46</a></div></div>
-<div class="ttc" id="aclassZoltan2_1_1BasicUserTypes_html"><div class="ttname"><a href="classZoltan2_1_1BasicUserTypes.html">Zoltan2::BasicUserTypes</a></div><div class="ttdoc">A simple class that can be the User template argument for an InputAdapter.</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__InputTraits_8hpp_source.html#l00108">Zoltan2_InputTraits.hpp:108</a></div></div>
-<div class="ttc" id="aclassZoltan2_1_1PartitioningProblem_html"><div class="ttname"><a href="classZoltan2_1_1PartitioningProblem.html">Zoltan2::PartitioningProblem</a></div><div class="ttdoc">PartitioningProblem sets up partitioning problems for the user.</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__PartitioningProblem_8hpp_source.html#l00068">Zoltan2_PartitioningProblem.hpp:69</a></div></div>
-<div class="ttc" id="aclassZoltan2_1_1PartitioningProblem_html_a4dd5d631101f6f1371d5d0020d50aeaf"><div class="ttname"><a href="classZoltan2_1_1PartitioningProblem.html#a4dd5d631101f6f1371d5d0020d50aeaf">Zoltan2::PartitioningProblem::getSolution</a></div><div class="ttdeci">const PartitioningSolution&lt; Adapter &gt; &amp; getSolution()</div><div class="ttdoc">Get the solution to the problem.</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__PartitioningProblem_8hpp_source.html#l00134">Zoltan2_PartitioningProblem.hpp:134</a></div></div>
-<div class="ttc" id="aclassZoltan2_1_1PartitioningProblem_html_a7fbd58cf6f99192560035d494b5eee16"><div class="ttname"><a href="classZoltan2_1_1PartitioningProblem.html#a7fbd58cf6f99192560035d494b5eee16">Zoltan2::PartitioningProblem::solve</a></div><div class="ttdeci">void solve(bool updateInputData=true)</div><div class="ttdoc">Direct the problem to create a solution.</div><div class="ttdef"><b>Definition</b> <a href="Zoltan2__PartitioningProblem_8hpp_source.html#l00578">Zoltan2_PartitioningProblem.hpp:578</a></div></div>
+<div class="ttc" id="aclass_zoltan2_1_1_basic_identifier_adapter_html"><div class="ttname"><a href="class_zoltan2_1_1_basic_identifier_adapter.html">Zoltan2::BasicIdentifierAdapter</a></div><div class="ttdoc">This class represents a collection of global Identifiers and their associated weights,...</div><div class="ttdef"><b>Definition</b> <a href="_zoltan2___basic_identifier_adapter_8hpp_source.html#l00046">Zoltan2_BasicIdentifierAdapter.hpp:46</a></div></div>
+<div class="ttc" id="aclass_zoltan2_1_1_basic_user_types_html"><div class="ttname"><a href="class_zoltan2_1_1_basic_user_types.html">Zoltan2::BasicUserTypes</a></div><div class="ttdoc">A simple class that can be the User template argument for an InputAdapter.</div><div class="ttdef"><b>Definition</b> <a href="_zoltan2___input_traits_8hpp_source.html#l00108">Zoltan2_InputTraits.hpp:108</a></div></div>
+<div class="ttc" id="aclass_zoltan2_1_1_partitioning_problem_html"><div class="ttname"><a href="class_zoltan2_1_1_partitioning_problem.html">Zoltan2::PartitioningProblem</a></div><div class="ttdoc">PartitioningProblem sets up partitioning problems for the user.</div><div class="ttdef"><b>Definition</b> <a href="_zoltan2___partitioning_problem_8hpp_source.html#l00068">Zoltan2_PartitioningProblem.hpp:69</a></div></div>
+<div class="ttc" id="aclass_zoltan2_1_1_partitioning_problem_html_a4dd5d631101f6f1371d5d0020d50aeaf"><div class="ttname"><a href="class_zoltan2_1_1_partitioning_problem.html#a4dd5d631101f6f1371d5d0020d50aeaf">Zoltan2::PartitioningProblem::getSolution</a></div><div class="ttdeci">const PartitioningSolution&lt; Adapter &gt; &amp; getSolution()</div><div class="ttdoc">Get the solution to the problem.</div><div class="ttdef"><b>Definition</b> <a href="_zoltan2___partitioning_problem_8hpp_source.html#l00134">Zoltan2_PartitioningProblem.hpp:134</a></div></div>
+<div class="ttc" id="aclass_zoltan2_1_1_partitioning_problem_html_a7fbd58cf6f99192560035d494b5eee16"><div class="ttname"><a href="class_zoltan2_1_1_partitioning_problem.html#a7fbd58cf6f99192560035d494b5eee16">Zoltan2::PartitioningProblem::solve</a></div><div class="ttdeci">void solve(bool updateInputData=true)</div><div class="ttdoc">Direct the problem to create a solution.</div><div class="ttdef"><b>Definition</b> <a href="_zoltan2___partitioning_problem_8hpp_source.html#l00578">Zoltan2_PartitioningProblem.hpp:578</a></div></div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

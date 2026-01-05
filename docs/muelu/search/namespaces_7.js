@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['teuchos_0',['Teuchos',['../namespaceTeuchos.html',1,'']]],
-  ['thyra_1',['Thyra',['../namespaceThyra.html',1,'']]]
+  ['teuchos_0',['Teuchos',['../namespace_teuchos.html',1,'']]],
+  ['thyra_1',['Thyra',['../namespace_thyra.html',1,'']]]
 ];

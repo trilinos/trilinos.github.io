@@ -1481,9 +1481,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01398" name="l01398"></a><span class="lineno"> 1398</span> </div>
 <div class="line"><a id="l01399" name="l01399"></a><span class="lineno"> 1399</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> ReturnType, <span class="keyword">class</span> FunctorType&gt;</div>
 <div class="line"><a id="l01400" name="l01400"></a><span class="lineno"> 1400</span><span class="keyword">struct </span>ParallelReduceReturnValue&lt;</div>
-<div class="line"><a id="l01401" name="l01401"></a><span class="lineno"> 1401</span>    std::enable_if_t&lt;Kokkos::is_view&lt;ReturnType&gt;::value&gt;, <a class="code hl_enumerationRef" href="../../../belos/doc/html/namespaceBelos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>,</div>
+<div class="line"><a id="l01401" name="l01401"></a><span class="lineno"> 1401</span>    std::enable_if_t&lt;Kokkos::is_view&lt;ReturnType&gt;::value&gt;, <a class="code hl_enumerationRef" href="../../../belos/doc/html/namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>,</div>
 <div class="line"><a id="l01402" name="l01402"></a><span class="lineno"> 1402</span>    FunctorType&gt; {</div>
-<div class="line"><a id="l01403" name="l01403"></a><span class="lineno"> 1403</span>  <span class="keyword">using </span>return_type  = <a class="code hl_enumerationRef" href="../../../belos/doc/html/namespaceBelos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>;</div>
+<div class="line"><a id="l01403" name="l01403"></a><span class="lineno"> 1403</span>  <span class="keyword">using </span>return_type  = <a class="code hl_enumerationRef" href="../../../belos/doc/html/namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>;</div>
 <div class="line"><a id="l01404" name="l01404"></a><span class="lineno"> 1404</span>  <span class="keyword">using </span>reducer_type = InvalidType;</div>
 <div class="line"><a id="l01405" name="l01405"></a><span class="lineno"> 1405</span> </div>
 <div class="line"><a id="l01406" name="l01406"></a><span class="lineno"> 1406</span>  <span class="keyword">using </span>value_type_scalar = <span class="keyword">typename</span> return_type::value_type;</div>
@@ -1492,7 +1492,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01409" name="l01409"></a><span class="lineno"> 1409</span>  <span class="keyword">using </span>value_type = std::conditional_t&lt;return_type::rank == 0,</div>
 <div class="line"><a id="l01410" name="l01410"></a><span class="lineno"> 1410</span>                                        value_type_scalar, value_type_array&gt;;</div>
 <div class="line"><a id="l01411" name="l01411"></a><span class="lineno"> 1411</span> </div>
-<div class="line"><a id="l01412" name="l01412"></a><span class="lineno"> 1412</span>  <span class="keyword">static</span> return_type&amp; return_value(<a class="code hl_enumerationRef" href="../../../belos/doc/html/namespaceBelos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>&amp; return_val, <span class="keyword">const</span> FunctorType&amp;) {</div>
+<div class="line"><a id="l01412" name="l01412"></a><span class="lineno"> 1412</span>  <span class="keyword">static</span> return_type&amp; return_value(<a class="code hl_enumerationRef" href="../../../belos/doc/html/namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>&amp; return_val, <span class="keyword">const</span> FunctorType&amp;) {</div>
 <div class="line"><a id="l01413" name="l01413"></a><span class="lineno"> 1413</span>    <span class="keywordflow">return</span> return_val;  <span class="comment">// NOLINT(bugprone-return-const-ref-from-parameter)</span></div>
 <div class="line"><a id="l01414" name="l01414"></a><span class="lineno"> 1414</span>  }</div>
 <div class="line"><a id="l01415" name="l01415"></a><span class="lineno"> 1415</span>};</div>
@@ -1503,7 +1503,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01420" name="l01420"></a><span class="lineno"> 1420</span>                     (!std::is_array_v&lt;ReturnType&gt; &amp;&amp;</div>
 <div class="line"><a id="l01421" name="l01421"></a><span class="lineno"> 1421</span>                      !std::is_pointer_v&lt;</div>
 <div class="line"><a id="l01422" name="l01422"></a><span class="lineno"> 1422</span>                          ReturnType&gt;)&amp;&amp;!Kokkos::is_reducer&lt;ReturnType&gt;::value&gt;,</div>
-<div class="line"><a id="l01423" name="l01423"></a><span class="lineno"> 1423</span>    <a class="code hl_enumerationRef" href="../../../belos/doc/html/namespaceBelos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>, FunctorType&gt; {</div>
+<div class="line"><a id="l01423" name="l01423"></a><span class="lineno"> 1423</span>    <a class="code hl_enumerationRef" href="../../../belos/doc/html/namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>, FunctorType&gt; {</div>
 <div class="line"><a id="l01424" name="l01424"></a><span class="lineno"> 1424</span>  <span class="keyword">using </span>return_type =</div>
 <div class="line"><a id="l01425" name="l01425"></a><span class="lineno"> 1425</span>      <a class="code hl_class" href="classKokkos_1_1Bitset.html">Kokkos::View&lt;ReturnType, Kokkos::HostSpace, Kokkos::MemoryUnmanaged&gt;</a>;</div>
 <div class="line"><a id="l01426" name="l01426"></a><span class="lineno"> 1426</span> </div>
@@ -1511,7 +1511,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01428" name="l01428"></a><span class="lineno"> 1428</span> </div>
 <div class="line"><a id="l01429" name="l01429"></a><span class="lineno"> 1429</span>  <span class="keyword">using </span>value_type = <span class="keyword">typename</span> return_type::value_type;</div>
 <div class="line"><a id="l01430" name="l01430"></a><span class="lineno"> 1430</span> </div>
-<div class="line"><a id="l01431" name="l01431"></a><span class="lineno"> 1431</span>  <span class="keyword">static</span> return_type return_value(<a class="code hl_enumerationRef" href="../../../belos/doc/html/namespaceBelos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>&amp; return_val, <span class="keyword">const</span> FunctorType&amp;) {</div>
+<div class="line"><a id="l01431" name="l01431"></a><span class="lineno"> 1431</span>  <span class="keyword">static</span> return_type return_value(<a class="code hl_enumerationRef" href="../../../belos/doc/html/namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>&amp; return_val, <span class="keyword">const</span> FunctorType&amp;) {</div>
 <div class="line"><a id="l01432" name="l01432"></a><span class="lineno"> 1432</span>    <span class="keywordflow">return</span> return_type(&amp;return_val);</div>
 <div class="line"><a id="l01433" name="l01433"></a><span class="lineno"> 1433</span>  }</div>
 <div class="line"><a id="l01434" name="l01434"></a><span class="lineno"> 1434</span>};</div>
@@ -1520,7 +1520,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01437" name="l01437"></a><span class="lineno"> 1437</span><span class="keyword">struct </span>ParallelReduceReturnValue&lt;</div>
 <div class="line"><a id="l01438" name="l01438"></a><span class="lineno"> 1438</span>    std::enable_if_t&lt;(std::is_array_v&lt;ReturnType&gt; ||</div>
 <div class="line"><a id="l01439" name="l01439"></a><span class="lineno"> 1439</span>                      std::is_pointer_v&lt;ReturnType&gt;)&gt;,</div>
-<div class="line"><a id="l01440" name="l01440"></a><span class="lineno"> 1440</span>    <a class="code hl_enumerationRef" href="../../../belos/doc/html/namespaceBelos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>, FunctorType&gt; {</div>
+<div class="line"><a id="l01440" name="l01440"></a><span class="lineno"> 1440</span>    <a class="code hl_enumerationRef" href="../../../belos/doc/html/namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>, FunctorType&gt; {</div>
 <div class="line"><a id="l01441" name="l01441"></a><span class="lineno"> 1441</span>  <span class="keyword">using </span>return_type = <a class="code hl_class" href="classKokkos_1_1Bitset.html">Kokkos::View&lt;std::remove_const_t&lt;ReturnType&gt;</a>,</div>
 <div class="line"><a id="l01442" name="l01442"></a><span class="lineno"> 1442</span>                                   <a class="code hl_class" href="classKokkos_1_1HostSpace.html">Kokkos::HostSpace</a>, <a class="code hl_class" href="classKokkos_1_1Bitset.html">Kokkos::MemoryUnmanaged</a>&gt;;</div>
 <div class="line"><a id="l01443" name="l01443"></a><span class="lineno"> 1443</span> </div>
@@ -1528,7 +1528,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01445" name="l01445"></a><span class="lineno"> 1445</span> </div>
 <div class="line"><a id="l01446" name="l01446"></a><span class="lineno"> 1446</span>  <span class="keyword">using </span>value_type = <span class="keyword">typename</span> return_type::value_type[];</div>
 <div class="line"><a id="l01447" name="l01447"></a><span class="lineno"> 1447</span> </div>
-<div class="line"><a id="l01448" name="l01448"></a><span class="lineno"> 1448</span>  <span class="keyword">static</span> return_type return_value(<a class="code hl_enumerationRef" href="../../../belos/doc/html/namespaceBelos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>&amp; return_val,</div>
+<div class="line"><a id="l01448" name="l01448"></a><span class="lineno"> 1448</span>  <span class="keyword">static</span> return_type return_value(<a class="code hl_enumerationRef" href="../../../belos/doc/html/namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>&amp; return_val,</div>
 <div class="line"><a id="l01449" name="l01449"></a><span class="lineno"> 1449</span>                                  <span class="keyword">const</span> FunctorType&amp; functor) {</div>
 <div class="line"><a id="l01450" name="l01450"></a><span class="lineno"> 1450</span>    <span class="keywordflow">if</span> (std::is_array_v&lt;ReturnType&gt;)</div>
 <div class="line"><a id="l01451" name="l01451"></a><span class="lineno"> 1451</span>      <span class="keywordflow">return</span> return_type(return_val);</div>
@@ -1539,13 +1539,13 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01456" name="l01456"></a><span class="lineno"> 1456</span> </div>
 <div class="line"><a id="l01457" name="l01457"></a><span class="lineno"> 1457</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> ReturnType, <span class="keyword">class</span> FunctorType&gt;</div>
 <div class="line"><a id="l01458" name="l01458"></a><span class="lineno"> 1458</span><span class="keyword">struct </span>ParallelReduceReturnValue&lt;</div>
-<div class="line"><a id="l01459" name="l01459"></a><span class="lineno"> 1459</span>    std::enable_if_t&lt;Kokkos::is_reducer&lt;ReturnType&gt;::value&gt;, <a class="code hl_enumerationRef" href="../../../belos/doc/html/namespaceBelos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>,</div>
+<div class="line"><a id="l01459" name="l01459"></a><span class="lineno"> 1459</span>    std::enable_if_t&lt;Kokkos::is_reducer&lt;ReturnType&gt;::value&gt;, <a class="code hl_enumerationRef" href="../../../belos/doc/html/namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>,</div>
 <div class="line"><a id="l01460" name="l01460"></a><span class="lineno"> 1460</span>    FunctorType&gt; {</div>
 <div class="line"><a id="l01461" name="l01461"></a><span class="lineno"> 1461</span>  <span class="keyword">using </span>return_type  = <span class="keyword">typename</span> ReturnType::result_view_type;</div>
-<div class="line"><a id="l01462" name="l01462"></a><span class="lineno"> 1462</span>  <span class="keyword">using </span>reducer_type = <a class="code hl_enumerationRef" href="../../../belos/doc/html/namespaceBelos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>;</div>
+<div class="line"><a id="l01462" name="l01462"></a><span class="lineno"> 1462</span>  <span class="keyword">using </span>reducer_type = <a class="code hl_enumerationRef" href="../../../belos/doc/html/namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>;</div>
 <div class="line"><a id="l01463" name="l01463"></a><span class="lineno"> 1463</span>  <span class="keyword">using </span>value_type   = <span class="keyword">typename</span> return_type::value_type;</div>
 <div class="line"><a id="l01464" name="l01464"></a><span class="lineno"> 1464</span> </div>
-<div class="line"><a id="l01465" name="l01465"></a><span class="lineno"> 1465</span>  <span class="keyword">static</span> <span class="keyword">auto</span> return_value(<a class="code hl_enumerationRef" href="../../../belos/doc/html/namespaceBelos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>&amp; return_val, <span class="keyword">const</span> FunctorType&amp;) {</div>
+<div class="line"><a id="l01465" name="l01465"></a><span class="lineno"> 1465</span>  <span class="keyword">static</span> <span class="keyword">auto</span> return_value(<a class="code hl_enumerationRef" href="../../../belos/doc/html/namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>&amp; return_val, <span class="keyword">const</span> FunctorType&amp;) {</div>
 <div class="line"><a id="l01466" name="l01466"></a><span class="lineno"> 1466</span>    <span class="keywordflow">return</span> return_val.view();</div>
 <div class="line"><a id="l01467" name="l01467"></a><span class="lineno"> 1467</span>  }</div>
 <div class="line"><a id="l01468" name="l01468"></a><span class="lineno"> 1468</span>};</div>
@@ -1593,7 +1593,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01510" name="l01510"></a><span class="lineno"> 1510</span>  <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> execute_impl(<span class="keyword">const</span> std::string&amp; label,</div>
 <div class="line"><a id="l01511" name="l01511"></a><span class="lineno"> 1511</span>                                  <span class="keyword">const</span> PolicyType&amp; policy,</div>
 <div class="line"><a id="l01512" name="l01512"></a><span class="lineno"> 1512</span>                                  <span class="keyword">const</span> FunctorType&amp; functor,</div>
-<div class="line"><a id="l01513" name="l01513"></a><span class="lineno"> 1513</span>                                  <a class="code hl_enumerationRef" href="../../../belos/doc/html/namespaceBelos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>&amp; return_value) {</div>
+<div class="line"><a id="l01513" name="l01513"></a><span class="lineno"> 1513</span>                                  <a class="code hl_enumerationRef" href="../../../belos/doc/html/namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>&amp; return_value) {</div>
 <div class="line"><a id="l01514" name="l01514"></a><span class="lineno"> 1514</span>    <span class="keyword">using </span>PassedReducerType = <span class="keyword">typename</span> return_value_adapter::reducer_type;</div>
 <div class="line"><a id="l01515" name="l01515"></a><span class="lineno"> 1515</span>    uint64_t kpID           = 0;</div>
 <div class="line"><a id="l01516" name="l01516"></a><span class="lineno"> 1516</span> </div>
@@ -1638,7 +1638,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01555" name="l01555"></a><span class="lineno"> 1555</span>  <span class="keyword">static</span> <span class="keyword">inline</span> std::enable_if_t&lt;!(is_array_reduction &amp;&amp;</div>
 <div class="line"><a id="l01556" name="l01556"></a><span class="lineno"> 1556</span>                                   std::is_pointer_v&lt;Dummy&gt;)&gt;</div>
 <div class="line"><a id="l01557" name="l01557"></a><span class="lineno"> 1557</span>  execute(<span class="keyword">const</span> std::string&amp; label, <span class="keyword">const</span> PolicyType&amp; policy,</div>
-<div class="line"><a id="l01558" name="l01558"></a><span class="lineno"> 1558</span>          <span class="keyword">const</span> FunctorType&amp; functor, <a class="code hl_enumerationRef" href="../../../belos/doc/html/namespaceBelos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>&amp; return_value) {</div>
+<div class="line"><a id="l01558" name="l01558"></a><span class="lineno"> 1558</span>          <span class="keyword">const</span> FunctorType&amp; functor, <a class="code hl_enumerationRef" href="../../../belos/doc/html/namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>&amp; return_value) {</div>
 <div class="line"><a id="l01559" name="l01559"></a><span class="lineno"> 1559</span>    execute_impl(label, policy, functor, return_value);</div>
 <div class="line"><a id="l01560" name="l01560"></a><span class="lineno"> 1560</span>  }</div>
 <div class="line"><a id="l01561" name="l01561"></a><span class="lineno"> 1561</span>};</div>
@@ -1716,7 +1716,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01682" name="l01682"></a><span class="lineno"> 1682</span>                          <a class="code hl_class" href="classKokkos_1_1Bitset.html">Kokkos::is_reducer&lt;ReturnType&gt;::value</a> ||</div>
 <div class="line"><a id="l01683" name="l01683"></a><span class="lineno"> 1683</span>                          std::is_pointer_v&lt;ReturnType&gt;)&gt;</div>
 <div class="line"><a id="l01684" name="l01684"></a><span class="lineno"> 1684</span>parallel_reduce(<span class="keyword">const</span> std::string&amp; label, <span class="keyword">const</span> PolicyType&amp; policy,</div>
-<div class="line"><a id="l01685" name="l01685"></a><span class="lineno"> 1685</span>                <span class="keyword">const</span> FunctorType&amp; functor, <a class="code hl_enumerationRef" href="../../../belos/doc/html/namespaceBelos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>&amp; return_value) {</div>
+<div class="line"><a id="l01685" name="l01685"></a><span class="lineno"> 1685</span>                <span class="keyword">const</span> FunctorType&amp; functor, <a class="code hl_enumerationRef" href="../../../belos/doc/html/namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>&amp; return_value) {</div>
 <div class="line"><a id="l01686" name="l01686"></a><span class="lineno"> 1686</span>  <span class="keyword">static_assert</span>(</div>
 <div class="line"><a id="l01687" name="l01687"></a><span class="lineno"> 1687</span>      !std::is_const_v&lt;ReturnType&gt;,</div>
 <div class="line"><a id="l01688" name="l01688"></a><span class="lineno"> 1688</span>      <span class="stringliteral">&quot;A const reduction result type is only allowed for a View, pointer or &quot;</span></div>
@@ -1737,7 +1737,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01703" name="l01703"></a><span class="lineno"> 1703</span>                          <a class="code hl_class" href="classKokkos_1_1Bitset.html">Kokkos::is_reducer&lt;ReturnType&gt;::value</a> ||</div>
 <div class="line"><a id="l01704" name="l01704"></a><span class="lineno"> 1704</span>                          std::is_pointer_v&lt;ReturnType&gt;)&gt;</div>
 <div class="line"><a id="l01705" name="l01705"></a><span class="lineno"> 1705</span>parallel_reduce(<span class="keyword">const</span> PolicyType&amp; policy, <span class="keyword">const</span> FunctorType&amp; functor,</div>
-<div class="line"><a id="l01706" name="l01706"></a><span class="lineno"> 1706</span>                <a class="code hl_enumerationRef" href="../../../belos/doc/html/namespaceBelos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>&amp; return_value) {</div>
+<div class="line"><a id="l01706" name="l01706"></a><span class="lineno"> 1706</span>                <a class="code hl_enumerationRef" href="../../../belos/doc/html/namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>&amp; return_value) {</div>
 <div class="line"><a id="l01707" name="l01707"></a><span class="lineno"> 1707</span>  parallel_reduce(<span class="stringliteral">&quot;&quot;</span>, policy, functor, return_value);</div>
 <div class="line"><a id="l01708" name="l01708"></a><span class="lineno"> 1708</span>}</div>
 <div class="line"><a id="l01709" name="l01709"></a><span class="lineno"> 1709</span> </div>
@@ -1746,7 +1746,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01712" name="l01712"></a><span class="lineno"> 1712</span>                          <a class="code hl_class" href="classKokkos_1_1Bitset.html">Kokkos::is_reducer&lt;ReturnType&gt;::value</a> ||</div>
 <div class="line"><a id="l01713" name="l01713"></a><span class="lineno"> 1713</span>                          std::is_pointer_v&lt;ReturnType&gt;)&gt;</div>
 <div class="line"><a id="l01714" name="l01714"></a><span class="lineno"> 1714</span>parallel_reduce(<span class="keyword">const</span> std::string&amp; label, <span class="keyword">const</span> <span class="keywordtype">size_t</span>&amp; work_count,</div>
-<div class="line"><a id="l01715" name="l01715"></a><span class="lineno"> 1715</span>                <span class="keyword">const</span> FunctorType&amp; functor, <a class="code hl_enumerationRef" href="../../../belos/doc/html/namespaceBelos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>&amp; return_value) {</div>
+<div class="line"><a id="l01715" name="l01715"></a><span class="lineno"> 1715</span>                <span class="keyword">const</span> FunctorType&amp; functor, <a class="code hl_enumerationRef" href="../../../belos/doc/html/namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>&amp; return_value) {</div>
 <div class="line"><a id="l01716" name="l01716"></a><span class="lineno"> 1716</span>  <span class="keyword">using </span>policy_type =</div>
 <div class="line"><a id="l01717" name="l01717"></a><span class="lineno"> 1717</span>      <span class="keyword">typename</span> Impl::ParallelReducePolicyType&lt;void, size_t,</div>
 <div class="line"><a id="l01718" name="l01718"></a><span class="lineno"> 1718</span>                                              FunctorType&gt;::policy_type;</div>
@@ -1759,7 +1759,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01725" name="l01725"></a><span class="lineno"> 1725</span>                          <a class="code hl_class" href="classKokkos_1_1Bitset.html">Kokkos::is_reducer&lt;ReturnType&gt;::value</a> ||</div>
 <div class="line"><a id="l01726" name="l01726"></a><span class="lineno"> 1726</span>                          std::is_pointer_v&lt;ReturnType&gt;)&gt;</div>
 <div class="line"><a id="l01727" name="l01727"></a><span class="lineno"> 1727</span>parallel_reduce(<span class="keyword">const</span> <span class="keywordtype">size_t</span>&amp; work_count, <span class="keyword">const</span> FunctorType&amp; functor,</div>
-<div class="line"><a id="l01728" name="l01728"></a><span class="lineno"> 1728</span>                <a class="code hl_enumerationRef" href="../../../belos/doc/html/namespaceBelos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>&amp; return_value) {</div>
+<div class="line"><a id="l01728" name="l01728"></a><span class="lineno"> 1728</span>                <a class="code hl_enumerationRef" href="../../../belos/doc/html/namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>&amp; return_value) {</div>
 <div class="line"><a id="l01729" name="l01729"></a><span class="lineno"> 1729</span>  parallel_reduce(<span class="stringliteral">&quot;&quot;</span>, work_count, functor, return_value);</div>
 <div class="line"><a id="l01730" name="l01730"></a><span class="lineno"> 1730</span>}</div>
 <div class="line"><a id="l01731" name="l01731"></a><span class="lineno"> 1731</span> </div>
@@ -1771,8 +1771,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01737" name="l01737"></a><span class="lineno"> 1737</span>                         <a class="code hl_class" href="classKokkos_1_1Bitset.html">Kokkos::is_reducer&lt;ReturnType&gt;::value</a> ||</div>
 <div class="line"><a id="l01738" name="l01738"></a><span class="lineno"> 1738</span>                         std::is_pointer_v&lt;ReturnType&gt;)&gt;</div>
 <div class="line"><a id="l01739" name="l01739"></a><span class="lineno"> 1739</span>parallel_reduce(<span class="keyword">const</span> std::string&amp; label, <span class="keyword">const</span> PolicyType&amp; policy,</div>
-<div class="line"><a id="l01740" name="l01740"></a><span class="lineno"> 1740</span>                <span class="keyword">const</span> FunctorType&amp; functor, <span class="keyword">const</span> <a class="code hl_enumerationRef" href="../../../belos/doc/html/namespaceBelos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>&amp; return_value) {</div>
-<div class="line"><a id="l01741" name="l01741"></a><span class="lineno"> 1741</span>  <a class="code hl_enumerationRef" href="../../../belos/doc/html/namespaceBelos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a> return_value_impl = return_value;</div>
+<div class="line"><a id="l01740" name="l01740"></a><span class="lineno"> 1740</span>                <span class="keyword">const</span> FunctorType&amp; functor, <span class="keyword">const</span> <a class="code hl_enumerationRef" href="../../../belos/doc/html/namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>&amp; return_value) {</div>
+<div class="line"><a id="l01741" name="l01741"></a><span class="lineno"> 1741</span>  <a class="code hl_enumerationRef" href="../../../belos/doc/html/namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a> return_value_impl = return_value;</div>
 <div class="line"><a id="l01742" name="l01742"></a><span class="lineno"> 1742</span>  Impl::ParallelReduceAdaptor&lt;PolicyType, FunctorType, ReturnType&gt;::execute(</div>
 <div class="line"><a id="l01743" name="l01743"></a><span class="lineno"> 1743</span>      label, policy, functor, return_value_impl);</div>
 <div class="line"><a id="l01744" name="l01744"></a><span class="lineno"> 1744</span>  Impl::ParallelReduceFence&lt;typename PolicyType::execution_space, ReturnType&gt;::</div>
@@ -1788,7 +1788,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01754" name="l01754"></a><span class="lineno"> 1754</span>                         <a class="code hl_class" href="classKokkos_1_1Bitset.html">Kokkos::is_reducer&lt;ReturnType&gt;::value</a> ||</div>
 <div class="line"><a id="l01755" name="l01755"></a><span class="lineno"> 1755</span>                         std::is_pointer_v&lt;ReturnType&gt;)&gt;</div>
 <div class="line"><a id="l01756" name="l01756"></a><span class="lineno"> 1756</span>parallel_reduce(<span class="keyword">const</span> PolicyType&amp; policy, <span class="keyword">const</span> FunctorType&amp; functor,</div>
-<div class="line"><a id="l01757" name="l01757"></a><span class="lineno"> 1757</span>                <span class="keyword">const</span> <a class="code hl_enumerationRef" href="../../../belos/doc/html/namespaceBelos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>&amp; return_value) {</div>
+<div class="line"><a id="l01757" name="l01757"></a><span class="lineno"> 1757</span>                <span class="keyword">const</span> <a class="code hl_enumerationRef" href="../../../belos/doc/html/namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>&amp; return_value) {</div>
 <div class="line"><a id="l01758" name="l01758"></a><span class="lineno"> 1758</span>  parallel_reduce(<span class="stringliteral">&quot;&quot;</span>, policy, functor, return_value);</div>
 <div class="line"><a id="l01759" name="l01759"></a><span class="lineno"> 1759</span>}</div>
 <div class="line"><a id="l01760" name="l01760"></a><span class="lineno"> 1760</span> </div>
@@ -1797,7 +1797,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01763" name="l01763"></a><span class="lineno"> 1763</span>                        <a class="code hl_class" href="classKokkos_1_1Bitset.html">Kokkos::is_reducer&lt;ReturnType&gt;::value</a> ||</div>
 <div class="line"><a id="l01764" name="l01764"></a><span class="lineno"> 1764</span>                        std::is_pointer_v&lt;ReturnType&gt;&gt;</div>
 <div class="line"><a id="l01765" name="l01765"></a><span class="lineno"> 1765</span>parallel_reduce(<span class="keyword">const</span> std::string&amp; label, <span class="keyword">const</span> <span class="keywordtype">size_t</span>&amp; work_count,</div>
-<div class="line"><a id="l01766" name="l01766"></a><span class="lineno"> 1766</span>                <span class="keyword">const</span> FunctorType&amp; functor, <span class="keyword">const</span> <a class="code hl_enumerationRef" href="../../../belos/doc/html/namespaceBelos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>&amp; return_value) {</div>
+<div class="line"><a id="l01766" name="l01766"></a><span class="lineno"> 1766</span>                <span class="keyword">const</span> FunctorType&amp; functor, <span class="keyword">const</span> <a class="code hl_enumerationRef" href="../../../belos/doc/html/namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>&amp; return_value) {</div>
 <div class="line"><a id="l01767" name="l01767"></a><span class="lineno"> 1767</span>  <span class="keyword">using </span>policy_type =</div>
 <div class="line"><a id="l01768" name="l01768"></a><span class="lineno"> 1768</span>      <span class="keyword">typename</span> Impl::ParallelReducePolicyType&lt;void, size_t,</div>
 <div class="line"><a id="l01769" name="l01769"></a><span class="lineno"> 1769</span>                                              FunctorType&gt;::policy_type;</div>
@@ -1810,7 +1810,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01776" name="l01776"></a><span class="lineno"> 1776</span>                        <a class="code hl_class" href="classKokkos_1_1Bitset.html">Kokkos::is_reducer&lt;ReturnType&gt;::value</a> ||</div>
 <div class="line"><a id="l01777" name="l01777"></a><span class="lineno"> 1777</span>                        std::is_pointer_v&lt;ReturnType&gt;&gt;</div>
 <div class="line"><a id="l01778" name="l01778"></a><span class="lineno"> 1778</span>parallel_reduce(<span class="keyword">const</span> <span class="keywordtype">size_t</span>&amp; work_count, <span class="keyword">const</span> FunctorType&amp; functor,</div>
-<div class="line"><a id="l01779" name="l01779"></a><span class="lineno"> 1779</span>                <span class="keyword">const</span> <a class="code hl_enumerationRef" href="../../../belos/doc/html/namespaceBelos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>&amp; return_value) {</div>
+<div class="line"><a id="l01779" name="l01779"></a><span class="lineno"> 1779</span>                <span class="keyword">const</span> <a class="code hl_enumerationRef" href="../../../belos/doc/html/namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>&amp; return_value) {</div>
 <div class="line"><a id="l01780" name="l01780"></a><span class="lineno"> 1780</span>  parallel_reduce(<span class="stringliteral">&quot;&quot;</span>, work_count, functor, return_value);</div>
 <div class="line"><a id="l01781" name="l01781"></a><span class="lineno"> 1781</span>}</div>
 <div class="line"><a id="l01782" name="l01782"></a><span class="lineno"> 1782</span> </div>
@@ -1871,7 +1871,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01837" name="l01837"></a><span class="lineno"> 1837</span><span class="preprocessor">#endif  </span><span class="comment">// KOKKOS_PARALLEL_REDUCE_HPP</span></div>
 <div class="ttc" id="aclassKokkos_1_1Bitset_html"><div class="ttname"><a href="classKokkos_1_1Bitset.html">Kokkos::Bitset</a></div><div class="ttdoc">A thread safe view to a bitset.</div><div class="ttdef"><b>Definition</b> <a href="Kokkos__Bitset_8hpp_source.html#l00049">Kokkos_Bitset.hpp:49</a></div></div>
 <div class="ttc" id="aclassKokkos_1_1HostSpace_html"><div class="ttname"><a href="classKokkos_1_1HostSpace.html">Kokkos::HostSpace</a></div><div class="ttdoc">Memory management for host memory.</div><div class="ttdef"><b>Definition</b> <a href="Kokkos__HostSpace_8hpp_source.html#l00049">Kokkos_HostSpace.hpp:49</a></div></div>
-<div class="ttc" id="anamespaceBelos_html_a58f4f203f3b36e10cb1ffd4614bbd18b"><div class="ttname"><a href="../../../belos/doc/html/namespaceBelos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a></div><div class="ttdeci">ReturnType</div></div>
+<div class="ttc" id="anamespace_belos_html_a58f4f203f3b36e10cb1ffd4614bbd18b"><div class="ttname"><a href="../../../belos/doc/html/namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a></div><div class="ttdeci">ReturnType</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

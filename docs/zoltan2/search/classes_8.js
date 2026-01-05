@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['kmeansalgorithm_0',['KMeansAlgorithm',['../classZoltan2_1_1KMeansAlgorithm.html',1,'Zoltan2']]],
-  ['kmeanscluster_1',['KMeansCluster',['../classZoltan2_1_1KMeansCluster.html',1,'Zoltan2']]],
-  ['kmeansheap_2',['KmeansHeap',['../classZoltan2_1_1KmeansHeap.html',1,'Zoltan2']]],
-  ['kokkosvectoradapter_3',['KokkosVectorAdapter',['../classKokkosVectorAdapter.html',1,'']]]
+  ['kmeansalgorithm_0',['KMeansAlgorithm',['../class_zoltan2_1_1_k_means_algorithm.html',1,'Zoltan2']]],
+  ['kmeanscluster_1',['KMeansCluster',['../class_zoltan2_1_1_k_means_cluster.html',1,'Zoltan2']]],
+  ['kmeansheap_2',['KmeansHeap',['../class_zoltan2_1_1_kmeans_heap.html',1,'Zoltan2']]],
+  ['kokkosvectoradapter_3',['KokkosVectorAdapter',['../class_kokkos_vector_adapter.html',1,'']]]
 ];
