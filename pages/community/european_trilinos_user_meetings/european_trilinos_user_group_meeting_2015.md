@@ -98,6 +98,5 @@ The Trilinos Project is an effort to develop algorithms and enabling technologie
 
 EuroTUG 2015 will be held at Mason de la Simulation in Paris-Saclay, France and hosted by CEA. The goal of the annual European user group meeting is to facilitate communication between European Trilinos users, clients and developers.
 
-Announcements will posted to trilinos-announce@software.sandia.gov. Please [subscribe](mail_lists.html "Mail lists") to this list for notification.
 
 ![mdls](images/mdls.png)
