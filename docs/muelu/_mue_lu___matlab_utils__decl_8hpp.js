@@ -41,8 +41,6 @@ var _mue_lu___matlab_utils__decl_8hpp =
       [ "XPETRA_MATRIX_COMPLEX", "_mue_lu___matlab_utils__decl_8hpp.html#a6da7829994ac1d91a749c3cbf89e2033a08e917b487e64ab1b0bd1cc22d980024", null ],
       [ "XPETRA_MULTIVECTOR_DOUBLE", "_mue_lu___matlab_utils__decl_8hpp.html#a6da7829994ac1d91a749c3cbf89e2033a46976661a8951857960b4d75d4142f79", null ],
       [ "XPETRA_MULTIVECTOR_COMPLEX", "_mue_lu___matlab_utils__decl_8hpp.html#a6da7829994ac1d91a749c3cbf89e2033a49fc80c0a0ede375950e005fc23b00e2", null ],
-      [ "EPETRA_CRSMATRIX", "_mue_lu___matlab_utils__decl_8hpp.html#a6da7829994ac1d91a749c3cbf89e2033ac8a0c4ea23c3215aaee06e6af161a40e", null ],
-      [ "EPETRA_MULTIVECTOR", "_mue_lu___matlab_utils__decl_8hpp.html#a6da7829994ac1d91a749c3cbf89e2033a3920c16650633a885a1ac8d49c438fce", null ],
       [ "AGGREGATES", "_mue_lu___matlab_utils__decl_8hpp.html#a6da7829994ac1d91a749c3cbf89e2033ad38a56fde076d810fcf4ad208a81e4ae", null ],
       [ "AMALGAMATION_INFO", "_mue_lu___matlab_utils__decl_8hpp.html#a6da7829994ac1d91a749c3cbf89e2033aeb12219fdd1205ad9d3684e35721bc41", null ],
       [ "GRAPH", "_mue_lu___matlab_utils__decl_8hpp.html#a6da7829994ac1d91a749c3cbf89e2033ae60abe8a2ee424cd2d9fe77daaf7addf", null ]

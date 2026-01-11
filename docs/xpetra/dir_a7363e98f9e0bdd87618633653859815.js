@@ -1,12 +1,9 @@
 var dir_a7363e98f9e0bdd87618633653859815 =
 [
     [ "ForwardDeclaration", "dir_cfdfa579cc9ebd771be538ec46031646.html", "dir_cfdfa579cc9ebd771be538ec46031646" ],
-    [ "Xpetra_EpetraExceptions.hpp", "_xpetra___epetra_exceptions_8hpp.html", "_xpetra___epetra_exceptions_8hpp" ],
-    [ "Xpetra_EpetraUtils.cpp", "_xpetra___epetra_utils_8cpp.html", "_xpetra___epetra_utils_8cpp" ],
-    [ "Xpetra_EpetraUtils.hpp", "_xpetra___epetra_utils_8hpp.html", "_xpetra___epetra_utils_8hpp" ],
-    [ "Xpetra_ETI_3arg.hpp", "_xpetra___e_t_i__3arg_8hpp.html", "_xpetra___e_t_i__3arg_8hpp" ],
-    [ "Xpetra_ETI_4arg.hpp", "_xpetra___e_t_i__4arg_8hpp.html", "_xpetra___e_t_i__4arg_8hpp" ],
-    [ "Xpetra_ETI_4arg_mv.hpp", "_xpetra___e_t_i__4arg__mv_8hpp.html", "_xpetra___e_t_i__4arg__mv_8hpp" ],
+    [ "Xpetra_ETI_3arg.hpp", "_xpetra___e_t_i__3arg_8hpp.html", null ],
+    [ "Xpetra_ETI_4arg.hpp", "_xpetra___e_t_i__4arg_8hpp.html", null ],
+    [ "Xpetra_ETI_4arg_mv.hpp", "_xpetra___e_t_i__4arg__mv_8hpp.html", null ],
     [ "Xpetra_Exceptions.hpp", "_xpetra___exceptions_8hpp.html", "_xpetra___exceptions_8hpp" ],
     [ "Xpetra_Helpers_decl.hpp", "_xpetra___helpers__decl_8hpp.html", "_xpetra___helpers__decl_8hpp" ],
     [ "Xpetra_Helpers_def.hpp", "_xpetra___helpers__def_8hpp.html", null ],
