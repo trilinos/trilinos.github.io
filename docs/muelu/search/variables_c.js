@@ -9,7 +9,7 @@ var searchData=
   ['mapfact_5f_6',['mapFact_',['../class_mue_lu_1_1_map_transfer_factory.html#aa4ad5b2ae283fddeb44c95b359c27985',1,'MueLu::MapTransferFactory']]],
   ['masterlist_5f_7',['masterList_',['../class_mue_lu_1_1_master_list.html#a5bc57387e3d79494fd7bcdca000846c1',1,'MueLu::MasterList']]],
   ['material_8',['material',['../class_mue_lu_1_1_distance_laplacian_1_1_scalar_material_distance_functor.html#ac841895a86c5938a6efc80bb9360f492',1,'MueLu::DistanceLaplacian::ScalarMaterialDistanceFunctor::material'],['../class_mue_lu_1_1_distance_laplacian_1_1_tensor_material_distance_functor.html#aa01d0e8b26f27d74e6218db6040aa054',1,'MueLu::DistanceLaplacian::TensorMaterialDistanceFunctor::material']]],
-  ['material_5f_9',['material_',['../class_mue_lu_1_1_aggregation_export_factory.html#a9f594010cebf88c7aaecfa59a1ef05c3',1,'MueLu::AggregationExportFactory::material_'],['../class_mue_lu_1_1_maxwell1.html#a7ea88c7478f2ab688f445a9a972bd1b2',1,'MueLu::Maxwell1::Material_']]],
+  ['material_5f_9',['material_',['../class_mue_lu_1_1_maxwell1.html#a7ea88c7478f2ab688f445a9a972bd1b2',1,'MueLu::Maxwell1::Material_'],['../class_mue_lu_1_1_aggregation_export_factory.html#a9f594010cebf88c7aaecfa59a1ef05c3',1,'MueLu::AggregationExportFactory::material_']]],
   ['material_5falpha_5f_10',['Material_alpha_',['../class_mue_lu_1_1_ref_maxwell.html#af01d663e9ba338a17473e2ed495a3baf',1,'MueLu::RefMaxwell']]],
   ['material_5fbeta_5f_11',['Material_beta_',['../class_mue_lu_1_1_ref_maxwell.html#a14b46b2176d4c3b40cdef2bf1d29e80b',1,'MueLu::RefMaxwell']]],
   ['material_5fmatrix_12',['material_matrix',['../class_mue_lu_1_1_distance_laplacian_1_1_tensor_inversion.html#ad437d49100436e9be13e3e78108f1a5f',1,'MueLu::DistanceLaplacian::TensorInversion']]],

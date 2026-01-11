@@ -280,7 +280,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>      B-&gt;description();</div>
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>      Teuchos::RCP&lt;Teuchos::FancyOStream&gt; fancy = Teuchos::fancyOStream(Teuchos::rcpFromRef(std::cout));</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>      B-&gt;getMap()-&gt;describe(*fancy, Teuchos::VERB_EXTREME);</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>      <span class="keywordflow">if</span> (!is_null(B-&gt;getMap())) B-&gt;getMap()-&gt;describe(*fancy, Teuchos::VERB_EXTREME);</div>
 <div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>      std::cout &lt;&lt; std::endl;</div>
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>      B-&gt;describe(*fancy, Teuchos::VERB_EXTREME);</div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    }</div>
@@ -462,7 +462,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>      X-&gt;description();</div>
 <div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>      Teuchos::RCP&lt;Teuchos::FancyOStream&gt; fancy = Teuchos::fancyOStream(Teuchos::rcpFromRef(std::cout));</div>
-<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>      X-&gt;getMap()-&gt;describe(*fancy, Teuchos::VERB_EXTREME);</div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>      <span class="keywordflow">if</span> (!is_null(X-&gt;getMap())) X-&gt;getMap()-&gt;describe(*fancy, Teuchos::VERB_EXTREME);</div>
 <div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>      std::cout &lt;&lt; std::endl;</div>
 <div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>      X-&gt;describe(*fancy, Teuchos::VERB_EXTREME);</div>
 <div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>    }</div>
@@ -568,78 +568,84 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00502" name="l00502"></a><span class="lineno">  502</span> </div>
 <div class="line"><a id="l00503" name="l00503"></a><span class="lineno">  503</span>  <span class="keywordflow">if</span>(current_phase == SOLVE)<span class="keywordflow">return</span>(<span class="keyword">false</span>);</div>
 <div class="line"><a id="l00504" name="l00504"></a><span class="lineno">  504</span>  <span class="keywordflow">if</span> (debug_level_ &gt; 0 &amp;&amp; current_phase == NUMFACT) {</div>
-<div class="line"><a id="l00505" name="l00505"></a><span class="lineno">  505</span>    <span class="keywordflow">if</span> (this-&gt;root_) std::cout &lt;&lt; <span class="stringliteral">&quot;\n == Amesos2_KLU2::loadA_impl(NumFact) ==\n&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00506" name="l00506"></a><span class="lineno">  506</span>    Teuchos::RCP&lt;Teuchos::FancyOStream&gt; fancy = Teuchos::fancyOStream(Teuchos::rcpFromRef(std::cout));</div>
-<div class="line"><a id="l00507" name="l00507"></a><span class="lineno">  507</span>    this-&gt;matrixA_-&gt;describe(*fancy, Teuchos::VERB_EXTREME);</div>
-<div class="line"><a id="l00508" name="l00508"></a><span class="lineno">  508</span>  }</div>
-<div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span> </div>
-<div class="line"><a id="l00510" name="l00510"></a><span class="lineno">  510</span>  <span class="keywordflow">if</span> ( single_proc_optimization() ) {</div>
-<div class="line"><a id="l00511" name="l00511"></a><span class="lineno">  511</span>    <span class="comment">// Do nothing in this case - Crs raw pointers will be used</span></div>
-<div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span>  }</div>
-<div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span>  <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span>  {</div>
-<div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span>    <span class="comment">// Only the root image needs storage allocated</span></div>
-<div class="line"><a id="l00516" name="l00516"></a><span class="lineno">  516</span>    <span class="keywordflow">if</span>( this-&gt;root_ ) {</div>
-<div class="line"><a id="l00517" name="l00517"></a><span class="lineno">  517</span>      <span class="keywordflow">if</span> (host_nzvals_view_.extent(0) != this-&gt;globalNumNonZeros_) </div>
-<div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>        Kokkos::resize(host_nzvals_view_, this-&gt;globalNumNonZeros_);</div>
-<div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span>      <span class="keywordflow">if</span> (host_rows_view_.extent(0) != this-&gt;globalNumNonZeros_)</div>
-<div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span>        Kokkos::resize(host_rows_view_, this-&gt;globalNumNonZeros_);</div>
-<div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span>      <span class="keywordflow">if</span> (host_col_ptr_view_.extent(0) != (this-&gt;globalNumRows_ + 1))</div>
-<div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>        Kokkos::resize(host_col_ptr_view_, this-&gt;globalNumRows_ + 1);</div>
-<div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span>    }</div>
-<div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span>    local_ordinal_type nnz_ret = -1;</div>
-<div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span>    <span class="keywordtype">bool</span> use_gather = use_gather_; <span class="comment">// user param</span></div>
-<div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span>    use_gather = (use_gather &amp;&amp; this-&gt;matrixA_-&gt;getComm()-&gt;getSize() &gt; 1); <span class="comment">// only with multiple MPIs</span></div>
-<div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span>    use_gather = (use_gather &amp;&amp; (std::is_same&lt;scalar_type, float&gt;::value || std::is_same&lt;scalar_type, double&gt;::value)); <span class="comment">// only for double or float</span></div>
-<div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span>    {</div>
-<div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span><span class="preprocessor">#ifdef HAVE_AMESOS2_TIMERS</span></div>
-<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span>      Teuchos::TimeMonitor mtxRedistTimer( this-&gt;timers_.mtxRedistTime_ );</div>
-<div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span>      <span class="keywordflow">if</span> (use_gather) {</div>
-<div class="line"><a id="l00533" name="l00533"></a><span class="lineno">  533</span>        <span class="keywordtype">bool</span> column_major = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00534" name="l00534"></a><span class="lineno">  534</span>        <span class="keywordflow">if</span> (!is_contiguous_) {</div>
-<div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span>          <span class="keyword">auto</span> contig_mat = this-&gt;matrixA_-&gt;reindex(this-&gt;contig_rowmap_, this-&gt;contig_colmap_, current_phase);</div>
-<div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span>          nnz_ret = contig_mat-&gt;gather(host_nzvals_view_, host_rows_view_, host_col_ptr_view_, this-&gt;perm_g2l, this-&gt;recvCountRows, this-&gt;recvDisplRows, this-&gt;recvCounts, this-&gt;recvDispls,</div>
-<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>                                       this-&gt;transpose_map, this-&gt;nzvals_t, column_major, current_phase);</div>
-<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>          nnz_ret = this-&gt;matrixA_-&gt;gather(host_nzvals_view_, host_rows_view_, host_col_ptr_view_, this-&gt;perm_g2l, this-&gt;recvCountRows, this-&gt;recvDisplRows, this-&gt;recvCounts, this-&gt;recvDispls,</div>
-<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>                                           this-&gt;transpose_map, this-&gt;nzvals_t, column_major, current_phase);</div>
-<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>        }</div>
-<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>        <span class="comment">// gather failed (e.g., not implemened for KokkosCrsMatrix)</span></div>
-<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>        <span class="comment">// in case of the failure, it falls back to the original &quot;do_get&quot;</span></div>
-<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>        <span class="keywordflow">if</span> (nnz_ret &lt; 0) use_gather = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>      }</div>
-<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>      <span class="keywordflow">if</span> (!use_gather) {</div>
-<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>        <a class="code hl_struct" href="struct_amesos2_1_1_util_1_1get__ccs__helper__kokkos__view.html">Util::get_ccs_helper_kokkos_view</a>&lt;</div>
-<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>          <a class="code hl_class" href="class_amesos2_1_1_matrix_adapter.html">MatrixAdapter&lt;Matrix&gt;</a>,host_value_type_array,host_ordinal_type_array,host_ordinal_type_array&gt;</div>
-<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>          ::do_get(this-&gt;matrixA_.ptr(), host_nzvals_view_, host_rows_view_, host_col_ptr_view_, nnz_ret,</div>
-<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>            (is_contiguous_ == <span class="keyword">true</span>) ? <a class="code hl_enumvalue" href="_amesos2___type_decl_8hpp.html#a46863e983ea61d9547a05756fa8c56fdae1aabcfb90f3c53debc498683b03fbcf">ROOTED</a> : <a class="code hl_enumvalue" href="_amesos2___type_decl_8hpp.html#a46863e983ea61d9547a05756fa8c56fdaf2e144700cf1a5c390ee9b057b4730ce">CONTIGUOUS_AND_ROOTED</a>,</div>
-<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>            <a class="code hl_enumvalue" href="_amesos2___type_decl_8hpp.html#ab6568e41be9e1f212466e518caefd6d3a95a80b3e2d2f12b8e202200b07417df8">ARBITRARY</a>,</div>
-<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>            this-&gt;rowIndexBase_);</div>
-<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>      }</div>
-<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>    }</div>
-<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span> </div>
-<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>    <span class="comment">// gather return the total nnz_ret on every MPI process</span></div>
-<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>    <span class="keywordflow">if</span> (use_gather || this-&gt;root_) {</div>
-<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>      TEUCHOS_TEST_FOR_EXCEPTION( nnz_ret != as&lt;local_ordinal_type&gt;(this-&gt;globalNumNonZeros_),</div>
-<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>                          std::runtime_error,</div>
-<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>                          <span class="stringliteral">&quot;Amesos2_KLU2 loadA_impl: Did not get the expected number of non-zero vals(&quot;</span></div>
-<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>                          +std::to_string(nnz_ret)+<span class="stringliteral">&quot; vs &quot;</span>+std::to_string(this-&gt;globalNumNonZeros_)+<span class="stringliteral">&quot;)&quot;</span>);</div>
-<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>    }</div>
-<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>  } <span class="comment">//end else single_process_optim_check = false</span></div>
-<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span> </div>
-<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>}</div>
+<div class="line"><a id="l00505" name="l00505"></a><span class="lineno">  505</span>    <span class="keywordflow">if</span> (this-&gt;root_) {</div>
+<div class="line"><a id="l00506" name="l00506"></a><span class="lineno">  506</span>      std::cout &lt;&lt; <span class="stringliteral">&quot;\n == Amesos2_KLU2::loadA_impl&quot;</span>;</div>
+<div class="line"><a id="l00507" name="l00507"></a><span class="lineno">  507</span>      <span class="keywordflow">if</span> (current_phase == PREORDERING) std::cout &lt;&lt; <span class="stringliteral">&quot;(PreOrder)&quot;</span>;</div>
+<div class="line"><a id="l00508" name="l00508"></a><span class="lineno">  508</span>      <span class="keywordflow">if</span> (current_phase == SYMBFACT) std::cout &lt;&lt; <span class="stringliteral">&quot;(SymFact)&quot;</span>;</div>
+<div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span>      <span class="keywordflow">if</span> (current_phase == NUMFACT)  std::cout &lt;&lt; <span class="stringliteral">&quot;(NumFact)&quot;</span>;</div>
+<div class="line"><a id="l00510" name="l00510"></a><span class="lineno">  510</span>      std::cout &lt;&lt; <span class="stringliteral">&quot; ==&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00511" name="l00511"></a><span class="lineno">  511</span>    }</div>
+<div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span>    Teuchos::RCP&lt;Teuchos::FancyOStream&gt; fancy = Teuchos::fancyOStream(Teuchos::rcpFromRef(std::cout));</div>
+<div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span>    this-&gt;matrixA_-&gt;describe(*fancy, (debug_level_ == 1 ? Teuchos::VERB_LOW : Teuchos::VERB_EXTREME));</div>
+<div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span>  }</div>
+<div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span> </div>
+<div class="line"><a id="l00516" name="l00516"></a><span class="lineno">  516</span>  <span class="keywordflow">if</span> ( single_proc_optimization() ) {</div>
+<div class="line"><a id="l00517" name="l00517"></a><span class="lineno">  517</span>    <span class="comment">// Do nothing in this case - Crs raw pointers will be used</span></div>
+<div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>  }</div>
+<div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span>  <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span>  {</div>
+<div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span>    <span class="comment">// Only the root image needs storage allocated</span></div>
+<div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>    <span class="keywordflow">if</span>( this-&gt;root_ ) {</div>
+<div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span>      <span class="keywordflow">if</span> (host_nzvals_view_.extent(0) != this-&gt;globalNumNonZeros_) </div>
+<div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span>        Kokkos::resize(host_nzvals_view_, this-&gt;globalNumNonZeros_);</div>
+<div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span>      <span class="keywordflow">if</span> (host_rows_view_.extent(0) != this-&gt;globalNumNonZeros_)</div>
+<div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span>        Kokkos::resize(host_rows_view_, this-&gt;globalNumNonZeros_);</div>
+<div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span>      <span class="keywordflow">if</span> (host_col_ptr_view_.extent(0) != (this-&gt;globalNumRows_ + 1))</div>
+<div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span>        Kokkos::resize(host_col_ptr_view_, this-&gt;globalNumRows_ + 1);</div>
+<div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span>    }</div>
+<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span>    local_ordinal_type nnz_ret = -1;</div>
+<div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span>    <span class="keywordtype">bool</span> use_gather = use_gather_; <span class="comment">// user param</span></div>
+<div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span>    use_gather = (use_gather &amp;&amp; this-&gt;matrixA_-&gt;getComm()-&gt;getSize() &gt; 1); <span class="comment">// only with multiple MPIs</span></div>
+<div class="line"><a id="l00533" name="l00533"></a><span class="lineno">  533</span>    use_gather = (use_gather &amp;&amp; (std::is_same&lt;scalar_type, float&gt;::value || std::is_same&lt;scalar_type, double&gt;::value)); <span class="comment">// only for double or float</span></div>
+<div class="line"><a id="l00534" name="l00534"></a><span class="lineno">  534</span>    {</div>
+<div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span><span class="preprocessor">#ifdef HAVE_AMESOS2_TIMERS</span></div>
+<div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span>      Teuchos::TimeMonitor mtxRedistTimer( this-&gt;timers_.mtxRedistTime_ );</div>
+<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>      <span class="keywordflow">if</span> (use_gather) {</div>
+<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>        <span class="keywordtype">bool</span> column_major = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>        <span class="keywordflow">if</span> (!is_contiguous_) {</div>
+<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>          <span class="keyword">auto</span> contig_mat = this-&gt;matrixA_-&gt;reindex(this-&gt;contig_rowmap_, this-&gt;contig_colmap_, current_phase);</div>
+<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>          nnz_ret = contig_mat-&gt;gather(host_nzvals_view_, host_rows_view_, host_col_ptr_view_, this-&gt;perm_g2l, this-&gt;recvCountRows, this-&gt;recvDisplRows, this-&gt;recvCounts, this-&gt;recvDispls,</div>
+<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>                                       this-&gt;transpose_map, this-&gt;nzvals_t, column_major, current_phase);</div>
+<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>          nnz_ret = this-&gt;matrixA_-&gt;gather(host_nzvals_view_, host_rows_view_, host_col_ptr_view_, this-&gt;perm_g2l, this-&gt;recvCountRows, this-&gt;recvDisplRows, this-&gt;recvCounts, this-&gt;recvDispls,</div>
+<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>                                           this-&gt;transpose_map, this-&gt;nzvals_t, column_major, current_phase);</div>
+<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>        }</div>
+<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>        <span class="comment">// gather failed (e.g., not implemened for KokkosCrsMatrix)</span></div>
+<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>        <span class="comment">// in case of the failure, it falls back to the original &quot;do_get&quot;</span></div>
+<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>        <span class="keywordflow">if</span> (nnz_ret &lt; 0) use_gather = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>      }</div>
+<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>      <span class="keywordflow">if</span> (!use_gather) {</div>
+<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>        <a class="code hl_struct" href="struct_amesos2_1_1_util_1_1get__ccs__helper__kokkos__view.html">Util::get_ccs_helper_kokkos_view</a>&lt;</div>
+<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>          <a class="code hl_class" href="class_amesos2_1_1_matrix_adapter.html">MatrixAdapter&lt;Matrix&gt;</a>,host_value_type_array,host_ordinal_type_array,host_ordinal_type_array&gt;</div>
+<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>          ::do_get(this-&gt;matrixA_.ptr(), host_nzvals_view_, host_rows_view_, host_col_ptr_view_, nnz_ret,</div>
+<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>            (is_contiguous_ == <span class="keyword">true</span>) ? <a class="code hl_enumvalue" href="_amesos2___type_decl_8hpp.html#a46863e983ea61d9547a05756fa8c56fdae1aabcfb90f3c53debc498683b03fbcf">ROOTED</a> : <a class="code hl_enumvalue" href="_amesos2___type_decl_8hpp.html#a46863e983ea61d9547a05756fa8c56fdaf2e144700cf1a5c390ee9b057b4730ce">CONTIGUOUS_AND_ROOTED</a>,</div>
+<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>            <a class="code hl_enumvalue" href="_amesos2___type_decl_8hpp.html#ab6568e41be9e1f212466e518caefd6d3a95a80b3e2d2f12b8e202200b07417df8">ARBITRARY</a>,</div>
+<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>            this-&gt;rowIndexBase_);</div>
+<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>      }</div>
+<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>    }</div>
+<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span> </div>
+<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>    <span class="comment">// gather return the total nnz_ret on every MPI process</span></div>
+<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>    <span class="keywordflow">if</span> (use_gather || this-&gt;root_) {</div>
+<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>      TEUCHOS_TEST_FOR_EXCEPTION( nnz_ret != as&lt;local_ordinal_type&gt;(this-&gt;globalNumNonZeros_),</div>
+<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>                          std::runtime_error,</div>
+<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>                          <span class="stringliteral">&quot;Amesos2_KLU2 loadA_impl: Did not get the expected number of non-zero vals(&quot;</span></div>
+<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>                          +std::to_string(nnz_ret)+<span class="stringliteral">&quot; vs &quot;</span>+std::to_string(this-&gt;globalNumNonZeros_)+<span class="stringliteral">&quot;)&quot;</span>);</div>
+<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>    }</div>
+<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>  } <span class="comment">//end else single_process_optim_check = false</span></div>
+<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span> </div>
+<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>}</div>
 </div>
-<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span> </div>
-<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span> </div>
-<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> Matrix, <span class="keyword">class</span> Vector&gt;</div>
-<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_class" href="class_amesos2_1_1_k_l_u2.html">KLU2&lt;Matrix,Vector&gt;::name</a> = <span class="stringliteral">&quot;KLU2&quot;</span>;</div>
-<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span> </div>
-<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span> </div>
-<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>} <span class="comment">// end namespace Amesos2</span></div>
+<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span> </div>
 <div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span> </div>
-<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span><span class="preprocessor">#endif  </span><span class="comment">// AMESOS2_KLU2_DEF_HPP</span></div>
+<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> Matrix, <span class="keyword">class</span> Vector&gt;</div>
+<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_class" href="class_amesos2_1_1_k_l_u2.html">KLU2&lt;Matrix,Vector&gt;::name</a> = <span class="stringliteral">&quot;KLU2&quot;</span>;</div>
+<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span> </div>
+<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span> </div>
+<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>} <span class="comment">// end namespace Amesos2</span></div>
+<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span> </div>
+<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span><span class="preprocessor">#endif  </span><span class="comment">// AMESOS2_KLU2_DEF_HPP</span></div>
 <div class="ttc" id="a_amesos2___k_l_u2__decl_8hpp_html"><div class="ttname"><a href="_amesos2___k_l_u2__decl_8hpp.html">Amesos2_KLU2_decl.hpp</a></div><div class="ttdoc">Amesos2 KLU2 declarations.</div></div>
 <div class="ttc" id="a_amesos2___solver_core__def_8hpp_html"><div class="ttname"><a href="_amesos2___solver_core__def_8hpp.html">Amesos2_SolverCore_def.hpp</a></div></div>
 <div class="ttc" id="a_amesos2___type_decl_8hpp_html_a46863e983ea61d9547a05756fa8c56fdae1aabcfb90f3c53debc498683b03fbcf"><div class="ttname"><a href="_amesos2___type_decl_8hpp.html#a46863e983ea61d9547a05756fa8c56fdae1aabcfb90f3c53debc498683b03fbcf">Amesos2::ROOTED</a></div><div class="ttdeci">@ ROOTED</div><div class="ttdef"><b>Definition</b> Amesos2_TypeDecl.hpp:93</div></div>
@@ -661,7 +667,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclass_amesos2_1_1_solver_core_html"><div class="ttname"><a href="class_amesos2_1_1_solver_core.html">Amesos2::SolverCore</a></div><div class="ttdoc">Amesos2::SolverCore: A templated interface for interaction with third-party direct sparse solvers.</div><div class="ttdef"><b>Definition</b> Amesos2_SolverCore_decl.hpp:72</div></div>
 <div class="ttc" id="agroup__amesos2__enums_html_gaee5c828ef45f1ffc1d48ae0d3435bb0e"><div class="ttname"><a href="group__amesos2__enums.html#gaee5c828ef45f1ffc1d48ae0d3435bb0e">Amesos2::EPhase</a></div><div class="ttdeci">EPhase</div><div class="ttdoc">Used to indicate a phase in the direct solution.</div><div class="ttdef"><b>Definition</b> Amesos2_TypeDecl.hpp:31</div></div>
 <div class="ttc" id="astruct_amesos2_1_1_multi_vec_adapter_html"><div class="ttname"><a href="struct_amesos2_1_1_multi_vec_adapter.html">Amesos2::MultiVecAdapter</a></div><div class="ttdoc">A templated MultiVector class adapter for Amesos2.</div><div class="ttdef"><b>Definition</b> Amesos2_MultiVecAdapter_decl.hpp:142</div></div>
-<div class="ttc" id="astruct_amesos2_1_1_util_1_1get__ccs__helper__kokkos__view_html"><div class="ttname"><a href="struct_amesos2_1_1_util_1_1get__ccs__helper__kokkos__view.html">Amesos2::Util::get_ccs_helper_kokkos_view</a></div><div class="ttdoc">A generic helper class for getting a CCS representation of a Matrix.</div><div class="ttdef"><b>Definition</b> Amesos2_Util.hpp:633</div></div>
+<div class="ttc" id="astruct_amesos2_1_1_util_1_1get__ccs__helper__kokkos__view_html"><div class="ttname"><a href="struct_amesos2_1_1_util_1_1get__ccs__helper__kokkos__view.html">Amesos2::Util::get_ccs_helper_kokkos_view</a></div><div class="ttdoc">A generic helper class for getting a CCS representation of a Matrix.</div><div class="ttdef"><b>Definition</b> Amesos2_Util.hpp:593</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

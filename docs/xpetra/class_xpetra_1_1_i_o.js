@@ -1,6 +1,5 @@
 var class_xpetra_1_1_i_o =
 [
-    [ "Map2EpetraMap", "class_xpetra_1_1_i_o.html#a9d916e81407a8d9c008e5377412eba70", null ],
     [ "Map2TpetraMap", "class_xpetra_1_1_i_o.html#a6004edb1872daf9f8142ff386153ed7a", null ],
     [ "Write", "class_xpetra_1_1_i_o.html#a636df07b394f2088127e287b40fe3004", null ],
     [ "Write", "class_xpetra_1_1_i_o.html#a3bb7c9a240778c7c4ac52d9585ca17f5", null ],

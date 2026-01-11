@@ -304,13 +304,12 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename User&gt;<br />
 class Zoltan2::XpetraMultiVectorAdapter&lt; User &gt;</div><p>An adapter for Xpetra::MultiVector. </p>
 <p>The template parameter is the user's input object: </p><ul>
-<li><code>Epetra_MultiVector</code> </li>
 <li><code>Tpetra::MultiVector</code> </li>
 <li><code>Xpetra::MultiVector</code> </li>
 </ul>
 <p>The <code>scalar_t</code> type, representing use data such as vector values, is used by <a class="el" href="namespace_zoltan2.html" title="Created by mbenlioglu on Aug 31, 2020.">Zoltan2</a> for weights, coordinates, part sizes and quality metrics. Some User types (like Tpetra::CrsMatrix) have an inherent scalar type, and some (like Tpetra::CrsGraph) do not. For such objects, the scalar type is set by <a class="el" href="namespace_zoltan2.html" title="Created by mbenlioglu on Aug 31, 2020.">Zoltan2</a> to <code>float</code>. If you wish to change it to double, set the second template parameter to <code>double</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html#l00047">47</a> of file <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html">Zoltan2_XpetraMultiVectorAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html#l00043">43</a> of file <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html">Zoltan2_XpetraMultiVectorAdapter.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a9cb92b61152a42f71e530a26bf567c21" name="a9cb92b61152a42f71e530a26bf567c21"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9cb92b61152a42f71e530a26bf567c21">&#9670;&#160;</a></span>XpetraMultiVectorAdapter() <span class="overload">[1/2]</span></h2>
@@ -349,7 +348,7 @@ template&lt;typename User &gt; </div>
 <p>Constructor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">invector</td><td>the user's Xpetra, Tpetra or Epetra MultiVector object </td></tr>
+    <tr><td class="paramname">invector</td><td>the user's Xpetra, Tpetra MultiVector object </td></tr>
     <tr><td class="paramname">weights</td><td>a list of pointers to arrays of weights. The number of weights per multivector element is assumed to be <code>weights.size()</code>. </td></tr>
     <tr><td class="paramname">weightStrides</td><td>a list of strides for the <code>weights</code>. The weight for weight index <code>n</code> for multivector element <code>k</code> should be found at <code>weights[n][weightStrides[n] * k]</code>. If <code>weightStrides.size()</code> is zero, it is assumed all strides are one.</td></tr>
   </table>
@@ -357,7 +356,7 @@ template&lt;typename User &gt; </div>
 </dl>
 <p>The values pointed to the arguments must remain valid for the lifetime of this Adapter. </p>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html#l00202">202</a> of file <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html">Zoltan2_XpetraMultiVectorAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html#l00189">189</a> of file <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html">Zoltan2_XpetraMultiVectorAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -382,12 +381,12 @@ template&lt;typename User &gt; </div>
 <p>Constructor for case when weights are not being used. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">invector</td><td>the user's Xpetra, Tpetra or Epetra MultiVector object </td></tr>
+    <tr><td class="paramname">invector</td><td>the user's Xpetra, Tpetra MultiVector object </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html#l00235">235</a> of file <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html">Zoltan2_XpetraMultiVectorAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html#l00222">222</a> of file <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html">Zoltan2_XpetraMultiVectorAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -422,7 +421,7 @@ template&lt;typename User &gt; </div>
 
 <p>Implements <a class="el" href="class_zoltan2_1_1_base_adapter_root.html#afc1a41211f303fe818fa2b22591ba748">Zoltan2::BaseAdapterRoot</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html#l00095">95</a> of file <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html">Zoltan2_XpetraMultiVectorAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html#l00091">91</a> of file <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html">Zoltan2_XpetraMultiVectorAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -452,7 +451,7 @@ template&lt;typename User &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html#l00097">97</a> of file <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html">Zoltan2_XpetraMultiVectorAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html#l00093">93</a> of file <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html">Zoltan2_XpetraMultiVectorAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -482,7 +481,7 @@ template&lt;typename User &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html#l00102">102</a> of file <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html">Zoltan2_XpetraMultiVectorAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html#l00098">98</a> of file <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html">Zoltan2_XpetraMultiVectorAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -515,7 +514,7 @@ template&lt;typename User &gt; </div>
 
 <p>Reimplemented from <a class="el" href="class_zoltan2_1_1_base_adapter_root.html#afaa2ba1912345361a39dca561b981735">Zoltan2::BaseAdapterRoot</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html#l00132">132</a> of file <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html">Zoltan2_XpetraMultiVectorAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html#l00119">119</a> of file <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html">Zoltan2_XpetraMultiVectorAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -561,7 +560,7 @@ template&lt;typename User &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html#l00134">134</a> of file <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html">Zoltan2_XpetraMultiVectorAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html#l00121">121</a> of file <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html">Zoltan2_XpetraMultiVectorAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -591,7 +590,7 @@ template&lt;typename User &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html#l00148">148</a> of file <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html">Zoltan2_XpetraMultiVectorAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html#l00135">135</a> of file <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html">Zoltan2_XpetraMultiVectorAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -624,7 +623,7 @@ template&lt;typename User &gt; </div>
 
 <p>Implements <a class="el" href="class_zoltan2_1_1_vector_adapter.html#a4d1191f45ab1c2c78424162d2122f5d7">Zoltan2::VectorAdapter&lt; User &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html#l00170">170</a> of file <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html">Zoltan2_XpetraMultiVectorAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html#l00157">157</a> of file <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html">Zoltan2_XpetraMultiVectorAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -682,7 +681,7 @@ template&lt;typename User &gt; </div>
 
 <p>Reimplemented from <a class="el" href="class_zoltan2_1_1_vector_adapter.html#aeb4a2b5ed022acc82cdf3cb6d3d435d0">Zoltan2::VectorAdapter&lt; User &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html#l00252">252</a> of file <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html">Zoltan2_XpetraMultiVectorAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html#l00239">239</a> of file <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html">Zoltan2_XpetraMultiVectorAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -704,7 +703,7 @@ template&lt;typename User &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html#l00294">294</a> of file <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html">Zoltan2_XpetraMultiVectorAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html#l00262">262</a> of file <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html">Zoltan2_XpetraMultiVectorAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -744,7 +743,7 @@ template&lt;typename Adapter &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html#l00340">340</a> of file <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html">Zoltan2_XpetraMultiVectorAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html#l00285">285</a> of file <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html">Zoltan2_XpetraMultiVectorAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -784,7 +783,7 @@ template&lt;typename Adapter &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html#l00364">364</a> of file <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html">Zoltan2_XpetraMultiVectorAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html#l00309">309</a> of file <a class="el" href="_zoltan2___xpetra_multi_vector_adapter_8hpp_source.html">Zoltan2_XpetraMultiVectorAdapter.hpp</a>.</p>
 
 </div>
 </div>

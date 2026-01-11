@@ -80,7 +80,7 @@ var dir_cfdfa579cc9ebd771be538ec46031646 =
     [ "MueLu_InterfaceMappingTransferFactory_fwd.hpp", "_mue_lu___interface_mapping_transfer_factory__fwd_8hpp.html", "_mue_lu___interface_mapping_transfer_factory__fwd_8hpp" ],
     [ "MueLu_IntrepidPCoarsenFactory_fwd.hpp", "_mue_lu___intrepid_p_coarsen_factory__fwd_8hpp.html", null ],
     [ "MueLu_InverseApproximationFactory_fwd.hpp", "_mue_lu___inverse_approximation_factory__fwd_8hpp.html", "_mue_lu___inverse_approximation_factory__fwd_8hpp" ],
-    [ "MueLu_IsorropiaInterface_fwd.hpp", "_mue_lu___isorropia_interface__fwd_8hpp.html", "_mue_lu___isorropia_interface__fwd_8hpp" ],
+    [ "MueLu_IsorropiaInterface_fwd.hpp", "_mue_lu___isorropia_interface__fwd_8hpp.html", null ],
     [ "MueLu_LeftoverAggregationAlgorithm_fwd.hpp", "_mue_lu___leftover_aggregation_algorithm__fwd_8hpp.html", "_mue_lu___leftover_aggregation_algorithm__fwd_8hpp" ],
     [ "MueLu_Level_fwd.hpp", "_mue_lu___level__fwd_8hpp.html", "_mue_lu___level__fwd_8hpp" ],
     [ "MueLu_LineDetectionFactory_fwd.hpp", "_mue_lu___line_detection_factory__fwd_8hpp.html", "_mue_lu___line_detection_factory__fwd_8hpp" ],

@@ -10,9 +10,7 @@ var searchData=
   ['userpartitioner_7',['UserPartitioner',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_ifpack2_1_1_details_1_1_user_partitioner.html',1,'Ifpack2::Details']]],
   ['userpfactory_8',['UserPFactory',['../class_mue_lu_1_1_user_p_factory.html',1,'MueLu']]],
   ['utilities_9',['Utilities',['../class_mue_lu_1_1_utilities.html',1,'MueLu']]],
-  ['utilities_3c_20double_2c_20int_2c_20int_2c_20xpetra_3a_3aepetranode_20_3e_10',['Utilities&lt; double, int, int, Xpetra::EpetraNode &gt;',['../class_mue_lu_1_1_utilities_3_01double_00_01int_00_01int_00_01_xpetra_1_1_epetra_node_01_4.html',1,'MueLu']]],
-  ['utilitiesbase_11',['UtilitiesBase',['../class_mue_lu_1_1_utilities_base.html',1,'MueLu']]],
-  ['utilitiesbase_3c_20double_2c_20int_2c_20int_2c_20xpetra_3a_3aepetranode_20_3e_12',['UtilitiesBase&lt; double, int, int, Xpetra::EpetraNode &gt;',['../class_mue_lu_1_1_utilities_base.html',1,'MueLu']]],
-  ['utilitiesbase_3c_20scalar_2c_20defaultlocalordinal_2c_20defaultglobalordinal_2c_20defaultnode_20_3e_13',['UtilitiesBase&lt; Scalar, DefaultLocalOrdinal, DefaultGlobalOrdinal, DefaultNode &gt;',['../class_mue_lu_1_1_utilities_base.html',1,'MueLu']]],
-  ['uzawasmoother_14',['UzawaSmoother',['../class_mue_lu_1_1_uzawa_smoother.html',1,'MueLu']]]
+  ['utilitiesbase_10',['UtilitiesBase',['../class_mue_lu_1_1_utilities_base.html',1,'MueLu']]],
+  ['utilitiesbase_3c_20scalar_2c_20defaultlocalordinal_2c_20defaultglobalordinal_2c_20defaultnode_20_3e_11',['UtilitiesBase&lt; Scalar, DefaultLocalOrdinal, DefaultGlobalOrdinal, DefaultNode &gt;',['../class_mue_lu_1_1_utilities_base.html',1,'MueLu']]],
+  ['uzawasmoother_12',['UzawaSmoother',['../class_mue_lu_1_1_uzawa_smoother.html',1,'MueLu']]]
 ];

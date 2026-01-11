@@ -386,12 +386,11 @@ class Zoltan2::XpetraCrsGraphAdapter&lt; User, UserCoord &gt;</div><p>Provides a
 </dd></dl>
 <p>The template parameter is the user's input object: </p><ul>
 <li>Tpetra::CrsGraph </li>
-<li>Xpetra::CrsGraph </li>
-<li>Epetra_CrsGraph</li>
+<li>Xpetra::CrsGraph</li>
 </ul>
 <p>The <code>scalar_t</code> type, representing use data such as matrix values, is used by <a class="el" href="namespace_zoltan2.html" title="Created by mbenlioglu on Aug 31, 2020.">Zoltan2</a> for weights, coordinates, part sizes and quality metrics. Some User types (like Tpetra::CrsMatrix) have an inherent scalar type, and some (like Tpetra::CrsGraph) do not. For such objects, the scalar type is set by <a class="el" href="namespace_zoltan2.html" title="Created by mbenlioglu on Aug 31, 2020.">Zoltan2</a> to <code>float</code>. If you wish to change it to double, set the second template parameter to <code>double</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00048">48</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00047">47</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="abb7db1773145ea5821cdb5affbbf7111" name="abb7db1773145ea5821cdb5affbbf7111"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abb7db1773145ea5821cdb5affbbf7111">&#9670;&#160;</a></span>XpetraCrsGraphAdapter()</h2>
@@ -430,7 +429,7 @@ template&lt;typename User , typename UserCoord &gt; </div>
 <p>Constructor for graph with no weights or coordinates. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ingraph</td><td>the Epetra_CrsGraph, Tpetra::CrsGraph or Xpetra::CrsGraph </td></tr>
+    <tr><td class="paramname">ingraph</td><td>the Tpetra::CrsGraph or Xpetra::CrsGraph </td></tr>
     <tr><td class="paramname">numVtxWeights</td><td>the number of weights per vertex (default = 0) </td></tr>
     <tr><td class="paramname">numEdgeWeights</td><td>the number of weights per edge (default = 0)</td></tr>
   </table>
@@ -438,7 +437,7 @@ template&lt;typename User , typename UserCoord &gt; </div>
 </dl>
 <p>Most adapters do not have RCPs in their interface. This one does because the user is obviously a Trilinos user. </p>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00255">255</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00254">254</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -488,7 +487,7 @@ template&lt;typename User , typename UserCoord &gt; </div>
 </dl>
 <p>The order of the weights should match the order that entities appear in the input data structure. </p>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00327">327</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00326">326</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -528,7 +527,7 @@ template&lt;typename User , typename UserCoord  = User&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00091">91</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00090">90</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -568,7 +567,7 @@ template&lt;typename User , typename UserCoord  = User&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00092">92</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00091">91</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -617,7 +616,7 @@ template&lt;typename User , typename UserCoord &gt; </div>
 </dl>
 <p>The order of the vertex weights should match the order that vertices appear in the input data structure. </p><div class="fragment"><div class="line">TheGraph-&gt;getRowMap()-&gt;getLocalElementList()</div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00338">338</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00337">337</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -707,7 +706,7 @@ template&lt;typename User , typename UserCoord &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00358">358</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00357">357</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -737,7 +736,7 @@ template&lt;typename User , typename UserCoord &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00374">374</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00373">373</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -788,7 +787,7 @@ template&lt;typename User , typename UserCoord &gt; </div>
 <p>By vertex: </p><div class="fragment"><div class="line">TheGraph-&gt;getRowMap()-&gt;getLocalElementList()</div>
 </div><!-- fragment --><p>Then by vertex neighbor: </p><div class="fragment"><div class="line">TheGraph-&gt;getLocalRowView(vertexNum, neighborList);</div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00390">390</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00389">389</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -879,7 +878,7 @@ template&lt;typename User , typename UserCoord  = User&gt; </div>
 
 <p>Access to Xpetra-wrapped user's graph. </p>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00155">155</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00154">154</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -910,7 +909,7 @@ template&lt;typename User , typename UserCoord  = User&gt; </div>
 
 <p>Access to user's graph. </p>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00159">159</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00158">158</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -943,7 +942,7 @@ template&lt;typename User , typename UserCoord  = User&gt; </div>
 
 <p>Implements <a class="el" href="class_zoltan2_1_1_graph_adapter.html#a0663fb15b40d4d2726a10cadab96b283">Zoltan2::GraphAdapter&lt; User, UserCoord &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00167">167</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00166">166</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -973,7 +972,7 @@ template&lt;typename User , typename UserCoord  = User&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00169">169</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00168">168</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -1006,7 +1005,7 @@ template&lt;typename User , typename UserCoord  = User&gt; </div>
 
 <p>Implements <a class="el" href="class_zoltan2_1_1_graph_adapter.html#afd8449fe0970b2e646947410228922d5">Zoltan2::GraphAdapter&lt; User, UserCoord &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00176">176</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00175">175</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -1046,7 +1045,7 @@ template&lt;typename User , typename UserCoord  = User&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00178">178</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00177">177</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -1079,7 +1078,7 @@ template&lt;typename User , typename UserCoord  = User&gt; </div>
 
 <p>Reimplemented from <a class="el" href="class_zoltan2_1_1_graph_adapter.html#aef988cdf5a17206b62b313f072e34219">Zoltan2::GraphAdapter&lt; User, UserCoord &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00184">184</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00183">183</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -1137,7 +1136,7 @@ template&lt;typename User , typename UserCoord  = User&gt; </div>
 
 <p>Reimplemented from <a class="el" href="class_zoltan2_1_1_graph_adapter.html#aad73ddc9b256cc28c174bedf0e36d93d">Zoltan2::GraphAdapter&lt; User, UserCoord &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00186">186</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00185">185</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -1171,7 +1170,7 @@ template&lt;typename User , typename UserCoord  = User&gt; </div>
 
 <p>Reimplemented from <a class="el" href="class_zoltan2_1_1_graph_adapter.html#a4350d79d13af1890d6a10337c8b46a4a">Zoltan2::GraphAdapter&lt; User, UserCoord &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00202">202</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00201">201</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -1204,7 +1203,7 @@ template&lt;typename User , typename UserCoord  = User&gt; </div>
 
 <p>Reimplemented from <a class="el" href="class_zoltan2_1_1_graph_adapter.html#a6c3cda5f415bff6b474d9b16a7781de4">Zoltan2::GraphAdapter&lt; User, UserCoord &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00204">204</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00203">203</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -1262,7 +1261,7 @@ template&lt;typename User , typename UserCoord  = User&gt; </div>
 
 <p>Reimplemented from <a class="el" href="class_zoltan2_1_1_graph_adapter.html#a32b7cc821603038d3d972dff30f19f77">Zoltan2::GraphAdapter&lt; User, UserCoord &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00206">206</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00205">205</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -1302,7 +1301,7 @@ template&lt;typename Adapter &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00411">411</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00410">410</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -1342,7 +1341,7 @@ template&lt;typename Adapter &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00435">435</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html#l00434">434</a> of file <a class="el" href="_zoltan2___xpetra_crs_graph_adapter_8hpp_source.html">Zoltan2_XpetraCrsGraphAdapter.hpp</a>.</p>
 
 </div>
 </div>
