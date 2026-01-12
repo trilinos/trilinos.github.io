@@ -2,6 +2,7 @@ var hierarchy =
 [
     [ "AdaptiveSAMLParameterListInterpreter", "class_adaptive_s_a_m_l_parameter_list_interpreter.html", null ],
     [ "AlgebraicPermutationStrategy", "class_algebraic_permutation_strategy.html", null ],
+    [ "MueLu::AmesosSmoother< Node >", "class_mue_lu_1_1_amesos_smoother.html", null ],
     [ "MueLu::AppendTrait< View, AppendValue >", "struct_mue_lu_1_1_append_trait.html", null ],
     [ "MueLu::AppendTrait< Kokkos::View< DataType, Pack... >, T >", "struct_mue_lu_1_1_append_trait_3_01_kokkos_1_1_view_3_01_data_type_00_01_pack_8_8_8_01_4_00_01_t_01_4.html", null ],
     [ "BelosError", null, [
@@ -51,8 +52,6 @@ var hierarchy =
           [ "MueLu::IndexManager< DefaultLocalOrdinal, DefaultGlobalOrdinal, DefaultNode >", "class_mue_lu_1_1_index_manager.html", null ],
           [ "MueLu::PreDropFunctionBaseClass< DefaultScalar, DefaultLocalOrdinal, DefaultGlobalOrdinal, DefaultNode >", "class_mue_lu_1_1_pre_drop_function_base_class.html", null ],
           [ "MueLu::SmootherBase< SmootherPrototype<>::scalar_type, typename SmootherPrototype< SmootherPrototype<>::scalar_type >::local_ordinal_type, typename SmootherPrototype< SmootherPrototype<>::scalar_type, typename SmootherPrototype< SmootherPrototype<>::scalar_type >::local_ordinal_type >::global_ordinal_type, typename SmootherPrototype< SmootherPrototype<>::scalar_type, typename SmootherPrototype< SmootherPrototype<>::scalar_type >::local_ordinal_type, typename SmootherPrototype< SmootherPrototype<>::scalar_type, typename SmootherPrototype< SmootherPrototype<>::scalar_type >::local_ordinal_type >::global_ordinal_type >::node_type >", "class_mue_lu_1_1_smoother_base.html", null ],
-          [ "MueLu::SmootherBase< double, int, int, Xpetra::EpetraNode >", "class_mue_lu_1_1_smoother_base.html", null ],
-          [ "MueLu::SmootherBase< double, int, int, typename SmootherPrototype< double, int, int >::node_type >", "class_mue_lu_1_1_smoother_base.html", null ],
           [ "MueLu::SmootherBase< SmootherBase<>::scalar_type, typename SmootherBase< SmootherBase<>::scalar_type >::local_ordinal_type, typename SmootherBase< SmootherBase<>::scalar_type, typename SmootherBase< SmootherBase<>::scalar_type >::local_ordinal_type >::global_ordinal_type, typename SmootherBase< SmootherBase<>::scalar_type, typename SmootherBase< SmootherBase<>::scalar_type >::local_ordinal_type, typename SmootherBase< SmootherBase<>::scalar_type, typename SmootherBase< SmootherBase<>::scalar_type >::local_ordinal_type >::global_ordinal_type >::node_type >", "class_mue_lu_1_1_smoother_base.html", null ],
           [ "MueLu::SmootherBase< double, int, GlobalOrdinal, Node >", "class_mue_lu_1_1_smoother_base.html", null ],
           [ "MueLu::SolverBase< DefaultScalar, DefaultLocalOrdinal, DefaultGlobalOrdinal, DefaultNode >", "class_mue_lu_1_1_solver_base.html", null ],
@@ -79,12 +78,6 @@ var hierarchy =
           [ "MueLu::FactoryBase", "class_mue_lu_1_1_factory_base.html", [
             [ "MueLu::Factory", "class_mue_lu_1_1_factory.html", [
               [ "MueLu::SmootherPrototype< SmootherPrototype<>::scalar_type, typename SmootherPrototype< SmootherPrototype<>::scalar_type >::local_ordinal_type, typename SmootherPrototype< SmootherPrototype<>::scalar_type, typename SmootherPrototype< SmootherPrototype<>::scalar_type >::local_ordinal_type >::global_ordinal_type, typename SmootherPrototype< SmootherPrototype<>::scalar_type, typename SmootherPrototype< SmootherPrototype<>::scalar_type >::local_ordinal_type, typename SmootherPrototype< SmootherPrototype<>::scalar_type, typename SmootherPrototype< SmootherPrototype<>::scalar_type >::local_ordinal_type >::global_ordinal_type >::node_type >", "class_mue_lu_1_1_smoother_prototype.html", null ],
-              [ "MueLu::SmootherPrototype< double, int, int, Xpetra::EpetraNode >", "class_mue_lu_1_1_smoother_prototype.html", [
-                [ "MueLu::Amesos2Smoother< double, int, int, Xpetra::EpetraNode >", "class_mue_lu_1_1_amesos2_smoother_3_01double_00_01int_00_01int_00_01_xpetra_1_1_epetra_node_01_4.html", null ],
-                [ "MueLu::BelosSmoother< double, int, int, Xpetra::EpetraNode >", "class_mue_lu_1_1_belos_smoother_3_01double_00_01int_00_01int_00_01_xpetra_1_1_epetra_node_01_4.html", null ],
-                [ "MueLu::Ifpack2Smoother< double, int, int, Xpetra::EpetraNode >", "class_mue_lu_1_1_ifpack2_smoother_3_01double_00_01int_00_01int_00_01_xpetra_1_1_epetra_node_01_4.html", null ]
-              ] ],
-              [ "MueLu::SmootherPrototype< double, int, int, typename SmootherPrototype< double, int, int >::node_type >", "class_mue_lu_1_1_smoother_prototype.html", null ],
               [ "MueLu::SmootherPrototype< double, int, GlobalOrdinal, Node >", "class_mue_lu_1_1_smoother_prototype.html", [
                 [ "MueLu::TekoSmoother< double, int, GlobalOrdinal, Node >", "class_mue_lu_1_1_teko_smoother_3_01double_00_01int_00_01_global_ordinal_00_01_node_01_4.html", null ]
               ] ],
@@ -143,12 +136,10 @@ var hierarchy =
                 [ "MueLu::VariableDofLaplacianFactory< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_variable_dof_laplacian_factory.html", null ],
                 [ "MueLu::ZeroSubBlockAFactory< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_zero_sub_block_a_factory.html", null ],
                 [ "MueLu::Zoltan2Interface< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_zoltan2_interface.html", null ],
-                [ "MueLu::Zoltan2Interface< double, int, int, Xpetra::EpetraNode >", "class_mue_lu_1_1_zoltan2_interface_3_01double_00_01int_00_01int_00_01_xpetra_1_1_epetra_node_01_4.html", null ],
                 [ "MueLu::ZoltanInterface< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_zoltan_interface.html", null ]
               ] ],
               [ "MueLu::SmootherPrototype< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_smoother_prototype.html", [
                 [ "MueLu::Amesos2Smoother< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_amesos2_smoother.html", null ],
-                [ "MueLu::AmesosSmoother< Node >", "class_mue_lu_1_1_amesos_smoother.html", null ],
                 [ "MueLu::BelosSmoother< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_belos_smoother.html", null ],
                 [ "MueLu::BlockedDirectSolver< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_blocked_direct_solver.html", null ],
                 [ "MueLu::BlockedGaussSeidelSmoother< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_blocked_gauss_seidel_smoother.html", null ],
@@ -156,7 +147,6 @@ var hierarchy =
                 [ "MueLu::BraessSarazinSmoother< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_braess_sarazin_smoother.html", null ],
                 [ "MueLu::DirectSolver< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_direct_solver.html", null ],
                 [ "MueLu::Ifpack2Smoother< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_ifpack2_smoother.html", null ],
-                [ "MueLu::IfpackSmoother< Node >", "class_mue_lu_1_1_ifpack_smoother.html", null ],
                 [ "MueLu::IndefBlockedDiagonalSmoother< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_indef_blocked_diagonal_smoother.html", null ],
                 [ "MueLu::MatlabSmoother< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_matlab_smoother.html", null ],
                 [ "MueLu::MergedSmoother< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_merged_smoother.html", null ],
@@ -258,8 +248,6 @@ var hierarchy =
           [ "MueLu::ShiftedLaplacian< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_shifted_laplacian.html", null ],
           [ "MueLu::SmootherBase< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_smoother_base.html", [
             [ "MueLu::SmootherPrototype< SmootherPrototype<>::scalar_type, typename SmootherPrototype< SmootherPrototype<>::scalar_type >::local_ordinal_type, typename SmootherPrototype< SmootherPrototype<>::scalar_type, typename SmootherPrototype< SmootherPrototype<>::scalar_type >::local_ordinal_type >::global_ordinal_type, typename SmootherPrototype< SmootherPrototype<>::scalar_type, typename SmootherPrototype< SmootherPrototype<>::scalar_type >::local_ordinal_type, typename SmootherPrototype< SmootherPrototype<>::scalar_type, typename SmootherPrototype< SmootherPrototype<>::scalar_type >::local_ordinal_type >::global_ordinal_type >::node_type >", "class_mue_lu_1_1_smoother_prototype.html", null ],
-            [ "MueLu::SmootherPrototype< double, int, int, Xpetra::EpetraNode >", "class_mue_lu_1_1_smoother_prototype.html", null ],
-            [ "MueLu::SmootherPrototype< double, int, int, typename SmootherPrototype< double, int, int >::node_type >", "class_mue_lu_1_1_smoother_prototype.html", null ],
             [ "MueLu::SmootherPrototype< double, int, GlobalOrdinal, Node >", "class_mue_lu_1_1_smoother_prototype.html", null ],
             [ "MueLu::SmootherPrototype< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_smoother_prototype.html", null ]
           ] ],
@@ -312,6 +300,7 @@ var hierarchy =
     [ "MueLu::GraphBase< LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_graph_base.html", null ],
     [ "MueLu::MatrixConstruction::GraphConstruction< local_matrix_type, local_graph_type >", "class_mue_lu_1_1_matrix_construction_1_1_graph_construction.html", null ],
     [ "MueLu::HierarchyUtils< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_hierarchy_utils.html", null ],
+    [ "MueLu::IfpackSmoother< Node >", "class_mue_lu_1_1_ifpack_smoother.html", null ],
     [ "MueLu::ImportUtils< LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_import_utils.html", null ],
     [ "Zoltan2::InputTraits< MueLu::LWGraph< LocalOrdinal, GlobalOrdinal, Node > >", "struct_zoltan2_1_1_input_traits_3_01_mue_lu_1_1_l_w_graph_3_01_local_ordinal_00_01_global_ordinal_00_01_node_01_4_01_4.html", null ],
     [ "MueLu::IteratorOps< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_iterator_ops.html", null ],
@@ -375,6 +364,7 @@ var hierarchy =
       [ "MueLu::XpetraOperator< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_xpetra_operator.html", null ]
     ] ],
     [ "OperatorT", null, [
+      [ "Belos::MueLuOp< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_belos_1_1_mue_lu_op.html", null ],
       [ "Belos::MueLuOp< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_belos_1_1_mue_lu_op.html", null ]
     ] ],
     [ "MueLu::optimalSatisfyConstraintsForScalarPDEsKernel< local_matrix_type >", "struct_mue_lu_1_1optimal_satisfy_constraints_for_scalar_p_d_es_kernel.html", null ],
@@ -428,9 +418,6 @@ var hierarchy =
     [ "MueLu::DistanceLaplacian::UnweightedDistanceFunctor< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_distance_laplacian_1_1_unweighted_distance_functor.html", null ],
     [ "MueLu::UtilitiesBase< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_utilities_base.html", [
       [ "MueLu::Utilities< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_utilities.html", null ]
-    ] ],
-    [ "MueLu::UtilitiesBase< double, int, int, Xpetra::EpetraNode >", "class_mue_lu_1_1_utilities_base.html", [
-      [ "MueLu::Utilities< double, int, int, Xpetra::EpetraNode >", "class_mue_lu_1_1_utilities_3_01double_00_01int_00_01int_00_01_xpetra_1_1_epetra_node_01_4.html", null ]
     ] ],
     [ "MueLu::UtilitiesBase< Scalar, DefaultLocalOrdinal, DefaultGlobalOrdinal, DefaultNode >", "class_mue_lu_1_1_utilities_base.html", null ],
     [ "MueLu::MatrixConstruction::VectorCountingFunctor< local_matrix_type, functor_type, remaining_functor_types >", "class_mue_lu_1_1_matrix_construction_1_1_vector_counting_functor.html", null ],

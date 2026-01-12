@@ -390,12 +390,11 @@ class Zoltan2::XpetraCrsMatrixAdapter&lt; User, UserCoord &gt;</div><p>Provides 
 </dd></dl>
 <p>The template parameter is the user's input object: </p><ul>
 <li>Tpetra::CrsMatrix </li>
-<li>Xpetra::CrsMatrix </li>
-<li>Epetra_CrsMatrix</li>
+<li>Xpetra::CrsMatrix</li>
 </ul>
 <p>The <code>scalar_t</code> type, representing use data such as matrix values, is used by <a class="el" href="namespace_zoltan2.html" title="Created by mbenlioglu on Aug 31, 2020.">Zoltan2</a> for weights, coordinates, part sizes and quality metrics. Some User types (like Tpetra::CrsMatrix) have an inherent scalar type, and some (like Tpetra::CrsGraph) do not. For such objects, the scalar type is set by <a class="el" href="namespace_zoltan2.html" title="Created by mbenlioglu on Aug 31, 2020.">Zoltan2</a> to <code>float</code>. If you wish to change it to double, set the second template parameter to <code>double</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00053">53</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00052">52</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7de1ff510ac175a569ee364834994dca" name="a7de1ff510ac175a569ee364834994dca"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7de1ff510ac175a569ee364834994dca">&#9670;&#160;</a></span>~XpetraCrsMatrixAdapter()</h2>
@@ -424,7 +423,7 @@ template&lt;typename User , typename UserCoord  = User&gt; </div>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00071">71</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00070">70</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -459,13 +458,13 @@ template&lt;typename User , typename UserCoord &gt; </div>
 <p>Constructor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">inmatrix</td><td>The users Epetra, Tpetra, or Xpetra CrsMatrix object </td></tr>
+    <tr><td class="paramname">inmatrix</td><td>The users Tpetra, or Xpetra CrsMatrix object </td></tr>
     <tr><td class="paramname">nWeightsPerRow</td><td>If row weights will be provided in <a class="el" href="class_zoltan2_1_1_xpetra_crs_matrix_adapter.html#aa4193cc96ffc97d9e9df1d3ae145bc2b" title="Specify a weight for each row.">setRowWeights()</a>, then set <code>nWeightsPerRow</code> to the number of weights per row. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00280">280</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00279">279</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -514,7 +513,7 @@ template&lt;typename User , typename UserCoord &gt; </div>
 </dl>
 <p>The order of weights should correspond to the order of the primary entity type; see, e.g., setRowWeights below. </p>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00321">321</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00320">320</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -562,7 +561,7 @@ template&lt;typename User , typename UserCoord &gt; </div>
 </dl>
 <p>The order of weights should correspond to the order of rows returned by </p><div class="fragment"><div class="line">theMatrix-&gt;getRowMap()-&gt;getLocalElementList();</div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00339">339</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00338">338</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -592,7 +591,7 @@ template&lt;typename User , typename UserCoord &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00358">358</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00357">357</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -622,7 +621,7 @@ template&lt;typename User , typename UserCoord &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00375">375</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00374">374</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -655,7 +654,7 @@ template&lt;typename User , typename UserCoord  = User&gt; </div>
 
 <p>Implements <a class="el" href="class_zoltan2_1_1_matrix_adapter.html#adc0286000a5725648bf3f9655d6b758a">Zoltan2::MatrixAdapter&lt; User, UserCoord &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00130">130</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00129">129</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -688,7 +687,7 @@ template&lt;typename User , typename UserCoord  = User&gt; </div>
 
 <p>Implements <a class="el" href="class_zoltan2_1_1_matrix_adapter.html#a6a955cabb234fc1d467ff1713745cca8">Zoltan2::MatrixAdapter&lt; User, UserCoord &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00134">134</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00133">133</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -721,7 +720,7 @@ template&lt;typename User , typename UserCoord  = User&gt; </div>
 
 <p>Implements <a class="el" href="class_zoltan2_1_1_matrix_adapter.html#a2d66369eb1313782d3db5781698a7312">Zoltan2::MatrixAdapter&lt; User, UserCoord &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00138">138</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00137">137</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -751,7 +750,7 @@ template&lt;typename User , typename UserCoord  = User&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00142">142</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00141">141</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -781,7 +780,7 @@ template&lt;typename User , typename UserCoord  = User&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00148">148</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00147">147</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -821,7 +820,7 @@ template&lt;typename User , typename UserCoord  = User&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00154">154</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00153">153</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -854,7 +853,7 @@ template&lt;typename User , typename UserCoord  = User&gt; </div>
 
 <p>Reimplemented from <a class="el" href="class_zoltan2_1_1_matrix_adapter.html#acbede61aa968dbc16cd8d0c1aa7c1ed3">Zoltan2::MatrixAdapter&lt; User, UserCoord &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00162">162</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00161">161</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -900,7 +899,7 @@ template&lt;typename User , typename UserCoord  = User&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00164">164</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00163">163</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -940,7 +939,7 @@ template&lt;typename User , typename UserCoord  = User&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00172">172</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00171">171</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -973,7 +972,7 @@ template&lt;typename User , typename UserCoord  = User&gt; </div>
 
 <p>Reimplemented from <a class="el" href="class_zoltan2_1_1_matrix_adapter.html#a624f401d3ffdce56c762c797146ad124">Zoltan2::MatrixAdapter&lt; User, UserCoord &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00232">232</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00231">231</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -1031,7 +1030,7 @@ template&lt;typename User , typename UserCoord  = User&gt; </div>
 
 <p>Reimplemented from <a class="el" href="class_zoltan2_1_1_matrix_adapter.html#a85e3719866856acf6962d36088f5f470">Zoltan2::MatrixAdapter&lt; User, UserCoord &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00234">234</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00233">233</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -1065,7 +1064,7 @@ template&lt;typename User , typename UserCoord  = User&gt; </div>
 
 <p>Reimplemented from <a class="el" href="class_zoltan2_1_1_matrix_adapter.html#a2fa13a1290decce60b19a179b636c1ff">Zoltan2::MatrixAdapter&lt; User, UserCoord &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00249">249</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00248">248</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -1105,7 +1104,7 @@ template&lt;typename Adapter &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00393">393</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00392">392</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
 
 </div>
 </div>
@@ -1145,7 +1144,7 @@ template&lt;typename Adapter &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00417">417</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html#l00416">416</a> of file <a class="el" href="_zoltan2___xpetra_crs_matrix_adapter_8hpp_source.html">Zoltan2_XpetraCrsMatrixAdapter.hpp</a>.</p>
 
 </div>
 </div>

@@ -141,8 +141,6 @@ Macros</h2></td></tr>
 <tr class="separator:a2355285f3fa7d584083539b8e1c9ce85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa66f7911e20feb4681427fc6a734a291" id="r_aa66f7911e20feb4681427fc6a734a291"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_xpetra___exceptions_8hpp.html#aa66f7911e20feb4681427fc6a734a291">XPETRA_RCP_DYNAMIC_CAST</a>(type,  obj,  newObj,  exceptionMsg)</td></tr>
 <tr class="separator:aa66f7911e20feb4681427fc6a734a291"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c0f15d6b600c3aca28d289e5c40ee2f" id="r_a1c0f15d6b600c3aca28d289e5c40ee2f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_xpetra___exceptions_8hpp.html#a1c0f15d6b600c3aca28d289e5c40ee2f">XPETRA_FACTORY_ERROR_IF_EPETRA</a>(lib)</td></tr>
-<tr class="separator:a1c0f15d6b600c3aca28d289e5c40ee2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad04790542c3e784371202f6cdfc1123d" id="r_ad04790542c3e784371202f6cdfc1123d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_xpetra___exceptions_8hpp.html#ad04790542c3e784371202f6cdfc1123d">XPETRA_FACTORY_END</a>&#160;&#160;&#160;<a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/teuchos/doc/html/group___test_for_exception__grp.html#gaadb9556c5c1ba7da1c141e7529a8ebdf">TEUCHOS_TEST_FOR_EXCEPTION</a>(1, <a class="el" href="class_xpetra_1_1_exceptions_1_1_bad_cast.html">::Xpetra::Exceptions::BadCast</a>, &quot;Unknown map-&gt;lib() type. Did you compile with Epetra and Tpetra support?&quot;);</td></tr>
 <tr class="separator:ad04790542c3e784371202f6cdfc1123d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f6cbbebc26907583b98d3166ec79ca1" id="r_a7f6cbbebc26907583b98d3166ec79ca1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_xpetra___exceptions_8hpp.html#a7f6cbbebc26907583b98d3166ec79ca1">XPETRA_TPETRA_ETI_EXCEPTION</a>(cl,  obj,  go,  node)&#160;&#160;&#160;<a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/teuchos/doc/html/group___test_for_exception__grp.html#gaadb9556c5c1ba7da1c141e7529a8ebdf">TEUCHOS_TEST_FOR_EXCEPTION</a>(1, <a class="el" href="class_xpetra_1_1_exceptions_1_1_bad_cast.html">::Xpetra::Exceptions::BadCast</a>, &quot;Problem in &quot; #cl &quot;! Cannot create new object &quot; #obj &quot; with <a class="el" href="_xpetra___use_short_names_ordinal_8hpp.html#af2e3bd93af6a39e41e4423bb7ca42a7e">GO</a>=&quot; #go &quot; and <a class="el" href="_xpetra___use_short_names_ordinal_8hpp.html#a6fd58e53a864a0cdb1d2f90791c93fad">NO</a>=&quot; #node &quot;. Xpetra has been compiled with Tpetra enabled but <a class="el" href="_xpetra___use_short_names_ordinal_8hpp.html#af2e3bd93af6a39e41e4423bb7ca42a7e">GO</a>=&quot; #go &quot; disabled and/or <a class="el" href="_xpetra___use_short_names_ordinal_8hpp.html#a6fd58e53a864a0cdb1d2f90791c93fad">NO</a>=&quot; #node &quot; disabled. Please check your Trilinos configuration.&quot;);</td></tr>
@@ -205,7 +203,7 @@ Macros</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">  type* newObj##_pt = <span class="keyword">dynamic_cast&lt;</span>type*<span class="keyword">&gt;</span>(&amp;obj);                                                                                         \</div>
 <div class="line">  TEUCHOS_TEST_FOR_EXCEPTION(newObj##_pt == NULL, <a class="code hl_class" href="class_xpetra_1_1_exceptions_1_1_bad_cast.html">Xpetra::Exceptions::BadCast</a>, <span class="stringliteral">&quot;Cannot cast &#39;&quot;</span> #obj <span class="stringliteral">&quot;&#39; to a &quot;</span> #type <span class="stringliteral">&quot;. &quot;</span> #exceptionMsg); \</div>
 <div class="line">  type&amp; newObj = *newObj##_pt;</div>
-<div class="ttc" id="aclass_xpetra_1_1_exceptions_1_1_bad_cast_html"><div class="ttname"><a href="class_xpetra_1_1_exceptions_1_1_bad_cast.html">Xpetra::Exceptions::BadCast</a></div><div class="ttdoc">Exception indicating invalid cast attempted.</div><div class="ttdef"><b>Definition</b> <a href="_xpetra___exceptions_8hpp_source.html#l00050">Xpetra_Exceptions.hpp:50</a></div></div>
+<div class="ttc" id="aclass_xpetra_1_1_exceptions_1_1_bad_cast_html"><div class="ttname"><a href="class_xpetra_1_1_exceptions_1_1_bad_cast.html">Xpetra::Exceptions::BadCast</a></div><div class="ttdoc">Exception indicating invalid cast attempted.</div><div class="ttdef"><b>Definition</b> <a href="_xpetra___exceptions_8hpp_source.html#l00042">Xpetra_Exceptions.hpp:42</a></div></div>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="_xpetra___exceptions_8hpp_source.html#l00022">22</a> of file <a class="el" href="_xpetra___exceptions_8hpp_source.html">Xpetra_Exceptions.hpp</a>.</p>
 
@@ -255,29 +253,6 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a id="a1c0f15d6b600c3aca28d289e5c40ee2f" name="a1c0f15d6b600c3aca28d289e5c40ee2f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c0f15d6b600c3aca28d289e5c40ee2f">&#9670;&#160;</a></span>XPETRA_FACTORY_ERROR_IF_EPETRA</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define XPETRA_FACTORY_ERROR_IF_EPETRA</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">lib</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">if</span> ((lib) == <a class="code hl_enumvalue" href="namespace_xpetra.html#acb606faa061766ef2c69d87b78ae13afa179b1b9c5e04a6cb49c2da1b06354c3c">::Xpetra::UseEpetra</a>)         \</div>
-<div class="line">    TEUCHOS_TEST_FOR_EXCEPTION(1, <a class="code hl_class" href="class_xpetra_1_1_exceptions_1_1_bad_cast.html">::Xpetra::Exceptions::BadCast</a>, <span class="stringliteral">&quot;Epetra can only be used with Scalar=double and LocalOrdinal=GlobalOrdinal=int on a serial node&quot;</span>);</div>
-<div class="ttc" id="anamespace_xpetra_html_acb606faa061766ef2c69d87b78ae13afa179b1b9c5e04a6cb49c2da1b06354c3c"><div class="ttname"><a href="namespace_xpetra.html#acb606faa061766ef2c69d87b78ae13afa179b1b9c5e04a6cb49c2da1b06354c3c">Xpetra::UseEpetra</a></div><div class="ttdeci">@ UseEpetra</div><div class="ttdef"><b>Definition</b> <a href="_xpetra___map__decl_8hpp_source.html#l00040">Xpetra_Map_decl.hpp:40</a></div></div>
-</div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="_xpetra___exceptions_8hpp_source.html#l00034">34</a> of file <a class="el" href="_xpetra___exceptions_8hpp_source.html">Xpetra_Exceptions.hpp</a>.</p>
-
-</div>
-</div>
 <a id="ad04790542c3e784371202f6cdfc1123d" name="ad04790542c3e784371202f6cdfc1123d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad04790542c3e784371202f6cdfc1123d">&#9670;&#160;</a></span>XPETRA_FACTORY_END</h2>
 
@@ -290,7 +265,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_xpetra___exceptions_8hpp_source.html#l00041">41</a> of file <a class="el" href="_xpetra___exceptions_8hpp_source.html">Xpetra_Exceptions.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_xpetra___exceptions_8hpp_source.html#l00033">33</a> of file <a class="el" href="_xpetra___exceptions_8hpp_source.html">Xpetra_Exceptions.hpp</a>.</p>
 
 </div>
 </div>
@@ -332,7 +307,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_xpetra___exceptions_8hpp_source.html#l00043">43</a> of file <a class="el" href="_xpetra___exceptions_8hpp_source.html">Xpetra_Exceptions.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_xpetra___exceptions_8hpp_source.html#l00035">35</a> of file <a class="el" href="_xpetra___exceptions_8hpp_source.html">Xpetra_Exceptions.hpp</a>.</p>
 
 </div>
 </div>

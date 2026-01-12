@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['todo_20list_0',['ToDo List',['../todo.html',1,'']]]
+  ['initialization_0',['Tpetra Lesson 01: Initialization',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/tpetra/doc/html/_tpetra__lesson01.html',1,'']]]
 ];

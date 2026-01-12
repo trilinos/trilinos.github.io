@@ -19,13 +19,12 @@ var searchData=
   ['amalgamationinfo_16',['AmalgamationInfo',['../class_mue_lu_1_1_amalgamation_info.html',1,'MueLu']]],
   ['amd_17',['AmD',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/struct_ifpack2_1_1_block_helper_details_1_1_am_d.html',1,'Ifpack2::BlockHelperDetails']]],
   ['amesos2smoother_18',['Amesos2Smoother',['../class_mue_lu_1_1_amesos2_smoother.html',1,'MueLu']]],
-  ['amesos2smoother_3c_20double_2c_20int_2c_20int_2c_20xpetra_3a_3aepetranode_20_3e_19',['Amesos2Smoother&lt; double, int, int, Xpetra::EpetraNode &gt;',['../class_mue_lu_1_1_amesos2_smoother_3_01double_00_01int_00_01int_00_01_xpetra_1_1_epetra_node_01_4.html',1,'MueLu']]],
-  ['amesos2wrapper_20',['Amesos2Wrapper',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_ifpack2_1_1_details_1_1_amesos2_wrapper.html',1,'Ifpack2::Details']]],
-  ['amesossmoother_21',['AmesosSmoother',['../class_mue_lu_1_1_amesos_smoother.html',1,'MueLu']]],
-  ['amgxoperator_22',['AMGXOperator',['../class_mue_lu_1_1_a_m_g_x_operator.html',1,'MueLu']]],
-  ['amgxoperator_3c_20double_2c_20int_2c_20int_2c_20node_20_3e_23',['AMGXOperator&lt; double, int, int, Node &gt;',['../class_mue_lu_1_1_a_m_g_x_operator_3_01double_00_01int_00_01int_00_01_node_01_4.html',1,'MueLu']]],
-  ['appendtrait_24',['AppendTrait',['../struct_mue_lu_1_1_append_trait.html',1,'MueLu']]],
-  ['appendtrait_3c_20kokkos_3a_3aview_3c_20datatype_2c_20pack_2e_2e_2e_20_3e_2c_20t_20_3e_25',['AppendTrait&lt; Kokkos::View&lt; DataType, Pack... &gt;, T &gt;',['../struct_mue_lu_1_1_append_trait_3_01_kokkos_1_1_view_3_01_data_type_00_01_pack_8_8_8_01_4_00_01_t_01_4.html',1,'MueLu']]],
-  ['applyparameters_26',['ApplyParameters',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/struct_ifpack2_1_1_block_tri_di_container_3_01_matrix_type_00_01_block_tri_di_container_details_03fe7ae53238d6eeea3418e658526b0d.html',1,'Ifpack2::BlockTriDiContainer']]],
-  ['arrayvaluetype_27',['ArrayValueType',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/struct_ifpack2_1_1_block_helper_details_1_1_array_value_type.html',1,'Ifpack2::BlockHelperDetails']]]
+  ['amesos2wrapper_19',['Amesos2Wrapper',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_ifpack2_1_1_details_1_1_amesos2_wrapper.html',1,'Ifpack2::Details']]],
+  ['amesossmoother_20',['AmesosSmoother',['../class_mue_lu_1_1_amesos_smoother.html',1,'MueLu']]],
+  ['amgxoperator_21',['AMGXOperator',['../class_mue_lu_1_1_a_m_g_x_operator.html',1,'MueLu']]],
+  ['amgxoperator_3c_20double_2c_20int_2c_20int_2c_20node_20_3e_22',['AMGXOperator&lt; double, int, int, Node &gt;',['../class_mue_lu_1_1_a_m_g_x_operator_3_01double_00_01int_00_01int_00_01_node_01_4.html',1,'MueLu']]],
+  ['appendtrait_23',['AppendTrait',['../struct_mue_lu_1_1_append_trait.html',1,'MueLu']]],
+  ['appendtrait_3c_20kokkos_3a_3aview_3c_20datatype_2c_20pack_2e_2e_2e_20_3e_2c_20t_20_3e_24',['AppendTrait&lt; Kokkos::View&lt; DataType, Pack... &gt;, T &gt;',['../struct_mue_lu_1_1_append_trait_3_01_kokkos_1_1_view_3_01_data_type_00_01_pack_8_8_8_01_4_00_01_t_01_4.html',1,'MueLu']]],
+  ['applyparameters_25',['ApplyParameters',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/struct_ifpack2_1_1_block_tri_di_container_3_01_matrix_type_00_01_block_tri_di_container_details_03fe7ae53238d6eeea3418e658526b0d.html',1,'Ifpack2::BlockTriDiContainer']]],
+  ['arrayvaluetype_26',['ArrayValueType',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/struct_ifpack2_1_1_block_helper_details_1_1_array_value_type.html',1,'Ifpack2::BlockHelperDetails']]]
 ];
