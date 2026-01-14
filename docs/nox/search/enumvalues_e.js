@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['quadmin_0',['QuadMin',['../class_n_o_x_1_1_direction_1_1_steepest_descent.html#a4b2e53fe7769478bb6726469b3d0c583ad8ac5f7b30ad49d14dee36f0406eb04f',1,'NOX::Direction::SteepestDescent']]],
-  ['quadratic_1',['Quadratic',['../class_n_o_x_1_1_line_search_1_1_polynomial.html#aee14b043087f6a3c5a5bbd0607e14611aa378a1b76b44e921f8ad179050d3a140',1,'NOX::LineSearch::Polynomial']]],
-  ['quadratic3_2',['Quadratic3',['../class_n_o_x_1_1_line_search_1_1_polynomial.html#aee14b043087f6a3c5a5bbd0607e14611a339126c90cca0db69f2e979b96a984eb',1,'NOX::LineSearch::Polynomial']]]
+  ['rawthyra_0',['RawThyra',['../class_n_o_x_1_1_thyra_1_1_matrix_free_jacobian_operator.html#a95598b49aebd59ddc62fcbe8131ad375ad28be92c81e2c46f7223713b38554801',1,'NOX::Thyra::MatrixFreeJacobianOperator']]],
+  ['relative_1',['Relative',['../class_n_o_x_1_1_status_test_1_1_norm_f.html#a854aa699d2dc22c104c6c523ab2c3976af8220a3ec1f0d774ad127b70b7aad740',1,'NOX::StatusTest::NormF']]]
 ];

@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['normtype_0',['NormType',['../class_n_o_x_1_1_abstract_1_1_vector.html#ad11f2453f994356b6626e16315b79434',1,'NOX::Abstract::Vector']]],
-  ['nullvectorscaling_1',['nullvectorscaling',['../class_l_o_c_a_1_1_turning_point_1_1_minimally_augmented_1_1_constraint.html#a38db38b0e3e8f3a4c82ef9d9a3dfd8c4',1,'LOCA::TurningPoint::MinimallyAugmented::Constraint::NullVectorScaling'],['../class_l_o_c_a_1_1_turning_point_1_1_moore_spence_1_1_extended_group.html#a169cae44e2adab802f8a6447bf1e99db',1,'LOCA::TurningPoint::MooreSpence::ExtendedGroup::NullVectorScaling']]]
+  ['scaletype_0',['scaletype',['../class_n_o_x_1_1_status_test_1_1_norm_f.html#ac48931c140d11bcb58a95dbad3ad8cdc',1,'NOX::StatusTest::NormF::ScaleType'],['../class_n_o_x_1_1_status_test_1_1_norm_update.html#ae1ca7d1e542b68c736290017b992bc96',1,'NOX::StatusTest::NormUpdate::ScaleType']]],
+  ['scalingtype_1',['ScalingType',['../class_n_o_x_1_1_direction_1_1_steepest_descent.html#a4b2e53fe7769478bb6726469b3d0c583',1,'NOX::Direction::SteepestDescent']]],
+  ['statustype_2',['statustype',['../namespace_n_o_x_1_1_status_test.html#aa46b1f439192e784b8434b16a99665e1',1,'NOX::StatusTest::StatusType'],['../namespace_l_o_c_a_1_1_status_test.html#adc7438be1497d6caf1b698fba7bbe4fd',1,'LOCA::StatusTest::StatusType']]],
+  ['stepstatus_3',['StepStatus',['../class_l_o_c_a_1_1_abstract_1_1_iterator.html#a8fb1abffd7192ab30b4a98faac8fd818',1,'LOCA::Abstract::Iterator']]],
+  ['steptype_4',['steptype',['../class_n_o_x_1_1_solver_1_1_inexact_trust_region_based.html#a907e4b4cdfc535d2ea5ad5c7ebb933ee',1,'NOX::Solver::InexactTrustRegionBased::StepType'],['../class_n_o_x_1_1_solver_1_1_tensor_based.html#a4b864006847ca6def9258efc5a2ea869',1,'NOX::Solver::TensorBased::StepType'],['../class_n_o_x_1_1_solver_1_1_trust_region_based.html#a0e980322483da05341764b51a1160372',1,'NOX::Solver::TrustRegionBased::StepType']]],
+  ['sufficientdecreasetype_5',['SufficientDecreaseType',['../class_n_o_x_1_1_line_search_1_1_polynomial.html#a15232872888ec56366c5c50aec62a284',1,'NOX::LineSearch::Polynomial']]]
 ];

@@ -68,6 +68,5 @@ var searchData=
   ['broyden_65',['Broyden',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/class_n_o_x_1_1_direction_1_1_broyden.html',1,'NOX::Direction']]],
   ['broydenmemory_66',['BroydenMemory',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/class_n_o_x_1_1_direction_1_1_broyden_1_1_broyden_memory.html',1,'NOX::Direction::Broyden']]],
   ['broydenmemoryunit_67',['BroydenMemoryUnit',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/class_n_o_x_1_1_direction_1_1_broyden_1_1_broyden_memory_unit.html',1,'NOX::Direction::Broyden']]],
-  ['broydenoperator_68',['BroydenOperator',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/class_n_o_x_1_1_epetra_1_1_broyden_operator.html',1,'NOX::Epetra']]],
-  ['buildobjects_69',['BuildObjects',['../structpanzer_1_1_type_assoc_map_1_1_build_objects.html',1,'panzer::TypeAssocMap']]]
+  ['buildobjects_68',['BuildObjects',['../structpanzer_1_1_type_assoc_map_1_1_build_objects.html',1,'panzer::TypeAssocMap']]]
 ];

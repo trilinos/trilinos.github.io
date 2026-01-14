@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['observer_0',['observer',['../class_n_o_x_1_1_epetra_1_1_observer.html',1,'NOX::Epetra::Observer'],['../class_n_o_x_1_1_observer.html',1,'NOX::Observer']]],
+  ['observer_0',['Observer',['../class_n_o_x_1_1_observer.html',1,'NOX']]],
   ['observerlog_1',['ObserverLog',['../class_n_o_x_1_1_observer_log.html',1,'NOX']]],
   ['observerprint_2',['ObserverPrint',['../class_n_o_x_1_1_observer_print.html',1,'NOX']]],
   ['observerreusepreconditioner_3',['ObserverReusePreconditioner',['../class_n_o_x_1_1_observer_reuse_preconditioner.html',1,'NOX']]],

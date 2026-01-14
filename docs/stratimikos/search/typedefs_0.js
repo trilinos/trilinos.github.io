@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['base_5ft_0',['base_t',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/rtop/src/support/doc/html/class_r_t_op_pack_1_1_r_op__1___coord_variant_scalar_reduction.html#a0e2d39ee5c569b0e88ab28b5241aee70',1,'RTOpPack::ROp_1_CoordVariantScalarReduction::base_t'],['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/rtop/src/support/doc/html/class_r_t_op_pack_1_1_r_op__1___scalar_reduction.html#a73734dbd5aa512574dfef8aacc023006',1,'RTOpPack::ROp_1_ScalarReduction::base_t'],['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/rtop/src/support/doc/html/class_r_t_op_pack_1_1_r_op__2___scalar_reduction.html#a9271fab0e2ddb77fadfc4bd024850e59',1,'RTOpPack::ROp_2_ScalarReduction::base_t']]],
+  ['base_5ftest_1',['base_test',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/belos/doc/html/class_belos_1_1_status_test_factory.html#ac540182d58e702e80507a6e28c5865db',1,'Belos::StatusTestFactory']]]
+];

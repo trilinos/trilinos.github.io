@@ -7,6 +7,5 @@ var searchData=
   ['bordering_4',['Bordering',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_l_o_c_a_1_1_bordered_solver_1_1_bordering.html',1,'LOCA::BorderedSolver']]],
   ['broyden_5',['Broyden',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_n_o_x_1_1_direction_1_1_broyden.html',1,'NOX::Direction']]],
   ['broydenmemory_6',['BroydenMemory',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_n_o_x_1_1_direction_1_1_broyden_1_1_broyden_memory.html',1,'NOX::Direction::Broyden']]],
-  ['broydenmemoryunit_7',['BroydenMemoryUnit',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_n_o_x_1_1_direction_1_1_broyden_1_1_broyden_memory_unit.html',1,'NOX::Direction::Broyden']]],
-  ['broydenoperator_8',['BroydenOperator',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_n_o_x_1_1_epetra_1_1_broyden_operator.html',1,'NOX::Epetra']]]
+  ['broydenmemoryunit_7',['BroydenMemoryUnit',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_n_o_x_1_1_direction_1_1_broyden_1_1_broyden_memory_unit.html',1,'NOX::Direction::Broyden']]]
 ];

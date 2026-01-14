@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['checktype_0',['checktype',['../namespace_n_o_x_1_1_status_test.html#a7c9d9087fff0cfe208e9edc1603ab14e',1,'NOX::StatusTest::CheckType'],['../namespace_l_o_c_a_1_1_status_test.html#a2e989cc4f698eda74ea14b3589150ce8',1,'LOCA::StatusTest::CheckType']]],
-  ['combotype_1',['combotype',['../class_n_o_x_1_1_status_test_1_1_combo.html#a788f39025311c7e7fdb1d53660dafe19',1,'NOX::StatusTest::Combo::ComboType'],['../class_l_o_c_a_1_1_status_test_1_1_combo.html#a7a81c06e054cf288d73c3358834d2c32',1,'LOCA::StatusTest::Combo::ComboType']]],
-  ['convergencecriteriatype_2',['ConvergenceCriteriaType',['../class_n_o_x_1_1_solver_1_1_tensor_based.html#a519d4177b6796550477b0ed8479cae4e',1,'NOX::Solver::TensorBased']]],
-  ['copytype_3',['CopyType',['../namespace_n_o_x.html#a053a1ab5b2b3bd9546883b949142c592',1,'NOX']]]
+  ['e_5fbaseevaluationtype_0',['E_BaseEvaluationType',['../class_n_o_x_1_1_thyra_1_1_matrix_free_jacobian_operator.html#a95598b49aebd59ddc62fcbe8131ad375',1,'NOX::Thyra::MatrixFreeJacobianOperator']]],
+  ['e_5fdifferencetype_1',['E_DifferenceType',['../class_n_o_x_1_1_thyra_1_1_matrix_free_jacobian_operator.html#a6b02c2d3820bdd26d7c679054d42abb7',1,'NOX::Thyra::MatrixFreeJacobianOperator']]],
+  ['e_5fperturbationtype_2',['E_PerturbationType',['../class_n_o_x_1_1_thyra_1_1_matrix_free_jacobian_operator.html#af3931084b7af64314cb0d63de84f0feb',1,'NOX::Thyra::MatrixFreeJacobianOperator']]]
 ];

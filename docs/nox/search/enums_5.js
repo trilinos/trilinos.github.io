@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['filltype_0',['FillType',['../class_n_o_x_1_1_epetra_1_1_interface_1_1_required.html#ac80d341073c0df754fb80179f6a2ae0d',1,'NOX::Epetra::Interface::Required']]]
+  ['msgtype_0',['MsgType',['../class_n_o_x_1_1_utils.html#ab30f60438649426b2490e4646754c856',1,'NOX::Utils']]]
 ];

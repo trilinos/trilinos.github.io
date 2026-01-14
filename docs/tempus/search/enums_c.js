@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['recoverysteptype_0',['recoverysteptype',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_n_o_x_1_1_line_search_1_1_polynomial.html#a0a72a3b21362e7134cb3536c5caa7e95',1,'NOX::LineSearch::Polynomial::RecoveryStepType'],['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_n_o_x_1_1_solver_1_1_tensor_based.html#a685b806a955375816a437fe5d4c862e6',1,'NOX::Solver::TensorBased::RecoveryStepType']]],
-  ['returntype_1',['ReturnType',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_n_o_x_1_1_abstract_1_1_group.html#aa17ab5aa51d466fd6f2d5dc361d5c217',1,'NOX::Abstract::Group']]]
+  ['vectortype_0',['VectorType',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_n_o_x_1_1_status_test_1_1_finite_value.html#ac2b082ce91f712a6ea7efe9f40658133',1,'NOX::StatusTest::FiniteValue']]]
 ];
