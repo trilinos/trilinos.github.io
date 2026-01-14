@@ -7,6 +7,6 @@ var searchData=
   ['quadmin_4',['QuadMin',['../class_n_o_x_1_1_direction_1_1_steepest_descent.html#a4b2e53fe7769478bb6726469b3d0c583ad8ac5f7b30ad49d14dee36f0406eb04f',1,'NOX::Direction::SteepestDescent']]],
   ['quadratic_5',['Quadratic',['../class_n_o_x_1_1_line_search_1_1_polynomial.html#aee14b043087f6a3c5a5bbd0607e14611aa378a1b76b44e921f8ad179050d3a140',1,'NOX::LineSearch::Polynomial']]],
   ['quadratic3_6',['Quadratic3',['../class_n_o_x_1_1_line_search_1_1_polynomial.html#aee14b043087f6a3c5a5bbd0607e14611a339126c90cca0db69f2e979b96a984eb',1,'NOX::LineSearch::Polynomial']]],
-  ['queryadaptationcriteria_7',['queryadaptationcriteria',['../class_thyra_1_1_adaptive_solution_manager.html#ad8f157d9b1cba8cb4d9dc2ec8fb11390',1,'Thyra::AdaptiveSolutionManager::queryAdaptationCriteria()'],['../class_n_o_x_1_1_epetra_1_1_adapt_manager.html#a15d679a75f1e5898b9548b09f80f5723',1,'NOX::Epetra::AdaptManager::queryAdaptationCriteria()']]],
+  ['queryadaptationcriteria_7',['queryAdaptationCriteria',['../class_thyra_1_1_adaptive_solution_manager.html#ad8f157d9b1cba8cb4d9dc2ec8fb11390',1,'Thyra::AdaptiveSolutionManager']]],
   ['questions_20and_20comments_8',['For All Other Questions and Comments...',['../index.html#questions',1,'']]]
 ];

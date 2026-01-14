@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['jac_0',['Jac',['../class_n_o_x_1_1_epetra_1_1_interface_1_1_required.html#ac80d341073c0df754fb80179f6a2ae0da49ab65cab0e4ed7c19678394eef9e04f',1,'NOX::Epetra::Interface::Required']]]
+  ['kelleysalingerpawlowski_0',['KelleySalingerPawlowski',['../class_n_o_x_1_1_thyra_1_1_matrix_free_jacobian_operator.html#af3931084b7af64314cb0d63de84f0febadc2e2f6f83c7a45b72aa79677d86da5d',1,'NOX::Thyra::MatrixFreeJacobianOperator']]],
+  ['knollkeyes_1',['KnollKeyes',['../class_n_o_x_1_1_thyra_1_1_matrix_free_jacobian_operator.html#af3931084b7af64314cb0d63de84f0febaf7b3f21ee427f5b1df683fc01615de02',1,'NOX::Thyra::MatrixFreeJacobianOperator']]]
 ];

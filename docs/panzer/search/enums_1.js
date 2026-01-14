@@ -1,6 +1,5 @@
 var searchData=
 [
   ['bctype_0',['BCType',['../namespacepanzer.html#ac5fdc63de1ba4703b6be8355fcae5f92',1,'panzer']]],
-  ['betatype_1',['BetaType',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/class_n_o_x_1_1_epetra_1_1_finite_difference.html#ad3e4bb3dbbe6e99ec620d99626163d97',1,'NOX::Epetra::FiniteDifference']]],
-  ['binaryopcode_2',['BinaryOpCode',['../namespacepanzer_1_1_expr.html#a1d5cd811fe9a735995e782ce22868eb8',1,'panzer::Expr']]]
+  ['binaryopcode_1',['BinaryOpCode',['../namespacepanzer_1_1_expr.html#a1d5cd811fe9a735995e782ce22868eb8',1,'panzer::Expr']]]
 ];

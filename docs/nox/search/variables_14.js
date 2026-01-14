@@ -9,6 +9,5 @@ var searchData=
   ['valid_5fparams_5f_6',['valid_params_',['../class_n_o_x_1_1_thyra_1_1_matrix_free_jacobian_operator.html#a7d3734b671c43014142740ce4bea0091',1,'NOX::Thyra::MatrixFreeJacobianOperator']]],
   ['validparameters_7',['validParameters',['../class_n_o_x_1_1_solver_1_1_pseudo_transient.html#a4ac31a05314b6130990a78d624a8a558',1,'NOX::Solver::PseudoTransient']]],
   ['vecs_8',['vecs',['../class_n_o_x_1_1_multi_vector.html#a7a3d697641999804f84e1e2caad6c355',1,'NOX::MultiVector']]],
-  ['vectorptrs_9',['vectorPtrs',['../class_l_o_c_a_1_1_extended_1_1_vector.html#a466884f22d2b02e50cd9572691cd2dff',1,'LOCA::Extended::Vector']]],
-  ['vectorspace_10',['vectorSpace',['../class_n_o_x_1_1_epetra_1_1_vector.html#a3934e2d91019a4567e64e86c50df4a07',1,'NOX::Epetra::Vector']]]
+  ['vectorptrs_9',['vectorPtrs',['../class_l_o_c_a_1_1_extended_1_1_vector.html#a466884f22d2b02e50cd9572691cd2dff',1,'LOCA::Extended::Vector']]]
 ];

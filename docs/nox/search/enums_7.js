@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['lambdaselectiontype_0',['LambdaSelectionType',['../class_n_o_x_1_1_solver_1_1_tensor_based.html#a13fb315f5b89b509472bec44da8d74c0',1,'NOX::Solver::TensorBased']]],
-  ['linesearchtype_1',['LineSearchType',['../class_n_o_x_1_1_solver_1_1_tensor_based.html#a617a8d7c7626151ce27cd999789737e0',1,'NOX::Solver::TensorBased']]]
+  ['preconditioner_5fmethod_0',['preconditioner_method',['../class_l_o_c_a_1_1_bordered_solver_1_1_epetra_householder.html#ab9398e3e0419dd88627e9c447fd94266',1,'LOCA::BorderedSolver::EpetraHouseholder::PRECONDITIONER_METHOD'],['../class_l_o_c_a_1_1_bordered_solver_1_1_tpetra_householder.html#a9e076dcf57e9b1413bd0e178e97c8ecb',1,'LOCA::BorderedSolver::TpetraHouseholder::PRECONDITIONER_METHOD']]]
 ];

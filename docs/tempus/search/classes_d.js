@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['observer_0',['observer',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_n_o_x_1_1_epetra_1_1_observer.html',1,'NOX::Epetra::Observer'],['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_n_o_x_1_1_observer.html',1,'NOX::Observer']]],
+  ['observer_0',['Observer',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_n_o_x_1_1_observer.html',1,'NOX']]],
   ['observerlog_1',['ObserverLog',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_n_o_x_1_1_observer_log.html',1,'NOX']]],
   ['observerprint_2',['ObserverPrint',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_n_o_x_1_1_observer_print.html',1,'NOX']]],
   ['observerreusepreconditioner_3',['ObserverReusePreconditioner',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_n_o_x_1_1_observer_reuse_preconditioner.html',1,'NOX']]],

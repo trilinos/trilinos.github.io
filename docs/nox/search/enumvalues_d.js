@@ -1,10 +1,6 @@
 var searchData=
 [
-  ['parameters_0',['Parameters',['../class_n_o_x_1_1_utils.html#ab30f60438649426b2490e4646754c856a692c04bea8f81df684acfd207ff5feda',1,'NOX::Utils']]],
-  ['prec_1',['Prec',['../class_n_o_x_1_1_epetra_1_1_interface_1_1_required.html#ac80d341073c0df754fb80179f6a2ae0da9c5681b885c1cbb0d9f119053d823925',1,'NOX::Epetra::Interface::Required']]],
-  ['printwarning_2',['PrintWarning',['../class_l_o_c_a_1_1_error_check.html#aeb35470817e367bb58c66ab3a99e9290a2c146189dbfdf43d7a7af565a91b031c',1,'LOCA::ErrorCheck']]],
-  ['provisional_3',['Provisional',['../class_l_o_c_a_1_1_abstract_1_1_iterator.html#a8fb1abffd7192ab30b4a98faac8fd818a0e105b35231cf4ffe7bff384ebda3245',1,'LOCA::Abstract::Iterator']]],
-  ['prpt_5frebuild_4',['PRPT_REBUILD',['../class_n_o_x_1_1_epetra_1_1_linear_system.html#ae34f9249eed5ec99227b53885fd067cea48321244a17afb664cdd75bd53a8a7b6',1,'NOX::Epetra::LinearSystem']]],
-  ['prpt_5frecompute_5',['PRPT_RECOMPUTE',['../class_n_o_x_1_1_epetra_1_1_linear_system.html#ae34f9249eed5ec99227b53885fd067cea9d23a1b901c58cebfe6c62cf7fce3ec4',1,'NOX::Epetra::LinearSystem']]],
-  ['prpt_5freuse_6',['PRPT_REUSE',['../class_n_o_x_1_1_epetra_1_1_linear_system.html#ae34f9249eed5ec99227b53885fd067ceab92123e13e1eaac1cdf0b36dd14dff13',1,'NOX::Epetra::LinearSystem']]]
+  ['quadmin_0',['QuadMin',['../class_n_o_x_1_1_direction_1_1_steepest_descent.html#a4b2e53fe7769478bb6726469b3d0c583ad8ac5f7b30ad49d14dee36f0406eb04f',1,'NOX::Direction::SteepestDescent']]],
+  ['quadratic_1',['Quadratic',['../class_n_o_x_1_1_line_search_1_1_polynomial.html#aee14b043087f6a3c5a5bbd0607e14611aa378a1b76b44e921f8ad179050d3a140',1,'NOX::LineSearch::Polynomial']]],
+  ['quadratic3_2',['Quadratic3',['../class_n_o_x_1_1_line_search_1_1_polynomial.html#aee14b043087f6a3c5a5bbd0607e14611a339126c90cca0db69f2e979b96a984eb',1,'NOX::LineSearch::Polynomial']]]
 ];

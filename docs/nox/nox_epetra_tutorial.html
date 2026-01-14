@@ -142,7 +142,7 @@ $(function() {
 <div class="line">  cout &lt;&lt; <span class="stringliteral">&quot;Test failed!&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line">  <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;NOX Error&quot;</span>);</div>
 <div class="line">}</div>
-</div><!-- fragment --><p>Create your object that derives from <a class="el" href="class_n_o_x_1_1_epetra_1_1_interface_1_1_required.html" title="Supplies NOX with the set nonlinear equations.">NOX::Epetra::Interface::Required</a> so that nox has access to the set of nonlinear equations to solve.</p>
+</div><!-- fragment --><p>Create your object that derives from NOX::Epetra::Interface::Required so that nox has access to the set of nonlinear equations to solve.</p>
 <div class="fragment"><div class="line"><span class="comment">// Create the interface between NOX and the application</span></div>
 <div class="line"><span class="comment">// This object is derived from NOX::Epetra::Interface</span></div>
 <div class="line">Teuchos::RCP&lt;Interface&gt; <span class="keyword">interface </span>=</div>
@@ -151,8 +151,8 @@ $(function() {
 <div class="fragment"><div class="line"><span class="comment">// Get the vector from the Problem</span></div>
 <div class="line">Teuchos::RCP&lt;Epetra_Vector&gt; soln = interface-&gt;getSolution();</div>
 <div class="line">Teuchos::RCP&lt;NOX::Epetra::Vector&gt; noxSoln =</div>
-<div class="line">  Teuchos::rcp(<span class="keyword">new</span> <a class="code hl_class" href="class_n_o_x_1_1_epetra_1_1_vector.html">NOX::Epetra::Vector</a>(soln,</div>
-<div class="line">                   <a class="code hl_enumvalue" href="class_n_o_x_1_1_epetra_1_1_vector.html#ac730e39819e3cfcb5e71d835ccbc4177a0d4f8ab43f33e41813e4d79cb788f878">NOX::Epetra::Vector::CreateView</a>));</div>
+<div class="line">  Teuchos::rcp(<span class="keyword">new</span> NOX::Epetra::Vector(soln,</div>
+<div class="line">                   NOX::Epetra::Vector::CreateView));</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Set the PDE factor (for nonlinear forcing term).  This could be specified</span></div>
 <div class="line"><span class="comment">// via user input.</span></div>
@@ -160,9 +160,7 @@ $(function() {
 <div class="line"> </div>
 <div class="line"><span class="comment">// Set the initial guess</span></div>
 <div class="line">soln-&gt;PutScalar(1.0);</div>
-<div class="ttc" id="aclass_n_o_x_1_1_epetra_1_1_vector_html"><div class="ttname"><a href="class_n_o_x_1_1_epetra_1_1_vector.html">NOX::Epetra::Vector</a></div><div class="ttdoc">Implementation of NOX::Abstract::Vector for Epetra vectors.</div><div class="ttdef"><b>Definition</b> NOX_Epetra_Vector.H:31</div></div>
-<div class="ttc" id="aclass_n_o_x_1_1_epetra_1_1_vector_html_ac730e39819e3cfcb5e71d835ccbc4177a0d4f8ab43f33e41813e4d79cb788f878"><div class="ttname"><a href="class_n_o_x_1_1_epetra_1_1_vector.html#ac730e39819e3cfcb5e71d835ccbc4177a0d4f8ab43f33e41813e4d79cb788f878">NOX::Epetra::Vector::CreateView</a></div><div class="ttdeci">@ CreateView</div><div class="ttdoc">Keeps a pointer to and uses the actual Epetra_Vector passed in.</div><div class="ttdef"><b>Definition</b> NOX_Epetra_Vector.H:38</div></div>
-</div><!-- fragment --><p>Create a parameter list and choose the options for the NOX solver. Note that the linear solver parameters in teh "Linear Solver" sublist are dependent upon what <a class="el" href="class_n_o_x_1_1_epetra_1_1_linear_system.html" title="Pure virtual class interface for allowing different linear solvers to be used by the NOX::Epetra::Gro...">NOX::Epetra::LinearSystem</a> object you are using. Currently NOX only comes with one concrete linear system implementation: NOX::EpetraLinearSystemAztecOO.</p>
+</div><!-- fragment --><p>Create a parameter list and choose the options for the NOX solver. Note that the linear solver parameters in teh "Linear Solver" sublist are dependent upon what NOX::Epetra::LinearSystem object you are using. Currently NOX only comes with one concrete linear system implementation: NOX::EpetraLinearSystemAztecOO.</p>
 <div class="fragment"><div class="line"><span class="comment">// Begin Nonlinear Solver ************************************</span></div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Create the top level parameter list</span></div>
@@ -233,38 +231,34 @@ $(function() {
 <div class="line">nlParams.sublist(<span class="stringliteral">&quot;Solver Options&quot;</span>).</div>
 <div class="line">  set(<span class="stringliteral">&quot;Status Test Check Type&quot;</span>, <a class="code hl_enumvalue" href="namespace_n_o_x_1_1_status_test.html#a7c9d9087fff0cfe208e9edc1603ab14ea83970a3e0659ad53f7fea353e46e0878">NOX::StatusTest::Complete</a>);</div>
 <div class="ttc" id="anamespace_n_o_x_1_1_status_test_html_a7c9d9087fff0cfe208e9edc1603ab14ea83970a3e0659ad53f7fea353e46e0878"><div class="ttname"><a href="namespace_n_o_x_1_1_status_test.html#a7c9d9087fff0cfe208e9edc1603ab14ea83970a3e0659ad53f7fea353e46e0878">NOX::StatusTest::Complete</a></div><div class="ttdeci">@ Complete</div><div class="ttdoc">Evaluate every test and subtest.</div><div class="ttdef"><b>Definition</b> NOX_StatusTest_Generic.H:43</div></div>
-</div><!-- fragment --><p>Create a Jacobian-Free Newton-Krylov method by using a <a class="el" href="class_n_o_x_1_1_epetra_1_1_matrix_free.html" title="Concrete implementation for creating an Epetra_Operator Jacobian based on the Matrix-Free Newton-Kryl...">NOX::Epetra::MatrixFree</a> operator for the Jacobian.</p>
+</div><!-- fragment --><p>Create a Jacobian-Free Newton-Krylov method by using a NOX::Epetra::MatrixFree operator for the Jacobian.</p>
 <div class="fragment"><div class="line"><span class="comment">// 2. Matrix-Free (Epetra_Operator)</span></div>
 <div class="line">Teuchos::RCP&lt;NOX::Epetra::MatrixFree&gt; MF =</div>
-<div class="line">  Teuchos::rcp(<span class="keyword">new</span> <a class="code hl_class" href="class_n_o_x_1_1_epetra_1_1_matrix_free.html">NOX::Epetra::MatrixFree</a>(printParams, interface,</div>
+<div class="line">  Teuchos::rcp(<span class="keyword">new</span> NOX::Epetra::MatrixFree(printParams, interface,</div>
 <div class="line">                       *noxSoln));</div>
-<div class="ttc" id="aclass_n_o_x_1_1_epetra_1_1_matrix_free_html"><div class="ttname"><a href="class_n_o_x_1_1_epetra_1_1_matrix_free.html">NOX::Epetra::MatrixFree</a></div><div class="ttdoc">Concrete implementation for creating an Epetra_Operator Jacobian based on the Matrix-Free Newton-Kryl...</div><div class="ttdef"><b>Definition</b> NOX_Epetra_MatrixFree.H:63</div></div>
 </div><!-- fragment --><p>Create a Finite Difference operator to estimate the Jacobian matrix for preconditioning.</p>
 <div class="fragment"><div class="line"><span class="comment">// 3. Finite Difference (Epetra_RowMatrix)</span></div>
 <div class="line">Teuchos::RCP&lt;NOX::Epetra::FiniteDifference&gt; FD =</div>
-<div class="line">  Teuchos::rcp(<span class="keyword">new</span> <a class="code hl_class" href="class_n_o_x_1_1_epetra_1_1_finite_difference.html">NOX::Epetra::FiniteDifference</a>(printParams, interface,</div>
+<div class="line">  Teuchos::rcp(<span class="keyword">new</span> NOX::Epetra::FiniteDifference(printParams, interface,</div>
 <div class="line">                         *soln));</div>
-<div class="ttc" id="aclass_n_o_x_1_1_epetra_1_1_finite_difference_html"><div class="ttname"><a href="class_n_o_x_1_1_epetra_1_1_finite_difference.html">NOX::Epetra::FiniteDifference</a></div><div class="ttdoc">Concrete implementation for creating an Epetra_RowMatrix Jacobian via finite differencing of the resi...</div><div class="ttdef"><b>Definition</b> NOX_Epetra_FiniteDifference.H:74</div></div>
-</div><!-- fragment --><p>Create a linear system derived from <a class="el" href="class_n_o_x_1_1_epetra_1_1_linear_system.html" title="Pure virtual class interface for allowing different linear solvers to be used by the NOX::Epetra::Gro...">NOX::Epetra::LinearSystem</a>. <a class="el" href="namespace_n_o_x.html" title="Nonlinear solvers package namespace.">NOX</a> comes with a concrete implementation of the linear system class that uses AztecOO as the linear solver called <a class="el" href="class_n_o_x_1_1_epetra_1_1_linear_system_aztec_o_o.html" title="Concrete implementation of NOX::Epetra::LinearSolver for AztecOO.">NOX::Epetra::LinearSystemAztecOO</a>. In this case we will use the constructor that specifies the Jacobian operator and a preconditioner matrix to be used with an internally constructed AztecOO preconditioner.</p>
+</div><!-- fragment --><p>Create a linear system derived from NOX::Epetra::LinearSystem. <a class="el" href="namespace_n_o_x.html" title="Nonlinear solvers package namespace.">NOX</a> comes with a concrete implementation of the linear system class that uses AztecOO as the linear solver called NOX::Epetra::LinearSystemAztecOO. In this case we will use the constructor that specifies the Jacobian operator and a preconditioner matrix to be used with an internally constructed AztecOO preconditioner.</p>
 <div class="fragment"><div class="line"><span class="comment">// Create the linear system</span></div>
 <div class="line">Teuchos::RCP&lt;NOX::Epetra::Interface::Jacobian&gt; iJac = MF;</div>
 <div class="line">Teuchos::RCP&lt;NOX::Epetra::Interface::Preconditioner&gt; iPrec = FD;</div>
 <div class="line">Teuchos::RCP&lt;NOX::Epetra::LinearSystemAztecOO&gt; linSys =</div>
-<div class="line">  Teuchos::rcp(<span class="keyword">new</span> <a class="code hl_class" href="class_n_o_x_1_1_epetra_1_1_linear_system_aztec_o_o.html">NOX::Epetra::LinearSystemAztecOO</a>(printParams, lsParams,</div>
+<div class="line">  Teuchos::rcp(<span class="keyword">new</span> NOX::Epetra::LinearSystemAztecOO(printParams, lsParams,</div>
 <div class="line">                            iJac, MF,</div>
 <div class="line">                            iPrec, FD,</div>
 <div class="line">                            *soln));</div>
-<div class="ttc" id="aclass_n_o_x_1_1_epetra_1_1_linear_system_aztec_o_o_html"><div class="ttname"><a href="class_n_o_x_1_1_epetra_1_1_linear_system_aztec_o_o.html">NOX::Epetra::LinearSystemAztecOO</a></div><div class="ttdoc">Concrete implementation of NOX::Epetra::LinearSolver for AztecOO.</div><div class="ttdef"><b>Definition</b> NOX_Epetra_LinearSystem_AztecOO.H:283</div></div>
 </div><!-- fragment --><p>Create the group using the linear system.</p>
 <div class="fragment"><div class="line"><span class="comment">// Create the Group</span></div>
-<div class="line"><a class="code hl_class" href="class_n_o_x_1_1_epetra_1_1_vector.html">NOX::Epetra::Vector</a> initialGuess(soln, <a class="code hl_enumvalue" href="class_n_o_x_1_1_epetra_1_1_vector.html#ac730e39819e3cfcb5e71d835ccbc4177a0d4f8ab43f33e41813e4d79cb788f878">NOX::Epetra::Vector::CreateView</a>);</div>
+<div class="line">NOX::Epetra::Vector initialGuess(soln, NOX::Epetra::Vector::CreateView);</div>
 <div class="line">Teuchos::RCP&lt;NOX::Epetra::Group&gt; grpPtr =</div>
-<div class="line">  Teuchos::rcp(<span class="keyword">new</span> <a class="code hl_class" href="class_n_o_x_1_1_epetra_1_1_group.html">NOX::Epetra::Group</a>(printParams,</div>
+<div class="line">  Teuchos::rcp(<span class="keyword">new</span> NOX::Epetra::Group(printParams,</div>
 <div class="line">                  iReq,</div>
 <div class="line">                  initialGuess,</div>
 <div class="line">                  linSys));</div>
-<div class="line"><a class="code hl_class" href="class_n_o_x_1_1_epetra_1_1_group.html">NOX::Epetra::Group</a>&amp; grp = *grpPtr;</div>
-<div class="ttc" id="aclass_n_o_x_1_1_epetra_1_1_group_html"><div class="ttname"><a href="class_n_o_x_1_1_epetra_1_1_group.html">NOX::Epetra::Group</a></div><div class="ttdoc">Concrete implementation of NOX::Abstract::Group for Trilinos/Epetra.</div><div class="ttdef"><b>Definition</b> NOX_Epetra_Group.H:49</div></div>
+<div class="line">NOX::Epetra::Group&amp; grp = *grpPtr;</div>
 </div><!-- fragment --><p>Create the status tests to determine how to terminate the nonlinear solve.</p>
 <div class="fragment"><div class="line"><span class="comment">// Create the convergence tests</span></div>
 <div class="line">Teuchos::RCP&lt;NOX::StatusTest::NormF&gt; absresid =</div>
@@ -308,12 +302,11 @@ $(function() {
 <div class="ttc" id="anamespace_n_o_x_1_1_status_test_html_aa46b1f439192e784b8434b16a99665e1"><div class="ttname"><a href="namespace_n_o_x_1_1_status_test.html#aa46b1f439192e784b8434b16a99665e1">NOX::StatusTest::StatusType</a></div><div class="ttdeci">StatusType</div><div class="ttdoc">Status type.</div><div class="ttdef"><b>Definition</b> NOX_StatusTest_Generic.H:28</div></div>
 </div><!-- fragment --><p>Get the underlying solution vector in terms of an Epetra_Vector and do whatever you want with it.</p>
 <div class="fragment"><div class="line"><span class="comment">// Get the Epetra_Vector with the final solution from the solver</span></div>
-<div class="line"><span class="keyword">const</span> <a class="code hl_class" href="class_n_o_x_1_1_epetra_1_1_group.html">NOX::Epetra::Group</a>&amp; finalGroup =</div>
-<div class="line">  <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code hl_class" href="class_n_o_x_1_1_epetra_1_1_group.html">NOX::Epetra::Group</a>&amp;<span class="keyword">&gt;</span>(solver-&gt;getSolutionGroup());</div>
+<div class="line"><span class="keyword">const</span> NOX::Epetra::Group&amp; finalGroup =</div>
+<div class="line">  <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span>NOX::Epetra::Group&amp;<span class="keyword">&gt;</span>(solver-&gt;getSolutionGroup());</div>
 <div class="line"><span class="keyword">const</span> Epetra_Vector&amp; finalSolution =</div>
-<div class="line">  (<span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code hl_class" href="class_n_o_x_1_1_epetra_1_1_vector.html">NOX::Epetra::Vector</a>&amp;<span class="keyword">&gt;</span>(finalGroup.<a class="code hl_function" href="class_n_o_x_1_1_epetra_1_1_group.html#a3b8f9860818e4f33c526bd6afa3d55a6">getX</a>())).</div>
+<div class="line">  (<span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span>NOX::Epetra::Vector&amp;<span class="keyword">&gt;</span>(finalGroup.getX())).</div>
 <div class="line">  getEpetraVector();</div>
-<div class="ttc" id="aclass_n_o_x_1_1_epetra_1_1_group_html_a3b8f9860818e4f33c526bd6afa3d55a6"><div class="ttname"><a href="class_n_o_x_1_1_epetra_1_1_group.html#a3b8f9860818e4f33c526bd6afa3d55a6">NOX::Epetra::Group::getX</a></div><div class="ttdeci">virtual const NOX::Abstract::Vector &amp; getX() const</div><div class="ttdoc">Return solution vector.</div><div class="ttdef"><b>Definition</b> NOX_Epetra_Group.C:512</div></div>
 </div><!-- fragment --><p>Exit simulation.</p>
 <div class="fragment"><div class="line">  <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>

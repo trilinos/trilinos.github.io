@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['kelleysalingerpawlowski_0',['KelleySalingerPawlowski',['../class_n_o_x_1_1_thyra_1_1_matrix_free_jacobian_operator.html#af3931084b7af64314cb0d63de84f0febadc2e2f6f83c7a45b72aa79677d86da5d',1,'NOX::Thyra::MatrixFreeJacobianOperator']]],
-  ['knollkeyes_1',['KnollKeyes',['../class_n_o_x_1_1_thyra_1_1_matrix_free_jacobian_operator.html#af3931084b7af64314cb0d63de84f0febaf7b3f21ee427f5b1df683fc01615de02',1,'NOX::Thyra::MatrixFreeJacobianOperator']]]
+  ['lastcomputedstep_0',['lastcomputedstep',['../class_n_o_x_1_1_line_search_1_1_polynomial.html#a0a72a3b21362e7134cb3536c5caa7e95acbc416be01095dcdafb4e863e600b875',1,'NOX::LineSearch::Polynomial::LastComputedStep'],['../class_n_o_x_1_1_solver_1_1_tensor_based.html#a685b806a955375816a437fe5d4c862e6add4ae3df27eab8fe137fe7448ea1e1e7',1,'NOX::Solver::TensorBased::LastComputedStep']]],
+  ['lastiteration_1',['LastIteration',['../class_l_o_c_a_1_1_abstract_1_1_iterator.html#acaf6fee3bc899dfc0e07096e17b7d3fba5e3b0621835c353b6f7b96b7d8c13f94',1,'LOCA::Abstract::Iterator']]],
+  ['linearsolverdetails_2',['LinearSolverDetails',['../class_n_o_x_1_1_utils.html#ab30f60438649426b2490e4646754c856a2cccd5434d2ee60fe6149d4828091477',1,'NOX::Utils']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['memorytype_0',['memorytype',['../class_n_o_x_1_1_epetra_1_1_multi_vector.html#afd06d3a071e8d05f7cf04f9e3a698df8',1,'NOX::Epetra::MultiVector::MemoryType'],['../class_n_o_x_1_1_epetra_1_1_vector.html#ac730e39819e3cfcb5e71d835ccbc4177',1,'NOX::Epetra::Vector::MemoryType']]],
-  ['msgtype_1',['MsgType',['../class_n_o_x_1_1_utils.html#ab30f60438649426b2490e4646754c856',1,'NOX::Utils']]]
+  ['recoverysteptype_0',['recoverysteptype',['../class_n_o_x_1_1_line_search_1_1_polynomial.html#a0a72a3b21362e7134cb3536c5caa7e95',1,'NOX::LineSearch::Polynomial::RecoveryStepType'],['../class_n_o_x_1_1_solver_1_1_tensor_based.html#a685b806a955375816a437fe5d4c862e6',1,'NOX::Solver::TensorBased::RecoveryStepType']]],
+  ['returntype_1',['ReturnType',['../class_n_o_x_1_1_abstract_1_1_group.html#aa17ab5aa51d466fd6f2d5dc361d5c217',1,'NOX::Abstract::Group']]]
 ];

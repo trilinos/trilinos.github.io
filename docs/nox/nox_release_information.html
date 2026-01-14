@@ -130,7 +130,7 @@ NOX and LOCA now generate Makefiles that users can include in their own makefile
 <li>
 Multivector support is no longer a configure option, but is automatically built as part of the library. </li>
 <li>
-The epetra interfaces (<a class="el" href="namespace_n_o_x_1_1_epetra_1_1_interface.html" title="Provides a set of interfaces for users to provide information about the nonlinear problem to NOX.">NOX::Epetra::Interface</a> namespace) have been changed. They now take an Epetra_Operator as an argument when evaluating the Jacobian and preconditioner objects. While this is redundant for our base epetra group (since it shares the same operator between groups), this allows users to override the eptra group and use separate operators for each group if desired. </li>
+The epetra interfaces (NOX::Epetra::Interface namespace) have been changed. They now take an Epetra_Operator as an argument when evaluating the Jacobian and preconditioner objects. While this is redundant for our base epetra group (since it shares the same operator between groups), this allows users to override the eptra group and use separate operators for each group if desired. </li>
 <li>
 There are 2 options for creating an Ifpack preconditioners. The original code where the "Preconditioner" option in the "Linear Solver" sublist was set to "Ifpack" and the new ifpack code "New Ifpack". The original option explicitly constructs an ifpack ilu object that has since been deprecated and will most likely be removed in the next release (Trilinos 8.0). The option "New Ifpack" uses the new ifpack factory object. You can now create a parameter list that directly uses the ifpack factory arguments and can create any ifpack preconditioner (not limited to ILU). We recommend switching to the "New Ifpack" preconditionerr interface asap. </li>
 <li>
@@ -181,7 +181,7 @@ A new Tensor based solver that is independent of the linear solver is now implem
 <li>
 Inexact Trust Region Techniques are fully supported (also in the prerelease section). </li>
 <li>
-Improved support for Epetra objects - The NOX::EpetraNew::Group should be used in place of the <a class="el" href="class_n_o_x_1_1_epetra_1_1_group.html" title="Concrete implementation of NOX::Abstract::Group for Trilinos/Epetra.">NOX::Epetra::Group</a>. In the future we will be phasing out the <a class="el" href="class_n_o_x_1_1_epetra_1_1_group.html" title="Concrete implementation of NOX::Abstract::Group for Trilinos/Epetra.">NOX::Epetra::Group</a> and replace it with NOX::EpetraNew::Group. </li>
+Improved support for Epetra objects - The NOX::EpetraNew::Group should be used in place of the NOX::Epetra::Group. In the future we will be phasing out the NOX::Epetra::Group and replace it with NOX::EpetraNew::Group. </li>
 <li>
 A multi-physics technique for code coupling has been demonstrated in the test/epetra/Multiphysics directory. This will be expanded to a generic capability in the next year. </li>
 </ul>
