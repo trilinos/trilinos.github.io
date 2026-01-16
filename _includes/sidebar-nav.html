@@ -1,0 +1,41 @@
+<div id="sidebar-nav">
+    <strong>{{ page.title }}</strong>
+    <ul>
+        {% assign headings = content | split: '<h' %}
+        {% assign current_level = 0 %}
+        {% for heading in headings %}
+            {% assign heading_id = heading | split: 'id="' | last | split: '"' | first %}
+            {% assign heading_parts = heading | split: '>' %}
+            {% assign heading_text = heading_parts[1] | strip_html | split: '</h' | first %}
+            
+            {% unless heading_id contains '1 class=' %}
+                {% if heading contains '1>' %}
+                    {% if current_level > 0 %}
+                        {% for i in (1..current_level) %}
+                            </ul></li>
+                        {% endfor %}
+                    {% endif %}
+                    <li>
+                        <a href="#{{ heading_id }}" title="{{ heading_text }}">{{ heading_text }}</a>
+                        <ul>
+                    {% assign current_level = 1 %}
+                {% elsif heading contains '2>' %}
+                    {% if current_level > 1 %}
+                        </ul></li>
+                    {% endif %}
+                    <li>
+                        <a href="#{{ heading_id }}" title="{{ heading_text }}">{{ heading_text }}</a>
+                        <ul>
+                    {% assign current_level = 2 %}
+                {% elsif heading contains '3>' %}
+                    <li>
+                        <a href="#{{ heading_id }}" title="{{ heading_text }}">{{ heading_text }}</a>
+                    </li>
+                {% endif %}
+            {% endunless %}
+        {% endfor %}
+        {% for i in (1..current_level) %}
+            </ul></li>
+        {% endfor %}
+    </ul>
+</div>

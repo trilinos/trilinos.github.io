@@ -158,10 +158,10 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><th><abbr> 10:45 </abbr></th>  <td> 
                                         <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-10-31/04_Framework-Update_Browne_TUG_Framework_Update.pptx.pdf">Framework Updates</a>  (S. Browne) 
                                         <ul>
-                                          <li> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-10-31/04b_Framework-Update_Ho_TUG23_Presentation.pptx">Trilinos Autotester Changes</a> (E. Ho, S. Browne) 
+                                          <li> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-10-31/04b_Framework-Update_Ho_TUG23_Presentation.pdf">Trilinos Autotester Changes</a> (E. Ho, S. Browne) 
                                         </ul> </td> </tr>
 
-<tr><th><abbr> 11:15 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-10-31/05_Trilinos-Core-Update_Pawlowski_TUG_CoreProductAreaUpdates_2023_10_31.pptx">Trilinos Core Product Area Update</a> (R. Pawlowski)
+<tr><th><abbr> 11:15 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-10-31/05_Trilinos-Core-Update_Pawlowski_TUG_CoreProductAreaUpdates_2023_10_31.pdf">Trilinos Core Product Area Update</a> (R. Pawlowski)
                                         <ul>
                                           <li> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-10-31/05b_Trilinos-Core-Update_Pawlowski_Liegeois_PyTrilinos2_TUG23.pdf">PyTrilinos2: automatic (re)generation of a Python interface for Trilinos</a>  (K. Liegeois, C. Glusa)
                                         </ul>
@@ -189,20 +189,20 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tr><td colspan=2> <b> Applications Session </b>                                                             </td> </tr>
 <tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober, J. Willenbring)                                    </td> </tr>
 
-<tr><th><abbr>  8:15 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/01_CFD-Simulations_Hamilton_TUG23.pptx">CFD Simulations with Panzer</a> S. Hamilton (ORNL) S. Slattery (ORNL) T. Erwin (ORNL) R. Pawlowski (SNL) B. Reuter (SNL) </td> </tr>
+<tr><th><abbr>  8:15 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/01_CFD-Simulations_Hamilton_TUG23.pdf">CFD Simulations with Panzer</a> S. Hamilton (ORNL) S. Slattery (ORNL) T. Erwin (ORNL) R. Pawlowski (SNL) B. Reuter (SNL) </td> </tr>
 <tr><th><abbr>  8:45 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/02_FROSch_Heinlein_2023-heinlein-frosch.pdf">Fast and Robust Overlapping Schwarz (FROSch) Preconditioners in Trilinos</a> (A. Heinlein) </td> </tr>
 <tr><th><abbr>  9:15 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/03_Albany-Numerical-Optimization_perego_TUG23.pdf">PDE-constrained optimization for ice sheet model initialization in MALI</a> (M. Perego, K. Liegeois) </td> </tr>
-<tr><th><abbr>  9:45 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/04_Drekar_Phillips_TUG2023.pptx">Recent Fusion-Related Results in Drekar</a> (E. Phillips) </td> </tr>
+<tr><th><abbr>  9:45 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/04_Drekar_Phillips_TUG2023.pdf">Recent Fusion-Related Results in Drekar</a> (E. Phillips) </td> </tr>
 
 <tr><th><abbr> 10:15 </abbr></th>  <td> <b> Break </b>                                                       </td> </tr>
 
-<tr><th><abbr> 10:45 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/05_Plato-ROL_Hardesty_Plato_TUG_Presentation.pptx">Plato Optimization-Based Design</a>  (S. Hardesty, D. Ridzal) </td> </tr>
+<tr><th><abbr> 10:45 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/05_Plato-ROL_Hardesty_Plato_TUG_Presentation.pdf">Plato Optimization-Based Design</a>  (S. Hardesty, D. Ridzal) </td> </tr>
 <tr><th><abbr> 11:15 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/06_Grafiki_Ellingwood_ellingwood_tug_talk_20231101.pdf">Grafiki: Trilinos-based Software for High-Performance Distributed Graph-based Algorithms</a> (N. Ellingwood) </td> </tr>
-<tr><th><abbr> 11:45 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/07_Gemma_Dang_Gemma_DistributedSchurPCAPreconditioner_TUG2023_v2.pptx">A Distributed-Memory Schur-complement PCA Preconditioner for Gemma Ill-conditioned Problems</a> (V. Dang, J. Kotulski) </td> </tr>
+<tr><th><abbr> 11:45 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/07_Gemma_Dang_Gemma_DistributedSchurPCAPreconditioner_TUG2023_v2.pdf">A Distributed-Memory Schur-complement PCA Preconditioner for Gemma Ill-conditioned Problems</a> (V. Dang, J. Kotulski) </td> </tr>
 
 <tr><th><abbr> 12:15 </abbr></th>  <td> <b> Lunch </b>                                                       </td> </tr>
 
-<tr><th><abbr>  1:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/08_Sierra-SD_Plews_2023-10-31_Plews_TUG_SierraSD.pptx">Performance of Modal Random Vibration Calculations for Structural Dynamics on Heterogeneous Computing Architectures</a> (J. Plews, N. Crane) </td> </tr>
+<tr><th><abbr>  1:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/08_Sierra-SD_Plews_2023-10-31_Plews_TUG_SierraSD.pdf">Performance of Modal Random Vibration Calculations for Structural Dynamics on Heterogeneous Computing Architectures</a> (J. Plews, N. Crane) </td> </tr>
 <tr><th><abbr>  2:00 </abbr></th>  <td>  
   <li> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/09a_GPU-Tooling_Siefert_TUG_24_H2D_Tools_v2.pdf">Trilinos Tools: Identifying Host-To-Device Transfers and State Of The Code</a> (C. Siefert, J. Hu)
   <li> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/09b_Hu_Tpetra-Profiling-Exemplars-TUG-2023-final.pdf">Tpetra Memory Transfer Tracking in Action</a> (J. Hu, C. Siefert)
@@ -214,8 +214,8 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 
 <tr><th><abbr>  3:00 </abbr></th>  <td> <b> Break </b>                                                       </td> </tr>
 
-<tr><th><abbr>  3:15 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/11_Performance-Profiling_Kelley_TUG23_PerformanceProfiling.pptx">Trilinos Performance Monitoring with Watchr</a>  (B. Kelley) </td> </tr>
-<tr><th><abbr>  3:35 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/12_ASC-DevOps-Trilinos-Planning_Warnock_ASCDO_TUG2023_Final.pptx">ASC DevOps Trilinos Planning Team: Common Build Trilinos Products</a> (S, Baxley, A. Potla, S. Warnock) </td> </tr>
+<tr><th><abbr>  3:15 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/11_Performance-Profiling_Kelley_TUG23_PerformanceProfiling.pdf">Trilinos Performance Monitoring with Watchr</a>  (B. Kelley) </td> </tr>
+<tr><th><abbr>  3:35 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-01/12_ASC-DevOps-Trilinos-Planning_Warnock_ASCDO_TUG2023_Final.pdf">ASC DevOps Trilinos Planning Team: Common Build Trilinos Products</a> (S, Baxley, A. Potla, S. Warnock) </td> </tr>
 
 <tr><th><abbr>  4:05 </abbr></th>  <td> <b>Adjourn</b>                                                       </td> </tr>
 </tbody>
@@ -228,21 +228,21 @@ All times in Mountain Daylight Time (MDT) Denver, U.S. (UTC-06:00).
 <tbody>
 <tr><td colspan=2> <b> Developer Sessions </b>                                                               </td> </tr>
 <tr><th><abbr>  8:00 </abbr></th>  <td> Welcome (C. Ober, J. Willenbring)                                    </td> </tr>
-<tr><th><abbr>  8:15 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-02/01_Modern-TriBITS_Bartlett.pptx">Modern TriBITS</a> (R. Bartlett)                                    </td> </tr>
+<tr><th><abbr>  8:15 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-02/01_Modern-TriBITS_Bartlett.pdf">Modern TriBITS</a> (R. Bartlett)                                    </td> </tr>
 <tr><th><abbr>  8:45 </abbr></th>  <td> Kokkos Overview on new capabilities and programmatic developments (C. Trott) </td> </tr>
-<tr><th><abbr>  9:15 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-02/03_Kokkos-Kernels_Berger-Vergiat_TUG_2023_KokkosKernels.pptx">Kokkos Kernels</a> (L. Berger-Vergiat, S. Rajamanickam, V. Dang, N. Ellingwood, J. Foucar, B. Kelley, E. Harvey, K. Liegeois, C. Pearson, E. Prudencio)                                     </td> </tr>
+<tr><th><abbr>  9:15 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-02/03_Kokkos-Kernels_Berger-Vergiat_TUG_2023_KokkosKernels.pdf">Kokkos Kernels</a> (L. Berger-Vergiat, S. Rajamanickam, V. Dang, N. Ellingwood, J. Foucar, B. Kelley, E. Harvey, K. Liegeois, C. Pearson, E. Prudencio)                                     </td> </tr>
 
 <tr><th><abbr>  9:45 </abbr></th>  <td> <b> Break </b>                                                       </td> </tr>
 
-<tr><th><abbr> 10:00 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-02/04_External-Testing_Shende_E4S_Frank_TUG23.pptx">E4S and Frank: A Platform for CI/CD with GPUs</a> (S. Shende)                          </td> </tr>
+<tr><th><abbr> 10:00 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-02/04_External-Testing_Shende_E4S_Frank_TUG23.pdf">E4S and Frank: A Platform for CI/CD with GPUs</a> (S. Shende)                          </td> </tr>
 <tr><th><abbr> 10:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-02/05_ASC-SQE_Turgeon_ASCSQE_Code_Credibility_2.pdf">Advancing Software Code Credibility and Pedigree Using SQE</a> (J. Turgeon)                                               </td> </tr>
 <tr><th><abbr> 11:00 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-02/06_TDOP_Survey_Ober_Trilinos_Checkbox_Survey_Summary-TUG.pdf">Results of Trilinos DevOps Pipeline Survey</a> (S. Browne, J. Hu, C. Ober&ast;, R. Pawlowski, J. Willenbring) </td> </tr>
 
 <tr><th><abbr> 11:30 </abbr></th>  <td> <b> Lunch Break </b>                                                 </td> </tr>
 
 <tr><td colspan=2> <b> Containers and Spack </b>                                                                </td> </tr>
-<tr><th><abbr> 12:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-02/07_Containers-Trilinos-PR-Testing_Browne_TUG_Framework_DevelopingWithinContainers.pptx">Developing Trilinos Within Containers</a> (S. Browne)              </td> </tr>
-<tr><th><abbr>  1:00 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-02/08_Spack_Browne_TUG_Framework_TestingWithSpack.pptx">Testing Trilinos with Spack</a> (S. Browne, J. LaPre)              </td> </tr>
+<tr><th><abbr> 12:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-02/07_Containers-Trilinos-PR-Testing_Browne_TUG_Framework_DevelopingWithinContainers.pdf">Developing Trilinos Within Containers</a> (S. Browne)              </td> </tr>
+<tr><th><abbr>  1:00 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-02/08_Spack_Browne_TUG_Framework_TestingWithSpack.pdf">Testing Trilinos with Spack</a> (S. Browne, J. LaPre)              </td> </tr>
 <tr><th><abbr>  1:30 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-02/09_Spack-Containers-CTH_Agelastos_FutureContainerStrategy-20231024a.pptx.pdf">Containers and MPMD for CTH/SABLE</a> (A. Agelastos)  </td> </tr>
 <tr><th><abbr>  1:45 </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/TUG_2023/2023-11-02/10_Alegra-Spack_Fuller_SPACK_ALEGRA.pdf">Adoption and Usage of Spack in ALEGRA DevOps and Development</a> (T. Fuller)   </td> </tr>
 
