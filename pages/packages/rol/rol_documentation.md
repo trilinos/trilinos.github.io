@@ -10,7 +10,7 @@ folder: packages
 
 ### Presentations
 
-[PDF](pdfs/ROL.pdf "ROL PDF Presentation") or [PowerPoint](pdfs/ROL.pptx "ROL PowerPoint Presentation").
+[PDF](pdfs/ROL.pdf "ROL PDF Presentation").
 
 * * *
 
