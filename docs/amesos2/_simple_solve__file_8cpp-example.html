@@ -342,14 +342,12 @@ $(function() {
 <div class="line">      <span class="keywordflow">if</span>( allprint ){</div>
 <div class="line">        <span class="keywordflow">if</span>( myRank == 0 ) *fos &lt;&lt; <span class="stringliteral">&quot;Solution :&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line">        Xhat-&gt;describe(*fos,Teuchos::VERB_EXTREME);</div>
-<div class="line">        *fos &lt;&lt; std::endl;</div>
+<div class="line">        <span class="keywordflow">if</span>( myRank == 0 ) *fos &lt;&lt; std::endl;</div>
 <div class="line">      } <span class="keywordflow">else</span> {</div>
 <div class="line">        Xhat-&gt;doImport(*X,*importer,Tpetra::REPLACE);</div>
-<div class="line">        <span class="keywordflow">if</span>( myRank == 0 ){</div>
-<div class="line">          *fos &lt;&lt; <span class="stringliteral">&quot;Solution :&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line">          Xhat-&gt;describe(*fos,Teuchos::VERB_EXTREME);</div>
-<div class="line">          *fos &lt;&lt; std::endl;</div>
-<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">if</span>( myRank == 0 ) *fos &lt;&lt; <span class="stringliteral">&quot;Solution :&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">        Xhat-&gt;describe(*fos,Teuchos::VERB_EXTREME);</div>
+<div class="line">        <span class="keywordflow">if</span>( myRank == 0 ) *fos &lt;&lt; std::endl;</div>
 <div class="line">      }</div>
 <div class="line">    }</div>
 <div class="line"> </div>
