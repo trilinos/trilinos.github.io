@@ -6,8 +6,8 @@ folder: community
 
 ## Upcoming Meetings
 
-*   [European workshop on high-performance software 2026](https://github.com/EuroTUG/eurotug_2026) -- February 25 - 27, 2026, TU Braunschweig
-*   [US Trilinos User & Developer Group Meeting 2026](trilinos_user-developer_group_meeting_2026.html) -- March 18-19, 2026, Chicago, IL, USA
+*   [HPSF Community Summit 2026](https://events.academiccloud.de/event/143/) -- February 25 - 27, 2026, TU Braunschweig
+*   [Trilinos User & Developer Group Meeting @ HPSF Conference 2026](trilinos_user-developer_group_meeting_2026.html) -- March 18-19, 2026, Chicago, IL, USA
 
 ## Past Meetings
 

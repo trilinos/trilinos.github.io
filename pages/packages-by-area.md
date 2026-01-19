@@ -1,7 +1,7 @@
 ---
 title: Packages by Area 
 permalink: packages-by-area.html
-keywords: Area Leads, Core Area, Solvers Area, Discretization and Analysis Area, Linear Systems, Performance Portability, Finite Element Analysis, Preconditioners, Eigen Solvers, Optimization, Mesh Adaptation, Stochastic Methods, Adelus, Amesos2, Anasazi, Belos, Compadre, Galeri, Ifpack2, Intrepid2, Kokkos, Krino, MiniTensor, Muelu, PAMGEN, Panzer, Percept, Phalanx, Piro, PyTrilinos2, ROL, RTop, Rapid Optimization Library, SEACAS, STK, Sacado, Shards, ShyLU, Stokhos, Stratimikos, Teko, Tempus, Teuchos, Thyra, Tpetra, TrilinosCouplings, Xpetra, Zoltan, Zoltan2, Trilinos package descriptions, Trilinos package documentation, Trilinos Doxygen, Trilinos GitHub repository, Trilinos continuous integration (CI), Trilinos continuous deployment (CD), Trilinos package teams, Trilinos package leads, Trilinos modular framework, Trilinos interoperability, Trilinos scalability, Trilinos finite element analysis, Trilinos mesh adaptation, Trilinos stochastic methods, Trilinos optimization, Trilinos linear solvers, Trilinos nonlinear solvers, Trilinos eigen solvers, Trilinos preconditioners, Trilinos time integration, Trilinos transient analysis, Trilinos data transfer, Trilinos DAG-based field evaluation, Trilinos meshless discretization, Trilinos high-order finite element discretizations, Trilinos signed distance fields, Trilinos unstructured meshes, Trilinos parallel services, Trilinos load balancing, Trilinos combinatorial scientific computing, Trilinos smart pointers, Trilinos BLAS and LAPACK wrappers, Trilinos XML parsers, Trilinos vector operations, Trilinos parallel data redistribution, Trilinos abstract numerical algorithms, Trilinos linear algebra libraries, Trilinos unified solver interface, Trilinos automatic differentiation, Trilinos stochastic Galerkin methods, Trilinos uncertainty quantification, Trilinos PDE discretizations, Trilinos multigrid solvers, Trilinos domain decomposition methods, Trilinos distributed computing, Trilinos MPI support, Trilinos CUDA support, Trilinos Kokkos ecosystem, Trilinos performance portability, Trilinos massively parallel computations, Trilinos multi-physics computations, Trilinos interfaces between packages, Trilinos Couplings, Trilinos legacy packages, Trilinos experimental tools, Trilinos utilities
+keywords: Area Leads, Core Area, Solvers Area, Discretization and Analysis Area, Linear Systems, Performance Portability, Finite Element Analysis, Preconditioners, Eigen Solvers, Optimization, Mesh Adaptation, Stochastic Methods, Adelus, Amesos2, Anasazi, Belos, Compadre, Galeri, Ifpack2, Intrepid2, Kokkos, Krino, MiniTensor, MueLu, PAMGEN, Panzer, Percept, Phalanx, Piro, PyTrilinos2, ROL, RTop, Rapid Optimization Library, SEACAS, STK, Sacado, Shards, ShyLU, Stokhos, Stratimikos, Teko, Tempus, Teuchos, Thyra, Tpetra, TrilinosCouplings, Xpetra, Zoltan, Zoltan2, Trilinos package descriptions, Trilinos package documentation, Trilinos Doxygen, Trilinos GitHub repository, Trilinos continuous integration (CI), Trilinos continuous deployment (CD), Trilinos package teams, Trilinos package leads, Trilinos modular framework, Trilinos interoperability, Trilinos scalability, Trilinos finite element analysis, Trilinos mesh adaptation, Trilinos stochastic methods, Trilinos optimization, Trilinos linear solvers, Trilinos nonlinear solvers, Trilinos eigen solvers, Trilinos preconditioners, Trilinos time integration, Trilinos transient analysis, Trilinos data transfer, Trilinos DAG-based field evaluation, Trilinos meshless discretization, Trilinos high-order finite element discretizations, Trilinos signed distance fields, Trilinos unstructured meshes, Trilinos parallel services, Trilinos load balancing, Trilinos combinatorial scientific computing, Trilinos smart pointers, Trilinos BLAS and LAPACK wrappers, Trilinos XML parsers, Trilinos vector operations, Trilinos parallel data redistribution, Trilinos abstract numerical algorithms, Trilinos linear algebra libraries, Trilinos unified solver interface, Trilinos automatic differentiation, Trilinos stochastic Galerkin methods, Trilinos uncertainty quantification, Trilinos PDE discretizations, Trilinos multigrid solvers, Trilinos domain decomposition methods, Trilinos distributed computing, Trilinos MPI support, Trilinos CUDA support, Trilinos Kokkos ecosystem, Trilinos performance portability, Trilinos massively parallel computations, Trilinos multi-physics computations, Trilinos interfaces between packages, Trilinos Couplings, Trilinos legacy packages, Trilinos experimental tools, Trilinos utilities
 ---
 
 ## Trilinos Area Leads
@@ -20,7 +20,7 @@ The Trilinos packages are organized into three main areas: **Core**, **Solvers**
   <tr style="background-color: lightblue;">
     <th><strong>Package</strong></th>
     <th><strong>Description</strong></th>
-    <th><strong>Doxygen</strong></th>
+    <th><strong>Documentation</strong></th>
     <th><strong>GitHub</strong></th>
     <th><strong>Team and Lead</strong></th>
   </tr>
@@ -35,30 +35,37 @@ The Trilinos packages are organized into three main areas: **Core**, **Solvers**
   <tr>
     <td><a href="https://github.com/kokkos" title="Kokkos">Kokkos</a></td>
     <td>Performance portability library.</td>
-    <td>N/A</td>
+    <td><a href="https://kokkos.org/kokkos-core-wiki/">Kokkos documentation</a></td>
     <td><a href="https://github.com/trilinos/Trilinos/tree/master/packages/kokkos">Kokkos</a></td>
-    <td>N/A</td>
+    <td><a href="https://kokkos.org/community/team/">Kokkos team</a></td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/kokkos" title="Kokkos">Kokkos Kernels</a></td>
+    <td>Mathematical Kernels for Node-Local Computations</td>
+    <td><a href="https://kokkos.org/kokkos-kernels/docs/">Kokkos Kernels documentation</a></td>
+    <td><a href="https://github.com/trilinos/Trilinos/tree/master/packages/kokkos-kernels">Kokkos Kernels</a></td>
+    <td><a href="https://kokkos.org/community/team/">Kokkos team</a></td>
   </tr>
   <tr>
     <td><a href="pamgen.html" title="PAMGEN">PAMGEN</a></td>
     <td>Creates hexahedral or quadrilateral (in 2D) finite element meshes of simple shapes (cubes and cylinders) in parallel.</td>
-    <td>N/A</td>
+    <td><a href="https://github.com/trilinos/Trilinos/tree/master/packages/pamgen/doc/sand_report">PAMGEN documentation</a></td>
     <td><a href="https://github.com/trilinos/Trilinos/tree/master/packages/pamgen">PAMGEN</a></td>
     <td><a href="https://github.com/orgs/trilinos/teams/pamgen">@pamgen</a> and
         <a href="mailto:rppawlo@sandia.gov">Roger Pawlowski</a> (<a href="https://github.com/rppawlo">@rppawlo</a>)</td>
   </tr>
   <tr>
     <td><a href="pytrilinos2.html" title="PyTrilinos2">PyTrilinos2</a></td>
-    <td>Replacement for PyTrilinos.</td>
+    <td>Python interfaces to several Trilinos packages.</td>
     <td>N/A</td>
-    <td><a href="https://github.com/trilinos/Trilinos/tree/master/packages/pytrilinos2">PyTrilinos2</a></td>
+    <td><a href="https://github.com/trilinos/Trilinos/tree/master/packages/PyTrilinos2">PyTrilinos2</a></td>
     <td><a href="https://github.com/orgs/trilinos/teams/pytrilinos2">@pytrilinos2</a> and
         <a href="mailto:caglusa@sandia.gov">Christian Glusa</a> (<a href="https://github.com/cgcgcg">@cgcgcg</a>)</td>
   </tr>
   <tr>
     <td><a href="rtop.html" title="RTOp">RTOp</a></td>
     <td>Provides the basic mechanism for implementing vector operations in a flexible and efficient manner.</td>
-    <td>N/A</td>
+    <td><a href="docs/rtop/index.html">RTOp Doxygen</a></td>
     <td><a href="https://github.com/trilinos/Trilinos/tree/master/packages/rtop">RTOp</a></td>
     <td><a href="https://github.com/orgs/trilinos/teams/rtop">@rtop</a> and
         <a href="mailto:rabartl@sandia.gov">Roscoe A. Bartlett</a> (<a href="https://github.com/bartlettroscoe">@bartlettroscoe</a>)</td>
@@ -66,7 +73,7 @@ The Trilinos packages are organized into three main areas: **Core**, **Solvers**
   <tr>
     <td><a href="https://github.com/sandialabs/seacas" title="SEACAS">SEACAS</a></td>
     <td>A suite of preprocessing, postprocessing, translation, and utility applications supporting finite element analysis software using the Exodus database file format.</td>
-    <td>N/A</td>
+    <td><a href="https://sandialabs.github.io/seacas-docs/sphinx/html/index.html">SEACAS Documentation</a></td>
     <td><a href="https://github.com/trilinos/Trilinos/tree/master/packages/seacas">SEACAS</a></td>
     <td><a href="https://github.com/orgs/trilinos/teams/seacas">@seacas</a> and
         <a href="mailto:tookusa@sandia.gov">Tolu Okusanya</a> (<a href="https://github.com/tokusanya">@tokusanya</a>)</td>
@@ -98,7 +105,7 @@ The Trilinos packages are organized into three main areas: **Core**, **Solvers**
   <tr>
     <td><a href="https://sandialabs.github.io/Zoltan/" title="Zoltan">Zoltan</a></td>
     <td>A toolkit of parallel services for dynamic, unstructured, and/or adaptive simulations, providing load balancing and related services.</td>
-    <td>N/A</td>
+    <td><a href="https://github.com/trilinos/Trilinos/tree/master/packages/zoltan/doc">Zoltan documentation</a></td>
     <td><a href="https://github.com/trilinos/Trilinos/tree/master/packages/zoltan">Zoltan</a></td>
     <td><a href="https://github.com/orgs/trilinos/teams/zoltan">@zoltan</a> and
         <a href="mailto:egboman@sandia.gov">Erik Boman</a> (<a href="https://github.com/egboman">@egboman</a>)</td>
@@ -106,7 +113,7 @@ The Trilinos packages are organized into three main areas: **Core**, **Solvers**
   <tr>
     <td><a href="zoltan2.html" title="Zoltan2">Zoltan2</a></td>
     <td>A package for load balancing and combinatorial scientific computing, viewed as a successor to Zoltan and Isorropia.</td>
-    <td>N/A</td>
+    <td><a href="docs/zoltan2/index.html">Zoltan2 Doxygen</a></td>
     <td><a href="https://github.com/trilinos/Trilinos/tree/master/packages/zoltan2">Zoltan2</a></td>
     <td><a href="https://github.com/orgs/trilinos/teams/zoltan2">@zoltan2</a> and
         <a href="mailto:egboman@sandia.gov">Erik Boman</a> (<a href="https://github.com/egboman">@egboman</a>)</td>
@@ -121,7 +128,7 @@ The Trilinos packages are organized into three main areas: **Core**, **Solvers**
   <tr style="background-color: lightyellow;">
     <td><strong>Package</strong></td>
     <td><strong>Description</strong></td>
-    <td><strong>Doxygen</strong></td>
+    <td><strong>Documentation</strong></td>
     <td><strong>GitHub</strong></td>
     <td><strong>Team</strong></td>
     <td><strong>Team Lead</strong></td>
@@ -167,7 +174,7 @@ The Trilinos packages are organized into three main areas: **Core**, **Solvers**
     <td><a href="mailto:csiefer@sandia.gov">Chris Siefert</a> (<a href="https://github.com/csiefer2">@csiefer2</a>), <a href="mailto:jhu@sandia.gov">Jonathan Hu</a> (<a href="https://github.com/jhux2">@jhux2</a>)</td>
   </tr>
   <tr>
-    <td><a href="muelu.html" title="Muelu">Muelu</a></td>
+    <td><a href="muelu.html" title="MueLu">MueLu</a></td>
     <td>Designed to solve large sparse linear systems of equations arising from PDE discretizations, providing multigrid solvers and preconditioners.</td>
     <td><a href="docs/muelu/index.html">MueLu Doxygen</a></td>
     <td><a href="https://github.com/trilinos/Trilinos/tree/master/packages/muelu">MueLu</a></td>
@@ -177,7 +184,7 @@ The Trilinos packages are organized into three main areas: **Core**, **Solvers**
   <tr>
     <td><a href="shylu.html" title="ShyLU">ShyLU</a></td>
     <td>Package for solving sparse linear systems using domain decomposition methods, focusing on distributed memory and node-level solvers.</td>
-    <td>N/A</td>
+    <td><a href="docs/shylu/index.html">ShyLU Doxygen</a></td>
     <td><a href="https://github.com/trilinos/Trilinos/tree/master/packages/shylu">ShyLU</a></td>
     <td><a href="https://github.com/orgs/trilinos/teams/shylu">@shylu</a></td>
     <td><a href="mailto:iyamaza@sandia.gov">Ichi Yamazaki</a> (<a href="https://github.com/iyamazaki">@iyamazaki</a>)</td>
@@ -216,7 +223,7 @@ The Trilinos packages are organized into three main areas: **Core**, **Solvers**
   <tr style="background-color: lightgreen;">
     <td><strong>Package</strong></td>
     <td><strong>Description</strong></td>
-    <td><strong>Doxygen</strong></td>
+    <td><strong>Documentation</strong></td>
     <td><strong>GitHub</strong></td>
     <td><strong>Team</strong></td>
     <td><strong>Team Lead</strong></td>
@@ -224,7 +231,7 @@ The Trilinos packages are organized into three main areas: **Core**, **Solvers**
   <tr>
     <td><a href="compadre.html" title="Compadre">Compadre</a></td>
     <td>Toolkit for meshless discretizations enabling the solution of differential equations and data transfer.</td>
-    <td>N/A</td>
+    <td><a href="docs/compadre/index.html">Compadre Doxygen</a></td>
     <td><a href="https://github.com/trilinos/Trilinos/tree/master/packages/compadre">Compadre</a></td>
     <td><a href="https://github.com/orgs/trilinos/teams/compadre">@compadre</a></td>
     <td><a href="mailto:pakuber@sandia.gov">Paul Kuberry</a> (<a href="https://github.com/kuberry">@kuberry</a>)</td>
@@ -286,7 +293,7 @@ The Trilinos packages are organized into three main areas: **Core**, **Solvers**
     <td><a href="mailto:mperego@sandia.gov">Mauro Perego</a> (<a href="https://github.com/mperego">@mperego</a>)</td>
   </tr>
   <tr>
-    <td><a href="rol.html" title="Rapid Optimization Library (ROL)">ROL</a></td>
+    <td><a href="https://rol.sandia.gov/" title="Rapid Optimization Library (ROL)">ROL</a></td>
     <td>Next-generation package for large-scale optimization, solving optimal design, control, and inverse problems.</td>
     <td><a href="docs/rol/index.html">ROL Doxygen</a></td>
     <td><a href="https://github.com/trilinos/Trilinos/tree/master/packages/rol">ROL</a></td>
@@ -312,7 +319,7 @@ The Trilinos packages are organized into three main areas: **Core**, **Solvers**
   <tr>
     <td><a href="stk.html" title="STK">STK</a></td>
     <td>Supports massively parallel multi-physics computations on dynamically changing unstructured meshes.</td>
-    <td>N/A</td>
+    <td><a href="pages/packages/stk/STKManual_2024-07-12-final.pdf">STK Manual</a></td>
     <td><a href="https://github.com/trilinos/Trilinos/tree/master/packages/stk">STK</a></td>
     <td><a href="https://github.com/orgs/trilinos/teams/stk">@stk</a></td>
     <td><a href="mailto:STK-NGPTeam@sandia.gov">STK Team</a> (<a href="https://github.com/orgs/trilinos/teams/stk">@stk</a>)</td>

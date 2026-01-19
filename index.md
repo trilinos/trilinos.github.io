@@ -17,6 +17,14 @@ Join us in harnessing the power of Trilinos to drive innovation and discovery in
 Explore Trilinos resources:
 
 <div class="quick-links-grid">
+    <div class="quick-link-box">
+    <h3><a href="getting_started.html">Getting started</a></h3>
+    <p>First steps with Trilinos: installation and usage <a href="getting_started.html">More...</a></p>
+  </div>
+  <div class="quick-link-box">
+    <h3><a href="events.html">Events</a></h3>
+    <p>Stay updated on workshops, webinars, and community events. <a href="events.html">More...</a></p>
+  </div>
   <div class="quick-link-box">
     <h3><a href="https://github.com/trilinos/Trilinos">Trilinos GitHub Repository</a></h3>
     <p>Access the source code and contribute to Trilinos development. <a href="https://github.com/trilinos/Trilinos">More...</a></p>
@@ -24,10 +32,6 @@ Explore Trilinos resources:
   <div class="quick-link-box">
     <h3><a href="packages-by-area.html">Doxygen Documentation</a></h3>
     <p>Explore the API documentation for Trilinos packages. <a href="packages-by-area.html">More...</a></p>
-  </div>
-  <div class="quick-link-box">
-    <h3><a href="events.html">Events</a></h3>
-    <p>Stay updated on workshops, webinars, and community events. <a href="events.html">More...</a></p>
   </div>
 </div>
 
