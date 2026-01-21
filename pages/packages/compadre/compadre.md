@@ -9,7 +9,7 @@ doxygen: false
 ---
 The Compadre Toolkit provides tools for the approximation of linear operators applied to a function (including point evaluation and derivatives), given samples of the function over a cloud of points. The toolkit can be used for data transfer applications as well as for meshless discretization of PDEs. Compadre currently uses Generalized Moving Least Squares (GMLS) for approximating functionals and we plan on implementing other meshless methods like radial basis functions. 
 
-This toolkit focuses on the 'on-node' aspects of meshless PDE discretizationo and remap, namely the parallel assembly and solution of  of local system for computing the basis coefficients. What it does **not** provide is the tools for managing fields, inverting globally sparse matrices, or neighbor search that requires orchestration over many MPI processes. This toolkit is designed to be easily dropped-in to an existing MPI (or serial) based framework for PDE solution or remap, with minimal dependencies, [Kokkos](kokkos.html) and [KokkosKernels](kokkoskernels.html).
+This toolkit focuses on the 'on-node' aspects of meshless PDE discretizationo and remap, namely the parallel assembly and solution of  of local system for computing the basis coefficients. What it does **not** provide is the tools for managing fields, inverting globally sparse matrices, or neighbor search that requires orchestration over many MPI processes. This toolkit is designed to be easily dropped-in to an existing MPI (or serial) based framework for PDE solution or remap, with minimal dependencies,  <a href="https://kokkos.org/" title="Kokkos">Kokkos</a>.
 
 The Compadre homepage is at [https://github.com/SNLComputation/compadre/wiki](https://github.com/SNLComputation/compadre/wiki).
 

@@ -10,7 +10,6 @@ doxygen: true
 
 Ifpack2 provides incomplete factorizations, relaxations, and domain decomposition operators for linear algebra objects (sparse matrices, operators, and dense vectors and multivectors) provided by the [Tpetra](tpetra.html) package. You may use these operators however you wish: for example as preconditioners in an iterative solver, or as smoothers for algebraic multigrid.
 
-Ifpack2 aims at offering the same functionality as the [Ifpack](ifpack.html) package, though it does not promise backwards compatibility. Ifpack only works for [Epetra](epetra.html) linear algebra objects; Ifpack2 only works for Tpetra objects.
 
 ### Why Ifpack2?
 

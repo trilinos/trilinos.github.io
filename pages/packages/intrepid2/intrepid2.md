@@ -23,7 +23,7 @@ Overview
 
 Supplementary materials
 
-Given that Intrepid2 largely mantains the mathematical structure of [Intrepid](intrepid.html), we refer to [Solving PDEs with Intrepid](https://content.iospress.com/articles/scientific-programming/spr340) by Bochev, Edwards, Kirby, Peterson, Ridzal.
+Given that Intrepid2 largely maintains the mathematical structure of Intrepid, we refer to [Solving PDEs with Intrepid](https://content.iospress.com/articles/scientific-programming/spr340) by Bochev, Edwards, Kirby, Peterson, Ridzal.
 
 Hierachical basis functions are implemented accordingly to the paper [Orientation embedded high order shape functions for the exact sequence elements of all shapes](https://www.sciencedirect.com/science/article/pii/S0898122115002084) by Fuentes, Keith, Demkowicz and Nagaraj. However, in Intrepid2 the orientations are not embedded in the basis but enforced separately for additional flexibility.
 
