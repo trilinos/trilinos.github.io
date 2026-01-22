@@ -95,6 +95,12 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_util.html">Intrepid2::Util&lt; T &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">small utility functions  <a href="class_intrepid2_1_1_util.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_intrepid2_1_1_deduce_dyn_rank_view.html">Intrepid2::DeduceDynRankView&lt; InputView &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to obtain the dynRankView type from an input View,.  <a href="struct_intrepid2_1_1_deduce_dyn_rank_view.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_intrepid2_1_1_impl_1_1_create_view_factory.html">Intrepid2::Impl::CreateViewFactory&lt; ViewPack &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory to create a view based on the properties of input views The class is useful when the view can be of Fad type It works with both DynRankViews and Views.  <a href="struct_intrepid2_1_1_impl_1_1_create_view_factory.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_intrepid2_1_1has__rank__member.html">Intrepid2::has_rank_member&lt; T, typename &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether a class has a member rank. Used in <a class="el" href="_intrepid2___utils_8hpp.html#aad19f5dbd3a5c356955e98f835b6d02f">getFixedRank()</a> method below, which in turn is used in the supports_rank_n helpers.  <a href="struct_intrepid2_1_1has__rank__member.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -249,9 +255,25 @@ Functions</h2></td></tr>
 <tr class="memitem:a37c05979aec8786f788850e75d66c2fa" id="r_a37c05979aec8786f788850e75d66c2fa"><td class="memTemplParams" colspan="2">template&lt;typename T , typename ... P&gt; </td></tr>
 <tr class="memitem:a37c05979aec8786f788850e75d66c2fa"><td class="memTemplItemLeft" align="right" valign="top">static KOKKOS_FORCEINLINE_FUNCTION ordinal_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_intrepid2___utils_8hpp.html#a37c05979aec8786f788850e75d66c2fa">Intrepid2::get_dimension_scalar</a> (const Kokkos::View&lt; T, P... &gt; &amp;view)</td></tr>
 <tr class="separator:a37c05979aec8786f788850e75d66c2fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a863191b6e6ab6fcf3497363e79cb0ec3" id="r_a863191b6e6ab6fcf3497363e79cb0ec3"><td class="memTemplParams" colspan="2">template&lt;typename OutViewType , typename InViewType , typename CtorProp , typename... Dims&gt; </td></tr>
+<tr class="memitem:a863191b6e6ab6fcf3497363e79cb0ec3"><td class="memTemplItemLeft" align="right" valign="top">OutViewType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_intrepid2___utils_8hpp.html#a863191b6e6ab6fcf3497363e79cb0ec3">Intrepid2::Impl::createMatchingView</a> (const InViewType &amp;view, const CtorProp &amp;prop, const Dims... dims)</td></tr>
+<tr class="memdesc:a863191b6e6ab6fcf3497363e79cb0ec3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and returns a view that matches the value_type of the provided view The type of the output view needs to be provided It works both with DynRankViews and Views.  <br /></td></tr>
+<tr class="separator:a863191b6e6ab6fcf3497363e79cb0ec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4265190cbd3af0773610caed66188873" id="r_a4265190cbd3af0773610caed66188873"><td class="memTemplParams" colspan="2">template&lt;typename InViewType , typename CtorProp , typename... Dims&gt; </td></tr>
+<tr class="memitem:a4265190cbd3af0773610caed66188873"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="struct_intrepid2_1_1_deduce_dyn_rank_view.html">DeduceDynRankView</a>&lt; InViewType &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_intrepid2___utils_8hpp.html#a4265190cbd3af0773610caed66188873">Intrepid2::Impl::createMatchingDynRankView</a> (const InViewType &amp;view, const CtorProp &amp;prop, const Dims... dims)</td></tr>
+<tr class="memdesc:a4265190cbd3af0773610caed66188873"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and returns a view that matches the value_type of the provided view The output view type is deduced from the input view, choosing the default layout when the input view has a stride layout.  <br /></td></tr>
+<tr class="separator:a4265190cbd3af0773610caed66188873"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25c4d8df50e95d35be448ecaf86f2efe" id="r_a25c4d8df50e95d35be448ecaf86f2efe"><td class="memTemplParams" colspan="2">template&lt;typename OutViewType , typename InViewType , typename CtorProp , typename... Dims&gt; </td></tr>
+<tr class="memitem:a25c4d8df50e95d35be448ecaf86f2efe"><td class="memTemplItemLeft" align="right" valign="top">KOKKOS_INLINE_FUNCTION std::enable_if&lt; std::is_pointer_v&lt; CtorProp &gt; &amp;&amp;!std::is_convertible_v&lt; CtorProp, constchar * &gt;, OutViewType &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_intrepid2___utils_8hpp.html#a25c4d8df50e95d35be448ecaf86f2efe">Intrepid2::Impl::createMatchingUnmanagedView</a> (const InViewType &amp;view, const CtorProp &amp;data, const Dims... dims)</td></tr>
+<tr class="memdesc:a25c4d8df50e95d35be448ecaf86f2efe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an unmanaged view that matches the value_type of the provided view The type of the output view needs to be provided.  <br /></td></tr>
+<tr class="separator:a25c4d8df50e95d35be448ecaf86f2efe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4650de4a264a2e87e3db6503e4c6acf4" id="r_a4650de4a264a2e87e3db6503e4c6acf4"><td class="memTemplParams" colspan="2">template&lt;typename InViewType , typename CtorProp , typename ... Dims&gt; </td></tr>
+<tr class="memitem:a4650de4a264a2e87e3db6503e4c6acf4"><td class="memTemplItemLeft" align="right" valign="top">KOKKOS_INLINE_FUNCTION std::enable_if&lt; std::is_pointer_v&lt; CtorProp &gt; &amp;&amp;!std::is_convertible_v&lt; CtorProp, constchar * &gt;, typenameDeduceDynRankView&lt; InViewType &gt;::type &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_intrepid2___utils_8hpp.html#a4650de4a264a2e87e3db6503e4c6acf4">Intrepid2::Impl::createMatchingUnmanagedDynRankView</a> (const InViewType &amp;view, const CtorProp &amp;data, const Dims... dims)</td></tr>
+<tr class="memdesc:a4650de4a264a2e87e3db6503e4c6acf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an unmanaged view that matches the value_type of the provided view The output view type is deduced from the input view, choosing the default layout when the input view has a stride layout.  <br /></td></tr>
+<tr class="separator:a4650de4a264a2e87e3db6503e4c6acf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af091a07c101c255386d84054cd68d1d0" id="r_af091a07c101c255386d84054cd68d1d0"><td class="memTemplParams" colspan="2">template&lt;class ViewType , class ... DimArgs&gt; </td></tr>
 <tr class="memitem:af091a07c101c255386d84054cd68d1d0"><td class="memTemplItemLeft" align="right" valign="top">Kokkos::DynRankView&lt; typename ViewType::value_type, typename <a class="el" href="struct_intrepid2_1_1_deduce_layout.html">DeduceLayout</a>&lt; ViewType &gt;::result_layout, typename ViewType::device_type &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_intrepid2___utils_8hpp.html#af091a07c101c255386d84054cd68d1d0">Intrepid2::getMatchingViewWithLabel</a> (const ViewType &amp;view, const std::string &amp;label, DimArgs... dims)</td></tr>
-<tr class="memdesc:af091a07c101c255386d84054cd68d1d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and returns a view that matches the provided view in Kokkos Layout.  <br /></td></tr>
+<tr class="memdesc:af091a07c101c255386d84054cd68d1d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and returns a view that matches the provided view in Kokkos Layout. DEPRECATED, use <a class="el" href="_intrepid2___utils_8hpp.html#a4265190cbd3af0773610caed66188873" title="Creates and returns a view that matches the value_type of the provided view The output view type is d...">Impl::createMatchingDynRankView</a> instead.  <br /></td></tr>
 <tr class="separator:af091a07c101c255386d84054cd68d1d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad19f5dbd3a5c356955e98f835b6d02f" id="r_aad19f5dbd3a5c356955e98f835b6d02f"><td class="memTemplParams" colspan="2">template&lt;class Functor , ordinal_type default_value&gt; </td></tr>
 <tr class="memitem:aad19f5dbd3a5c356955e98f835b6d02f"><td class="memTemplItemLeft" align="right" valign="top">constexpr enable_if_t&lt; <a class="el" href="struct_intrepid2_1_1has__rank__member.html">has_rank_member</a>&lt; Functor &gt;::value, ordinal_type &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_intrepid2___utils_8hpp.html#aad19f5dbd3a5c356955e98f835b6d02f">Intrepid2::getFixedRank</a> ()</td></tr>
@@ -322,7 +344,7 @@ Variables</h2></td></tr>
 <div class="line">    Kokkos::abort(  <span class="stringliteral">&quot;[Intrepid2] Abort\n&quot;</span>);                             \</div>
 <div class="line">  }</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00087">87</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00088">88</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
 
 </div>
 </div>
@@ -365,7 +387,7 @@ Variables</h2></td></tr>
 <div class="line">    Kokkos::abort(  <span class="stringliteral">&quot;[Intrepid2] Abort\n&quot;</span>);                             \</div>
 <div class="line">  }</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00107">107</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00108">108</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
 
 </div>
 </div>
@@ -407,7 +429,7 @@ Variables</h2></td></tr>
 <div class="line">    <span class="keywordflow">throw</span> x(msg);                                                       \</div>
 <div class="line">  }</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00059">59</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00060">60</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
 
 </div>
 </div>
@@ -450,7 +472,7 @@ Variables</h2></td></tr>
 <div class="line">  }</div>
 </div><!-- fragment --><p>KK: device assert is disabled when NDEBUG is defined which behaves differently from host test. </p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00070">70</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00071">71</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
 
 </div>
 </div>
@@ -485,7 +507,7 @@ Variables</h2></td></tr>
 <div class="line">    Kokkos::printf(<span class="stringliteral">&quot;            %s \n&quot;</span>, msg);                                   \</div>
 <div class="line">  }</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00052">52</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00053">53</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
 
 </div>
 </div>
@@ -516,7 +538,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00271">271</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00272">272</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
 
 </div>
 </div>
@@ -539,11 +561,220 @@ template&lt;typename Device , typename Derived &gt; </div>
 </div><div class="memdoc">
 <p>Function for creating a vtable on device (requires copy ctor for derived object). Allocates device memory and must be called from host. </p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00827">827</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00935">935</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_intrepid2___utils_8hpp_source.html#l00827">Intrepid2::copy_virtual_class_to_device()</a>.</p>
+<p class="reference">References <a class="el" href="_intrepid2___utils_8hpp_source.html#l00935">Intrepid2::copy_virtual_class_to_device()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_intrepid2___utils_8hpp_source.html#l00827">Intrepid2::copy_virtual_class_to_device()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_intrepid2___utils_8hpp_source.html#l00935">Intrepid2::copy_virtual_class_to_device()</a>.</p>
+
+</div>
+</div>
+<a id="a4265190cbd3af0773610caed66188873" name="a4265190cbd3af0773610caed66188873"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4265190cbd3af0773610caed66188873">&#9670;&#160;</a></span>createMatchingDynRankView()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename InViewType , typename CtorProp , typename... Dims&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">DeduceDynRankView&lt; InViewType &gt;::type Intrepid2::Impl::createMatchingDynRankView </td>
+          <td>(</td>
+          <td class="paramtype">const InViewType &amp;&#160;</td>
+          <td class="paramname"><em>view</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const CtorProp &amp;&#160;</td>
+          <td class="paramname"><em>prop</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Dims...&#160;</td>
+          <td class="paramname"><em>dims</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates and returns a view that matches the value_type of the provided view The output view type is deduced from the input view, choosing the default layout when the input view has a stride layout. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">view</td><td>- the view(s) to match </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">prop</td><td>- the properties (e.g., label) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dims</td><td>- dimensions to use for the view (the logical dimensions; this method handles adding the derivative dimension required for Fad types). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00390">390</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_intrepid2___utils_8hpp_source.html#l00390">Intrepid2::Impl::createMatchingDynRankView()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_intrepid2___utils_8hpp_source.html#l00390">Intrepid2::Impl::createMatchingDynRankView()</a>.</p>
+
+</div>
+</div>
+<a id="a4650de4a264a2e87e3db6503e4c6acf4" name="a4650de4a264a2e87e3db6503e4c6acf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4650de4a264a2e87e3db6503e4c6acf4">&#9670;&#160;</a></span>createMatchingUnmanagedDynRankView()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename InViewType , typename CtorProp , typename ... Dims&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">KOKKOS_INLINE_FUNCTION std::enable_if&lt; std::is_pointer_v&lt; CtorProp &gt; &amp;&amp;!std::is_convertible_v&lt; CtorProp, constchar * &gt;, typenameDeduceDynRankView&lt; InViewType &gt;::type &gt;::type Intrepid2::Impl::createMatchingUnmanagedDynRankView </td>
+          <td>(</td>
+          <td class="paramtype">const InViewType &amp;&#160;</td>
+          <td class="paramname"><em>view</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const CtorProp &amp;&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Dims...&#160;</td>
+          <td class="paramname"><em>dims</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates an unmanaged view that matches the value_type of the provided view The output view type is deduced from the input view, choosing the default layout when the input view has a stride layout. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">view</td><td>- the view(s) to match </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>- pointer to array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dims</td><td>- dimensions to use for the view (the logical dimensions; this method handles adding the derivative dimension required for Fad types). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00439">439</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_intrepid2___utils_8hpp_source.html#l00439">Intrepid2::Impl::createMatchingUnmanagedDynRankView()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_intrepid2___utils_8hpp_source.html#l00439">Intrepid2::Impl::createMatchingUnmanagedDynRankView()</a>.</p>
+
+</div>
+</div>
+<a id="a25c4d8df50e95d35be448ecaf86f2efe" name="a25c4d8df50e95d35be448ecaf86f2efe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25c4d8df50e95d35be448ecaf86f2efe">&#9670;&#160;</a></span>createMatchingUnmanagedView()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename OutViewType , typename InViewType , typename CtorProp , typename... Dims&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">KOKKOS_INLINE_FUNCTION std::enable_if&lt; std::is_pointer_v&lt; CtorProp &gt; &amp;&amp;!std::is_convertible_v&lt; CtorProp, constchar * &gt;, OutViewType &gt;::type Intrepid2::Impl::createMatchingUnmanagedView </td>
+          <td>(</td>
+          <td class="paramtype">const InViewType &amp;&#160;</td>
+          <td class="paramname"><em>view</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const CtorProp &amp;&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Dims...&#160;</td>
+          <td class="paramname"><em>dims</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates an unmanaged view that matches the value_type of the provided view The type of the output view needs to be provided. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">view</td><td>- the view(s) to match </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">view</td><td>- the view(s) to match </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>- pointer to array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dims</td><td>- dimensions to use for the view (the logical dimensions; this method handles adding the derivative dimension required for Fad types). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00409">409</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_intrepid2___utils_8hpp_source.html#l00409">Intrepid2::Impl::createMatchingUnmanagedView()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_intrepid2___utils_8hpp_source.html#l00409">Intrepid2::Impl::createMatchingUnmanagedView()</a>.</p>
+
+</div>
+</div>
+<a id="a863191b6e6ab6fcf3497363e79cb0ec3" name="a863191b6e6ab6fcf3497363e79cb0ec3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a863191b6e6ab6fcf3497363e79cb0ec3">&#9670;&#160;</a></span>createMatchingView()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename OutViewType , typename InViewType , typename CtorProp , typename... Dims&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">OutViewType Intrepid2::Impl::createMatchingView </td>
+          <td>(</td>
+          <td class="paramtype">const InViewType &amp;&#160;</td>
+          <td class="paramname"><em>view</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const CtorProp &amp;&#160;</td>
+          <td class="paramname"><em>prop</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Dims...&#160;</td>
+          <td class="paramname"><em>dims</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates and returns a view that matches the value_type of the provided view The type of the output view needs to be provided It works both with DynRankViews and Views. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">view</td><td>- the view(s) to match </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">prop</td><td>- the properties (e.g., label) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dims</td><td>- dimensions to use for the view (the logical dimensions; this method handles adding the derivative dimension required for Fad types). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00375">375</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_intrepid2___utils_8hpp_source.html#l00375">Intrepid2::Impl::createMatchingView()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_intrepid2___utils_8hpp_source.html#l00375">Intrepid2::Impl::createMatchingView()</a>.</p>
 
 </div>
 </div>
@@ -575,11 +806,11 @@ template&lt;typename T , typename ... P&gt; </div>
 
 <p>specialization of functions for pod types, returning the scalar dimension (1 for pod types) of a view these functions are specialized in Sacado and they return the scalar dimension (i.e. the dimension of the type w.r.t. the type associated to the pointer type). </p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00305">305</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00306">306</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_intrepid2___utils_8hpp_source.html#l00305">Intrepid2::dimension_scalar()</a>.</p>
+<p class="reference">References <a class="el" href="_intrepid2___utils_8hpp_source.html#l00306">Intrepid2::dimension_scalar()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_intrepid2___utils_8hpp_source.html#l00305">Intrepid2::dimension_scalar()</a>, and <a class="el" href="_intrepid2___integration_tools_def_8hpp_source.html#l02024">Intrepid2::IntegrationTools&lt; DeviceType &gt;::integrate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_intrepid2___utils_8hpp_source.html#l00306">Intrepid2::dimension_scalar()</a>, and <a class="el" href="_intrepid2___integration_tools_def_8hpp_source.html#l02024">Intrepid2::IntegrationTools&lt; DeviceType &gt;::integrate()</a>.</p>
 
 </div>
 </div>
@@ -609,7 +840,7 @@ template&lt;typename T , typename ... P&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00311">311</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00312">312</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
 
 </div>
 </div>
@@ -639,7 +870,7 @@ template&lt;typename T , typename ... P&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00315">315</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00316">316</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
 
 </div>
 </div>
@@ -669,7 +900,7 @@ template&lt;typename T , typename ... P&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00321">321</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00322">322</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
 
 </div>
 </div>
@@ -701,11 +932,11 @@ template&lt;typename T &gt; </div>
 
 <p>functions returning the scalar value. for pod types, they return the input object itself. of other types it returns the member function val() of the type T. For Sacado Fad types it returns the scalar value. </p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00286">286</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00287">287</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_intrepid2___utils_8hpp_source.html#l00286">Intrepid2::get_scalar_value()</a>.</p>
+<p class="reference">References <a class="el" href="_intrepid2___utils_8hpp_source.html#l00287">Intrepid2::get_scalar_value()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_intrepid2___utils_8hpp_source.html#l00286">Intrepid2::get_scalar_value()</a>, and <a class="el" href="_intrepid2___orientation_tools_def_coeff_matrix___h_d_i_v_8hpp_source.html#l00142">Intrepid2::Impl::OrientationTools::getCoeffMatrix_HDIV()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_intrepid2___utils_8hpp_source.html#l00287">Intrepid2::get_scalar_value()</a>, and <a class="el" href="_intrepid2___orientation_tools_def_coeff_matrix___h_d_i_v_8hpp_source.html#l00142">Intrepid2::Impl::OrientationTools::getCoeffMatrix_HDIV()</a>.</p>
 
 </div>
 </div>
@@ -735,7 +966,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00292">292</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00293">293</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
 
 </div>
 </div>
@@ -765,11 +996,11 @@ template&lt;class Functor , ordinal_type default_value&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>functor.rank if the functor has a static rank member; returns specified default_value otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00380">380</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00488">488</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_intrepid2___utils_8hpp_source.html#l00380">Intrepid2::getFixedRank()</a>.</p>
+<p class="reference">References <a class="el" href="_intrepid2___utils_8hpp_source.html#l00488">Intrepid2::getFixedRank()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_intrepid2___utils_8hpp_source.html#l00380">Intrepid2::getFixedRank()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_intrepid2___utils_8hpp_source.html#l00488">Intrepid2::getFixedRank()</a>.</p>
 
 </div>
 </div>
@@ -799,9 +1030,9 @@ template&lt;class Functor , ordinal_type default_value&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>functor.rank if the functor has a static rank member; returns specified default_value otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00391">391</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00499">499</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_intrepid2___utils_8hpp_source.html#l00380">Intrepid2::getFixedRank()</a>.</p>
+<p class="reference">References <a class="el" href="_intrepid2___utils_8hpp_source.html#l00488">Intrepid2::getFixedRank()</a>.</p>
 
 </div>
 </div>
@@ -824,11 +1055,11 @@ template&lt;class Functor &gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>functor.rank() if the functor implements rank(); functor.rank otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00747">747</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00855">855</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_intrepid2___utils_8hpp_source.html#l00747">Intrepid2::getFunctorRank()</a>.</p>
+<p class="reference">References <a class="el" href="_intrepid2___utils_8hpp_source.html#l00855">Intrepid2::getFunctorRank()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00400">Intrepid2::copyFunctorToHostView()</a>, <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html#l00104">Intrepid2::RealSpaceTools&lt; DeviceType &gt;::Serial::det()</a>, <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html#l00823">Intrepid2::RealSpaceTools&lt; DeviceType &gt;::det()</a>, <a class="el" href="_intrepid2___utils_8hpp_source.html#l00747">Intrepid2::getFunctorRank()</a>, <a class="el" href="_intrepid2___view_iterator_8hpp_source.html#l00103">Intrepid2::ViewIterator&lt; ViewType, ScalarType &gt;::increment()</a>, <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html#l00717">Intrepid2::RealSpaceTools&lt; DeviceType &gt;::inverse()</a>, <a class="el" href="_intrepid2___transformed_basis_values_8hpp_source.html#l00118">Intrepid2::TransformedBasisValues&lt; Scalar, DeviceType &gt;::multiplyByPointwiseWeights()</a>, <a class="el" href="_intrepid2___view_iterator_8hpp_source.html#l00086">Intrepid2::ViewIterator&lt; ViewType, ScalarType &gt;::nextIncrementRank()</a>, <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00596">Intrepid2::testFloatingEquality()</a>, and <a class="el" href="_intrepid2___view_iterator_8hpp_source.html#l00051">Intrepid2::ViewIterator&lt; ViewType, ScalarType &gt;::ViewIterator()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00400">Intrepid2::copyFunctorToHostView()</a>, <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html#l00104">Intrepid2::RealSpaceTools&lt; DeviceType &gt;::Serial::det()</a>, <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html#l00823">Intrepid2::RealSpaceTools&lt; DeviceType &gt;::det()</a>, <a class="el" href="_intrepid2___utils_8hpp_source.html#l00855">Intrepid2::getFunctorRank()</a>, <a class="el" href="_intrepid2___view_iterator_8hpp_source.html#l00103">Intrepid2::ViewIterator&lt; ViewType, ScalarType &gt;::increment()</a>, <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html#l00717">Intrepid2::RealSpaceTools&lt; DeviceType &gt;::inverse()</a>, <a class="el" href="_intrepid2___transformed_basis_values_8hpp_source.html#l00118">Intrepid2::TransformedBasisValues&lt; Scalar, DeviceType &gt;::multiplyByPointwiseWeights()</a>, <a class="el" href="_intrepid2___view_iterator_8hpp_source.html#l00086">Intrepid2::ViewIterator&lt; ViewType, ScalarType &gt;::nextIncrementRank()</a>, <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00596">Intrepid2::testFloatingEquality()</a>, and <a class="el" href="_intrepid2___view_iterator_8hpp_source.html#l00051">Intrepid2::ViewIterator&lt; ViewType, ScalarType &gt;::ViewIterator()</a>.</p>
 
 </div>
 </div>
@@ -851,9 +1082,9 @@ template&lt;class Functor &gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>functor.rank() if the functor implements rank(); functor.rank otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00758">758</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00866">866</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_intrepid2___utils_8hpp_source.html#l00747">Intrepid2::getFunctorRank()</a>.</p>
+<p class="reference">References <a class="el" href="_intrepid2___utils_8hpp_source.html#l00855">Intrepid2::getFunctorRank()</a>.</p>
 
 </div>
 </div>
@@ -899,7 +1130,7 @@ template&lt;class ViewType , class ... DimArgs&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Creates and returns a view that matches the provided view in Kokkos Layout. </p>
+<p>Creates and returns a view that matches the provided view in Kokkos Layout. DEPRECATED, use Impl::createMatchingDynRankView instead. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">view</td><td>- the view to match </td></tr>
@@ -910,11 +1141,11 @@ template&lt;class ViewType , class ... DimArgs&gt; </div>
 </dl>
 <p>This method is particularly useful because we use LayoutStride as the Kokkos Layout in a number of places, and LayoutStride views cannot be instantiated without also providing stride information. </p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00336">336</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00458">458</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_intrepid2___utils_8hpp_source.html#l00336">Intrepid2::getMatchingViewWithLabel()</a>.</p>
+<p class="reference">References <a class="el" href="_intrepid2___utils_8hpp_source.html#l00458">Intrepid2::getMatchingViewWithLabel()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_intrepid2___data_8hpp_source.html#l01067">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::allocateDynRankViewMatchingUnderlying()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l01084">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::allocateDynRankViewMatchingUnderlying()</a>, <a class="el" href="_intrepid2___cell_geometry_def_8hpp_source.html#l00151">Intrepid2::CellGeometry&lt; PointScalar, spaceDim, DeviceType &gt;::allocateJacobianDataPrivate()</a>, <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html#l00092">Intrepid2::CellTools&lt; DeviceType &gt;::allocateJacobianDet()</a>, <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html#l00126">Intrepid2::CellTools&lt; DeviceType &gt;::allocateJacobianInv()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l01278">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::allocateMatMatResult()</a>, <a class="el" href="_intrepid2___cell_geometry_def_8hpp_source.html#l00798">Intrepid2::CellGeometry&lt; PointScalar, spaceDim, DeviceType &gt;::getJacobianRefData()</a>, <a class="el" href="_intrepid2___cell_geometry_def_8hpp_source.html#l00882">Intrepid2::CellGeometry&lt; PointScalar, spaceDim, DeviceType &gt;::getJacobianRefData()</a>, <a class="el" href="_intrepid2___point_tools_def_8hpp_source.html#l00086">Intrepid2::PointTools::getLattice()</a>, <a class="el" href="_intrepid2___utils_8hpp_source.html#l00336">Intrepid2::getMatchingViewWithLabel()</a>, <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01592">Intrepid2::Basis_TensorBasis&lt; BasisBaseClass &gt;::getValues()</a>, <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01764">Intrepid2::Basis_TensorBasis&lt; BasisBaseClass &gt;::getValues()</a>, <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l02260">Intrepid2::Basis_TensorBasis3&lt; BasisBaseClass &gt;::getValues()</a>, and <a class="el" href="_intrepid2___cell_geometry_def_8hpp_source.html#l00243">Intrepid2::CellGeometry&lt; PointScalar, spaceDim, DeviceType &gt;::setJacobianDataPrivate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_intrepid2___utils_8hpp_source.html#l00458">Intrepid2::getMatchingViewWithLabel()</a>.</p>
 
 </div>
 </div>
@@ -946,11 +1177,11 @@ template&lt;typename ViewType &gt; </div>
 
 <p>Returns the size of the Scalar dimension for the View. This is 0 for non-AD types. This method is useful for sizing scratch storage in hierarchically parallel kernels. Whereas get_dimension_scalar() returns 1 for POD types, this returns 0 for POD types. </p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00805">805</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00913">913</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_intrepid2___utils_8hpp_source.html#l00805">Intrepid2::getScalarDimensionForView()</a>.</p>
+<p class="reference">References <a class="el" href="_intrepid2___utils_8hpp_source.html#l00913">Intrepid2::getScalarDimensionForView()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_intrepid2___utils_8hpp_source.html#l00805">Intrepid2::getScalarDimensionForView()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_intrepid2___utils_8hpp_source.html#l00913">Intrepid2::getScalarDimensionForView()</a>.</p>
 
 </div>
 </div>
@@ -981,11 +1212,11 @@ template&lt;typename Scalar &gt; </div>
 
 <p>Returns a vector size to be used for the provided Scalar type in the context of hierarchically-parallel Kokkos functor execution. </p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00793">793</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00901">901</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_intrepid2___utils_8hpp_source.html#l00793">Intrepid2::getVectorSizeForHierarchicalParallelism()</a>.</p>
+<p class="reference">References <a class="el" href="_intrepid2___utils_8hpp_source.html#l00901">Intrepid2::getVectorSizeForHierarchicalParallelism()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_intrepid2___utils_8hpp_source.html#l00793">Intrepid2::getVectorSizeForHierarchicalParallelism()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_intrepid2___utils_8hpp_source.html#l00901">Intrepid2::getVectorSizeForHierarchicalParallelism()</a>.</p>
 
 </div>
 </div>
@@ -1025,7 +1256,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00265">265</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00266">266</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
 
 </div>
 </div>
@@ -1065,7 +1296,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00259">259</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00260">260</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
 
 </div>
 </div>
@@ -1123,7 +1354,7 @@ template&lt;typename IdxType , typename DimType , typename IterType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00204">204</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00205">205</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
 
 </div>
 </div>
@@ -1193,7 +1424,7 @@ template&lt;typename IdxType , typename DimType , typename IterType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00220">220</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00221">221</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
 
 </div>
 </div>
@@ -1210,7 +1441,7 @@ template&lt;typename IdxType , typename DimType , typename IterType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00786">786</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00894">894</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
 
 </div>
 </div>
@@ -1226,7 +1457,7 @@ template&lt;typename IdxType , typename DimType , typename IterType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00782">782</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00890">890</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
 
 </div>
 </div>
