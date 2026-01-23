@@ -12,7 +12,7 @@ Trilinos is a comprehensive software framework for scientific computing, providi
 ---
 {% comment %}Loop over capability areas.{% endcomment -%}
 {% for capabilityArea in site.capabilityAreas %}
-<h2>{{ capabilityArea.name }}</h2>
+<h2 id="{{ capabilityArea.label }}">{{ capabilityArea.name }}</h2>
 <ul>
 
 {% comment %}Loop over capabilities.{% endcomment -%}
