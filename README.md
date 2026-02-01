@@ -31,3 +31,8 @@ More details on update website can be found [here](https://cse-software.github.i
  
 
 
+# Structure
+
+We are using so-called collections to manage packages, package areas, capabilities and capability areas.
+These are collected in the folders `_packages`, `_packageAreas`, `_capabilities` and `_capabilityAreas`.
+Each folder contains a file `0_fileFormat.txt` with a description of the metadata fields.
