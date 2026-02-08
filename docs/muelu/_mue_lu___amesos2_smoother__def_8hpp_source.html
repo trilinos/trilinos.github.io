@@ -223,7 +223,7 @@ $(document).ready(function(){initNavTree('_mue_lu___amesos2_smoother__def_8hpp_s
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="preprocessor">#if defined(HAVE_AMESOS2_KLU2)</span></div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <a class="code hl_variable" href="class_mue_lu_1_1_amesos2_smoother.html#a2588fe554cf0157008e001a4831a021c">type_</a> = <span class="stringliteral">&quot;Klu&quot;</span>;</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="preprocessor">#elif defined(HAVE_AMESOS2_SUPERLU)</span></div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <a class="code hl_variable" href="class_mue_lu_1_1_amesos2_smoother.html#a2588fe554cf0157008e001a4831a021c">type_</a>          = <span class="stringliteral">&quot;Superlu&quot;</span>;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <a class="code hl_variable" href="class_mue_lu_1_1_amesos2_smoother.html#a2588fe554cf0157008e001a4831a021c">type_</a> = <span class="stringliteral">&quot;Superlu&quot;</span>;</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="preprocessor">#elif defined(HAVE_AMESOS2_SUPERLUDIST)</span></div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <a class="code hl_variable" href="class_mue_lu_1_1_amesos2_smoother.html#a2588fe554cf0157008e001a4831a021c">type_</a> = <span class="stringliteral">&quot;Superludist&quot;</span>;</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="preprocessor">#elif defined(HAVE_AMESOS2_BASKER)</span></div>
@@ -319,236 +319,228 @@ $(document).ready(function(){initNavTree('_mue_lu___amesos2_smoother__def_8hpp_s
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>      colMap           = rowMap;</div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    }</div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="preprocessor">#if KOKKOS_VERSION &gt;= 40799</span></div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    <span class="keyword">using </span>ATS = KokkosKernels::ArithTraits&lt;SC&gt;;</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    <span class="keyword">using </span>ATS      = Kokkos::ArithTraits&lt;SC&gt;;</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    <span class="keyword">using </span>impl_Scalar = <span class="keyword">typename</span> ATS::val_type;</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span><span class="preprocessor">#if KOKKOS_VERSION &gt;= 40799</span></div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <span class="keyword">using </span>impl_ATS = KokkosKernels::ArithTraits&lt;impl_Scalar&gt;;</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <span class="keyword">using </span>impl_ATS = Kokkos::ArithTraits&lt;impl_Scalar&gt;;</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    <span class="keyword">using </span>range_type = Kokkos::RangePolicy&lt;LO, typename NO::execution_space&gt;;</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    <span class="keyword">using </span>ATS         = KokkosKernels::ArithTraits&lt;SC&gt;;</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    <span class="keyword">using </span>impl_Scalar = <span class="keyword">typename</span> ATS::val_type;</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    <span class="keyword">using </span>impl_ATS    = KokkosKernels::ArithTraits&lt;impl_Scalar&gt;;</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    <span class="keyword">using </span>range_type  = Kokkos::RangePolicy&lt;LO, typename NO::execution_space&gt;;</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    <span class="keyword">typedef</span> <span class="keyword">typename</span> Matrix::local_matrix_device_type KCRS;</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <span class="keyword">typedef</span> <span class="keyword">typename</span> KCRS::StaticCrsGraphType graph_t;</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <span class="keyword">typedef</span> <span class="keyword">typename</span> graph_t::row_map_type::non_const_type lno_view_t;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <span class="keyword">typedef</span> <span class="keyword">typename</span> graph_t::entries_type::non_const_type lno_nnz_view_t;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <span class="keyword">typedef</span> <span class="keyword">typename</span> KCRS::values_type::non_const_type scalar_view_t;</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    <span class="keyword">const</span> impl_Scalar impl_SC_ZERO = impl_ATS::zero();</div>
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    <span class="keyword">typedef</span> <span class="keyword">typename</span> Matrix::local_matrix_device_type KCRS;</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    <span class="keyword">typedef</span> <span class="keyword">typename</span> KCRS::StaticCrsGraphType graph_t;</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    <span class="keyword">typedef</span> <span class="keyword">typename</span> graph_t::row_map_type::non_const_type lno_view_t;</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    <span class="keyword">typedef</span> <span class="keyword">typename</span> graph_t::entries_type::non_const_type lno_nnz_view_t;</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    <span class="keyword">typedef</span> <span class="keyword">typename</span> KCRS::values_type::non_const_type scalar_view_t;</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    <span class="keywordtype">size_t</span> lclNumRows       = rowMap-&gt;getLocalNumElements();</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    <a class="code hl_typedef" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> lclNumCols = Teuchos::as&lt;LocalOrdinal&gt;(gblNumCols);</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    lno_view_t newRowPointers(<span class="stringliteral">&quot;newRowPointers&quot;</span>, lclNumRows + 1);</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    lno_nnz_view_t newColIndices(<span class="stringliteral">&quot;newColIndices&quot;</span>, lclNumRows * gblNumCols);</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    scalar_view_t newValues(<span class="stringliteral">&quot;newValues&quot;</span>, lclNumRows * gblNumCols);</div>
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    <span class="keyword">const</span> impl_Scalar impl_SC_ZERO = impl_ATS::zero();</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    <span class="keywordtype">size_t</span> lclNumRows       = rowMap-&gt;getLocalNumElements();</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <a class="code hl_typedef" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> lclNumCols = Teuchos::as&lt;LocalOrdinal&gt;(gblNumCols);</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    lno_view_t newRowPointers(<span class="stringliteral">&quot;newRowPointers&quot;</span>, lclNumRows + 1);</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    lno_nnz_view_t newColIndices(<span class="stringliteral">&quot;newColIndices&quot;</span>, lclNumRows * gblNumCols);</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    scalar_view_t newValues(<span class="stringliteral">&quot;newValues&quot;</span>, lclNumRows * gblNumCols);</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    impl_Scalar shift;</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    {</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>      RCP&lt;Vector&gt; diag = VectorFactory::Build(A-&gt;getRowMap());</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>      A-&gt;getLocalDiagCopy(*diag);</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>      shift = diag-&gt;normInf();</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    }</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    <span class="comment">// form normalization * nullspace * nullspace^T</span></div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    {</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>      <span class="keyword">auto</span> lclNullspace        = Nullspace-&gt;getLocalViewDevice(Tpetra::Access::ReadOnly);</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>      <span class="keyword">auto</span> lclGhostedNullspace = ghostedNullspace-&gt;getLocalViewDevice(Tpetra::Access::ReadOnly);</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>      Kokkos::parallel_for(</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>          <span class="stringliteral">&quot;MueLu:Amesos2Smoother::fixNullspace_1&quot;</span>, range_type(0, lclNumRows + 1),</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>          KOKKOS_LAMBDA(<span class="keyword">const</span> <span class="keywordtype">size_t</span> i) {</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>            <span class="keywordflow">if</span> (i &lt; lclNumRows) {</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>              newRowPointers(i) = i * gblNumCols;</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>              <span class="keywordflow">for</span> (<a class="code hl_typedef" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> j = 0; j &lt; lclNumCols; j++) {</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>                newColIndices(i * gblNumCols + j) = j;</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>                newValues(i * gblNumCols + j)     = impl_SC_ZERO;</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>                <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code hl_define" href="_mue_lu___g_m_r_e_s_solver__def_8hpp.html#a03a4ee36405cbb496e147f703a06a260">I</a> = 0; <a class="code hl_define" href="_mue_lu___g_m_r_e_s_solver__def_8hpp.html#a03a4ee36405cbb496e147f703a06a260">I</a> &lt; lclNullspace.extent(1); <a class="code hl_define" href="_mue_lu___g_m_r_e_s_solver__def_8hpp.html#a03a4ee36405cbb496e147f703a06a260">I</a>++)</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>                  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> J = 0; J &lt; lclGhostedNullspace.extent(1); J++)</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>                    newValues(i * gblNumCols + j) += shift * lclNullspace(i, <a class="code hl_define" href="_mue_lu___g_m_r_e_s_solver__def_8hpp.html#a03a4ee36405cbb496e147f703a06a260">I</a>) * impl_ATS::conjugate(lclGhostedNullspace(j, J));</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>              }</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>            } <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>              newRowPointers(lclNumRows) = lclNumRows * gblNumCols;</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>          });</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    }</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span> </div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    <span class="comment">// add A</span></div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="keywordflow">if</span> (colMap-&gt;lib() == Xpetra::UseTpetra) {</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>      <span class="keyword">auto</span> lclA          = A-&gt;getLocalMatrixDevice();</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>      <span class="keyword">auto</span> lclColMapA    = A-&gt;getColMap()-&gt;getLocalMap();</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>      <span class="keyword">auto</span> lclColMapANew = colMap-&gt;getLocalMap();</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>      Kokkos::parallel_for(</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>          <span class="stringliteral">&quot;MueLu:Amesos2Smoother::fixNullspace_2&quot;</span>, range_type(0, lclNumRows),</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>          KOKKOS_LAMBDA(<span class="keyword">const</span> <span class="keywordtype">size_t</span> i) {</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> jj = lclA.graph.row_map(i); jj &lt; lclA.graph.row_map(i + 1); jj++) {</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>              LO j          = lclColMapANew.getLocalElement(lclColMapA.getGlobalElement(lclA.graph.entries(jj)));</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>              impl_Scalar v = lclA.values(jj);</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>              newValues(i * gblNumCols + j) += v;</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>            }</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>          });</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>      <span class="keyword">auto</span> lclA = A-&gt;getLocalMatrixHost();</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>      <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; lclNumRows; i++) {</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> jj = lclA.graph.row_map(i); jj &lt; lclA.graph.row_map(i + 1); jj++) {</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>          LO j = colMap-&gt;getLocalElement(A-&gt;getColMap()-&gt;getGlobalElement(lclA.graph.entries(jj)));</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>          SC v = lclA.values(jj);</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>          newValues(i * gblNumCols + j) += v;</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>        }</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>      }</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    }</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span> </div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    RCP&lt;Matrix&gt; newA       = rcp(<span class="keyword">new</span> CrsMatrixWrap(rowMap, colMap, 0));</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    RCP&lt;CrsMatrix&gt; newAcrs = toCrsMatrix(newA);</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    newAcrs-&gt;setAllValues(newRowPointers, newColIndices, newValues);</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    newAcrs-&gt;expertStaticFillComplete(A-&gt;getDomainMap(), A-&gt;getRangeMap(),</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>                                      importer, A-&gt;getCrsGraph()-&gt;getExporter());</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    impl_Scalar shift;</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    {</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>      RCP&lt;Vector&gt; diag = VectorFactory::Build(A-&gt;getRowMap());</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>      A-&gt;getLocalDiagCopy(*diag);</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>      shift = diag-&gt;normInf();</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    }</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    <span class="comment">// form normalization * nullspace * nullspace^T</span></div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    {</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>      <span class="keyword">auto</span> lclNullspace        = Nullspace-&gt;getLocalViewDevice(Tpetra::Access::ReadOnly);</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>      <span class="keyword">auto</span> lclGhostedNullspace = ghostedNullspace-&gt;getLocalViewDevice(Tpetra::Access::ReadOnly);</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>      Kokkos::parallel_for(</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>          <span class="stringliteral">&quot;MueLu:Amesos2Smoother::fixNullspace_1&quot;</span>, range_type(0, lclNumRows + 1),</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>          KOKKOS_LAMBDA(<span class="keyword">const</span> <span class="keywordtype">size_t</span> i) {</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>            <span class="keywordflow">if</span> (i &lt; lclNumRows) {</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>              newRowPointers(i) = i * gblNumCols;</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>              <span class="keywordflow">for</span> (<a class="code hl_typedef" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> j = 0; j &lt; lclNumCols; j++) {</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>                newColIndices(i * gblNumCols + j) = j;</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>                newValues(i * gblNumCols + j)     = impl_SC_ZERO;</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>                <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code hl_define" href="_mue_lu___g_m_r_e_s_solver__def_8hpp.html#a03a4ee36405cbb496e147f703a06a260">I</a> = 0; <a class="code hl_define" href="_mue_lu___g_m_r_e_s_solver__def_8hpp.html#a03a4ee36405cbb496e147f703a06a260">I</a> &lt; lclNullspace.extent(1); <a class="code hl_define" href="_mue_lu___g_m_r_e_s_solver__def_8hpp.html#a03a4ee36405cbb496e147f703a06a260">I</a>++)</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>                  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> J = 0; J &lt; lclGhostedNullspace.extent(1); J++)</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>                    newValues(i * gblNumCols + j) += shift * lclNullspace(i, <a class="code hl_define" href="_mue_lu___g_m_r_e_s_solver__def_8hpp.html#a03a4ee36405cbb496e147f703a06a260">I</a>) * impl_ATS::conjugate(lclGhostedNullspace(j, J));</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>              }</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>            } <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>              newRowPointers(lclNumRows) = lclNumRows * gblNumCols;</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>          });</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    }</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    <span class="comment">// add A</span></div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    <span class="keywordflow">if</span> (colMap-&gt;lib() == Xpetra::UseTpetra) {</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>      <span class="keyword">auto</span> lclA          = A-&gt;getLocalMatrixDevice();</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>      <span class="keyword">auto</span> lclColMapA    = A-&gt;getColMap()-&gt;getLocalMap();</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>      <span class="keyword">auto</span> lclColMapANew = colMap-&gt;getLocalMap();</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>      Kokkos::parallel_for(</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>          <span class="stringliteral">&quot;MueLu:Amesos2Smoother::fixNullspace_2&quot;</span>, range_type(0, lclNumRows),</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>          KOKKOS_LAMBDA(<span class="keyword">const</span> <span class="keywordtype">size_t</span> i) {</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> jj = lclA.graph.row_map(i); jj &lt; lclA.graph.row_map(i + 1); jj++) {</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>              LO j          = lclColMapANew.getLocalElement(lclColMapA.getGlobalElement(lclA.graph.entries(jj)));</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>              impl_Scalar v = lclA.values(jj);</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>              newValues(i * gblNumCols + j) += v;</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>            }</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>          });</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>      <span class="keyword">auto</span> lclA = A-&gt;getLocalMatrixHost();</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>      <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; lclNumRows; i++) {</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> jj = lclA.graph.row_map(i); jj &lt; lclA.graph.row_map(i + 1); jj++) {</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>          LO j = colMap-&gt;getLocalElement(A-&gt;getColMap()-&gt;getGlobalElement(lclA.graph.entries(jj)));</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>          SC v = lclA.values(jj);</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>          newValues(i * gblNumCols + j) += v;</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        }</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>      }</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    }</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> </div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    RCP&lt;Matrix&gt; newA       = rcp(<span class="keyword">new</span> CrsMatrixWrap(rowMap, colMap, 0));</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    RCP&lt;CrsMatrix&gt; newAcrs = toCrsMatrix(newA);</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    newAcrs-&gt;setAllValues(newRowPointers, newColIndices, newValues);</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    newAcrs-&gt;expertStaticFillComplete(A-&gt;getDomainMap(), A-&gt;getRangeMap(),</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>                                      importer, A-&gt;getCrsGraph()-&gt;getExporter());</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span> </div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    factorA = newA;</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    rowMap  = factorA-&gt;getRowMap();</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    factorA = A;</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>  }</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span> </div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>  RCP&lt;const Tpetra_CrsMatrix&gt; tA = toTpetra(factorA);</div>
 <div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span> </div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    factorA = newA;</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    rowMap  = factorA-&gt;getRowMap();</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    factorA = A;</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>  }</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span> </div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>  RCP&lt;const Tpetra_CrsMatrix&gt; tA = toTpetra(factorA);</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>  prec_ = Amesos2::create&lt;Tpetra_CrsMatrix, Tpetra_MultiVector&gt;(type_, tA);</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>  TEUCHOS_TEST_FOR_EXCEPTION(prec_ == Teuchos::null, <a class="code hl_class" href="class_mue_lu_1_1_exceptions_1_1_runtime_error.html">Exceptions::RuntimeError</a>, <span class="stringliteral">&quot;Amesos2::create returns Teuchos::null&quot;</span>);</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>  RCP&lt;Teuchos::ParameterList&gt; amesos2_params = Teuchos::rcpFromRef(pL.sublist(<span class="stringliteral">&quot;Amesos2&quot;</span>));</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>  amesos2_params-&gt;setName(<span class="stringliteral">&quot;Amesos2&quot;</span>);</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>  <span class="keywordflow">if</span> ((rowMap-&gt;getGlobalNumElements() != as&lt;size_t&gt;((rowMap-&gt;getMaxAllGlobalIndex() - rowMap-&gt;getMinAllGlobalIndex()) + 1)) ||</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>      (!rowMap-&gt;isContiguous() &amp;&amp; (rowMap-&gt;getComm()-&gt;getSize() == 1))) {</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>    <span class="keywordflow">if</span> (((type_ != <span class="stringliteral">&quot;Cusolver&quot;</span>) &amp;&amp; (type_ != <span class="stringliteral">&quot;Tacho&quot;</span>)) &amp;&amp; !(amesos2_params-&gt;sublist(prec_-&gt;name()).template isType&lt;bool&gt;(<span class="stringliteral">&quot;IsContiguous&quot;</span>)))</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>      amesos2_params-&gt;sublist(prec_-&gt;name()).set(<span class="stringliteral">&quot;IsContiguous&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;Are GIDs Contiguous&quot;</span>);</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>  }</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>  prec_-&gt;setParameters(amesos2_params);</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span> </div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>  prec_-&gt;numericFactorization();</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span> </div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>  <a class="code hl_function" href="class_mue_lu_1_1_smoother_prototype.html#a7a8cef915447724a9ab71e0089e9dbb9">SmootherPrototype::IsSetup</a>(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>}</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>  prec_ = Amesos2::create&lt;Tpetra_CrsMatrix, Tpetra_MultiVector&gt;(type_, tA);</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>  TEUCHOS_TEST_FOR_EXCEPTION(prec_ == Teuchos::null, <a class="code hl_class" href="class_mue_lu_1_1_exceptions_1_1_runtime_error.html">Exceptions::RuntimeError</a>, <span class="stringliteral">&quot;Amesos2::create returns Teuchos::null&quot;</span>);</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>  RCP&lt;Teuchos::ParameterList&gt; amesos2_params = Teuchos::rcpFromRef(pL.sublist(<span class="stringliteral">&quot;Amesos2&quot;</span>));</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>  amesos2_params-&gt;setName(<span class="stringliteral">&quot;Amesos2&quot;</span>);</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>  <span class="keywordflow">if</span> ((rowMap-&gt;getGlobalNumElements() != as&lt;size_t&gt;((rowMap-&gt;getMaxAllGlobalIndex() - rowMap-&gt;getMinAllGlobalIndex()) + 1)) ||</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>      (!rowMap-&gt;isContiguous() &amp;&amp; (rowMap-&gt;getComm()-&gt;getSize() == 1))) {</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    <span class="keywordflow">if</span> (((type_ != <span class="stringliteral">&quot;Cusolver&quot;</span>) &amp;&amp; (type_ != <span class="stringliteral">&quot;Tacho&quot;</span>)) &amp;&amp; !(amesos2_params-&gt;sublist(prec_-&gt;name()).template isType&lt;bool&gt;(<span class="stringliteral">&quot;IsContiguous&quot;</span>)))</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>      amesos2_params-&gt;sublist(prec_-&gt;name()).set(<span class="stringliteral">&quot;IsContiguous&quot;</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;Are GIDs Contiguous&quot;</span>);</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>  }</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>  prec_-&gt;setParameters(amesos2_params);</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span> </div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>  prec_-&gt;numericFactorization();</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>  <a class="code hl_function" href="class_mue_lu_1_1_smoother_prototype.html#a7a8cef915447724a9ab71e0089e9dbb9">SmootherPrototype::IsSetup</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>}</div>
 </div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span> </div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Scalar, <span class="keyword">class</span> LocalOrdinal, <span class="keyword">class</span> GlobalOrdinal, <span class="keyword">class</span> Node&gt;</div>
-<div class="foldopen" id="foldopen00316" data-start="{" data-end="}">
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno"><a class="line" href="class_mue_lu_1_1_amesos2_smoother.html#af4512fab364bd9a6a15da48470143f2a">  316</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_mue_lu_1_1_amesos2_smoother.html#af4512fab364bd9a6a15da48470143f2a">Amesos2Smoother&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;::Apply</a>(MultiVector&amp; X, <span class="keyword">const</span> MultiVector&amp; B, <span class="keywordtype">bool</span> <span class="comment">/* InitialGuessIsZero */</span>)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>  TEUCHOS_TEST_FOR_EXCEPTION(<a class="code hl_function" href="class_mue_lu_1_1_smoother_prototype.html#a7a8cef915447724a9ab71e0089e9dbb9">SmootherPrototype::IsSetup</a>() == <span class="keyword">false</span>, <a class="code hl_class" href="class_mue_lu_1_1_exceptions_1_1_runtime_error.html">Exceptions::RuntimeError</a>, <span class="stringliteral">&quot;MueLu::Amesos2Smoother::Apply(): Setup() has not been called&quot;</span>);</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span> </div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>  RCP&lt;Tpetra_MultiVector&gt; tX, tB;</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>  <span class="keywordflow">if</span> (!useTransformation_) {</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    tX = toTpetra(Teuchos::rcpFromRef(X));</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>    tB = toTpetra(Teuchos::rcpFromRef(<span class="keyword">const_cast&lt;</span>MultiVector&amp;<span class="keyword">&gt;</span>(B)));</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>    <span class="comment">// Copy data of the original vectors into the transformed ones</span></div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    <span class="keywordtype">size_t</span> numVectors = X.getNumVectors();</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>    <span class="keywordtype">size_t</span> length     = X.getLocalLength();</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span> </div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    TEUCHOS_TEST_FOR_EXCEPTION(numVectors &gt; 1, <a class="code hl_class" href="class_mue_lu_1_1_exceptions_1_1_runtime_error.html">Exceptions::RuntimeError</a>,</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>                               <span class="stringliteral">&quot;MueLu::Amesos2Smoother::Apply: Fixing coarse matrix for Amesos2 for multivectors has not been implemented yet.&quot;</span>);</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>    ArrayRCP&lt;const SC&gt; Xdata = X.getData(0), Bdata = B.getData(0);</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>    ArrayRCP&lt;SC&gt; X_data = X_-&gt;getDataNonConst(0), B_data = B_-&gt;getDataNonConst(0);</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span> </div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; length; i++) {</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>      X_data[i] = Xdata[i];</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>      B_data[i] = Bdata[i];</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>    }</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span> </div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    tX = toTpetra(X_);</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>    tB = toTpetra(B_);</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>  }</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span> </div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Scalar, <span class="keyword">class</span> LocalOrdinal, <span class="keyword">class</span> GlobalOrdinal, <span class="keyword">class</span> Node&gt;</div>
+<div class="foldopen" id="foldopen00308" data-start="{" data-end="}">
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno"><a class="line" href="class_mue_lu_1_1_amesos2_smoother.html#af4512fab364bd9a6a15da48470143f2a">  308</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_mue_lu_1_1_amesos2_smoother.html#af4512fab364bd9a6a15da48470143f2a">Amesos2Smoother&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;::Apply</a>(MultiVector&amp; X, <span class="keyword">const</span> MultiVector&amp; B, <span class="keywordtype">bool</span> <span class="comment">/* InitialGuessIsZero */</span>)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>  TEUCHOS_TEST_FOR_EXCEPTION(<a class="code hl_function" href="class_mue_lu_1_1_smoother_prototype.html#a7a8cef915447724a9ab71e0089e9dbb9">SmootherPrototype::IsSetup</a>() == <span class="keyword">false</span>, <a class="code hl_class" href="class_mue_lu_1_1_exceptions_1_1_runtime_error.html">Exceptions::RuntimeError</a>, <span class="stringliteral">&quot;MueLu::Amesos2Smoother::Apply(): Setup() has not been called&quot;</span>);</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span> </div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>  RCP&lt;Tpetra_MultiVector&gt; tX, tB;</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>  <span class="keywordflow">if</span> (!useTransformation_) {</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    tX = toTpetra(Teuchos::rcpFromRef(X));</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    tB = toTpetra(Teuchos::rcpFromRef(<span class="keyword">const_cast&lt;</span>MultiVector&amp;<span class="keyword">&gt;</span>(B)));</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    <span class="comment">// Copy data of the original vectors into the transformed ones</span></div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>    <span class="keywordtype">size_t</span> numVectors = X.getNumVectors();</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    <span class="keywordtype">size_t</span> length     = X.getLocalLength();</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span> </div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>    TEUCHOS_TEST_FOR_EXCEPTION(numVectors &gt; 1, <a class="code hl_class" href="class_mue_lu_1_1_exceptions_1_1_runtime_error.html">Exceptions::RuntimeError</a>,</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>                               <span class="stringliteral">&quot;MueLu::Amesos2Smoother::Apply: Fixing coarse matrix for Amesos2 for multivectors has not been implemented yet.&quot;</span>);</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>    ArrayRCP&lt;const SC&gt; Xdata = X.getData(0), Bdata = B.getData(0);</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>    ArrayRCP&lt;SC&gt; X_data = X_-&gt;getDataNonConst(0), B_data = B_-&gt;getDataNonConst(0);</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span> </div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; length; i++) {</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>      X_data[i] = Xdata[i];</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>      B_data[i] = Bdata[i];</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    }</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span> </div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>    tX = toTpetra(X_);</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>    tB = toTpetra(B_);</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>  }</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span> </div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>  prec_-&gt;setX(tX);</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>  prec_-&gt;setB(tB);</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span> </div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>  prec_-&gt;solve();</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span> </div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>  prec_-&gt;setX(Teuchos::null);</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>  prec_-&gt;setB(Teuchos::null);</div>
 <div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span> </div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>  prec_-&gt;setX(tX);</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>  prec_-&gt;setB(tB);</div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span> </div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>  prec_-&gt;solve();</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span> </div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>  prec_-&gt;setX(Teuchos::null);</div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>  prec_-&gt;setB(Teuchos::null);</div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span> </div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>  <span class="keywordflow">if</span> (useTransformation_) {</div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>    <span class="comment">// Copy data from the transformed vectors into the original ones</span></div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>    <span class="keywordtype">size_t</span> length = X.getLocalLength();</div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span> </div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>    ArrayRCP&lt;SC&gt; Xdata        = X.getDataNonConst(0);</div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>    ArrayRCP&lt;const SC&gt; X_data = X_-&gt;getData(0);</div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span> </div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; length; i++)</div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>      Xdata[i] = X_data[i];</div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>  }</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>  <span class="keywordflow">if</span> (useTransformation_) {</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>    <span class="comment">// Copy data from the transformed vectors into the original ones</span></div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>    <span class="keywordtype">size_t</span> length = X.getLocalLength();</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span> </div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>    ArrayRCP&lt;SC&gt; Xdata        = X.getDataNonConst(0);</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    ArrayRCP&lt;const SC&gt; X_data = X_-&gt;getData(0);</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span> </div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; length; i++)</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>      Xdata[i] = X_data[i];</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>  }</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span> </div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>  {</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>    Teuchos::ParameterList pL = this-&gt;GetParameterList();</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>    <span class="keywordflow">if</span> (pL.get&lt;<span class="keywordtype">bool</span>&gt;(<span class="stringliteral">&quot;fix nullspace&quot;</span>)) {</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>      projection_-&gt;projectOut(X);</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>    }</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>  }</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>}</div>
+</div>
 <div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span> </div>
-<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>  {</div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>    Teuchos::ParameterList pL = this-&gt;GetParameterList();</div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>    <span class="keywordflow">if</span> (pL.get&lt;<span class="keywordtype">bool</span>&gt;(<span class="stringliteral">&quot;fix nullspace&quot;</span>)) {</div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>      projection_-&gt;projectOut(X);</div>
-<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>    }</div>
-<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>  }</div>
-<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>}</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Scalar, <span class="keyword">class</span> LocalOrdinal, <span class="keyword">class</span> GlobalOrdinal, <span class="keyword">class</span> Node&gt;</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>RCP&lt;MueLu::SmootherPrototype&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt; &gt;</div>
+<div class="foldopen" id="foldopen00363" data-start="{" data-end="}">
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno"><a class="line" href="class_mue_lu_1_1_amesos2_smoother.html#a469b59ef437ae7ed3afa1498264f0ee3">  363</a></span><a class="code hl_function" href="class_mue_lu_1_1_amesos2_smoother.html#a469b59ef437ae7ed3afa1498264f0ee3">Amesos2Smoother&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;::</a></div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span><a class="code hl_function" href="class_mue_lu_1_1_amesos2_smoother.html#a469b59ef437ae7ed3afa1498264f0ee3">    Copy</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>  <span class="keywordflow">return</span> rcp(<span class="keyword">new</span> <a class="code hl_class" href="class_mue_lu_1_1_amesos2_smoother.html">Amesos2Smoother</a>(*<span class="keyword">this</span>));</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>}</div>
 </div>
-<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span> </div>
-<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Scalar, <span class="keyword">class</span> LocalOrdinal, <span class="keyword">class</span> GlobalOrdinal, <span class="keyword">class</span> Node&gt;</div>
-<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>RCP&lt;MueLu::SmootherPrototype&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt; &gt;</div>
-<div class="foldopen" id="foldopen00371" data-start="{" data-end="}">
-<div class="line"><a id="l00371" name="l00371"></a><span class="lineno"><a class="line" href="class_mue_lu_1_1_amesos2_smoother.html#a469b59ef437ae7ed3afa1498264f0ee3">  371</a></span><a class="code hl_function" href="class_mue_lu_1_1_amesos2_smoother.html#a469b59ef437ae7ed3afa1498264f0ee3">Amesos2Smoother&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;::</a></div>
-<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span><a class="code hl_function" href="class_mue_lu_1_1_amesos2_smoother.html#a469b59ef437ae7ed3afa1498264f0ee3">    Copy</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>  <span class="keywordflow">return</span> rcp(<span class="keyword">new</span> <a class="code hl_class" href="class_mue_lu_1_1_amesos2_smoother.html">Amesos2Smoother</a>(*<span class="keyword">this</span>));</div>
-<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>}</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span> </div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Scalar, <span class="keyword">class</span> LocalOrdinal, <span class="keyword">class</span> GlobalOrdinal, <span class="keyword">class</span> Node&gt;</div>
+<div class="foldopen" id="foldopen00369" data-start="{" data-end="}">
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno"><a class="line" href="class_mue_lu_1_1_amesos2_smoother.html#a4c963fbdac34de1ac7376f9ad4181f89">  369</a></span>std::string <a class="code hl_function" href="class_mue_lu_1_1_amesos2_smoother.html#a4c963fbdac34de1ac7376f9ad4181f89">Amesos2Smoother&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;::description</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>  std::ostringstream out;</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span> </div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="class_mue_lu_1_1_smoother_prototype.html#a7a8cef915447724a9ab71e0089e9dbb9">SmootherPrototype::IsSetup</a>() == <span class="keyword">true</span>) {</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>    out &lt;&lt; prec_-&gt;description();</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span> </div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>    out &lt;&lt; <a class="code hl_function" href="class_mue_lu_1_1_describable.html#ac5692382309bca28b7eb771c0feaf3d4">SmootherPrototype::description</a>();</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>    out &lt;&lt; <span class="stringliteral">&quot;{type = &quot;</span> &lt;&lt; type_ &lt;&lt; <span class="stringliteral">&quot;}&quot;</span>;</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>  }</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>  <span class="keywordflow">return</span> out.str();</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>}</div>
 </div>
-<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span> </div>
-<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Scalar, <span class="keyword">class</span> LocalOrdinal, <span class="keyword">class</span> GlobalOrdinal, <span class="keyword">class</span> Node&gt;</div>
-<div class="foldopen" id="foldopen00377" data-start="{" data-end="}">
-<div class="line"><a id="l00377" name="l00377"></a><span class="lineno"><a class="line" href="class_mue_lu_1_1_amesos2_smoother.html#a4c963fbdac34de1ac7376f9ad4181f89">  377</a></span>std::string <a class="code hl_function" href="class_mue_lu_1_1_amesos2_smoother.html#a4c963fbdac34de1ac7376f9ad4181f89">Amesos2Smoother&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;::description</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>  std::ostringstream out;</div>
-<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span> </div>
-<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="class_mue_lu_1_1_smoother_prototype.html#a7a8cef915447724a9ab71e0089e9dbb9">SmootherPrototype::IsSetup</a>() == <span class="keyword">true</span>) {</div>
-<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>    out &lt;&lt; prec_-&gt;description();</div>
-<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span> </div>
-<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>    out &lt;&lt; <a class="code hl_function" href="class_mue_lu_1_1_describable.html#ac5692382309bca28b7eb771c0feaf3d4">SmootherPrototype::description</a>();</div>
-<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>    out &lt;&lt; <span class="stringliteral">&quot;{type = &quot;</span> &lt;&lt; type_ &lt;&lt; <span class="stringliteral">&quot;}&quot;</span>;</div>
-<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>  }</div>
-<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>  <span class="keywordflow">return</span> out.str();</div>
-<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>}</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span> </div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Scalar, <span class="keyword">class</span> LocalOrdinal, <span class="keyword">class</span> GlobalOrdinal, <span class="keyword">class</span> Node&gt;</div>
+<div class="foldopen" id="foldopen00383" data-start="{" data-end="}">
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno"><a class="line" href="class_mue_lu_1_1_amesos2_smoother.html#a63a6328e4ee68188dc21bc81b017a2f7">  383</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_mue_lu_1_1_amesos2_smoother.html#a63a6328e4ee68188dc21bc81b017a2f7">Amesos2Smoother&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;::print</a>(Teuchos::FancyOStream&amp; out, <span class="keyword">const</span> <a class="code hl_typedef" href="namespace_mue_lu.html#a0265bde4f2d409b3d8414b59a20a5168">VerbLevel</a> verbLevel)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>  <a class="code hl_define" href="_mue_lu___base_class_8hpp.html#a4c782d5f601f0e715831a411095ef99f">MUELU_DESCRIBE</a>;</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span> </div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>  <span class="keywordflow">if</span> (verbLevel &amp; <a class="code hl_enumvalue" href="namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1faf380d18f674872fe2bd4ca526f51bbf1">Parameters0</a>)</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>    out0 &lt;&lt; <span class="stringliteral">&quot;Prec. type: &quot;</span> &lt;&lt; type_ &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span> </div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>  <span class="keywordflow">if</span> (verbLevel &amp; <a class="code hl_enumvalue" href="namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1faf9a2394955219647f1b426bf2d026ca1">Parameters1</a>) {</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>    out0 &lt;&lt; <span class="stringliteral">&quot;Parameter list: &quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>    Teuchos::OSTab tab2(out);</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>    out &lt;&lt; this-&gt;GetParameterList();</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>  }</div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span> </div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>  <span class="keywordflow">if</span> ((verbLevel &amp; <a class="code hl_enumvalue" href="namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1fa8844d4aee6f17d6329d46d2f8c0653b8">External</a>) &amp;&amp; prec_ != Teuchos::null) {</div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>    Teuchos::OSTab tab2(out);</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>    out &lt;&lt; *prec_ &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>  }</div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span> </div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>  <span class="keywordflow">if</span> (verbLevel &amp; <a class="code hl_enumvalue" href="namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1fa6a391ac1916a6d1f5e3b952fc5e248b5">Debug</a>)</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>    out0 &lt;&lt; <span class="stringliteral">&quot;IsSetup: &quot;</span> &lt;&lt; Teuchos::toString(<a class="code hl_function" href="class_mue_lu_1_1_smoother_prototype.html#a7a8cef915447724a9ab71e0089e9dbb9">SmootherPrototype::IsSetup</a>()) &lt;&lt; std::endl</div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>         &lt;&lt; <span class="stringliteral">&quot;-&quot;</span> &lt;&lt; std::endl</div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>         &lt;&lt; <span class="stringliteral">&quot;RCP&lt;prec_&gt;: &quot;</span> &lt;&lt; prec_ &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>}</div>
 </div>
-<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span> </div>
-<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Scalar, <span class="keyword">class</span> LocalOrdinal, <span class="keyword">class</span> GlobalOrdinal, <span class="keyword">class</span> Node&gt;</div>
-<div class="foldopen" id="foldopen00391" data-start="{" data-end="}">
-<div class="line"><a id="l00391" name="l00391"></a><span class="lineno"><a class="line" href="class_mue_lu_1_1_amesos2_smoother.html#a63a6328e4ee68188dc21bc81b017a2f7">  391</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_mue_lu_1_1_amesos2_smoother.html#a63a6328e4ee68188dc21bc81b017a2f7">Amesos2Smoother&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;::print</a>(Teuchos::FancyOStream&amp; out, <span class="keyword">const</span> <a class="code hl_typedef" href="namespace_mue_lu.html#a0265bde4f2d409b3d8414b59a20a5168">VerbLevel</a> verbLevel)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>  <a class="code hl_define" href="_mue_lu___base_class_8hpp.html#a4c782d5f601f0e715831a411095ef99f">MUELU_DESCRIBE</a>;</div>
-<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span> </div>
-<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>  <span class="keywordflow">if</span> (verbLevel &amp; <a class="code hl_enumvalue" href="namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1faf380d18f674872fe2bd4ca526f51bbf1">Parameters0</a>)</div>
-<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>    out0 &lt;&lt; <span class="stringliteral">&quot;Prec. type: &quot;</span> &lt;&lt; type_ &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span> </div>
-<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>  <span class="keywordflow">if</span> (verbLevel &amp; <a class="code hl_enumvalue" href="namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1faf9a2394955219647f1b426bf2d026ca1">Parameters1</a>) {</div>
-<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>    out0 &lt;&lt; <span class="stringliteral">&quot;Parameter list: &quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>    Teuchos::OSTab tab2(out);</div>
-<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>    out &lt;&lt; this-&gt;GetParameterList();</div>
-<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>  }</div>
-<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span> </div>
-<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>  <span class="keywordflow">if</span> ((verbLevel &amp; <a class="code hl_enumvalue" href="namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1fa8844d4aee6f17d6329d46d2f8c0653b8">External</a>) &amp;&amp; prec_ != Teuchos::null) {</div>
-<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>    Teuchos::OSTab tab2(out);</div>
-<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>    out &lt;&lt; *prec_ &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>  }</div>
-<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span> </div>
-<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>  <span class="keywordflow">if</span> (verbLevel &amp; <a class="code hl_enumvalue" href="namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1fa6a391ac1916a6d1f5e3b952fc5e248b5">Debug</a>)</div>
-<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>    out0 &lt;&lt; <span class="stringliteral">&quot;IsSetup: &quot;</span> &lt;&lt; Teuchos::toString(<a class="code hl_function" href="class_mue_lu_1_1_smoother_prototype.html#a7a8cef915447724a9ab71e0089e9dbb9">SmootherPrototype::IsSetup</a>()) &lt;&lt; std::endl</div>
-<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>         &lt;&lt; <span class="stringliteral">&quot;-&quot;</span> &lt;&lt; std::endl</div>
-<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>         &lt;&lt; <span class="stringliteral">&quot;RCP&lt;prec_&gt;: &quot;</span> &lt;&lt; prec_ &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span> </div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Scalar, <span class="keyword">class</span> LocalOrdinal, <span class="keyword">class</span> GlobalOrdinal, <span class="keyword">class</span> Node&gt;</div>
+<div class="foldopen" id="foldopen00407" data-start="{" data-end="}">
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno"><a class="line" href="class_mue_lu_1_1_amesos2_smoother.html#a1568aaed5b4e12f97044e96e331b962e">  407</a></span><span class="keywordtype">size_t</span> <a class="code hl_function" href="class_mue_lu_1_1_amesos2_smoother.html#a1568aaed5b4e12f97044e96e331b962e">Amesos2Smoother&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;::getNodeSmootherComplexity</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>  <span class="keywordflow">if</span> (!prec_.is_null())</div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>    <span class="keywordflow">return</span> prec_-&gt;getStatus().getNnzLU();</div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>  <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>    <span class="keywordflow">return</span> 0.0;</div>
 <div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>}</div>
 </div>
-<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span> </div>
-<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Scalar, <span class="keyword">class</span> LocalOrdinal, <span class="keyword">class</span> GlobalOrdinal, <span class="keyword">class</span> Node&gt;</div>
-<div class="foldopen" id="foldopen00415" data-start="{" data-end="}">
-<div class="line"><a id="l00415" name="l00415"></a><span class="lineno"><a class="line" href="class_mue_lu_1_1_amesos2_smoother.html#a1568aaed5b4e12f97044e96e331b962e">  415</a></span><span class="keywordtype">size_t</span> <a class="code hl_function" href="class_mue_lu_1_1_amesos2_smoother.html#a1568aaed5b4e12f97044e96e331b962e">Amesos2Smoother&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;::getNodeSmootherComplexity</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>  <span class="keywordflow">if</span> (!prec_.is_null())</div>
-<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>    <span class="keywordflow">return</span> prec_-&gt;getStatus().getNnzLU();</div>
-<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>  <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>    <span class="keywordflow">return</span> 0.0;</div>
-<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>}</div>
-</div>
-<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>}  <span class="comment">// namespace MueLu</span></div>
-<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span> </div>
-<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span><span class="preprocessor">#endif  </span><span class="comment">// MUELU_AMESOS2SMOOTHER_DEF_HPP</span></div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>}  <span class="comment">// namespace MueLu</span></div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span> </div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span><span class="preprocessor">#endif  </span><span class="comment">// MUELU_AMESOS2SMOOTHER_DEF_HPP</span></div>
 <div class="ttc" id="a_mue_lu___amesos2_smoother__decl_8hpp_html"><div class="ttname"><a href="_mue_lu___amesos2_smoother__decl_8hpp.html">MueLu_Amesos2Smoother_decl.hpp</a></div></div>
 <div class="ttc" id="a_mue_lu___base_class_8hpp_html_a4c782d5f601f0e715831a411095ef99f"><div class="ttname"><a href="_mue_lu___base_class_8hpp.html#a4c782d5f601f0e715831a411095ef99f">MUELU_DESCRIBE</a></div><div class="ttdeci">#define MUELU_DESCRIBE</div><div class="ttdoc">Helper macro for implementing Describable::describe() for BaseClass objects.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___base_class_8hpp_source.html#l00044">MueLu_BaseClass.hpp:44</a></div></div>
 <div class="ttc" id="a_mue_lu___config_defs_8hpp_html"><div class="ttname"><a href="_mue_lu___config_defs_8hpp.html">MueLu_ConfigDefs.hpp</a></div></div>
@@ -559,15 +551,15 @@ $(document).ready(function(){initNavTree('_mue_lu___amesos2_smoother__def_8hpp_s
 <div class="ttc" id="a_mue_lu___use_default_types_8hpp_html_a227573c7cbca9c75611ada9e032620cc"><div class="ttname"><a href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a></div><div class="ttdeci">MueLu::DefaultScalar Scalar</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___use_default_types_8hpp_source.html#l00012">MueLu_UseDefaultTypes.hpp:12</a></div></div>
 <div class="ttc" id="aclass_mue_lu_1_1_amesos2_smoother_html"><div class="ttname"><a href="class_mue_lu_1_1_amesos2_smoother.html">MueLu::Amesos2Smoother</a></div><div class="ttdoc">Class that encapsulates Amesos2 direct solvers.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___amesos2_smoother__decl_8hpp_source.html#l00058">MueLu_Amesos2Smoother_decl.hpp:58</a></div></div>
 <div class="ttc" id="aclass_mue_lu_1_1_amesos2_smoother_html_a1245a849be53f6dc9463097cfe618f34"><div class="ttname"><a href="class_mue_lu_1_1_amesos2_smoother.html#a1245a849be53f6dc9463097cfe618f34">MueLu::Amesos2Smoother::DeclareInput</a></div><div class="ttdeci">void DeclareInput(Level &amp;currentLevel) const</div><div class="ttdoc">Input.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___amesos2_smoother__def_8hpp_source.html#l00153">MueLu_Amesos2Smoother_def.hpp:153</a></div></div>
-<div class="ttc" id="aclass_mue_lu_1_1_amesos2_smoother_html_a1568aaed5b4e12f97044e96e331b962e"><div class="ttname"><a href="class_mue_lu_1_1_amesos2_smoother.html#a1568aaed5b4e12f97044e96e331b962e">MueLu::Amesos2Smoother::getNodeSmootherComplexity</a></div><div class="ttdeci">size_t getNodeSmootherComplexity() const</div><div class="ttdoc">Get a rough estimate of cost per iteration.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___amesos2_smoother__def_8hpp_source.html#l00415">MueLu_Amesos2Smoother_def.hpp:415</a></div></div>
+<div class="ttc" id="aclass_mue_lu_1_1_amesos2_smoother_html_a1568aaed5b4e12f97044e96e331b962e"><div class="ttname"><a href="class_mue_lu_1_1_amesos2_smoother.html#a1568aaed5b4e12f97044e96e331b962e">MueLu::Amesos2Smoother::getNodeSmootherComplexity</a></div><div class="ttdeci">size_t getNodeSmootherComplexity() const</div><div class="ttdoc">Get a rough estimate of cost per iteration.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___amesos2_smoother__def_8hpp_source.html#l00407">MueLu_Amesos2Smoother_def.hpp:407</a></div></div>
 <div class="ttc" id="aclass_mue_lu_1_1_amesos2_smoother_html_a2588fe554cf0157008e001a4831a021c"><div class="ttname"><a href="class_mue_lu_1_1_amesos2_smoother.html#a2588fe554cf0157008e001a4831a021c">MueLu::Amesos2Smoother::type_</a></div><div class="ttdeci">std::string type_</div><div class="ttdoc">amesos2-specific key phrase that denote smoother type</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___amesos2_smoother__decl_8hpp_source.html#l00126">MueLu_Amesos2Smoother_decl.hpp:126</a></div></div>
-<div class="ttc" id="aclass_mue_lu_1_1_amesos2_smoother_html_a469b59ef437ae7ed3afa1498264f0ee3"><div class="ttname"><a href="class_mue_lu_1_1_amesos2_smoother.html#a469b59ef437ae7ed3afa1498264f0ee3">MueLu::Amesos2Smoother::Copy</a></div><div class="ttdeci">RCP&lt; SmootherPrototype &gt; Copy() const</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___amesos2_smoother__def_8hpp_source.html#l00371">MueLu_Amesos2Smoother_def.hpp:372</a></div></div>
-<div class="ttc" id="aclass_mue_lu_1_1_amesos2_smoother_html_a4c963fbdac34de1ac7376f9ad4181f89"><div class="ttname"><a href="class_mue_lu_1_1_amesos2_smoother.html#a4c963fbdac34de1ac7376f9ad4181f89">MueLu::Amesos2Smoother::description</a></div><div class="ttdeci">std::string description() const</div><div class="ttdoc">Return a simple one-line description of this object.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___amesos2_smoother__def_8hpp_source.html#l00377">MueLu_Amesos2Smoother_def.hpp:377</a></div></div>
-<div class="ttc" id="aclass_mue_lu_1_1_amesos2_smoother_html_a63a6328e4ee68188dc21bc81b017a2f7"><div class="ttname"><a href="class_mue_lu_1_1_amesos2_smoother.html#a63a6328e4ee68188dc21bc81b017a2f7">MueLu::Amesos2Smoother::print</a></div><div class="ttdeci">void print(Teuchos::FancyOStream &amp;out, const VerbLevel verbLevel=Default) const</div><div class="ttdoc">Print the object with some verbosity level to an FancyOStream object.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___amesos2_smoother__def_8hpp_source.html#l00391">MueLu_Amesos2Smoother_def.hpp:391</a></div></div>
+<div class="ttc" id="aclass_mue_lu_1_1_amesos2_smoother_html_a469b59ef437ae7ed3afa1498264f0ee3"><div class="ttname"><a href="class_mue_lu_1_1_amesos2_smoother.html#a469b59ef437ae7ed3afa1498264f0ee3">MueLu::Amesos2Smoother::Copy</a></div><div class="ttdeci">RCP&lt; SmootherPrototype &gt; Copy() const</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___amesos2_smoother__def_8hpp_source.html#l00363">MueLu_Amesos2Smoother_def.hpp:364</a></div></div>
+<div class="ttc" id="aclass_mue_lu_1_1_amesos2_smoother_html_a4c963fbdac34de1ac7376f9ad4181f89"><div class="ttname"><a href="class_mue_lu_1_1_amesos2_smoother.html#a4c963fbdac34de1ac7376f9ad4181f89">MueLu::Amesos2Smoother::description</a></div><div class="ttdeci">std::string description() const</div><div class="ttdoc">Return a simple one-line description of this object.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___amesos2_smoother__def_8hpp_source.html#l00369">MueLu_Amesos2Smoother_def.hpp:369</a></div></div>
+<div class="ttc" id="aclass_mue_lu_1_1_amesos2_smoother_html_a63a6328e4ee68188dc21bc81b017a2f7"><div class="ttname"><a href="class_mue_lu_1_1_amesos2_smoother.html#a63a6328e4ee68188dc21bc81b017a2f7">MueLu::Amesos2Smoother::print</a></div><div class="ttdeci">void print(Teuchos::FancyOStream &amp;out, const VerbLevel verbLevel=Default) const</div><div class="ttdoc">Print the object with some verbosity level to an FancyOStream object.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___amesos2_smoother__def_8hpp_source.html#l00383">MueLu_Amesos2Smoother_def.hpp:383</a></div></div>
 <div class="ttc" id="aclass_mue_lu_1_1_amesos2_smoother_html_a9094466253f80faac4b187da30613991"><div class="ttname"><a href="class_mue_lu_1_1_amesos2_smoother.html#a9094466253f80faac4b187da30613991">MueLu::Amesos2Smoother::~Amesos2Smoother</a></div><div class="ttdeci">virtual ~Amesos2Smoother()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___amesos2_smoother__def_8hpp_source.html#l00138">MueLu_Amesos2Smoother_def.hpp:138</a></div></div>
 <div class="ttc" id="aclass_mue_lu_1_1_amesos2_smoother_html_ada61f77cc58832aa8242a8542feb1dcf"><div class="ttname"><a href="class_mue_lu_1_1_amesos2_smoother.html#ada61f77cc58832aa8242a8542feb1dcf">MueLu::Amesos2Smoother::GetValidParameterList</a></div><div class="ttdeci">RCP&lt; const ParameterList &gt; GetValidParameterList() const</div><div class="ttdoc">Return a const parameter list of valid parameters that setParameterList() will accept.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___amesos2_smoother__def_8hpp_source.html#l00141">MueLu_Amesos2Smoother_def.hpp:141</a></div></div>
 <div class="ttc" id="aclass_mue_lu_1_1_amesos2_smoother_html_ae7e656a1d170deceaa7d346fd924a517"><div class="ttname"><a href="class_mue_lu_1_1_amesos2_smoother.html#ae7e656a1d170deceaa7d346fd924a517">MueLu::Amesos2Smoother::Setup</a></div><div class="ttdeci">void Setup(Level &amp;currentLevel)</div><div class="ttdoc">Set up the direct solver. This creates the underlying Amesos2 solver object according to the paramete...</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___amesos2_smoother__def_8hpp_source.html#l00162">MueLu_Amesos2Smoother_def.hpp:162</a></div></div>
-<div class="ttc" id="aclass_mue_lu_1_1_amesos2_smoother_html_af4512fab364bd9a6a15da48470143f2a"><div class="ttname"><a href="class_mue_lu_1_1_amesos2_smoother.html#af4512fab364bd9a6a15da48470143f2a">MueLu::Amesos2Smoother::Apply</a></div><div class="ttdeci">void Apply(MultiVector &amp;X, const MultiVector &amp;B, bool InitialGuessIsZero=false) const</div><div class="ttdoc">Apply the direct solver. Solves the linear system AX=B using the constructed solver.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___amesos2_smoother__def_8hpp_source.html#l00316">MueLu_Amesos2Smoother_def.hpp:316</a></div></div>
+<div class="ttc" id="aclass_mue_lu_1_1_amesos2_smoother_html_af4512fab364bd9a6a15da48470143f2a"><div class="ttname"><a href="class_mue_lu_1_1_amesos2_smoother.html#af4512fab364bd9a6a15da48470143f2a">MueLu::Amesos2Smoother::Apply</a></div><div class="ttdeci">void Apply(MultiVector &amp;X, const MultiVector &amp;B, bool InitialGuessIsZero=false) const</div><div class="ttdoc">Apply the direct solver. Solves the linear system AX=B using the constructed solver.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___amesos2_smoother__def_8hpp_source.html#l00308">MueLu_Amesos2Smoother_def.hpp:308</a></div></div>
 <div class="ttc" id="aclass_mue_lu_1_1_amesos2_smoother_html_afa76529d339ed5a43cccfe1fee4f086e"><div class="ttname"><a href="class_mue_lu_1_1_amesos2_smoother.html#afa76529d339ed5a43cccfe1fee4f086e">MueLu::Amesos2Smoother::Amesos2Smoother</a></div><div class="ttdeci">Amesos2Smoother(const std::string &amp;type=&quot;&quot;, const Teuchos::ParameterList &amp;paramList=Teuchos::ParameterList())</div><div class="ttdoc">Constructor Creates a MueLu interface to the direct solvers in the Amesos2 package....</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___amesos2_smoother__def_8hpp_source.html#l00094">MueLu_Amesos2Smoother_def.hpp:94</a></div></div>
 <div class="ttc" id="aclass_mue_lu_1_1_describable_html_ac5692382309bca28b7eb771c0feaf3d4"><div class="ttname"><a href="class_mue_lu_1_1_describable.html#ac5692382309bca28b7eb771c0feaf3d4">MueLu::Describable::description</a></div><div class="ttdeci">virtual std::string description() const</div><div class="ttdoc">Return a simple one-line description of this object.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___describable_8cpp_source.html#l00025">MueLu_Describable.cpp:25</a></div></div>
 <div class="ttc" id="aclass_mue_lu_1_1_exceptions_1_1_runtime_error_html"><div class="ttname"><a href="class_mue_lu_1_1_exceptions_1_1_runtime_error.html">MueLu::Exceptions::RuntimeError</a></div><div class="ttdoc">Exception throws to report errors in the internal logical of the program.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___exceptions_8hpp_source.html#l00036">MueLu_Exceptions.hpp:36</a></div></div>

@@ -4,7 +4,7 @@ var class_xpetra_1_1_multi_vector =
     [ "local_ordinal_type", "class_xpetra_1_1_multi_vector.html#ade8fa8ac23c85d19ca53ea844ee694e2", null ],
     [ "global_ordinal_type", "class_xpetra_1_1_multi_vector.html#a2f4c362e8baf19292eea881543b56b45", null ],
     [ "node_type", "class_xpetra_1_1_multi_vector.html#adc9f2491a8c85ebdadffee46079cafde", null ],
-    [ "impl_scalar_type", "class_xpetra_1_1_multi_vector.html#a457b532717b09a24b46017fdfd55ada6", null ],
+    [ "impl_scalar_type", "class_xpetra_1_1_multi_vector.html#abec8d528c479518ebe3a1a45705ebaba", null ],
     [ "dual_view_type", "class_xpetra_1_1_multi_vector.html#ab89d0689817d97bca20003c742dc1a59", null ],
     [ "dual_view_type_const", "class_xpetra_1_1_multi_vector.html#a13e34b0403ed20f1d31cbdcbe2653e8f", null ],
     [ "host_execution_space", "class_xpetra_1_1_multi_vector.html#a620b53c135191fc86035d6b9720a66bb", null ],

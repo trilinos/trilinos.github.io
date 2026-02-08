@@ -9,7 +9,7 @@ var class_mue_lu_1_1_cut_drop_1_1_scaled_distance_laplacian_comparison =
     [ "diag_vec_type", "class_mue_lu_1_1_cut_drop_1_1_scaled_distance_laplacian_comparison.html#ae3e448665f31d453c0cee20f395f390b", null ],
     [ "diag_view_type", "class_mue_lu_1_1_cut_drop_1_1_scaled_distance_laplacian_comparison.html#a8e165bedd88dc98dd6b61d4dab3ad2b8", null ],
     [ "results_view", "class_mue_lu_1_1_cut_drop_1_1_scaled_distance_laplacian_comparison.html#aa004bd780970aa752b92312e8852ba18", null ],
-    [ "ATS", "class_mue_lu_1_1_cut_drop_1_1_scaled_distance_laplacian_comparison.html#a6624ff1f937cbed5da9cf7796f3b294b", null ],
+    [ "ATS", "class_mue_lu_1_1_cut_drop_1_1_scaled_distance_laplacian_comparison.html#a22ef90903f6ac0fbb28c7db7d183b879", null ],
     [ "magnitudeType", "class_mue_lu_1_1_cut_drop_1_1_scaled_distance_laplacian_comparison.html#a85410c177a23b56584f83a60cd551f40", null ],
     [ "values_view", "class_mue_lu_1_1_cut_drop_1_1_scaled_distance_laplacian_comparison.html#ac85b3e88b016034fd0f04f72dd31b7fe", null ],
     [ "comparator_type", "class_mue_lu_1_1_cut_drop_1_1_scaled_distance_laplacian_comparison.html#ab21472a81b426c47f264704af4b674c7", null ],

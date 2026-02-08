@@ -176,7 +176,7 @@ class Tpetra::Details::FixedHashTable&lt; KeyType, ValueType, DeviceType &gt;</d
 <p>This class implements a look-up table from integer keys to integer values. All the (key,value) pairs must be added at once, and pairs may not be changed or removed. Keys and values may have different types. <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Tpetra::Map</a> may use this to implement global-to-local index lookup.</p>
 <p>The hash table uses a "compressed sparse row" storage strategy. The hash function maps a key to its "row" in the table, and then we search within that row to find the corresponding value. In each row, we store a key and its value adjacent to each other. This strategy puts (key,value) pairs in a single contiguous array, rather than in separately allocated buckets (as in a conventional dynamically allocated hash table). This saves initialization time, as long as the hash function takes less than half the time of a system call to allocate memory. This is because there are only <picture><source srcset="form_19_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$O(1)$" src="form_19.png" width="25" height="14"/></picture> memory allocation calls, rather than one for each (key,value) pair or hash bucket. The compressed sparse row strategy may also improve locality for hash table lookups. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__decl_8hpp_source.html#l00060">60</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__decl_8hpp_source.html">Tpetra_Details_FixedHashTable_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__decl_8hpp_source.html#l00056">56</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__decl_8hpp_source.html">Tpetra_Details_FixedHashTable_decl.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a85a4746cffd15a3e03d34e0d33b41f03" name="a85a4746cffd15a3e03d34e0d33b41f03"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a85a4746cffd15a3e03d34e0d33b41f03">&#9670;&#160;</a></span>keys_type</h2>
@@ -195,7 +195,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Type of a 1-D Kokkos::View (array) used to store keys. </p>
 <p>This is the type preferred by <a class="el" href="class_tpetra_1_1_details_1_1_fixed_hash_table.html">FixedHashTable</a>'s constructors. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__decl_8hpp_source.html#l00103">103</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__decl_8hpp_source.html">Tpetra_Details_FixedHashTable_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__decl_8hpp_source.html#l00099">99</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__decl_8hpp_source.html">Tpetra_Details_FixedHashTable_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -256,7 +256,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html#l00506">506</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html">Tpetra_Details_FixedHashTable_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html#l00488">488</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html">Tpetra_Details_FixedHashTable_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -287,7 +287,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html#l00519">519</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html">Tpetra_Details_FixedHashTable_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html#l00501">501</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html">Tpetra_Details_FixedHashTable_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -329,7 +329,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html#l00677">677</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html">Tpetra_Details_FixedHashTable_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html#l00635">635</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html">Tpetra_Details_FixedHashTable_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -371,7 +371,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html#l00544">544</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html">Tpetra_Details_FixedHashTable_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html#l00526">526</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html">Tpetra_Details_FixedHashTable_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -427,7 +427,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html#l00590">590</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html">Tpetra_Details_FixedHashTable_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html#l00564">564</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html">Tpetra_Details_FixedHashTable_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -483,7 +483,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html#l00627">627</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html">Tpetra_Details_FixedHashTable_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html#l00593">593</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html">Tpetra_Details_FixedHashTable_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -525,7 +525,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html#l00710">710</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html">Tpetra_Details_FixedHashTable_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html#l00660">660</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html">Tpetra_Details_FixedHashTable_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -570,7 +570,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>"Copy" constructor that takes a <a class="el" href="class_tpetra_1_1_details_1_1_fixed_hash_table.html">FixedHashTable</a> with the same KeyType and ValueType, but a different DeviceType. </p>
 <p>This constructor makes a deep copy of the input's data if necessary. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__decl_8hpp_source.html#l00221">221</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__decl_8hpp_source.html">Tpetra_Details_FixedHashTable_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__decl_8hpp_source.html#l00217">217</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__decl_8hpp_source.html">Tpetra_Details_FixedHashTable_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -603,7 +603,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Get the value corresponding to the given key. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__decl_8hpp_source.html#l00261">261</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__decl_8hpp_source.html">Tpetra_Details_FixedHashTable_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__decl_8hpp_source.html#l00257">257</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__decl_8hpp_source.html">Tpetra_Details_FixedHashTable_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -635,7 +635,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Number of (key, value) pairs in the table. </p>
 <p>This counts pairs with the same key value as separate pairs. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__decl_8hpp_source.html#l00295">295</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__decl_8hpp_source.html">Tpetra_Details_FixedHashTable_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__decl_8hpp_source.html#l00291">291</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__decl_8hpp_source.html">Tpetra_Details_FixedHashTable_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -668,7 +668,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>This function does not throw. If the table is empty, the return value is undefined. Furthermore, if the table is empty, we do not promise that <a class="el" href="class_tpetra_1_1_details_1_1_fixed_hash_table.html#a98d6979cabcd6de5e3e2f07f1b986047" title="The minimum key in the table.">minKey()</a> &lt;= <a class="el" href="class_tpetra_1_1_details_1_1_fixed_hash_table.html#a8d39d4594c0bb80290627180cf8b3939" title="The maximum key in the table.">maxKey()</a>.</p>
 <p>This class assumes that both keys and values are numbers. Therefore, keys are less-than comparable. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__decl_8hpp_source.html#l00316">316</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__decl_8hpp_source.html">Tpetra_Details_FixedHashTable_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__decl_8hpp_source.html#l00312">312</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__decl_8hpp_source.html">Tpetra_Details_FixedHashTable_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -701,7 +701,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>This function does not throw. If the table is empty, the return value is undefined. Furthermore, if the table is empty, we do not promise that <a class="el" href="class_tpetra_1_1_details_1_1_fixed_hash_table.html#a98d6979cabcd6de5e3e2f07f1b986047" title="The minimum key in the table.">minKey()</a> &lt;= <a class="el" href="class_tpetra_1_1_details_1_1_fixed_hash_table.html#a8d39d4594c0bb80290627180cf8b3939" title="The maximum key in the table.">maxKey()</a>.</p>
 <p>This class assumes that both keys and values are numbers. Therefore, keys are less-than comparable. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__decl_8hpp_source.html#l00328">328</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__decl_8hpp_source.html">Tpetra_Details_FixedHashTable_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__decl_8hpp_source.html#l00324">324</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__decl_8hpp_source.html">Tpetra_Details_FixedHashTable_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -734,7 +734,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>A "value" is the result of calling <a class="el" href="class_tpetra_1_1_details_1_1_fixed_hash_table.html#ab4b7e3412db2308e46f5b5710adcea4f" title="Get the value corresponding to the given key.">get()</a> on a key.</p>
 <p>This function does not throw. If the table is empty, the return value is undefined. Furthermore, if the table is empty, we do not promise that <a class="el" href="class_tpetra_1_1_details_1_1_fixed_hash_table.html#a1a1523fcba45dd3b1ffbccbd1a9cdcf3" title="The minimum value in the table.">minVal()</a> &lt;= <a class="el" href="class_tpetra_1_1_details_1_1_fixed_hash_table.html#a8eb6676ef882fbe052ca41e599628b14" title="The maximum value in the table.">maxVal()</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__decl_8hpp_source.html#l00339">339</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__decl_8hpp_source.html">Tpetra_Details_FixedHashTable_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__decl_8hpp_source.html#l00335">335</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__decl_8hpp_source.html">Tpetra_Details_FixedHashTable_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -767,7 +767,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>A "value" is the result of calling <a class="el" href="class_tpetra_1_1_details_1_1_fixed_hash_table.html#ab4b7e3412db2308e46f5b5710adcea4f" title="Get the value corresponding to the given key.">get()</a> on a key.</p>
 <p>This function does not throw. If the table is empty, the return value is undefined. Furthermore, if the table is empty, we do not promise that <a class="el" href="class_tpetra_1_1_details_1_1_fixed_hash_table.html#a1a1523fcba45dd3b1ffbccbd1a9cdcf3" title="The minimum value in the table.">minVal()</a> &lt;= <a class="el" href="class_tpetra_1_1_details_1_1_fixed_hash_table.html#a8eb6676ef882fbe052ca41e599628b14" title="The maximum value in the table.">maxVal()</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__decl_8hpp_source.html#l00350">350</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__decl_8hpp_source.html">Tpetra_Details_FixedHashTable_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__decl_8hpp_source.html#l00346">346</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__decl_8hpp_source.html">Tpetra_Details_FixedHashTable_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -792,7 +792,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>This is a nonconst function because it requires running a Kokkos kernel to search the keys. The result of the first call is cached and reused on subsequent calls.</p>
 <p>This function is the "local" (to an MPI process) version of <a class="el" href="class_tpetra_1_1_map.html#a170c298d6288ddb406a8e5d919d92a83" title="Whether the Map is one to one.">Tpetra::Map::isOneToOne</a>. If a <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Tpetra::Map</a> has duplicate keys (global indices) on any one MPI process, then it is most certainly not one to one. The opposite may not necessarily be true, because a <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Tpetra::Map</a> might have duplicate global indices that occur on different MPI processes. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html#l01209">1209</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html">Tpetra_Details_FixedHashTable_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html#l01125">1125</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html">Tpetra_Details_FixedHashTable_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -816,7 +816,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Implementation of Teuchos::Describable interface. </p>
 <p><a class="el" href="class_tpetra_1_1_details_1_1_fixed_hash_table.html">FixedHashTable</a> can't actually inherit from Teuchos::Describable, because that would prevent instances of this class from living in GPU <b>device</b> code. See GitHub issue #1623. Return a simple one-line description of this object. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html#l01239">1239</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html">Tpetra_Details_FixedHashTable_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html#l01155">1155</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html">Tpetra_Details_FixedHashTable_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -850,7 +850,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Print this object with the given verbosity to the output stream. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html#l01251">1251</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html">Tpetra_Details_FixedHashTable_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html#l01167">1167</a> of file <a class="el" href="_tpetra___details___fixed_hash_table__def_8hpp_source.html">Tpetra_Details_FixedHashTable_def.hpp</a>.</p>
 
 </div>
 </div>

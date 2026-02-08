@@ -9,7 +9,7 @@ var class_mue_lu_1_1_cut_drop_1_1_scaled_comparison =
     [ "diag_vec_type", "class_mue_lu_1_1_cut_drop_1_1_scaled_comparison.html#ae42124842406f9e762678bf46afc9f6b", null ],
     [ "diag_view_type", "class_mue_lu_1_1_cut_drop_1_1_scaled_comparison.html#a119f7ee1a1b5c7f5f2ad391f9f781891", null ],
     [ "results_view", "class_mue_lu_1_1_cut_drop_1_1_scaled_comparison.html#a38c4288e779bc84afd6182808cca0b95", null ],
-    [ "ATS", "class_mue_lu_1_1_cut_drop_1_1_scaled_comparison.html#a906af7c4fc2d7c610b25ca2e842d47f0", null ],
+    [ "ATS", "class_mue_lu_1_1_cut_drop_1_1_scaled_comparison.html#a38f4369b7bf44c8886057b7d93954177", null ],
     [ "magnitudeType", "class_mue_lu_1_1_cut_drop_1_1_scaled_comparison.html#a0d818861c09902d232e1aad7bdeb4574", null ],
     [ "values_view", "class_mue_lu_1_1_cut_drop_1_1_scaled_comparison.html#a7cc776e652400b0849d3c9df7458d74a", null ],
     [ "comparator_type", "class_mue_lu_1_1_cut_drop_1_1_scaled_comparison.html#a4313892d3af6eb29621037385c724646", null ],

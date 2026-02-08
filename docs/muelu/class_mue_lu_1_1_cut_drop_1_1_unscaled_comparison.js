@@ -7,7 +7,7 @@ var class_mue_lu_1_1_cut_drop_1_1_unscaled_comparison =
     [ "local_ordinal_type", "class_mue_lu_1_1_cut_drop_1_1_unscaled_comparison.html#a0f52dbba1a827768aca95d2b369d0e1d", null ],
     [ "memory_space", "class_mue_lu_1_1_cut_drop_1_1_unscaled_comparison.html#a8a7477444b45b21c6b9b908128acbdc9", null ],
     [ "results_view", "class_mue_lu_1_1_cut_drop_1_1_unscaled_comparison.html#ae6d763031695d2d3776586b83a3afd05", null ],
-    [ "ATS", "class_mue_lu_1_1_cut_drop_1_1_unscaled_comparison.html#adfc16836685dc2aead754a8d2a22f7b3", null ],
+    [ "ATS", "class_mue_lu_1_1_cut_drop_1_1_unscaled_comparison.html#a34e69fa8a612a9930d9d32180aae8553", null ],
     [ "magnitudeType", "class_mue_lu_1_1_cut_drop_1_1_unscaled_comparison.html#a12c6173865a74701096d8700c1b96339", null ],
     [ "values_view", "class_mue_lu_1_1_cut_drop_1_1_unscaled_comparison.html#ae0edde6f0c2df67cefd3d23b39583940", null ],
     [ "comparator_type", "class_mue_lu_1_1_cut_drop_1_1_unscaled_comparison.html#a950ada0fa57f0290b5c00c675e94d4eb", null ],

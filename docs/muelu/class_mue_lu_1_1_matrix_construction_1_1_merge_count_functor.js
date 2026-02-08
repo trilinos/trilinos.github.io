@@ -7,7 +7,7 @@ var class_mue_lu_1_1_matrix_construction_1_1_merge_count_functor =
     [ "block_indices_view_type", "class_mue_lu_1_1_matrix_construction_1_1_merge_count_functor.html#a50cdbaa755afde06d47c970ca567e5f1", null ],
     [ "permutation_type", "class_mue_lu_1_1_matrix_construction_1_1_merge_count_functor.html#a7891f83b82faaeffe0fec509af2f1004", null ],
     [ "rowptr_type", "class_mue_lu_1_1_matrix_construction_1_1_merge_count_functor.html#a348fb08bc909f4f3f996eb8e63ab1576", null ],
-    [ "ATS", "class_mue_lu_1_1_matrix_construction_1_1_merge_count_functor.html#a5b437cd4ea00823ed15c367ca178cbf5", null ],
+    [ "ATS", "class_mue_lu_1_1_matrix_construction_1_1_merge_count_functor.html#a384c35d6cecfc757356331066d424a38", null ],
     [ "MergeCountFunctor", "class_mue_lu_1_1_matrix_construction_1_1_merge_count_functor.html#a2256ead76fe85bdb9fca285f8f06d87f", null ],
     [ "operator()", "class_mue_lu_1_1_matrix_construction_1_1_merge_count_functor.html#a600c39f01ee14f14d0c8cb0bae459786", null ],
     [ "A", "class_mue_lu_1_1_matrix_construction_1_1_merge_count_functor.html#ad3d2532b7dfa5e9cb763b39c527281dc", null ],

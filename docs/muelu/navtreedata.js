@@ -91,7 +91,7 @@ var NAVTREEINDEX =
 "class_mue_lu_1_1_classical_dropping_1_1_drop_functor.html#a520e1e4f08b32b11692667cbb77298b5",
 "class_mue_lu_1_1_count_unggregated_by_color.html",
 "class_mue_lu_1_1_describable.html#a1040f110b490ed93e4ce4a9e8f81fa63",
-"class_mue_lu_1_1_distance_laplacian_1_1_scalar_material_distance_functor.html#a68a5005305bf81d64911482cacaa4df0",
+"class_mue_lu_1_1_distance_laplacian_1_1_scalar_material_distance_functor.html#a60bea1c47580c040b5be0018ee6a47d3",
 "class_mue_lu_1_1_exceptions_1_1_invalid_argument.html",
 "class_mue_lu_1_1_factory_monitor.html#a782e88af9324a9cff9a419b01c01a5d1",
 "class_mue_lu_1_1_hierarchy.html#a1e5acfbbfd7725dbe665d6fbce259f02",

@@ -7,7 +7,7 @@ var class_mue_lu_1_1_matrix_construction_1_1_vector_counting_functor =
     [ "block_indices_view_type", "class_mue_lu_1_1_matrix_construction_1_1_vector_counting_functor.html#a85fd9ee2e14635918ad15613248554a8", null ],
     [ "permutation_type", "class_mue_lu_1_1_matrix_construction_1_1_vector_counting_functor.html#ab24d27ef0fe847f30166292372c89c94", null ],
     [ "rowptr_type", "class_mue_lu_1_1_matrix_construction_1_1_vector_counting_functor.html#a2f670232999104fc5a10e88c64381b5b", null ],
-    [ "ATS", "class_mue_lu_1_1_matrix_construction_1_1_vector_counting_functor.html#a9c8bf4724bb9296ec6626304f30cdd40", null ],
+    [ "ATS", "class_mue_lu_1_1_matrix_construction_1_1_vector_counting_functor.html#a6ea236fd327ee5872263a9033436d417", null ],
     [ "VectorCountingFunctor", "class_mue_lu_1_1_matrix_construction_1_1_vector_counting_functor.html#a1ccfc0f4c6c246b17a783bbc487e114e", null ],
     [ "join", "class_mue_lu_1_1_matrix_construction_1_1_vector_counting_functor.html#aa3a541be84b5b210fdb1a4ad182fcd1c", null ],
     [ "operatorRow", "class_mue_lu_1_1_matrix_construction_1_1_vector_counting_functor.html#ad3cc9056b1a4c55a2ea771bc42eb7aef", null ],

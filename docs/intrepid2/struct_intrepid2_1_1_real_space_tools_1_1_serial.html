@@ -56,6 +56,10 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a421a9a8cbe96c08558588fadae34ee19"><td class="memTemplItemLeft" align="right" valign="top">static KOKKOS_INLINE_FUNCTION inVecValueType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="struct_intrepid2_1_1_real_space_tools_1_1_serial.html#a421a9a8cbe96c08558588fadae34ee19">vectorNorm</a> (const Kokkos::DynRankView&lt; inVecValueType, inVecProperties... &gt; inVec, const ENorm normType)</td></tr>
 <tr class="memdesc:a421a9a8cbe96c08558588fadae34ee19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes norm (1, 2, infinity) of a single vector stored in an array of rank 1.  <br /></td></tr>
 <tr class="separator:a421a9a8cbe96c08558588fadae34ee19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75b3595e229ff27bd7e8b20db28a2183" id="r_a75b3595e229ff27bd7e8b20db28a2183"><td class="memTemplParams" colspan="2">template&lt;ordinal_type D, class MatrixViewType &gt; </td></tr>
+<tr class="memitem:a75b3595e229ff27bd7e8b20db28a2183"><td class="memTemplItemLeft" align="right" valign="top">static KOKKOS_INLINE_FUNCTION MatrixViewType::value_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="struct_intrepid2_1_1_real_space_tools_1_1_serial.html#a75b3595e229ff27bd7e8b20db28a2183">det</a> (const MatrixViewType inMat)</td></tr>
+<tr class="memdesc:a75b3595e229ff27bd7e8b20db28a2183"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes determinant of a single square matrix stored in an array of rank 2.  <br /></td></tr>
+<tr class="separator:a75b3595e229ff27bd7e8b20db28a2183"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26def7e2c345ccec32aa552e7955ea53" id="r_a26def7e2c345ccec32aa552e7955ea53"><td class="memTemplParams" colspan="2">template&lt;class MatrixViewType &gt; </td></tr>
 <tr class="memitem:a26def7e2c345ccec32aa552e7955ea53"><td class="memTemplItemLeft" align="right" valign="top">static KOKKOS_INLINE_FUNCTION MatrixViewType::value_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="struct_intrepid2_1_1_real_space_tools_1_1_serial.html#a26def7e2c345ccec32aa552e7955ea53">det</a> (const MatrixViewType inMat)</td></tr>
 <tr class="memdesc:a26def7e2c345ccec32aa552e7955ea53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes determinant of a single square matrix stored in an array of rank 2.  <br /></td></tr>
@@ -70,8 +74,56 @@ Static Public Member Functions</h2></td></tr>
 struct Intrepid2::RealSpaceTools&lt; DeviceType &gt;::Serial</div>
 <p class="definition">Definition at line <a class="el" href="_intrepid2___real_space_tools_8hpp_source.html#l00049">49</a> of file <a class="el" href="_intrepid2___real_space_tools_8hpp_source.html">Intrepid2_RealSpaceTools.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a75b3595e229ff27bd7e8b20db28a2183" name="a75b3595e229ff27bd7e8b20db28a2183"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75b3595e229ff27bd7e8b20db28a2183">&#9670;&#160;</a></span>det() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DeviceType &gt; </div>
+<div class="memtemplate">
+template&lt;ordinal_type D, class MatrixViewType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">KOKKOS_INLINE_FUNCTION MatrixViewType::value_type <a class="el" href="class_intrepid2_1_1_real_space_tools.html">Intrepid2::RealSpaceTools</a>&lt; DeviceType &gt;::Serial::det </td>
+          <td>(</td>
+          <td class="paramtype">const MatrixViewType&#160;</td>
+          <td class="paramname"><em>inMat</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Computes determinant of a single square matrix stored in an array of rank 2. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inMat</td><td>[in] - array representing a single matrix, indexed by (D, D)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Requirements: <br  />
+<ul>
+<li>rank(<b><em>inMats</em></b>) == 2 (checked at runtime, in debug mode) </li>
+<li>matrix dimension is limited to 1, 2, or 3, and is equal to template parameter D (checked at compile time; check may depend on compilation environment). </li>
+</ul>
+</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html#l00102">102</a> of file <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html">Intrepid2_RealSpaceToolsDef.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_intrepid2___utils_8hpp_source.html#l00849">Intrepid2::getFunctorRank()</a>.</p>
+
+</div>
+</div>
 <a id="a26def7e2c345ccec32aa552e7955ea53" name="a26def7e2c345ccec32aa552e7955ea53"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26def7e2c345ccec32aa552e7955ea53">&#9670;&#160;</a></span>det()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a26def7e2c345ccec32aa552e7955ea53">&#9670;&#160;</a></span>det() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -112,9 +164,9 @@ template&lt;class MatrixViewType &gt; </div>
 </ul>
 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html#l00103">103</a> of file <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html">Intrepid2_RealSpaceToolsDef.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html#l00148">148</a> of file <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html">Intrepid2_RealSpaceToolsDef.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_intrepid2___utils_8hpp_source.html#l00855">Intrepid2::getFunctorRank()</a>.</p>
+<p class="reference">References <a class="el" href="_intrepid2___utils_8hpp_source.html#l00849">Intrepid2::getFunctorRank()</a>, and <a class="el" href="_intrepid2___utils_8hpp_source.html#l00071">INTREPID2_TEST_FOR_EXCEPTION_DEVICE_SAFE</a>.</p>
 
 </div>
 </div>
@@ -171,7 +223,7 @@ template&lt;typename inVec1ValueType , class ... inVec1Properties, typename inVe
 </ul>
 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html#l00151">151</a> of file <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html">Intrepid2_RealSpaceToolsDef.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html#l00183">183</a> of file <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html">Intrepid2_RealSpaceToolsDef.hpp</a>.</p>
 
 </div>
 </div>

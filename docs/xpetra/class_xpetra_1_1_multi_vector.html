@@ -137,11 +137,11 @@ Public Types</h2></td></tr>
 <tr class="separator:adc9f2491a8c85ebdadffee46079cafde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Xpetra specific</h2></td></tr>
-<tr class="memitem:a457b532717b09a24b46017fdfd55ada6" id="r_a457b532717b09a24b46017fdfd55ada6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xpetra_1_1_multi_vector.html#a457b532717b09a24b46017fdfd55ada6">impl_scalar_type</a> = typename Kokkos::ArithTraits&lt; Scalar &gt;::val_type</td></tr>
-<tr class="separator:a457b532717b09a24b46017fdfd55ada6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab89d0689817d97bca20003c742dc1a59" id="r_ab89d0689817d97bca20003c742dc1a59"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xpetra_1_1_multi_vector.html#ab89d0689817d97bca20003c742dc1a59">dual_view_type</a> = Kokkos::DualView&lt; <a class="el" href="class_xpetra_1_1_multi_vector.html#a457b532717b09a24b46017fdfd55ada6">impl_scalar_type</a> **, Kokkos::LayoutStride, typename node_type::device_type, Kokkos::MemoryUnmanaged &gt;</td></tr>
+<tr class="memitem:abec8d528c479518ebe3a1a45705ebaba" id="r_abec8d528c479518ebe3a1a45705ebaba"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xpetra_1_1_multi_vector.html#abec8d528c479518ebe3a1a45705ebaba">impl_scalar_type</a> = typename KokkosKernels::ArithTraits&lt; Scalar &gt;::val_type</td></tr>
+<tr class="separator:abec8d528c479518ebe3a1a45705ebaba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab89d0689817d97bca20003c742dc1a59" id="r_ab89d0689817d97bca20003c742dc1a59"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xpetra_1_1_multi_vector.html#ab89d0689817d97bca20003c742dc1a59">dual_view_type</a> = Kokkos::DualView&lt; <a class="el" href="class_xpetra_1_1_multi_vector.html#abec8d528c479518ebe3a1a45705ebaba">impl_scalar_type</a> **, Kokkos::LayoutStride, typename node_type::device_type, Kokkos::MemoryUnmanaged &gt;</td></tr>
 <tr class="separator:ab89d0689817d97bca20003c742dc1a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13e34b0403ed20f1d31cbdcbe2653e8f" id="r_a13e34b0403ed20f1d31cbdcbe2653e8f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xpetra_1_1_multi_vector.html#a13e34b0403ed20f1d31cbdcbe2653e8f">dual_view_type_const</a> = Kokkos::DualView&lt; const <a class="el" href="class_xpetra_1_1_multi_vector.html#a457b532717b09a24b46017fdfd55ada6">impl_scalar_type</a> **, Kokkos::LayoutStride, typename node_type::device_type, Kokkos::MemoryUnmanaged &gt;</td></tr>
+<tr class="memitem:a13e34b0403ed20f1d31cbdcbe2653e8f" id="r_a13e34b0403ed20f1d31cbdcbe2653e8f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xpetra_1_1_multi_vector.html#a13e34b0403ed20f1d31cbdcbe2653e8f">dual_view_type_const</a> = Kokkos::DualView&lt; const <a class="el" href="class_xpetra_1_1_multi_vector.html#abec8d528c479518ebe3a1a45705ebaba">impl_scalar_type</a> **, Kokkos::LayoutStride, typename node_type::device_type, Kokkos::MemoryUnmanaged &gt;</td></tr>
 <tr class="separator:a13e34b0403ed20f1d31cbdcbe2653e8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a620b53c135191fc86035d6b9720a66bb" id="r_a620b53c135191fc86035d6b9720a66bb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xpetra_1_1_multi_vector.html#a620b53c135191fc86035d6b9720a66bb">host_execution_space</a> = typename dual_view_type::host_mirror_space</td></tr>
 <tr class="separator:a620b53c135191fc86035d6b9720a66bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -353,7 +353,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class Scalar, class LocalOrdinal, class GlobalOrdinal, class Node = Tpetra::KokkosClassic::DefaultNode::DefaultNodeType&gt;<br />
 class Xpetra::MultiVector&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;</div>
-<p class="definition">Definition at line <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html#l00044">44</a> of file <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html">Xpetra_MultiVector_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html#l00040">40</a> of file <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html">Xpetra_MultiVector_decl.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="aced1e108e956ff5f694a86310820c29d" name="aced1e108e956ff5f694a86310820c29d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aced1e108e956ff5f694a86310820c29d">&#9670;&#160;</a></span>scalar_type</h2>
@@ -369,7 +369,7 @@ template&lt;class Scalar , class LocalOrdinal , class GlobalOrdinal , class Node
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html#l00047">47</a> of file <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html">Xpetra_MultiVector_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html#l00043">43</a> of file <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html">Xpetra_MultiVector_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -387,7 +387,7 @@ template&lt;class Scalar , class LocalOrdinal , class GlobalOrdinal , class Node
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html#l00048">48</a> of file <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html">Xpetra_MultiVector_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html#l00044">44</a> of file <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html">Xpetra_MultiVector_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -405,7 +405,7 @@ template&lt;class Scalar , class LocalOrdinal , class GlobalOrdinal , class Node
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html#l00049">49</a> of file <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html">Xpetra_MultiVector_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html#l00045">45</a> of file <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html">Xpetra_MultiVector_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -423,12 +423,12 @@ template&lt;class Scalar , class LocalOrdinal , class GlobalOrdinal , class Node
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html#l00050">50</a> of file <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html">Xpetra_MultiVector_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html#l00046">46</a> of file <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html">Xpetra_MultiVector_decl.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a457b532717b09a24b46017fdfd55ada6" name="a457b532717b09a24b46017fdfd55ada6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a457b532717b09a24b46017fdfd55ada6">&#9670;&#160;</a></span>impl_scalar_type</h2>
+<a id="abec8d528c479518ebe3a1a45705ebaba" name="abec8d528c479518ebe3a1a45705ebaba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abec8d528c479518ebe3a1a45705ebaba">&#9670;&#160;</a></span>impl_scalar_type</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -436,12 +436,12 @@ template&lt;class Scalar , class LocalOrdinal , class GlobalOrdinal , class Node
 template&lt;class Scalar , class LocalOrdinal , class GlobalOrdinal , class Node  = Tpetra::KokkosClassic::DefaultNode::DefaultNodeType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_xpetra_1_1_multi_vector.html">Xpetra::MultiVector</a>&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;::impl_scalar_type =  typename Kokkos::ArithTraits&lt;Scalar&gt;::val_type</td>
+          <td class="memname">using <a class="el" href="class_xpetra_1_1_multi_vector.html">Xpetra::MultiVector</a>&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;::impl_scalar_type =  typename KokkosKernels::ArithTraits&lt;Scalar&gt;::val_type</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html#l00241">241</a> of file <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html">Xpetra_MultiVector_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html#l00234">234</a> of file <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html">Xpetra_MultiVector_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -454,12 +454,12 @@ template&lt;class Scalar , class LocalOrdinal , class GlobalOrdinal , class Node
 template&lt;class Scalar , class LocalOrdinal , class GlobalOrdinal , class Node  = Tpetra::KokkosClassic::DefaultNode::DefaultNodeType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_xpetra_1_1_multi_vector.html">Xpetra::MultiVector</a>&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;::dual_view_type =  Kokkos::DualView&lt;<a class="el" href="class_xpetra_1_1_multi_vector.html#a457b532717b09a24b46017fdfd55ada6">impl_scalar_type</a>**, Kokkos::LayoutStride, typename node_type::device_type, Kokkos::MemoryUnmanaged&gt;</td>
+          <td class="memname">using <a class="el" href="class_xpetra_1_1_multi_vector.html">Xpetra::MultiVector</a>&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;::dual_view_type =  Kokkos::DualView&lt;<a class="el" href="class_xpetra_1_1_multi_vector.html#abec8d528c479518ebe3a1a45705ebaba">impl_scalar_type</a>**, Kokkos::LayoutStride, typename node_type::device_type, Kokkos::MemoryUnmanaged&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html#l00243">243</a> of file <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html">Xpetra_MultiVector_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html#l00235">235</a> of file <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html">Xpetra_MultiVector_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -472,12 +472,12 @@ template&lt;class Scalar , class LocalOrdinal , class GlobalOrdinal , class Node
 template&lt;class Scalar , class LocalOrdinal , class GlobalOrdinal , class Node  = Tpetra::KokkosClassic::DefaultNode::DefaultNodeType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_xpetra_1_1_multi_vector.html">Xpetra::MultiVector</a>&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;::dual_view_type_const =  Kokkos::DualView&lt;const <a class="el" href="class_xpetra_1_1_multi_vector.html#a457b532717b09a24b46017fdfd55ada6">impl_scalar_type</a>**, Kokkos::LayoutStride, typename node_type::device_type, Kokkos::MemoryUnmanaged&gt;</td>
+          <td class="memname">using <a class="el" href="class_xpetra_1_1_multi_vector.html">Xpetra::MultiVector</a>&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;::dual_view_type_const =  Kokkos::DualView&lt;const <a class="el" href="class_xpetra_1_1_multi_vector.html#abec8d528c479518ebe3a1a45705ebaba">impl_scalar_type</a>**, Kokkos::LayoutStride, typename node_type::device_type, Kokkos::MemoryUnmanaged&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html#l00244">244</a> of file <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html">Xpetra_MultiVector_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html#l00236">236</a> of file <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html">Xpetra_MultiVector_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -495,7 +495,7 @@ template&lt;class Scalar , class LocalOrdinal , class GlobalOrdinal , class Node
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html#l00245">245</a> of file <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html">Xpetra_MultiVector_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html#l00237">237</a> of file <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html">Xpetra_MultiVector_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -513,7 +513,7 @@ template&lt;class Scalar , class LocalOrdinal , class GlobalOrdinal , class Node
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html#l00246">246</a> of file <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html">Xpetra_MultiVector_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html#l00238">238</a> of file <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html">Xpetra_MultiVector_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1912,7 +1912,7 @@ template&lt;class Scalar , class LocalOrdinal , class GlobalOrdinal , class Node
 
 <p>Reimplemented in <a class="el" href="class_xpetra_1_1_tpetra_multi_vector.html#a802b5cc4f8054deb4f63572aaac08546">Xpetra::TpetraMultiVector&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;</a>, and <a class="el" href="class_xpetra_1_1_tpetra_multi_vector.html#a802b5cc4f8054deb4f63572aaac08546">Xpetra::TpetraMultiVector&lt; Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosClassic::DefaultNode::DefaultNodeType &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html#l00248">248</a> of file <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html">Xpetra_MultiVector_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html#l00240">240</a> of file <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html">Xpetra_MultiVector_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1944,7 +1944,7 @@ template&lt;class Scalar , class LocalOrdinal , class GlobalOrdinal , class Node
 
 <p>Reimplemented in <a class="el" href="class_xpetra_1_1_tpetra_multi_vector.html#a0ae40b438a91145cfd8b2534207caf27">Xpetra::TpetraMultiVector&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;</a>, and <a class="el" href="class_xpetra_1_1_tpetra_multi_vector.html#a0ae40b438a91145cfd8b2534207caf27">Xpetra::TpetraMultiVector&lt; Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosClassic::DefaultNode::DefaultNodeType &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html#l00256">256</a> of file <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html">Xpetra_MultiVector_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html#l00248">248</a> of file <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html">Xpetra_MultiVector_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1976,7 +1976,7 @@ template&lt;class Scalar , class LocalOrdinal , class GlobalOrdinal , class Node
 
 <p>Reimplemented in <a class="el" href="class_xpetra_1_1_tpetra_multi_vector.html#a761aceeca028c78557d2c4c9c8f19390">Xpetra::TpetraMultiVector&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;</a>, and <a class="el" href="class_xpetra_1_1_tpetra_multi_vector.html#a761aceeca028c78557d2c4c9c8f19390">Xpetra::TpetraMultiVector&lt; Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosClassic::DefaultNode::DefaultNodeType &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html#l00264">264</a> of file <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html">Xpetra_MultiVector_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html#l00256">256</a> of file <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html">Xpetra_MultiVector_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2008,7 +2008,7 @@ template&lt;class Scalar , class LocalOrdinal , class GlobalOrdinal , class Node
 
 <p>Reimplemented in <a class="el" href="class_xpetra_1_1_tpetra_multi_vector.html#a87d157fc34e71c1f809da39da936f780">Xpetra::TpetraMultiVector&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;</a>, and <a class="el" href="class_xpetra_1_1_tpetra_multi_vector.html#a87d157fc34e71c1f809da39da936f780">Xpetra::TpetraMultiVector&lt; Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosClassic::DefaultNode::DefaultNodeType &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html#l00272">272</a> of file <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html">Xpetra_MultiVector_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html#l00264">264</a> of file <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html">Xpetra_MultiVector_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2040,7 +2040,7 @@ template&lt;class Scalar , class LocalOrdinal , class GlobalOrdinal , class Node
 
 <p>Reimplemented in <a class="el" href="class_xpetra_1_1_tpetra_multi_vector.html#a8c2204ba5a70fda6ff7489740a5c6866">Xpetra::TpetraMultiVector&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;</a>, and <a class="el" href="class_xpetra_1_1_tpetra_multi_vector.html#a8c2204ba5a70fda6ff7489740a5c6866">Xpetra::TpetraMultiVector&lt; Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosClassic::DefaultNode::DefaultNodeType &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html#l00280">280</a> of file <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html">Xpetra_MultiVector_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html#l00272">272</a> of file <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html">Xpetra_MultiVector_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2072,7 +2072,7 @@ template&lt;class Scalar , class LocalOrdinal , class GlobalOrdinal , class Node
 
 <p>Reimplemented in <a class="el" href="class_xpetra_1_1_tpetra_multi_vector.html#a78ca4b4c29e63b5437571b9195ebfaf3">Xpetra::TpetraMultiVector&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;</a>, and <a class="el" href="class_xpetra_1_1_tpetra_multi_vector.html#a78ca4b4c29e63b5437571b9195ebfaf3">Xpetra::TpetraMultiVector&lt; Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosClassic::DefaultNode::DefaultNodeType &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html#l00288">288</a> of file <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html">Xpetra_MultiVector_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html#l00280">280</a> of file <a class="el" href="_xpetra___multi_vector__decl_8hpp_source.html">Xpetra_MultiVector_decl.hpp</a>.</p>
 
 </div>
 </div>
