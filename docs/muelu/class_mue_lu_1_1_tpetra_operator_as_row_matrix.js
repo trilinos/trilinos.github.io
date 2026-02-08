@@ -4,7 +4,7 @@ var class_mue_lu_1_1_tpetra_operator_as_row_matrix =
     [ "vec_type", "class_mue_lu_1_1_tpetra_operator_as_row_matrix.html#a6032c72ac45e664024bf1f4b079b3b69", null ],
     [ "row_matrix_type", "class_mue_lu_1_1_tpetra_operator_as_row_matrix.html#aba5445588a064347f1e35c41b7925679", null ],
     [ "impl_scalar_type", "class_mue_lu_1_1_tpetra_operator_as_row_matrix.html#a8bf687ef4d6942d21da5b7bc99a7c240", null ],
-    [ "mag_type", "class_mue_lu_1_1_tpetra_operator_as_row_matrix.html#aa63a4a57e2f3dd194d5b1589f8a20565", null ],
+    [ "mag_type", "class_mue_lu_1_1_tpetra_operator_as_row_matrix.html#ae3fa04ec204a95f57a48c91cd19d4f42", null ],
     [ "local_inds_device_view_type", "class_mue_lu_1_1_tpetra_operator_as_row_matrix.html#a44e4a48bf77899c78c58d395f631b6f8", null ],
     [ "local_inds_host_view_type", "class_mue_lu_1_1_tpetra_operator_as_row_matrix.html#a2e454e5fa495a2085f337d0e1abf0d7d", null ],
     [ "nonconst_local_inds_host_view_type", "class_mue_lu_1_1_tpetra_operator_as_row_matrix.html#aab0d7ea28ca163d93f2dd721f6c7321e", null ],

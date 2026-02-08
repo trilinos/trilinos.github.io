@@ -5,7 +5,7 @@ var class_mue_lu_1_1_cut_drop_1_1_cut_drop_functor =
     [ "local_ordinal_type", "class_mue_lu_1_1_cut_drop_1_1_cut_drop_functor.html#a07b409e8e0e5942e380187764cde9a8b", null ],
     [ "memory_space", "class_mue_lu_1_1_cut_drop_1_1_cut_drop_functor.html#a8b60cbc109d3b25b3b029c3c68a22994", null ],
     [ "results_view", "class_mue_lu_1_1_cut_drop_1_1_cut_drop_functor.html#a6af3050cd0b302bf3a67fa1c4a39dd40", null ],
-    [ "ATS", "class_mue_lu_1_1_cut_drop_1_1_cut_drop_functor.html#a97351a6939daa7059d6a4072d4ea0b03", null ],
+    [ "ATS", "class_mue_lu_1_1_cut_drop_1_1_cut_drop_functor.html#a10df8501e06ab41500e0f48fd552ca86", null ],
     [ "magnitudeType", "class_mue_lu_1_1_cut_drop_1_1_cut_drop_functor.html#aceee54e0171aaca2678d14226304b46c", null ],
     [ "boundary_nodes_view", "class_mue_lu_1_1_cut_drop_1_1_cut_drop_functor.html#a13d14ca9a1d6fb525f2ca9151d391be4", null ],
     [ "CutDropFunctor", "class_mue_lu_1_1_cut_drop_1_1_cut_drop_functor.html#a53e20ebadde951e8959063ccb1cc1682", null ],

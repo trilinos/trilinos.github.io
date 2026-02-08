@@ -83,7 +83,7 @@ var class_xpetra_1_1_tpetra_block_crs_matrix =
     [ "getTpetra_BlockCrsMatrix", "class_xpetra_1_1_tpetra_block_crs_matrix.html#a7e320e94bdc17e6dfa5691495e4493e8", null ],
     [ "getTpetra_BlockCrsMatrixNonConst", "class_xpetra_1_1_tpetra_block_crs_matrix.html#af59f4d42930f4eebb3661b1c7edda530", null ],
     [ "getLocalMatrixDevice", "class_xpetra_1_1_tpetra_block_crs_matrix.html#a11e2737b9dc07430dd9b8ea6f2d25f8b", null ],
-    [ "getLocalMatrixHost", "class_xpetra_1_1_tpetra_block_crs_matrix.html#a1f2f4156cde0111871b1369deb0dc653", null ],
+    [ "getLocalMatrixHost", "class_xpetra_1_1_tpetra_block_crs_matrix.html#a3dc9cfcb5c6a912dfaacd44f203480ed", null ],
     [ "setAllValues", "class_xpetra_1_1_tpetra_block_crs_matrix.html#a9a25175e4c57504f404034ea2ddbea68", null ],
     [ "GetStorageBlockSize", "class_xpetra_1_1_tpetra_block_crs_matrix.html#ab15662e88957b62d8cd15cfc2bd33d76", null ],
     [ "residual", "class_xpetra_1_1_tpetra_block_crs_matrix.html#ae163731242c5bb7bf19281083bcade02", null ],

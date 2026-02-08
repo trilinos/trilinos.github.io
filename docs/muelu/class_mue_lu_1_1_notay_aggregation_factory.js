@@ -4,7 +4,7 @@ var class_mue_lu_1_1_notay_aggregation_factory =
     [ "device_type", "class_mue_lu_1_1_notay_aggregation_factory.html#a6d4bf07b40db8291828c8c97760b0889", null ],
     [ "execution_space", "class_mue_lu_1_1_notay_aggregation_factory.html#a5b22f6c71ddfd30791e0d27e622ff4b9", null ],
     [ "magnitude_type", "class_mue_lu_1_1_notay_aggregation_factory.html#a198585ab34cf5be777bc8aaf6833e5f1", null ],
-    [ "impl_scalar_type", "class_mue_lu_1_1_notay_aggregation_factory.html#a91d28b47fa37a2d7e255a3928a296672", null ],
+    [ "impl_scalar_type", "class_mue_lu_1_1_notay_aggregation_factory.html#a46b46be12adba99914efa9eb68841925", null ],
     [ "row_sum_type", "class_mue_lu_1_1_notay_aggregation_factory.html#a03e36ddac9eb93e6810c49f95ff913e7", null ],
     [ "NotayAggregationFactory", "class_mue_lu_1_1_notay_aggregation_factory.html#a9da06aa545f7bd936f47ad36c49d65cf", null ],
     [ "~NotayAggregationFactory", "class_mue_lu_1_1_notay_aggregation_factory.html#a0ad92da760718edac3fdfc3b2c711c2d", null ],

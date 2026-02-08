@@ -135,11 +135,11 @@ Public Types</h2></td></tr>
 <tr class="separator:ad71f2e242bd94d6ffa0f0cc13ff2b3e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91b0c127b14ed4a151c89f6175522428" id="r_a91b0c127b14ed4a151c89f6175522428"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xpetra_1_1_crs_graph.html#a91b0c127b14ed4a151c89f6175522428">local_graph_device_type</a> = KokkosSparse::StaticCrsGraph&lt; LocalOrdinal, Kokkos::LayoutLeft, <a class="el" href="class_xpetra_1_1_crs_graph.html#aa963f42c5891d9388763d2d938ba2790">device_type</a>, void, size_t &gt;</td></tr>
 <tr class="separator:a91b0c127b14ed4a151c89f6175522428"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10e4e2cf1b329006d3e257fc2a151648" id="r_a10e4e2cf1b329006d3e257fc2a151648"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xpetra_1_1_crs_graph.html#a10e4e2cf1b329006d3e257fc2a151648">local_graph_host_type</a> = typename local_graph_device_type::HostMirror</td></tr>
-<tr class="separator:a10e4e2cf1b329006d3e257fc2a151648"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a247c508df66e20ee0acffad72a4952ae" id="r_a247c508df66e20ee0acffad72a4952ae"><td class="memItemLeft" align="right" valign="top">virtual local_graph_type::HostMirror&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xpetra_1_1_crs_graph.html#a247c508df66e20ee0acffad72a4952ae">getLocalGraphHost</a> () const =0</td></tr>
-<tr class="memdesc:a247c508df66e20ee0acffad72a4952ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the local graph.  <br /></td></tr>
-<tr class="separator:a247c508df66e20ee0acffad72a4952ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fb23ab9145709c5fc15705ac1957bea" id="r_a6fb23ab9145709c5fc15705ac1957bea"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xpetra_1_1_crs_graph.html#a6fb23ab9145709c5fc15705ac1957bea">local_graph_host_type</a> = typename local_graph_device_type::host_mirror_type</td></tr>
+<tr class="separator:a6fb23ab9145709c5fc15705ac1957bea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3b6f80406b22d658cffbfa26f75f914" id="r_aa3b6f80406b22d658cffbfa26f75f914"><td class="memItemLeft" align="right" valign="top">virtual local_graph_type::host_mirror_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xpetra_1_1_crs_graph.html#aa3b6f80406b22d658cffbfa26f75f914">getLocalGraphHost</a> () const =0</td></tr>
+<tr class="memdesc:aa3b6f80406b22d658cffbfa26f75f914"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the local graph.  <br /></td></tr>
+<tr class="separator:aa3b6f80406b22d658cffbfa26f75f914"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae79da8c884b3358ce16c26636dae364a" id="r_ae79da8c884b3358ce16c26636dae364a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_xpetra_1_1_crs_graph.html#ad71f2e242bd94d6ffa0f0cc13ff2b3e3">local_graph_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xpetra_1_1_crs_graph.html#ae79da8c884b3358ce16c26636dae364a">getLocalGraphDevice</a> () const =0</td></tr>
 <tr class="separator:ae79da8c884b3358ce16c26636dae364a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24ceed36f962c1e3bb1b4602494d8159" id="r_a24ceed36f962c1e3bb1b4602494d8159"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xpetra_1_1_crs_graph.html#a24ceed36f962c1e3bb1b4602494d8159">getLocalDiagOffsets</a> (const Kokkos::View&lt; size_t *, <a class="el" href="class_xpetra_1_1_crs_graph.html#aa963f42c5891d9388763d2d938ba2790">device_type</a>, Kokkos::MemoryUnmanaged &gt; &amp;offsets) const =0</td></tr>
@@ -478,8 +478,8 @@ template&lt;class LocalOrdinal , class GlobalOrdinal , class Node  = Tpetra::Kok
 
 </div>
 </div>
-<a id="a10e4e2cf1b329006d3e257fc2a151648" name="a10e4e2cf1b329006d3e257fc2a151648"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10e4e2cf1b329006d3e257fc2a151648">&#9670;&#160;</a></span>local_graph_host_type</h2>
+<a id="a6fb23ab9145709c5fc15705ac1957bea" name="a6fb23ab9145709c5fc15705ac1957bea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fb23ab9145709c5fc15705ac1957bea">&#9670;&#160;</a></span>local_graph_host_type</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -487,12 +487,12 @@ template&lt;class LocalOrdinal , class GlobalOrdinal , class Node  = Tpetra::Kok
 template&lt;class LocalOrdinal , class GlobalOrdinal , class Node  = Tpetra::KokkosClassic::DefaultNode::DefaultNodeType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_xpetra_1_1_crs_graph.html">Xpetra::CrsGraph</a>&lt; LocalOrdinal, GlobalOrdinal, Node &gt;::local_graph_host_type =  typename local_graph_device_type::HostMirror</td>
+          <td class="memname">using <a class="el" href="class_xpetra_1_1_crs_graph.html">Xpetra::CrsGraph</a>&lt; LocalOrdinal, GlobalOrdinal, Node &gt;::local_graph_host_type =  typename local_graph_device_type::host_mirror_type</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_xpetra___crs_graph_8hpp_source.html#l00199">199</a> of file <a class="el" href="_xpetra___crs_graph_8hpp_source.html">Xpetra_CrsGraph.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_xpetra___crs_graph_8hpp_source.html#l00196">196</a> of file <a class="el" href="_xpetra___crs_graph_8hpp_source.html">Xpetra_CrsGraph.hpp</a>.</p>
 
 </div>
 </div>
@@ -1809,8 +1809,8 @@ template&lt;class LocalOrdinal , class GlobalOrdinal , class Node  = Tpetra::Kok
 
 </div>
 </div>
-<a id="a247c508df66e20ee0acffad72a4952ae" name="a247c508df66e20ee0acffad72a4952ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a247c508df66e20ee0acffad72a4952ae">&#9670;&#160;</a></span>getLocalGraphHost()</h2>
+<a id="aa3b6f80406b22d658cffbfa26f75f914" name="aa3b6f80406b22d658cffbfa26f75f914"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3b6f80406b22d658cffbfa26f75f914">&#9670;&#160;</a></span>getLocalGraphHost()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1821,7 +1821,7 @@ template&lt;class LocalOrdinal , class GlobalOrdinal , class Node  = Tpetra::Kok
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual local_graph_type::HostMirror <a class="el" href="class_xpetra_1_1_crs_graph.html">Xpetra::CrsGraph</a>&lt; LocalOrdinal, GlobalOrdinal, Node &gt;::getLocalGraphHost </td>
+          <td class="memname">virtual local_graph_type::host_mirror_type <a class="el" href="class_xpetra_1_1_crs_graph.html">Xpetra::CrsGraph</a>&lt; LocalOrdinal, GlobalOrdinal, Node &gt;::getLocalGraphHost </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1838,7 +1838,7 @@ template&lt;class LocalOrdinal , class GlobalOrdinal , class Node  = Tpetra::Kok
 <dl class="section warning"><dt>Warning</dt><dd>THIS IS AN EXPERT MODE FUNCTION. THIS IS AN IMPLEMENTATION DETAIL. DO NOT CALL THIS FUNCTION!!!</dd></dl>
 <p>This is only a valid representation of the local graph if the (global) graph is fill complete. </p>
 
-<p>Implemented in <a class="el" href="class_xpetra_1_1_tpetra_crs_graph.html#a991c586faf29c5b2c0d53bbf991aacd3">Xpetra::TpetraCrsGraph&lt; LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_xpetra_1_1_tpetra_crs_graph.html#a63c21c6ff2ff304a57efc46c4c30fad0">Xpetra::TpetraCrsGraph&lt; LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
 </div>
 </div>

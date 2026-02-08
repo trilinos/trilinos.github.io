@@ -3,7 +3,7 @@ var class_mue_lu_1_1_boundary_detection_1_1_vector_dirichlet_functor =
     [ "scalar_type", "class_mue_lu_1_1_boundary_detection_1_1_vector_dirichlet_functor.html#a6a5cc3a521a5b27e45f9598bad1f0e05", null ],
     [ "local_ordinal_type", "class_mue_lu_1_1_boundary_detection_1_1_vector_dirichlet_functor.html#a131dea77b62e9642d4e9c7707032ecef", null ],
     [ "memory_space", "class_mue_lu_1_1_boundary_detection_1_1_vector_dirichlet_functor.html#a1702b59771d5ff54b3b552b3aa3c319d", null ],
-    [ "ATS", "class_mue_lu_1_1_boundary_detection_1_1_vector_dirichlet_functor.html#a5e711f11ef525ab9ab0548ba89dd7e8e", null ],
+    [ "ATS", "class_mue_lu_1_1_boundary_detection_1_1_vector_dirichlet_functor.html#a78953ca294826f5f666cdff38c71a79c", null ],
     [ "magnitudeType", "class_mue_lu_1_1_boundary_detection_1_1_vector_dirichlet_functor.html#a7d479e8d1ac012544d5d5f074e2386e4", null ],
     [ "boundary_nodes_view", "class_mue_lu_1_1_boundary_detection_1_1_vector_dirichlet_functor.html#a499f93901e3293c9b25918b1c6cad29d", null ],
     [ "VectorDirichletFunctor", "class_mue_lu_1_1_boundary_detection_1_1_vector_dirichlet_functor.html#af0e4b7c50a5c5abf9b240c729b95c503", null ],

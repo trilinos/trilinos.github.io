@@ -125,12 +125,12 @@ Private Types</h2></td></tr>
 <tr class="separator:ae18c160810b5ffc40117f3769eb3ee47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5edc69edccf2783a57656499ed7feb83" id="r_a5edc69edccf2783a57656499ed7feb83"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_boundary_detection_1_1_row_sum_functor.html#a5edc69edccf2783a57656499ed7feb83">memory_space</a> = typename local_matrix_type::memory_space</td></tr>
 <tr class="separator:a5edc69edccf2783a57656499ed7feb83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e9ce45493e76acf9d1ffd02608416c3" id="r_a9e9ce45493e76acf9d1ffd02608416c3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_boundary_detection_1_1_row_sum_functor.html#a9e9ce45493e76acf9d1ffd02608416c3">ATS</a> = Kokkos::ArithTraits&lt; <a class="el" href="class_mue_lu_1_1_boundary_detection_1_1_row_sum_functor.html#a513c02ce502b9e64e626ee3c9f6e832b">scalar_type</a> &gt;</td></tr>
-<tr class="separator:a9e9ce45493e76acf9d1ffd02608416c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac41060c8393d5999a11275ce8e819711" id="r_ac41060c8393d5999a11275ce8e819711"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_boundary_detection_1_1_row_sum_functor.html#ac41060c8393d5999a11275ce8e819711">ATS</a> = KokkosKernels::ArithTraits&lt; <a class="el" href="class_mue_lu_1_1_boundary_detection_1_1_row_sum_functor.html#a513c02ce502b9e64e626ee3c9f6e832b">scalar_type</a> &gt;</td></tr>
+<tr class="separator:ac41060c8393d5999a11275ce8e819711"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ee4c99b86dd32b2b5b53c01d4278c16" id="r_a6ee4c99b86dd32b2b5b53c01d4278c16"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_boundary_detection_1_1_row_sum_functor.html#a6ee4c99b86dd32b2b5b53c01d4278c16">magnitudeType</a> = typename ATS::magnitudeType</td></tr>
 <tr class="separator:a6ee4c99b86dd32b2b5b53c01d4278c16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24b10cddffeff690b255fa32f6483aee" id="r_a24b10cddffeff690b255fa32f6483aee"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_boundary_detection_1_1_row_sum_functor.html#a24b10cddffeff690b255fa32f6483aee">magATS</a> = Kokkos::ArithTraits&lt; <a class="el" href="class_mue_lu_1_1_boundary_detection_1_1_row_sum_functor.html#a6ee4c99b86dd32b2b5b53c01d4278c16">magnitudeType</a> &gt;</td></tr>
-<tr class="separator:a24b10cddffeff690b255fa32f6483aee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ea2bb5bea945a78e844c1831aa81c02" id="r_a5ea2bb5bea945a78e844c1831aa81c02"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_boundary_detection_1_1_row_sum_functor.html#a5ea2bb5bea945a78e844c1831aa81c02">magATS</a> = KokkosKernels::ArithTraits&lt; <a class="el" href="class_mue_lu_1_1_boundary_detection_1_1_row_sum_functor.html#a6ee4c99b86dd32b2b5b53c01d4278c16">magnitudeType</a> &gt;</td></tr>
+<tr class="separator:a5ea2bb5bea945a78e844c1831aa81c02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa77c197310e8249ad3279ec24325edb7" id="r_aa77c197310e8249ad3279ec24325edb7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_boundary_detection_1_1_row_sum_functor.html#aa77c197310e8249ad3279ec24325edb7">boundary_nodes_view</a> = Kokkos::View&lt; bool *, <a class="el" href="class_mue_lu_1_1_boundary_detection_1_1_row_sum_functor.html#a5edc69edccf2783a57656499ed7feb83">memory_space</a> &gt;</td></tr>
 <tr class="separator:aa77c197310e8249ad3279ec24325edb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -148,7 +148,7 @@ Private Attributes</h2></td></tr>
 class MueLu::BoundaryDetection::RowSumFunctor&lt; local_matrix_type &gt;</div><p>Functor for marking nodes as Dirichlet based on rowsum. </p>
 <p>A row is marked as Dirichlet boundary if the sum of off-diagonal values is smaller in absolute value than the diagonal multiplied by the threshold rowSumTol. It is assumed that boundaryNodes was initialized to false. </p>
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html#l00161">161</a> of file <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html">MueLu_BoundaryDetection.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html#l00149">149</a> of file <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html">MueLu_BoundaryDetection.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a513c02ce502b9e64e626ee3c9f6e832b" name="a513c02ce502b9e64e626ee3c9f6e832b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a513c02ce502b9e64e626ee3c9f6e832b">&#9670;&#160;</a></span>scalar_type</h2>
@@ -172,7 +172,7 @@ template&lt;class local_matrix_type &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html#l00163">163</a> of file <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html">MueLu_BoundaryDetection.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html#l00151">151</a> of file <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html">MueLu_BoundaryDetection.hpp</a>.</p>
 
 </div>
 </div>
@@ -198,7 +198,7 @@ template&lt;class local_matrix_type &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html#l00164">164</a> of file <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html">MueLu_BoundaryDetection.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html#l00152">152</a> of file <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html">MueLu_BoundaryDetection.hpp</a>.</p>
 
 </div>
 </div>
@@ -224,12 +224,12 @@ template&lt;class local_matrix_type &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html#l00165">165</a> of file <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html">MueLu_BoundaryDetection.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html#l00153">153</a> of file <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html">MueLu_BoundaryDetection.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a9e9ce45493e76acf9d1ffd02608416c3" name="a9e9ce45493e76acf9d1ffd02608416c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e9ce45493e76acf9d1ffd02608416c3">&#9670;&#160;</a></span>ATS</h2>
+<a id="ac41060c8393d5999a11275ce8e819711" name="ac41060c8393d5999a11275ce8e819711"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac41060c8393d5999a11275ce8e819711">&#9670;&#160;</a></span>ATS</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -240,7 +240,7 @@ template&lt;class local_matrix_type &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_mue_lu_1_1_boundary_detection_1_1_row_sum_functor.html">MueLu::BoundaryDetection::RowSumFunctor</a>&lt; local_matrix_type &gt;::ATS =  Kokkos::ArithTraits&lt;<a class="el" href="class_mue_lu_1_1_boundary_detection_1_1_row_sum_functor.html#a513c02ce502b9e64e626ee3c9f6e832b">scalar_type</a>&gt;</td>
+          <td class="memname">using <a class="el" href="class_mue_lu_1_1_boundary_detection_1_1_row_sum_functor.html">MueLu::BoundaryDetection::RowSumFunctor</a>&lt; local_matrix_type &gt;::ATS =  KokkosKernels::ArithTraits&lt;<a class="el" href="class_mue_lu_1_1_boundary_detection_1_1_row_sum_functor.html#a513c02ce502b9e64e626ee3c9f6e832b">scalar_type</a>&gt;</td>
         </tr>
       </table>
   </td>
@@ -250,7 +250,7 @@ template&lt;class local_matrix_type &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html#l00170">170</a> of file <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html">MueLu_BoundaryDetection.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html#l00155">155</a> of file <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html">MueLu_BoundaryDetection.hpp</a>.</p>
 
 </div>
 </div>
@@ -276,12 +276,12 @@ template&lt;class local_matrix_type &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html#l00172">172</a> of file <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html">MueLu_BoundaryDetection.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html#l00156">156</a> of file <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html">MueLu_BoundaryDetection.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a24b10cddffeff690b255fa32f6483aee" name="a24b10cddffeff690b255fa32f6483aee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24b10cddffeff690b255fa32f6483aee">&#9670;&#160;</a></span>magATS</h2>
+<a id="a5ea2bb5bea945a78e844c1831aa81c02" name="a5ea2bb5bea945a78e844c1831aa81c02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ea2bb5bea945a78e844c1831aa81c02">&#9670;&#160;</a></span>magATS</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -292,7 +292,7 @@ template&lt;class local_matrix_type &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_mue_lu_1_1_boundary_detection_1_1_row_sum_functor.html">MueLu::BoundaryDetection::RowSumFunctor</a>&lt; local_matrix_type &gt;::magATS =  Kokkos::ArithTraits&lt;<a class="el" href="class_mue_lu_1_1_boundary_detection_1_1_row_sum_functor.html#a6ee4c99b86dd32b2b5b53c01d4278c16">magnitudeType</a>&gt;</td>
+          <td class="memname">using <a class="el" href="class_mue_lu_1_1_boundary_detection_1_1_row_sum_functor.html">MueLu::BoundaryDetection::RowSumFunctor</a>&lt; local_matrix_type &gt;::magATS =  KokkosKernels::ArithTraits&lt;<a class="el" href="class_mue_lu_1_1_boundary_detection_1_1_row_sum_functor.html#a6ee4c99b86dd32b2b5b53c01d4278c16">magnitudeType</a>&gt;</td>
         </tr>
       </table>
   </td>
@@ -302,7 +302,7 @@ template&lt;class local_matrix_type &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html#l00176">176</a> of file <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html">MueLu_BoundaryDetection.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html#l00157">157</a> of file <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html">MueLu_BoundaryDetection.hpp</a>.</p>
 
 </div>
 </div>
@@ -328,7 +328,7 @@ template&lt;class local_matrix_type &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html#l00178">178</a> of file <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html">MueLu_BoundaryDetection.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html#l00158">158</a> of file <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html">MueLu_BoundaryDetection.hpp</a>.</p>
 
 </div>
 </div>
@@ -375,7 +375,7 @@ template&lt;class local_matrix_type &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html#l00185">185</a> of file <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html">MueLu_BoundaryDetection.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html#l00165">165</a> of file <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html">MueLu_BoundaryDetection.hpp</a>.</p>
 
 </div>
 </div>
@@ -406,7 +406,7 @@ template&lt;class local_matrix_type &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html#l00191">191</a> of file <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html">MueLu_BoundaryDetection.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html#l00171">171</a> of file <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html">MueLu_BoundaryDetection.hpp</a>.</p>
 
 </div>
 </div>
@@ -433,7 +433,7 @@ template&lt;class local_matrix_type &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html#l00180">180</a> of file <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html">MueLu_BoundaryDetection.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html#l00160">160</a> of file <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html">MueLu_BoundaryDetection.hpp</a>.</p>
 
 </div>
 </div>
@@ -459,7 +459,7 @@ template&lt;class local_matrix_type &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html#l00181">181</a> of file <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html">MueLu_BoundaryDetection.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html#l00161">161</a> of file <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html">MueLu_BoundaryDetection.hpp</a>.</p>
 
 </div>
 </div>
@@ -485,7 +485,7 @@ template&lt;class local_matrix_type &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html#l00182">182</a> of file <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html">MueLu_BoundaryDetection.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html#l00162">162</a> of file <a class="el" href="_mue_lu___boundary_detection_8hpp_source.html">MueLu_BoundaryDetection.hpp</a>.</p>
 
 </div>
 </div>

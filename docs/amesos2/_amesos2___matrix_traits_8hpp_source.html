@@ -140,20 +140,15 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keyword">typedef</span> Scalar impl_scalar_type;</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keyword">typedef</span> Tpetra::Map&lt;&gt;::node_type node_t;</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">#if KOKKOS_VERSION &gt;= 40799</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keyword">typedef</span> <span class="keyword">typename</span> matrix_type::host_mirror_type::index_type  global_host_idx_type;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keyword">typedef</span> <span class="keyword">typename</span> matrix_type::host_mirror_type::values_type global_host_val_type;</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keyword">typedef</span> <span class="keyword">typename</span> matrix_type::HostMirror::index_type  global_host_idx_type;</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keyword">typedef</span> <span class="keyword">typename</span> matrix_type::HostMirror::values_type global_host_val_type;</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keyword">typedef</span> <span class="keyword">typename</span> matrix_type::host_mirror_type::index_type  global_host_idx_type;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keyword">typedef</span> <span class="keyword">typename</span> matrix_type::host_mirror_type::values_type global_host_val_type;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keyword">typedef</span> row_access major_access;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  };</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>}</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keyword">typedef</span> row_access major_access;</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  };</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>}</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="preprocessor">#endif  </span><span class="comment">// AMESOS2_MATRIXTRAITS_HPP</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">#endif  </span><span class="comment">// AMESOS2_MATRIXTRAITS_HPP</span></div>
 <div class="ttc" id="a_amesos2___util_8hpp_html"><div class="ttname"><a href="_amesos2___util_8hpp.html">Amesos2_Util.hpp</a></div><div class="ttdoc">Utility functions for Amesos2.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

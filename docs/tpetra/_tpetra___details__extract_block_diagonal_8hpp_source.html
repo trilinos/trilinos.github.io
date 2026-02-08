@@ -114,56 +114,48 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <span class="keyword">using </span>scalar_view_t  = <span class="keyword">typename</span> KCRS::values_type::const_type;</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <span class="keyword">using </span>local_mv_type  = <span class="keyword">typename</span> MultiVectorType::dual_view_type::t_dev;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="keyword">using </span>range_type     = Kokkos::RangePolicy&lt;typename SparseMatrixType::node_type::execution_space, LO&gt;;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#if KOKKOS_VERSION &gt;= 40799</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <span class="keyword">using </span>ATS = KokkosKernels::ArithTraits&lt;SC&gt;;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <span class="keyword">using </span>ATS      = Kokkos::ArithTraits&lt;SC&gt;;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#if KOKKOS_VERSION &gt;= 40799</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <span class="keyword">using </span>impl_ATS = KokkosKernels::ArithTraits&lt;typename ATS::val_type&gt;;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <span class="keyword">using </span>impl_ATS = Kokkos::ArithTraits&lt;typename ATS::val_type&gt;;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="comment">// Sanity checking: Map Compatibility (A&#39;s rowmap matches diagonal&#39;s map)</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="class_tpetra_1_1_details_1_1_behavior.html#a8103de3f5a7460948b3ff2fd169f0e95">Tpetra::Details::Behavior::debug</a>() == <span class="keyword">true</span>) {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    TEUCHOS_TEST_FOR_EXCEPTION(!A.getRowMap()-&gt;isSameAs(*diagonal.getMap()),</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                               std::runtime_error, <span class="stringliteral">&quot;Tpetra::Details::extractBlockDiagonal was given incompatible maps&quot;</span>);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  }</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  LO numrows   = diagonal.getLocalLength();</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  LO blocksize = diagonal.getNumVectors();</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="comment">// Get Kokkos versions of objects</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  local_map_type rowmap  = A.getRowMap()-&gt;getLocalMap();</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  local_map_type colmap  = A.getRowMap()-&gt;getLocalMap();</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  local_mv_type diag     = diagonal.getLocalViewDevice(Access::OverwriteAll);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="keyword">const</span> KCRS Amat        = A.getLocalMatrixDevice();</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  lno_view_t Arowptr     = Amat.graph.row_map;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  lno_nnz_view_t Acolind = Amat.graph.entries;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  scalar_view_t Avals    = Amat.values;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="keyword">using </span>ATS            = KokkosKernels::ArithTraits&lt;SC&gt;;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <span class="keyword">using </span>impl_ATS       = KokkosKernels::ArithTraits&lt;typename ATS::val_type&gt;;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <span class="comment">// Sanity checking: Map Compatibility (A&#39;s rowmap matches diagonal&#39;s map)</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="class_tpetra_1_1_details_1_1_behavior.html#a8103de3f5a7460948b3ff2fd169f0e95">Tpetra::Details::Behavior::debug</a>() == <span class="keyword">true</span>) {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    TEUCHOS_TEST_FOR_EXCEPTION(!A.getRowMap()-&gt;isSameAs(*diagonal.getMap()),</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                               std::runtime_error, <span class="stringliteral">&quot;Tpetra::Details::extractBlockDiagonal was given incompatible maps&quot;</span>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  LO numrows   = diagonal.getLocalLength();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  LO blocksize = diagonal.getNumVectors();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="comment">// Get Kokkos versions of objects</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  local_map_type rowmap  = A.getRowMap()-&gt;getLocalMap();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  local_map_type colmap  = A.getRowMap()-&gt;getLocalMap();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  local_mv_type diag     = diagonal.getLocalViewDevice(Access::OverwriteAll);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <span class="keyword">const</span> KCRS Amat        = A.getLocalMatrixDevice();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  lno_view_t Arowptr     = Amat.graph.row_map;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  lno_nnz_view_t Acolind = Amat.graph.entries;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  scalar_view_t Avals    = Amat.values;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  Kokkos::parallel_for(</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>      <span class="stringliteral">&quot;Tpetra::extractBlockDiagonal&quot;</span>, range_type(0, numrows), KOKKOS_LAMBDA(<span class="keyword">const</span> LO i) {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        LO diag_col   = colmap.getLocalElement(rowmap.getGlobalElement(i));</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        LO blockStart = diag_col - (diag_col % blocksize);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        LO blockStop  = blockStart + blocksize;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">for</span> (LO k = 0; k &lt; blocksize; k++)</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>          diag(i, k) = impl_ATS::zero();</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  Kokkos::parallel_for(</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>      <span class="stringliteral">&quot;Tpetra::extractBlockDiagonal&quot;</span>, range_type(0, numrows), KOKKOS_LAMBDA(<span class="keyword">const</span> LO i) {</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        LO diag_col   = colmap.getLocalElement(rowmap.getGlobalElement(i));</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        LO blockStart = diag_col - (diag_col % blocksize);</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        LO blockStop  = blockStart + blocksize;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">for</span> (LO k = 0; k &lt; blocksize; k++)</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>          diag(i, k) = impl_ATS::zero();</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> k = Arowptr(i); k &lt; Arowptr(i + 1); k++) {</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>          LO col = Acolind(k);</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>          <span class="keywordflow">if</span> (blockStart &lt;= col &amp;&amp; col &lt; blockStop) {</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            diag(i, col - blockStart) = Avals(k);</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>          }</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        }</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      });</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>}</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>}  <span class="comment">// namespace Details</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>}  <span class="comment">// namespace Tpetra</span></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#endif  </span><span class="comment">// TPETRA_DETAILS_EXTRACTBLOCKDIAGONAL_HPP</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> k = Arowptr(i); k &lt; Arowptr(i + 1); k++) {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>          LO col = Acolind(k);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>          <span class="keywordflow">if</span> (blockStart &lt;= col &amp;&amp; col &lt; blockStop) {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            diag(i, col - blockStart) = Avals(k);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>          }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>      });</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>}</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>}  <span class="comment">// namespace Details</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>}  <span class="comment">// namespace Tpetra</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#endif  </span><span class="comment">// TPETRA_DETAILS_EXTRACTBLOCKDIAGONAL_HPP</span></div>
 <div class="ttc" id="a_tpetra___details___behavior_8hpp_html"><div class="ttname"><a href="_tpetra___details___behavior_8hpp.html">Tpetra_Details_Behavior.hpp</a></div><div class="ttdoc">Declaration of Tpetra::Details::Behavior, a class that describes Tpetra's behavior.</div></div>
 <div class="ttc" id="aclass_tpetra_1_1_details_1_1_behavior_html_a8103de3f5a7460948b3ff2fd169f0e95"><div class="ttname"><a href="class_tpetra_1_1_details_1_1_behavior.html#a8103de3f5a7460948b3ff2fd169f0e95">Tpetra::Details::Behavior::debug</a></div><div class="ttdeci">static bool debug()</div><div class="ttdoc">Whether Tpetra is in debug mode.</div><div class="ttdef"><b>Definition</b> <a href="_tpetra___details___behavior_8cpp_source.html#l00238">Tpetra_Details_Behavior.cpp:238</a></div></div>
 <div class="ttc" id="anamespace_details_html"><div class="ttname"><a href="namespace_details.html">Details</a></div><div class="ttdoc">Implementation details of Tpetra.</div></div>

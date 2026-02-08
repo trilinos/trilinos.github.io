@@ -473,7 +473,7 @@ var namespace_mue_lu =
     [ "leftRghtDofScalingWithinNode", "namespace_mue_lu.html#ae0ee0ff8b78707e2b0c568cf16ea92e3", null ],
     [ "toString", "namespace_mue_lu.html#adffcd9a4c5dd0a4b2cbf6c8e77f27e6b", null ],
     [ "removeSmallEntries", "namespace_mue_lu.html#a95081a6a0dce52bbefe28d064fd880b4", null ],
-    [ "isDirichletRow", "namespace_mue_lu.html#a40326a9bc86845ca783ad0bfb98e1217", null ],
+    [ "isDirichletRow", "namespace_mue_lu.html#afd30dad2cb2f125aed9e5a8136540b10", null ],
     [ "DetectDirichletRows_kokkos", "namespace_mue_lu.html#a0ad62863a64ab14fcef41a102139656d", null ],
     [ "ApplyRowSumCriterion", "namespace_mue_lu.html#a50e710338a6f7c3645ca2ad3b6b9c59a", null ],
     [ "ApplyRowSumCriterion", "namespace_mue_lu.html#aaed7ec979eaa550da32df5b428867a84", null ],
