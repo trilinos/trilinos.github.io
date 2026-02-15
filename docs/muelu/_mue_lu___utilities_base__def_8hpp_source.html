@@ -327,7 +327,7 @@ $(document).ready(function(){initNavTree('_mue_lu___utilities_base__def_8hpp_sou
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno"><a class="line" href="class_mue_lu_1_1_utilities_base.html#ad441b11df979e541d1ad16f423bf94db">  197</a></span><a class="code hl_function" href="class_mue_lu_1_1_utilities_base.html#ad441b11df979e541d1ad16f423bf94db">UtilitiesBase&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;::</a></div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><a class="code hl_function" href="class_mue_lu_1_1_utilities_base.html#ad441b11df979e541d1ad16f423bf94db">    GetMatrixDiagonal</a>(<span class="keyword">const</span> Matrix&amp; A) {</div>
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>  <span class="keyword">const</span> <span class="keyword">auto</span> rowMap = A.getRowMap();</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>  <span class="keyword">auto</span> diag         = Xpetra::VectorFactory&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;::Build(rowMap, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>  <span class="keyword">auto</span> diag         = Xpetra::VectorFactory&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;::Build(rowMap, <span class="keyword">false</span>);</div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>  <span class="keyword">const</span> CrsMatrixWrap* crsOp = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span>CrsMatrixWrap*<span class="keyword">&gt;</span>(&amp;A);</div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>  <span class="keywordflow">if</span> ((crsOp != NULL) &amp;&amp; (rowMap-&gt;lib() == Xpetra::UseTpetra)) {</div>
@@ -376,7 +376,7 @@ $(document).ready(function(){initNavTree('_mue_lu___utilities_base__def_8hpp_sou
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno"><a class="line" href="class_mue_lu_1_1_utilities_base.html#a41bd83654250a33b3f2dc88927dd7ea2">  240</a></span>  RCP&lt;const BlockedCrsMatrix&gt; bA = Teuchos::rcp_dynamic_cast&lt;const BlockedCrsMatrix&gt;(rcpFromRef(A));</div>
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>  <span class="keywordflow">if</span> (!bA.is_null()) {</div>
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    RCP&lt;const Map&gt; rowMap = A.getRowMap();</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    RCP&lt;Vector&gt; diag      = Xpetra::VectorFactory&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;::Build(rowMap, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    RCP&lt;Vector&gt; diag      = Xpetra::VectorFactory&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;::Build(rowMap, <span class="keyword">false</span>);</div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    A.getLocalDiagCopy(*diag);</div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    RCP&lt;Vector&gt; inv = <a class="code hl_function" href="class_mue_lu_1_1_utilities_base.html#a27a050b6b0412e812ad724f3e154be5b">MueLu::UtilitiesBase&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;::GetInverse</a>(diag, tol, valReplacement);</div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    <span class="keywordflow">return</span> inv;</div>
@@ -485,7 +485,7 @@ $(document).ready(function(){initNavTree('_mue_lu___utilities_base__def_8hpp_sou
 <div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>      Teuchos::rcp_dynamic_cast&lt;const Xpetra::BlockedCrsMatrix&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;&gt;(rcpA);</div>
 <div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>  <span class="keywordflow">if</span> (bA == Teuchos::null) {</div>
 <div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    RCP&lt;const Map&gt; rowMap = rcpA-&gt;getRowMap();</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>    diag                  = Xpetra::VectorFactory&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;::Build(rowMap, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>    diag                  = Xpetra::VectorFactory&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;::Build(rowMap, <span class="keyword">false</span>);</div>
 <div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span> </div>
 <div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>    <span class="keywordflow">if</span> (rowMap-&gt;lib() == Xpetra::UnderlyingLib::UseTpetra) {</div>
 <div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>      Teuchos::TimeMonitor MM = *Teuchos::TimeMonitor::getNewTimer(<span class="stringliteral">&quot;UtilitiesBase::GetLumpedMatrixDiagonal (Kokkos implementation)&quot;</span>);</div>
@@ -833,7 +833,7 @@ $(document).ready(function(){initNavTree('_mue_lu___utilities_base__def_8hpp_sou
 <div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span>    importer = ImportFactory::Build(rowMap, colMap);</div>
 <div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span>  }</div>
 <div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span>  <span class="keywordflow">if</span> (!importer.is_null()) {</div>
-<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>    RCP&lt;Vector&gt; diagonal = VectorFactory::Build(colMap);</div>
+<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>    RCP&lt;Vector&gt; diagonal = VectorFactory::Build(colMap, <span class="keyword">false</span>);</div>
 <div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span>    diagonal-&gt;doImport(*localDiag, *(importer), Xpetra::INSERT);</div>
 <div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span>    <span class="keywordflow">return</span> diagonal;</div>
 <div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span>  } <span class="keywordflow">else</span></div>
@@ -1036,9 +1036,9 @@ $(document).ready(function(){initNavTree('_mue_lu___utilities_base__def_8hpp_sou
 <div class="line"><a id="l00853" name="l00853"></a><span class="lineno">  853</span>                             <span class="stringliteral">&quot;Utils::PowerMethod: operator must have domain and range maps that are equivalent.&quot;</span>);</div>
 <div class="line"><a id="l00854" name="l00854"></a><span class="lineno">  854</span> </div>
 <div class="line"><a id="l00855" name="l00855"></a><span class="lineno">  855</span>  <span class="comment">// Create three vectors, fill z with random numbers</span></div>
-<div class="line"><a id="l00856" name="l00856"></a><span class="lineno">  856</span>  RCP&lt;Vector&gt; q = Xpetra::VectorFactory&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;::Build(A.getDomainMap());</div>
-<div class="line"><a id="l00857" name="l00857"></a><span class="lineno">  857</span>  RCP&lt;Vector&gt; r = Xpetra::VectorFactory&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;::Build(A.getRangeMap());</div>
-<div class="line"><a id="l00858" name="l00858"></a><span class="lineno">  858</span>  RCP&lt;Vector&gt; z = Xpetra::VectorFactory&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;::Build(A.getRangeMap());</div>
+<div class="line"><a id="l00856" name="l00856"></a><span class="lineno">  856</span>  RCP&lt;Vector&gt; q = Xpetra::VectorFactory&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;::Build(A.getDomainMap(), <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00857" name="l00857"></a><span class="lineno">  857</span>  RCP&lt;Vector&gt; r = Xpetra::VectorFactory&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;::Build(A.getRangeMap(), <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00858" name="l00858"></a><span class="lineno">  858</span>  RCP&lt;Vector&gt; z = Xpetra::VectorFactory&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;::Build(A.getRangeMap(), <span class="keyword">false</span>);</div>
 <div class="line"><a id="l00859" name="l00859"></a><span class="lineno">  859</span> </div>
 <div class="line"><a id="l00860" name="l00860"></a><span class="lineno">  860</span>  z-&gt;setSeed(seed);    <span class="comment">// seed random number generator</span></div>
 <div class="line"><a id="l00861" name="l00861"></a><span class="lineno">  861</span>  z-&gt;randomize(<span class="keyword">true</span>);  <span class="comment">// use Xpetra implementation: -&gt; same results for Epetra and Tpetra</span></div>

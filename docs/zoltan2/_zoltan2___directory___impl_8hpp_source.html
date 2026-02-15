@@ -1187,8 +1187,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01075" name="l01075"></a><span class="lineno"> 1075</span>  uint32_t k1 = 0;</div>
 <div class="line"><a id="l01076" name="l01076"></a><span class="lineno"> 1076</span>  <span class="keywordflow">switch</span>(len &amp; 3)</div>
 <div class="line"><a id="l01077" name="l01077"></a><span class="lineno"> 1077</span>  {</div>
-<div class="line"><a id="l01078" name="l01078"></a><span class="lineno"> 1078</span>    <span class="keywordflow">case</span> 3: k1 ^= tail[2] &lt;&lt; 16;</div>
-<div class="line"><a id="l01079" name="l01079"></a><span class="lineno"> 1079</span>    <span class="keywordflow">case</span> 2: k1 ^= tail[1] &lt;&lt; 8;</div>
+<div class="line"><a id="l01078" name="l01078"></a><span class="lineno"> 1078</span>    <span class="keywordflow">case</span> 3: k1 ^= tail[2] &lt;&lt; 16; [[fallthrough]];</div>
+<div class="line"><a id="l01079" name="l01079"></a><span class="lineno"> 1079</span>    <span class="keywordflow">case</span> 2: k1 ^= tail[1] &lt;&lt; 8; [[fallthrough]];</div>
 <div class="line"><a id="l01080" name="l01080"></a><span class="lineno"> 1080</span>    <span class="keywordflow">case</span> 1: k1 ^= tail[0];</div>
 <div class="line"><a id="l01081" name="l01081"></a><span class="lineno"> 1081</span>            k1 *= c1; k1 = <a class="code hl_define" href="_zoltan2___directory___impl_8hpp.html#add645a73443cf3215974bcc992d129a0">ZOLTAN2_ROTL32</a>(k1,15); k1 *= c2; h1 ^= k1;</div>
 <div class="line"><a id="l01082" name="l01082"></a><span class="lineno"> 1082</span>  };</div>
