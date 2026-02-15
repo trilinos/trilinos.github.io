@@ -213,121 +213,121 @@ $(document).ready(function(){initNavTree('_mue_lu___repartition_factory__def_8hp
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  RCP&lt;const Teuchos::Comm&lt;int&gt; &gt; origComm = rowMap-&gt;getComm();</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  RCP&lt;const Teuchos::Comm&lt;int&gt; &gt; comm     = origComm;</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  <span class="keywordtype">int</span> myRank   = comm-&gt;getRank();</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  <span class="keywordtype">int</span> numProcs = comm-&gt;getSize();</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  RCP&lt;const Teuchos::MpiComm&lt;int&gt; &gt; tmpic = rcp_dynamic_cast&lt;const Teuchos::MpiComm&lt;int&gt; &gt;(comm);</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  TEUCHOS_TEST_FOR_EXCEPTION(tmpic == Teuchos::null, <a class="code hl_class" href="class_mue_lu_1_1_exceptions_1_1_runtime_error.html">Exceptions::RuntimeError</a>, <span class="stringliteral">&quot;Cannot cast base Teuchos::Comm to Teuchos::MpiComm object.&quot;</span>);</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  RCP&lt;const Teuchos::OpaqueWrapper&lt;MPI_Comm&gt; &gt; rawMpiComm = tmpic-&gt;getRawMpiComm();</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  <span class="keywordtype">int</span> numPartitions = Get&lt;int&gt;(currentLevel, <span class="stringliteral">&quot;number of partitions&quot;</span>);</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  <span class="comment">// ======================================================================================================</span></div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  <span class="comment">// Construct decomposition vector</span></div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  <span class="comment">// ======================================================================================================</span></div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  RCP&lt;GOVector&gt; decomposition = Get&lt;RCP&lt;GOVector&gt; &gt;(currentLevel, <span class="stringliteral">&quot;Partition&quot;</span>);</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  <span class="comment">// check which factory provides &quot;Partition&quot;</span></div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  <span class="keywordflow">if</span> (remapPartitions == <span class="keyword">true</span> &amp;&amp; Teuchos::rcp_dynamic_cast&lt;const CloneRepartitionInterface&gt;(GetFactory(<span class="stringliteral">&quot;Partition&quot;</span>)) != Teuchos::null) {</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="comment">// if &quot;Partition&quot; is provided by a CloneRepartitionInterface class we have to switch of remapPartitions</span></div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="comment">// as we can assume the processor Ids in Partition to be the expected ones. If we would do remapping we</span></div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="comment">// would get different processors for the different blocks which screws up matrix-matrix multiplication.</span></div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    remapPartitions = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  }</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>  <span class="comment">// check special cases</span></div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  <span class="keywordflow">if</span> (numPartitions == 1) {</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="comment">// Trivial case: decomposition is the trivial one, all zeros. We skip the call to Zoltan_Interface</span></div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="comment">// (this is mostly done to avoid extra output messages, as even if we didn&#39;t skip there is a shortcut</span></div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="comment">// in Zoltan[12]Interface).</span></div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="comment">// TODO: We can probably skip more work in this case (like building all extra data structures)</span></div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    GetOStream(<a class="code hl_enumvalue" href="namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1fabcf3f2fd68507cefed497403ab07a54e">Runtime0</a>) &lt;&lt; <span class="stringliteral">&quot;Only one partition: Skip call to the repartitioner.&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (numPartitions == -1) {</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="comment">// No repartitioning necessary: decomposition should be Teuchos::null</span></div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    GetOStream(<a class="code hl_enumvalue" href="namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1fabcf3f2fd68507cefed497403ab07a54e">Runtime0</a>) &lt;&lt; <span class="stringliteral">&quot;No repartitioning necessary: partitions were left unchanged by the repartitioner&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    Set&lt;RCP&lt;const Import&gt; &gt;(currentLevel, <span class="stringliteral">&quot;Importer&quot;</span>, Teuchos::null);</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  }</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>  <span class="comment">// If we&#39;re doing node away, we need to be sure to get the mapping to the NodeComm&#39;s rank 0.</span></div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> nodeRepartLevel = pL.get&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;repartition: node repartition level&quot;</span>);</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>  <span class="keywordflow">if</span> (currentLevel.<a class="code hl_function" href="class_mue_lu_1_1_level.html#a72e28575744e0454e8abe29007701b77">GetLevelID</a>() == nodeRepartLevel) {</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="comment">// NodePartitionInterface returns the *ranks* of the guy who gets the info, not the *partition number*</span></div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="comment">// In a sense, we&#39;ve already done remap here.</span></div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="comment">// FIXME: We need a low-comm import construction</span></div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    remapPartitions = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  }</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  <span class="comment">// ======================================================================================================</span></div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>  <span class="comment">// Remap if necessary</span></div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>  <span class="comment">// ======================================================================================================</span></div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>  <span class="comment">// From a user perspective, we want user to not care about remapping, thinking of it as only a performance feature.</span></div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>  <span class="comment">// There are two problems, however.</span></div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>  <span class="comment">// (1) Next level aggregation depends on the order of GIDs in the vector, if one uses &quot;natural&quot; or &quot;random&quot; orderings.</span></div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>  <span class="comment">//     This also means that remapping affects next level aggregation, despite the fact that the _set_ of GIDs for</span></div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>  <span class="comment">//     each partition is the same.</span></div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  <span class="comment">// (2) Even with the fixed order of GIDs, the remapping may influence the aggregation for the next-next level.</span></div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>  <span class="comment">//     Let us consider the following example. Lets assume that when we don&#39;t do remapping, processor 0 would have</span></div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>  <span class="comment">//     GIDs {0,1,2}, and processor 1 GIDs {3,4,5}, and if we do remapping processor 0 would contain {3,4,5} and</span></div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>  <span class="comment">//     processor 1 {0,1,2}. Now, when we run repartitioning algorithm on the next level (say Zoltan1 RCB), it may</span></div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>  <span class="comment">//     be dependent on whether whether it is [{0,1,2}, {3,4,5}] or [{3,4,5}, {0,1,2}]. Specifically, the tie-breaking</span></div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>  <span class="comment">//     algorithm can resolve these differently. For instance, running</span></div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>  <span class="comment">//         mpirun -np 5 ./MueLu_ScalingTestParamList.exe --xml=easy_sa.xml --nx=12 --ny=12 --nz=12</span></div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>  <span class="comment">//     with</span></div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>  <span class="comment">//         &lt;ParameterList name=&quot;MueLu&quot;&gt;</span></div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>  <span class="comment">//           &lt;Parameter name=&quot;coarse: max size&quot;                type=&quot;int&quot;      value=&quot;1&quot;/&gt;</span></div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>  <span class="comment">//           &lt;Parameter name=&quot;repartition: enable&quot;             type=&quot;bool&quot;     value=&quot;true&quot;/&gt;</span></div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>  <span class="comment">//           &lt;Parameter name=&quot;repartition: min rows per proc&quot;  type=&quot;int&quot;      value=&quot;2&quot;/&gt;</span></div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>  <span class="comment">//           &lt;ParameterList name=&quot;level 1&quot;&gt;</span></div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>  <span class="comment">//             &lt;Parameter name=&quot;repartition: remap parts&quot;      type=&quot;bool&quot;     value=&quot;false/true&quot;/&gt;</span></div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>  <span class="comment">//           &lt;/ParameterList&gt;</span></div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>  <span class="comment">//         &lt;/ParameterList&gt;</span></div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>  <span class="comment">//     produces different repartitioning for level 2.</span></div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>  <span class="comment">//     This different repartitioning may then escalate into different aggregation for the next level.</span></div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>  <span class="comment">//</span></div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>  <span class="comment">// We fix (1) by fixing the order of GIDs in a vector by sorting the resulting vector.</span></div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>  <span class="comment">// Fixing (2) is more complicated.</span></div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>  <span class="comment">// FIXME: Fixing (2) in Zoltan may not be enough, as we may use some arbitration in MueLu,</span></div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>  <span class="comment">// for instance with CoupledAggregation. What we really need to do is to use the same order of processors containing</span></div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>  <span class="comment">// the same order of GIDs. To achieve that, the newly created subcommunicator must be conforming with the order. For</span></div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>  <span class="comment">// instance, if we have [{0,1,2}, {3,4,5}], we create a subcommunicator where processor 0 gets rank 0, and processor 1</span></div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>  <span class="comment">// gets rank 1. If, on the other hand, we have [{3,4,5}, {0,1,2}], we assign rank 1 to processor 0, and rank 0 to processor 1.</span></div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>  <span class="comment">// This rank permutation requires help from Epetra/Tpetra, both of which have no such API in place.</span></div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>  <span class="comment">// One should also be concerned that if we had such API in place, rank 0 in subcommunicator may no longer be rank 0 in</span></div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  <span class="comment">// MPI_COMM_WORLD, which may lead to issues for logging.</span></div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>  <span class="keywordflow">if</span> (remapPartitions) {</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <a class="code hl_class" href="class_mue_lu_1_1_sub_factory_monitor.html">SubFactoryMonitor</a> m1(*<span class="keyword">this</span>, <span class="stringliteral">&quot;DeterminePartitionPlacement&quot;</span>, currentLevel);</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <span class="keywordtype">bool</span> acceptPartition = pL.get&lt;<span class="keywordtype">bool</span>&gt;(<span class="stringliteral">&quot;repartition: remap accept partition&quot;</span>);</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="keywordtype">bool</span> allSubdomainsAcceptPartitions;</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="keywordtype">int</span> localNumAcceptPartition = acceptPartition;</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <span class="keywordtype">int</span> globalNumAcceptPartition;</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <a class="code hl_define" href="_mue_lu___perf_utils__decl_8hpp.html#a0537b70d4043fd9285afd8348c0a3cfe">MueLu_sumAll</a>(comm, localNumAcceptPartition, globalNumAcceptPartition);</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    GetOStream(<a class="code hl_enumvalue" href="namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1fa18d960e5bd7364c1ea53ae67f5891ff5">Statistics2</a>) &lt;&lt; <span class="stringliteral">&quot;Number of ranks that accept partitions: &quot;</span> &lt;&lt; globalNumAcceptPartition &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    <span class="keywordflow">if</span> (globalNumAcceptPartition &lt; numPartitions) {</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>      GetOStream(<a class="code hl_enumvalue" href="namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1fa1804a250088d64143eda40094c28d224">Warnings0</a>) &lt;&lt; <span class="stringliteral">&quot;Not enough ranks are willing to accept a partition, allowing partitions on all ranks.&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>      acceptPartition               = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>      allSubdomainsAcceptPartitions = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (numPartitions &gt; numProcs) {</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>      <span class="comment">// We are trying to repartition to a larger communicator.</span></div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>      allSubdomainsAcceptPartitions = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>      allSubdomainsAcceptPartitions = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    }</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    DeterminePartitionPlacement(*A, *decomposition, numPartitions, acceptPartition, allSubdomainsAcceptPartitions);</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>  }</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>  <span class="comment">// ======================================================================================================</span></div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>  <span class="comment">// Construct importer</span></div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>  <span class="comment">// ======================================================================================================</span></div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>  <span class="comment">// At this point, the following is true:</span></div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>  <span class="comment">//  * Each processors owns 0 or 1 partitions</span></div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>  <span class="comment">//  * If a processor owns a partition, that partition number is equal to the processor rank</span></div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>  <span class="comment">//  * The decomposition vector contains the partitions ids that the corresponding GID belongs to</span></div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span><span class="preprocessor">#ifdef HAVE_MUELU_DEBUG</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  <span class="keywordtype">int</span> numProcs = comm-&gt;getSize();</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  RCP&lt;const Teuchos::MpiComm&lt;int&gt; &gt; tmpic = rcp_dynamic_cast&lt;const Teuchos::MpiComm&lt;int&gt; &gt;(comm);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  TEUCHOS_TEST_FOR_EXCEPTION(tmpic == Teuchos::null, <a class="code hl_class" href="class_mue_lu_1_1_exceptions_1_1_runtime_error.html">Exceptions::RuntimeError</a>, <span class="stringliteral">&quot;Cannot cast base Teuchos::Comm to Teuchos::MpiComm object.&quot;</span>);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  RCP&lt;const Teuchos::OpaqueWrapper&lt;MPI_Comm&gt; &gt; rawMpiComm = tmpic-&gt;getRawMpiComm();</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  <span class="keywordtype">int</span> numPartitions = Get&lt;int&gt;(currentLevel, <span class="stringliteral">&quot;number of partitions&quot;</span>);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  <span class="comment">// ======================================================================================================</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  <span class="comment">// Construct decomposition vector</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  <span class="comment">// ======================================================================================================</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  RCP&lt;GOVector&gt; decomposition = Get&lt;RCP&lt;GOVector&gt; &gt;(currentLevel, <span class="stringliteral">&quot;Partition&quot;</span>);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  <span class="comment">// check which factory provides &quot;Partition&quot;</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  <span class="keywordflow">if</span> (remapPartitions == <span class="keyword">true</span> &amp;&amp; Teuchos::rcp_dynamic_cast&lt;const CloneRepartitionInterface&gt;(GetFactory(<span class="stringliteral">&quot;Partition&quot;</span>)) != Teuchos::null) {</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="comment">// if &quot;Partition&quot; is provided by a CloneRepartitionInterface class we have to switch of remapPartitions</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="comment">// as we can assume the processor Ids in Partition to be the expected ones. If we would do remapping we</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="comment">// would get different processors for the different blocks which screws up matrix-matrix multiplication.</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    remapPartitions = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  }</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  <span class="comment">// check special cases</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>  <span class="keywordflow">if</span> (numPartitions == 1) {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="comment">// Trivial case: decomposition is the trivial one, all zeros. We skip the call to Zoltan_Interface</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="comment">// (this is mostly done to avoid extra output messages, as even if we didn&#39;t skip there is a shortcut</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="comment">// in Zoltan[12]Interface).</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="comment">// TODO: We can probably skip more work in this case (like building all extra data structures)</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    GetOStream(<a class="code hl_enumvalue" href="namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1fabcf3f2fd68507cefed497403ab07a54e">Runtime0</a>) &lt;&lt; <span class="stringliteral">&quot;Only one partition: Skip call to the repartitioner.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (numPartitions == -1) {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="comment">// No repartitioning necessary: decomposition should be Teuchos::null</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    GetOStream(<a class="code hl_enumvalue" href="namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1fabcf3f2fd68507cefed497403ab07a54e">Runtime0</a>) &lt;&lt; <span class="stringliteral">&quot;No repartitioning necessary: partitions were left unchanged by the repartitioner&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    Set&lt;RCP&lt;const Import&gt; &gt;(currentLevel, <span class="stringliteral">&quot;Importer&quot;</span>, Teuchos::null);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>  }</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>  <span class="comment">// If we&#39;re doing node away, we need to be sure to get the mapping to the NodeComm&#39;s rank 0.</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> nodeRepartLevel = pL.get&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;repartition: node repartition level&quot;</span>);</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>  <span class="keywordflow">if</span> (currentLevel.<a class="code hl_function" href="class_mue_lu_1_1_level.html#a72e28575744e0454e8abe29007701b77">GetLevelID</a>() == nodeRepartLevel) {</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="comment">// NodePartitionInterface returns the *ranks* of the guy who gets the info, not the *partition number*</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="comment">// In a sense, we&#39;ve already done remap here.</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="comment">// FIXME: We need a low-comm import construction</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    remapPartitions = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>  }</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>  <span class="comment">// ======================================================================================================</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  <span class="comment">// Remap if necessary</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>  <span class="comment">// ======================================================================================================</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>  <span class="comment">// From a user perspective, we want user to not care about remapping, thinking of it as only a performance feature.</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>  <span class="comment">// There are two problems, however.</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>  <span class="comment">// (1) Next level aggregation depends on the order of GIDs in the vector, if one uses &quot;natural&quot; or &quot;random&quot; orderings.</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>  <span class="comment">//     This also means that remapping affects next level aggregation, despite the fact that the _set_ of GIDs for</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>  <span class="comment">//     each partition is the same.</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>  <span class="comment">// (2) Even with the fixed order of GIDs, the remapping may influence the aggregation for the next-next level.</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  <span class="comment">//     Let us consider the following example. Lets assume that when we don&#39;t do remapping, processor 0 would have</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>  <span class="comment">//     GIDs {0,1,2}, and processor 1 GIDs {3,4,5}, and if we do remapping processor 0 would contain {3,4,5} and</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>  <span class="comment">//     processor 1 {0,1,2}. Now, when we run repartitioning algorithm on the next level (say Zoltan1 RCB), it may</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>  <span class="comment">//     be dependent on whether whether it is [{0,1,2}, {3,4,5}] or [{3,4,5}, {0,1,2}]. Specifically, the tie-breaking</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>  <span class="comment">//     algorithm can resolve these differently. For instance, running</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>  <span class="comment">//         mpirun -np 5 ./MueLu_ScalingTestParamList.exe --xml=easy_sa.xml --nx=12 --ny=12 --nz=12</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>  <span class="comment">//     with</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>  <span class="comment">//         &lt;ParameterList name=&quot;MueLu&quot;&gt;</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>  <span class="comment">//           &lt;Parameter name=&quot;coarse: max size&quot;                type=&quot;int&quot;      value=&quot;1&quot;/&gt;</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>  <span class="comment">//           &lt;Parameter name=&quot;repartition: enable&quot;             type=&quot;bool&quot;     value=&quot;true&quot;/&gt;</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>  <span class="comment">//           &lt;Parameter name=&quot;repartition: min rows per proc&quot;  type=&quot;int&quot;      value=&quot;2&quot;/&gt;</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>  <span class="comment">//           &lt;ParameterList name=&quot;level 1&quot;&gt;</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>  <span class="comment">//             &lt;Parameter name=&quot;repartition: remap parts&quot;      type=&quot;bool&quot;     value=&quot;false/true&quot;/&gt;</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>  <span class="comment">//           &lt;/ParameterList&gt;</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>  <span class="comment">//         &lt;/ParameterList&gt;</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>  <span class="comment">//     produces different repartitioning for level 2.</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>  <span class="comment">//     This different repartitioning may then escalate into different aggregation for the next level.</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>  <span class="comment">//</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>  <span class="comment">// We fix (1) by fixing the order of GIDs in a vector by sorting the resulting vector.</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>  <span class="comment">// Fixing (2) is more complicated.</span></div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>  <span class="comment">// FIXME: Fixing (2) in Zoltan may not be enough, as we may use some arbitration in MueLu,</span></div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>  <span class="comment">// for instance with CoupledAggregation. What we really need to do is to use the same order of processors containing</span></div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>  <span class="comment">// the same order of GIDs. To achieve that, the newly created subcommunicator must be conforming with the order. For</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>  <span class="comment">// instance, if we have [{0,1,2}, {3,4,5}], we create a subcommunicator where processor 0 gets rank 0, and processor 1</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>  <span class="comment">// gets rank 1. If, on the other hand, we have [{3,4,5}, {0,1,2}], we assign rank 1 to processor 0, and rank 0 to processor 1.</span></div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>  <span class="comment">// This rank permutation requires help from Epetra/Tpetra, both of which have no such API in place.</span></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>  <span class="comment">// One should also be concerned that if we had such API in place, rank 0 in subcommunicator may no longer be rank 0 in</span></div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>  <span class="comment">// MPI_COMM_WORLD, which may lead to issues for logging.</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  <span class="keywordflow">if</span> (remapPartitions) {</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <a class="code hl_class" href="class_mue_lu_1_1_sub_factory_monitor.html">SubFactoryMonitor</a> m1(*<span class="keyword">this</span>, <span class="stringliteral">&quot;DeterminePartitionPlacement&quot;</span>, currentLevel);</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <span class="keywordtype">bool</span> acceptPartition = pL.get&lt;<span class="keywordtype">bool</span>&gt;(<span class="stringliteral">&quot;repartition: remap accept partition&quot;</span>);</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <span class="keywordtype">bool</span> allSubdomainsAcceptPartitions;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="keywordtype">int</span> localNumAcceptPartition = acceptPartition;</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="keywordtype">int</span> globalNumAcceptPartition;</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <a class="code hl_define" href="_mue_lu___perf_utils__decl_8hpp.html#a0537b70d4043fd9285afd8348c0a3cfe">MueLu_sumAll</a>(comm, localNumAcceptPartition, globalNumAcceptPartition);</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    GetOStream(<a class="code hl_enumvalue" href="namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1fa18d960e5bd7364c1ea53ae67f5891ff5">Statistics2</a>) &lt;&lt; <span class="stringliteral">&quot;Number of ranks that accept partitions: &quot;</span> &lt;&lt; globalNumAcceptPartition &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <span class="keywordflow">if</span> (globalNumAcceptPartition &lt; numPartitions) {</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>      GetOStream(<a class="code hl_enumvalue" href="namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1fa1804a250088d64143eda40094c28d224">Warnings0</a>) &lt;&lt; <span class="stringliteral">&quot;Not enough ranks are willing to accept a partition, allowing partitions on all ranks.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>      acceptPartition               = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>      allSubdomainsAcceptPartitions = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (numPartitions &gt; numProcs) {</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>      <span class="comment">// We are trying to repartition to a larger communicator.</span></div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>      allSubdomainsAcceptPartitions = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>      allSubdomainsAcceptPartitions = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    }</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    DeterminePartitionPlacement(*A, *decomposition, numPartitions, acceptPartition, allSubdomainsAcceptPartitions);</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>  }</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>  <span class="comment">// ======================================================================================================</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>  <span class="comment">// Construct importer</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>  <span class="comment">// ======================================================================================================</span></div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>  <span class="comment">// At this point, the following is true:</span></div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>  <span class="comment">//  * Each processors owns 0 or 1 partitions</span></div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>  <span class="comment">//  * If a processor owns a partition, that partition number is equal to the processor rank</span></div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>  <span class="comment">//  * The decomposition vector contains the partitions ids that the corresponding GID belongs to</span></div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span><span class="preprocessor">#ifdef HAVE_MUELU_DEBUG</span></div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>  <span class="keywordtype">int</span> myRank = comm-&gt;getRank();</div>
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>  ArrayRCP&lt;const GO&gt; decompEntries;</div>
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>  <span class="keywordflow">if</span> (decomposition-&gt;getLocalLength() &gt; 0)</div>
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    decompEntries = decomposition-&gt;getData(0);</div>

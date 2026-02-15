@@ -551,7 +551,7 @@ $(document).ready(function(){initNavTree('_mue_lu___tentative_p_factory__kokkos_
 <div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span>      <a class="code hl_function" href="class_mue_lu_1_1_amalgamation_factory.html#a48502cd863663294d89edaf4ea255609">AmalgamationFactory&lt;SC, LO, GO, NO&gt;::AmalgamateMap</a>(rcp_dynamic_cast&lt;const StridedMap&gt;(coarseMap), coarseCoordMap);</div>
 <div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span>    }</div>
 <div class="line"><a id="l00442" name="l00442"></a><span class="lineno">  442</span> </div>
-<div class="line"><a id="l00443" name="l00443"></a><span class="lineno">  443</span>    coarseCoords = RealValuedMultiVectorFactory::Build(coarseCoordMap, fineCoords-&gt;getNumVectors());</div>
+<div class="line"><a id="l00443" name="l00443"></a><span class="lineno">  443</span>    coarseCoords = RealValuedMultiVectorFactory::Build(coarseCoordMap, fineCoords-&gt;getNumVectors(), <span class="keyword">false</span>);</div>
 <div class="line"><a id="l00444" name="l00444"></a><span class="lineno">  444</span> </div>
 <div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span>    <span class="comment">// Create overlapped fine coordinates to reduce global communication</span></div>
 <div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span>    <span class="keyword">auto</span> uniqueMap                           = fineCoords-&gt;getMap();</div>
@@ -560,7 +560,7 @@ $(document).ready(function(){initNavTree('_mue_lu___tentative_p_factory__kokkos_
 <div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span>      <span class="keyword">auto</span> nonUniqueMap = aggregates-&gt;GetMap();</div>
 <div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span>      <span class="keyword">auto</span> importer     = ImportFactory::Build(uniqueMap, nonUniqueMap);</div>
 <div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span> </div>
-<div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span>      ghostedCoords = RealValuedMultiVectorFactory::Build(nonUniqueMap, fineCoords-&gt;getNumVectors());</div>
+<div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span>      ghostedCoords = RealValuedMultiVectorFactory::Build(nonUniqueMap, fineCoords-&gt;getNumVectors(), <span class="keyword">false</span>);</div>
 <div class="line"><a id="l00453" name="l00453"></a><span class="lineno">  453</span>      ghostedCoords-&gt;doImport(*fineCoords, *importer, Xpetra::INSERT);</div>
 <div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span>    }</div>
 <div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span> </div>
@@ -790,11 +790,11 @@ $(document).ready(function(){initNavTree('_mue_lu___tentative_p_factory__kokkos_
 <div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span> </div>
 <div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span>  <span class="comment">// STEP 2: prepare local QR decomposition</span></div>
 <div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span>  <span class="comment">// Reserve memory for tentative prolongation operator</span></div>
-<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span>  coarseNullspace = MultiVectorFactory::Build(coarseMap, NSDim);</div>
+<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span>  coarseNullspace = MultiVectorFactory::Build(coarseMap, NSDim, <span class="keyword">true</span>);</div>
 <div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span> </div>
 <div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span>  <span class="comment">// Pull out the nullspace vectors so that we can have random access (on the device)</span></div>
 <div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span>  <span class="keyword">auto</span> <a class="code hl_variable" href="_mue_lu___tentative_p_factory__kokkos__def_8hpp.html#a07dbdcb2ddd87f01fe8a877ba10906c0">fineNS</a>   = fineNullspace-&gt;getLocalViewDevice(Tpetra::Access::ReadWrite);</div>
-<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>  <span class="keyword">auto</span> <a class="code hl_variable" href="_mue_lu___tentative_p_factory__kokkos__def_8hpp.html#a9003c58d4537707f490783dbd07086f9">coarseNS</a> = coarseNullspace-&gt;getLocalViewDevice(Tpetra::Access::OverwriteAll);</div>
+<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>  <span class="keyword">auto</span> <a class="code hl_variable" href="_mue_lu___tentative_p_factory__kokkos__def_8hpp.html#a9003c58d4537707f490783dbd07086f9">coarseNS</a> = coarseNullspace-&gt;getLocalViewDevice(Tpetra::Access::ReadWrite);</div>
 <div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span> </div>
 <div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span>  <span class="keywordtype">size_t</span> nnz = 0;  <span class="comment">// actual number of nnz</span></div>
 <div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span> </div>
@@ -1201,11 +1201,11 @@ $(document).ready(function(){initNavTree('_mue_lu___tentative_p_factory__kokkos_
 <div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span> </div>
 <div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span>  <span class="comment">// STEP 2: prepare local QR decomposition</span></div>
 <div class="line"><a id="l01088" name="l01088"></a><span class="lineno"> 1088</span>  <span class="comment">// Reserve memory for tentative prolongation operator</span></div>
-<div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span>  coarseNullspace = MultiVectorFactory::Build(coarsePointMap, NSDim);</div>
+<div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span>  coarseNullspace = MultiVectorFactory::Build(coarsePointMap, NSDim, <span class="keyword">true</span>);</div>
 <div class="line"><a id="l01090" name="l01090"></a><span class="lineno"> 1090</span> </div>
 <div class="line"><a id="l01091" name="l01091"></a><span class="lineno"> 1091</span>  <span class="comment">// Pull out the nullspace vectors so that we can have random access (on the device)</span></div>
 <div class="line"><a id="l01092" name="l01092"></a><span class="lineno"> 1092</span>  <span class="keyword">auto</span> <a class="code hl_variable" href="_mue_lu___tentative_p_factory__kokkos__def_8hpp.html#a07dbdcb2ddd87f01fe8a877ba10906c0">fineNS</a>   = fineNullspace-&gt;getLocalViewDevice(Tpetra::Access::ReadWrite);</div>
-<div class="line"><a id="l01093" name="l01093"></a><span class="lineno"> 1093</span>  <span class="keyword">auto</span> <a class="code hl_variable" href="_mue_lu___tentative_p_factory__kokkos__def_8hpp.html#a9003c58d4537707f490783dbd07086f9">coarseNS</a> = coarseNullspace-&gt;getLocalViewDevice(Tpetra::Access::OverwriteAll);</div>
+<div class="line"><a id="l01093" name="l01093"></a><span class="lineno"> 1093</span>  <span class="keyword">auto</span> <a class="code hl_variable" href="_mue_lu___tentative_p_factory__kokkos__def_8hpp.html#a9003c58d4537707f490783dbd07086f9">coarseNS</a> = coarseNullspace-&gt;getLocalViewDevice(Tpetra::Access::ReadWrite);</div>
 <div class="line"><a id="l01094" name="l01094"></a><span class="lineno"> 1094</span> </div>
 <div class="line"><a id="l01095" name="l01095"></a><span class="lineno"> 1095</span>  <span class="keyword">typedef</span> <span class="keyword">typename</span> Xpetra::Matrix&lt;SC, LO, GO, NO&gt;::local_matrix_device_type local_matrix_type;</div>
 <div class="line"><a id="l01096" name="l01096"></a><span class="lineno"> 1096</span>  <span class="keyword">typedef</span> <span class="keyword">typename</span> local_matrix_type::row_map_type::non_const_type rows_type;</div>

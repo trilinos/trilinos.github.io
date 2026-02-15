@@ -402,7 +402,7 @@ $(document).ready(function(){initNavTree('_mue_lu___rebalance_transfer_factory__
 <div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>        coordImporter = ImportFactory::Build(origMap, targetVectorMap);</div>
 <div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>      }</div>
 <div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span> </div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>      RCP&lt;xdMV&gt; permutedCoords = Xpetra::MultiVectorFactory&lt;typename Teuchos::ScalarTraits&lt;Scalar&gt;::magnitudeType, LO, GO, NO&gt;::Build(coordImporter-&gt;getTargetMap(), coords-&gt;getNumVectors());</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>      RCP&lt;xdMV&gt; permutedCoords = Xpetra::MultiVectorFactory&lt;typename Teuchos::ScalarTraits&lt;Scalar&gt;::magnitudeType, LO, GO, NO&gt;::Build(coordImporter-&gt;getTargetMap(), coords-&gt;getNumVectors(), <span class="keyword">false</span>);</div>
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>      permutedCoords-&gt;doImport(*coords, *coordImporter, Xpetra::INSERT);</div>
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
 <div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>      <span class="keywordflow">if</span> (pL.isParameter(<span class="stringliteral">&quot;repartition: use subcommunicators&quot;</span>) == <span class="keyword">true</span> &amp;&amp; pL.get&lt;<span class="keywordtype">bool</span>&gt;(<span class="stringliteral">&quot;repartition: use subcommunicators&quot;</span>) == <span class="keyword">true</span>)</div>
@@ -446,7 +446,7 @@ $(document).ready(function(){initNavTree('_mue_lu___rebalance_transfer_factory__
 <div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>        materialImporter = ImportFactory::Build(origMap, targetVectorMap);</div>
 <div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>      }</div>
 <div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span> </div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>      RCP&lt;MultiVector&gt; permutedMaterial = MultiVectorFactory::Build(materialImporter-&gt;getTargetMap(), material-&gt;getNumVectors());</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>      RCP&lt;MultiVector&gt; permutedMaterial = MultiVectorFactory::Build(materialImporter-&gt;getTargetMap(), material-&gt;getNumVectors(), <span class="keyword">false</span>);</div>
 <div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>      permutedMaterial-&gt;doImport(*material, *materialImporter, Xpetra::INSERT);</div>
 <div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span> </div>
 <div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>      <span class="keywordflow">if</span> (pL.get&lt;<span class="keywordtype">bool</span>&gt;(<span class="stringliteral">&quot;repartition: use subcommunicators&quot;</span>) == <span class="keyword">true</span>)</div>
@@ -488,7 +488,7 @@ $(document).ready(function(){initNavTree('_mue_lu___rebalance_transfer_factory__
 <div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>      <span class="comment">// This line must be after the Get call</span></div>
 <div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>      <a class="code hl_class" href="class_mue_lu_1_1_sub_factory_monitor.html">SubFactoryMonitor</a> subM(*<span class="keyword">this</span>, <span class="stringliteral">&quot;Rebalancing nullspace&quot;</span>, coarseLevel);</div>
 <div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span> </div>
-<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>      RCP&lt;MultiVector&gt; permutedNullspace = MultiVectorFactory::Build(importer-&gt;getTargetMap(), nullspace-&gt;getNumVectors());</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>      RCP&lt;MultiVector&gt; permutedNullspace = MultiVectorFactory::Build(importer-&gt;getTargetMap(), nullspace-&gt;getNumVectors(), <span class="keyword">false</span>);</div>
 <div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>      permutedNullspace-&gt;doImport(*nullspace, *importer, Xpetra::INSERT);</div>
 <div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span> </div>
 <div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>      <span class="keywordflow">if</span> (pL.get&lt;<span class="keywordtype">bool</span>&gt;(<span class="stringliteral">&quot;repartition: use subcommunicators&quot;</span>) == <span class="keyword">true</span>)</div>
