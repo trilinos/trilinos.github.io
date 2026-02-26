@@ -85,7 +85,7 @@ The Trilinos packages are organized into three main areas: **Core**, **Solvers**
   </tr>
   <tr>
     <td><a href="https://github.com/trilinos/Trilinos/tree/master/packages/zoltan">Zoltan</a></td>
-    <td><div>A toolkit of parallel services for dynamic, unstructured, and/or adaptive simulations, providing load balancing and related services.</div><div style="margin-left: 1.5em;"><a href="https://github.com/trilinos/Trilinos/tree/master/packages/zoltan/doc">Zoltan documentation</a></div></td>
+    <td><div>A toolkit of parallel services for dynamic, unstructured, and/or adaptive simulations, providing load balancing and related services.</div><div style="margin-left: 1.5em;"><a href="https://sandialabs.github.io/Zoltan/">Zoltan documentation</a></div></td>
     <td><a href="https://github.com/orgs/trilinos/teams/zoltan">@zoltan</a></td>
     <td><a href="mailto:egboman@sandia.gov">Erik Boman</a> (<a href="https://github.com/egboman">@egboman</a>)</td>
   </tr>
@@ -255,7 +255,7 @@ The Trilinos packages are organized into three main areas: **Core**, **Solvers**
   </tr>
   <tr>
     <td><a href="https://github.com/trilinos/Trilinos/tree/master/packages/stk">STK</a></td>
-    <td><div>Supports massively parallel multi-physics computations on dynamically changing unstructured meshes.</div><div style="margin-left: 1.5em;"><a href="pages/packages/stk/STKManual_2024-07-12-final.pdf">STK Manual</a></div></td>
+    <td><div>Supports massively parallel multi-physics computations on dynamically changing unstructured meshes.</div><div style="margin-left: 1.5em;"><a href="pdfs/STKManual_2024-07-12-final.pdf">STK Manual</a></div></td>
     <td><a href="https://github.com/orgs/trilinos/teams/stk">@stk</a></td>
     <td><a href="mailto:STK-NGPTeam@sandia.gov">STK Team</a> (<a href="https://github.com/orgs/trilinos/teams/stk">@stk</a>)</td>
   </tr>
@@ -272,8 +272,8 @@ The Trilinos packages are organized into three main areas: **Core**, **Solvers**
     <td><a href="mailto:ccober@sandia.gov">Curtis Ober</a> (<a href="https://github.com/ccober6">@ccober6</a>)</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/trilinos/Trilinos/tree/master/packages/trilinoscouplings">Trilinos Couplings</a></td>
-    <td><div>A collection of interfaces between packages.</div><div style="margin-left: 1.5em;"><a href="docs/trilinoscouplings/index.html">Trilinos Couplings Doxygen</a></div></td>
+    <td><a href="https://github.com/trilinos/Trilinos/tree/master/packages/trilinoscouplings">TrilinosCouplings</a></td>
+    <td><div>A collection of interfaces between packages.</div><div style="margin-left: 1.5em;"><a href="docs/trilinoscouplings/index.html">TrilinosCouplings Doxygen</a></div></td>
     <td><a href="https://github.com/orgs/trilinos/teams/trilinoscouplings">@trilinoscouplings</a></td>
     <td><a href="mailto:mperego@sandia.gov">Mauro Perego</a> (<a href="https://github.com/mperego">@mperego</a>)</td>
   </tr>
