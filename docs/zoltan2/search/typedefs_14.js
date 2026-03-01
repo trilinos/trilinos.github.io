@@ -16,5 +16,5 @@ var searchData=
   ['xmv_5ftmv_5ft_13',['xMV_tMV_t',['../namespace_zoltan2___testing_framework.html#a2a7f666b0072a5a51fec036c41713998',1,'Zoltan2_TestingFramework']]],
   ['xmv_5fxmv_5ft_14',['xMV_xMV_t',['../namespace_zoltan2___testing_framework.html#a5a702116d0daa0ad982c0595fe55a3c4',1,'Zoltan2_TestingFramework']]],
   ['xmvector_5ft_15',['xMVector_t',['../namespace_zoltan2___testing_framework.html#ad39932e85b3eba2b463fe730d4e0285d',1,'Zoltan2_TestingFramework']]],
-  ['xvector_5ft_16',['xvector_t',['../namespace_zoltan2___testing_framework.html#ab847f806e75c5442f9f4a108b133c3eb',1,'Zoltan2_TestingFramework::xVector_t'],['../_xpetra_multi_vector_input_8cpp.html#a8ec563f4b1c10df3b6b35c28a5348937',1,'xvector_t:&#160;XpetraMultiVectorInput.cpp'],['../_xpetra_vector_input_8cpp.html#a47dcf4b6f75b836d5f31cd5b9e1e8c24',1,'xvector_t:&#160;XpetraVectorInput.cpp']]]
+  ['xvector_5ft_16',['xvector_t',['../_xpetra_multi_vector_input_8cpp.html#a8ec563f4b1c10df3b6b35c28a5348937',1,'xvector_t:&#160;XpetraMultiVectorInput.cpp'],['../_xpetra_vector_input_8cpp.html#a47dcf4b6f75b836d5f31cd5b9e1e8c24',1,'xvector_t:&#160;XpetraVectorInput.cpp'],['../namespace_zoltan2___testing_framework.html#ab847f806e75c5442f9f4a108b133c3eb',1,'Zoltan2_TestingFramework::xVector_t']]]
 ];

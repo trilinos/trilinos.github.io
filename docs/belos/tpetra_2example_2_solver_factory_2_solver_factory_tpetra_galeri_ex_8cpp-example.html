@@ -148,7 +148,7 @@ $(function() {
 <div class="line">  <span class="keyword">using </span>Teuchos::rcp;</div>
 <div class="line">  <span class="keyword">using </span>Teuchos::ParameterList;</div>
 <div class="line"> </div>
-<div class="line">  Teuchos::GlobalMPISession mpiSession (&amp;argc, &amp;argv, &amp;std::cout);</div>
+<div class="line">  Tpetra::initialize(&amp;argc, &amp;argv);</div>
 <div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span> comm = Tpetra::getDefaultComm();</div>
 <div class="line">  <span class="keyword">const</span> <span class="keywordtype">int</span> myPID = comm-&gt;getRank();</div>
 <div class="line"> </div>
@@ -334,6 +334,8 @@ $(function() {
 <div class="line">    }</div>
 <div class="line">  }</div>
 <div class="line">  TEUCHOS_STANDARD_CATCH_STATEMENTS(verbose, std::cerr, success);</div>
+<div class="line"> </div>
+<div class="line">  Tpetra::finalize();</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">return</span> success ? EXIT_SUCCESS : EXIT_FAILURE;</div>
 <div class="line">}</div>
