@@ -119,10 +119,11 @@ $(function() {
 <div class="line">  <span class="keywordtype">bool</span> printSolution   = <span class="keyword">false</span>;</div>
 <div class="line">  <span class="keywordtype">bool</span> checkSolution   = <span class="keyword">false</span>;</div>
 <div class="line">  <span class="keywordtype">bool</span> printTiming     = <span class="keyword">false</span>;</div>
-<div class="line">  <span class="keywordtype">bool</span> useStackedTimer = <span class="keyword">false</span>;</div>
+<div class="line">  <span class="keywordtype">bool</span> useStackedTimer = <span class="keyword">true</span>;</div>
 <div class="line">  <span class="keywordtype">bool</span> allprint        = <span class="keyword">false</span>;</div>
 <div class="line">  <span class="keywordtype">bool</span> verbose = (myRank==0);</div>
-<div class="line">  <span class="keywordtype">bool</span> useZoltan2 = <span class="keyword">false</span>;</div>
+<div class="line">  <span class="keywordtype">bool</span> describe_on = <span class="keyword">false</span>;</div>
+<div class="line">  <span class="keywordtype">bool</span> useZoltan2  = <span class="keyword">false</span>;</div>
 <div class="line">  <span class="keywordtype">bool</span> useParMETIS = <span class="keyword">false</span>;</div>
 <div class="line">  std::string mat_filename(<span class="stringliteral">&quot;arc130.mtx&quot;</span>);</div>
 <div class="line">  std::string map_filename(<span class="stringliteral">&quot;&quot;</span>);</div>
@@ -131,6 +132,7 @@ $(function() {
 <div class="line">  std::string xml_filename(<span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line">  Teuchos::CommandLineProcessor cmdp(<span class="keyword">false</span>,<span class="keyword">true</span>);</div>
 <div class="line">  cmdp.setOption(<span class="stringliteral">&quot;verbose&quot;</span>,<span class="stringliteral">&quot;quiet&quot;</span>,&amp;verbose,<span class="stringliteral">&quot;Print messages and results.&quot;</span>);</div>
+<div class="line">  cmdp.setOption(<span class="stringliteral">&quot;describe&quot;</span>,<span class="stringliteral">&quot;no_describe&quot;</span>,&amp;describe_on,<span class="stringliteral">&quot;Describe solver.&quot;</span>);</div>
 <div class="line">  cmdp.setOption(<span class="stringliteral">&quot;filename&quot;</span>,&amp;mat_filename,<span class="stringliteral">&quot;Filename for Matrix-Market test matrix.&quot;</span>);</div>
 <div class="line">  cmdp.setOption(<span class="stringliteral">&quot;map_filename&quot;</span>,&amp;map_filename,<span class="stringliteral">&quot;Filename for matrix rowmap.&quot;</span>);</div>
 <div class="line">  cmdp.setOption(<span class="stringliteral">&quot;numSolves&quot;</span>,&amp;numSolves,<span class="stringliteral">&quot;Number of computes &amp; solves.&quot;</span>);</div>
@@ -274,6 +276,12 @@ $(function() {
 <div class="line">  }</div>
 <div class="line"> </div>
 <div class="line">  solver = Amesos2::create&lt;MAT,MV&gt;(solvername, A, X, B);</div>
+<div class="line">  <span class="keywordflow">if</span>( describe_on ) {</div>
+<div class="line">    solver-&gt;describe(*fos, Teuchos::VERB_EXTREME);</div>
+<div class="line">  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (myRank == 0) {</div>
+<div class="line">    std::cout &lt;&lt; solver-&gt;description() &lt;&lt; std::endl &lt;&lt; std::endl;</div>
+<div class="line">  }</div>
+<div class="line"> </div>
 <div class="line">  <span class="keywordflow">if</span> (xml_filename != <span class="stringliteral">&quot;&quot;</span>) {</div>
 <div class="line">    Teuchos::ParameterList test_params =</div>
 <div class="line">      Teuchos::ParameterXMLFileReader(xml_filename).getParameters();</div>

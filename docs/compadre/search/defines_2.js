@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['make_5fsampling_5ffunctional_0',['make_sampling_functional',['../_compadre___operators_8hpp.html#a241b2c0f3394c0ceb7d2d7f016f10093',1,'Compadre_Operators.hpp']]]
+  ['pi_0',['PI',['../_g_m_l_s___manifold_8hpp.html#a598a3330b3c21701223ee0ca14316eca',1,'GMLS_Manifold.hpp']]]
 ];

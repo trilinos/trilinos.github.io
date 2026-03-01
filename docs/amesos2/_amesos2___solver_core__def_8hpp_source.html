@@ -701,153 +701,154 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span>    std::string p = name();</div>
 <div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>    <a class="code hl_function" href="group__amesos2__util.html#ga050780af1f00d876654b3c2d797012cd">Util::printLine</a>(out);</div>
 <div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>    out &lt;&lt; this-&gt;description() &lt;&lt; std::endl &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span> </div>
-<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>    out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Matrix has &quot;</span> &lt;&lt; globalNumRows_ &lt;&lt; <span class="stringliteral">&quot; rows&quot;</span></div>
-<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>        &lt;&lt; <span class="stringliteral">&quot; and &quot;</span> &lt;&lt; globalNumNonZeros_ &lt;&lt; <span class="stringliteral">&quot; nonzeros&quot;</span></div>
-<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span>        &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>    <span class="keywordflow">if</span>( vl == VERB_MEDIUM || vl == VERB_HIGH || vl == VERB_EXTREME ){</div>
-<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Nonzero elements per row = &quot;</span></div>
-<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span>          &lt;&lt; globalNumNonZeros_ / globalNumRows_</div>
-<div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span>          &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Percentage of nonzero elements = &quot;</span></div>
-<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span>          &lt;&lt; 100.0 * globalNumNonZeros_ / (globalNumRows_ * globalNumCols_)</div>
-<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span>          &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span>    }</div>
-<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span>    <span class="keywordflow">if</span>( vl == VERB_HIGH || vl == VERB_EXTREME ){</div>
-<div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Use transpose = &quot;</span> &lt;&lt; control_.useTranspose_</div>
-<div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span>          &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Use iterative refinement = &quot;</span> &lt;&lt; control_.useIterRefine_</div>
-<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span>          &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span>    }</div>
-<div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span>    <span class="keywordflow">if</span> ( vl == VERB_EXTREME ){</div>
-<div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span>      printTiming(out,vl);</div>
-<div class="line"><a id="l00638" name="l00638"></a><span class="lineno">  638</span>    }</div>
-<div class="line"><a id="l00639" name="l00639"></a><span class="lineno">  639</span>    <a class="code hl_function" href="group__amesos2__util.html#ga050780af1f00d876654b3c2d797012cd">Util::printLine</a>(out);</div>
-<div class="line"><a id="l00640" name="l00640"></a><span class="lineno">  640</span>  }</div>
-<div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span>}</div>
+<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>    <span class="keyword">static_cast&lt;</span><span class="keyword">const </span>solver_type*<span class="keyword">&gt;</span>(<span class="keyword">this</span>)-&gt;describe_impl(out, verbLevel);</div>
+<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span> </div>
+<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>    out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Matrix has &quot;</span> &lt;&lt; globalNumRows_ &lt;&lt; <span class="stringliteral">&quot; rows&quot;</span></div>
+<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span>        &lt;&lt; <span class="stringliteral">&quot; and &quot;</span> &lt;&lt; globalNumNonZeros_ &lt;&lt; <span class="stringliteral">&quot; nonzeros&quot;</span></div>
+<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>        &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span>    <span class="keywordflow">if</span>( vl == VERB_MEDIUM || vl == VERB_HIGH || vl == VERB_EXTREME ){</div>
+<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Nonzero elements per row = &quot;</span></div>
+<div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span>          &lt;&lt; globalNumNonZeros_ / globalNumRows_</div>
+<div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span>          &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Percentage of nonzero elements = &quot;</span></div>
+<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span>          &lt;&lt; 100.0 * globalNumNonZeros_ / (globalNumRows_ * globalNumCols_)</div>
+<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span>          &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span>    }</div>
+<div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span>    <span class="keywordflow">if</span>( vl == VERB_HIGH || vl == VERB_EXTREME ){</div>
+<div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Use transpose = &quot;</span> &lt;&lt; control_.useTranspose_</div>
+<div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span>          &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Use iterative refinement = &quot;</span> &lt;&lt; control_.useIterRefine_</div>
+<div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span>          &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span>    }</div>
+<div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span>    <span class="keywordflow">if</span> ( vl == VERB_EXTREME ){</div>
+<div class="line"><a id="l00638" name="l00638"></a><span class="lineno">  638</span>      printTiming(out,vl);</div>
+<div class="line"><a id="l00639" name="l00639"></a><span class="lineno">  639</span>    }</div>
+<div class="line"><a id="l00640" name="l00640"></a><span class="lineno">  640</span>    <a class="code hl_function" href="group__amesos2__util.html#ga050780af1f00d876654b3c2d797012cd">Util::printLine</a>(out);</div>
+<div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span>  }</div>
+<div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span>}</div>
 </div>
-<div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span> </div>
 <div class="line"><a id="l00643" name="l00643"></a><span class="lineno">  643</span> </div>
-<div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span><span class="keyword">template</span> &lt;<span class="keyword">template</span> &lt;<span class="keyword">class</span>,<span class="keyword">class</span>&gt; <span class="keyword">class </span>ConcreteSolver, <span class="keyword">class </span>Matrix, <span class="keyword">class </span>Vector &gt;</div>
-<div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span><span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen00646" data-start="{" data-end="}">
-<div class="line"><a id="l00646" name="l00646"></a><span class="lineno"><a class="line" href="class_amesos2_1_1_solver_core.html#a50fa15c50131dd3a4a19b3a0e94612d3">  646</a></span><a class="code hl_function" href="class_amesos2_1_1_solver_core.html#a50fa15c50131dd3a4a19b3a0e94612d3">SolverCore&lt;ConcreteSolver,Matrix,Vector&gt;::printTiming</a>(</div>
-<div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span>  Teuchos::FancyOStream &amp;out,</div>
-<div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span>  <span class="keyword">const</span> Teuchos::EVerbosityLevel verbLevel)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span>  <span class="keywordflow">if</span>( matrixA_.is_null() || (rank_ != 0) ){ <span class="keywordflow">return</span>; }</div>
-<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span> </div>
-<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span>  <span class="keywordtype">double</span> preTime  = timers_.preOrderTime_.totalElapsedTime();</div>
-<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span>  <span class="keywordtype">double</span> symTime  = timers_.symFactTime_.totalElapsedTime();</div>
-<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span>  <span class="keywordtype">double</span> numTime  = timers_.numFactTime_.totalElapsedTime();</div>
-<div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span>  <span class="keywordtype">double</span> solTime  = timers_.solveTime_.totalElapsedTime();</div>
-<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span>  <span class="keywordtype">double</span> totTime  = timers_.totalTime_.totalElapsedTime();</div>
-<div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span>  <span class="keywordtype">double</span> overhead = totTime - (preTime + symTime + numTime + solTime);</div>
-<div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span> </div>
-<div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span>  std::string p = name() + <span class="stringliteral">&quot; : &quot;</span>;</div>
-<div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span>  <a class="code hl_function" href="group__amesos2__util.html#ga050780af1f00d876654b3c2d797012cd">Util::printLine</a>(out);</div>
-<div class="line"><a id="l00661" name="l00661"></a><span class="lineno">  661</span> </div>
-<div class="line"><a id="l00662" name="l00662"></a><span class="lineno">  662</span>  <span class="keywordflow">if</span>(verbLevel != Teuchos::VERB_NONE)</div>
-<div class="line"><a id="l00663" name="l00663"></a><span class="lineno">  663</span>    {</div>
-<div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Time to convert matrix to implementation format = &quot;</span></div>
-<div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span>          &lt;&lt; timers_.mtxConvTime_.totalElapsedTime() &lt;&lt; <span class="stringliteral">&quot; (s)&quot;</span></div>
-<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span>          &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Time to redistribute matrix = &quot;</span></div>
-<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>          &lt;&lt; timers_.mtxRedistTime_.totalElapsedTime() &lt;&lt; <span class="stringliteral">&quot; (s)&quot;</span></div>
-<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span>          &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span> </div>
-<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Time to convert vectors to implementation format = &quot;</span></div>
-<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span>          &lt;&lt; timers_.vecConvTime_.totalElapsedTime() &lt;&lt; <span class="stringliteral">&quot; (s)&quot;</span></div>
-<div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span>          &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Time to redistribute vectors = &quot;</span></div>
-<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span>          &lt;&lt; timers_.vecRedistTime_.totalElapsedTime() &lt;&lt; <span class="stringliteral">&quot; (s)&quot;</span></div>
-<div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span>          &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span> </div>
-<div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Number of pre-orderings = &quot;</span></div>
-<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span>          &lt;&lt; status_.getNumPreOrder()</div>
-<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span>          &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Time for pre-ordering = &quot;</span></div>
-<div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span>          &lt;&lt; preTime &lt;&lt; <span class="stringliteral">&quot; (s), avg = &quot;</span></div>
-<div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span>          &lt;&lt; preTime / status_.getNumPreOrder() &lt;&lt; <span class="stringliteral">&quot; (s)&quot;</span></div>
-<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>          &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span> </div>
-<div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Number of symbolic factorizations = &quot;</span></div>
-<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span>          &lt;&lt; status_.getNumSymbolicFact()</div>
-<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>          &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Time for sym fact = &quot;</span></div>
-<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>          &lt;&lt; symTime &lt;&lt; <span class="stringliteral">&quot; (s), avg = &quot;</span></div>
-<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>          &lt;&lt; symTime / status_.getNumSymbolicFact() &lt;&lt; <span class="stringliteral">&quot; (s)&quot;</span></div>
-<div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span>          &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span> </div>
-<div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Number of numeric factorizations = &quot;</span></div>
-<div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span>          &lt;&lt; status_.getNumNumericFact()</div>
-<div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span>          &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Time for num fact = &quot;</span></div>
-<div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span>          &lt;&lt; numTime &lt;&lt; <span class="stringliteral">&quot; (s), avg = &quot;</span></div>
-<div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span>          &lt;&lt; numTime / status_.getNumNumericFact() &lt;&lt; <span class="stringliteral">&quot; (s)&quot;</span></div>
-<div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span>          &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span> </div>
-<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Number of solve phases = &quot;</span></div>
-<div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span>          &lt;&lt; status_.getNumSolve()</div>
-<div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span>          &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Time for solve = &quot;</span></div>
-<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span>          &lt;&lt; solTime &lt;&lt; <span class="stringliteral">&quot; (s), avg = &quot;</span></div>
-<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span>          &lt;&lt; solTime / status_.getNumSolve() &lt;&lt; <span class="stringliteral">&quot; (s)&quot;</span></div>
-<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span>          &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span> </div>
-<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Total time spent in Amesos2 = &quot;</span></div>
-<div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span>          &lt;&lt; totTime &lt;&lt; <span class="stringliteral">&quot; (s)&quot;</span></div>
-<div class="line"><a id="l00712" name="l00712"></a><span class="lineno">  712</span>          &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Total time spent in the Amesos2 interface = &quot;</span></div>
-<div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span>          &lt;&lt; overhead &lt;&lt; <span class="stringliteral">&quot; (s)&quot;</span></div>
-<div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span>          &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;  (the above time does not include solver time)&quot;</span></div>
-<div class="line"><a id="l00717" name="l00717"></a><span class="lineno">  717</span>          &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00718" name="l00718"></a><span class="lineno">  718</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Amesos2 interface time / total time = &quot;</span></div>
-<div class="line"><a id="l00719" name="l00719"></a><span class="lineno">  719</span>          &lt;&lt; overhead / totTime</div>
-<div class="line"><a id="l00720" name="l00720"></a><span class="lineno">  720</span>          &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span>      <a class="code hl_function" href="group__amesos2__util.html#ga050780af1f00d876654b3c2d797012cd">Util::printLine</a>(out);</div>
-<div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span>    }</div>
-<div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span>}</div>
+<div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span> </div>
+<div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span><span class="keyword">template</span> &lt;<span class="keyword">template</span> &lt;<span class="keyword">class</span>,<span class="keyword">class</span>&gt; <span class="keyword">class </span>ConcreteSolver, <span class="keyword">class </span>Matrix, <span class="keyword">class </span>Vector &gt;</div>
+<div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00647" data-start="{" data-end="}">
+<div class="line"><a id="l00647" name="l00647"></a><span class="lineno"><a class="line" href="class_amesos2_1_1_solver_core.html#a50fa15c50131dd3a4a19b3a0e94612d3">  647</a></span><a class="code hl_function" href="class_amesos2_1_1_solver_core.html#a50fa15c50131dd3a4a19b3a0e94612d3">SolverCore&lt;ConcreteSolver,Matrix,Vector&gt;::printTiming</a>(</div>
+<div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span>  Teuchos::FancyOStream &amp;out,</div>
+<div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span>  <span class="keyword">const</span> Teuchos::EVerbosityLevel verbLevel)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>  <span class="keywordflow">if</span>( matrixA_.is_null() || (rank_ != 0) ){ <span class="keywordflow">return</span>; }</div>
+<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span> </div>
+<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span>  <span class="keywordtype">double</span> preTime  = timers_.preOrderTime_.totalElapsedTime();</div>
+<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span>  <span class="keywordtype">double</span> symTime  = timers_.symFactTime_.totalElapsedTime();</div>
+<div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span>  <span class="keywordtype">double</span> numTime  = timers_.numFactTime_.totalElapsedTime();</div>
+<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span>  <span class="keywordtype">double</span> solTime  = timers_.solveTime_.totalElapsedTime();</div>
+<div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span>  <span class="keywordtype">double</span> totTime  = timers_.totalTime_.totalElapsedTime();</div>
+<div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span>  <span class="keywordtype">double</span> overhead = totTime - (preTime + symTime + numTime + solTime);</div>
+<div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span> </div>
+<div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span>  std::string p = name() + <span class="stringliteral">&quot; : &quot;</span>;</div>
+<div class="line"><a id="l00661" name="l00661"></a><span class="lineno">  661</span>  <a class="code hl_function" href="group__amesos2__util.html#ga050780af1f00d876654b3c2d797012cd">Util::printLine</a>(out);</div>
+<div class="line"><a id="l00662" name="l00662"></a><span class="lineno">  662</span> </div>
+<div class="line"><a id="l00663" name="l00663"></a><span class="lineno">  663</span>  <span class="keywordflow">if</span>(verbLevel != Teuchos::VERB_NONE)</div>
+<div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span>    {</div>
+<div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Time to convert matrix to implementation format = &quot;</span></div>
+<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span>          &lt;&lt; timers_.mtxConvTime_.totalElapsedTime() &lt;&lt; <span class="stringliteral">&quot; (s)&quot;</span></div>
+<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span>          &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Time to redistribute matrix = &quot;</span></div>
+<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span>          &lt;&lt; timers_.mtxRedistTime_.totalElapsedTime() &lt;&lt; <span class="stringliteral">&quot; (s)&quot;</span></div>
+<div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span>          &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span> </div>
+<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Time to convert vectors to implementation format = &quot;</span></div>
+<div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span>          &lt;&lt; timers_.vecConvTime_.totalElapsedTime() &lt;&lt; <span class="stringliteral">&quot; (s)&quot;</span></div>
+<div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span>          &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Time to redistribute vectors = &quot;</span></div>
+<div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span>          &lt;&lt; timers_.vecRedistTime_.totalElapsedTime() &lt;&lt; <span class="stringliteral">&quot; (s)&quot;</span></div>
+<div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span>          &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span> </div>
+<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Number of pre-orderings = &quot;</span></div>
+<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span>          &lt;&lt; status_.getNumPreOrder()</div>
+<div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span>          &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Time for pre-ordering = &quot;</span></div>
+<div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span>          &lt;&lt; preTime &lt;&lt; <span class="stringliteral">&quot; (s), avg = &quot;</span></div>
+<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>          &lt;&lt; preTime / status_.getNumPreOrder() &lt;&lt; <span class="stringliteral">&quot; (s)&quot;</span></div>
+<div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span>          &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span> </div>
+<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Number of symbolic factorizations = &quot;</span></div>
+<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>          &lt;&lt; status_.getNumSymbolicFact()</div>
+<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>          &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Time for sym fact = &quot;</span></div>
+<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>          &lt;&lt; symTime &lt;&lt; <span class="stringliteral">&quot; (s), avg = &quot;</span></div>
+<div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span>          &lt;&lt; symTime / status_.getNumSymbolicFact() &lt;&lt; <span class="stringliteral">&quot; (s)&quot;</span></div>
+<div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span>          &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span> </div>
+<div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Number of numeric factorizations = &quot;</span></div>
+<div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span>          &lt;&lt; status_.getNumNumericFact()</div>
+<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>          &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Time for num fact = &quot;</span></div>
+<div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span>          &lt;&lt; numTime &lt;&lt; <span class="stringliteral">&quot; (s), avg = &quot;</span></div>
+<div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span>          &lt;&lt; numTime / status_.getNumNumericFact() &lt;&lt; <span class="stringliteral">&quot; (s)&quot;</span></div>
+<div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span>          &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span> </div>
+<div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Number of solve phases = &quot;</span></div>
+<div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span>          &lt;&lt; status_.getNumSolve()</div>
+<div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span>          &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Time for solve = &quot;</span></div>
+<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span>          &lt;&lt; solTime &lt;&lt; <span class="stringliteral">&quot; (s), avg = &quot;</span></div>
+<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span>          &lt;&lt; solTime / status_.getNumSolve() &lt;&lt; <span class="stringliteral">&quot; (s)&quot;</span></div>
+<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span>          &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span> </div>
+<div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Total time spent in Amesos2 = &quot;</span></div>
+<div class="line"><a id="l00712" name="l00712"></a><span class="lineno">  712</span>          &lt;&lt; totTime &lt;&lt; <span class="stringliteral">&quot; (s)&quot;</span></div>
+<div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span>          &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Total time spent in the Amesos2 interface = &quot;</span></div>
+<div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span>          &lt;&lt; overhead &lt;&lt; <span class="stringliteral">&quot; (s)&quot;</span></div>
+<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span>          &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00717" name="l00717"></a><span class="lineno">  717</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;  (the above time does not include solver time)&quot;</span></div>
+<div class="line"><a id="l00718" name="l00718"></a><span class="lineno">  718</span>          &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00719" name="l00719"></a><span class="lineno">  719</span>      out &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;Amesos2 interface time / total time = &quot;</span></div>
+<div class="line"><a id="l00720" name="l00720"></a><span class="lineno">  720</span>          &lt;&lt; overhead / totTime</div>
+<div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span>          &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span>      <a class="code hl_function" href="group__amesos2__util.html#ga050780af1f00d876654b3c2d797012cd">Util::printLine</a>(out);</div>
+<div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span>    }</div>
+<div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span>}</div>
 </div>
-<div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span> </div>
 <div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span> </div>
-<div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span><span class="keyword">template</span> &lt;<span class="keyword">template</span> &lt;<span class="keyword">class</span>,<span class="keyword">class</span>&gt; <span class="keyword">class </span>ConcreteSolver, <span class="keyword">class </span>Matrix, <span class="keyword">class </span>Vector &gt;</div>
-<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span><span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen00728" data-start="{" data-end="}">
-<div class="line"><a id="l00728" name="l00728"></a><span class="lineno"><a class="line" href="class_amesos2_1_1_solver_core.html#a4ef759dbc9ee048cc8813a73b2b2313c">  728</a></span><a class="code hl_function" href="class_amesos2_1_1_solver_core.html#a4ef759dbc9ee048cc8813a73b2b2313c">SolverCore&lt;ConcreteSolver,Matrix,Vector&gt;::getTiming</a>(</div>
-<div class="line"><a id="l00729" name="l00729"></a><span class="lineno">  729</span>  Teuchos::ParameterList&amp; timingParameterList)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00730" name="l00730"></a><span class="lineno">  730</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span>  Teuchos::ParameterList temp;</div>
-<div class="line"><a id="l00732" name="l00732"></a><span class="lineno">  732</span>  timingParameterList = temp.setName(<span class="stringliteral">&quot;NULL&quot;</span>);</div>
-<div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span>}</div>
+<div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span> </div>
+<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span><span class="keyword">template</span> &lt;<span class="keyword">template</span> &lt;<span class="keyword">class</span>,<span class="keyword">class</span>&gt; <span class="keyword">class </span>ConcreteSolver, <span class="keyword">class </span>Matrix, <span class="keyword">class </span>Vector &gt;</div>
+<div class="line"><a id="l00728" name="l00728"></a><span class="lineno">  728</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00729" data-start="{" data-end="}">
+<div class="line"><a id="l00729" name="l00729"></a><span class="lineno"><a class="line" href="class_amesos2_1_1_solver_core.html#a4ef759dbc9ee048cc8813a73b2b2313c">  729</a></span><a class="code hl_function" href="class_amesos2_1_1_solver_core.html#a4ef759dbc9ee048cc8813a73b2b2313c">SolverCore&lt;ConcreteSolver,Matrix,Vector&gt;::getTiming</a>(</div>
+<div class="line"><a id="l00730" name="l00730"></a><span class="lineno">  730</span>  Teuchos::ParameterList&amp; timingParameterList)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00732" name="l00732"></a><span class="lineno">  732</span>  Teuchos::ParameterList temp;</div>
+<div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span>  timingParameterList = temp.setName(<span class="stringliteral">&quot;NULL&quot;</span>);</div>
+<div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span>}</div>
 </div>
-<div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span> </div>
 <div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span> </div>
-<div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span><span class="keyword">template</span> &lt;<span class="keyword">template</span> &lt;<span class="keyword">class</span>,<span class="keyword">class</span>&gt; <span class="keyword">class </span>ConcreteSolver, <span class="keyword">class </span>Matrix, <span class="keyword">class </span>Vector &gt;</div>
-<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>std::string</div>
-<div class="foldopen" id="foldopen00738" data-start="{" data-end="}">
-<div class="line"><a id="l00738" name="l00738"></a><span class="lineno"><a class="line" href="class_amesos2_1_1_solver_core.html#a9b357929ec60fcb8f7311d9fe5f8d711">  738</a></span><a class="code hl_function" href="class_amesos2_1_1_solver_core.html#a9b357929ec60fcb8f7311d9fe5f8d711">SolverCore&lt;ConcreteSolver,Matrix,Vector&gt;::name</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span>  std::string solverName = solver_type::name;</div>
-<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span>  <span class="keywordflow">return</span> solverName;</div>
-<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>}</div>
+<div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span> </div>
+<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span><span class="keyword">template</span> &lt;<span class="keyword">template</span> &lt;<span class="keyword">class</span>,<span class="keyword">class</span>&gt; <span class="keyword">class </span>ConcreteSolver, <span class="keyword">class </span>Matrix, <span class="keyword">class </span>Vector &gt;</div>
+<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>std::string</div>
+<div class="foldopen" id="foldopen00739" data-start="{" data-end="}">
+<div class="line"><a id="l00739" name="l00739"></a><span class="lineno"><a class="line" href="class_amesos2_1_1_solver_core.html#a9b357929ec60fcb8f7311d9fe5f8d711">  739</a></span><a class="code hl_function" href="class_amesos2_1_1_solver_core.html#a9b357929ec60fcb8f7311d9fe5f8d711">SolverCore&lt;ConcreteSolver,Matrix,Vector&gt;::name</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span>  std::string solverName = solver_type::name;</div>
+<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>  <span class="keywordflow">return</span> solverName;</div>
+<div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span>}</div>
 </div>
-<div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span> </div>
-<div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span><span class="keyword">template</span> &lt;<span class="keyword">template</span> &lt;<span class="keyword">class</span>,<span class="keyword">class</span>&gt; <span class="keyword">class </span>ConcreteSolver, <span class="keyword">class </span>Matrix, <span class="keyword">class </span>Vector &gt;</div>
-<div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span><span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen00746" data-start="{" data-end="}">
-<div class="line"><a id="l00746" name="l00746"></a><span class="lineno"><a class="line" href="class_amesos2_1_1_solver_core.html#a8441318f6ff61e1c2062f3d08f15e34c">  746</a></span><a class="code hl_function" href="class_amesos2_1_1_solver_core.html#a8441318f6ff61e1c2062f3d08f15e34c">SolverCore&lt;ConcreteSolver,Matrix,Vector&gt;::loadA</a>(<a class="code hl_enumeration" href="group__amesos2__enums.html#gaee5c828ef45f1ffc1d48ae0d3435bb0e">EPhase</a> current_phase)</div>
-<div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span>{</div>
-<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>  matrix_loaded_ = <span class="keyword">static_cast&lt;</span>solver_type*<span class="keyword">&gt;</span>(<span class="keyword">this</span>)-&gt;loadA_impl(current_phase);</div>
-<div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>}</div>
+<div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span> </div>
+<div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span><span class="keyword">template</span> &lt;<span class="keyword">template</span> &lt;<span class="keyword">class</span>,<span class="keyword">class</span>&gt; <span class="keyword">class </span>ConcreteSolver, <span class="keyword">class </span>Matrix, <span class="keyword">class </span>Vector &gt;</div>
+<div class="line"><a id="l00746" name="l00746"></a><span class="lineno">  746</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00747" data-start="{" data-end="}">
+<div class="line"><a id="l00747" name="l00747"></a><span class="lineno"><a class="line" href="class_amesos2_1_1_solver_core.html#a8441318f6ff61e1c2062f3d08f15e34c">  747</a></span><a class="code hl_function" href="class_amesos2_1_1_solver_core.html#a8441318f6ff61e1c2062f3d08f15e34c">SolverCore&lt;ConcreteSolver,Matrix,Vector&gt;::loadA</a>(<a class="code hl_enumeration" href="group__amesos2__enums.html#gaee5c828ef45f1ffc1d48ae0d3435bb0e">EPhase</a> current_phase)</div>
+<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>{</div>
+<div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>  matrix_loaded_ = <span class="keyword">static_cast&lt;</span>solver_type*<span class="keyword">&gt;</span>(<span class="keyword">this</span>)-&gt;loadA_impl(current_phase);</div>
+<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>}</div>
 </div>
 </div>
-<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span> </div>
 <div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span> </div>
-<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span>} <span class="comment">// end namespace Amesos2</span></div>
-<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span> </div>
-<div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span><span class="preprocessor">#endif  </span><span class="comment">// AMESOS2_SOLVERCORE_DEF_HPP</span></div>
+<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span> </div>
+<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>} <span class="comment">// end namespace Amesos2</span></div>
+<div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span> </div>
+<div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span><span class="preprocessor">#endif  </span><span class="comment">// AMESOS2_SOLVERCORE_DEF_HPP</span></div>
 </div>
 </div>
 </div>
@@ -875,11 +876,11 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclass_amesos2_1_1_solver_core_html_a4421ccce4e1d01c9c90e7b656368cfc7"><div class="ttname"><a href="class_amesos2_1_1_solver_core.html#a4421ccce4e1d01c9c90e7b656368cfc7">Amesos2::SolverCore::describe</a></div><div class="ttdeci">void describe(Teuchos::FancyOStream &amp;out, const Teuchos::EVerbosityLevel verbLevel=Teuchos::Describable::verbLevel_default) const override</div><div class="ttdef"><b>Definition</b> Amesos2_SolverCore_def.hpp:585</div></div>
 <div class="ttc" id="aclass_amesos2_1_1_solver_core_html_a4a952a7b212d5655c4558ca481544a47"><div class="ttname"><a href="class_amesos2_1_1_solver_core.html#a4a952a7b212d5655c4558ca481544a47">Amesos2::SolverCore::description</a></div><div class="ttdeci">std::string description() const override</div><div class="ttdoc">Returns a short description of this Solver.</div><div class="ttdef"><b>Definition</b> Amesos2_SolverCore_def.hpp:575</div></div>
 <div class="ttc" id="aclass_amesos2_1_1_solver_core_html_a4db47efd6c335575a3d5c44bc7de873c"><div class="ttname"><a href="class_amesos2_1_1_solver_core.html#a4db47efd6c335575a3d5c44bc7de873c">Amesos2::SolverCore::SolverCore</a></div><div class="ttdeci">SolverCore(Teuchos::RCP&lt; const Matrix &gt; A, Teuchos::RCP&lt; Vector &gt; X, Teuchos::RCP&lt; const Vector &gt; B)</div><div class="ttdoc">Initialize a Solver instance.</div><div class="ttdef"><b>Definition</b> Amesos2_SolverCore_def.hpp:36</div></div>
-<div class="ttc" id="aclass_amesos2_1_1_solver_core_html_a4ef759dbc9ee048cc8813a73b2b2313c"><div class="ttname"><a href="class_amesos2_1_1_solver_core.html#a4ef759dbc9ee048cc8813a73b2b2313c">Amesos2::SolverCore::getTiming</a></div><div class="ttdeci">void getTiming(Teuchos::ParameterList &amp;timingParameterList) const override</div><div class="ttdoc">Extracts timing information from the current solver.</div><div class="ttdef"><b>Definition</b> Amesos2_SolverCore_def.hpp:728</div></div>
-<div class="ttc" id="aclass_amesos2_1_1_solver_core_html_a50fa15c50131dd3a4a19b3a0e94612d3"><div class="ttname"><a href="class_amesos2_1_1_solver_core.html#a50fa15c50131dd3a4a19b3a0e94612d3">Amesos2::SolverCore::printTiming</a></div><div class="ttdeci">void printTiming(Teuchos::FancyOStream &amp;out, const Teuchos::EVerbosityLevel verbLevel) const override</div><div class="ttdoc">Prints timing information about the current solver.</div><div class="ttdef"><b>Definition</b> Amesos2_SolverCore_def.hpp:646</div></div>
+<div class="ttc" id="aclass_amesos2_1_1_solver_core_html_a4ef759dbc9ee048cc8813a73b2b2313c"><div class="ttname"><a href="class_amesos2_1_1_solver_core.html#a4ef759dbc9ee048cc8813a73b2b2313c">Amesos2::SolverCore::getTiming</a></div><div class="ttdeci">void getTiming(Teuchos::ParameterList &amp;timingParameterList) const override</div><div class="ttdoc">Extracts timing information from the current solver.</div><div class="ttdef"><b>Definition</b> Amesos2_SolverCore_def.hpp:729</div></div>
+<div class="ttc" id="aclass_amesos2_1_1_solver_core_html_a50fa15c50131dd3a4a19b3a0e94612d3"><div class="ttname"><a href="class_amesos2_1_1_solver_core.html#a50fa15c50131dd3a4a19b3a0e94612d3">Amesos2::SolverCore::printTiming</a></div><div class="ttdeci">void printTiming(Teuchos::FancyOStream &amp;out, const Teuchos::EVerbosityLevel verbLevel) const override</div><div class="ttdoc">Prints timing information about the current solver.</div><div class="ttdef"><b>Definition</b> Amesos2_SolverCore_def.hpp:647</div></div>
 <div class="ttc" id="aclass_amesos2_1_1_solver_core_html_a6fe1ae1b8b22e3ac713477ecf0d4de09"><div class="ttname"><a href="class_amesos2_1_1_solver_core.html#a6fe1ae1b8b22e3ac713477ecf0d4de09">Amesos2::SolverCore::preOrdering</a></div><div class="ttdeci">super_type &amp; preOrdering() override</div><div class="ttdoc">Pre-orders the matrix A for minimal fill-in.</div><div class="ttdef"><b>Definition</b> Amesos2_SolverCore_def.hpp:69</div></div>
-<div class="ttc" id="aclass_amesos2_1_1_solver_core_html_a8441318f6ff61e1c2062f3d08f15e34c"><div class="ttname"><a href="class_amesos2_1_1_solver_core.html#a8441318f6ff61e1c2062f3d08f15e34c">Amesos2::SolverCore::loadA</a></div><div class="ttdeci">void loadA(EPhase current_phase)</div><div class="ttdoc">Refresh this solver's internal data about A.</div><div class="ttdef"><b>Definition</b> Amesos2_SolverCore_def.hpp:746</div></div>
-<div class="ttc" id="aclass_amesos2_1_1_solver_core_html_a9b357929ec60fcb8f7311d9fe5f8d711"><div class="ttname"><a href="class_amesos2_1_1_solver_core.html#a9b357929ec60fcb8f7311d9fe5f8d711">Amesos2::SolverCore::name</a></div><div class="ttdeci">std::string name() const override</div><div class="ttdoc">Return the name of this solver.</div><div class="ttdef"><b>Definition</b> Amesos2_SolverCore_def.hpp:738</div></div>
+<div class="ttc" id="aclass_amesos2_1_1_solver_core_html_a8441318f6ff61e1c2062f3d08f15e34c"><div class="ttname"><a href="class_amesos2_1_1_solver_core.html#a8441318f6ff61e1c2062f3d08f15e34c">Amesos2::SolverCore::loadA</a></div><div class="ttdeci">void loadA(EPhase current_phase)</div><div class="ttdoc">Refresh this solver's internal data about A.</div><div class="ttdef"><b>Definition</b> Amesos2_SolverCore_def.hpp:747</div></div>
+<div class="ttc" id="aclass_amesos2_1_1_solver_core_html_a9b357929ec60fcb8f7311d9fe5f8d711"><div class="ttname"><a href="class_amesos2_1_1_solver_core.html#a9b357929ec60fcb8f7311d9fe5f8d711">Amesos2::SolverCore::name</a></div><div class="ttdeci">std::string name() const override</div><div class="ttdoc">Return the name of this solver.</div><div class="ttdef"><b>Definition</b> Amesos2_SolverCore_def.hpp:739</div></div>
 <div class="ttc" id="aclass_amesos2_1_1_solver_core_html_ae9f44f3463a9033ac5c4eb7555bbd1f5"><div class="ttname"><a href="class_amesos2_1_1_solver_core.html#ae9f44f3463a9033ac5c4eb7555bbd1f5">Amesos2::SolverCore::~SolverCore</a></div><div class="ttdeci">~SolverCore()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition</b> Amesos2_SolverCore_def.hpp:61</div></div>
 <div class="ttc" id="aclass_amesos2_1_1_solver_core_html_aee1efeeb5fcd7ca2b9dbbc96dc25f1ee"><div class="ttname"><a href="class_amesos2_1_1_solver_core.html#aee1efeeb5fcd7ca2b9dbbc96dc25f1ee">Amesos2::SolverCore::symbolicFactorization</a></div><div class="ttdeci">super_type &amp; symbolicFactorization() override</div><div class="ttdoc">Performs symbolic factorization on the matrix A.</div><div class="ttdef"><b>Definition</b> Amesos2_SolverCore_def.hpp:89</div></div>
 <div class="ttc" id="aclass_amesos2_1_1_solver_core_html_aef544e95d8a8f95051718b46d7766957"><div class="ttname"><a href="class_amesos2_1_1_solver_core.html#aef544e95d8a8f95051718b46d7766957">Amesos2::SolverCore::numericFactorization</a></div><div class="ttdeci">super_type &amp; numericFactorization() override</div><div class="ttdoc">Performs numeric factorization on the matrix A.</div><div class="ttdef"><b>Definition</b> Amesos2_SolverCore_def.hpp:118</div></div>
