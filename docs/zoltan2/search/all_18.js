@@ -31,5 +31,5 @@ var searchData=
   ['xstep_28',['xstep',['../class_geometric_gen_1_1_coordinate_grid_distribution.html#a8cbf62bf753f9fa526a08c2c2b520f86',1,'GeometricGen::CoordinateGridDistribution']]],
   ['xtrapulpvwgttest2_2exml_29',['xtrapulpVwgtTest2.xml',['../xtrapulp_vwgt_test2_8xml.html',1,'']]],
   ['xtrapulpvwgttest2nodistrib_2exml_30',['xtrapulpVwgtTest2NoDistrib.xml',['../xtrapulp_vwgt_test2_no_distrib_8xml.html',1,'']]],
-  ['xvector_5ft_31',['xvector_t',['../namespace_zoltan2___testing_framework.html#ab847f806e75c5442f9f4a108b133c3eb',1,'Zoltan2_TestingFramework::xVector_t'],['../_xpetra_multi_vector_input_8cpp.html#a8ec563f4b1c10df3b6b35c28a5348937',1,'xvector_t:&#160;XpetraMultiVectorInput.cpp'],['../_xpetra_vector_input_8cpp.html#a47dcf4b6f75b836d5f31cd5b9e1e8c24',1,'xvector_t:&#160;XpetraVectorInput.cpp']]]
+  ['xvector_5ft_31',['xvector_t',['../_xpetra_multi_vector_input_8cpp.html#a8ec563f4b1c10df3b6b35c28a5348937',1,'xvector_t:&#160;XpetraMultiVectorInput.cpp'],['../_xpetra_vector_input_8cpp.html#a47dcf4b6f75b836d5f31cd5b9e1e8c24',1,'xvector_t:&#160;XpetraVectorInput.cpp'],['../namespace_zoltan2___testing_framework.html#ab847f806e75c5442f9f4a108b133c3eb',1,'Zoltan2_TestingFramework::xVector_t']]]
 ];

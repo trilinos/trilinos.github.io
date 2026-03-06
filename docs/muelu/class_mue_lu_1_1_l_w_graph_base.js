@@ -9,7 +9,7 @@ var class_mue_lu_1_1_l_w_graph_base =
     [ "execution_space", "class_mue_lu_1_1_l_w_graph_base.html#a37dba12450f11eb6896d90e787479e6b", null ],
     [ "memory_space", "class_mue_lu_1_1_l_w_graph_base.html#acf4451bb5cb1229399479092b1f0492d", null ],
     [ "local_graph_device_type", "class_mue_lu_1_1_l_w_graph_base.html#aea587fcb59ada17c0cedfe8690f0ac14", null ],
-    [ "local_graph_type", "class_mue_lu_1_1_l_w_graph_base.html#a0eccc4dbdb6e732760901deb570cf06f", null ],
+    [ "local_graph_type", "class_mue_lu_1_1_l_w_graph_base.html#a6b6d3e38b8d55efee744fb732e821e56", null ],
     [ "boundary_nodes_type", "class_mue_lu_1_1_l_w_graph_base.html#a35d4cd1dd18b95316540aac545c9466a", null ],
     [ "row_type", "class_mue_lu_1_1_l_w_graph_base.html#a5168621b6ca48b5d77487a5943540f19", null ],
     [ "entries_type", "class_mue_lu_1_1_l_w_graph_base.html#a23518cee2c632a773b47b475a4faaed7", null ],

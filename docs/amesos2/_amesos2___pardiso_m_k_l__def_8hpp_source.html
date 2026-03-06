@@ -660,105 +660,130 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Matrix, <span class="keyword">class</span> Vector&gt;</div>
 <div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span><span class="keywordtype">void</span></div>
 <div class="foldopen" id="foldopen00597" data-start="{" data-end="}">
-<div class="line"><a id="l00597" name="l00597"></a><span class="lineno"><a class="line" href="class_amesos2_1_1_pardiso_m_k_l.html#ac57664ccb95ec9cd95486dbfb90f4130">  597</a></span><a class="code hl_function" href="class_amesos2_1_1_pardiso_m_k_l.html#ac57664ccb95ec9cd95486dbfb90f4130">PardisoMKL&lt;Matrix,Vector&gt;::check_pardiso_mkl_error</a>(<a class="code hl_enumeration" href="group__amesos2__enums.html#gaee5c828ef45f1ffc1d48ae0d3435bb0e">EPhase</a> phase,</div>
-<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span>                                                   int_t error)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00597" name="l00597"></a><span class="lineno"><a class="line" href="class_amesos2_1_1_pardiso_m_k_l.html#a2059eb78e946090314dbe90fac281ab3">  597</a></span><a class="code hl_function" href="class_amesos2_1_1_pardiso_m_k_l.html#a2059eb78e946090314dbe90fac281ab3">PardisoMKL&lt;Matrix,Vector&gt;::describe_impl</a>(Teuchos::FancyOStream &amp;out,</div>
+<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span>                                         <span class="keyword">const</span> Teuchos::EVerbosityLevel verbLevel)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span>  <span class="keywordtype">int</span> error_i = error;</div>
-<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>  Teuchos::broadcast(*(this-&gt;getComm()), 0, &amp;error_i); <span class="comment">// We only care about root&#39;s value</span></div>
-<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span> </div>
-<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>  <span class="keywordflow">if</span>( error == 0 ) <span class="keywordflow">return</span>;      <span class="comment">// No error</span></div>
-<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span> </div>
-<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>  std::string errmsg = <span class="stringliteral">&quot;Other error&quot;</span>;</div>
-<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span>  <span class="keywordflow">switch</span>( error ){</div>
-<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span>  <span class="keywordflow">case</span> -1:</div>
-<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>    errmsg = <span class="stringliteral">&quot;PardisoMKL reported error: &#39;Input inconsistent&#39;&quot;</span>;</div>
-<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span>  <span class="keywordflow">case</span> -2:</div>
-<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>    errmsg = <span class="stringliteral">&quot;PardisoMKL reported error: &#39;Not enough memory&#39;&quot;</span>;</div>
-<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span>    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span>  <span class="keywordflow">case</span> -3:</div>
-<div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span>    errmsg = <span class="stringliteral">&quot;PardisoMKL reported error: &#39;Reordering problem&#39;&quot;</span>;</div>
-<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span>    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>  <span class="keywordflow">case</span> -4:</div>
-<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>    errmsg =</div>
-<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>      <span class="stringliteral">&quot;PardisoMKL reported error: &#39;Zero pivot, numerical &quot;</span></div>
-<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>      <span class="stringliteral">&quot;factorization or iterative refinement problem&#39;&quot;</span>;</div>
-<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span>  <span class="keywordflow">case</span> -5:</div>
-<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>    errmsg = <span class="stringliteral">&quot;PardisoMKL reported error: &#39;Unclassified (internal) error&#39;&quot;</span>;</div>
-<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span>    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span>  <span class="keywordflow">case</span> -6:</div>
-<div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span>    errmsg = <span class="stringliteral">&quot;PardisoMKL reported error: &#39;Reordering failed&#39;&quot;</span>;</div>
-<div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span>    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span>  <span class="keywordflow">case</span> -7:</div>
-<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span>    errmsg = <span class="stringliteral">&quot;PardisoMKL reported error: &#39;Diagonal matrix is singular&#39;&quot;</span>;</div>
-<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span>    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span>  <span class="keywordflow">case</span> -8:</div>
-<div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span>    errmsg = <span class="stringliteral">&quot;PardisoMKL reported error: &#39;32-bit integer overflow problem&#39;&quot;</span>;</div>
+<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span>  out &lt;&lt; <span class="stringliteral">&quot; PardisoMKL current parameters:&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>  out &lt;&lt; <span class="stringliteral">&quot;  &gt; IPARM(2)  = &quot;</span> &lt;&lt; iparm_[1]  &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>  out &lt;&lt; <span class="stringliteral">&quot;  &gt; IPARM(4)  = &quot;</span> &lt;&lt; iparm_[3]  &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>  out &lt;&lt; <span class="stringliteral">&quot;  &gt; IPARM(8)  = &quot;</span> &lt;&lt; iparm_[7]  &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span>  out &lt;&lt; <span class="stringliteral">&quot;  &gt; IPARM(10) = &quot;</span> &lt;&lt; iparm_[9]  &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>  out &lt;&lt; <span class="stringliteral">&quot;  &gt; IPARM(12) = &quot;</span> &lt;&lt; iparm_[11] &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span>  out &lt;&lt; <span class="stringliteral">&quot;  &gt; IPARM(13) = &quot;</span> &lt;&lt; iparm_[12] &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span>  out &lt;&lt; <span class="stringliteral">&quot;  &gt; IPARM(18) = &quot;</span> &lt;&lt; iparm_[17] &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>  out &lt;&lt; <span class="stringliteral">&quot;  &gt; IPARM(24) = &quot;</span> &lt;&lt; iparm_[23] &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>  out &lt;&lt; <span class="stringliteral">&quot;  &gt; IPARM(25) = &quot;</span> &lt;&lt; iparm_[24] &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span>  out &lt;&lt; <span class="stringliteral">&quot;  &gt; IPARM(60) = &quot;</span> &lt;&lt; iparm_[59] &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>  out &lt;&lt; <span class="stringliteral">&quot;  &gt; IsContiguous = &quot;</span> &lt;&lt; (is_contiguous_ ? <span class="stringliteral">&quot;YES&quot;</span> : <span class="stringliteral">&quot;NO&quot;</span>) &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span>  out &lt;&lt; <span class="stringliteral">&quot;  &gt; MessageLevel = &quot;</span> &lt;&lt; msglvl_ &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span>  out &lt;&lt; <span class="stringliteral">&quot;  &gt; DebugLevel   = &quot;</span> &lt;&lt; debug_level_ &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span>  out &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span>}</div>
+</div>
+<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span> </div>
+<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span> </div>
+<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Matrix, <span class="keyword">class</span> Vector&gt;</div>
+<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00620" data-start="{" data-end="}">
+<div class="line"><a id="l00620" name="l00620"></a><span class="lineno"><a class="line" href="class_amesos2_1_1_pardiso_m_k_l.html#ac57664ccb95ec9cd95486dbfb90f4130">  620</a></span><a class="code hl_function" href="class_amesos2_1_1_pardiso_m_k_l.html#ac57664ccb95ec9cd95486dbfb90f4130">PardisoMKL&lt;Matrix,Vector&gt;::check_pardiso_mkl_error</a>(<a class="code hl_enumeration" href="group__amesos2__enums.html#gaee5c828ef45f1ffc1d48ae0d3435bb0e">EPhase</a> phase,</div>
+<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span>                                                   int_t error)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span>  <span class="keywordtype">int</span> error_i = error;</div>
+<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span>  Teuchos::broadcast(*(this-&gt;getComm()), 0, &amp;error_i); <span class="comment">// We only care about root&#39;s value</span></div>
+<div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span> </div>
+<div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span>  <span class="keywordflow">if</span>( error == 0 ) <span class="keywordflow">return</span>;      <span class="comment">// No error</span></div>
+<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span> </div>
+<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span>  std::string errmsg = <span class="stringliteral">&quot;Other error&quot;</span>;</div>
+<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span>  <span class="keywordflow">switch</span>( error ){</div>
+<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span>  <span class="keywordflow">case</span> -1:</div>
+<div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span>    errmsg = <span class="stringliteral">&quot;PardisoMKL reported error: &#39;Input inconsistent&#39;&quot;</span>;</div>
 <div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span>    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span>  <span class="keywordflow">case</span> -9:</div>
-<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span>    errmsg = <span class="stringliteral">&quot;PardisoMKL reported error: &#39;Not enough memory for OOC&#39;&quot;</span>;</div>
+<div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span>  <span class="keywordflow">case</span> -2:</div>
+<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span>    errmsg = <span class="stringliteral">&quot;PardisoMKL reported error: &#39;Not enough memory&#39;&quot;</span>;</div>
 <div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span>    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span>  <span class="keywordflow">case</span> -10:</div>
-<div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span>    errmsg = <span class="stringliteral">&quot;PardisoMKL reported error: &#39;Problems with opening OOC temporary files&#39;&quot;</span>;</div>
+<div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span>  <span class="keywordflow">case</span> -3:</div>
+<div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span>    errmsg = <span class="stringliteral">&quot;PardisoMKL reported error: &#39;Reordering problem&#39;&quot;</span>;</div>
 <div class="line"><a id="l00638" name="l00638"></a><span class="lineno">  638</span>    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00639" name="l00639"></a><span class="lineno">  639</span>  <span class="keywordflow">case</span> -11:</div>
-<div class="line"><a id="l00640" name="l00640"></a><span class="lineno">  640</span>    errmsg = <span class="stringliteral">&quot;PardisoMKL reported error: &#39;Read/write problem with OOC data file&#39;&quot;</span>;</div>
-<div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span>    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span>  }</div>
-<div class="line"><a id="l00643" name="l00643"></a><span class="lineno">  643</span> </div>
-<div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span>  TEUCHOS_TEST_FOR_EXCEPTION( <span class="keyword">true</span>, std::runtime_error, errmsg );</div>
-<div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span>}</div>
+<div class="line"><a id="l00639" name="l00639"></a><span class="lineno">  639</span>  <span class="keywordflow">case</span> -4:</div>
+<div class="line"><a id="l00640" name="l00640"></a><span class="lineno">  640</span>    errmsg =</div>
+<div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span>      <span class="stringliteral">&quot;PardisoMKL reported error: &#39;Zero pivot, numerical &quot;</span></div>
+<div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span>      <span class="stringliteral">&quot;factorization or iterative refinement problem&#39;&quot;</span>;</div>
+<div class="line"><a id="l00643" name="l00643"></a><span class="lineno">  643</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span>  <span class="keywordflow">case</span> -5:</div>
+<div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span>    errmsg = <span class="stringliteral">&quot;PardisoMKL reported error: &#39;Unclassified (internal) error&#39;&quot;</span>;</div>
+<div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span>  <span class="keywordflow">case</span> -6:</div>
+<div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span>    errmsg = <span class="stringliteral">&quot;PardisoMKL reported error: &#39;Reordering failed&#39;&quot;</span>;</div>
+<div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span>  <span class="keywordflow">case</span> -7:</div>
+<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>    errmsg = <span class="stringliteral">&quot;PardisoMKL reported error: &#39;Diagonal matrix is singular&#39;&quot;</span>;</div>
+<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span>  <span class="keywordflow">case</span> -8:</div>
+<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span>    errmsg = <span class="stringliteral">&quot;PardisoMKL reported error: &#39;32-bit integer overflow problem&#39;&quot;</span>;</div>
+<div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span>  <span class="keywordflow">case</span> -9:</div>
+<div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span>    errmsg = <span class="stringliteral">&quot;PardisoMKL reported error: &#39;Not enough memory for OOC&#39;&quot;</span>;</div>
+<div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span>  <span class="keywordflow">case</span> -10:</div>
+<div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span>    errmsg = <span class="stringliteral">&quot;PardisoMKL reported error: &#39;Problems with opening OOC temporary files&#39;&quot;</span>;</div>
+<div class="line"><a id="l00661" name="l00661"></a><span class="lineno">  661</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00662" name="l00662"></a><span class="lineno">  662</span>  <span class="keywordflow">case</span> -11:</div>
+<div class="line"><a id="l00663" name="l00663"></a><span class="lineno">  663</span>    errmsg = <span class="stringliteral">&quot;PardisoMKL reported error: &#39;Read/write problem with OOC data file&#39;&quot;</span>;</div>
+<div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span>  }</div>
+<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span> </div>
+<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span>  TEUCHOS_TEST_FOR_EXCEPTION( <span class="keyword">true</span>, std::runtime_error, errmsg );</div>
+<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>}</div>
 </div>
-<div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span> </div>
-<div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span> </div>
-<div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Matrix, <span class="keyword">class</span> Vector&gt;</div>
-<div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span><span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen00650" data-start="{" data-end="}">
-<div class="line"><a id="l00650" name="l00650"></a><span class="lineno"><a class="line" href="class_amesos2_1_1_pardiso_m_k_l.html#a803880b502a66ebc2954c6c9f10cfa13">  650</a></span><a class="code hl_function" href="class_amesos2_1_1_pardiso_m_k_l.html#a803880b502a66ebc2954c6c9f10cfa13">PardisoMKL&lt;Matrix,Vector&gt;::set_pardiso_mkl_matrix_type</a>(int_t mtype)</div>
-<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>{</div>
-<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span>  <span class="keywordflow">if</span>( mtype == 0 ){</div>
-<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span>    <span class="keywordflow">if</span>( complex_ ){</div>
-<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span>      mtype_ = 13;              <span class="comment">// complex, unsymmetric</span></div>
-<div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span>      mtype_ = 11;              <span class="comment">// real, unsymmetric</span></div>
-<div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span>    }</div>
-<div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span>    <span class="keywordflow">switch</span>( mtype ){</div>
-<div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span>    <span class="keywordflow">case</span> 11:</div>
-<div class="line"><a id="l00661" name="l00661"></a><span class="lineno">  661</span>      TEUCHOS_TEST_FOR_EXCEPTION( complex_,</div>
-<div class="line"><a id="l00662" name="l00662"></a><span class="lineno">  662</span>                          std::invalid_argument,</div>
-<div class="line"><a id="l00663" name="l00663"></a><span class="lineno">  663</span>                          <span class="stringliteral">&quot;Cannot set a real Pardiso matrix type with scalar type complex&quot;</span> );</div>
-<div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span>      mtype_ = 11; <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span>    <span class="keywordflow">case</span> 13:</div>
-<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span>      TEUCHOS_TEST_FOR_EXCEPTION( !complex_,</div>
-<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span>                          std::invalid_argument,</div>
-<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>                          <span class="stringliteral">&quot;Cannot set a complex Pardiso matrix type with non-complex scalars&quot;</span> );</div>
-<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span>      mtype_ = 13; <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span>    <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span>      TEUCHOS_TEST_FOR_EXCEPTION( <span class="keyword">true</span>,</div>
-<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span>                          std::invalid_argument,</div>
-<div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span>                          <span class="stringliteral">&quot;Symmetric matrices are not yet supported by the Amesos2 interface&quot;</span> );</div>
-<div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span>    }</div>
-<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span>  }</div>
-<div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span>}</div>
+<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span> </div>
+<div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span> </div>
+<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Matrix, <span class="keyword">class</span> Vector&gt;</div>
+<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00673" data-start="{" data-end="}">
+<div class="line"><a id="l00673" name="l00673"></a><span class="lineno"><a class="line" href="class_amesos2_1_1_pardiso_m_k_l.html#a803880b502a66ebc2954c6c9f10cfa13">  673</a></span><a class="code hl_function" href="class_amesos2_1_1_pardiso_m_k_l.html#a803880b502a66ebc2954c6c9f10cfa13">PardisoMKL&lt;Matrix,Vector&gt;::set_pardiso_mkl_matrix_type</a>(int_t mtype)</div>
+<div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span>{</div>
+<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span>  <span class="keywordflow">if</span>( mtype == 0 ){</div>
+<div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span>    <span class="keywordflow">if</span>( complex_ ){</div>
+<div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span>      mtype_ = 13;              <span class="comment">// complex, unsymmetric</span></div>
+<div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span>      mtype_ = 11;              <span class="comment">// real, unsymmetric</span></div>
+<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span>    }</div>
+<div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span>    <span class="keywordflow">switch</span>( mtype ){</div>
+<div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span>    <span class="keywordflow">case</span> 11:</div>
+<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>      TEUCHOS_TEST_FOR_EXCEPTION( complex_,</div>
+<div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span>                          std::invalid_argument,</div>
+<div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span>                          <span class="stringliteral">&quot;Cannot set a real Pardiso matrix type with scalar type complex&quot;</span> );</div>
+<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span>      mtype_ = 11; <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>    <span class="keywordflow">case</span> 13:</div>
+<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>      TEUCHOS_TEST_FOR_EXCEPTION( !complex_,</div>
+<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>                          std::invalid_argument,</div>
+<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>                          <span class="stringliteral">&quot;Cannot set a complex Pardiso matrix type with non-complex scalars&quot;</span> );</div>
+<div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span>      mtype_ = 13; <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span>    <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span>      TEUCHOS_TEST_FOR_EXCEPTION( <span class="keyword">true</span>,</div>
+<div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span>                          std::invalid_argument,</div>
+<div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span>                          <span class="stringliteral">&quot;Symmetric matrices are not yet supported by the Amesos2 interface&quot;</span> );</div>
+<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>    }</div>
+<div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span>  }</div>
+<div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span>}</div>
 </div>
-<div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span> </div>
-<div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span> </div>
-<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Matrix, <span class="keyword">class</span> Vector&gt;</div>
-<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_class" href="class_amesos2_1_1_pardiso_m_k_l.html">PardisoMKL&lt;Matrix,Vector&gt;::name</a> = <span class="stringliteral">&quot;PARDISOMKL&quot;</span>;</div>
-<div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span> </div>
-<div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Matrix, <span class="keyword">class</span> Vector&gt;</div>
-<div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span><span class="keyword">const</span> <span class="keyword">typename</span> PardisoMKL&lt;Matrix,Vector&gt;::int_t</div>
-<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span><a class="code hl_class" href="class_amesos2_1_1_pardiso_m_k_l.html">PardisoMKL&lt;Matrix,Vector&gt;::maxfct_</a> = 1;</div>
-<div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span> </div>
-<div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Matrix, <span class="keyword">class</span> Vector&gt;</div>
-<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span><span class="keyword">const</span> <span class="keyword">typename</span> PardisoMKL&lt;Matrix,Vector&gt;::int_t</div>
-<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span><a class="code hl_class" href="class_amesos2_1_1_pardiso_m_k_l.html">PardisoMKL&lt;Matrix,Vector&gt;::mnum_</a> = 1;</div>
-<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span> </div>
-<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>} <span class="comment">// end namespace Amesos</span></div>
-<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span> </div>
-<div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span><span class="preprocessor">#endif  </span><span class="comment">// AMESOS2_PARDISOMKL_DEF_HPP</span></div>
+<div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span> </div>
+<div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span> </div>
+<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Matrix, <span class="keyword">class</span> Vector&gt;</div>
+<div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_class" href="class_amesos2_1_1_pardiso_m_k_l.html">PardisoMKL&lt;Matrix,Vector&gt;::name</a> = <span class="stringliteral">&quot;PARDISOMKL&quot;</span>;</div>
+<div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span> </div>
+<div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Matrix, <span class="keyword">class</span> Vector&gt;</div>
+<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span><span class="keyword">const</span> <span class="keyword">typename</span> PardisoMKL&lt;Matrix,Vector&gt;::int_t</div>
+<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span><a class="code hl_class" href="class_amesos2_1_1_pardiso_m_k_l.html">PardisoMKL&lt;Matrix,Vector&gt;::maxfct_</a> = 1;</div>
+<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span> </div>
+<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Matrix, <span class="keyword">class</span> Vector&gt;</div>
+<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span><span class="keyword">const</span> <span class="keyword">typename</span> PardisoMKL&lt;Matrix,Vector&gt;::int_t</div>
+<div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span><a class="code hl_class" href="class_amesos2_1_1_pardiso_m_k_l.html">PardisoMKL&lt;Matrix,Vector&gt;::mnum_</a> = 1;</div>
+<div class="line"><a id="l00712" name="l00712"></a><span class="lineno">  712</span> </div>
+<div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span>} <span class="comment">// end namespace Amesos</span></div>
+<div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span> </div>
+<div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span><span class="preprocessor">#endif  </span><span class="comment">// AMESOS2_PARDISOMKL_DEF_HPP</span></div>
 <div class="ttc" id="a_amesos2___pardiso_m_k_l__decl_8hpp_html"><div class="ttname"><a href="_amesos2___pardiso_m_k_l__decl_8hpp.html">Amesos2_PardisoMKL_decl.hpp</a></div><div class="ttdoc">A template class that does nothing useful besides show developers what, in general,...</div></div>
 <div class="ttc" id="a_amesos2___solver_core__def_8hpp_html"><div class="ttname"><a href="_amesos2___solver_core__def_8hpp.html">Amesos2_SolverCore_def.hpp</a></div></div>
 <div class="ttc" id="a_amesos2___type_decl_8hpp_html_a46863e983ea61d9547a05756fa8c56fdae1aabcfb90f3c53debc498683b03fbcf"><div class="ttname"><a href="_amesos2___type_decl_8hpp.html#a46863e983ea61d9547a05756fa8c56fdae1aabcfb90f3c53debc498683b03fbcf">Amesos2::ROOTED</a></div><div class="ttdeci">@ ROOTED</div><div class="ttdef"><b>Definition</b> Amesos2_TypeDecl.hpp:93</div></div>
@@ -768,24 +793,25 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclass_amesos2_1_1_pardiso_m_k_l_html"><div class="ttname"><a href="class_amesos2_1_1_pardiso_m_k_l.html">Amesos2::PardisoMKL</a></div><div class="ttdoc">Amesos2 interface to the PardisoMKL package.</div><div class="ttdef"><b>Definition</b> Amesos2_PardisoMKL_decl.hpp:50</div></div>
 <div class="ttc" id="aclass_amesos2_1_1_pardiso_m_k_l_html_a17e542017604305aad4ec01ac08eff87"><div class="ttname"><a href="class_amesos2_1_1_pardiso_m_k_l.html#a17e542017604305aad4ec01ac08eff87">Amesos2::PardisoMKL::getValidParameters_impl</a></div><div class="ttdeci">Teuchos::RCP&lt; const Teuchos::ParameterList &gt; getValidParameters_impl() const</div><div class="ttdef"><b>Definition</b> Amesos2_PardisoMKL_def.hpp:439</div></div>
 <div class="ttc" id="aclass_amesos2_1_1_pardiso_m_k_l_html_a188020622fdf8f71e81be7f4dd6c660a"><div class="ttname"><a href="class_amesos2_1_1_pardiso_m_k_l.html#a188020622fdf8f71e81be7f4dd6c660a">Amesos2::PardisoMKL::setParameters_impl</a></div><div class="ttdeci">void setParameters_impl(const Teuchos::RCP&lt; Teuchos::ParameterList &gt; &amp;parameterList)</div><div class="ttdef"><b>Definition</b> Amesos2_PardisoMKL_def.hpp:313</div></div>
+<div class="ttc" id="aclass_amesos2_1_1_pardiso_m_k_l_html_a2059eb78e946090314dbe90fac281ab3"><div class="ttname"><a href="class_amesos2_1_1_pardiso_m_k_l.html#a2059eb78e946090314dbe90fac281ab3">Amesos2::PardisoMKL::describe_impl</a></div><div class="ttdeci">void describe_impl(Teuchos::FancyOStream &amp;out, const Teuchos::EVerbosityLevel verbLevel) const</div><div class="ttdoc">Prints the status information about the current solver with some level of verbosity.</div><div class="ttdef"><b>Definition</b> Amesos2_PardisoMKL_def.hpp:597</div></div>
 <div class="ttc" id="aclass_amesos2_1_1_pardiso_m_k_l_html_a2f0e4b6fd27614923b17ec3f48e70d09"><div class="ttname"><a href="class_amesos2_1_1_pardiso_m_k_l.html#a2f0e4b6fd27614923b17ec3f48e70d09">Amesos2::PardisoMKL::~PardisoMKL</a></div><div class="ttdeci">~PardisoMKL()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition</b> Amesos2_PardisoMKL_def.hpp:79</div></div>
-<div class="ttc" id="aclass_amesos2_1_1_pardiso_m_k_l_html_a3ff211af14e2022e80cc5b844052ed00"><div class="ttname"><a href="class_amesos2_1_1_pardiso_m_k_l.html#a3ff211af14e2022e80cc5b844052ed00">Amesos2::PardisoMKL::mtype_</a></div><div class="ttdeci">int_t mtype_</div><div class="ttdoc">The matrix type. We deal only with unsymmetrix matrices.</div><div class="ttdef"><b>Definition</b> Amesos2_PardisoMKL_decl.hpp:257</div></div>
+<div class="ttc" id="aclass_amesos2_1_1_pardiso_m_k_l_html_a3ff211af14e2022e80cc5b844052ed00"><div class="ttname"><a href="class_amesos2_1_1_pardiso_m_k_l.html#a3ff211af14e2022e80cc5b844052ed00">Amesos2::PardisoMKL::mtype_</a></div><div class="ttdeci">int_t mtype_</div><div class="ttdoc">The matrix type. We deal only with unsymmetrix matrices.</div><div class="ttdef"><b>Definition</b> Amesos2_PardisoMKL_decl.hpp:265</div></div>
 <div class="ttc" id="aclass_amesos2_1_1_pardiso_m_k_l_html_a506b2eac2460e58e842d172525fdc067"><div class="ttname"><a href="class_amesos2_1_1_pardiso_m_k_l.html#a506b2eac2460e58e842d172525fdc067">Amesos2::PardisoMKL::PardisoMKL</a></div><div class="ttdeci">PardisoMKL(Teuchos::RCP&lt; const Matrix &gt; A, Teuchos::RCP&lt; Vector &gt; X, Teuchos::RCP&lt; const Vector &gt; B)</div><div class="ttdoc">Initialize from Teuchos::RCP.</div><div class="ttdef"><b>Definition</b> Amesos2_PardisoMKL_def.hpp:40</div></div>
-<div class="ttc" id="aclass_amesos2_1_1_pardiso_m_k_l_html_a53652c6e59c57cc7b3482cc101714b20"><div class="ttname"><a href="class_amesos2_1_1_pardiso_m_k_l.html#a53652c6e59c57cc7b3482cc101714b20">Amesos2::PardisoMKL::iparm_</a></div><div class="ttdeci">int_t iparm_[64]</div><div class="ttdef"><b>Definition</b> Amesos2_PardisoMKL_decl.hpp:267</div></div>
+<div class="ttc" id="aclass_amesos2_1_1_pardiso_m_k_l_html_a53652c6e59c57cc7b3482cc101714b20"><div class="ttname"><a href="class_amesos2_1_1_pardiso_m_k_l.html#a53652c6e59c57cc7b3482cc101714b20">Amesos2::PardisoMKL::iparm_</a></div><div class="ttdeci">int_t iparm_[64]</div><div class="ttdef"><b>Definition</b> Amesos2_PardisoMKL_decl.hpp:275</div></div>
 <div class="ttc" id="aclass_amesos2_1_1_pardiso_m_k_l_html_a57dcf519e35c402c55ee3f8db58e4459"><div class="ttname"><a href="class_amesos2_1_1_pardiso_m_k_l.html#a57dcf519e35c402c55ee3f8db58e4459">Amesos2::PardisoMKL::numericFactorization_impl</a></div><div class="ttdeci">int numericFactorization_impl()</div><div class="ttdoc">PardisoMKL specific numeric factorization.</div><div class="ttdef"><b>Definition</b> Amesos2_PardisoMKL_def.hpp:167</div></div>
 <div class="ttc" id="aclass_amesos2_1_1_pardiso_m_k_l_html_a766819e1f963b322f0ff31c34c7624af"><div class="ttname"><a href="class_amesos2_1_1_pardiso_m_k_l.html#a766819e1f963b322f0ff31c34c7624af">Amesos2::PardisoMKL::matrixShapeOK_impl</a></div><div class="ttdeci">bool matrixShapeOK_impl() const</div><div class="ttdoc">Determines whether the shape of the matrix is OK for this solver.</div><div class="ttdef"><b>Definition</b> Amesos2_PardisoMKL_def.hpp:304</div></div>
 <div class="ttc" id="aclass_amesos2_1_1_pardiso_m_k_l_html_a7943eeb4fb902154e3a6b8c3a6185f1d"><div class="ttname"><a href="class_amesos2_1_1_pardiso_m_k_l.html#a7943eeb4fb902154e3a6b8c3a6185f1d">Amesos2::PardisoMKL::loadA_impl</a></div><div class="ttdeci">bool loadA_impl(EPhase current_phase)</div><div class="ttdoc">Reads matrix data into internal structures.</div><div class="ttdef"><b>Definition</b> Amesos2_PardisoMKL_def.hpp:550</div></div>
-<div class="ttc" id="aclass_amesos2_1_1_pardiso_m_k_l_html_a803880b502a66ebc2954c6c9f10cfa13"><div class="ttname"><a href="class_amesos2_1_1_pardiso_m_k_l.html#a803880b502a66ebc2954c6c9f10cfa13">Amesos2::PardisoMKL::set_pardiso_mkl_matrix_type</a></div><div class="ttdeci">void set_pardiso_mkl_matrix_type(int_t mtype=0)</div><div class="ttdef"><b>Definition</b> Amesos2_PardisoMKL_def.hpp:650</div></div>
+<div class="ttc" id="aclass_amesos2_1_1_pardiso_m_k_l_html_a803880b502a66ebc2954c6c9f10cfa13"><div class="ttname"><a href="class_amesos2_1_1_pardiso_m_k_l.html#a803880b502a66ebc2954c6c9f10cfa13">Amesos2::PardisoMKL::set_pardiso_mkl_matrix_type</a></div><div class="ttdeci">void set_pardiso_mkl_matrix_type(int_t mtype=0)</div><div class="ttdef"><b>Definition</b> Amesos2_PardisoMKL_def.hpp:673</div></div>
 <div class="ttc" id="aclass_amesos2_1_1_pardiso_m_k_l_html_a866a1c1158923fc55e4be58a18e57d76"><div class="ttname"><a href="class_amesos2_1_1_pardiso_m_k_l.html#a866a1c1158923fc55e4be58a18e57d76">Amesos2::PardisoMKL::solve_impl</a></div><div class="ttdeci">int solve_impl(const Teuchos::Ptr&lt; MultiVecAdapter&lt; Vector &gt; &gt; X, const Teuchos::Ptr&lt; const MultiVecAdapter&lt; Vector &gt; &gt; B) const</div><div class="ttdoc">PardisoMKL specific solve.</div><div class="ttdef"><b>Definition</b> Amesos2_PardisoMKL_def.hpp:201</div></div>
 <div class="ttc" id="aclass_amesos2_1_1_pardiso_m_k_l_html_abe39006cea015bb6dae018c780273908"><div class="ttname"><a href="class_amesos2_1_1_pardiso_m_k_l.html#abe39006cea015bb6dae018c780273908">Amesos2::PardisoMKL::preOrdering_impl</a></div><div class="ttdeci">int preOrdering_impl()</div><div class="ttdoc">Performs pre-ordering on the matrix to increase efficiency.</div><div class="ttdef"><b>Definition</b> Amesos2_PardisoMKL_def.hpp:103</div></div>
-<div class="ttc" id="aclass_amesos2_1_1_pardiso_m_k_l_html_ac57664ccb95ec9cd95486dbfb90f4130"><div class="ttname"><a href="class_amesos2_1_1_pardiso_m_k_l.html#ac57664ccb95ec9cd95486dbfb90f4130">Amesos2::PardisoMKL::check_pardiso_mkl_error</a></div><div class="ttdeci">void check_pardiso_mkl_error(EPhase phase, int_t error) const</div><div class="ttdoc">Throws an appropriate runtime error in the event that error &lt; 0 .</div><div class="ttdef"><b>Definition</b> Amesos2_PardisoMKL_def.hpp:597</div></div>
-<div class="ttc" id="aclass_amesos2_1_1_pardiso_m_k_l_html_ad304f9d77b373af4a0a44e755d67e57e"><div class="ttname"><a href="class_amesos2_1_1_pardiso_m_k_l.html#ad304f9d77b373af4a0a44e755d67e57e">Amesos2::PardisoMKL::pt_</a></div><div class="ttdeci">void * pt_[64]</div><div class="ttdoc">PardisoMKL internal data address pointer.</div><div class="ttdef"><b>Definition</b> Amesos2_PardisoMKL_decl.hpp:255</div></div>
+<div class="ttc" id="aclass_amesos2_1_1_pardiso_m_k_l_html_ac57664ccb95ec9cd95486dbfb90f4130"><div class="ttname"><a href="class_amesos2_1_1_pardiso_m_k_l.html#ac57664ccb95ec9cd95486dbfb90f4130">Amesos2::PardisoMKL::check_pardiso_mkl_error</a></div><div class="ttdeci">void check_pardiso_mkl_error(EPhase phase, int_t error) const</div><div class="ttdoc">Throws an appropriate runtime error in the event that error &lt; 0 .</div><div class="ttdef"><b>Definition</b> Amesos2_PardisoMKL_def.hpp:620</div></div>
+<div class="ttc" id="aclass_amesos2_1_1_pardiso_m_k_l_html_ad304f9d77b373af4a0a44e755d67e57e"><div class="ttname"><a href="class_amesos2_1_1_pardiso_m_k_l.html#ad304f9d77b373af4a0a44e755d67e57e">Amesos2::PardisoMKL::pt_</a></div><div class="ttdeci">void * pt_[64]</div><div class="ttdoc">PardisoMKL internal data address pointer.</div><div class="ttdef"><b>Definition</b> Amesos2_PardisoMKL_decl.hpp:263</div></div>
 <div class="ttc" id="aclass_amesos2_1_1_pardiso_m_k_l_html_af5029901e1e5e39078eb6454c146da62"><div class="ttname"><a href="class_amesos2_1_1_pardiso_m_k_l.html#af5029901e1e5e39078eb6454c146da62">Amesos2::PardisoMKL::symbolicFactorization_impl</a></div><div class="ttdeci">int symbolicFactorization_impl()</div><div class="ttdoc">Perform symbolic factorization of the matrix using PardisoMKL.</div><div class="ttdef"><b>Definition</b> Amesos2_PardisoMKL_def.hpp:114</div></div>
 <div class="ttc" id="aclass_amesos2_1_1_solver_core_html"><div class="ttname"><a href="class_amesos2_1_1_solver_core.html">Amesos2::SolverCore</a></div><div class="ttdoc">Amesos2::SolverCore: A templated interface for interaction with third-party direct sparse solvers.</div><div class="ttdef"><b>Definition</b> Amesos2_SolverCore_decl.hpp:72</div></div>
 <div class="ttc" id="agroup__amesos2__enums_html_gaee5c828ef45f1ffc1d48ae0d3435bb0e"><div class="ttname"><a href="group__amesos2__enums.html#gaee5c828ef45f1ffc1d48ae0d3435bb0e">Amesos2::EPhase</a></div><div class="ttdeci">EPhase</div><div class="ttdoc">Used to indicate a phase in the direct solution.</div><div class="ttdef"><b>Definition</b> Amesos2_TypeDecl.hpp:31</div></div>
 <div class="ttc" id="astruct_amesos2_1_1_multi_vec_adapter_html"><div class="ttname"><a href="struct_amesos2_1_1_multi_vec_adapter.html">Amesos2::MultiVecAdapter</a></div><div class="ttdoc">A templated MultiVector class adapter for Amesos2.</div><div class="ttdef"><b>Definition</b> Amesos2_MultiVecAdapter_decl.hpp:142</div></div>
 <div class="ttc" id="astruct_amesos2_1_1_util_1_1get__1d__copy__helper_html"><div class="ttname"><a href="struct_amesos2_1_1_util_1_1get__1d__copy__helper.html">Amesos2::Util::get_1d_copy_helper</a></div><div class="ttdoc">Helper class for getting 1-D copies of multivectors.</div><div class="ttdef"><b>Definition</b> Amesos2_MultiVecAdapter_decl.hpp:233</div></div>
-<div class="ttc" id="astruct_amesos2_1_1_util_1_1get__crs__helper__kokkos__view_html"><div class="ttname"><a href="struct_amesos2_1_1_util_1_1get__crs__helper__kokkos__view.html">Amesos2::Util::get_crs_helper_kokkos_view</a></div><div class="ttdoc">Similar to get_ccs_helper , but used to get a CRS representation of the given matrix.</div><div class="ttdef"><b>Definition</b> Amesos2_Util.hpp:604</div></div>
+<div class="ttc" id="astruct_amesos2_1_1_util_1_1get__crs__helper__kokkos__view_html"><div class="ttname"><a href="struct_amesos2_1_1_util_1_1get__crs__helper__kokkos__view.html">Amesos2::Util::get_crs_helper_kokkos_view</a></div><div class="ttdoc">Similar to get_ccs_helper , but used to get a CRS representation of the given matrix.</div><div class="ttdef"><b>Definition</b> Amesos2_Util.hpp:600</div></div>
 <div class="ttc" id="astruct_amesos2_1_1_util_1_1put__1d__data__helper_html"><div class="ttname"><a href="struct_amesos2_1_1_util_1_1put__1d__data__helper.html">Amesos2::Util::put_1d_data_helper</a></div><div class="ttdoc">Helper class for putting 1-D data arrays into multivectors.</div><div class="ttdef"><b>Definition</b> Amesos2_MultiVecAdapter_decl.hpp:339</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

@@ -4,7 +4,7 @@ var struct_mue_lu_1_1_cut_drop_1_1_unscaled_comparison_1_1_comparator =
     [ "local_ordinal_type", "struct_mue_lu_1_1_cut_drop_1_1_unscaled_comparison_1_1_comparator.html#a8596f2d3a9523541a148cabb751332d5", null ],
     [ "memory_space", "struct_mue_lu_1_1_cut_drop_1_1_unscaled_comparison_1_1_comparator.html#abc85bb464b427a4421687771f4e8cfda", null ],
     [ "results_view", "struct_mue_lu_1_1_cut_drop_1_1_unscaled_comparison_1_1_comparator.html#a2d734c7cbcd5a72a44027872094eded8", null ],
-    [ "ATS", "struct_mue_lu_1_1_cut_drop_1_1_unscaled_comparison_1_1_comparator.html#a636c7fae0b78b731f91820e2951a0f3e", null ],
+    [ "ATS", "struct_mue_lu_1_1_cut_drop_1_1_unscaled_comparison_1_1_comparator.html#a312831bf9072d0f0f2bd94d412fe94f1", null ],
     [ "magnitudeType", "struct_mue_lu_1_1_cut_drop_1_1_unscaled_comparison_1_1_comparator.html#ac874ec19a12aa25504a2a34d431810bd", null ],
     [ "values_view", "struct_mue_lu_1_1_cut_drop_1_1_unscaled_comparison_1_1_comparator.html#acc92dc57d1e5f9cd73aa2e94ba5f1e85", null ],
     [ "Comparator", "struct_mue_lu_1_1_cut_drop_1_1_unscaled_comparison_1_1_comparator.html#a1cd2029e7392d44e800f3f2bc69a2885", null ],

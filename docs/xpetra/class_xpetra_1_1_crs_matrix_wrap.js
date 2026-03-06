@@ -68,7 +68,7 @@ var class_xpetra_1_1_crs_matrix_wrap =
     [ "describe", "class_xpetra_1_1_crs_matrix_wrap.html#a6e7f9af39ae3a4e5ec812b88d0758418", null ],
     [ "setObjectLabel", "class_xpetra_1_1_crs_matrix_wrap.html#a81a6b8ef37a45e3212c8c8e88384391d", null ],
     [ "getLocalMatrixDevice", "class_xpetra_1_1_crs_matrix_wrap.html#a9b6f46445224ff11782dcbab6e350b44", null ],
-    [ "getLocalMatrixHost", "class_xpetra_1_1_crs_matrix_wrap.html#ad47821b32ec9bb1fc6e1bf991ebee63e", null ],
+    [ "getLocalMatrixHost", "class_xpetra_1_1_crs_matrix_wrap.html#a8976077ba9526a400799e63eab4b9ee7", null ],
     [ "hasCrsGraph", "class_xpetra_1_1_crs_matrix_wrap.html#a56d9629e1cba0751081cd5dcd82ec738", null ],
     [ "getCrsGraph", "class_xpetra_1_1_crs_matrix_wrap.html#a10c3356976934ad0d91ba5ab9040b6b0", null ],
     [ "getCrsMatrix", "class_xpetra_1_1_crs_matrix_wrap.html#af8f6e949a4131aec590b57f597391998", null ],

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['k_5f_0',['K_',['../class_mue_lu_1_1_shifted_laplacian.html#a65da1751731be2b3eba8dd3390e3f852',1,'MueLu::ShiftedLaplacian']]],
-  ['kat_1',['kat',['../struct_mue_lu_1_1constraint_kernel.html#a418d1902a5863bf2fd871f00b4b018e6',1,'MueLu::constraintKernel::KAT'],['../struct_mue_lu_1_1optimal_satisfy_constraints_for_scalar_p_d_es_kernel.html#acf0235838868941e2644dd27b3f669ed',1,'MueLu::optimalSatisfyConstraintsForScalarPDEsKernel::KAT']]],
+  ['kat_1',['kat',['../struct_mue_lu_1_1constraint_kernel.html#a2eadde2ee7ef456cbcfa5e502f86a5fb',1,'MueLu::constraintKernel::KAT'],['../struct_mue_lu_1_1optimal_satisfy_constraints_for_scalar_p_d_es_kernel.html#a29cec4089133228818bba54339b7f402',1,'MueLu::optimalSatisfyConstraintsForScalarPDEsKernel::KAT']]],
   ['kcrsmatrix_2',['KCrsMatrix',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_ifpack2_1_1_details_1_1_fast_i_l_u___base.html#a4bc0a9c7ed66969f5c6202cc8a016506',1,'Ifpack2::Details::FastILU_Base']]],
   ['keep_3',['keep',['../namespace_mue_lu.html#a68ae14477561647a8c38a292b7fb6c59ad7d908964a8c40518f58b80c4d2b3313',1,'MueLu::KEEP'],['../class_mue_lu_1_1_hierarchy.html#aa8fcb1af999cfa8350c243ab36da5f78',1,'MueLu::Hierarchy::Keep()'],['../class_mue_lu_1_1_level.html#af3ffd5552e631a7712de69fc6c4efea6',1,'MueLu::Level::Keep()'],['../namespace_mue_lu.html#a16a5d3ba44dac8c44bb095e39b731cbea6e9188562d239e004c6f6b23e377fd07',1,'MueLu::Keep']]],
   ['keep_5f_4',['keep_',['../class_mue_lu_1_1_hierarchy_manager.html#a5ac31c0e9240148f3f9d1da2fecf2e75',1,'MueLu::HierarchyManager::keep_'],['../class_mue_lu_1_1_variable_container.html#ac0d912766b00eb521f619ccc08aba784',1,'MueLu::VariableContainer::keep_']]],

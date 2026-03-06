@@ -25,6 +25,5 @@ var searchData=
   ['assemblecurvaturepsqrtw_22',['assemblecurvaturepsqrtw',['../struct_compadre_1_1_assemble_curvature_psqrt_w.html#a5db45bf09d617371685947a3b947365f',1,'Compadre::AssembleCurvaturePsqrtW::AssembleCurvaturePsqrtW()'],['../struct_compadre_1_1_assemble_curvature_psqrt_w.html',1,'Compadre::AssembleCurvaturePsqrtW']]],
   ['assemblemanifoldpsqrtw_23',['assemblemanifoldpsqrtw',['../struct_compadre_1_1_assemble_manifold_psqrt_w.html#a6ce5bb528b46c0de3a7f8f980c83e969',1,'Compadre::AssembleManifoldPsqrtW::AssembleManifoldPsqrtW()'],['../struct_compadre_1_1_assemble_manifold_psqrt_w.html',1,'Compadre::AssembleManifoldPsqrtW']]],
   ['assemblestandardpsqrtw_24',['assemblestandardpsqrtw',['../struct_compadre_1_1_assemble_standard_psqrt_w.html#aa312bf268e0a5eca9f5bc03cf97f1325',1,'Compadre::AssembleStandardPsqrtW::AssembleStandardPsqrtW()'],['../struct_compadre_1_1_assemble_standard_psqrt_w.html',1,'Compadre::AssembleStandardPsqrtW']]],
-  ['assert_5fno_5fdeath_25',['ASSERT_NO_DEATH',['../_compadre___unit_tests_8cpp.html#a6074806aacfe09ca2734cfded4e951c3',1,'Compadre_UnitTests.cpp']]],
-  ['atan4_26',['atan4',['../_g_m_l_s___manifold_8hpp.html#aa428adad38789d560980276ea79c9e89',1,'GMLS_Manifold.hpp']]]
+  ['atan4_25',['atan4',['../_g_m_l_s___manifold_8hpp.html#aa428adad38789d560980276ea79c9e89',1,'GMLS_Manifold.hpp']]]
 ];

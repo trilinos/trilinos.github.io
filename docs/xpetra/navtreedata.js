@@ -89,7 +89,7 @@ var NAVTREEINDEX =
 "class_xpetra_1_1_reordered_blocked_crs_matrix.html#abf08e0cddb3bfb587edda0be894c7c6d",
 "class_xpetra_1_1_strided_map.html#ad5b812c22d3b7e246e96c81ffa228e29",
 "class_xpetra_1_1_tpetra_crs_graph.html#a1c63709b377aa53eeea083bed079f5eb",
-"class_xpetra_1_1_tpetra_crs_matrix.html#ab8e40c768f6e4e49ea097e3f5699b427",
+"class_xpetra_1_1_tpetra_crs_matrix.html#abb015691ba397feed8a8ab3ad2a696d4",
 "class_xpetra_1_1_tpetra_multi_vector.html#a04a7d9e38b75ebb2c98a51ce58d89987",
 "class_xpetra_1_1_tpetra_vector.html#ab7a6b57272de0197944695e7957b1499",
 "namespace_xpetra.html#acf2f4e410836d369c8795783875fd7c5"

@@ -4,7 +4,7 @@ var class_mue_lu_1_1_matrix_construction_1_1_pointwise_fill_reuse_functor =
     [ "local_ordinal_type", "class_mue_lu_1_1_matrix_construction_1_1_pointwise_fill_reuse_functor.html#aeb2d5f8ae45951c694441049454b0ff0", null ],
     [ "memory_space", "class_mue_lu_1_1_matrix_construction_1_1_pointwise_fill_reuse_functor.html#aa71d4cf3cfe9bc9013c3f05ce312a892", null ],
     [ "results_view", "class_mue_lu_1_1_matrix_construction_1_1_pointwise_fill_reuse_functor.html#a86ee6036e03c5c54a716efc41aebb4c1", null ],
-    [ "ATS", "class_mue_lu_1_1_matrix_construction_1_1_pointwise_fill_reuse_functor.html#a38effd3f238d5c82ff8857866a8cffdb", null ],
+    [ "ATS", "class_mue_lu_1_1_matrix_construction_1_1_pointwise_fill_reuse_functor.html#a3c50113ed58833c5ad2452b7bb313118", null ],
     [ "magnitudeType", "class_mue_lu_1_1_matrix_construction_1_1_pointwise_fill_reuse_functor.html#a694b84ed33f56ed623a1f29908102c00", null ],
     [ "PointwiseFillReuseFunctor", "class_mue_lu_1_1_matrix_construction_1_1_pointwise_fill_reuse_functor.html#af7429839a1187d72462b54d096d2a534", null ],
     [ "operator()", "class_mue_lu_1_1_matrix_construction_1_1_pointwise_fill_reuse_functor.html#a197ef93030d06b3ffbf2592b5e3242ed", null ],

@@ -40,7 +40,7 @@ var searchData=
   ['divisionfunction_37',['divisionfunction',['../class_teuchos_1_1_division_function.html#a4c9a215f163b818140a6ab3819d5d13c',1,'Teuchos::DivisionFunction::DivisionFunction(OperandType amountToDivideBy)'],['../class_teuchos_1_1_division_function.html#a5f20d6adeb678866524957c68bcd2bb8',1,'Teuchos::DivisionFunction::DivisionFunction()']]],
   ['docstring_38',['docString',['../class_teuchos_1_1_parameter_entry.html#ac6deac4c36402a00b8075320c1e6a848',1,'Teuchos::ParameterEntry']]],
   ['dofloatingpointtrap_39',['doFloatingPointTrap',['../namespace_teuchos.html#a34e4d04211025e5f620ef214fb40bc9e',1,'Teuchos']]],
-  ['dot_40',['dot',['../class_teuchos_1_1_default_b_l_a_s_impl.html#a2bad8641e02b141e2d82dd7c8a4df8cf',1,'Teuchos::DefaultBLASImpl::DOT()'],['../class_teuchos_1_1_serial_dense_vector.html#a6aa2438adbfbd00a675ab4b24a4fab71',1,'Teuchos::SerialDenseVector::dot()']]],
+  ['dot_40',['dot',['../class_teuchos_1_1_serial_dense_vector.html#a6aa2438adbfbd00a675ab4b24a4fab71',1,'Teuchos::SerialDenseVector::dot()'],['../class_teuchos_1_1_default_b_l_a_s_impl.html#a2bad8641e02b141e2d82dd7c8a4df8cf',1,'Teuchos::DefaultBLASImpl::DOT()']]],
   ['doubleentry_41',['DoubleEntry',['../class_teuchos_1_1_double_entry.html#abc0d04bdb93d5226b6baf8d9e118e659',1,'Teuchos::DoubleEntry']]],
   ['duplicate_42',['duplicate',['../class_teuchos_1_1_comm.html#a1775f0e2d0fadcdde08714ee2b154ea4',1,'Teuchos::Comm::duplicate()'],['../class_teuchos_1_1_serial_comm.html#ab53d262529fbeea1ae965c6997211747',1,'Teuchos::SerialComm::duplicate()']]],
   ['duplicateparameteridsexception_43',['DuplicateParameterIDsException',['../class_teuchos_1_1_duplicate_parameter_i_ds_exception.html#a74e0068eb8e0a09d9a31cfbfc2155f89',1,'Teuchos::DuplicateParameterIDsException']]],

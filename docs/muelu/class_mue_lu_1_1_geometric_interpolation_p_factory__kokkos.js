@@ -5,7 +5,7 @@ var class_mue_lu_1_1_geometric_interpolation_p_factory__kokkos =
     [ "realvaluedmultivector_type", "class_mue_lu_1_1_geometric_interpolation_p_factory__kokkos.html#a81a4138efd2219ebf16f5f4a19994d97", null ],
     [ "device_type", "class_mue_lu_1_1_geometric_interpolation_p_factory__kokkos.html#afb51dd60edc3d32791d4d70a1563d821", null ],
     [ "execution_space", "class_mue_lu_1_1_geometric_interpolation_p_factory__kokkos.html#a0cbeb75c63eb53b49a707a529f23c328", null ],
-    [ "impl_scalar_type", "class_mue_lu_1_1_geometric_interpolation_p_factory__kokkos.html#aa19a1e45f38437448137a1cb5854df02", null ],
+    [ "impl_scalar_type", "class_mue_lu_1_1_geometric_interpolation_p_factory__kokkos.html#a41b1338de8b70aa33b2fb6f723a68ed4", null ],
     [ "coord_view_type", "class_mue_lu_1_1_geometric_interpolation_p_factory__kokkos.html#ada28f330e1ce7c30a7f1b497e3a633bd", null ],
     [ "GeometricInterpolationPFactory_kokkos", "class_mue_lu_1_1_geometric_interpolation_p_factory__kokkos.html#a577dee4cdf0173997aa331185ad954dd", null ],
     [ "~GeometricInterpolationPFactory_kokkos", "class_mue_lu_1_1_geometric_interpolation_p_factory__kokkos.html#a56ed6199bda51f26b255abf967110b90", null ],

@@ -13,10 +13,10 @@ Trilinos is a comprehensive software framework for scientific computing, providi
 
 ## Performance Portability
 
-- <strong>Performance Portability</strong> <span style="float:right;"><em>Provided by:<a href="https://kokkos.org/">Kokkos</a> </em></span><br /> 
+- <strong>Performance Portability</strong> <span style="float:right;"><em>Provided by: <a href="https://kokkos.org/">Kokkos</a> </em></span><br /> 
   Tools for enabling efficient computation across diverse hardware architectures, including CPUs, GPUs, and emerging HPC systems. Capabilities include abstractions for parallel execution, memory spaces, and hierarchical parallelism.  Support for expressing parallel computations at multiple levels, including thread, team, and vector levels, ensuring efficient utilization of hardware resources.  Abstractions for memory management, including multidimensional arrays with customizable memory layouts and traits for optimized data access patterns.
 
-- <strong>Mathematical Kernels for Node-Local Computations</strong> <span style="float:right;"><em>Provided by:<a href="https://kokkos.org/">Kokkos Kernels</a> </em></span><br /> 
+- <strong>Mathematical Kernels for Node-Local Computations</strong> <span style="float:right;"><em>Provided by: <a href="https://kokkos.org/">Kokkos Kernels</a> </em></span><br /> 
   Performance-portable implementations of mathematical kernels for dense and sparse linear algebra, graph algorithms, and batched computations. Capabilities include optimized sparse matrix operations, efficient BLAS routines, graph-based computations, and integration with vendor-optimized libraries. Thread-safe and asynchronous implementations ensure efficient concurrent execution and scalability.
 
 - <strong>Distributed-Memory Linear Algebra</strong> <span style="float:right;"><em>Provided by: <a href="https://github.com/trilinos/Trilinos/tree/master/packages/tpetra#readme">Tpetra</a> </em></span><br />
@@ -101,7 +101,7 @@ Trilinos is a comprehensive software framework for scientific computing, providi
 
 ## Partitioning and Load Balancing
 
-- <strong>Partitioning and Load Balancing</strong> <span style="float:right;"><em>Provided by: <a href="https://sandialabs.github.io/Zoltan/">Zoltan</a> , <a href="https://github.com/trilinos/Trilinos/tree/master/packages/zoltan2#readme">Zoltan2</a> </em></span><br />
+- <strong>Partitioning and Load Balancing</strong> <span style="float:right;"><em>Provided by: <a href="https://sandialabs.github.io/Zoltan/">Zoltan</a>, <a href="https://github.com/trilinos/Trilinos/tree/master/packages/zoltan2#readme">Zoltan2</a> </em></span><br />
   Tools for efficiently partitioning and distributing data objects such as sparse matrices across processors, ensuring balanced computational loads and minimizing communication overhead. These capabilities include support for hybrid parallelism and advanced algorithms like geometric partitioning, spectral graph partitioning, graph coloring, and MPI task placement.
 
 ---

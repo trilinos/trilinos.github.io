@@ -4,7 +4,7 @@ var struct_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison_1_1_co
     [ "local_ordinal_type", "struct_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison_1_1_comparator.html#afd445b2a50c969675fa304cf6631769e", null ],
     [ "memory_space", "struct_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison_1_1_comparator.html#afeacf492b6b60fb765d40964e718ad1f", null ],
     [ "results_view", "struct_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison_1_1_comparator.html#a9f22bc4cbb1caf7d80cb96e3f64c447d", null ],
-    [ "ATS", "struct_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison_1_1_comparator.html#aa695e57704ec6b62cb28277449b45294", null ],
+    [ "ATS", "struct_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison_1_1_comparator.html#a24685b7181f6fd440685224aa10d3163", null ],
     [ "magnitudeType", "struct_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison_1_1_comparator.html#a1382ff309c09211d645e3c040271bcb6", null ],
     [ "values_view", "struct_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison_1_1_comparator.html#a68ee802fd3b905f595cae889eeb63f53", null ],
     [ "Comparator", "struct_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison_1_1_comparator.html#a3b71c392cf9e73d7a7b6eebded9f115d", null ],

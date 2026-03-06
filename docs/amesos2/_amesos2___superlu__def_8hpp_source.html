@@ -1066,213 +1066,232 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01000" name="l01000"></a><span class="lineno"> 1000</span> </div>
 <div class="line"><a id="l01001" name="l01001"></a><span class="lineno"> 1001</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Matrix, <span class="keyword">class</span> Vector&gt;</div>
 <div class="line"><a id="l01002" name="l01002"></a><span class="lineno"> 1002</span><span class="keywordtype">void</span></div>
-<div class="line"><a id="l01003" name="l01003"></a><span class="lineno"> 1003</span><a class="code hl_class" href="class_amesos2_1_1_superlu.html">Superlu&lt;Matrix,Vector&gt;::triangular_solve_factor</a>()</div>
-<div class="line"><a id="l01004" name="l01004"></a><span class="lineno"> 1004</span>{</div>
-<div class="line"><a id="l01005" name="l01005"></a><span class="lineno"> 1005</span><span class="preprocessor">#if defined(KOKKOSKERNELS_ENABLE_SUPERNODAL_SPTRSV) &amp;&amp; defined(KOKKOSKERNELS_ENABLE_TPL_SUPERLU)</span></div>
-<div class="line"><a id="l01006" name="l01006"></a><span class="lineno"> 1006</span>  <span class="keywordtype">size_t</span> ld_rhs = this-&gt;matrixA_-&gt;getGlobalNumRows();</div>
-<div class="line"><a id="l01007" name="l01007"></a><span class="lineno"> 1007</span> </div>
-<div class="line"><a id="l01008" name="l01008"></a><span class="lineno"> 1008</span>  <span class="comment">// convert etree to parents</span></div>
-<div class="line"><a id="l01009" name="l01009"></a><span class="lineno"> 1009</span>  SLU::SCformat * Lstore = (SLU::SCformat*)(data_.L.Store);</div>
-<div class="line"><a id="l01010" name="l01010"></a><span class="lineno"> 1010</span>  <span class="keywordtype">int</span> nsuper = 1 + Lstore-&gt;nsuper;     <span class="comment">// # of supernodal columns</span></div>
-<div class="line"><a id="l01011" name="l01011"></a><span class="lineno"> 1011</span>  Kokkos::resize(data_.parents, nsuper);</div>
-<div class="line"><a id="l01012" name="l01012"></a><span class="lineno"> 1012</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> s = 0; s &lt; nsuper; s++) {</div>
-<div class="line"><a id="l01013" name="l01013"></a><span class="lineno"> 1013</span>    <span class="keywordtype">int</span> j = Lstore-&gt;sup_to_col[s+1]-1; <span class="comment">// the last column index of this supernode</span></div>
-<div class="line"><a id="l01014" name="l01014"></a><span class="lineno"> 1014</span>    <span class="keywordflow">if</span> (data_.etree[j] == <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(ld_rhs)) {</div>
-<div class="line"><a id="l01015" name="l01015"></a><span class="lineno"> 1015</span>        data_.parents(s) = -1;</div>
-<div class="line"><a id="l01016" name="l01016"></a><span class="lineno"> 1016</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l01017" name="l01017"></a><span class="lineno"> 1017</span>        data_.parents(s) = Lstore-&gt;col_to_sup[data_.etree[j]];</div>
-<div class="line"><a id="l01018" name="l01018"></a><span class="lineno"> 1018</span>    }</div>
-<div class="line"><a id="l01019" name="l01019"></a><span class="lineno"> 1019</span>  }</div>
-<div class="line"><a id="l01020" name="l01020"></a><span class="lineno"> 1020</span> </div>
-<div class="line"><a id="l01021" name="l01021"></a><span class="lineno"> 1021</span>  deep_copy_or_assign_view(device_trsv_perm_r_, data_.perm_r); <span class="comment">// will use device to permute</span></div>
-<div class="line"><a id="l01022" name="l01022"></a><span class="lineno"> 1022</span>  deep_copy_or_assign_view(device_trsv_perm_c_, data_.perm_c); <span class="comment">// will use device to permute</span></div>
-<div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span>  <span class="keywordflow">if</span> (data_.options.Equil == SLU::YES) {</div>
-<div class="line"><a id="l01024" name="l01024"></a><span class="lineno"> 1024</span>    deep_copy_or_assign_view(device_trsv_R_, data_.R); <span class="comment">// will use device to scale</span></div>
-<div class="line"><a id="l01025" name="l01025"></a><span class="lineno"> 1025</span>    deep_copy_or_assign_view(device_trsv_C_, data_.C); <span class="comment">// will use device to scale</span></div>
-<div class="line"><a id="l01026" name="l01026"></a><span class="lineno"> 1026</span>  }</div>
-<div class="line"><a id="l01027" name="l01027"></a><span class="lineno"> 1027</span> </div>
-<div class="line"><a id="l01028" name="l01028"></a><span class="lineno"> 1028</span>  <span class="keywordtype">bool</span> condition_flag = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l01029" name="l01029"></a><span class="lineno"> 1029</span>  <span class="keywordflow">if</span> (data_.options.ConditionNumber == SLU::YES) {</div>
-<div class="line"><a id="l01030" name="l01030"></a><span class="lineno"> 1030</span>    <span class="keyword">using </span>STM = Teuchos::ScalarTraits&lt;magnitude_type&gt;;</div>
-<div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span>    <span class="keyword">const</span> magnitude_type eps = STM::eps ();</div>
-<div class="line"><a id="l01032" name="l01032"></a><span class="lineno"> 1032</span> </div>
-<div class="line"><a id="l01033" name="l01033"></a><span class="lineno"> 1033</span>    SCformat *Lstore2 = (SCformat*)(data_.L.Store);</div>
-<div class="line"><a id="l01034" name="l01034"></a><span class="lineno"> 1034</span>    <span class="keywordtype">int</span> nsuperL = 1 + Lstore2-&gt;nsuper;</div>
-<div class="line"><a id="l01035" name="l01035"></a><span class="lineno"> 1035</span>    <span class="keywordtype">int</span> *nb = Lstore2-&gt;sup_to_col;</div>
-<div class="line"><a id="l01036" name="l01036"></a><span class="lineno"> 1036</span>    <span class="keywordtype">int</span> max_cols = 0;</div>
-<div class="line"><a id="l01037" name="l01037"></a><span class="lineno"> 1037</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; nsuperL; i++) {</div>
-<div class="line"><a id="l01038" name="l01038"></a><span class="lineno"> 1038</span>      <span class="keywordflow">if</span> (nb[i+1] - nb[i] &gt; max_cols) {</div>
-<div class="line"><a id="l01039" name="l01039"></a><span class="lineno"> 1039</span>        max_cols = nb[i+1] - nb[i];</div>
-<div class="line"><a id="l01040" name="l01040"></a><span class="lineno"> 1040</span>      }</div>
-<div class="line"><a id="l01041" name="l01041"></a><span class="lineno"> 1041</span>    }</div>
-<div class="line"><a id="l01042" name="l01042"></a><span class="lineno"> 1042</span> </div>
-<div class="line"><a id="l01043" name="l01043"></a><span class="lineno"> 1043</span>    <span class="comment">// when rcond is small, it is ill-conditioned and flag is true</span></div>
-<div class="line"><a id="l01044" name="l01044"></a><span class="lineno"> 1044</span>    <span class="keyword">const</span> magnitude_type multiply_fact (10.0); <span class="comment">// larger the value, more likely flag is true, and no invert</span></div>
-<div class="line"><a id="l01045" name="l01045"></a><span class="lineno"> 1045</span>    condition_flag = (((double)max_cols * nsuper) * eps * multiply_fact &gt;= data_.rcond);</div>
-<div class="line"><a id="l01046" name="l01046"></a><span class="lineno"> 1046</span> </div>
-<div class="line"><a id="l01047" name="l01047"></a><span class="lineno"> 1047</span><span class="preprocessor">#ifdef HAVE_AMESOS2_VERBOSE_DEBUG</span></div>
-<div class="line"><a id="l01048" name="l01048"></a><span class="lineno"> 1048</span>    <span class="keywordtype">int</span> n = data_.perm_r.extent(0);</div>
-<div class="line"><a id="l01049" name="l01049"></a><span class="lineno"> 1049</span>    std::cout &lt;&lt; this-&gt;getComm()-&gt;getRank()</div>
-<div class="line"><a id="l01050" name="l01050"></a><span class="lineno"> 1050</span>              &lt;&lt; <span class="stringliteral">&quot; : anorm = &quot;</span> &lt;&lt; data_.anorm &lt;&lt; <span class="stringliteral">&quot;, rcond = &quot;</span> &lt;&lt; data_.rcond &lt;&lt; <span class="stringliteral">&quot;, n = &quot;</span> &lt;&lt; n</div>
-<div class="line"><a id="l01051" name="l01051"></a><span class="lineno"> 1051</span>              &lt;&lt; <span class="stringliteral">&quot;, num super cols = &quot;</span> &lt;&lt; nsuper &lt;&lt; <span class="stringliteral">&quot;, max super cols = &quot;</span> &lt;&lt; max_cols</div>
-<div class="line"><a id="l01052" name="l01052"></a><span class="lineno"> 1052</span>              &lt;&lt; <span class="stringliteral">&quot; -&gt; &quot;</span> &lt;&lt; ((double)max_cols * nsuper) * eps / data_.rcond</div>
-<div class="line"><a id="l01053" name="l01053"></a><span class="lineno"> 1053</span>              &lt;&lt; (((double)max_cols * nsuper) * eps * multiply_fact &lt; data_.rcond ? <span class="stringliteral">&quot; (okay)&quot;</span> : <span class="stringliteral">&quot; (warn)&quot;</span>) &lt;&lt; std::endl;</div>
-<div class="line"><a id="l01054" name="l01054"></a><span class="lineno"> 1054</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l01055" name="l01055"></a><span class="lineno"> 1055</span>  }</div>
-<div class="line"><a id="l01056" name="l01056"></a><span class="lineno"> 1056</span> </div>
-<div class="line"><a id="l01057" name="l01057"></a><span class="lineno"> 1057</span>  <span class="comment">// Create handles for U and U^T solves</span></div>
-<div class="line"><a id="l01058" name="l01058"></a><span class="lineno"> 1058</span>  <span class="keywordflow">if</span> (sptrsv_use_spmv_ &amp;&amp; !condition_flag) {</div>
-<div class="line"><a id="l01059" name="l01059"></a><span class="lineno"> 1059</span>    device_khL_.create_sptrsv_handle(</div>
-<div class="line"><a id="l01060" name="l01060"></a><span class="lineno"> 1060</span>      KokkosSparse::Experimental::SPTRSVAlgorithm::SUPERNODAL_SPMV_DAG, ld_rhs, <span class="keyword">true</span>);</div>
-<div class="line"><a id="l01061" name="l01061"></a><span class="lineno"> 1061</span>    device_khU_.create_sptrsv_handle(</div>
-<div class="line"><a id="l01062" name="l01062"></a><span class="lineno"> 1062</span>      KokkosSparse::Experimental::SPTRSVAlgorithm::SUPERNODAL_SPMV_DAG, ld_rhs, <span class="keyword">false</span>);</div>
-<div class="line"><a id="l01063" name="l01063"></a><span class="lineno"> 1063</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l01064" name="l01064"></a><span class="lineno"> 1064</span>    device_khL_.create_sptrsv_handle(</div>
-<div class="line"><a id="l01065" name="l01065"></a><span class="lineno"> 1065</span>      KokkosSparse::Experimental::SPTRSVAlgorithm::SUPERNODAL_DAG, ld_rhs, <span class="keyword">true</span>);</div>
-<div class="line"><a id="l01066" name="l01066"></a><span class="lineno"> 1066</span>    device_khU_.create_sptrsv_handle(</div>
-<div class="line"><a id="l01067" name="l01067"></a><span class="lineno"> 1067</span>      KokkosSparse::Experimental::SPTRSVAlgorithm::SUPERNODAL_DAG, ld_rhs, <span class="keyword">false</span>);</div>
-<div class="line"><a id="l01068" name="l01068"></a><span class="lineno"> 1068</span>  }</div>
-<div class="line"><a id="l01069" name="l01069"></a><span class="lineno"> 1069</span> </div>
-<div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span>  <span class="comment">// specify whether to store U in CSR format</span></div>
-<div class="line"><a id="l01071" name="l01071"></a><span class="lineno"> 1071</span>  device_khU_.set_sptrsv_column_major (!sptrsv_u_in_csr_);</div>
-<div class="line"><a id="l01072" name="l01072"></a><span class="lineno"> 1072</span> </div>
-<div class="line"><a id="l01073" name="l01073"></a><span class="lineno"> 1073</span>  <span class="comment">// specify whether to merge supernodes with similar sparsity structure</span></div>
-<div class="line"><a id="l01074" name="l01074"></a><span class="lineno"> 1074</span>  device_khL_.set_sptrsv_merge_supernodes (sptrsv_merge_supernodes_);</div>
-<div class="line"><a id="l01075" name="l01075"></a><span class="lineno"> 1075</span>  device_khU_.set_sptrsv_merge_supernodes (sptrsv_merge_supernodes_);</div>
-<div class="line"><a id="l01076" name="l01076"></a><span class="lineno"> 1076</span> </div>
-<div class="line"><a id="l01077" name="l01077"></a><span class="lineno"> 1077</span>  <span class="comment">// invert only if flag is not on</span></div>
-<div class="line"><a id="l01078" name="l01078"></a><span class="lineno"> 1078</span>  <span class="keywordtype">bool</span> sptrsv_invert_diag    = (!condition_flag &amp;&amp; sptrsv_invert_diag_);</div>
-<div class="line"><a id="l01079" name="l01079"></a><span class="lineno"> 1079</span>  <span class="keywordtype">bool</span> sptrsv_invert_offdiag = (!condition_flag &amp;&amp; sptrsv_invert_offdiag_);</div>
-<div class="line"><a id="l01080" name="l01080"></a><span class="lineno"> 1080</span> </div>
-<div class="line"><a id="l01081" name="l01081"></a><span class="lineno"> 1081</span>  <span class="comment">// specify whether to invert diagonal blocks</span></div>
-<div class="line"><a id="l01082" name="l01082"></a><span class="lineno"> 1082</span>  device_khL_.set_sptrsv_invert_diagonal (sptrsv_invert_diag);</div>
-<div class="line"><a id="l01083" name="l01083"></a><span class="lineno"> 1083</span>  device_khU_.set_sptrsv_invert_diagonal (sptrsv_invert_diag);</div>
-<div class="line"><a id="l01084" name="l01084"></a><span class="lineno"> 1084</span> </div>
-<div class="line"><a id="l01085" name="l01085"></a><span class="lineno"> 1085</span>  <span class="comment">// specify wheather to apply diagonal-inversion to off-diagonal blocks (optional, default is false)</span></div>
-<div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span>  device_khL_.set_sptrsv_invert_offdiagonal (sptrsv_invert_offdiag);</div>
-<div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span>  device_khU_.set_sptrsv_invert_offdiagonal (sptrsv_invert_offdiag);</div>
-<div class="line"><a id="l01088" name="l01088"></a><span class="lineno"> 1088</span> </div>
-<div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span>  <span class="comment">// set etree</span></div>
-<div class="line"><a id="l01090" name="l01090"></a><span class="lineno"> 1090</span>  device_khL_.set_sptrsv_etree(data_.parents.data());</div>
-<div class="line"><a id="l01091" name="l01091"></a><span class="lineno"> 1091</span>  device_khU_.set_sptrsv_etree(data_.parents.data());</div>
-<div class="line"><a id="l01092" name="l01092"></a><span class="lineno"> 1092</span> </div>
-<div class="line"><a id="l01093" name="l01093"></a><span class="lineno"> 1093</span>  <span class="comment">// set permutation</span></div>
-<div class="line"><a id="l01094" name="l01094"></a><span class="lineno"> 1094</span>  device_khL_.set_sptrsv_perm(data_.perm_r.data());</div>
-<div class="line"><a id="l01095" name="l01095"></a><span class="lineno"> 1095</span>  device_khU_.set_sptrsv_perm(data_.perm_c.data());</div>
-<div class="line"><a id="l01096" name="l01096"></a><span class="lineno"> 1096</span> </div>
-<div class="line"><a id="l01097" name="l01097"></a><span class="lineno"> 1097</span>  <span class="keywordtype">int</span> block_size  = -1; <span class="comment">// TODO: add needed params</span></div>
-<div class="line"><a id="l01098" name="l01098"></a><span class="lineno"> 1098</span>  <span class="keywordflow">if</span> (block_size &gt;= 0) {</div>
-<div class="line"><a id="l01099" name="l01099"></a><span class="lineno"> 1099</span>    std::cout &lt;&lt; <span class="stringliteral">&quot; Block Size         : &quot;</span> &lt;&lt; block_size &lt;&lt; std::endl;</div>
-<div class="line"><a id="l01100" name="l01100"></a><span class="lineno"> 1100</span>    device_khL_.set_sptrsv_diag_supernode_sizes (block_size, block_size);</div>
-<div class="line"><a id="l01101" name="l01101"></a><span class="lineno"> 1101</span>    device_khU_.set_sptrsv_diag_supernode_sizes (block_size, block_size);</div>
-<div class="line"><a id="l01102" name="l01102"></a><span class="lineno"> 1102</span>  }</div>
-<div class="line"><a id="l01103" name="l01103"></a><span class="lineno"> 1103</span> </div>
-<div class="line"><a id="l01104" name="l01104"></a><span class="lineno"> 1104</span>  <span class="comment">// Do symbolic analysis</span></div>
-<div class="line"><a id="l01105" name="l01105"></a><span class="lineno"> 1105</span>  {</div>
-<div class="line"><a id="l01106" name="l01106"></a><span class="lineno"> 1106</span><span class="preprocessor">#ifdef HAVE_AMESOS2_TIMERS</span></div>
-<div class="line"><a id="l01107" name="l01107"></a><span class="lineno"> 1107</span>      Teuchos::RCP&lt; Teuchos::Time &gt; SymboTimer_ = Teuchos::TimeMonitor::getNewCounter (<span class="stringliteral">&quot;Time for SpTrsv symbolic&quot;</span>);</div>
-<div class="line"><a id="l01108" name="l01108"></a><span class="lineno"> 1108</span>      Teuchos::TimeMonitor numFactTimer(*SymboTimer_);</div>
-<div class="line"><a id="l01109" name="l01109"></a><span class="lineno"> 1109</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l01110" name="l01110"></a><span class="lineno"> 1110</span>    KokkosSparse::Experimental::sptrsv_symbolic</div>
-<div class="line"><a id="l01111" name="l01111"></a><span class="lineno"> 1111</span>      (&amp;device_khL_, &amp;device_khU_, data_.L, data_.U);</div>
-<div class="line"><a id="l01112" name="l01112"></a><span class="lineno"> 1112</span>  }</div>
+<div class="foldopen" id="foldopen01003" data-start="{" data-end="}">
+<div class="line"><a id="l01003" name="l01003"></a><span class="lineno"><a class="line" href="class_amesos2_1_1_superlu.html#adff8794b0024fd87df8ea6d1f73878db"> 1003</a></span><a class="code hl_function" href="class_amesos2_1_1_superlu.html#adff8794b0024fd87df8ea6d1f73878db">Superlu&lt;Matrix,Vector&gt;::describe_impl</a>(Teuchos::FancyOStream &amp;out,</div>
+<div class="line"><a id="l01004" name="l01004"></a><span class="lineno"> 1004</span>                                      <span class="keyword">const</span> Teuchos::EVerbosityLevel verbLevel)<span class="keyword"> const</span></div>
+<div class="line"><a id="l01005" name="l01005"></a><span class="lineno"> 1005</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l01006" name="l01006"></a><span class="lineno"> 1006</span>  out &lt;&lt; <span class="stringliteral">&quot; SuperLU current parameters:&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01007" name="l01007"></a><span class="lineno"> 1007</span>  out &lt;&lt; <span class="stringliteral">&quot;  &gt; IsContiguous = &quot;</span> &lt;&lt; (is_contiguous_ ? <span class="stringliteral">&quot;YES&quot;</span> : <span class="stringliteral">&quot;NO&quot;</span>) &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01008" name="l01008"></a><span class="lineno"> 1008</span>  out &lt;&lt; <span class="stringliteral">&quot;  &gt; Trans        = &quot;</span> &lt;&lt; data_.options.Trans &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01009" name="l01009"></a><span class="lineno"> 1009</span>  out &lt;&lt; <span class="stringliteral">&quot;  &gt; IterRefine   = &quot;</span> &lt;&lt; data_.options.IterRefine &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01010" name="l01010"></a><span class="lineno"> 1010</span>  out &lt;&lt; <span class="stringliteral">&quot;  &gt; ColPerm      = &quot;</span> &lt;&lt; data_.options.ColPerm &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01011" name="l01011"></a><span class="lineno"> 1011</span>  out &lt;&lt; <span class="stringliteral">&quot;  &gt; Equil        = &quot;</span> &lt;&lt; data_.options.Equil &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01012" name="l01012"></a><span class="lineno"> 1012</span>  out &lt;&lt; <span class="stringliteral">&quot;  &gt; SymmetricMode   = &quot;</span> &lt;&lt; data_.options.SymmetricMode &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01013" name="l01013"></a><span class="lineno"> 1013</span>  out &lt;&lt; <span class="stringliteral">&quot;  &gt; ConditionNumber = &quot;</span> &lt;&lt; data_.options.ConditionNumber &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01014" name="l01014"></a><span class="lineno"> 1014</span>  out &lt;&lt; <span class="stringliteral">&quot;  &gt; DiagPivotThresh = &quot;</span> &lt;&lt; data_.options.DiagPivotThresh &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01015" name="l01015"></a><span class="lineno"> 1015</span>  out &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01016" name="l01016"></a><span class="lineno"> 1016</span>}</div>
+</div>
+<div class="line"><a id="l01017" name="l01017"></a><span class="lineno"> 1017</span> </div>
+<div class="line"><a id="l01018" name="l01018"></a><span class="lineno"> 1018</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Matrix, <span class="keyword">class</span> Vector&gt;</div>
+<div class="line"><a id="l01019" name="l01019"></a><span class="lineno"> 1019</span><span class="keywordtype">void</span></div>
+<div class="line"><a id="l01020" name="l01020"></a><span class="lineno"> 1020</span><a class="code hl_class" href="class_amesos2_1_1_superlu.html">Superlu&lt;Matrix,Vector&gt;::triangular_solve_factor</a>()</div>
+<div class="line"><a id="l01021" name="l01021"></a><span class="lineno"> 1021</span>{</div>
+<div class="line"><a id="l01022" name="l01022"></a><span class="lineno"> 1022</span><span class="preprocessor">#if defined(KOKKOSKERNELS_ENABLE_SUPERNODAL_SPTRSV) &amp;&amp; defined(KOKKOSKERNELS_ENABLE_TPL_SUPERLU)</span></div>
+<div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span>  <span class="keywordtype">size_t</span> ld_rhs = this-&gt;matrixA_-&gt;getGlobalNumRows();</div>
+<div class="line"><a id="l01024" name="l01024"></a><span class="lineno"> 1024</span> </div>
+<div class="line"><a id="l01025" name="l01025"></a><span class="lineno"> 1025</span>  <span class="comment">// convert etree to parents</span></div>
+<div class="line"><a id="l01026" name="l01026"></a><span class="lineno"> 1026</span>  SLU::SCformat * Lstore = (SLU::SCformat*)(data_.L.Store);</div>
+<div class="line"><a id="l01027" name="l01027"></a><span class="lineno"> 1027</span>  <span class="keywordtype">int</span> nsuper = 1 + Lstore-&gt;nsuper;     <span class="comment">// # of supernodal columns</span></div>
+<div class="line"><a id="l01028" name="l01028"></a><span class="lineno"> 1028</span>  Kokkos::resize(data_.parents, nsuper);</div>
+<div class="line"><a id="l01029" name="l01029"></a><span class="lineno"> 1029</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> s = 0; s &lt; nsuper; s++) {</div>
+<div class="line"><a id="l01030" name="l01030"></a><span class="lineno"> 1030</span>    <span class="keywordtype">int</span> j = Lstore-&gt;sup_to_col[s+1]-1; <span class="comment">// the last column index of this supernode</span></div>
+<div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span>    <span class="keywordflow">if</span> (data_.etree[j] == <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(ld_rhs)) {</div>
+<div class="line"><a id="l01032" name="l01032"></a><span class="lineno"> 1032</span>        data_.parents(s) = -1;</div>
+<div class="line"><a id="l01033" name="l01033"></a><span class="lineno"> 1033</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l01034" name="l01034"></a><span class="lineno"> 1034</span>        data_.parents(s) = Lstore-&gt;col_to_sup[data_.etree[j]];</div>
+<div class="line"><a id="l01035" name="l01035"></a><span class="lineno"> 1035</span>    }</div>
+<div class="line"><a id="l01036" name="l01036"></a><span class="lineno"> 1036</span>  }</div>
+<div class="line"><a id="l01037" name="l01037"></a><span class="lineno"> 1037</span> </div>
+<div class="line"><a id="l01038" name="l01038"></a><span class="lineno"> 1038</span>  deep_copy_or_assign_view(device_trsv_perm_r_, data_.perm_r); <span class="comment">// will use device to permute</span></div>
+<div class="line"><a id="l01039" name="l01039"></a><span class="lineno"> 1039</span>  deep_copy_or_assign_view(device_trsv_perm_c_, data_.perm_c); <span class="comment">// will use device to permute</span></div>
+<div class="line"><a id="l01040" name="l01040"></a><span class="lineno"> 1040</span>  <span class="keywordflow">if</span> (data_.options.Equil == SLU::YES) {</div>
+<div class="line"><a id="l01041" name="l01041"></a><span class="lineno"> 1041</span>    deep_copy_or_assign_view(device_trsv_R_, data_.R); <span class="comment">// will use device to scale</span></div>
+<div class="line"><a id="l01042" name="l01042"></a><span class="lineno"> 1042</span>    deep_copy_or_assign_view(device_trsv_C_, data_.C); <span class="comment">// will use device to scale</span></div>
+<div class="line"><a id="l01043" name="l01043"></a><span class="lineno"> 1043</span>  }</div>
+<div class="line"><a id="l01044" name="l01044"></a><span class="lineno"> 1044</span> </div>
+<div class="line"><a id="l01045" name="l01045"></a><span class="lineno"> 1045</span>  <span class="keywordtype">bool</span> condition_flag = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l01046" name="l01046"></a><span class="lineno"> 1046</span>  <span class="keywordflow">if</span> (data_.options.ConditionNumber == SLU::YES) {</div>
+<div class="line"><a id="l01047" name="l01047"></a><span class="lineno"> 1047</span>    <span class="keyword">using </span>STM = Teuchos::ScalarTraits&lt;magnitude_type&gt;;</div>
+<div class="line"><a id="l01048" name="l01048"></a><span class="lineno"> 1048</span>    <span class="keyword">const</span> magnitude_type eps = STM::eps ();</div>
+<div class="line"><a id="l01049" name="l01049"></a><span class="lineno"> 1049</span> </div>
+<div class="line"><a id="l01050" name="l01050"></a><span class="lineno"> 1050</span>    SCformat *Lstore2 = (SCformat*)(data_.L.Store);</div>
+<div class="line"><a id="l01051" name="l01051"></a><span class="lineno"> 1051</span>    <span class="keywordtype">int</span> nsuperL = 1 + Lstore2-&gt;nsuper;</div>
+<div class="line"><a id="l01052" name="l01052"></a><span class="lineno"> 1052</span>    <span class="keywordtype">int</span> *nb = Lstore2-&gt;sup_to_col;</div>
+<div class="line"><a id="l01053" name="l01053"></a><span class="lineno"> 1053</span>    <span class="keywordtype">int</span> max_cols = 0;</div>
+<div class="line"><a id="l01054" name="l01054"></a><span class="lineno"> 1054</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; nsuperL; i++) {</div>
+<div class="line"><a id="l01055" name="l01055"></a><span class="lineno"> 1055</span>      <span class="keywordflow">if</span> (nb[i+1] - nb[i] &gt; max_cols) {</div>
+<div class="line"><a id="l01056" name="l01056"></a><span class="lineno"> 1056</span>        max_cols = nb[i+1] - nb[i];</div>
+<div class="line"><a id="l01057" name="l01057"></a><span class="lineno"> 1057</span>      }</div>
+<div class="line"><a id="l01058" name="l01058"></a><span class="lineno"> 1058</span>    }</div>
+<div class="line"><a id="l01059" name="l01059"></a><span class="lineno"> 1059</span> </div>
+<div class="line"><a id="l01060" name="l01060"></a><span class="lineno"> 1060</span>    <span class="comment">// when rcond is small, it is ill-conditioned and flag is true</span></div>
+<div class="line"><a id="l01061" name="l01061"></a><span class="lineno"> 1061</span>    <span class="keyword">const</span> magnitude_type multiply_fact (10.0); <span class="comment">// larger the value, more likely flag is true, and no invert</span></div>
+<div class="line"><a id="l01062" name="l01062"></a><span class="lineno"> 1062</span>    condition_flag = (((double)max_cols * nsuper) * eps * multiply_fact &gt;= data_.rcond);</div>
+<div class="line"><a id="l01063" name="l01063"></a><span class="lineno"> 1063</span> </div>
+<div class="line"><a id="l01064" name="l01064"></a><span class="lineno"> 1064</span><span class="preprocessor">#ifdef HAVE_AMESOS2_VERBOSE_DEBUG</span></div>
+<div class="line"><a id="l01065" name="l01065"></a><span class="lineno"> 1065</span>    <span class="keywordtype">int</span> n = data_.perm_r.extent(0);</div>
+<div class="line"><a id="l01066" name="l01066"></a><span class="lineno"> 1066</span>    std::cout &lt;&lt; this-&gt;getComm()-&gt;getRank()</div>
+<div class="line"><a id="l01067" name="l01067"></a><span class="lineno"> 1067</span>              &lt;&lt; <span class="stringliteral">&quot; : anorm = &quot;</span> &lt;&lt; data_.anorm &lt;&lt; <span class="stringliteral">&quot;, rcond = &quot;</span> &lt;&lt; data_.rcond &lt;&lt; <span class="stringliteral">&quot;, n = &quot;</span> &lt;&lt; n</div>
+<div class="line"><a id="l01068" name="l01068"></a><span class="lineno"> 1068</span>              &lt;&lt; <span class="stringliteral">&quot;, num super cols = &quot;</span> &lt;&lt; nsuper &lt;&lt; <span class="stringliteral">&quot;, max super cols = &quot;</span> &lt;&lt; max_cols</div>
+<div class="line"><a id="l01069" name="l01069"></a><span class="lineno"> 1069</span>              &lt;&lt; <span class="stringliteral">&quot; -&gt; &quot;</span> &lt;&lt; ((double)max_cols * nsuper) * eps / data_.rcond</div>
+<div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span>              &lt;&lt; (((double)max_cols * nsuper) * eps * multiply_fact &lt; data_.rcond ? <span class="stringliteral">&quot; (okay)&quot;</span> : <span class="stringliteral">&quot; (warn)&quot;</span>) &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01071" name="l01071"></a><span class="lineno"> 1071</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l01072" name="l01072"></a><span class="lineno"> 1072</span>  }</div>
+<div class="line"><a id="l01073" name="l01073"></a><span class="lineno"> 1073</span> </div>
+<div class="line"><a id="l01074" name="l01074"></a><span class="lineno"> 1074</span>  <span class="comment">// Create handles for U and U^T solves</span></div>
+<div class="line"><a id="l01075" name="l01075"></a><span class="lineno"> 1075</span>  <span class="keywordflow">if</span> (sptrsv_use_spmv_ &amp;&amp; !condition_flag) {</div>
+<div class="line"><a id="l01076" name="l01076"></a><span class="lineno"> 1076</span>    device_khL_.create_sptrsv_handle(</div>
+<div class="line"><a id="l01077" name="l01077"></a><span class="lineno"> 1077</span>      KokkosSparse::Experimental::SPTRSVAlgorithm::SUPERNODAL_SPMV_DAG, ld_rhs, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l01078" name="l01078"></a><span class="lineno"> 1078</span>    device_khU_.create_sptrsv_handle(</div>
+<div class="line"><a id="l01079" name="l01079"></a><span class="lineno"> 1079</span>      KokkosSparse::Experimental::SPTRSVAlgorithm::SUPERNODAL_SPMV_DAG, ld_rhs, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l01080" name="l01080"></a><span class="lineno"> 1080</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l01081" name="l01081"></a><span class="lineno"> 1081</span>    device_khL_.create_sptrsv_handle(</div>
+<div class="line"><a id="l01082" name="l01082"></a><span class="lineno"> 1082</span>      KokkosSparse::Experimental::SPTRSVAlgorithm::SUPERNODAL_DAG, ld_rhs, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l01083" name="l01083"></a><span class="lineno"> 1083</span>    device_khU_.create_sptrsv_handle(</div>
+<div class="line"><a id="l01084" name="l01084"></a><span class="lineno"> 1084</span>      KokkosSparse::Experimental::SPTRSVAlgorithm::SUPERNODAL_DAG, ld_rhs, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l01085" name="l01085"></a><span class="lineno"> 1085</span>  }</div>
+<div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span> </div>
+<div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span>  <span class="comment">// specify whether to store U in CSR format</span></div>
+<div class="line"><a id="l01088" name="l01088"></a><span class="lineno"> 1088</span>  device_khU_.set_sptrsv_column_major (!sptrsv_u_in_csr_);</div>
+<div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span> </div>
+<div class="line"><a id="l01090" name="l01090"></a><span class="lineno"> 1090</span>  <span class="comment">// specify whether to merge supernodes with similar sparsity structure</span></div>
+<div class="line"><a id="l01091" name="l01091"></a><span class="lineno"> 1091</span>  device_khL_.set_sptrsv_merge_supernodes (sptrsv_merge_supernodes_);</div>
+<div class="line"><a id="l01092" name="l01092"></a><span class="lineno"> 1092</span>  device_khU_.set_sptrsv_merge_supernodes (sptrsv_merge_supernodes_);</div>
+<div class="line"><a id="l01093" name="l01093"></a><span class="lineno"> 1093</span> </div>
+<div class="line"><a id="l01094" name="l01094"></a><span class="lineno"> 1094</span>  <span class="comment">// invert only if flag is not on</span></div>
+<div class="line"><a id="l01095" name="l01095"></a><span class="lineno"> 1095</span>  <span class="keywordtype">bool</span> sptrsv_invert_diag    = (!condition_flag &amp;&amp; sptrsv_invert_diag_);</div>
+<div class="line"><a id="l01096" name="l01096"></a><span class="lineno"> 1096</span>  <span class="keywordtype">bool</span> sptrsv_invert_offdiag = (!condition_flag &amp;&amp; sptrsv_invert_offdiag_);</div>
+<div class="line"><a id="l01097" name="l01097"></a><span class="lineno"> 1097</span> </div>
+<div class="line"><a id="l01098" name="l01098"></a><span class="lineno"> 1098</span>  <span class="comment">// specify whether to invert diagonal blocks</span></div>
+<div class="line"><a id="l01099" name="l01099"></a><span class="lineno"> 1099</span>  device_khL_.set_sptrsv_invert_diagonal (sptrsv_invert_diag);</div>
+<div class="line"><a id="l01100" name="l01100"></a><span class="lineno"> 1100</span>  device_khU_.set_sptrsv_invert_diagonal (sptrsv_invert_diag);</div>
+<div class="line"><a id="l01101" name="l01101"></a><span class="lineno"> 1101</span> </div>
+<div class="line"><a id="l01102" name="l01102"></a><span class="lineno"> 1102</span>  <span class="comment">// specify wheather to apply diagonal-inversion to off-diagonal blocks (optional, default is false)</span></div>
+<div class="line"><a id="l01103" name="l01103"></a><span class="lineno"> 1103</span>  device_khL_.set_sptrsv_invert_offdiagonal (sptrsv_invert_offdiag);</div>
+<div class="line"><a id="l01104" name="l01104"></a><span class="lineno"> 1104</span>  device_khU_.set_sptrsv_invert_offdiagonal (sptrsv_invert_offdiag);</div>
+<div class="line"><a id="l01105" name="l01105"></a><span class="lineno"> 1105</span> </div>
+<div class="line"><a id="l01106" name="l01106"></a><span class="lineno"> 1106</span>  <span class="comment">// set etree</span></div>
+<div class="line"><a id="l01107" name="l01107"></a><span class="lineno"> 1107</span>  device_khL_.set_sptrsv_etree(data_.parents.data());</div>
+<div class="line"><a id="l01108" name="l01108"></a><span class="lineno"> 1108</span>  device_khU_.set_sptrsv_etree(data_.parents.data());</div>
+<div class="line"><a id="l01109" name="l01109"></a><span class="lineno"> 1109</span> </div>
+<div class="line"><a id="l01110" name="l01110"></a><span class="lineno"> 1110</span>  <span class="comment">// set permutation</span></div>
+<div class="line"><a id="l01111" name="l01111"></a><span class="lineno"> 1111</span>  device_khL_.set_sptrsv_perm(data_.perm_r.data());</div>
+<div class="line"><a id="l01112" name="l01112"></a><span class="lineno"> 1112</span>  device_khU_.set_sptrsv_perm(data_.perm_c.data());</div>
 <div class="line"><a id="l01113" name="l01113"></a><span class="lineno"> 1113</span> </div>
-<div class="line"><a id="l01114" name="l01114"></a><span class="lineno"> 1114</span>  <span class="comment">// Do numerical compute</span></div>
-<div class="line"><a id="l01115" name="l01115"></a><span class="lineno"> 1115</span>  {</div>
-<div class="line"><a id="l01116" name="l01116"></a><span class="lineno"> 1116</span><span class="preprocessor">#ifdef HAVE_AMESOS2_TIMERS</span></div>
-<div class="line"><a id="l01117" name="l01117"></a><span class="lineno"> 1117</span>      Teuchos::RCP&lt; Teuchos::Time &gt; NumerTimer_ = Teuchos::TimeMonitor::getNewCounter (<span class="stringliteral">&quot;Time for SpTrsv numeric&quot;</span>);</div>
-<div class="line"><a id="l01118" name="l01118"></a><span class="lineno"> 1118</span>      Teuchos::TimeMonitor numFactTimer(*NumerTimer_);</div>
-<div class="line"><a id="l01119" name="l01119"></a><span class="lineno"> 1119</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l01120" name="l01120"></a><span class="lineno"> 1120</span>    KokkosSparse::Experimental::sptrsv_compute</div>
-<div class="line"><a id="l01121" name="l01121"></a><span class="lineno"> 1121</span>      (&amp;device_khL_, &amp;device_khU_, data_.L, data_.U);</div>
-<div class="line"><a id="l01122" name="l01122"></a><span class="lineno"> 1122</span>  }</div>
-<div class="line"><a id="l01123" name="l01123"></a><span class="lineno"> 1123</span><span class="preprocessor">#endif </span><span class="comment">// HAVE_AMESOS2_TRIANGULAR_SOLVE</span></div>
-<div class="line"><a id="l01124" name="l01124"></a><span class="lineno"> 1124</span>}</div>
-<div class="line"><a id="l01125" name="l01125"></a><span class="lineno"> 1125</span> </div>
-<div class="line"><a id="l01126" name="l01126"></a><span class="lineno"> 1126</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Matrix, <span class="keyword">class</span> Vector&gt;</div>
-<div class="line"><a id="l01127" name="l01127"></a><span class="lineno"> 1127</span><span class="keywordtype">void</span></div>
-<div class="line"><a id="l01128" name="l01128"></a><span class="lineno"> 1128</span>Superlu&lt;Matrix,Vector&gt;::triangular_solve()<span class="keyword"> const</span></div>
-<div class="line"><a id="l01129" name="l01129"></a><span class="lineno"> 1129</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l01130" name="l01130"></a><span class="lineno"> 1130</span><span class="preprocessor">#if defined(KOKKOSKERNELS_ENABLE_SUPERNODAL_SPTRSV) &amp;&amp; defined(KOKKOSKERNELS_ENABLE_TPL_SUPERLU)</span></div>
-<div class="line"><a id="l01131" name="l01131"></a><span class="lineno"> 1131</span>  <span class="keywordtype">size_t</span> ld_rhs = device_xValues_.extent(0);</div>
-<div class="line"><a id="l01132" name="l01132"></a><span class="lineno"> 1132</span>  <span class="keywordtype">size_t</span> nrhs = device_xValues_.extent(1);</div>
-<div class="line"><a id="l01133" name="l01133"></a><span class="lineno"> 1133</span> </div>
-<div class="line"><a id="l01134" name="l01134"></a><span class="lineno"> 1134</span>  Kokkos::resize(device_trsv_rhs_, ld_rhs, nrhs);</div>
-<div class="line"><a id="l01135" name="l01135"></a><span class="lineno"> 1135</span>  Kokkos::resize(device_trsv_sol_, ld_rhs, nrhs);</div>
-<div class="line"><a id="l01136" name="l01136"></a><span class="lineno"> 1136</span> </div>
-<div class="line"><a id="l01137" name="l01137"></a><span class="lineno"> 1137</span>  <span class="comment">// forward pivot</span></div>
-<div class="line"><a id="l01138" name="l01138"></a><span class="lineno"> 1138</span>  <span class="keyword">auto</span> local_device_bValues = device_bValues_;</div>
-<div class="line"><a id="l01139" name="l01139"></a><span class="lineno"> 1139</span>  <span class="keyword">auto</span> local_device_trsv_perm_r = device_trsv_perm_r_;</div>
-<div class="line"><a id="l01140" name="l01140"></a><span class="lineno"> 1140</span>  <span class="keyword">auto</span> local_device_trsv_rhs = device_trsv_rhs_;</div>
-<div class="line"><a id="l01141" name="l01141"></a><span class="lineno"> 1141</span> </div>
-<div class="line"><a id="l01142" name="l01142"></a><span class="lineno"> 1142</span>  <span class="keywordflow">if</span> (data_.rowequ) {</div>
-<div class="line"><a id="l01143" name="l01143"></a><span class="lineno"> 1143</span>    <span class="keyword">auto</span> local_device_trsv_R = device_trsv_R_;</div>
-<div class="line"><a id="l01144" name="l01144"></a><span class="lineno"> 1144</span>    Kokkos::parallel_for(Kokkos::RangePolicy&lt;DeviceExecSpaceType&gt;(0, ld_rhs),</div>
-<div class="line"><a id="l01145" name="l01145"></a><span class="lineno"> 1145</span>      KOKKOS_LAMBDA(<span class="keywordtype">size_t</span> j) {</div>
-<div class="line"><a id="l01146" name="l01146"></a><span class="lineno"> 1146</span>      <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> k = 0; k &lt; nrhs; ++k) {</div>
-<div class="line"><a id="l01147" name="l01147"></a><span class="lineno"> 1147</span>        local_device_trsv_rhs(local_device_trsv_perm_r(j),k) = local_device_trsv_R(j) * local_device_bValues(j,k);</div>
-<div class="line"><a id="l01148" name="l01148"></a><span class="lineno"> 1148</span>      }</div>
-<div class="line"><a id="l01149" name="l01149"></a><span class="lineno"> 1149</span>    });</div>
-<div class="line"><a id="l01150" name="l01150"></a><span class="lineno"> 1150</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l01151" name="l01151"></a><span class="lineno"> 1151</span>    Kokkos::parallel_for(Kokkos::RangePolicy&lt;DeviceExecSpaceType&gt;(0, ld_rhs),</div>
-<div class="line"><a id="l01152" name="l01152"></a><span class="lineno"> 1152</span>      KOKKOS_LAMBDA(<span class="keywordtype">size_t</span> j) {</div>
-<div class="line"><a id="l01153" name="l01153"></a><span class="lineno"> 1153</span>      <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> k = 0; k &lt; nrhs; ++k) {</div>
-<div class="line"><a id="l01154" name="l01154"></a><span class="lineno"> 1154</span>        local_device_trsv_rhs(local_device_trsv_perm_r(j),k) = local_device_bValues(j,k);</div>
-<div class="line"><a id="l01155" name="l01155"></a><span class="lineno"> 1155</span>      }</div>
-<div class="line"><a id="l01156" name="l01156"></a><span class="lineno"> 1156</span>    });</div>
-<div class="line"><a id="l01157" name="l01157"></a><span class="lineno"> 1157</span>  }</div>
+<div class="line"><a id="l01114" name="l01114"></a><span class="lineno"> 1114</span>  <span class="keywordtype">int</span> block_size  = -1; <span class="comment">// TODO: add needed params</span></div>
+<div class="line"><a id="l01115" name="l01115"></a><span class="lineno"> 1115</span>  <span class="keywordflow">if</span> (block_size &gt;= 0) {</div>
+<div class="line"><a id="l01116" name="l01116"></a><span class="lineno"> 1116</span>    std::cout &lt;&lt; <span class="stringliteral">&quot; Block Size         : &quot;</span> &lt;&lt; block_size &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01117" name="l01117"></a><span class="lineno"> 1117</span>    device_khL_.set_sptrsv_diag_supernode_sizes (block_size, block_size);</div>
+<div class="line"><a id="l01118" name="l01118"></a><span class="lineno"> 1118</span>    device_khU_.set_sptrsv_diag_supernode_sizes (block_size, block_size);</div>
+<div class="line"><a id="l01119" name="l01119"></a><span class="lineno"> 1119</span>  }</div>
+<div class="line"><a id="l01120" name="l01120"></a><span class="lineno"> 1120</span> </div>
+<div class="line"><a id="l01121" name="l01121"></a><span class="lineno"> 1121</span>  <span class="comment">// Do symbolic analysis</span></div>
+<div class="line"><a id="l01122" name="l01122"></a><span class="lineno"> 1122</span>  {</div>
+<div class="line"><a id="l01123" name="l01123"></a><span class="lineno"> 1123</span><span class="preprocessor">#ifdef HAVE_AMESOS2_TIMERS</span></div>
+<div class="line"><a id="l01124" name="l01124"></a><span class="lineno"> 1124</span>      Teuchos::RCP&lt; Teuchos::Time &gt; SymboTimer_ = Teuchos::TimeMonitor::getNewCounter (<span class="stringliteral">&quot;Time for SpTrsv symbolic&quot;</span>);</div>
+<div class="line"><a id="l01125" name="l01125"></a><span class="lineno"> 1125</span>      Teuchos::TimeMonitor numFactTimer(*SymboTimer_);</div>
+<div class="line"><a id="l01126" name="l01126"></a><span class="lineno"> 1126</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l01127" name="l01127"></a><span class="lineno"> 1127</span>    KokkosSparse::Experimental::sptrsv_symbolic</div>
+<div class="line"><a id="l01128" name="l01128"></a><span class="lineno"> 1128</span>      (&amp;device_khL_, &amp;device_khU_, data_.L, data_.U);</div>
+<div class="line"><a id="l01129" name="l01129"></a><span class="lineno"> 1129</span>  }</div>
+<div class="line"><a id="l01130" name="l01130"></a><span class="lineno"> 1130</span> </div>
+<div class="line"><a id="l01131" name="l01131"></a><span class="lineno"> 1131</span>  <span class="comment">// Do numerical compute</span></div>
+<div class="line"><a id="l01132" name="l01132"></a><span class="lineno"> 1132</span>  {</div>
+<div class="line"><a id="l01133" name="l01133"></a><span class="lineno"> 1133</span><span class="preprocessor">#ifdef HAVE_AMESOS2_TIMERS</span></div>
+<div class="line"><a id="l01134" name="l01134"></a><span class="lineno"> 1134</span>      Teuchos::RCP&lt; Teuchos::Time &gt; NumerTimer_ = Teuchos::TimeMonitor::getNewCounter (<span class="stringliteral">&quot;Time for SpTrsv numeric&quot;</span>);</div>
+<div class="line"><a id="l01135" name="l01135"></a><span class="lineno"> 1135</span>      Teuchos::TimeMonitor numFactTimer(*NumerTimer_);</div>
+<div class="line"><a id="l01136" name="l01136"></a><span class="lineno"> 1136</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l01137" name="l01137"></a><span class="lineno"> 1137</span>    KokkosSparse::Experimental::sptrsv_compute</div>
+<div class="line"><a id="l01138" name="l01138"></a><span class="lineno"> 1138</span>      (&amp;device_khL_, &amp;device_khU_, data_.L, data_.U);</div>
+<div class="line"><a id="l01139" name="l01139"></a><span class="lineno"> 1139</span>  }</div>
+<div class="line"><a id="l01140" name="l01140"></a><span class="lineno"> 1140</span><span class="preprocessor">#endif </span><span class="comment">// HAVE_AMESOS2_TRIANGULAR_SOLVE</span></div>
+<div class="line"><a id="l01141" name="l01141"></a><span class="lineno"> 1141</span>}</div>
+<div class="line"><a id="l01142" name="l01142"></a><span class="lineno"> 1142</span> </div>
+<div class="line"><a id="l01143" name="l01143"></a><span class="lineno"> 1143</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Matrix, <span class="keyword">class</span> Vector&gt;</div>
+<div class="line"><a id="l01144" name="l01144"></a><span class="lineno"> 1144</span><span class="keywordtype">void</span></div>
+<div class="line"><a id="l01145" name="l01145"></a><span class="lineno"> 1145</span>Superlu&lt;Matrix,Vector&gt;::triangular_solve()<span class="keyword"> const</span></div>
+<div class="line"><a id="l01146" name="l01146"></a><span class="lineno"> 1146</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l01147" name="l01147"></a><span class="lineno"> 1147</span><span class="preprocessor">#if defined(KOKKOSKERNELS_ENABLE_SUPERNODAL_SPTRSV) &amp;&amp; defined(KOKKOSKERNELS_ENABLE_TPL_SUPERLU)</span></div>
+<div class="line"><a id="l01148" name="l01148"></a><span class="lineno"> 1148</span>  <span class="keywordtype">size_t</span> ld_rhs = device_xValues_.extent(0);</div>
+<div class="line"><a id="l01149" name="l01149"></a><span class="lineno"> 1149</span>  <span class="keywordtype">size_t</span> nrhs = device_xValues_.extent(1);</div>
+<div class="line"><a id="l01150" name="l01150"></a><span class="lineno"> 1150</span> </div>
+<div class="line"><a id="l01151" name="l01151"></a><span class="lineno"> 1151</span>  Kokkos::resize(device_trsv_rhs_, ld_rhs, nrhs);</div>
+<div class="line"><a id="l01152" name="l01152"></a><span class="lineno"> 1152</span>  Kokkos::resize(device_trsv_sol_, ld_rhs, nrhs);</div>
+<div class="line"><a id="l01153" name="l01153"></a><span class="lineno"> 1153</span> </div>
+<div class="line"><a id="l01154" name="l01154"></a><span class="lineno"> 1154</span>  <span class="comment">// forward pivot</span></div>
+<div class="line"><a id="l01155" name="l01155"></a><span class="lineno"> 1155</span>  <span class="keyword">auto</span> local_device_bValues = device_bValues_;</div>
+<div class="line"><a id="l01156" name="l01156"></a><span class="lineno"> 1156</span>  <span class="keyword">auto</span> local_device_trsv_perm_r = device_trsv_perm_r_;</div>
+<div class="line"><a id="l01157" name="l01157"></a><span class="lineno"> 1157</span>  <span class="keyword">auto</span> local_device_trsv_rhs = device_trsv_rhs_;</div>
 <div class="line"><a id="l01158" name="l01158"></a><span class="lineno"> 1158</span> </div>
-<div class="line"><a id="l01159" name="l01159"></a><span class="lineno"> 1159</span>  <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> k = 0; k &lt; nrhs; ++k) { <span class="comment">// sptrsv_solve does not batch</span></div>
-<div class="line"><a id="l01160" name="l01160"></a><span class="lineno"> 1160</span>    <span class="keyword">auto</span> sub_sol = Kokkos::subview(device_trsv_sol_, Kokkos::ALL, k);</div>
-<div class="line"><a id="l01161" name="l01161"></a><span class="lineno"> 1161</span>    <span class="keyword">auto</span> sub_rhs = Kokkos::subview(device_trsv_rhs_, Kokkos::ALL, k);</div>
-<div class="line"><a id="l01162" name="l01162"></a><span class="lineno"> 1162</span> </div>
-<div class="line"><a id="l01163" name="l01163"></a><span class="lineno"> 1163</span>    <span class="comment">// do L solve= - numeric (only rhs is modified) on the default device/host space</span></div>
-<div class="line"><a id="l01164" name="l01164"></a><span class="lineno"> 1164</span>    {</div>
-<div class="line"><a id="l01165" name="l01165"></a><span class="lineno"> 1165</span><span class="preprocessor">#ifdef HAVE_AMESOS2_TIMERS</span></div>
-<div class="line"><a id="l01166" name="l01166"></a><span class="lineno"> 1166</span>      Teuchos::RCP&lt; Teuchos::Time &gt; SpLtrsvTimer_ = Teuchos::TimeMonitor::getNewCounter (<span class="stringliteral">&quot;Time for L solve&quot;</span>);</div>
-<div class="line"><a id="l01167" name="l01167"></a><span class="lineno"> 1167</span>      Teuchos::TimeMonitor solveTimer(*SpLtrsvTimer_);</div>
-<div class="line"><a id="l01168" name="l01168"></a><span class="lineno"> 1168</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l01169" name="l01169"></a><span class="lineno"> 1169</span>      KokkosSparse::Experimental::sptrsv_solve(&amp;device_khL_, sub_sol, sub_rhs);</div>
-<div class="line"><a id="l01170" name="l01170"></a><span class="lineno"> 1170</span>    }</div>
-<div class="line"><a id="l01171" name="l01171"></a><span class="lineno"> 1171</span>    <span class="comment">// do L^T solve - numeric (only rhs is modified) on the default device/host space</span></div>
-<div class="line"><a id="l01172" name="l01172"></a><span class="lineno"> 1172</span>    {</div>
-<div class="line"><a id="l01173" name="l01173"></a><span class="lineno"> 1173</span><span class="preprocessor">#ifdef HAVE_AMESOS2_TIMERS</span></div>
-<div class="line"><a id="l01174" name="l01174"></a><span class="lineno"> 1174</span>      Teuchos::RCP&lt; Teuchos::Time &gt; SpUtrsvTimer_ = Teuchos::TimeMonitor::getNewCounter (<span class="stringliteral">&quot;Time for U solve&quot;</span>);</div>
-<div class="line"><a id="l01175" name="l01175"></a><span class="lineno"> 1175</span>      Teuchos::TimeMonitor solveTimer(*SpUtrsvTimer_);</div>
-<div class="line"><a id="l01176" name="l01176"></a><span class="lineno"> 1176</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l01177" name="l01177"></a><span class="lineno"> 1177</span>      KokkosSparse::Experimental::sptrsv_solve(&amp;device_khU_, sub_rhs, sub_sol);</div>
-<div class="line"><a id="l01178" name="l01178"></a><span class="lineno"> 1178</span>    }</div>
-<div class="line"><a id="l01179" name="l01179"></a><span class="lineno"> 1179</span>  } <span class="comment">// end loop over rhs vectors</span></div>
-<div class="line"><a id="l01180" name="l01180"></a><span class="lineno"> 1180</span> </div>
-<div class="line"><a id="l01181" name="l01181"></a><span class="lineno"> 1181</span>  <span class="comment">// backward pivot</span></div>
-<div class="line"><a id="l01182" name="l01182"></a><span class="lineno"> 1182</span>  <span class="keyword">auto</span> local_device_xValues = device_xValues_;</div>
-<div class="line"><a id="l01183" name="l01183"></a><span class="lineno"> 1183</span>  <span class="keyword">auto</span> local_device_trsv_perm_c = device_trsv_perm_c_;</div>
-<div class="line"><a id="l01184" name="l01184"></a><span class="lineno"> 1184</span>  <span class="keywordflow">if</span> (data_.colequ) {</div>
-<div class="line"><a id="l01185" name="l01185"></a><span class="lineno"> 1185</span>    <span class="keyword">auto</span> local_device_trsv_C = device_trsv_C_;</div>
-<div class="line"><a id="l01186" name="l01186"></a><span class="lineno"> 1186</span>    Kokkos::parallel_for(Kokkos::RangePolicy&lt;DeviceExecSpaceType&gt;(0, ld_rhs),</div>
-<div class="line"><a id="l01187" name="l01187"></a><span class="lineno"> 1187</span>      KOKKOS_LAMBDA(<span class="keywordtype">size_t</span> j) {</div>
-<div class="line"><a id="l01188" name="l01188"></a><span class="lineno"> 1188</span>      <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> k = 0; k &lt; nrhs; ++k) {</div>
-<div class="line"><a id="l01189" name="l01189"></a><span class="lineno"> 1189</span>        local_device_xValues(j,k) = local_device_trsv_C(j) * local_device_trsv_rhs(local_device_trsv_perm_c(j),k);</div>
-<div class="line"><a id="l01190" name="l01190"></a><span class="lineno"> 1190</span>      }</div>
-<div class="line"><a id="l01191" name="l01191"></a><span class="lineno"> 1191</span>    });</div>
-<div class="line"><a id="l01192" name="l01192"></a><span class="lineno"> 1192</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l01193" name="l01193"></a><span class="lineno"> 1193</span>    Kokkos::parallel_for(Kokkos::RangePolicy&lt;DeviceExecSpaceType&gt;(0, ld_rhs),</div>
-<div class="line"><a id="l01194" name="l01194"></a><span class="lineno"> 1194</span>      KOKKOS_LAMBDA(<span class="keywordtype">size_t</span> j) {</div>
-<div class="line"><a id="l01195" name="l01195"></a><span class="lineno"> 1195</span>      <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> k = 0; k &lt; nrhs; ++k) {</div>
-<div class="line"><a id="l01196" name="l01196"></a><span class="lineno"> 1196</span>        local_device_xValues(j,k) = local_device_trsv_rhs(local_device_trsv_perm_c(j),k);</div>
-<div class="line"><a id="l01197" name="l01197"></a><span class="lineno"> 1197</span>      }</div>
-<div class="line"><a id="l01198" name="l01198"></a><span class="lineno"> 1198</span>    });</div>
-<div class="line"><a id="l01199" name="l01199"></a><span class="lineno"> 1199</span>  }</div>
-<div class="line"><a id="l01200" name="l01200"></a><span class="lineno"> 1200</span><span class="preprocessor">#endif </span><span class="comment">// HAVE_AMESOS2_TRIANGULAR_SOLVE</span></div>
-<div class="line"><a id="l01201" name="l01201"></a><span class="lineno"> 1201</span>}</div>
-<div class="line"><a id="l01202" name="l01202"></a><span class="lineno"> 1202</span> </div>
-<div class="line"><a id="l01203" name="l01203"></a><span class="lineno"> 1203</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> Matrix, <span class="keyword">class</span> Vector&gt;</div>
-<div class="line"><a id="l01204" name="l01204"></a><span class="lineno"> 1204</span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="class_amesos2_1_1_superlu.html#a7289aae1a9b25f47e9d3365cf42a08bb">Superlu&lt;Matrix,Vector&gt;::name</a> = <span class="stringliteral">&quot;SuperLU&quot;</span>;</div>
-<div class="line"><a id="l01205" name="l01205"></a><span class="lineno"> 1205</span> </div>
-<div class="line"><a id="l01206" name="l01206"></a><span class="lineno"> 1206</span> </div>
-<div class="line"><a id="l01207" name="l01207"></a><span class="lineno"> 1207</span>} <span class="comment">// end namespace Amesos2</span></div>
-<div class="line"><a id="l01208" name="l01208"></a><span class="lineno"> 1208</span> </div>
-<div class="line"><a id="l01209" name="l01209"></a><span class="lineno"> 1209</span><span class="preprocessor">#endif  </span><span class="comment">// AMESOS2_SUPERLU_DEF_HPP</span></div>
+<div class="line"><a id="l01159" name="l01159"></a><span class="lineno"> 1159</span>  <span class="keywordflow">if</span> (data_.rowequ) {</div>
+<div class="line"><a id="l01160" name="l01160"></a><span class="lineno"> 1160</span>    <span class="keyword">auto</span> local_device_trsv_R = device_trsv_R_;</div>
+<div class="line"><a id="l01161" name="l01161"></a><span class="lineno"> 1161</span>    Kokkos::parallel_for(Kokkos::RangePolicy&lt;DeviceExecSpaceType&gt;(0, ld_rhs),</div>
+<div class="line"><a id="l01162" name="l01162"></a><span class="lineno"> 1162</span>      KOKKOS_LAMBDA(<span class="keywordtype">size_t</span> j) {</div>
+<div class="line"><a id="l01163" name="l01163"></a><span class="lineno"> 1163</span>      <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> k = 0; k &lt; nrhs; ++k) {</div>
+<div class="line"><a id="l01164" name="l01164"></a><span class="lineno"> 1164</span>        local_device_trsv_rhs(local_device_trsv_perm_r(j),k) = local_device_trsv_R(j) * local_device_bValues(j,k);</div>
+<div class="line"><a id="l01165" name="l01165"></a><span class="lineno"> 1165</span>      }</div>
+<div class="line"><a id="l01166" name="l01166"></a><span class="lineno"> 1166</span>    });</div>
+<div class="line"><a id="l01167" name="l01167"></a><span class="lineno"> 1167</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l01168" name="l01168"></a><span class="lineno"> 1168</span>    Kokkos::parallel_for(Kokkos::RangePolicy&lt;DeviceExecSpaceType&gt;(0, ld_rhs),</div>
+<div class="line"><a id="l01169" name="l01169"></a><span class="lineno"> 1169</span>      KOKKOS_LAMBDA(<span class="keywordtype">size_t</span> j) {</div>
+<div class="line"><a id="l01170" name="l01170"></a><span class="lineno"> 1170</span>      <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> k = 0; k &lt; nrhs; ++k) {</div>
+<div class="line"><a id="l01171" name="l01171"></a><span class="lineno"> 1171</span>        local_device_trsv_rhs(local_device_trsv_perm_r(j),k) = local_device_bValues(j,k);</div>
+<div class="line"><a id="l01172" name="l01172"></a><span class="lineno"> 1172</span>      }</div>
+<div class="line"><a id="l01173" name="l01173"></a><span class="lineno"> 1173</span>    });</div>
+<div class="line"><a id="l01174" name="l01174"></a><span class="lineno"> 1174</span>  }</div>
+<div class="line"><a id="l01175" name="l01175"></a><span class="lineno"> 1175</span> </div>
+<div class="line"><a id="l01176" name="l01176"></a><span class="lineno"> 1176</span>  <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> k = 0; k &lt; nrhs; ++k) { <span class="comment">// sptrsv_solve does not batch</span></div>
+<div class="line"><a id="l01177" name="l01177"></a><span class="lineno"> 1177</span>    <span class="keyword">auto</span> sub_sol = Kokkos::subview(device_trsv_sol_, Kokkos::ALL, k);</div>
+<div class="line"><a id="l01178" name="l01178"></a><span class="lineno"> 1178</span>    <span class="keyword">auto</span> sub_rhs = Kokkos::subview(device_trsv_rhs_, Kokkos::ALL, k);</div>
+<div class="line"><a id="l01179" name="l01179"></a><span class="lineno"> 1179</span> </div>
+<div class="line"><a id="l01180" name="l01180"></a><span class="lineno"> 1180</span>    <span class="comment">// do L solve= - numeric (only rhs is modified) on the default device/host space</span></div>
+<div class="line"><a id="l01181" name="l01181"></a><span class="lineno"> 1181</span>    {</div>
+<div class="line"><a id="l01182" name="l01182"></a><span class="lineno"> 1182</span><span class="preprocessor">#ifdef HAVE_AMESOS2_TIMERS</span></div>
+<div class="line"><a id="l01183" name="l01183"></a><span class="lineno"> 1183</span>      Teuchos::RCP&lt; Teuchos::Time &gt; SpLtrsvTimer_ = Teuchos::TimeMonitor::getNewCounter (<span class="stringliteral">&quot;Time for L solve&quot;</span>);</div>
+<div class="line"><a id="l01184" name="l01184"></a><span class="lineno"> 1184</span>      Teuchos::TimeMonitor solveTimer(*SpLtrsvTimer_);</div>
+<div class="line"><a id="l01185" name="l01185"></a><span class="lineno"> 1185</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l01186" name="l01186"></a><span class="lineno"> 1186</span>      KokkosSparse::Experimental::sptrsv_solve(&amp;device_khL_, sub_sol, sub_rhs);</div>
+<div class="line"><a id="l01187" name="l01187"></a><span class="lineno"> 1187</span>    }</div>
+<div class="line"><a id="l01188" name="l01188"></a><span class="lineno"> 1188</span>    <span class="comment">// do L^T solve - numeric (only rhs is modified) on the default device/host space</span></div>
+<div class="line"><a id="l01189" name="l01189"></a><span class="lineno"> 1189</span>    {</div>
+<div class="line"><a id="l01190" name="l01190"></a><span class="lineno"> 1190</span><span class="preprocessor">#ifdef HAVE_AMESOS2_TIMERS</span></div>
+<div class="line"><a id="l01191" name="l01191"></a><span class="lineno"> 1191</span>      Teuchos::RCP&lt; Teuchos::Time &gt; SpUtrsvTimer_ = Teuchos::TimeMonitor::getNewCounter (<span class="stringliteral">&quot;Time for U solve&quot;</span>);</div>
+<div class="line"><a id="l01192" name="l01192"></a><span class="lineno"> 1192</span>      Teuchos::TimeMonitor solveTimer(*SpUtrsvTimer_);</div>
+<div class="line"><a id="l01193" name="l01193"></a><span class="lineno"> 1193</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l01194" name="l01194"></a><span class="lineno"> 1194</span>      KokkosSparse::Experimental::sptrsv_solve(&amp;device_khU_, sub_rhs, sub_sol);</div>
+<div class="line"><a id="l01195" name="l01195"></a><span class="lineno"> 1195</span>    }</div>
+<div class="line"><a id="l01196" name="l01196"></a><span class="lineno"> 1196</span>  } <span class="comment">// end loop over rhs vectors</span></div>
+<div class="line"><a id="l01197" name="l01197"></a><span class="lineno"> 1197</span> </div>
+<div class="line"><a id="l01198" name="l01198"></a><span class="lineno"> 1198</span>  <span class="comment">// backward pivot</span></div>
+<div class="line"><a id="l01199" name="l01199"></a><span class="lineno"> 1199</span>  <span class="keyword">auto</span> local_device_xValues = device_xValues_;</div>
+<div class="line"><a id="l01200" name="l01200"></a><span class="lineno"> 1200</span>  <span class="keyword">auto</span> local_device_trsv_perm_c = device_trsv_perm_c_;</div>
+<div class="line"><a id="l01201" name="l01201"></a><span class="lineno"> 1201</span>  <span class="keywordflow">if</span> (data_.colequ) {</div>
+<div class="line"><a id="l01202" name="l01202"></a><span class="lineno"> 1202</span>    <span class="keyword">auto</span> local_device_trsv_C = device_trsv_C_;</div>
+<div class="line"><a id="l01203" name="l01203"></a><span class="lineno"> 1203</span>    Kokkos::parallel_for(Kokkos::RangePolicy&lt;DeviceExecSpaceType&gt;(0, ld_rhs),</div>
+<div class="line"><a id="l01204" name="l01204"></a><span class="lineno"> 1204</span>      KOKKOS_LAMBDA(<span class="keywordtype">size_t</span> j) {</div>
+<div class="line"><a id="l01205" name="l01205"></a><span class="lineno"> 1205</span>      <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> k = 0; k &lt; nrhs; ++k) {</div>
+<div class="line"><a id="l01206" name="l01206"></a><span class="lineno"> 1206</span>        local_device_xValues(j,k) = local_device_trsv_C(j) * local_device_trsv_rhs(local_device_trsv_perm_c(j),k);</div>
+<div class="line"><a id="l01207" name="l01207"></a><span class="lineno"> 1207</span>      }</div>
+<div class="line"><a id="l01208" name="l01208"></a><span class="lineno"> 1208</span>    });</div>
+<div class="line"><a id="l01209" name="l01209"></a><span class="lineno"> 1209</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l01210" name="l01210"></a><span class="lineno"> 1210</span>    Kokkos::parallel_for(Kokkos::RangePolicy&lt;DeviceExecSpaceType&gt;(0, ld_rhs),</div>
+<div class="line"><a id="l01211" name="l01211"></a><span class="lineno"> 1211</span>      KOKKOS_LAMBDA(<span class="keywordtype">size_t</span> j) {</div>
+<div class="line"><a id="l01212" name="l01212"></a><span class="lineno"> 1212</span>      <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> k = 0; k &lt; nrhs; ++k) {</div>
+<div class="line"><a id="l01213" name="l01213"></a><span class="lineno"> 1213</span>        local_device_xValues(j,k) = local_device_trsv_rhs(local_device_trsv_perm_c(j),k);</div>
+<div class="line"><a id="l01214" name="l01214"></a><span class="lineno"> 1214</span>      }</div>
+<div class="line"><a id="l01215" name="l01215"></a><span class="lineno"> 1215</span>    });</div>
+<div class="line"><a id="l01216" name="l01216"></a><span class="lineno"> 1216</span>  }</div>
+<div class="line"><a id="l01217" name="l01217"></a><span class="lineno"> 1217</span><span class="preprocessor">#endif </span><span class="comment">// HAVE_AMESOS2_TRIANGULAR_SOLVE</span></div>
+<div class="line"><a id="l01218" name="l01218"></a><span class="lineno"> 1218</span>}</div>
+<div class="line"><a id="l01219" name="l01219"></a><span class="lineno"> 1219</span> </div>
+<div class="line"><a id="l01220" name="l01220"></a><span class="lineno"> 1220</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> Matrix, <span class="keyword">class</span> Vector&gt;</div>
+<div class="line"><a id="l01221" name="l01221"></a><span class="lineno"> 1221</span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="class_amesos2_1_1_superlu.html#a7289aae1a9b25f47e9d3365cf42a08bb">Superlu&lt;Matrix,Vector&gt;::name</a> = <span class="stringliteral">&quot;SuperLU&quot;</span>;</div>
+<div class="line"><a id="l01222" name="l01222"></a><span class="lineno"> 1222</span> </div>
+<div class="line"><a id="l01223" name="l01223"></a><span class="lineno"> 1223</span> </div>
+<div class="line"><a id="l01224" name="l01224"></a><span class="lineno"> 1224</span>} <span class="comment">// end namespace Amesos2</span></div>
+<div class="line"><a id="l01225" name="l01225"></a><span class="lineno"> 1225</span> </div>
+<div class="line"><a id="l01226" name="l01226"></a><span class="lineno"> 1226</span><span class="preprocessor">#endif  </span><span class="comment">// AMESOS2_SUPERLU_DEF_HPP</span></div>
 <div class="ttc" id="a_amesos2___solver_core__def_8hpp_html"><div class="ttname"><a href="_amesos2___solver_core__def_8hpp.html">Amesos2_SolverCore_def.hpp</a></div></div>
 <div class="ttc" id="a_amesos2___superlu__decl_8hpp_html"><div class="ttname"><a href="_amesos2___superlu__decl_8hpp.html">Amesos2_Superlu_decl.hpp</a></div><div class="ttdoc">Amesos2 Superlu declarations.</div></div>
 <div class="ttc" id="a_amesos2___type_decl_8hpp_html_a46863e983ea61d9547a05756fa8c56fdae1aabcfb90f3c53debc498683b03fbcf"><div class="ttname"><a href="_amesos2___type_decl_8hpp.html#a46863e983ea61d9547a05756fa8c56fdae1aabcfb90f3c53debc498683b03fbcf">Amesos2::ROOTED</a></div><div class="ttdeci">@ ROOTED</div><div class="ttdef"><b>Definition</b> Amesos2_TypeDecl.hpp:93</div></div>
@@ -1293,9 +1312,10 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclass_amesos2_1_1_superlu_html_abb04635ad2654103ae54e65d964a814e"><div class="ttname"><a href="class_amesos2_1_1_superlu.html#abb04635ad2654103ae54e65d964a814e">Amesos2::Superlu::Superlu</a></div><div class="ttdeci">Superlu(Teuchos::RCP&lt; const Matrix &gt; A, Teuchos::RCP&lt; Vector &gt; X, Teuchos::RCP&lt; const Vector &gt; B)</div><div class="ttdoc">Initialize from Teuchos::RCP.</div><div class="ttdef"><b>Definition</b> Amesos2_Superlu_def.hpp:43</div></div>
 <div class="ttc" id="aclass_amesos2_1_1_superlu_html_ac1bbf49fbeb39fe1d73ac812ed9fb10c"><div class="ttname"><a href="class_amesos2_1_1_superlu.html#ac1bbf49fbeb39fe1d73ac812ed9fb10c">Amesos2::Superlu::setParameters_impl</a></div><div class="ttdeci">void setParameters_impl(const Teuchos::RCP&lt; Teuchos::ParameterList &gt; &amp;parameterList)</div><div class="ttdef"><b>Definition</b> Amesos2_Superlu_def.hpp:685</div></div>
 <div class="ttc" id="aclass_amesos2_1_1_superlu_html_ad3cfbac198770c34edfcf0e9143ef06d"><div class="ttname"><a href="class_amesos2_1_1_superlu.html#ad3cfbac198770c34edfcf0e9143ef06d">Amesos2::Superlu::loadA_impl</a></div><div class="ttdeci">bool loadA_impl(EPhase current_phase)</div><div class="ttdoc">Reads matrix data into internal structures.</div><div class="ttdef"><b>Definition</b> Amesos2_Superlu_def.hpp:937</div></div>
+<div class="ttc" id="aclass_amesos2_1_1_superlu_html_adff8794b0024fd87df8ea6d1f73878db"><div class="ttname"><a href="class_amesos2_1_1_superlu.html#adff8794b0024fd87df8ea6d1f73878db">Amesos2::Superlu::describe_impl</a></div><div class="ttdeci">void describe_impl(Teuchos::FancyOStream &amp;out, const Teuchos::EVerbosityLevel verbLevel) const</div><div class="ttdoc">Prints the status information about the current solver with some level of verbosity.</div><div class="ttdef"><b>Definition</b> Amesos2_Superlu_def.hpp:1003</div></div>
 <div class="ttc" id="agroup__amesos2__enums_html_gaee5c828ef45f1ffc1d48ae0d3435bb0e"><div class="ttname"><a href="group__amesos2__enums.html#gaee5c828ef45f1ffc1d48ae0d3435bb0e">Amesos2::EPhase</a></div><div class="ttdeci">EPhase</div><div class="ttdoc">Used to indicate a phase in the direct solution.</div><div class="ttdef"><b>Definition</b> Amesos2_TypeDecl.hpp:31</div></div>
 <div class="ttc" id="astruct_amesos2_1_1_multi_vec_adapter_html"><div class="ttname"><a href="struct_amesos2_1_1_multi_vec_adapter.html">Amesos2::MultiVecAdapter</a></div><div class="ttdoc">A templated MultiVector class adapter for Amesos2.</div><div class="ttdef"><b>Definition</b> Amesos2_MultiVecAdapter_decl.hpp:142</div></div>
-<div class="ttc" id="astruct_amesos2_1_1_util_1_1get__ccs__helper__kokkos__view_html"><div class="ttname"><a href="struct_amesos2_1_1_util_1_1get__ccs__helper__kokkos__view.html">Amesos2::Util::get_ccs_helper_kokkos_view</a></div><div class="ttdoc">A generic helper class for getting a CCS representation of a Matrix.</div><div class="ttdef"><b>Definition</b> Amesos2_Util.hpp:593</div></div>
+<div class="ttc" id="astruct_amesos2_1_1_util_1_1get__ccs__helper__kokkos__view_html"><div class="ttname"><a href="struct_amesos2_1_1_util_1_1get__ccs__helper__kokkos__view.html">Amesos2::Util::get_ccs_helper_kokkos_view</a></div><div class="ttdoc">A generic helper class for getting a CCS representation of a Matrix.</div><div class="ttdef"><b>Definition</b> Amesos2_Util.hpp:589</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

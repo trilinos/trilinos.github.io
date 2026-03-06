@@ -179,17 +179,17 @@ $(document).ready(function(){initNavTree('_mue_lu___rebalance_map_factory__def_8
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="comment">// create vector based on input map</span></div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="comment">// Note, that the map can be a part only of the full map stored in rebalanceImporter.getSourceMap()</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    RCP&lt;Vector&gt; v = VectorFactory::Build(map);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    RCP&lt;Vector&gt; v = VectorFactory::Build(map, <span class="keyword">false</span>);</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    v-&gt;putScalar(1.0);</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="comment">// create a new vector based on the full rebalanceImporter.getSourceMap()</span></div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="comment">// import the partial map information to the full source map</span></div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    RCP&lt;const Import&gt; blowUpImporter = ImportFactory::Build(map, rebalanceImporter-&gt;getSourceMap());</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    RCP&lt;Vector&gt; pv                   = VectorFactory::Build(rebalanceImporter-&gt;getSourceMap());</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    RCP&lt;Vector&gt; pv                   = VectorFactory::Build(rebalanceImporter-&gt;getSourceMap(), <span class="keyword">false</span>);</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    pv-&gt;doImport(*v, *blowUpImporter, Xpetra::INSERT);</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="comment">// do rebalancing using rebalanceImporter</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    RCP&lt;Vector&gt; ptv = VectorFactory::Build(rebalanceImporter-&gt;getTargetMap());</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    RCP&lt;Vector&gt; ptv = VectorFactory::Build(rebalanceImporter-&gt;getTargetMap(), <span class="keyword">false</span>);</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    ptv-&gt;doImport(*pv, *rebalanceImporter, Xpetra::INSERT);</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordflow">if</span> (pL.get&lt;<span class="keywordtype">bool</span>&gt;(<span class="stringliteral">&quot;repartition: use subcommunicators&quot;</span>) == <span class="keyword">true</span>)</div>

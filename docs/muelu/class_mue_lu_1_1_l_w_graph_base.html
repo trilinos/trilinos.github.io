@@ -134,19 +134,19 @@ Public Types</h2></td></tr>
 <tr class="separator:acf4451bb5cb1229399479092b1f0492d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea587fcb59ada17c0cedfe8690f0ac14" id="r_aea587fcb59ada17c0cedfe8690f0ac14"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#aea587fcb59ada17c0cedfe8690f0ac14">local_graph_device_type</a> = KokkosSparse::StaticCrsGraph&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, Kokkos::LayoutLeft, typename Node::device_type, void, size_t &gt;</td></tr>
 <tr class="separator:aea587fcb59ada17c0cedfe8690f0ac14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0eccc4dbdb6e732760901deb570cf06f" id="r_a0eccc4dbdb6e732760901deb570cf06f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a0eccc4dbdb6e732760901deb570cf06f">local_graph_type</a> = typename std::conditional&lt; OnHost, typename local_graph_device_type::HostMirror, <a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#aea587fcb59ada17c0cedfe8690f0ac14">local_graph_device_type</a> &gt;::type</td></tr>
-<tr class="separator:a0eccc4dbdb6e732760901deb570cf06f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b6d3e38b8d55efee744fb732e821e56" id="r_a6b6d3e38b8d55efee744fb732e821e56"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a6b6d3e38b8d55efee744fb732e821e56">local_graph_type</a> = typename std::conditional&lt; OnHost, typename local_graph_device_type::host_mirror_type, <a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#aea587fcb59ada17c0cedfe8690f0ac14">local_graph_device_type</a> &gt;::type</td></tr>
+<tr class="separator:a6b6d3e38b8d55efee744fb732e821e56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35d4cd1dd18b95316540aac545c9466a" id="r_a35d4cd1dd18b95316540aac545c9466a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a35d4cd1dd18b95316540aac545c9466a">boundary_nodes_type</a> = Kokkos::View&lt; bool *, <a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#acf4451bb5cb1229399479092b1f0492d">memory_space</a> &gt;</td></tr>
 <tr class="separator:a35d4cd1dd18b95316540aac545c9466a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5168621b6ca48b5d77487a5943540f19" id="r_a5168621b6ca48b5d77487a5943540f19"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a5168621b6ca48b5d77487a5943540f19">row_type</a> = typename local_graph_type::row_map_type</td></tr>
 <tr class="separator:a5168621b6ca48b5d77487a5943540f19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23518cee2c632a773b47b475a4faaed7" id="r_a23518cee2c632a773b47b475a4faaed7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a23518cee2c632a773b47b475a4faaed7">entries_type</a> = typename local_graph_type::entries_type</td></tr>
 <tr class="separator:a23518cee2c632a773b47b475a4faaed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96c14c283a9aff1475accde95132a3bc" id="r_a96c14c283a9aff1475accde95132a3bc"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a96c14c283a9aff1475accde95132a3bc">neighbor_vertices_type</a> = KokkosSparse::GraphRowViewConst&lt; <a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a0eccc4dbdb6e732760901deb570cf06f">local_graph_type</a> &gt;</td></tr>
+<tr class="memitem:a96c14c283a9aff1475accde95132a3bc" id="r_a96c14c283a9aff1475accde95132a3bc"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a96c14c283a9aff1475accde95132a3bc">neighbor_vertices_type</a> = KokkosSparse::GraphRowViewConst&lt; <a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a6b6d3e38b8d55efee744fb732e821e56">local_graph_type</a> &gt;</td></tr>
 <tr class="separator:a96c14c283a9aff1475accde95132a3bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Constructors/Destructors.</h2></td></tr>
-<tr class="memitem:a2b63b0415a141156fe2e21109de51b9b" id="r_a2b63b0415a141156fe2e21109de51b9b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a0eccc4dbdb6e732760901deb570cf06f">local_graph_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a2b63b0415a141156fe2e21109de51b9b">graph_</a></td></tr>
+<tr class="memitem:a2b63b0415a141156fe2e21109de51b9b" id="r_a2b63b0415a141156fe2e21109de51b9b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a6b6d3e38b8d55efee744fb732e821e56">local_graph_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a2b63b0415a141156fe2e21109de51b9b">graph_</a></td></tr>
 <tr class="memdesc:a2b63b0415a141156fe2e21109de51b9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Underlying graph (with label)  <br /></td></tr>
 <tr class="separator:a2b63b0415a141156fe2e21109de51b9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadff943bbf1f7c6ef0a78357650f7aa8" id="r_aadff943bbf1f7c6ef0a78357650f7aa8"><td class="memItemLeft" align="right" valign="top">RCP&lt; const <a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#aac7d09bbbc7d19ebd9dd860f1b19cfed">map_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#aadff943bbf1f7c6ef0a78357650f7aa8">domainMap_</a></td></tr>
@@ -167,9 +167,9 @@ Public Types</h2></td></tr>
 <tr class="separator:a6acdd6306dee5c6607f3494d36ae756a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e6936254914554899c574e910b094bf" id="r_a1e6936254914554899c574e910b094bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a33f1279802131d43065385689b2832ff">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a1e6936254914554899c574e910b094bf">maxNumRowEntries_</a></td></tr>
 <tr class="separator:a1e6936254914554899c574e910b094bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f852a0ecb140738ea5c8e503a1dfd63" id="r_a1f852a0ecb140738ea5c8e503a1dfd63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a1f852a0ecb140738ea5c8e503a1dfd63">setup</a> (const <a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a0eccc4dbdb6e732760901deb570cf06f">local_graph_type</a> &amp;graph, const RCP&lt; const <a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#aac7d09bbbc7d19ebd9dd860f1b19cfed">map_type</a> &gt; &amp;domainMap, const RCP&lt; const <a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#aac7d09bbbc7d19ebd9dd860f1b19cfed">map_type</a> &gt; &amp;importMap, const std::string &amp;objectLabel)</td></tr>
+<tr class="memitem:a1f852a0ecb140738ea5c8e503a1dfd63" id="r_a1f852a0ecb140738ea5c8e503a1dfd63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a1f852a0ecb140738ea5c8e503a1dfd63">setup</a> (const <a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a6b6d3e38b8d55efee744fb732e821e56">local_graph_type</a> &amp;graph, const RCP&lt; const <a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#aac7d09bbbc7d19ebd9dd860f1b19cfed">map_type</a> &gt; &amp;domainMap, const RCP&lt; const <a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#aac7d09bbbc7d19ebd9dd860f1b19cfed">map_type</a> &gt; &amp;importMap, const std::string &amp;objectLabel)</td></tr>
 <tr class="separator:a1f852a0ecb140738ea5c8e503a1dfd63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04a942518aeaaccc48c8857d05132688" id="r_a04a942518aeaaccc48c8857d05132688"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a04a942518aeaaccc48c8857d05132688">LWGraphBase</a> (const <a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a0eccc4dbdb6e732760901deb570cf06f">local_graph_type</a> &amp;graph, const RCP&lt; const <a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#aac7d09bbbc7d19ebd9dd860f1b19cfed">map_type</a> &gt; &amp;domainMap, const RCP&lt; const <a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#aac7d09bbbc7d19ebd9dd860f1b19cfed">map_type</a> &gt; &amp;importMap, const std::string &amp;objectLabel=&quot;&quot;)</td></tr>
+<tr class="memitem:a04a942518aeaaccc48c8857d05132688" id="r_a04a942518aeaaccc48c8857d05132688"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a04a942518aeaaccc48c8857d05132688">LWGraphBase</a> (const <a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a6b6d3e38b8d55efee744fb732e821e56">local_graph_type</a> &amp;graph, const RCP&lt; const <a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#aac7d09bbbc7d19ebd9dd860f1b19cfed">map_type</a> &gt; &amp;domainMap, const RCP&lt; const <a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#aac7d09bbbc7d19ebd9dd860f1b19cfed">map_type</a> &gt; &amp;importMap, const std::string &amp;objectLabel=&quot;&quot;)</td></tr>
 <tr class="memdesc:a04a942518aeaaccc48c8857d05132688"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_mue_lu_1_1_l_w_graph.html" title="Lightweight MueLu representation of a compressed row storage graph.">LWGraph</a> constructor.  <br /></td></tr>
 <tr class="separator:a04a942518aeaaccc48c8857d05132688"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e25345c563ff97ad3b0d94c175828bc" id="r_a4e25345c563ff97ad3b0d94c175828bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a4e25345c563ff97ad3b0d94c175828bc">LWGraphBase</a> (const RCP&lt; const <a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a328e46dbf15af86d25abf52ffc40d720">crs_graph_type</a> &gt; &amp;graph, const std::string &amp;objectLabel=&quot;&quot;)</td></tr>
@@ -224,7 +224,7 @@ Public Types</h2></td></tr>
 <tr class="memitem:ab1fd39e12639ba5a167c2c36fe3259ea" id="r_ab1fd39e12639ba5a167c2c36fe3259ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#ab1fd39e12639ba5a167c2c36fe3259ea">print</a> (Teuchos::FancyOStream &amp;out, const <a class="el" href="namespace_mue_lu.html#a0265bde4f2d409b3d8414b59a20a5168">VerbLevel</a> verbLevel=<a class="el" href="namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1fa47815c062d008efd5aa66650a143824e">Default</a>) const</td></tr>
 <tr class="memdesc:ab1fd39e12639ba5a167c2c36fe3259ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the <a class="el" href="class_mue_lu_1_1_graph.html">Graph</a> with some verbosity level to an FancyOStream object.  <br /></td></tr>
 <tr class="separator:ab1fd39e12639ba5a167c2c36fe3259ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20aba49a4fe123a87227eb84588bcad6" id="r_a20aba49a4fe123a87227eb84588bcad6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a0eccc4dbdb6e732760901deb570cf06f">local_graph_type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a20aba49a4fe123a87227eb84588bcad6">getGraph</a> () const</td></tr>
+<tr class="memitem:a20aba49a4fe123a87227eb84588bcad6" id="r_a20aba49a4fe123a87227eb84588bcad6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a6b6d3e38b8d55efee744fb732e821e56">local_graph_type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a20aba49a4fe123a87227eb84588bcad6">getGraph</a> () const</td></tr>
 <tr class="separator:a20aba49a4fe123a87227eb84588bcad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae7f1d6d5be4238ca2eef24b5edaa971" id="r_aae7f1d6d5be4238ca2eef24b5edaa971"><td class="memItemLeft" align="right" valign="top">RCP&lt; <a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a328e46dbf15af86d25abf52ffc40d720">crs_graph_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#aae7f1d6d5be4238ca2eef24b5edaa971">GetCrsGraph</a> () const</td></tr>
 <tr class="separator:aae7f1d6d5be4238ca2eef24b5edaa971"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -398,8 +398,8 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
 
 </div>
 </div>
-<a id="a0eccc4dbdb6e732760901deb570cf06f" name="a0eccc4dbdb6e732760901deb570cf06f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0eccc4dbdb6e732760901deb570cf06f">&#9670;&#160;</a></span>local_graph_type</h2>
+<a id="a6b6d3e38b8d55efee744fb732e821e56" name="a6b6d3e38b8d55efee744fb732e821e56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b6d3e38b8d55efee744fb732e821e56">&#9670;&#160;</a></span>local_graph_type</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -407,12 +407,12 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
 template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> , bool OnHost&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_mue_lu_1_1_l_w_graph_base.html">MueLu::LWGraphBase</a>&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a>, OnHost &gt;::local_graph_type =  typename std::conditional&lt;OnHost, typename local_graph_device_type::HostMirror, <a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#aea587fcb59ada17c0cedfe8690f0ac14">local_graph_device_type</a>&gt;::type</td>
+          <td class="memname">using <a class="el" href="class_mue_lu_1_1_l_w_graph_base.html">MueLu::LWGraphBase</a>&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a>, OnHost &gt;::local_graph_type =  typename std::conditional&lt;OnHost, typename local_graph_device_type::host_mirror_type, <a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#aea587fcb59ada17c0cedfe8690f0ac14">local_graph_device_type</a>&gt;::type</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00093">93</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00090">90</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -430,7 +430,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00095">95</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00091">91</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -448,7 +448,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00096">96</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00092">92</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -466,7 +466,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00097">97</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00093">93</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -479,12 +479,12 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
 template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> , bool OnHost&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_mue_lu_1_1_l_w_graph_base.html">MueLu::LWGraphBase</a>&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a>, OnHost &gt;::neighbor_vertices_type =  KokkosSparse::GraphRowViewConst&lt;<a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a0eccc4dbdb6e732760901deb570cf06f">local_graph_type</a>&gt;</td>
+          <td class="memname">using <a class="el" href="class_mue_lu_1_1_l_w_graph_base.html">MueLu::LWGraphBase</a>&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a>, OnHost &gt;::neighbor_vertices_type =  KokkosSparse::GraphRowViewConst&lt;<a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a6b6d3e38b8d55efee744fb732e821e56">local_graph_type</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00098">98</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00094">94</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -503,7 +503,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
         <tr>
           <td class="memname"><a class="el" href="class_mue_lu_1_1_l_w_graph_base.html">MueLu::LWGraphBase</a>&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a>, OnHost &gt;::LWGraphBase </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a0eccc4dbdb6e732760901deb570cf06f">local_graph_type</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a6b6d3e38b8d55efee744fb732e821e56">local_graph_type</a> &amp;&#160;</td>
           <td class="paramname"><em>graph</em>, </td>
         </tr>
         <tr>
@@ -539,7 +539,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
 
 <p><a class="el" href="class_mue_lu_1_1_l_w_graph.html" title="Lightweight MueLu representation of a compressed row storage graph.">LWGraph</a> constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00132">132</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00128">128</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -579,7 +579,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00139">139</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00135">135</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -637,7 +637,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00164">164</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00160">160</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -683,7 +683,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
         <tr>
           <td class="memname">void <a class="el" href="class_mue_lu_1_1_l_w_graph_base.html">MueLu::LWGraphBase</a>&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a>, OnHost &gt;::setup </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a0eccc4dbdb6e732760901deb570cf06f">local_graph_type</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a6b6d3e38b8d55efee744fb732e821e56">local_graph_type</a> &amp;&#160;</td>
           <td class="paramname"><em>graph</em>, </td>
         </tr>
         <tr>
@@ -717,7 +717,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00107">107</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00103">103</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -746,7 +746,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00176">176</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00172">172</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -775,7 +775,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00179">179</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00175">175</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -806,7 +806,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
 
 <p>Return overlapping import map (nodes). </p>
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00183">183</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00179">179</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -837,7 +837,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
 
 <p>Return number of graph vertices. </p>
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00188">188</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00184">184</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -868,7 +868,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
 
 <p>Return number of graph edges. </p>
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00193">193</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00189">189</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -899,7 +899,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
 
 <p>Return global number of graph edges. </p>
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00198">198</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00194">194</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -930,7 +930,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
 
 <p>Returns the maximum number of entries across all rows/columns on this node. </p>
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00205">205</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00201">201</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -962,7 +962,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
 
 <p>Return the list of vertices adjacent to the vertex 'v'. </p>
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00210">210</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00206">206</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -994,7 +994,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
 
 <p>Return the list of vertices adjacent to the vertex 'v'. </p>
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00216">216</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00212">212</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -1026,7 +1026,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
 
 <p>Return true if vertex with local id 'v' is on current process. </p>
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00223">223</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00219">219</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -1057,7 +1057,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
 
 <p>Return the row pointers of the local graph. </p>
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00228">228</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00224">224</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -1088,7 +1088,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
 
 <p>Return the list entries in the local graph. </p>
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00233">233</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00229">229</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -1120,7 +1120,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
 
 <p>Set boolean array indicating which rows correspond to Dirichlet boundaries. </p>
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00238">238</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00234">234</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -1151,7 +1151,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
 
 <p>Returns map with global ids of boundary nodes. </p>
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00243">243</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00239">239</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -1182,7 +1182,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
 
 <p>Return a simple one-line description of the <a class="el" href="class_mue_lu_1_1_graph.html">Graph</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00248">248</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00244">244</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -1224,7 +1224,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
 
 <p>Print the <a class="el" href="class_mue_lu_1_1_graph.html">Graph</a> with some verbosity level to an FancyOStream object. </p>
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00253">253</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00249">249</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -1240,7 +1240,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a0eccc4dbdb6e732760901deb570cf06f">local_graph_type</a> &amp; <a class="el" href="class_mue_lu_1_1_l_w_graph_base.html">MueLu::LWGraphBase</a>&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a>, OnHost &gt;::getGraph </td>
+          <td class="memname"><a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a6b6d3e38b8d55efee744fb732e821e56">local_graph_type</a> &amp; <a class="el" href="class_mue_lu_1_1_l_w_graph_base.html">MueLu::LWGraphBase</a>&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a>, OnHost &gt;::getGraph </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1253,7 +1253,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00285">285</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00281">281</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -1282,7 +1282,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00289">289</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00285">285</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -1311,7 +1311,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00305">305</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00301">301</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -1328,7 +1328,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a0eccc4dbdb6e732760901deb570cf06f">local_graph_type</a> <a class="el" href="class_mue_lu_1_1_l_w_graph_base.html">MueLu::LWGraphBase</a>&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a>, OnHost &gt;::graph_</td>
+          <td class="memname"><a class="el" href="class_mue_lu_1_1_l_w_graph_base.html#a6b6d3e38b8d55efee744fb732e821e56">local_graph_type</a> <a class="el" href="class_mue_lu_1_1_l_w_graph_base.html">MueLu::LWGraphBase</a>&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a>, OnHost &gt;::graph_</td>
         </tr>
       </table>
   </td>
@@ -1340,7 +1340,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
 
 <p>Underlying graph (with label) </p>
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00311">311</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00307">307</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -1368,7 +1368,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
 
 <p><a class="el" href="class_mue_lu_1_1_graph.html">Graph</a> maps. </p>
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00314">314</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00310">310</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -1394,7 +1394,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00315">315</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00311">311</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -1422,7 +1422,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
 
 <p>Name of this graph. </p>
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00318">318</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00314">314</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -1450,7 +1450,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
 
 <p>Boolean array marking Dirichlet rows. </p>
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00321">321</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00317">317</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -1478,7 +1478,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
 
 <p>Local index boundaries (cached from domain map) </p>
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00324">324</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00320">320</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -1504,7 +1504,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00324">324</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00320">320</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -1530,7 +1530,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00325">325</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html#l00321">321</a> of file <a class="el" href="_mue_lu___l_w_graph_base_8hpp_source.html">MueLu_LWGraphBase.hpp</a>.</p>
 
 </div>
 </div>

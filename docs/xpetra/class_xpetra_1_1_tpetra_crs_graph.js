@@ -54,7 +54,7 @@ var class_xpetra_1_1_tpetra_crs_graph =
     [ "isStorageOptimized", "class_xpetra_1_1_tpetra_crs_graph.html#a8f82733711b6f7709caaf3d535b4c848", null ],
     [ "getGlobalRowView", "class_xpetra_1_1_tpetra_crs_graph.html#a7f2da8e7234c5244c2e5456126958d5b", null ],
     [ "getLocalRowView", "class_xpetra_1_1_tpetra_crs_graph.html#aec5688ecf59641fd933936b49c774728", null ],
-    [ "getLocalGraphHost", "class_xpetra_1_1_tpetra_crs_graph.html#a991c586faf29c5b2c0d53bbf991aacd3", null ],
+    [ "getLocalGraphHost", "class_xpetra_1_1_tpetra_crs_graph.html#a63c21c6ff2ff304a57efc46c4c30fad0", null ],
     [ "getLocalGraphDevice", "class_xpetra_1_1_tpetra_crs_graph.html#a5f9755c4e2ee13bfd9f0d48e9a2f7caa", null ],
     [ "getLocalDiagOffsets", "class_xpetra_1_1_tpetra_crs_graph.html#a9827f25b68ed1071bc73155d7539869c", null ],
     [ "computeGlobalConstants", "class_xpetra_1_1_tpetra_crs_graph.html#a78453c184a5f71cdb38f77fddc328d08", null ],

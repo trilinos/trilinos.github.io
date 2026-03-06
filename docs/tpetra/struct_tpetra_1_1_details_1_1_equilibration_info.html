@@ -81,7 +81,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Struct storing results of <a class="el" href="namespace_tpetra.html#a3dcab9772f6bf1dc819cf962e001a88b" title="Compute global row and column one-norms (&quot;row sums&quot; and &quot;column sums&quot;) of the input sparse matrix A,...">Tpetra::computeRowAndColumnOneNorms</a>.  
+<p>Struct storing results of <a class="el" href="namespace_tpetra.html#a423df57068771c2cac356b86a3503eb7" title="Compute global row and column one-norms (&quot;row sums&quot; and &quot;column sums&quot;) of the input sparse matrix A,...">Tpetra::computeRowAndColumnOneNorms</a>.  
  <a href="struct_tpetra_1_1_details_1_1_equilibration_info.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html">Tpetra_Details_EquilibrationInfo.hpp</a>&gt;</code></p>
@@ -138,7 +138,7 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</a> <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">ScalarType</a>, <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</a> DeviceType&gt;<br />
-struct Tpetra::Details::EquilibrationInfo&lt; ScalarType, DeviceType &gt;</div><p>Struct storing results of <a class="el" href="namespace_tpetra.html#a3dcab9772f6bf1dc819cf962e001a88b" title="Compute global row and column one-norms (&quot;row sums&quot; and &quot;column sums&quot;) of the input sparse matrix A,...">Tpetra::computeRowAndColumnOneNorms</a>. </p>
+struct Tpetra::Details::EquilibrationInfo&lt; ScalarType, DeviceType &gt;</div><p>Struct storing results of <a class="el" href="namespace_tpetra.html#a423df57068771c2cac356b86a3503eb7" title="Compute global row and column one-norms (&quot;row sums&quot; and &quot;column sums&quot;) of the input sparse matrix A,...">Tpetra::computeRowAndColumnOneNorms</a>. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">ScalarType</td><td>Type of the entries in the <a class="el" href="class_tpetra_1_1_row_matrix.html" title="A read-only, row-oriented interface to a sparse matrix.">Tpetra::RowMatrix</a> / <a class="el" href="class_tpetra_1_1_crs_matrix.html" title="Sparse matrix that presents a row-oriented interface that lets users read or modify entries.">Tpetra::CrsMatrix</a>. This must be the Kokkos-ized version, that is, <code>Kokkos::ArithTraits&lt;ScalarType&gt;::val_type</code>.</td></tr>
@@ -146,11 +146,11 @@ struct Tpetra::Details::EquilibrationInfo&lt; ScalarType, DeviceType &gt;</div><
   </table>
   </dd>
 </dl>
-<p><a class="el" href="namespace_tpetra.html" title="Namespace Tpetra contains the class and methods constituting the Tpetra library.">Tpetra</a> users may NOT do anything with this struct other than get it as the return value of <a class="el" href="namespace_tpetra.html#a3dcab9772f6bf1dc819cf962e001a88b" title="Compute global row and column one-norms (&quot;row sums&quot; and &quot;column sums&quot;) of the input sparse matrix A,...">Tpetra::computeRowAndColumnOneNorms</a>, and pass it into <a class="el" href="namespace_tpetra.html#a9b6fc2027faffce668e8f192674a31df" title="Left-scale and/or right-scale (in that order) the entries of the input Tpetra::CrsMatrix A.">Tpetra::leftAndOrRightScaleCrsMatrix</a>.</p>
+<p><a class="el" href="namespace_tpetra.html" title="Namespace Tpetra contains the class and methods constituting the Tpetra library.">Tpetra</a> users may NOT do anything with this struct other than get it as the return value of <a class="el" href="namespace_tpetra.html#a423df57068771c2cac356b86a3503eb7" title="Compute global row and column one-norms (&quot;row sums&quot; and &quot;column sums&quot;) of the input sparse matrix A,...">Tpetra::computeRowAndColumnOneNorms</a>, and pass it into <a class="el" href="namespace_tpetra.html#a5a5fedf63d83681dcc7ee00c0302dc0f" title="Left-scale and/or right-scale (in that order) the entries of the input Tpetra::CrsMatrix A.">Tpetra::leftAndOrRightScaleCrsMatrix</a>.</p>
 <p><a class="el" href="namespace_tpetra.html" title="Namespace Tpetra contains the class and methods constituting the Tpetra library.">Tpetra</a> developers may use the fields in this struct, to implement equilibration, balancing (in the symmetric / Hermitian positive definite case only), or to analyze the matrix (e.g., whether it is diagonally dominant).</p>
 <p>If this is the return value of computeRowAndColumnOneNorms, results are always global. computeLocalRowAndColumnOneNorms only computes local results, where "local" means "to an MPI process." globalizeRowOneNorms and globalizeColumnOneNorms "globalize" the results, so they refer to the entire matrix, globally distributed over an MPI communicator. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html#l00051">51</a> of file <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html">Tpetra_Details_EquilibrationInfo.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html#l00047">47</a> of file <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html">Tpetra_Details_EquilibrationInfo.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a3c2cf87705dc8f67af5eb4b8d1d24c19" name="a3c2cf87705dc8f67af5eb4b8d1d24c19"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3c2cf87705dc8f67af5eb4b8d1d24c19">&#9670;&#160;</a></span>assign()</h2>
@@ -182,7 +182,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Deep-copy src into *this. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html#l00112">112</a> of file <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html">Tpetra_Details_EquilibrationInfo.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html#l00100">100</a> of file <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html">Tpetra_Details_EquilibrationInfo.hpp</a>.</p>
 
 </div>
 </div>
@@ -203,7 +203,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>One-norms of the matrix's rows, distributed via the row <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html#l00162">162</a> of file <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html">Tpetra_Details_EquilibrationInfo.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html#l00150">150</a> of file <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html">Tpetra_Details_EquilibrationInfo.hpp</a>.</p>
 
 </div>
 </div>
@@ -223,7 +223,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Diagonal entries of the matrix, distributed via the row <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html#l00165">165</a> of file <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html">Tpetra_Details_EquilibrationInfo.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html#l00153">153</a> of file <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html">Tpetra_Details_EquilibrationInfo.hpp</a>.</p>
 
 </div>
 </div>
@@ -244,7 +244,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>One-norms of the matrix's columns, distributed via the column <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a>. </p>
 <p>If assumeSymmetric is true, this is just a redistributed version of rowNorms. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html#l00172">172</a> of file <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html">Tpetra_Details_EquilibrationInfo.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html#l00160">160</a> of file <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html">Tpetra_Details_EquilibrationInfo.hpp</a>.</p>
 
 </div>
 </div>
@@ -265,7 +265,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Diagonal entries of the matrix, distributed via the column <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a>. </p>
 <p>Only use this if assumeSymmetric is false. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html#l00177">177</a> of file <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html">Tpetra_Details_EquilibrationInfo.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html#l00165">165</a> of file <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html">Tpetra_Details_EquilibrationInfo.hpp</a>.</p>
 
 </div>
 </div>
@@ -287,7 +287,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>This is only valid if assumeSymmetric is false.</p>
 <p>For the nonsymmetric case, we imitate LAPACK's DGEEQU, in doing the row scaling first, then the column scaling. Thus, the column norms are "scaled" by the row norms (above). We still keep the unscaled column norms (colNorms; see above) in that case, because they are diagnostic. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html#l00189">189</a> of file <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html">Tpetra_Details_EquilibrationInfo.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html#l00177">177</a> of file <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html">Tpetra_Details_EquilibrationInfo.hpp</a>.</p>
 
 </div>
 </div>
@@ -308,7 +308,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Whether to assume that the matrix is (globally) symmetric. </p>
 <p>This affects whether colDiagonalEntries and rowScaledColNorms are valid. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html#l00195">195</a> of file <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html">Tpetra_Details_EquilibrationInfo.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html#l00183">183</a> of file <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html">Tpetra_Details_EquilibrationInfo.hpp</a>.</p>
 
 </div>
 </div>
@@ -328,7 +328,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Found an Inf somewhere in the matrix. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html#l00198">198</a> of file <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html">Tpetra_Details_EquilibrationInfo.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html#l00186">186</a> of file <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html">Tpetra_Details_EquilibrationInfo.hpp</a>.</p>
 
 </div>
 </div>
@@ -348,7 +348,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Found a NaN somewhere in the matrix. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html#l00201">201</a> of file <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html">Tpetra_Details_EquilibrationInfo.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html#l00189">189</a> of file <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html">Tpetra_Details_EquilibrationInfo.hpp</a>.</p>
 
 </div>
 </div>
@@ -368,7 +368,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Found a zero diagonal entry somewhere in the matrix. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html#l00204">204</a> of file <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html">Tpetra_Details_EquilibrationInfo.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html#l00192">192</a> of file <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html">Tpetra_Details_EquilibrationInfo.hpp</a>.</p>
 
 </div>
 </div>
@@ -388,7 +388,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>At least one row of the matrix has a zero norm. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html#l00207">207</a> of file <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html">Tpetra_Details_EquilibrationInfo.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html#l00195">195</a> of file <a class="el" href="_tpetra___details___equilibration_info_8hpp_source.html">Tpetra_Details_EquilibrationInfo.hpp</a>.</p>
 
 </div>
 </div>
