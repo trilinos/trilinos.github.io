@@ -29,7 +29,7 @@ Trilinos is a comprehensive software framework for scientific computing, providi
 - <strong>Iterative Linear Solvers</strong> <span style="float:right;"><em>Provided by: <a href="https://github.com/trilinos/Trilinos/tree/master/packages/belos#readme">Belos</a> </em></span><br />
   Comprehensive suite of iterative solvers for linear systems, including Krylov methods such as CG, GMRES, MINRES, and BiCGStab. These solvers support block and pseudo-block methods for solving systems with multiple right-hand sides, as well as advanced techniques like flexible GMRES and pipelined CG.
 
-- <strong>Direct Linear Solvers</strong> <span style="float:right;"><em>Provided by: <a href="https://github.com/trilinos/Trilinos/tree/master/packages/amesos2#readme">Amesos2</a>, <a href="shylu">ShyLU</a>, <a href="https://github.com/trilinos/Trilinos/blob/master/packages/adelus/README.md">Adelus</a> </em></span><br />
+- <strong>Direct Linear Solvers</strong> <span style="float:right;"><em>Provided by: <a href="https://github.com/trilinos/Trilinos/tree/master/packages/amesos2#readme">Amesos2</a> , <a href="https://github.com/trilinos/Trilinos/tree/master/packages/shylu#readme">ShyLU</a> , <a href="https://github.com/trilinos/Trilinos/tree/master/packages/adelus#readme">Adelus</a> </em></span><br />
   Direct solvers for sparse linear systems, including interfaces to third-party solvers and node-local solvers optimized for shared-memory architectures. These solvers are essential for problems requiring robust and accurate solutions, such as circuit simulations and mechanics applications.
 
 - <strong>Large-Scale Eigenvalue Algorithms</strong> <span style="float:right;"><em>Provided by: <a href="https://github.com/trilinos/Trilinos/tree/master/packages/anasazi#readme">Anasazi</a> </em></span><br />
@@ -111,25 +111,25 @@ Trilinos is a comprehensive software framework for scientific computing, providi
 - <strong>Mesh Generation</strong> <span style="float:right;"><em>Provided by: <a href="https://github.com/trilinos/Trilinos/tree/master/packages/pamgen#readme">PAMGEN</a> </em></span><br />
   Tools for generating meshes for computational simulations, including structured, unstructured, and hybrid meshes. These capabilities support the creation of meshes for complex geometries and multiphysics applications.
 
-- <strong>Mesh Manipulation</strong> <span style="float:right;"><em>Provided by: <a href="https://github.com/sandialabs/seacas">SEACAS</a>, <a href="https://github.com/trilinos/Trilinos/tree/master/packages/stk">STK</a>, <a href="https://github.com/trilinos/Trilinos/tree/master/packages/percept#readme">Percept</a> </em></span><br />
+- <strong>Mesh Manipulation</strong> <span style="float:right;"><em>Provided by: <a href="https://github.com/sandialabs/seacas">SEACAS</a> , <a href="https://github.com/trilinos/Trilinos/tree/master/packages/stk#readme">STK</a> , <a href="https://github.com/trilinos/Trilinos/tree/master/packages/percept#readme">Percept</a> </em></span><br />
   Utilities for modifying meshes, including operations such as mesh refinement, coarsening, and partitioning. These tools allow users to adapt meshes to specific simulation requirements or improve computational efficiency.
 
-- <strong>Mesh I/O</strong> <span style="float:right;"><em>Provided by: <a href="https://github.com/sandialabs/seacas">SEACAS</a>, <a href="https://github.com/trilinos/Trilinos/tree/master/packages/st">STK</a> </em></span><br />
+- <strong>Mesh I/O</strong> <span style="float:right;"><em>Provided by: <a href="https://github.com/sandialabs/seacas">SEACAS</a> , <a href="https://github.com/trilinos/Trilinos/tree/master/packages/stk#readme">STK</a> </em></span><br />
   Support for reading and writing mesh data in various formats, including Exodus, NetCDF, and other widely used formats in scientific computing. These capabilities enable interoperability with external mesh generation and visualization tools. Integration with visualization tools for inspecting and analyzing mesh structures and simulation results. These capabilities include support for exporting data to visualization software such as ParaView and VisIt.
 
 - <strong>Cell Topology</strong> <span style="float:right;"><em>Provided by: <a href="https://github.com/trilinos/Trilinos/tree/master/packages/shards#readme">Shards</a> </em></span><br />
   Tools for defining and querying cell topology, including support for triangles, quadrilaterals, tetrahedrons, hexahedrons, wedges, and pyramids. These capabilities are essential for finite element and finite volume discretizations.
 
-- <strong>Level-Set Methods</strong> <span style="float:right;"><em>Provided by: <a href="https://github.com/trilinos/Trilinos/tree/master/packages/krino">Krino</a> </em></span><br />
+- <strong>Level-Set Methods</strong> <span style="float:right;"><em>Provided by: <a href="https://github.com/trilinos/Trilinos/tree/master/packages/krino#readme">Krino</a> </em></span><br />
   Capabilities for handling level-set representations of geometries, enabling simulations involving moving boundaries, interfaces, and topological changes. These methods are particularly useful for fluid-structure interaction and multiphase flow problems.
 
-- <strong>Mesh Refinement and Adaptivity</strong> <span style="float:right;"><em>Provided by: <a href="https://github.com/trilinos/Trilinos/tree/master/packages/stk">STK</a> </em></span><br />
+- <strong>Mesh Refinement and Adaptivity</strong> <span style="float:right;"><em>Provided by: <a href="https://github.com/trilinos/Trilinos/tree/master/packages/stk#readme">STK</a> </em></span><br />
   Tools for refining and adapting meshes based on simulation results, including error indicators and solution gradients. These capabilities ensure accurate and efficient simulations by dynamically adjusting the mesh resolution.
 
-- <strong>Mesh Quality Assessment</strong> <span style="float:right;"><em>Provided by: <a href="https://github.com/sandialabs/seacas">SEACAS</a>, <a href="https://github.com/trilinos/Trilinos/tree/master/packages/percept#readme">Percept</a> </em></span><br />
+- <strong>Mesh Quality Assessment</strong> <span style="float:right;"><em>Provided by: <a href="https://github.com/sandialabs/seacas">SEACAS</a> , <a href="https://github.com/trilinos/Trilinos/tree/master/packages/percept#readme">Percept</a> </em></span><br />
   Utilities for assessing and improving mesh quality, including metrics for element shape, size, and aspect ratio. These tools help ensure that meshes are suitable for high-fidelity simulations.
 
-- <strong>Mesh-Based Data Transfer</strong> <span style="float:right;"><em>Provided by: <a href="https://github.com/sandialabs/seacas">SEACAS</a>, <a href="https://github.com/trilinos/Trilinos/tree/master/packages/stk">STK</a> </em></span><br />
+- <strong>Mesh-Based Data Transfer</strong> <span style="float:right;"><em>Provided by: <a href="https://github.com/sandialabs/seacas">SEACAS</a> , <a href="https://github.com/trilinos/Trilinos/tree/master/packages/stk#readme">STK</a> </em></span><br />
   Support for transferring data between meshes, including interpolation and projection methods for scalar, vector, and tensor fields. These capabilities are critical for multiphysics simulations and coupling between different models.  
 
 
@@ -140,7 +140,7 @@ Trilinos is a comprehensive software framework for scientific computing, providi
 - <strong>Unified Solver Interface</strong> <span style="float:right;"><em>Provided by: <a href="https://github.com/trilinos/Trilinos/tree/master/packages/stratimikos#readme">Stratimikos</a> </em></span><br />
   Cohesive interface to linear solvers and preconditioners, enabling runtime configuration through parameter lists. This interface simplifies solver management for complex applications and supports integration with multiple linear algebra backends.
 
-- <strong>Python Wrappers</strong> <span style="float:right;"><em>Provided by: <a href="https://github.com/trilinos/Trilinos/tree/master/packages/PyTrilinos2#readme">pytrilinos2</a> </em></span><br />
+- <strong>Python Wrappers</strong> <span style="float:right;"><em>Provided by: <a href="https://github.com/trilinos/Trilinos/tree/master/packages/PyTrilinos2#readme">PyTrilinos2</a> </em></span><br />
   Python interfaces for selected capabilities, enabling rapid prototyping and algorithm development. These wrappers provide access to linear algebra, solvers, and preconditioners for efficient experimentation and integration.
 
 - <strong>Abstract Numerical Algorithms</strong> <span style="float:right;"><em>Provided by: <a href="https://github.com/trilinos/Trilinos/tree/master/packages/thyra#readme">Thyra</a> </em></span><br />
