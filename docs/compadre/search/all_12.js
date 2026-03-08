@@ -6,10 +6,10 @@ var searchData=
   ['scalar_5ftype_3',['scalar_type',['../namespace_compadre.html#a310d7900e5d0709cc5c7cf013f029beb',1,'Compadre']]],
   ['scalarpointevaluation_4',['ScalarPointEvaluation',['../namespace_compadre.html#ac613f05c82282085cc91ecb265feeed2ae0c2ab1d68dac76e2b2090cda07f5b1d',1,'Compadre']]],
   ['scalartaylorpolynomial_5',['ScalarTaylorPolynomial',['../namespace_compadre.html#a64bb4f79de16fc9728def7ec3f4a120ead7db955a4a94bfaca7d5fc83e50efdbf',1,'Compadre']]],
-  ['scratch_5flocal_5findex_5ftype_6',['scratch_local_index_type',['../namespace_compadre.html#a4e6f86db2704a6f395705270646d9b0f',1,'Compadre']]],
-  ['scratch_5fmatrix_5fleft_5ftype_7',['scratch_matrix_left_type',['../namespace_compadre.html#a52e15ed50116ddb89cfd97c735f766e5',1,'Compadre']]],
-  ['scratch_5fmatrix_5fright_5ftype_8',['scratch_matrix_right_type',['../namespace_compadre.html#ae710161b1c8ebaec6c752cf22f478ab3',1,'Compadre']]],
-  ['scratch_5fvector_5ftype_9',['scratch_vector_type',['../namespace_compadre.html#a235a6581508ec055a452c685ab96b687',1,'Compadre']]],
+  ['scratch_5flocal_5findex_5ftype_6',['scratch_local_index_type',['../namespace_compadre.html#a9f156fad27b08340322a9c19a2e48dbb',1,'Compadre']]],
+  ['scratch_5fmatrix_5fleft_5ftype_7',['scratch_matrix_left_type',['../namespace_compadre.html#a9cc7d2d3736b20cf2793b5d326e3244e',1,'Compadre']]],
+  ['scratch_5fmatrix_5fright_5ftype_8',['scratch_matrix_right_type',['../namespace_compadre.html#a959727ae68a07ef12e6e59f9d350fa37',1,'Compadre']]],
+  ['scratch_5fvector_5ftype_9',['scratch_vector_type',['../namespace_compadre.html#a61d08d26a1ff6381ba5d2ef3a4159b35',1,'Compadre']]],
   ['search_10',['Performing Neighbor Search',['..//home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/compadre/examples/GMLS_Manifold.hpp#ex1c',1,'']]],
   ['setadditionalevaluationsitesdata_11',['setadditionalevaluationsitesdata',['../class_compadre_1_1_g_m_l_s.html#a582803a54057ba1f59b6fa87f60bc02b',1,'Compadre::GMLS::setAdditionalEvaluationSitesData(view_type_1 cr_additional_evaluation_indices, view_type_1 number_of_additional_evaluation_indices, view_type_2 additional_evaluation_coordinates)'],['../class_compadre_1_1_g_m_l_s.html#a4dcfd8c5670aa05859fb32a3396c4e84',1,'Compadre::GMLS::setAdditionalEvaluationSitesData(view_type_1 additional_evaluation_indices, view_type_2 additional_evaluation_coordinates)']]],
   ['setauxiliaryevaluationcoordinates_12',['setauxiliaryevaluationcoordinates',['../class_compadre_1_1_g_m_l_s.html#afc8b12223b797bee4670fe221a7f7d19',1,'Compadre::GMLS::setAuxiliaryEvaluationCoordinates(coordinates_type evaluation_coordinates)'],['../class_compadre_1_1_g_m_l_s.html#a646f05813756a1956f08d74318adc382',1,'Compadre::GMLS::setAuxiliaryEvaluationCoordinates(view_type evaluation_coordinates)']]],
@@ -62,6 +62,6 @@ var searchData=
   ['status_59',['status',['../class_compadre_1_1_kokkos_parser.html#a0d5c0f2a38854568d5b20d6ef68a2e15',1,'Compadre::KokkosParser']]],
   ['subviewnd_60',['subviewnd',['../struct_compadre_1_1_subview_n_d.html',1,'Compadre::SubviewND&lt; T, T2, T3 &gt;'],['../struct_compadre_1_1_subview_n_d_3_01_t_00_01_t2_00_01enable__if__t_3_07_t_1_1rank_3_012_08_4_01_4.html#aecec7be3768b6c3c4a3cbcf1f9bd54a0',1,'Compadre::SubviewND&lt; T, T2, enable_if_t&lt;(T::rank&lt; 2)&gt; &gt;::SubviewND()'],['../struct_compadre_1_1_subview_n_d.html#a7284ec8e1e8fdd504220bd888e9c4d49',1,'Compadre::SubviewND::SubviewND()']]],
   ['subviewnd_3c_20t_2c_20t2_2c_20enable_5fif_5ft_3c_28t_3a_3arank_3c_202_29_3e_20_3e_61',['SubviewND&lt; T, T2, enable_if_t&lt;(T::rank&lt; 2)&gt; &gt;',['../struct_compadre_1_1_subview_n_d_3_01_t_00_01_t2_00_01enable__if__t_3_07_t_1_1rank_3_012_08_4_01_4.html',1,'Compadre']]],
-  ['surfacecurlofscalar_62',['SurfaceCurlOfScalar',['../namespace_compadre.html#aea88811ac1310b9b80505981791a81f4',1,'Compadre']]],
+  ['surfacecurlofscalar_62',['SurfaceCurlOfScalar',['../namespace_compadre.html#a08037edd7af65aa528103bfe7462282b',1,'Compadre']]],
   ['swap_5fpair_63',['swap_pair',['../_neighbor_search_test_8cpp.html#a201f29b80de31d40cf4359ef846a407b',1,'NeighborSearchTest.cpp']]]
 ];

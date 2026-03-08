@@ -37,6 +37,6 @@ var searchData=
   ['sphere_5fharmonic54_34',['sphere_harmonic54',['../_g_m_l_s___manifold_8hpp.html#a3729934a92b2fc6ddefecc724ad9a6d8',1,'GMLS_Manifold.hpp']]],
   ['status_35',['status',['../class_compadre_1_1_kokkos_parser.html#a0d5c0f2a38854568d5b20d6ef68a2e15',1,'Compadre::KokkosParser']]],
   ['subviewnd_36',['subviewnd',['../struct_compadre_1_1_subview_n_d.html#a7284ec8e1e8fdd504220bd888e9c4d49',1,'Compadre::SubviewND::SubviewND()'],['../struct_compadre_1_1_subview_n_d_3_01_t_00_01_t2_00_01enable__if__t_3_07_t_1_1rank_3_012_08_4_01_4.html#aecec7be3768b6c3c4a3cbcf1f9bd54a0',1,'Compadre::SubviewND&lt; T, T2, enable_if_t&lt;(T::rank&lt; 2)&gt; &gt;::SubviewND()']]],
-  ['surfacecurlofscalar_37',['SurfaceCurlOfScalar',['../namespace_compadre.html#aea88811ac1310b9b80505981791a81f4',1,'Compadre']]],
+  ['surfacecurlofscalar_37',['SurfaceCurlOfScalar',['../namespace_compadre.html#a08037edd7af65aa528103bfe7462282b',1,'Compadre']]],
   ['swap_5fpair_38',['swap_pair',['../_neighbor_search_test_8cpp.html#a201f29b80de31d40cf4359ef846a407b',1,'NeighborSearchTest.cpp']]]
 ];

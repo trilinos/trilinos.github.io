@@ -2,7 +2,7 @@ var searchData=
 [
   ['laplace_5fbeltrami_5fsphere_5fharmonic54_0',['laplace_beltrami_sphere_harmonic54',['../_g_m_l_s___manifold_8hpp.html#ad96e99959f0227e073592b846b381654',1,'GMLS_Manifold.hpp']]],
   ['laplacianofscalarpointevaluation_1',['LaplacianOfScalarPointEvaluation',['../namespace_compadre.html#ac613f05c82282085cc91ecb265feeed2a05d6c2c82fb9dab37feec3db68d5a1d0',1,'Compadre']]],
-  ['largesttwoeigenvectorsthreebythreesymmetric_2',['largestTwoEigenvectorsThreeByThreeSymmetric',['../namespace_compadre_1_1_g_m_l_s___linear_algebra.html#a714e08bbc8ec43d8df8d8db080ed3a27',1,'Compadre::GMLS_LinearAlgebra']]],
+  ['largesttwoeigenvectorsthreebythreesymmetric_2',['largestTwoEigenvectorsThreeByThreeSymmetric',['../namespace_compadre_1_1_g_m_l_s___linear_algebra.html#a071f7c18e8878f725c120e353083ce1d',1,'Compadre::GMLS_LinearAlgebra']]],
   ['latitude_3',['latitude',['../_g_m_l_s___manifold_8hpp.html#a59d9ec56edda974c3d195cbf51f98a26',1,'GMLS_Manifold.hpp']]],
   ['layout_5fleft_4',['layout_left',['../namespace_compadre.html#aed756b57dba06d191da3c4f109a6d508',1,'Compadre']]],
   ['layout_5fright_5',['layout_right',['../namespace_compadre.html#a93f8bc88dd6f42460e2ef8fb8e95a5bf',1,'Compadre']]],
