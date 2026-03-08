@@ -19,7 +19,7 @@ var searchData=
   ['applyfullpolynomialcoefficientsbasistodatasinglecomponent_16',['applyFullPolynomialCoefficientsBasisToDataSingleComponent',['../class_compadre_1_1_evaluator.html#a094f34080746ecc1c4b3b92872280e7f',1,'Compadre::Evaluator']]],
   ['applylocalcharttoambientspacetransform_17',['applyLocalChartToAmbientSpaceTransform',['../class_compadre_1_1_evaluator.html#a5d17f7937bdf527946dd82f22c3131ea',1,'Compadre::Evaluator']]],
   ['applytargets_18',['applytargets',['../struct_compadre_1_1_apply_targets.html',1,'Compadre::ApplyTargets'],['../struct_compadre_1_1_apply_targets.html#aedf57bbc4c4a53187b5b15f76859d13d',1,'Compadre::ApplyTargets::ApplyTargets()']]],
-  ['applytargetstocoefficients_19',['applyTargetsToCoefficients',['../namespace_compadre.html#aafe332a5fb39392799f679477f65e863',1,'Compadre']]],
+  ['applytargetstocoefficients_19',['applyTargetsToCoefficients',['../namespace_compadre.html#a169783c9f93ae86840aa70855c8d5643',1,'Compadre']]],
   ['are_20correct_20',['Check That Solutions Are Correct',['..//home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/compadre/examples/GMLS_Manifold.hpp#ex5',1,'']]],
   ['arguments_21',['Parse Command Line Arguments',['..//home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/compadre/examples/GMLS_Manifold.hpp#ex1a',1,'']]],
   ['assemblecurvaturepsqrtw_22',['assemblecurvaturepsqrtw',['../struct_compadre_1_1_assemble_curvature_psqrt_w.html#a5db45bf09d617371685947a3b947365f',1,'Compadre::AssembleCurvaturePsqrtW::AssembleCurvaturePsqrtW()'],['../struct_compadre_1_1_assemble_curvature_psqrt_w.html',1,'Compadre::AssembleCurvaturePsqrtW']]],

@@ -13,7 +13,7 @@ var searchData=
   ['max_5fpoly_5forder_10',['max_poly_order',['../struct_compadre_1_1_g_m_l_s_basis_data.html#a526e60cfce80da9576c833d926f6d4f7',1,'Compadre::GMLSBasisData']]],
   ['max_5fsize_11',['max_size',['../class_compadre_1_1_radius_result_set.html#a689af6843e6e5bc515d30b4a0272d353',1,'Compadre::RadiusResultSet']]],
   ['member_5ftype_12',['member_type',['../namespace_compadre.html#a5fe1f559ea7a8ba64ea070506d2b9e32',1,'Compadre']]],
-  ['metricfactor_13',['MetricFactor',['../namespace_compadre.html#a6c5235bcbced4c0128099bf40e5c8288',1,'Compadre']]],
+  ['metricfactor_13',['MetricFactor',['../namespace_compadre.html#a19ce461325138d16d58761bdcc256397',1,'Compadre']]],
   ['mode_3a_14',['mode:',['../class_compadre_1_1_point_cloud_search.html#autotoc_md0',1,'When in dry-run mode:'],['../class_compadre_1_1_point_cloud_search.html#autotoc_md1',1,'When not in dry-run mode:']]],
   ['moving_20least_20squares_20gmls_15',['Generalized Moving Least Squares (GMLS)',['../index.html#autotoc_md4',1,'']]]
 ];
