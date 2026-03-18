@@ -165,6 +165,10 @@ We will give an overview of the the different multigrid solver variants for Maxw
 
 <tr><th>
 <abbr> 4:05pm </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/HPSF-TUG_2026/xxxxx">Trilinos Open Discussion</a> (Curtis Ober)  <br><br>
+<strong>QR Code and Link</strong> <br>
+ <a href="https://docs.google.com/document/d/11_CKxUAjBiHCRy9sLHHC5aVGJ7pNQv8SFkK2cqSwnjw/edit?tab=t.0">
+    <img src="pages/community/trilinos_user_meetings/HPSF-TUG_2026/trilinosHPSF-qr.png" alt="QR code for Trilinos Open Discussion" style="width:140px;height:auto;">
+  </a> <br><br>
 Trilinos developers would like to engage with users on feature requests, complaints, criticisms, etc.  Bring your questions! No technical topic is off-limits (Ok, that is Trilinos related.).  Some possible discussion points are:
 
 * Feature Requests: What feature(s) would you like to see in Trilinos?
