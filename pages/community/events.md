@@ -7,11 +7,11 @@ folder: community
 ## Upcoming Meetings
 
 *   [HPSF Community Summit 2026](https://events.academiccloud.de/event/143/) -- February 25 - 27, 2026, TU Braunschweig
-*   [Trilinos User & Developer Group Meeting @ HPSF Conference 2026](trilinos_user-developer_group_meeting_2026.html) -- March 18-19, 2026, Chicago, IL, USA
+*   [HPSF / Trilinos User Group Meeting  2026](HPSF-TUG_2026.html) -- March 18-19, 2026, Chicago, IL, USA
 
 ## Past Meetings
 
-*   [HPSF / Trilinos User Group Meeting 2025](trilinos_user-developer_group_meeting_2025.html) -- May 5-8, 2025, Chicago, Illinois, USA
+*   [HPSF / Trilinos User Group Meeting 2025](HPSF-TUG_2025.html) -- May 5-8, 2025, Chicago, Illinois, USA
 *   [Trilinos User Group Meeting 2024](trilinos_user-developer_group_meeting_2024.html) -- Oct 22-24, 2024, Albuquerque, NM, USA
 *   [Trilinos User Group Meeting 2023](trilinos_user-developer_group_meeting_2023.html) -- Oct 30 - Nov 2, 2023, Albuquerque, NM, USA
 *   [Trilinos User Group Meeting 2022](trilinos_user-developer_group_meeting_2022.html) -- Oct 25-27, 2022, Albuquerque, NM, USA
