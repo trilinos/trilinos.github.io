@@ -47,7 +47,7 @@ The Trilinos project is a large collection of inter-dependent scientific softwar
 </td> </tr>
 
 <tr><th>
-<abbr>  2:25pm </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/HPSF-TUG_2026/xxxx">An Introduction to the Trilinos Core Products</a> (Roger Pawlowski)  <br><br>
+<abbr>  2:25pm </abbr></th>  <td> <a href="pages/community/trilinos_user_meetings/HPSF-TUG_2026/CoreProductsOverview.pdf">An Introduction to the Trilinos Core Products</a> (Roger Pawlowski)  <br><br>
 The Trilinos Core area includes packages that form the basic building blocks for Trilinos capabilities. This talk will briefly introduce each package, it’s capabilities and demonstrate how the packages can be pulled together into an application. The Core area will cover the following packages. The Kokkos performance portability library provides data structures and parallel algorithms that are performant on both CPU and GPU architectures. The Kokkos-Kernels library provides performance portable BLAS and LAPACK routines. The Tpetra library provides MPI-based parallel distributed linear algebra data structures built on Kokkos. The Teuchos library provides basic utilities for a common look and feel across Trilinos packages. The Zoltan library provides parallel distributed load balancing tools. The PyTrilinos package provides python wrappers for Trilinos capabilities. The Thyra package provides abstraction layers for writing algorithms for linear algebra, linear solvers and nonlinear solvers. 
 </td> </tr>
 
