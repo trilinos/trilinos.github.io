@@ -7,7 +7,7 @@ folder: community
 
 ## Dates
 
-March 18-19, 2025
+March 18-19, 2026
 
 ## Location
 
@@ -183,6 +183,49 @@ Trilinos developers would like to engage with users on feature requests, complai
 * Your ideas: Add your own discussion point!
 
 Contribute your discussion points by emailing Curtis Ober ccober@sandia.gov with the subject line: Trilinos Open Discussion Points or contact a Trilinos developer during HPSF.
+
+Topics that were discussed:
+
+* Documentation and AI Readiness
+
+Current documentation is often lacking or missing.
+Need to improve AI readiness of documentation, artifacts, and metadata, including skill files.
+Potential application of these improvements to build assistance.
+Reference: agentskills.io for more details on skill files.
+
+*  Kokkos and Trilinos Compatibility
+
+Concerns were raised about Kokkos and Trilinos potentially getting out of sync.
+Spack guarantees compatibility between versions.
+Question raised about using an older Kokkos version than the one included in Trilinos.
+CMake override exists for the "blessed" Kokkos version to allow older versions, but no guarantees on stability or support.
+
+* Hypre Support in Tpetra Stack
+
+Inquiry about the status of Hypre support within the Tpetra stack.
+There is currently no testing for the Hypre interface.
+
+* Trilinos Build Process Improvements
+
+Building Trilinos has become easier recently.
+Desire to better capture build environments and dependencies to simplify rebuilds, especially for vendors.
+Goal: create shareable and reproducible environments for Trilinos and downstream applications.
+
+* AMD Pull Request (PR) Testing
+
+Nightly builds for AMD will become available soon.
+No capacity for full PR testing on AMD currently.
+Build-only PR testing for AMD is feasible and should be implemented.
+
+* Xpetra and BlockedCrsMatrix Development
+
+Plan to phase out Xpetra.
+Promote BlockedCrsMatrix to a fully supported, standalone component.
+
+* Nightly Builds Monitoring
+
+Question if anyone is currently monitoring nightly builds.
+Operational leadership will begin bi-weekly reviews of nightlies and will follow up with package owners as needed.
 </td> </tr>
 
 </tbody>
