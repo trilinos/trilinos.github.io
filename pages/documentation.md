@@ -12,9 +12,9 @@ Find out more about Trilinos: how to use it, install it, configure it, and even 
 
 ## General Information
 
-- [Trilinos: Enabling Scientific Computing Across Diverse Hardware Architectures at Scale](https://arxiv.org/abs/2503.08126)
+- [Trilinos: Enabling Scientific Computing Across Diverse Hardware Architectures at Scale](https://dl.acm.org/doi/10.1145/3802822)
     - An overview of the Trilinos framework, highlighting its design principles, modular architecture, and scalability for scientific computing on modern hardware platforms.
-    - Submitted in 2025.
+    - ACM Transactions on Mathematical Software, accepted.
 - [An Overview of the Trilinos Project](pdfs/TrilinosACMTOMS2004.pdf) 
     - ACM Transactions on Mathematical Software, Vol. 31, Issue 3, September 2005, Pages 397-423.
 - [An Overview of Trilinos](pdfs/TrilinosOverview.pdf)
