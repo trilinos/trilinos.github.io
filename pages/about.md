@@ -74,27 +74,18 @@ Trilinos was awarded one of two HPC Software Challenge Awards at SC2004 for its 
 
 If you are using Trilinos, please cite our software in your publications. Below is a suitable BibTeX entry:
 
-```bibtex
-@Manual{trilinos,
-  title        = {The {T}rilinos {P}roject},
-  author       = {The Trilinos Project Team},
-  organization = {Linux Foundation / High Performance Software Foundation},
-  year         = {2026},
-  url          = {https://trilinos.github.io},
-  note         = {Accessed: January 8, 2026},
-}
+```
+@article{TrilinosPaper,
+  author = {Mayr, Matthias and Heinlein, Alexander and Glusa, Christian A. and Rajamanickam, Sivasankaran and Arnst, Maarten and Bartlett, Roscoe A. and Berger-Vergiat, Luc and Boman, Erik G. and Devine, Karen D. and Harper, Graham and Heroux, Michael A. and Hoemmen, Mark and Hu, Jonathan J. and Kelley, Brian and Kouri, Drew P. and Kuberry, Paul and Kim, Kyungjoo and Liegois, Kim and Ober, Curtis C. and Pawlowski, Roger P. and Pearson, Carl and Perego, Mauro and Phipps, Eric T. and Ridzal, Denis and Roberts, Nathan V. and Siefert, Christopher M. and Thornquist, Heidi K. and Tomasetti, Romin and Trott, Christian R. and Tuminaro, Raymond S. and Willenbring, James M. and Wolf, Michael and Yamazaki, Ichitaro},
+  doi = {10.1145/3802822},
+  journal = {ACM Transactions on Mathematical Software},
+  title = {{T}rilinos: {E}nabling {S}cientific {C}omputing across {D}iverse {H}ardware {A}rchitectures at {S}cale},
+  url = {https://doi.org/10.1145/3802822},
+  volume = {published online ahead of print},
+  year = {2026}}
 ```
 
-For specific packages, you may cite their individual webpages. For example:
-```
-@Manual{muelu,
-  title  = {The {M}uelu {P}roject},
-  author = {The {M}uelu {T}eam}},
-  year   = {2026},
-  url    = {https://trilinos.github.io/docs/muelu/index.html}
-  note   = {Accessed: January 8, 2026},
-}
-```
+For specific packages, you may additionally cite their individual papers or webpages. See the documentation of individual packages for more information.
 
 ---
 
