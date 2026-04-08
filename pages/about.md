@@ -72,29 +72,9 @@ Trilinos was awarded one of two HPC Software Challenge Awards at SC2004 for its 
 
 ## Citing Trilinos
 
-If you are using Trilinos, please cite our software in your publications. Below is a suitable BibTeX entry:
 
-```bibtex
-@Manual{trilinos,
-  title        = {The {T}rilinos {P}roject},
-  author       = {The Trilinos Project Team},
-  organization = {Linux Foundation / High Performance Software Foundation},
-  year         = {2026},
-  url          = {https://trilinos.github.io},
-  note         = {Accessed: January 8, 2026},
-}
-```
-
-For specific packages, you may cite their individual webpages. For example:
-```
-@Manual{muelu,
-  title  = {The {M}uelu {P}roject},
-  author = {The {M}uelu {T}eam}},
-  year   = {2026},
-  url    = {https://trilinos.github.io/docs/muelu/index.html}
-  note   = {Accessed: January 8, 2026},
-}
-```
+See [Citing Trilinos](documentation.html#citing-trilinos) on the
+[Documentation page](documentation.html).
 
 ---
 

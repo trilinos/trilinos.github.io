@@ -53,7 +53,7 @@ Trilinos is a comprehensive software framework for scientific computing, providi
 
 ---
 
-## Discretization Utilities
+## Discretization Tools
 
 - <strong>Finite Element Local Assembly</strong> <span style="float:right;"><em>Provided by: <a href="https://github.com/trilinos/Trilinos/tree/master/packages/intrepid2#readme">Intrepid2</a> </em></span><br />
   Tools for local assembly of finite element matrices and vectors, supporting high-order compatible discretizations for function spaces such as H(grad), H(curl), H(div), and L<sup>2</sup>. Capabilities include geometric operations, basis functions, orientation tools, and projection methods for efficient finite element computations.
@@ -66,6 +66,9 @@ Trilinos is a comprehensive software framework for scientific computing, providi
 
 - <strong>Meshless Approximation of Linear Operators</strong> <span style="float:right;"><em>Provided by: <a href="https://github.com/trilinos/Trilinos/tree/master/packages/compadre#readme">Compadre</a> </em></span><br />
   Tools for meshless approximation of linear operators using generalized moving least squares (GMLS). These capabilities support applications such as data transfer and meshless discretization of PDEs, leveraging hierarchical parallelism for performance portability.
+
+- <strong>Cell Topology</strong> <span style="float:right;"><em>Provided by: <a href="https://github.com/trilinos/Trilinos/tree/master/packages/shards#readme">Shards</a> </em></span><br />
+  Tools for defining and querying cell topology, including support for triangles, quadrilaterals, tetrahedrons, hexahedrons, wedges, and pyramids. These capabilities are essential for finite element and finite volume discretizations.
 
 ---
 
@@ -117,9 +120,6 @@ Trilinos is a comprehensive software framework for scientific computing, providi
 - <strong>Mesh I/O</strong> <span style="float:right;"><em>Provided by: <a href="https://github.com/sandialabs/seacas">SEACAS</a> , <a href="https://github.com/trilinos/Trilinos/tree/master/packages/stk#readme">STK</a> </em></span><br />
   Support for reading and writing mesh data in various formats, including Exodus, NetCDF, and other widely used formats in scientific computing. These capabilities enable interoperability with external mesh generation and visualization tools. Integration with visualization tools for inspecting and analyzing mesh structures and simulation results. These capabilities include support for exporting data to visualization software such as ParaView and VisIt.
 
-- <strong>Cell Topology</strong> <span style="float:right;"><em>Provided by: <a href="https://github.com/trilinos/Trilinos/tree/master/packages/shards#readme">Shards</a> </em></span><br />
-  Tools for defining and querying cell topology, including support for triangles, quadrilaterals, tetrahedrons, hexahedrons, wedges, and pyramids. These capabilities are essential for finite element and finite volume discretizations.
-
 - <strong>Level-Set Methods</strong> <span style="float:right;"><em>Provided by: <a href="https://github.com/trilinos/Trilinos/tree/master/packages/krino#readme">Krino</a> </em></span><br />
   Capabilities for handling level-set representations of geometries, enabling simulations involving moving boundaries, interfaces, and topological changes. These methods are particularly useful for fluid-structure interaction and multiphase flow problems.
 
@@ -159,8 +159,8 @@ Trilinos is a comprehensive software framework for scientific computing, providi
 - <strong>Utility and Helper Tools</strong> <span style="float:right;"><em>Provided by: <a href="https://github.com/trilinos/Trilinos/tree/master/packages/teuchos#readme">Teuchos</a> </em></span><br />
   Collection of tools for memory management, parameter lists, templated wrappers for BLAS/LAPACK, and XML parsing. These utilities simplify programming tasks and ensure consistent coding practices.
 
-- <strong>Matrix-Free Linear Algebra</strong> <span style="float:right;"><em>Provided by: <a href="https://github.com/trilinos/Trilinos/tree/master/packages/galeri#readme">Galeri</a> </em></span><br />
-  Tools for generating test problems and matrix-free linear algebra objects, including structured grids and finite difference operators. Galeri provides a lightweight and flexible framework for prototyping and testing numerical algorithms.
+- <strong>Test Matrix Generation</strong> <span style="float:right;"><em>Provided by: <a href="https://github.com/trilinos/Trilinos/tree/master/packages/galeri#readme">Galeri</a> </em></span><br />
+Galeri is a Trilinos package that generates standard test problems and corresponding sparse matrices (and often coordinates and right-hand sides) for linear system and preconditioner/solver benchmarking. It provides parameter-driven constructors for common structured-grid PDE discretizations (e.g., Poisson and convection–diffusion) and simple graph/matrix models, primarily to support rapid prototyping and verification.
 
 - <strong>Tensor Algebra Utilities</strong> <span style="float:right;"><em>Provided by: <a href="https://github.com/trilinos/Trilinos/tree/master/packages/minitensor#readme">MiniTensor</a> </em></span><br />
   Compact library for tensor algebra, supporting operations on small tensors, vectors, and matrices. MiniTensor is optimized for performance and portability, making it suitable for applications in mechanics and material modeling.
