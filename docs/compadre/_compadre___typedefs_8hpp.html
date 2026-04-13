@@ -28,7 +28,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Compadre<span id="projectnumber">&#160;1.7.0</span>
+   <div id="projectname">Compadre<span id="projectnumber">&#160;1.7.2</span>
    </div>
   </td>
  </tr>
@@ -251,7 +251,7 @@ Variables</h2></td></tr>
 <p>compadre_assert_debug is used for assertions that are checked in loops, as these significantly impact performance. </p>
 <p>When NDEBUG is set, these conditions are not checked. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___typedefs_8hpp_source.html#l00184">184</a> of file <a class="el" href="_compadre___typedefs_8hpp_source.html">Compadre_Typedefs.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___typedefs_8hpp_source.html#l00194">194</a> of file <a class="el" href="_compadre___typedefs_8hpp_source.html">Compadre_Typedefs.hpp</a>.</p>
 
 </div>
 </div>
@@ -273,7 +273,7 @@ Variables</h2></td></tr>
 
 <p>compadre_kernel_assert_debug is similar to compadre_assert_debug, but is a call on the device, namely inside of a function marked KOKKOS_INLINE_FUNCTION </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___typedefs_8hpp_source.html#l00204">204</a> of file <a class="el" href="_compadre___typedefs_8hpp_source.html">Compadre_Typedefs.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___typedefs_8hpp_source.html#l00214">214</a> of file <a class="el" href="_compadre___typedefs_8hpp_source.html">Compadre_Typedefs.hpp</a>.</p>
 
 </div>
 </div>
@@ -292,20 +292,12 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span> {                                \</div>
-<div class="line">    if ( ! (condition)) {                                               \</div>
-<div class="line">      std::stringstream _ss_;                                           \</div>
-<div class="line">      _ss_ &lt;&lt; __FILE__ &lt;&lt; <span class="stringliteral">&quot;:&quot;</span> &lt;&lt; __LINE__ &lt;&lt; <span class="stringliteral">&quot;: FAIL:\n&quot;</span> &lt;&lt; #condition  \</div>
-<div class="line">        &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;                                                        \</div>
-<div class="line">        <span class="keywordflow">throw</span> std::logic_error(_ss_.str());                             \</div>
-<div class="line">    }                                                                   \</div>
-<div class="line">  } <span class="keywordflow">while</span> (0)</div>
-</div><!-- fragment -->
+
 <p>compadre_assert_release is used for assertions that should always be checked, but generally are not expensive to verify or are not called frequently. </p>
 <p><br  />
  </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___typedefs_8hpp_source.html#l00152">152</a> of file <a class="el" href="_compadre___typedefs_8hpp_source.html">Compadre_Typedefs.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___typedefs_8hpp_source.html#l00164">164</a> of file <a class="el" href="_compadre___typedefs_8hpp_source.html">Compadre_Typedefs.hpp</a>.</p>
 
 </div>
 </div>
@@ -325,7 +317,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_compadre___typedefs_8hpp_source.html#l00185">185</a> of file <a class="el" href="_compadre___typedefs_8hpp_source.html">Compadre_Typedefs.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___typedefs_8hpp_source.html#l00195">195</a> of file <a class="el" href="_compadre___typedefs_8hpp_source.html">Compadre_Typedefs.hpp</a>.</p>
 
 </div>
 </div>
@@ -345,7 +337,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_compadre___typedefs_8hpp_source.html#l00205">205</a> of file <a class="el" href="_compadre___typedefs_8hpp_source.html">Compadre_Typedefs.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___typedefs_8hpp_source.html#l00215">215</a> of file <a class="el" href="_compadre___typedefs_8hpp_source.html">Compadre_Typedefs.hpp</a>.</p>
 
 </div>
 </div>
@@ -364,14 +356,10 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span> { \</div>
-<div class="line">    if ( ! (condition))                         \</div>
-<div class="line">      Kokkos::abort(#condition);                \</div>
-<div class="line">  } <span class="keywordflow">while</span> (0)</div>
-</div><!-- fragment -->
+
 <p>compadre_kernel_assert_release is similar to compadre_assert_release, but is a call on the device, namely inside of a function marked KOKKOS_INLINE_FUNCTION </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___typedefs_8hpp_source.html#l00163">163</a> of file <a class="el" href="_compadre___typedefs_8hpp_source.html">Compadre_Typedefs.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___typedefs_8hpp_source.html#l00175">175</a> of file <a class="el" href="_compadre___typedefs_8hpp_source.html">Compadre_Typedefs.hpp</a>.</p>
 
 </div>
 </div>

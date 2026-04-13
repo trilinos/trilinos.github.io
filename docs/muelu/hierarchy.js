@@ -5,12 +5,14 @@ var hierarchy =
     [ "MueLu::AmesosSmoother< Node >", "class_mue_lu_1_1_amesos_smoother.html", null ],
     [ "MueLu::AppendTrait< View, AppendValue >", "struct_mue_lu_1_1_append_trait.html", null ],
     [ "MueLu::AppendTrait< Kokkos::View< DataType, Pack... >, T >", "struct_mue_lu_1_1_append_trait_3_01_kokkos_1_1_view_3_01_data_type_00_01_pack_8_8_8_01_4_00_01_t_01_4.html", null ],
+    [ "MueLu::Behavior", "class_mue_lu_1_1_behavior.html", null ],
     [ "BelosError", null, [
       [ "Belos::MueLuOpFailure", "class_belos_1_1_mue_lu_op_failure.html", null ]
     ] ],
     [ "MueLuTests::BlackBoxPFactoryTester< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_tests_1_1_black_box_p_factory_tester.html", null ],
     [ "MueLu::Misc::BlockDiagonalizeFunctor< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_misc_1_1_block_diagonalize_functor.html", null ],
     [ "MueLu::Misc::BlockDiagonalizeVectorFunctor< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_misc_1_1_block_diagonalize_vector_functor.html", null ],
+    [ "MueLu::BlockInverseFunctor< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_block_inverse_functor.html", null ],
     [ "MueLu::MatrixConstruction::BlockRowComparison< local_matrix_type >", "class_mue_lu_1_1_matrix_construction_1_1_block_row_comparison.html", null ],
     [ "MueLu::DistanceLaplacian::BlockWeightedDistanceFunctor< Scalar, LocalOrdinal, GlobalOrdinal, Node, weight_type >", "class_mue_lu_1_1_distance_laplacian_1_1_block_weighted_distance_functor.html", null ],
     [ "MueLu::BoundaryDetection::BoundaryFunctor< local_matrix_type, Functor, RemainingFunctors >", "class_mue_lu_1_1_boundary_detection_1_1_boundary_functor.html", null ],
@@ -24,8 +26,10 @@ var hierarchy =
     [ "Teuchos::Comm< Ordinal >", "class_teuchos_1_1_comm.html", null ],
     [ "MueLu::CutDrop::ScaledComparison< Scalar, LocalOrdinal, GlobalOrdinal, Node, measure >::Comparator< local_matrix_type2, diag_view_type2 >", "struct_mue_lu_1_1_cut_drop_1_1_scaled_comparison_1_1_comparator.html", null ],
     [ "MueLu::CutDrop::ScaledDistanceLaplacianComparison< Scalar, LocalOrdinal, GlobalOrdinal, Node, DistanceFunctorType, measure >::Comparator< local_matrix_type2, DistanceFunctorType2, diag_view_type2 >", "struct_mue_lu_1_1_cut_drop_1_1_scaled_distance_laplacian_comparison_1_1_comparator.html", null ],
+    [ "MueLu::CutDrop::ScaledDistanceLaplacianVectorComparison< Scalar, LocalOrdinal, GlobalOrdinal, Node, DistanceFunctorType, measure >::Comparator< local_matrix_type2, DistanceFunctorType2, diag_view_type2 >", "struct_mue_lu_1_1_cut_drop_1_1_scaled_distance_laplacian_vector_comparison_1_1_comparator.html", null ],
     [ "MueLu::CutDrop::UnscaledComparison< Scalar, LocalOrdinal, GlobalOrdinal, Node >::Comparator< local_matrix_type2 >", "struct_mue_lu_1_1_cut_drop_1_1_unscaled_comparison_1_1_comparator.html", null ],
     [ "MueLu::CutDrop::UnscaledDistanceLaplacianComparison< Scalar, LocalOrdinal, GlobalOrdinal, Node, DistanceFunctorType >::Comparator< local_matrix_type2, DistanceFunctorType2, diag_view_type2 >", "struct_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison_1_1_comparator.html", null ],
+    [ "MueLu::CutDrop::UnscaledDistanceLaplacianVectorComparison< Scalar, LocalOrdinal, GlobalOrdinal, Node, DistanceFunctorType >::Comparator< local_matrix_type2, DistanceFunctorType2, diag_view_type2 >", "struct_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_vector_comparison_1_1_comparator.html", null ],
     [ "MueLu::MatrixConstruction::BlockRowComparison< local_matrix_type >::Comparator< local_matrix_type2 >", "struct_mue_lu_1_1_matrix_construction_1_1_block_row_comparison_1_1_comparator.html", null ],
     [ "MueLu::BrickAggregationFactory< Scalar, LocalOrdinal, GlobalOrdinal, Node >::compare", "class_mue_lu_1_1_brick_aggregation_factory_1_1compare.html", null ],
     [ "MueLu::CompPairs< Scalar, LocalOrdinal >", "struct_mue_lu_1_1_comp_pairs.html", null ],
@@ -43,10 +47,12 @@ var hierarchy =
     ] ],
     [ "MueLu::Misc::DebugFunctor< local_matrix_type >", "class_mue_lu_1_1_misc_1_1_debug_functor.html", null ],
     [ "MueLu::DefaultProblemStrings< T, U >", "class_mue_lu_1_1_default_problem_strings.html", null ],
+    [ "Dense", "class_dense.html", null ],
     [ "Teuchos::Describable", null, [
       [ "MueLu::Describable", "class_mue_lu_1_1_describable.html", [
         [ "MueLu::BaseClass", "class_mue_lu_1_1_base_class.html", [
           [ "MueLu::AggregationAlgorithmBase< DefaultLocalOrdinal, DefaultGlobalOrdinal, DefaultNode >", "class_mue_lu_1_1_aggregation_algorithm_base.html", null ],
+          [ "MueLu::Constraint< DefaultScalar, DefaultLocalOrdinal, DefaultGlobalOrdinal, DefaultNode >", "class_mue_lu_1_1_constraint.html", null ],
           [ "MueLu::FacadeClassBase< DefaultScalar, DefaultLocalOrdinal, DefaultGlobalOrdinal, DefaultNode >", "class_mue_lu_1_1_facade_class_base.html", null ],
           [ "MueLu::HierarchyFactory< DefaultScalar, DefaultLocalOrdinal, DefaultGlobalOrdinal, DefaultNode >", "class_mue_lu_1_1_hierarchy_factory.html", null ],
           [ "MueLu::IndexManager< DefaultLocalOrdinal, DefaultGlobalOrdinal, DefaultNode >", "class_mue_lu_1_1_index_manager.html", null ],
@@ -54,7 +60,6 @@ var hierarchy =
           [ "MueLu::SmootherBase< SmootherPrototype<>::scalar_type, typename SmootherPrototype< SmootherPrototype<>::scalar_type >::local_ordinal_type, typename SmootherPrototype< SmootherPrototype<>::scalar_type, typename SmootherPrototype< SmootherPrototype<>::scalar_type >::local_ordinal_type >::global_ordinal_type, typename SmootherPrototype< SmootherPrototype<>::scalar_type, typename SmootherPrototype< SmootherPrototype<>::scalar_type >::local_ordinal_type, typename SmootherPrototype< SmootherPrototype<>::scalar_type, typename SmootherPrototype< SmootherPrototype<>::scalar_type >::local_ordinal_type >::global_ordinal_type >::node_type >", "class_mue_lu_1_1_smoother_base.html", null ],
           [ "MueLu::SmootherBase< SmootherBase<>::scalar_type, typename SmootherBase< SmootherBase<>::scalar_type >::local_ordinal_type, typename SmootherBase< SmootherBase<>::scalar_type, typename SmootherBase< SmootherBase<>::scalar_type >::local_ordinal_type >::global_ordinal_type, typename SmootherBase< SmootherBase<>::scalar_type, typename SmootherBase< SmootherBase<>::scalar_type >::local_ordinal_type, typename SmootherBase< SmootherBase<>::scalar_type, typename SmootherBase< SmootherBase<>::scalar_type >::local_ordinal_type >::global_ordinal_type >::node_type >", "class_mue_lu_1_1_smoother_base.html", null ],
           [ "MueLu::SmootherBase< double, int, GlobalOrdinal, Node >", "class_mue_lu_1_1_smoother_base.html", null ],
-          [ "MueLu::SolverBase< DefaultScalar, DefaultLocalOrdinal, DefaultGlobalOrdinal, DefaultNode >", "class_mue_lu_1_1_solver_base.html", null ],
           [ "MueLu::AMGXOperator< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_a_m_g_x_operator.html", null ],
           [ "MueLu::Aggregates< LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_aggregates.html", null ],
           [ "MueLu::AggregationAlgorithmBase< LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_aggregation_algorithm_base.html", [
@@ -69,7 +74,9 @@ var hierarchy =
           ] ],
           [ "MueLu::AlgebraicPermutationStrategy< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_algebraic_permutation_strategy.html", null ],
           [ "MueLu::AmalgamationInfo< LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_amalgamation_info.html", null ],
-          [ "MueLu::Constraint< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_constraint.html", null ],
+          [ "MueLu::Constraint< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_constraint.html", [
+            [ "MueLu::DenseConstraint< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_dense_constraint.html", null ]
+          ] ],
           [ "MueLu::FacadeClassBase< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_facade_class_base.html", [
             [ "MueLu::FacadeBGS2x2< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_facade_b_g_s2x2.html", null ],
             [ "MueLu::FacadeSimple< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_facade_simple.html", null ]
@@ -251,11 +258,6 @@ var hierarchy =
             [ "MueLu::SmootherPrototype< double, int, GlobalOrdinal, Node >", "class_mue_lu_1_1_smoother_prototype.html", null ],
             [ "MueLu::SmootherPrototype< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_smoother_prototype.html", null ]
           ] ],
-          [ "MueLu::SolverBase< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_solver_base.html", [
-            [ "MueLu::CGSolver< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_c_g_solver.html", null ],
-            [ "MueLu::GMRESSolver< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_g_m_r_e_s_solver.html", null ],
-            [ "MueLu::SteepestDescentSolver< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_steepest_descent_solver.html", null ]
-          ] ],
           [ "MueLu::SubMonitor", "class_mue_lu_1_1_sub_monitor.html", [
             [ "MueLu::SubFactoryMonitor", "class_mue_lu_1_1_sub_factory_monitor.html", null ]
           ] ],
@@ -333,6 +335,8 @@ var hierarchy =
     [ "MergedBlockedMatrix", "class_merged_blocked_matrix.html", null ],
     [ "MergedSmoother", "class_merged_smoother.html", null ],
     [ "MueLu::MatrixConstruction::MergeFillFunctor< local_matrix_type >", "class_mue_lu_1_1_matrix_construction_1_1_merge_fill_functor.html", null ],
+    [ "MueLu::MinSpmMV< LocalGraph, LocalVector >", "class_mue_lu_1_1_min_spm_m_v.html", null ],
+    [ "MueLu::MinSpmMVT< LocalGraph, LocalVector >", "class_mue_lu_1_1_min_spm_m_v_t.html", null ],
     [ "MueLu::ML2MueLuParameterTranslator", "class_mue_lu_1_1_m_l2_mue_lu_parameter_translator.html", null ],
     [ "MueLu::MuemexArg", "class_mue_lu_1_1_muemex_arg.html", [
       [ "MueLu::MuemexData< T >", "class_mue_lu_1_1_muemex_data.html", null ]
@@ -357,9 +361,13 @@ var hierarchy =
       [ "MueLu::TpetraOperator< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_tpetra_operator.html", null ]
     ] ],
     [ "Xpetra::Operator", null, [
+      [ "MueLu::Constraint< DefaultScalar, DefaultLocalOrdinal, DefaultGlobalOrdinal, DefaultNode >", "class_mue_lu_1_1_constraint.html", null ],
+      [ "MueLu::Constraint< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_constraint.html", null ],
+      [ "MueLu::FlatOperator< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_flat_operator.html", null ],
       [ "MueLu::MatrixFreeTentativeP< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_matrix_free_tentative_p.html", null ],
       [ "MueLu::Maxwell1< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_maxwell1.html", null ],
       [ "MueLu::MultiPhys< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_multi_phys.html", null ],
+      [ "MueLu::ProductOperator< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_product_operator.html", null ],
       [ "MueLu::RefMaxwell< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_ref_maxwell.html", null ],
       [ "MueLu::XpetraOperator< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_xpetra_operator.html", null ]
     ] ],
@@ -400,6 +408,7 @@ var hierarchy =
     [ "MueLu::DistanceLaplacian::ScalarMaterialDistanceFunctor< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_distance_laplacian_1_1_scalar_material_distance_functor.html", null ],
     [ "MueLu::CutDrop::ScaledComparison< Scalar, LocalOrdinal, GlobalOrdinal, Node, measure >", "class_mue_lu_1_1_cut_drop_1_1_scaled_comparison.html", null ],
     [ "MueLu::CutDrop::ScaledDistanceLaplacianComparison< Scalar, LocalOrdinal, GlobalOrdinal, Node, DistanceFunctorType, measure >", "class_mue_lu_1_1_cut_drop_1_1_scaled_distance_laplacian_comparison.html", null ],
+    [ "MueLu::CutDrop::ScaledDistanceLaplacianVectorComparison< Scalar, LocalOrdinal, GlobalOrdinal, Node, DistanceFunctorType, measure >", "class_mue_lu_1_1_cut_drop_1_1_scaled_distance_laplacian_vector_comparison.html", null ],
     [ "MueLu::SetFactoryManager", "class_mue_lu_1_1_set_factory_manager.html", null ],
     [ "MueLu::Smoother< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_smoother.html", null ],
     [ "SmootherPrototypex", null, [
@@ -410,11 +419,15 @@ var hierarchy =
       [ "Belos::StatusTestGenResSubNorm< Scalar, Xpetra::MultiVector< Scalar, LocalOrdinal, GlobalOrdinal, Node >, Belos::OperatorT< Xpetra::MultiVector< Scalar, LocalOrdinal, GlobalOrdinal, Node > > >", "class_belos_1_1_status_test_gen_res_sub_norm_3_01_scalar_00_01_xpetra_1_1_multi_vector_3_01_scalb5dcf6a9ef93bfb0db805b34e83d96ba.html", null ]
     ] ],
     [ "MueLu::Misc::SymmetrizeFunctor< local_matrix_type >", "class_mue_lu_1_1_misc_1_1_symmetrize_functor.html", null ],
+    [ "MueLu::BlockInverseFunctor< Scalar, LocalOrdinal, GlobalOrdinal, Node >::TagApply", "class_mue_lu_1_1_block_inverse_functor_1_1_tag_apply.html", null ],
+    [ "MueLu::BlockInverseFunctor< Scalar, LocalOrdinal, GlobalOrdinal, Node >::TagCountSingularBlocks", "class_mue_lu_1_1_block_inverse_functor_1_1_tag_count_singular_blocks.html", null ],
+    [ "MueLu::BlockInverseFunctor< Scalar, LocalOrdinal, GlobalOrdinal, Node >::TagFindSingularBlocks", "class_mue_lu_1_1_block_inverse_functor_1_1_tag_find_singular_blocks.html", null ],
     [ "MueLu::DistanceLaplacian::TensorInversion< local_ordinal_type, material_vector_type, material_matrix_type >", "class_mue_lu_1_1_distance_laplacian_1_1_tensor_inversion.html", null ],
     [ "MueLu::DistanceLaplacian::TensorMaterialDistanceFunctor< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_distance_laplacian_1_1_tensor_material_distance_functor.html", null ],
     [ "MueLu::Triplet< T, W >", "struct_mue_lu_1_1_triplet.html", null ],
     [ "MueLu::CutDrop::UnscaledComparison< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_cut_drop_1_1_unscaled_comparison.html", null ],
     [ "MueLu::CutDrop::UnscaledDistanceLaplacianComparison< Scalar, LocalOrdinal, GlobalOrdinal, Node, DistanceFunctorType >", "class_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison.html", null ],
+    [ "MueLu::CutDrop::UnscaledDistanceLaplacianVectorComparison< Scalar, LocalOrdinal, GlobalOrdinal, Node, DistanceFunctorType >", "class_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_vector_comparison.html", null ],
     [ "MueLu::DistanceLaplacian::UnweightedDistanceFunctor< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_distance_laplacian_1_1_unweighted_distance_functor.html", null ],
     [ "MueLu::UtilitiesBase< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_utilities_base.html", [
       [ "MueLu::Utilities< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_utilities.html", null ]
@@ -435,6 +448,7 @@ var hierarchy =
     [ "Teuchos::VerboseObject", null, [
       [ "MueLu::VerboseObject", "class_mue_lu_1_1_verbose_object.html", [
         [ "MueLu::BaseClass", "class_mue_lu_1_1_base_class.html", null ],
+        [ "MueLu::FlatOperator< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_flat_operator.html", null ],
         [ "MueLu::Maxwell1< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_maxwell1.html", null ],
         [ "MueLu::Maxwell_Utils< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_maxwell___utils.html", null ],
         [ "MueLu::MultiPhys< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_multi_phys.html", null ],

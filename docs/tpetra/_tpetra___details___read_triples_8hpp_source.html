@@ -727,7 +727,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00894" name="l00894"></a><span class="lineno">  894</span>  <span class="comment">// constexpr int sizeTag = 42 + (ArithTraits&lt;SC&gt;::is_complex ? 100 : 0);</span></div>
 <div class="line"><a id="l00896" name="l00896"></a><span class="lineno">  896</span>  <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_class" href="class_tpetra_1_1_crs_matrix_struct.html">sizeTag</a> = 42;</div>
 <div class="line"><a id="l00897" name="l00897"></a><span class="lineno">  897</span>  <span class="comment">// constexpr int msgTag = 43;</span></div>
-<div class="line"><a id="l00898" name="l00898"></a><span class="lineno">  898</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_class" href="class_tpetra_1_1_crs_matrix_struct.html">myRank</a>   = comm.getRank();</div>
+<div class="line"><a id="l00898" name="l00898"></a><span class="lineno">  898</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> myRank   = comm.getRank();</div>
 <div class="line"><a id="l00899" name="l00899"></a><span class="lineno">  899</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_class" href="class_tpetra_1_1_crs_matrix_struct.html">numProcs</a> = comm.getSize();</div>
 <div class="line"><a id="l00900" name="l00900"></a><span class="lineno">  900</span>  <span class="keywordtype">int</span> <a class="code hl_class" href="class_tpetra_1_1_crs_matrix_struct.html">errCode</a>        = 0;</div>
 <div class="line"><a id="l00901" name="l00901"></a><span class="lineno">  901</span> </div>
@@ -744,7 +744,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00912" name="l00912"></a><span class="lineno">  912</span>  <a class="code hl_class" href="class_tpetra_1_1_crs_matrix_struct.html">vals</a>.reserve(<a class="code hl_class" href="class_tpetra_1_1_crs_matrix_struct.html">maxNumEntPerMsg</a>);</div>
 <div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span> </div>
 <div class="line"><a id="l00914" name="l00914"></a><span class="lineno">  914</span>  <a class="code hl_class" href="class_tpetra_1_1_crs_matrix_struct.html">totalNumEntRead</a> = 0;</div>
-<div class="line"><a id="l00915" name="l00915"></a><span class="lineno">  915</span>  <span class="keywordflow">if</span> (<a class="code hl_class" href="class_tpetra_1_1_crs_matrix_struct.html">myRank</a> == <a class="code hl_class" href="class_tpetra_1_1_crs_matrix_struct.html">srcRank</a>) {</div>
+<div class="line"><a id="l00915" name="l00915"></a><span class="lineno">  915</span>  <span class="keywordflow">if</span> (myRank == <a class="code hl_class" href="class_tpetra_1_1_crs_matrix_struct.html">srcRank</a>) {</div>
 <div class="line"><a id="l00916" name="l00916"></a><span class="lineno">  916</span>    <span class="comment">// Loop around through all the processes, including this one, over</span></div>
 <div class="line"><a id="l00917" name="l00917"></a><span class="lineno">  917</span>    <span class="comment">// and over until we reach the end of the file, or an error occurs.</span></div>
 <div class="line"><a id="l00918" name="l00918"></a><span class="lineno">  918</span>    <span class="keywordtype">int</span> <a class="code hl_class" href="class_tpetra_1_1_crs_matrix_struct.html">destRank</a>                 = 0;</div>

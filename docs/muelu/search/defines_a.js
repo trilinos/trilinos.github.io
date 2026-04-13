@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['vertical_0',['vertical',['../_mue_lu___line_detection_factory__decl_8hpp.html#a91b21b229126b2c997c247835568107b',1,'VERTICAL:&#160;MueLu_LineDetectionFactory_decl.hpp'],['../_mue_lu___semi_coarsen_p_factory__decl_8hpp.html#a91b21b229126b2c997c247835568107b',1,'VERTICAL:&#160;MueLu_SemiCoarsenPFactory_decl.hpp']]]
+  ['xpetra_5fcreatexpetrapreconditioner_5fshort_0',['XPETRA_CREATEXPETRAPRECONDITIONER_SHORT',['../_mue_lu___create_xpetra_preconditioner_8hpp.html#a513dff8db3589114efc3a54be7ddbe23',1,'MueLu_CreateXpetraPreconditioner.hpp']]],
+  ['xpetra_5fcrsmatrixutils_5fshort_1',['XPETRA_CRSMATRIXUTILS_SHORT',['../_mue_lu___crs_matrix_utils_8hpp.html#adcd39fff23b916562c08d762db4b536f',1,'MueLu_CrsMatrixUtils.hpp']]]
 ];

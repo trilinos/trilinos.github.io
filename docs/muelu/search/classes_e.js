@@ -27,6 +27,7 @@ var searchData=
   ['preservedirichletaggregationalgorithm_24',['PreserveDirichletAggregationAlgorithm',['../class_mue_lu_1_1_preserve_dirichlet_aggregation_algorithm.html',1,'MueLu']]],
   ['prfactory_25',['PRFactory',['../class_mue_lu_1_1_p_r_factory.html',1,'MueLu']]],
   ['printmonitor_26',['PrintMonitor',['../class_mue_lu_1_1_print_monitor.html',1,'MueLu']]],
-  ['projection_27',['Projection',['../class_mue_lu_1_1_projection.html',1,'MueLu']]],
-  ['projectorsmoother_28',['ProjectorSmoother',['../class_mue_lu_1_1_projector_smoother.html',1,'MueLu']]]
+  ['productoperator_27',['ProductOperator',['../class_mue_lu_1_1_product_operator.html',1,'MueLu']]],
+  ['projection_28',['Projection',['../class_mue_lu_1_1_projection.html',1,'MueLu']]],
+  ['projectorsmoother_29',['ProjectorSmoother',['../class_mue_lu_1_1_projector_smoother.html',1,'MueLu']]]
 ];

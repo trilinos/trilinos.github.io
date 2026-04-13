@@ -84,6 +84,7 @@ $(function() {
 <p>Declaration of the <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Tpetra::Map</a> class and related nonmember constructors.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;Tpetra_ConfigDefs.hpp&quot;</code><br />
+<code>#include &quot;<a class="el" href="_tpetra___details__iallreduce_8hpp_source.html">Tpetra_Details_iallreduce.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_tpetra___map__fwd_8hpp_source.html">Tpetra_Map_fwd.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_tpetra___directory__fwd_8hpp_source.html">Tpetra_Directory_fwd.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_tpetra___tie_break__fwd_8hpp_source.html">Tpetra_TieBreak_fwd.hpp</a>&quot;</code><br />
@@ -151,6 +152,10 @@ Functions</h2></td></tr>
 <tr class="memitem:af39d52d1f4d871014f221f328c43dfb7"><td class="memTemplItemLeft" align="right" valign="top">Teuchos::RCP&lt; <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> <a class="el" href="class_tpetra_1_1_map.html">Map</a>&lt; <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">LocalOrdinal</a>, <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">GlobalOrdinal</a>, Node &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_tpetra.html#af39d52d1f4d871014f221f328c43dfb7">Tpetra::createOneToOne</a> (<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> Teuchos::RCP&lt; <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> <a class="el" href="class_tpetra_1_1_map.html">Map</a>&lt; <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">LocalOrdinal</a>, <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">GlobalOrdinal</a>, Node &gt; &gt; &amp;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">M</a>, <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> <a class="el" href="class_tpetra_1_1_details_1_1_tie_break.html">::Tpetra::Details::TieBreak</a>&lt; <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">LocalOrdinal</a>, <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">GlobalOrdinal</a> &gt; &amp;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">tie_break</a>)</td></tr>
 <tr class="memdesc:af39d52d1f4d871014f221f328c43dfb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a one-to-one version of the given <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> where each GID lives on only one process. The given TieBreak object specifies the rule to break ties.  <br /></td></tr>
 <tr class="separator:af39d52d1f4d871014f221f328c43dfb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ae63dc108d289574b3bc5c180ad75e7" id="r_a6ae63dc108d289574b3bc5c180ad75e7"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</a> LO , <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</a> GO , <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</a> <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">NT</a> &gt; </td></tr>
+<tr class="memitem:a6ae63dc108d289574b3bc5c180ad75e7"><td class="memTemplItemLeft" align="right" valign="top">Teuchos::RCP&lt; <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> <a class="el" href="class_tpetra_1_1_map.html">Tpetra::Map</a>&lt; LO, GO, <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">NT</a> &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_tpetra.html#a6ae63dc108d289574b3bc5c180ad75e7">Tpetra::createOneToOneAndMakeOverlappingMapFitted</a> (Teuchos::RCP&lt; <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> <a class="el" href="class_tpetra_1_1_map.html">Tpetra::Map</a>&lt; LO, GO, <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">NT</a> &gt; &gt; &amp;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">M</a>)</td></tr>
+<tr class="memdesc:a6ae63dc108d289574b3bc5c180ad75e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a one-to-one version of the given <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> where each GID lives on only one process. It also replaces the input argument with a map that is locally fitted to the one-to-one map.  <br /></td></tr>
+<tr class="separator:a6ae63dc108d289574b3bc5c180ad75e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa399034f366389ef8abca502aa8bac2c" id="r_aa399034f366389ef8abca502aa8bac2c"><td class="memTemplParams" colspan="2">template&lt;class LocalOrdinal , class GlobalOrdinal , class Node &gt; </td></tr>
 <tr class="memitem:aa399034f366389ef8abca502aa8bac2c"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_tpetra___map__decl_8hpp.html#aa399034f366389ef8abca502aa8bac2c">operator==</a> (const <a class="el" href="class_tpetra_1_1_map.html">Tpetra::Map</a>&lt; LocalOrdinal, GlobalOrdinal, Node &gt; &amp;map1, const <a class="el" href="class_tpetra_1_1_map.html">Tpetra::Map</a>&lt; LocalOrdinal, GlobalOrdinal, Node &gt; &amp;map2)</td></tr>
 <tr class="memdesc:aa399034f366389ef8abca502aa8bac2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if map1 is the same as (in the sense of isSameAs()) map2, else false.  <br /></td></tr>
@@ -195,7 +200,7 @@ template&lt;class LocalOrdinal , class GlobalOrdinal , class Node &gt; </div>
 
 <p>True if map1 is the same as (in the sense of isSameAs()) map2, else false. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___map__decl_8hpp_source.html#l01439">1439</a> of file <a class="el" href="_tpetra___map__decl_8hpp_source.html">Tpetra_Map_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___map__decl_8hpp_source.html#l01489">1489</a> of file <a class="el" href="_tpetra___map__decl_8hpp_source.html">Tpetra_Map_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -229,7 +234,7 @@ template&lt;class LocalOrdinal , class GlobalOrdinal , class Node &gt; </div>
 
 <p>True if map1 is not the same as (in the sense of isSameAs()) map2, else false. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___map__decl_8hpp_source.html#l01445">1445</a> of file <a class="el" href="_tpetra___map__decl_8hpp_source.html">Tpetra_Map_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___map__decl_8hpp_source.html#l01495">1495</a> of file <a class="el" href="_tpetra___map__decl_8hpp_source.html">Tpetra_Map_decl.hpp</a>.</p>
 
 </div>
 </div>

@@ -84,7 +84,7 @@ var NAVTREEINDEX =
 "class_xpetra_1_1_crs_graph_factory.html",
 "class_xpetra_1_1_crs_matrix_wrap.html#a3f595397cd3744f443f47f3a9d7bb6c9",
 "class_xpetra_1_1_i_o.html#a07da65132f3475dab66df300eaf8ad09",
-"class_xpetra_1_1_map_factory.html#a723fef5b0a75618f7c38828789133c64",
+"class_xpetra_1_1_map_factory.html#a904dee3bfdfd0cc85b4ebf68fa1000cf",
 "class_xpetra_1_1_matrix_utils.html",
 "class_xpetra_1_1_reordered_blocked_crs_matrix.html#abf08e0cddb3bfb587edda0be894c7c6d",
 "class_xpetra_1_1_strided_map.html#ad5b812c22d3b7e246e96c81ffa228e29",

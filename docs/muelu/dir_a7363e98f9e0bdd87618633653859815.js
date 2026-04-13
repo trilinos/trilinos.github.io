@@ -9,6 +9,8 @@ var dir_a7363e98f9e0bdd87618633653859815 =
     [ "MueLu_AlgebraicPermutationStrategy_def.hpp", "_mue_lu___algebraic_permutation_strategy__def_8hpp.html", null ],
     [ "MueLu_AvatarInterface.cpp", "_mue_lu___avatar_interface_8cpp.html", null ],
     [ "MueLu_AvatarInterface.hpp", "_mue_lu___avatar_interface_8hpp.html", null ],
+    [ "MueLu_Behavior.cpp", "_mue_lu___behavior_8cpp.html", "_mue_lu___behavior_8cpp" ],
+    [ "MueLu_Behavior.hpp", "_mue_lu___behavior_8hpp.html", "_mue_lu___behavior_8hpp" ],
     [ "MueLu_BoostGraphviz.hpp", "_mue_lu___boost_graphviz_8hpp.html", null ],
     [ "MueLu_CoarseningVisualizationFactory_decl.hpp", "_mue_lu___coarsening_visualization_factory__decl_8hpp.html", "_mue_lu___coarsening_visualization_factory__decl_8hpp" ],
     [ "MueLu_CoarseningVisualizationFactory_def.hpp", "_mue_lu___coarsening_visualization_factory__def_8hpp.html", null ],

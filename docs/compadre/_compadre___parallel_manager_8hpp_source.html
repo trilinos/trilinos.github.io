@@ -28,7 +28,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Compadre<span id="projectnumber">&#160;1.7.0</span>
+   <div id="projectname">Compadre<span id="projectnumber">&#160;1.7.2</span>
    </div>
   </td>
  </tr>
@@ -172,7 +172,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="class_compadre_1_1_parallel_manager.html#a12d04ed38e0f1bf9eed7e729ef78b916">   80</a></span>    <a class="code hl_function" href="class_compadre_1_1_parallel_manager.html#a12d04ed38e0f1bf9eed7e729ef78b916">ParallelManager</a>() : <a class="code hl_variable" href="class_compadre_1_1_parallel_manager.html#a9101ea13d0f04df55e6424dd4b0bf3dc">_team_scratch_size_a</a>(0), <a class="code hl_variable" href="class_compadre_1_1_parallel_manager.html#aff8f71993a81c30f0bf7ec3daa10954d">_thread_scratch_size_a</a>(0), </div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            <a class="code hl_variable" href="class_compadre_1_1_parallel_manager.html#adea2e1084f7a98121a84e09e5a540599">_team_scratch_size_b</a>(0), <a class="code hl_variable" href="class_compadre_1_1_parallel_manager.html#ae0633eb13bd6d8cf0dabf02750b04085">_thread_scratch_size_b</a>(0) {</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#ifdef COMPADRE_USE_CUDA</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#if defined(COMPADRE_USE_CUDA) || defined(COMPADRE_USE_HIP)</span></div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <a class="code hl_variable" href="class_compadre_1_1_parallel_manager.html#a099701f4cc83a49f206348cca02ba3ec">_scratch_team_level_a</a> = 0;</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <a class="code hl_variable" href="class_compadre_1_1_parallel_manager.html#a319c9d5a14bda0591887fb5afb84c776">_scratch_thread_level_a</a> = 0;</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <a class="code hl_variable" href="class_compadre_1_1_parallel_manager.html#a5c7d0f8f2e56bb42fa1201dc2d7ee3bd">_scratch_team_level_b</a> = 1;</div>
@@ -181,10 +181,10 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <a class="code hl_variable" href="class_compadre_1_1_parallel_manager.html#a4d9cf61f4c45a657f8addee8ffdc025f">_environment_threads</a> = -1;</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <a class="code hl_variable" href="class_compadre_1_1_parallel_manager.html#a889821748f21c18df6719e286d07fba8">_environment_vector_lanes</a> = -1;</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <a class="code hl_variable" href="class_compadre_1_1_parallel_manager.html#a099701f4cc83a49f206348cca02ba3ec">_scratch_team_level_a</a> = 0;</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <a class="code hl_variable" href="class_compadre_1_1_parallel_manager.html#a319c9d5a14bda0591887fb5afb84c776">_scratch_thread_level_a</a> = 0;</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <a class="code hl_variable" href="class_compadre_1_1_parallel_manager.html#a5c7d0f8f2e56bb42fa1201dc2d7ee3bd">_scratch_team_level_b</a> = 0;</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <a class="code hl_variable" href="class_compadre_1_1_parallel_manager.html#ab6b0cafe5ffd5295644db099d23c0ab4">_scratch_thread_level_b</a> = 0;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <a class="code hl_variable" href="class_compadre_1_1_parallel_manager.html#a099701f4cc83a49f206348cca02ba3ec">_scratch_team_level_a</a> = 1;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <a class="code hl_variable" href="class_compadre_1_1_parallel_manager.html#a319c9d5a14bda0591887fb5afb84c776">_scratch_thread_level_a</a> = 1;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <a class="code hl_variable" href="class_compadre_1_1_parallel_manager.html#a5c7d0f8f2e56bb42fa1201dc2d7ee3bd">_scratch_team_level_b</a> = 1;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <a class="code hl_variable" href="class_compadre_1_1_parallel_manager.html#ab6b0cafe5ffd5295644db099d23c0ab4">_scratch_thread_level_b</a> = 1;</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <a class="code hl_variable" href="class_compadre_1_1_parallel_manager.html#a4d9cf61f4c45a657f8addee8ffdc025f">_environment_threads</a> = -1;</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <a class="code hl_variable" href="class_compadre_1_1_parallel_manager.html#a889821748f21c18df6719e286d07fba8">_environment_vector_lanes</a> = -1;</div>
