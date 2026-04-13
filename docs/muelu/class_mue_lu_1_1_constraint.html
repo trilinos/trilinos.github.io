@@ -98,8 +98,9 @@ $(document).ready(function(){initNavTree('class_mue_lu_1_1_constraint.html','');
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="class_mue_lu_1_1_constraint-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">MueLu::Constraint&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt; Class Template Reference</div></div>
+  <div class="headertitle"><div class="title">MueLu::Constraint&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt; Class Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -113,9 +114,10 @@ Inheritance diagram for MueLu::Constraint&lt; Scalar, LocalOrdinal, GlobalOrdina
  <div class="center">
   <img src="class_mue_lu_1_1_constraint.png" usemap="#MueLu::Constraint_3C_20Scalar_2C_20LocalOrdinal_2C_20GlobalOrdinal_2C_20Node_20_3E_map" alt=""/>
   <map id="MueLu::Constraint_3C_20Scalar_2C_20LocalOrdinal_2C_20GlobalOrdinal_2C_20Node_20_3E_map" name="MueLu::Constraint_3C_20Scalar_2C_20LocalOrdinal_2C_20GlobalOrdinal_2C_20Node_20_3E_map">
-<area href="class_mue_lu_1_1_base_class.html" title="Base class for MueLu classes." alt="MueLu::BaseClass" shape="rect" coords="196,112,579,136"/>
-<area href="class_mue_lu_1_1_verbose_object.html" title="Verbose class for MueLu classes." alt="MueLu::VerboseObject" shape="rect" coords="0,56,383,80"/>
-<area href="class_mue_lu_1_1_describable.html" title="Base class for MueLu classes." alt="MueLu::Describable" shape="rect" coords="393,56,776,80"/>
+<area href="class_mue_lu_1_1_base_class.html" title="Base class for MueLu classes." alt="MueLu::BaseClass" shape="rect" coords="546,112,1082,136"/>
+<area href="class_mue_lu_1_1_verbose_object.html" title="Verbose class for MueLu classes." alt="MueLu::VerboseObject" shape="rect" coords="273,56,809,80"/>
+<area href="class_mue_lu_1_1_describable.html" title="Base class for MueLu classes." alt="MueLu::Describable" shape="rect" coords="819,56,1355,80"/>
+<area href="class_mue_lu_1_1_dense_constraint.html" alt="MueLu::DenseConstraint&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;" shape="rect" coords="273,224,809,248"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -124,34 +126,18 @@ Public Types</h2></td></tr>
 <tr class="memitem:a566c99a85780df3cd1bf8bc2cc9162d5" id="r_a566c99a85780df3cd1bf8bc2cc9162d5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#a566c99a85780df3cd1bf8bc2cc9162d5">MagnitudeType</a> = typename Teuchos::ScalarTraits&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a> &gt;::magnitudeType</td></tr>
 <tr class="separator:a566c99a85780df3cd1bf8bc2cc9162d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">Apply methods.</h2></td></tr>
-<tr class="memitem:aea1e6d7e64841c06fb25a5a706894139" id="r_aea1e6d7e64841c06fb25a5a706894139"><td class="memItemLeft" align="right" valign="top">RCP&lt; MultiVector &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#aea1e6d7e64841c06fb25a5a706894139">B_</a></td></tr>
-<tr class="separator:aea1e6d7e64841c06fb25a5a706894139"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1de66c943475c1f9840e021365d00998" id="r_a1de66c943475c1f9840e021365d00998"><td class="memItemLeft" align="right" valign="top">RCP&lt; MultiVector &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#a1de66c943475c1f9840e021365d00998">Bc_</a></td></tr>
-<tr class="separator:a1de66c943475c1f9840e021365d00998"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a585abdec4cf926c50d632a645666a847" id="r_a585abdec4cf926c50d632a645666a847"><td class="memItemLeft" align="right" valign="top">RCP&lt; MultiVector &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#a585abdec4cf926c50d632a645666a847">X_</a></td></tr>
-<tr class="memdesc:a585abdec4cf926c50d632a645666a847"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overlapped coarse nullspace.  <br /></td></tr>
-<tr class="separator:a585abdec4cf926c50d632a645666a847"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3025f864ed066142186871c93b9ee241" id="r_a3025f864ed066142186871c93b9ee241"><td class="memItemLeft" align="right" valign="top">RCP&lt; const CrsGraph &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#a3025f864ed066142186871c93b9ee241">Ppattern_</a></td></tr>
-<tr class="memdesc:a3025f864ed066142186871c93b9ee241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nonzero sparsity pattern.  <br /></td></tr>
-<tr class="separator:a3025f864ed066142186871c93b9ee241"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25112595f78cd9c967d1d34433513160" id="r_a25112595f78cd9c967d1d34433513160"><td class="memItemLeft" align="right" valign="top">ArrayRCP&lt; Teuchos::SerialDenseMatrix&lt; LO, SC &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#a25112595f78cd9c967d1d34433513160">XXtInv_</a></td></tr>
-<tr class="memdesc:a25112595f78cd9c967d1d34433513160"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array storing \((Q_i Q_i^H)^{-1}\).  <br /></td></tr>
-<tr class="separator:a25112595f78cd9c967d1d34433513160"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8a19ed29a3c6b97c487b08a0c388db5" id="r_ad8a19ed29a3c6b97c487b08a0c388db5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#ad8a19ed29a3c6b97c487b08a0c388db5">Apply</a> (const Matrix &amp;P, Matrix &amp;Projected) const</td></tr>
-<tr class="memdesc:ad8a19ed29a3c6b97c487b08a0c388db5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply constraint.  <br /></td></tr>
-<tr class="separator:ad8a19ed29a3c6b97c487b08a0c388db5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa151de4eecc9d9db9738d8394c6d63a0" id="r_aa151de4eecc9d9db9738d8394c6d63a0"><td class="memItemLeft" align="right" valign="top">RCP&lt; const CrsGraph &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#aa151de4eecc9d9db9738d8394c6d63a0">GetPattern</a> () const</td></tr>
-<tr class="separator:aa151de4eecc9d9db9738d8394c6d63a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">Setup methods.</h2></td></tr>
-<tr class="memitem:ab19ae584f973b88460c039a5778d52a4" id="r_ab19ae584f973b88460c039a5778d52a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#ab19ae584f973b88460c039a5778d52a4">Setup</a> (const RCP&lt; MultiVector &gt; &amp;B, const RCP&lt; MultiVector &gt; &amp;Bc, RCP&lt; const CrsGraph &gt; Ppattern)</td></tr>
-<tr class="separator:ab19ae584f973b88460c039a5778d52a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae054a600fdf1c5513f0504ea788dac10" id="r_ae054a600fdf1c5513f0504ea788dac10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_mue_lu_1_1_constraint.html#a566c99a85780df3cd1bf8bc2cc9162d5">MagnitudeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#ae054a600fdf1c5513f0504ea788dac10">ResidualNorm</a> (const RCP&lt; const Matrix &gt; P) const</td></tr>
-<tr class="separator:ae054a600fdf1c5513f0504ea788dac10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a96975abfadf4801860ddf0b2c42637e2" id="r_a96975abfadf4801860ddf0b2c42637e2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#a96975abfadf4801860ddf0b2c42637e2">Constraint</a> ()=default</td></tr>
+<tr class="separator:a96975abfadf4801860ddf0b2c42637e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8baf8c381ce2ee984180740dd337f1e3" id="r_a8baf8c381ce2ee984180740dd337f1e3"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_mue_lu_1_1_constraint.html#a566c99a85780df3cd1bf8bc2cc9162d5">MagnitudeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#a8baf8c381ce2ee984180740dd337f1e3">ResidualNorm</a> (const RCP&lt; const Matrix &gt; P) const =0</td></tr>
+<tr class="separator:a8baf8c381ce2ee984180740dd337f1e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22c7992015ad4b63a0a180b9f89532d4" id="r_a22c7992015ad4b63a0a180b9f89532d4"><td class="memItemLeft" align="right" valign="top">virtual const RCP&lt; const Map &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#a22c7992015ad4b63a0a180b9f89532d4">getDomainMap</a> () const</td></tr>
+<tr class="memdesc:a22c7992015ad4b63a0a180b9f89532d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Map associated with the domain of this operator, which must be compatible with X.getMap().  <br /></td></tr>
+<tr class="separator:a22c7992015ad4b63a0a180b9f89532d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed736833cfbc223d0728142498911b74" id="r_aed736833cfbc223d0728142498911b74"><td class="memItemLeft" align="right" valign="top">virtual const RCP&lt; const Map &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#aed736833cfbc223d0728142498911b74">getRangeMap</a> () const</td></tr>
+<tr class="memdesc:aed736833cfbc223d0728142498911b74"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Map associated with the range of this operator, which must be compatible with Y.getMap().  <br /></td></tr>
+<tr class="separator:aed736833cfbc223d0728142498911b74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_mue_lu_1_1_base_class"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_mue_lu_1_1_base_class')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_mue_lu_1_1_base_class.html">MueLu::BaseClass</a></td></tr>
 <tr class="memitem:a8b4300b78aff18f709d332226fb1048f inherit pub_methods_class_mue_lu_1_1_base_class" id="r_a8b4300b78aff18f709d332226fb1048f"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_base_class.html#a8b4300b78aff18f709d332226fb1048f">~BaseClass</a> ()</td></tr>
 <tr class="memdesc:a8b4300b78aff18f709d332226fb1048f inherit pub_methods_class_mue_lu_1_1_base_class"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
@@ -197,6 +183,74 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a05f382c7b3e76dc86db2e4b30bea5df8 inherit pub_methods_class_mue_lu_1_1_describable" id="r_a05f382c7b3e76dc86db2e4b30bea5df8"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_describable.html#a05f382c7b3e76dc86db2e4b30bea5df8">ShortClassName</a> () const</td></tr>
 <tr class="memdesc:a05f382c7b3e76dc86db2e4b30bea5df8 inherit pub_methods_class_mue_lu_1_1_describable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the class name of the object, without template parameters and without namespace.  <br /></td></tr>
 <tr class="separator:a05f382c7b3e76dc86db2e4b30bea5df8 inherit pub_methods_class_mue_lu_1_1_describable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">Apply methods.</h2></td></tr>
+<tr class="memitem:ae7e8b2d3d5b54419217881d566b62d46" id="r_ae7e8b2d3d5b54419217881d566b62d46"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#ae7e8b2d3d5b54419217881d566b62d46">MV</a> = Xpetra::MultiVector&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt;</td></tr>
+<tr class="separator:ae7e8b2d3d5b54419217881d566b62d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26d9638bc7820a1f25b75fa2a3fcabd9" id="r_a26d9638bc7820a1f25b75fa2a3fcabd9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#a26d9638bc7820a1f25b75fa2a3fcabd9">OP</a> = Belos::OperatorT&lt; <a class="el" href="class_mue_lu_1_1_constraint.html#ae7e8b2d3d5b54419217881d566b62d46">MV</a> &gt;</td></tr>
+<tr class="separator:a26d9638bc7820a1f25b75fa2a3fcabd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36cdb8e1f43d886aaaa98f4f7c0b5cd1" id="r_a36cdb8e1f43d886aaaa98f4f7c0b5cd1"><td class="memItemLeft" align="right" valign="top">RCP&lt; Matrix &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#a36cdb8e1f43d886aaaa98f4f7c0b5cd1">X_</a></td></tr>
+<tr class="memdesc:a36cdb8e1f43d886aaaa98f4f7c0b5cd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constraints matrix.  <br /></td></tr>
+<tr class="separator:a36cdb8e1f43d886aaaa98f4f7c0b5cd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3025f864ed066142186871c93b9ee241" id="r_a3025f864ed066142186871c93b9ee241"><td class="memItemLeft" align="right" valign="top">RCP&lt; const CrsGraph &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#a3025f864ed066142186871c93b9ee241">Ppattern_</a></td></tr>
+<tr class="memdesc:a3025f864ed066142186871c93b9ee241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nonzero sparsity pattern.  <br /></td></tr>
+<tr class="separator:a3025f864ed066142186871c93b9ee241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae875a7e7cfcc8577f7116e140cd32aee" id="r_ae875a7e7cfcc8577f7116e140cd32aee"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#ae875a7e7cfcc8577f7116e140cd32aee">solverType_</a></td></tr>
+<tr class="separator:ae875a7e7cfcc8577f7116e140cd32aee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62b46442f8314b434673f45aa8dfec4c" id="r_a62b46442f8314b434673f45aa8dfec4c"><td class="memItemLeft" align="right" valign="top">RCP&lt; Belos::LinearProblem&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>, <a class="el" href="class_mue_lu_1_1_constraint.html#ae7e8b2d3d5b54419217881d566b62d46">MV</a>, <a class="el" href="class_mue_lu_1_1_constraint.html#a26d9638bc7820a1f25b75fa2a3fcabd9">OP</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#a62b46442f8314b434673f45aa8dfec4c">problem_</a></td></tr>
+<tr class="separator:a62b46442f8314b434673f45aa8dfec4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bd59dd353ab89aac8597cb418bbb2a7" id="r_a2bd59dd353ab89aac8597cb418bbb2a7"><td class="memItemLeft" align="right" valign="top">RCP&lt; Belos::SolverManager&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>, <a class="el" href="class_mue_lu_1_1_constraint.html#ae7e8b2d3d5b54419217881d566b62d46">MV</a>, <a class="el" href="class_mue_lu_1_1_constraint.html#a26d9638bc7820a1f25b75fa2a3fcabd9">OP</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#a2bd59dd353ab89aac8597cb418bbb2a7">solver_</a></td></tr>
+<tr class="separator:a2bd59dd353ab89aac8597cb418bbb2a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b966b1f4d2aae316932ba96a607f509" id="r_a8b966b1f4d2aae316932ba96a607f509"><td class="memItemLeft" align="right" valign="top">RCP&lt; Matrix &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#a8b966b1f4d2aae316932ba96a607f509">invXXt_</a></td></tr>
+<tr class="memdesc:a8b966b1f4d2aae316932ba96a607f509"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inverse of X*X^T.  <br /></td></tr>
+<tr class="separator:a8b966b1f4d2aae316932ba96a607f509"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae921dca256613f9def3da6ec3be04a19" id="r_ae921dca256613f9def3da6ec3be04a19"><td class="memItemLeft" align="right" valign="top">RCP&lt; MultiVector &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#ae921dca256613f9def3da6ec3be04a19">temp1_</a></td></tr>
+<tr class="separator:ae921dca256613f9def3da6ec3be04a19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacef5bf8ad03d49141a6d3d89e30d51a" id="r_aacef5bf8ad03d49141a6d3d89e30d51a"><td class="memItemLeft" align="right" valign="top">RCP&lt; MultiVector &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#aacef5bf8ad03d49141a6d3d89e30d51a">temp2_</a></td></tr>
+<tr class="separator:aacef5bf8ad03d49141a6d3d89e30d51a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae032e120601271a770b0232e31e3feea" id="r_ae032e120601271a770b0232e31e3feea"><td class="memItemLeft" align="right" valign="top">RCP&lt; MultiVector &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#ae032e120601271a770b0232e31e3feea">temp3_</a></td></tr>
+<tr class="separator:ae032e120601271a770b0232e31e3feea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35e0b541e106363bcab7d3afcfadc8de" id="r_a35e0b541e106363bcab7d3afcfadc8de"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#a35e0b541e106363bcab7d3afcfadc8de">apply</a> (const MultiVector &amp;P, MultiVector &amp;Projected, Teuchos::ETransp mode=Teuchos::NO_TRANS, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a> alpha=Teuchos::ScalarTraits&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a> &gt;::one(), <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a> beta=Teuchos::ScalarTraits&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a> &gt;::zero()) const</td></tr>
+<tr class="memdesc:a35e0b541e106363bcab7d3afcfadc8de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply constraint.  <br /></td></tr>
+<tr class="separator:a35e0b541e106363bcab7d3afcfadc8de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ad126b6ff4bfaacc2d3d981529dd54a" id="r_a8ad126b6ff4bfaacc2d3d981529dd54a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#a8ad126b6ff4bfaacc2d3d981529dd54a">residual</a> (const MultiVector &amp;X, const MultiVector &amp;B, MultiVector &amp;R) const</td></tr>
+<tr class="memdesc:a8ad126b6ff4bfaacc2d3d981529dd54a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute a residual R = B - (*this) * X.  <br /></td></tr>
+<tr class="separator:a8ad126b6ff4bfaacc2d3d981529dd54a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad36991224d51004cf2184ce02e0b1101" id="r_ad36991224d51004cf2184ce02e0b1101"><td class="memItemLeft" align="right" valign="top">RCP&lt; const CrsGraph &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#ad36991224d51004cf2184ce02e0b1101">GetPattern</a> () const</td></tr>
+<tr class="separator:ad36991224d51004cf2184ce02e0b1101"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae992b31a91e40802950250b4ab5d61cd" id="r_ae992b31a91e40802950250b4ab5d61cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#ae992b31a91e40802950250b4ab5d61cd">SetPattern</a> (RCP&lt; const CrsGraph &gt; &amp;Ppattern)</td></tr>
+<tr class="separator:ae992b31a91e40802950250b4ab5d61cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb2048c32964cdcee3c99481609a6e4b" id="r_abb2048c32964cdcee3c99481609a6e4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#abb2048c32964cdcee3c99481609a6e4b">SetConstraintsMatrix</a> (RCP&lt; Matrix &gt; &amp;X)</td></tr>
+<tr class="separator:abb2048c32964cdcee3c99481609a6e4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a174bbee10065186a627555e5b660f95c" id="r_a174bbee10065186a627555e5b660f95c"><td class="memItemLeft" align="right" valign="top">RCP&lt; Matrix &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#a174bbee10065186a627555e5b660f95c">GetConstraintMatrix</a> ()</td></tr>
+<tr class="separator:a174bbee10065186a627555e5b660f95c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c68bc98187a60071e56d920a5c2e278" id="r_a4c68bc98187a60071e56d920a5c2e278"><td class="memItemLeft" align="right" valign="top">virtual CrsGraph::local_graph_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#a4c68bc98187a60071e56d920a5c2e278">FindBlocks</a> (RCP&lt; const CrsGraph &gt; &amp;XXt)</td></tr>
+<tr class="separator:a4c68bc98187a60071e56d920a5c2e278"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeefaef1c2220ae93924bd1b0337f7810" id="r_aeefaef1c2220ae93924bd1b0337f7810"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#aeefaef1c2220ae93924bd1b0337f7810">AssignMatrixEntriesToVector</a> (const Matrix &amp;P, const RCP&lt; const CrsGraph &gt; &amp;pattern, MultiVector &amp;vecP) const</td></tr>
+<tr class="separator:aeefaef1c2220ae93924bd1b0337f7810"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3ab99b9ccc829c8fdd3ecf0965c5802" id="r_ac3ab99b9ccc829c8fdd3ecf0965c5802"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#ac3ab99b9ccc829c8fdd3ecf0965c5802">AssignMatrixEntriesToVector</a> (const Matrix &amp;P, MultiVector &amp;vecP) const</td></tr>
+<tr class="separator:ac3ab99b9ccc829c8fdd3ecf0965c5802"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6c4a4c4de5dbbcb766daeedf353b4e4" id="r_ac6c4a4c4de5dbbcb766daeedf353b4e4"><td class="memItemLeft" align="right" valign="top">RCP&lt; Matrix &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#ac6c4a4c4de5dbbcb766daeedf353b4e4">GetMatrixWithEntriesFromVector</a> (MultiVector &amp;vecP) const</td></tr>
+<tr class="separator:ac6c4a4c4de5dbbcb766daeedf353b4e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba09d748096013f923e45d7a79cacd28" id="r_aba09d748096013f923e45d7a79cacd28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#aba09d748096013f923e45d7a79cacd28">LeastSquaresSolve</a> (const MultiVector &amp;B, MultiVector &amp;C) const</td></tr>
+<tr class="separator:aba09d748096013f923e45d7a79cacd28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50a80f9f8ca95b47e116cab4d2173f4a" id="r_a50a80f9f8ca95b47e116cab4d2173f4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#a50a80f9f8ca95b47e116cab4d2173f4a">PrepareLeastSquaresSolve</a> (const std::string &amp;solverType, bool detect_singular_blocks=false)</td></tr>
+<tr class="separator:a50a80f9f8ca95b47e116cab4d2173f4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46c113110b1e437fad4fad4c9d1d5a58" id="r_a46c113110b1e437fad4fad4c9d1d5a58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#a46c113110b1e437fad4fad4c9d1d5a58">PrepareLeastSquaresSolveBelos</a> (bool detect_singular_blocks)</td></tr>
+<tr class="memdesc:a46c113110b1e437fad4fad4c9d1d5a58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare least-squares solve using <a class="el" href="namespace_belos.html">Belos</a>.  <br /></td></tr>
+<tr class="separator:a46c113110b1e437fad4fad4c9d1d5a58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd8ba6aac4b82bc6da063c546b12ea76" id="r_abd8ba6aac4b82bc6da063c546b12ea76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#abd8ba6aac4b82bc6da063c546b12ea76">LeastSquaresSolveBelos</a> (const MultiVector &amp;B, MultiVector &amp;C) const</td></tr>
+<tr class="memdesc:abd8ba6aac4b82bc6da063c546b12ea76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform least-squares solve using <a class="el" href="namespace_belos.html">Belos</a>.  <br /></td></tr>
+<tr class="separator:abd8ba6aac4b82bc6da063c546b12ea76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23700371f0420de1d3136994185f866c" id="r_a23700371f0420de1d3136994185f866c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#a23700371f0420de1d3136994185f866c">PrepareLeastSquaresSolveDirect</a> (bool detect_singular_blocks)</td></tr>
+<tr class="memdesc:a23700371f0420de1d3136994185f866c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare direct solution of least-squares problem.  <br /></td></tr>
+<tr class="separator:a23700371f0420de1d3136994185f866c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f9f87ac9423f08c4429eccbc2b69e3a" id="r_a0f9f87ac9423f08c4429eccbc2b69e3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_constraint.html#a0f9f87ac9423f08c4429eccbc2b69e3a">LeastSquaresSolveDirect</a> (const MultiVector &amp;B, MultiVector &amp;C) const</td></tr>
+<tr class="memdesc:a0f9f87ac9423f08c4429eccbc2b69e3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Direct solve of least-squares problem.  <br /></td></tr>
+<tr class="separator:a0f9f87ac9423f08c4429eccbc2b69e3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_static_methods_class_mue_lu_1_1_verbose_object"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_mue_lu_1_1_verbose_object')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="class_mue_lu_1_1_verbose_object.html">MueLu::VerboseObject</a></td></tr>
 <tr class="memitem:acb0e1cb557d90dd3e7ba062e19ad6cfc inherit pub_static_methods_class_mue_lu_1_1_verbose_object" id="r_acb0e1cb557d90dd3e7ba062e19ad6cfc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_verbose_object.html#acb0e1cb557d90dd3e7ba062e19ad6cfc">SetDefaultVerbLevel</a> (const <a class="el" href="namespace_mue_lu.html#a0265bde4f2d409b3d8414b59a20a5168">VerbLevel</a> defaultVerbLevel)</td></tr>
 <tr class="memdesc:acb0e1cb557d90dd3e7ba062e19ad6cfc inherit pub_static_methods_class_mue_lu_1_1_verbose_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the default (global) verbosity level.  <br /></td></tr>
@@ -227,7 +281,7 @@ Coarse space approximation constraint</h1>
 </p>
  in the XXtInv_ array. These matrices are dense, but have small size (NSDim x NSDim). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html#l00069">69</a> of file <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html">MueLu_Constraint_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html#l00078">78</a> of file <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html">MueLu_Constraint_decl.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a566c99a85780df3cd1bf8bc2cc9162d5" name="a566c99a85780df3cd1bf8bc2cc9162d5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a566c99a85780df3cd1bf8bc2cc9162d5">&#9670;&#160;</a></span>MagnitudeType</h2>
@@ -243,98 +297,268 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html#l00078">78</a> of file <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html">MueLu_Constraint_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html#l00089">89</a> of file <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html">MueLu_Constraint_decl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ae7e8b2d3d5b54419217881d566b62d46" name="ae7e8b2d3d5b54419217881d566b62d46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7e8b2d3d5b54419217881d566b62d46">&#9670;&#160;</a></span>MV</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>  = DefaultScalar, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>  = DefaultLocalOrdinal, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>  = DefaultGlobalOrdinal, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a>  = DefaultNode&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="class_mue_lu_1_1_constraint.html">MueLu::Constraint</a>&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt;::MV =  Xpetra::MultiVector&lt;<a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a>&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html#l00149">149</a> of file <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html">MueLu_Constraint_decl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a26d9638bc7820a1f25b75fa2a3fcabd9" name="a26d9638bc7820a1f25b75fa2a3fcabd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26d9638bc7820a1f25b75fa2a3fcabd9">&#9670;&#160;</a></span>OP</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>  = DefaultScalar, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>  = DefaultLocalOrdinal, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>  = DefaultGlobalOrdinal, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a>  = DefaultNode&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="class_mue_lu_1_1_constraint.html">MueLu::Constraint</a>&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt;::OP =  Belos::OperatorT&lt;<a class="el" href="class_mue_lu_1_1_constraint.html#ae7e8b2d3d5b54419217881d566b62d46">MV</a>&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html#l00150">150</a> of file <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html">MueLu_Constraint_decl.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a96975abfadf4801860ddf0b2c42637e2" name="a96975abfadf4801860ddf0b2c42637e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96975abfadf4801860ddf0b2c42637e2">&#9670;&#160;</a></span>Constraint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>  = DefaultScalar, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>  = DefaultLocalOrdinal, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>  = DefaultGlobalOrdinal, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a>  = DefaultNode&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_mue_lu_1_1_constraint.html">MueLu::Constraint</a>&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt;<a class="el" href="class_constraint.html">::Constraint</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab19ae584f973b88460c039a5778d52a4" name="ab19ae584f973b88460c039a5778d52a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab19ae584f973b88460c039a5778d52a4">&#9670;&#160;</a></span>Setup()</h2>
+<a id="a8baf8c381ce2ee984180740dd337f1e3" name="a8baf8c381ce2ee984180740dd337f1e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8baf8c381ce2ee984180740dd337f1e3">&#9670;&#160;</a></span>ResidualNorm()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt; </div>
+template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>  = DefaultScalar, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>  = DefaultLocalOrdinal, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>  = DefaultGlobalOrdinal, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a>  = DefaultNode&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Constraint::Setup </td>
-          <td>(</td>
-          <td class="paramtype">const RCP&lt; MultiVector &gt; &amp;&#160;</td>
-          <td class="paramname"><em>B</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const RCP&lt; MultiVector &gt; &amp;&#160;</td>
-          <td class="paramname"><em>Bc</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">RCP&lt; const CrsGraph &gt;&#160;</td>
-          <td class="paramname"><em>Ppattern</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Setup constraint. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">B</td><td>&ndash; Fine nullspace vectors </td></tr>
-    <tr><td class="paramname">Bc</td><td>&ndash; Coarse nullspace vectors </td></tr>
-    <tr><td class="paramname">Ppattern</td><td>&ndash; Nonzero sparsity pattern for the prolongator </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__def_8hpp_source.html#l00033">33</a> of file <a class="el" href="_mue_lu___constraint__def_8hpp_source.html">MueLu_Constraint_def.hpp</a>.</p>
-
-</div>
-</div>
-<a id="ae054a600fdf1c5513f0504ea788dac10" name="ae054a600fdf1c5513f0504ea788dac10"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae054a600fdf1c5513f0504ea788dac10">&#9670;&#160;</a></span>ResidualNorm()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">Teuchos::ScalarTraits&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a> &gt;::magnitudeType Constraint::ResidualNorm </td>
+          <td class="memname">virtual <a class="el" href="class_mue_lu_1_1_constraint.html#a566c99a85780df3cd1bf8bc2cc9162d5">MagnitudeType</a> <a class="el" href="class_mue_lu_1_1_constraint.html">MueLu::Constraint</a>&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt;::ResidualNorm </td>
           <td>(</td>
           <td class="paramtype">const RCP&lt; const Matrix &gt;&#160;</td>
           <td class="paramname"><em>P</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__def_8hpp_source.html#l00103">103</a> of file <a class="el" href="_mue_lu___constraint__def_8hpp_source.html">MueLu_Constraint_def.hpp</a>.</p>
+<p>Implemented in <a class="el" href="class_mue_lu_1_1_dense_constraint.html#a03d7957236f9f312d1d8d48d2627170a">MueLu::DenseConstraint&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
 </div>
 </div>
-<a id="ad8a19ed29a3c6b97c487b08a0c388db5" name="ad8a19ed29a3c6b97c487b08a0c388db5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8a19ed29a3c6b97c487b08a0c388db5">&#9670;&#160;</a></span>Apply()</h2>
+<a id="a22c7992015ad4b63a0a180b9f89532d4" name="a22c7992015ad4b63a0a180b9f89532d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22c7992015ad4b63a0a180b9f89532d4">&#9670;&#160;</a></span>getDomainMap()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Constraint::Apply </td>
+          <td class="memname">const Teuchos::RCP&lt; const Xpetra::Map&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt; &gt; Constraint::getDomainMap </td>
           <td>(</td>
-          <td class="paramtype">const Matrix &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The Map associated with the domain of this operator, which must be compatible with X.getMap(). </p>
+
+<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__def_8hpp_source.html#l00335">335</a> of file <a class="el" href="_mue_lu___constraint__def_8hpp_source.html">MueLu_Constraint_def.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aed736833cfbc223d0728142498911b74" name="aed736833cfbc223d0728142498911b74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed736833cfbc223d0728142498911b74">&#9670;&#160;</a></span>getRangeMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Teuchos::RCP&lt; const Xpetra::Map&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt; &gt; Constraint::getRangeMap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The Map associated with the range of this operator, which must be compatible with Y.getMap(). </p>
+
+<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__def_8hpp_source.html#l00340">340</a> of file <a class="el" href="_mue_lu___constraint__def_8hpp_source.html">MueLu_Constraint_def.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a35e0b541e106363bcab7d3afcfadc8de" name="a35e0b541e106363bcab7d3afcfadc8de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35e0b541e106363bcab7d3afcfadc8de">&#9670;&#160;</a></span>apply()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Constraint::apply </td>
+          <td>(</td>
+          <td class="paramtype">const MultiVector &amp;&#160;</td>
           <td class="paramname"><em>P</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Matrix &amp;&#160;</td>
-          <td class="paramname"><em>Projected</em>&#160;</td>
+          <td class="paramtype">MultiVector &amp;&#160;</td>
+          <td class="paramname"><em>Projected</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Teuchos::ETransp&#160;</td>
+          <td class="paramname"><em>mode</em> = <code>Teuchos::NO_TRANS</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>&#160;</td>
+          <td class="paramname"><em>alpha</em> = <code>Teuchos::ScalarTraits&lt;<a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>&gt;::one()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>&#160;</td>
+          <td class="paramname"><em>beta</em> = <code>Teuchos::ScalarTraits&lt;<a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>&gt;::zero()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Apply constraint. </p>
+
+<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__def_8hpp_source.html#l00629">629</a> of file <a class="el" href="_mue_lu___constraint__def_8hpp_source.html">MueLu_Constraint_def.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a8ad126b6ff4bfaacc2d3d981529dd54a" name="a8ad126b6ff4bfaacc2d3d981529dd54a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ad126b6ff4bfaacc2d3d981529dd54a">&#9670;&#160;</a></span>residual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>  = DefaultScalar, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>  = DefaultLocalOrdinal, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>  = DefaultGlobalOrdinal, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a>  = DefaultNode&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void Constraint::residual </td>
+          <td>(</td>
+          <td class="paramtype">const MultiVector &amp;&#160;</td>
+          <td class="paramname"><em>X</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const MultiVector &amp;&#160;</td>
+          <td class="paramname"><em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MultiVector &amp;&#160;</td>
+          <td class="paramname"><em>R</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -344,45 +568,445 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227
       </table>
 </div><div class="memdoc">
 
-<p>Apply constraint. </p>
-<dl class="section note"><dt>Note</dt><dd>We assume that the graph of Projected is the same as Ppattern_ </dd></dl>
+<p>Compute a residual R = B - (*this) * X. </p>
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__def_8hpp_source.html#l00120">120</a> of file <a class="el" href="_mue_lu___constraint__def_8hpp_source.html">MueLu_Constraint_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__def_8hpp_source.html#l00650">650</a> of file <a class="el" href="_mue_lu___constraint__def_8hpp_source.html">MueLu_Constraint_def.hpp</a>.</p>
 
 </div>
 </div>
-<a id="aa151de4eecc9d9db9738d8394c6d63a0" name="aa151de4eecc9d9db9738d8394c6d63a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa151de4eecc9d9db9738d8394c6d63a0">&#9670;&#160;</a></span>GetPattern()</h2>
+<a id="ad36991224d51004cf2184ce02e0b1101" name="ad36991224d51004cf2184ce02e0b1101"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad36991224d51004cf2184ce02e0b1101">&#9670;&#160;</a></span>GetPattern()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>  = DefaultScalar, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>  = DefaultLocalOrdinal, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>  = DefaultGlobalOrdinal, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a>  = DefaultNode&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
+template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">RCP&lt; const CrsGraph &gt; <a class="el" href="class_mue_lu_1_1_constraint.html">MueLu::Constraint</a>&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt;::GetPattern </td>
+          <td class="memname">RCP&lt; const Xpetra::CrsGraph&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt; &gt; Constraint::GetPattern </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__def_8hpp_source.html#l00661">661</a> of file <a class="el" href="_mue_lu___constraint__def_8hpp_source.html">MueLu_Constraint_def.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ae992b31a91e40802950250b4ab5d61cd" name="ae992b31a91e40802950250b4ab5d61cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae992b31a91e40802950250b4ab5d61cd">&#9670;&#160;</a></span>SetPattern()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void Constraint::SetPattern </td>
+          <td>(</td>
+          <td class="paramtype">RCP&lt; const CrsGraph &gt; &amp;&#160;</td>
+          <td class="paramname"><em>Ppattern</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__def_8hpp_source.html#l00666">666</a> of file <a class="el" href="_mue_lu___constraint__def_8hpp_source.html">MueLu_Constraint_def.hpp</a>.</p>
+
+</div>
+</div>
+<a id="abb2048c32964cdcee3c99481609a6e4b" name="abb2048c32964cdcee3c99481609a6e4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb2048c32964cdcee3c99481609a6e4b">&#9670;&#160;</a></span>SetConstraintsMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void Constraint::SetConstraintsMatrix </td>
+          <td>(</td>
+          <td class="paramtype">RCP&lt; Matrix &gt; &amp;&#160;</td>
+          <td class="paramname"><em>X</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__def_8hpp_source.html#l00671">671</a> of file <a class="el" href="_mue_lu___constraint__def_8hpp_source.html">MueLu_Constraint_def.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a174bbee10065186a627555e5b660f95c" name="a174bbee10065186a627555e5b660f95c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a174bbee10065186a627555e5b660f95c">&#9670;&#160;</a></span>GetConstraintMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">RCP&lt; Xpetra::Matrix&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt; &gt; Constraint::GetConstraintMatrix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__def_8hpp_source.html#l00681">681</a> of file <a class="el" href="_mue_lu___constraint__def_8hpp_source.html">MueLu_Constraint_def.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a4c68bc98187a60071e56d920a5c2e278" name="a4c68bc98187a60071e56d920a5c2e278"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c68bc98187a60071e56d920a5c2e278">&#9670;&#160;</a></span>FindBlocks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>  = DefaultScalar, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>  = DefaultLocalOrdinal, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>  = DefaultGlobalOrdinal, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a>  = DefaultNode&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Xpetra::CrsGraph&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt;::local_graph_type Constraint::FindBlocks </td>
+          <td>(</td>
+          <td class="paramtype">RCP&lt; const CrsGraph &gt; &amp;&#160;</td>
+          <td class="paramname"><em>XXt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html#l00102">102</a> of file <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html">MueLu_Constraint_decl.hpp</a>.</p>
+<p>Reimplemented in <a class="el" href="class_mue_lu_1_1_dense_constraint.html#ae7c3cef334fb22f1dbe5de4ddd772bb4">MueLu::DenseConstraint&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__def_8hpp_source.html#l00433">433</a> of file <a class="el" href="_mue_lu___constraint__def_8hpp_source.html">MueLu_Constraint_def.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aeefaef1c2220ae93924bd1b0337f7810" name="aeefaef1c2220ae93924bd1b0337f7810"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeefaef1c2220ae93924bd1b0337f7810">&#9670;&#160;</a></span>AssignMatrixEntriesToVector() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void Constraint::AssignMatrixEntriesToVector </td>
+          <td>(</td>
+          <td class="paramtype">const Matrix &amp;&#160;</td>
+          <td class="paramname"><em>P</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const RCP&lt; const CrsGraph &gt; &amp;&#160;</td>
+          <td class="paramname"><em>pattern</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MultiVector &amp;&#160;</td>
+          <td class="paramname"><em>vecP</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__def_8hpp_source.html#l00686">686</a> of file <a class="el" href="_mue_lu___constraint__def_8hpp_source.html">MueLu_Constraint_def.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ac3ab99b9ccc829c8fdd3ecf0965c5802" name="ac3ab99b9ccc829c8fdd3ecf0965c5802"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3ab99b9ccc829c8fdd3ecf0965c5802">&#9670;&#160;</a></span>AssignMatrixEntriesToVector() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void Constraint::AssignMatrixEntriesToVector </td>
+          <td>(</td>
+          <td class="paramtype">const Matrix &amp;&#160;</td>
+          <td class="paramname"><em>P</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MultiVector &amp;&#160;</td>
+          <td class="paramname"><em>vecP</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__def_8hpp_source.html#l00727">727</a> of file <a class="el" href="_mue_lu___constraint__def_8hpp_source.html">MueLu_Constraint_def.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ac6c4a4c4de5dbbcb766daeedf353b4e4" name="ac6c4a4c4de5dbbcb766daeedf353b4e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6c4a4c4de5dbbcb766daeedf353b4e4">&#9670;&#160;</a></span>GetMatrixWithEntriesFromVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">RCP&lt; Xpetra::Matrix&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt; &gt; Constraint::GetMatrixWithEntriesFromVector </td>
+          <td>(</td>
+          <td class="paramtype">MultiVector &amp;&#160;</td>
+          <td class="paramname"><em>vecP</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__def_8hpp_source.html#l00733">733</a> of file <a class="el" href="_mue_lu___constraint__def_8hpp_source.html">MueLu_Constraint_def.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aba09d748096013f923e45d7a79cacd28" name="aba09d748096013f923e45d7a79cacd28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba09d748096013f923e45d7a79cacd28">&#9670;&#160;</a></span>LeastSquaresSolve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void Constraint::LeastSquaresSolve </td>
+          <td>(</td>
+          <td class="paramtype">const MultiVector &amp;&#160;</td>
+          <td class="paramname"><em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MultiVector &amp;&#160;</td>
+          <td class="paramname"><em>C</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__def_8hpp_source.html#l00619">619</a> of file <a class="el" href="_mue_lu___constraint__def_8hpp_source.html">MueLu_Constraint_def.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a50a80f9f8ca95b47e116cab4d2173f4a" name="a50a80f9f8ca95b47e116cab4d2173f4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50a80f9f8ca95b47e116cab4d2173f4a">&#9670;&#160;</a></span>PrepareLeastSquaresSolve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Constraint::PrepareLeastSquaresSolve </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>solverType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>detect_singular_blocks</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__def_8hpp_source.html#l00589">589</a> of file <a class="el" href="_mue_lu___constraint__def_8hpp_source.html">MueLu_Constraint_def.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a46c113110b1e437fad4fad4c9d1d5a58" name="a46c113110b1e437fad4fad4c9d1d5a58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46c113110b1e437fad4fad4c9d1d5a58">&#9670;&#160;</a></span>PrepareLeastSquaresSolveBelos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Constraint::PrepareLeastSquaresSolveBelos </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>detect_singular_blocks</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prepare least-squares solve using <a class="el" href="namespace_belos.html">Belos</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__def_8hpp_source.html#l00345">345</a> of file <a class="el" href="_mue_lu___constraint__def_8hpp_source.html">MueLu_Constraint_def.hpp</a>.</p>
+
+</div>
+</div>
+<a id="abd8ba6aac4b82bc6da063c546b12ea76" name="abd8ba6aac4b82bc6da063c546b12ea76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd8ba6aac4b82bc6da063c546b12ea76">&#9670;&#160;</a></span>LeastSquaresSolveBelos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Constraint::LeastSquaresSolveBelos </td>
+          <td>(</td>
+          <td class="paramtype">const MultiVector &amp;&#160;</td>
+          <td class="paramname"><em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MultiVector &amp;&#160;</td>
+          <td class="paramname"><em>C</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Perform least-squares solve using <a class="el" href="namespace_belos.html">Belos</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__def_8hpp_source.html#l00600">600</a> of file <a class="el" href="_mue_lu___constraint__def_8hpp_source.html">MueLu_Constraint_def.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a23700371f0420de1d3136994185f866c" name="a23700371f0420de1d3136994185f866c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23700371f0420de1d3136994185f866c">&#9670;&#160;</a></span>PrepareLeastSquaresSolveDirect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Constraint::PrepareLeastSquaresSolveDirect </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>detect_singular_blocks</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prepare direct solution of least-squares problem. </p>
+
+<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__def_8hpp_source.html#l00535">535</a> of file <a class="el" href="_mue_lu___constraint__def_8hpp_source.html">MueLu_Constraint_def.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a0f9f87ac9423f08c4429eccbc2b69e3a" name="a0f9f87ac9423f08c4429eccbc2b69e3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f9f87ac9423f08c4429eccbc2b69e3a">&#9670;&#160;</a></span>LeastSquaresSolveDirect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Constraint::LeastSquaresSolveDirect </td>
+          <td>(</td>
+          <td class="paramtype">const MultiVector &amp;&#160;</td>
+          <td class="paramname"><em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MultiVector &amp;&#160;</td>
+          <td class="paramname"><em>C</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Direct solve of least-squares problem. </p>
+
+<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__def_8hpp_source.html#l00613">613</a> of file <a class="el" href="_mue_lu___constraint__def_8hpp_source.html">MueLu_Constraint_def.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="aea1e6d7e64841c06fb25a5a706894139" name="aea1e6d7e64841c06fb25a5a706894139"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea1e6d7e64841c06fb25a5a706894139">&#9670;&#160;</a></span>B_</h2>
+<a id="a36cdb8e1f43d886aaaa98f4f7c0b5cd1" name="a36cdb8e1f43d886aaaa98f4f7c0b5cd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36cdb8e1f43d886aaaa98f4f7c0b5cd1">&#9670;&#160;</a></span>X_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -393,7 +1017,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">RCP&lt;MultiVector&gt; <a class="el" href="class_mue_lu_1_1_constraint.html">MueLu::Constraint</a>&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt;::B_</td>
+          <td class="memname">RCP&lt;Matrix&gt; <a class="el" href="class_mue_lu_1_1_constraint.html">MueLu::Constraint</a>&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt;::X_</td>
         </tr>
       </table>
   </td>
@@ -403,61 +1027,9 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html#l00107">107</a> of file <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html">MueLu_Constraint_decl.hpp</a>.</p>
+<p>The constraints matrix. </p>
 
-</div>
-</div>
-<a id="a1de66c943475c1f9840e021365d00998" name="a1de66c943475c1f9840e021365d00998"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1de66c943475c1f9840e021365d00998">&#9670;&#160;</a></span>Bc_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>  = DefaultScalar, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>  = DefaultLocalOrdinal, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>  = DefaultGlobalOrdinal, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a>  = DefaultNode&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">RCP&lt;MultiVector&gt; <a class="el" href="class_mue_lu_1_1_constraint.html">MueLu::Constraint</a>&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt;::Bc_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html#l00108">108</a> of file <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html">MueLu_Constraint_decl.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a585abdec4cf926c50d632a645666a847" name="a585abdec4cf926c50d632a645666a847"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a585abdec4cf926c50d632a645666a847">&#9670;&#160;</a></span>X_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>  = DefaultScalar, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>  = DefaultLocalOrdinal, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>  = DefaultGlobalOrdinal, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a>  = DefaultNode&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">RCP&lt;MultiVector&gt; <a class="el" href="class_mue_lu_1_1_constraint.html">MueLu::Constraint</a>&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt;::X_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Overlapped coarse nullspace. </p>
-
-<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html#l00109">109</a> of file <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html">MueLu_Constraint_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html#l00141">141</a> of file <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html">MueLu_Constraint_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -485,12 +1057,12 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227
 
 <p>Nonzero sparsity pattern. </p>
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html#l00110">110</a> of file <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html">MueLu_Constraint_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html#l00144">144</a> of file <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html">MueLu_Constraint_decl.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a25112595f78cd9c967d1d34433513160" name="a25112595f78cd9c967d1d34433513160"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25112595f78cd9c967d1d34433513160">&#9670;&#160;</a></span>XXtInv_</h2>
+<a id="ae875a7e7cfcc8577f7116e140cd32aee" name="ae875a7e7cfcc8577f7116e140cd32aee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae875a7e7cfcc8577f7116e140cd32aee">&#9670;&#160;</a></span>solverType_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -501,7 +1073,7 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">ArrayRCP&lt;Teuchos::SerialDenseMatrix&lt;LO, SC&gt; &gt; <a class="el" href="class_mue_lu_1_1_constraint.html">MueLu::Constraint</a>&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt;::XXtInv_</td>
+          <td class="memname">std::string <a class="el" href="class_mue_lu_1_1_constraint.html">MueLu::Constraint</a>&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt;::solverType_</td>
         </tr>
       </table>
   </td>
@@ -511,9 +1083,165 @@ template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227
 </table>
 </div><div class="memdoc">
 
-<p>Array storing \((Q_i Q_i^H)^{-1}\). </p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html#l00146">146</a> of file <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html">MueLu_Constraint_decl.hpp</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html#l00111">111</a> of file <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html">MueLu_Constraint_decl.hpp</a>.</p>
+</div>
+</div>
+<a id="a62b46442f8314b434673f45aa8dfec4c" name="a62b46442f8314b434673f45aa8dfec4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62b46442f8314b434673f45aa8dfec4c">&#9670;&#160;</a></span>problem_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>  = DefaultScalar, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>  = DefaultLocalOrdinal, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>  = DefaultGlobalOrdinal, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a>  = DefaultNode&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RCP&lt;Belos::LinearProblem&lt;<a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>, <a class="el" href="class_mue_lu_1_1_constraint.html#ae7e8b2d3d5b54419217881d566b62d46">MV</a>, <a class="el" href="class_mue_lu_1_1_constraint.html#a26d9638bc7820a1f25b75fa2a3fcabd9">OP</a>&gt; &gt; <a class="el" href="class_mue_lu_1_1_constraint.html">MueLu::Constraint</a>&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt;::problem_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html#l00151">151</a> of file <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html">MueLu_Constraint_decl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a2bd59dd353ab89aac8597cb418bbb2a7" name="a2bd59dd353ab89aac8597cb418bbb2a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bd59dd353ab89aac8597cb418bbb2a7">&#9670;&#160;</a></span>solver_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>  = DefaultScalar, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>  = DefaultLocalOrdinal, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>  = DefaultGlobalOrdinal, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a>  = DefaultNode&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RCP&lt;Belos::SolverManager&lt;<a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>, <a class="el" href="class_mue_lu_1_1_constraint.html#ae7e8b2d3d5b54419217881d566b62d46">MV</a>, <a class="el" href="class_mue_lu_1_1_constraint.html#a26d9638bc7820a1f25b75fa2a3fcabd9">OP</a>&gt; &gt; <a class="el" href="class_mue_lu_1_1_constraint.html">MueLu::Constraint</a>&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt;::solver_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html#l00152">152</a> of file <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html">MueLu_Constraint_decl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a8b966b1f4d2aae316932ba96a607f509" name="a8b966b1f4d2aae316932ba96a607f509"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b966b1f4d2aae316932ba96a607f509">&#9670;&#160;</a></span>invXXt_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>  = DefaultScalar, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>  = DefaultLocalOrdinal, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>  = DefaultGlobalOrdinal, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a>  = DefaultNode&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RCP&lt;Matrix&gt; <a class="el" href="class_mue_lu_1_1_constraint.html">MueLu::Constraint</a>&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt;::invXXt_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inverse of X*X^T. </p>
+
+<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html#l00162">162</a> of file <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html">MueLu_Constraint_decl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ae921dca256613f9def3da6ec3be04a19" name="ae921dca256613f9def3da6ec3be04a19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae921dca256613f9def3da6ec3be04a19">&#9670;&#160;</a></span>temp1_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>  = DefaultScalar, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>  = DefaultLocalOrdinal, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>  = DefaultGlobalOrdinal, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a>  = DefaultNode&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RCP&lt;MultiVector&gt; <a class="el" href="class_mue_lu_1_1_constraint.html">MueLu::Constraint</a>&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt;::temp1_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html#l00171">171</a> of file <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html">MueLu_Constraint_decl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aacef5bf8ad03d49141a6d3d89e30d51a" name="aacef5bf8ad03d49141a6d3d89e30d51a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacef5bf8ad03d49141a6d3d89e30d51a">&#9670;&#160;</a></span>temp2_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>  = DefaultScalar, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>  = DefaultLocalOrdinal, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>  = DefaultGlobalOrdinal, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a>  = DefaultNode&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RCP&lt;MultiVector&gt; <a class="el" href="class_mue_lu_1_1_constraint.html">MueLu::Constraint</a>&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt;::temp2_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html#l00171">171</a> of file <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html">MueLu_Constraint_decl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ae032e120601271a770b0232e31e3feea" name="ae032e120601271a770b0232e31e3feea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae032e120601271a770b0232e31e3feea">&#9670;&#160;</a></span>temp3_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>  = DefaultScalar, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>  = DefaultLocalOrdinal, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>  = DefaultGlobalOrdinal, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a>  = DefaultNode&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RCP&lt;MultiVector&gt; <a class="el" href="class_mue_lu_1_1_constraint.html">MueLu::Constraint</a>&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt;::temp3_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html#l00171">171</a> of file <a class="el" href="_mue_lu___constraint__decl_8hpp_source.html">MueLu_Constraint_decl.hpp</a>.</p>
 
 </div>
 </div>

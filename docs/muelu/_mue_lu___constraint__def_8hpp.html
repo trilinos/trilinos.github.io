@@ -97,31 +97,74 @@ $(document).ready(function(){initNavTree('_mue_lu___constraint__def_8hpp.html','
 
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">MueLu_Constraint_def.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;Teuchos_BLAS.hpp&gt;</code><br />
-<code>#include &lt;Teuchos_LAPACK.hpp&gt;</code><br />
-<code>#include &lt;Teuchos_SerialDenseVector.hpp&gt;</code><br />
-<code>#include &lt;Teuchos_SerialDenseMatrix.hpp&gt;</code><br />
-<code>#include &lt;Teuchos_SerialDenseHelpers.hpp&gt;</code><br />
-<code>#include &lt;Xpetra_ImportFactory.hpp&gt;</code><br />
-<code>#include &lt;Xpetra_Map.hpp&gt;</code><br />
-<code>#include &lt;Xpetra_Matrix.hpp&gt;</code><br />
-<code>#include &lt;Xpetra_MultiVectorFactory.hpp&gt;</code><br />
+<div class="textblock"><code>#include &lt;Xpetra_Map.hpp&gt;</code><br />
 <code>#include &lt;Xpetra_MultiVector.hpp&gt;</code><br />
-<code>#include &lt;Xpetra_CrsGraph.hpp&gt;</code><br />
+<code>#include &lt;Xpetra_Matrix.hpp&gt;</code><br />
+<code>#include &quot;KokkosBatched_Copy_Internal.hpp&quot;</code><br />
+<code>#include &quot;Teuchos_Assert.hpp&quot;</code><br />
+<code>#include &quot;Xpetra_MatrixFactory.hpp&quot;</code><br />
+<code>#include &quot;Xpetra_MatrixMatrix.hpp&quot;</code><br />
 <code>#include &quot;<a class="el" href="_mue_lu___exceptions_8hpp_source.html">MueLu_Exceptions.hpp</a>&quot;</code><br />
+<code>#include &quot;MueLu_ProductOperator.hpp&quot;</code><br />
 <code>#include &quot;<a class="el" href="_mue_lu___constraint__decl_8hpp_source.html">MueLu_Constraint_decl.hpp</a>&quot;</code><br />
+<code>#include &quot;MueLu_Utilities.hpp&quot;</code><br />
+<code>#include &quot;<a class="el" href="_mue_lu___monitor_8hpp_source.html">MueLu_Monitor.hpp</a>&quot;</code><br />
+<code>#include &quot;KokkosBlas1_set.hpp&quot;</code><br />
+<code>#include &quot;KokkosBatched_QR_FormQ_TeamVector_Internal.hpp&quot;</code><br />
+<code>#include &quot;KokkosBatched_ApplyQ_Decl.hpp&quot;</code><br />
+<code>#include &quot;KokkosBatched_SetIdentity_Decl.hpp&quot;</code><br />
+<code>#include &quot;KokkosBatched_SetIdentity_Impl.hpp&quot;</code><br />
+<code>#include &quot;Kokkos_DualView.hpp&quot;</code><br />
+<code>#include &quot;Kokkos_Pair.hpp&quot;</code><br />
+<code>#include &quot;Kokkos_UnorderedMap.hpp&quot;</code><br />
+<code>#include &quot;KokkosBatched_QR_Decl.hpp&quot;</code><br />
+<code>#include &quot;KokkosBatched_QR_Serial_Impl.hpp&quot;</code><br />
+<code>#include &quot;KokkosBatched_QR_TeamVector_Impl.hpp&quot;</code><br />
+<code>#include &quot;KokkosBatched_LU_Decl.hpp&quot;</code><br />
+<code>#include &quot;KokkosBatched_LU_Team_Impl.hpp&quot;</code><br />
+<code>#include &quot;KokkosBatched_Trsv_Decl.hpp&quot;</code><br />
+<code>#include &quot;KokkosBatched_Trsv_TeamVector_Impl.hpp&quot;</code><br />
+<code>#include &quot;KokkosBatched_Gemm_Decl.hpp&quot;</code><br />
+<code>#include &quot;KokkosBatched_Gemm_Team_Impl.hpp&quot;</code><br />
+<code>#include &quot;KokkosBatched_Gemv_Decl.hpp&quot;</code><br />
+<code>#include &quot;KokkosBatched_Gemv_Team_Impl.hpp&quot;</code><br />
+<code>#include &quot;KokkosBatched_Copy_Decl.hpp&quot;</code><br />
+<code>#include &quot;KokkosBatched_Copy_Impl.hpp&quot;</code><br />
 </div>
 <p><a href="_mue_lu___constraint__def_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_min_spm_m_v.html">MueLu::MinSpmMV&lt; LocalGraph, LocalVector &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_min_spm_m_v_t.html">MueLu::MinSpmMVT&lt; LocalGraph, LocalVector &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_block_inverse_functor.html">MueLu::BlockInverseFunctor&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_block_inverse_functor_1_1_tag_find_singular_blocks.html">MueLu::BlockInverseFunctor&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;::TagFindSingularBlocks</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_block_inverse_functor_1_1_tag_count_singular_blocks.html">MueLu::BlockInverseFunctor&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;::TagCountSingularBlocks</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_block_inverse_functor_1_1_tag_apply.html">MueLu::BlockInverseFunctor&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;::TagApply</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespace_mue_lu" id="r_namespace_mue_lu"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_mue_lu.html">MueLu</a></td></tr>
 <tr class="memdesc:namespace_mue_lu"><td class="mdescLeft">&#160;</td><td class="mdescRight">Namespace for <a class="el" href="namespace_mue_lu.html" title="Namespace for MueLu classes and methods.">MueLu</a> classes and methods. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a65747e85b97630bac3cd282cb894fcaf" id="r_a65747e85b97630bac3cd282cb894fcaf"><td class="memTemplParams" colspan="2">template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a> , class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt; </td></tr>
+<tr class="memitem:a65747e85b97630bac3cd282cb894fcaf"><td class="memTemplItemLeft" align="right" valign="top">Teuchos::RCP&lt; Xpetra::Matrix&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_mue_lu.html#a65747e85b97630bac3cd282cb894fcaf">MueLu::allocateBlockDiagonalMatrix</a> (RCP&lt; const Xpetra::Map&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt; &gt; map, const typename Xpetra::CrsGraph&lt; <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a>, <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> &gt;::local_graph_type blocks)</td></tr>
+<tr class="separator:a65747e85b97630bac3cd282cb894fcaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -86,12 +86,15 @@ $(function() {
 <code>#include &quot;Teuchos_as.hpp&quot;</code><br />
 <code>#include &quot;Teuchos_TypeNameTraits.hpp&quot;</code><br />
 <code>#include &quot;Teuchos_CommHelpers.hpp&quot;</code><br />
+<code>#include &quot;Kokkos_Sort.hpp&quot;</code><br />
 <code>#include &quot;Tpetra_Directory.hpp&quot;</code><br />
 <code>#include &quot;<a class="el" href="_tpetra___details___behavior_8hpp_source.html">Tpetra_Details_Behavior.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_tpetra___details__iallreduce_8hpp_source.html">Tpetra_Details_iallreduce.hpp</a>&quot;</code><br />
 <code>#include &quot;Tpetra_Details_FixedHashTable.hpp&quot;</code><br />
 <code>#include &quot;<a class="el" href="_tpetra___details__gatherv_print_8hpp_source.html">Tpetra_Details_gathervPrint.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_tpetra___details__print_once_8hpp_source.html">Tpetra_Details_printOnce.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_tpetra___core_8hpp_source.html">Tpetra_Core.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_tpetra___map__decl_8hpp_source.html">Tpetra_Map_decl.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_tpetra___util_8hpp_source.html">Tpetra_Util.hpp</a>&quot;</code><br />
 <code>#include &quot;Tpetra_Details_mpiIsInitialized.hpp&quot;</code><br />
 <code>#include &quot;<a class="el" href="_tpetra___details__extract_mpi_comm_from_teuchos_8hpp_source.html">Tpetra_Details_extractMpiCommFromTeuchos.hpp</a>&quot;</code><br />
@@ -107,6 +110,9 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespace_tpetra_1_1_impl" id="r_namespace_tpetra_1_1_impl"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_tpetra_1_1_impl.html">Tpetra::Impl</a></td></tr>
 <tr class="memdesc:namespace_tpetra_1_1_impl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Namespace for new <a class="el" href="namespace_tpetra.html" title="Namespace Tpetra contains the class and methods constituting the Tpetra library.">Tpetra</a> features that are not ready for public release, but are ready for evaluation by friendly expert users. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespace_tpetra_1_1_details" id="r_namespace_tpetra_1_1_details"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_tpetra_1_1_details.html">Tpetra::Details</a></td></tr>
+<tr class="memdesc:namespace_tpetra_1_1_details"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nonmember function that computes a residual Computes R = B - A * X. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
@@ -179,12 +185,15 @@ Macros</h2></td></tr>
 <div class="line">                                                                                                    \</div>
 <div class="line">  <span class="keyword">template</span> Teuchos::RCP&lt;const Map&lt;LO, GO, NODE&gt;&gt;                                                    \</div>
 <div class="line">  createOneToOne(<span class="keyword">const</span> Teuchos::RCP&lt;<span class="keyword">const</span> Map&lt;LO, GO, NODE&gt;&gt;&amp; M,                                    \</div>
-<div class="line">                 <span class="keyword">const</span> <a class="code hl_class" href="class_tpetra_1_1_details_1_1_tie_break.html">Tpetra::Details::TieBreak&lt;LO, GO&gt;</a>&amp; tie_break);</div>
+<div class="line">                 <span class="keyword">const</span> <a class="code hl_class" href="class_tpetra_1_1_details_1_1_tie_break.html">Tpetra::Details::TieBreak&lt;LO, GO&gt;</a>&amp; tie_break);                               \</div>
+<div class="line">                                                                                                    \</div>
+<div class="line">  <span class="keyword">template</span> Teuchos::RCP&lt;const Map&lt;LO, GO, NODE&gt;&gt;                                                    \</div>
+<div class="line">  createOneToOneAndMakeOverlappingMapFitted(Teuchos::RCP&lt;<span class="keyword">const</span> Map&lt;LO, GO, NODE&gt;&gt;&amp; M);</div>
 <div class="ttc" id="aclass_tpetra_1_1_details_1_1_tie_break_html"><div class="ttname"><a href="class_tpetra_1_1_details_1_1_tie_break.html">Tpetra::Details::TieBreak</a></div><div class="ttdoc">Interface for breaking ties in ownership.</div><div class="ttdef"><b>Definition</b> <a href="_tpetra___tie_break_8hpp_source.html#l00038">Tpetra_TieBreak.hpp:38</a></div></div>
 </div><!-- fragment -->
 <p>Explicit instantiation macro supporting the Map class. Instantiates the class and the non-member constructors. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___map__def_8hpp_source.html#l02702">2702</a> of file <a class="el" href="_tpetra___map__def_8hpp_source.html">Tpetra_Map_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___map__def_8hpp_source.html#l02765">2765</a> of file <a class="el" href="_tpetra___map__def_8hpp_source.html">Tpetra_Map_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -230,7 +239,7 @@ Macros</h2></td></tr>
 </div><!-- fragment -->
 <p>Explicit instantiation macro supporting the Map class, on the default node for specified ordinals. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___map__def_8hpp_source.html#l02731">2731</a> of file <a class="el" href="_tpetra___map__def_8hpp_source.html">Tpetra_Map_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___map__def_8hpp_source.html#l02797">2797</a> of file <a class="el" href="_tpetra___map__def_8hpp_source.html">Tpetra_Map_def.hpp</a>.</p>
 
 </div>
 </div>

@@ -64,6 +64,7 @@ var class_mue_lu_1_1_maxwell1 =
     [ "allEdgesBoundary_", "class_mue_lu_1_1_maxwell1.html#aea463f03b07eb0f2499b5744fb2f4ad9", null ],
     [ "allNodesBoundary_", "class_mue_lu_1_1_maxwell1.html#a9ed21be7be7607ef5830c5b32200b43e", null ],
     [ "dump_matrices_", "class_mue_lu_1_1_maxwell1.html#acb9fabc47617f5dcc2d99530a792bba5", null ],
+    [ "check_D0_scaling_", "class_mue_lu_1_1_maxwell1.html#a4a0b7ed143de22c90c02fd2345be1517", null ],
     [ "enable_reuse_", "class_mue_lu_1_1_maxwell1.html#a1f2c8d7d37ebb893a83b994372b5146e", null ],
     [ "syncTimers_", "class_mue_lu_1_1_maxwell1.html#aecfb388f333e4e5ea5194adbd05c180a", null ],
     [ "applyBCsTo22_", "class_mue_lu_1_1_maxwell1.html#a865c7ba063c366a64e33a779d94a71b4", null ],

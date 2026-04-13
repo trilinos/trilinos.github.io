@@ -106,9 +106,9 @@ $(document).ready(function(){initNavTree('_mue_lu___crs_matrix_utils_8hpp_source
 <div class="contents">
 <a href="_mue_lu___crs_matrix_utils_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// @HEADER</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// *****************************************************************************</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//             Xpetra: A linear algebra interface package</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//        MueLu: A package for multigrid based preconditioning</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// Copyright 2012 NTESS and the Xpetra contributors.</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// Copyright 2012 NTESS and the MueLu contributors.</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// SPDX-License-Identifier: BSD-3-Clause</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">// *****************************************************************************</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// @HEADER</span></div>
@@ -140,42 +140,43 @@ $(document).ready(function(){initNavTree('_mue_lu___crs_matrix_utils_8hpp_source
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                             <span class="keyword">const</span> Teuchos::ArrayView&lt;Scalar&gt;&amp; CRS_vals,</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                             <span class="keyword">const</span> UnderlyingLib lib) {</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordflow">if</span> (lib == Xpetra::UseTpetra) {</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      Tpetra::Import_Util::sortCrsEntries(CRS_rowptr, CRS_colind, CRS_vals);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    }</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      Tpetra::Import_Util::sortCrsEntries(CRS_rowptr, CRS_colind, CRS_vals,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                                          ::KokkosSparse::SortAlgorithm::DEFAULT);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  }</div>
 </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="foldopen" id="foldopen00051" data-start="{" data-end="}">
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_xpetra_1_1_crs_matrix_utils.html#a5edf19408d7d8726f9b0b6b10810b00f">   51</a></span>  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_xpetra_1_1_crs_matrix_utils.html#a5edf19408d7d8726f9b0b6b10810b00f">sortAndMergeCrsEntries</a>(<span class="keyword">const</span> Teuchos::ArrayView&lt;size_t&gt;&amp; CRS_rowptr,</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                                     <span class="keyword">const</span> Teuchos::ArrayView&lt;LocalOrdinal&gt;&amp; CRS_colind,</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                                     <span class="keyword">const</span> Teuchos::ArrayView&lt;Scalar&gt;&amp; CRS_vals,</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                                     <span class="keyword">const</span> UnderlyingLib lib) {</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordflow">if</span> (lib == Xpetra::UseTpetra) {</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>      Tpetra::Import_Util::sortAndMergeCrsEntries(CRS_rowptr, CRS_colind, CRS_vals);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_xpetra_1_1_crs_matrix_utils.html#a5edf19408d7d8726f9b0b6b10810b00f">   52</a></span>  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_xpetra_1_1_crs_matrix_utils.html#a5edf19408d7d8726f9b0b6b10810b00f">sortAndMergeCrsEntries</a>(<span class="keyword">const</span> Teuchos::ArrayView&lt;size_t&gt;&amp; CRS_rowptr,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                                     <span class="keyword">const</span> Teuchos::ArrayView&lt;LocalOrdinal&gt;&amp; CRS_colind,</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                                     <span class="keyword">const</span> Teuchos::ArrayView&lt;Scalar&gt;&amp; CRS_vals,</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                                     <span class="keyword">const</span> UnderlyingLib lib) {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordflow">if</span> (lib == Xpetra::UseTpetra) {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>      Tpetra::Import_Util::sortAndMergeCrsEntries(CRS_rowptr, CRS_colind, CRS_vals);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  }</div>
 </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>};  <span class="comment">// end class CrsMatrixUtils</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>};  <span class="comment">// end class CrsMatrixUtils</span></div>
 </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>}  <span class="comment">// end namespace Xpetra</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>}  <span class="comment">// end namespace Xpetra</span></div>
 </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="_mue_lu___crs_matrix_utils_8hpp.html#adcd39fff23b916562c08d762db4b536f">   66</a></span><span class="preprocessor">#define XPETRA_CRSMATRIXUTILS_SHORT</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">#endif  </span><span class="comment">// PACKAGES_XPETRA_CRSMATRIX_UTILS_HPP_</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="_mue_lu___crs_matrix_utils_8hpp.html#adcd39fff23b916562c08d762db4b536f">   67</a></span><span class="preprocessor">#define XPETRA_CRSMATRIXUTILS_SHORT</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#endif  </span><span class="comment">// PACKAGES_XPETRA_CRSMATRIX_UTILS_HPP_</span></div>
 <div class="ttc" id="a_mue_lu___use_default_types_8hpp_html_a226b8cca25ba3f3d741bc52854fe8601"><div class="ttname"><a href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a></div><div class="ttdeci">MueLu::DefaultLocalOrdinal LocalOrdinal</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___use_default_types_8hpp_source.html#l00013">MueLu_UseDefaultTypes.hpp:13</a></div></div>
 <div class="ttc" id="a_mue_lu___use_default_types_8hpp_html_a227573c7cbca9c75611ada9e032620cc"><div class="ttname"><a href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a></div><div class="ttdeci">MueLu::DefaultScalar Scalar</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___use_default_types_8hpp_source.html#l00012">MueLu_UseDefaultTypes.hpp:12</a></div></div>
 <div class="ttc" id="a_mue_lu___use_default_types_8hpp_html_a4730156daf25e1b41a9e14299c5d8f72"><div class="ttname"><a href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a></div><div class="ttdeci">MueLu::DefaultGlobalOrdinal GlobalOrdinal</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___use_default_types_8hpp_source.html#l00014">MueLu_UseDefaultTypes.hpp:14</a></div></div>
 <div class="ttc" id="a_mue_lu___use_default_types_8hpp_html_ae44371dd79510c1867d16cce8b8800da"><div class="ttname"><a href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a></div><div class="ttdeci">MueLu::DefaultNode Node</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___use_default_types_8hpp_source.html#l00015">MueLu_UseDefaultTypes.hpp:15</a></div></div>
 <div class="ttc" id="aclass_xpetra_1_1_crs_matrix_utils_html"><div class="ttname"><a href="class_xpetra_1_1_crs_matrix_utils.html">Xpetra::CrsMatrixUtils</a></div><div class="ttdoc">Xpetra utility class for CrsMatrix-related routines.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___crs_matrix_utils_8hpp_source.html#l00032">MueLu_CrsMatrixUtils.hpp:32</a></div></div>
 <div class="ttc" id="aclass_xpetra_1_1_crs_matrix_utils_html_a184265161ad365eae2ece3b541ebe77e"><div class="ttname"><a href="class_xpetra_1_1_crs_matrix_utils.html#a184265161ad365eae2ece3b541ebe77e">Xpetra::CrsMatrixUtils::sortCrsEntries</a></div><div class="ttdeci">static void sortCrsEntries(const Teuchos::ArrayView&lt; size_t &gt; &amp;CRS_rowptr, const Teuchos::ArrayView&lt; LocalOrdinal &gt; &amp;CRS_colind, const Teuchos::ArrayView&lt; Scalar &gt; &amp;CRS_vals, const UnderlyingLib lib)</div><div class="ttdoc">Sort the entries of the (raw CSR) matrix by column index within each row.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___crs_matrix_utils_8hpp_source.html#l00038">MueLu_CrsMatrixUtils.hpp:38</a></div></div>
-<div class="ttc" id="aclass_xpetra_1_1_crs_matrix_utils_html_a5edf19408d7d8726f9b0b6b10810b00f"><div class="ttname"><a href="class_xpetra_1_1_crs_matrix_utils.html#a5edf19408d7d8726f9b0b6b10810b00f">Xpetra::CrsMatrixUtils::sortAndMergeCrsEntries</a></div><div class="ttdeci">static void sortAndMergeCrsEntries(const Teuchos::ArrayView&lt; size_t &gt; &amp;CRS_rowptr, const Teuchos::ArrayView&lt; LocalOrdinal &gt; &amp;CRS_colind, const Teuchos::ArrayView&lt; Scalar &gt; &amp;CRS_vals, const UnderlyingLib lib)</div><div class="ttdoc">Sort and merge the entries of the (raw CSR) matrix by column index within each row.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___crs_matrix_utils_8hpp_source.html#l00051">MueLu_CrsMatrixUtils.hpp:51</a></div></div>
+<div class="ttc" id="aclass_xpetra_1_1_crs_matrix_utils_html_a5edf19408d7d8726f9b0b6b10810b00f"><div class="ttname"><a href="class_xpetra_1_1_crs_matrix_utils.html#a5edf19408d7d8726f9b0b6b10810b00f">Xpetra::CrsMatrixUtils::sortAndMergeCrsEntries</a></div><div class="ttdeci">static void sortAndMergeCrsEntries(const Teuchos::ArrayView&lt; size_t &gt; &amp;CRS_rowptr, const Teuchos::ArrayView&lt; LocalOrdinal &gt; &amp;CRS_colind, const Teuchos::ArrayView&lt; Scalar &gt; &amp;CRS_vals, const UnderlyingLib lib)</div><div class="ttdoc">Sort and merge the entries of the (raw CSR) matrix by column index within each row.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___crs_matrix_utils_8hpp_source.html#l00052">MueLu_CrsMatrixUtils.hpp:52</a></div></div>
 <div class="ttc" id="anamespace_xpetra_html"><div class="ttname"><a href="namespace_xpetra.html">Xpetra</a></div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___crs_matrix_utils_8hpp_source.html#l00019">MueLu_CrsMatrixUtils.hpp:19</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

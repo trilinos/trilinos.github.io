@@ -150,7 +150,7 @@ $(function() {
 <div class="line">  cmdp.setOption(<span class="stringliteral">&quot;use-stacked-timer&quot;</span>,<span class="stringliteral">&quot;no-stacked-timer&quot;</span>,&amp;useStackedTimer,<span class="stringliteral">&quot;Use StackedTimer to print solver timing statistics&quot;</span>);</div>
 <div class="line">  cmdp.setOption(<span class="stringliteral">&quot;all-print&quot;</span>,<span class="stringliteral">&quot;root-print&quot;</span>,&amp;allprint,<span class="stringliteral">&quot;All processors print to out&quot;</span>);</div>
 <div class="line">  <span class="keywordflow">if</span> (cmdp.parse(argc,argv) != Teuchos::CommandLineProcessor::PARSE_SUCCESSFUL) {</div>
-<div class="line">    <span class="keywordflow">return</span> -1;</div>
+<div class="line">    <span class="keywordflow">return</span> EXIT_FAILURE;</div>
 <div class="line">  }</div>
 <div class="line"> </div>
 <div class="line">  std::ostream&amp; out = ( (allprint || (myRank == 0)) ? std::cout : blackhole );</div>
@@ -161,9 +161,11 @@ $(function() {
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Read matrix</span></div>
 <div class="line">  RCP&lt;MAT&gt; A;</div>
+<div class="line">  <span class="keywordflow">if</span>( verbose &amp;&amp; myRank == 0) std::cout &lt;&lt; <span class="stringliteral">&quot;Reading A from &quot;</span> &lt;&lt; mat_filename &lt;&lt; std::endl;</div>
 <div class="line">  <span class="keywordflow">if</span> (map_filename == <span class="stringliteral">&quot;&quot;</span>) {</div>
 <div class="line">    A = MMReader::readSparseFile(mat_filename, comm);</div>
 <div class="line">  } <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="keywordflow">if</span>( verbose &amp;&amp; myRank == 0) std::cout &lt;&lt; <span class="stringliteral">&quot; using map file &quot;</span> &lt;&lt; map_filename &lt;&lt; std::endl;</div>
 <div class="line">    RCP&lt;const Map&lt;LO,GO&gt; &gt; rowMap = MMReader::readMapFile(map_filename, comm);</div>
 <div class="line">    RCP&lt;const Map&lt;LO,GO&gt; &gt; colMap = Teuchos::null;</div>
 <div class="line">    A = MMReader::readSparseFile (mat_filename, rowMap, colMap, rowMap, rowMap);</div>
@@ -192,12 +194,15 @@ $(function() {
 <div class="line"><span class="comment">     *   [10]]</span></div>
 <div class="line"><span class="comment">     */</span></div>
 <div class="line">    <span class="keywordflow">if</span> (<span class="keyword">true</span>) {</div>
+<div class="line">      <span class="keywordflow">if</span>( verbose &amp;&amp; myRank == 0) std::cout &lt;&lt; <span class="stringliteral">&quot;Setting B to be A*[1; ..; 1];&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line">      X-&gt;putScalar(1);</div>
 <div class="line">      A-&gt;apply(*X, *B);</div>
 <div class="line">    } <span class="keywordflow">else</span> {</div>
+<div class="line">      <span class="keywordflow">if</span>( verbose &amp;&amp; myRank == 0) std::cout &lt;&lt; <span class="stringliteral">&quot;Setting B to be [10; ..; 10];&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line">      B-&gt;putScalar(10);</div>
 <div class="line">    }</div>
 <div class="line">  } <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="keywordflow">if</span>( verbose &amp;&amp; myRank == 0) std::cout &lt;&lt; <span class="stringliteral">&quot;Reading B from &quot;</span> &lt;&lt; rhs_filename &lt;&lt; std::endl;</div>
 <div class="line">    B = MMReader::readDenseFile (rhs_filename, comm, rngmap);</div>
 <div class="line">    numVectors = B-&gt;getNumVectors();</div>
 <div class="line">  }</div>
@@ -272,7 +277,7 @@ $(function() {
 <div class="line">  RCP&lt;Amesos2::Solver&lt;MAT,MV&gt; &gt; solver;</div>
 <div class="line">  <span class="keywordflow">if</span>( !Amesos2::query(solvername) ){</div>
 <div class="line">    *fos &lt;&lt; solvername &lt;&lt; <span class="stringliteral">&quot; solver not enabled.  Exiting...&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line">    <span class="keywordflow">return</span> EXIT_SUCCESS;</div>
+<div class="line">    <span class="keywordflow">return</span> EXIT_FAILURE;</div>
 <div class="line">  }</div>
 <div class="line"> </div>
 <div class="line">  solver = Amesos2::create&lt;MAT,MV&gt;(solvername, A, X, B);</div>
@@ -300,8 +305,13 @@ $(function() {
 <div class="line">  {</div>
 <div class="line">    Teuchos::RCP&lt; Teuchos::Time &gt; symboTimer_ = Teuchos::TimeMonitor::getNewCounter (<span class="stringliteral">&quot;Time for Symbolic Factorization&quot;</span>);</div>
 <div class="line">    Teuchos::TimeMonitor symboFactTimer(*symboTimer_);</div>
-<div class="line"> </div>
-<div class="line">    solver-&gt;symbolicFactorization();</div>
+<div class="line">    <span class="keywordflow">try</span> {</div>
+<div class="line">      solver-&gt;symbolicFactorization();</div>
+<div class="line">    } <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception&amp; e) {</div>
+<div class="line">      *fos &lt;&lt; <span class="stringliteral">&quot;\n == solver symbolic threw exception ==\n&quot;</span></div>
+<div class="line">           &lt;&lt; e.what() &lt;&lt; <span class="stringliteral">&quot;\n == Exiting ==\n&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">      <span class="keywordflow">return</span> EXIT_FAILURE; <span class="comment">//everyone should throw on failure</span></div>
+<div class="line">    }</div>
 <div class="line">    comm-&gt;barrier();</div>
 <div class="line">  }</div>
 <div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> s = 0; s &lt; numSolves; s++) {</div>
@@ -330,7 +340,13 @@ $(function() {
 <div class="line">      Teuchos::RCP&lt; Teuchos::Time &gt; numerTimer_ = Teuchos::TimeMonitor::getNewCounter (<span class="stringliteral">&quot;Time for Numeric Factorization&quot;</span>);</div>
 <div class="line">      Teuchos::TimeMonitor numerFactTimer(*numerTimer_);</div>
 <div class="line"> </div>
-<div class="line">      solver-&gt;numericFactorization();</div>
+<div class="line">      <span class="keywordflow">try</span> {</div>
+<div class="line">        solver-&gt;numericFactorization();</div>
+<div class="line">      } <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception&amp; e) {</div>
+<div class="line">        *fos &lt;&lt; <span class="stringliteral">&quot;\n == solver numeric threw exception ==\n&quot;</span></div>
+<div class="line">             &lt;&lt; e.what() &lt;&lt; <span class="stringliteral">&quot;\n == Exiting ==\n&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">        <span class="keywordflow">return</span> EXIT_FAILURE; <span class="comment">//everyone should throw on failure</span></div>
+<div class="line">      }</div>
 <div class="line">      comm-&gt;barrier();</div>
 <div class="line">    }</div>
 <div class="line">    <span class="comment">// perform solve</span></div>
@@ -338,7 +354,13 @@ $(function() {
 <div class="line">      Teuchos::RCP&lt; Teuchos::Time &gt; solveTimer_ = Teuchos::TimeMonitor::getNewCounter (<span class="stringliteral">&quot;Time for Solve&quot;</span>);</div>
 <div class="line">      Teuchos::TimeMonitor solveTimer(*solveTimer_);</div>
 <div class="line"> </div>
-<div class="line">      solver-&gt;solve();</div>
+<div class="line">      <span class="keywordflow">try</span> {</div>
+<div class="line">        solver-&gt;solve();</div>
+<div class="line">      } <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception&amp; e) {</div>
+<div class="line">        *fos &lt;&lt; <span class="stringliteral">&quot;\n == solver solve threw exception ==\n&quot;</span></div>
+<div class="line">             &lt;&lt; e.what() &lt;&lt; <span class="stringliteral">&quot;\n == Exiting ==\n&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">        <span class="keywordflow">return</span> EXIT_FAILURE; <span class="comment">//everyone should throw on failure</span></div>
+<div class="line">      }</div>
 <div class="line">      comm-&gt;barrier();</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">if</span>(printSolution) {</div>
@@ -397,7 +419,7 @@ $(function() {
 <div class="line">  }</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// We are done.</span></div>
-<div class="line">  <span class="keywordflow">return</span> 0;</div>
+<div class="line">  <span class="keywordflow">return</span> EXIT_SUCCESS;</div>
 <div class="line">}</div>
 <div class="ttc" id="aklu2__simple_8cpp_html_a840291bc02cba5474a4cb46a9b9566fe"><div class="ttname"><a href="klu2__simple_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe">main</a></div><div class="ttdeci">int main(void)</div><div class="ttdef"><b>Definition</b> klu2_simple.cpp:144</div></div>
 </div><!-- fragment --> </div><!-- contents -->

@@ -22,5 +22,6 @@ var searchData=
   ['finelevelinputdata_19',['FineLevelInputData',['../class_fine_level_input_data.html',1,'']]],
   ['finelevelinputdatafactory_20',['FineLevelInputDataFactory',['../class_mue_lu_1_1_fine_level_input_data_factory.html',1,'MueLu']]],
   ['finelevelinputdatafactorytester_21',['FineLevelInputDataFactoryTester',['../class_mue_lu_tests_1_1_fine_level_input_data_factory_tester.html',1,'MueLuTests']]],
-  ['formattinghelper_22',['FormattingHelper',['../struct_mue_lu_1_1_formatting_helper.html',1,'MueLu']]]
+  ['flatoperator_22',['FlatOperator',['../class_mue_lu_1_1_flat_operator.html',1,'MueLu']]],
+  ['formattinghelper_23',['FormattingHelper',['../struct_mue_lu_1_1_formatting_helper.html',1,'MueLu']]]
 ];

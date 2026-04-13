@@ -50,7 +50,7 @@ var searchData=
   ['sort_5findexes_47',['sort_indexes',['../_tpetra___util_8hpp.html#acefeb08d30ea92d23ff102232d4c35f1',1,'Tpetra::SortDetails']]],
   ['sortandmergecrsentries_48',['sortAndMergeCrsEntries',['../_tpetra___import___util2_8hpp.html#abb69413e3cd403ec431d579e68fec29f',1,'Tpetra::Import_Util']]],
   ['sortandmergeindicesandvalues_49',['sortAndMergeIndicesAndValues',['../class_tpetra_1_1_crs_matrix.html#a25b1085eb918617cd6b57317794c7807',1,'Tpetra::CrsMatrix']]],
-  ['sortcrsentries_50',['sortCrsEntries',['../_tpetra___import___util2_8hpp.html#afa6ddc7a853dc700b00ae11be6598ce6',1,'Tpetra::Import_Util']]],
+  ['sortcrsentries_50',['sortCrsEntries',['../_tpetra___import___util2_8hpp.html#a578bcc4a9808a9d6034a6e26f03ea193',1,'Tpetra::Import_Util']]],
   ['sortdetails_51',['SortDetails',['../namespace_sort_details.html',1,'']]],
   ['sortghostsassociatedwitheachprocessor_5f_52',['sortGhostsAssociatedWithEachProcessor_',['../class_tpetra_1_1_crs_graph.html#aa924264cc4a3c2c4ffba8824fc36d75d',1,'Tpetra::CrsGraph']]],
   ['source_5f_53',['source_',['../class_tpetra_1_1_import_export_data.html#acf04ab3127247c4dada948c79ec62f4f',1,'Tpetra::ImportExportData']]],

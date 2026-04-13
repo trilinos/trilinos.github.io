@@ -222,7 +222,7 @@ $(document).ready(function(){initNavTree('_mue_lu___factory_factory__def_8hpp_so
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="preprocessor">#include &quot;MueLu_MatlabSmoother.hpp&quot;</span></div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="preprocessor">#ifdef HAVE_MUELU_INTREPID2</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="preprocessor">#if defined(HAVE_MUELU_INTREPID2) &amp;&amp; defined(HAVE_MUELU_EXPERIMENTAL)</span></div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="preprocessor">#include &quot;MueLu_IntrepidPCoarsenFactory.hpp&quot;</span></div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
@@ -391,7 +391,7 @@ $(document).ready(function(){initNavTree('_mue_lu___factory_factory__def_8hpp_so
 <div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>  <span class="keywordflow">if</span> (factoryName == <span class="stringliteral">&quot;MatlabSmoother&quot;</span>) <span class="keywordflow">return</span> BuildMatlabSmoother(paramList, factoryMapIn, factoryManagersIn);</div>
 <div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span> </div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span><span class="preprocessor">#ifdef HAVE_MUELU_INTREPID2</span></div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span><span class="preprocessor">#if defined(HAVE_MUELU_INTREPID2) &amp;&amp; defined(HAVE_MUELU_EXPERIMENTAL)</span></div>
 <div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>  <span class="keywordflow">if</span> (factoryName == <span class="stringliteral">&quot;IntrepidPCoarsenFactory&quot;</span>) <span class="keywordflow">return</span> Build2&lt;IntrepidPCoarsenFactory&gt;(paramList, factoryMapIn, factoryManagersIn);</div>
 <div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span> </div>
