@@ -47,7 +47,7 @@ var hierarchy =
     ] ],
     [ "MueLu::Misc::DebugFunctor< local_matrix_type >", "class_mue_lu_1_1_misc_1_1_debug_functor.html", null ],
     [ "MueLu::DefaultProblemStrings< T, U >", "class_mue_lu_1_1_default_problem_strings.html", null ],
-    [ "Dense", "class_dense.html", null ],
+    [ "DenseConstraint", "class_dense_constraint.html", null ],
     [ "Teuchos::Describable", null, [
       [ "MueLu::Describable", "class_mue_lu_1_1_describable.html", [
         [ "MueLu::BaseClass", "class_mue_lu_1_1_base_class.html", [

@@ -677,7 +677,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Kokkos memory space for communication buffers. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l00714">714</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l00715">715</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -705,7 +705,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Whether the data transfer should be performed in forward or reverse mode. </p>
 <p>"Reverse mode" means calling <a class="el" href="class_tpetra_1_1_dist_object.html#ad2623c99b47ce9d88692abdc094d8be6" title="Export data into this object using an Export object (&quot;forward mode&quot;).">doExport()</a> with an <a class="el" href="class_tpetra_1_1_import.html" title="Communication plan for data redistribution from a uniquely-owned to a (possibly) multiply-owned distr...">Import</a> object, or calling <a class="el" href="class_tpetra_1_1_dist_object.html#a2e2cce34ee9698060f87e1fad3695a2d" title="Import data into this object using an Import object (&quot;forward mode&quot;).">doImport()</a> with an <a class="el" href="class_tpetra_1_1_export.html" title="Communication plan for data redistribution from a (possibly) multiply-owned to a uniquely-owned distr...">Export</a> object. "Forward mode" means calling <a class="el" href="class_tpetra_1_1_dist_object.html#ad2623c99b47ce9d88692abdc094d8be6" title="Export data into this object using an Export object (&quot;forward mode&quot;).">doExport()</a> with an <a class="el" href="class_tpetra_1_1_export.html" title="Communication plan for data redistribution from a (possibly) multiply-owned to a uniquely-owned distr...">Export</a> object, or calling <a class="el" href="class_tpetra_1_1_dist_object.html#a2e2cce34ee9698060f87e1fad3695a2d" title="Import data into this object using an Import object (&quot;forward mode&quot;).">doImport()</a> with an <a class="el" href="class_tpetra_1_1_import.html" title="Communication plan for data redistribution from a uniquely-owned to a (possibly) multiply-owned distr...">Import</a> object. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l00644">644</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l00643">643</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1456,7 +1456,6 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   <table class="params">
     <tr><td class="paramname">alpha</td><td>[in] Coefficient by which to scale the result. We treat alpha = 0 as a special case, following the BLAS rules. That is, if alpha = 0, this method does <code>this-&gt;putScalar(0)</code>. </td></tr>
     <tr><td class="paramname">D</td><td>[in] Block diagonal, as a 3-D Kokkos::View. The leftmost index indicates which block, the middle index the row within a block, and the rightmost index the column within a block. </td></tr>
-    <tr><td class="paramname">pivots</td><td>[in] Pivots (from LU factorization of the blocks) </td></tr>
     <tr><td class="paramname">X</td><td>[in] Input Block(Multi)<a class="el" href="class_tpetra_1_1_vector.html" title="A distributed dense vector.">Vector</a>; may alias <code>*this</code>.</td></tr>
   </table>
   </dd>
@@ -1514,9 +1513,9 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 </div><div class="memdoc">
 
 <p>Block Jacobi update <picture><source srcset="form_7_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$Y = \beta * Y + \alpha D (X - Z)$" src="form_7.png" width="136" height="14"/></picture>. </p>
-<p>This method computes the block Jacobi update <picture><source srcset="form_7_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$Y = \beta * Y + \alpha D (X - Z)$" src="form_7.png" width="136" height="14"/></picture>, where Y is <code>*this&lt;\tt&gt;, D the (explicitly stored) inverse block diagonal of a <a class="el" href="class_tpetra_1_1_block_crs_matrix.html" title="Sparse matrix whose entries are small dense square blocks, all of the same dimensions.">BlockCrsMatrix</a> A, and <picture><source srcset="form_8_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$Z = A*Y$" src="form_8.png" width="56" height="10"/></picture>. The method may use Z as scratch space.</code></p>
-<p><code>Folks who optimize sparse matrix-vector multiply kernels tend not to write special-purpose kernels like this one. Thus, this kernel consolidates all the other code that block Jacobi needs, while exploiting the existing sparse matrix-vector multiply kernel in <a class="el" href="class_tpetra_1_1_block_crs_matrix.html" title="Sparse matrix whose entries are small dense square blocks, all of the same dimensions.">BlockCrsMatrix</a>. That consolidation minimizes thread-parallel kernel launch overhead.</code></p>
-<p><code></p><dl class="params"><dt>Parameters</dt><dd>
+<p>This method computes the block Jacobi update <picture><source srcset="form_7_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$Y = \beta * Y + \alpha D (X - Z)$" src="form_7.png" width="136" height="14"/></picture>, where Y is <code>*this</code>, D the (explicitly stored) inverse block diagonal of a <a class="el" href="class_tpetra_1_1_block_crs_matrix.html" title="Sparse matrix whose entries are small dense square blocks, all of the same dimensions.">BlockCrsMatrix</a> A, and <picture><source srcset="form_8_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$Z = A*Y$" src="form_8.png" width="56" height="10"/></picture>. The method may use Z as scratch space.</p>
+<p>Folks who optimize sparse matrix-vector multiply kernels tend not to write special-purpose kernels like this one. Thus, this kernel consolidates all the other code that block Jacobi needs, while exploiting the existing sparse matrix-vector multiply kernel in <a class="el" href="class_tpetra_1_1_block_crs_matrix.html" title="Sparse matrix whose entries are small dense square blocks, all of the same dimensions.">BlockCrsMatrix</a>. That consolidation minimizes thread-parallel kernel launch overhead.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">alpha</td><td>[in] Coefficient of the "block scaled" term. We treat alpha = 0 as a special case, following the BLAS rules. That is, if alpha = 0, this method does Y = beta * Y. </td></tr>
     <tr><td class="paramname">D</td><td>[in] Block diagonal, as a 3-D Kokkos::View. The leftmost index indicates which block, the middle index the row within a block, and the rightmost index the column within a block. </td></tr>
@@ -1526,7 +1525,6 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </table>
   </dd>
 </dl>
-<p></code></p>
 
 <p class="definition">Definition at line <a class="el" href="_tpetra___block_multi_vector__def_8hpp_source.html#l00709">709</a> of file <a class="el" href="_tpetra___block_multi_vector__def_8hpp_source.html">Tpetra_BlockMultiVector_def.hpp</a>.</p>
 
@@ -1561,7 +1559,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Whether this object needs synchronization to the given memory space. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___block_multi_vector__decl_8hpp_source.html#l00417">417</a> of file <a class="el" href="_tpetra___block_multi_vector__decl_8hpp_source.html">Tpetra_BlockMultiVector_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___block_multi_vector__decl_8hpp_source.html#l00416">416</a> of file <a class="el" href="_tpetra___block_multi_vector__decl_8hpp_source.html">Tpetra_BlockMultiVector_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1592,7 +1590,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Whether this object needs synchronization to the host. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___block_multi_vector__decl_8hpp_source.html#l00422">422</a> of file <a class="el" href="_tpetra___block_multi_vector__decl_8hpp_source.html">Tpetra_BlockMultiVector_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___block_multi_vector__decl_8hpp_source.html#l00421">421</a> of file <a class="el" href="_tpetra___block_multi_vector__decl_8hpp_source.html">Tpetra_BlockMultiVector_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1623,7 +1621,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Whether this object needs synchronization to the device. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___block_multi_vector__decl_8hpp_source.html#l00427">427</a> of file <a class="el" href="_tpetra___block_multi_vector__decl_8hpp_source.html">Tpetra_BlockMultiVector_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___block_multi_vector__decl_8hpp_source.html#l00426">426</a> of file <a class="el" href="_tpetra___block_multi_vector__decl_8hpp_source.html">Tpetra_BlockMultiVector_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2103,7 +2101,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Stride between consecutive local entries in the same column. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___block_multi_vector__decl_8hpp_source.html#l00569">569</a> of file <a class="el" href="_tpetra___block_multi_vector__decl_8hpp_source.html">Tpetra_BlockMultiVector_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___block_multi_vector__decl_8hpp_source.html#l00568">568</a> of file <a class="el" href="_tpetra___block_multi_vector__decl_8hpp_source.html">Tpetra_BlockMultiVector_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2134,7 +2132,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Stride between consecutive local entries in the same row. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___block_multi_vector__decl_8hpp_source.html#l00574">574</a> of file <a class="el" href="_tpetra___block_multi_vector__decl_8hpp_source.html">Tpetra_BlockMultiVector_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___block_multi_vector__decl_8hpp_source.html#l00573">573</a> of file <a class="el" href="_tpetra___block_multi_vector__decl_8hpp_source.html">Tpetra_BlockMultiVector_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2231,11 +2229,12 @@ Allows the "target" <a class="el" href="class_tpetra_1_1_map.html" title="A para
     <tr><td class="paramname">source</td><td>[in] The "source" object for redistribution. </td></tr>
     <tr><td class="paramname">importer</td><td>[in] Precomputed data redistribution plan. Its source <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> must be the same as the input <a class="el" href="class_tpetra_1_1_dist_object.html" title="Base class for distributed Tpetra objects that support data redistribution.">DistObject</a>'s <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a>, and its target <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> must be the same as <code>this-&gt;<a class="el" href="class_tpetra_1_1_dist_object.html#adef545d3737b47c030e0e6a3e7d8b1e7" title="The Map describing the parallel distribution of this object.">getMap()</a></code>. </td></tr>
     <tr><td class="paramname">CM</td><td>[in] How to combine incoming data with the same global index. </td></tr>
+    <tr><td class="paramname">restrictedMode</td><td>[in] Whether to use restricted mode. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00371">371</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00372">372</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2300,11 +2299,12 @@ Allows the "target" <a class="el" href="class_tpetra_1_1_map.html" title="A para
     <tr><td class="paramname">source</td><td>[in] The "source" object for redistribution. </td></tr>
     <tr><td class="paramname">exporter</td><td>[in] Precomputed data redistribution plan. Its <em>target</em> <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> must be the same as the input <a class="el" href="class_tpetra_1_1_dist_object.html" title="Base class for distributed Tpetra objects that support data redistribution.">DistObject</a>'s <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a>, and its <em>source</em> <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> must be the same as <code>this-&gt;<a class="el" href="class_tpetra_1_1_dist_object.html#adef545d3737b47c030e0e6a3e7d8b1e7" title="The Map describing the parallel distribution of this object.">getMap()</a></code>. (Note the difference from forward mode.) </td></tr>
     <tr><td class="paramname">CM</td><td>[in] How to combine incoming data with the same global index. </td></tr>
+    <tr><td class="paramname">restrictedMode</td><td>[in] Whether to use restricted mode. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00438">438</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00441">441</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2369,11 +2369,12 @@ Allows the "target" <a class="el" href="class_tpetra_1_1_map.html" title="A para
     <tr><td class="paramname">source</td><td>[in] The "source" object for redistribution. </td></tr>
     <tr><td class="paramname">exporter</td><td>[in] Precomputed data redistribution plan. Its source <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> must be the same as the input <a class="el" href="class_tpetra_1_1_dist_object.html" title="Base class for distributed Tpetra objects that support data redistribution.">DistObject</a>'s <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a>, and its target <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> must be the same as <code>this-&gt;<a class="el" href="class_tpetra_1_1_dist_object.html#adef545d3737b47c030e0e6a3e7d8b1e7" title="The Map describing the parallel distribution of this object.">getMap()</a></code>. </td></tr>
     <tr><td class="paramname">CM</td><td>[in] How to combine incoming data with the same global index. </td></tr>
+    <tr><td class="paramname">restrictedMode</td><td>[in] Whether to use restricted mode. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00404">404</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00406">406</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2438,11 +2439,12 @@ Allows the "target" <a class="el" href="class_tpetra_1_1_map.html" title="A para
     <tr><td class="paramname">source</td><td>[in] The "source" object for redistribution. </td></tr>
     <tr><td class="paramname">importer</td><td>[in] Precomputed data redistribution plan. Its <em>target</em> <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> must be the same as the input <a class="el" href="class_tpetra_1_1_dist_object.html" title="Base class for distributed Tpetra objects that support data redistribution.">DistObject</a>'s <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a>, and its <em>source</em> <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> must be the same as <code>this-&gt;<a class="el" href="class_tpetra_1_1_dist_object.html#adef545d3737b47c030e0e6a3e7d8b1e7" title="The Map describing the parallel distribution of this object.">getMap()</a></code>. (Note the difference from forward mode.) </td></tr>
     <tr><td class="paramname">CM</td><td>[in] How to combine incoming data with the same global index. </td></tr>
+    <tr><td class="paramname">restrictedMode</td><td>[in] Whether to use restricted mode. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00472">472</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00476">476</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2471,7 +2473,7 @@ Allows the "target" <a class="el" href="class_tpetra_1_1_map.html" title="A para
 
 <p>Whether the data from an import/export operation has arrived, and is ready for the unpack and combine step. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00527">527</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00531">531</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2501,7 +2503,7 @@ Allows the "target" <a class="el" href="class_tpetra_1_1_map.html" title="A para
 <p>Whether this is a globally distributed object. </p>
 <p>For a definition of "globally distributed" (and its opposite, "locally replicated"), see the documentation of <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a>'s <a class="el" href="class_tpetra_1_1_dist_object.html#afc178c45d66d8232f27b1e79fc0e1535" title="Whether this is a globally distributed object.">isDistributed()</a> method. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00538">538</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00542">542</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2531,7 +2533,7 @@ Allows the "target" <a class="el" href="class_tpetra_1_1_map.html" title="A para
 <p>The <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> describing the parallel distribution of this object. </p>
 <p>Note that some <a class="el" href="namespace_tpetra.html" title="Namespace Tpetra contains the class and methods constituting the Tpetra library.">Tpetra</a> objects might be distributed using multiple <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> objects. For example, <a class="el" href="class_tpetra_1_1_crs_matrix.html" title="Sparse matrix that presents a row-oriented interface that lets users read or modify entries.">CrsMatrix</a> has both a row <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> and a column <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a>. It is up to the subclass to decide which <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> to use when invoking the <a class="el" href="class_tpetra_1_1_dist_object.html" title="Base class for distributed Tpetra objects that support data redistribution.">DistObject</a> constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l00546">546</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l00550">550</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2562,7 +2564,7 @@ Allows the "target" <a class="el" href="class_tpetra_1_1_map.html" title="A para
 <p>Print this object to the given output stream. </p>
 <p>We generally assume that all MPI processes can print to the given stream. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00556">556</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00560">560</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2592,7 +2594,7 @@ Allows the "target" <a class="el" href="class_tpetra_1_1_map.html" title="A para
 <p>One-line descriptiion of this object. </p>
 <p>We declare this method virtual so that subclasses of <a class="el" href="class_tpetra_1_1_dist_object.html" title="Base class for distributed Tpetra objects that support data redistribution.">DistObject</a> may override it. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00566">566</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00570">570</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2633,7 +2635,7 @@ Allows the "target" <a class="el" href="class_tpetra_1_1_map.html" title="A para
 <p>Print a descriptiion of this object to the given output stream. </p>
 <p>We declare this method virtual so that subclasses of Distobject may override it. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00573">573</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00577">577</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2668,12 +2670,11 @@ We make NO promises of backwards compatibility. This method may change or disapp
 <p>On input, this object is distributed over the <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> returned by <a class="el" href="class_tpetra_1_1_dist_object.html#adef545d3737b47c030e0e6a3e7d8b1e7" title="The Map describing the parallel distribution of this object.">getMap()</a> (the "original Map," with its communicator, the "original communicator"). The input <code>newMap</code> of this method <em>must</em> be the same as the result of calling <code><a class="el" href="class_tpetra_1_1_dist_object.html#adef545d3737b47c030e0e6a3e7d8b1e7" title="The Map describing the parallel distribution of this object.">getMap()</a>-&gt;removeEmptyProcesses()</code>. On processes in the original communicator which contain zero entries ("excluded processes," as opposed to "included processes"), the input <code>newMap</code> must be <code>Teuchos::null</code> (which is what <code><a class="el" href="class_tpetra_1_1_dist_object.html#adef545d3737b47c030e0e6a3e7d8b1e7" title="The Map describing the parallel distribution of this object.">getMap()</a>-&gt;removeEmptyProcesses()</code> returns anyway).</p>
 <p>On included processes, reassign this object's <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> (that would be returned by <a class="el" href="class_tpetra_1_1_dist_object.html#adef545d3737b47c030e0e6a3e7d8b1e7" title="The Map describing the parallel distribution of this object.">getMap()</a>) to the input <code>newMap</code>, and do any work that needs to be done to restore correct semantics. On excluded processes, free any data that needs freeing, and do any other work that needs to be done to restore correct semantics.</p>
 <p>This method has collective semantics over the original communicator. On exit, the only method of this object which is safe to call on excluded processes is the destructor. This implies that subclasses' destructors must not contain communication operations.</p>
-<dl class="section return"><dt>Returns</dt><dd>The object's new <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a>. Its communicator is a new communicator, distinct from the old <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a>'s communicator, which contains a subset of the processes in the old communicator.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The name differs from <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a>'s method removeEmptyProcesses(), in order to emphasize that the operation on <a class="el" href="class_tpetra_1_1_dist_object.html" title="Base class for distributed Tpetra objects that support data redistribution.">DistObject</a> happens in place, modifying the input, whereas the operation removeEmptyProcess() on <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> does not modify the input.</dd>
 <dd>
 To implementers of <a class="el" href="class_tpetra_1_1_dist_object.html" title="Base class for distributed Tpetra objects that support data redistribution.">DistObject</a> subclasses: The default implementation of this class throws std::logic_error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00628">628</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00627">627</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2702,7 +2703,7 @@ To implementers of <a class="el" href="class_tpetra_1_1_dist_object.html" title=
 
 <p>Getter for the DistributorActor. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l00631">631</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l00630">630</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2733,7 +2734,7 @@ To implementers of <a class="el" href="class_tpetra_1_1_dist_object.html" title=
 <p>If this method returns zero, the instance says that it might possibly have a different number of packets for each LID (local index) to send or receive. If it returns nonzero, the instance promises that the number of packets is the same for all LIDs, and that the return value is this number of packets per LID.</p>
 <p>The default implementation of this method returns zero. This does not affect the behavior of <a class="el" href="class_tpetra_1_1_dist_object.html#a82a9a5fd0df1dda55188a340e6b5a2e7" title="Redistribute data across (MPI) processes.">doTransfer()</a> in any way. If a nondefault implementation returns nonzero, <a class="el" href="class_tpetra_1_1_dist_object.html#a82a9a5fd0df1dda55188a340e6b5a2e7" title="Redistribute data across (MPI) processes.">doTransfer()</a> will use this information to avoid unnecessary allocation and / or resizing of arrays. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00665">665</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00664">664</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2802,12 +2803,13 @@ To implementers of <a class="el" href="class_tpetra_1_1_dist_object.html" title=
     <tr><td class="paramname">transfer</td><td>[in] The <a class="el" href="class_tpetra_1_1_export.html" title="Communication plan for data redistribution from a (possibly) multiply-owned to a uniquely-owned distr...">Export</a> or <a class="el" href="class_tpetra_1_1_import.html" title="Communication plan for data redistribution from a uniquely-owned to a (possibly) multiply-owned distr...">Import</a> object representing the communication pattern. (<a class="el" href="class_tpetra_1_1_details_1_1_transfer.html" title="Common base class of Import and Export.">Details::Transfer</a> is the common base class of these two objects.)</td></tr>
     <tr><td class="paramname">modeString</td><td>[in] Human-readable string, for verbose debugging output and error output, explaining what function called this method. Example: "doImport (forward)", "doExport (reverse)".</td></tr>
     <tr><td class="paramname">revOp</td><td>[in] Whether to do a forward or reverse mode redistribution.</td></tr>
-    <tr><td class="paramname">CM</td><td>[in] The combine mode that describes how to combine values that map to the same global ID on the same process. </td></tr>
+    <tr><td class="paramname">CM</td><td>[in] The combine mode that describes how to combine values that map to the same global ID on the same process.</td></tr>
+    <tr><td class="paramname">restrictedMode</td><td>[in] Whether to use restricted mode. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00687">687</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00688">688</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2856,7 +2858,7 @@ To implementers of <a class="el" href="class_tpetra_1_1_dist_object.html" title=
 <dl class="section return"><dt>Returns</dt><dd>Whether we actually reallocated either of the arrays.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>This is an implementation detail of doTransferNew(). This needs to be protected, but that doesn't mean users should call this method. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00709">709</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00710">710</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2921,7 +2923,7 @@ To implementers of <a class="el" href="class_tpetra_1_1_dist_object.html" title=
 <p>Implementation detail of doTransfer. </p>
 <p>LID DualViews come from the Transfer object given to doTransfer. They are <em>always</em> sync'd on both host and device. Users must never attempt to modify or sync them. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00738">738</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00739">739</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2978,7 +2980,7 @@ To implementers of <a class="el" href="class_tpetra_1_1_dist_object.html" title=
 </div><div class="memdoc">
 
 <p>Perform copies and permutations that are local to the calling (MPI) process. </p>
-<p>Subclasses <em>must</em> reimplement this function. Its default implementation does nothing. Note that the &lt;t&gt;target object of the <a class="el" href="class_tpetra_1_1_export.html" title="Communication plan for data redistribution from a (possibly) multiply-owned to a uniquely-owned distr...">Export</a> or <a class="el" href="class_tpetra_1_1_import.html" title="Communication plan for data redistribution from a uniquely-owned to a (possibly) multiply-owned distr...">Import</a>, namely <code>*this</code>, packs the <em>source</em> object's data.</p>
+<p>Subclasses <em>must</em> reimplement this function. Its default implementation does nothing. Note that the <em>target</em> object of the <a class="el" href="class_tpetra_1_1_export.html" title="Communication plan for data redistribution from a (possibly) multiply-owned to a uniquely-owned distr...">Export</a> or <a class="el" href="class_tpetra_1_1_import.html" title="Communication plan for data redistribution from a uniquely-owned to a (possibly) multiply-owned distr...">Import</a>, namely <code>*this</code>, packs the <em>source</em> object's data.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>permuteToLIDs and permuteFromLIDs are sync'd to both host and device. That is, <code>permuteToLIDs.need_sync_host()</code>, <code>permuteToLIDs.need_sync_device()</code>, <code>permuteFromLIDs.need_sync_host()</code>, and <code>permuteFromLIDs.need_sync_device()</code> are all false.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -2991,7 +2993,7 @@ To implementers of <a class="el" href="class_tpetra_1_1_dist_object.html" title=
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00822">822</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00823">823</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -3055,7 +3057,7 @@ To implementers of <a class="el" href="class_tpetra_1_1_dist_object.html" title=
 
 <p>Same as copyAndPermute, but do operations in <code>space</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00832">832</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00833">833</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -3112,7 +3114,7 @@ To implementers of <a class="el" href="class_tpetra_1_1_dist_object.html" title=
 </div><div class="memdoc">
 
 <p>Pack data and metadata for communication (sends). </p>
-<p>Subclasses <em>must</em> reimplement this function. Its default implementation does nothing. Note that the &lt;t&gt;target object of the <a class="el" href="class_tpetra_1_1_export.html" title="Communication plan for data redistribution from a (possibly) multiply-owned to a uniquely-owned distr...">Export</a> or <a class="el" href="class_tpetra_1_1_import.html" title="Communication plan for data redistribution from a uniquely-owned to a (possibly) multiply-owned distr...">Import</a>, namely <code>*this</code>, packs the <em>source</em> object's data.</p>
+<p>Subclasses <em>must</em> reimplement this function. Its default implementation does nothing. Note that the <em>target</em> object of the <a class="el" href="class_tpetra_1_1_export.html" title="Communication plan for data redistribution from a (possibly) multiply-owned to a uniquely-owned distr...">Export</a> or <a class="el" href="class_tpetra_1_1_import.html" title="Communication plan for data redistribution from a uniquely-owned to a (possibly) multiply-owned distr...">Import</a>, namely <code>*this</code>, packs the <em>source</em> object's data.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>exportLIDs is sync'd to both host and device. That is, <code>exportLIDs.need_sync_host ()</code> and <code>exportLIDs.need_sync_device()</code> are both false.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -3125,7 +3127,7 @@ To implementers of <a class="el" href="class_tpetra_1_1_dist_object.html" title=
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00876">876</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00877">877</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -3189,7 +3191,7 @@ To implementers of <a class="el" href="class_tpetra_1_1_dist_object.html" title=
 
 <p>Same as packAndPrepare, but in an execution space instance. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00889">889</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00890">890</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -3246,20 +3248,20 @@ To implementers of <a class="el" href="class_tpetra_1_1_dist_object.html" title=
 </div><div class="memdoc">
 
 <p>Perform any unpacking and combining after communication. </p>
-<p>Subclasses <em>must</em> reimplement this function. Its default implementation does nothing. Note that the &lt;t&gt;target object of the <a class="el" href="class_tpetra_1_1_export.html" title="Communication plan for data redistribution from a (possibly) multiply-owned to a uniquely-owned distr...">Export</a> or <a class="el" href="class_tpetra_1_1_import.html" title="Communication plan for data redistribution from a uniquely-owned to a (possibly) multiply-owned distr...">Import</a>, namely <code>*this</code>, unpacks the received data into itself, possibly modifying its entries.</p>
+<p>Subclasses <em>must</em> reimplement this function. Its default implementation does nothing. Note that the <em>target</em> object of the <a class="el" href="class_tpetra_1_1_export.html" title="Communication plan for data redistribution from a (possibly) multiply-owned to a uniquely-owned distr...">Export</a> or <a class="el" href="class_tpetra_1_1_import.html" title="Communication plan for data redistribution from a uniquely-owned to a (possibly) multiply-owned distr...">Import</a>, namely <code>*this</code>, unpacks the received data into itself, possibly modifying its entries.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>importLIDs is sync'd to both host and device. That is, <code>importLIDs.need_sync_host ()</code> and <code>importLIDs.need_sync_device()</code> are both false.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">importLIDs</td><td>[in] List of the entries (as LIDs in the destination object) we received from other processes.</td></tr>
     <tr><td class="paramname">imports</td><td>[in/out] On input: Buffer of received data to unpack. <a class="el" href="class_tpetra_1_1_dist_object.html" title="Base class for distributed Tpetra objects that support data redistribution.">DistObject</a> promises nothing about where this is sync'd. Implementations may sync this wherever they like, either to host or to device. The allocation belongs to <a class="el" href="class_tpetra_1_1_dist_object.html" title="Base class for distributed Tpetra objects that support data redistribution.">DistObject</a>, not to subclasses; don't be tempted to change this to pass by reference.</td></tr>
-    <tr><td class="paramname">numPacketsPerLID</td><td>[in/out] On input: If <code>constantNumPackets</code> is zero, then <code>numPacketsPerLID[i]</code> contains the number of packets imported for importLIDs[i]. <a class="el" href="class_tpetra_1_1_dist_object.html" title="Base class for distributed Tpetra objects that support data redistribution.">DistObject</a> promises nothing about where this is sync'd. Implementations may sync this wherever they like, either to host or to device. The allocation belongs to <a class="el" href="class_tpetra_1_1_dist_object.html" title="Base class for distributed Tpetra objects that support data redistribution.">DistObject</a>, not to subclasses; don't be tempted to change this to pass by reference.</td></tr>
+    <tr><td class="paramname">numPacketsPerLID</td><td>[in/out] On input: If <code>constantNumPackets</code> is zero, then <code>numPacketsPerLID[i]</code> contains the number of packets imported for <code>importLIDs[i]</code>. <a class="el" href="class_tpetra_1_1_dist_object.html" title="Base class for distributed Tpetra objects that support data redistribution.">DistObject</a> promises nothing about where this is sync'd. Implementations may sync this wherever they like, either to host or to device. The allocation belongs to <a class="el" href="class_tpetra_1_1_dist_object.html" title="Base class for distributed Tpetra objects that support data redistribution.">DistObject</a>, not to subclasses; don't be tempted to change this to pass by reference.</td></tr>
     <tr><td class="paramname">constantNumPackets</td><td>[in] If nonzero, then the number of packets per LID is the same for all entries ("constant") and <code>constantNumPackets</code> is that number. If zero, then <code>numPacketsPerLID[i]</code> is the number of packets to unpack for LID <code>importLIDs[i]</code>.</td></tr>
     <tr><td class="paramname">combineMode</td><td>[in] The CombineMode to use when combining the imported entries with existing entries. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00940">940</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00941">941</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -3328,7 +3330,7 @@ To implementers of <a class="el" href="class_tpetra_1_1_dist_object.html" title=
 <dl class="section return"><dt>Returns</dt><dd>Whether we actually reallocated.</dd></dl>
 <p>We don't need a "reallocExportsIfNeeded" method, because <code>exports_</code> always gets passed into <a class="el" href="class_tpetra_1_1_block_multi_vector.html#ab1ee2f568f2d24bbf1b10d6b3db65043">packAndPrepare()</a> by nonconst reference. Thus, that method can resize the DualView without needing to call other <a class="el" href="class_tpetra_1_1_dist_object.html" title="Base class for distributed Tpetra objects that support data redistribution.">DistObject</a> methods. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00999">999</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l01000">1000</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -3358,7 +3360,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Mesh <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> given to constructor. </p>
 <p>This is stored by value, not as a Teuchos::RCP, because the latter is not thread-safe. I would like GID-&gt;LID lookups to be thread-safe. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___block_multi_vector__decl_8hpp_source.html#l00587">587</a> of file <a class="el" href="_tpetra___block_multi_vector__decl_8hpp_source.html">Tpetra_BlockMultiVector_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___block_multi_vector__decl_8hpp_source.html#l00586">586</a> of file <a class="el" href="_tpetra___block_multi_vector__decl_8hpp_source.html">Tpetra_BlockMultiVector_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -3386,7 +3388,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>The <a class="el" href="class_tpetra_1_1_multi_vector.html" title="One or more distributed dense vectors.">Tpetra::MultiVector</a> used to represent the data. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___block_multi_vector__decl_8hpp_source.html#l00595">595</a> of file <a class="el" href="_tpetra___block_multi_vector__decl_8hpp_source.html">Tpetra_BlockMultiVector_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___block_multi_vector__decl_8hpp_source.html#l00594">594</a> of file <a class="el" href="_tpetra___block_multi_vector__decl_8hpp_source.html">Tpetra_BlockMultiVector_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -3412,7 +3414,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>The <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> over which this object is distributed. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l00965">965</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l00966">966</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -3439,7 +3441,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Buffer into which packed data are imported (received from other processes). </p>
 <p>Unfortunately, I had to declare these protected, because <a class="el" href="class_tpetra_1_1_crs_matrix.html" title="Sparse matrix that presents a row-oriented interface that lets users read or modify entries.">CrsMatrix</a> uses them at one point. Please, nobody else use them. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l00978">978</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l00979">979</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -3468,7 +3470,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>This may be ignored in <a class="el" href="class_tpetra_1_1_dist_object.html#a82a9a5fd0df1dda55188a340e6b5a2e7" title="Redistribute data across (MPI) processes.">doTransfer()</a> if constantNumPackets is nonzero, indicating a constant number of packets per LID. (For example, <a class="el" href="class_tpetra_1_1_multi_vector.html" title="One or more distributed dense vectors.">MultiVector</a> sets the constantNumPackets output argument of <a class="el" href="class_tpetra_1_1_block_multi_vector.html#ab1ee2f568f2d24bbf1b10d6b3db65043">packAndPrepare()</a> to the number of columns in the multivector.)</p>
 <p>Unfortunately, I had to declare this protected, because <a class="el" href="class_tpetra_1_1_crs_matrix.html" title="Sparse matrix that presents a row-oriented interface that lets users read or modify entries.">CrsMatrix</a> uses it at one point. Please, nobody else use it. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l01018">1018</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l01019">1019</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -3495,7 +3497,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Buffer from which packed data are exported (sent to other processes). </p>
 <p>Unfortunately, I had to declare this protected, because <a class="el" href="class_tpetra_1_1_crs_matrix.html" title="Sparse matrix that presents a row-oriented interface that lets users read or modify entries.">CrsMatrix</a> uses it at one point. Please, nobody else use it. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l01025">1025</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l01026">1026</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -3524,7 +3526,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>This may be ignored in <a class="el" href="class_tpetra_1_1_dist_object.html#a82a9a5fd0df1dda55188a340e6b5a2e7" title="Redistribute data across (MPI) processes.">doTransfer()</a> if constantNumPackets is nonzero, indicating a constant number of packets per LID. (For example, <a class="el" href="class_tpetra_1_1_multi_vector.html" title="One or more distributed dense vectors.">MultiVector</a> sets the constantNumPackets output argument of <a class="el" href="class_tpetra_1_1_block_multi_vector.html#ab1ee2f568f2d24bbf1b10d6b3db65043">packAndPrepare()</a> to the number of columns in the multivector.)</p>
 <p>Unfortunately, I had to declare this protected, because <a class="el" href="class_tpetra_1_1_crs_matrix.html" title="Sparse matrix that presents a row-oriented interface that lets users read or modify entries.">CrsMatrix</a> uses them at one point. Please, nobody else use it. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l01040">1040</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l01041">1041</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
 
 </div>
 </div>

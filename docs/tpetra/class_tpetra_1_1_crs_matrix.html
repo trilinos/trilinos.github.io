@@ -1130,7 +1130,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Kokkos::Device specialization for communication buffers. </p>
 <p>See #1088 for why this is not just <code>device_type::device_type</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l02928">2928</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l02931">2931</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1183,7 +1183,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Kokkos memory space for communication buffers. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l00714">714</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l00715">715</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1211,7 +1211,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Whether the data transfer should be performed in forward or reverse mode. </p>
 <p>"Reverse mode" means calling <a class="el" href="class_tpetra_1_1_dist_object.html#ad2623c99b47ce9d88692abdc094d8be6" title="Export data into this object using an Export object (&quot;forward mode&quot;).">doExport()</a> with an <a class="el" href="class_tpetra_1_1_import.html" title="Communication plan for data redistribution from a uniquely-owned to a (possibly) multiply-owned distr...">Import</a> object, or calling <a class="el" href="class_tpetra_1_1_dist_object.html#a2e2cce34ee9698060f87e1fad3695a2d" title="Import data into this object using an Import object (&quot;forward mode&quot;).">doImport()</a> with an <a class="el" href="class_tpetra_1_1_export.html" title="Communication plan for data redistribution from a (possibly) multiply-owned to a uniquely-owned distr...">Export</a> object. "Forward mode" means calling <a class="el" href="class_tpetra_1_1_dist_object.html#ad2623c99b47ce9d88692abdc094d8be6" title="Export data into this object using an Export object (&quot;forward mode&quot;).">doExport()</a> with an <a class="el" href="class_tpetra_1_1_export.html" title="Communication plan for data redistribution from a (possibly) multiply-owned to a uniquely-owned distr...">Export</a> object, or calling <a class="el" href="class_tpetra_1_1_dist_object.html#a2e2cce34ee9698060f87e1fad3695a2d" title="Import data into this object using an Import object (&quot;forward mode&quot;).">doImport()</a> with an <a class="el" href="class_tpetra_1_1_import.html" title="Communication plan for data redistribution from a uniquely-owned to a (possibly) multiply-owned distr...">Import</a> object. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l00644">644</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l00643">643</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2428,6 +2428,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
     <tr><td class="paramname">rowInfo</td><td>[in] Result of graph.getRowInfo on the index of the local row of the matrix to modify. </td></tr>
     <tr><td class="paramname">inds</td><td>[in] Global column indices of that row to modify. </td></tr>
     <tr><td class="paramname">newVals</td><td>[in] For each k, replace the value in rowVals corresponding to local column index inds[k] with newVals[k]. </td></tr>
+    <tr><td class="paramname">numElts</td><td>[in] Number of elements to replace. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2661,6 +2662,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
     <tr><td class="paramname">rowInfo</td><td>[in] Result of graph.getRowInfo on the index of the local row of the matrix to modify. </td></tr>
     <tr><td class="paramname">inds</td><td>[in] Local column indices of that row to modify. </td></tr>
     <tr><td class="paramname">newVals</td><td>[in] For each k, replace the value in rowVals corresponding to local column index inds[k] with newVals[k]. </td></tr>
+    <tr><td class="paramname">numElts</td><td>[in] Number of elements to replace. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2709,8 +2711,8 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">localRow</td><td>[in] local index of the row in which to replace the entries. This row <em>must</em> be owned by the calling process. </td></tr>
-    <tr><td class="paramname">cols</td><td>[in] Local indices of the columns in which to replace the entries. </td></tr>
-    <tr><td class="paramname">vals</td><td>[in] Values to use for replacing the entries.</td></tr>
+    <tr><td class="paramname">inputInds</td><td>[in] Local indices of the columns in which to replace the entries. </td></tr>
+    <tr><td class="paramname">inputVals</td><td>[in] Values to use for replacing the entries.</td></tr>
   </table>
   </dd>
 </dl>
@@ -3122,6 +3124,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
     <tr><td class="paramname">rowInfo</td><td>[in] Result of graph.getRowInfo on the index of the local row of the matrix to modify. </td></tr>
     <tr><td class="paramname">inds</td><td>[in] Local column indices of that row to modify. </td></tr>
     <tr><td class="paramname">newVals</td><td>[in] For each k, increment the value in rowVals corresponding to local column index inds[k] by newVals[k]. </td></tr>
+    <tr><td class="paramname">numElts</td><td>[in] Number of elements to sum into. </td></tr>
     <tr><td class="paramname">atomic</td><td>[in] Whether to use atomic updates (+=) when incrementing values. </td></tr>
   </table>
   </dd>
@@ -3187,8 +3190,8 @@ cols[k])</code> must already exist. (This method does <em>not</em> change the ma
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">localRow</td><td>[in] Local index of a row. This row <em>must</em> be owned by the calling process. </td></tr>
-    <tr><td class="paramname">cols</td><td>[in] Local indices of the columns whose entries we want to modify. </td></tr>
-    <tr><td class="paramname">vals</td><td>[in] Values corresponding to the above column indices. <code>vals(k)</code> corresponds to <code>cols(k)</code>. </td></tr>
+    <tr><td class="paramname">inputInds</td><td>[in] Local indices of the columns whose entries we want to modify. </td></tr>
+    <tr><td class="paramname">inputVals</td><td>[in] Values corresponding to the above column indices. <code>vals(k)</code> corresponds to <code>cols(k)</code>. </td></tr>
     <tr><td class="paramname">atomic</td><td>[in] Whether to use atomic updates.</td></tr>
   </table>
   </dd>
@@ -3398,16 +3401,16 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">lclRow</td><td>[in] (Local) index of the row to modify. This row <em>must&lt;/t&gt; be owned by the calling process. (This is a stricter requirement than for sumIntoGlobalValues.) </em></td></tr>
-    <tr><td class="paramname">inputInds</td><td><em>[in] (Local) indices in the row to modify. Indices not in the row on the calling process, and their corresponding values, will be ignored. </em></td></tr>
-    <tr><td class="paramname">inputVals</td><td><em>[in] Values to use for modification. </em></td></tr>
-    <tr><td class="paramname">f</td><td><em>[in] The binary function to use for updating the sparse matrix's value. It takes two <code>impl_scalar_type</code> values and returns <code>impl_scalar_type</code>. </em></td></tr>
-    <tr><td class="paramname">atomic</td><td><em>[in] Whether to use atomic updates. </em></td></tr>
+    <tr><td class="paramname">lclRow</td><td>[in] (Local) index of the row to modify. This row <em>must</em> be owned by the calling process. (This is a stricter requirement than for sumIntoGlobalValues.) </td></tr>
+    <tr><td class="paramname">inputInds</td><td>[in] (Local) indices in the row to modify. Indices not in the row on the calling process, and their corresponding values, will be ignored. </td></tr>
+    <tr><td class="paramname">inputVals</td><td>[in] Values to use for modification. </td></tr>
+    <tr><td class="paramname">f</td><td>[in] The binary function to use for updating the sparse matrix's value. It takes two <code>impl_scalar_type</code> values and returns <code>impl_scalar_type</code>. </td></tr>
+    <tr><td class="paramname">atomic</td><td>[in] Whether to use atomic updates. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l01667">1667</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l01670">1670</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -3483,17 +3486,17 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">gblRow</td><td>[in] (Global) index of the row to modify. This row <em>must&lt;/t&gt; be owned by the calling process. (This is a stricter requirement than for sumIntoGlobalValues.) </em></td></tr>
-    <tr><td class="paramname">inputInds</td><td><em>[in] (Global) indices in the row to modify. Indices not in the row on the calling process, and their corresponding values, will be ignored. </em></td></tr>
-    <tr><td class="paramname">inputVals</td><td><em>[in] Values to use for modification. </em></td></tr>
-    <tr><td class="paramname">f</td><td><em>[in] The binary function to use for updating the sparse matrix's value. It takes two <code>impl_scalar_type</code> values and returns <code>impl_scalar_type</code>. </em></td></tr>
-    <tr><td class="paramname">atomic</td><td><em>[in] Whether to use atomic updates.</em></td></tr>
+    <tr><td class="paramname">gblRow</td><td>[in] (Global) index of the row to modify. This row <em>must</em> be owned by the calling process. (This is a stricter requirement than for sumIntoGlobalValues.) </td></tr>
+    <tr><td class="paramname">inputInds</td><td>[in] (Global) indices in the row to modify. Indices not in the row on the calling process, and their corresponding values, will be ignored. </td></tr>
+    <tr><td class="paramname">inputVals</td><td>[in] Values to use for modification. </td></tr>
+    <tr><td class="paramname">f</td><td>[in] The binary function to use for updating the sparse matrix's value. It takes two <code>impl_scalar_type</code> values and returns <code>impl_scalar_type</code>. </td></tr>
+    <tr><td class="paramname">atomic</td><td>[in] Whether to use atomic updates.</td></tr>
   </table>
   </dd>
 </dl>
 <p>This method works whether indices are local or global. However, it will cost more if indices are local, since it will have to convert the input global indices to local indices in that case. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l01756">1756</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l01759">1759</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -3634,7 +3637,7 @@ No insert/sum routines have been called</dd></dl>
 <p>The input argument might be used directly (shallow copy), or it might be (deep) copied.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ptr</td><td>[in/out] Kokkos sparse local matrix This is in/out because the matrix reserves the right to take this argument by shallow copy. Any method that changes the matrix's values may then change this. </td></tr>
+    <tr><td class="paramname">localMatrix</td><td>[in] Kokkos sparse local matrix. This is in/out because the matrix reserves the right to take this argument by shallow copy. Any method that changes the matrix's values may then change this. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3728,7 +3731,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Get a host view of the CRS packed row pointers. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l01866">1866</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l01869">1869</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -3759,7 +3762,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Get a device view of the CRS packed row pointers. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l01869">1869</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l01872">1872</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -3790,7 +3793,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Get a host view of the CRS packed column indicies. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l01872">1872</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l01875">1875</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -3821,7 +3824,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Get a device_view of the CRS packed column indicies. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l01875">1875</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l01878">1878</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -4562,7 +4565,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 </div><div class="memdoc">
 
 <p>Number of global elements in the row map of this matrix. </p>
-<p>This is &lt;it&gt;not&lt;/it&gt; the number of rows in the matrix as a mathematical object. This method returns the global sum of the number of local elements in the row map on each processor, which is the row map's getGlobalNumElements(). Since the row map is not one-to-one in general, that global sum could be different than the number of rows in the matrix. If you want the number of rows in the matrix, ask the range map for its global number of elements, using the following code: <code> global_size_t globalNumRows = <a class="el" href="class_tpetra_1_1_crs_matrix.html#a6c3745cbabd2c69094d59099ffe33474" title="The range Map of this matrix.">getRangeMap()</a>-&gt;getGlobalNumElements(); </code> This method retains the behavior of Epetra, which also asks the row map for the global number of rows, rather than asking the range map.</p>
+<p>This is <em>not</em> the number of rows in the matrix as a mathematical object. This method returns the global sum of the number of local elements in the row map on each processor, which is the row map's getGlobalNumElements(). Since the row map is not one-to-one in general, that global sum could be different than the number of rows in the matrix. If you want the number of rows in the matrix, ask the range map for its global number of elements, using the following code: <code> global_size_t globalNumRows = <a class="el" href="class_tpetra_1_1_crs_matrix.html#a6c3745cbabd2c69094d59099ffe33474" title="The range Map of this matrix.">getRangeMap()</a>-&gt;getGlobalNumElements(); </code> This method retains the behavior of Epetra, which also asks the row map for the global number of rows, rather than asking the range map.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Undefined if <a class="el" href="class_tpetra_1_1_crs_matrix.html#a5300003b779cc17718930dd8fe21bb1f" title="Whether the matrix is not fill complete.">isFillActive()</a>. </dd></dl>
 
 <p>Implements <a class="el" href="class_tpetra_1_1_row_matrix.html#a315d06e6f7d9ba5b1f30318ff44f603b">Tpetra::RowMatrix&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
@@ -4942,7 +4945,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Implements <a class="el" href="class_tpetra_1_1_row_matrix.html#a99d73047cc4211712094ef6890ebc46f">Tpetra::RowMatrix&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l02376">2376</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l02379">2379</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -6499,7 +6502,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Get the Kokkos local values on host, read only. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l03274">3274</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l03277">3277</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -6531,7 +6534,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Get the Kokkos local values on host, read write. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l03280">3280</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l03283">3283</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -6563,7 +6566,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Get the Kokkos local values on host, overwrite all. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l03286">3286</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l03289">3289</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -6595,7 +6598,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Get the Kokkos local values on device, read only. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l03292">3292</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l03295">3295</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -6627,7 +6630,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Get the Kokkos local values on device, read write. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l03298">3298</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l03301">3301</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -6659,7 +6662,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Get the Kokkos local values on device, overwrite all. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l03304">3304</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l03307">3307</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -7739,11 +7742,12 @@ Allows the "target" <a class="el" href="class_tpetra_1_1_map.html" title="A para
     <tr><td class="paramname">source</td><td>[in] The "source" object for redistribution. </td></tr>
     <tr><td class="paramname">importer</td><td>[in] Precomputed data redistribution plan. Its source <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> must be the same as the input <a class="el" href="class_tpetra_1_1_dist_object.html" title="Base class for distributed Tpetra objects that support data redistribution.">DistObject</a>'s <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a>, and its target <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> must be the same as <code>this-&gt;<a class="el" href="class_tpetra_1_1_dist_object.html#adef545d3737b47c030e0e6a3e7d8b1e7" title="The Map describing the parallel distribution of this object.">getMap()</a></code>. </td></tr>
     <tr><td class="paramname">CM</td><td>[in] How to combine incoming data with the same global index. </td></tr>
+    <tr><td class="paramname">restrictedMode</td><td>[in] Whether to use restricted mode. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00371">371</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00372">372</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -7808,11 +7812,12 @@ Allows the "target" <a class="el" href="class_tpetra_1_1_map.html" title="A para
     <tr><td class="paramname">source</td><td>[in] The "source" object for redistribution. </td></tr>
     <tr><td class="paramname">exporter</td><td>[in] Precomputed data redistribution plan. Its <em>target</em> <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> must be the same as the input <a class="el" href="class_tpetra_1_1_dist_object.html" title="Base class for distributed Tpetra objects that support data redistribution.">DistObject</a>'s <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a>, and its <em>source</em> <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> must be the same as <code>this-&gt;<a class="el" href="class_tpetra_1_1_dist_object.html#adef545d3737b47c030e0e6a3e7d8b1e7" title="The Map describing the parallel distribution of this object.">getMap()</a></code>. (Note the difference from forward mode.) </td></tr>
     <tr><td class="paramname">CM</td><td>[in] How to combine incoming data with the same global index. </td></tr>
+    <tr><td class="paramname">restrictedMode</td><td>[in] Whether to use restricted mode. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00438">438</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00441">441</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -7877,11 +7882,12 @@ Allows the "target" <a class="el" href="class_tpetra_1_1_map.html" title="A para
     <tr><td class="paramname">source</td><td>[in] The "source" object for redistribution. </td></tr>
     <tr><td class="paramname">exporter</td><td>[in] Precomputed data redistribution plan. Its source <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> must be the same as the input <a class="el" href="class_tpetra_1_1_dist_object.html" title="Base class for distributed Tpetra objects that support data redistribution.">DistObject</a>'s <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a>, and its target <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> must be the same as <code>this-&gt;<a class="el" href="class_tpetra_1_1_dist_object.html#adef545d3737b47c030e0e6a3e7d8b1e7" title="The Map describing the parallel distribution of this object.">getMap()</a></code>. </td></tr>
     <tr><td class="paramname">CM</td><td>[in] How to combine incoming data with the same global index. </td></tr>
+    <tr><td class="paramname">restrictedMode</td><td>[in] Whether to use restricted mode. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00404">404</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00406">406</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -7946,11 +7952,12 @@ Allows the "target" <a class="el" href="class_tpetra_1_1_map.html" title="A para
     <tr><td class="paramname">source</td><td>[in] The "source" object for redistribution. </td></tr>
     <tr><td class="paramname">importer</td><td>[in] Precomputed data redistribution plan. Its <em>target</em> <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> must be the same as the input <a class="el" href="class_tpetra_1_1_dist_object.html" title="Base class for distributed Tpetra objects that support data redistribution.">DistObject</a>'s <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a>, and its <em>source</em> <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> must be the same as <code>this-&gt;<a class="el" href="class_tpetra_1_1_dist_object.html#adef545d3737b47c030e0e6a3e7d8b1e7" title="The Map describing the parallel distribution of this object.">getMap()</a></code>. (Note the difference from forward mode.) </td></tr>
     <tr><td class="paramname">CM</td><td>[in] How to combine incoming data with the same global index. </td></tr>
+    <tr><td class="paramname">restrictedMode</td><td>[in] Whether to use restricted mode. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00472">472</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00476">476</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -7979,7 +7986,7 @@ Allows the "target" <a class="el" href="class_tpetra_1_1_map.html" title="A para
 
 <p>Whether the data from an import/export operation has arrived, and is ready for the unpack and combine step. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00527">527</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00531">531</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -8009,7 +8016,7 @@ Allows the "target" <a class="el" href="class_tpetra_1_1_map.html" title="A para
 <p>Whether this is a globally distributed object. </p>
 <p>For a definition of "globally distributed" (and its opposite, "locally replicated"), see the documentation of <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a>'s <a class="el" href="class_tpetra_1_1_dist_object.html#afc178c45d66d8232f27b1e79fc0e1535" title="Whether this is a globally distributed object.">isDistributed()</a> method. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00538">538</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00542">542</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -8039,7 +8046,7 @@ Allows the "target" <a class="el" href="class_tpetra_1_1_map.html" title="A para
 <p>The <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> describing the parallel distribution of this object. </p>
 <p>Note that some <a class="el" href="namespace_tpetra.html" title="Namespace Tpetra contains the class and methods constituting the Tpetra library.">Tpetra</a> objects might be distributed using multiple <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> objects. For example, <a class="el" href="class_tpetra_1_1_crs_matrix.html" title="Sparse matrix that presents a row-oriented interface that lets users read or modify entries.">CrsMatrix</a> has both a row <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> and a column <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a>. It is up to the subclass to decide which <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> to use when invoking the <a class="el" href="class_tpetra_1_1_dist_object.html" title="Base class for distributed Tpetra objects that support data redistribution.">DistObject</a> constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l00546">546</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l00550">550</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -8070,7 +8077,7 @@ Allows the "target" <a class="el" href="class_tpetra_1_1_map.html" title="A para
 <p>Print this object to the given output stream. </p>
 <p>We generally assume that all MPI processes can print to the given stream. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00556">556</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00560">560</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -8105,12 +8112,11 @@ We make NO promises of backwards compatibility. This method may change or disapp
 <p>On input, this object is distributed over the <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> returned by <a class="el" href="class_tpetra_1_1_dist_object.html#adef545d3737b47c030e0e6a3e7d8b1e7" title="The Map describing the parallel distribution of this object.">getMap()</a> (the "original Map," with its communicator, the "original communicator"). The input <code>newMap</code> of this method <em>must</em> be the same as the result of calling <code><a class="el" href="class_tpetra_1_1_dist_object.html#adef545d3737b47c030e0e6a3e7d8b1e7" title="The Map describing the parallel distribution of this object.">getMap()</a>-&gt;removeEmptyProcesses()</code>. On processes in the original communicator which contain zero entries ("excluded processes," as opposed to "included processes"), the input <code>newMap</code> must be <code>Teuchos::null</code> (which is what <code><a class="el" href="class_tpetra_1_1_dist_object.html#adef545d3737b47c030e0e6a3e7d8b1e7" title="The Map describing the parallel distribution of this object.">getMap()</a>-&gt;removeEmptyProcesses()</code> returns anyway).</p>
 <p>On included processes, reassign this object's <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> (that would be returned by <a class="el" href="class_tpetra_1_1_dist_object.html#adef545d3737b47c030e0e6a3e7d8b1e7" title="The Map describing the parallel distribution of this object.">getMap()</a>) to the input <code>newMap</code>, and do any work that needs to be done to restore correct semantics. On excluded processes, free any data that needs freeing, and do any other work that needs to be done to restore correct semantics.</p>
 <p>This method has collective semantics over the original communicator. On exit, the only method of this object which is safe to call on excluded processes is the destructor. This implies that subclasses' destructors must not contain communication operations.</p>
-<dl class="section return"><dt>Returns</dt><dd>The object's new <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a>. Its communicator is a new communicator, distinct from the old <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a>'s communicator, which contains a subset of the processes in the old communicator.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The name differs from <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a>'s method removeEmptyProcesses(), in order to emphasize that the operation on <a class="el" href="class_tpetra_1_1_dist_object.html" title="Base class for distributed Tpetra objects that support data redistribution.">DistObject</a> happens in place, modifying the input, whereas the operation removeEmptyProcess() on <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> does not modify the input.</dd>
 <dd>
 To implementers of <a class="el" href="class_tpetra_1_1_dist_object.html" title="Base class for distributed Tpetra objects that support data redistribution.">DistObject</a> subclasses: The default implementation of this class throws std::logic_error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00628">628</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00627">627</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -8139,7 +8145,7 @@ To implementers of <a class="el" href="class_tpetra_1_1_dist_object.html" title=
 
 <p>Getter for the DistributorActor. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l00631">631</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l00630">630</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -8170,7 +8176,7 @@ To implementers of <a class="el" href="class_tpetra_1_1_dist_object.html" title=
 <p>If this method returns zero, the instance says that it might possibly have a different number of packets for each LID (local index) to send or receive. If it returns nonzero, the instance promises that the number of packets is the same for all LIDs, and that the return value is this number of packets per LID.</p>
 <p>The default implementation of this method returns zero. This does not affect the behavior of <a class="el" href="class_tpetra_1_1_dist_object.html#a82a9a5fd0df1dda55188a340e6b5a2e7" title="Redistribute data across (MPI) processes.">doTransfer()</a> in any way. If a nondefault implementation returns nonzero, <a class="el" href="class_tpetra_1_1_dist_object.html#a82a9a5fd0df1dda55188a340e6b5a2e7" title="Redistribute data across (MPI) processes.">doTransfer()</a> will use this information to avoid unnecessary allocation and / or resizing of arrays. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00665">665</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00664">664</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -8239,12 +8245,13 @@ To implementers of <a class="el" href="class_tpetra_1_1_dist_object.html" title=
     <tr><td class="paramname">transfer</td><td>[in] The <a class="el" href="class_tpetra_1_1_export.html" title="Communication plan for data redistribution from a (possibly) multiply-owned to a uniquely-owned distr...">Export</a> or <a class="el" href="class_tpetra_1_1_import.html" title="Communication plan for data redistribution from a uniquely-owned to a (possibly) multiply-owned distr...">Import</a> object representing the communication pattern. (<a class="el" href="class_tpetra_1_1_details_1_1_transfer.html" title="Common base class of Import and Export.">Details::Transfer</a> is the common base class of these two objects.)</td></tr>
     <tr><td class="paramname">modeString</td><td>[in] Human-readable string, for verbose debugging output and error output, explaining what function called this method. Example: "doImport (forward)", "doExport (reverse)".</td></tr>
     <tr><td class="paramname">revOp</td><td>[in] Whether to do a forward or reverse mode redistribution.</td></tr>
-    <tr><td class="paramname">CM</td><td>[in] The combine mode that describes how to combine values that map to the same global ID on the same process. </td></tr>
+    <tr><td class="paramname">CM</td><td>[in] The combine mode that describes how to combine values that map to the same global ID on the same process.</td></tr>
+    <tr><td class="paramname">restrictedMode</td><td>[in] Whether to use restricted mode. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00687">687</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00688">688</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -8293,7 +8300,7 @@ To implementers of <a class="el" href="class_tpetra_1_1_dist_object.html" title=
 <dl class="section return"><dt>Returns</dt><dd>Whether we actually reallocated either of the arrays.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>This is an implementation detail of doTransferNew(). This needs to be protected, but that doesn't mean users should call this method. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00709">709</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00710">710</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -8358,7 +8365,7 @@ To implementers of <a class="el" href="class_tpetra_1_1_dist_object.html" title=
 <p>Implementation detail of doTransfer. </p>
 <p>LID DualViews come from the Transfer object given to doTransfer. They are <em>always</em> sync'd on both host and device. Users must never attempt to modify or sync them. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00738">738</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00739">739</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -8415,7 +8422,7 @@ To implementers of <a class="el" href="class_tpetra_1_1_dist_object.html" title=
 </div><div class="memdoc">
 
 <p>Perform copies and permutations that are local to the calling (MPI) process. </p>
-<p>Subclasses <em>must</em> reimplement this function. Its default implementation does nothing. Note that the &lt;t&gt;target object of the <a class="el" href="class_tpetra_1_1_export.html" title="Communication plan for data redistribution from a (possibly) multiply-owned to a uniquely-owned distr...">Export</a> or <a class="el" href="class_tpetra_1_1_import.html" title="Communication plan for data redistribution from a uniquely-owned to a (possibly) multiply-owned distr...">Import</a>, namely <code>*this</code>, packs the <em>source</em> object's data.</p>
+<p>Subclasses <em>must</em> reimplement this function. Its default implementation does nothing. Note that the <em>target</em> object of the <a class="el" href="class_tpetra_1_1_export.html" title="Communication plan for data redistribution from a (possibly) multiply-owned to a uniquely-owned distr...">Export</a> or <a class="el" href="class_tpetra_1_1_import.html" title="Communication plan for data redistribution from a uniquely-owned to a (possibly) multiply-owned distr...">Import</a>, namely <code>*this</code>, packs the <em>source</em> object's data.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>permuteToLIDs and permuteFromLIDs are sync'd to both host and device. That is, <code>permuteToLIDs.need_sync_host()</code>, <code>permuteToLIDs.need_sync_device()</code>, <code>permuteFromLIDs.need_sync_host()</code>, and <code>permuteFromLIDs.need_sync_device()</code> are all false.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -8428,7 +8435,7 @@ To implementers of <a class="el" href="class_tpetra_1_1_dist_object.html" title=
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00822">822</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00823">823</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -8492,7 +8499,7 @@ To implementers of <a class="el" href="class_tpetra_1_1_dist_object.html" title=
 
 <p>Same as copyAndPermute, but do operations in <code>space</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00832">832</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00833">833</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -8549,7 +8556,7 @@ To implementers of <a class="el" href="class_tpetra_1_1_dist_object.html" title=
 </div><div class="memdoc">
 
 <p>Pack data and metadata for communication (sends). </p>
-<p>Subclasses <em>must</em> reimplement this function. Its default implementation does nothing. Note that the &lt;t&gt;target object of the <a class="el" href="class_tpetra_1_1_export.html" title="Communication plan for data redistribution from a (possibly) multiply-owned to a uniquely-owned distr...">Export</a> or <a class="el" href="class_tpetra_1_1_import.html" title="Communication plan for data redistribution from a uniquely-owned to a (possibly) multiply-owned distr...">Import</a>, namely <code>*this</code>, packs the <em>source</em> object's data.</p>
+<p>Subclasses <em>must</em> reimplement this function. Its default implementation does nothing. Note that the <em>target</em> object of the <a class="el" href="class_tpetra_1_1_export.html" title="Communication plan for data redistribution from a (possibly) multiply-owned to a uniquely-owned distr...">Export</a> or <a class="el" href="class_tpetra_1_1_import.html" title="Communication plan for data redistribution from a uniquely-owned to a (possibly) multiply-owned distr...">Import</a>, namely <code>*this</code>, packs the <em>source</em> object's data.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>exportLIDs is sync'd to both host and device. That is, <code>exportLIDs.need_sync_host ()</code> and <code>exportLIDs.need_sync_device()</code> are both false.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -8562,7 +8569,7 @@ To implementers of <a class="el" href="class_tpetra_1_1_dist_object.html" title=
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00876">876</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00877">877</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -8626,7 +8633,7 @@ To implementers of <a class="el" href="class_tpetra_1_1_dist_object.html" title=
 
 <p>Same as packAndPrepare, but in an execution space instance. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00889">889</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00890">890</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -8683,20 +8690,20 @@ To implementers of <a class="el" href="class_tpetra_1_1_dist_object.html" title=
 </div><div class="memdoc">
 
 <p>Perform any unpacking and combining after communication. </p>
-<p>Subclasses <em>must</em> reimplement this function. Its default implementation does nothing. Note that the &lt;t&gt;target object of the <a class="el" href="class_tpetra_1_1_export.html" title="Communication plan for data redistribution from a (possibly) multiply-owned to a uniquely-owned distr...">Export</a> or <a class="el" href="class_tpetra_1_1_import.html" title="Communication plan for data redistribution from a uniquely-owned to a (possibly) multiply-owned distr...">Import</a>, namely <code>*this</code>, unpacks the received data into itself, possibly modifying its entries.</p>
+<p>Subclasses <em>must</em> reimplement this function. Its default implementation does nothing. Note that the <em>target</em> object of the <a class="el" href="class_tpetra_1_1_export.html" title="Communication plan for data redistribution from a (possibly) multiply-owned to a uniquely-owned distr...">Export</a> or <a class="el" href="class_tpetra_1_1_import.html" title="Communication plan for data redistribution from a uniquely-owned to a (possibly) multiply-owned distr...">Import</a>, namely <code>*this</code>, unpacks the received data into itself, possibly modifying its entries.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>importLIDs is sync'd to both host and device. That is, <code>importLIDs.need_sync_host ()</code> and <code>importLIDs.need_sync_device()</code> are both false.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">importLIDs</td><td>[in] List of the entries (as LIDs in the destination object) we received from other processes.</td></tr>
     <tr><td class="paramname">imports</td><td>[in/out] On input: Buffer of received data to unpack. <a class="el" href="class_tpetra_1_1_dist_object.html" title="Base class for distributed Tpetra objects that support data redistribution.">DistObject</a> promises nothing about where this is sync'd. Implementations may sync this wherever they like, either to host or to device. The allocation belongs to <a class="el" href="class_tpetra_1_1_dist_object.html" title="Base class for distributed Tpetra objects that support data redistribution.">DistObject</a>, not to subclasses; don't be tempted to change this to pass by reference.</td></tr>
-    <tr><td class="paramname">numPacketsPerLID</td><td>[in/out] On input: If <code>constantNumPackets</code> is zero, then <code>numPacketsPerLID[i]</code> contains the number of packets imported for importLIDs[i]. <a class="el" href="class_tpetra_1_1_dist_object.html" title="Base class for distributed Tpetra objects that support data redistribution.">DistObject</a> promises nothing about where this is sync'd. Implementations may sync this wherever they like, either to host or to device. The allocation belongs to <a class="el" href="class_tpetra_1_1_dist_object.html" title="Base class for distributed Tpetra objects that support data redistribution.">DistObject</a>, not to subclasses; don't be tempted to change this to pass by reference.</td></tr>
+    <tr><td class="paramname">numPacketsPerLID</td><td>[in/out] On input: If <code>constantNumPackets</code> is zero, then <code>numPacketsPerLID[i]</code> contains the number of packets imported for <code>importLIDs[i]</code>. <a class="el" href="class_tpetra_1_1_dist_object.html" title="Base class for distributed Tpetra objects that support data redistribution.">DistObject</a> promises nothing about where this is sync'd. Implementations may sync this wherever they like, either to host or to device. The allocation belongs to <a class="el" href="class_tpetra_1_1_dist_object.html" title="Base class for distributed Tpetra objects that support data redistribution.">DistObject</a>, not to subclasses; don't be tempted to change this to pass by reference.</td></tr>
     <tr><td class="paramname">constantNumPackets</td><td>[in] If nonzero, then the number of packets per LID is the same for all entries ("constant") and <code>constantNumPackets</code> is that number. If zero, then <code>numPacketsPerLID[i]</code> is the number of packets to unpack for LID <code>importLIDs[i]</code>.</td></tr>
     <tr><td class="paramname">combineMode</td><td>[in] The CombineMode to use when combining the imported entries with existing entries. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00940">940</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00941">941</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -8765,7 +8772,7 @@ To implementers of <a class="el" href="class_tpetra_1_1_dist_object.html" title=
 <dl class="section return"><dt>Returns</dt><dd>Whether we actually reallocated.</dd></dl>
 <p>We don't need a "reallocExportsIfNeeded" method, because <code>exports_</code> always gets passed into packAndPrepare() by nonconst reference. Thus, that method can resize the DualView without needing to call other <a class="el" href="class_tpetra_1_1_dist_object.html" title="Base class for distributed Tpetra objects that support data redistribution.">DistObject</a> methods. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l00999">999</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l01000">1000</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -8929,7 +8936,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l04061">4061</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l04064">4064</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -9016,7 +9023,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l04079">4079</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l04082">4082</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -9094,7 +9101,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l04100">4100</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l04103">4103</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -9179,7 +9186,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l04118">4118</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l04121">4121</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -9227,7 +9234,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Create an empty <a class="el" href="class_tpetra_1_1_crs_matrix.html" title="Sparse matrix that presents a row-oriented interface that lets users read or modify entries.">CrsMatrix</a> given a row map and a single integer upper bound on the number of stored entries per row. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l04049">4049</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l04052">4052</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -9276,7 +9283,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l04144">4144</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l04147">4147</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -9307,7 +9314,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>This is a column <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> <a class="el" href="class_tpetra_1_1_multi_vector.html" title="One or more distributed dense vectors.">MultiVector</a>. It is used as the target of the forward mode <a class="el" href="class_tpetra_1_1_import.html" title="Communication plan for data redistribution from a uniquely-owned to a (possibly) multiply-owned distr...">Import</a> operation (if necessary) in <a class="el" href="class_tpetra_1_1_crs_matrix.html#a63ab2d56f57e555e3435f45157bffe7f" title="Compute a sparse matrix-MultiVector multiply.">apply()</a>, and the source of the reverse mode <a class="el" href="class_tpetra_1_1_export.html" title="Communication plan for data redistribution from a (possibly) multiply-owned to a uniquely-owned distr...">Export</a> operation (if necessary) in these methods. Both of these methods create this <a class="el" href="class_tpetra_1_1_multi_vector.html" title="One or more distributed dense vectors.">MultiVector</a> on demand if needed, and reuse it (if possible) for subsequent calls.</p>
 <p>This is declared <code>mutable</code> because the methods in question are const, yet want to cache the <a class="el" href="class_tpetra_1_1_multi_vector.html" title="One or more distributed dense vectors.">MultiVector</a> for later use. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l03762">3762</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l03765">3765</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -9337,7 +9344,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>This is a row <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> <a class="el" href="class_tpetra_1_1_multi_vector.html" title="One or more distributed dense vectors.">MultiVector</a>. It is uses as the source of the forward mode <a class="el" href="class_tpetra_1_1_export.html" title="Communication plan for data redistribution from a (possibly) multiply-owned to a uniquely-owned distr...">Export</a> operation (if necessary) in <a class="el" href="class_tpetra_1_1_crs_matrix.html#a63ab2d56f57e555e3435f45157bffe7f" title="Compute a sparse matrix-MultiVector multiply.">apply()</a>, and the target of the reverse mode <a class="el" href="class_tpetra_1_1_import.html" title="Communication plan for data redistribution from a uniquely-owned to a (possibly) multiply-owned distr...">Import</a> operation (if necessary) in these methods. Both of these methods create this <a class="el" href="class_tpetra_1_1_multi_vector.html" title="One or more distributed dense vectors.">MultiVector</a> on demand if needed, and reuse it (if possible) for subsequent calls.</p>
 <p>This is declared <code>mutable</code> because the methods in question are const, yet want to cache the <a class="el" href="class_tpetra_1_1_multi_vector.html" title="One or more distributed dense vectors.">MultiVector</a> for later use. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l03776">3776</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l03779">3779</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -9368,7 +9375,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Status of the matrix's storage, when not in a fill-complete state. </p>
 <p>The phrase "When not in a fill-complete state" is important. When the matrix is fill complete, it <em>always</em> uses 1-D "packed" storage. However, if the "Optimize Storage" parameter to fillComplete was false, the matrix may keep unpacked 1-D storage around and resume it on the next resumeFill call. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l03959">3959</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l03962">3962</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -9396,7 +9403,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Whether the matrix is fill complete. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l03963">3963</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l03966">3966</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -9428,7 +9435,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>This used to be a map from GlobalOrdinal to (GlobalOrdinal, Scalar) pairs. This makes gcc issue a "note" about the ABI of structs containing std::complex members changing. CDash reports this as a warning, even though it's a "note," not a warning. However, I don't want it to show up, so I rearranged the map's value type to a pair of arrays, rather than an array of pairs.</p>
 <dl class="section note"><dt>Note</dt><dd>For Epetra developers: <a class="el" href="class_tpetra_1_1_crs_matrix.html" title="Sparse matrix that presents a row-oriented interface that lets users read or modify entries.">Tpetra::CrsMatrix</a> corresponds more to Epetra_FECrsMatrix than to Epetra_CrsMatrix. The <a class="el" href="class_tpetra_1_1_crs_matrix.html#aa790420b9730e4f5034d1eb05148c64b" title="Insert one or more entries into the matrix, using global column indices.">insertGlobalValues()</a> method in <a class="el" href="class_tpetra_1_1_crs_matrix.html" title="Sparse matrix that presents a row-oriented interface that lets users read or modify entries.">Tpetra::CrsMatrix</a>, unlike its corresponding method in Epetra_CrsMatrix, allows insertion into rows which are not owned by the calling process. The <a class="el" href="class_tpetra_1_1_crs_matrix.html#a8b602f81fbd0d6ab14ee1fdf9dde6f1b" title="Communicate nonlocal contributions to other processes.">globalAssemble()</a> method redistributes these to their owning processes. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l03994">3994</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html#l03997">3997</a> of file <a class="el" href="_tpetra___crs_matrix__decl_8hpp_source.html">Tpetra_CrsMatrix_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -9454,7 +9461,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>The <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> over which this object is distributed. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l00965">965</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l00966">966</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -9481,7 +9488,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Buffer into which packed data are imported (received from other processes). </p>
 <p>Unfortunately, I had to declare these protected, because <a class="el" href="class_tpetra_1_1_crs_matrix.html" title="Sparse matrix that presents a row-oriented interface that lets users read or modify entries.">CrsMatrix</a> uses them at one point. Please, nobody else use them. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l00978">978</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l00979">979</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -9510,7 +9517,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>This may be ignored in <a class="el" href="class_tpetra_1_1_dist_object.html#a82a9a5fd0df1dda55188a340e6b5a2e7" title="Redistribute data across (MPI) processes.">doTransfer()</a> if constantNumPackets is nonzero, indicating a constant number of packets per LID. (For example, <a class="el" href="class_tpetra_1_1_multi_vector.html" title="One or more distributed dense vectors.">MultiVector</a> sets the constantNumPackets output argument of packAndPrepare() to the number of columns in the multivector.)</p>
 <p>Unfortunately, I had to declare this protected, because <a class="el" href="class_tpetra_1_1_crs_matrix.html" title="Sparse matrix that presents a row-oriented interface that lets users read or modify entries.">CrsMatrix</a> uses it at one point. Please, nobody else use it. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l01018">1018</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l01019">1019</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -9537,7 +9544,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Buffer from which packed data are exported (sent to other processes). </p>
 <p>Unfortunately, I had to declare this protected, because <a class="el" href="class_tpetra_1_1_crs_matrix.html" title="Sparse matrix that presents a row-oriented interface that lets users read or modify entries.">CrsMatrix</a> uses it at one point. Please, nobody else use it. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l01025">1025</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l01026">1026</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -9566,7 +9573,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>This may be ignored in <a class="el" href="class_tpetra_1_1_dist_object.html#a82a9a5fd0df1dda55188a340e6b5a2e7" title="Redistribute data across (MPI) processes.">doTransfer()</a> if constantNumPackets is nonzero, indicating a constant number of packets per LID. (For example, <a class="el" href="class_tpetra_1_1_multi_vector.html" title="One or more distributed dense vectors.">MultiVector</a> sets the constantNumPackets output argument of packAndPrepare() to the number of columns in the multivector.)</p>
 <p>Unfortunately, I had to declare this protected, because <a class="el" href="class_tpetra_1_1_crs_matrix.html" title="Sparse matrix that presents a row-oriented interface that lets users read or modify entries.">CrsMatrix</a> uses them at one point. Please, nobody else use it. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l01040">1040</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l01041">1041</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
 
 </div>
 </div>
