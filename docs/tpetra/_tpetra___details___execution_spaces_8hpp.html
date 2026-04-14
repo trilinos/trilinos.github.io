@@ -127,7 +127,7 @@ Functions</h2></td></tr>
 <tr class="separator:abae6d6d9bb87e2032af0c4175919b639"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f23ec21564ca29677fcdc60ffa90d83" id="r_a7f23ec21564ca29677fcdc60ffa90d83"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">typename</a> <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">ExecSpace</a> &gt; </td></tr>
 <tr class="memitem:a7f23ec21564ca29677fcdc60ffa90d83"><td class="memTemplItemLeft" align="right" valign="top">Teuchos::RCP&lt; <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">ExecSpace</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_tpetra___details___execution_spaces_8hpp.html#a7f23ec21564ca29677fcdc60ffa90d83">Tpetra::Details::Spaces::space_instance</a> (<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> <a class="el" href="_tpetra___details___execution_spaces_8hpp.html#ab21e0e691527ad1b408254e8a75e882e">Priority</a> &amp;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">priority</a>, <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">int</a> <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">i</a>=0)</td></tr>
-<tr class="memdesc:a7f23ec21564ca29677fcdc60ffa90d83"><td class="mdescLeft">&#160;</td><td class="mdescRight">get a strong Teuchos::RCP to Tpetra-managed Kokkos execution space instance <code>i</code>  <br /></td></tr>
+<tr class="memdesc:a7f23ec21564ca29677fcdc60ffa90d83"><td class="mdescLeft">&#160;</td><td class="mdescRight">get a strong Teuchos::RCP to Tpetra-managed Kokkos execution space instance  <br /></td></tr>
 <tr class="separator:a7f23ec21564ca29677fcdc60ffa90d83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c6a47f80f87773381e430bbea0224f1" id="r_a0c6a47f80f87773381e430bbea0224f1"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">typename</a> <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">S1</a> , <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">typename</a> <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">S2</a> &gt; </td></tr>
 <tr class="memitem:a0c6a47f80f87773381e430bbea0224f1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_tpetra___details___execution_spaces_8hpp.html#a0c6a47f80f87773381e430bbea0224f1">Tpetra::Details::Spaces::exec_space_wait</a> (<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">char</a> *<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">msg</a>, <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">S1</a> &amp;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">waitee</a>, <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">S2</a> &amp;)</td></tr>
@@ -283,10 +283,11 @@ template&lt;typename ExecSpace &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>get a strong Teuchos::RCP to Tpetra-managed Kokkos execution space instance <code>i</code> </p>
+<p>get a strong Teuchos::RCP to Tpetra-managed Kokkos execution space instance </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">priority</td><td>the priority of the execution space instance </td></tr>
+    <tr><td class="paramname">i</td><td>the index of the execution space instance </td></tr>
   </table>
   </dd>
 </dl>
@@ -298,7 +299,7 @@ template&lt;typename ExecSpace &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a strong RCP&lt;ExecSpace&gt; </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details___execution_spaces_8hpp_source.html#l00388">388</a> of file <a class="el" href="_tpetra___details___execution_spaces_8hpp_source.html">Tpetra_Details_ExecutionSpaces.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details___execution_spaces_8hpp_source.html#l00389">389</a> of file <a class="el" href="_tpetra___details___execution_spaces_8hpp_source.html">Tpetra_Details_ExecutionSpaces.hpp</a>.</p>
 
 </div>
 </div>
@@ -354,7 +355,7 @@ template&lt;typename S1 , typename S2 &gt; </div>
 </dl>
 <p>For Kokkos::Cuda execution spaces, this function may return immediately (i.e., without synchronizing the host). </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details___execution_spaces_8hpp_source.html#l00422">422</a> of file <a class="el" href="_tpetra___details___execution_spaces_8hpp_source.html">Tpetra_Details_ExecutionSpaces.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details___execution_spaces_8hpp_source.html#l00423">423</a> of file <a class="el" href="_tpetra___details___execution_spaces_8hpp_source.html">Tpetra_Details_ExecutionSpaces.hpp</a>.</p>
 
 </div>
 </div>

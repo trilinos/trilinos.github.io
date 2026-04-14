@@ -358,7 +358,7 @@ var annotated_dup =
     [ "AlgebraicPermutationStrategy", "class_algebraic_permutation_strategy.html", null ],
     [ "BrickAggregationFactory", "class_brick_aggregation_factory.html", null ],
     [ "Constraint", "class_constraint.html", null ],
-    [ "Dense", "class_dense.html", null ],
+    [ "DenseConstraint", "class_dense_constraint.html", null ],
     [ "FineLevelInputData", "class_fine_level_input_data.html", null ],
     [ "LocalPermutationStrategy", "class_local_permutation_strategy.html", null ],
     [ "MergedBlockedMatrix", "class_merged_blocked_matrix.html", null ],

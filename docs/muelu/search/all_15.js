@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['v_0',['v',['../struct_mue_lu_1_1_triplet.html#ad8b4684c7233782939b10de04deaa8a8',1,'MueLu::Triplet::v'],['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_ifpack2_1_1_details_1_1_chebyshev.html#a04be92be96469d28d8b8febbc22d3abc',1,'Ifpack2::Details::Chebyshev::V']]],
+  ['v_0',['v',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_ifpack2_1_1_details_1_1_chebyshev.html#a04be92be96469d28d8b8febbc22d3abc',1,'Ifpack2::Details::Chebyshev::V'],['../struct_mue_lu_1_1_triplet.html#ad8b4684c7233782939b10de04deaa8a8',1,'MueLu::Triplet::v']]],
   ['v1_1',['v1',['../class_mue_lu_1_1my_triangle.html#ae354eeb0a7b130c100e2ba4d9069e794',1,'MueLu::myTriangle']]],
   ['v2_2',['v2',['../class_mue_lu_1_1my_triangle.html#a467a19b7f4de655fb26db5f12a68cd48',1,'MueLu::myTriangle']]],
   ['v3_3',['v3',['../class_mue_lu_1_1my_triangle.html#a1eda0fb1797d6a23abf3824e71c8d762',1,'MueLu::myTriangle']]],
