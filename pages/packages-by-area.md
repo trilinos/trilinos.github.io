@@ -1,7 +1,7 @@
 ---
 title: Packages by Area 
 permalink: packages-by-area.html
-keywords: Area Leads, Core Area, Solvers Area, Discretization and Analysis Area, Performance Portability, Linear Solvers, Preconditioners, Discretization Utilities, Nonlinear Solvers, Transient Solvers, Optimization, Automatic Differentiation, Uncertainty Quantification, Mesh and Geometry Tools, Partitioning and Load Balancing, Interfaces and Adapters, Utilities, Adelus, Amesos2, Anasazi, Belos, Compadre, Galeri, Ifpack2, Intrepid2, Kokkos, Kokkos Kernels, Krino, LOCA, MiniTensor, MueLu, NOX, PAMGEN, Panzer, Percept, Phalanx, Piro, PyTrilinos2, ROL, RTOp, Sacado, SEACAS, Shards, ShyLU, STK, Stokhos, Stratimikos, Teuchos, Tempus, Thyra, Teko, Tpetra, Zoltan, Zoltan2
+keywords: Area Leads, Core Area, Solvers Area, Discretization and Analysis Area, Performance Portability, Linear Solvers, Preconditioners, Discretization Tools, Nonlinear Solvers, Transient Solvers, Optimization, Automatic Differentiation, Uncertainty Quantification, Mesh and Geometry Tools, Partitioning and Load Balancing, Interfaces and Adapters, Utilities, Adelus, Amesos2, Anasazi, Belos, Compadre, Galeri, Ifpack2, Intrepid2, Kokkos, Kokkos Kernels, Krino, LOCA, MiniTensor, MueLu, NOX, PAMGEN, Panzer, Percept, Phalanx, Piro, PyTrilinos2, ROL, RTOp, Sacado, SEACAS, Shards, ShyLU, STK, Stokhos, Stratimikos, Teuchos, Tempus, Thyra, Teko, Tpetra, Zoltan, Zoltan2
 ---
 
 ## Trilinos Area Leads
@@ -186,9 +186,9 @@ Additionally, the <a href="download.html#devsecops-team" title="DevSecOps">**Dev
     <th><strong>Link(s)</strong></th>
   </tr>
 
-  <!-- Discretization Utilities -->
+  <!-- Discretization Tools -->
   <tr>
-    <td rowspan="4"><strong>Discretization Utilities</strong></td>
+    <td rowspan="4"><strong>Discretization Tools</strong></td>
     <td><a href="https://github.com/trilinos/Trilinos/tree/master/packages/intrepid2">Intrepid2</a></td>
     <td>Performance portable tools for local assembly of high-order finite element discretizations.</td>
     <td><a href="docs/intrepid2/index.html">Doxygen</a></td>
