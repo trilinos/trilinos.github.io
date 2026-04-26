@@ -2,7 +2,6 @@ var hierarchy =
 [
     [ "AdaptiveSAMLParameterListInterpreter", "class_adaptive_s_a_m_l_parameter_list_interpreter.html", null ],
     [ "AlgebraicPermutationStrategy", "class_algebraic_permutation_strategy.html", null ],
-    [ "MueLu::AmesosSmoother< Node >", "class_mue_lu_1_1_amesos_smoother.html", null ],
     [ "MueLu::AppendTrait< View, AppendValue >", "struct_mue_lu_1_1_append_trait.html", null ],
     [ "MueLu::AppendTrait< Kokkos::View< DataType, Pack... >, T >", "struct_mue_lu_1_1_append_trait_3_01_kokkos_1_1_view_3_01_data_type_00_01_pack_8_8_8_01_4_00_01_t_01_4.html", null ],
     [ "MueLu::Behavior", "class_mue_lu_1_1_behavior.html", null ],
@@ -108,7 +107,6 @@ var hierarchy =
                 [ "MueLu::InitialBlockNumberFactory< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_initial_block_number_factory.html", null ],
                 [ "MueLu::InterfaceAggregationFactory< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_interface_aggregation_factory.html", null ],
                 [ "MueLu::InverseApproximationFactory< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_inverse_approximation_factory.html", null ],
-                [ "MueLu::IsorropiaInterface< LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_isorropia_interface.html", null ],
                 [ "MueLu::LineDetectionFactory< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_line_detection_factory.html", null ],
                 [ "MueLu::LowPrecisionFactory< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_low_precision_factory.html", null ],
                 [ "MueLu::MergedBlockedMatrixFactory< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_merged_blocked_matrix_factory.html", null ],
@@ -302,7 +300,6 @@ var hierarchy =
     [ "MueLu::GraphBase< LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_graph_base.html", null ],
     [ "MueLu::MatrixConstruction::GraphConstruction< local_matrix_type, local_graph_type >", "class_mue_lu_1_1_matrix_construction_1_1_graph_construction.html", null ],
     [ "MueLu::HierarchyUtils< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_hierarchy_utils.html", null ],
-    [ "MueLu::IfpackSmoother< Node >", "class_mue_lu_1_1_ifpack_smoother.html", null ],
     [ "MueLu::ImportUtils< LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_import_utils.html", null ],
     [ "Zoltan2::InputTraits< MueLu::LWGraph< LocalOrdinal, GlobalOrdinal, Node > >", "struct_zoltan2_1_1_input_traits_3_01_mue_lu_1_1_l_w_graph_3_01_local_ordinal_00_01_global_ordinal_00_01_node_01_4_01_4.html", null ],
     [ "MueLu::IteratorOps< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_iterator_ops.html", null ],

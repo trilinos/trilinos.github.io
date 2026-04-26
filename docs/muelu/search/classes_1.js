@@ -3,7 +3,7 @@ var searchData=
   ['badcast_0',['BadCast',['../class_mue_lu_1_1_exceptions_1_1_bad_cast.html',1,'MueLu::Exceptions']]],
   ['bandedcontainer_1',['BandedContainer',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_ifpack2_1_1_banded_container.html',1,'Ifpack2']]],
   ['baseclass_2',['BaseClass',['../class_mue_lu_1_1_base_class.html',1,'MueLu']]],
-  ['behavior_3',['Behavior',['../class_mue_lu_1_1_behavior.html',1,'MueLu']]],
+  ['behavior_3',['behavior',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_ifpack2_1_1_details_1_1_behavior.html',1,'Ifpack2::Details::Behavior'],['../class_mue_lu_1_1_behavior.html',1,'MueLu::Behavior']]],
   ['belossmoother_4',['BelosSmoother',['../class_mue_lu_1_1_belos_smoother.html',1,'MueLu']]],
   ['blackboxpfactory_5',['BlackBoxPFactory',['../class_mue_lu_1_1_black_box_p_factory.html',1,'MueLu']]],
   ['blackboxpfactorytester_6',['BlackBoxPFactoryTester',['../class_mue_lu_tests_1_1_black_box_p_factory_tester.html',1,'MueLuTests']]],

@@ -942,344 +942,343 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span>      <span class="comment">// Rows in each partition are distributed round-robin to the blocks -</span></div>
 <div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span>      <span class="comment">// that&#39;s how MueLu stores DOFs in a non-block matrix</span></div>
 <div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span>      <span class="keywordflow">for</span> (local_ordinal_type i = 0; i &lt; NumLocalBlocks_; i++) {</div>
-<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span>        <span class="comment">//#ifdef HAVE_IFPACK2_DEBUG</span></div>
-<div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span>        TEUCHOS_TEST_FOR_EXCEPTION(Partitioner_-&gt;numRowsInPart(i) % dofs != 0, std::logic_error,</div>
-<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span>                                   <span class="stringliteral">&quot;Expected size of all blocks (partitions) to be divisible by MueLu dofs/node.&quot;</span>);</div>
-<div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span>        <span class="keywordtype">size_t</span> blockSize = Partitioner_-&gt;numRowsInPart(i) / dofs;</div>
-<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>        <span class="comment">//#endif</span></div>
-<div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span>        <span class="comment">// block i will be split into j different blocks,</span></div>
-<div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span>        <span class="comment">// each corresponding to a different dof</span></div>
-<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>        <span class="keywordflow">for</span> (local_ordinal_type j = 0; j &lt; dofs; j++) {</div>
-<div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span>          local_ordinal_type blockIndex = i * dofs + j;</div>
-<div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span>          blockRows[blockIndex].resize(blockSize);</div>
-<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>          <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> k = 0; k &lt; blockSize; k++) {</div>
-<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span>            blockRows[blockIndex][k] = (*Partitioner_)(i, k * dofs + j);</div>
-<div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span>          }</div>
-<div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span>        }</div>
-<div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span>      }</div>
-<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span>    }</div>
-<div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>    <span class="comment">// No decoupling - just get the rows directly from Partitioner</span></div>
-<div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span>    blockRows.resize(NumLocalBlocks_);</div>
-<div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span>    <span class="keywordflow">for</span> (local_ordinal_type i = 0; i &lt; NumLocalBlocks_; ++i) {</div>
-<div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span>      <span class="keyword">const</span> <span class="keywordtype">size_t</span> numRows = Partitioner_-&gt;numRowsInPart(i);</div>
-<div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span>      blockRows[i].resize(numRows);</div>
-<div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span>      <span class="comment">// Extract a list of the indices of each partitioner row.</span></div>
-<div class="line"><a id="l00838" name="l00838"></a><span class="lineno">  838</span>      <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; numRows; ++j) {</div>
-<div class="line"><a id="l00839" name="l00839"></a><span class="lineno">  839</span>        blockRows[i][j] = (*Partitioner_)(i, j);</div>
-<div class="line"><a id="l00840" name="l00840"></a><span class="lineno">  840</span>      }</div>
-<div class="line"><a id="l00841" name="l00841"></a><span class="lineno">  841</span>    }</div>
-<div class="line"><a id="l00842" name="l00842"></a><span class="lineno">  842</span>  }</div>
-<div class="line"><a id="l00843" name="l00843"></a><span class="lineno">  843</span>  <span class="comment">// right before constructing the</span></div>
-<div class="line"><a id="l00844" name="l00844"></a><span class="lineno">  844</span>  Container_ = <a class="code hl_function" href="struct_ifpack2_1_1_container_factory.html#a5c27c2254ee8e217cd0baa9f4641eb56">ContainerFactory&lt;MatrixType&gt;::build</a>(containerType, A_, blockRows, Importer_, pointIndexed);</div>
-<div class="line"><a id="l00845" name="l00845"></a><span class="lineno">  845</span>  Container_-&gt;setParameters(List_);</div>
-<div class="line"><a id="l00846" name="l00846"></a><span class="lineno">  846</span>  Container_-&gt;initialize();</div>
-<div class="line"><a id="l00847" name="l00847"></a><span class="lineno">  847</span>}</div>
-<div class="line"><a id="l00848" name="l00848"></a><span class="lineno">  848</span> </div>
-<div class="line"><a id="l00849" name="l00849"></a><span class="lineno">  849</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> MatrixType, <span class="keyword">class</span> ContainerType&gt;</div>
-<div class="line"><a id="l00850" name="l00850"></a><span class="lineno">  850</span><span class="keywordtype">void</span> BlockRelaxation&lt;MatrixType, ContainerType&gt;::</div>
-<div class="line"><a id="l00851" name="l00851"></a><span class="lineno">  851</span>    ApplyInverseJacobi(<span class="keyword">const</span> MV&amp; X, MV&amp; Y)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00852" name="l00852"></a><span class="lineno">  852</span>  <span class="keyword">const</span> <span class="keywordtype">size_t</span> NumVectors = X.getNumVectors();</div>
-<div class="line"><a id="l00853" name="l00853"></a><span class="lineno">  853</span> </div>
-<div class="line"><a id="l00854" name="l00854"></a><span class="lineno">  854</span>  MV AY(Y.getMap(), NumVectors);</div>
-<div class="line"><a id="l00855" name="l00855"></a><span class="lineno">  855</span> </div>
-<div class="line"><a id="l00856" name="l00856"></a><span class="lineno">  856</span>  <span class="comment">// Initial matvec not needed</span></div>
-<div class="line"><a id="l00857" name="l00857"></a><span class="lineno">  857</span>  <span class="keywordtype">int</span> starting_iteration = 0;</div>
-<div class="line"><a id="l00858" name="l00858"></a><span class="lineno">  858</span>  <span class="keywordflow">if</span> (OverlapLevel_ &gt; 0) {</div>
-<div class="line"><a id="l00859" name="l00859"></a><span class="lineno">  859</span>    <span class="comment">// Overlapping jacobi, with view of W_</span></div>
-<div class="line"><a id="l00860" name="l00860"></a><span class="lineno">  860</span>    <span class="keyword">auto</span> WView = W_-&gt;getLocalViewHost(Tpetra::Access::ReadOnly);</div>
-<div class="line"><a id="l00861" name="l00861"></a><span class="lineno">  861</span>    <span class="keywordflow">if</span> (ZeroStartingSolution_) {</div>
-<div class="line"><a id="l00862" name="l00862"></a><span class="lineno">  862</span>      <span class="keyword">auto</span> XView = X.getLocalViewHost(Tpetra::Access::ReadOnly);</div>
-<div class="line"><a id="l00863" name="l00863"></a><span class="lineno">  863</span>      <span class="keyword">auto</span> YView = Y.getLocalViewHost(Tpetra::Access::ReadWrite);</div>
-<div class="line"><a id="l00864" name="l00864"></a><span class="lineno">  864</span>      Container_-&gt;DoOverlappingJacobi(XView, YView, WView, DampingFactor_, nonsymCombine_);</div>
-<div class="line"><a id="l00865" name="l00865"></a><span class="lineno">  865</span>      starting_iteration = 1;</div>
-<div class="line"><a id="l00866" name="l00866"></a><span class="lineno">  866</span>    }</div>
-<div class="line"><a id="l00867" name="l00867"></a><span class="lineno">  867</span>    <span class="keyword">const</span> scalar_type ONE = STS::one();</div>
-<div class="line"><a id="l00868" name="l00868"></a><span class="lineno">  868</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = starting_iteration; j &lt; NumSweeps_; j++) {</div>
-<div class="line"><a id="l00869" name="l00869"></a><span class="lineno">  869</span>      applyMat(Y, AY);</div>
-<div class="line"><a id="l00870" name="l00870"></a><span class="lineno">  870</span>      AY.update(ONE, X, -ONE);</div>
-<div class="line"><a id="l00871" name="l00871"></a><span class="lineno">  871</span>      {</div>
-<div class="line"><a id="l00872" name="l00872"></a><span class="lineno">  872</span>        <span class="keyword">auto</span> AYView = AY.getLocalViewHost(Tpetra::Access::ReadOnly);</div>
-<div class="line"><a id="l00873" name="l00873"></a><span class="lineno">  873</span>        <span class="keyword">auto</span> YView  = Y.getLocalViewHost(Tpetra::Access::ReadWrite);</div>
-<div class="line"><a id="l00874" name="l00874"></a><span class="lineno">  874</span>        Container_-&gt;DoOverlappingJacobi(AYView, YView, WView, DampingFactor_, nonsymCombine_);</div>
-<div class="line"><a id="l00875" name="l00875"></a><span class="lineno">  875</span>      }</div>
-<div class="line"><a id="l00876" name="l00876"></a><span class="lineno">  876</span>    }</div>
-<div class="line"><a id="l00877" name="l00877"></a><span class="lineno">  877</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00878" name="l00878"></a><span class="lineno">  878</span>    <span class="comment">// Non-overlapping</span></div>
-<div class="line"><a id="l00879" name="l00879"></a><span class="lineno">  879</span>    <span class="keywordflow">if</span> (ZeroStartingSolution_) {</div>
-<div class="line"><a id="l00880" name="l00880"></a><span class="lineno">  880</span>      <span class="keyword">auto</span> XView = X.getLocalViewHost(Tpetra::Access::ReadOnly);</div>
-<div class="line"><a id="l00881" name="l00881"></a><span class="lineno">  881</span>      <span class="keyword">auto</span> YView = Y.getLocalViewHost(Tpetra::Access::ReadWrite);</div>
-<div class="line"><a id="l00882" name="l00882"></a><span class="lineno">  882</span>      Container_-&gt;DoJacobi(XView, YView, DampingFactor_);</div>
-<div class="line"><a id="l00883" name="l00883"></a><span class="lineno">  883</span>      starting_iteration = 1;</div>
-<div class="line"><a id="l00884" name="l00884"></a><span class="lineno">  884</span>    }</div>
-<div class="line"><a id="l00885" name="l00885"></a><span class="lineno">  885</span>    <span class="keyword">const</span> scalar_type ONE = STS::one();</div>
-<div class="line"><a id="l00886" name="l00886"></a><span class="lineno">  886</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = starting_iteration; j &lt; NumSweeps_; j++) {</div>
-<div class="line"><a id="l00887" name="l00887"></a><span class="lineno">  887</span>      applyMat(Y, AY);</div>
-<div class="line"><a id="l00888" name="l00888"></a><span class="lineno">  888</span>      AY.update(ONE, X, -ONE);</div>
-<div class="line"><a id="l00889" name="l00889"></a><span class="lineno">  889</span>      {</div>
-<div class="line"><a id="l00890" name="l00890"></a><span class="lineno">  890</span>        <span class="keyword">auto</span> AYView = AY.getLocalViewHost(Tpetra::Access::ReadOnly);</div>
-<div class="line"><a id="l00891" name="l00891"></a><span class="lineno">  891</span>        <span class="keyword">auto</span> YView  = Y.getLocalViewHost(Tpetra::Access::ReadWrite);</div>
-<div class="line"><a id="l00892" name="l00892"></a><span class="lineno">  892</span>        Container_-&gt;DoJacobi(AYView, YView, DampingFactor_);</div>
-<div class="line"><a id="l00893" name="l00893"></a><span class="lineno">  893</span>      }</div>
-<div class="line"><a id="l00894" name="l00894"></a><span class="lineno">  894</span>    }</div>
-<div class="line"><a id="l00895" name="l00895"></a><span class="lineno">  895</span>  }</div>
-<div class="line"><a id="l00896" name="l00896"></a><span class="lineno">  896</span>}</div>
-<div class="line"><a id="l00897" name="l00897"></a><span class="lineno">  897</span> </div>
-<div class="line"><a id="l00898" name="l00898"></a><span class="lineno">  898</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> MatrixType, <span class="keyword">class</span> ContainerType&gt;</div>
-<div class="line"><a id="l00899" name="l00899"></a><span class="lineno">  899</span><span class="keywordtype">void</span> BlockRelaxation&lt;MatrixType, ContainerType&gt;::</div>
-<div class="line"><a id="l00900" name="l00900"></a><span class="lineno">  900</span>    ApplyInverseGS(<span class="keyword">const</span> MV&amp; X, MV&amp; Y)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00901" name="l00901"></a><span class="lineno">  901</span>  <span class="keyword">using </span>Teuchos::Ptr;</div>
-<div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span>  <span class="keyword">using </span>Teuchos::ptr;</div>
-<div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span>  <span class="keywordtype">size_t</span> numVecs = X.getNumVectors();</div>
-<div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span>  <span class="comment">// Get view of X (is never modified in this function)</span></div>
-<div class="line"><a id="l00905" name="l00905"></a><span class="lineno">  905</span>  <span class="keyword">auto</span> XView = X.getLocalViewHost(Tpetra::Access::ReadOnly);</div>
-<div class="line"><a id="l00906" name="l00906"></a><span class="lineno">  906</span>  <span class="keyword">auto</span> YView = Y.getLocalViewHost(Tpetra::Access::ReadWrite);</div>
-<div class="line"><a id="l00907" name="l00907"></a><span class="lineno">  907</span>  <span class="comment">// Pre-import Y, if parallel</span></div>
-<div class="line"><a id="l00908" name="l00908"></a><span class="lineno">  908</span>  Ptr&lt;MV&gt; Y2;</div>
-<div class="line"><a id="l00909" name="l00909"></a><span class="lineno">  909</span>  <span class="keywordtype">bool</span> deleteY2 = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00910" name="l00910"></a><span class="lineno">  910</span>  <span class="keywordflow">if</span> (IsParallel_) {</div>
-<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span>    Y2       = ptr(<span class="keyword">new</span> MV(Importer_-&gt;getTargetMap(), numVecs));</div>
-<div class="line"><a id="l00912" name="l00912"></a><span class="lineno">  912</span>    deleteY2 = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span>  } <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00914" name="l00914"></a><span class="lineno">  914</span>    Y2 = ptr(&amp;Y);</div>
-<div class="line"><a id="l00915" name="l00915"></a><span class="lineno">  915</span>  <span class="keywordflow">if</span> (IsParallel_) {</div>
-<div class="line"><a id="l00916" name="l00916"></a><span class="lineno">  916</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; NumSweeps_; ++j) {</div>
-<div class="line"><a id="l00917" name="l00917"></a><span class="lineno">  917</span>      <span class="comment">// do import once per sweep</span></div>
-<div class="line"><a id="l00918" name="l00918"></a><span class="lineno">  918</span>      Y2-&gt;doImport(Y, *Importer_, Tpetra::INSERT);</div>
-<div class="line"><a id="l00919" name="l00919"></a><span class="lineno">  919</span>      <span class="keyword">auto</span> Y2View = Y2-&gt;getLocalViewHost(Tpetra::Access::ReadWrite);</div>
-<div class="line"><a id="l00920" name="l00920"></a><span class="lineno">  920</span>      Container_-&gt;DoGaussSeidel(XView, YView, Y2View, DampingFactor_);</div>
-<div class="line"><a id="l00921" name="l00921"></a><span class="lineno">  921</span>    }</div>
-<div class="line"><a id="l00922" name="l00922"></a><span class="lineno">  922</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00923" name="l00923"></a><span class="lineno">  923</span>    <span class="keyword">auto</span> Y2View = Y2-&gt;getLocalViewHost(Tpetra::Access::ReadWrite);</div>
-<div class="line"><a id="l00924" name="l00924"></a><span class="lineno">  924</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; NumSweeps_; ++j) {</div>
-<div class="line"><a id="l00925" name="l00925"></a><span class="lineno">  925</span>      Container_-&gt;DoGaussSeidel(XView, YView, Y2View, DampingFactor_);</div>
-<div class="line"><a id="l00926" name="l00926"></a><span class="lineno">  926</span>    }</div>
-<div class="line"><a id="l00927" name="l00927"></a><span class="lineno">  927</span>  }</div>
-<div class="line"><a id="l00928" name="l00928"></a><span class="lineno">  928</span>  <span class="keywordflow">if</span> (deleteY2)</div>
-<div class="line"><a id="l00929" name="l00929"></a><span class="lineno">  929</span>    <span class="keyword">delete</span> Y2.get();</div>
-<div class="line"><a id="l00930" name="l00930"></a><span class="lineno">  930</span>}</div>
-<div class="line"><a id="l00931" name="l00931"></a><span class="lineno">  931</span> </div>
-<div class="line"><a id="l00932" name="l00932"></a><span class="lineno">  932</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> MatrixType, <span class="keyword">class</span> ContainerType&gt;</div>
-<div class="line"><a id="l00933" name="l00933"></a><span class="lineno">  933</span><span class="keywordtype">void</span> BlockRelaxation&lt;MatrixType, ContainerType&gt;::</div>
-<div class="line"><a id="l00934" name="l00934"></a><span class="lineno">  934</span>    ApplyInverseSGS(<span class="keyword">const</span> MV&amp; X, MV&amp; Y)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00935" name="l00935"></a><span class="lineno">  935</span>  <span class="keyword">using </span>Teuchos::Ptr;</div>
-<div class="line"><a id="l00936" name="l00936"></a><span class="lineno">  936</span>  <span class="keyword">using </span>Teuchos::ptr;</div>
-<div class="line"><a id="l00937" name="l00937"></a><span class="lineno">  937</span>  <span class="comment">// Get view of X (is never modified in this function)</span></div>
-<div class="line"><a id="l00938" name="l00938"></a><span class="lineno">  938</span>  <span class="keyword">auto</span> XView = X.getLocalViewHost(Tpetra::Access::ReadOnly);</div>
-<div class="line"><a id="l00939" name="l00939"></a><span class="lineno">  939</span>  <span class="keyword">auto</span> YView = Y.getLocalViewHost(Tpetra::Access::ReadWrite);</div>
-<div class="line"><a id="l00940" name="l00940"></a><span class="lineno">  940</span>  <span class="comment">// Pre-import Y, if parallel</span></div>
-<div class="line"><a id="l00941" name="l00941"></a><span class="lineno">  941</span>  Ptr&lt;MV&gt; Y2;</div>
-<div class="line"><a id="l00942" name="l00942"></a><span class="lineno">  942</span>  <span class="keywordtype">bool</span> deleteY2 = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00943" name="l00943"></a><span class="lineno">  943</span>  <span class="keywordflow">if</span> (IsParallel_) {</div>
-<div class="line"><a id="l00944" name="l00944"></a><span class="lineno">  944</span>    Y2       = ptr(<span class="keyword">new</span> MV(Importer_-&gt;getTargetMap(), X.getNumVectors()));</div>
-<div class="line"><a id="l00945" name="l00945"></a><span class="lineno">  945</span>    deleteY2 = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span>  } <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00947" name="l00947"></a><span class="lineno">  947</span>    Y2 = ptr(&amp;Y);</div>
-<div class="line"><a id="l00948" name="l00948"></a><span class="lineno">  948</span>  <span class="keywordflow">if</span> (IsParallel_) {</div>
-<div class="line"><a id="l00949" name="l00949"></a><span class="lineno">  949</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; NumSweeps_; ++j) {</div>
-<div class="line"><a id="l00950" name="l00950"></a><span class="lineno">  950</span>      <span class="comment">// do import once per sweep</span></div>
-<div class="line"><a id="l00951" name="l00951"></a><span class="lineno">  951</span>      Y2-&gt;doImport(Y, *Importer_, Tpetra::INSERT);</div>
-<div class="line"><a id="l00952" name="l00952"></a><span class="lineno">  952</span>      <span class="keyword">auto</span> Y2View = Y2-&gt;getLocalViewHost(Tpetra::Access::ReadWrite);</div>
-<div class="line"><a id="l00953" name="l00953"></a><span class="lineno">  953</span>      Container_-&gt;DoSGS(XView, YView, Y2View, DampingFactor_);</div>
-<div class="line"><a id="l00954" name="l00954"></a><span class="lineno">  954</span>    }</div>
-<div class="line"><a id="l00955" name="l00955"></a><span class="lineno">  955</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span>    <span class="keyword">auto</span> Y2View = Y2-&gt;getLocalViewHost(Tpetra::Access::ReadWrite);</div>
-<div class="line"><a id="l00957" name="l00957"></a><span class="lineno">  957</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; NumSweeps_; ++j) {</div>
-<div class="line"><a id="l00958" name="l00958"></a><span class="lineno">  958</span>      Container_-&gt;DoSGS(XView, YView, Y2View, DampingFactor_);</div>
-<div class="line"><a id="l00959" name="l00959"></a><span class="lineno">  959</span>    }</div>
-<div class="line"><a id="l00960" name="l00960"></a><span class="lineno">  960</span>  }</div>
-<div class="line"><a id="l00961" name="l00961"></a><span class="lineno">  961</span>  <span class="keywordflow">if</span> (deleteY2)</div>
-<div class="line"><a id="l00962" name="l00962"></a><span class="lineno">  962</span>    <span class="keyword">delete</span> Y2.get();</div>
-<div class="line"><a id="l00963" name="l00963"></a><span class="lineno">  963</span>}</div>
-<div class="line"><a id="l00964" name="l00964"></a><span class="lineno">  964</span> </div>
-<div class="line"><a id="l00965" name="l00965"></a><span class="lineno">  965</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> MatrixType, <span class="keyword">class</span> ContainerType&gt;</div>
-<div class="line"><a id="l00966" name="l00966"></a><span class="lineno">  966</span><span class="keywordtype">void</span> BlockRelaxation&lt;MatrixType, ContainerType&gt;::computeImporter()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00967" name="l00967"></a><span class="lineno">  967</span>  <span class="keyword">using </span>Teuchos::Array;</div>
-<div class="line"><a id="l00968" name="l00968"></a><span class="lineno">  968</span>  <span class="keyword">using </span>Teuchos::ArrayView;</div>
-<div class="line"><a id="l00969" name="l00969"></a><span class="lineno">  969</span>  <span class="keyword">using </span>Teuchos::Comm;</div>
-<div class="line"><a id="l00970" name="l00970"></a><span class="lineno">  970</span>  <span class="keyword">using </span>Teuchos::Ptr;</div>
-<div class="line"><a id="l00971" name="l00971"></a><span class="lineno">  971</span>  <span class="keyword">using </span>Teuchos::RCP;</div>
-<div class="line"><a id="l00972" name="l00972"></a><span class="lineno">  972</span>  <span class="keyword">using </span>Teuchos::rcp;</div>
-<div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span>  <span class="keyword">using </span>Teuchos::rcp_dynamic_cast;</div>
-<div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span>  <span class="keywordflow">if</span> (IsParallel_) {</div>
-<div class="line"><a id="l00975" name="l00975"></a><span class="lineno">  975</span>    <span class="keywordflow">if</span> (hasBlockCrsMatrix_) {</div>
-<div class="line"><a id="l00976" name="l00976"></a><span class="lineno">  976</span>      <span class="keyword">const</span> RCP&lt;const block_crs_matrix_type&gt; bcrs =</div>
-<div class="line"><a id="l00977" name="l00977"></a><span class="lineno">  977</span>          rcp_dynamic_cast&lt;const block_crs_matrix_type&gt;(A_);</div>
-<div class="line"><a id="l00978" name="l00978"></a><span class="lineno">  978</span>      <span class="keywordtype">int</span> bs_                          = bcrs-&gt;getBlockSize();</div>
-<div class="line"><a id="l00979" name="l00979"></a><span class="lineno">  979</span>      RCP&lt;const map_type&gt; oldDomainMap = A_-&gt;getDomainMap();</div>
-<div class="line"><a id="l00980" name="l00980"></a><span class="lineno">  980</span>      RCP&lt;const map_type&gt; oldColMap    = A_-&gt;getColMap();</div>
-<div class="line"><a id="l00981" name="l00981"></a><span class="lineno">  981</span>      <span class="comment">// Because A is a block CRS matrix, import will not do what you think it does</span></div>
-<div class="line"><a id="l00982" name="l00982"></a><span class="lineno">  982</span>      <span class="comment">// We have to construct the correct maps for it</span></div>
-<div class="line"><a id="l00983" name="l00983"></a><span class="lineno">  983</span>      global_size_t numGlobalElements                     = oldColMap-&gt;getGlobalNumElements() * bs_;</div>
-<div class="line"><a id="l00984" name="l00984"></a><span class="lineno">  984</span>      global_ordinal_type indexBase                       = oldColMap-&gt;getIndexBase();</div>
-<div class="line"><a id="l00985" name="l00985"></a><span class="lineno">  985</span>      RCP&lt;const Comm&lt;int&gt;&gt; comm                           = oldColMap-&gt;getComm();</div>
-<div class="line"><a id="l00986" name="l00986"></a><span class="lineno">  986</span>      ArrayView&lt;const global_ordinal_type&gt; oldColElements = oldColMap-&gt;getLocalElementList();</div>
-<div class="line"><a id="l00987" name="l00987"></a><span class="lineno">  987</span>      Array&lt;global_ordinal_type&gt; newColElements(bs_ * oldColElements.size());</div>
-<div class="line"><a id="l00988" name="l00988"></a><span class="lineno">  988</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; oldColElements.size(); i++) {</div>
-<div class="line"><a id="l00989" name="l00989"></a><span class="lineno">  989</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; bs_; j++)</div>
-<div class="line"><a id="l00990" name="l00990"></a><span class="lineno">  990</span>          newColElements[i * bs_ + j] = oldColElements[i] * bs_ + j;</div>
-<div class="line"><a id="l00991" name="l00991"></a><span class="lineno">  991</span>      }</div>
-<div class="line"><a id="l00992" name="l00992"></a><span class="lineno">  992</span>      RCP&lt;map_type&gt; colMap(<span class="keyword">new</span> map_type(numGlobalElements, newColElements, indexBase, comm));</div>
-<div class="line"><a id="l00993" name="l00993"></a><span class="lineno">  993</span>      <span class="comment">// Create the importer</span></div>
-<div class="line"><a id="l00994" name="l00994"></a><span class="lineno">  994</span>      Importer_ = rcp(<span class="keyword">new</span> import_type(oldDomainMap, colMap));</div>
-<div class="line"><a id="l00995" name="l00995"></a><span class="lineno">  995</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!A_.is_null()) {</div>
-<div class="line"><a id="l00996" name="l00996"></a><span class="lineno">  996</span>      Importer_ = A_-&gt;getGraph()-&gt;getImporter();</div>
-<div class="line"><a id="l00997" name="l00997"></a><span class="lineno">  997</span>      <span class="keywordflow">if</span> (Importer_.is_null())</div>
-<div class="line"><a id="l00998" name="l00998"></a><span class="lineno">  998</span>        Importer_ = rcp(<span class="keyword">new</span> import_type(A_-&gt;getDomainMap(), A_-&gt;getColMap()));</div>
-<div class="line"><a id="l00999" name="l00999"></a><span class="lineno">  999</span>    }</div>
-<div class="line"><a id="l01000" name="l01000"></a><span class="lineno"> 1000</span>  }</div>
-<div class="line"><a id="l01001" name="l01001"></a><span class="lineno"> 1001</span>  <span class="comment">// otherwise, Importer_ is not needed and is left NULL</span></div>
-<div class="line"><a id="l01002" name="l01002"></a><span class="lineno"> 1002</span>}</div>
-<div class="line"><a id="l01003" name="l01003"></a><span class="lineno"> 1003</span> </div>
-<div class="line"><a id="l01004" name="l01004"></a><span class="lineno"> 1004</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> MatrixType, <span class="keyword">class</span> ContainerType&gt;</div>
-<div class="line"><a id="l01005" name="l01005"></a><span class="lineno"> 1005</span>std::string</div>
-<div class="foldopen" id="foldopen01006" data-start="{" data-end="}">
-<div class="line"><a id="l01006" name="l01006"></a><span class="lineno"><a class="line" href="class_ifpack2_1_1_block_relaxation.html#ad6183939a7b25c1cfe4871460ccad4b8"> 1006</a></span><a class="code hl_function" href="class_ifpack2_1_1_block_relaxation.html#ad6183939a7b25c1cfe4871460ccad4b8">BlockRelaxation&lt;MatrixType, ContainerType&gt;::</a></div>
-<div class="line"><a id="l01007" name="l01007"></a><span class="lineno"> 1007</span><a class="code hl_function" href="class_ifpack2_1_1_block_relaxation.html#ad6183939a7b25c1cfe4871460ccad4b8">    description</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l01008" name="l01008"></a><span class="lineno"> 1008</span>  std::ostringstream out;</div>
-<div class="line"><a id="l01009" name="l01009"></a><span class="lineno"> 1009</span> </div>
-<div class="line"><a id="l01010" name="l01010"></a><span class="lineno"> 1010</span>  <span class="comment">// Output is a valid YAML dictionary in flow style.  If you don&#39;t</span></div>
-<div class="line"><a id="l01011" name="l01011"></a><span class="lineno"> 1011</span>  <span class="comment">// like everything on a single line, you should call describe()</span></div>
-<div class="line"><a id="l01012" name="l01012"></a><span class="lineno"> 1012</span>  <span class="comment">// instead.</span></div>
-<div class="line"><a id="l01013" name="l01013"></a><span class="lineno"> 1013</span>  out &lt;&lt; <span class="stringliteral">&quot;\&quot;Ifpack2::BlockRelaxation\&quot;: {&quot;</span>;</div>
-<div class="line"><a id="l01014" name="l01014"></a><span class="lineno"> 1014</span>  <span class="keywordflow">if</span> (this-&gt;getObjectLabel() != <span class="stringliteral">&quot;&quot;</span>) {</div>
-<div class="line"><a id="l01015" name="l01015"></a><span class="lineno"> 1015</span>    out &lt;&lt; <span class="stringliteral">&quot;Label: \&quot;&quot;</span> &lt;&lt; this-&gt;getObjectLabel() &lt;&lt; <span class="stringliteral">&quot;\&quot;, &quot;</span>;</div>
-<div class="line"><a id="l01016" name="l01016"></a><span class="lineno"> 1016</span>  }</div>
-<div class="line"><a id="l01017" name="l01017"></a><span class="lineno"> 1017</span>  <span class="comment">//  out &lt;&lt; &quot;Initialized: &quot; &lt;&lt; (isInitialized () ? &quot;true&quot; : &quot;false&quot;) &lt;&lt; &quot;, &quot;;</span></div>
-<div class="line"><a id="l01018" name="l01018"></a><span class="lineno"> 1018</span>  <span class="comment">//  out &lt;&lt; &quot;Computed: &quot; &lt;&lt; (isComputed () ? &quot;true&quot; : &quot;false&quot;) &lt;&lt; &quot;, &quot;;</span></div>
-<div class="line"><a id="l01019" name="l01019"></a><span class="lineno"> 1019</span>  <span class="keywordflow">if</span> (A_.is_null()) {</div>
-<div class="line"><a id="l01020" name="l01020"></a><span class="lineno"> 1020</span>    out &lt;&lt; <span class="stringliteral">&quot;Matrix: null, &quot;</span>;</div>
-<div class="line"><a id="l01021" name="l01021"></a><span class="lineno"> 1021</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l01022" name="l01022"></a><span class="lineno"> 1022</span>    <span class="comment">//    out &lt;&lt; &quot;Matrix: not null&quot;</span></div>
-<div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span>    <span class="comment">// &lt;&lt; &quot;, Global matrix dimensions: [&quot;</span></div>
-<div class="line"><a id="l01024" name="l01024"></a><span class="lineno"> 1024</span>    out &lt;&lt; <span class="stringliteral">&quot;Global matrix dimensions: [&quot;</span></div>
-<div class="line"><a id="l01025" name="l01025"></a><span class="lineno"> 1025</span>        &lt;&lt; A_-&gt;getGlobalNumRows() &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; A_-&gt;getGlobalNumCols() &lt;&lt; <span class="stringliteral">&quot;], &quot;</span>;</div>
-<div class="line"><a id="l01026" name="l01026"></a><span class="lineno"> 1026</span>  }</div>
-<div class="line"><a id="l01027" name="l01027"></a><span class="lineno"> 1027</span> </div>
-<div class="line"><a id="l01028" name="l01028"></a><span class="lineno"> 1028</span>  <span class="comment">// It&#39;s useful to print this instance&#39;s relaxation method.  If you</span></div>
-<div class="line"><a id="l01029" name="l01029"></a><span class="lineno"> 1029</span>  <span class="comment">// want more info than that, call describe() instead.</span></div>
-<div class="line"><a id="l01030" name="l01030"></a><span class="lineno"> 1030</span>  out &lt;&lt; <span class="stringliteral">&quot;\&quot;relaxation: type\&quot;: &quot;</span>;</div>
-<div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span>  <span class="keywordflow">if</span> (PrecType_ == Ifpack2::Details::JACOBI) {</div>
-<div class="line"><a id="l01032" name="l01032"></a><span class="lineno"> 1032</span>    out &lt;&lt; <span class="stringliteral">&quot;Block Jacobi&quot;</span>;</div>
-<div class="line"><a id="l01033" name="l01033"></a><span class="lineno"> 1033</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (PrecType_ == Ifpack2::Details::GS) {</div>
-<div class="line"><a id="l01034" name="l01034"></a><span class="lineno"> 1034</span>    out &lt;&lt; <span class="stringliteral">&quot;Block Gauss-Seidel&quot;</span>;</div>
-<div class="line"><a id="l01035" name="l01035"></a><span class="lineno"> 1035</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (PrecType_ == Ifpack2::Details::SGS) {</div>
-<div class="line"><a id="l01036" name="l01036"></a><span class="lineno"> 1036</span>    out &lt;&lt; <span class="stringliteral">&quot;Block Symmetric Gauss-Seidel&quot;</span>;</div>
-<div class="line"><a id="l01037" name="l01037"></a><span class="lineno"> 1037</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (PrecType_ == Ifpack2::Details::MTSPLITJACOBI) {</div>
-<div class="line"><a id="l01038" name="l01038"></a><span class="lineno"> 1038</span>    out &lt;&lt; <span class="stringliteral">&quot;MT Split Jacobi&quot;</span>;</div>
-<div class="line"><a id="l01039" name="l01039"></a><span class="lineno"> 1039</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l01040" name="l01040"></a><span class="lineno"> 1040</span>    out &lt;&lt; <span class="stringliteral">&quot;INVALID&quot;</span>;</div>
-<div class="line"><a id="l01041" name="l01041"></a><span class="lineno"> 1041</span>  }</div>
-<div class="line"><a id="l01042" name="l01042"></a><span class="lineno"> 1042</span> </div>
-<div class="line"><a id="l01043" name="l01043"></a><span class="lineno"> 1043</span>  <span class="comment">// BlockCrs if we have that</span></div>
-<div class="line"><a id="l01044" name="l01044"></a><span class="lineno"> 1044</span>  <span class="keywordflow">if</span> (hasBlockCrsMatrix_)</div>
-<div class="line"><a id="l01045" name="l01045"></a><span class="lineno"> 1045</span>    out &lt;&lt; <span class="stringliteral">&quot;, BlockCrs&quot;</span>;</div>
-<div class="line"><a id="l01046" name="l01046"></a><span class="lineno"> 1046</span> </div>
-<div class="line"><a id="l01047" name="l01047"></a><span class="lineno"> 1047</span>  <span class="comment">// Print the approximate # rows per part</span></div>
-<div class="line"><a id="l01048" name="l01048"></a><span class="lineno"> 1048</span>  <span class="keywordtype">int</span> approx_rows_per_part = A_-&gt;getLocalNumRows() / Partitioner_-&gt;numLocalParts();</div>
-<div class="line"><a id="l01049" name="l01049"></a><span class="lineno"> 1049</span>  out &lt;&lt; <span class="stringliteral">&quot;, blocksize: &quot;</span> &lt;&lt; approx_rows_per_part;</div>
-<div class="line"><a id="l01050" name="l01050"></a><span class="lineno"> 1050</span> </div>
-<div class="line"><a id="l01051" name="l01051"></a><span class="lineno"> 1051</span>  out &lt;&lt; <span class="stringliteral">&quot;, overlap: &quot;</span> &lt;&lt; OverlapLevel_;</div>
-<div class="line"><a id="l01052" name="l01052"></a><span class="lineno"> 1052</span> </div>
-<div class="line"><a id="l01053" name="l01053"></a><span class="lineno"> 1053</span>  out &lt;&lt; <span class="stringliteral">&quot;, &quot;</span></div>
-<div class="line"><a id="l01054" name="l01054"></a><span class="lineno"> 1054</span>      &lt;&lt; <span class="stringliteral">&quot;sweeps: &quot;</span> &lt;&lt; NumSweeps_ &lt;&lt; <span class="stringliteral">&quot;, &quot;</span></div>
-<div class="line"><a id="l01055" name="l01055"></a><span class="lineno"> 1055</span>      &lt;&lt; <span class="stringliteral">&quot;damping factor: &quot;</span> &lt;&lt; DampingFactor_ &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
-<div class="line"><a id="l01056" name="l01056"></a><span class="lineno"> 1056</span> </div>
-<div class="line"><a id="l01057" name="l01057"></a><span class="lineno"> 1057</span>  std::string containerType = ContainerType::getName();</div>
-<div class="line"><a id="l01058" name="l01058"></a><span class="lineno"> 1058</span>  out &lt;&lt; <span class="stringliteral">&quot;block container: &quot;</span> &lt;&lt; ((containerType == <span class="stringliteral">&quot;Generic&quot;</span>) ? containerType_ : containerType);</div>
-<div class="line"><a id="l01059" name="l01059"></a><span class="lineno"> 1059</span>  <span class="keywordflow">if</span> (List_.isParameter(<span class="stringliteral">&quot;partitioner: PDE equations&quot;</span>))</div>
-<div class="line"><a id="l01060" name="l01060"></a><span class="lineno"> 1060</span>    out &lt;&lt; <span class="stringliteral">&quot;, dofs/node: &quot;</span> &lt;&lt; List_.get&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;partitioner: PDE equations&quot;</span>);</div>
-<div class="line"><a id="l01061" name="l01061"></a><span class="lineno"> 1061</span> </div>
-<div class="line"><a id="l01062" name="l01062"></a><span class="lineno"> 1062</span>  out &lt;&lt; <span class="stringliteral">&quot;}&quot;</span>;</div>
-<div class="line"><a id="l01063" name="l01063"></a><span class="lineno"> 1063</span>  <span class="keywordflow">return</span> out.str();</div>
-<div class="line"><a id="l01064" name="l01064"></a><span class="lineno"> 1064</span>}</div>
+<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span>        TEUCHOS_TEST_FOR_EXCEPTION(Partitioner_-&gt;numRowsInPart(i) % dofs != 0, std::logic_error,</div>
+<div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span>                                   <span class="stringliteral">&quot;Expected size of all blocks (partitions) to be divisible by MueLu dofs/node.&quot;</span>);</div>
+<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span>        <span class="keywordtype">size_t</span> blockSize = Partitioner_-&gt;numRowsInPart(i) / dofs;</div>
+<div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span>        <span class="comment">// #endif</span></div>
+<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>        <span class="comment">//  block i will be split into j different blocks,</span></div>
+<div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span>        <span class="comment">//  each corresponding to a different dof</span></div>
+<div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span>        <span class="keywordflow">for</span> (local_ordinal_type j = 0; j &lt; dofs; j++) {</div>
+<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>          local_ordinal_type blockIndex = i * dofs + j;</div>
+<div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span>          blockRows[blockIndex].resize(blockSize);</div>
+<div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span>          <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> k = 0; k &lt; blockSize; k++) {</div>
+<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>            blockRows[blockIndex][k] = (*Partitioner_)(i, k * dofs + j);</div>
+<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span>          }</div>
+<div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span>        }</div>
+<div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span>      }</div>
+<div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span>    }</div>
+<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span>    <span class="comment">// No decoupling - just get the rows directly from Partitioner</span></div>
+<div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>    blockRows.resize(NumLocalBlocks_);</div>
+<div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span>    <span class="keywordflow">for</span> (local_ordinal_type i = 0; i &lt; NumLocalBlocks_; ++i) {</div>
+<div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span>      <span class="keyword">const</span> <span class="keywordtype">size_t</span> numRows = Partitioner_-&gt;numRowsInPart(i);</div>
+<div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span>      blockRows[i].resize(numRows);</div>
+<div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span>      <span class="comment">// Extract a list of the indices of each partitioner row.</span></div>
+<div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span>      <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; numRows; ++j) {</div>
+<div class="line"><a id="l00838" name="l00838"></a><span class="lineno">  838</span>        blockRows[i][j] = (*Partitioner_)(i, j);</div>
+<div class="line"><a id="l00839" name="l00839"></a><span class="lineno">  839</span>      }</div>
+<div class="line"><a id="l00840" name="l00840"></a><span class="lineno">  840</span>    }</div>
+<div class="line"><a id="l00841" name="l00841"></a><span class="lineno">  841</span>  }</div>
+<div class="line"><a id="l00842" name="l00842"></a><span class="lineno">  842</span>  <span class="comment">// right before constructing the</span></div>
+<div class="line"><a id="l00843" name="l00843"></a><span class="lineno">  843</span>  Container_ = <a class="code hl_function" href="struct_ifpack2_1_1_container_factory.html#a5c27c2254ee8e217cd0baa9f4641eb56">ContainerFactory&lt;MatrixType&gt;::build</a>(containerType, A_, blockRows, Importer_, pointIndexed);</div>
+<div class="line"><a id="l00844" name="l00844"></a><span class="lineno">  844</span>  Container_-&gt;setParameters(List_);</div>
+<div class="line"><a id="l00845" name="l00845"></a><span class="lineno">  845</span>  Container_-&gt;initialize();</div>
+<div class="line"><a id="l00846" name="l00846"></a><span class="lineno">  846</span>}</div>
+<div class="line"><a id="l00847" name="l00847"></a><span class="lineno">  847</span> </div>
+<div class="line"><a id="l00848" name="l00848"></a><span class="lineno">  848</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> MatrixType, <span class="keyword">class</span> ContainerType&gt;</div>
+<div class="line"><a id="l00849" name="l00849"></a><span class="lineno">  849</span><span class="keywordtype">void</span> BlockRelaxation&lt;MatrixType, ContainerType&gt;::</div>
+<div class="line"><a id="l00850" name="l00850"></a><span class="lineno">  850</span>    ApplyInverseJacobi(<span class="keyword">const</span> MV&amp; X, MV&amp; Y)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00851" name="l00851"></a><span class="lineno">  851</span>  <span class="keyword">const</span> <span class="keywordtype">size_t</span> NumVectors = X.getNumVectors();</div>
+<div class="line"><a id="l00852" name="l00852"></a><span class="lineno">  852</span> </div>
+<div class="line"><a id="l00853" name="l00853"></a><span class="lineno">  853</span>  MV AY(Y.getMap(), NumVectors);</div>
+<div class="line"><a id="l00854" name="l00854"></a><span class="lineno">  854</span> </div>
+<div class="line"><a id="l00855" name="l00855"></a><span class="lineno">  855</span>  <span class="comment">// Initial matvec not needed</span></div>
+<div class="line"><a id="l00856" name="l00856"></a><span class="lineno">  856</span>  <span class="keywordtype">int</span> starting_iteration = 0;</div>
+<div class="line"><a id="l00857" name="l00857"></a><span class="lineno">  857</span>  <span class="keywordflow">if</span> (OverlapLevel_ &gt; 0) {</div>
+<div class="line"><a id="l00858" name="l00858"></a><span class="lineno">  858</span>    <span class="comment">// Overlapping jacobi, with view of W_</span></div>
+<div class="line"><a id="l00859" name="l00859"></a><span class="lineno">  859</span>    <span class="keyword">auto</span> WView = W_-&gt;getLocalViewHost(Tpetra::Access::ReadOnly);</div>
+<div class="line"><a id="l00860" name="l00860"></a><span class="lineno">  860</span>    <span class="keywordflow">if</span> (ZeroStartingSolution_) {</div>
+<div class="line"><a id="l00861" name="l00861"></a><span class="lineno">  861</span>      <span class="keyword">auto</span> XView = X.getLocalViewHost(Tpetra::Access::ReadOnly);</div>
+<div class="line"><a id="l00862" name="l00862"></a><span class="lineno">  862</span>      <span class="keyword">auto</span> YView = Y.getLocalViewHost(Tpetra::Access::ReadWrite);</div>
+<div class="line"><a id="l00863" name="l00863"></a><span class="lineno">  863</span>      Container_-&gt;DoOverlappingJacobi(XView, YView, WView, DampingFactor_, nonsymCombine_);</div>
+<div class="line"><a id="l00864" name="l00864"></a><span class="lineno">  864</span>      starting_iteration = 1;</div>
+<div class="line"><a id="l00865" name="l00865"></a><span class="lineno">  865</span>    }</div>
+<div class="line"><a id="l00866" name="l00866"></a><span class="lineno">  866</span>    <span class="keyword">const</span> scalar_type ONE = STS::one();</div>
+<div class="line"><a id="l00867" name="l00867"></a><span class="lineno">  867</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = starting_iteration; j &lt; NumSweeps_; j++) {</div>
+<div class="line"><a id="l00868" name="l00868"></a><span class="lineno">  868</span>      applyMat(Y, AY);</div>
+<div class="line"><a id="l00869" name="l00869"></a><span class="lineno">  869</span>      AY.update(ONE, X, -ONE);</div>
+<div class="line"><a id="l00870" name="l00870"></a><span class="lineno">  870</span>      {</div>
+<div class="line"><a id="l00871" name="l00871"></a><span class="lineno">  871</span>        <span class="keyword">auto</span> AYView = AY.getLocalViewHost(Tpetra::Access::ReadOnly);</div>
+<div class="line"><a id="l00872" name="l00872"></a><span class="lineno">  872</span>        <span class="keyword">auto</span> YView  = Y.getLocalViewHost(Tpetra::Access::ReadWrite);</div>
+<div class="line"><a id="l00873" name="l00873"></a><span class="lineno">  873</span>        Container_-&gt;DoOverlappingJacobi(AYView, YView, WView, DampingFactor_, nonsymCombine_);</div>
+<div class="line"><a id="l00874" name="l00874"></a><span class="lineno">  874</span>      }</div>
+<div class="line"><a id="l00875" name="l00875"></a><span class="lineno">  875</span>    }</div>
+<div class="line"><a id="l00876" name="l00876"></a><span class="lineno">  876</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00877" name="l00877"></a><span class="lineno">  877</span>    <span class="comment">// Non-overlapping</span></div>
+<div class="line"><a id="l00878" name="l00878"></a><span class="lineno">  878</span>    <span class="keywordflow">if</span> (ZeroStartingSolution_) {</div>
+<div class="line"><a id="l00879" name="l00879"></a><span class="lineno">  879</span>      <span class="keyword">auto</span> XView = X.getLocalViewHost(Tpetra::Access::ReadOnly);</div>
+<div class="line"><a id="l00880" name="l00880"></a><span class="lineno">  880</span>      <span class="keyword">auto</span> YView = Y.getLocalViewHost(Tpetra::Access::ReadWrite);</div>
+<div class="line"><a id="l00881" name="l00881"></a><span class="lineno">  881</span>      Container_-&gt;DoJacobi(XView, YView, DampingFactor_);</div>
+<div class="line"><a id="l00882" name="l00882"></a><span class="lineno">  882</span>      starting_iteration = 1;</div>
+<div class="line"><a id="l00883" name="l00883"></a><span class="lineno">  883</span>    }</div>
+<div class="line"><a id="l00884" name="l00884"></a><span class="lineno">  884</span>    <span class="keyword">const</span> scalar_type ONE = STS::one();</div>
+<div class="line"><a id="l00885" name="l00885"></a><span class="lineno">  885</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = starting_iteration; j &lt; NumSweeps_; j++) {</div>
+<div class="line"><a id="l00886" name="l00886"></a><span class="lineno">  886</span>      applyMat(Y, AY);</div>
+<div class="line"><a id="l00887" name="l00887"></a><span class="lineno">  887</span>      AY.update(ONE, X, -ONE);</div>
+<div class="line"><a id="l00888" name="l00888"></a><span class="lineno">  888</span>      {</div>
+<div class="line"><a id="l00889" name="l00889"></a><span class="lineno">  889</span>        <span class="keyword">auto</span> AYView = AY.getLocalViewHost(Tpetra::Access::ReadOnly);</div>
+<div class="line"><a id="l00890" name="l00890"></a><span class="lineno">  890</span>        <span class="keyword">auto</span> YView  = Y.getLocalViewHost(Tpetra::Access::ReadWrite);</div>
+<div class="line"><a id="l00891" name="l00891"></a><span class="lineno">  891</span>        Container_-&gt;DoJacobi(AYView, YView, DampingFactor_);</div>
+<div class="line"><a id="l00892" name="l00892"></a><span class="lineno">  892</span>      }</div>
+<div class="line"><a id="l00893" name="l00893"></a><span class="lineno">  893</span>    }</div>
+<div class="line"><a id="l00894" name="l00894"></a><span class="lineno">  894</span>  }</div>
+<div class="line"><a id="l00895" name="l00895"></a><span class="lineno">  895</span>}</div>
+<div class="line"><a id="l00896" name="l00896"></a><span class="lineno">  896</span> </div>
+<div class="line"><a id="l00897" name="l00897"></a><span class="lineno">  897</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> MatrixType, <span class="keyword">class</span> ContainerType&gt;</div>
+<div class="line"><a id="l00898" name="l00898"></a><span class="lineno">  898</span><span class="keywordtype">void</span> BlockRelaxation&lt;MatrixType, ContainerType&gt;::</div>
+<div class="line"><a id="l00899" name="l00899"></a><span class="lineno">  899</span>    ApplyInverseGS(<span class="keyword">const</span> MV&amp; X, MV&amp; Y)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00900" name="l00900"></a><span class="lineno">  900</span>  <span class="keyword">using </span>Teuchos::Ptr;</div>
+<div class="line"><a id="l00901" name="l00901"></a><span class="lineno">  901</span>  <span class="keyword">using </span>Teuchos::ptr;</div>
+<div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span>  <span class="keywordtype">size_t</span> numVecs = X.getNumVectors();</div>
+<div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span>  <span class="comment">// Get view of X (is never modified in this function)</span></div>
+<div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span>  <span class="keyword">auto</span> XView = X.getLocalViewHost(Tpetra::Access::ReadOnly);</div>
+<div class="line"><a id="l00905" name="l00905"></a><span class="lineno">  905</span>  <span class="keyword">auto</span> YView = Y.getLocalViewHost(Tpetra::Access::ReadWrite);</div>
+<div class="line"><a id="l00906" name="l00906"></a><span class="lineno">  906</span>  <span class="comment">// Pre-import Y, if parallel</span></div>
+<div class="line"><a id="l00907" name="l00907"></a><span class="lineno">  907</span>  Ptr&lt;MV&gt; Y2;</div>
+<div class="line"><a id="l00908" name="l00908"></a><span class="lineno">  908</span>  <span class="keywordtype">bool</span> deleteY2 = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00909" name="l00909"></a><span class="lineno">  909</span>  <span class="keywordflow">if</span> (IsParallel_) {</div>
+<div class="line"><a id="l00910" name="l00910"></a><span class="lineno">  910</span>    Y2       = ptr(<span class="keyword">new</span> MV(Importer_-&gt;getTargetMap(), numVecs));</div>
+<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span>    deleteY2 = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00912" name="l00912"></a><span class="lineno">  912</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span>    Y2 = ptr(&amp;Y);</div>
+<div class="line"><a id="l00914" name="l00914"></a><span class="lineno">  914</span>  <span class="keywordflow">if</span> (IsParallel_) {</div>
+<div class="line"><a id="l00915" name="l00915"></a><span class="lineno">  915</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; NumSweeps_; ++j) {</div>
+<div class="line"><a id="l00916" name="l00916"></a><span class="lineno">  916</span>      <span class="comment">// do import once per sweep</span></div>
+<div class="line"><a id="l00917" name="l00917"></a><span class="lineno">  917</span>      Y2-&gt;doImport(Y, *Importer_, Tpetra::INSERT);</div>
+<div class="line"><a id="l00918" name="l00918"></a><span class="lineno">  918</span>      <span class="keyword">auto</span> Y2View = Y2-&gt;getLocalViewHost(Tpetra::Access::ReadWrite);</div>
+<div class="line"><a id="l00919" name="l00919"></a><span class="lineno">  919</span>      Container_-&gt;DoGaussSeidel(XView, YView, Y2View, DampingFactor_);</div>
+<div class="line"><a id="l00920" name="l00920"></a><span class="lineno">  920</span>    }</div>
+<div class="line"><a id="l00921" name="l00921"></a><span class="lineno">  921</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00922" name="l00922"></a><span class="lineno">  922</span>    <span class="keyword">auto</span> Y2View = Y2-&gt;getLocalViewHost(Tpetra::Access::ReadWrite);</div>
+<div class="line"><a id="l00923" name="l00923"></a><span class="lineno">  923</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; NumSweeps_; ++j) {</div>
+<div class="line"><a id="l00924" name="l00924"></a><span class="lineno">  924</span>      Container_-&gt;DoGaussSeidel(XView, YView, Y2View, DampingFactor_);</div>
+<div class="line"><a id="l00925" name="l00925"></a><span class="lineno">  925</span>    }</div>
+<div class="line"><a id="l00926" name="l00926"></a><span class="lineno">  926</span>  }</div>
+<div class="line"><a id="l00927" name="l00927"></a><span class="lineno">  927</span>  <span class="keywordflow">if</span> (deleteY2)</div>
+<div class="line"><a id="l00928" name="l00928"></a><span class="lineno">  928</span>    <span class="keyword">delete</span> Y2.get();</div>
+<div class="line"><a id="l00929" name="l00929"></a><span class="lineno">  929</span>}</div>
+<div class="line"><a id="l00930" name="l00930"></a><span class="lineno">  930</span> </div>
+<div class="line"><a id="l00931" name="l00931"></a><span class="lineno">  931</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> MatrixType, <span class="keyword">class</span> ContainerType&gt;</div>
+<div class="line"><a id="l00932" name="l00932"></a><span class="lineno">  932</span><span class="keywordtype">void</span> BlockRelaxation&lt;MatrixType, ContainerType&gt;::</div>
+<div class="line"><a id="l00933" name="l00933"></a><span class="lineno">  933</span>    ApplyInverseSGS(<span class="keyword">const</span> MV&amp; X, MV&amp; Y)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00934" name="l00934"></a><span class="lineno">  934</span>  <span class="keyword">using </span>Teuchos::Ptr;</div>
+<div class="line"><a id="l00935" name="l00935"></a><span class="lineno">  935</span>  <span class="keyword">using </span>Teuchos::ptr;</div>
+<div class="line"><a id="l00936" name="l00936"></a><span class="lineno">  936</span>  <span class="comment">// Get view of X (is never modified in this function)</span></div>
+<div class="line"><a id="l00937" name="l00937"></a><span class="lineno">  937</span>  <span class="keyword">auto</span> XView = X.getLocalViewHost(Tpetra::Access::ReadOnly);</div>
+<div class="line"><a id="l00938" name="l00938"></a><span class="lineno">  938</span>  <span class="keyword">auto</span> YView = Y.getLocalViewHost(Tpetra::Access::ReadWrite);</div>
+<div class="line"><a id="l00939" name="l00939"></a><span class="lineno">  939</span>  <span class="comment">// Pre-import Y, if parallel</span></div>
+<div class="line"><a id="l00940" name="l00940"></a><span class="lineno">  940</span>  Ptr&lt;MV&gt; Y2;</div>
+<div class="line"><a id="l00941" name="l00941"></a><span class="lineno">  941</span>  <span class="keywordtype">bool</span> deleteY2 = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00942" name="l00942"></a><span class="lineno">  942</span>  <span class="keywordflow">if</span> (IsParallel_) {</div>
+<div class="line"><a id="l00943" name="l00943"></a><span class="lineno">  943</span>    Y2       = ptr(<span class="keyword">new</span> MV(Importer_-&gt;getTargetMap(), X.getNumVectors()));</div>
+<div class="line"><a id="l00944" name="l00944"></a><span class="lineno">  944</span>    deleteY2 = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00945" name="l00945"></a><span class="lineno">  945</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span>    Y2 = ptr(&amp;Y);</div>
+<div class="line"><a id="l00947" name="l00947"></a><span class="lineno">  947</span>  <span class="keywordflow">if</span> (IsParallel_) {</div>
+<div class="line"><a id="l00948" name="l00948"></a><span class="lineno">  948</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; NumSweeps_; ++j) {</div>
+<div class="line"><a id="l00949" name="l00949"></a><span class="lineno">  949</span>      <span class="comment">// do import once per sweep</span></div>
+<div class="line"><a id="l00950" name="l00950"></a><span class="lineno">  950</span>      Y2-&gt;doImport(Y, *Importer_, Tpetra::INSERT);</div>
+<div class="line"><a id="l00951" name="l00951"></a><span class="lineno">  951</span>      <span class="keyword">auto</span> Y2View = Y2-&gt;getLocalViewHost(Tpetra::Access::ReadWrite);</div>
+<div class="line"><a id="l00952" name="l00952"></a><span class="lineno">  952</span>      Container_-&gt;DoSGS(XView, YView, Y2View, DampingFactor_);</div>
+<div class="line"><a id="l00953" name="l00953"></a><span class="lineno">  953</span>    }</div>
+<div class="line"><a id="l00954" name="l00954"></a><span class="lineno">  954</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00955" name="l00955"></a><span class="lineno">  955</span>    <span class="keyword">auto</span> Y2View = Y2-&gt;getLocalViewHost(Tpetra::Access::ReadWrite);</div>
+<div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; NumSweeps_; ++j) {</div>
+<div class="line"><a id="l00957" name="l00957"></a><span class="lineno">  957</span>      Container_-&gt;DoSGS(XView, YView, Y2View, DampingFactor_);</div>
+<div class="line"><a id="l00958" name="l00958"></a><span class="lineno">  958</span>    }</div>
+<div class="line"><a id="l00959" name="l00959"></a><span class="lineno">  959</span>  }</div>
+<div class="line"><a id="l00960" name="l00960"></a><span class="lineno">  960</span>  <span class="keywordflow">if</span> (deleteY2)</div>
+<div class="line"><a id="l00961" name="l00961"></a><span class="lineno">  961</span>    <span class="keyword">delete</span> Y2.get();</div>
+<div class="line"><a id="l00962" name="l00962"></a><span class="lineno">  962</span>}</div>
+<div class="line"><a id="l00963" name="l00963"></a><span class="lineno">  963</span> </div>
+<div class="line"><a id="l00964" name="l00964"></a><span class="lineno">  964</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> MatrixType, <span class="keyword">class</span> ContainerType&gt;</div>
+<div class="line"><a id="l00965" name="l00965"></a><span class="lineno">  965</span><span class="keywordtype">void</span> BlockRelaxation&lt;MatrixType, ContainerType&gt;::computeImporter()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00966" name="l00966"></a><span class="lineno">  966</span>  <span class="keyword">using </span>Teuchos::Array;</div>
+<div class="line"><a id="l00967" name="l00967"></a><span class="lineno">  967</span>  <span class="keyword">using </span>Teuchos::ArrayView;</div>
+<div class="line"><a id="l00968" name="l00968"></a><span class="lineno">  968</span>  <span class="keyword">using </span>Teuchos::Comm;</div>
+<div class="line"><a id="l00969" name="l00969"></a><span class="lineno">  969</span>  <span class="keyword">using </span>Teuchos::Ptr;</div>
+<div class="line"><a id="l00970" name="l00970"></a><span class="lineno">  970</span>  <span class="keyword">using </span>Teuchos::RCP;</div>
+<div class="line"><a id="l00971" name="l00971"></a><span class="lineno">  971</span>  <span class="keyword">using </span>Teuchos::rcp;</div>
+<div class="line"><a id="l00972" name="l00972"></a><span class="lineno">  972</span>  <span class="keyword">using </span>Teuchos::rcp_dynamic_cast;</div>
+<div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span>  <span class="keywordflow">if</span> (IsParallel_) {</div>
+<div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span>    <span class="keywordflow">if</span> (hasBlockCrsMatrix_) {</div>
+<div class="line"><a id="l00975" name="l00975"></a><span class="lineno">  975</span>      <span class="keyword">const</span> RCP&lt;const block_crs_matrix_type&gt; bcrs =</div>
+<div class="line"><a id="l00976" name="l00976"></a><span class="lineno">  976</span>          rcp_dynamic_cast&lt;const block_crs_matrix_type&gt;(A_);</div>
+<div class="line"><a id="l00977" name="l00977"></a><span class="lineno">  977</span>      <span class="keywordtype">int</span> bs_                          = bcrs-&gt;getBlockSize();</div>
+<div class="line"><a id="l00978" name="l00978"></a><span class="lineno">  978</span>      RCP&lt;const map_type&gt; oldDomainMap = A_-&gt;getDomainMap();</div>
+<div class="line"><a id="l00979" name="l00979"></a><span class="lineno">  979</span>      RCP&lt;const map_type&gt; oldColMap    = A_-&gt;getColMap();</div>
+<div class="line"><a id="l00980" name="l00980"></a><span class="lineno">  980</span>      <span class="comment">// Because A is a block CRS matrix, import will not do what you think it does</span></div>
+<div class="line"><a id="l00981" name="l00981"></a><span class="lineno">  981</span>      <span class="comment">// We have to construct the correct maps for it</span></div>
+<div class="line"><a id="l00982" name="l00982"></a><span class="lineno">  982</span>      global_size_t numGlobalElements                     = oldColMap-&gt;getGlobalNumElements() * bs_;</div>
+<div class="line"><a id="l00983" name="l00983"></a><span class="lineno">  983</span>      global_ordinal_type indexBase                       = oldColMap-&gt;getIndexBase();</div>
+<div class="line"><a id="l00984" name="l00984"></a><span class="lineno">  984</span>      RCP&lt;const Comm&lt;int&gt;&gt; comm                           = oldColMap-&gt;getComm();</div>
+<div class="line"><a id="l00985" name="l00985"></a><span class="lineno">  985</span>      ArrayView&lt;const global_ordinal_type&gt; oldColElements = oldColMap-&gt;getLocalElementList();</div>
+<div class="line"><a id="l00986" name="l00986"></a><span class="lineno">  986</span>      Array&lt;global_ordinal_type&gt; newColElements(bs_ * oldColElements.size());</div>
+<div class="line"><a id="l00987" name="l00987"></a><span class="lineno">  987</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; oldColElements.size(); i++) {</div>
+<div class="line"><a id="l00988" name="l00988"></a><span class="lineno">  988</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; bs_; j++)</div>
+<div class="line"><a id="l00989" name="l00989"></a><span class="lineno">  989</span>          newColElements[i * bs_ + j] = oldColElements[i] * bs_ + j;</div>
+<div class="line"><a id="l00990" name="l00990"></a><span class="lineno">  990</span>      }</div>
+<div class="line"><a id="l00991" name="l00991"></a><span class="lineno">  991</span>      RCP&lt;map_type&gt; colMap(<span class="keyword">new</span> map_type(numGlobalElements, newColElements, indexBase, comm));</div>
+<div class="line"><a id="l00992" name="l00992"></a><span class="lineno">  992</span>      <span class="comment">// Create the importer</span></div>
+<div class="line"><a id="l00993" name="l00993"></a><span class="lineno">  993</span>      Importer_ = rcp(<span class="keyword">new</span> import_type(oldDomainMap, colMap));</div>
+<div class="line"><a id="l00994" name="l00994"></a><span class="lineno">  994</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!A_.is_null()) {</div>
+<div class="line"><a id="l00995" name="l00995"></a><span class="lineno">  995</span>      Importer_ = A_-&gt;getGraph()-&gt;getImporter();</div>
+<div class="line"><a id="l00996" name="l00996"></a><span class="lineno">  996</span>      <span class="keywordflow">if</span> (Importer_.is_null())</div>
+<div class="line"><a id="l00997" name="l00997"></a><span class="lineno">  997</span>        Importer_ = rcp(<span class="keyword">new</span> import_type(A_-&gt;getDomainMap(), A_-&gt;getColMap()));</div>
+<div class="line"><a id="l00998" name="l00998"></a><span class="lineno">  998</span>    }</div>
+<div class="line"><a id="l00999" name="l00999"></a><span class="lineno">  999</span>  }</div>
+<div class="line"><a id="l01000" name="l01000"></a><span class="lineno"> 1000</span>  <span class="comment">// otherwise, Importer_ is not needed and is left NULL</span></div>
+<div class="line"><a id="l01001" name="l01001"></a><span class="lineno"> 1001</span>}</div>
+<div class="line"><a id="l01002" name="l01002"></a><span class="lineno"> 1002</span> </div>
+<div class="line"><a id="l01003" name="l01003"></a><span class="lineno"> 1003</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> MatrixType, <span class="keyword">class</span> ContainerType&gt;</div>
+<div class="line"><a id="l01004" name="l01004"></a><span class="lineno"> 1004</span>std::string</div>
+<div class="foldopen" id="foldopen01005" data-start="{" data-end="}">
+<div class="line"><a id="l01005" name="l01005"></a><span class="lineno"><a class="line" href="class_ifpack2_1_1_block_relaxation.html#ad6183939a7b25c1cfe4871460ccad4b8"> 1005</a></span><a class="code hl_function" href="class_ifpack2_1_1_block_relaxation.html#ad6183939a7b25c1cfe4871460ccad4b8">BlockRelaxation&lt;MatrixType, ContainerType&gt;::</a></div>
+<div class="line"><a id="l01006" name="l01006"></a><span class="lineno"> 1006</span><a class="code hl_function" href="class_ifpack2_1_1_block_relaxation.html#ad6183939a7b25c1cfe4871460ccad4b8">    description</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01007" name="l01007"></a><span class="lineno"> 1007</span>  std::ostringstream out;</div>
+<div class="line"><a id="l01008" name="l01008"></a><span class="lineno"> 1008</span> </div>
+<div class="line"><a id="l01009" name="l01009"></a><span class="lineno"> 1009</span>  <span class="comment">// Output is a valid YAML dictionary in flow style.  If you don&#39;t</span></div>
+<div class="line"><a id="l01010" name="l01010"></a><span class="lineno"> 1010</span>  <span class="comment">// like everything on a single line, you should call describe()</span></div>
+<div class="line"><a id="l01011" name="l01011"></a><span class="lineno"> 1011</span>  <span class="comment">// instead.</span></div>
+<div class="line"><a id="l01012" name="l01012"></a><span class="lineno"> 1012</span>  out &lt;&lt; <span class="stringliteral">&quot;\&quot;Ifpack2::BlockRelaxation\&quot;: {&quot;</span>;</div>
+<div class="line"><a id="l01013" name="l01013"></a><span class="lineno"> 1013</span>  <span class="keywordflow">if</span> (this-&gt;getObjectLabel() != <span class="stringliteral">&quot;&quot;</span>) {</div>
+<div class="line"><a id="l01014" name="l01014"></a><span class="lineno"> 1014</span>    out &lt;&lt; <span class="stringliteral">&quot;Label: \&quot;&quot;</span> &lt;&lt; this-&gt;getObjectLabel() &lt;&lt; <span class="stringliteral">&quot;\&quot;, &quot;</span>;</div>
+<div class="line"><a id="l01015" name="l01015"></a><span class="lineno"> 1015</span>  }</div>
+<div class="line"><a id="l01016" name="l01016"></a><span class="lineno"> 1016</span>  <span class="comment">//  out &lt;&lt; &quot;Initialized: &quot; &lt;&lt; (isInitialized () ? &quot;true&quot; : &quot;false&quot;) &lt;&lt; &quot;, &quot;;</span></div>
+<div class="line"><a id="l01017" name="l01017"></a><span class="lineno"> 1017</span>  <span class="comment">//  out &lt;&lt; &quot;Computed: &quot; &lt;&lt; (isComputed () ? &quot;true&quot; : &quot;false&quot;) &lt;&lt; &quot;, &quot;;</span></div>
+<div class="line"><a id="l01018" name="l01018"></a><span class="lineno"> 1018</span>  <span class="keywordflow">if</span> (A_.is_null()) {</div>
+<div class="line"><a id="l01019" name="l01019"></a><span class="lineno"> 1019</span>    out &lt;&lt; <span class="stringliteral">&quot;Matrix: null, &quot;</span>;</div>
+<div class="line"><a id="l01020" name="l01020"></a><span class="lineno"> 1020</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l01021" name="l01021"></a><span class="lineno"> 1021</span>    <span class="comment">//    out &lt;&lt; &quot;Matrix: not null&quot;</span></div>
+<div class="line"><a id="l01022" name="l01022"></a><span class="lineno"> 1022</span>    <span class="comment">// &lt;&lt; &quot;, Global matrix dimensions: [&quot;</span></div>
+<div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span>    out &lt;&lt; <span class="stringliteral">&quot;Global matrix dimensions: [&quot;</span></div>
+<div class="line"><a id="l01024" name="l01024"></a><span class="lineno"> 1024</span>        &lt;&lt; A_-&gt;getGlobalNumRows() &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; A_-&gt;getGlobalNumCols() &lt;&lt; <span class="stringliteral">&quot;], &quot;</span>;</div>
+<div class="line"><a id="l01025" name="l01025"></a><span class="lineno"> 1025</span>  }</div>
+<div class="line"><a id="l01026" name="l01026"></a><span class="lineno"> 1026</span> </div>
+<div class="line"><a id="l01027" name="l01027"></a><span class="lineno"> 1027</span>  <span class="comment">// It&#39;s useful to print this instance&#39;s relaxation method.  If you</span></div>
+<div class="line"><a id="l01028" name="l01028"></a><span class="lineno"> 1028</span>  <span class="comment">// want more info than that, call describe() instead.</span></div>
+<div class="line"><a id="l01029" name="l01029"></a><span class="lineno"> 1029</span>  out &lt;&lt; <span class="stringliteral">&quot;\&quot;relaxation: type\&quot;: &quot;</span>;</div>
+<div class="line"><a id="l01030" name="l01030"></a><span class="lineno"> 1030</span>  <span class="keywordflow">if</span> (PrecType_ == Ifpack2::Details::JACOBI) {</div>
+<div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span>    out &lt;&lt; <span class="stringliteral">&quot;Block Jacobi&quot;</span>;</div>
+<div class="line"><a id="l01032" name="l01032"></a><span class="lineno"> 1032</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (PrecType_ == Ifpack2::Details::GS) {</div>
+<div class="line"><a id="l01033" name="l01033"></a><span class="lineno"> 1033</span>    out &lt;&lt; <span class="stringliteral">&quot;Block Gauss-Seidel&quot;</span>;</div>
+<div class="line"><a id="l01034" name="l01034"></a><span class="lineno"> 1034</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (PrecType_ == Ifpack2::Details::SGS) {</div>
+<div class="line"><a id="l01035" name="l01035"></a><span class="lineno"> 1035</span>    out &lt;&lt; <span class="stringliteral">&quot;Block Symmetric Gauss-Seidel&quot;</span>;</div>
+<div class="line"><a id="l01036" name="l01036"></a><span class="lineno"> 1036</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (PrecType_ == Ifpack2::Details::MTSPLITJACOBI) {</div>
+<div class="line"><a id="l01037" name="l01037"></a><span class="lineno"> 1037</span>    out &lt;&lt; <span class="stringliteral">&quot;MT Split Jacobi&quot;</span>;</div>
+<div class="line"><a id="l01038" name="l01038"></a><span class="lineno"> 1038</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l01039" name="l01039"></a><span class="lineno"> 1039</span>    out &lt;&lt; <span class="stringliteral">&quot;INVALID&quot;</span>;</div>
+<div class="line"><a id="l01040" name="l01040"></a><span class="lineno"> 1040</span>  }</div>
+<div class="line"><a id="l01041" name="l01041"></a><span class="lineno"> 1041</span> </div>
+<div class="line"><a id="l01042" name="l01042"></a><span class="lineno"> 1042</span>  <span class="comment">// BlockCrs if we have that</span></div>
+<div class="line"><a id="l01043" name="l01043"></a><span class="lineno"> 1043</span>  <span class="keywordflow">if</span> (hasBlockCrsMatrix_)</div>
+<div class="line"><a id="l01044" name="l01044"></a><span class="lineno"> 1044</span>    out &lt;&lt; <span class="stringliteral">&quot;, BlockCrs&quot;</span>;</div>
+<div class="line"><a id="l01045" name="l01045"></a><span class="lineno"> 1045</span> </div>
+<div class="line"><a id="l01046" name="l01046"></a><span class="lineno"> 1046</span>  <span class="comment">// Print the approximate # rows per part</span></div>
+<div class="line"><a id="l01047" name="l01047"></a><span class="lineno"> 1047</span>  <span class="keywordtype">int</span> approx_rows_per_part = A_-&gt;getLocalNumRows() / Partitioner_-&gt;numLocalParts();</div>
+<div class="line"><a id="l01048" name="l01048"></a><span class="lineno"> 1048</span>  out &lt;&lt; <span class="stringliteral">&quot;, blocksize: &quot;</span> &lt;&lt; approx_rows_per_part;</div>
+<div class="line"><a id="l01049" name="l01049"></a><span class="lineno"> 1049</span> </div>
+<div class="line"><a id="l01050" name="l01050"></a><span class="lineno"> 1050</span>  out &lt;&lt; <span class="stringliteral">&quot;, overlap: &quot;</span> &lt;&lt; OverlapLevel_;</div>
+<div class="line"><a id="l01051" name="l01051"></a><span class="lineno"> 1051</span> </div>
+<div class="line"><a id="l01052" name="l01052"></a><span class="lineno"> 1052</span>  out &lt;&lt; <span class="stringliteral">&quot;, &quot;</span></div>
+<div class="line"><a id="l01053" name="l01053"></a><span class="lineno"> 1053</span>      &lt;&lt; <span class="stringliteral">&quot;sweeps: &quot;</span> &lt;&lt; NumSweeps_ &lt;&lt; <span class="stringliteral">&quot;, &quot;</span></div>
+<div class="line"><a id="l01054" name="l01054"></a><span class="lineno"> 1054</span>      &lt;&lt; <span class="stringliteral">&quot;damping factor: &quot;</span> &lt;&lt; DampingFactor_ &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
+<div class="line"><a id="l01055" name="l01055"></a><span class="lineno"> 1055</span> </div>
+<div class="line"><a id="l01056" name="l01056"></a><span class="lineno"> 1056</span>  std::string containerType = ContainerType::getName();</div>
+<div class="line"><a id="l01057" name="l01057"></a><span class="lineno"> 1057</span>  out &lt;&lt; <span class="stringliteral">&quot;block container: &quot;</span> &lt;&lt; ((containerType == <span class="stringliteral">&quot;Generic&quot;</span>) ? containerType_ : containerType);</div>
+<div class="line"><a id="l01058" name="l01058"></a><span class="lineno"> 1058</span>  <span class="keywordflow">if</span> (List_.isParameter(<span class="stringliteral">&quot;partitioner: PDE equations&quot;</span>))</div>
+<div class="line"><a id="l01059" name="l01059"></a><span class="lineno"> 1059</span>    out &lt;&lt; <span class="stringliteral">&quot;, dofs/node: &quot;</span> &lt;&lt; List_.get&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;partitioner: PDE equations&quot;</span>);</div>
+<div class="line"><a id="l01060" name="l01060"></a><span class="lineno"> 1060</span> </div>
+<div class="line"><a id="l01061" name="l01061"></a><span class="lineno"> 1061</span>  out &lt;&lt; <span class="stringliteral">&quot;}&quot;</span>;</div>
+<div class="line"><a id="l01062" name="l01062"></a><span class="lineno"> 1062</span>  <span class="keywordflow">return</span> out.str();</div>
+<div class="line"><a id="l01063" name="l01063"></a><span class="lineno"> 1063</span>}</div>
 </div>
-<div class="line"><a id="l01065" name="l01065"></a><span class="lineno"> 1065</span> </div>
-<div class="line"><a id="l01066" name="l01066"></a><span class="lineno"> 1066</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> MatrixType, <span class="keyword">class</span> ContainerType&gt;</div>
-<div class="foldopen" id="foldopen01067" data-start="{" data-end="}">
-<div class="line"><a id="l01067" name="l01067"></a><span class="lineno"><a class="line" href="class_ifpack2_1_1_block_relaxation.html#a398451d498b9997f4bdeb2a55c86f35a"> 1067</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_ifpack2_1_1_block_relaxation.html#a398451d498b9997f4bdeb2a55c86f35a">BlockRelaxation&lt;MatrixType, ContainerType&gt;::</a></div>
-<div class="line"><a id="l01068" name="l01068"></a><span class="lineno"> 1068</span><a class="code hl_function" href="class_ifpack2_1_1_block_relaxation.html#a398451d498b9997f4bdeb2a55c86f35a">    describe</a>(Teuchos::FancyOStream&amp; out,</div>
-<div class="line"><a id="l01069" name="l01069"></a><span class="lineno"> 1069</span>             <span class="keyword">const</span> Teuchos::EVerbosityLevel verbLevel)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span>  <span class="keyword">using </span>std::endl;</div>
-<div class="line"><a id="l01071" name="l01071"></a><span class="lineno"> 1071</span>  <span class="keyword">using </span>std::setw;</div>
-<div class="line"><a id="l01072" name="l01072"></a><span class="lineno"> 1072</span>  <span class="keyword">using </span>Teuchos::TypeNameTraits;</div>
-<div class="line"><a id="l01073" name="l01073"></a><span class="lineno"> 1073</span>  <span class="keyword">using </span>Teuchos::VERB_DEFAULT;</div>
-<div class="line"><a id="l01074" name="l01074"></a><span class="lineno"> 1074</span>  <span class="keyword">using </span>Teuchos::VERB_EXTREME;</div>
-<div class="line"><a id="l01075" name="l01075"></a><span class="lineno"> 1075</span>  <span class="keyword">using </span>Teuchos::VERB_HIGH;</div>
-<div class="line"><a id="l01076" name="l01076"></a><span class="lineno"> 1076</span>  <span class="keyword">using </span>Teuchos::VERB_LOW;</div>
-<div class="line"><a id="l01077" name="l01077"></a><span class="lineno"> 1077</span>  <span class="keyword">using </span>Teuchos::VERB_MEDIUM;</div>
-<div class="line"><a id="l01078" name="l01078"></a><span class="lineno"> 1078</span>  <span class="keyword">using </span>Teuchos::VERB_NONE;</div>
-<div class="line"><a id="l01079" name="l01079"></a><span class="lineno"> 1079</span> </div>
-<div class="line"><a id="l01080" name="l01080"></a><span class="lineno"> 1080</span>  Teuchos::EVerbosityLevel vl = verbLevel;</div>
-<div class="line"><a id="l01081" name="l01081"></a><span class="lineno"> 1081</span>  <span class="keywordflow">if</span> (vl == VERB_DEFAULT) vl = VERB_LOW;</div>
-<div class="line"><a id="l01082" name="l01082"></a><span class="lineno"> 1082</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> myImageID = A_-&gt;getComm()-&gt;getRank();</div>
-<div class="line"><a id="l01083" name="l01083"></a><span class="lineno"> 1083</span> </div>
-<div class="line"><a id="l01084" name="l01084"></a><span class="lineno"> 1084</span>  <span class="comment">// Convention requires that describe() begin with a tab.</span></div>
-<div class="line"><a id="l01085" name="l01085"></a><span class="lineno"> 1085</span>  Teuchos::OSTab tab(out);</div>
-<div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span> </div>
-<div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span>  <span class="comment">//    none: print nothing</span></div>
-<div class="line"><a id="l01088" name="l01088"></a><span class="lineno"> 1088</span>  <span class="comment">//     low: print O(1) info from node 0</span></div>
-<div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span>  <span class="comment">//  medium:</span></div>
-<div class="line"><a id="l01090" name="l01090"></a><span class="lineno"> 1090</span>  <span class="comment">//    high:</span></div>
-<div class="line"><a id="l01091" name="l01091"></a><span class="lineno"> 1091</span>  <span class="comment">// extreme:</span></div>
-<div class="line"><a id="l01092" name="l01092"></a><span class="lineno"> 1092</span>  <span class="keywordflow">if</span> (vl != VERB_NONE &amp;&amp; myImageID == 0) {</div>
-<div class="line"><a id="l01093" name="l01093"></a><span class="lineno"> 1093</span>    out &lt;&lt; <span class="stringliteral">&quot;Ifpack2::BlockRelaxation&lt;&quot;</span></div>
-<div class="line"><a id="l01094" name="l01094"></a><span class="lineno"> 1094</span>        &lt;&lt; TypeNameTraits&lt;MatrixType&gt;::name() &lt;&lt; <span class="stringliteral">&quot;, &quot;</span></div>
-<div class="line"><a id="l01095" name="l01095"></a><span class="lineno"> 1095</span>        &lt;&lt; TypeNameTraits&lt;ContainerType&gt;::name() &lt;&lt; <span class="stringliteral">&quot; &gt;:&quot;</span>;</div>
-<div class="line"><a id="l01096" name="l01096"></a><span class="lineno"> 1096</span>    Teuchos::OSTab tab1(out);</div>
-<div class="line"><a id="l01097" name="l01097"></a><span class="lineno"> 1097</span> </div>
-<div class="line"><a id="l01098" name="l01098"></a><span class="lineno"> 1098</span>    <span class="keywordflow">if</span> (this-&gt;getObjectLabel() != <span class="stringliteral">&quot;&quot;</span>) {</div>
-<div class="line"><a id="l01099" name="l01099"></a><span class="lineno"> 1099</span>      out &lt;&lt; <span class="stringliteral">&quot;label: \&quot;&quot;</span> &lt;&lt; this-&gt;getObjectLabel() &lt;&lt; <span class="stringliteral">&quot;\&quot;&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a id="l01100" name="l01100"></a><span class="lineno"> 1100</span>    }</div>
-<div class="line"><a id="l01101" name="l01101"></a><span class="lineno"> 1101</span>    out &lt;&lt; <span class="stringliteral">&quot;initialized: &quot;</span> &lt;&lt; (isInitialized() ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>) &lt;&lt; endl</div>
-<div class="line"><a id="l01102" name="l01102"></a><span class="lineno"> 1102</span>        &lt;&lt; <span class="stringliteral">&quot;computed: &quot;</span> &lt;&lt; (isComputed() ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>) &lt;&lt; endl;</div>
-<div class="line"><a id="l01103" name="l01103"></a><span class="lineno"> 1103</span> </div>
-<div class="line"><a id="l01104" name="l01104"></a><span class="lineno"> 1104</span>    std::string precType;</div>
-<div class="line"><a id="l01105" name="l01105"></a><span class="lineno"> 1105</span>    <span class="keywordflow">if</span> (PrecType_ == Ifpack2::Details::JACOBI) {</div>
-<div class="line"><a id="l01106" name="l01106"></a><span class="lineno"> 1106</span>      precType = <span class="stringliteral">&quot;Block Jacobi&quot;</span>;</div>
-<div class="line"><a id="l01107" name="l01107"></a><span class="lineno"> 1107</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (PrecType_ == Ifpack2::Details::GS) {</div>
-<div class="line"><a id="l01108" name="l01108"></a><span class="lineno"> 1108</span>      precType = <span class="stringliteral">&quot;Block Gauss-Seidel&quot;</span>;</div>
-<div class="line"><a id="l01109" name="l01109"></a><span class="lineno"> 1109</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (PrecType_ == Ifpack2::Details::SGS) {</div>
-<div class="line"><a id="l01110" name="l01110"></a><span class="lineno"> 1110</span>      precType = <span class="stringliteral">&quot;Block Symmetric Gauss-Seidel&quot;</span>;</div>
-<div class="line"><a id="l01111" name="l01111"></a><span class="lineno"> 1111</span>    }</div>
-<div class="line"><a id="l01112" name="l01112"></a><span class="lineno"> 1112</span>    out &lt;&lt; <span class="stringliteral">&quot;type: &quot;</span> &lt;&lt; precType &lt;&lt; endl</div>
-<div class="line"><a id="l01113" name="l01113"></a><span class="lineno"> 1113</span>        &lt;&lt; <span class="stringliteral">&quot;global number of rows: &quot;</span> &lt;&lt; A_-&gt;getGlobalNumRows() &lt;&lt; endl</div>
-<div class="line"><a id="l01114" name="l01114"></a><span class="lineno"> 1114</span>        &lt;&lt; <span class="stringliteral">&quot;global number of columns: &quot;</span> &lt;&lt; A_-&gt;getGlobalNumCols() &lt;&lt; endl</div>
-<div class="line"><a id="l01115" name="l01115"></a><span class="lineno"> 1115</span>        &lt;&lt; <span class="stringliteral">&quot;number of sweeps: &quot;</span> &lt;&lt; NumSweeps_ &lt;&lt; endl</div>
-<div class="line"><a id="l01116" name="l01116"></a><span class="lineno"> 1116</span>        &lt;&lt; <span class="stringliteral">&quot;damping factor: &quot;</span> &lt;&lt; DampingFactor_ &lt;&lt; endl</div>
-<div class="line"><a id="l01117" name="l01117"></a><span class="lineno"> 1117</span>        &lt;&lt; <span class="stringliteral">&quot;nonsymmetric overlap combine&quot;</span> &lt;&lt; nonsymCombine_ &lt;&lt; endl</div>
-<div class="line"><a id="l01118" name="l01118"></a><span class="lineno"> 1118</span>        &lt;&lt; <span class="stringliteral">&quot;backwards mode: &quot;</span></div>
-<div class="line"><a id="l01119" name="l01119"></a><span class="lineno"> 1119</span>        &lt;&lt; ((PrecType_ == Ifpack2::Details::GS &amp;&amp; DoBackwardGS_) ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>)</div>
-<div class="line"><a id="l01120" name="l01120"></a><span class="lineno"> 1120</span>        &lt;&lt; endl</div>
-<div class="line"><a id="l01121" name="l01121"></a><span class="lineno"> 1121</span>        &lt;&lt; <span class="stringliteral">&quot;zero starting solution: &quot;</span></div>
-<div class="line"><a id="l01122" name="l01122"></a><span class="lineno"> 1122</span>        &lt;&lt; (ZeroStartingSolution_ ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>) &lt;&lt; endl;</div>
-<div class="line"><a id="l01123" name="l01123"></a><span class="lineno"> 1123</span>  }</div>
-<div class="line"><a id="l01124" name="l01124"></a><span class="lineno"> 1124</span>}</div>
+<div class="line"><a id="l01064" name="l01064"></a><span class="lineno"> 1064</span> </div>
+<div class="line"><a id="l01065" name="l01065"></a><span class="lineno"> 1065</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> MatrixType, <span class="keyword">class</span> ContainerType&gt;</div>
+<div class="foldopen" id="foldopen01066" data-start="{" data-end="}">
+<div class="line"><a id="l01066" name="l01066"></a><span class="lineno"><a class="line" href="class_ifpack2_1_1_block_relaxation.html#a398451d498b9997f4bdeb2a55c86f35a"> 1066</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_ifpack2_1_1_block_relaxation.html#a398451d498b9997f4bdeb2a55c86f35a">BlockRelaxation&lt;MatrixType, ContainerType&gt;::</a></div>
+<div class="line"><a id="l01067" name="l01067"></a><span class="lineno"> 1067</span><a class="code hl_function" href="class_ifpack2_1_1_block_relaxation.html#a398451d498b9997f4bdeb2a55c86f35a">    describe</a>(Teuchos::FancyOStream&amp; out,</div>
+<div class="line"><a id="l01068" name="l01068"></a><span class="lineno"> 1068</span>             <span class="keyword">const</span> Teuchos::EVerbosityLevel verbLevel)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01069" name="l01069"></a><span class="lineno"> 1069</span>  <span class="keyword">using </span>std::endl;</div>
+<div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span>  <span class="keyword">using </span>std::setw;</div>
+<div class="line"><a id="l01071" name="l01071"></a><span class="lineno"> 1071</span>  <span class="keyword">using </span>Teuchos::TypeNameTraits;</div>
+<div class="line"><a id="l01072" name="l01072"></a><span class="lineno"> 1072</span>  <span class="keyword">using </span>Teuchos::VERB_DEFAULT;</div>
+<div class="line"><a id="l01073" name="l01073"></a><span class="lineno"> 1073</span>  <span class="keyword">using </span>Teuchos::VERB_EXTREME;</div>
+<div class="line"><a id="l01074" name="l01074"></a><span class="lineno"> 1074</span>  <span class="keyword">using </span>Teuchos::VERB_HIGH;</div>
+<div class="line"><a id="l01075" name="l01075"></a><span class="lineno"> 1075</span>  <span class="keyword">using </span>Teuchos::VERB_LOW;</div>
+<div class="line"><a id="l01076" name="l01076"></a><span class="lineno"> 1076</span>  <span class="keyword">using </span>Teuchos::VERB_MEDIUM;</div>
+<div class="line"><a id="l01077" name="l01077"></a><span class="lineno"> 1077</span>  <span class="keyword">using </span>Teuchos::VERB_NONE;</div>
+<div class="line"><a id="l01078" name="l01078"></a><span class="lineno"> 1078</span> </div>
+<div class="line"><a id="l01079" name="l01079"></a><span class="lineno"> 1079</span>  Teuchos::EVerbosityLevel vl = verbLevel;</div>
+<div class="line"><a id="l01080" name="l01080"></a><span class="lineno"> 1080</span>  <span class="keywordflow">if</span> (vl == VERB_DEFAULT) vl = VERB_LOW;</div>
+<div class="line"><a id="l01081" name="l01081"></a><span class="lineno"> 1081</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> myImageID = A_-&gt;getComm()-&gt;getRank();</div>
+<div class="line"><a id="l01082" name="l01082"></a><span class="lineno"> 1082</span> </div>
+<div class="line"><a id="l01083" name="l01083"></a><span class="lineno"> 1083</span>  <span class="comment">// Convention requires that describe() begin with a tab.</span></div>
+<div class="line"><a id="l01084" name="l01084"></a><span class="lineno"> 1084</span>  Teuchos::OSTab tab(out);</div>
+<div class="line"><a id="l01085" name="l01085"></a><span class="lineno"> 1085</span> </div>
+<div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span>  <span class="comment">//    none: print nothing</span></div>
+<div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span>  <span class="comment">//     low: print O(1) info from node 0</span></div>
+<div class="line"><a id="l01088" name="l01088"></a><span class="lineno"> 1088</span>  <span class="comment">//  medium:</span></div>
+<div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span>  <span class="comment">//    high:</span></div>
+<div class="line"><a id="l01090" name="l01090"></a><span class="lineno"> 1090</span>  <span class="comment">// extreme:</span></div>
+<div class="line"><a id="l01091" name="l01091"></a><span class="lineno"> 1091</span>  <span class="keywordflow">if</span> (vl != VERB_NONE &amp;&amp; myImageID == 0) {</div>
+<div class="line"><a id="l01092" name="l01092"></a><span class="lineno"> 1092</span>    out &lt;&lt; <span class="stringliteral">&quot;Ifpack2::BlockRelaxation&lt;&quot;</span></div>
+<div class="line"><a id="l01093" name="l01093"></a><span class="lineno"> 1093</span>        &lt;&lt; TypeNameTraits&lt;MatrixType&gt;::name() &lt;&lt; <span class="stringliteral">&quot;, &quot;</span></div>
+<div class="line"><a id="l01094" name="l01094"></a><span class="lineno"> 1094</span>        &lt;&lt; TypeNameTraits&lt;ContainerType&gt;::name() &lt;&lt; <span class="stringliteral">&quot; &gt;:&quot;</span>;</div>
+<div class="line"><a id="l01095" name="l01095"></a><span class="lineno"> 1095</span>    Teuchos::OSTab tab1(out);</div>
+<div class="line"><a id="l01096" name="l01096"></a><span class="lineno"> 1096</span> </div>
+<div class="line"><a id="l01097" name="l01097"></a><span class="lineno"> 1097</span>    <span class="keywordflow">if</span> (this-&gt;getObjectLabel() != <span class="stringliteral">&quot;&quot;</span>) {</div>
+<div class="line"><a id="l01098" name="l01098"></a><span class="lineno"> 1098</span>      out &lt;&lt; <span class="stringliteral">&quot;label: \&quot;&quot;</span> &lt;&lt; this-&gt;getObjectLabel() &lt;&lt; <span class="stringliteral">&quot;\&quot;&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l01099" name="l01099"></a><span class="lineno"> 1099</span>    }</div>
+<div class="line"><a id="l01100" name="l01100"></a><span class="lineno"> 1100</span>    out &lt;&lt; <span class="stringliteral">&quot;initialized: &quot;</span> &lt;&lt; (isInitialized() ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>) &lt;&lt; endl</div>
+<div class="line"><a id="l01101" name="l01101"></a><span class="lineno"> 1101</span>        &lt;&lt; <span class="stringliteral">&quot;computed: &quot;</span> &lt;&lt; (isComputed() ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>) &lt;&lt; endl;</div>
+<div class="line"><a id="l01102" name="l01102"></a><span class="lineno"> 1102</span> </div>
+<div class="line"><a id="l01103" name="l01103"></a><span class="lineno"> 1103</span>    std::string precType;</div>
+<div class="line"><a id="l01104" name="l01104"></a><span class="lineno"> 1104</span>    <span class="keywordflow">if</span> (PrecType_ == Ifpack2::Details::JACOBI) {</div>
+<div class="line"><a id="l01105" name="l01105"></a><span class="lineno"> 1105</span>      precType = <span class="stringliteral">&quot;Block Jacobi&quot;</span>;</div>
+<div class="line"><a id="l01106" name="l01106"></a><span class="lineno"> 1106</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (PrecType_ == Ifpack2::Details::GS) {</div>
+<div class="line"><a id="l01107" name="l01107"></a><span class="lineno"> 1107</span>      precType = <span class="stringliteral">&quot;Block Gauss-Seidel&quot;</span>;</div>
+<div class="line"><a id="l01108" name="l01108"></a><span class="lineno"> 1108</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (PrecType_ == Ifpack2::Details::SGS) {</div>
+<div class="line"><a id="l01109" name="l01109"></a><span class="lineno"> 1109</span>      precType = <span class="stringliteral">&quot;Block Symmetric Gauss-Seidel&quot;</span>;</div>
+<div class="line"><a id="l01110" name="l01110"></a><span class="lineno"> 1110</span>    }</div>
+<div class="line"><a id="l01111" name="l01111"></a><span class="lineno"> 1111</span>    out &lt;&lt; <span class="stringliteral">&quot;type: &quot;</span> &lt;&lt; precType &lt;&lt; endl</div>
+<div class="line"><a id="l01112" name="l01112"></a><span class="lineno"> 1112</span>        &lt;&lt; <span class="stringliteral">&quot;global number of rows: &quot;</span> &lt;&lt; A_-&gt;getGlobalNumRows() &lt;&lt; endl</div>
+<div class="line"><a id="l01113" name="l01113"></a><span class="lineno"> 1113</span>        &lt;&lt; <span class="stringliteral">&quot;global number of columns: &quot;</span> &lt;&lt; A_-&gt;getGlobalNumCols() &lt;&lt; endl</div>
+<div class="line"><a id="l01114" name="l01114"></a><span class="lineno"> 1114</span>        &lt;&lt; <span class="stringliteral">&quot;number of sweeps: &quot;</span> &lt;&lt; NumSweeps_ &lt;&lt; endl</div>
+<div class="line"><a id="l01115" name="l01115"></a><span class="lineno"> 1115</span>        &lt;&lt; <span class="stringliteral">&quot;damping factor: &quot;</span> &lt;&lt; DampingFactor_ &lt;&lt; endl</div>
+<div class="line"><a id="l01116" name="l01116"></a><span class="lineno"> 1116</span>        &lt;&lt; <span class="stringliteral">&quot;nonsymmetric overlap combine&quot;</span> &lt;&lt; nonsymCombine_ &lt;&lt; endl</div>
+<div class="line"><a id="l01117" name="l01117"></a><span class="lineno"> 1117</span>        &lt;&lt; <span class="stringliteral">&quot;backwards mode: &quot;</span></div>
+<div class="line"><a id="l01118" name="l01118"></a><span class="lineno"> 1118</span>        &lt;&lt; ((PrecType_ == Ifpack2::Details::GS &amp;&amp; DoBackwardGS_) ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>)</div>
+<div class="line"><a id="l01119" name="l01119"></a><span class="lineno"> 1119</span>        &lt;&lt; endl</div>
+<div class="line"><a id="l01120" name="l01120"></a><span class="lineno"> 1120</span>        &lt;&lt; <span class="stringliteral">&quot;zero starting solution: &quot;</span></div>
+<div class="line"><a id="l01121" name="l01121"></a><span class="lineno"> 1121</span>        &lt;&lt; (ZeroStartingSolution_ ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>) &lt;&lt; endl;</div>
+<div class="line"><a id="l01122" name="l01122"></a><span class="lineno"> 1122</span>  }</div>
+<div class="line"><a id="l01123" name="l01123"></a><span class="lineno"> 1123</span>}</div>
 </div>
-<div class="line"><a id="l01125" name="l01125"></a><span class="lineno"> 1125</span> </div>
-<div class="line"><a id="l01126" name="l01126"></a><span class="lineno"> 1126</span>}  <span class="comment">// namespace Ifpack2</span></div>
-<div class="line"><a id="l01127" name="l01127"></a><span class="lineno"> 1127</span> </div>
-<div class="line"><a id="l01128" name="l01128"></a><span class="lineno"> 1128</span><span class="comment">// Macro that does explicit template instantiation (ETI) for</span></div>
-<div class="line"><a id="l01129" name="l01129"></a><span class="lineno"> 1129</span><span class="comment">// Ifpack2::BlockRelaxation.  S, LO, GO, N correspond to the four</span></div>
-<div class="line"><a id="l01130" name="l01130"></a><span class="lineno"> 1130</span><span class="comment">// template parameters of Ifpack2::Preconditioner and</span></div>
-<div class="line"><a id="l01131" name="l01131"></a><span class="lineno"> 1131</span><span class="comment">// Tpetra::RowMatrix.</span></div>
-<div class="line"><a id="l01132" name="l01132"></a><span class="lineno"> 1132</span><span class="comment">//</span></div>
-<div class="line"><a id="l01133" name="l01133"></a><span class="lineno"> 1133</span><span class="comment">// We only instantiate for MatrixType = Tpetra::RowMatrix.  There&#39;s no</span></div>
-<div class="line"><a id="l01134" name="l01134"></a><span class="lineno"> 1134</span><span class="comment">// need to instantiate for Tpetra::CrsMatrix too.  All Ifpack2</span></div>
-<div class="line"><a id="l01135" name="l01135"></a><span class="lineno"> 1135</span><span class="comment">// preconditioners can and should do dynamic casts if they need a type</span></div>
-<div class="line"><a id="l01136" name="l01136"></a><span class="lineno"> 1136</span><span class="comment">// more specific than RowMatrix.  This keeps build time short and</span></div>
-<div class="line"><a id="l01137" name="l01137"></a><span class="lineno"> 1137</span><span class="comment">// library and executable sizes small.</span></div>
-<div class="line"><a id="l01138" name="l01138"></a><span class="lineno"> 1138</span> </div>
-<div class="line"><a id="l01139" name="l01139"></a><span class="lineno"> 1139</span><span class="preprocessor">#ifdef HAVE_IFPACK2_EXPLICIT_INSTANTIATION</span></div>
-<div class="line"><a id="l01140" name="l01140"></a><span class="lineno"> 1140</span> </div>
-<div class="line"><a id="l01141" name="l01141"></a><span class="lineno"> 1141</span><span class="preprocessor">#define IFPACK2_BLOCKRELAXATION_INSTANT(S, LO, GO, N) \</span></div>
-<div class="line"><a id="l01142" name="l01142"></a><span class="lineno"> 1142</span><span class="preprocessor">  template class Ifpack2::BlockRelaxation&lt;            \</span></div>
-<div class="line"><a id="l01143" name="l01143"></a><span class="lineno"> 1143</span><span class="preprocessor">      Tpetra::RowMatrix&lt;S, LO, GO, N&gt;,                \</span></div>
-<div class="line"><a id="l01144" name="l01144"></a><span class="lineno"> 1144</span><span class="preprocessor">      Ifpack2::Container&lt;Tpetra::RowMatrix&lt;S, LO, GO, N&gt;&gt;&gt;;</span></div>
-<div class="line"><a id="l01145" name="l01145"></a><span class="lineno"> 1145</span> </div>
-<div class="line"><a id="l01146" name="l01146"></a><span class="lineno"> 1146</span><span class="preprocessor">#endif  </span><span class="comment">// HAVE_IFPACK2_EXPLICIT_INSTANTIATION</span></div>
-<div class="line"><a id="l01147" name="l01147"></a><span class="lineno"> 1147</span> </div>
-<div class="line"><a id="l01148" name="l01148"></a><span class="lineno"> 1148</span><span class="preprocessor">#endif  </span><span class="comment">// IFPACK2_BLOCKRELAXATION_DEF_HPP</span></div>
+<div class="line"><a id="l01124" name="l01124"></a><span class="lineno"> 1124</span> </div>
+<div class="line"><a id="l01125" name="l01125"></a><span class="lineno"> 1125</span>}  <span class="comment">// namespace Ifpack2</span></div>
+<div class="line"><a id="l01126" name="l01126"></a><span class="lineno"> 1126</span> </div>
+<div class="line"><a id="l01127" name="l01127"></a><span class="lineno"> 1127</span><span class="comment">// Macro that does explicit template instantiation (ETI) for</span></div>
+<div class="line"><a id="l01128" name="l01128"></a><span class="lineno"> 1128</span><span class="comment">// Ifpack2::BlockRelaxation.  S, LO, GO, N correspond to the four</span></div>
+<div class="line"><a id="l01129" name="l01129"></a><span class="lineno"> 1129</span><span class="comment">// template parameters of Ifpack2::Preconditioner and</span></div>
+<div class="line"><a id="l01130" name="l01130"></a><span class="lineno"> 1130</span><span class="comment">// Tpetra::RowMatrix.</span></div>
+<div class="line"><a id="l01131" name="l01131"></a><span class="lineno"> 1131</span><span class="comment">//</span></div>
+<div class="line"><a id="l01132" name="l01132"></a><span class="lineno"> 1132</span><span class="comment">// We only instantiate for MatrixType = Tpetra::RowMatrix.  There&#39;s no</span></div>
+<div class="line"><a id="l01133" name="l01133"></a><span class="lineno"> 1133</span><span class="comment">// need to instantiate for Tpetra::CrsMatrix too.  All Ifpack2</span></div>
+<div class="line"><a id="l01134" name="l01134"></a><span class="lineno"> 1134</span><span class="comment">// preconditioners can and should do dynamic casts if they need a type</span></div>
+<div class="line"><a id="l01135" name="l01135"></a><span class="lineno"> 1135</span><span class="comment">// more specific than RowMatrix.  This keeps build time short and</span></div>
+<div class="line"><a id="l01136" name="l01136"></a><span class="lineno"> 1136</span><span class="comment">// library and executable sizes small.</span></div>
+<div class="line"><a id="l01137" name="l01137"></a><span class="lineno"> 1137</span> </div>
+<div class="line"><a id="l01138" name="l01138"></a><span class="lineno"> 1138</span><span class="preprocessor">#ifdef HAVE_IFPACK2_EXPLICIT_INSTANTIATION</span></div>
+<div class="line"><a id="l01139" name="l01139"></a><span class="lineno"> 1139</span> </div>
+<div class="line"><a id="l01140" name="l01140"></a><span class="lineno"> 1140</span><span class="preprocessor">#define IFPACK2_BLOCKRELAXATION_INSTANT(S, LO, GO, N) \</span></div>
+<div class="line"><a id="l01141" name="l01141"></a><span class="lineno"> 1141</span><span class="preprocessor">  template class Ifpack2::BlockRelaxation&lt;            \</span></div>
+<div class="line"><a id="l01142" name="l01142"></a><span class="lineno"> 1142</span><span class="preprocessor">      Tpetra::RowMatrix&lt;S, LO, GO, N&gt;,                \</span></div>
+<div class="line"><a id="l01143" name="l01143"></a><span class="lineno"> 1143</span><span class="preprocessor">      Ifpack2::Container&lt;Tpetra::RowMatrix&lt;S, LO, GO, N&gt;&gt;&gt;;</span></div>
+<div class="line"><a id="l01144" name="l01144"></a><span class="lineno"> 1144</span> </div>
+<div class="line"><a id="l01145" name="l01145"></a><span class="lineno"> 1145</span><span class="preprocessor">#endif  </span><span class="comment">// HAVE_IFPACK2_EXPLICIT_INSTANTIATION</span></div>
+<div class="line"><a id="l01146" name="l01146"></a><span class="lineno"> 1146</span> </div>
+<div class="line"><a id="l01147" name="l01147"></a><span class="lineno"> 1147</span><span class="preprocessor">#endif  </span><span class="comment">// IFPACK2_BLOCKRELAXATION_DEF_HPP</span></div>
 <div class="ttc" id="a_ifpack2___block_relaxation__decl_8hpp_html"><div class="ttname"><a href="_ifpack2___block_relaxation__decl_8hpp.html">Ifpack2_BlockRelaxation_decl.hpp</a></div><div class="ttdoc">Ifpack2::BlockRelaxation class declaration.</div></div>
 <div class="ttc" id="a_ifpack2___details___user_partitioner__decl_8hpp_html"><div class="ttname"><a href="_ifpack2___details___user_partitioner__decl_8hpp.html">Ifpack2_Details_UserPartitioner_decl.hpp</a></div><div class="ttdoc">Declaration of a user-defined partitioner in which the user can define a partition of the graph....</div></div>
 <div class="ttc" id="aclass_ifpack2_1_1_block_relaxation_html"><div class="ttname"><a href="class_ifpack2_1_1_block_relaxation.html">Ifpack2::BlockRelaxation</a></div><div class="ttdoc">Block relaxation preconditioners (or smoothers) for Tpetra::RowMatrix and Tpetra::CrsMatrix sparse ma...</div><div class="ttdef"><b>Definition</b> Ifpack2_BlockRelaxation_decl.hpp:56</div></div>
@@ -1290,7 +1289,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclass_ifpack2_1_1_block_relaxation_html_a2de3d9a3b4d50ba144f276e934983472"><div class="ttname"><a href="class_ifpack2_1_1_block_relaxation.html#a2de3d9a3b4d50ba144f276e934983472">Ifpack2::BlockRelaxation::BlockRelaxation</a></div><div class="ttdeci">BlockRelaxation(const Teuchos::RCP&lt; const row_matrix_type &gt; &amp;Matrix)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> Ifpack2_BlockRelaxation_def.hpp:58</div></div>
 <div class="ttc" id="aclass_ifpack2_1_1_block_relaxation_html_a336120266faa8b02287e9894977b9e93"><div class="ttname"><a href="class_ifpack2_1_1_block_relaxation.html#a336120266faa8b02287e9894977b9e93">Ifpack2::BlockRelaxation::compute</a></div><div class="ttdeci">void compute()</div><div class="ttdoc">compute the preconditioner for the specified matrix, diagonal perturbation thresholds and relaxation ...</div><div class="ttdef"><b>Definition</b> Ifpack2_BlockRelaxation_def.hpp:742</div></div>
 <div class="ttc" id="aclass_ifpack2_1_1_block_relaxation_html_a34d65097a2f98d15b1586e7540dc1a89"><div class="ttname"><a href="class_ifpack2_1_1_block_relaxation.html#a34d65097a2f98d15b1586e7540dc1a89">Ifpack2::BlockRelaxation::getNodeSmootherComplexity</a></div><div class="ttdeci">size_t getNodeSmootherComplexity() const</div><div class="ttdoc">Get a rough estimate of cost per iteration.</div><div class="ttdef"><b>Definition</b> Ifpack2_BlockRelaxation_def.hpp:416</div></div>
-<div class="ttc" id="aclass_ifpack2_1_1_block_relaxation_html_a398451d498b9997f4bdeb2a55c86f35a"><div class="ttname"><a href="class_ifpack2_1_1_block_relaxation.html#a398451d498b9997f4bdeb2a55c86f35a">Ifpack2::BlockRelaxation::describe</a></div><div class="ttdeci">void describe(Teuchos::FancyOStream &amp;out, const Teuchos::EVerbosityLevel verbLevel=Teuchos::Describable::verbLevel_default) const</div><div class="ttdoc">Print the object with some verbosity level to an FancyOStream object.</div><div class="ttdef"><b>Definition</b> Ifpack2_BlockRelaxation_def.hpp:1068</div></div>
+<div class="ttc" id="aclass_ifpack2_1_1_block_relaxation_html_a398451d498b9997f4bdeb2a55c86f35a"><div class="ttname"><a href="class_ifpack2_1_1_block_relaxation.html#a398451d498b9997f4bdeb2a55c86f35a">Ifpack2::BlockRelaxation::describe</a></div><div class="ttdeci">void describe(Teuchos::FancyOStream &amp;out, const Teuchos::EVerbosityLevel verbLevel=Teuchos::Describable::verbLevel_default) const</div><div class="ttdoc">Print the object with some verbosity level to an FancyOStream object.</div><div class="ttdef"><b>Definition</b> Ifpack2_BlockRelaxation_def.hpp:1067</div></div>
 <div class="ttc" id="aclass_ifpack2_1_1_block_relaxation_html_a4b70f00dbcb188f19d00118df9d43eb0"><div class="ttname"><a href="class_ifpack2_1_1_block_relaxation.html#a4b70f00dbcb188f19d00118df9d43eb0">Ifpack2::BlockRelaxation::local_ordinal_type</a></div><div class="ttdeci">MatrixType::local_ordinal_type local_ordinal_type</div><div class="ttdoc">The type of local indices in the input MatrixType.</div><div class="ttdef"><b>Definition</b> Ifpack2_BlockRelaxation_decl.hpp:65</div></div>
 <div class="ttc" id="aclass_ifpack2_1_1_block_relaxation_html_a5bda6ca61381dbbd342cc1cc7f982681"><div class="ttname"><a href="class_ifpack2_1_1_block_relaxation.html#a5bda6ca61381dbbd342cc1cc7f982681">Ifpack2::BlockRelaxation::~BlockRelaxation</a></div><div class="ttdeci">virtual ~BlockRelaxation()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition</b> Ifpack2_BlockRelaxation_def.hpp:91</div></div>
 <div class="ttc" id="aclass_ifpack2_1_1_block_relaxation_html_a7567a8ba9cb3a51ec1b882ef71f922d0"><div class="ttname"><a href="class_ifpack2_1_1_block_relaxation.html#a7567a8ba9cb3a51ec1b882ef71f922d0">Ifpack2::BlockRelaxation::getNumCompute</a></div><div class="ttdeci">int getNumCompute() const</div><div class="ttdoc">Returns the number of calls to compute().</div><div class="ttdef"><b>Definition</b> Ifpack2_BlockRelaxation_def.hpp:384</div></div>
@@ -1303,7 +1302,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclass_ifpack2_1_1_block_relaxation_html_acd7474302b7704d23c36a9dce7fa1df6"><div class="ttname"><a href="class_ifpack2_1_1_block_relaxation.html#acd7474302b7704d23c36a9dce7fa1df6">Ifpack2::BlockRelaxation::setParameters</a></div><div class="ttdeci">void setParameters(const Teuchos::ParameterList &amp;params)</div><div class="ttdoc">Sets all the parameters for the preconditioner.</div><div class="ttdef"><b>Definition</b> Ifpack2_BlockRelaxation_def.hpp:156</div></div>
 <div class="ttc" id="aclass_ifpack2_1_1_block_relaxation_html_ace22169a9c001345ac8b20291a7ef445"><div class="ttname"><a href="class_ifpack2_1_1_block_relaxation.html#ace22169a9c001345ac8b20291a7ef445">Ifpack2::BlockRelaxation::getInitializeTime</a></div><div class="ttdeci">double getInitializeTime() const</div><div class="ttdoc">Returns the time spent in initialize().</div><div class="ttdef"><b>Definition</b> Ifpack2_BlockRelaxation_def.hpp:397</div></div>
 <div class="ttc" id="aclass_ifpack2_1_1_block_relaxation_html_ad505f512d3db5e75056fd5f98c7c0276"><div class="ttname"><a href="class_ifpack2_1_1_block_relaxation.html#ad505f512d3db5e75056fd5f98c7c0276">Ifpack2::BlockRelaxation::apply</a></div><div class="ttdeci">void apply(const MV &amp;X, MV &amp;Y, Teuchos::ETransp mode=Teuchos::NO_TRANS, scalar_type alpha=Teuchos::ScalarTraits&lt; scalar_type &gt;::one(), scalar_type beta=Teuchos::ScalarTraits&lt; scalar_type &gt;::zero()) const</div><div class="ttdoc">Applies the preconditioner to X, returns the result in Y.</div><div class="ttdef"><b>Definition</b> Ifpack2_BlockRelaxation_def.hpp:433</div></div>
-<div class="ttc" id="aclass_ifpack2_1_1_block_relaxation_html_ad6183939a7b25c1cfe4871460ccad4b8"><div class="ttname"><a href="class_ifpack2_1_1_block_relaxation.html#ad6183939a7b25c1cfe4871460ccad4b8">Ifpack2::BlockRelaxation::description</a></div><div class="ttdeci">std::string description() const</div><div class="ttdoc">A one-line description of this object.</div><div class="ttdef"><b>Definition</b> Ifpack2_BlockRelaxation_def.hpp:1007</div></div>
+<div class="ttc" id="aclass_ifpack2_1_1_block_relaxation_html_ad6183939a7b25c1cfe4871460ccad4b8"><div class="ttname"><a href="class_ifpack2_1_1_block_relaxation.html#ad6183939a7b25c1cfe4871460ccad4b8">Ifpack2::BlockRelaxation::description</a></div><div class="ttdeci">std::string description() const</div><div class="ttdoc">A one-line description of this object.</div><div class="ttdef"><b>Definition</b> Ifpack2_BlockRelaxation_def.hpp:1006</div></div>
 <div class="ttc" id="aclass_ifpack2_1_1_block_relaxation_html_ae56816fecd1fdfd4d15c25da2a4fb433"><div class="ttname"><a href="class_ifpack2_1_1_block_relaxation.html#ae56816fecd1fdfd4d15c25da2a4fb433">Ifpack2::BlockRelaxation::getComm</a></div><div class="ttdeci">Teuchos::RCP&lt; const Teuchos::Comm&lt; int &gt; &gt; getComm() const</div><div class="ttdoc">The communicator over which the input matrix is distributed.</div><div class="ttdef"><b>Definition</b> Ifpack2_BlockRelaxation_def.hpp:327</div></div>
 <div class="ttc" id="aclass_ifpack2_1_1_block_relaxation_html_af93b279360388aec687ca84d49c97343"><div class="ttname"><a href="class_ifpack2_1_1_block_relaxation.html#af93b279360388aec687ca84d49c97343">Ifpack2::BlockRelaxation::setMatrix</a></div><div class="ttdeci">virtual void setMatrix(const Teuchos::RCP&lt; const row_matrix_type &gt; &amp;A)</div><div class="ttdoc">Change the matrix to be preconditioned.</div><div class="ttdef"><b>Definition</b> Ifpack2_BlockRelaxation_def.hpp:31</div></div>
 <div class="ttc" id="aclass_ifpack2_1_1_block_relaxation_html_afd6944a2d016d23e5aaafde3076246c0"><div class="ttname"><a href="class_ifpack2_1_1_block_relaxation.html#afd6944a2d016d23e5aaafde3076246c0">Ifpack2::BlockRelaxation::scalar_type</a></div><div class="ttdeci">MatrixType::scalar_type scalar_type</div><div class="ttdoc">The type of the entries of the input MatrixType.</div><div class="ttdef"><b>Definition</b> Ifpack2_BlockRelaxation_decl.hpp:62</div></div>

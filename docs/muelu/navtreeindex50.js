@@ -1,8 +1,0 @@
-var NAVTREEINDEX50 =
-{
-"struct_zoltan2_1_1_input_traits_3_01_mue_lu_1_1_l_w_graph_3_01_local_ordinal_00_01_global_ordinal_00_01_node_01_4_01_4.html#add6f2a77779f65907283bd0fe98a0da5":[10,0,7,0,2],
-"struct_zoltan2_1_1_input_traits_3_01_mue_lu_1_1_l_w_graph_3_01_local_ordinal_00_01_global_ordinal_00_01_node_01_4_01_4.html#add6f2a77779f65907283bd0fe98a0da5":[9,0,9,0,2],
-"struct_zoltan2_1_1_input_traits_3_01_mue_lu_1_1_l_w_graph_3_01_local_ordinal_00_01_global_ordinal_00_01_node_01_4_01_4.html#afdec5c22e058c6b46cf95e4168132933":[10,0,7,0,0],
-"struct_zoltan2_1_1_input_traits_3_01_mue_lu_1_1_l_w_graph_3_01_local_ordinal_00_01_global_ordinal_00_01_node_01_4_01_4.html#afdec5c22e058c6b46cf95e4168132933":[9,0,9,0,0],
-"todo.html":[8]
-};

@@ -346,7 +346,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>  <span class="comment">// Sort &amp; set values</span></div>
 <div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>  <span class="keywordflow">if</span> (params.is_null() || params-&gt;get(<span class="stringliteral">&quot;sort entries&quot;</span>, <span class="keyword">true</span>)) {</div>
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    <span class="comment">// Tpetra&#39;s SpGEMM results in almost sorted matrices. Use shell sort.</span></div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    Import_Util::sortCrsEntries(row_mapC, entriesC, valuesC, ::KokkosSparse::SortAlgorithm::SHELL);</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    Import_Util::sortCrsEntries(row_mapC, entriesC, valuesC);</div>
 <div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>  }</div>
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>  C.setAllValues(row_mapC, entriesC, valuesC);</div>
 <div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>}</div>
@@ -742,7 +742,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span>  <span class="comment">// Sort &amp; set values</span></div>
 <div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span>  <span class="keywordflow">if</span> (params.is_null() || params-&gt;get(<span class="stringliteral">&quot;sort entries&quot;</span>, <span class="keyword">true</span>)) {</div>
 <div class="line"><a id="l00661" name="l00661"></a><span class="lineno">  661</span>    <span class="comment">// Tpetra&#39;s SpGEMM results in almost sorted matrices. Use shell sort.</span></div>
-<div class="line"><a id="l00662" name="l00662"></a><span class="lineno">  662</span>    Import_Util::sortCrsEntries(row_mapC, entriesC, valuesC, ::KokkosSparse::SortAlgorithm::SHELL);</div>
+<div class="line"><a id="l00662" name="l00662"></a><span class="lineno">  662</span>    Import_Util::sortCrsEntries(row_mapC, entriesC, valuesC);</div>
 <div class="line"><a id="l00663" name="l00663"></a><span class="lineno">  663</span>  }</div>
 <div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span>  C.setAllValues(row_mapC, entriesC, valuesC);</div>
 <div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span>}</div>
@@ -1309,7 +1309,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01226" name="l01226"></a><span class="lineno"> 1226</span> </div>
 <div class="line"><a id="l01227" name="l01227"></a><span class="lineno"> 1227</span>  <span class="comment">// Final sort &amp; set of CRS arrays</span></div>
 <div class="line"><a id="l01228" name="l01228"></a><span class="lineno"> 1228</span>  <span class="comment">// Tpetra&#39;s SpGEMM results in almost sorted matrices. Use shell sort.</span></div>
-<div class="line"><a id="l01229" name="l01229"></a><span class="lineno"> 1229</span>  Import_Util::sortCrsEntries(rowmapAc, entriesAc, valuesAc, ::KokkosSparse::SortAlgorithm::SHELL);</div>
+<div class="line"><a id="l01229" name="l01229"></a><span class="lineno"> 1229</span>  Import_Util::sortCrsEntries(rowmapAc, entriesAc, valuesAc);</div>
 <div class="line"><a id="l01230" name="l01230"></a><span class="lineno"> 1230</span>  <span class="comment">// mfh 27 Sep 2016: This just sets pointers.</span></div>
 <div class="line"><a id="l01231" name="l01231"></a><span class="lineno"> 1231</span>  Ac.setAllValues(rowmapAc, entriesAc, valuesAc);</div>
 <div class="line"><a id="l01232" name="l01232"></a><span class="lineno"> 1232</span> </div>

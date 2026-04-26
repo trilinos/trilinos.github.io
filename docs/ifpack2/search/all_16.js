@@ -12,5 +12,6 @@ var searchData=
   ['why_20ifpack2_9',['Why Ifpack2?',['../index.html#Ifpack2_why',1,'']]],
   ['with_20ifpack_20and_20ml_10',['Note on compatibility with Ifpack and ML',['../class_ifpack2_1_1_chebyshev.html#Ifpack2_Chebyshev_setParameters_compat',1,'']]],
   ['work_11',['How does it work?',['../class_ifpack2_1_1_local_filter.html#Ifpack2_LocalFilter_How',1,'']]],
-  ['wrapper_5ftype_12',['wrapper_type',['../../../../belos/doc/html/class_belos_1_1_inner_solver_traits.html#a7cf4852770fedebde212c6d293f56307',1,'Belos::InnerSolverTraits']]]
+  ['wrapper_5ftype_12',['wrapper_type',['../../../../belos/doc/html/class_belos_1_1_inner_solver_traits.html#a7cf4852770fedebde212c6d293f56307',1,'Belos::InnerSolverTraits']]],
+  ['writeadditiveschwarzlocalmatrix_13',['writeAdditiveSchwarzLocalMatrix',['../class_ifpack2_1_1_details_1_1_behavior.html#a4bd7ea9eea316a59cb9f3fe2f2b9b5f8',1,'Ifpack2::Details::Behavior']]]
 ];
