@@ -664,7 +664,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>      SameVectors = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>    }</div>
 <div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span> </div>
-<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>    <span class="comment">// NOTE: Here were assuming that the local ordering of Epetra&#39;s X/Y-vectors and</span></div>
+<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>    <span class="comment">// NOTE: Here were assuming that the local ordering of Tpetra&#39;s X/Y-vectors and</span></div>
 <div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>    <span class="comment">// Hypre&#39;s X/Y-vectors are the same.  Seeing as as this is more or less how we constructed</span></div>
 <div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>    <span class="comment">// the Hypre matrices, this seems pretty reasoanble.</span></div>
 <div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span> </div>
@@ -680,7 +680,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>      }</div>
 <div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>      <span class="comment">// Temporarily make a pointer to data in Hypre for end</span></div>
 <div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>      SC *XTemp = XLocal_-&gt;data;</div>
-<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>      <span class="comment">// Replace data in Hypre vectors with Epetra data</span></div>
+<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>      <span class="comment">// Replace data in Hypre vectors with Tpetra data</span></div>
 <div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span>      XLocal_-&gt;data = XValues;</div>
 <div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span>      SC *YTemp     = YLocal_-&gt;data;</div>
 <div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span>      YLocal_-&gt;data = YValues;</div>
@@ -1016,7 +1016,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00926" name="l00926"></a><span class="lineno">  926</span> </div>
 <div class="line"><a id="l00927" name="l00927"></a><span class="lineno">  927</span>  <span class="comment">// Must create GloballyContiguous DomainMap (which is a permutation of Matrix_&#39;s</span></div>
 <div class="line"><a id="l00928" name="l00928"></a><span class="lineno">  928</span>  <span class="comment">// DomainMap) and the corresponding permuted ColumnMap.</span></div>
-<div class="line"><a id="l00929" name="l00929"></a><span class="lineno">  929</span>  <span class="comment">//   Epetra_GID  ---------&gt;   LID   ----------&gt; HYPRE_GID</span></div>
+<div class="line"><a id="l00929" name="l00929"></a><span class="lineno">  929</span>  <span class="comment">//   Tpetra_GID  ---------&gt;   LID   ----------&gt; HYPRE_GID</span></div>
 <div class="line"><a id="l00930" name="l00930"></a><span class="lineno">  930</span>  <span class="comment">//           via DomainMap.LID()       via GloballyContiguousDomainMap.GID()</span></div>
 <div class="line"><a id="l00931" name="l00931"></a><span class="lineno">  931</span>  <span class="keywordflow">if</span> (Matrix.is_null())</div>
 <div class="line"><a id="l00932" name="l00932"></a><span class="lineno">  932</span>    <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Hypre&lt;Tpetra::RowMatrix&lt;HYPRE_Real, HYPRE_Int, long long, Node&gt;: Unsupported matrix configuration: Tpetra::CrsMatrix required&quot;</span>);</div>

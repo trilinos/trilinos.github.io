@@ -316,11 +316,11 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> = DefaultLocalOrdinal, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a> = DefaultGlobalOrdinal, class <a class="el" href="_mue_lu___use_default_types_8hpp.html#ae44371dd79510c1867d16cce8b8800da">Node</a> = DefaultNode&gt;<br />
 class MueLu::RepartitionInterface&lt; LocalOrdinal, GlobalOrdinal, Node &gt;</div><p>Helper class which transforms an "AmalgamatedPartition" array to an unamalgamated "Partition". </p>
-<p>This is a general class that allows to translate node-based rebalancing information (given by "AmalgamatedPartition") to DOF-based rebalancing information (stored as output in the "Partition" variable). It is meant to be used together with the <a class="el" href="class_mue_lu_1_1_isorropia_interface.html" title="Interface to Isorropia.">IsorropiaInterface</a> class which provides the node-based rebalancing information in the "AmalgamatedPartition" variable. It uses the striding information of "A" to transform the amalgamated rebalaning info into DOF-based rebalancing information that can be processed by the <a class="el" href="class_mue_lu_1_1_repartition_factory.html" title="Factory for building permutation matrix that can be be used to shuffle data (matrices,...">RepartitionFactory</a> class.</p>
+<p>This is a general class that allows to translate node-based rebalancing information (given by "AmalgamatedPartition") to DOF-based rebalancing information (stored as output in the "Partition" variable). It is meant to be used together with the IsorropiaInterface class which provides the node-based rebalancing information in the "AmalgamatedPartition" variable. It uses the striding information of "A" to transform the amalgamated rebalaning info into DOF-based rebalancing information that can be processed by the <a class="el" href="class_mue_lu_1_1_repartition_factory.html" title="Factory for building permutation matrix that can be be used to shuffle data (matrices,...">RepartitionFactory</a> class.</p>
 <dl class="section note"><dt>Note</dt><dd>: We assume a constant number of DOFs per node</dd></dl>
-<h2><a class="anchor" id="autotoc_md106"></a>
+<h2><a class="anchor" id="autotoc_md103"></a>
 Input/output of RepartitionInterface</h2>
-<h3><a class="anchor" id="autotoc_md107"></a>
+<h3><a class="anchor" id="autotoc_md104"></a>
 User parameters of RepartitionInterface</h3>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -328,14 +328,14 @@ User parameters of RepartitionInterface</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">A   </td><td class="markdownTableBodyNone"><a class="el" href="class_mue_lu_1_1_factory.html">Factory</a>   </td><td class="markdownTableBodyNone">null   </td><td class="markdownTableBodyCenter"></td><td class="markdownTableBodyCenter">*   </td><td class="markdownTableBodyCenter">*   </td><td class="markdownTableBodyNone">Generating factory of the matrix A used during the prolongator smoothing process    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">AmalgamatedPartition   </td><td class="markdownTableBodyNone"><a class="el" href="class_mue_lu_1_1_factory.html">Factory</a>   </td><td class="markdownTableBodyNone">null   </td><td class="markdownTableBodyCenter"></td><td class="markdownTableBodyCenter">*   </td><td class="markdownTableBodyCenter">*   </td><td class="markdownTableBodyNone"><a class="el" href="class_mue_lu_1_1_factory.html">Factory</a> generating the AmalgamatedPartition (e.g. an <a class="el" href="class_mue_lu_1_1_isorropia_interface.html" title="Interface to Isorropia.">IsorropiaInterface</a>)    </td></tr>
+<td class="markdownTableBodyNone">AmalgamatedPartition   </td><td class="markdownTableBodyNone"><a class="el" href="class_mue_lu_1_1_factory.html">Factory</a>   </td><td class="markdownTableBodyNone">null   </td><td class="markdownTableBodyCenter"></td><td class="markdownTableBodyCenter">*   </td><td class="markdownTableBodyCenter">*   </td><td class="markdownTableBodyNone"><a class="el" href="class_mue_lu_1_1_factory.html">Factory</a> generating the AmalgamatedPartition (e.g. an IsorropiaInterface)    </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">number of partitions   </td><td class="markdownTableBodyNone">GO   </td><td class="markdownTableBodyNone">-   </td><td class="markdownTableBodyCenter"></td><td class="markdownTableBodyCenter"></td><td class="markdownTableBodyCenter"></td><td class="markdownTableBodyNone">Short-cut parameter set by <a class="el" href="class_mue_lu_1_1_repartition_factory.html" title="Factory for building permutation matrix that can be be used to shuffle data (matrices,...">RepartitionFactory</a>. Avoid repartitioning algorithms if only one partition is necessary (see details below)   </td></tr>
 </table>
 <p>The * in the <code>master.xml</code> column denotes that the parameter is defined in the <code>master.xml</code> file.<br  />
  The * in the <code>validated</code> column means that the parameter is declared in the list of valid input parameters (see RepartitionInterface::GetValidParameters).<br  />
  The * in the <code>requested</code> column states that the data is requested as input with all dependencies (see <a class="el" href="class_mue_lu_1_1_repartition_interface.html#a7fa4db8123721206cda4c79ff8bc98a9" title="Specifies the data that this class needs, and the factories that generate that data.">RepartitionInterface::DeclareInput</a>).</p>
-<h3><a class="anchor" id="autotoc_md108"></a>
+<h3><a class="anchor" id="autotoc_md105"></a>
 Variables provided by RepartitionInterface</h3>
 <p>After <a class="el" href="class_mue_lu_1_1_repartition_interface.html#a829dce27ec64593862a73e38b23175f2" title="Build an object with this factory.">RepartitionInterface::Build</a> the following data is available (if requested)</p>
 <table class="markdownTable">

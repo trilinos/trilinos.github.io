@@ -18,7 +18,7 @@ var searchData=
   ['divisionop_3c_20t1_2c_20t2_2c_20false_2c_20true_2c_20exprspecdefault_20_3e_15',['DivisionOp&lt; T1, T2, false, true, ExprSpecDefault &gt;',['../class_sacado_1_1_fad_1_1_exp_1_1_division_op_3_01_t1_00_01_t2_00_01false_00_01true_00_01_expr_spec_default_01_4.html',1,'Sacado::Fad::Exp']]],
   ['divisionop_3c_20t1_2c_20t2_2c_20true_2c_20false_2c_20exprspecdefault_20_3e_16',['DivisionOp&lt; T1, T2, true, false, ExprSpecDefault &gt;',['../class_sacado_1_1_fad_1_1_exp_1_1_division_op_3_01_t1_00_01_t2_00_01true_00_01false_00_01_expr_spec_default_01_4.html',1,'Sacado::Fad::Exp']]],
   ['doubleavoid_17',['doubleavoid',['../class_sacado_1_1_rad2_1_1_double_avoid.html',1,'Sacado::Rad2::DoubleAvoid&lt; T &gt;'],['../class_sacado_1_1_rad_1_1_double_avoid.html',1,'Sacado::Rad::DoubleAvoid&lt; T &gt;'],['../class_sacado_1_1_rad_vec_1_1_double_avoid.html',1,'Sacado::RadVec::DoubleAvoid&lt; T &gt;']]],
-  ['doubleavoid_3c_20double_20_3e_18',['doubleavoid&lt; double &gt;',['../class_sacado_1_1_rad_1_1_double_avoid_3_01double_01_4.html',1,'Sacado::Rad::DoubleAvoid&lt; double &gt;'],['../class_sacado_1_1_rad_vec_1_1_double_avoid_3_01double_01_4.html',1,'Sacado::RadVec::DoubleAvoid&lt; double &gt;'],['../class_sacado_1_1_rad2_1_1_double_avoid_3_01double_01_4.html',1,'Sacado::Rad2::DoubleAvoid&lt; double &gt;']]],
+  ['doubleavoid_3c_20double_20_3e_18',['doubleavoid&lt; double &gt;',['../class_sacado_1_1_rad_vec_1_1_double_avoid_3_01double_01_4.html',1,'Sacado::RadVec::DoubleAvoid&lt; double &gt;'],['../class_sacado_1_1_rad_1_1_double_avoid_3_01double_01_4.html',1,'Sacado::Rad::DoubleAvoid&lt; double &gt;'],['../class_sacado_1_1_rad2_1_1_double_avoid_3_01double_01_4.html',1,'Sacado::Rad2::DoubleAvoid&lt; double &gt;']]],
   ['doubleavoid_3c_20int_20_3e_19',['DoubleAvoid&lt; int &gt;',['../class_sacado_1_1_rad_1_1_double_avoid_3_01int_01_4.html',1,'Sacado::Rad']]],
   ['doubleavoid_3c_20long_20_3e_20',['DoubleAvoid&lt; long &gt;',['../class_sacado_1_1_rad_1_1_double_avoid_3_01long_01_4.html',1,'Sacado::Rad']]],
   ['ds_5farray_21',['ds_array',['../struct_sacado_1_1ds__array.html',1,'Sacado']]],
@@ -29,5 +29,6 @@ var searchData=
   ['dvfad_26',['DVFad',['../class_sacado_1_1_fad_1_1_d_v_fad.html',1,'Sacado::Fad']]],
   ['dynamicstorage_27',['dynamicstorage',['../class_sacado_1_1_fad_1_1_dynamic_storage.html',1,'Sacado::Fad::DynamicStorage&lt; T, U &gt;'],['../class_sacado_1_1_fad_1_1_exp_1_1_dynamic_storage.html',1,'Sacado::Fad::Exp::DynamicStorage&lt; T, U &gt;']]],
   ['dynamicstorage_3c_20valt_2c_20logt_20_3e_28',['DynamicStorage&lt; ValT, LogT &gt;',['../class_sacado_1_1_fad_1_1_dynamic_storage.html',1,'Sacado::Fad']]],
-  ['dynamicstorage_3c_20valuet_20_3e_29',['DynamicStorage&lt; ValueT &gt;',['../class_sacado_1_1_fad_1_1_dynamic_storage.html',1,'Sacado::Fad']]]
+  ['dynamicstorage_3c_20valuet_20_3e_29',['DynamicStorage&lt; ValueT &gt;',['../class_sacado_1_1_fad_1_1_dynamic_storage.html',1,'Sacado::Fad']]],
+  ['dynrankdimtraits_3c_20bool_20_3e_30',['DynRankDimTraits&lt; bool &gt;',['../struct_kokkos_1_1_impl_1_1_dyn_rank_dim_traits_3_01bool_01_4.html',1,'Kokkos::Impl']]]
 ];

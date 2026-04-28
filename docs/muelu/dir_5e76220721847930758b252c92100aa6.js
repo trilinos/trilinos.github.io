@@ -2,8 +2,6 @@ var dir_5e76220721847930758b252c92100aa6 =
 [
     [ "MueLu_CloneRepartitionInterface_decl.hpp", "_mue_lu___clone_repartition_interface__decl_8hpp.html", "_mue_lu___clone_repartition_interface__decl_8hpp" ],
     [ "MueLu_CloneRepartitionInterface_def.hpp", "_mue_lu___clone_repartition_interface__def_8hpp.html", null ],
-    [ "MueLu_IsorropiaInterface_decl.hpp", "_mue_lu___isorropia_interface__decl_8hpp.html", "_mue_lu___isorropia_interface__decl_8hpp" ],
-    [ "MueLu_IsorropiaInterface_def.hpp", "_mue_lu___isorropia_interface__def_8hpp.html", null ],
     [ "MueLu_NodePartitionInterface_decl.hpp", "_mue_lu___node_partition_interface__decl_8hpp.html", "_mue_lu___node_partition_interface__decl_8hpp" ],
     [ "MueLu_NodePartitionInterface_def.hpp", "_mue_lu___node_partition_interface__def_8hpp.html", "_mue_lu___node_partition_interface__def_8hpp" ],
     [ "MueLu_RebalanceAcFactory_decl.hpp", "_mue_lu___rebalance_ac_factory__decl_8hpp.html", "_mue_lu___rebalance_ac_factory__decl_8hpp" ],

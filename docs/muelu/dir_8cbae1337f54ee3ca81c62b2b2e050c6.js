@@ -12,8 +12,6 @@ var dir_8cbae1337f54ee3ca81c62b2b2e050c6 =
     [ "MueLu_DirectSolver_def.hpp", "_mue_lu___direct_solver__def_8hpp.html", null ],
     [ "MueLu_Ifpack2Smoother_decl.hpp", "_mue_lu___ifpack2_smoother__decl_8hpp.html", "_mue_lu___ifpack2_smoother__decl_8hpp" ],
     [ "MueLu_Ifpack2Smoother_def.hpp", "_mue_lu___ifpack2_smoother__def_8hpp.html", null ],
-    [ "MueLu_IfpackSmoother.cpp", "_mue_lu___ifpack_smoother_8cpp.html", null ],
-    [ "MueLu_IfpackSmoother.hpp", "_mue_lu___ifpack_smoother_8hpp.html", null ],
     [ "MueLu_MergedSmoother_decl.hpp", "_mue_lu___merged_smoother__decl_8hpp.html", "_mue_lu___merged_smoother__decl_8hpp" ],
     [ "MueLu_MergedSmoother_def.hpp", "_mue_lu___merged_smoother__def_8hpp.html", null ],
     [ "MueLu_PermutingSmoother_decl.hpp", "_mue_lu___permuting_smoother__decl_8hpp.html", "_mue_lu___permuting_smoother__decl_8hpp" ],

@@ -339,9 +339,9 @@ class MueLu::CombinePFactory&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;<
 <p><a class="el" href="class_mue_lu_1_1_hierarchy_utils.html#abbe70cf45df130a7734be86b29bd914d">MueLu::HierarchyUtils&lt;SC,LO,GO,NO&gt;::CopyBetweenHierarchies</a>(*scalarHierarchy0,*systemHierarchy, "P", "Psubblock0", "RCP&lt;Matrix&gt;"); . . . . . . <a class="el" href="class_mue_lu_1_1_hierarchy_utils.html#abbe70cf45df130a7734be86b29bd914d">MueLu::HierarchyUtils&lt;SC,LO,GO,NO&gt;::CopyBetweenHierarchies</a>(*scalarHierarchy7,*systemHierarchy, "P", "Psubblock6", "RCP&lt;Matrix&gt;");</p>
 <p>to copy them to a new hierarchy. This new hierarchy would then have &lt;Parameter name="multigrid algorithm" type="string"  value="combo"&gt; in its parameter list to then invoke ComboPFactory. Currently, this is used in src/Operators/MueLu_Multiphysics_def.hpp with an example in test/multiphysics.</p>
 <p>The end result is a block diagonal matrix corresponding to [Psubblock0 ] [ Psubblock1 ] [ Psubblock2 ] P = [ Psubblock3 ] [ Psubblock4 ] [ Psubblock5 ] [ Psubblock6]</p>
-<h2><a class="anchor" id="autotoc_md127"></a>
+<h2><a class="anchor" id="autotoc_md124"></a>
 Input/output of CombinePFactory</h2>
-<h3><a class="anchor" id="autotoc_md128"></a>
+<h3><a class="anchor" id="autotoc_md125"></a>
 User parameters of SemiCoarsenPFactory</h3>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -364,7 +364,7 @@ User parameters of SemiCoarsenPFactory</h3>
 <p>The * in the <code>master.xml</code> column denotes that the parameter is defined in the <code>master.xml</code> file.<br  />
  The * in the <code>validated</code> column means that the parameter is declared in the list of valid input parameters (see CombineCoarsenPFactory::GetValidParameters).<br  />
  The * in the <code>requested</code> column states that the data is requested as input with all dependencies (see CombineCoarsenPFactory::DeclareInput).</p>
-<h3><a class="anchor" id="autotoc_md129"></a>
+<h3><a class="anchor" id="autotoc_md126"></a>
 Variables provided by CombinePFactory</h3>
 <p>After <a class="el" href="class_mue_lu_1_1_combine_p_factory.html#a07f998e58739bca9ec49e7100e0c0d79" title="Build an object with this factory.">CombinePFactory::Build</a> the following data is available (if requested)</p>
 <table class="markdownTable">
