@@ -1987,11 +1987,14 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
     <tr><td class="paramname">rowPtrBeg</td><td>[in/out] rowPtrBeg[i] points to the first column index (in the indices array) of row i. </td></tr>
     <tr><td class="paramname">rowPtrEnd</td><td>[in/out] rowPtrEnd[i] points to the last column index (in the indices array) of row i. </td></tr>
     <tr><td class="paramname">indices_wdv</td><td>[in/out] array containing column indices of nonzeros in CRS representation. </td></tr>
+    <tr><td class="paramname">padding</td><td>[in] Padding specification for extra space. </td></tr>
+    <tr><td class="paramname">my_rank</td><td>[in] My process rank, for verbose output. </td></tr>
+    <tr><td class="paramname">verbose</td><td>[in] Whether to print verbose output. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details__crs_utils_8hpp_source.html#l00558">558</a> of file <a class="el" href="_tpetra___details__crs_utils_8hpp_source.html">Tpetra_Details_crsUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details__crs_utils_8hpp_source.html#l00565">565</a> of file <a class="el" href="_tpetra___details__crs_utils_8hpp_source.html">Tpetra_Details_crsUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -2065,7 +2068,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>The optional function <code>cb</code> is called on every valid index. <code>cb</code> is sent the current loop index <code>k</code>, <code>rowPtrs</code>[k] (the start of the row), and the relative offset from <code>start</code> in to the <code>curIndices</code> array for <code>newIndices</code>[k]. This function could, for example, be used by <code><a class="el" href="class_tpetra_1_1_crs_matrix.html" title="Sparse matrix that presents a row-oriented interface that lets users read or modify entries.">CrsMatrix</a></code> to fill the values array during <code>sumInto*Values</code> or <code>replace*Values</code>; Eg, <code><a class="el" href="class_tpetra_1_1_crs_matrix.html#a3a0ad69c66c995fe6b2ceaa449a19e63" title="Sum into one or more sparse matrix entries, using local row and column indices.">CrsMatrix::sumIntoLocalValues</a></code> might have the following:</p>
 <p><code> CrsMatrix::sumIntoLocalValues(LO row, array&lt;LO&gt; cols, array&lt;S&gt; vals) { this-&gt;graph_-&gt;insertLocalValues(row, cols, [&amp;](size_t const k, size_t const start, size_t const offset){ this-&gt;values_[start+offset] += vals[k]; }); } </code> </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details__crs_utils_8hpp_source.html#l00634">634</a> of file <a class="el" href="_tpetra___details__crs_utils_8hpp_source.html">Tpetra_Details_crsUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details__crs_utils_8hpp_source.html#l00641">641</a> of file <a class="el" href="_tpetra___details__crs_utils_8hpp_source.html">Tpetra_Details_crsUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -2138,7 +2141,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>The actual value of <code>newIndices</code>[k] that is inserted is the value returned from <code>map(newIndices[k])</code>. If an identity map is provided, <code>newIndices</code>[k] is directly inserted. However, any other map can be provided. For instance, for a locally indexed graph on which <code>insertGlobalIndices</code> is called, the <code>curIndices</code> array can be a view of the graph's local indices, the <code>newIndices</code> array are the new <em>global</em> indices, and <code>map</code> is the graph's column map to convert global indices to local. If this function is called through the overload below without the <code>map</code> argument, the identity map is provided.</p>
 <p>The function <code>cb</code> is called on every valid index. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details__crs_utils_8hpp_source.html#l00701">701</a> of file <a class="el" href="_tpetra___details__crs_utils_8hpp_source.html">Tpetra_Details_crsUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details__crs_utils_8hpp_source.html#l00708">708</a> of file <a class="el" href="_tpetra___details__crs_utils_8hpp_source.html">Tpetra_Details_crsUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -2954,6 +2957,8 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   <table class="params">
     <tr><td class="paramname">colMap</td><td>[out] Will be set to the new column map. </td></tr>
     <tr><td class="paramname">domMap</td><td>[in] The domain map, used to determine which global columns are locally owned. </td></tr>
+    <tr><td class="paramname">gids</td><td>[in] Global indices for constructing the column map. </td></tr>
+    <tr><td class="paramname">errStrm</td><td>[out] Optional output stream for error messages. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3572,7 +3577,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">typenam
 </dl>
 <p>This is the public interface to the pack machinery converts passed Teuchos::ArrayView objects to Kokkos::View objects (and copies back in to the Teuchos::ArrayView objects, if needed). When <a class="el" href="class_tpetra_1_1_crs_graph.html" title="A distributed graph accessed by rows (adjacency lists) and stored sparsely.">CrsGraph</a> migrates fully to adopting Kokkos::DualView objects for its storage of data, this procedure could be bypassed. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details__pack_crs_graph__def_8hpp_source.html#l00693">693</a> of file <a class="el" href="_tpetra___details__pack_crs_graph__def_8hpp_source.html">Tpetra_Details_packCrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details__pack_crs_graph__def_8hpp_source.html#l00665">665</a> of file <a class="el" href="_tpetra___details__pack_crs_graph__def_8hpp_source.html">Tpetra_Details_packCrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -3635,7 +3640,6 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">typenam
 </div><div class="memdoc">
 
 <p>Pack specified entries of the given local sparse graph for communication, for "new" <a class="el" href="class_tpetra_1_1_dist_object.html" title="Base class for distributed Tpetra objects that support data redistribution.">DistObject</a> interface. </p>
-<p>Pack specified entries of the given local sparse graph for communication ("new" <a class="el" href="class_tpetra_1_1_dist_object.html" title="Base class for distributed Tpetra objects that support data redistribution.">DistObject</a> interface version).</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">LO</td><td>The type of local indices. This must be the same as the LocalOrdinal template parameter of <a class="el" href="class_tpetra_1_1_crs_graph.html" title="A distributed graph accessed by rows (adjacency lists) and stored sparsely.">Tpetra::CrsGraph</a>. </td></tr>
@@ -3656,7 +3660,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">typenam
 </dl>
 <p>This method implements CrsGraph::packNew, and thus CrsGraph::packAndPrepare, for the case where the graph to pack has a valid KokkosSparse::CrsGraph. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details__pack_crs_graph__def_8hpp_source.html#l00779">779</a> of file <a class="el" href="_tpetra___details__pack_crs_graph__def_8hpp_source.html">Tpetra_Details_packCrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details__pack_crs_graph__def_8hpp_source.html#l00749">749</a> of file <a class="el" href="_tpetra___details__pack_crs_graph__def_8hpp_source.html">Tpetra_Details_packCrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -3724,16 +3728,17 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">typenam
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sourceGraph</td><td>[in] the <a class="el" href="class_tpetra_1_1_crs_graph.html" title="A distributed graph accessed by rows (adjacency lists) and stored sparsely.">CrsGraph</a> source</td></tr>
-    <tr><td class="paramname">exports</td><td>[in/out] Output pack buffer; resized if needed.</td></tr>
+    <tr><td class="paramname">exports_dv</td><td>[in/out] Output pack buffer; resized if needed.</td></tr>
     <tr><td class="paramname">numPacketsPerLID</td><td>[out] Entry k gives the number of bytes packed for row exportLIDs[k] of the local graph.</td></tr>
     <tr><td class="paramname">exportLIDs</td><td>[in] Local indices of the rows to pack.</td></tr>
+    <tr><td class="paramname">sourcePIDs</td><td>[in] Process IDs of the source entries.</td></tr>
     <tr><td class="paramname">constantNumPackets</td><td>[out] Setting this to zero tells the caller to expect a possibly /// different ("nonconstant") number of packets per local index (i.e., a possibly different number of entries per row).</td></tr>
   </table>
   </dd>
 </dl>
 <p>This is the public interface to the pack machinery converts passed Teuchos::ArrayView objects to Kokkos::View objects (and copies back in to the Teuchos::ArrayView objects, if needed). When <a class="el" href="class_tpetra_1_1_crs_graph.html" title="A distributed graph accessed by rows (adjacency lists) and stored sparsely.">CrsGraph</a> migrates fully to adopting Kokkos::DualView objects for its storage of data, this procedure could be bypassed. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details__pack_crs_graph__def_8hpp_source.html#l00865">865</a> of file <a class="el" href="_tpetra___details__pack_crs_graph__def_8hpp_source.html">Tpetra_Details_packCrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details__pack_crs_graph__def_8hpp_source.html#l00835">835</a> of file <a class="el" href="_tpetra___details__pack_crs_graph__def_8hpp_source.html">Tpetra_Details_packCrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -3946,9 +3951,10 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">typenam
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sourceMatrix</td><td>[in] the <a class="el" href="class_tpetra_1_1_crs_matrix.html" title="Sparse matrix that presents a row-oriented interface that lets users read or modify entries.">CrsMatrix</a> source</td></tr>
-    <tr><td class="paramname">exports</td><td>[in/out] Output pack buffer; resized if needed.</td></tr>
+    <tr><td class="paramname">exports_dv</td><td>[in/out] Output pack buffer; resized if needed.</td></tr>
     <tr><td class="paramname">numPacketsPerLID</td><td>[out] Entry k gives the number of bytes packed for row exportLIDs[k] of the local matrix.</td></tr>
     <tr><td class="paramname">exportLIDs</td><td>[in] Local indices of the rows to pack.</td></tr>
+    <tr><td class="paramname">sourcePIDs</td><td>[in] Process IDs of the source entries.</td></tr>
     <tr><td class="paramname">constantNumPackets</td><td>[out] Setting this to zero tells the caller to expect a possibly /// different ("nonconstant") number of packets per local index (i.e., a possibly different number of entries per row).</td></tr>
   </table>
   </dd>
@@ -4767,9 +4773,14 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </table>
   </dd>
 </dl>
-<dl class="section warning"><dt>Warning</dt><dd>The allowed <code>combineMode</code> are: ADD, REPLACE, and ABSMAX. INSERT is not allowed. </dd>
-<dd>
-This method is intended for expert developer use only, and should never be called by user code.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>The allowed <code>combineMode</code> are: ADD, REPLACE, and ABSMAX. INSERT is not allowed.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">numSameIDs</td><td>[in] Number of IDs that are the same.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>This method is intended for expert developer use only, and should never be called by user code.</dd></dl>
 <p>Note: This is the public interface to the unpack and combine machinery and converts passed Teuchos::ArrayView objects to Kokkos::View objects (and copies back in to the Teuchos::ArrayView objects, if needed). When <a class="el" href="class_tpetra_1_1_crs_graph.html" title="A distributed graph accessed by rows (adjacency lists) and stored sparsely.">CrsGraph</a> migrates fully to adopting Kokkos::DualView objects for its storage of data, this procedure could be bypassed. </p>
 
 </div>
@@ -4989,9 +5000,15 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 <dl class="section warning"><dt>Warning</dt><dd>This method is intended for expert developer use only, and should never be called by user code.</dd></dl>
-<p>Note: This is the public interface to the unpack and combine machinery and converts passed Teuchos::ArrayView objects to Kokkos::View objects (and copies back in to the Teuchos::ArrayView objects, if needed). When <a class="el" href="class_tpetra_1_1_crs_graph.html" title="A distributed graph accessed by rows (adjacency lists) and stored sparsely.">CrsGraph</a> migrates fully to adopting Kokkos::DualView objects for its storage of data, this procedure could be bypassed. </p>
+<p>Note: This is the public interface to the unpack and combine machinery and converts passed Teuchos::ArrayView objects to Kokkos::View objects (and copies back in to the Teuchos::ArrayView objects, if needed). When <a class="el" href="class_tpetra_1_1_crs_graph.html" title="A distributed graph accessed by rows (adjacency lists) and stored sparsely.">CrsGraph</a> migrates fully to adopting Kokkos::DualView objects for its storage of data, this procedure could be bypassed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">numSameIDs</td><td>[in] Number of IDs that are the same. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details__unpack_crs_graph_and_combine__def_8hpp_source.html#l00792">792</a> of file <a class="el" href="_tpetra___details__unpack_crs_graph_and_combine__def_8hpp_source.html">Tpetra_Details_unpackCrsGraphAndCombine_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details__unpack_crs_graph_and_combine__def_8hpp_source.html#l00795">795</a> of file <a class="el" href="_tpetra___details__unpack_crs_graph_and_combine__def_8hpp_source.html">Tpetra_Details_unpackCrsGraphAndCombine_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -5112,7 +5129,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Note: The SourcePids vector (on input) should contam <a class="el" href="_tpetra___import___util_8hpp.html#a5fa4bbea411fc1ca5bcf9f09d98cd4d7" title="Like getPidGidPairs, but just gets the PIDs, ordered by the column Map.">Tpetra::Import_Util::getPids</a>, with the "-1 for local" option being used.</p>
 <p>Note: The TargetPids vector (on output) will contain owning PIDs for each entry in the graph, with the "-1 for local" for locally owned entries. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details__unpack_crs_graph_and_combine__def_8hpp_source.html#l00860">860</a> of file <a class="el" href="_tpetra___details__unpack_crs_graph_and_combine__def_8hpp_source.html">Tpetra_Details_unpackCrsGraphAndCombine_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details__unpack_crs_graph_and_combine__def_8hpp_source.html#l00863">863</a> of file <a class="el" href="_tpetra___details__unpack_crs_graph_and_combine__def_8hpp_source.html">Tpetra_Details_unpackCrsGraphAndCombine_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -5286,7 +5303,37 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">typenam
     <tr><td class="paramname">constantNumPackets</td><td>[out] Setting this to zero tells the caller to expect a possibly /// different ("nonconstant") number of packets per local index (i.e., a possibly different number of entries per row).</td></tr>
     <tr><td class="paramname">distor</td><td>[in] The distributor (not used)</td></tr>
     <tr><td class="paramname">combineMode</td><td>[in] the mode to use for combining values</td></tr>
-    <tr><td class="paramname">numSameIds</td><td>[in]</td></tr>
+    <tr><td class="paramname">numSameIDs</td><td>[in] Number of IDs that are the same.</td></tr>
+    <tr><td class="paramname">permuteToLIDs</td><td>[in]</td></tr>
+    <tr><td class="paramname">permuteFromLIDs</td><td>[in]</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>The allowed <code>combineMode</code> are: ADD, REPLACE, and ABSMAX. INSERT is not allowed. </dd>
+<dd>
+This method is intended for expert developer use only, and should never be called by user code.</dd></dl>
+<p>Note: This is the public interface to the unpack and combine machinery and converts passed Teuchos::ArrayView objects to Kokkos::View objects (and copies back in to the Teuchos::ArrayView objects, if needed). When <a class="el" href="class_tpetra_1_1_crs_matrix.html" title="Sparse matrix that presents a row-oriented interface that lets users read or modify entries.">CrsMatrix</a> migrates fully to adopting Kokkos::DualView objects for its storage of data, this procedure could be bypassed.</p>
+<p>Perform the count for unpacking the imported column indices pids, and values, and combining them into matrix. Return (a ceiling on) the number of local stored entries ("nonzeros") in the matrix. If there are no shared rows in the sourceMatrix this count is exact.</p>
+<p>Note: This routine also counts the copyAndPermute nonzeros in addition to those that come in via import.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ST</td><td>The type of the numerical entries of the matrix. (You can use real-valued or complex-valued types here, unlike in Epetra, where the scalar type is always <code>double</code>.) </td></tr>
+    <tr><td class="paramname">LO</td><td>The type of local indices. See the documentation of <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> for requirements. </td></tr>
+    <tr><td class="paramname">GO</td><td>The type of global indices. See the documentation of <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> for requirements. </td></tr>
+    <tr><td class="paramname">Node</td><td>The Kokkos Node type. See the documentation of <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> for requirements.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sourceMatrix</td><td>[in] the <a class="el" href="class_tpetra_1_1_crs_matrix.html" title="Sparse matrix that presents a row-oriented interface that lets users read or modify entries.">CrsMatrix</a> source</td></tr>
+    <tr><td class="paramname">imports</td><td>[in] Input pack buffer</td></tr>
+    <tr><td class="paramname">numPacketsPerLID</td><td>[out] Entry k gives the number of bytes packed for row exportLIDs[k] of the local matrix.</td></tr>
+    <tr><td class="paramname">importLIDs</td><td>[in] Local indices of the rows to pack.</td></tr>
+    <tr><td class="paramname">constantNumPackets</td><td>[out] Setting this to zero tells the caller to expect a possibly /// different ("nonconstant") number of packets per local index (i.e., a possibly different number of entries per row).</td></tr>
+    <tr><td class="paramname">distor</td><td>[in] The distributor (not used)</td></tr>
+    <tr><td class="paramname">combineMode</td><td>[in] the mode to use for combining values</td></tr>
+    <tr><td class="paramname">numSameIDs</td><td>[in]</td></tr>
     <tr><td class="paramname">permuteToLIDs</td><td>[in]</td></tr>
     <tr><td class="paramname">permuteFromLIDs</td><td>[in]</td></tr>
   </table>
@@ -5297,7 +5344,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">typenam
 This method is intended for expert developer use only, and should never be called by user code.</dd></dl>
 <p>Note: This is the public interface to the unpack and combine machinery and converts passed Teuchos::ArrayView objects to Kokkos::View objects (and copies back in to the Teuchos::ArrayView objects, if needed). When <a class="el" href="class_tpetra_1_1_crs_matrix.html" title="Sparse matrix that presents a row-oriented interface that lets users read or modify entries.">CrsMatrix</a> migrates fully to adopting Kokkos::DualView objects for its storage of data, this procedure could be bypassed. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details__unpack_crs_matrix_and_combine__def_8hpp_source.html#l01272">1272</a> of file <a class="el" href="_tpetra___details__unpack_crs_matrix_and_combine__def_8hpp_source.html">Tpetra_Details_unpackCrsMatrixAndCombine_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details__unpack_crs_matrix_and_combine__def_8hpp_source.html#l01267">1267</a> of file <a class="el" href="_tpetra___details__unpack_crs_matrix_and_combine__def_8hpp_source.html">Tpetra_Details_unpackCrsMatrixAndCombine_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -5406,7 +5453,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">typenam
 <p>Note: The TargetPids vector (on output) will contain owning PIDs for each entry in the matrix, with the "-1 for local" for locally owned entries.</p>
 <p>Note: This method does the work previously done in unpackAndCombineWithOwningPIDsCount, namely, calculating the local number of nonzeros, and allocates CRS arrays of the correct sizes </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details__unpack_crs_matrix_and_combine__def_8hpp_source.html#l01533">1533</a> of file <a class="el" href="_tpetra___details__unpack_crs_matrix_and_combine__def_8hpp_source.html">Tpetra_Details_unpackCrsMatrixAndCombine_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details__unpack_crs_matrix_and_combine__def_8hpp_source.html#l01528">1528</a> of file <a class="el" href="_tpetra___details__unpack_crs_matrix_and_combine__def_8hpp_source.html">Tpetra_Details_unpackCrsMatrixAndCombine_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -5515,7 +5562,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">typenam
 <p>Note: The SourcePids vector (on input) should contain owning PIDs for each column in the (source) ColMap, as from <a class="el" href="_tpetra___import___util_8hpp.html#a5fa4bbea411fc1ca5bcf9f09d98cd4d7" title="Like getPidGidPairs, but just gets the PIDs, ordered by the column Map.">Tpetra::Import_Util::getPids</a>, with the "-1 for local" option being used.</p>
 <p>Note: The TargetPids vector (on output) will contain owning PIDs for each entry in the matrix, with the "-1 for local" for locally owned entries. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details__unpack_crs_matrix_and_combine__def_8hpp_source.html#l01357">1357</a> of file <a class="el" href="_tpetra___details__unpack_crs_matrix_and_combine__def_8hpp_source.html">Tpetra_Details_unpackCrsMatrixAndCombine_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details__unpack_crs_matrix_and_combine__def_8hpp_source.html#l01352">1352</a> of file <a class="el" href="_tpetra___details__unpack_crs_matrix_and_combine__def_8hpp_source.html">Tpetra_Details_unpackCrsMatrixAndCombine_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -5588,16 +5635,14 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">typenam
     <tr><td class="paramname">numPacketsPerLID</td><td>[out] Entry k gives the number of bytes packed for row exportLIDs[k] of the local matrix.</td></tr>
     <tr><td class="paramname">importLIDs</td><td>[in] Local indices of the rows to pack.</td></tr>
     <tr><td class="paramname">constantNumPackets</td><td>[out] Setting this to zero tells the caller to expect a possibly /// different ("nonconstant") number of packets per local index (i.e., a possibly different number of entries per row).</td></tr>
-    <tr><td class="paramname">distor</td><td>[in] The distributor (not used)</td></tr>
+    <tr><td class="paramname">constantNumPackets</td><td>[in] Whether number of packets is constant.</td></tr>
     <tr><td class="paramname">combineMode</td><td>[in] the mode to use for combining values</td></tr>
-    <tr><td class="paramname">atomic</td><td>[in] whether or not do atomic adds/replaces in to the matrix</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section warning"><dt>Warning</dt><dd>The allowed <code>combineMode</code> are: ADD, REPLACE, and ABSMAX. INSERT is not allowed.</dd></dl>
 <p>This is the public interface to the unpack and combine machinery and converts passed Teuchos::ArrayView objects to Kokkos::View objects (and copies back in to the Teuchos::ArrayView objects, if needed). When <a class="el" href="class_tpetra_1_1_crs_matrix.html" title="Sparse matrix that presents a row-oriented interface that lets users read or modify entries.">CrsMatrix</a> migrates fully to adopting Kokkos::DualView objects for its storage of data, this procedure could be bypassed. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details__unpack_crs_matrix_and_combine__def_8hpp_source.html#l01119">1119</a> of file <a class="el" href="_tpetra___details__unpack_crs_matrix_and_combine__def_8hpp_source.html">Tpetra_Details_unpackCrsMatrixAndCombine_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details__unpack_crs_matrix_and_combine__def_8hpp_source.html#l01114">1114</a> of file <a class="el" href="_tpetra___details__unpack_crs_matrix_and_combine__def_8hpp_source.html">Tpetra_Details_unpackCrsMatrixAndCombine_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -6591,15 +6636,17 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
     <tr><td class="paramname">curLineNum</td><td>[in/out] On both input and output, the current line number in the input stream. (In the Matrix Market format, sparse matrix entries cannot start until at least line 3 of the file.) This is only valid on Process 0. </td></tr>
     <tr><td class="paramname">totalNumEntRead</td><td>[out] Total number of matrix entries (triples) read on Process 0. This is only valid on Process 0. </td></tr>
     <tr><td class="paramname">processTriple</td><td>[in] Closure, generally with side effects, that takes in and stores off a sparse matrix entry. First argument is the (global) row index, second argument is the (global) column index, and third argument is the value of the entry. The closure must NOT do MPI communication. Return value is an error code, that is zero if and only if the closure succeeded. We intend for you to use this to call CooMatrix::insertEntry. </td></tr>
+    <tr><td class="paramname">maxNumEntPerMsg</td><td>[in] Maximum number of entries per message. </td></tr>
     <tr><td class="paramname">comm</td><td>[in] Communicator to use for receiving the triples. </td></tr>
     <tr><td class="paramname">tolerant</td><td>[in] Whether to read tolerantly. </td></tr>
-    <tr><td class="paramname">errStrm</td><td>[in] If not NULL, print any error messages to this stream.</td></tr>
+    <tr><td class="paramname">errStrm</td><td>[in] If not NULL, print any error messages to this stream. </td></tr>
+    <tr><td class="paramname">debug</td><td>[in] Whether to print debug output.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Error code; 0 if and only if success. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details___read_triples_8hpp_source.html#l00880">880</a> of file <a class="el" href="_tpetra___details___read_triples_8hpp_source.html">Tpetra_Details_ReadTriples.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details___read_triples_8hpp_source.html#l00884">884</a> of file <a class="el" href="_tpetra___details___read_triples_8hpp_source.html">Tpetra_Details_ReadTriples.hpp</a>.</p>
 
 </div>
 </div>

@@ -131,7 +131,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>          <span class="keyword">class </span>LocalOrdinal,</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>          <span class="keyword">class </span>GlobalOrdinal, <span class="keyword">class </span>LocalOrdinalViewType&gt;</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keyword">struct </span>KernelWrappers2&lt;Scalar, LocalOrdinal, GlobalOrdinal, <a class="code hl_namespace" href="namespace_tpetra.html">Tpetra</a>::KokkosCompat::KokkosOpenMPWrapperNode, LocalOrdinalViewType&gt; {</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> jacobi_A_B_newmatrix_kernel_wrapper(Scalar omega,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> jacobi_A_B_newmatrix_kernel_wrapper(<span class="keyword">typename</span> Teuchos::ScalarTraits&lt;Scalar&gt;::magnitudeType omega,</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                                                         <span class="keyword">const</span> Vector&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Dinv,</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                                                         CrsMatrixStruct&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Aview,</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                                                         CrsMatrixStruct&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Bview,</div>
@@ -144,7 +144,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                                                         <span class="keyword">const</span> std::string&amp; label                           = std::string(),</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                                                         <span class="keyword">const</span> Teuchos::RCP&lt;Teuchos::ParameterList&gt;&amp; params = Teuchos::null);</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> jacobi_A_B_reuse_kernel_wrapper(Scalar omega,</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> jacobi_A_B_reuse_kernel_wrapper(<span class="keyword">typename</span> Teuchos::ScalarTraits&lt;Scalar&gt;::magnitudeType omega,</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                                                     <span class="keyword">const</span> Vector&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Dinv,</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                                                     CrsMatrixStruct&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Aview,</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                                                     CrsMatrixStruct&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Bview,</div>
@@ -157,7 +157,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                                                     <span class="keyword">const</span> std::string&amp; label                           = std::string(),</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                                                     <span class="keyword">const</span> Teuchos::RCP&lt;Teuchos::ParameterList&gt;&amp; params = Teuchos::null);</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> jacobi_A_B_newmatrix_KokkosKernels(Scalar omega,</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> jacobi_A_B_newmatrix_KokkosKernels(<span class="keyword">typename</span> Teuchos::ScalarTraits&lt;Scalar&gt;::magnitudeType omega,</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                                                        <span class="keyword">const</span> Vector&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Dinv,</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                                                        CrsMatrixStruct&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Aview,</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                                                        CrsMatrixStruct&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Bview,</div>
@@ -427,7 +427,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>          <span class="keyword">class </span>LocalOrdinal,</div>
 <div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>          <span class="keyword">class </span>GlobalOrdinal,</div>
 <div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>          <span class="keyword">class </span>LocalOrdinalViewType&gt;</div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span><span class="keywordtype">void</span> KernelWrappers2&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode, LocalOrdinalViewType&gt;::jacobi_A_B_newmatrix_kernel_wrapper(Scalar omega,</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span><span class="keywordtype">void</span> KernelWrappers2&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode, LocalOrdinalViewType&gt;::jacobi_A_B_newmatrix_kernel_wrapper(<span class="keyword">typename</span> Teuchos::ScalarTraits&lt;Scalar&gt;::magnitudeType omega,</div>
 <div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>                                                                                                                                                                    <span class="keyword">const</span> Vector&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Dinv,</div>
 <div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>                                                                                                                                                                    CrsMatrixStruct&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Aview,</div>
 <div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>                                                                                                                                                                    CrsMatrixStruct&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Bview,</div>
@@ -491,7 +491,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>          <span class="keyword">class </span>LocalOrdinal,</div>
 <div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>          <span class="keyword">class </span>GlobalOrdinal,</div>
 <div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>          <span class="keyword">class </span>LocalOrdinalViewType&gt;</div>
-<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span><span class="keywordtype">void</span> KernelWrappers2&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode, LocalOrdinalViewType&gt;::jacobi_A_B_reuse_kernel_wrapper(Scalar omega,</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span><span class="keywordtype">void</span> KernelWrappers2&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode, LocalOrdinalViewType&gt;::jacobi_A_B_reuse_kernel_wrapper(<span class="keyword">typename</span> Teuchos::ScalarTraits&lt;Scalar&gt;::magnitudeType omega,</div>
 <div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>                                                                                                                                                                <span class="keyword">const</span> Vector&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Dinv,</div>
 <div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>                                                                                                                                                                CrsMatrixStruct&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Aview,</div>
 <div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>                                                                                                                                                                CrsMatrixStruct&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Bview,</div>
@@ -541,7 +541,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span>          <span class="keyword">class </span>LocalOrdinal,</div>
 <div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span>          <span class="keyword">class </span>GlobalOrdinal,</div>
 <div class="line"><a id="l00460" name="l00460"></a><span class="lineno">  460</span>          <span class="keyword">class </span>LocalOrdinalViewType&gt;</div>
-<div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span><span class="keywordtype">void</span> KernelWrappers2&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode, LocalOrdinalViewType&gt;::jacobi_A_B_newmatrix_KokkosKernels(Scalar omega,</div>
+<div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span><span class="keywordtype">void</span> KernelWrappers2&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode, LocalOrdinalViewType&gt;::jacobi_A_B_newmatrix_KokkosKernels(<span class="keyword">typename</span> Teuchos::ScalarTraits&lt;Scalar&gt;::magnitudeType omega,</div>
 <div class="line"><a id="l00462" name="l00462"></a><span class="lineno">  462</span>                                                                                                                                                                   <span class="keyword">const</span> Vector&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Dinv,</div>
 <div class="line"><a id="l00463" name="l00463"></a><span class="lineno">  463</span>                                                                                                                                                                   CrsMatrixStruct&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Aview,</div>
 <div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span>                                                                                                                                                                   CrsMatrixStruct&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Bview,</div>
@@ -654,272 +654,273 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>    valuesC  = scalar_view_t(Kokkos::ViewAllocateWithoutInitializing(<span class="stringliteral">&quot;valuesC&quot;</span>), c_nnz_size);</div>
 <div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>  }</div>
 <div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span> </div>
-<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>  KokkosSparse::Experimental::spgemm_jacobi(&amp;kh, AnumRows, BnumRows, BnumCols,</div>
-<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>                                            Arowptr, Acolind, Avals, <span class="keyword">false</span>,</div>
-<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>                                            Browptr, Bcolind, Bvals, <span class="keyword">false</span>,</div>
-<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>                                            row_mapC, entriesC, valuesC,</div>
-<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>                                            omega, Dinv.getLocalViewDevice(Tpetra::Access::ReadOnly));</div>
-<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>  kh.destroy_spgemm_handle();</div>
-<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span> </div>
-<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span><span class="preprocessor">#ifdef HAVE_TPETRA_MMM_TIMINGS</span></div>
-<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span>  MM = Teuchos::null;</div>
-<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>  MM = rcp(<span class="keyword">new</span> TimeMonitor(*TimeMonitor::getNewTimer(prefix_mmm + std::string(<span class="stringliteral">&quot;Jacobi Newmatrix OpenMPSort&quot;</span>))));</div>
-<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span> </div>
-<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>  <span class="comment">// Sort &amp; set values</span></div>
-<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>  <span class="keywordflow">if</span> (params.is_null() || params-&gt;get(<span class="stringliteral">&quot;sort entries&quot;</span>, <span class="keyword">true</span>)) {</div>
-<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>    <span class="comment">// Tpetra&#39;s OpenMP SpGEMM results in almost sorted matrices. Use shell sort.</span></div>
-<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>    Import_Util::sortCrsEntries(row_mapC, entriesC, valuesC);</div>
-<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>  }</div>
-<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>  C.setAllValues(row_mapC, entriesC, valuesC);</div>
-<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span> </div>
-<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span><span class="preprocessor">#ifdef HAVE_TPETRA_MMM_TIMINGS</span></div>
-<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span>  MM = Teuchos::null;</div>
-<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span>  MM = rcp(<span class="keyword">new</span> TimeMonitor(*TimeMonitor::getNewTimer(prefix_mmm + std::string(<span class="stringliteral">&quot;Jacobi Newmatrix OpenMPESFC&quot;</span>))));</div>
-<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span> </div>
-<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span>  <span class="comment">// Final Fillcomplete</span></div>
-<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span>  Teuchos::RCP&lt;Teuchos::ParameterList&gt; labelList = rcp(<span class="keyword">new</span> Teuchos::ParameterList);</div>
-<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span>  labelList-&gt;set(<span class="stringliteral">&quot;Timer Label&quot;</span>, label);</div>
-<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>  <span class="keywordflow">if</span> (!params.is_null()) labelList-&gt;set(<span class="stringliteral">&quot;compute global constants&quot;</span>, params-&gt;get(<span class="stringliteral">&quot;compute global constants&quot;</span>, <span class="keyword">true</span>));</div>
-<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>  Teuchos::RCP&lt;const Export&lt;LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt; &gt; dummyExport;</div>
-<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>  C.expertStaticFillComplete(Bview.origMatrix-&gt;getDomainMap(), Aview.origMatrix-&gt;getRangeMap(), Cimport, dummyExport, labelList);</div>
-<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span>}</div>
-<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span> </div>
-<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span><span class="comment">/*********************************************************************************************************/</span></div>
-<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span><span class="keyword">template</span> &lt;<span class="keyword">class </span>Scalar,</div>
-<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>          <span class="keyword">class </span>LocalOrdinal,</div>
-<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>          <span class="keyword">class </span>GlobalOrdinal,</div>
-<div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span>          <span class="keyword">class </span>LocalOrdinalViewType&gt;</div>
-<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span><span class="keywordtype">void</span> KernelWrappers3&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode, LocalOrdinalViewType&gt;::mult_R_A_P_newmatrix_kernel_wrapper(CrsMatrixStruct&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Rview,</div>
-<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span>                                                                                                                                                                    CrsMatrixStruct&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Aview,</div>
-<div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span>                                                                                                                                                                    CrsMatrixStruct&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Pview,</div>
-<div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span>                                                                                                                                                                    <span class="keyword">const</span> LocalOrdinalViewType&amp; Acol2Prow,</div>
-<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span>                                                                                                                                                                    <span class="keyword">const</span> LocalOrdinalViewType&amp; Acol2PIrow,</div>
-<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>                                                                                                                                                                    <span class="keyword">const</span> LocalOrdinalViewType&amp; Pcol2Accol,</div>
-<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>                                                                                                                                                                    <span class="keyword">const</span> LocalOrdinalViewType&amp; PIcol2Accol,</div>
-<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>                                                                                                                                                                    CrsMatrix&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Ac,</div>
-<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>                                                                                                                                                                    Teuchos::RCP&lt;<span class="keyword">const</span> Import&lt;LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt; &gt; Acimport,</div>
-<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>                                                                                                                                                                    <span class="keyword">const</span> std::string&amp; label,</div>
-<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span>                                                                                                                                                                    <span class="keyword">const</span> Teuchos::RCP&lt;Teuchos::ParameterList&gt;&amp; params) {</div>
-<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span><span class="preprocessor">#ifdef HAVE_TPETRA_MMM_TIMINGS</span></div>
-<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span>  std::string prefix_mmm = std::string(<span class="stringliteral">&quot;TpetraExt &quot;</span>) + label + std::string(<span class="stringliteral">&quot;: &quot;</span>);</div>
-<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span>  <span class="keyword">using </span>Teuchos::TimeMonitor;</div>
-<div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span>  Teuchos::RCP&lt;TimeMonitor&gt; MM;</div>
-<div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span> </div>
-<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span>  <span class="comment">// Node-specific code</span></div>
-<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span>  std::string nodename(<span class="stringliteral">&quot;OpenMP&quot;</span>);</div>
-<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span> </div>
-<div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span>  <span class="comment">// Options</span></div>
-<div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span>  std::string myalg(<span class="stringliteral">&quot;LTG&quot;</span>);</div>
-<div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span> </div>
-<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span>  <span class="keywordflow">if</span> (!params.is_null()) {</div>
-<div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span>    <span class="keywordflow">if</span> (params-&gt;isParameter(<span class="stringliteral">&quot;openmp: rap algorithm&quot;</span>))</div>
-<div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span>      myalg = params-&gt;get(<span class="stringliteral">&quot;openmp: rap algorithm&quot;</span>, myalg);</div>
-<div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span>  }</div>
-<div class="line"><a id="l00638" name="l00638"></a><span class="lineno">  638</span> </div>
-<div class="line"><a id="l00639" name="l00639"></a><span class="lineno">  639</span>  <span class="keywordflow">if</span> (myalg == <span class="stringliteral">&quot;LTG&quot;</span>) {</div>
-<div class="line"><a id="l00640" name="l00640"></a><span class="lineno">  640</span>    <span class="comment">// Use the LTG kernel if requested</span></div>
-<div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span>    ::Tpetra::MatrixMatrix::ExtraKernels::mult_R_A_P_newmatrix_LowThreadGustavsonKernel(Rview, Aview, Pview, Acol2Prow, Acol2PIrow, Pcol2Accol, PIcol2Accol, Ac, Acimport, label, params);</div>
-<div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00643" name="l00643"></a><span class="lineno">  643</span>    <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Tpetra::MatrixMatrix::R_A_P newmatrix unknown kernel&quot;</span>);</div>
-<div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span>  }</div>
-<div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span>}</div>
-<div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span> </div>
-<div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span><span class="comment">/*********************************************************************************************************/</span></div>
-<div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span><span class="keyword">template</span> &lt;<span class="keyword">class </span>Scalar,</div>
-<div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span>          <span class="keyword">class </span>LocalOrdinal,</div>
-<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span>          <span class="keyword">class </span>GlobalOrdinal,</div>
-<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>          <span class="keyword">class </span>LocalOrdinalViewType&gt;</div>
-<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span><span class="keywordtype">void</span> KernelWrappers3&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode, LocalOrdinalViewType&gt;::mult_R_A_P_reuse_kernel_wrapper(</div>
-<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span>    CrsMatrixStruct&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Rview,</div>
-<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span>    CrsMatrixStruct&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Aview,</div>
-<div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span>    CrsMatrixStruct&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Pview,</div>
-<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span> </div>
-<div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span>    <span class="keyword">const</span> LocalOrdinalViewType&amp; Acol2Prow,</div>
-<div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span>    <span class="keyword">const</span> LocalOrdinalViewType&amp; Acol2Irow,</div>
-<div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span>    <span class="keyword">const</span> LocalOrdinalViewType&amp; Pcol2Ccol,</div>
-<div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span>    <span class="keyword">const</span> LocalOrdinalViewType&amp; Icol2Ccol,</div>
-<div class="line"><a id="l00661" name="l00661"></a><span class="lineno">  661</span>    CrsMatrix&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; C,</div>
-<div class="line"><a id="l00662" name="l00662"></a><span class="lineno">  662</span>    Teuchos::RCP&lt;<span class="keyword">const</span> Import&lt;LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt; &gt; Cimport,</div>
-<div class="line"><a id="l00663" name="l00663"></a><span class="lineno">  663</span>    <span class="keyword">const</span> std::string&amp; label,</div>
-<div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span>    <span class="keyword">const</span> Teuchos::RCP&lt;Teuchos::ParameterList&gt;&amp; params) {</div>
-<div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span><span class="preprocessor">#ifdef HAVE_TPETRA_MMM_TIMINGS</span></div>
-<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span>  std::string prefix_mmm = std::string(<span class="stringliteral">&quot;TpetraExt &quot;</span>) + label + std::string(<span class="stringliteral">&quot;: &quot;</span>);</div>
-<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span>  <span class="keyword">using </span>Teuchos::TimeMonitor;</div>
-<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>  Teuchos::RCP&lt;TimeMonitor&gt; MM;</div>
-<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span> </div>
-<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span>  <span class="comment">// Lots and lots of typedefs</span></div>
-<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span>  <span class="keyword">using </span>Teuchos::RCP;</div>
-<div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span> </div>
-<div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span>  <span class="comment">// Options</span></div>
-<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span>  std::string myalg(<span class="stringliteral">&quot;LTG&quot;</span>);</div>
-<div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span>  <span class="keywordflow">if</span> (!params.is_null()) {</div>
-<div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span>    <span class="keywordflow">if</span> (params-&gt;isParameter(<span class="stringliteral">&quot;openmp: rap algorithm&quot;</span>))</div>
-<div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span>      myalg = params-&gt;get(<span class="stringliteral">&quot;openmp: rap algorithm&quot;</span>, myalg);</div>
-<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span>  }</div>
-<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span> </div>
-<div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span>  <span class="keywordflow">if</span> (myalg == <span class="stringliteral">&quot;LTG&quot;</span>) {</div>
-<div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span>    <span class="comment">// Use the LTG kernel if requested</span></div>
-<div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span>    ::Tpetra::MatrixMatrix::ExtraKernels::mult_R_A_P_reuse_LowThreadGustavsonKernel(Rview, Aview, Pview, Acol2Prow, Acol2Irow, Pcol2Ccol, Icol2Ccol, C, Cimport, label, params);</div>
-<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span>    <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Tpetra::MatrixMatrix::R_A_P newmatrix unknown kernel&quot;</span>);</div>
-<div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span>  }</div>
-<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span> </div>
-<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span><span class="preprocessor">#ifdef HAVE_TPETRA_MMM_TIMINGS</span></div>
-<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>  MM = Teuchos::null;</div>
-<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>  MM = rcp(<span class="keyword">new</span> TimeMonitor(*TimeMonitor::getNewTimer(prefix_mmm + std::string(<span class="stringliteral">&quot;RAP Reuse OpenMPESFC&quot;</span>))));</div>
-<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span>  C.fillComplete(C.getDomainMap(), C.getRangeMap());</div>
-<div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span>}</div>
-<div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span> </div>
-<div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span><span class="comment">/*********************************************************************************************************/</span></div>
-<div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span><span class="keyword">template</span> &lt;<span class="keyword">class </span>Scalar,</div>
-<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>          <span class="keyword">class </span>LocalOrdinal,</div>
-<div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span>          <span class="keyword">class </span>GlobalOrdinal,</div>
-<div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span>          <span class="keyword">class </span>LocalOrdinalViewType&gt;</div>
-<div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span><span class="keywordtype">void</span> KernelWrappers3&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode, LocalOrdinalViewType&gt;::mult_PT_A_P_newmatrix_kernel_wrapper(CrsMatrixStruct&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Aview,</div>
-<div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span> </div>
-<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span>                                                                                                                                                                     CrsMatrixStruct&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Pview,</div>
-<div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span>                                                                                                                                                                     <span class="keyword">const</span> LocalOrdinalViewType&amp; Acol2Prow,</div>
-<div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span>                                                                                                                                                                     <span class="keyword">const</span> LocalOrdinalViewType&amp; Acol2PIrow,</div>
-<div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span>                                                                                                                                                                     <span class="keyword">const</span> LocalOrdinalViewType&amp; Pcol2Accol,</div>
-<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span>                                                                                                                                                                     <span class="keyword">const</span> LocalOrdinalViewType&amp; PIcol2Accol,</div>
-<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span>                                                                                                                                                                     CrsMatrix&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Ac,</div>
-<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span>                                                                                                                                                                     Teuchos::RCP&lt;<span class="keyword">const</span> Import&lt;LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt; &gt; Acimport,</div>
-<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span>                                                                                                                                                                     <span class="keyword">const</span> std::string&amp; label,</div>
-<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span>                                                                                                                                                                     <span class="keyword">const</span> Teuchos::RCP&lt;Teuchos::ParameterList&gt;&amp; params) {</div>
-<div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span><span class="preprocessor">#ifdef HAVE_TPETRA_MMM_TIMINGS</span></div>
-<div class="line"><a id="l00712" name="l00712"></a><span class="lineno">  712</span>  std::string prefix_mmm = std::string(<span class="stringliteral">&quot;TpetraExt &quot;</span>) + label + std::string(<span class="stringliteral">&quot;: &quot;</span>);</div>
-<div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span>  <span class="keyword">using </span>Teuchos::TimeMonitor;</div>
-<div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span>  Teuchos::RCP&lt;TimeMonitor&gt; MM;</div>
-<div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span> </div>
-<div class="line"><a id="l00717" name="l00717"></a><span class="lineno">  717</span>  <span class="comment">// Node-specific code</span></div>
-<div class="line"><a id="l00718" name="l00718"></a><span class="lineno">  718</span>  std::string nodename(<span class="stringliteral">&quot;OpenMP&quot;</span>);</div>
-<div class="line"><a id="l00719" name="l00719"></a><span class="lineno">  719</span> </div>
-<div class="line"><a id="l00720" name="l00720"></a><span class="lineno">  720</span>  <span class="comment">// Options</span></div>
-<div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span>  std::string myalg(<span class="stringliteral">&quot;LTG&quot;</span>);</div>
-<div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span> </div>
-<div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span>  <span class="keywordflow">if</span> (!params.is_null()) {</div>
-<div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span>    <span class="keywordflow">if</span> (params-&gt;isParameter(<span class="stringliteral">&quot;openmp: ptap algorithm&quot;</span>))</div>
-<div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span>      myalg = params-&gt;get(<span class="stringliteral">&quot;openmp: ptap algorithm&quot;</span>, myalg);</div>
-<div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span>  }</div>
-<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span> </div>
-<div class="line"><a id="l00728" name="l00728"></a><span class="lineno">  728</span>  <span class="keywordflow">if</span> (myalg == <span class="stringliteral">&quot;LTG&quot;</span>) {</div>
-<div class="line"><a id="l00729" name="l00729"></a><span class="lineno">  729</span><span class="preprocessor">#ifdef HAVE_TPETRA_MMM_TIMINGS</span></div>
-<div class="line"><a id="l00730" name="l00730"></a><span class="lineno">  730</span>    MM = Teuchos::null;</div>
-<div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span>    MM = rcp(<span class="keyword">new</span> TimeMonitor(*TimeMonitor::getNewTimer(prefix_mmm + std::string(<span class="stringliteral">&quot;PTAP local transpose&quot;</span>))));</div>
-<div class="line"><a id="l00732" name="l00732"></a><span class="lineno">  732</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span> </div>
-<div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span>    <span class="keyword">using </span>Teuchos::ParameterList;</div>
-<div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span>    <span class="keyword">using </span>Teuchos::RCP;</div>
-<div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span>    <span class="keyword">using </span>LO = LocalOrdinal;</div>
-<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>    <span class="keyword">using </span>GO = GlobalOrdinal;</div>
-<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>    <span class="keyword">using </span>SC = Scalar;</div>
-<div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span> </div>
-<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span>    <span class="comment">// We don&#39;t need a kernel-level PTAP, we just transpose here</span></div>
-<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span>    <span class="keyword">using </span>transposer_type =</div>
-<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>        RowMatrixTransposer&lt;SC, LO, GO, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;;</div>
-<div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span>    transposer_type transposer(Pview.origMatrix, label + <span class="stringliteral">&quot;XP: &quot;</span>);</div>
-<div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span>    RCP&lt;ParameterList&gt; transposeParams(<span class="keyword">new</span> ParameterList);</div>
-<div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span>    <span class="keywordflow">if</span> (!params.is_null()) {</div>
-<div class="line"><a id="l00746" name="l00746"></a><span class="lineno">  746</span>      transposeParams-&gt;set(<span class="stringliteral">&quot;compute global constants&quot;</span>,</div>
-<div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span>                           params-&gt;get(<span class="stringliteral">&quot;compute global constants: temporaries&quot;</span>,</div>
-<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>                                       <span class="keyword">false</span>));</div>
-<div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>    }</div>
-<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>    transposeParams-&gt;set(<span class="stringliteral">&quot;sort&quot;</span>, <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span>    RCP&lt;CrsMatrix&lt;SC, LO, GO, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt; &gt; Ptrans =</div>
-<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span>        transposer.createTransposeLocal(transposeParams);</div>
-<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>    CrsMatrixStruct&lt;SC, LO, GO, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt; Rview;</div>
-<div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span>    Rview.origMatrix = Ptrans;</div>
-<div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span> </div>
-<div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span>    using ::Tpetra::MatrixMatrix::ExtraKernels::mult_R_A_P_newmatrix_LowThreadGustavsonKernel;</div>
-<div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span>    mult_R_A_P_newmatrix_LowThreadGustavsonKernel(Rview, Aview, Pview, Acol2Prow, Acol2PIrow, Pcol2Accol,</div>
-<div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span>                                                  PIcol2Accol, Ac, Acimport, label, params);</div>
-<div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span>    <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Tpetra::MatrixMatrix::PT_A_P newmatrix unknown kernel&quot;</span>);</div>
-<div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span>  }</div>
-<div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span>}</div>
-<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span> </div>
-<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span><span class="comment">/*********************************************************************************************************/</span></div>
-<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span><span class="keyword">template</span> &lt;<span class="keyword">class </span>Scalar,</div>
-<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span>          <span class="keyword">class </span>LocalOrdinal,</div>
-<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span>          <span class="keyword">class </span>GlobalOrdinal,</div>
-<div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>          <span class="keyword">class </span>LocalOrdinalViewType&gt;</div>
-<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span><span class="keywordtype">void</span> KernelWrappers3&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode, LocalOrdinalViewType&gt;::mult_PT_A_P_reuse_kernel_wrapper(CrsMatrixStruct&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Aview,</div>
-<div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span> </div>
-<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>                                                                                                                                                                 CrsMatrixStruct&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Pview,</div>
-<div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span>                                                                                                                                                                 <span class="keyword">const</span> LocalOrdinalViewType&amp; Acol2Prow,</div>
-<div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span>                                                                                                                                                                 <span class="keyword">const</span> LocalOrdinalViewType&amp; Acol2PIrow,</div>
-<div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span>                                                                                                                                                                 <span class="keyword">const</span> LocalOrdinalViewType&amp; Pcol2Accol,</div>
-<div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span>                                                                                                                                                                 <span class="keyword">const</span> LocalOrdinalViewType&amp; PIcol2Accol,</div>
-<div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span>                                                                                                                                                                 CrsMatrix&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Ac,</div>
-<div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span>                                                                                                                                                                 Teuchos::RCP&lt;<span class="keyword">const</span> Import&lt;LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt; &gt; Acimport,</div>
-<div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span>                                                                                                                                                                 <span class="keyword">const</span> std::string&amp; label,</div>
-<div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span>                                                                                                                                                                 <span class="keyword">const</span> Teuchos::RCP&lt;Teuchos::ParameterList&gt;&amp; params) {</div>
-<div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span><span class="preprocessor">#ifdef HAVE_TPETRA_MMM_TIMINGS</span></div>
-<div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span>  std::string prefix_mmm = std::string(<span class="stringliteral">&quot;TpetraExt &quot;</span>) + label + std::string(<span class="stringliteral">&quot;: &quot;</span>);</div>
-<div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span>  <span class="keyword">using </span>Teuchos::TimeMonitor;</div>
-<div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span>  Teuchos::RCP&lt;TimeMonitor&gt; MM;</div>
-<div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span> </div>
-<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span>  <span class="comment">// Node-specific code</span></div>
-<div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span>  std::string nodename(<span class="stringliteral">&quot;OpenMP&quot;</span>);</div>
-<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span> </div>
-<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span>  <span class="comment">// Options</span></div>
-<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span>  std::string myalg(<span class="stringliteral">&quot;LTG&quot;</span>);</div>
-<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span> </div>
-<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>  <span class="keywordflow">if</span> (!params.is_null()) {</div>
-<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>    <span class="keywordflow">if</span> (params-&gt;isParameter(<span class="stringliteral">&quot;openmp: ptap algorithm&quot;</span>))</div>
-<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>      myalg = params-&gt;get(<span class="stringliteral">&quot;openmp: ptap algorithm&quot;</span>, myalg);</div>
-<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span>  }</div>
-<div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span> </div>
-<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span>  <span class="keywordflow">if</span> (myalg == <span class="stringliteral">&quot;LTG&quot;</span>) {</div>
-<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span><span class="preprocessor">#ifdef HAVE_TPETRA_MMM_TIMINGS</span></div>
-<div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span>    MM = Teuchos::null;</div>
-<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span>    MM = rcp(<span class="keyword">new</span> TimeMonitor(*TimeMonitor::getNewTimer(prefix_mmm + std::string(<span class="stringliteral">&quot;PTAP local transpose&quot;</span>))));</div>
-<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span> </div>
-<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span>    <span class="keyword">using </span>Teuchos::ParameterList;</div>
-<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span>    <span class="keyword">using </span>Teuchos::RCP;</div>
-<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span>    <span class="keyword">using </span>LO = LocalOrdinal;</div>
-<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span>    <span class="keyword">using </span>GO = GlobalOrdinal;</div>
-<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span>    <span class="keyword">using </span>SC = Scalar;</div>
-<div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span> </div>
-<div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span>    <span class="comment">// We don&#39;t need a kernel-level PTAP, we just transpose here</span></div>
-<div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span>    <span class="keyword">using </span>transposer_type =</div>
-<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>        RowMatrixTransposer&lt;SC, LO, GO, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;;</div>
-<div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span>    transposer_type transposer(Pview.origMatrix, label + <span class="stringliteral">&quot;XP: &quot;</span>);</div>
-<div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span>    RCP&lt;ParameterList&gt; transposeParams(<span class="keyword">new</span> ParameterList);</div>
-<div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span>    <span class="keywordflow">if</span> (!params.is_null()) {</div>
-<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span>      transposeParams-&gt;set(<span class="stringliteral">&quot;compute global constants&quot;</span>,</div>
-<div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span>                           params-&gt;get(<span class="stringliteral">&quot;compute global constants: temporaries&quot;</span>,</div>
-<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span>                                       <span class="keyword">false</span>));</div>
-<div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span>    }</div>
-<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>    transposeParams-&gt;set(<span class="stringliteral">&quot;sort&quot;</span>, <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span>    RCP&lt;CrsMatrix&lt;SC, LO, GO, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt; &gt; Ptrans =</div>
-<div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span>        transposer.createTransposeLocal(transposeParams);</div>
-<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>    CrsMatrixStruct&lt;SC, LO, GO, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt; Rview;</div>
-<div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span>    Rview.origMatrix = Ptrans;</div>
-<div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span> </div>
-<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>    using ::Tpetra::MatrixMatrix::ExtraKernels::mult_R_A_P_reuse_LowThreadGustavsonKernel;</div>
-<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span>    mult_R_A_P_reuse_LowThreadGustavsonKernel(Rview, Aview, Pview, Acol2Prow, Acol2PIrow, Pcol2Accol,</div>
-<div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span>                                              PIcol2Accol, Ac, Acimport, label, params);</div>
-<div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span>    <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Tpetra::MatrixMatrix::PT_A_P reuse unknown kernel&quot;</span>);</div>
-<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span>  }</div>
-<div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span>  Ac.fillComplete(Ac.getDomainMap(), Ac.getRangeMap());</div>
-<div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>}</div>
-<div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span> </div>
-<div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span>}  <span class="comment">// namespace MMdetails</span></div>
-<div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span>}  <span class="comment">// namespace Tpetra</span></div>
-<div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span> </div>
-<div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span><span class="preprocessor">#endif  </span><span class="comment">// OpenMP</span></div>
-<div class="line"><a id="l00838" name="l00838"></a><span class="lineno">  838</span> </div>
-<div class="line"><a id="l00839" name="l00839"></a><span class="lineno">  839</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>  <span class="keyword">const</span> Scalar jacobiOmega = omega * Teuchos::ScalarTraits&lt;Scalar&gt;::one();</div>
+<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>  KokkosSparse::Experimental::spgemm_jacobi(&amp;kh, AnumRows, BnumRows, BnumCols,</div>
+<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>                                            Arowptr, Acolind, Avals, <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>                                            Browptr, Bcolind, Bvals, <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>                                            row_mapC, entriesC, valuesC,</div>
+<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>                                            jacobiOmega, Dinv.getLocalViewDevice(Tpetra::Access::ReadOnly));</div>
+<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span>  kh.destroy_spgemm_handle();</div>
+<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span> </div>
+<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span><span class="preprocessor">#ifdef HAVE_TPETRA_MMM_TIMINGS</span></div>
+<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>  MM = Teuchos::null;</div>
+<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span>  MM = rcp(<span class="keyword">new</span> TimeMonitor(*TimeMonitor::getNewTimer(prefix_mmm + std::string(<span class="stringliteral">&quot;Jacobi Newmatrix OpenMPSort&quot;</span>))));</div>
+<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span> </div>
+<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>  <span class="comment">// Sort &amp; set values</span></div>
+<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>  <span class="keywordflow">if</span> (params.is_null() || params-&gt;get(<span class="stringliteral">&quot;sort entries&quot;</span>, <span class="keyword">true</span>)) {</div>
+<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>    <span class="comment">// Tpetra&#39;s OpenMP SpGEMM results in almost sorted matrices. Use shell sort.</span></div>
+<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>    Import_Util::sortCrsEntries(row_mapC, entriesC, valuesC);</div>
+<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>  }</div>
+<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>  C.setAllValues(row_mapC, entriesC, valuesC);</div>
+<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span> </div>
+<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span><span class="preprocessor">#ifdef HAVE_TPETRA_MMM_TIMINGS</span></div>
+<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span>  MM = Teuchos::null;</div>
+<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span>  MM = rcp(<span class="keyword">new</span> TimeMonitor(*TimeMonitor::getNewTimer(prefix_mmm + std::string(<span class="stringliteral">&quot;Jacobi Newmatrix OpenMPESFC&quot;</span>))));</div>
+<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span> </div>
+<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span>  <span class="comment">// Final Fillcomplete</span></div>
+<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span>  Teuchos::RCP&lt;Teuchos::ParameterList&gt; labelList = rcp(<span class="keyword">new</span> Teuchos::ParameterList);</div>
+<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>  labelList-&gt;set(<span class="stringliteral">&quot;Timer Label&quot;</span>, label);</div>
+<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>  <span class="keywordflow">if</span> (!params.is_null()) labelList-&gt;set(<span class="stringliteral">&quot;compute global constants&quot;</span>, params-&gt;get(<span class="stringliteral">&quot;compute global constants&quot;</span>, <span class="keyword">true</span>));</div>
+<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>  Teuchos::RCP&lt;const Export&lt;LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt; &gt; dummyExport;</div>
+<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span>  C.expertStaticFillComplete(Bview.origMatrix-&gt;getDomainMap(), Aview.origMatrix-&gt;getRangeMap(), Cimport, dummyExport, labelList);</div>
+<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>}</div>
+<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span> </div>
+<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span><span class="comment">/*********************************************************************************************************/</span></div>
+<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span><span class="keyword">template</span> &lt;<span class="keyword">class </span>Scalar,</div>
+<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>          <span class="keyword">class </span>LocalOrdinal,</div>
+<div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span>          <span class="keyword">class </span>GlobalOrdinal,</div>
+<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>          <span class="keyword">class </span>LocalOrdinalViewType&gt;</div>
+<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span><span class="keywordtype">void</span> KernelWrappers3&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode, LocalOrdinalViewType&gt;::mult_R_A_P_newmatrix_kernel_wrapper(CrsMatrixStruct&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Rview,</div>
+<div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span>                                                                                                                                                                    CrsMatrixStruct&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Aview,</div>
+<div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span>                                                                                                                                                                    CrsMatrixStruct&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Pview,</div>
+<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span>                                                                                                                                                                    <span class="keyword">const</span> LocalOrdinalViewType&amp; Acol2Prow,</div>
+<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>                                                                                                                                                                    <span class="keyword">const</span> LocalOrdinalViewType&amp; Acol2PIrow,</div>
+<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>                                                                                                                                                                    <span class="keyword">const</span> LocalOrdinalViewType&amp; Pcol2Accol,</div>
+<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>                                                                                                                                                                    <span class="keyword">const</span> LocalOrdinalViewType&amp; PIcol2Accol,</div>
+<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>                                                                                                                                                                    CrsMatrix&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Ac,</div>
+<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>                                                                                                                                                                    Teuchos::RCP&lt;<span class="keyword">const</span> Import&lt;LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt; &gt; Acimport,</div>
+<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span>                                                                                                                                                                    <span class="keyword">const</span> std::string&amp; label,</div>
+<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>                                                                                                                                                                    <span class="keyword">const</span> Teuchos::RCP&lt;Teuchos::ParameterList&gt;&amp; params) {</div>
+<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span><span class="preprocessor">#ifdef HAVE_TPETRA_MMM_TIMINGS</span></div>
+<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span>  std::string prefix_mmm = std::string(<span class="stringliteral">&quot;TpetraExt &quot;</span>) + label + std::string(<span class="stringliteral">&quot;: &quot;</span>);</div>
+<div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span>  <span class="keyword">using </span>Teuchos::TimeMonitor;</div>
+<div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span>  Teuchos::RCP&lt;TimeMonitor&gt; MM;</div>
+<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span> </div>
+<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span>  <span class="comment">// Node-specific code</span></div>
+<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span>  std::string nodename(<span class="stringliteral">&quot;OpenMP&quot;</span>);</div>
+<div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span> </div>
+<div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span>  <span class="comment">// Options</span></div>
+<div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span>  std::string myalg(<span class="stringliteral">&quot;LTG&quot;</span>);</div>
+<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span> </div>
+<div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span>  <span class="keywordflow">if</span> (!params.is_null()) {</div>
+<div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span>    <span class="keywordflow">if</span> (params-&gt;isParameter(<span class="stringliteral">&quot;openmp: rap algorithm&quot;</span>))</div>
+<div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span>      myalg = params-&gt;get(<span class="stringliteral">&quot;openmp: rap algorithm&quot;</span>, myalg);</div>
+<div class="line"><a id="l00638" name="l00638"></a><span class="lineno">  638</span>  }</div>
+<div class="line"><a id="l00639" name="l00639"></a><span class="lineno">  639</span> </div>
+<div class="line"><a id="l00640" name="l00640"></a><span class="lineno">  640</span>  <span class="keywordflow">if</span> (myalg == <span class="stringliteral">&quot;LTG&quot;</span>) {</div>
+<div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span>    <span class="comment">// Use the LTG kernel if requested</span></div>
+<div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span>    ::Tpetra::MatrixMatrix::ExtraKernels::mult_R_A_P_newmatrix_LowThreadGustavsonKernel(Rview, Aview, Pview, Acol2Prow, Acol2PIrow, Pcol2Accol, PIcol2Accol, Ac, Acimport, label, params);</div>
+<div class="line"><a id="l00643" name="l00643"></a><span class="lineno">  643</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span>    <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Tpetra::MatrixMatrix::R_A_P newmatrix unknown kernel&quot;</span>);</div>
+<div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span>  }</div>
+<div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span>}</div>
+<div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span> </div>
+<div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span><span class="comment">/*********************************************************************************************************/</span></div>
+<div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span><span class="keyword">template</span> &lt;<span class="keyword">class </span>Scalar,</div>
+<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span>          <span class="keyword">class </span>LocalOrdinal,</div>
+<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>          <span class="keyword">class </span>GlobalOrdinal,</div>
+<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span>          <span class="keyword">class </span>LocalOrdinalViewType&gt;</div>
+<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span><span class="keywordtype">void</span> KernelWrappers3&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode, LocalOrdinalViewType&gt;::mult_R_A_P_reuse_kernel_wrapper(</div>
+<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span>    CrsMatrixStruct&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Rview,</div>
+<div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span>    CrsMatrixStruct&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Aview,</div>
+<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span>    CrsMatrixStruct&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Pview,</div>
+<div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span> </div>
+<div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span>    <span class="keyword">const</span> LocalOrdinalViewType&amp; Acol2Prow,</div>
+<div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span>    <span class="keyword">const</span> LocalOrdinalViewType&amp; Acol2Irow,</div>
+<div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span>    <span class="keyword">const</span> LocalOrdinalViewType&amp; Pcol2Ccol,</div>
+<div class="line"><a id="l00661" name="l00661"></a><span class="lineno">  661</span>    <span class="keyword">const</span> LocalOrdinalViewType&amp; Icol2Ccol,</div>
+<div class="line"><a id="l00662" name="l00662"></a><span class="lineno">  662</span>    CrsMatrix&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; C,</div>
+<div class="line"><a id="l00663" name="l00663"></a><span class="lineno">  663</span>    Teuchos::RCP&lt;<span class="keyword">const</span> Import&lt;LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt; &gt; Cimport,</div>
+<div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span>    <span class="keyword">const</span> std::string&amp; label,</div>
+<div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span>    <span class="keyword">const</span> Teuchos::RCP&lt;Teuchos::ParameterList&gt;&amp; params) {</div>
+<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span><span class="preprocessor">#ifdef HAVE_TPETRA_MMM_TIMINGS</span></div>
+<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span>  std::string prefix_mmm = std::string(<span class="stringliteral">&quot;TpetraExt &quot;</span>) + label + std::string(<span class="stringliteral">&quot;: &quot;</span>);</div>
+<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>  <span class="keyword">using </span>Teuchos::TimeMonitor;</div>
+<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span>  Teuchos::RCP&lt;TimeMonitor&gt; MM;</div>
+<div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span> </div>
+<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span>  <span class="comment">// Lots and lots of typedefs</span></div>
+<div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span>  <span class="keyword">using </span>Teuchos::RCP;</div>
+<div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span> </div>
+<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span>  <span class="comment">// Options</span></div>
+<div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span>  std::string myalg(<span class="stringliteral">&quot;LTG&quot;</span>);</div>
+<div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span>  <span class="keywordflow">if</span> (!params.is_null()) {</div>
+<div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span>    <span class="keywordflow">if</span> (params-&gt;isParameter(<span class="stringliteral">&quot;openmp: rap algorithm&quot;</span>))</div>
+<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span>      myalg = params-&gt;get(<span class="stringliteral">&quot;openmp: rap algorithm&quot;</span>, myalg);</div>
+<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span>  }</div>
+<div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span> </div>
+<div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span>  <span class="keywordflow">if</span> (myalg == <span class="stringliteral">&quot;LTG&quot;</span>) {</div>
+<div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span>    <span class="comment">// Use the LTG kernel if requested</span></div>
+<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>    ::Tpetra::MatrixMatrix::ExtraKernels::mult_R_A_P_reuse_LowThreadGustavsonKernel(Rview, Aview, Pview, Acol2Prow, Acol2Irow, Pcol2Ccol, Icol2Ccol, C, Cimport, label, params);</div>
+<div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span>    <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Tpetra::MatrixMatrix::R_A_P newmatrix unknown kernel&quot;</span>);</div>
+<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span>  }</div>
+<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span> </div>
+<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span><span class="preprocessor">#ifdef HAVE_TPETRA_MMM_TIMINGS</span></div>
+<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>  MM = Teuchos::null;</div>
+<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>  MM = rcp(<span class="keyword">new</span> TimeMonitor(*TimeMonitor::getNewTimer(prefix_mmm + std::string(<span class="stringliteral">&quot;RAP Reuse OpenMPESFC&quot;</span>))));</div>
+<div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span>  C.fillComplete(C.getDomainMap(), C.getRangeMap());</div>
+<div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span>}</div>
+<div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span> </div>
+<div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span><span class="comment">/*********************************************************************************************************/</span></div>
+<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span><span class="keyword">template</span> &lt;<span class="keyword">class </span>Scalar,</div>
+<div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span>          <span class="keyword">class </span>LocalOrdinal,</div>
+<div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span>          <span class="keyword">class </span>GlobalOrdinal,</div>
+<div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span>          <span class="keyword">class </span>LocalOrdinalViewType&gt;</div>
+<div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span><span class="keywordtype">void</span> KernelWrappers3&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode, LocalOrdinalViewType&gt;::mult_PT_A_P_newmatrix_kernel_wrapper(CrsMatrixStruct&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Aview,</div>
+<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span> </div>
+<div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span>                                                                                                                                                                     CrsMatrixStruct&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Pview,</div>
+<div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span>                                                                                                                                                                     <span class="keyword">const</span> LocalOrdinalViewType&amp; Acol2Prow,</div>
+<div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span>                                                                                                                                                                     <span class="keyword">const</span> LocalOrdinalViewType&amp; Acol2PIrow,</div>
+<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span>                                                                                                                                                                     <span class="keyword">const</span> LocalOrdinalViewType&amp; Pcol2Accol,</div>
+<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span>                                                                                                                                                                     <span class="keyword">const</span> LocalOrdinalViewType&amp; PIcol2Accol,</div>
+<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span>                                                                                                                                                                     CrsMatrix&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Ac,</div>
+<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span>                                                                                                                                                                     Teuchos::RCP&lt;<span class="keyword">const</span> Import&lt;LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt; &gt; Acimport,</div>
+<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span>                                                                                                                                                                     <span class="keyword">const</span> std::string&amp; label,</div>
+<div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span>                                                                                                                                                                     <span class="keyword">const</span> Teuchos::RCP&lt;Teuchos::ParameterList&gt;&amp; params) {</div>
+<div class="line"><a id="l00712" name="l00712"></a><span class="lineno">  712</span><span class="preprocessor">#ifdef HAVE_TPETRA_MMM_TIMINGS</span></div>
+<div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span>  std::string prefix_mmm = std::string(<span class="stringliteral">&quot;TpetraExt &quot;</span>) + label + std::string(<span class="stringliteral">&quot;: &quot;</span>);</div>
+<div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span>  <span class="keyword">using </span>Teuchos::TimeMonitor;</div>
+<div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span>  Teuchos::RCP&lt;TimeMonitor&gt; MM;</div>
+<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00717" name="l00717"></a><span class="lineno">  717</span> </div>
+<div class="line"><a id="l00718" name="l00718"></a><span class="lineno">  718</span>  <span class="comment">// Node-specific code</span></div>
+<div class="line"><a id="l00719" name="l00719"></a><span class="lineno">  719</span>  std::string nodename(<span class="stringliteral">&quot;OpenMP&quot;</span>);</div>
+<div class="line"><a id="l00720" name="l00720"></a><span class="lineno">  720</span> </div>
+<div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span>  <span class="comment">// Options</span></div>
+<div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span>  std::string myalg(<span class="stringliteral">&quot;LTG&quot;</span>);</div>
+<div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span> </div>
+<div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span>  <span class="keywordflow">if</span> (!params.is_null()) {</div>
+<div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span>    <span class="keywordflow">if</span> (params-&gt;isParameter(<span class="stringliteral">&quot;openmp: ptap algorithm&quot;</span>))</div>
+<div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span>      myalg = params-&gt;get(<span class="stringliteral">&quot;openmp: ptap algorithm&quot;</span>, myalg);</div>
+<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span>  }</div>
+<div class="line"><a id="l00728" name="l00728"></a><span class="lineno">  728</span> </div>
+<div class="line"><a id="l00729" name="l00729"></a><span class="lineno">  729</span>  <span class="keywordflow">if</span> (myalg == <span class="stringliteral">&quot;LTG&quot;</span>) {</div>
+<div class="line"><a id="l00730" name="l00730"></a><span class="lineno">  730</span><span class="preprocessor">#ifdef HAVE_TPETRA_MMM_TIMINGS</span></div>
+<div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span>    MM = Teuchos::null;</div>
+<div class="line"><a id="l00732" name="l00732"></a><span class="lineno">  732</span>    MM = rcp(<span class="keyword">new</span> TimeMonitor(*TimeMonitor::getNewTimer(prefix_mmm + std::string(<span class="stringliteral">&quot;PTAP local transpose&quot;</span>))));</div>
+<div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span> </div>
+<div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span>    <span class="keyword">using </span>Teuchos::ParameterList;</div>
+<div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span>    <span class="keyword">using </span>Teuchos::RCP;</div>
+<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>    <span class="keyword">using </span>LO = LocalOrdinal;</div>
+<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>    <span class="keyword">using </span>GO = GlobalOrdinal;</div>
+<div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span>    <span class="keyword">using </span>SC = Scalar;</div>
+<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span> </div>
+<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span>    <span class="comment">// We don&#39;t need a kernel-level PTAP, we just transpose here</span></div>
+<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>    <span class="keyword">using </span>transposer_type =</div>
+<div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span>        RowMatrixTransposer&lt;SC, LO, GO, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;;</div>
+<div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span>    transposer_type transposer(Pview.origMatrix, label + <span class="stringliteral">&quot;XP: &quot;</span>);</div>
+<div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span>    RCP&lt;ParameterList&gt; transposeParams(<span class="keyword">new</span> ParameterList);</div>
+<div class="line"><a id="l00746" name="l00746"></a><span class="lineno">  746</span>    <span class="keywordflow">if</span> (!params.is_null()) {</div>
+<div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span>      transposeParams-&gt;set(<span class="stringliteral">&quot;compute global constants&quot;</span>,</div>
+<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>                           params-&gt;get(<span class="stringliteral">&quot;compute global constants: temporaries&quot;</span>,</div>
+<div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>                                       <span class="keyword">false</span>));</div>
+<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>    }</div>
+<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span>    transposeParams-&gt;set(<span class="stringliteral">&quot;sort&quot;</span>, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span>    RCP&lt;CrsMatrix&lt;SC, LO, GO, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt; &gt; Ptrans =</div>
+<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>        transposer.createTransposeLocal(transposeParams);</div>
+<div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span>    CrsMatrixStruct&lt;SC, LO, GO, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt; Rview;</div>
+<div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span>    Rview.origMatrix = Ptrans;</div>
+<div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span> </div>
+<div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span>    using ::Tpetra::MatrixMatrix::ExtraKernels::mult_R_A_P_newmatrix_LowThreadGustavsonKernel;</div>
+<div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span>    mult_R_A_P_newmatrix_LowThreadGustavsonKernel(Rview, Aview, Pview, Acol2Prow, Acol2PIrow, Pcol2Accol,</div>
+<div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span>                                                  PIcol2Accol, Ac, Acimport, label, params);</div>
+<div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span>    <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Tpetra::MatrixMatrix::PT_A_P newmatrix unknown kernel&quot;</span>);</div>
+<div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span>  }</div>
+<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>}</div>
+<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span> </div>
+<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span><span class="comment">/*********************************************************************************************************/</span></div>
+<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span><span class="keyword">template</span> &lt;<span class="keyword">class </span>Scalar,</div>
+<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span>          <span class="keyword">class </span>LocalOrdinal,</div>
+<div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>          <span class="keyword">class </span>GlobalOrdinal,</div>
+<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>          <span class="keyword">class </span>LocalOrdinalViewType&gt;</div>
+<div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span><span class="keywordtype">void</span> KernelWrappers3&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode, LocalOrdinalViewType&gt;::mult_PT_A_P_reuse_kernel_wrapper(CrsMatrixStruct&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Aview,</div>
+<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span> </div>
+<div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span>                                                                                                                                                                 CrsMatrixStruct&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Pview,</div>
+<div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span>                                                                                                                                                                 <span class="keyword">const</span> LocalOrdinalViewType&amp; Acol2Prow,</div>
+<div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span>                                                                                                                                                                 <span class="keyword">const</span> LocalOrdinalViewType&amp; Acol2PIrow,</div>
+<div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span>                                                                                                                                                                 <span class="keyword">const</span> LocalOrdinalViewType&amp; Pcol2Accol,</div>
+<div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span>                                                                                                                                                                 <span class="keyword">const</span> LocalOrdinalViewType&amp; PIcol2Accol,</div>
+<div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span>                                                                                                                                                                 CrsMatrix&lt;Scalar, LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;&amp; Ac,</div>
+<div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span>                                                                                                                                                                 Teuchos::RCP&lt;<span class="keyword">const</span> Import&lt;LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt; &gt; Acimport,</div>
+<div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span>                                                                                                                                                                 <span class="keyword">const</span> std::string&amp; label,</div>
+<div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span>                                                                                                                                                                 <span class="keyword">const</span> Teuchos::RCP&lt;Teuchos::ParameterList&gt;&amp; params) {</div>
+<div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span><span class="preprocessor">#ifdef HAVE_TPETRA_MMM_TIMINGS</span></div>
+<div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span>  std::string prefix_mmm = std::string(<span class="stringliteral">&quot;TpetraExt &quot;</span>) + label + std::string(<span class="stringliteral">&quot;: &quot;</span>);</div>
+<div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span>  <span class="keyword">using </span>Teuchos::TimeMonitor;</div>
+<div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span>  Teuchos::RCP&lt;TimeMonitor&gt; MM;</div>
+<div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span> </div>
+<div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span>  <span class="comment">// Node-specific code</span></div>
+<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span>  std::string nodename(<span class="stringliteral">&quot;OpenMP&quot;</span>);</div>
+<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span> </div>
+<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span>  <span class="comment">// Options</span></div>
+<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>  std::string myalg(<span class="stringliteral">&quot;LTG&quot;</span>);</div>
+<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span> </div>
+<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>  <span class="keywordflow">if</span> (!params.is_null()) {</div>
+<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>    <span class="keywordflow">if</span> (params-&gt;isParameter(<span class="stringliteral">&quot;openmp: ptap algorithm&quot;</span>))</div>
+<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span>      myalg = params-&gt;get(<span class="stringliteral">&quot;openmp: ptap algorithm&quot;</span>, myalg);</div>
+<div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>  }</div>
+<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span> </div>
+<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span>  <span class="keywordflow">if</span> (myalg == <span class="stringliteral">&quot;LTG&quot;</span>) {</div>
+<div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span><span class="preprocessor">#ifdef HAVE_TPETRA_MMM_TIMINGS</span></div>
+<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span>    MM = Teuchos::null;</div>
+<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span>    MM = rcp(<span class="keyword">new</span> TimeMonitor(*TimeMonitor::getNewTimer(prefix_mmm + std::string(<span class="stringliteral">&quot;PTAP local transpose&quot;</span>))));</div>
+<div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span> </div>
+<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span>    <span class="keyword">using </span>Teuchos::ParameterList;</div>
+<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span>    <span class="keyword">using </span>Teuchos::RCP;</div>
+<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span>    <span class="keyword">using </span>LO = LocalOrdinal;</div>
+<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span>    <span class="keyword">using </span>GO = GlobalOrdinal;</div>
+<div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span>    <span class="keyword">using </span>SC = Scalar;</div>
+<div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span> </div>
+<div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span>    <span class="comment">// We don&#39;t need a kernel-level PTAP, we just transpose here</span></div>
+<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>    <span class="keyword">using </span>transposer_type =</div>
+<div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span>        RowMatrixTransposer&lt;SC, LO, GO, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;;</div>
+<div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span>    transposer_type transposer(Pview.origMatrix, label + <span class="stringliteral">&quot;XP: &quot;</span>);</div>
+<div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span>    RCP&lt;ParameterList&gt; transposeParams(<span class="keyword">new</span> ParameterList);</div>
+<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span>    <span class="keywordflow">if</span> (!params.is_null()) {</div>
+<div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span>      transposeParams-&gt;set(<span class="stringliteral">&quot;compute global constants&quot;</span>,</div>
+<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span>                           params-&gt;get(<span class="stringliteral">&quot;compute global constants: temporaries&quot;</span>,</div>
+<div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span>                                       <span class="keyword">false</span>));</div>
+<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>    }</div>
+<div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span>    transposeParams-&gt;set(<span class="stringliteral">&quot;sort&quot;</span>, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span>    RCP&lt;CrsMatrix&lt;SC, LO, GO, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt; &gt; Ptrans =</div>
+<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>        transposer.createTransposeLocal(transposeParams);</div>
+<div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span>    CrsMatrixStruct&lt;SC, LO, GO, Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt; Rview;</div>
+<div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span>    Rview.origMatrix = Ptrans;</div>
+<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span> </div>
+<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span>    using ::Tpetra::MatrixMatrix::ExtraKernels::mult_R_A_P_reuse_LowThreadGustavsonKernel;</div>
+<div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span>    mult_R_A_P_reuse_LowThreadGustavsonKernel(Rview, Aview, Pview, Acol2Prow, Acol2PIrow, Pcol2Accol,</div>
+<div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span>                                              PIcol2Accol, Ac, Acimport, label, params);</div>
+<div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span>    <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Tpetra::MatrixMatrix::PT_A_P reuse unknown kernel&quot;</span>);</div>
+<div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span>  }</div>
+<div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>  Ac.fillComplete(Ac.getDomainMap(), Ac.getRangeMap());</div>
+<div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span>}</div>
+<div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span> </div>
+<div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span>}  <span class="comment">// namespace MMdetails</span></div>
+<div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span>}  <span class="comment">// namespace Tpetra</span></div>
+<div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span> </div>
+<div class="line"><a id="l00838" name="l00838"></a><span class="lineno">  838</span><span class="preprocessor">#endif  </span><span class="comment">// OpenMP</span></div>
+<div class="line"><a id="l00839" name="l00839"></a><span class="lineno">  839</span> </div>
+<div class="line"><a id="l00840" name="l00840"></a><span class="lineno">  840</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_tpetra_1_1_crs_matrix_html_a8043e2e365146c4ab22b3ba8c9d9a2fb"><div class="ttname"><a href="class_tpetra_1_1_crs_matrix.html#a8043e2e365146c4ab22b3ba8c9d9a2fb">Tpetra::CrsMatrix::local_matrix_device_type</a></div><div class="ttdeci">KokkosSparse::CrsMatrix&lt; impl_scalar_type, local_ordinal_type, device_type, void, typename local_graph_device_type::size_type &gt; local_matrix_device_type</div><div class="ttdoc">The specialization of Kokkos::CrsMatrix that represents the part of the sparse matrix on each MPI pro...</div><div class="ttdef"><b>Definition</b> <a href="_tpetra___crs_matrix__decl_8hpp_source.html#l00467">Tpetra_CrsMatrix_decl.hpp:472</a></div></div>
 <div class="ttc" id="aclass_tpetra_1_1_crs_matrix_struct_html"><div class="ttname"><a href="class_tpetra_1_1_crs_matrix_struct.html">Tpetra::CrsMatrixStruct</a></div><div class="ttdoc">Struct that holds views of the contents of a CrsMatrix.</div><div class="ttdef"><b>Definition</b> <a href="_tpetra_ext___m_m_helpers__decl_8hpp_source.html#l00036">TpetraExt_MMHelpers_decl.hpp:36</a></div></div>
 <div class="ttc" id="aclass_tpetra_1_1_details_1_1_behavior_html_a8103de3f5a7460948b3ff2fd169f0e95"><div class="ttname"><a href="class_tpetra_1_1_details_1_1_behavior.html#a8103de3f5a7460948b3ff2fd169f0e95">Tpetra::Details::Behavior::debug</a></div><div class="ttdeci">static bool debug()</div><div class="ttdoc">Whether Tpetra is in debug mode.</div><div class="ttdef"><b>Definition</b> <a href="_tpetra___details___behavior_8cpp_source.html#l00238">Tpetra_Details_Behavior.cpp:238</a></div></div>

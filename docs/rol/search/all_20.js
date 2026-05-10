@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['z_20lagrange_20multiplier_20for_20the_20inequality_20constraint_20here_20subscript_20i_0',['z lagrange multiplier for the inequality constraint here subscript i',['../classROL_1_1InteriorPoint_1_1PrimalDualResidual.html#autotoc_md106',1,'z - Lagrange multiplier for the inequality constraint (here subscript i)'],['../classROL_1_1InteriorPoint_1_1PrimalDualResidual.html#autotoc_md110',1,'z - Lagrange multiplier for the inequality constraint (here subscript i)']]],
+  ['z_20lagrange_20multiplier_20for_20the_20inequality_20constraint_20here_20subscript_20i_0',['z lagrange multiplier for the inequality constraint here subscript i',['../classROL_1_1InteriorPoint_1_1PrimalDualResidual.html#autotoc_md107',1,'z - Lagrange multiplier for the inequality constraint (here subscript i)'],['../classROL_1_1InteriorPoint_1_1PrimalDualResidual.html#autotoc_md111',1,'z - Lagrange multiplier for the inequality constraint (here subscript i)']]],
   ['z0_5f_1',['z0_',['../classROL_1_1Constraint__SerialSimOpt.html#a80edd782150d50b979f8d517ac3a343c',1,'ROL::Constraint_SerialSimOpt']]],
   ['z1_5f_2',['z1_',['../classROL_1_1Bundle__U__TT.html#ac85e4cbda8bee68601f2c60f3ea9be8c',1,'ROL::Bundle_U_TT::z1_'],['../classROL_1_1Bundle__TT.html#a6680a7ce37b709af3741340429ea3ca5',1,'ROL::Bundle_TT::z1_']]],
   ['z2_5f_3',['z2_',['../classROL_1_1Bundle__U__TT.html#a98d6afb1e8342fb4b453fdf5edfb3ee2',1,'ROL::Bundle_U_TT::z2_'],['../classROL_1_1Bundle__TT.html#ad8d592ba13a800b847ad8b96387fc512',1,'ROL::Bundle_TT::z2_']]],

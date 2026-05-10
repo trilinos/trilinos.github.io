@@ -437,7 +437,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">filename</td><td>[in] Name of the Matrix Market file. </td></tr>
-    <tr><td class="paramname">pComm</td><td>[in] Communicator containing all processor(s) over which the sparse matrix will be distributed. </td></tr>
+    <tr><td class="paramname">comm</td><td>[in] Communicator containing all processor(s) over which the sparse matrix will be distributed. </td></tr>
     <tr><td class="paramname">callFillComplete</td><td>[in] Whether to call fillComplete() on the <a class="el" href="class_tpetra_1_1_crs_matrix.html" title="Sparse matrix that presents a row-oriented interface that lets users read or modify entries.">Tpetra::CrsMatrix</a>, after adding all the entries read in from the input stream. </td></tr>
     <tr><td class="paramname">tolerant</td><td>[in] Whether to read the data tolerantly from the file. </td></tr>
     <tr><td class="paramname">debug</td><td>[in] Whether to produce copious status output useful for <a class="el" href="namespace_tpetra.html" title="Namespace Tpetra contains the class and methods constituting the Tpetra library.">Tpetra</a> developers, but probably not useful for anyone else. </td></tr>
@@ -929,7 +929,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">filename</td><td>[in] Name of the Matrix Market file. </td></tr>
-    <tr><td class="paramname">pComm</td><td>[in] Communicator containing all processor(s) over which the sparse matrix will be distributed. </td></tr>
+    <tr><td class="paramname">comm</td><td>[in] Communicator containing all processor(s) over which the sparse matrix will be distributed. </td></tr>
     <tr><td class="paramname">callFillComplete</td><td>[in] Whether to call fillComplete() on the <a class="el" href="class_tpetra_1_1_crs_matrix.html" title="Sparse matrix that presents a row-oriented interface that lets users read or modify entries.">Tpetra::CrsMatrix</a>, after adding all the entries read in from the input stream. </td></tr>
     <tr><td class="paramname">tolerant</td><td>[in] Whether to read the data tolerantly from the file. </td></tr>
     <tr><td class="paramname">debug</td><td>[in] Whether to produce copious status output useful for <a class="el" href="namespace_tpetra.html" title="Namespace Tpetra contains the class and methods constituting the Tpetra library.">Tpetra</a> developers, but probably not useful for anyone else. </td></tr>
@@ -1008,7 +1008,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">filename</td><td>[in] Name of the Matrix Market file. </td></tr>
-    <tr><td class="paramname">pComm</td><td>[in] Communicator containing all process(es) over which the sparse matrix will be distributed. </td></tr>
+    <tr><td class="paramname">comm</td><td>[in] Communicator containing all process(es) over which the sparse matrix will be distributed. </td></tr>
     <tr><td class="paramname">constructorParams</td><td>[in/out] Parameters for the <a class="el" href="class_tpetra_1_1_crs_matrix.html" title="Sparse matrix that presents a row-oriented interface that lets users read or modify entries.">CrsMatrix</a> constructor. </td></tr>
     <tr><td class="paramname">fillCompleteParams</td><td>[in/out] Parameters for <a class="el" href="class_tpetra_1_1_crs_matrix.html" title="Sparse matrix that presents a row-oriented interface that lets users read or modify entries.">CrsMatrix</a>'s fillComplete call. </td></tr>
     <tr><td class="paramname">tolerant</td><td>[in] Whether to read the data tolerantly from the file. </td></tr>
@@ -1431,7 +1431,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
     <tr><td class="paramname">map</td><td>[in/out] On input: if nonnull, the map describing how to distribute the vector (not modified). In this case, the map's communicator and node must equal <code>comm</code> resp. <code>node</code>. If null on input, then on output, a sensible (contiguous and uniformly distributed over the given communicator) map describing the distribution of the output multivector. </td></tr>
     <tr><td class="paramname">tolerant</td><td>[in] Whether to read the data tolerantly from the file. </td></tr>
     <tr><td class="paramname">debug</td><td>[in] Whether to produce copious status output useful for <a class="el" href="namespace_tpetra.html" title="Namespace Tpetra contains the class and methods constituting the Tpetra library.">Tpetra</a> developers, but probably not useful for anyone else. </td></tr>
-    <tr><td class="paramname">debug</td><td>[in] If true, read in binary mode. </td></tr>
+    <tr><td class="paramname">binary</td><td>[in] If true, read in binary mode. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1644,7 +1644,7 @@ On <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution
     <tr><td class="paramname">map</td><td>[in/out] On input: if nonnull, the map describing how to distribute the vector (not modified). In this case, the map's communicator and node must equal comm resp. node. If null on input, then on output, a sensible (contiguous and uniformly distributed over the given communicator) map describing the distribution of the output multivector. </td></tr>
     <tr><td class="paramname">tolerant</td><td>[in] Whether to read the data tolerantly from the stream. </td></tr>
     <tr><td class="paramname">debug</td><td>[in] Whether to produce copious status output useful for <a class="el" href="namespace_tpetra.html" title="Namespace Tpetra contains the class and methods constituting the Tpetra library.">Tpetra</a> developers, but probably not useful for anyone else. </td></tr>
-    <tr><td class="paramname">debug</td><td>[in] If true, read in binary mode. </td></tr>
+    <tr><td class="paramname">binary</td><td>[in] If true, read in binary mode. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1775,7 +1775,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
     <tr><td class="paramname">comm</td><td>[in] Communicator containing all process(es) over which the <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> will be distributed. </td></tr>
     <tr><td class="paramname">tolerant</td><td>[in] Whether to read the data tolerantly from the file. </td></tr>
     <tr><td class="paramname">debug</td><td>[in] Whether to produce copious status output useful for <a class="el" href="namespace_tpetra.html" title="Namespace Tpetra contains the class and methods constituting the Tpetra library.">Tpetra</a> developers, but probably not useful for anyone else. </td></tr>
-    <tr><td class="paramname">debug</td><td>[in] If true, read in binary mode. </td></tr>
+    <tr><td class="paramname">binary</td><td>[in] If true, read in binary mode. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1846,7 +1846,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
     <tr><td class="paramname">comm</td><td>[in] Communicator containing all process(es) over which the <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> will be distributed. </td></tr>
     <tr><td class="paramname">tolerant</td><td>[in] Whether to read the data tolerantly from the file. </td></tr>
     <tr><td class="paramname">debug</td><td>[in] Whether to produce copious status output useful for <a class="el" href="namespace_tpetra.html" title="Namespace Tpetra contains the class and methods constituting the Tpetra library.">Tpetra</a> developers, but probably not useful for anyone else. </td></tr>
-    <tr><td class="paramname">debug</td><td>[in] If true, read in binary mode. </td></tr>
+    <tr><td class="paramname">binary</td><td>[in] If true, read in binary mode. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1925,7 +1925,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
     <tr><td class="paramname">err</td><td>[in] Optional output stream for debugging output. This is only referenced if <code>debug</code> is true. </td></tr>
     <tr><td class="paramname">tolerant</td><td>[in] Whether to read the data tolerantly from the file. </td></tr>
     <tr><td class="paramname">debug</td><td>[in] If true, write copious debugging output to <code>err</code> on all processes in <code>comm</code>. </td></tr>
-    <tr><td class="paramname">debug</td><td>[in] If true, read in binary mode. </td></tr>
+    <tr><td class="paramname">binary</td><td>[in] If true, read in binary mode. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2022,19 +2022,20 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Function to read a one-per-rank collection of <a class="el" href="namespace_matrix_market.html" title="Matrix Market file readers and writers for sparse and dense matrices (as CrsMatrix resp....">MatrixMarket</a> files and assemble it into a single big matrix. The code will try to minimize the number of ranks hammering on the file system at once, but we don't make any guarantees. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">filename_prefix</td><td>[in] File for rank I is filename_prefix + to_string(I) + filename_suffix </td></tr>
-    <tr><td class="paramname">filename_sufffix</td><td>[in] File for rank I is filename_prefix + to_string(I) + filename_suffix </td></tr>
+    <tr><td class="paramname">filename_suffix</td><td>[in] File for rank I is filename_prefix + to_string(I) + filename_suffix </td></tr>
     <tr><td class="paramname">rowMap</td><td>[in] The <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> over which to distribute rows of the sparse matrix. This must be nonnull. </td></tr>
     <tr><td class="paramname">colMap</td><td>[in/out] If nonnull: the <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> over which to distribute columns of the sparse matrix. If null and if callFillComplete is true, we create this for you. </td></tr>
     <tr><td class="paramname">domainMap</td><td>[in] The sparse matrix's domain <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a>. This must be nonnull. It may equal (pointer equality) the row <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a>, if that would be appropriate for this matrix. </td></tr>
     <tr><td class="paramname">rangeMap</td><td>[in] The sparse matrix's range <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a>. This must be nonnull. It may equal (pointer equality) the row <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a>, if that would be appropriate for this matrix. </td></tr>
     <tr><td class="paramname">callFillComplete</td><td>[in] Whether to call fillComplete() on the <a class="el" href="class_tpetra_1_1_crs_matrix.html" title="Sparse matrix that presents a row-oriented interface that lets users read or modify entries.">Tpetra::CrsMatrix</a>, after adding all the entries read in from the input stream. (Not calling fillComplete() may be useful if you want to change the matrix after reading it from a file.) </td></tr>
     <tr><td class="paramname">tolerant</td><td>[in] Whether to read the data tolerantly from the file. </td></tr>
+    <tr><td class="paramname">ranksToReadAtOnce</td><td>[in] Number of ranks to read at once. </td></tr>
     <tr><td class="paramname">debug</td><td>[in] Whether to produce copious status output useful for <a class="el" href="namespace_tpetra.html" title="Namespace Tpetra contains the class and methods constituting the Tpetra library.">Tpetra</a> developers, but probably not useful for anyone else. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_matrix_market___tpetra_8hpp_source.html#l05543">5543</a> of file <a class="el" href="_matrix_market___tpetra_8hpp_source.html">MatrixMarket_Tpetra.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_matrix_market___tpetra_8hpp_source.html#l05544">5544</a> of file <a class="el" href="_matrix_market___tpetra_8hpp_source.html">MatrixMarket_Tpetra.hpp</a>.</p>
 
 </div>
 </div>

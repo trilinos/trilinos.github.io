@@ -1,10 +1,8 @@
 var searchData=
 [
-  ['laplacian_0',['3D Laplacian',['../gl_fe_lapl.html',1,'']]],
-  ['laplacian3d_20cpp_1',['Laplacian3D.cpp',['../_laplacian3_d.html',1,'']]],
-  ['length_2',['length',['../_galeri___workspace_8h.html#a58b2cd30eea585c8961d78882a175c78',1,'Galeri::FiniteElements::Length(const double x1, const double y1, const double z1, const double x2, const double y2, const double z2)'],['../_galeri___workspace_8h.html#a5e804be3d3fbae301d9329c6164f5fc3',1,'Galeri::FiniteElements::Length(const double *x, const double *y, const double *z)']]],
-  ['lhs_3',['lhs',['../class_galeri_1_1_finite_elements_1_1_abstract_problem.html#a240b13b1a72492876a05a7373d67a153',1,'Galeri::FiniteElements::AbstractProblem::LHS()'],['../class_galeri_1_1_finite_elements_1_1_abstract_variational.html#a78d635f3cc8586916dec6e339b714631',1,'Galeri::FiniteElements::AbstractVariational::LHS()'],['../class_galeri_1_1_finite_elements_1_1_galerkin_variational.html#a222c2908a3fd5db14db188a4d5a16ff0',1,'Galeri::FiniteElements::GalerkinVariational::LHS()'],['../class_galeri_1_1_finite_elements_1_1_linear_problem.html#aa37a426b59c7a541589069addbe66fed',1,'Galeri::FiniteElements::LinearProblem::LHS()'],['../class_galeri_1_1_finite_elements_1_1_s_u_p_g_variational.html#ad9619012a0a2b2aefac214dc7ec0c966',1,'Galeri::FiniteElements::SUPGVariational::LHS()']]],
-  ['license_4',['Copyright and License',['../gl__copyright.html',1,'']]],
-  ['linearproblem_5',['linearproblem',['../class_galeri_1_1_finite_elements_1_1_linear_problem.html',1,'Galeri::FiniteElements::LinearProblem'],['../class_galeri_1_1_finite_elements_1_1_linear_problem.html#a13860554ed7108508ba62cffcbdfcbfa',1,'Galeri::FiniteElements::LinearProblem::LinearProblem()']]],
-  ['loadable_6',['loadable',['../class_galeri_1_1grid_1_1_loadable.html',1,'Galeri::grid::Loadable'],['../class_galeri_1_1grid_1_1_loadable.html#ad97968f73521ba4c3495014b796719d8',1,'Galeri::grid::Loadable::Loadable()'],['../class_galeri_1_1grid_1_1_loadable.html#ab2c02df6ea9ca64c2397c45531b6cdc6',1,'Galeri::grid::Loadable::Loadable(const Epetra_Comm &amp;comm, const int numGlobalElements, const int numMyElements, const std::string &amp;elementType, const int *myGlobalElements=0, const int numElementData=0, const int numVertexData=0)']]]
+  ['laplace1dproblem_0',['Laplace1DProblem',['../class_galeri_1_1_xpetra_1_1_laplace1_d_problem.html',1,'Galeri::Xpetra']]],
+  ['laplace2dproblem_1',['Laplace2DProblem',['../class_galeri_1_1_xpetra_1_1_laplace2_d_problem.html',1,'Galeri::Xpetra']]],
+  ['laplace3dproblem_2',['Laplace3DProblem',['../class_galeri_1_1_xpetra_1_1_laplace3_d_problem.html',1,'Galeri::Xpetra']]],
+  ['laplacian_3',['3D Laplacian',['../gl_fe_lapl.html',1,'']]],
+  ['license_4',['Copyright and License',['../gl__copyright.html',1,'']]]
 ];

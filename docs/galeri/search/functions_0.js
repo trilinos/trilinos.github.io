@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['a_0',['a',['../class_galeri_1_1_finite_elements_1_1_abstract_problem.html#a5dc3a92641c02ac6ea56f2a4107b95fc',1,'Galeri::FiniteElements::AbstractProblem::A()'],['../class_galeri_1_1_finite_elements_1_1_linear_problem.html#a3241bdbbac61992c8299aefa02dc0db4',1,'Galeri::FiniteElements::LinearProblem::A()']]],
-  ['areaofquad_1',['AreaOfQuad',['../_galeri___workspace_8h.html#a5628a2dd620b531f62a4a507cf221929',1,'Galeri::FiniteElements']]],
-  ['areaoftriangle_2',['AreaOfTriangle',['../_galeri___workspace_8h.html#ac64249cb9b5e19f8c302381c48ceeb9e',1,'Galeri::FiniteElements']]]
+  ['describe_0',['describe',['../class_galeri_1_1_xpetra_1_1_parameters.html#a4499d476d477c5538a484714c30d6211',1,'Galeri::Xpetra::Parameters']]],
+  ['description_1',['description',['../class_galeri_1_1_xpetra_1_1_parameters.html#aff12f0a4e6321f0b8f2fa97dfb7b0811',1,'Galeri::Xpetra::Parameters']]]
 ];

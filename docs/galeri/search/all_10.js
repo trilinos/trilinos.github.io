@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['quad_0',['quad',['../class_galeri_1_1grid_1_1_quad.html',1,'Galeri::grid::Quad'],['../class_galeri_1_1quadrature_1_1_quad.html',1,'Galeri::quadrature::Quad']]],
-  ['quadquadrature_1',['quadquadrature',['../class_galeri_1_1_finite_elements_1_1_quad_quadrature.html',1,'Galeri::FiniteElements::QuadQuadrature'],['../class_galeri_1_1_finite_elements_1_1_quad_quadrature.html#a6dee225892417649088c0cb891753755',1,'Galeri::FiniteElements::QuadQuadrature::QuadQuadrature()']]],
-  ['quadrectanglegrid_2',['quadrectanglegrid',['../class_galeri_1_1_finite_elements_1_1_quad_rectangle_grid.html',1,'Galeri::FiniteElements::QuadRectangleGrid'],['../class_galeri_1_1_finite_elements_1_1_quad_rectangle_grid.html#af1dcfff1de7bbd7be11c5c9cae7a2915',1,'Galeri::FiniteElements::QuadRectangleGrid::QuadRectangleGrid()']]],
-  ['quadrweight_3',['quadrweight',['../class_galeri_1_1_finite_elements_1_1_abstract_quadrature.html#a712527d2c20fddcece9f9c470bf567a5',1,'Galeri::FiniteElements::AbstractQuadrature::QuadrWeight()'],['../class_galeri_1_1_finite_elements_1_1_hex_quadrature.html#a505ba324bf5ebb3be2024a0b3857db4f',1,'Galeri::FiniteElements::HexQuadrature::QuadrWeight()'],['../class_galeri_1_1_finite_elements_1_1_quad_quadrature.html#a345d37172ae408e6ecd94b60f60f4297',1,'Galeri::FiniteElements::QuadQuadrature::QuadrWeight()'],['../class_galeri_1_1_finite_elements_1_1_tet_quadrature.html#a9aecb29fab165faa830a0ddea1a206f0',1,'Galeri::FiniteElements::TetQuadrature::QuadrWeight()'],['../class_galeri_1_1_finite_elements_1_1_triangle_quadrature.html#a0727e17f02253fe5b99186c20282d5a6',1,'Galeri::FiniteElements::TriangleQuadrature::QuadrWeight()']]]
+  ['scalarproblem_0',['ScalarProblem',['../class_galeri_1_1_xpetra_1_1_scalar_problem.html',1,'Galeri::Xpetra']]],
+  ['scaledidentitystencil_1',['ScaledIdentityStencil',['../class_galeri_1_1_xpetra_1_1_scaled_identity_stencil.html',1,'Galeri::Xpetra']]],
+  ['star2dproblem_2',['Star2DProblem',['../class_galeri_1_1_xpetra_1_1_star2_d_problem.html',1,'Galeri::Xpetra']]]
 ];

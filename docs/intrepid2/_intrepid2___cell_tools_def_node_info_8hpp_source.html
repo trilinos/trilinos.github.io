@@ -96,7 +96,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> is_accessible =</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(cellCenter)::memory_space&gt;::accessible;</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">static_assert</span>(is_accessible, <span class="stringliteral">&quot;CellTools&lt;DeviceType&gt;::getReferenceCellCenter(..): output view&#39;s memory space is not compatible with DeviceType&quot;</span>);</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
@@ -134,7 +134,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> is_accessible =</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(cellVertex)::memory_space&gt;::accessible;</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keyword">static_assert</span>(is_accessible, <span class="stringliteral">&quot;CellTools&lt;DeviceType&gt;::getReferenceVertex(..): output view&#39;s memory space is not compatible with DeviceType&quot;</span>);</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
@@ -206,7 +206,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> is_accessible =</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(cellNode)::memory_space&gt;::accessible;</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <span class="keyword">static_assert</span>(is_accessible, <span class="stringliteral">&quot;CellTools&lt;DeviceType&gt;::getReferenceNode(..): output view&#39;s memory space is not compatible with DeviceType&quot;</span>);</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
@@ -287,7 +287,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> is_accessible =</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(refEdgeTangent)::memory_space&gt;::accessible;</div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    <span class="keyword">static_assert</span>(is_accessible, <span class="stringliteral">&quot;CellTools&lt;DeviceType&gt;::getReferenceEdgeTangent(..): output view&#39;s memory space is not compatible with DeviceType&quot;</span>);</div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
@@ -328,7 +328,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>                                  <span class="stringliteral">&quot;&gt;&gt;&gt; ERROR (Intrepid2::CellTools::getReferenceFaceTangents): dim0 (spatial dim) must match that of parent cell&quot;</span>);  </div>
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> is_accessible =</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(refFaceTanU)::memory_space&gt;::accessible;</div>
 <div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    <span class="keyword">static_assert</span>(is_accessible, <span class="stringliteral">&quot;CellTools&lt;DeviceType&gt;::getReferenceFaceTangents(..): output views&#39; memory spaces are not compatible with DeviceType&quot;</span>);</div>
 <div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
@@ -367,7 +367,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    INTREPID2_TEST_FOR_EXCEPTION( sideOrd &lt; 0 || sideOrd &gt;= <span class="keyword">static_cast&lt;</span>ordinal_type<span class="keyword">&gt;</span>(parentCell.getSubcellCount(parentCell.getDimension() - 1)), std::invalid_argument,</div>
 <div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>                                  <span class="stringliteral">&quot;&gt;&gt;&gt; ERROR (Intrepid2::CellTools::getReferenceSideNormal): side ordinal out of bounds&quot;</span>);    </div>
 <div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span><span class="preprocessor">#endif </span></div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> is_accessible = Kokkos::Impl::MemorySpaceAccess&lt;</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> is_accessible = Kokkos::SpaceAccessibility&lt;</div>
 <div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>        MemSpaceType,</div>
 <div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(refSideNormal)::memory_space&gt;::accessible;</div>
 <div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    <span class="keyword">static_assert</span>(is_accessible, <span class="stringliteral">&quot;CellTools&lt;DeviceType&gt;::getReferenceSideNormal(..): output view&#39;s memory space is not compatible with DeviceType&quot;</span>);</div>
@@ -413,7 +413,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>    INTREPID2_TEST_FOR_EXCEPTION( refFaceNormal.extent(0) != parentCell.getDimension(), std::invalid_argument,</div>
 <div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>                                  <span class="stringliteral">&quot;&gt;&gt;&gt; ERROR (Intrepid2::CellTools::getReferenceFaceNormal): dim0 (spatial dim) must match that of parent cell&quot;</span>);  </div>
 <div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> is_accessible = Kokkos::Impl::MemorySpaceAccess&lt;</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> is_accessible = Kokkos::SpaceAccessibility&lt;</div>
 <div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>        MemSpaceType,</div>
 <div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(refFaceNormal)::memory_space&gt;::accessible;</div>
 <div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>    <span class="keyword">static_assert</span>(is_accessible, <span class="stringliteral">&quot;CellTools&lt;DeviceType&gt;::getReferenceFaceNormal(..): output view&#39;s memory space is not compatible with DeviceType&quot;</span>);</div>
@@ -467,9 +467,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>    }</div>
 <div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> are_accessible =</div>
-<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(edgeTangents)::memory_space&gt;::accessible &amp;&amp;</div>
-<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(worksetJacobians)::memory_space&gt;::accessible;</div>
 <div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>    <span class="keyword">static_assert</span>(are_accessible, <span class="stringliteral">&quot;CellTools&lt;DeviceType&gt;::getPhysicalEdgeTangents(..): input/output views&#39; memory spaces are not compatible with DeviceType&quot;</span>);</div>
 <div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span> </div>
@@ -555,11 +555,11 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00484" name="l00484"></a><span class="lineno">  484</span>    }</div>
 <div class="line"><a id="l00485" name="l00485"></a><span class="lineno">  485</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00486" name="l00486"></a><span class="lineno">  486</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> are_accessible =</div>
-<div class="line"><a id="l00487" name="l00487"></a><span class="lineno">  487</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00487" name="l00487"></a><span class="lineno">  487</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00488" name="l00488"></a><span class="lineno">  488</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(edgeTangents)::memory_space&gt;::accessible &amp;&amp;</div>
-<div class="line"><a id="l00489" name="l00489"></a><span class="lineno">  489</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00489" name="l00489"></a><span class="lineno">  489</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00490" name="l00490"></a><span class="lineno">  490</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(worksetJacobians)::memory_space&gt;::accessible &amp;&amp;</div>
-<div class="line"><a id="l00491" name="l00491"></a><span class="lineno">  491</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00491" name="l00491"></a><span class="lineno">  491</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00492" name="l00492"></a><span class="lineno">  492</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(worksetEdgeOrds)::memory_space&gt;::accessible;</div>
 <div class="line"><a id="l00493" name="l00493"></a><span class="lineno">  493</span>    <span class="keyword">static_assert</span>(are_accessible, <span class="stringliteral">&quot;CellTools&lt;DeviceType&gt;::getPhysicalEdgeTangents(..): input/output views&#39; memory spaces are not compatible with DeviceType&quot;</span>);</div>
 <div class="line"><a id="l00494" name="l00494"></a><span class="lineno">  494</span> </div>
@@ -626,9 +626,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>    }      </div>
 <div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> are_accessible =</div>
-<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(faceTanU)::memory_space&gt;::accessible &amp;&amp;</div>
-<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(worksetJacobians)::memory_space&gt;::accessible;</div>
 <div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>    <span class="keyword">static_assert</span>(are_accessible, <span class="stringliteral">&quot;CellTools&lt;DeviceType&gt;::getPhysicalFaceTangents(..): input/output views&#39; memory spaces are not compatible with DeviceType&quot;</span>);</div>
 <div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span> </div>
@@ -729,11 +729,11 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span>    }      </div>
 <div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> are_accessible =</div>
-<div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(faceTanU)::memory_space&gt;::accessible &amp;&amp;</div>
-<div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(worksetJacobians)::memory_space&gt;::accessible &amp;&amp;</div>
-<div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(worksetFaceOrds)::memory_space&gt;::accessible;</div>
 <div class="line"><a id="l00661" name="l00661"></a><span class="lineno">  661</span>    <span class="keyword">static_assert</span>(are_accessible, <span class="stringliteral">&quot;CellTools&lt;DeviceType&gt;::getPhysicalFaceTangents(..): input/output views&#39; memory spaces are not compatible with DeviceType&quot;</span>);</div>
 <div class="line"><a id="l00662" name="l00662"></a><span class="lineno">  662</span> </div>
@@ -805,9 +805,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span>                                  <span class="stringliteral">&quot;&gt;&gt;&gt; ERROR (Intrepid2::CellTools::getPhysicalSideNormals): side ordinal out of bounds&quot;</span>);  </div>
 <div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span><span class="preprocessor">#endif  </span></div>
 <div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> are_accessible =</div>
-<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00728" name="l00728"></a><span class="lineno">  728</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(sideNormals)::memory_space&gt;::accessible &amp;&amp;</div>
-<div class="line"><a id="l00729" name="l00729"></a><span class="lineno">  729</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00729" name="l00729"></a><span class="lineno">  729</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00730" name="l00730"></a><span class="lineno">  730</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(worksetJacobians)::memory_space&gt;::accessible;</div>
 <div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span>    <span class="keyword">static_assert</span>(are_accessible, <span class="stringliteral">&quot;CellTools&lt;DeviceType&gt;::getPhysicalSideNormals(..): input/output views&#39; memory spaces are not compatible with DeviceType&quot;</span>);</div>
 <div class="line"><a id="l00732" name="l00732"></a><span class="lineno">  732</span> </div>
@@ -849,11 +849,11 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span>                                  <span class="stringliteral">&quot;&gt;&gt;&gt; ERROR (Intrepid2::CellTools::getPhysicalSideNormals): two or three-dimensional parent cell required&quot;</span>);</div>
 <div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> are_accessible =</div>
-<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(sideNormals)::memory_space&gt;::accessible &amp;&amp;</div>
-<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(worksetJacobians)::memory_space&gt;::accessible &amp;&amp;</div>
-<div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(worksetSideOrds)::memory_space&gt;::accessible;</div>
 <div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span>    <span class="keyword">static_assert</span>(are_accessible, <span class="stringliteral">&quot;CellTools&lt;DeviceType&gt;::getPhysicalSideNormals(..): input/output views&#39; memory spaces are not compatible with DeviceType&quot;</span>);</div>
 <div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span> </div>
@@ -912,9 +912,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span>    }        </div>
 <div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> are_accessible =</div>
-<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(faceNormals)::memory_space&gt;::accessible &amp;&amp;</div>
-<div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(worksetJacobians)::memory_space&gt;::accessible;</div>
 <div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span>    <span class="keyword">static_assert</span>(are_accessible, <span class="stringliteral">&quot;CellTools&lt;DeviceType&gt;::getPhysicalFaceNormals(..): input/output views&#39; memory spaces are not compatible with DeviceType&quot;</span>);</div>
 <div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span> </div>
@@ -977,11 +977,11 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00890" name="l00890"></a><span class="lineno">  890</span>    }</div>
 <div class="line"><a id="l00891" name="l00891"></a><span class="lineno">  891</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00892" name="l00892"></a><span class="lineno">  892</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> are_accessible =</div>
-<div class="line"><a id="l00893" name="l00893"></a><span class="lineno">  893</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00893" name="l00893"></a><span class="lineno">  893</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00894" name="l00894"></a><span class="lineno">  894</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(faceNormals)::memory_space&gt;::accessible &amp;&amp;</div>
-<div class="line"><a id="l00895" name="l00895"></a><span class="lineno">  895</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00895" name="l00895"></a><span class="lineno">  895</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00896" name="l00896"></a><span class="lineno">  896</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(worksetJacobians)::memory_space&gt;::accessible &amp;&amp;</div>
-<div class="line"><a id="l00897" name="l00897"></a><span class="lineno">  897</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00897" name="l00897"></a><span class="lineno">  897</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00898" name="l00898"></a><span class="lineno">  898</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(worksetFaceOrds)::memory_space&gt;::accessible;</div>
 <div class="line"><a id="l00899" name="l00899"></a><span class="lineno">  899</span>    <span class="keyword">static_assert</span>(are_accessible, <span class="stringliteral">&quot;CellTools&lt;DeviceType&gt;::getPhysicalFaceNormals(..): input/output views&#39; memory spaces are not compatible with DeviceType&quot;</span>);</div>
 <div class="line"><a id="l00900" name="l00900"></a><span class="lineno">  900</span> </div>

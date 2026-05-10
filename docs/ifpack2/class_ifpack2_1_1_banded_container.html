@@ -106,9 +106,9 @@ Inheritance diagram for Ifpack2::BandedContainer&lt; MatrixType, LocalScalarType
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Constructor and destructor</div></td></tr>
-<tr class="memitem:a45ab8bf470bbb5b3179dad2d4ac9b2ea" id="r_a45ab8bf470bbb5b3179dad2d4ac9b2ea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ifpack2_1_1_banded_container.html#a45ab8bf470bbb5b3179dad2d4ac9b2ea">BandedContainer</a> (const Teuchos::RCP&lt; const row_matrix_type &gt; &amp;matrix, const Teuchos::Array&lt; Teuchos::Array&lt; LO &gt; &gt; &amp;partitions, const Teuchos::RCP&lt; const import_type &gt; &amp;, bool pointIndexed)</td></tr>
-<tr class="memdesc:a45ab8bf470bbb5b3179dad2d4ac9b2ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
-<tr class="separator:a45ab8bf470bbb5b3179dad2d4ac9b2ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e7bdee8b2c9b2f7410ba4c35804db6a" id="r_a4e7bdee8b2c9b2f7410ba4c35804db6a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ifpack2_1_1_banded_container.html#a4e7bdee8b2c9b2f7410ba4c35804db6a">BandedContainer</a> (const Teuchos::RCP&lt; const row_matrix_type &gt; &amp;matrix, const Teuchos::Array&lt; Teuchos::Array&lt; LO &gt; &gt; &amp;partitions, const Teuchos::RCP&lt; const import_type &gt; &amp;importer, bool pointIndexed)</td></tr>
+<tr class="memdesc:a4e7bdee8b2c9b2f7410ba4c35804db6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="separator:a4e7bdee8b2c9b2f7410ba4c35804db6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0237298a551c8862bdc4903e8724b30" id="r_ab0237298a551c8862bdc4903e8724b30"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ifpack2_1_1_banded_container.html#ab0237298a551c8862bdc4903e8724b30">~BandedContainer</a> ()</td></tr>
 <tr class="memdesc:ab0237298a551c8862bdc4903e8724b30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor (declared virtual for memory safety of derived classes).  <br /></td></tr>
 <tr class="separator:ab0237298a551c8862bdc4903e8724b30"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -299,8 +299,8 @@ On all processes, all off-process indices in the column Map of the input matrix 
 </ol>
 <p>These assumptions may be violated if the input matrix is a Tpetra::CrsMatrix that was constructed with a user-provided column Map. The assumptions are not mathematically necessary and could be relaxed at any time. Implementers who wish to do so will need to modify the extract() method, so that it translates explicitly between local row and column indices, instead of just assuming that they are the same. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a45ab8bf470bbb5b3179dad2d4ac9b2ea" name="a45ab8bf470bbb5b3179dad2d4ac9b2ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45ab8bf470bbb5b3179dad2d4ac9b2ea">&#9670;&#160;</a></span>BandedContainer()</h2>
+<a id="a4e7bdee8b2c9b2f7410ba4c35804db6a" name="a4e7bdee8b2c9b2f7410ba4c35804db6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e7bdee8b2c9b2f7410ba4c35804db6a">&#9670;&#160;</a></span>BandedContainer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -323,7 +323,7 @@ template&lt;class MatrixType , class LocalScalarType &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const Teuchos::RCP&lt; const import_type &gt; &amp;&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramname"><em>importer</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -343,7 +343,8 @@ template&lt;class MatrixType , class LocalScalarType &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">matrix</td><td>[in] The original input matrix. This <a class="el" href="class_ifpack2_1_1_container.html" title="Interface for creating and solving a set of local linear problems.">Container</a> will construct local diagonal blocks from its rows according to <code>partitions</code>. </td></tr>
-    <tr><td class="paramname">partitioner</td><td>[in] The <a class="el" href="class_ifpack2_1_1_partitioner.html" title="Ifpack2::Partitioner:">Partitioner</a> object that assigns local rows of the input matrix to blocks. </td></tr>
+    <tr><td class="paramname">partitions</td><td>[in] Partitioning of local rows into blocks. </td></tr>
+    <tr><td class="paramname">importer</td><td>[in] Import object for communication. </td></tr>
     <tr><td class="paramname">pointIndexed</td><td>[in] If the input matrix is a <code>Tpetra::BlockCrsMatrix</code>, whether elements of <code>partitions</code>[k] identify rows within blocks (true) or whole blocks (false). </td></tr>
   </table>
   </dd>

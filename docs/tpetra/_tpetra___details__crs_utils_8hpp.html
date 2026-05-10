@@ -207,16 +207,21 @@ template&lt;class RowPtr , class Indices , class Values , class Padding &gt; </d
 </div><div class="memdoc">
 
 <p>Implementation of padCrsArrays. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Each row lclRow has row_ptr_end[lclRow] - row_ptr_beg[lclRow] entries. Offsets row_ptr_end[lclRow] to row_ptr_beg[lclRow+1] - 1 (inclusive) are extra space. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">action</td><td>[in] Whether to pad indices only, or indices and values. </td></tr>
     <tr><td class="paramname">row_ptr_beg</td><td>[in] Offset to beginning of each row. </td></tr>
-    <tr><td class="paramname">row_ptr_end</td><td>[in] Offset to end of each row.</td></tr>
+    <tr><td class="paramname">row_ptr_end</td><td>[in] Offset to end of each row. </td></tr>
+    <tr><td class="paramname">indices_wdv</td><td>[in/out] Indices to pad. </td></tr>
+    <tr><td class="paramname">values_wdv</td><td>[in/out] Values to pad. </td></tr>
+    <tr><td class="paramname">padding</td><td>[in] Padding information. </td></tr>
+    <tr><td class="paramname">my_rank</td><td>[in] My process rank. </td></tr>
+    <tr><td class="paramname">verbose</td><td>[in] Whether to print verbose messages. </td></tr>
   </table>
   </dd>
 </dl>
-<p>Each row lclRow has row_ptr_end[lclRow] - row_ptr_beg[lclRow] entries. Offsets row_ptr_end[lclRow] to row_ptr_beg[lclRow+1] - 1 (inclusive) are extra space. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details__crs_utils_8hpp_source.html#l00115">115</a> of file <a class="el" href="_tpetra___details__crs_utils_8hpp_source.html">Tpetra_Details_crsUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details__crs_utils_8hpp_source.html#l00120">120</a> of file <a class="el" href="_tpetra___details__crs_utils_8hpp_source.html">Tpetra_Details_crsUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -280,7 +285,7 @@ template&lt;class Pointers , class InOutIndices , class InIndices , class IndexM
 
 <p>Implementation of insertCrsIndices. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details__crs_utils_8hpp_source.html#l00372">372</a> of file <a class="el" href="_tpetra___details__crs_utils_8hpp_source.html">Tpetra_Details_crsUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details__crs_utils_8hpp_source.html#l00377">377</a> of file <a class="el" href="_tpetra___details__crs_utils_8hpp_source.html">Tpetra_Details_crsUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -344,7 +349,7 @@ template&lt;class Pointers , class Indices1 , class Indices2 , class IndexMap , 
 
 <p>Implementation of findCrsIndices. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details__crs_utils_8hpp_source.html#l00467">467</a> of file <a class="el" href="_tpetra___details__crs_utils_8hpp_source.html">Tpetra_Details_crsUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details__crs_utils_8hpp_source.html#l00472">472</a> of file <a class="el" href="_tpetra___details__crs_utils_8hpp_source.html">Tpetra_Details_crsUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -408,7 +413,7 @@ template&lt;class Pointers , class Indices1 , class Indices2 , class IndexMap , 
 
 <p>Implementation of findCrsIndices. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___details__crs_utils_8hpp_source.html#l00503">503</a> of file <a class="el" href="_tpetra___details__crs_utils_8hpp_source.html">Tpetra_Details_crsUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___details__crs_utils_8hpp_source.html#l00508">508</a> of file <a class="el" href="_tpetra___details__crs_utils_8hpp_source.html">Tpetra_Details_crsUtils.hpp</a>.</p>
 
 </div>
 </div>

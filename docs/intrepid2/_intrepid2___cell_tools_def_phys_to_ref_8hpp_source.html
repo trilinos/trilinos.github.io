@@ -90,11 +90,11 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                       <span class="keyword">const</span> Kokkos::DynRankView&lt;worksetCellValueType,worksetCellProperties...&gt; worksetCell,</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                       <span class="keyword">const</span> shards::CellTopology cellTopo ) {</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> are_accessible =</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(refPoints)::memory_space&gt;::accessible &amp;&amp;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(physPoints)::memory_space&gt;::accessible &amp;&amp;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(worksetCell)::memory_space&gt;::accessible;</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">static_assert</span>(are_accessible, <span class="stringliteral">&quot;CellTools&lt;DeviceType&gt;::mapToReferenceFrame(..): input/output views&#39; memory spaces are not compatible with DeviceType&quot;</span>);</div>
@@ -146,13 +146,13 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> are_accessible =</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(refPoints)::memory_space&gt;::accessible &amp;&amp;</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(initGuess)::memory_space&gt;::accessible &amp;&amp;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(physPoints)::memory_space&gt;::accessible &amp;&amp;</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(worksetCell)::memory_space&gt;::accessible;</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keyword">static_assert</span>(are_accessible, <span class="stringliteral">&quot;CellTools&lt;DeviceType&gt;::mapToReferenceFrameInitGuess(..): input/output views&#39; memory spaces are not compatible with DeviceType&quot;</span>);</div>
@@ -237,7 +237,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclass_intrepid2_1_1_parameters_html_a969f6567a84daa2231760dc6c8d0ff8f"><div class="ttname"><a href="class_intrepid2_1_1_parameters.html#a969f6567a84daa2231760dc6c8d0ff8f">Intrepid2::Parameters::MaxNewton</a></div><div class="ttdeci">static constexpr ordinal_type MaxNewton</div><div class="ttdoc">Maximum number of Newton iterations used internally in methods such as computing the action of the in...</div><div class="ttdef"><b>Definition</b> <a href="_intrepid2___types_8hpp_source.html#l00116">Intrepid2_Types.hpp:116</a></div></div>
 <div class="ttc" id="aclass_intrepid2_1_1_real_space_tools_html"><div class="ttname"><a href="class_intrepid2_1_1_real_space_tools.html">Intrepid2::RealSpaceTools</a></div><div class="ttdoc">Implementation of basic linear algebra functionality in Euclidean space.</div><div class="ttdef"><b>Definition</b> <a href="_intrepid2___real_space_tools_8hpp_source.html#l00046">Intrepid2_RealSpaceTools.hpp:46</a></div></div>
 <div class="ttc" id="astruct_intrepid2_1_1_deduce_layout_html"><div class="ttname"><a href="struct_intrepid2_1_1_deduce_layout.html">Intrepid2::DeduceLayout</a></div><div class="ttdoc">layout deduction (temporary meta-function)</div><div class="ttdef"><b>Definition</b> <a href="_intrepid2___utils_8hpp_source.html#l00186">Intrepid2_Utils.hpp:186</a></div></div>
-<div class="ttc" id="astruct_intrepid2_1_1_impl_1_1_create_view_factory_html"><div class="ttname"><a href="struct_intrepid2_1_1_impl_1_1_create_view_factory.html">Intrepid2::Impl::CreateViewFactory</a></div><div class="ttdoc">Factory to create a view based on the properties of input views The class is useful when the view can...</div><div class="ttdef"><b>Definition</b> <a href="_intrepid2___utils_8hpp_source.html#l00344">Intrepid2_Utils.hpp:345</a></div></div>
+<div class="ttc" id="astruct_intrepid2_1_1_impl_1_1_create_view_factory_html"><div class="ttname"><a href="struct_intrepid2_1_1_impl_1_1_create_view_factory.html">Intrepid2::Impl::CreateViewFactory</a></div><div class="ttdoc">Factory to create a view based on the properties of input views The class is useful when the view can...</div><div class="ttdef"><b>Definition</b> <a href="_intrepid2___utils_8hpp_source.html#l00363">Intrepid2_Utils.hpp:364</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -1035,7 +1035,7 @@ template&lt;class MatrixType &gt; </div>
 <p>Extract a list of entries in a specified global row of this matrix. Put into pre-allocated storage. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">DropRow</td><td>- (In) Global row number for which indices are desired. </td></tr>
+    <tr><td class="paramname">GlobalRow</td><td>- (In) Global row number for which indices are desired. </td></tr>
     <tr><td class="paramname">Indices</td><td>- (Out) Global column indices corresponding to values. </td></tr>
     <tr><td class="paramname">Values</td><td>- (Out) Matrix values. </td></tr>
     <tr><td class="paramname">NumEntries</td><td>- (Out) Number of indices.</td></tr>
@@ -1097,10 +1097,10 @@ template&lt;class MatrixType &gt; </div>
 <p>Extract a list of entries in a specified local row of the graph. Put into storage allocated by calling routine. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">DropRow</td><td>- (In) Drop row number for which indices are desired. </td></tr>
-    <tr><td class="paramname">Indices</td><td>- (Out) Drop column indices corresponding to values. </td></tr>
-    <tr><td class="paramname">Values</td><td>- (Out) Matrix values. </td></tr>
-    <tr><td class="paramname">NumIndices</td><td>- (Out) Number of indices.</td></tr>
+    <tr><td class="paramname">DropRow</td><td>[in] Local row number for which indices are desired. </td></tr>
+    <tr><td class="paramname">Indices</td><td>[out] Local column indices corresponding to values. </td></tr>
+    <tr><td class="paramname">Values</td><td>[out] Matrix values. </td></tr>
+    <tr><td class="paramname">NumEntries</td><td>[out] Number of indices.</td></tr>
   </table>
   </dd>
 </dl>
@@ -1154,12 +1154,12 @@ template&lt;class MatrixType &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">GlobalRow</td><td>- (In) Global row number for which indices are desired. </td></tr>
-    <tr><td class="paramname">Indices</td><td>- (Out) Global column indices corresponding to values. </td></tr>
-    <tr><td class="paramname">Values</td><td>- (Out) Row values </td></tr>
+    <tr><td class="paramname">indices</td><td>- (Out) Global column indices corresponding to values. </td></tr>
+    <tr><td class="paramname">values</td><td>- (Out) Row values </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd><code>isDroplyIndexed() == false</code> </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><code><a class="el" href="class_ifpack2_1_1_drop_filter.html#a7005f5afc79e1cf8bc84ff9a1d3f1d19" title="If matrix indices are in the local range, this function returns true. Otherwise, this function return...">isLocallyIndexed()</a> == false</code> </dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd><code>indices.size() == getNumEntriesInGlobalRow(GlobalRow)</code></dd></dl>
 <p>Note: If <code>GlobalRow</code> does not belong to this node, then <code>indices</code> is set to null. </p>
 
@@ -1210,15 +1210,15 @@ template&lt;class MatrixType &gt; </div>
 <p>Extract a const, non-persisting view of local indices in a specified row of the matrix. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">DropRow</td><td>- (In) Drop row number for which indices are desired. </td></tr>
-    <tr><td class="paramname">Indices</td><td>- (Out) Global column indices corresponding to values. </td></tr>
-    <tr><td class="paramname">Values</td><td>- (Out) Row values </td></tr>
+    <tr><td class="paramname">LocalRow</td><td>- (In) Local row number for which indices are desired. </td></tr>
+    <tr><td class="paramname">indices</td><td>- (Out) Local column indices corresponding to values. </td></tr>
+    <tr><td class="paramname">values</td><td>- (Out) Row values </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd><code><a class="el" href="class_ifpack2_1_1_drop_filter.html#a516f2c9f64583f29e0399b9d6222ebfc" title="If matrix indices are in the global range, this function returns true. Otherwise, this function retur...">isGloballyIndexed()</a> == false</code> </dd></dl>
-<dl class="section post"><dt>Postcondition</dt><dd><code>indices.size() == getNumEntriesInDropRow(DropRow)</code></dd></dl>
-<p>Note: If <code>DropRow</code> does not belong to this node, then <code>indices</code> is set to null. </p>
+<dl class="section post"><dt>Postcondition</dt><dd><code>indices.size() == getNumEntriesInLocalRow(LocalRow)</code></dd></dl>
+<p>Note: If <code>LocalRow</code> does not belong to this node, then <code>indices</code> is set to null. </p>
 
 </div>
 </div>

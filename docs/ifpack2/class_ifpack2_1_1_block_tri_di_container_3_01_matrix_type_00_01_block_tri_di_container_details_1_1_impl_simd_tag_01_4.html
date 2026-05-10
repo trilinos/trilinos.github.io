@@ -309,10 +309,12 @@ template&lt;typename MatrixType &gt; </div>
 </div><div class="memdoc">
 
 <p>Constructor. </p>
-<p>matrix [in] The original input matrix. This <a class="el" href="class_ifpack2_1_1_container.html" title="Interface for creating and solving a set of local linear problems.">Container</a> will construct a local diagonal block from the rows given by <code>localRows</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">partitions</td><td>[in] The set of (local) rows assigned to this container. <code>partitions[i] == j</code>, where i (from 0 to <code>getNumRows() - 1</code>) indicates the <a class="el" href="class_ifpack2_1_1_sparse_container.html" title="Store and solve a local sparse linear problem.">SparseContainer</a>'s row, and j indicates the local row in the calling process. <code>partitions.size()</code> gives the number of rows in the local matrix on each process. This may be different on different processes. If partitions is empty, then a local block-Jacobi preconditioner is formed; this is equivalent to every part of partitions having size 1. </td></tr>
+    <tr><td class="paramname">matrix</td><td>[in] The original input matrix. This <a class="el" href="class_ifpack2_1_1_container.html" title="Interface for creating and solving a set of local linear problems.">Container</a> will construct a local diagonal block from the rows given by <code>localRows</code>.</td></tr>
+    <tr><td class="paramname">partitions</td><td>[in] The set of (local) rows assigned to this container. <code>partitions[i] == j</code>, where i (from 0 to <code>getNumRows() - 1</code>) indicates the <a class="el" href="class_ifpack2_1_1_sparse_container.html" title="Store and solve a local sparse linear problem.">SparseContainer</a>'s row, and j indicates the local row in the calling process. <code>partitions.size()</code> gives the number of rows in the local matrix on each process. This may be different on different processes. If partitions is empty, then a local block-Jacobi preconditioner is formed; this is equivalent to every part of partitions having size 1.</td></tr>
+    <tr><td class="paramname">importer</td><td>[in] Import object for communication. </td></tr>
+    <tr><td class="paramname">pointIndexed</td><td>[in] If the input matrix is a <code>Tpetra::BlockCrsMatrix</code>, whether elements of <code>partitions</code>[k] identify rows within blocks (true) or whole blocks (false). </td></tr>
   </table>
   </dd>
 </dl>
@@ -381,8 +383,13 @@ template&lt;typename MatrixType &gt; </div>
 <p>Constructor for users who want to use <a class="el" href="class_ifpack2_1_1_block_tri_di_container.html" title="Store and solve local block tridiagonal linear problems.">BlockTriDiContainer</a> directly. See main constructor for documentation. This constructor removes the Container-general arguments that are not used in <a class="el" href="class_ifpack2_1_1_block_tri_di_container.html" title="Store and solve local block tridiagonal linear problems.">BlockTriDiContainer</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">matrix</td><td>[in] The original input matrix. </td></tr>
+    <tr><td class="paramname">partitions</td><td>[in] Partitioning of local rows into blocks. </td></tr>
+    <tr><td class="paramname">n_subparts_per_part</td><td>[in] Number of subparts per partition. </td></tr>
     <tr><td class="paramname">overlapCommAndComp</td><td>[in] Overlap communication and computation. This is not always better; it depends on (at least) the MPI implementation and the machine architecture. Defaults to false. It has to be specified at construction because the core data structures depend on whether overlapCommAndComp is true or false.</td></tr>
     <tr><td class="paramname">useSequentialMethod</td><td>[in] This is for development and testing purposes only. </td></tr>
+    <tr><td class="paramname">block_size</td><td>[in] Block size for the container. </td></tr>
+    <tr><td class="paramname">explicitConversion</td><td>[in] Whether to use explicit conversion. </td></tr>
   </table>
   </dd>
 </dl>
@@ -613,6 +620,12 @@ template&lt;typename MatrixType &gt; </div>
 </div><div class="memdoc">
 
 <p>Extract the local tridiagonal block and prepare the solver. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td>[in] Compute parameters.</td></tr>
+  </table>
+  </dd>
+</dl>
 <p>This version of <code>applyInverseJacobi</code> is meant to be called by direct users of this class, rather than by <code><a class="el" href="class_ifpack2_1_1_block_relaxation.html" title="Block relaxation preconditioners (or smoothers) for Tpetra::RowMatrix and Tpetra::CrsMatrix sparse ma...">BlockRelaxation</a></code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">

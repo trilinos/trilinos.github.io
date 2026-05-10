@@ -389,11 +389,33 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>  <span class="comment">// uninitialized state.</span></div>
 <div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>}</div>
 <div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span> </div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span> </div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>} <span class="comment">// end namespace Thyra</span></div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Scalar, <span class="keyword">class</span> LocalOrdinal, <span class="keyword">class</span> GlobalOrdinal, <span class="keyword">class</span> Node&gt;</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>TpetraVectorSpace&lt;Scalar,LocalOrdinal,GlobalOrdinal,Node&gt;::~TpetraVectorSpace() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span> </div>
 <div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span> </div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span><span class="preprocessor">#endif </span><span class="comment">// THYRA_TPETRA_VECTOR_SPACE_HPP</span></div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Scalar, <span class="keyword">class</span> LocalOrdinal, <span class="keyword">class</span> GlobalOrdinal, <span class="keyword">class</span> Node&gt;</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>RCP&lt;TpetraVectorSpace&lt;Scalar,LocalOrdinal,GlobalOrdinal,Node&gt; &gt;</div>
+<div class="foldopen" id="foldopen00291" data-start="{" data-end="}">
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno"><a class="line" href="class_thyra_1_1_tpetra_vector_space.html#a555af9938c09f97f6499d95adf372c46">  291</a></span>tpetraVectorSpace(</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>  <span class="keyword">const</span> <a class="code hl_classRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/thyra/doc/../../../packages/teuchos/doc/html/class_teuchos_1_1_r_c_p.html">RCP</a>&lt;<span class="keyword">const</span> Tpetra::Map&lt;LocalOrdinal,GlobalOrdinal,Node&gt; &gt; &amp;tpetraMap</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>  )</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>{</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>  <a class="code hl_classRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/thyra/doc/../../../packages/teuchos/doc/html/class_teuchos_1_1_r_c_p.html">RCP&lt;TpetraVectorSpace&lt;Scalar,LocalOrdinal,GlobalOrdinal,Node&gt;</a> &gt; vs =</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    <a class="code hl_function" href="class_thyra_1_1_tpetra_vector_space.html#af3f524498645e7a5ba1ca068cd5ba0b1">TpetraVectorSpace&lt;Scalar,LocalOrdinal,GlobalOrdinal,Node&gt;::create</a>();</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>  vs-&gt;initialize(tpetraMap);</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>  <span class="keywordflow">return</span> vs;</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>}</div>
+</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span> </div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>} <span class="comment">// end namespace Thyra</span></div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span> </div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span><span class="preprocessor">#define THYRATPETRAADAPTERS_TPETRAVECTORSPACE_INSTANT(S, LO, GO, N)            \</span></div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span><span class="preprocessor">  template class Thyra::TpetraVectorSpace&lt;S, LO, GO, N&gt;;                       \</span></div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span><span class="preprocessor">                                                                               \</span></div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span><span class="preprocessor">  template Teuchos::RCP&lt;Thyra::TpetraVectorSpace&lt;S, LO, GO, N&gt;&gt;                \</span></div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span><span class="preprocessor">  Thyra::tpetraVectorSpace(const Thyra::RCP&lt;const Tpetra::Map&lt;LO, GO, N&gt;&gt; &amp;);</span></div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span> </div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span><span class="preprocessor">#endif </span><span class="comment">// THYRA_TPETRA_VECTOR_SPACE_HPP</span></div>
 <div class="ttc" id="aclass_r_t_op_pack_1_1_const_sub_multi_vector_view_html"><div class="ttname"><a href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/thyra/doc/../../../packages/rtop/src/interfaces/doc/html/class_r_t_op_pack_1_1_const_sub_multi_vector_view.html">RTOpPack::ConstSubMultiVectorView</a></div></div>
 <div class="ttc" id="aclass_r_t_op_pack_1_1_const_sub_multi_vector_view_html_a646515bb6bc84143e391420349f654b7"><div class="ttname"><a href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/thyra/doc/../../../packages/rtop/src/interfaces/doc/html/class_r_t_op_pack_1_1_const_sub_multi_vector_view.html#a646515bb6bc84143e391420349f654b7">RTOpPack::ConstSubMultiVectorView::numSubCols</a></div><div class="ttdeci">Ordinal numSubCols() const</div></div>
 <div class="ttc" id="aclass_r_t_op_pack_1_1_const_sub_multi_vector_view_html_a7f0672342c7d1967ee1d3b60367ce02a"><div class="ttname"><a href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/thyra/doc/../../../packages/rtop/src/interfaces/doc/html/class_r_t_op_pack_1_1_const_sub_multi_vector_view.html#a7f0672342c7d1967ee1d3b60367ce02a">RTOpPack::ConstSubMultiVectorView::subDim</a></div><div class="ttdeci">Ordinal subDim() const</div></div>

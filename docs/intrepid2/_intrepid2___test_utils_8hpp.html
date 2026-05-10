@@ -106,6 +106,10 @@ Functions</h2></td></tr>
 <tr class="separator:a8c6238cbbce0a3c154f960543a3c75f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadd5ca1cefdef12076510d703534d4c3" id="r_aadd5ca1cefdef12076510d703534d4c3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_intrepid2___test_utils_8hpp.html#aadd5ca1cefdef12076510d703534d4c3">Intrepid2::essentiallyEqual</a> (double a, double b, double epsilon)</td></tr>
 <tr class="separator:aadd5ca1cefdef12076510d703534d4c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c9a0cf20c7cda0aa108be6ce303e3c6" id="r_a7c9a0cf20c7cda0aa108be6ce303e3c6"><td class="memTemplParams" colspan="2">template&lt;typename ScalarType &gt; </td></tr>
+<tr class="memitem:a7c9a0cf20c7cda0aa108be6ce303e3c6"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="struct_intrepid2_1_1_scalar_traits.html">ScalarTraits</a>&lt; ScalarType &gt;::scalar_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_intrepid2___test_utils_8hpp.html#a7c9a0cf20c7cda0aa108be6ce303e3c6">Intrepid2::computeMaxNorm</a> (const ScalarType &amp;value)</td></tr>
+<tr class="memdesc:a7c9a0cf20c7cda0aa108be6ce303e3c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the norm 1 of a scalar value or Sacado Fad type.  <br /></td></tr>
+<tr class="separator:a7c9a0cf20c7cda0aa108be6ce303e3c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fc162a8b975aa49df3551e2baa99e1a" id="r_a1fc162a8b975aa49df3551e2baa99e1a"><td class="memItemLeft" align="right" valign="top">KOKKOS_INLINE_FUNCTION double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_intrepid2___test_utils_8hpp.html#a1fc162a8b975aa49df3551e2baa99e1a">Intrepid2::fromZeroOne</a> (double x_zero_one)</td></tr>
 <tr class="separator:a1fc162a8b975aa49df3551e2baa99e1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65530852eb6e974a1cfaffb1db54270f" id="r_a65530852eb6e974a1cfaffb1db54270f"><td class="memItemLeft" align="right" valign="top">KOKKOS_INLINE_FUNCTION double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_intrepid2___test_utils_8hpp.html#a65530852eb6e974a1cfaffb1db54270f">Intrepid2::toZeroOne</a> (double x_minus_one_one)</td></tr>
@@ -243,7 +247,7 @@ Variables</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">\</div>
 <div class="line">TEUCHOS_UNIT_TEST_TEMPLATE_2_INSTANT( GROUP_NAME, TEST_NAME, <span class="keywordtype">double</span>, <span class="keywordtype">double</span> ) \</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00794">794</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00815">815</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -275,7 +279,7 @@ Variables</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">\</div>
 <div class="line">TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT( GROUP_NAME, TEST_NAME, <span class="keywordtype">double</span> ) \</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00790">790</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00811">811</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -379,6 +383,48 @@ template&lt;typename ScalarType , typename DeviceType &gt; </div>
 
 </div>
 </div>
+<a id="a7c9a0cf20c7cda0aa108be6ce303e3c6" name="a7c9a0cf20c7cda0aa108be6ce303e3c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c9a0cf20c7cda0aa108be6ce303e3c6">&#9670;&#160;</a></span>computeMaxNorm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ScalarType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">ScalarTraits&lt; ScalarType &gt;::scalar_type Intrepid2::computeMaxNorm </td>
+          <td>(</td>
+          <td class="paramtype">const ScalarType &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compute the norm 1 of a scalar value or Sacado Fad type. </p>
+<p>For scalar values, the norm is the absolute value. For Sacado Fad types, the norm is the max of absolute values of all components (value and derivatives).</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ScalarType</td><td>The scalar type (double or Sacado::Fad type) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The value to compute the norm of </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The computed norm </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00115">115</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00115">Intrepid2::computeMaxNorm()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00115">Intrepid2::computeMaxNorm()</a>.</p>
+
+</div>
+</div>
 <a id="aa53b597ad2628f67ad1d90e1befbfe11" name="aa53b597ad2628f67ad1d90e1befbfe11"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa53b597ad2628f67ad1d90e1befbfe11">&#9670;&#160;</a></span>copyFunctorToHostView()</h2>
 
@@ -399,11 +445,11 @@ template&lt;class Functor , class Scalar , int rank&gt; </div>
 
 <p>Copy the values for the specified functor. </p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00401">401</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00422">422</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00401">Intrepid2::copyFunctorToHostView()</a>, and <a class="el" href="_intrepid2___utils_8hpp_source.html#l00849">Intrepid2::getFunctorRank()</a>.</p>
+<p class="reference">References <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00422">Intrepid2::copyFunctorToHostView()</a>, and <a class="el" href="_intrepid2___utils_8hpp_source.html#l00868">Intrepid2::getFunctorRank()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00401">Intrepid2::copyFunctorToHostView()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00422">Intrepid2::copyFunctorToHostView()</a>.</p>
 
 </div>
 </div>
@@ -511,7 +557,7 @@ template&lt;class Scalar1 , class Scalar2 &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00105">105</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00126">126</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -531,7 +577,7 @@ template&lt;class Scalar1 , class Scalar2 &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00117">117</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00138">138</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -587,7 +633,7 @@ template&lt;class Scalar1 , class Scalar2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00370">370</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00391">391</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -645,7 +691,7 @@ template&lt;class BasisFamily &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00137">137</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00158">158</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -685,7 +731,7 @@ template&lt;typename ValueType , class ... DimArgs&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00219">219</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00240">240</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -743,7 +789,7 @@ template&lt;bool defineVertexFunctions&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00185">185</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00206">206</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -765,7 +811,7 @@ template&lt;class DeviceViewType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00129">129</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00150">150</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -815,11 +861,11 @@ template&lt;typename PointValueType , typename DeviceType &gt; </div>
 </dl>
 <p>The total number of points defined will be a triangular number; if n=numPointsBase, then the point count is the nth triangular number, given by n*(n+1)/2. </p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00240">240</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00261">261</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00240">Intrepid2::getInputPointsView()</a>, <a class="el" href="_intrepid2___point_tools_def_8hpp_source.html#l00086">Intrepid2::PointTools::getLattice()</a>, and <a class="el" href="_intrepid2___point_tools_def_8hpp_source.html#l00035">Intrepid2::PointTools::getLatticeSize()</a>.</p>
+<p class="reference">References <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00261">Intrepid2::getInputPointsView()</a>, <a class="el" href="_intrepid2___point_tools_def_8hpp_source.html#l00086">Intrepid2::PointTools::getLattice()</a>, and <a class="el" href="_intrepid2___point_tools_def_8hpp_source.html#l00035">Intrepid2::PointTools::getLatticeSize()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00240">Intrepid2::getInputPointsView()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00261">Intrepid2::getInputPointsView()</a>.</p>
 
 </div>
 </div>
@@ -877,7 +923,7 @@ template&lt;typename OutputValueType , typename DeviceType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00293">293</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00314">314</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -917,7 +963,7 @@ template&lt;typename ValueType , typename DeviceType , class ... DimArgs&gt; </d
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00204">204</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00225">225</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -955,7 +1001,7 @@ template&lt;class FunctorType , typename Scalar , int rank&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00466">466</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00487">487</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -993,7 +1039,7 @@ template&lt;class FunctorType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00506">506</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00527">527</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -1031,7 +1077,7 @@ template&lt;class FunctorType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00513">513</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00534">534</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -1069,7 +1115,7 @@ template&lt;class FunctorType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00520">520</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00541">541</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -1107,7 +1153,7 @@ template&lt;class FunctorType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00527">527</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00548">548</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -1145,7 +1191,7 @@ template&lt;class FunctorType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00534">534</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00555">555</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -1183,7 +1229,7 @@ template&lt;class FunctorType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00541">541</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00562">562</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -1221,7 +1267,7 @@ template&lt;class FunctorType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00548">548</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00569">569</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -1259,7 +1305,7 @@ template&lt;class View &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00555">555</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00576">576</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -1404,7 +1450,7 @@ template&lt;class FunctorType1 , class FunctorType2 , int rank, typename Scalar 
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00588">588</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00609">609</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -1474,9 +1520,9 @@ template&lt;class FunctorType1 , class FunctorType2 , int rank, typename Scalar 
 
 <p>this method assumes both functors are accesible on device. </p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00597">597</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00618">618</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_intrepid2___utils_8hpp_source.html#l00849">Intrepid2::getFunctorRank()</a>.</p>
+<p class="reference">References <a class="el" href="_intrepid2___utils_8hpp_source.html#l00868">Intrepid2::getFunctorRank()</a>.</p>
 
 </div>
 </div>
@@ -1544,7 +1590,7 @@ template&lt;class ViewType , class FunctorType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00697">697</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00718">718</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -1612,7 +1658,7 @@ template&lt;class ViewType , class FunctorType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00704">704</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00725">725</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -1680,7 +1726,7 @@ template&lt;class ViewType , class FunctorType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00711">711</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00732">732</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -1748,7 +1794,7 @@ template&lt;class ViewType , class FunctorType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00718">718</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00739">739</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -1816,7 +1862,7 @@ template&lt;class ViewType , class FunctorType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00725">725</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00746">746</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -1884,7 +1930,7 @@ template&lt;class ViewType , class FunctorType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00732">732</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00753">753</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -1952,7 +1998,7 @@ template&lt;class ViewType , class FunctorType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00739">739</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00760">760</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -2020,7 +2066,7 @@ template&lt;class ViewType1 , class ViewType2 &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00746">746</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00767">767</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -2040,7 +2086,7 @@ template&lt;class ViewType1 , class ViewType2 &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00111">111</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00132">132</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -2060,7 +2106,7 @@ template&lt;class ViewType1 , class ViewType2 &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00123">123</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___test_utils_8hpp_source.html#l00144">144</a> of file <a class="el" href="_intrepid2___test_utils_8hpp_source.html">Intrepid2_TestUtils.hpp</a>.</p>
 
 </div>
 </div>

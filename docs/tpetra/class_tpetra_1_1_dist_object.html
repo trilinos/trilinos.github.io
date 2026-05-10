@@ -1935,7 +1935,9 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   <table class="params">
     <tr><td class="paramname">newSize</td><td>[in] New size of imports_. </td></tr>
     <tr><td class="paramname">verbose</td><td>[in] Whether to print verbose debugging output to stderr on every (MPI) process in the communicator. </td></tr>
-    <tr><td class="paramname">prefix</td><td>[in] If <code>verbose</code> is <code>true</code>, then this is a nonnull prefix to print at the beginning of each line of verbose debugging output. Otherwise, not used.</td></tr>
+    <tr><td class="paramname">prefix</td><td>[in] If <code>verbose</code> is <code>true</code>, then this is a nonnull prefix to print at the beginning of each line of verbose debugging output. Otherwise, not used. </td></tr>
+    <tr><td class="paramname">remoteLIDsContiguous</td><td>[in] Whether the remote LIDs are contiguous. If true, the remote LIDs are stored contiguously. </td></tr>
+    <tr><td class="paramname">CM</td><td>[in] Combine mode used for importing.</td></tr>
   </table>
   </dd>
 </dl>
@@ -2033,7 +2035,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>This may be ignored in <a class="el" href="class_tpetra_1_1_dist_object.html#a82a9a5fd0df1dda55188a340e6b5a2e7" title="Redistribute data across (MPI) processes.">doTransfer()</a> if constantNumPackets is nonzero, indicating a constant number of packets per LID. (For example, <a class="el" href="class_tpetra_1_1_multi_vector.html" title="One or more distributed dense vectors.">MultiVector</a> sets the constantNumPackets output argument of <a class="el" href="class_tpetra_1_1_dist_object.html#a484241212e4d1ca7c2669a6729b57801" title="Pack data and metadata for communication (sends).">packAndPrepare()</a> to the number of columns in the multivector.)</p>
 <p>Unfortunately, I had to declare this protected, because <a class="el" href="class_tpetra_1_1_crs_matrix.html" title="Sparse matrix that presents a row-oriented interface that lets users read or modify entries.">CrsMatrix</a> uses it at one point. Please, nobody else use it. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l01019">1019</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l01023">1023</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2062,7 +2064,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Buffer from which packed data are exported (sent to other processes). </p>
 <p>Unfortunately, I had to declare this protected, because <a class="el" href="class_tpetra_1_1_crs_matrix.html" title="Sparse matrix that presents a row-oriented interface that lets users read or modify entries.">CrsMatrix</a> uses it at one point. Please, nobody else use it. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l01026">1026</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l01030">1030</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2093,7 +2095,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>This may be ignored in <a class="el" href="class_tpetra_1_1_dist_object.html#a82a9a5fd0df1dda55188a340e6b5a2e7" title="Redistribute data across (MPI) processes.">doTransfer()</a> if constantNumPackets is nonzero, indicating a constant number of packets per LID. (For example, <a class="el" href="class_tpetra_1_1_multi_vector.html" title="One or more distributed dense vectors.">MultiVector</a> sets the constantNumPackets output argument of <a class="el" href="class_tpetra_1_1_dist_object.html#a484241212e4d1ca7c2669a6729b57801" title="Pack data and metadata for communication (sends).">packAndPrepare()</a> to the number of columns in the multivector.)</p>
 <p>Unfortunately, I had to declare this protected, because <a class="el" href="class_tpetra_1_1_crs_matrix.html" title="Sparse matrix that presents a row-oriented interface that lets users read or modify entries.">CrsMatrix</a> uses them at one point. Please, nobody else use it. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l01041">1041</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l01045">1045</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
 
 </div>
 </div>

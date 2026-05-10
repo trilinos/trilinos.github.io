@@ -259,10 +259,10 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span><span class="preprocessor">#if defined(KOKKOS_ENABLE_CUDA) &amp;&amp; defined(IFPACK2_BLOCKHELPER_ENABLE_PROFILE)</span></div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span><span class="preprocessor">#define IFPACK2_BLOCKHELPER_PROFILER_REGION_BEGIN \</span></div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="preprocessor">  KOKKOS_IMPL_CUDA_SAFE_CALL(cudaProfilerStart());</span></div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="preprocessor">  cudaProfilerStart();</span></div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="preprocessor">#define IFPACK2_BLOCKHELPER_PROFILER_REGION_END \</span></div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="preprocessor">  { KOKKOS_IMPL_CUDA_SAFE_CALL(cudaProfilerStop()); }</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="preprocessor">  { cudaProfilerStop(); }</span></div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="preprocessor">#else</span></div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="preprocessor">#define IFPACK2_BLOCKHELPER_PROFILER_REGION_BEGIN</span></div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="preprocessor">#define IFPACK2_BLOCKHELPER_PROFILER_REGION_END</span></div>

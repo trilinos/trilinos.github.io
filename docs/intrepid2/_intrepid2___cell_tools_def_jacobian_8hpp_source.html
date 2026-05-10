@@ -831,7 +831,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span>               <span class="keyword">const</span> BasisGradientsType gradients, <span class="keyword">const</span> <span class="keywordtype">int</span> startCell, <span class="keyword">const</span> <span class="keywordtype">int</span> endCell)</div>
 <div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span>  {</div>
 <div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> is_accessible =</div>
-<div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(jacobian)::memory_space&gt;::accessible;</div>
 <div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span>    <span class="keyword">static_assert</span>(is_accessible, <span class="stringliteral">&quot;CellTools&lt;DeviceType&gt;::setJacobian(..): output view&#39;s memory space is not compatible with DeviceType&quot;</span>);</div>
 <div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span> </div>
@@ -862,9 +862,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span>               <span class="keyword">const</span> Teuchos::RCP&lt;HGradBasisType&gt; basis,</div>
 <div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span>               <span class="keyword">const</span> <span class="keywordtype">int</span> startCell, <span class="keyword">const</span> <span class="keywordtype">int</span> endCell) {</div>
 <div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> are_accessible =</div>
-<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(jacobian)::memory_space&gt;::accessible &amp;&amp;</div>
-<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(points)::memory_space&gt;::accessible;</div>
 <div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span>    <span class="keyword">static_assert</span>(are_accessible, <span class="stringliteral">&quot;CellTools&lt;DeviceType&gt;::setJacobian(..): input/output views&#39; memory spaces are not compatible with DeviceType&quot;</span>);</div>
 <div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span> </div>

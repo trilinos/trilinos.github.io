@@ -2,8 +2,8 @@ var class_mue_lu_1_1_utilities_base =
 [
     [ "Magnitude", "class_mue_lu_1_1_utilities_base.html#a25f9f3f3ab255efcb865639b84de9cfe", null ],
     [ "Crs2Op", "class_mue_lu_1_1_utilities_base.html#ad11f19d7f046c6c1ca0653211d6114ce", null ],
-    [ "GetThresholdedMatrix", "class_mue_lu_1_1_utilities_base.html#a8434cdef8d339a14d17c5c3b223f75b2", null ],
-    [ "GetThresholdedGraph", "class_mue_lu_1_1_utilities_base.html#afd71553d66184e42a190881e8ada3ab8", null ],
+    [ "GetThresholdedMatrix", "class_mue_lu_1_1_utilities_base.html#a7e1ff4f657df52a3ec87e2dec8924eed", null ],
+    [ "GetThresholdedGraph", "class_mue_lu_1_1_utilities_base.html#a50d3a00823cfd64fe227d4bf5c1aaa9a", null ],
     [ "GetMatrixDiagonal_arcp", "class_mue_lu_1_1_utilities_base.html#a51200f8b6e5f2826fd51fce2b4fbc932", null ],
     [ "GetMatrixDiagonal", "class_mue_lu_1_1_utilities_base.html#ad441b11df979e541d1ad16f423bf94db", null ],
     [ "GetMatrixDiagonalInverse", "class_mue_lu_1_1_utilities_base.html#a2c2b0c6a402fb999f06e358ff3f9f046", null ],
@@ -19,7 +19,7 @@ var class_mue_lu_1_1_utilities_base =
     [ "ResidualNorm", "class_mue_lu_1_1_utilities_base.html#a09df65c3a0bea6f419c2cfdaf53df213", null ],
     [ "Residual", "class_mue_lu_1_1_utilities_base.html#af37802341b46cb6aa8eb808b2cbddbd4", null ],
     [ "Residual", "class_mue_lu_1_1_utilities_base.html#a90f249f0c447c26174cdc2dae3651d5b", null ],
-    [ "PowerMethod", "class_mue_lu_1_1_utilities_base.html#a56ca409dd7f83de8595195f92358509e", null ],
+    [ "PowerMethod", "class_mue_lu_1_1_utilities_base.html#a27559f4f06eb09aaf78ce76b66db9107", null ],
     [ "PowerMethod", "class_mue_lu_1_1_utilities_base.html#a30f08426008d1b9adab4f882a21195a4", null ],
     [ "MakeFancy", "class_mue_lu_1_1_utilities_base.html#ae6e6111c23248f61f0569a06a9d49b9c", null ],
     [ "Distance2", "class_mue_lu_1_1_utilities_base.html#a6d386320c54df2bc3ea020e33f59d8e2", null ],
@@ -59,5 +59,6 @@ var class_mue_lu_1_1_utilities_base =
     [ "GeneratedBlockedTargetMap", "class_mue_lu_1_1_utilities_base.html#a9cdbb4ad474ae9885ffb992d4cbf4389", null ],
     [ "MapsAreNested", "class_mue_lu_1_1_utilities_base.html#a5772f0667c15ed7c6cb0c92528e54242", null ],
     [ "CuthillMcKee", "class_mue_lu_1_1_utilities_base.html#a429fe32da21a728163f1deac77d34025", null ],
-    [ "ReverseCuthillMcKee", "class_mue_lu_1_1_utilities_base.html#a541e638ad794cb71e0102244fefc1eb8", null ]
+    [ "ReverseCuthillMcKee", "class_mue_lu_1_1_utilities_base.html#a541e638ad794cb71e0102244fefc1eb8", null ],
+    [ "TripleMatrixProduct", "class_mue_lu_1_1_utilities_base.html#a0e61ae39fa0b91d8f506cfb5c58513cd", null ]
 ];
