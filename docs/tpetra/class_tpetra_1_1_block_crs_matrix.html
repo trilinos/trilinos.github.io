@@ -910,7 +910,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Kokkos::Device specialization for communication buffers. </p>
 <p>See #1088 for why this is not just <code>device_type::device_type</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___block_crs_matrix__decl_8hpp_source.html#l00737">737</a> of file <a class="el" href="_tpetra___block_crs_matrix__decl_8hpp_source.html">Tpetra_BlockCrsMatrix_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___block_crs_matrix__decl_8hpp_source.html#l00746">746</a> of file <a class="el" href="_tpetra___block_crs_matrix__decl_8hpp_source.html">Tpetra_BlockCrsMatrix_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1468,6 +1468,16 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 </div><div class="memdoc">
 
 <p>For this matrix A, compute <code>Y := beta * Y + alpha * Op(A) * X</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">X</td><td>[in] Input <a class="el" href="class_tpetra_1_1_multi_vector.html" title="One or more distributed dense vectors.">MultiVector</a>. </td></tr>
+    <tr><td class="paramname">Y</td><td>[in/out] Output <a class="el" href="class_tpetra_1_1_multi_vector.html" title="One or more distributed dense vectors.">MultiVector</a>. </td></tr>
+    <tr><td class="paramname">mode</td><td>[in] Whether to apply the transpose (Teuchos::NO_TRANS, Teuchos::TRANS, Teuchos::CONJ_TRANS). </td></tr>
+    <tr><td class="paramname">alpha</td><td>[in] Scaling factor for the result. </td></tr>
+    <tr><td class="paramname">beta</td><td>[in] Scaling factor for Y before adding the result.</td></tr>
+  </table>
+  </dd>
+</dl>
 <p>Op(A) is A if mode is Teuchos::NO_TRANS, the transpose of A if mode is Teuchos::TRANS, and the conjugate transpose of A if mode is Teuchos::CONJ_TRANS.</p>
 <p>If alpha is zero, ignore X's entries on input; if beta is zero, ignore Y's entries on input. This follows the BLAS convention, and only matters if X resp. Y have Inf or NaN entries. </p>
 
@@ -1504,7 +1514,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Reimplemented from <a class="el" href="class_tpetra_1_1_operator.html#af08c1e3f0773c94db195d612e2c2b9ad">Tpetra::Operator&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___block_crs_matrix__decl_8hpp_source.html#l00350">350</a> of file <a class="el" href="_tpetra___block_crs_matrix__decl_8hpp_source.html">Tpetra_BlockCrsMatrix_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___block_crs_matrix__decl_8hpp_source.html#l00357">357</a> of file <a class="el" href="_tpetra___block_crs_matrix__decl_8hpp_source.html">Tpetra_BlockCrsMatrix_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1654,7 +1664,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Implements <a class="el" href="class_tpetra_1_1_row_matrix.html#a99d73047cc4211712094ef6890ebc46f">Tpetra::RowMatrix&lt; Scalar, LO, GO, Node &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___block_crs_matrix__decl_8hpp_source.html#l00398">398</a> of file <a class="el" href="_tpetra___block_crs_matrix__decl_8hpp_source.html">Tpetra_BlockCrsMatrix_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___block_crs_matrix__decl_8hpp_source.html#l00405">405</a> of file <a class="el" href="_tpetra___block_crs_matrix__decl_8hpp_source.html">Tpetra_BlockCrsMatrix_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1738,6 +1748,16 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 </div><div class="memdoc">
 
 <p>Version of <a class="el" href="class_tpetra_1_1_block_crs_matrix.html#a89e793f16d4d2853ab05d605dca3a05f" title="For this matrix A, compute Y := beta * Y + alpha * Op(A) * X.">apply()</a> that takes <a class="el" href="class_tpetra_1_1_block_multi_vector.html" title="MultiVector for multiple degrees of freedom per mesh point.">BlockMultiVector</a> input and output. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">X</td><td>[in] Input <a class="el" href="class_tpetra_1_1_multi_vector.html" title="One or more distributed dense vectors.">MultiVector</a>. </td></tr>
+    <tr><td class="paramname">Y</td><td>[in/out] Output <a class="el" href="class_tpetra_1_1_multi_vector.html" title="One or more distributed dense vectors.">MultiVector</a>. </td></tr>
+    <tr><td class="paramname">mode</td><td>[in] Whether to apply the transpose (Teuchos::NO_TRANS, Teuchos::TRANS, Teuchos::CONJ_TRANS). </td></tr>
+    <tr><td class="paramname">alpha</td><td>[in] Scaling factor for the result. </td></tr>
+    <tr><td class="paramname">beta</td><td>[in] Scaling factor for Y before adding the result.</td></tr>
+  </table>
+  </dd>
+</dl>
 <p>This method is deliberately not marked const, because it may do lazy initialization of temporary internal block multivectors. </p>
 
 <p class="definition">Definition at line <a class="el" href="_tpetra___block_crs_matrix__def_8hpp_source.html#l00481">481</a> of file <a class="el" href="_tpetra___block_crs_matrix__def_8hpp_source.html">Tpetra_BlockCrsMatrix_def.hpp</a>.</p>
@@ -1970,14 +1990,12 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>This matrix has a graph, and we assume that the graph is fill complete on input to the matrix's constructor. Thus, the matrix has a column <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a>, and it stores column indices as local indices. This means you can view the column indices as local indices directly. However, you may <em>not</em> view them as global indices directly, since the column indices are not stored as global indices in the graph.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">localRowInd</td><td>[in] Local (mesh, i.e., block) row index.</td></tr>
-    <tr><td class="paramname">colInds</td><td>[out] If <code>localRowInd</code> is valid on the calling process, then on output, this is a pointer to the local (mesh, i.e., block) column indices in the given (mesh, i.e., block) row. If localRowInd is <em>not</em> valid, then this is undefined. (Please check the return value of this method.)</td></tr>
-    <tr><td class="paramname">vals</td><td>[out] If <code>localRowInd</code> is valid on the calling process, then on output, this is a pointer to the row's values. If localRowInd is <em>not</em> valid, then this is undefined. (Please check the return value of this method.)</td></tr>
-    <tr><td class="paramname">numInds</td><td>[in] The number of (mesh, i.e., block) indices in <code>colInds</code> on output.</td></tr>
+    <tr><td class="paramname">LocalRow</td><td>[in] Local (mesh, i.e., block) row index.</td></tr>
+    <tr><td class="paramname">indices</td><td>[out] If <code>LocalRow</code> is valid on the calling process, then on output, this is a pointer to the local (mesh, i.e., block) column indices in the given (mesh, i.e., block) row. If LocalRow is <em>not</em> valid, then this is undefined. (Please check the return value of this method.)</td></tr>
+    <tr><td class="paramname">values</td><td>[out] If <code>LocalRow</code> is valid on the calling process, then on output, this is a pointer to the row's values. If LocalRow is <em>not</em> valid, then this is undefined. (Please check the return value of this method.) </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if <code>localRowInd</code> is valid, else <code>Teuchos::OrdinalTraits&lt;LO&gt;::invalid()</code>. KK: this is inherited from row matrix interface and it returns const this cannot replace the deprecated pointer interface we need nonconst version of this code </dd></dl>
 
 <p>Implements <a class="el" href="class_tpetra_1_1_row_matrix.html#a45235d3b4a450cd11d00d72c96d53488">Tpetra::RowMatrix&lt; Scalar, LO, GO, Node &gt;</a>.</p>
 
@@ -2317,7 +2335,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Whether this object had an error on the calling process. </p>
 <p><a class="el" href="class_tpetra_1_1_import.html" title="Communication plan for data redistribution from a uniquely-owned to a (possibly) multiply-owned distr...">Import</a> and <a class="el" href="class_tpetra_1_1_export.html" title="Communication plan for data redistribution from a (possibly) multiply-owned to a uniquely-owned distr...">Export</a> operations using this object as the target of the <a class="el" href="class_tpetra_1_1_import.html" title="Communication plan for data redistribution from a uniquely-owned to a (possibly) multiply-owned distr...">Import</a> or <a class="el" href="class_tpetra_1_1_export.html" title="Communication plan for data redistribution from a (possibly) multiply-owned to a uniquely-owned distr...">Export</a> may incur local errors, if some process encounters an LID in its list which is not a valid mesh row local index on that process. In that case, we don't want to throw an exception, because not all processes may throw an exception; this can result in deadlock or put <a class="el" href="namespace_tpetra.html" title="Namespace Tpetra contains the class and methods constituting the Tpetra library.">Tpetra</a> in an incorrect state, due to lack of consistency across processes. Instead, we set a local error flag and ignore the incorrect data. When unpacking, we do the same with invalid column indices. If you want to check whether some process experienced an error, you must do a reduction or all-reduce over this flag. Every time you initiate a new <a class="el" href="class_tpetra_1_1_import.html" title="Communication plan for data redistribution from a uniquely-owned to a (possibly) multiply-owned distr...">Import</a> or <a class="el" href="class_tpetra_1_1_export.html" title="Communication plan for data redistribution from a (possibly) multiply-owned to a uniquely-owned distr...">Export</a> with this object as the target, we clear this flag. (Note to developers: we clear it at the beginning of checkSizes().) </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___block_crs_matrix__decl_8hpp_source.html#l00627">627</a> of file <a class="el" href="_tpetra___block_crs_matrix__decl_8hpp_source.html">Tpetra_BlockCrsMatrix_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___block_crs_matrix__decl_8hpp_source.html#l00632">632</a> of file <a class="el" href="_tpetra___block_crs_matrix__decl_8hpp_source.html">Tpetra_BlockCrsMatrix_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2350,7 +2368,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>This is only nonempty on the calling process if <a class="el" href="class_tpetra_1_1_block_crs_matrix.html#adbe4ae54fd551ecc7fa191b8a5216a7c" title="Whether this object had an error on the calling process.">localError()</a> returns true. In that case, it stores a stream of human-readable, endline-separated error messages encountered during an <a class="el" href="class_tpetra_1_1_import.html" title="Communication plan for data redistribution from a uniquely-owned to a (possibly) multiply-owned distr...">Import</a> or <a class="el" href="class_tpetra_1_1_export.html" title="Communication plan for data redistribution from a (possibly) multiply-owned to a uniquely-owned distr...">Export</a> cycle. Every time you initiate a new <a class="el" href="class_tpetra_1_1_import.html" title="Communication plan for data redistribution from a uniquely-owned to a (possibly) multiply-owned distr...">Import</a> or <a class="el" href="class_tpetra_1_1_export.html" title="Communication plan for data redistribution from a (possibly) multiply-owned to a uniquely-owned distr...">Export</a> with this object as the target, we clear this stream. (Note to developers: we clear it at the beginning of checkSizes().)</p>
 <p>If you want to print this, you are responsible for ensuring that it is valid for the calling MPI process to print to whatever output stream you use. On some MPI implementations, you may need to send the string to Process 0 for printing. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___block_crs_matrix__decl_8hpp_source.html#l00645">645</a> of file <a class="el" href="_tpetra___block_crs_matrix__decl_8hpp_source.html">Tpetra_BlockCrsMatrix_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___block_crs_matrix__decl_8hpp_source.html#l00650">650</a> of file <a class="el" href="_tpetra___block_crs_matrix__decl_8hpp_source.html">Tpetra_BlockCrsMatrix_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2486,7 +2504,15 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </table>
   </dd>
 </dl>
-<p>This method uses the offsets of the diagonal entries, as precomputed by <a class="el" href="class_tpetra_1_1_block_crs_matrix.html#a8efe9c6b5212d2811e508f433c5912a8" title="Get offsets of the diagonal entries in the matrix.">getLocalDiagOffsets()</a>, to speed up copying the diagonal of the matrix. Like sumIntoLocalValues, but for the ABSMAX combine mode. </p>
+<p>This method uses the offsets of the diagonal entries, as precomputed by <a class="el" href="class_tpetra_1_1_block_crs_matrix.html#a8efe9c6b5212d2811e508f433c5912a8" title="Get offsets of the diagonal entries in the matrix.">getLocalDiagOffsets()</a>, to speed up copying the diagonal of the matrix. Like sumIntoLocalValues, but for the ABSMAX combine mode. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">localRowInd</td><td>[in] Local row index. </td></tr>
+    <tr><td class="paramname">colInds</td><td>[in] Array of local column indices. </td></tr>
+    <tr><td class="paramname">vals</td><td>[in] Array of values to ABSMAX into the matrix. </td></tr>
+    <tr><td class="paramname">numColInds</td><td>[in] Number of column indices. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="_tpetra___block_crs_matrix__def_8hpp_source.html#l00615">615</a> of file <a class="el" href="_tpetra___block_crs_matrix__def_8hpp_source.html">Tpetra_BlockCrsMatrix_def.hpp</a>.</p>
 
@@ -3560,7 +3586,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Reimplemented in <a class="el" href="class_tpetra_1_1_crs_matrix.html#a91bdf1bb397a404452e5fd443c5e9a76">Tpetra::CrsMatrix&lt; ::Tpetra::Details::DefaultTypes::scalar_type, ::Tpetra::Details::DefaultTypes::local_ordinal_type, ::Tpetra::Details::DefaultTypes::global_ordinal_type, ::Tpetra::Details::DefaultTypes::node_type &gt;</a>, <a class="el" href="class_tpetra_1_1_crs_matrix.html#a91bdf1bb397a404452e5fd443c5e9a76">Tpetra::CrsMatrix&lt; SC, LO, GO, NT &gt;</a>, <a class="el" href="class_tpetra_1_1_row_matrix.html#a0906b1838bbedac46e1404bd5a95ac07">Tpetra::RowMatrix&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;</a>, and <a class="el" href="class_tpetra_1_1_crs_matrix.html#a91bdf1bb397a404452e5fd443c5e9a76">Tpetra::CrsMatrix&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___operator_8hpp_source.html#l00129">129</a> of file <a class="el" href="_tpetra___operator_8hpp_source.html">Tpetra_Operator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___operator_8hpp_source.html#l00135">135</a> of file <a class="el" href="_tpetra___operator_8hpp_source.html">Tpetra_Operator.hpp</a>.</p>
 
 </div>
 </div>
@@ -3870,8 +3896,18 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Computes the operator-multivector application. </p>
 <p>Loosely, performs <picture><source srcset="form_28_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$Y = \alpha \cdot A^{\textrm{mode}} \cdot X + \beta \cdot Y$" src="form_28.png" width="146" height="18"/></picture>. However, the details of operation vary according to the values of <code>alpha</code> and <code>beta</code>. Specifically</p><ul>
 <li>if <code>beta == 0</code>, <a class="el" href="class_tpetra_1_1_block_crs_matrix.html#a89e793f16d4d2853ab05d605dca3a05f" title="For this matrix A, compute Y := beta * Y + alpha * Op(A) * X.">apply()</a> <b>must</b> overwrite <code>Y</code>, so that any values in <code>Y</code> (including NaNs) are ignored.</li>
-<li>if <code>alpha == 0</code>, <a class="el" href="class_tpetra_1_1_block_crs_matrix.html#a89e793f16d4d2853ab05d605dca3a05f" title="For this matrix A, compute Y := beta * Y + alpha * Op(A) * X.">apply()</a> <b>may</b> short-circuit the operator, so that any values in <code>X</code> (including NaNs) are ignored. </li>
+<li>if <code>alpha == 0</code>, <a class="el" href="class_tpetra_1_1_block_crs_matrix.html#a89e793f16d4d2853ab05d605dca3a05f" title="For this matrix A, compute Y := beta * Y + alpha * Op(A) * X.">apply()</a> <b>may</b> short-circuit the operator, so that any values in <code>X</code> (including NaNs) are ignored.</li>
 </ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">X</td><td>[in] Input <a class="el" href="class_tpetra_1_1_multi_vector.html" title="One or more distributed dense vectors.">MultiVector</a>. </td></tr>
+    <tr><td class="paramname">Y</td><td>[in/out] Output <a class="el" href="class_tpetra_1_1_multi_vector.html" title="One or more distributed dense vectors.">MultiVector</a>. </td></tr>
+    <tr><td class="paramname">mode</td><td>[in] Whether to apply the transpose (Teuchos::NO_TRANS, Teuchos::TRANS, Teuchos::CONJ_TRANS). </td></tr>
+    <tr><td class="paramname">alpha</td><td>[in] Scaling factor for the result. </td></tr>
+    <tr><td class="paramname">beta</td><td>[in] Scaling factor for Y before adding the result. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implemented in <a class="el" href="class_tpetra_1_1_crs_matrix.html#a63ab2d56f57e555e3435f45157bffe7f">Tpetra::CrsMatrix&lt; ::Tpetra::Details::DefaultTypes::scalar_type, ::Tpetra::Details::DefaultTypes::local_ordinal_type, ::Tpetra::Details::DefaultTypes::global_ordinal_type, ::Tpetra::Details::DefaultTypes::node_type &gt;</a>, <a class="el" href="class_tpetra_1_1_crs_matrix.html#a63ab2d56f57e555e3435f45157bffe7f">Tpetra::CrsMatrix&lt; SC, LO, GO, NT &gt;</a>, <a class="el" href="class_tpetra_1_1_crs_matrix.html#a63ab2d56f57e555e3435f45157bffe7f">Tpetra::CrsMatrix&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;</a>, <a class="el" href="class_tpetra_1_1_crs_matrix_multiply_op.html#a41e29101b1ae6467fd906130d67048fc">Tpetra::CrsMatrixMultiplyOp&lt; Scalar, MatScalar, LocalOrdinal, GlobalOrdinal, Node &gt;</a>, <a class="el" href="class_tpetra_1_1_mixed_scalar_multiply_op.html#a70315ab5375234ca1163450393d5e610">Tpetra::MixedScalarMultiplyOp&lt; Scalar, OpScalar, LocalOrdinal, GlobalOrdinal, Node &gt;</a>, and <a class="el" href="class_tpetra_1_1details_1_1_apply_op.html#a80636845a84d210c536d40e885fac042">Tpetra::details::ApplyOp&lt; Scalar, OperatorType &gt;</a>.</p>
 
@@ -3905,7 +3941,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Whether this operator can return its diagonal. </p>
 <p>By default, this returns false. Subclasses must override this method if they can supply a diagonal. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___operator_8hpp_source.html#l00124">124</a> of file <a class="el" href="_tpetra___operator_8hpp_source.html">Tpetra_Operator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___operator_8hpp_source.html#l00130">130</a> of file <a class="el" href="_tpetra___operator_8hpp_source.html">Tpetra_Operator.hpp</a>.</p>
 
 </div>
 </div>
@@ -5022,14 +5058,16 @@ To implementers of <a class="el" href="class_tpetra_1_1_dist_object.html" title=
   <table class="params">
     <tr><td class="paramname">newSize</td><td>[in] New size of imports_. </td></tr>
     <tr><td class="paramname">verbose</td><td>[in] Whether to print verbose debugging output to stderr on every (MPI) process in the communicator. </td></tr>
-    <tr><td class="paramname">prefix</td><td>[in] If <code>verbose</code> is <code>true</code>, then this is a nonnull prefix to print at the beginning of each line of verbose debugging output. Otherwise, not used.</td></tr>
+    <tr><td class="paramname">prefix</td><td>[in] If <code>verbose</code> is <code>true</code>, then this is a nonnull prefix to print at the beginning of each line of verbose debugging output. Otherwise, not used. </td></tr>
+    <tr><td class="paramname">remoteLIDsContiguous</td><td>[in] Whether the remote LIDs are contiguous. If true, the remote LIDs are stored contiguously. </td></tr>
+    <tr><td class="paramname">CM</td><td>[in] Combine mode used for importing.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whether we actually reallocated.</dd></dl>
 <p>We don't need a "reallocExportsIfNeeded" method, because <code>exports_</code> always gets passed into <a class="el" href="class_tpetra_1_1_block_crs_matrix.html#ac9c17fc21fba3b953dba26569018a488">packAndPrepare()</a> by nonconst reference. Thus, that method can resize the DualView without needing to call other <a class="el" href="class_tpetra_1_1_dist_object.html" title="Base class for distributed Tpetra objects that support data redistribution.">DistObject</a> methods. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l01000">1000</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__def_8hpp_source.html#l01004">1004</a> of file <a class="el" href="_tpetra___dist_object__def_8hpp_source.html">Tpetra_DistObject_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -5112,7 +5150,7 @@ To implementers of <a class="el" href="class_tpetra_1_1_dist_object.html" title=
 <p>This may be ignored in <a class="el" href="class_tpetra_1_1_dist_object.html#a82a9a5fd0df1dda55188a340e6b5a2e7" title="Redistribute data across (MPI) processes.">doTransfer()</a> if constantNumPackets is nonzero, indicating a constant number of packets per LID. (For example, <a class="el" href="class_tpetra_1_1_multi_vector.html" title="One or more distributed dense vectors.">MultiVector</a> sets the constantNumPackets output argument of <a class="el" href="class_tpetra_1_1_block_crs_matrix.html#ac9c17fc21fba3b953dba26569018a488">packAndPrepare()</a> to the number of columns in the multivector.)</p>
 <p>Unfortunately, I had to declare this protected, because <a class="el" href="class_tpetra_1_1_crs_matrix.html" title="Sparse matrix that presents a row-oriented interface that lets users read or modify entries.">CrsMatrix</a> uses it at one point. Please, nobody else use it. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l01019">1019</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l01023">1023</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -5139,7 +5177,7 @@ To implementers of <a class="el" href="class_tpetra_1_1_dist_object.html" title=
 <p>Buffer from which packed data are exported (sent to other processes). </p>
 <p>Unfortunately, I had to declare this protected, because <a class="el" href="class_tpetra_1_1_crs_matrix.html" title="Sparse matrix that presents a row-oriented interface that lets users read or modify entries.">CrsMatrix</a> uses it at one point. Please, nobody else use it. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l01026">1026</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l01030">1030</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -5168,7 +5206,7 @@ To implementers of <a class="el" href="class_tpetra_1_1_dist_object.html" title=
 <p>This may be ignored in <a class="el" href="class_tpetra_1_1_dist_object.html#a82a9a5fd0df1dda55188a340e6b5a2e7" title="Redistribute data across (MPI) processes.">doTransfer()</a> if constantNumPackets is nonzero, indicating a constant number of packets per LID. (For example, <a class="el" href="class_tpetra_1_1_multi_vector.html" title="One or more distributed dense vectors.">MultiVector</a> sets the constantNumPackets output argument of <a class="el" href="class_tpetra_1_1_block_crs_matrix.html#ac9c17fc21fba3b953dba26569018a488">packAndPrepare()</a> to the number of columns in the multivector.)</p>
 <p>Unfortunately, I had to declare this protected, because <a class="el" href="class_tpetra_1_1_crs_matrix.html" title="Sparse matrix that presents a row-oriented interface that lets users read or modify entries.">CrsMatrix</a> uses them at one point. Please, nobody else use it. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l01041">1041</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html#l01045">1045</a> of file <a class="el" href="_tpetra___dist_object__decl_8hpp_source.html">Tpetra_DistObject_decl.hpp</a>.</p>
 
 </div>
 </div>

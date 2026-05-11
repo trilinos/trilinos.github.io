@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['linearproblem_0',['LinearProblem',['../class_galeri_1_1_finite_elements_1_1_linear_problem.html',1,'Galeri::FiniteElements']]],
-  ['loadable_1',['Loadable',['../class_galeri_1_1grid_1_1_loadable.html',1,'Galeri::grid']]]
+  ['laplace1dproblem_0',['Laplace1DProblem',['../class_galeri_1_1_xpetra_1_1_laplace1_d_problem.html',1,'Galeri::Xpetra']]],
+  ['laplace2dproblem_1',['Laplace2DProblem',['../class_galeri_1_1_xpetra_1_1_laplace2_d_problem.html',1,'Galeri::Xpetra']]],
+  ['laplace3dproblem_2',['Laplace3DProblem',['../class_galeri_1_1_xpetra_1_1_laplace3_d_problem.html',1,'Galeri::Xpetra']]]
 ];

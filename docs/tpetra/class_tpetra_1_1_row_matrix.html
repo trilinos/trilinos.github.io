@@ -1738,8 +1738,18 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Computes the operator-multivector application. </p>
 <p>Loosely, performs <picture><source srcset="form_28_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$Y = \alpha \cdot A^{\textrm{mode}} \cdot X + \beta \cdot Y$" src="form_28.png" width="146" height="18"/></picture>. However, the details of operation vary according to the values of <code>alpha</code> and <code>beta</code>. Specifically</p><ul>
 <li>if <code>beta == 0</code>, <a class="el" href="class_tpetra_1_1_operator.html#a900b02363414fa0decad11d466c320ce" title="Computes the operator-multivector application.">apply()</a> <b>must</b> overwrite <code>Y</code>, so that any values in <code>Y</code> (including NaNs) are ignored.</li>
-<li>if <code>alpha == 0</code>, <a class="el" href="class_tpetra_1_1_operator.html#a900b02363414fa0decad11d466c320ce" title="Computes the operator-multivector application.">apply()</a> <b>may</b> short-circuit the operator, so that any values in <code>X</code> (including NaNs) are ignored. </li>
+<li>if <code>alpha == 0</code>, <a class="el" href="class_tpetra_1_1_operator.html#a900b02363414fa0decad11d466c320ce" title="Computes the operator-multivector application.">apply()</a> <b>may</b> short-circuit the operator, so that any values in <code>X</code> (including NaNs) are ignored.</li>
 </ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">X</td><td>[in] Input <a class="el" href="class_tpetra_1_1_multi_vector.html" title="One or more distributed dense vectors.">MultiVector</a>. </td></tr>
+    <tr><td class="paramname">Y</td><td>[in/out] Output <a class="el" href="class_tpetra_1_1_multi_vector.html" title="One or more distributed dense vectors.">MultiVector</a>. </td></tr>
+    <tr><td class="paramname">mode</td><td>[in] Whether to apply the transpose (Teuchos::NO_TRANS, Teuchos::TRANS, Teuchos::CONJ_TRANS). </td></tr>
+    <tr><td class="paramname">alpha</td><td>[in] Scaling factor for the result. </td></tr>
+    <tr><td class="paramname">beta</td><td>[in] Scaling factor for Y before adding the result. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implemented in <a class="el" href="class_tpetra_1_1_crs_matrix.html#a63ab2d56f57e555e3435f45157bffe7f">Tpetra::CrsMatrix&lt; ::Tpetra::Details::DefaultTypes::scalar_type, ::Tpetra::Details::DefaultTypes::local_ordinal_type, ::Tpetra::Details::DefaultTypes::global_ordinal_type, ::Tpetra::Details::DefaultTypes::node_type &gt;</a>, <a class="el" href="class_tpetra_1_1_crs_matrix.html#a63ab2d56f57e555e3435f45157bffe7f">Tpetra::CrsMatrix&lt; SC, LO, GO, NT &gt;</a>, <a class="el" href="class_tpetra_1_1_crs_matrix.html#a63ab2d56f57e555e3435f45157bffe7f">Tpetra::CrsMatrix&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;</a>, <a class="el" href="class_tpetra_1_1_crs_matrix_multiply_op.html#a41e29101b1ae6467fd906130d67048fc">Tpetra::CrsMatrixMultiplyOp&lt; Scalar, MatScalar, LocalOrdinal, GlobalOrdinal, Node &gt;</a>, <a class="el" href="class_tpetra_1_1_mixed_scalar_multiply_op.html#a70315ab5375234ca1163450393d5e610">Tpetra::MixedScalarMultiplyOp&lt; Scalar, OpScalar, LocalOrdinal, GlobalOrdinal, Node &gt;</a>, and <a class="el" href="class_tpetra_1_1details_1_1_apply_op.html#a80636845a84d210c536d40e885fac042">Tpetra::details::ApplyOp&lt; Scalar, OperatorType &gt;</a>.</p>
 
@@ -1775,7 +1785,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Reimplemented in <a class="el" href="class_tpetra_1_1details_1_1_apply_op.html#aeaed46564e9a72a538e09910b3bfd4d3">Tpetra::details::ApplyOp&lt; Scalar, OperatorType &gt;</a>, <a class="el" href="class_tpetra_1_1_block_crs_matrix.html#a6c2e0bf21d59732b1d9bc58fe70d7588">Tpetra::BlockCrsMatrix&lt; Scalar, LO, GO, Node &gt;</a>, <a class="el" href="class_tpetra_1_1_crs_matrix.html#a8d215d979f759f6482e6f7d743d6f990">Tpetra::CrsMatrix&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;</a>, <a class="el" href="class_tpetra_1_1_crs_matrix.html#a8d215d979f759f6482e6f7d743d6f990">Tpetra::CrsMatrix&lt; ::Tpetra::Details::DefaultTypes::scalar_type, ::Tpetra::Details::DefaultTypes::local_ordinal_type, ::Tpetra::Details::DefaultTypes::global_ordinal_type, ::Tpetra::Details::DefaultTypes::node_type &gt;</a>, <a class="el" href="class_tpetra_1_1_crs_matrix.html#a8d215d979f759f6482e6f7d743d6f990">Tpetra::CrsMatrix&lt; SC, LO, GO, NT &gt;</a>, <a class="el" href="class_tpetra_1_1_crs_matrix_multiply_op.html#a2551c08553e98d0145b2ba9f1ef0de75">Tpetra::CrsMatrixMultiplyOp&lt; Scalar, MatScalar, LocalOrdinal, GlobalOrdinal, Node &gt;</a>, and <a class="el" href="class_tpetra_1_1_mixed_scalar_multiply_op.html#acce5c43d62624f573dc513774a4e5885">Tpetra::MixedScalarMultiplyOp&lt; Scalar, OpScalar, LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___operator_8hpp_source.html#l00119">119</a> of file <a class="el" href="_tpetra___operator_8hpp_source.html">Tpetra_Operator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___operator_8hpp_source.html#l00125">125</a> of file <a class="el" href="_tpetra___operator_8hpp_source.html">Tpetra_Operator.hpp</a>.</p>
 
 </div>
 </div>
@@ -1807,7 +1817,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Whether this operator can return its diagonal. </p>
 <p>By default, this returns false. Subclasses must override this method if they can supply a diagonal. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___operator_8hpp_source.html#l00124">124</a> of file <a class="el" href="_tpetra___operator_8hpp_source.html">Tpetra_Operator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___operator_8hpp_source.html#l00130">130</a> of file <a class="el" href="_tpetra___operator_8hpp_source.html">Tpetra_Operator.hpp</a>.</p>
 
 </div>
 </div>

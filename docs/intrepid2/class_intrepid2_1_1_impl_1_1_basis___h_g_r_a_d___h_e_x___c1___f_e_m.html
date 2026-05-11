@@ -77,9 +77,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aeff0349c1b1afe78fcc2764d6cabb4ff" id="r_aeff0349c1b1afe78fcc2764d6cabb4ff"><td class="memTemplParams" colspan="2">template&lt;typename DT , typename outputValueValueType , class ... outputValueProperties, typename inputPointValueType , class ... inputPointProperties&gt; </td></tr>
 <tr class="memitem:aeff0349c1b1afe78fcc2764d6cabb4ff"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_impl_1_1_basis___h_g_r_a_d___h_e_x___c1___f_e_m.html#aeff0349c1b1afe78fcc2764d6cabb4ff">getValues</a> (const typename DT::execution_space &amp;space, Kokkos::DynRankView&lt; outputValueValueType, outputValueProperties... &gt; outputValues, const Kokkos::DynRankView&lt; inputPointValueType, inputPointProperties... &gt; inputPoints, const EOperator operatorType)</td></tr>
 <tr class="separator:aeff0349c1b1afe78fcc2764d6cabb4ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaffa17b1e1d692c4f4f637640c4f10ab" id="r_aaffa17b1e1d692c4f4f637640c4f10ab"><td class="memTemplParams" colspan="2">template&lt;typename DT , typename OT , typename PT &gt; </td></tr>
-<tr class="memitem:aaffa17b1e1d692c4f4f637640c4f10ab"><td class="memTemplItemLeft" align="right" valign="top">KOKKOS_INLINE_FUNCTION void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_impl_1_1_basis___h_g_r_a_d___h_e_x___c1___f_e_m.html#aaffa17b1e1d692c4f4f637640c4f10ab">getValues</a> (OutputViewType outputValues, const PointViewType inputPoints, const EOperator operatorType, const typename Kokkos::TeamPolicy&lt; typename DT::execution_space &gt;::member_type &amp;team_member, const typename DT::execution_space::scratch_memory_space &amp;scratchStorage, const ordinal_type subcellDim, const ordinal_type subcellOrdinal) const</td></tr>
-<tr class="separator:aaffa17b1e1d692c4f4f637640c4f10ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a547764649e379ab57018f54f50b9671c" id="r_a547764649e379ab57018f54f50b9671c"><td class="memTemplParams" colspan="2">template&lt;typename DT , typename OT , typename PT &gt; </td></tr>
+<tr class="memitem:a547764649e379ab57018f54f50b9671c"><td class="memTemplItemLeft" align="right" valign="top">KOKKOS_INLINE_FUNCTION void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_impl_1_1_basis___h_g_r_a_d___h_e_x___c1___f_e_m.html#a547764649e379ab57018f54f50b9671c">getValues</a> (OutputViewType outputValues, const PointViewType inputPoints, const EOperator operatorType, const typename Kokkos::TeamPolicy&lt; typename DT::execution_space &gt;::member_type &amp;team_member, const int threadScratchLevel, const ordinal_type subcellDim, const ordinal_type subcellOrdinal) const</td></tr>
+<tr class="separator:a547764649e379ab57018f54f50b9671c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -150,12 +150,12 @@ template&lt;typename DT , typename outputValueValueType , class ... outputValueP
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_g_r_a_d___h_e_x___c1___f_e_m_def_8hpp_source.html#l00279">279</a> of file <a class="el" href="_intrepid2___h_g_r_a_d___h_e_x___c1___f_e_m_def_8hpp_source.html">Intrepid2_HGRAD_HEX_C1_FEMDef.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_g_r_a_d___h_e_x___c1___f_e_m_def_8hpp_source.html#l00271">271</a> of file <a class="el" href="_intrepid2___h_g_r_a_d___h_e_x___c1___f_e_m_def_8hpp_source.html">Intrepid2_HGRAD_HEX_C1_FEMDef.hpp</a>.</p>
 
 </div>
 </div>
-<a id="aaffa17b1e1d692c4f4f637640c4f10ab" name="aaffa17b1e1d692c4f4f637640c4f10ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaffa17b1e1d692c4f4f637640c4f10ab">&#9670;&#160;</a></span>getValues() <span class="overload">[2/2]</span></h2>
+<a id="a547764649e379ab57018f54f50b9671c" name="a547764649e379ab57018f54f50b9671c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a547764649e379ab57018f54f50b9671c">&#9670;&#160;</a></span>getValues() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -189,8 +189,8 @@ template&lt;typename DT , typename OT , typename PT &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const typename DT::execution_space::scratch_memory_space &amp;&#160;</td>
-          <td class="paramname"><em>scratchStorage</em>, </td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>threadScratchLevel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -212,7 +212,7 @@ template&lt;typename DT , typename OT , typename PT &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_g_r_a_d___h_e_x___c1___f_e_m_def_8hpp_source.html#l00430">430</a> of file <a class="el" href="_intrepid2___h_g_r_a_d___h_e_x___c1___f_e_m_def_8hpp_source.html">Intrepid2_HGRAD_HEX_C1_FEMDef.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_g_r_a_d___h_e_x___c1___f_e_m_def_8hpp_source.html#l00420">420</a> of file <a class="el" href="_intrepid2___h_g_r_a_d___h_e_x___c1___f_e_m_def_8hpp_source.html">Intrepid2_HGRAD_HEX_C1_FEMDef.hpp</a>.</p>
 
 </div>
 </div>

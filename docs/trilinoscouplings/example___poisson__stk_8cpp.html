@@ -203,12 +203,13 @@ Functions</h2></td></tr>
 <tr class="memitem:aaf5fe8202359578160eb300c38b0db0e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="example___poisson__stk_8cpp.html#aaf5fe8202359578160eb300c38b0db0e">evaluateExactSolutionGrad</a> (ArrayOut &amp;exactSolutionGradValues, const ArrayIn &amp;evaluationPoints)</td></tr>
 <tr class="memdesc:aaf5fe8202359578160eb300c38b0db0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computation of the gradient of the exact solution at array of points in physical space.  <br /></td></tr>
 <tr class="separator:aaf5fe8202359578160eb300c38b0db0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30c96d09d964ed34390c8bcb51e0a628" id="r_a30c96d09d964ed34390c8bcb51e0a628"><td class="memItemLeft" align="right" valign="top"><a id="a30c96d09d964ed34390c8bcb51e0a628" name="a30c96d09d964ed34390c8bcb51e0a628"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>TestMultiLevelPreconditioner</b> (char ProblemType[], Teuchos::ParameterList &amp;MLList, Teuchos::RCP&lt; Tpetra_CrsMatrix &gt; &amp;A, Teuchos::RCP&lt; Tpetra_Vector &gt; &amp;xexact, Teuchos::RCP&lt; Tpetra_MultiVector &gt; &amp;b, Teuchos::RCP&lt; Tpetra_MultiVector &gt; &amp;uh, Teuchos::RCP&lt; Tpetra_MultiVector &gt; &amp;coords, double &amp;TotalErrorResidual, double &amp;TotalErrorExactSol)</td></tr>
-<tr class="separator:a30c96d09d964ed34390c8bcb51e0a628"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f7be345cdc646ae3b5c63d0ea5d312a" id="r_a2f7be345cdc646ae3b5c63d0ea5d312a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="example___poisson__stk_8cpp.html#a2f7be345cdc646ae3b5c63d0ea5d312a">getDimension</a> (const ShardsCellTopology &amp;cellTopology)</td></tr>
-<tr class="memdesc:a2f7be345cdc646ae3b5c63d0ea5d312a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple factory that chooses basis function based on cell topology.  <br /></td></tr>
-<tr class="separator:a2f7be345cdc646ae3b5c63d0ea5d312a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6847efc58489f3fb368c6ae01b333de" id="r_aa6847efc58489f3fb368c6ae01b333de"><td class="memItemLeft" align="right" valign="top"><a id="aa6847efc58489f3fb368c6ae01b333de" name="aa6847efc58489f3fb368c6ae01b333de"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>TestMultiLevelPreconditioner</b> (char ProblemType[], Teuchos::ParameterList &amp;MLList, Teuchos::RCP&lt; Tpetra_CrsMatrix &gt; &amp;A, Teuchos::RCP&lt; Tpetra_Vector &gt; &amp;xexact, Teuchos::RCP&lt; Tpetra_MultiVector &gt; &amp;b, Teuchos::RCP&lt; Tpetra_MultiVector &gt; &amp;uh, Teuchos::RCP&lt; Tpetra_MultiVector &gt; &amp;coords, Teuchos::RCP&lt; Tpetra_CrsMatrix &gt; &amp;MassMatrix, double &amp;TotalErrorResidual, double &amp;TotalErrorExactSol)</td></tr>
+<tr class="separator:aa6847efc58489f3fb368c6ae01b333de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57776f3b7821490a97dd1d49710faa17" id="r_a57776f3b7821490a97dd1d49710faa17"><td class="memTemplParams" colspan="2">template&lt;typename DeviceType , typename Scalar &gt; </td></tr>
+<tr class="memitem:a57776f3b7821490a97dd1d49710faa17"><td class="memTemplItemLeft" align="right" valign="top">Teuchos::RCP&lt; Intrepid2::Basis&lt; DeviceType, Scalar, Scalar &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="example___poisson__stk_8cpp.html#a57776f3b7821490a97dd1d49710faa17">getHGradBasis</a> (const ShardsCellTopology &amp;cellTopology)</td></tr>
+<tr class="memdesc:a57776f3b7821490a97dd1d49710faa17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple factory that chooses HGRAD basis function based on cell topology.  <br /></td></tr>
+<tr class="separator:a57776f3b7821490a97dd1d49710faa17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e3fc96f36582eeb58451bd58356dd99" id="r_a8e3fc96f36582eeb58451bd58356dd99"><td class="memItemLeft" align="right" valign="top"><a id="a8e3fc96f36582eeb58451bd58356dd99" name="a8e3fc96f36582eeb58451bd58356dd99"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>mesh_read_write</b> (const std::string &amp;type, const std::string &amp;working_directory, const std::string &amp;filename, stk::io::StkMeshIoBroker &amp;broker, int db_integer_size, stk::io::HeartbeatType hb_type)</td></tr>
 <tr class="separator:a8e3fc96f36582eeb58451bd58356dd99"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -515,14 +516,16 @@ template&lt;typename Scalar &gt; </div>
 
 </div>
 </div>
-<a id="a2f7be345cdc646ae3b5c63d0ea5d312a" name="a2f7be345cdc646ae3b5c63d0ea5d312a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f7be345cdc646ae3b5c63d0ea5d312a">&#9670;&#160;</a></span>getDimension()</h2>
+<a id="a57776f3b7821490a97dd1d49710faa17" name="a57776f3b7821490a97dd1d49710faa17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57776f3b7821490a97dd1d49710faa17">&#9670;&#160;</a></span>getHGradBasis()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename DeviceType , typename Scalar &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">int getDimension </td>
+          <td class="memname">Teuchos::RCP&lt; Intrepid2::Basis&lt; DeviceType, Scalar, Scalar &gt; &gt; getHGradBasis </td>
           <td>(</td>
           <td class="paramtype">const ShardsCellTopology &amp;&#160;</td>
           <td class="paramname"><em>cellTopology</em></td><td>)</td>
@@ -531,12 +534,10 @@ template&lt;typename Scalar &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Simple factory that chooses basis function based on cell topology. </p>
+<p>Simple factory that chooses HGRAD basis function based on cell topology. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cellTopology</td><td>[in] Shards cell topology </td></tr>
-    <tr><td class="paramname">order</td><td>[in] basis function order, currently unused </td></tr>
-    <tr><td class="paramname">basis</td><td>[out] pointer to Intrepid basis</td></tr>
+    <tr><td class="paramname">cellTopology</td><td>[in] Shards cell topology</td></tr>
   </table>
   </dd>
 </dl>

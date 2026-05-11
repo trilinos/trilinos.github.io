@@ -395,9 +395,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>                                  <span class="stringliteral">&quot;&gt;&gt;&gt; ERROR (Intrepid2::CellTools::getSubcvCoords): cell coords dimension(2) does not match to the dimension of the cell.&quot;</span> );</div>
 <div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> are_accessible =</div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(subcvCoords)::memory_space&gt;::accessible &amp;&amp;</div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(cellCoords)::memory_space&gt;::accessible;</div>
 <div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>    <span class="keyword">static_assert</span>(are_accessible, <span class="stringliteral">&quot;CellTools&lt;DeviceType&gt;::getSubcvCoords(..): input/output views&#39; memory spaces are not compatible with DeviceType&quot;</span>);</div>
 <div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span> </div>

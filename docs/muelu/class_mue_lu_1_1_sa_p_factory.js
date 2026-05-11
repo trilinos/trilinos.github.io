@@ -14,5 +14,6 @@ var class_mue_lu_1_1_sa_p_factory =
     [ "optimalSatisfyPConstraintsForScalarPDEsNonKokkos", "class_mue_lu_1_1_sa_p_factory.html#a1856d975d1a0e316c43e543bb33b1e47", null ],
     [ "SatisfyPConstraints", "class_mue_lu_1_1_sa_p_factory.html#a07141c58f342f637651b2a0999e6f490", null ],
     [ "optimalSatisfyPConstraintsForScalarPDEs", "class_mue_lu_1_1_sa_p_factory.html#a659269e45404c62a31fd0f2c2bd322b6", null ],
-    [ "constrainRow", "class_mue_lu_1_1_sa_p_factory.html#a678c63d902096030c96ebda34e7ff9b9", null ]
+    [ "constrainRow", "class_mue_lu_1_1_sa_p_factory.html#a678c63d902096030c96ebda34e7ff9b9", null ],
+    [ "JacobiMaxwell1", "class_mue_lu_1_1_sa_p_factory.html#aee10774ba2075e6ed8790bf529711b1b", null ]
 ];

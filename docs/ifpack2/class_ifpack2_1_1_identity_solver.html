@@ -633,8 +633,11 @@ template&lt;class MatrixType &gt; </div>
 <p>Apply the preconditioner to X, and put the result in Y. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">X</td><td>[in] MultiVector to which to apply the preconditioner.</td></tr>
-    <tr><td class="paramname">Y</td><td>[in/out] On input: Initial guess, if applicable. On poutput: Result of applying the preconditioner. </td></tr>
+    <tr><td class="paramname">X</td><td>[in] MultiVector to which to apply the preconditioner. </td></tr>
+    <tr><td class="paramname">Y</td><td>[in/out] On input: Initial guess, if applicable. On output: Result of applying the preconditioner. </td></tr>
+    <tr><td class="paramname">mode</td><td>[in] Whether to apply the transpose (Teuchos::NO_TRANS, Teuchos::TRANS, Teuchos::CONJ_TRANS). </td></tr>
+    <tr><td class="paramname">alpha</td><td>[in] Scaling factor for the result. </td></tr>
+    <tr><td class="paramname">beta</td><td>[in] Scaling factor for Y before adding the result. </td></tr>
   </table>
   </dd>
 </dl>
@@ -744,6 +747,7 @@ template&lt;class MatrixType &gt; </div>
   <table class="params">
     <tr><td class="paramname">X</td><td>[in] MultiVector input. </td></tr>
     <tr><td class="paramname">Y</td><td>[in/out] Result of applying the matrix A to X. </td></tr>
+    <tr><td class="paramname">mode</td><td>[in] Whether to apply the transpose (Teuchos::NO_TRANS, Teuchos::TRANS, Teuchos::CONJ_TRANS). </td></tr>
   </table>
   </dd>
 </dl>

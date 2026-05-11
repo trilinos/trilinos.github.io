@@ -342,7 +342,8 @@ template&lt;class MatrixType , class LocalScalarType &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">matrix</td><td>[in] The original input matrix. This <a class="el" href="class_ifpack2_1_1_container.html" title="Interface for creating and solving a set of local linear problems.">Container</a> will construct local diagonal blocks from its rows according to <code>partitions</code>. </td></tr>
-    <tr><td class="paramname">partitioner</td><td>[in] The <a class="el" href="class_ifpack2_1_1_partitioner.html" title="Ifpack2::Partitioner:">Partitioner</a> object that assigns local rows of the input matrix to blocks. </td></tr>
+    <tr><td class="paramname">partitions</td><td>[in] Partitioning of local rows into blocks. </td></tr>
+    <tr><td class="paramname">importer</td><td>[in] Import object for communication. </td></tr>
     <tr><td class="paramname">pointIndexed</td><td>[in] If the input matrix is a <code>Tpetra::BlockCrsMatrix</code>, whether elements of <code>partitions</code>[k] identify rows within blocks (true) or whole blocks (false). </td></tr>
   </table>
   </dd>

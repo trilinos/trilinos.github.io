@@ -18,7 +18,6 @@ var class_mue_lu_1_1_matrix_construction_1_1_vector_counting_functor_3_01local__
     [ "results", "class_mue_lu_1_1_matrix_construction_1_1_vector_counting_functor_3_01local__matrix__type_00_01functor__type_01_4.html#a1912a2f3dcdbc860ab869df23d3e971b", null ],
     [ "filtered_rowptr", "class_mue_lu_1_1_matrix_construction_1_1_vector_counting_functor_3_01local__matrix__type_00_01functor__type_01_4.html#ab39c1d189446473d380ec84a11a03438", null ],
     [ "graph_rowptr", "class_mue_lu_1_1_matrix_construction_1_1_vector_counting_functor_3_01local__matrix__type_00_01functor__type_01_4.html#a6b07fb5b6f4b94c8196d1172d616d881", null ],
-    [ "firstFunctor", "class_mue_lu_1_1_matrix_construction_1_1_vector_counting_functor_3_01local__matrix__type_00_01functor__type_01_4.html#a8e5ea31e866579873025d6b193361753", null ],
     [ "functor", "class_mue_lu_1_1_matrix_construction_1_1_vector_counting_functor_3_01local__matrix__type_00_01functor__type_01_4.html#a1f14d972e4acebcf647cd7e26d8d56e7", null ],
     [ "comparison", "class_mue_lu_1_1_matrix_construction_1_1_vector_counting_functor_3_01local__matrix__type_00_01functor__type_01_4.html#a25f5f3bb95b44deb5df772f2b3762479", null ],
     [ "permutation", "class_mue_lu_1_1_matrix_construction_1_1_vector_counting_functor_3_01local__matrix__type_00_01functor__type_01_4.html#aa6dfbd8660e44acf80d713f7ab958163", null ]

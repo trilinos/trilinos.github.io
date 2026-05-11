@@ -103,8 +103,8 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:adcadc8e9a53a45fe26833760ce39cb75" id="r_adcadc8e9a53a45fe26833760ce39cb75"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classROL_1_1ScaledObjective.html#adcadc8e9a53a45fe26833760ce39cb75">ScaledObjective</a> (const Ptr&lt; <a class="el" href="classROL_1_1Objective.html">Objective</a>&lt; Real &gt; &gt; &amp;obj, Real scale)</td></tr>
-<tr class="separator:adcadc8e9a53a45fe26833760ce39cb75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ad3830a60a5c00ca3107b561b3221e5" id="r_a4ad3830a60a5c00ca3107b561b3221e5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classROL_1_1ScaledObjective.html#a4ad3830a60a5c00ca3107b561b3221e5">ScaledObjective</a> (const Ptr&lt; <a class="el" href="classROL_1_1Objective.html">Objective</a>&lt; Real &gt; &gt; &amp;obj, Real scale, Real shift=Real(0))</td></tr>
+<tr class="separator:a4ad3830a60a5c00ca3107b561b3221e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82e8f711a6b47c7c728ead74ed10f5c6" id="r_a82e8f711a6b47c7c728ead74ed10f5c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classROL_1_1ScaledObjective.html#a82e8f711a6b47c7c728ead74ed10f5c6">update</a> (const <a class="el" href="classROL_1_1Vector.html">Vector</a>&lt; Real &gt; &amp;x, <a class="el" href="namespaceROL.html#a9dd6ab8dac42a769044e106f370b9aec">UpdateType</a> type, int iter=-1) override</td></tr>
 <tr class="memdesc:a82e8f711a6b47c7c728ead74ed10f5c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update objective function.  <br /></td></tr>
 <tr class="separator:a82e8f711a6b47c7c728ead74ed10f5c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -182,6 +182,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:aeac88db5cd0972cf7e8ee72b42f83377"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea0f1134501d0c7fb858190bb243a391" id="r_aea0f1134501d0c7fb858190bb243a391"><td class="memItemLeft" align="right" valign="top">const Real&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classROL_1_1ScaledObjective.html#aea0f1134501d0c7fb858190bb243a391">scale_</a></td></tr>
 <tr class="separator:aea0f1134501d0c7fb858190bb243a391"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a638adec928f5fd0e177bf9a2efc16dae" id="r_a638adec928f5fd0e177bf9a2efc16dae"><td class="memItemLeft" align="right" valign="top">const Real&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classROL_1_1ScaledObjective.html#a638adec928f5fd0e177bf9a2efc16dae">shift_</a></td></tr>
+<tr class="separator:a638adec928f5fd0e177bf9a2efc16dae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -194,8 +196,8 @@ Additional Inherited Members</h2></td></tr>
 class ROL::ScaledObjective&lt; Real &gt;</div>
 <p class="definition">Definition at line <a class="el" href="ROL__ScaledObjective_8hpp_source.html#l00018">18</a> of file <a class="el" href="ROL__ScaledObjective_8hpp_source.html">ROL_ScaledObjective.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="adcadc8e9a53a45fe26833760ce39cb75" name="adcadc8e9a53a45fe26833760ce39cb75"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adcadc8e9a53a45fe26833760ce39cb75">&#9670;&#160;</a></span>ScaledObjective()</h2>
+<a id="a4ad3830a60a5c00ca3107b561b3221e5" name="a4ad3830a60a5c00ca3107b561b3221e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ad3830a60a5c00ca3107b561b3221e5">&#9670;&#160;</a></span>ScaledObjective()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -215,7 +217,13 @@ template&lt;typename Real &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">Real&#160;</td>
-          <td class="paramname"><em>scale</em>&#160;</td>
+          <td class="paramname"><em>scale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Real&#160;</td>
+          <td class="paramname"><em>shift</em> = <code>Real(0)</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -684,6 +692,32 @@ template&lt;typename Real &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">const Real <a class="el" href="classROL_1_1ScaledObjective.html">ROL::ScaledObjective</a>&lt; Real &gt;::scale_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ROL__ScaledObjective_8hpp_source.html#l00021">21</a> of file <a class="el" href="ROL__ScaledObjective_8hpp_source.html">ROL_ScaledObjective.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a638adec928f5fd0e177bf9a2efc16dae" name="a638adec928f5fd0e177bf9a2efc16dae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a638adec928f5fd0e177bf9a2efc16dae">&#9670;&#160;</a></span>shift_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Real <a class="el" href="classROL_1_1ScaledObjective.html">ROL::ScaledObjective</a>&lt; Real &gt;::shift_</td>
         </tr>
       </table>
   </td>

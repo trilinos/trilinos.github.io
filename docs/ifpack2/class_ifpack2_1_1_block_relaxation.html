@@ -802,8 +802,11 @@ template&lt;class MatrixType , class ContainerType  = Container&lt;MatrixType&gt
 <p>Applies the preconditioner to X, returns the result in Y. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">X</td><td>- (In) A Tpetra::MultiVector of dimension NumVectors to be preconditioned. </td></tr>
-    <tr><td class="paramname">Y</td><td>- (InOut) A Tpetra::MultiVector of dimension NumVectors containing result.</td></tr>
+    <tr><td class="paramname">X</td><td>(In) A Tpetra::MultiVector of dimension NumVectors to be preconditioned. </td></tr>
+    <tr><td class="paramname">Y</td><td>(InOut) A Tpetra::MultiVector of dimension NumVectors containing result. </td></tr>
+    <tr><td class="paramname">mode</td><td>(In) Whether to apply the transpose (Teuchos::NO_TRANS, Teuchos::TRANS, Teuchos::CONJ_TRANS). </td></tr>
+    <tr><td class="paramname">alpha</td><td>(In) Scaling factor for the result. </td></tr>
+    <tr><td class="paramname">beta</td><td>(In) Scaling factor for Y before adding the result.</td></tr>
   </table>
   </dd>
 </dl>
@@ -911,8 +914,9 @@ template&lt;class MatrixType , class ContainerType  = Container&lt;MatrixType&gt
 <p>Applies the matrix to a Tpetra::MultiVector. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">X</td><td>- (In) A Tpetra::MultiVector of dimension NumVectors to multiply with matrix. </td></tr>
-    <tr><td class="paramname">Y</td><td>- (Out) A Tpetra::MultiVector of dimension NumVectors containing the result. </td></tr>
+    <tr><td class="paramname">X</td><td>(In) A Tpetra::MultiVector of dimension NumVectors to multiply with matrix. </td></tr>
+    <tr><td class="paramname">Y</td><td>(Out) A Tpetra::MultiVector of dimension NumVectors containing the result. </td></tr>
+    <tr><td class="paramname">mode</td><td>(In) Whether to apply the transpose (Teuchos::NO_TRANS, Teuchos::TRANS, Teuchos::CONJ_TRANS). </td></tr>
   </table>
   </dd>
 </dl>

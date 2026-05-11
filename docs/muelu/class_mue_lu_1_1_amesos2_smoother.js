@@ -12,6 +12,7 @@ var class_mue_lu_1_1_amesos2_smoother =
     [ "description", "class_mue_lu_1_1_amesos2_smoother.html#a4c963fbdac34de1ac7376f9ad4181f89", null ],
     [ "print", "class_mue_lu_1_1_amesos2_smoother.html#a63a6328e4ee68188dc21bc81b017a2f7", null ],
     [ "getNodeSmootherComplexity", "class_mue_lu_1_1_amesos2_smoother.html#a1568aaed5b4e12f97044e96e331b962e", null ],
+    [ "ApplyBlocked", "class_mue_lu_1_1_amesos2_smoother.html#a39551b63f2163af64fcf05e35c5c4a80", null ],
     [ "type_", "class_mue_lu_1_1_amesos2_smoother.html#a2588fe554cf0157008e001a4831a021c", null ],
     [ "prec_", "class_mue_lu_1_1_amesos2_smoother.html#a98a63657b121a02d2226098eb504a119", null ],
     [ "useTransformation_", "class_mue_lu_1_1_amesos2_smoother.html#ae5908a4dffa9ee186324c150fa8247a1", null ],

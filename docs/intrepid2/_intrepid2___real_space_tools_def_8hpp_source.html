@@ -314,9 +314,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    </div>
 <div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    <span class="keyword">using </span>MemSpaceType = <span class="keyword">typename</span> DeviceType::memory_space;</div>
 <div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> are_accessible =</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(output)::memory_space&gt;::accessible &amp;&amp;</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(input)::memory_space&gt;::accessible;</div>
 <div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    <span class="keyword">static_assert</span>(are_accessible, <span class="stringliteral">&quot;RealSpaceTools&lt;DeviceType&gt;::extractScalarValues(..): input/output views&#39; memory spaces are not compatible with DeviceType&quot;</span>);</div>
 <div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
@@ -414,9 +414,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>    <span class="keyword">using </span>MemSpaceType = <span class="keyword">typename</span> DeviceType::memory_space;</div>
 <div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> are_accessible =</div>
-<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(output)::memory_space&gt;::accessible &amp;&amp;</div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(input)::memory_space&gt;::accessible;</div>
 <div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>    <span class="keyword">static_assert</span>(are_accessible, <span class="stringliteral">&quot;RealSpaceTools&lt;DeviceType&gt;::clone(..): input/output views&#39; memory spaces are not compatible with DeviceType&quot;</span>);</div>
 <div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span> </div>
@@ -490,9 +490,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>    <span class="keyword">using </span>MemSpaceType = <span class="keyword">typename</span> DeviceType::memory_space;</div>
 <div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> are_accessible =</div>
-<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(absArray)::memory_space&gt;::accessible &amp;&amp;</div>
-<div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(inArray)::memory_space&gt;::accessible;</div>
 <div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span>    <span class="keyword">static_assert</span>(are_accessible, <span class="stringliteral">&quot;RealSpaceTools&lt;DeviceType&gt;::absval(..): input/output views&#39; memory spaces are not compatible with DeviceType&quot;</span>);</div>
 <div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span> </div>
@@ -573,9 +573,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span> </div>
 <div class="line"><a id="l00516" name="l00516"></a><span class="lineno">  516</span>    <span class="keyword">using </span>MemSpaceType = <span class="keyword">typename</span> DeviceType::memory_space;</div>
 <div class="line"><a id="l00517" name="l00517"></a><span class="lineno">  517</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> are_accessible =</div>
-<div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(normArray)::memory_space&gt;::accessible &amp;&amp;</div>
-<div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(inVecs)::memory_space&gt;::accessible;</div>
 <div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>    <span class="keyword">static_assert</span>(are_accessible, <span class="stringliteral">&quot;RealSpaceTools&lt;DeviceType&gt;::vectorNorm(..): input/output views&#39; memory spaces are not compatible with DeviceType&quot;</span>);</div>
 <div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span>    <span class="keyword">using </span>FunctorType = <a class="code hl_struct" href="struct_intrepid2_1_1_functor_real_space_tools_1_1_f__vector_norm.html">FunctorRealSpaceTools::F_vectorNorm</a>&lt;<span class="keyword">decltype</span>(normArray),<span class="keyword">decltype</span>(inVecs)&gt;;</div>
@@ -662,9 +662,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span> </div>
 <div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span>    <span class="keyword">using </span>MemSpaceType = <span class="keyword">typename</span> DeviceType::memory_space;</div>
 <div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> are_accessible =</div>
-<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(transposeMats)::memory_space&gt;::accessible &amp;&amp;</div>
-<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(inMats)::memory_space&gt;::accessible;</div>
 <div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span>    <span class="keyword">static_assert</span>(are_accessible, <span class="stringliteral">&quot;RealSpaceTools&lt;DeviceType&gt;::transpose(..): input/output views&#39; memory spaces are not compatible with DeviceType&quot;</span>);</div>
 <div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>    <span class="keyword">using </span>FunctorType = <a class="code hl_struct" href="struct_intrepid2_1_1_functor_real_space_tools_1_1_f__transpose.html">FunctorRealSpaceTools::F_transpose</a>&lt;<span class="keyword">decltype</span>(transposeMats),<span class="keyword">decltype</span>(inMats)&gt;;</div>
@@ -1044,11 +1044,11 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00980" name="l00980"></a><span class="lineno">  980</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00981" name="l00981"></a><span class="lineno">  981</span>    <span class="keyword">using </span>MemSpaceType = <span class="keyword">typename</span> DeviceType::memory_space;</div>
 <div class="line"><a id="l00982" name="l00982"></a><span class="lineno">  982</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> are_accessible =</div>
-<div class="line"><a id="l00983" name="l00983"></a><span class="lineno">  983</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00983" name="l00983"></a><span class="lineno">  983</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00984" name="l00984"></a><span class="lineno">  984</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(sumArray)::memory_space&gt;::accessible &amp;&amp;</div>
-<div class="line"><a id="l00985" name="l00985"></a><span class="lineno">  985</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00985" name="l00985"></a><span class="lineno">  985</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00986" name="l00986"></a><span class="lineno">  986</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(inArray1)::memory_space&gt;::accessible &amp;&amp;</div>
-<div class="line"><a id="l00987" name="l00987"></a><span class="lineno">  987</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l00987" name="l00987"></a><span class="lineno">  987</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l00988" name="l00988"></a><span class="lineno">  988</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(inArray2)::memory_space&gt;::accessible;</div>
 <div class="line"><a id="l00989" name="l00989"></a><span class="lineno">  989</span>    <span class="keyword">static_assert</span>(are_accessible, <span class="stringliteral">&quot;RealSpaceTools&lt;DeviceType&gt;::add(..): input/output views&#39; memory spaces are not compatible with DeviceType&quot;</span>);</div>
 <div class="line"><a id="l00990" name="l00990"></a><span class="lineno">  990</span> </div>
@@ -1146,11 +1146,11 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01079" name="l01079"></a><span class="lineno"> 1079</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l01080" name="l01080"></a><span class="lineno"> 1080</span>    <span class="keyword">using </span>MemSpaceType = <span class="keyword">typename</span> DeviceType::memory_space;</div>
 <div class="line"><a id="l01081" name="l01081"></a><span class="lineno"> 1081</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> are_accessible =</div>
-<div class="line"><a id="l01082" name="l01082"></a><span class="lineno"> 1082</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l01082" name="l01082"></a><span class="lineno"> 1082</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l01083" name="l01083"></a><span class="lineno"> 1083</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(diffArray)::memory_space&gt;::accessible &amp;&amp;</div>
-<div class="line"><a id="l01084" name="l01084"></a><span class="lineno"> 1084</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l01084" name="l01084"></a><span class="lineno"> 1084</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l01085" name="l01085"></a><span class="lineno"> 1085</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(inArray1)::memory_space&gt;::accessible &amp;&amp;</div>
-<div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(inArray2)::memory_space&gt;::accessible;</div>
 <div class="line"><a id="l01088" name="l01088"></a><span class="lineno"> 1088</span>    <span class="keyword">static_assert</span>(are_accessible, <span class="stringliteral">&quot;RealSpaceTools&lt;DeviceType&gt;::subtract(..): input/output views&#39; memory spaces are not compatible with DeviceType&quot;</span>);</div>
 <div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span> </div>
@@ -1249,9 +1249,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01179" name="l01179"></a><span class="lineno"> 1179</span> </div>
 <div class="line"><a id="l01180" name="l01180"></a><span class="lineno"> 1180</span>    <span class="keyword">using </span>MemSpaceType = <span class="keyword">typename</span> DeviceType::memory_space;</div>
 <div class="line"><a id="l01181" name="l01181"></a><span class="lineno"> 1181</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> are_accessible =</div>
-<div class="line"><a id="l01182" name="l01182"></a><span class="lineno"> 1182</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l01182" name="l01182"></a><span class="lineno"> 1182</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l01183" name="l01183"></a><span class="lineno"> 1183</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(scaledArray)::memory_space&gt;::accessible &amp;&amp;</div>
-<div class="line"><a id="l01184" name="l01184"></a><span class="lineno"> 1184</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l01184" name="l01184"></a><span class="lineno"> 1184</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l01185" name="l01185"></a><span class="lineno"> 1185</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(inArray)::memory_space&gt;::accessible;</div>
 <div class="line"><a id="l01186" name="l01186"></a><span class="lineno"> 1186</span>    <span class="keyword">static_assert</span>(are_accessible, <span class="stringliteral">&quot;RealSpaceTools&lt;DeviceType&gt;::scale(..): input/output views&#39; memory spaces are not compatible with DeviceType&quot;</span>);</div>
 <div class="line"><a id="l01187" name="l01187"></a><span class="lineno"> 1187</span> </div>
@@ -1349,11 +1349,11 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01276" name="l01276"></a><span class="lineno"> 1276</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l01277" name="l01277"></a><span class="lineno"> 1277</span>    <span class="keyword">using </span>MemSpaceType = <span class="keyword">typename</span> DeviceType::memory_space;</div>
 <div class="line"><a id="l01278" name="l01278"></a><span class="lineno"> 1278</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> are_accessible =</div>
-<div class="line"><a id="l01279" name="l01279"></a><span class="lineno"> 1279</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l01279" name="l01279"></a><span class="lineno"> 1279</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l01280" name="l01280"></a><span class="lineno"> 1280</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(dotArray)::memory_space&gt;::accessible &amp;&amp;</div>
-<div class="line"><a id="l01281" name="l01281"></a><span class="lineno"> 1281</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l01281" name="l01281"></a><span class="lineno"> 1281</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l01282" name="l01282"></a><span class="lineno"> 1282</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(inVecs1)::memory_space&gt;::accessible &amp;&amp;</div>
-<div class="line"><a id="l01283" name="l01283"></a><span class="lineno"> 1283</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l01283" name="l01283"></a><span class="lineno"> 1283</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l01284" name="l01284"></a><span class="lineno"> 1284</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(inVecs2)::memory_space&gt;::accessible;</div>
 <div class="line"><a id="l01285" name="l01285"></a><span class="lineno"> 1285</span>    <span class="keyword">static_assert</span>(are_accessible, <span class="stringliteral">&quot;RealSpaceTools&lt;DeviceType&gt;::dot(..): input/output views&#39; memory spaces are not compatible with DeviceType&quot;</span>);</div>
 <div class="line"><a id="l01286" name="l01286"></a><span class="lineno"> 1286</span> </div>
@@ -1533,11 +1533,11 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01460" name="l01460"></a><span class="lineno"> 1460</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l01461" name="l01461"></a><span class="lineno"> 1461</span>    <span class="keyword">using </span>MemSpaceType = <span class="keyword">typename</span> DeviceType::memory_space;</div>
 <div class="line"><a id="l01462" name="l01462"></a><span class="lineno"> 1462</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> are_accessible =</div>
-<div class="line"><a id="l01463" name="l01463"></a><span class="lineno"> 1463</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l01463" name="l01463"></a><span class="lineno"> 1463</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l01464" name="l01464"></a><span class="lineno"> 1464</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(matVecs)::memory_space&gt;::accessible &amp;&amp;</div>
-<div class="line"><a id="l01465" name="l01465"></a><span class="lineno"> 1465</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l01465" name="l01465"></a><span class="lineno"> 1465</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l01466" name="l01466"></a><span class="lineno"> 1466</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(inMats)::memory_space&gt;::accessible &amp;&amp;</div>
-<div class="line"><a id="l01467" name="l01467"></a><span class="lineno"> 1467</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l01467" name="l01467"></a><span class="lineno"> 1467</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l01468" name="l01468"></a><span class="lineno"> 1468</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(inVecs)::memory_space&gt;::accessible;</div>
 <div class="line"><a id="l01469" name="l01469"></a><span class="lineno"> 1469</span>    <span class="keyword">static_assert</span>(are_accessible, <span class="stringliteral">&quot;RealSpaceTools&lt;DeviceType&gt;::matvec(..): input/output views&#39; memory spaces are not compatible with DeviceType&quot;</span>);</div>
 <div class="line"><a id="l01470" name="l01470"></a><span class="lineno"> 1470</span> </div>
@@ -1582,9 +1582,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01507" name="l01507"></a><span class="lineno"> 1507</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l01508" name="l01508"></a><span class="lineno"> 1508</span>    <span class="keyword">using </span>MemSpaceType = <span class="keyword">typename</span> DeviceType::memory_space;</div>
 <div class="line"><a id="l01509" name="l01509"></a><span class="lineno"> 1509</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> are_accessible =</div>
-<div class="line"><a id="l01510" name="l01510"></a><span class="lineno"> 1510</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l01510" name="l01510"></a><span class="lineno"> 1510</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l01511" name="l01511"></a><span class="lineno"> 1511</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(outMats)::memory_space&gt;::accessible &amp;&amp;</div>
-<div class="line"><a id="l01512" name="l01512"></a><span class="lineno"> 1512</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l01512" name="l01512"></a><span class="lineno"> 1512</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l01513" name="l01513"></a><span class="lineno"> 1513</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(inMats)::memory_space&gt;::accessible;</div>
 <div class="line"><a id="l01514" name="l01514"></a><span class="lineno"> 1514</span>    <span class="keyword">static_assert</span>(are_accessible, <span class="stringliteral">&quot;RealSpaceTools&lt;DeviceType&gt;::AtA(..): input/output views&#39; memory spaces are not compatible with DeviceType&quot;</span>);</div>
 <div class="line"><a id="l01515" name="l01515"></a><span class="lineno"> 1515</span> </div>
@@ -1704,11 +1704,11 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01628" name="l01628"></a><span class="lineno"> 1628</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l01629" name="l01629"></a><span class="lineno"> 1629</span>    <span class="keyword">using </span>MemSpaceType = <span class="keyword">typename</span> DeviceType::memory_space;</div>
 <div class="line"><a id="l01630" name="l01630"></a><span class="lineno"> 1630</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> are_accessible =</div>
-<div class="line"><a id="l01631" name="l01631"></a><span class="lineno"> 1631</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l01631" name="l01631"></a><span class="lineno"> 1631</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l01632" name="l01632"></a><span class="lineno"> 1632</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(vecProd)::memory_space&gt;::accessible &amp;&amp;</div>
-<div class="line"><a id="l01633" name="l01633"></a><span class="lineno"> 1633</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l01633" name="l01633"></a><span class="lineno"> 1633</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l01634" name="l01634"></a><span class="lineno"> 1634</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(inLeft)::memory_space&gt;::accessible &amp;&amp;</div>
-<div class="line"><a id="l01635" name="l01635"></a><span class="lineno"> 1635</span>        Kokkos::Impl::MemorySpaceAccess&lt;MemSpaceType,</div>
+<div class="line"><a id="l01635" name="l01635"></a><span class="lineno"> 1635</span>        Kokkos::SpaceAccessibility&lt;MemSpaceType,</div>
 <div class="line"><a id="l01636" name="l01636"></a><span class="lineno"> 1636</span>        <span class="keyword">typename</span> <span class="keyword">decltype</span>(inRight)::memory_space&gt;::accessible;</div>
 <div class="line"><a id="l01637" name="l01637"></a><span class="lineno"> 1637</span>    <span class="keyword">static_assert</span>(are_accessible, <span class="stringliteral">&quot;RealSpaceTools&lt;DeviceType&gt;::vecprod(..): input/output views&#39; memory spaces are not compatible with DeviceType&quot;</span>);</div>
 <div class="line"><a id="l01638" name="l01638"></a><span class="lineno"> 1638</span> </div>
@@ -1791,7 +1791,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01714" name="l01714"></a><span class="lineno"> 1714</span><span class="comment">//   }</span></div>
 <div class="line"><a id="l01715" name="l01715"></a><span class="lineno"> 1715</span> </div>
 <div class="line"><a id="l01716" name="l01716"></a><span class="lineno"> 1716</span> </div>
-<div class="ttc" id="a_intrepid2___utils_8hpp_html_a24bfd936fe77495137bd26668ff4c939"><div class="ttname"><a href="_intrepid2___utils_8hpp.html#a24bfd936fe77495137bd26668ff4c939">Intrepid2::getFunctorRank</a></div><div class="ttdeci">enable_if_t&lt; has_rank_method&lt; Functor &gt;::value, unsigned &gt; KOKKOS_INLINE_FUNCTION getFunctorRank(const Functor &amp;functor)</div><div class="ttdef"><b>Definition</b> <a href="_intrepid2___utils_8hpp_source.html#l00849">Intrepid2_Utils.hpp:849</a></div></div>
+<div class="ttc" id="a_intrepid2___utils_8hpp_html_a24bfd936fe77495137bd26668ff4c939"><div class="ttname"><a href="_intrepid2___utils_8hpp.html#a24bfd936fe77495137bd26668ff4c939">Intrepid2::getFunctorRank</a></div><div class="ttdeci">enable_if_t&lt; has_rank_method&lt; Functor &gt;::value, unsigned &gt; KOKKOS_INLINE_FUNCTION getFunctorRank(const Functor &amp;functor)</div><div class="ttdef"><b>Definition</b> <a href="_intrepid2___utils_8hpp_source.html#l00868">Intrepid2_Utils.hpp:868</a></div></div>
 <div class="ttc" id="a_intrepid2___utils_8hpp_html_aa6ff600e0b284c11d59733df104c01f9"><div class="ttname"><a href="_intrepid2___utils_8hpp.html#aa6ff600e0b284c11d59733df104c01f9">Intrepid2::get_scalar_value</a></div><div class="ttdeci">KOKKOS_FORCEINLINE_FUNCTION constexpr std::enable_if&lt;!(std::is_standard_layout&lt; T &gt;::value &amp;&amp;std::is_trivial&lt; T &gt;::value), typenameScalarTraits&lt; T &gt;::scalar_type &gt;::type get_scalar_value(const T &amp;obj)</div><div class="ttdoc">functions returning the scalar value. for pod types, they return the input object itself....</div><div class="ttdef"><b>Definition</b> <a href="_intrepid2___utils_8hpp_source.html#l00287">Intrepid2_Utils.hpp:287</a></div></div>
 <div class="ttc" id="a_intrepid2___utils_8hpp_html_ac10c59c3e5f7d12813cfdba00e63aa02"><div class="ttname"><a href="_intrepid2___utils_8hpp.html#ac10c59c3e5f7d12813cfdba00e63aa02">INTREPID2_TEST_FOR_EXCEPTION_DEVICE_SAFE</a></div><div class="ttdeci">#define INTREPID2_TEST_FOR_EXCEPTION_DEVICE_SAFE(test, x, msg)</div><div class="ttdef"><b>Definition</b> <a href="_intrepid2___utils_8hpp_source.html#l00071">Intrepid2_Utils.hpp:71</a></div></div>
 <div class="ttc" id="aclass_intrepid2_1_1_real_space_tools_html"><div class="ttname"><a href="class_intrepid2_1_1_real_space_tools.html">Intrepid2::RealSpaceTools</a></div><div class="ttdoc">Implementation of basic linear algebra functionality in Euclidean space.</div><div class="ttdef"><b>Definition</b> <a href="_intrepid2___real_space_tools_8hpp_source.html#l00046">Intrepid2_RealSpaceTools.hpp:46</a></div></div>

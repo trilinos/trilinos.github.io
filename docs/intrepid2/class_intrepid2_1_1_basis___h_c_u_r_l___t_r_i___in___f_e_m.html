@@ -140,12 +140,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a70d177f43ce3b1d3abbef946fc614250" id="r_a70d177f43ce3b1d3abbef946fc614250"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_basis___h_c_u_r_l___t_r_i___in___f_e_m.html#a70d177f43ce3b1d3abbef946fc614250">getValues</a> (const <a class="el" href="class_intrepid2_1_1_basis.html#ae5850ad4ecab7d33f5f22b79d80a3255">ExecutionSpace</a> &amp;space, <a class="el" href="class_intrepid2_1_1_basis.html#a1162328aeba60e176a9ee52d73465a41">OutputViewType</a> outputValues, const <a class="el" href="class_intrepid2_1_1_basis.html#a08fcf7f132219cc3a54755f504836766">PointViewType</a> inputPoints, const EOperator operatorType=OPERATOR_VALUE) const override</td></tr>
 <tr class="memdesc:a70d177f43ce3b1d3abbef946fc614250"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluation of a FEM basis on a <b>reference cell</b>.  <br /></td></tr>
 <tr class="separator:a70d177f43ce3b1d3abbef946fc614250"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98d60460b48d2574158aa0bd10dbd0df" id="r_a98d60460b48d2574158aa0bd10dbd0df"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_basis___h_c_u_r_l___t_r_i___in___f_e_m.html#a98d60460b48d2574158aa0bd10dbd0df">getScratchSpaceSize</a> (ordinal_type &amp;perTeamSpaceSize, ordinal_type &amp;perThreadSpaceSize, const <a class="el" href="class_intrepid2_1_1_basis.html#a08fcf7f132219cc3a54755f504836766">PointViewType</a> inputPointsconst, const EOperator operatorType=OPERATOR_VALUE) const override</td></tr>
-<tr class="memdesc:a98d60460b48d2574158aa0bd10dbd0df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the size of the scratch space, in bytes, needed for using the team-level implementation of getValues.  <br /></td></tr>
-<tr class="separator:a98d60460b48d2574158aa0bd10dbd0df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00f56bb773f834d3a2032d524f90c3d7" id="r_a00f56bb773f834d3a2032d524f90c3d7"><td class="memItemLeft" align="right" valign="top"><a id="a00f56bb773f834d3a2032d524f90c3d7" name="a00f56bb773f834d3a2032d524f90c3d7"></a>
-virtual KOKKOS_INLINE_FUNCTION void&#160;</td><td class="memItemRight" valign="bottom"><b>getValues</b> (<a class="el" href="class_intrepid2_1_1_basis.html#a1162328aeba60e176a9ee52d73465a41">OutputViewType</a> outputValues, const <a class="el" href="class_intrepid2_1_1_basis.html#a08fcf7f132219cc3a54755f504836766">PointViewType</a> inputPoints, const EOperator operatorType, const typename Kokkos::TeamPolicy&lt; typename DeviceType::execution_space &gt;::member_type &amp;team_member, const typename DeviceType::execution_space::scratch_memory_space &amp;scratchStorage, const ordinal_type subcellDim=-1, const ordinal_type subcellOrdinal=-1) const override</td></tr>
-<tr class="separator:a00f56bb773f834d3a2032d524f90c3d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a8327ecff0cdb1861079fefb1fcf394" id="r_a1a8327ecff0cdb1861079fefb1fcf394"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_basis___h_c_u_r_l___t_r_i___in___f_e_m.html#a1a8327ecff0cdb1861079fefb1fcf394">getScratchSpaceSize</a> (ordinal_type &amp;perThreadSpaceSize, const <a class="el" href="class_intrepid2_1_1_basis.html#a08fcf7f132219cc3a54755f504836766">PointViewType</a> inputPointsconst, const EOperator operatorType=OPERATOR_VALUE) const override</td></tr>
+<tr class="memdesc:a1a8327ecff0cdb1861079fefb1fcf394"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the size of the scratch space, in bytes, needed for using the team-level implementation of getValues.  <br /></td></tr>
+<tr class="separator:a1a8327ecff0cdb1861079fefb1fcf394"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa17ba4a467ff1bb99702cb3e4049b610" id="r_aa17ba4a467ff1bb99702cb3e4049b610"><td class="memItemLeft" align="right" valign="top"><a id="aa17ba4a467ff1bb99702cb3e4049b610" name="aa17ba4a467ff1bb99702cb3e4049b610"></a>
+virtual KOKKOS_INLINE_FUNCTION void&#160;</td><td class="memItemRight" valign="bottom"><b>getValues</b> (<a class="el" href="class_intrepid2_1_1_basis.html#a1162328aeba60e176a9ee52d73465a41">OutputViewType</a> outputValues, const <a class="el" href="class_intrepid2_1_1_basis.html#a08fcf7f132219cc3a54755f504836766">PointViewType</a> inputPoints, const EOperator operatorType, const typename Kokkos::TeamPolicy&lt; typename DeviceType::execution_space &gt;::member_type &amp;team_member, const int threadScratchLevel, const ordinal_type subcellDim=-1, const ordinal_type subcellOrdinal=-1) const override</td></tr>
+<tr class="separator:aa17ba4a467ff1bb99702cb3e4049b610"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad82bab55315313979e8227946b6e762" id="r_aad82bab55315313979e8227946b6e762"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_basis___h_c_u_r_l___t_r_i___in___f_e_m.html#aad82bab55315313979e8227946b6e762">getDofCoords</a> (<a class="el" href="class_intrepid2_1_1_basis.html#a47cb0c9149d0291b0eeb3f55a4f80662">ScalarViewType</a> dofCoords) const override</td></tr>
 <tr class="memdesc:aad82bab55315313979e8227946b6e762"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns spatial locations (coordinates) of degrees of freedom on the reference cell.  <br /></td></tr>
 <tr class="separator:aad82bab55315313979e8227946b6e762"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -174,14 +174,14 @@ virtual KOKKOS_INLINE_FUNCTION void&#160;</td><td class="memItemRight" valign="b
 <tr class="memdesc:a5eab726da16dc1d018ee05c56abb2a04 inherit pub_methods_class_intrepid2_1_1_basis"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dummy array to receive input arguments.  <br /></td></tr>
 <tr class="separator:a5eab726da16dc1d018ee05c56abb2a04 inherit pub_methods_class_intrepid2_1_1_basis"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba19518edc84f7f560b46fcf60f4df11 inherit pub_methods_class_intrepid2_1_1_basis" id="r_aba19518edc84f7f560b46fcf60f4df11"><td class="memItemLeft" align="right" valign="top">Kokkos::DynRankView&lt; <a class="el" href="class_intrepid2_1_1_basis.html#a12a21adbff2e6763c670abe016c0864c">OutputValueType</a>, <a class="el" href="class_intrepid2_1_1_basis.html#a79e59416ef09efd11f0f8b3193ad8975">DeviceType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_basis.html#aba19518edc84f7f560b46fcf60f4df11">allocateOutputView</a> (const int numPoints, const EOperator operatorType=OPERATOR_VALUE) const</td></tr>
-<tr class="memdesc:aba19518edc84f7f560b46fcf60f4df11 inherit pub_methods_class_intrepid2_1_1_basis"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a View container suitable for passing to the <a class="el" href="class_intrepid2_1_1_basis.html#a0ffdfab8ac08309c3ad5ca885b20fbc4" title="Team-level evaluation of basis functions on a reference cell.">getValues()</a> variant that accepts Kokkos DynRankViews as arguments (as opposed to the Intrepid2 <a class="el" href="class_intrepid2_1_1_basis_values.html" title="The data containers in Intrepid2 that support sum factorization and other reduced-data optimizations ...">BasisValues</a> and PointValues containers).  <br /></td></tr>
+<tr class="memdesc:aba19518edc84f7f560b46fcf60f4df11 inherit pub_methods_class_intrepid2_1_1_basis"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a View container suitable for passing to the <a class="el" href="class_intrepid2_1_1_basis.html#a7119754509dad73b02668af3b21f009c" title="Team-level evaluation of basis functions on a reference cell.">getValues()</a> variant that accepts Kokkos DynRankViews as arguments (as opposed to the Intrepid2 <a class="el" href="class_intrepid2_1_1_basis_values.html" title="The data containers in Intrepid2 that support sum factorization and other reduced-data optimizations ...">BasisValues</a> and PointValues containers).  <br /></td></tr>
 <tr class="separator:aba19518edc84f7f560b46fcf60f4df11 inherit pub_methods_class_intrepid2_1_1_basis"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4764f8ba822116c07746810503b138d4 inherit pub_methods_class_intrepid2_1_1_basis" id="r_a4764f8ba822116c07746810503b138d4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_intrepid2_1_1_basis_values.html">BasisValues</a>&lt; <a class="el" href="class_intrepid2_1_1_basis.html#a12a21adbff2e6763c670abe016c0864c">OutputValueType</a>, <a class="el" href="class_intrepid2_1_1_basis.html#a79e59416ef09efd11f0f8b3193ad8975">DeviceType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_basis.html#a4764f8ba822116c07746810503b138d4">allocateBasisValues</a> (<a class="el" href="class_intrepid2_1_1_tensor_points.html">TensorPoints</a>&lt; <a class="el" href="class_intrepid2_1_1_basis.html#aa34d3bc792deb2473541e8515343ef59">PointValueType</a>, <a class="el" href="class_intrepid2_1_1_basis.html#a79e59416ef09efd11f0f8b3193ad8975">DeviceType</a> &gt; points, const EOperator operatorType=OPERATOR_VALUE) const</td></tr>
-<tr class="memdesc:a4764f8ba822116c07746810503b138d4 inherit pub_methods_class_intrepid2_1_1_basis"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate <a class="el" href="class_intrepid2_1_1_basis_values.html" title="The data containers in Intrepid2 that support sum factorization and other reduced-data optimizations ...">BasisValues</a> container suitable for passing to the <a class="el" href="class_intrepid2_1_1_basis.html#a0ffdfab8ac08309c3ad5ca885b20fbc4" title="Team-level evaluation of basis functions on a reference cell.">getValues()</a> variant that takes a <a class="el" href="class_intrepid2_1_1_tensor_points.html" title="View-like interface to tensor points; point components are stored separately; the appropriate coordin...">TensorPoints</a> container as argument.  <br /></td></tr>
+<tr class="memdesc:a4764f8ba822116c07746810503b138d4 inherit pub_methods_class_intrepid2_1_1_basis"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate <a class="el" href="class_intrepid2_1_1_basis_values.html" title="The data containers in Intrepid2 that support sum factorization and other reduced-data optimizations ...">BasisValues</a> container suitable for passing to the <a class="el" href="class_intrepid2_1_1_basis.html#a7119754509dad73b02668af3b21f009c" title="Team-level evaluation of basis functions on a reference cell.">getValues()</a> variant that takes a <a class="el" href="class_intrepid2_1_1_tensor_points.html" title="View-like interface to tensor points; point components are stored separately; the appropriate coordin...">TensorPoints</a> container as argument.  <br /></td></tr>
 <tr class="separator:a4764f8ba822116c07746810503b138d4 inherit pub_methods_class_intrepid2_1_1_basis"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ffdfab8ac08309c3ad5ca885b20fbc4 inherit pub_methods_class_intrepid2_1_1_basis" id="r_a0ffdfab8ac08309c3ad5ca885b20fbc4"><td class="memItemLeft" align="right" valign="top">virtual KOKKOS_INLINE_FUNCTION void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_basis.html#a0ffdfab8ac08309c3ad5ca885b20fbc4">getValues</a> (<a class="el" href="class_intrepid2_1_1_basis.html#a1162328aeba60e176a9ee52d73465a41">OutputViewType</a>, const <a class="el" href="class_intrepid2_1_1_basis.html#a08fcf7f132219cc3a54755f504836766">PointViewType</a>, const EOperator, const typename Kokkos::TeamPolicy&lt; <a class="el" href="class_intrepid2_1_1_basis.html#ae5850ad4ecab7d33f5f22b79d80a3255">ExecutionSpace</a> &gt;::member_type &amp;teamMember, const typename ExecutionSpace::scratch_memory_space &amp;scratchStorage, const ordinal_type subcellDim=-1, const ordinal_type subcellOrdinal=-1) const</td></tr>
-<tr class="memdesc:a0ffdfab8ac08309c3ad5ca885b20fbc4 inherit pub_methods_class_intrepid2_1_1_basis"><td class="mdescLeft">&#160;</td><td class="mdescRight">Team-level evaluation of basis functions on a <b>reference cell</b>.  <br /></td></tr>
-<tr class="separator:a0ffdfab8ac08309c3ad5ca885b20fbc4 inherit pub_methods_class_intrepid2_1_1_basis"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7119754509dad73b02668af3b21f009c inherit pub_methods_class_intrepid2_1_1_basis" id="r_a7119754509dad73b02668af3b21f009c"><td class="memItemLeft" align="right" valign="top">virtual KOKKOS_INLINE_FUNCTION void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_basis.html#a7119754509dad73b02668af3b21f009c">getValues</a> (<a class="el" href="class_intrepid2_1_1_basis.html#a1162328aeba60e176a9ee52d73465a41">OutputViewType</a>, const <a class="el" href="class_intrepid2_1_1_basis.html#a08fcf7f132219cc3a54755f504836766">PointViewType</a>, const EOperator, const typename Kokkos::TeamPolicy&lt; <a class="el" href="class_intrepid2_1_1_basis.html#ae5850ad4ecab7d33f5f22b79d80a3255">ExecutionSpace</a> &gt;::member_type &amp;teamMember, const int threadScratchLevel, const ordinal_type subcellDim=-1, const ordinal_type subcellOrdinal=-1) const</td></tr>
+<tr class="memdesc:a7119754509dad73b02668af3b21f009c inherit pub_methods_class_intrepid2_1_1_basis"><td class="mdescLeft">&#160;</td><td class="mdescRight">Team-level evaluation of basis functions on a <b>reference cell</b>.  <br /></td></tr>
+<tr class="separator:a7119754509dad73b02668af3b21f009c inherit pub_methods_class_intrepid2_1_1_basis"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26ef3cfad2c2a4be396918b603f2fa43 inherit pub_methods_class_intrepid2_1_1_basis" id="r_a26ef3cfad2c2a4be396918b603f2fa43"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_basis.html#a26ef3cfad2c2a4be396918b603f2fa43">getValues</a> (<a class="el" href="class_intrepid2_1_1_basis.html#a1162328aeba60e176a9ee52d73465a41">OutputViewType</a> outputValues, const <a class="el" href="class_intrepid2_1_1_basis.html#a08fcf7f132219cc3a54755f504836766">PointViewType</a> inputPoints, const EOperator operatorType=OPERATOR_VALUE) const</td></tr>
 <tr class="separator:a26ef3cfad2c2a4be396918b603f2fa43 inherit pub_methods_class_intrepid2_1_1_basis"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bcb24023c718cb67f0a0b89b64cd703 inherit pub_methods_class_intrepid2_1_1_basis" id="r_a9bcb24023c718cb67f0a0b89b64cd703"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_basis.html#a9bcb24023c718cb67f0a0b89b64cd703">getValues</a> (<a class="el" href="class_intrepid2_1_1_basis_values.html">BasisValues</a>&lt; <a class="el" href="class_intrepid2_1_1_basis.html#a12a21adbff2e6763c670abe016c0864c">OutputValueType</a>, <a class="el" href="class_intrepid2_1_1_basis.html#a79e59416ef09efd11f0f8b3193ad8975">DeviceType</a> &gt; outputValues, const <a class="el" href="class_intrepid2_1_1_tensor_points.html">TensorPoints</a>&lt; <a class="el" href="class_intrepid2_1_1_basis.html#aa34d3bc792deb2473541e8515343ef59">PointValueType</a>, <a class="el" href="class_intrepid2_1_1_basis.html#a79e59416ef09efd11f0f8b3193ad8975">DeviceType</a> &gt; inputPoints, const EOperator operatorType=OPERATOR_VALUE) const</td></tr>
@@ -322,7 +322,7 @@ class Intrepid2::Basis_HCURL_TRI_In_FEM&lt; DeviceType, outputValueType, pointVa
 </ul>
 <p>If the pointType argument to the constructor specifies equispaced points, then the edge points will be equispaced on each edge and the interior points equispaced also. If the pointType argument specifies warp-blend points, then Gauss-Lobatto points of order n are chosen on each edge and the interior of warp-blend lattice of order n+1 is chosen for the interior points. </p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00163">163</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html">Intrepid2_HCURL_TRI_In_FEM.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00154">154</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html">Intrepid2_HCURL_TRI_In_FEM.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a2f965a51a4378543a54dd063ddd0710e" name="a2f965a51a4378543a54dd063ddd0710e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2f965a51a4378543a54dd063ddd0710e">&#9670;&#160;</a></span>BasisBase</h2>
@@ -338,7 +338,7 @@ template&lt;typename <a class="el" href="class_intrepid2_1_1_basis.html#a79e5941
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00166">166</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html">Intrepid2_HCURL_TRI_In_FEM.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00157">157</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html">Intrepid2_HCURL_TRI_In_FEM.hpp</a>.</p>
 
 </div>
 </div>
@@ -356,7 +356,7 @@ template&lt;typename <a class="el" href="class_intrepid2_1_1_basis.html#a79e5941
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00177">177</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html">Intrepid2_HCURL_TRI_In_FEM.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00168">168</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html">Intrepid2_HCURL_TRI_In_FEM.hpp</a>.</p>
 
 </div>
 </div>
@@ -391,7 +391,7 @@ template&lt;typename DT , typename OT , typename PT &gt; </div>
 
 <p>Constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_def_8hpp_source.html#l00151">151</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_def_8hpp_source.html">Intrepid2_HCURL_TRI_In_FEMDef.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_def_8hpp_source.html#l00147">147</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_def_8hpp_source.html">Intrepid2_HCURL_TRI_In_FEMDef.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_intrepid2___cubature_direct_8hpp_source.html#l00155">Intrepid2::CubatureDirect&lt; DeviceType, pointValueType, weightValueType &gt;::getCubature()</a>, <a class="el" href="_intrepid2___point_tools_def_8hpp_source.html#l00086">Intrepid2::PointTools::getLattice()</a>, <a class="el" href="_intrepid2___point_tools_def_8hpp_source.html#l00035">Intrepid2::PointTools::getLatticeSize()</a>, <a class="el" href="_intrepid2___cubature_direct_8hpp_source.html#l00164">Intrepid2::CubatureDirect&lt; DeviceType, pointValueType, weightValueType &gt;::getNumPoints()</a>, <a class="el" href="_intrepid2___cell_tools_def_node_info_8hpp_source.html#l00211">Intrepid2::CellTools&lt; DeviceType &gt;::getReferenceEdgeTangent()</a>, <a class="el" href="class_intrepid2_1_1_cell_tools.html#a7b4e906b9b8ddf007e9d1602ae211cbb">Intrepid2::CellTools&lt; DeviceType &gt;::mapToReferenceSubcell()</a>, and <a class="el" href="_intrepid2___types_8hpp_source.html#l00102">Intrepid2::Parameters::MaxOrder</a>.</p>
 
@@ -429,7 +429,7 @@ template&lt;typename <a class="el" href="class_intrepid2_1_1_basis.html#a79e5941
 
 <p>Reimplemented from <a class="el" href="class_intrepid2_1_1_basis.html#aba504dcea4094d5802952005944b120d">Intrepid2::Basis&lt; Device, outputValueType, pointValueType &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00247">247</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html">Intrepid2_HCURL_TRI_In_FEM.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00237">237</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html">Intrepid2_HCURL_TRI_In_FEM.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_intrepid2___basis_8hpp_source.html#l00295">Intrepid2::Basis&lt; Device, outputValueType, pointValueType &gt;::dofCoeffs_</a>.</p>
 
@@ -465,7 +465,7 @@ template&lt;typename <a class="el" href="class_intrepid2_1_1_basis.html#a79e5941
 
 <p>Reimplemented from <a class="el" href="class_intrepid2_1_1_basis.html#aacd773a457b85bbab371a053f67643cf">Intrepid2::Basis&lt; Device, outputValueType, pointValueType &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00230">230</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html">Intrepid2_HCURL_TRI_In_FEM.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00220">220</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html">Intrepid2_HCURL_TRI_In_FEM.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_intrepid2___basis_8hpp_source.html#l00285">Intrepid2::Basis&lt; Device, outputValueType, pointValueType &gt;::dofCoords_</a>.</p>
 
@@ -497,7 +497,7 @@ template&lt;typename <a class="el" href="class_intrepid2_1_1_basis.html#a79e5941
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00263">263</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html">Intrepid2_HCURL_TRI_In_FEM.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00253">253</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html">Intrepid2_HCURL_TRI_In_FEM.hpp</a>.</p>
 
 </div>
 </div>
@@ -531,9 +531,9 @@ template&lt;typename <a class="el" href="class_intrepid2_1_1_basis.html#a79e5941
 
 <p>Reimplemented from <a class="el" href="class_intrepid2_1_1_basis.html#a42fa61322fb16e8bad7f97eac4332601">Intrepid2::Basis&lt; Device, outputValueType, pointValueType &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00300">300</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html">Intrepid2_HCURL_TRI_In_FEM.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00290">290</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html">Intrepid2_HCURL_TRI_In_FEM.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_intrepid2___basis_8hpp_source.html#l00166">Intrepid2::Basis&lt; Device, outputValueType, pointValueType &gt;::basisDegree_</a>, and <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00310">Intrepid2::Basis_HCURL_TRI_In_FEM&lt; DeviceType, outputValueType, pointValueType &gt;::pointType_</a>.</p>
+<p class="reference">References <a class="el" href="_intrepid2___basis_8hpp_source.html#l00166">Intrepid2::Basis&lt; Device, outputValueType, pointValueType &gt;::basisDegree_</a>, and <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00300">Intrepid2::Basis_HCURL_TRI_In_FEM&lt; DeviceType, outputValueType, pointValueType &gt;::pointType_</a>.</p>
 
 </div>
 </div>
@@ -567,12 +567,12 @@ template&lt;typename <a class="el" href="class_intrepid2_1_1_basis.html#a79e5941
 
 <p>Reimplemented from <a class="el" href="class_intrepid2_1_1_basis.html#ae685cbac362f1df2ccfe62ef00c2e76b">Intrepid2::Basis&lt; Device, outputValueType, pointValueType &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00270">270</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html">Intrepid2_HCURL_TRI_In_FEM.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00260">260</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html">Intrepid2_HCURL_TRI_In_FEM.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a98d60460b48d2574158aa0bd10dbd0df" name="a98d60460b48d2574158aa0bd10dbd0df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98d60460b48d2574158aa0bd10dbd0df">&#9670;&#160;</a></span>getScratchSpaceSize()</h2>
+<a id="a1a8327ecff0cdb1861079fefb1fcf394" name="a1a8327ecff0cdb1861079fefb1fcf394"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a8327ecff0cdb1861079fefb1fcf394">&#9670;&#160;</a></span>getScratchSpaceSize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -585,12 +585,6 @@ template&lt;typename DT , typename OT , typename PT &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="class_intrepid2_1_1_basis___h_c_u_r_l___t_r_i___in___f_e_m.html">Intrepid2::Basis_HCURL_TRI_In_FEM</a>&lt; DT, OT, PT &gt;::getScratchSpaceSize </td>
           <td>(</td>
-          <td class="paramtype">ordinal_type &amp;&#160;</td>
-          <td class="paramname"><em>perTeamSpaceSize</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">ordinal_type &amp;&#160;</td>
           <td class="paramname"><em>perThreadSpaceSize</em>, </td>
         </tr>
@@ -623,16 +617,16 @@ template&lt;typename DT , typename OT , typename PT &gt; </div>
 <p>Warning, <em>inputPoints</em> is only used to deduce the type of the points where to evaluate basis functions. The rank of inputPoints and its size are not relevant, however, when using DFAD types, inputPoints cannot be empty, otherwise the size of the scracth space needed won't be deduced correctly.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">space</td><td>[in] - inputPoints </td></tr>
-    <tr><td class="paramname">perTeamSpaceSize</td><td>[out] - size of the scratch space needed per team </td></tr>
     <tr><td class="paramname">perThreadeSize</td><td>[out] - size of the scratch space beeded per thread </td></tr>
+    <tr><td class="paramname">inputPoints</td><td>[in] - inputPoints </td></tr>
+    <tr><td class="paramname">operatorType</td><td>[in] - operator type (OPERATOR_VALUE, OPERATOR_GRAD, OPERATOR_DIV, OPERATOR_CURL) </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Reimplemented from <a class="el" href="class_intrepid2_1_1_basis.html#a1ff872bc7d4c9d0af65efbfb344c20c5">Intrepid2::Basis&lt; Device, outputValueType, pointValueType &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="class_intrepid2_1_1_basis.html#a331877340232cf77b7b8b9db926c3d88">Intrepid2::Basis&lt; Device, outputValueType, pointValueType &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_def_8hpp_source.html#l00453">453</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_def_8hpp_source.html">Intrepid2_HCURL_TRI_In_FEMDef.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_def_8hpp_source.html#l00449">449</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_def_8hpp_source.html">Intrepid2_HCURL_TRI_In_FEMDef.hpp</a>.</p>
 
 </div>
 </div>
@@ -685,9 +679,9 @@ template&lt;typename <a class="el" href="class_intrepid2_1_1_basis.html#a79e5941
 
 <p>Reimplemented from <a class="el" href="class_intrepid2_1_1_basis.html#af38951d8d5996252f32f428f2407bafc">Intrepid2::Basis&lt; Device, outputValueType, pointValueType &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00290">290</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html">Intrepid2_HCURL_TRI_In_FEM.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00280">280</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html">Intrepid2_HCURL_TRI_In_FEM.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_intrepid2___basis_8hpp_source.html#l00166">Intrepid2::Basis&lt; Device, outputValueType, pointValueType &gt;::basisDegree_</a>, and <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00310">Intrepid2::Basis_HCURL_TRI_In_FEM&lt; DeviceType, outputValueType, pointValueType &gt;::pointType_</a>.</p>
+<p class="reference">References <a class="el" href="_intrepid2___basis_8hpp_source.html#l00166">Intrepid2::Basis&lt; Device, outputValueType, pointValueType &gt;::basisDegree_</a>, and <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00300">Intrepid2::Basis_HCURL_TRI_In_FEM&lt; DeviceType, outputValueType, pointValueType &gt;::pointType_</a>.</p>
 
 </div>
 </div>
@@ -756,9 +750,9 @@ A FEM basis spans a COMPLETE or INCOMPLETE polynomial space on the reference cel
 
 <p>Reimplemented from <a class="el" href="class_intrepid2_1_1_basis.html#a7b6120fc889459b1696d93418b45a7a4">Intrepid2::Basis&lt; Device, outputValueType, pointValueType &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00189">189</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html">Intrepid2_HCURL_TRI_In_FEM.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00180">180</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html">Intrepid2_HCURL_TRI_In_FEM.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00307">Intrepid2::Basis_HCURL_TRI_In_FEM&lt; DeviceType, outputValueType, pointValueType &gt;::coeffs_</a>, <a class="el" href="_intrepid2___basis_8hpp_source.html#l00834">Intrepid2::Basis&lt; Device, outputValueType, pointValueType &gt;::getBaseCellTopology()</a>, <a class="el" href="_intrepid2___basis_8hpp_source.html#l00805">Intrepid2::Basis&lt; Device, outputValueType, pointValueType &gt;::getCardinality()</a>, <a class="el" href="_intrepid2___basis_def_8hpp_source.html#l00561">Intrepid2::getValues_HCURL_Args()</a>, and <a class="el" href="_intrepid2___types_8hpp_source.html#l00100">Intrepid2::Parameters::MaxNumPtsPerBasisEval</a>.</p>
+<p class="reference">References <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00297">Intrepid2::Basis_HCURL_TRI_In_FEM&lt; DeviceType, outputValueType, pointValueType &gt;::coeffs_</a>, <a class="el" href="_intrepid2___basis_8hpp_source.html#l00834">Intrepid2::Basis&lt; Device, outputValueType, pointValueType &gt;::getBaseCellTopology()</a>, <a class="el" href="_intrepid2___basis_8hpp_source.html#l00805">Intrepid2::Basis&lt; Device, outputValueType, pointValueType &gt;::getCardinality()</a>, <a class="el" href="_intrepid2___basis_def_8hpp_source.html#l00561">Intrepid2::getValues_HCURL_Args()</a>, and <a class="el" href="_intrepid2___types_8hpp_source.html#l00100">Intrepid2::Parameters::MaxNumPtsPerBasisEval</a>.</p>
 
 </div>
 </div>
@@ -791,7 +785,7 @@ template&lt;typename <a class="el" href="class_intrepid2_1_1_basis.html#a79e5941
 
 <p>Reimplemented from <a class="el" href="class_intrepid2_1_1_basis.html#a6622ee449830dc41153d5a1288229fc4">Intrepid2::Basis&lt; Device, outputValueType, pointValueType &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00276">276</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html">Intrepid2_HCURL_TRI_In_FEM.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00266">266</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html">Intrepid2_HCURL_TRI_In_FEM.hpp</a>.</p>
 
 </div>
 </div>
@@ -820,9 +814,9 @@ template&lt;typename <a class="el" href="class_intrepid2_1_1_basis.html#a79e5941
 
 <p>expansion coefficients of the nodal basis in terms of the orthgonal one </p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00307">307</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html">Intrepid2_HCURL_TRI_In_FEM.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00297">297</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html">Intrepid2_HCURL_TRI_In_FEM.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00189">Intrepid2::Basis_HCURL_TRI_In_FEM&lt; DeviceType, outputValueType, pointValueType &gt;::getValues()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00180">Intrepid2::Basis_HCURL_TRI_In_FEM&lt; DeviceType, outputValueType, pointValueType &gt;::getValues()</a>.</p>
 
 </div>
 </div>
@@ -851,9 +845,9 @@ template&lt;typename <a class="el" href="class_intrepid2_1_1_basis.html#a79e5941
 <p>type of lattice used for creating the DoF coordinates <br  />
  </p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00310">310</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html">Intrepid2_HCURL_TRI_In_FEM.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00300">300</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html">Intrepid2_HCURL_TRI_In_FEM.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00300">Intrepid2::Basis_HCURL_TRI_In_FEM&lt; DeviceType, outputValueType, pointValueType &gt;::getHostBasis()</a>, and <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00290">Intrepid2::Basis_HCURL_TRI_In_FEM&lt; DeviceType, outputValueType, pointValueType &gt;::getSubCellRefBasis()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00290">Intrepid2::Basis_HCURL_TRI_In_FEM&lt; DeviceType, outputValueType, pointValueType &gt;::getHostBasis()</a>, and <a class="el" href="_intrepid2___h_c_u_r_l___t_r_i___in___f_e_m_8hpp_source.html#l00280">Intrepid2::Basis_HCURL_TRI_In_FEM&lt; DeviceType, outputValueType, pointValueType &gt;::getSubCellRefBasis()</a>.</p>
 
 </div>
 </div>

@@ -82,6 +82,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classROL_1_1MonteCarloGenerator-members.html">List of all members</a>  </div>
@@ -98,7 +100,8 @@ $(function() {
  <div class="center">
   <img src="classROL_1_1MonteCarloGenerator.png" usemap="#ROL::MonteCarloGenerator_3C_20Real_20_3E_map" alt=""/>
   <map id="ROL::MonteCarloGenerator_3C_20Real_20_3E_map" name="ROL::MonteCarloGenerator_3C_20Real_20_3E_map">
-<area href="classROL_1_1SampleGenerator.html" alt="ROL::SampleGenerator&lt; Real &gt;" shape="rect" coords="0,0,215,24"/>
+<area href="classROL_1_1SampleGenerator.html" alt="ROL::SampleGenerator&lt; Real &gt;" shape="rect" coords="0,0,235,24"/>
+<area href="classROL_1_1UniformSimplexGenerator.html" alt="ROL::UniformSimplexGenerator&lt; Real &gt;" shape="rect" coords="0,112,235,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -110,6 +113,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aaef5e0eb95f86b3ded0e05a83ff7103c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a214d1df1ac7f40a8cf62e40c2e6b1bdc" id="r_a214d1df1ac7f40a8cf62e40c2e6b1bdc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classROL_1_1MonteCarloGenerator.html#a214d1df1ac7f40a8cf62e40c2e6b1bdc">MonteCarloGenerator</a> (int nSamp, const std::vector&lt; Real &gt; &amp;mean, const std::vector&lt; Real &gt; &amp;std, const Ptr&lt; <a class="el" href="classROL_1_1BatchManager.html">BatchManager</a>&lt; Real &gt; &gt; &amp;bman, bool use_SA=false, bool adaptive=false, int numNewSamps=0, int seed=123454321)</td></tr>
 <tr class="separator:a214d1df1ac7f40a8cf62e40c2e6b1bdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa73bd9e83d55640718c5734c432bb68" id="r_afa73bd9e83d55640718c5734c432bb68"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classROL_1_1MonteCarloGenerator.html#afa73bd9e83d55640718c5734c432bb68">MonteCarloGenerator</a> (const Ptr&lt; <a class="el" href="classROL_1_1BatchManager.html">BatchManager</a>&lt; Real &gt; &gt; &amp;bman, bool use_SA=false, bool adaptive=false, int numNewSamps=0, int seed=123454321)</td></tr>
+<tr class="separator:afa73bd9e83d55640718c5734c432bb68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ec86e860f8849845b8d96d56004af47" id="r_a8ec86e860f8849845b8d96d56004af47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classROL_1_1MonteCarloGenerator.html#a8ec86e860f8849845b8d96d56004af47">update</a> (const <a class="el" href="classROL_1_1Vector.html">Vector</a>&lt; Real &gt; &amp;x) override</td></tr>
 <tr class="separator:a8ec86e860f8849845b8d96d56004af47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01d4f59588649fb1e7c9c512bb740801" id="r_a01d4f59588649fb1e7c9c512bb740801"><td class="memItemLeft" align="right" valign="top">Real&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classROL_1_1MonteCarloGenerator.html#a01d4f59588649fb1e7c9c512bb740801">computeError</a> (std::vector&lt; Real &gt; &amp;vals) override</td></tr>
@@ -156,14 +161,35 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae7a23ca8451c6f63d8a4a216a1d9d872 inherit pub_methods_classROL_1_1SampleGenerator" id="r_ae7a23ca8451c6f63d8a4a216a1d9d872"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classROL_1_1SampleGenerator.html#ae7a23ca8451c6f63d8a4a216a1d9d872">print</a> (const std::string &amp;filename=&quot;samples&quot;, const int prec=12) const</td></tr>
 <tr class="separator:ae7a23ca8451c6f63d8a4a216a1d9d872 inherit pub_methods_classROL_1_1SampleGenerator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:aff294e7d7af40c5861d931041d2f6ce6" id="r_aff294e7d7af40c5861d931041d2f6ce6"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::vector&lt; Real &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classROL_1_1MonteCarloGenerator.html#aff294e7d7af40c5861d931041d2f6ce6">sample</a> (int nSamp, bool store=true, bool <a class="el" href="classROL_1_1MonteCarloGenerator.html#abe01da7978d70020d4adbc1ce8a7371e">refine</a>=false)</td></tr>
+<tr class="separator:aff294e7d7af40c5861d931041d2f6ce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classROL_1_1SampleGenerator"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classROL_1_1SampleGenerator')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classROL_1_1SampleGenerator.html">ROL::SampleGenerator&lt; Real &gt;</a></td></tr>
+<tr class="memitem:a3579a08318e1d7ef746fb2b5c8309ce6 inherit pro_methods_classROL_1_1SampleGenerator" id="r_a3579a08318e1d7ef746fb2b5c8309ce6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classROL_1_1SampleGenerator.html#a3579a08318e1d7ef746fb2b5c8309ce6">setPoints</a> (std::vector&lt; std::vector&lt; Real &gt; &gt; &amp;p)</td></tr>
+<tr class="separator:a3579a08318e1d7ef746fb2b5c8309ce6 inherit pro_methods_classROL_1_1SampleGenerator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fccbba0d8bd1a4e6a1a733df6e7a60d inherit pro_methods_classROL_1_1SampleGenerator" id="r_a4fccbba0d8bd1a4e6a1a733df6e7a60d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classROL_1_1SampleGenerator.html#a4fccbba0d8bd1a4e6a1a733df6e7a60d">setWeights</a> (std::vector&lt; Real &gt; &amp;w)</td></tr>
+<tr class="separator:a4fccbba0d8bd1a4e6a1a733df6e7a60d inherit pro_methods_classROL_1_1SampleGenerator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:ac42c9331bb7997b9897431c9acdedb47" id="r_ac42c9331bb7997b9897431c9acdedb47"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classROL_1_1MonteCarloGenerator.html#ac42c9331bb7997b9897431c9acdedb47">nSamp_</a></td></tr>
+<tr class="separator:ac42c9331bb7997b9897431c9acdedb47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a848fa43527dd9a42e3bc75e9f067c2cd" id="r_a848fa43527dd9a42e3bc75e9f067c2cd"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classROL_1_1MonteCarloGenerator.html#a848fa43527dd9a42e3bc75e9f067c2cd">use_SA_</a></td></tr>
+<tr class="separator:a848fa43527dd9a42e3bc75e9f067c2cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94d4a7cfd593971538e6e69e46760b37" id="r_a94d4a7cfd593971538e6e69e46760b37"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classROL_1_1MonteCarloGenerator.html#a94d4a7cfd593971538e6e69e46760b37">adaptive_</a></td></tr>
+<tr class="separator:a94d4a7cfd593971538e6e69e46760b37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac01c58a0c6ae72be1204deeeb00998b9" id="r_ac01c58a0c6ae72be1204deeeb00998b9"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classROL_1_1MonteCarloGenerator.html#ac01c58a0c6ae72be1204deeeb00998b9">numNewSamps_</a></td></tr>
+<tr class="separator:ac01c58a0c6ae72be1204deeeb00998b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac785f361133662d45a6ac0f87015b927" id="r_ac785f361133662d45a6ac0f87015b927"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classROL_1_1MonteCarloGenerator.html#ac785f361133662d45a6ac0f87015b927">seed_</a></td></tr>
+<tr class="separator:ac785f361133662d45a6ac0f87015b927"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:acb346c67c72651ca779efbb45c67b0c8" id="r_acb346c67c72651ca779efbb45c67b0c8"><td class="memItemLeft" align="right" valign="top">Real&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classROL_1_1MonteCarloGenerator.html#acb346c67c72651ca779efbb45c67b0c8">ierf</a> (Real input) const</td></tr>
 <tr class="separator:acb346c67c72651ca779efbb45c67b0c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08e48913aeb62174fb99853f449ae85a" id="r_a08e48913aeb62174fb99853f449ae85a"><td class="memItemLeft" align="right" valign="top">Real&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classROL_1_1MonteCarloGenerator.html#a08e48913aeb62174fb99853f449ae85a">random</a> (void) const</td></tr>
 <tr class="separator:a08e48913aeb62174fb99853f449ae85a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff294e7d7af40c5861d931041d2f6ce6" id="r_aff294e7d7af40c5861d931041d2f6ce6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; Real &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classROL_1_1MonteCarloGenerator.html#aff294e7d7af40c5861d931041d2f6ce6">sample</a> (int nSamp, bool store=true, bool <a class="el" href="classROL_1_1MonteCarloGenerator.html#abe01da7978d70020d4adbc1ce8a7371e">refine</a>=false)</td></tr>
-<tr class="separator:aff294e7d7af40c5861d931041d2f6ce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -171,20 +197,10 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a61579e586a17b38815dc0851d0fda2ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7aeb5c7a60a68b7d4b55cf10dba463c5" id="r_a7aeb5c7a60a68b7d4b55cf10dba463c5"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; Ptr&lt; <a class="el" href="classROL_1_1Distribution.html">Distribution</a>&lt; Real &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classROL_1_1MonteCarloGenerator.html#a7aeb5c7a60a68b7d4b55cf10dba463c5">dist_</a></td></tr>
 <tr class="separator:a7aeb5c7a60a68b7d4b55cf10dba463c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac42c9331bb7997b9897431c9acdedb47" id="r_ac42c9331bb7997b9897431c9acdedb47"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classROL_1_1MonteCarloGenerator.html#ac42c9331bb7997b9897431c9acdedb47">nSamp_</a></td></tr>
-<tr class="separator:ac42c9331bb7997b9897431c9acdedb47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b310fe04228b31ac133e42057d99585" id="r_a6b310fe04228b31ac133e42057d99585"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classROL_1_1MonteCarloGenerator.html#a6b310fe04228b31ac133e42057d99585">use_normal_</a></td></tr>
 <tr class="separator:a6b310fe04228b31ac133e42057d99585"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a848fa43527dd9a42e3bc75e9f067c2cd" id="r_a848fa43527dd9a42e3bc75e9f067c2cd"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classROL_1_1MonteCarloGenerator.html#a848fa43527dd9a42e3bc75e9f067c2cd">use_SA_</a></td></tr>
-<tr class="separator:a848fa43527dd9a42e3bc75e9f067c2cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94d4a7cfd593971538e6e69e46760b37" id="r_a94d4a7cfd593971538e6e69e46760b37"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classROL_1_1MonteCarloGenerator.html#a94d4a7cfd593971538e6e69e46760b37">adaptive_</a></td></tr>
-<tr class="separator:a94d4a7cfd593971538e6e69e46760b37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac01c58a0c6ae72be1204deeeb00998b9" id="r_ac01c58a0c6ae72be1204deeeb00998b9"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classROL_1_1MonteCarloGenerator.html#ac01c58a0c6ae72be1204deeeb00998b9">numNewSamps_</a></td></tr>
-<tr class="separator:ac01c58a0c6ae72be1204deeeb00998b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac29a200e80756518d559a65c5aa0622c" id="r_ac29a200e80756518d559a65c5aa0622c"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classROL_1_1MonteCarloGenerator.html#ac29a200e80756518d559a65c5aa0622c">useDist_</a></td></tr>
 <tr class="separator:ac29a200e80756518d559a65c5aa0622c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac785f361133662d45a6ac0f87015b927" id="r_ac785f361133662d45a6ac0f87015b927"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classROL_1_1MonteCarloGenerator.html#ac785f361133662d45a6ac0f87015b927">seed_</a></td></tr>
-<tr class="separator:ac785f361133662d45a6ac0f87015b927"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72d3e9751d6d2871c0cf62aa9cb67629" id="r_a72d3e9751d6d2871c0cf62aa9cb67629"><td class="memItemLeft" align="right" valign="top">Real&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classROL_1_1MonteCarloGenerator.html#a72d3e9751d6d2871c0cf62aa9cb67629">sum_val_</a></td></tr>
 <tr class="separator:a72d3e9751d6d2871c0cf62aa9cb67629"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88eab22daffba61e3a0a63ceb4e5a8c1" id="r_a88eab22daffba61e3a0a63ceb4e5a8c1"><td class="memItemLeft" align="right" valign="top">Real&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classROL_1_1MonteCarloGenerator.html#a88eab22daffba61e3a0a63ceb4e5a8c1">sum_val2_</a></td></tr>
@@ -193,14 +209,6 @@ Private Attributes</h2></td></tr>
 <tr class="separator:ac1654cc1db46254d3ac7d80973bfa64d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73e2b32ea60c25cfc7f9e54566753646" id="r_a73e2b32ea60c25cfc7f9e54566753646"><td class="memItemLeft" align="right" valign="top">Real&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classROL_1_1MonteCarloGenerator.html#a73e2b32ea60c25cfc7f9e54566753646">sum_ng2_</a></td></tr>
 <tr class="separator:a73e2b32ea60c25cfc7f9e54566753646"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pro_methods_classROL_1_1SampleGenerator"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classROL_1_1SampleGenerator')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classROL_1_1SampleGenerator.html">ROL::SampleGenerator&lt; Real &gt;</a></td></tr>
-<tr class="memitem:a3579a08318e1d7ef746fb2b5c8309ce6 inherit pro_methods_classROL_1_1SampleGenerator" id="r_a3579a08318e1d7ef746fb2b5c8309ce6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classROL_1_1SampleGenerator.html#a3579a08318e1d7ef746fb2b5c8309ce6">setPoints</a> (std::vector&lt; std::vector&lt; Real &gt; &gt; &amp;p)</td></tr>
-<tr class="separator:a3579a08318e1d7ef746fb2b5c8309ce6 inherit pro_methods_classROL_1_1SampleGenerator"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4fccbba0d8bd1a4e6a1a733df6e7a60d inherit pro_methods_classROL_1_1SampleGenerator" id="r_a4fccbba0d8bd1a4e6a1a733df6e7a60d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classROL_1_1SampleGenerator.html#a4fccbba0d8bd1a4e6a1a733df6e7a60d">setWeights</a> (std::vector&lt; Real &gt; &amp;w)</td></tr>
-<tr class="separator:a4fccbba0d8bd1a4e6a1a733df6e7a60d inherit pro_methods_classROL_1_1SampleGenerator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename Real&gt;<br />
@@ -208,7 +216,7 @@ class ROL::MonteCarloGenerator&lt; Real &gt;</div>
 <p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html#l00019">19</a> of file <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html">ROL_MonteCarloGenerator.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6babeb37180eee8a6bfc39d607dd7024" name="a6babeb37180eee8a6bfc39d607dd7024"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6babeb37180eee8a6bfc39d607dd7024">&#9670;&#160;</a></span>MonteCarloGenerator() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6babeb37180eee8a6bfc39d607dd7024">&#9670;&#160;</a></span>MonteCarloGenerator() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -267,12 +275,12 @@ template&lt;typename Real &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html#l00093">93</a> of file <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html">ROL_MonteCarloGeneratorDef.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html#l00024">ROL::MonteCarloGenerator&lt; Real &gt;::nSamp_</a>, <a class="el" href="ROL__SampleGenerator_8hpp_source.html#l00090">ROL::SampleGenerator&lt; Real &gt;::numBatches()</a>, and <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html#l00043">ROL::MonteCarloGenerator&lt; Real &gt;::sample()</a>.</p>
+<p class="reference">References <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html#l00036">ROL::MonteCarloGenerator&lt; Real &gt;::nSamp_</a>, <a class="el" href="ROL__SampleGenerator_8hpp_source.html#l00100">ROL::SampleGenerator&lt; Real &gt;::numBatches()</a>, and <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html#l00043">ROL::MonteCarloGenerator&lt; Real &gt;::sample()</a>.</p>
 
 </div>
 </div>
 <a id="aaef5e0eb95f86b3ded0e05a83ff7103c" name="aaef5e0eb95f86b3ded0e05a83ff7103c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaef5e0eb95f86b3ded0e05a83ff7103c">&#9670;&#160;</a></span>MonteCarloGenerator() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aaef5e0eb95f86b3ded0e05a83ff7103c">&#9670;&#160;</a></span>MonteCarloGenerator() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -331,12 +339,12 @@ template&lt;typename Real &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html#l00117">117</a> of file <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html">ROL_MonteCarloGeneratorDef.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html#l00021">ROL::MonteCarloGenerator&lt; Real &gt;::data_</a>, <a class="el" href="vector_2test__11_8cpp_source.html#l00023">dim</a>, <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html#l00024">ROL::MonteCarloGenerator&lt; Real &gt;::nSamp_</a>, <a class="el" href="ROL__SampleGenerator_8hpp_source.html#l00090">ROL::SampleGenerator&lt; Real &gt;::numBatches()</a>, and <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html#l00043">ROL::MonteCarloGenerator&lt; Real &gt;::sample()</a>.</p>
+<p class="reference">References <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html#l00021">ROL::MonteCarloGenerator&lt; Real &gt;::data_</a>, <a class="el" href="vector_2test__11_8cpp_source.html#l00023">dim</a>, <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html#l00036">ROL::MonteCarloGenerator&lt; Real &gt;::nSamp_</a>, <a class="el" href="ROL__SampleGenerator_8hpp_source.html#l00100">ROL::SampleGenerator&lt; Real &gt;::numBatches()</a>, and <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html#l00043">ROL::MonteCarloGenerator&lt; Real &gt;::sample()</a>.</p>
 
 </div>
 </div>
 <a id="a214d1df1ac7f40a8cf62e40c2e6b1bdc" name="a214d1df1ac7f40a8cf62e40c2e6b1bdc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a214d1df1ac7f40a8cf62e40c2e6b1bdc">&#9670;&#160;</a></span>MonteCarloGenerator() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a214d1df1ac7f40a8cf62e40c2e6b1bdc">&#9670;&#160;</a></span>MonteCarloGenerator() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -401,7 +409,57 @@ template&lt;typename Real &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html#l00152">152</a> of file <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html">ROL_MonteCarloGeneratorDef.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html#l00021">ROL::MonteCarloGenerator&lt; Real &gt;::data_</a>, <a class="el" href="vector_2test__11_8cpp_source.html#l00023">dim</a>, <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html#l00024">ROL::MonteCarloGenerator&lt; Real &gt;::nSamp_</a>, <a class="el" href="ROL__SampleGenerator_8hpp_source.html#l00090">ROL::SampleGenerator&lt; Real &gt;::numBatches()</a>, and <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html#l00043">ROL::MonteCarloGenerator&lt; Real &gt;::sample()</a>.</p>
+<p class="reference">References <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html#l00021">ROL::MonteCarloGenerator&lt; Real &gt;::data_</a>, <a class="el" href="vector_2test__11_8cpp_source.html#l00023">dim</a>, <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html#l00036">ROL::MonteCarloGenerator&lt; Real &gt;::nSamp_</a>, <a class="el" href="ROL__SampleGenerator_8hpp_source.html#l00100">ROL::SampleGenerator&lt; Real &gt;::numBatches()</a>, and <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html#l00043">ROL::MonteCarloGenerator&lt; Real &gt;::sample()</a>.</p>
+
+</div>
+</div>
+<a id="afa73bd9e83d55640718c5734c432bb68" name="afa73bd9e83d55640718c5734c432bb68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa73bd9e83d55640718c5734c432bb68">&#9670;&#160;</a></span>MonteCarloGenerator() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classROL_1_1MonteCarloGenerator.html">ROL::MonteCarloGenerator</a>&lt; Real &gt;::MonteCarloGenerator </td>
+          <td>(</td>
+          <td class="paramtype">const Ptr&lt; <a class="el" href="classROL_1_1BatchManager.html">BatchManager</a>&lt; Real &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>bman</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>use_SA</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>adaptive</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>numNewSamps</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>seed</em> = <code>123454321</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html#l00181">181</a> of file <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html">ROL_MonteCarloGeneratorDef.hpp</a>.</p>
 
 </div>
 </div>
@@ -505,14 +563,16 @@ template&lt;typename Real &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
+<p>Reimplemented in <a class="el" href="classROL_1_1UniformSimplexGenerator.html#aecc5a45e1ff1bb9423a585df154b4d13">ROL::UniformSimplexGenerator&lt; Real &gt;</a>.</p>
+
 <p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html#l00043">43</a> of file <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html">ROL_MonteCarloGeneratorDef.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ROL__SampleGenerator_8hpp_source.html#l00086">ROL::SampleGenerator&lt; Real &gt;::batchID()</a>, <a class="el" href="ROL__SampleGenerator_8hpp_source.html#l00102">ROL::SampleGenerator&lt; Real &gt;::broadcast()</a>, <a class="el" href="vector_2test__11_8cpp_source.html#l00023">dim</a>, <a class="el" href="ROL__SampleGenerator_8hpp_source.html#l00090">ROL::SampleGenerator&lt; Real &gt;::numBatches()</a>, <a class="el" href="example__05_8cpp_source.html#l00015">random()</a>, <a class="el" href="ROL__SampleGenerator_8hpp_source.html#l00028">ROL::SampleGenerator&lt; Real &gt;::setPoints()</a>, <a class="el" href="ROL__SampleGenerator_8hpp_source.html#l00032">ROL::SampleGenerator&lt; Real &gt;::setWeights()</a>, and <a class="el" href="ROL__Objective__SerialSimOpt_8hpp_source.html#l00077">zero</a>.</p>
+<p class="reference">References <a class="el" href="ROL__SampleGenerator_8hpp_source.html#l00096">ROL::SampleGenerator&lt; Real &gt;::batchID()</a>, <a class="el" href="ROL__SampleGenerator_8hpp_source.html#l00112">ROL::SampleGenerator&lt; Real &gt;::broadcast()</a>, <a class="el" href="vector_2test__11_8cpp_source.html#l00023">dim</a>, <a class="el" href="ROL__SampleGenerator_8hpp_source.html#l00100">ROL::SampleGenerator&lt; Real &gt;::numBatches()</a>, <a class="el" href="example__05_8cpp_source.html#l00015">random()</a>, <a class="el" href="ROL__SampleGenerator_8hpp_source.html#l00028">ROL::SampleGenerator&lt; Real &gt;::setPoints()</a>, <a class="el" href="ROL__SampleGenerator_8hpp_source.html#l00032">ROL::SampleGenerator&lt; Real &gt;::setWeights()</a>, and <a class="el" href="ROL__Objective__SerialSimOpt_8hpp_source.html#l00077">zero</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html#l00093">ROL::MonteCarloGenerator&lt; Real &gt;::MonteCarloGenerator()</a>, <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html#l00152">ROL::MonteCarloGenerator&lt; Real &gt;::MonteCarloGenerator()</a>, and <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html#l00117">ROL::MonteCarloGenerator&lt; Real &gt;::MonteCarloGenerator()</a>.</p>
 
@@ -546,7 +606,7 @@ template&lt;typename Real &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classROL_1_1SampleGenerator.html#ad6411fd09052c52f5f0e31a2b5ad9e62">ROL::SampleGenerator&lt; Real &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html#l00180">180</a> of file <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html">ROL_MonteCarloGeneratorDef.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html#l00198">198</a> of file <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html">ROL_MonteCarloGeneratorDef.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="ROL__SampleGenerator_8hpp_source.html#l00045">ROL::SampleGenerator&lt; Real &gt;::update()</a>.</p>
 
@@ -580,9 +640,9 @@ template&lt;typename Real &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classROL_1_1SampleGenerator.html#a9435036d9b9a48fcec33599c32f4bc32">ROL::SampleGenerator&lt; Real &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html#l00190">190</a> of file <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html">ROL_MonteCarloGeneratorDef.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html#l00208">208</a> of file <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html">ROL_MonteCarloGeneratorDef.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ROL__SampleGenerator_8hpp_source.html#l00094">ROL::SampleGenerator&lt; Real &gt;::sumAll()</a>, and <a class="el" href="ROL__Objective__SerialSimOpt_8hpp_source.html#l00077">zero</a>.</p>
+<p class="reference">References <a class="el" href="ROL__SampleGenerator_8hpp_source.html#l00104">ROL::SampleGenerator&lt; Real &gt;::sumAll()</a>, and <a class="el" href="ROL__Objective__SerialSimOpt_8hpp_source.html#l00077">zero</a>.</p>
 
 </div>
 </div>
@@ -622,9 +682,9 @@ template&lt;typename Real &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html#l00219">219</a> of file <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html">ROL_MonteCarloGeneratorDef.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html#l00237">237</a> of file <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html">ROL_MonteCarloGeneratorDef.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ROL__SampleGenerator_8hpp_source.html#l00094">ROL::SampleGenerator&lt; Real &gt;::sumAll()</a>, and <a class="el" href="ROL__Objective__SerialSimOpt_8hpp_source.html#l00077">zero</a>.</p>
+<p class="reference">References <a class="el" href="ROL__SampleGenerator_8hpp_source.html#l00104">ROL::SampleGenerator&lt; Real &gt;::sumAll()</a>, and <a class="el" href="ROL__Objective__SerialSimOpt_8hpp_source.html#l00077">zero</a>.</p>
 
 </div>
 </div>
@@ -656,7 +716,7 @@ template&lt;typename Real &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classROL_1_1SampleGenerator.html#aaf97841323791751b987a91ea9b69bc8">ROL::SampleGenerator&lt; Real &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html#l00251">251</a> of file <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html">ROL_MonteCarloGeneratorDef.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html#l00269">269</a> of file <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html">ROL_MonteCarloGeneratorDef.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="ROL__SampleGenerator_8hpp_source.html#l00061">ROL::SampleGenerator&lt; Real &gt;::refine()</a>, <a class="el" href="ROL__SampleGenerator_8hpp_source.html#l00028">ROL::SampleGenerator&lt; Real &gt;::setPoints()</a>, and <a class="el" href="ROL__SampleGenerator_8hpp_source.html#l00032">ROL::SampleGenerator&lt; Real &gt;::setWeights()</a>.</p>
 
@@ -690,7 +750,7 @@ template&lt;typename Real &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classROL_1_1SampleGenerator.html#a2778c09e5f90b362a58a93a7ab5666ee">ROL::SampleGenerator&lt; Real &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html#l00267">267</a> of file <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html">ROL_MonteCarloGeneratorDef.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html#l00285">285</a> of file <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html">ROL_MonteCarloGeneratorDef.hpp</a>.</p>
 
 </div>
 </div>
@@ -749,34 +809,6 @@ template&lt;typename Real &gt; </div>
 
 </div>
 </div>
-<a id="ac42c9331bb7997b9897431c9acdedb47" name="ac42c9331bb7997b9897431c9acdedb47"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac42c9331bb7997b9897431c9acdedb47">&#9670;&#160;</a></span>nSamp_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Real &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="classROL_1_1MonteCarloGenerator.html">ROL::MonteCarloGenerator</a>&lt; Real &gt;::nSamp_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html#l00024">24</a> of file <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html">ROL_MonteCarloGenerator.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html#l00093">ROL::MonteCarloGenerator&lt; Real &gt;::MonteCarloGenerator()</a>, <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html#l00152">ROL::MonteCarloGenerator&lt; Real &gt;::MonteCarloGenerator()</a>, and <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html#l00117">ROL::MonteCarloGenerator&lt; Real &gt;::MonteCarloGenerator()</a>.</p>
-
-</div>
-</div>
 <a id="a6b310fe04228b31ac133e42057d99585" name="a6b310fe04228b31ac133e42057d99585"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6b310fe04228b31ac133e42057d99585">&#9670;&#160;</a></span>use_normal_</h2>
 
@@ -799,85 +831,7 @@ template&lt;typename Real &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html#l00025">25</a> of file <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html">ROL_MonteCarloGenerator.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a848fa43527dd9a42e3bc75e9f067c2cd" name="a848fa43527dd9a42e3bc75e9f067c2cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a848fa43527dd9a42e3bc75e9f067c2cd">&#9670;&#160;</a></span>use_SA_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Real &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const bool <a class="el" href="classROL_1_1MonteCarloGenerator.html">ROL::MonteCarloGenerator</a>&lt; Real &gt;::use_SA_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html#l00026">26</a> of file <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html">ROL_MonteCarloGenerator.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a94d4a7cfd593971538e6e69e46760b37" name="a94d4a7cfd593971538e6e69e46760b37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94d4a7cfd593971538e6e69e46760b37">&#9670;&#160;</a></span>adaptive_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Real &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const bool <a class="el" href="classROL_1_1MonteCarloGenerator.html">ROL::MonteCarloGenerator</a>&lt; Real &gt;::adaptive_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html#l00027">27</a> of file <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html">ROL_MonteCarloGenerator.hpp</a>.</p>
-
-</div>
-</div>
-<a id="ac01c58a0c6ae72be1204deeeb00998b9" name="ac01c58a0c6ae72be1204deeeb00998b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac01c58a0c6ae72be1204deeeb00998b9">&#9670;&#160;</a></span>numNewSamps_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Real &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int <a class="el" href="classROL_1_1MonteCarloGenerator.html">ROL::MonteCarloGenerator</a>&lt; Real &gt;::numNewSamps_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html#l00028">28</a> of file <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html">ROL_MonteCarloGenerator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html#l00024">24</a> of file <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html">ROL_MonteCarloGenerator.hpp</a>.</p>
 
 </div>
 </div>
@@ -903,33 +857,7 @@ template&lt;typename Real &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html#l00029">29</a> of file <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html">ROL_MonteCarloGenerator.hpp</a>.</p>
-
-</div>
-</div>
-<a id="ac785f361133662d45a6ac0f87015b927" name="ac785f361133662d45a6ac0f87015b927"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac785f361133662d45a6ac0f87015b927">&#9670;&#160;</a></span>seed_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Real &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int <a class="el" href="classROL_1_1MonteCarloGenerator.html">ROL::MonteCarloGenerator</a>&lt; Real &gt;::seed_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html#l00030">30</a> of file <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html">ROL_MonteCarloGenerator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html#l00025">25</a> of file <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html">ROL_MonteCarloGenerator.hpp</a>.</p>
 
 </div>
 </div>
@@ -955,7 +883,7 @@ template&lt;typename Real &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html#l00032">32</a> of file <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html">ROL_MonteCarloGenerator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html#l00027">27</a> of file <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html">ROL_MonteCarloGenerator.hpp</a>.</p>
 
 </div>
 </div>
@@ -981,7 +909,7 @@ template&lt;typename Real &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html#l00033">33</a> of file <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html">ROL_MonteCarloGenerator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html#l00028">28</a> of file <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html">ROL_MonteCarloGenerator.hpp</a>.</p>
 
 </div>
 </div>
@@ -1007,7 +935,7 @@ template&lt;typename Real &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html#l00034">34</a> of file <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html">ROL_MonteCarloGenerator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html#l00029">29</a> of file <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html">ROL_MonteCarloGenerator.hpp</a>.</p>
 
 </div>
 </div>
@@ -1033,7 +961,139 @@ template&lt;typename Real &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html#l00035">35</a> of file <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html">ROL_MonteCarloGenerator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html#l00030">30</a> of file <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html">ROL_MonteCarloGenerator.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ac42c9331bb7997b9897431c9acdedb47" name="ac42c9331bb7997b9897431c9acdedb47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac42c9331bb7997b9897431c9acdedb47">&#9670;&#160;</a></span>nSamp_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classROL_1_1MonteCarloGenerator.html">ROL::MonteCarloGenerator</a>&lt; Real &gt;::nSamp_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html#l00036">36</a> of file <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html">ROL_MonteCarloGenerator.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html#l00093">ROL::MonteCarloGenerator&lt; Real &gt;::MonteCarloGenerator()</a>, <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html#l00152">ROL::MonteCarloGenerator&lt; Real &gt;::MonteCarloGenerator()</a>, and <a class="el" href="ROL__MonteCarloGeneratorDef_8hpp_source.html#l00117">ROL::MonteCarloGenerator&lt; Real &gt;::MonteCarloGenerator()</a>.</p>
+
+</div>
+</div>
+<a id="a848fa43527dd9a42e3bc75e9f067c2cd" name="a848fa43527dd9a42e3bc75e9f067c2cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a848fa43527dd9a42e3bc75e9f067c2cd">&#9670;&#160;</a></span>use_SA_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool <a class="el" href="classROL_1_1MonteCarloGenerator.html">ROL::MonteCarloGenerator</a>&lt; Real &gt;::use_SA_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html#l00037">37</a> of file <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html">ROL_MonteCarloGenerator.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a94d4a7cfd593971538e6e69e46760b37" name="a94d4a7cfd593971538e6e69e46760b37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94d4a7cfd593971538e6e69e46760b37">&#9670;&#160;</a></span>adaptive_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool <a class="el" href="classROL_1_1MonteCarloGenerator.html">ROL::MonteCarloGenerator</a>&lt; Real &gt;::adaptive_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html#l00038">38</a> of file <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html">ROL_MonteCarloGenerator.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ac01c58a0c6ae72be1204deeeb00998b9" name="ac01c58a0c6ae72be1204deeeb00998b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac01c58a0c6ae72be1204deeeb00998b9">&#9670;&#160;</a></span>numNewSamps_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int <a class="el" href="classROL_1_1MonteCarloGenerator.html">ROL::MonteCarloGenerator</a>&lt; Real &gt;::numNewSamps_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html#l00039">39</a> of file <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html">ROL_MonteCarloGenerator.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ac785f361133662d45a6ac0f87015b927" name="ac785f361133662d45a6ac0f87015b927"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac785f361133662d45a6ac0f87015b927">&#9670;&#160;</a></span>seed_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int <a class="el" href="classROL_1_1MonteCarloGenerator.html">ROL::MonteCarloGenerator</a>&lt; Real &gt;::seed_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html#l00040">40</a> of file <a class="el" href="ROL__MonteCarloGenerator_8hpp_source.html">ROL_MonteCarloGenerator.hpp</a>.</p>
 
 </div>
 </div>

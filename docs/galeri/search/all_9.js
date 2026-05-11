@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['hex_0',['hex',['../class_galeri_1_1grid_1_1_hex.html',1,'Galeri::grid::Hex'],['../class_galeri_1_1quadrature_1_1_hex.html',1,'Galeri::quadrature::Hex']]],
-  ['hexcubegrid_1',['hexcubegrid',['../class_galeri_1_1_finite_elements_1_1_hex_cube_grid.html',1,'Galeri::FiniteElements::HexCubeGrid'],['../class_galeri_1_1_finite_elements_1_1_hex_cube_grid.html#a77aa97e397c172a64c1a66afdcea03e7',1,'Galeri::FiniteElements::HexCubeGrid::HexCubeGrid()']]],
-  ['hexquadrature_2',['hexquadrature',['../class_galeri_1_1_finite_elements_1_1_hex_quadrature.html',1,'Galeri::FiniteElements::HexQuadrature'],['../class_galeri_1_1_finite_elements_1_1_hex_quadrature.html#a4f14543b236938429a797512ff2e0b67',1,'Galeri::FiniteElements::HexQuadrature::HexQuadrature()']]],
-  ['how_20to_20deal_20with_20abstractgrid_20classes_3',['How to deal with AbstractGrid Classes',['../gl_fe_grid.html',1,'']]]
+  ['helmholtz1dproblem_0',['Helmholtz1DProblem',['../class_galeri_1_1_xpetra_1_1_helmholtz1_d_problem.html',1,'Galeri::Xpetra']]],
+  ['helmholtz2dproblem_1',['Helmholtz2DProblem',['../class_galeri_1_1_xpetra_1_1_helmholtz2_d_problem.html',1,'Galeri::Xpetra']]],
+  ['helmholtz3dproblem_2',['Helmholtz3DProblem',['../class_galeri_1_1_xpetra_1_1_helmholtz3_d_problem.html',1,'Galeri::Xpetra']]],
+  ['helmholtzfem2dproblem_3',['HelmholtzFEM2DProblem',['../class_galeri_1_1_xpetra_1_1_helmholtz_f_e_m2_d_problem.html',1,'Galeri::Xpetra']]],
+  ['helmholtzfem3dproblem_4',['HelmholtzFEM3DProblem',['../class_galeri_1_1_xpetra_1_1_helmholtz_f_e_m3_d_problem.html',1,'Galeri::Xpetra']]],
+  ['how_20to_20deal_20with_20abstractgrid_20classes_5',['How to deal with AbstractGrid Classes',['../gl_fe_grid.html',1,'']]]
 ];

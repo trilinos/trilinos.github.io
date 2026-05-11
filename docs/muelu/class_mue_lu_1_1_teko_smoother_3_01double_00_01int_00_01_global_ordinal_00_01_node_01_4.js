@@ -9,7 +9,7 @@ var class_mue_lu_1_1_teko_smoother_3_01double_00_01int_00_01_global_ordinal_00_0
     [ "DeclareInput", "class_mue_lu_1_1_teko_smoother_3_01double_00_01int_00_01_global_ordinal_00_01_node_01_4.html#ae8b3427233935287aaec5da8f1fe3b24", null ],
     [ "SetTekoParameters", "class_mue_lu_1_1_teko_smoother_3_01double_00_01int_00_01_global_ordinal_00_01_node_01_4.html#ae5d38728f3ec1d8bad1370726c0c25b0", null ],
     [ "Setup", "class_mue_lu_1_1_teko_smoother_3_01double_00_01int_00_01_global_ordinal_00_01_node_01_4.html#a65379f12211bbdff116b7d35630705a9", null ],
-    [ "Apply", "class_mue_lu_1_1_teko_smoother_3_01double_00_01int_00_01_global_ordinal_00_01_node_01_4.html#abca67e17f677a89ac56168f9a8a5980c", null ],
+    [ "Apply", "class_mue_lu_1_1_teko_smoother_3_01double_00_01int_00_01_global_ordinal_00_01_node_01_4.html#a876c6ef9197f76cdfc000fc9197cb99b", null ],
     [ "Copy", "class_mue_lu_1_1_teko_smoother_3_01double_00_01int_00_01_global_ordinal_00_01_node_01_4.html#a3704064bcd512ec5cd2f9a7042a86b27", null ],
     [ "description", "class_mue_lu_1_1_teko_smoother_3_01double_00_01int_00_01_global_ordinal_00_01_node_01_4.html#a3c97702b480ab7e4ba6e3888938c4d10", null ],
     [ "print", "class_mue_lu_1_1_teko_smoother_3_01double_00_01int_00_01_global_ordinal_00_01_node_01_4.html#afa5fffd68c669fa239cee4c968738101", null ],

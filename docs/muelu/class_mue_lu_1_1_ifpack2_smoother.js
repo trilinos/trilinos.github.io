@@ -22,7 +22,6 @@ var class_mue_lu_1_1_ifpack2_smoother =
     [ "SetupGeneric", "class_mue_lu_1_1_ifpack2_smoother.html#ada5df1b3d1b2e2bcb46b68bb562cecab", null ],
     [ "SetupChebyshevEigenvalues", "class_mue_lu_1_1_ifpack2_smoother.html#a1ae502461eb117852685e750cf542543", null ],
     [ "Ifpack2Smoother", "class_mue_lu_1_1_ifpack2_smoother.html#aa996c70540640f86ec03cd8f1d13061b", null ],
-    [ "constructionSuccessful_", "class_mue_lu_1_1_ifpack2_smoother.html#a7b65d8da642435f6d7693f4a58face88", null ],
     [ "type_", "class_mue_lu_1_1_ifpack2_smoother.html#aa8d1f618696b651365c865eff048a832", null ],
     [ "overlap_", "class_mue_lu_1_1_ifpack2_smoother.html#a7da815855d7a688ffe32b9a1fed5ae6d", null ],
     [ "prec_", "class_mue_lu_1_1_ifpack2_smoother.html#a8724d09f2d43c5e60145e87a0455d5ff", null ],

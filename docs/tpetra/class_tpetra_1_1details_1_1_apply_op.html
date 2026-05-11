@@ -368,11 +368,21 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 </div><div class="memdoc">
 
 <p>Compute <code>Y = beta*Y + alpha*Op(A)*X</code>, where <code>Op(A)</code> is either A, <picture><source srcset="form_0_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$A^T$" src="form_0.png" width="18" height="11"/></picture>, or <picture><source srcset="form_1_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$A^H$" src="form_1.png" width="19" height="11"/></picture>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">X</td><td>[in] Input <a class="el" href="class_tpetra_1_1_multi_vector.html" title="One or more distributed dense vectors.">MultiVector</a>. </td></tr>
+    <tr><td class="paramname">Y</td><td>[in/out] Output <a class="el" href="class_tpetra_1_1_multi_vector.html" title="One or more distributed dense vectors.">MultiVector</a>. </td></tr>
+    <tr><td class="paramname">mode</td><td>[in] Whether to apply the transpose (Teuchos::NO_TRANS, Teuchos::TRANS, Teuchos::CONJ_TRANS). </td></tr>
+    <tr><td class="paramname">alpha</td><td>[in] Scaling factor for the result. </td></tr>
+    <tr><td class="paramname">beta</td><td>[in] Scaling factor for Y before adding the result.</td></tr>
+  </table>
+  </dd>
+</dl>
 <p>This method calls the underlying <a class="el" href="class_tpetra_1_1_operator.html" title="Abstract interface for operators (e.g., matrices and preconditioners).">Operator</a> object's applyTempl&lt;Scalar,Scalar&gt;() method. </p>
 
 <p>Implements <a class="el" href="class_tpetra_1_1_operator.html#a900b02363414fa0decad11d466c320ce">Tpetra::Operator&lt; Scalar, OperatorType::local_ordinal_type, OperatorType::global_ordinal_type, OperatorType::node_type &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___apply_op_8hpp_source.html#l00089">89</a> of file <a class="el" href="_tpetra___apply_op_8hpp_source.html">Tpetra_ApplyOp.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___apply_op_8hpp_source.html#l00095">95</a> of file <a class="el" href="_tpetra___apply_op_8hpp_source.html">Tpetra_ApplyOp.hpp</a>.</p>
 
 </div>
 </div>
@@ -406,7 +416,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Reimplemented from <a class="el" href="class_tpetra_1_1_operator.html#af08c1e3f0773c94db195d612e2c2b9ad">Tpetra::Operator&lt; Scalar, OperatorType::local_ordinal_type, OperatorType::global_ordinal_type, OperatorType::node_type &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___apply_op_8hpp_source.html#l00102">102</a> of file <a class="el" href="_tpetra___apply_op_8hpp_source.html">Tpetra_ApplyOp.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___apply_op_8hpp_source.html#l00108">108</a> of file <a class="el" href="_tpetra___apply_op_8hpp_source.html">Tpetra_ApplyOp.hpp</a>.</p>
 
 </div>
 </div>
@@ -439,7 +449,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Implements <a class="el" href="class_tpetra_1_1_operator.html#a81a0f2636e24ebe69bdcaf8cafd786be">Tpetra::Operator&lt; Scalar, OperatorType::local_ordinal_type, OperatorType::global_ordinal_type, OperatorType::node_type &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___apply_op_8hpp_source.html#l00108">108</a> of file <a class="el" href="_tpetra___apply_op_8hpp_source.html">Tpetra_ApplyOp.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___apply_op_8hpp_source.html#l00114">114</a> of file <a class="el" href="_tpetra___apply_op_8hpp_source.html">Tpetra_ApplyOp.hpp</a>.</p>
 
 </div>
 </div>
@@ -472,7 +482,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Implements <a class="el" href="class_tpetra_1_1_operator.html#a15e31f088868daf38fddf2aa5148be73">Tpetra::Operator&lt; Scalar, OperatorType::local_ordinal_type, OperatorType::global_ordinal_type, OperatorType::node_type &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___apply_op_8hpp_source.html#l00114">114</a> of file <a class="el" href="_tpetra___apply_op_8hpp_source.html">Tpetra_ApplyOp.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___apply_op_8hpp_source.html#l00120">120</a> of file <a class="el" href="_tpetra___apply_op_8hpp_source.html">Tpetra_ApplyOp.hpp</a>.</p>
 
 </div>
 </div>
@@ -502,7 +512,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Whether this operator can return its diagonal. </p>
 <p>By default, this returns false. Subclasses must override this method if they can supply a diagonal. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___operator_8hpp_source.html#l00107">107</a> of file <a class="el" href="_tpetra___operator_8hpp_source.html">Tpetra_Operator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___operator_8hpp_source.html#l00113">113</a> of file <a class="el" href="_tpetra___operator_8hpp_source.html">Tpetra_Operator.hpp</a>.</p>
 
 </div>
 </div>
@@ -533,7 +543,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Get the diagonal of the operator. </p>
 <p>By default, this throws. Subclasses must override this method if they can supply a diagonal. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___operator_8hpp_source.html#l00113">113</a> of file <a class="el" href="_tpetra___operator_8hpp_source.html">Tpetra_Operator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___operator_8hpp_source.html#l00119">119</a> of file <a class="el" href="_tpetra___operator_8hpp_source.html">Tpetra_Operator.hpp</a>.</p>
 
 </div>
 </div>
@@ -562,7 +572,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>The underlying <a class="el" href="class_tpetra_1_1_operator.html" title="Abstract interface for operators (e.g., matrices and preconditioners).">Operator</a> object. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___apply_op_8hpp_source.html#l00121">121</a> of file <a class="el" href="_tpetra___apply_op_8hpp_source.html">Tpetra_ApplyOp.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___apply_op_8hpp_source.html#l00127">127</a> of file <a class="el" href="_tpetra___apply_op_8hpp_source.html">Tpetra_ApplyOp.hpp</a>.</p>
 
 </div>
 </div>

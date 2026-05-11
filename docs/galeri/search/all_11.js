@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['readme_0',['README',['../gl__r_e_a_d_m_e.html',1,'']]],
-  ['rebalance_1',['Rebalance',['../class_galeri_1_1grid_1_1_rebalance.html',1,'Galeri::grid']]],
-  ['rhs_2',['rhs',['../class_galeri_1_1_finite_elements_1_1_abstract_problem.html#ab12834b60f9f003520198cbd1e40dbbb',1,'Galeri::FiniteElements::AbstractProblem::RHS()'],['../class_galeri_1_1_finite_elements_1_1_abstract_variational.html#afa9a2aa2fc9fc65c797610bcb5a4ca85',1,'Galeri::FiniteElements::AbstractVariational::RHS()'],['../class_galeri_1_1_finite_elements_1_1_galerkin_variational.html#a1c3274fad4b21ce9f057ae4cc1616ba0',1,'Galeri::FiniteElements::GalerkinVariational::RHS()'],['../class_galeri_1_1_finite_elements_1_1_linear_problem.html#ac3dbd0fec7b62cdc3fc0d6c08a03122f',1,'Galeri::FiniteElements::LinearProblem::RHS()'],['../class_galeri_1_1_finite_elements_1_1_s_u_p_g_variational.html#aaa242cf0680af87178974b59bd025d49',1,'Galeri::FiniteElements::SUPGVariational::RHS()']]],
-  ['rowmap_3',['rowmap',['../class_galeri_1_1_finite_elements_1_1_abstract_grid.html#a168def7dfa93eb824452e41626b8cd63',1,'Galeri::FiniteElements::AbstractGrid::RowMap()'],['../class_galeri_1_1_finite_elements_1_1_file_grid.html#a028c19fb43ee45f0ee3ea146c54b37b4',1,'Galeri::FiniteElements::FileGrid::RowMap()'],['../class_galeri_1_1_finite_elements_1_1_hex_cube_grid.html#a2fa3e57e4175b69e5019ef3226f755a5',1,'Galeri::FiniteElements::HexCubeGrid::RowMap()'],['../class_galeri_1_1_finite_elements_1_1_quad_rectangle_grid.html#a4b876194b97697ac66d276590db89257',1,'Galeri::FiniteElements::QuadRectangleGrid::RowMap()'],['../class_galeri_1_1_finite_elements_1_1_tet_cube_grid.html#ad523b53101f47bc19b7878662ea47b56',1,'Galeri::FiniteElements::TetCubeGrid::RowMap()'],['../class_galeri_1_1_finite_elements_1_1_t_r_i_a_n_g_l_e_grid.html#ac42f620237235b4056e9cfab02530606',1,'Galeri::FiniteElements::TRIANGLEGrid::RowMap()'],['../class_galeri_1_1_finite_elements_1_1_triangle_rectangle_grid.html#a866919e6d7df27de59bce53c85a2989d',1,'Galeri::FiniteElements::TriangleRectangleGrid::RowMap()']]]
+  ['the_20coordinates_20of_20a_20cartesian_20grid_0',['Creating the Coordinates of a Cartesian Grid',['../gl__utils.html#gl_Coord',1,'']]],
+  ['the_20finite_20element_20module_1',['The Finite Element Module',['../gl__finite_elements.html',1,'']]],
+  ['the_20python_20interface_2',['The Python interface',['../gl__python.html',1,'']]],
+  ['to_20deal_20with_20abstractgrid_20classes_3',['How to deal with AbstractGrid Classes',['../gl_fe_grid.html',1,'']]],
+  ['to_20galeri_4',['Introduction to Galeri',['../index.html',1,'']]],
+  ['tridiagstencil_5',['TriDiagStencil',['../class_galeri_1_1_xpetra_1_1_tri_diag_stencil.html',1,'Galeri::Xpetra']]]
 ];

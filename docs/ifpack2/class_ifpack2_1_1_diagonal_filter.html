@@ -1034,7 +1034,7 @@ template&lt;class MatrixType &gt; </div>
 <p>Extract a list of entries in a specified global row of this matrix. Put into pre-allocated storage. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">LocalRow</td><td>- (In) Global row number for which indices are desired. </td></tr>
+    <tr><td class="paramname">GlobalRow</td><td>- (In) Global row number for which indices are desired. </td></tr>
     <tr><td class="paramname">Indices</td><td>- (Out) Global column indices corresponding to values. </td></tr>
     <tr><td class="paramname">Values</td><td>- (Out) Matrix values. </td></tr>
     <tr><td class="paramname">NumEntries</td><td>- (Out) Number of indices.</td></tr>
@@ -1099,11 +1099,11 @@ template&lt;class MatrixType &gt; </div>
     <tr><td class="paramname">LocalRow</td><td>- (In) Local row number for which indices are desired. </td></tr>
     <tr><td class="paramname">Indices</td><td>- (Out) Local column indices corresponding to values. </td></tr>
     <tr><td class="paramname">Values</td><td>- (Out) Matrix values. </td></tr>
-    <tr><td class="paramname">NumIndices</td><td>- (Out) Number of indices.</td></tr>
+    <tr><td class="paramname">NumEntries</td><td>- (Out) Number of indices.</td></tr>
   </table>
   </dd>
 </dl>
-<p>Note: A std::runtime_error exception is thrown if either <code>Indices</code> or <code>Values</code> is not large enough to hold the data associated with row <code>LocalRow</code>. If <code>LocalRow</code> is not valid for this node, then <code>Indices</code> and <code>Values</code> are unchanged and <code>NumIndices</code> is returned as Teuchos::OrdinalTraits&lt;size_t&gt;::invalid(). </p>
+<p>Note: A std::runtime_error exception is thrown if either <code>Indices</code> or <code>Values</code> is not large enough to hold the data associated with row <code>LocalRow</code>. If <code>LocalRow</code> is not valid for this node, then <code>Indices</code> and <code>Values</code> are unchanged and <code>NumEntries</code> is returned as Teuchos::OrdinalTraits&lt;size_t&gt;::invalid(). </p>
 
 </div>
 </div>
@@ -1152,9 +1152,9 @@ template&lt;class MatrixType &gt; </div>
 <p>Extract a const, non-persisting view of global indices in a specified row of the matrix. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">GlobalRow</td><td>- (In) Global row number for which indices are desired. </td></tr>
-    <tr><td class="paramname">Indices</td><td>- (Out) Global column indices corresponding to values. </td></tr>
-    <tr><td class="paramname">Values</td><td>- (Out) Row values </td></tr>
+    <tr><td class="paramname">GlobalRow</td><td>[in] Global row number for which indices are desired. </td></tr>
+    <tr><td class="paramname">indices</td><td>[out] Global column indices corresponding to values. </td></tr>
+    <tr><td class="paramname">values</td><td>[out] Row values. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1210,8 +1210,8 @@ template&lt;class MatrixType &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">LocalRow</td><td>- (In) Local row number for which indices are desired. </td></tr>
-    <tr><td class="paramname">Indices</td><td>- (Out) Global column indices corresponding to values. </td></tr>
-    <tr><td class="paramname">Values</td><td>- (Out) Row values </td></tr>
+    <tr><td class="paramname">indices</td><td>- (Out) Local column indices corresponding to values. </td></tr>
+    <tr><td class="paramname">values</td><td>- (Out) Row values </td></tr>
   </table>
   </dd>
 </dl>

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['quad_0',['quad',['../class_galeri_1_1grid_1_1_quad.html',1,'Galeri::grid::Quad'],['../class_galeri_1_1quadrature_1_1_quad.html',1,'Galeri::quadrature::Quad']]],
-  ['quadquadrature_1',['QuadQuadrature',['../class_galeri_1_1_finite_elements_1_1_quad_quadrature.html',1,'Galeri::FiniteElements']]],
-  ['quadrectanglegrid_2',['QuadRectangleGrid',['../class_galeri_1_1_finite_elements_1_1_quad_rectangle_grid.html',1,'Galeri::FiniteElements']]]
+  ['scalarproblem_0',['ScalarProblem',['../class_galeri_1_1_xpetra_1_1_scalar_problem.html',1,'Galeri::Xpetra']]],
+  ['scaledidentitystencil_1',['ScaledIdentityStencil',['../class_galeri_1_1_xpetra_1_1_scaled_identity_stencil.html',1,'Galeri::Xpetra']]],
+  ['star2dproblem_2',['Star2DProblem',['../class_galeri_1_1_xpetra_1_1_star2_d_problem.html',1,'Galeri::Xpetra']]]
 ];

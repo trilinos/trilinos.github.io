@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['uninitialized_0',['UNINITIALIZED',['../class_galeri_1_1core_1_1_workspace.html#a4a3b1b1843327b58d3ffa14689803c52',1,'Galeri::core::Workspace']]],
-  ['usage_20of_20createcrsmatrix_1',['Example of Usage of CreateCrsMatrix()',['../gl_matrices_ex.html',1,'']]],
-  ['usage_20of_20createmap_2',['Example of Usage of CreateMap()',['../gl_maps_ex.html',1,'']]],
-  ['utilities_3',['Utilities',['../gl__utils.html',1,'']]]
+  ['with_20abstractgrid_20classes_0',['How to deal with AbstractGrid Classes',['../gl_fe_grid.html',1,'']]]
 ];
