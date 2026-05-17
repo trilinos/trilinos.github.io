@@ -95,10 +95,16 @@ $(function() {
 <div class="line"><span class="preprocessor">#endif</span></div>
 <div class="line">  <span class="keyword">typedef</span> Tpetra::CrsMatrix&lt;Scalar,LO,GO&gt; MAT;</div>
 <div class="line">  <span class="keyword">typedef</span> Tpetra::MultiVector&lt;Scalar,LO,GO&gt; MV;</div>
+<div class="line">  <span class="keyword">typedef</span> Tpetra::MultiVector&lt;LO,LO,GO&gt; ID;</div>
 <div class="line">  <span class="keyword">typedef</span> Tpetra::MatrixMarket::Reader&lt;MAT&gt; MMReader;</div>
+<div class="line">  <span class="keyword">typedef</span> Tpetra::MatrixMarket::Reader&lt;ID&gt; IDReader;</div>
+<div class="line">  <span class="keyword">typedef</span> Tpetra::Map&lt;LO,GO&gt; MAP;</div>
+<div class="line"> </div>
+<div class="line">  <span class="keyword">typedef</span> Teuchos::ArrayRCP&lt;const LO&gt; SchurPart_type;</div>
+<div class="line">  <span class="keyword">typedef</span> Teuchos::Array&lt;Scalar&gt;      SchurOut_type;</div>
+<div class="line">  <span class="keyword">typedef</span> <span class="keyword">typename</span> SchurOut_type::size_type size_type;</div>
 <div class="line"> </div>
 <div class="line">  <span class="keyword">using </span>Tpetra::global_size_t;</div>
-<div class="line">  <span class="keyword">using </span>Tpetra::Map;</div>
 <div class="line">  <span class="keyword">using </span>Tpetra::Import;</div>
 <div class="line">  <span class="keyword">using </span>Teuchos::RCP;</div>
 <div class="line">  <span class="keyword">using </span>Teuchos::rcp;</div>
@@ -130,6 +136,7 @@ $(function() {
 <div class="line">  std::string rhs_filename(<span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line">  std::string solvername(<span class="stringliteral">&quot;Superlu&quot;</span>);</div>
 <div class="line">  std::string xml_filename(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line">  std::string schur_filename(<span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line">  Teuchos::CommandLineProcessor cmdp(<span class="keyword">false</span>,<span class="keyword">true</span>);</div>
 <div class="line">  cmdp.setOption(<span class="stringliteral">&quot;verbose&quot;</span>,<span class="stringliteral">&quot;quiet&quot;</span>,&amp;verbose,<span class="stringliteral">&quot;Print messages and results.&quot;</span>);</div>
 <div class="line">  cmdp.setOption(<span class="stringliteral">&quot;describe&quot;</span>,<span class="stringliteral">&quot;no_describe&quot;</span>,&amp;describe_on,<span class="stringliteral">&quot;Describe solver.&quot;</span>);</div>
@@ -140,6 +147,7 @@ $(function() {
 <div class="line">  cmdp.setOption(<span class="stringliteral">&quot;rhs_filename&quot;</span>,&amp;rhs_filename,<span class="stringliteral">&quot;Filename for Matrix-Market right-hand-side.&quot;</span>);</div>
 <div class="line">  cmdp.setOption(<span class="stringliteral">&quot;solvername&quot;</span>,&amp;solvername,<span class="stringliteral">&quot;Name of solver.&quot;</span>);</div>
 <div class="line">  cmdp.setOption(<span class="stringliteral">&quot;xml_filename&quot;</span>,&amp;xml_filename,<span class="stringliteral">&quot;XML Filename for Solver parameters.&quot;</span>);</div>
+<div class="line">  cmdp.setOption(<span class="stringliteral">&quot;schur_filename&quot;</span>,&amp;schur_filename,<span class="stringliteral">&quot;XML Filename to specify the row IDs of Schur complement for partial factorization.&quot;</span>);</div>
 <div class="line">  cmdp.setOption(<span class="stringliteral">&quot;multi-solve&quot;</span>,<span class="stringliteral">&quot;no-multi-solve&quot;</span>,&amp;multi_solve,<span class="stringliteral">&quot;Test multiple numFacto &amp; solve per symbolic.&quot;</span>);</div>
 <div class="line">  cmdp.setOption(<span class="stringliteral">&quot;print-matrix&quot;</span>,<span class="stringliteral">&quot;no-print-matrix&quot;</span>,&amp;printMatrix,<span class="stringliteral">&quot;Print the full matrix after reading it.&quot;</span>);</div>
 <div class="line">  cmdp.setOption(<span class="stringliteral">&quot;print-solution&quot;</span>,<span class="stringliteral">&quot;no-print-solution&quot;</span>,&amp;printSolution,<span class="stringliteral">&quot;Print solution vector after solve.&quot;</span>);</div>
@@ -166,14 +174,14 @@ $(function() {
 <div class="line">    A = MMReader::readSparseFile(mat_filename, comm);</div>
 <div class="line">  } <span class="keywordflow">else</span> {</div>
 <div class="line">    <span class="keywordflow">if</span>( verbose &amp;&amp; myRank == 0) std::cout &lt;&lt; <span class="stringliteral">&quot; using map file &quot;</span> &lt;&lt; map_filename &lt;&lt; std::endl;</div>
-<div class="line">    RCP&lt;const Map&lt;LO,GO&gt; &gt; rowMap = MMReader::readMapFile(map_filename, comm);</div>
-<div class="line">    RCP&lt;const Map&lt;LO,GO&gt; &gt; colMap = Teuchos::null;</div>
+<div class="line">    RCP&lt;const MAP&gt; rowMap = MMReader::readMapFile(map_filename, comm);</div>
+<div class="line">    RCP&lt;const MAP&gt; colMap = Teuchos::null;</div>
 <div class="line">    A = MMReader::readSparseFile (mat_filename, rowMap, colMap, rowMap, rowMap);</div>
 <div class="line">  }</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// get the map (Range Map used for both X &amp; B)</span></div>
-<div class="line">  RCP&lt;const Map&lt;LO,GO&gt; &gt; rngmap = A-&gt;getRangeMap();</div>
-<div class="line">  RCP&lt;const Map&lt;LO,GO&gt; &gt; dmnmap = A-&gt;getDomainMap();</div>
+<div class="line">  RCP&lt;const MAP&gt; rngmap = A-&gt;getRangeMap();</div>
+<div class="line">  RCP&lt;const MAP&gt; dmnmap = A-&gt;getDomainMap();</div>
 <div class="line">  GO nrows = A-&gt;getGlobalNumRows();</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Create random X</span></div>
@@ -287,10 +295,39 @@ $(function() {
 <div class="line">    std::cout &lt;&lt; solver-&gt;description() &lt;&lt; std::endl &lt;&lt; std::endl;</div>
 <div class="line">  }</div>
 <div class="line"> </div>
+<div class="line">  size_type n2 = 0;</div>
+<div class="line">  <span class="keywordtype">int</span> partial_facto = 0;</div>
+<div class="line">  RCP&lt;ID&gt; SchurPart;</div>
+<div class="line">  SchurOut_type schurOut;</div>
 <div class="line">  <span class="keywordflow">if</span> (xml_filename != <span class="stringliteral">&quot;&quot;</span>) {</div>
-<div class="line">    Teuchos::ParameterList test_params =</div>
-<div class="line">      Teuchos::ParameterXMLFileReader(xml_filename).getParameters();</div>
+<div class="line">    Teuchos::ParameterList test_params = Teuchos::ParameterXMLFileReader(xml_filename).getParameters();</div>
 <div class="line">    Teuchos::ParameterList&amp; amesos2_params = test_params.sublist(<span class="stringliteral">&quot;Amesos2&quot;</span>);</div>
+<div class="line">    <span class="keywordflow">if</span> (Amesos2::tolower (solvername) == <span class="stringliteral">&quot;shylubasker&quot;</span>) {</div>
+<div class="line">      <span class="comment">// Partial factorization (only for ShyLU-Basker)</span></div>
+<div class="line">      Teuchos::ParameterList&amp; shylubasker_params = amesos2_params.sublist(<span class="stringliteral">&quot;ShyLUBasker&quot;</span>);</div>
+<div class="line">      partial_facto = (shylubasker_params.isParameter(<span class="stringliteral">&quot;PartialFacto&quot;</span>) ? shylubasker_params.get&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;PartialFacto&quot;</span>) : 0);</div>
+<div class="line">      <span class="keywordflow">if</span> (partial_facto != 0 &amp;&amp; myRank == 0) {</div>
+<div class="line">        RCP&lt;const Teuchos::Comm&lt;LO&gt; &gt; SerialComm = rcp(<span class="keyword">new</span> Teuchos::SerialComm&lt;int&gt;());</div>
+<div class="line">        <span class="keyword">const</span> LO indexBase = 0;</div>
+<div class="line">        RCP&lt;const MAP&gt; SerialMap (<span class="keyword">new</span> MAP (nrows, indexBase, SerialComm));</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// row IDs for schur comp</span></div>
+<div class="line">        <span class="keywordflow">if</span> (schur_filename != <span class="stringliteral">&quot;&quot;</span>) {</div>
+<div class="line">          <span class="keywordflow">if</span>( verbose &amp;&amp; myRank == 0) std::cout &lt;&lt; <span class="stringliteral">&quot;Reading Schur_Part from &quot;</span> &lt;&lt; schur_filename &lt;&lt; std::endl;</div>
+<div class="line">          SchurPart = IDReader::readDenseFile (schur_filename, SerialComm, SerialMap);</div>
+<div class="line">        } <span class="keywordflow">else</span> {</div>
+<div class="line">          SchurPart = rcp(<span class="keyword">new</span> ID(SerialMap, 1));</div>
+<div class="line">          SchurPart-&gt;putScalar(0); <span class="comment">// no schur</span></div>
+<div class="line">        }</div>
+<div class="line">        SchurPart_type schurPart = SchurPart-&gt;getData(0);</div>
+<div class="line">        shylubasker_params.set(<span class="stringliteral">&quot;SchurPart&quot;</span>, schurPart.getRawPtr());</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// storage for output schur comp</span></div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;nrows; i++) <span class="keywordflow">if</span> (schurPart[i] == 1) n2 ++;</div>
+<div class="line">        schurOut.resize(n2*n2);</div>
+<div class="line">        shylubasker_params.set(<span class="stringliteral">&quot;SchurOut&quot;</span>, schurOut.getRawPtr());</div>
+<div class="line">      }</div>
+<div class="line">    }</div>
 <div class="line">    *fos &lt;&lt; amesos2_params.currentParametersString() &lt;&lt; std::endl;</div>
 <div class="line">    solver-&gt;setParameters( Teuchos::rcpFromRef(amesos2_params) );</div>
 <div class="line">  }</div>
@@ -348,6 +385,14 @@ $(function() {
 <div class="line">        <span class="keywordflow">return</span> EXIT_FAILURE; <span class="comment">//everyone should throw on failure</span></div>
 <div class="line">      }</div>
 <div class="line">      comm-&gt;barrier();</div>
+<div class="line">      <span class="keywordflow">if</span> (partial_facto == 2 &amp;&amp; myRank == 0 &amp;&amp; printMatrix) {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;S=[\n&quot;</span>);</div>
+<div class="line">        <span class="keywordflow">for</span> (size_type i = 0; i &lt; n2; i++) {</div>
+<div class="line">          <span class="keywordflow">for</span> (size_type j = 0; j &lt; n2; j++) *fos &lt;&lt; schurOut[i+j*n2];</div>
+<div class="line">          *fos &lt;&lt; std::endl;</div>
+<div class="line">        }</div>
+<div class="line">        printf(<span class="stringliteral">&quot;];\n&quot;</span>);</div>
+<div class="line">      }</div>
 <div class="line">    }</div>
 <div class="line">    <span class="comment">// perform solve</span></div>
 <div class="line">    {</div>
@@ -365,8 +410,8 @@ $(function() {
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">if</span>(printSolution) {</div>
 <div class="line">      <span class="comment">// Print the solution</span></div>
-<div class="line">      RCP&lt;Map&lt;LO,GO&gt; &gt; root_map</div>
-<div class="line">        = rcp( <span class="keyword">new</span> Map&lt;LO,GO&gt;(nrows,myRank == 0 ? nrows : 0,0,comm) );</div>
+<div class="line">      RCP&lt;MAP&gt; root_map</div>
+<div class="line">        = rcp( <span class="keyword">new</span> MAP(nrows,myRank == 0 ? nrows : 0,0,comm) );</div>
 <div class="line">      RCP&lt;MV&gt; Xhat = rcp( <span class="keyword">new</span> MV(root_map,numVectors) );</div>
 <div class="line">      RCP&lt;Import&lt;LO,GO&gt; &gt; importer = rcp( <span class="keyword">new</span> Import&lt;LO,GO&gt;(rngmap,root_map) );</div>
 <div class="line">      <span class="keywordflow">if</span>( allprint ){</div>
