@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="Docutils 0.20.1: https://docutils.sourceforge.io/" />
-<meta name="author" content="Roscoe A. Bartlett (bartlettra&#64;orn.gov)" />
+<meta name="author" content="Roscoe A. Bartlett (rabartl&#64;sandia.gov)" />
 <title>Trilinos Configure, Build, Test, and Install Reference Guide</title>
 <style type="text/css">
 
@@ -368,9 +368,9 @@ ul.auto-toc {
 <col class="docinfo-content" />
 <tbody valign="top">
 <tr><th class="docinfo-name">Author:</th>
-<td>Roscoe A. Bartlett (<a class="reference external" href="mailto:bartlettra&#64;orn.gov">bartlettra&#64;orn.gov</a>)</td></tr>
+<td>Roscoe A. Bartlett (<a class="reference external" href="mailto:rabartl&#64;sandia.gov">rabartl&#64;sandia.gov</a>)</td></tr>
 <tr><th class="docinfo-name">Contact:</th>
-<td><a class="first last reference external" href="mailto:trilinos-framework&#64;software.sandia.gov">trilinos-framework&#64;software.sandia.gov</a></td></tr>
+<td>&#64;trilinos/framework (github)</td></tr>
 </tbody>
 </table>
 <div class="abstract topic">
@@ -606,7 +606,7 @@ when setting this option.</p>
 </div>
 <div class="section" id="enabling-disabling-time-monitors">
 <h2><a class="toc-backref" href="#toc-entry-5">2.3&nbsp;&nbsp;&nbsp;Enabling/disabling time monitors</a></h2>
-<p>I order to enable instrumentation of select code to generate timing statistics, set:</p>
+<p>In order to enable instrumentation of select code to generate timing statistics, set:</p>
 <pre class="literal-block">
 -D Trilinos_ENABLE_TEUCHOS_TIME_MONITOR:BOOL=ON
 </pre>
@@ -616,7 +616,7 @@ that support them.  To print the timers at the end of the program, call
 </div>
 <div class="section" id="select-different-tribits-implementation">
 <h2><a class="toc-backref" href="#toc-entry-6">2.4&nbsp;&nbsp;&nbsp;Select different TriBITS implementation</a></h2>
-<p>When co-developing TriBTS and Trilinos (after cloning the TriBITS repo
+<p>When co-developing TriBITS and Trilinos (after cloning the TriBITS repo
 <a class="reference external" href="https://github.com/TriBITSPub/TriBITS">https://github.com/TriBITSPub/TriBITS</a> under the local Trilinos git repo)
 configure Trilinos to use that TriBITS implementation using, for example:</p>
 <pre class="literal-block">
@@ -630,7 +630,7 @@ or CMake will automatically assume it is relative to the build dir!)</p>
 <p>Kokkos (<a class="reference external" href="https://github.com/kokkos/kokkos">https://github.com/kokkos/kokkos</a>) is a C++ implementation of a
 cross-platform shared-memory parallel programming model. Many Trilinos packages,
 and other stand-alone applications, use it to implement parallel algorithms.</p>
-<p>The Kokkos package is enabled with <tt class="docutils literal"><span class="pre">-DTrilinos_ENABLE_Kokkos=ON</span></tt>), then
+<p>The Kokkos package is enabled with <tt class="docutils literal"><span class="pre">-DTrilinos_ENABLE_Kokkos=ON</span></tt>, then
 the native configuration options of the Kokkos package are available such as
 <tt class="docutils literal"><span class="pre">-DKokkos_ENABLE_OPENMP=ON</span></tt> or <tt class="docutils literal"><span class="pre">-DKokkos_ENABLE_CUDA=ON</span></tt>.
 For comprehensive information on how to configure Kokkos for your specific build,
@@ -656,7 +656,7 @@ Kokkos variable</p>
 <td>&nbsp;</td>
 </tr>
 <tr><td><ul class="first last simple">
-<li>Enable Cuda</li>
+<li>Enable CUDA</li>
 </ul>
 </td>
 <td><tt class="docutils literal">TPL_ENABLE_CUDA</tt></td>
@@ -686,11 +686,11 @@ explicitly using <tt class="docutils literal"><span class="pre">-D</span> Kokkos
 </div>
 <div class="section" id="setting-the-c-language-standard-for-trilinos">
 <h2><a class="toc-backref" href="#toc-entry-8">2.6&nbsp;&nbsp;&nbsp;Setting the C++ language standard for Trilinos</a></h2>
-<p>Trilinos currently supports building with the C++17 language standard as
+<p>Trilinos currently supports building with the C++20 language standard as
 supported by a wide range of C++ compilers.  In addition, the library targets
 imported from the installed <tt class="docutils literal">&lt;Package&gt;Config.cmake</tt> files (also pulled in
 through <tt class="docutils literal">TrilinosConfig.cmake</tt>) will automatically require downstream CMake
-projects turn on C++17 or later standard support in the compiler options
+projects turn on C++20 or later standard support in the compiler options
 (using the CMake <tt class="docutils literal">INTERFACE_COMPILE_FEATURES</tt> properties of the Trilinos
 library targets).  Building Trilinos with C++14 or lower C++ language
 standards is not supported.</p>
@@ -703,14 +703,14 @@ on, configure with:</p>
 </pre>
 <p>As mentioned above, that will also result in all downstream C++ software built
 with CMake to be built with C++20 compiler options turned on as well.</p>
-<p>However, Trilinos is currently only rigorously tested with C++17 compiler
+<p>However, Trilinos is currently only rigorously tested with C++20 compiler
 options so trying to build and use with a higher language standard may not
 give satisfactory results.</p>
 </div>
 <div class="section" id="addressing-problems-with-large-builds-of-trilinos">
 <h2><a class="toc-backref" href="#toc-entry-9">2.7&nbsp;&nbsp;&nbsp;Addressing problems with large builds of Trilinos</a></h2>
 <p>Trilinos is a large collection of complex software.  Depending on what gets
-enabled when building Trlinos, one can experience build and installation
+enabled when building Trilinos, one can experience build and installation
 problems due to this large size.</p>
 <p>When running into problems like these, the first thing that should be tried is
 to <strong>upgrade to and use the newest supported version of CMake!</strong> In some
@@ -720,7 +720,7 @@ releases as they come out.</p>
 <p>Otherwise, some problems that can arise when and solutions to those problems
 are mentioned below.</p>
 <p><strong>Command-line too long errors:</strong></p>
-<p>When turning on some options and enabling some set of package's one may
+<p>When turning on some options and enabling some set of packages one may
 encounter command-lines that are too long for the OS shell or the tool being
 called.  For example, on some systems, enabling CUDA and COMPLEX variable
 types (e.g. <tt class="docutils literal"><span class="pre">-D</span> TPL_ENABLE_CUDA=ON <span class="pre">-D</span> Trilinos_ENABLE_COMPLEX=ON</tt>) can
@@ -768,7 +768,7 @@ CDash).  To enable support for these build statistics, configure with:</p>
 <p>This will do the following:</p>
 <ul class="simple">
 <li>Generate wrappers <tt class="docutils literal">build_stats_&lt;op&gt;_wrapper.sh</tt> for C, C++, and Fortran
-(and for static builds also <tt class="docutils literal">ar</tt>, <tt class="docutils literal">randlib</tt> and <tt class="docutils literal">ld</tt>) in the build
+(and for static builds also <tt class="docutils literal">ar</tt>, <tt class="docutils literal">ranlib</tt> and <tt class="docutils literal">ld</tt>) in the build
 tree that will compute statics as a byproduct of every invocation of these
 commands.  (The wrappers create a file <tt class="docutils literal"><span class="pre">&lt;output-file&gt;.timing</span></tt> for every
 generated object, library and executable <tt class="docutils literal"><span class="pre">&lt;output-file&gt;</span></tt> file.)</li>
@@ -864,7 +864,7 @@ targets getting (re)built after an initial configure, then configure with:</p>
 <p>This will remove <strong>all</strong> of the <tt class="docutils literal">*.timing</tt> files under the base build
 directory during a fresh configure (i.e. where the <tt class="docutils literal">CMakeCache.txt</tt> file
 does not exist).  But this will not remove <tt class="docutils literal">*.timing</tt> files on reconfigures
-(i..e where a <tt class="docutils literal">CMakeCache.txt</tt> file is preserved).  Timing stats for targets
+(i.e., where a <tt class="docutils literal">CMakeCache.txt</tt> file is preserved).  Timing stats for targets
 that are already built and don't need to be rebuilt after the last fresh
 configure will not get reported.  (But this can be useful for CI builds where
 one only wants to see build stats for the files updated in the last PR
