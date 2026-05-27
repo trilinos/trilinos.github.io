@@ -37,7 +37,7 @@ jobs:
       if: always()
       run: |
         sudo apt-get update
-        sudo apt-get install -yq doxygen graphviz texlive texlive-latex-extra ghostscript cmake mpi-default-bin mpi-default-dev libopenblas-serial-dev libgtest-dev ccache
+        sudo apt-get install -yq doxygen graphviz texlive texlive-latex-extra ghostscript cmake mpi-default-bin mpi-default-dev libopenblas-serial-dev libgtest-dev ccache python3-docutils
     
     - name: Check out webpage repo
       uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4.2.1
@@ -141,6 +141,13 @@ jobs:
           fi
         done   
         popd
+
+    - name: Generate build reference
+      run: |
+        cd ${{ env.TRILINOS_SOURCE }}/doc/build_ref/
+        make
+        cp TrilinosBuildReference.pdf  $GITHUB_WORKSPACE/${{ env.WEBPAGES_DIR }}/pdfs/
+        cp TrilinosBuildReference.html $GITHUB_WORKSPACE/${{ env.WEBPAGES_DIR }}/
 
     - name: Create PR
       uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e # v7.0.8
