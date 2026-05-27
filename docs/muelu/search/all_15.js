@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['v_0',['v',['../struct_mue_lu_1_1_triplet.html#ad8b4684c7233782939b10de04deaa8a8',1,'MueLu::Triplet::v'],['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_ifpack2_1_1_details_1_1_chebyshev.html#a04be92be96469d28d8b8febbc22d3abc',1,'Ifpack2::Details::Chebyshev::V']]],
+  ['v_0',['v',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_ifpack2_1_1_details_1_1_chebyshev.html#a04be92be96469d28d8b8febbc22d3abc',1,'Ifpack2::Details::Chebyshev::V'],['../struct_mue_lu_1_1_triplet.html#ad8b4684c7233782939b10de04deaa8a8',1,'MueLu::Triplet::v']]],
   ['v1_1',['v1',['../class_mue_lu_1_1my_triangle.html#ae354eeb0a7b130c100e2ba4d9069e794',1,'MueLu::myTriangle']]],
   ['v2_2',['v2',['../class_mue_lu_1_1my_triangle.html#a467a19b7f4de655fb26db5f12a68cd48',1,'MueLu::myTriangle']]],
   ['v3_3',['v3',['../class_mue_lu_1_1my_triangle.html#a1eda0fb1797d6a23abf3824e71c8d762',1,'MueLu::myTriangle']]],
@@ -75,7 +75,7 @@ var searchData=
   ['verbosity_5f_72',['verbosity_',['../class_mue_lu_1_1_hierarchy_manager.html#a1d8c4f795a3cc1e96b6791630d0bbcf5',1,'MueLu::HierarchyManager']]],
   ['version_73',['Version',['../namespace_mue_lu.html#ab643586a83060a7cf1a8d72e3f61ae14',1,'MueLu']]],
   ['vertex2aggid_74',['vertex2AggId',['../class_mue_lu_1_1_expansion_functor.html#a252ba0ccb04f409dcc69daa630b519ac',1,'MueLu::ExpansionFunctor']]],
-  ['vertex2aggid_5f_75',['vertex2aggid_',['../class_mue_lu_1_1_aggregates.html#ae76e6b240520b45869f9b1f387afc235',1,'MueLu::Aggregates::vertex2AggId_'],['../class_mue_lu_1_1_aggregation_export_factory.html#af9100cc3ea366e583189ccf67b4d7224',1,'MueLu::AggregationExportFactory::vertex2AggId_'],['../struct_mue_lu_1_1_aggregation_structured_algorithm_1_1fill_aggregates_functor.html#ad9b8af87259f9ff29853f08c7502ec22',1,'MueLu::AggregationStructuredAlgorithm::fillAggregatesFunctor::vertex2AggID_']]],
+  ['vertex2aggid_5f_75',['vertex2aggid_',['../struct_mue_lu_1_1_aggregation_structured_algorithm_1_1fill_aggregates_functor.html#ad9b8af87259f9ff29853f08c7502ec22',1,'MueLu::AggregationStructuredAlgorithm::fillAggregatesFunctor::vertex2AggID_'],['../class_mue_lu_1_1_aggregates.html#ae76e6b240520b45869f9b1f387afc235',1,'MueLu::Aggregates::vertex2AggId_'],['../class_mue_lu_1_1_aggregation_export_factory.html#af9100cc3ea366e583189ccf67b4d7224',1,'MueLu::AggregationExportFactory::vertex2AggId_']]],
   ['vertexdegreeweight_5f_76',['vertexDegreeWeight_',['../class_mue_lu_1_1_mue_lu_graph_base_adapter.html#aa61c84f70d9ab2e1cba379b7e3f39fa0',1,'MueLu::MueLuGraphBaseAdapter']]],
   ['vertexweights_5f_77',['vertexWeights_',['../class_mue_lu_1_1_mue_lu_graph_base_adapter.html#a25a036d7a7a65fa7c7386abaf783601c',1,'MueLu::MueLuGraphBaseAdapter']]],
   ['vertical_78',['vertical',['../_mue_lu___semi_coarsen_p_factory__decl_8hpp.html#a91b21b229126b2c997c247835568107b',1,'VERTICAL:&#160;MueLu_SemiCoarsenPFactory_decl.hpp'],['../_mue_lu___line_detection_factory__decl_8hpp.html#a91b21b229126b2c997c247835568107b',1,'VERTICAL:&#160;MueLu_LineDetectionFactory_decl.hpp']]],

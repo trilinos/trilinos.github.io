@@ -326,7 +326,7 @@ $(function() {
 <div class="line"> </div>
 <div class="line">      <span class="comment">// Manually clean up some memory</span></div>
 <div class="line"> </div>
-<div class="line">      <span class="keyword">delete</span> d_ptr1.release().get(); <span class="comment">// Now d_ptr1.get() no longer points to a valid object but okay</span></div>
+<div class="line">      <span class="keyword">delete</span> <span class="keyword">static_cast&lt;</span>E*<span class="keyword">&gt;</span>(d_ptr1.release().get()); <span class="comment">// Now d_ptr1.get() no longer points to a valid object but okay</span></div>
 <div class="line">      <span class="comment">// as long as no other access to this object is attempted! (see below)</span></div>
 <div class="line"><span class="preprocessor">#ifdef SHOW_RUN_TIME_ERROR_2</span></div>
 <div class="line">      <a class="code hl_define" href="group___test_for_exception__grp.html#ga904c9f821383ba177d6c5de1fdc787a1">TEUCHOS_TEST_FOR_EXCEPT</a>( d_ptr1-&gt;D_g() == D_g_return ); <span class="comment">// Should cause a segmentation fault since d_ptr.get() was deleted!</span></div>

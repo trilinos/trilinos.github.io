@@ -47,7 +47,6 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pri-types">Private Types</a> &#124;
-<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
 <a href="class_intrepid2_1_1_cell_tools-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Intrepid2::CellTools&lt; DeviceType &gt; Class Template Reference</div></div>
 </div><!--header-->
@@ -92,6 +91,18 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a78474ac2637b9b8c8b18bb5614934926" id="r_a78474ac2637b9b8c8b18bb5614934926"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_cell_tools.html#a78474ac2637b9b8c8b18bb5614934926">hasReferenceCell</a> (const shards::CellTopology cellTopo)</td></tr>
 <tr class="memdesc:a78474ac2637b9b8c8b18bb5614934926"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a cell topology has reference cell.  <br /></td></tr>
 <tr class="separator:a78474ac2637b9b8c8b18bb5614934926"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a046c51a9ac2de45222ad3c592f1d95cc" id="r_a046c51a9ac2de45222ad3c592f1d95cc"><td class="memTemplParams" colspan="2">template&lt;typename outputValueType , typename pointValueType &gt; </td></tr>
+<tr class="memitem:a046c51a9ac2de45222ad3c592f1d95cc"><td class="memTemplItemLeft" align="right" valign="top">static Teuchos::RCP&lt; <a class="el" href="class_intrepid2_1_1_basis.html">Basis</a>&lt; DeviceType, outputValueType, pointValueType &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_cell_tools.html#a046c51a9ac2de45222ad3c592f1d95cc">createHGradBasis</a> (const shards::CellTopology cellTopo)</td></tr>
+<tr class="memdesc:a046c51a9ac2de45222ad3c592f1d95cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates default HGrad basis based on cell topology.  <br /></td></tr>
+<tr class="separator:a046c51a9ac2de45222ad3c592f1d95cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d46964bbdab75ff0be193cac8bc32e9" id="r_a3d46964bbdab75ff0be193cac8bc32e9"><td class="memTemplParams" colspan="2">template&lt;EOperator Operator, typename OutputViewType , typename InputViewType &gt; </td></tr>
+<tr class="memitem:a3d46964bbdab75ff0be193cac8bc32e9"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_cell_tools.html#a3d46964bbdab75ff0be193cac8bc32e9">getHGradValues</a> (OutputViewType output, const InputViewType input, const <a class="el" href="class_intrepid2_1_1_basis.html">Basis</a>&lt; DeviceType, typename OutputViewType::value_type, typename InputViewType::value_type &gt; *basis)</td></tr>
+<tr class="memdesc:a3d46964bbdab75ff0be193cac8bc32e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the value or gradient of HGRAD basis functions at input points.  <br /></td></tr>
+<tr class="separator:a3d46964bbdab75ff0be193cac8bc32e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc81d68e0a43cfd68a3e06122935eb84" id="r_acc81d68e0a43cfd68a3e06122935eb84"><td class="memTemplParams" colspan="2">template&lt;EOperator Operator, typename OutputViewType , typename InputViewType &gt; </td></tr>
+<tr class="memitem:acc81d68e0a43cfd68a3e06122935eb84"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_cell_tools.html#acc81d68e0a43cfd68a3e06122935eb84">getHGradValues</a> (OutputViewType output, const InputViewType input, const shards::CellTopology cellTopo)</td></tr>
+<tr class="memdesc:acc81d68e0a43cfd68a3e06122935eb84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the value or gradient of HGRAD basis functions at input points.  <br /></td></tr>
+<tr class="separator:acc81d68e0a43cfd68a3e06122935eb84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b4e2522850bdc5a0100dd0653154f46" id="r_a9b4e2522850bdc5a0100dd0653154f46"><td class="memTemplParams" colspan="2">template&lt;typename JacobianViewType , typename PointViewType , typename WorksetType , typename HGradBasisType &gt; </td></tr>
 <tr class="memitem:a9b4e2522850bdc5a0100dd0653154f46"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_cell_tools.html#a9b4e2522850bdc5a0100dd0653154f46">setJacobian</a> (JacobianViewType jacobian, const PointViewType points, const WorksetType worksetCell, const Teuchos::RCP&lt; HGradBasisType &gt; basis, const int startCell=0, const int endCell=-1)</td></tr>
 <tr class="memdesc:a9b4e2522850bdc5a0100dd0653154f46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the Jacobian matrix <em>DF</em> of the reference-to-physical frame map <em>F</em>.  <br /></td></tr>
@@ -104,6 +115,10 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a2248e8b80e5009fe12aa8eeaf6eaadd6"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_cell_tools.html#a2248e8b80e5009fe12aa8eeaf6eaadd6">setJacobian</a> (JacobianViewType jacobian, const PointViewType points, const WorksetCellViewType worksetCell, const shards::CellTopology cellTopo)</td></tr>
 <tr class="memdesc:a2248e8b80e5009fe12aa8eeaf6eaadd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the Jacobian matrix <em>DF</em> of the reference-to-physical frame map <em>F</em>.  <br /></td></tr>
 <tr class="separator:a2248e8b80e5009fe12aa8eeaf6eaadd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa018e3797329a445e53219a833523802" id="r_aa018e3797329a445e53219a833523802"><td class="memTemplParams" colspan="2">template&lt;typename OutViewType , typename TanViewType , typename InViewType &gt; </td></tr>
+<tr class="memitem:aa018e3797329a445e53219a833523802"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_cell_tools.html#aa018e3797329a445e53219a833523802">scaledResidualNormalComponent</a> (OutViewType result, const TanViewType tangents, const InViewType residual, const typename InViewType::value_type scaling)</td></tr>
+<tr class="memdesc:aa018e3797329a445e53219a833523802"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the scaled normal component of a d-dimensional resudial vecor with respect to a (d-1) dimensional manifold, given the manifold tangents.  <br /></td></tr>
+<tr class="separator:aa018e3797329a445e53219a833523802"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b3f3c71168e71bf3db25e9255845126" id="r_a4b3f3c71168e71bf3db25e9255845126"><td class="memTemplParams" colspan="2">template&lt;typename JacobianInvViewType , typename JacobianViewType &gt; </td></tr>
 <tr class="memitem:a4b3f3c71168e71bf3db25e9255845126"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_cell_tools.html#a4b3f3c71168e71bf3db25e9255845126">setJacobianInv</a> (JacobianInvViewType jacobianInv, const JacobianViewType jacobian)</td></tr>
 <tr class="memdesc:a4b3f3c71168e71bf3db25e9255845126"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the inverse of the Jacobian matrix <em>DF</em> of the reference-to-physical frame map <em>F</em>.  <br /></td></tr>
@@ -208,10 +223,10 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a4647855c7283cf8bf47c365498121314"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_cell_tools.html#a4647855c7283cf8bf47c365498121314">mapToPhysicalFrame</a> (PhysPointValueType physPoints, const RefPointValueType refPoints, const WorksetType worksetCell, const HGradBasisPtrType basis)</td></tr>
 <tr class="memdesc:a4647855c7283cf8bf47c365498121314"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes <em>F</em>, the reference-to-physical frame map.  <br /></td></tr>
 <tr class="separator:a4647855c7283cf8bf47c365498121314"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42a27c76bece1882e3e6d12879b5d7eb" id="r_a42a27c76bece1882e3e6d12879b5d7eb"><td class="memTemplParams" colspan="2">template&lt;typename PhysPointViewType , typename RefPointViewType , typename WorksetCellViewType &gt; </td></tr>
-<tr class="memitem:a42a27c76bece1882e3e6d12879b5d7eb"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_cell_tools.html#a42a27c76bece1882e3e6d12879b5d7eb">mapToPhysicalFrame</a> (PhysPointViewType physPoints, const RefPointViewType refPoints, const WorksetCellViewType worksetCell, const shards::CellTopology cellTopo)</td></tr>
-<tr class="memdesc:a42a27c76bece1882e3e6d12879b5d7eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes <em>F</em>, the reference-to-physical frame map.  <br /></td></tr>
-<tr class="separator:a42a27c76bece1882e3e6d12879b5d7eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b0993d4fbd5803fbb255719503ed835" id="r_a9b0993d4fbd5803fbb255719503ed835"><td class="memTemplParams" colspan="2">template&lt;typename PhysPointViewType , typename RefPointViewType , typename WorksetCellViewType &gt; </td></tr>
+<tr class="memitem:a9b0993d4fbd5803fbb255719503ed835"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_cell_tools.html#a9b0993d4fbd5803fbb255719503ed835">mapToPhysicalFrame</a> (PhysPointViewType physPoints, const RefPointViewType refPoints, const WorksetCellViewType worksetCell, const shards::CellTopology cellTopo)</td></tr>
+<tr class="memdesc:a9b0993d4fbd5803fbb255719503ed835"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes <em>F</em>, the reference-to-physical frame map.  <br /></td></tr>
+<tr class="separator:a9b0993d4fbd5803fbb255719503ed835"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b4e906b9b8ddf007e9d1602ae211cbb" id="r_a7b4e906b9b8ddf007e9d1602ae211cbb"><td class="memTemplParams" colspan="2">template&lt;typename refSubcellViewType , typename paramPointViewType &gt; </td></tr>
 <tr class="memitem:a7b4e906b9b8ddf007e9d1602ae211cbb"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_cell_tools.html#a7b4e906b9b8ddf007e9d1602ae211cbb">mapToReferenceSubcell</a> (refSubcellViewType refSubcellPoints, const paramPointViewType paramPoints, const ordinal_type subcellDim, const ordinal_type subcellOrd, const shards::CellTopology parentCell)</td></tr>
 <tr class="memdesc:a7b4e906b9b8ddf007e9d1602ae211cbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes parameterization maps of 1- and 2-subcells of reference cells.  <br /></td></tr>
@@ -224,38 +239,46 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:abfc73d03e80a21b3aa2f3f5c22e404c3"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_cell_tools.html#abfc73d03e80a21b3aa2f3f5c22e404c3">mapToReferenceSubcell</a> (refSubcellViewType refSubcellPoints, const paramPointViewType paramPoints, const typename <a class="el" href="class_intrepid2_1_1_ref_subcell_parametrization.html">RefSubcellParametrization</a>&lt; DeviceType &gt;::ConstViewType subcellParametrization, const ordViewType subcellOrd)</td></tr>
 <tr class="memdesc:abfc73d03e80a21b3aa2f3f5c22e404c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes parameterization maps of 1- and 2-subcells of reference cells.  <br /></td></tr>
 <tr class="separator:abfc73d03e80a21b3aa2f3f5c22e404c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a006dc4e9c5f5ac25be8b513b8f63ca04" id="r_a006dc4e9c5f5ac25be8b513b8f63ca04"><td class="memTemplParams" colspan="2">template&lt;typename refPointValueType , class ... refPointProperties, typename physPointValueType , class ... physPointProperties, typename worksetCellValueType , class ... worksetCellProperties&gt; </td></tr>
-<tr class="memitem:a006dc4e9c5f5ac25be8b513b8f63ca04"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_cell_tools.html#a006dc4e9c5f5ac25be8b513b8f63ca04">mapToReferenceFrame</a> (Kokkos::DynRankView&lt; refPointValueType, refPointProperties... &gt; refPoints, const Kokkos::DynRankView&lt; physPointValueType, physPointProperties... &gt; physPoints, const Kokkos::DynRankView&lt; worksetCellValueType, worksetCellProperties... &gt; worksetCell, const shards::CellTopology cellTopo)</td></tr>
-<tr class="memdesc:a006dc4e9c5f5ac25be8b513b8f63ca04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes <picture><source srcset="form_76_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ F^{-1}_{c} $" src="form_76.png" width="23" height="15"/></picture>, the inverse of the reference-to-physical frame map using a default initial guess.  <br /></td></tr>
-<tr class="separator:a006dc4e9c5f5ac25be8b513b8f63ca04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b08ff3ec8d107e2ee85036f4f6e2025" id="r_a6b08ff3ec8d107e2ee85036f4f6e2025"><td class="memTemplParams" colspan="2">template&lt;typename refPointValueType , class ... refPointProperties, typename initGuessValueType , class ... initGuessProperties, typename physPointValueType , class ... physPointProperties, typename worksetCellValueType , class ... worksetCellProperties, typename HGradBasisPtrType &gt; </td></tr>
-<tr class="memitem:a6b08ff3ec8d107e2ee85036f4f6e2025"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_cell_tools.html#a6b08ff3ec8d107e2ee85036f4f6e2025">mapToReferenceFrameInitGuess</a> (Kokkos::DynRankView&lt; refPointValueType, refPointProperties... &gt; refPoints, const Kokkos::DynRankView&lt; initGuessValueType, initGuessProperties... &gt; initGuess, const Kokkos::DynRankView&lt; physPointValueType, physPointProperties... &gt; physPoints, const Kokkos::DynRankView&lt; worksetCellValueType, worksetCellProperties... &gt; worksetCell, const HGradBasisPtrType basis)</td></tr>
-<tr class="memdesc:a6b08ff3ec8d107e2ee85036f4f6e2025"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computation of <picture><source srcset="form_76_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ F^{-1}_{c} $" src="form_76.png" width="23" height="15"/></picture>, the inverse of the reference-to-physical frame map using user-supplied initial guess.  <br /></td></tr>
-<tr class="separator:a6b08ff3ec8d107e2ee85036f4f6e2025"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a069100237b73970c9e72252d95dc2289" id="r_a069100237b73970c9e72252d95dc2289"><td class="memTemplParams" colspan="2">template&lt;typename refPointValueType , class ... refPointProperties, typename initGuessValueType , class ... initGuessProperties, typename physPointValueType , class ... physPointProperties, typename worksetCellValueType , class ... worksetCellProperties&gt; </td></tr>
-<tr class="memitem:a069100237b73970c9e72252d95dc2289"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_cell_tools.html#a069100237b73970c9e72252d95dc2289">mapToReferenceFrameInitGuess</a> (Kokkos::DynRankView&lt; refPointValueType, refPointProperties... &gt; refPoints, const Kokkos::DynRankView&lt; initGuessValueType, initGuessProperties... &gt; initGuess, const Kokkos::DynRankView&lt; physPointValueType, physPointProperties... &gt; physPoints, const Kokkos::DynRankView&lt; worksetCellValueType, worksetCellProperties... &gt; worksetCell, const shards::CellTopology cellTopo)</td></tr>
-<tr class="memdesc:a069100237b73970c9e72252d95dc2289"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computation of <picture><source srcset="form_76_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ F^{-1}_{c} $" src="form_76.png" width="23" height="15"/></picture>, the inverse of the reference-to-physical frame map using user-supplied initial guess.  <br /></td></tr>
-<tr class="separator:a069100237b73970c9e72252d95dc2289"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62aba51bf0141d1cc73648a276119be4" id="r_a62aba51bf0141d1cc73648a276119be4"><td class="memTemplParams" colspan="2">template&lt;typename refPointValueType , class ... refPointProperties, typename physPointValueType , class ... physPointProperties, typename worksetCellValueType , class ... worksetCellProperties&gt; </td></tr>
+<tr class="memitem:a62aba51bf0141d1cc73648a276119be4"><td class="memTemplItemLeft" align="right" valign="top">static bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_cell_tools.html#a62aba51bf0141d1cc73648a276119be4">mapToReferenceFrame</a> (Kokkos::DynRankView&lt; refPointValueType, refPointProperties... &gt; refPoints, const Kokkos::DynRankView&lt; physPointValueType, physPointProperties... &gt; physPoints, const Kokkos::DynRankView&lt; worksetCellValueType, worksetCellProperties... &gt; worksetCell, const shards::CellTopology cellTopo, const physPointValueType shellThickness=-1.0)</td></tr>
+<tr class="memdesc:a62aba51bf0141d1cc73648a276119be4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes <picture><source srcset="form_76_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ F^{-1}_{c} $" src="form_76.png" width="23" height="15"/></picture>, the inverse of the reference-to-physical frame map using a default initial guess.  <br /></td></tr>
+<tr class="separator:a62aba51bf0141d1cc73648a276119be4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bd5ba197b89e1450dfef46c6adaac49" id="r_a5bd5ba197b89e1450dfef46c6adaac49"><td class="memTemplParams" colspan="2">template&lt;typename refPointValueType , class ... refPointProperties, typename physPointValueType , class ... physPointProperties, typename worksetCellValueType , class ... worksetCellProperties&gt; </td></tr>
+<tr class="memitem:a5bd5ba197b89e1450dfef46c6adaac49"><td class="memTemplItemLeft" align="right" valign="top">static bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_cell_tools.html#a5bd5ba197b89e1450dfef46c6adaac49">mapToReferenceFrame</a> (Kokkos::DynRankView&lt; refPointValueType, refPointProperties... &gt; refPoints, const Kokkos::DynRankView&lt; physPointValueType, physPointProperties... &gt; physPoints, const Kokkos::DynRankView&lt; worksetCellValueType, worksetCellProperties... &gt; worksetCell, const <a class="el" href="_intrepid2___basis_8hpp.html#a73c7dfae712018bc9f59aa9fd385ed84">BasisPtr</a>&lt; DeviceType, refPointValueType, refPointValueType &gt; basis, const physPointValueType shellThickness=-1.0)</td></tr>
+<tr class="memdesc:a5bd5ba197b89e1450dfef46c6adaac49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computation of <picture><source srcset="form_76_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ F^{-1}_{c} $" src="form_76.png" width="23" height="15"/></picture>, the inverse of the reference-to-physical frame map where refPoints is also used as initial guess.  <br /></td></tr>
+<tr class="separator:a5bd5ba197b89e1450dfef46c6adaac49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7ba1c33918414756800813c3ab82ac5" id="r_ae7ba1c33918414756800813c3ab82ac5"><td class="memTemplParams" colspan="2">template&lt;typename refPointValueType , class ... refPointProperties, typename initGuessValueType , class ... initGuessProperties, typename physPointValueType , class ... physPointProperties, typename worksetCellValueType , class ... worksetCellProperties, typename HGradBasisPtrType &gt; </td></tr>
+<tr class="memitem:ae7ba1c33918414756800813c3ab82ac5"><td class="memTemplItemLeft" align="right" valign="top">static bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_cell_tools.html#ae7ba1c33918414756800813c3ab82ac5">mapToReferenceFrameInitGuess</a> (Kokkos::DynRankView&lt; refPointValueType, refPointProperties... &gt; refPoints, const Kokkos::DynRankView&lt; initGuessValueType, initGuessProperties... &gt; initGuess, const Kokkos::DynRankView&lt; physPointValueType, physPointProperties... &gt; physPoints, const Kokkos::DynRankView&lt; worksetCellValueType, worksetCellProperties... &gt; worksetCell, const HGradBasisPtrType basis, const physPointValueType shellThickness=-1.0)</td></tr>
+<tr class="memdesc:ae7ba1c33918414756800813c3ab82ac5"><td class="mdescLeft">&#160;</td><td class="mdescRight">[Deprecated] Computation of <picture><source srcset="form_76_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ F^{-1}_{c} $" src="form_76.png" width="23" height="15"/></picture>, the inverse of the reference-to-physical frame map using user-supplied initial guess.  <br /></td></tr>
+<tr class="separator:ae7ba1c33918414756800813c3ab82ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61c46d0bc3f8a6ad614492ce1c691b34" id="r_a61c46d0bc3f8a6ad614492ce1c691b34"><td class="memTemplParams" colspan="2">template&lt;typename refPointValueType , class ... refPointProperties, typename initGuessValueType , class ... initGuessProperties, typename physPointValueType , class ... physPointProperties, typename worksetCellValueType , class ... worksetCellProperties&gt; </td></tr>
+<tr class="memitem:a61c46d0bc3f8a6ad614492ce1c691b34"><td class="memTemplItemLeft" align="right" valign="top">static bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_cell_tools.html#a61c46d0bc3f8a6ad614492ce1c691b34">mapToReferenceFrameInitGuess</a> (Kokkos::DynRankView&lt; refPointValueType, refPointProperties... &gt; refPoints, const Kokkos::DynRankView&lt; initGuessValueType, initGuessProperties... &gt; initGuess, const Kokkos::DynRankView&lt; physPointValueType, physPointProperties... &gt; physPoints, const Kokkos::DynRankView&lt; worksetCellValueType, worksetCellProperties... &gt; worksetCell, const shards::CellTopology cellTopo, const physPointValueType shellThickness=-1.0)</td></tr>
+<tr class="memdesc:a61c46d0bc3f8a6ad614492ce1c691b34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computation of <picture><source srcset="form_76_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ F^{-1}_{c} $" src="form_76.png" width="23" height="15"/></picture>, the inverse of the reference-to-physical frame map using user-supplied initial guess.  <br /></td></tr>
+<tr class="separator:a61c46d0bc3f8a6ad614492ce1c691b34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c2dc9c2a5aff2b205be105a1536e1e8" id="r_a4c2dc9c2a5aff2b205be105a1536e1e8"><td class="memTemplParams" colspan="2">template&lt;typename subcvCoordValueType , class ... subcvCoordProperties, typename cellCoordValueType , class ... cellCoordProperties&gt; </td></tr>
 <tr class="memitem:a4c2dc9c2a5aff2b205be105a1536e1e8"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_cell_tools.html#a4c2dc9c2a5aff2b205be105a1536e1e8">getSubcvCoords</a> (Kokkos::DynRankView&lt; subcvCoordValueType, subcvCoordProperties... &gt; subcvCoords, const Kokkos::DynRankView&lt; cellCoordValueType, cellCoordProperties... &gt; cellCoords, const shards::CellTopology primaryCell)</td></tr>
 <tr class="memdesc:a4c2dc9c2a5aff2b205be105a1536e1e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes coordinates of sub-control volumes in each primary cell.  <br /></td></tr>
 <tr class="separator:a4c2dc9c2a5aff2b205be105a1536e1e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0831be92f02c6e6b51bd2a7cf877519d" id="r_a0831be92f02c6e6b51bd2a7cf877519d"><td class="memTemplParams" colspan="2">template&lt;typename PointViewType &gt; </td></tr>
-<tr class="memitem:a0831be92f02c6e6b51bd2a7cf877519d"><td class="memTemplItemLeft" align="right" valign="top">static bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_cell_tools.html#a0831be92f02c6e6b51bd2a7cf877519d">checkPointInclusion</a> (const PointViewType point, const shards::CellTopology cellTopo, const typename <a class="el" href="struct_intrepid2_1_1_scalar_traits.html">ScalarTraits</a>&lt; typename PointViewType::value_type &gt;::scalar_type thres=threshold&lt; typename <a class="el" href="struct_intrepid2_1_1_scalar_traits.html">ScalarTraits</a>&lt; typename PointViewType::value_type &gt;::scalar_type &gt;())</td></tr>
-<tr class="memdesc:a0831be92f02c6e6b51bd2a7cf877519d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a point belongs to a reference cell.  <br /></td></tr>
-<tr class="separator:a0831be92f02c6e6b51bd2a7cf877519d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5d5a76a0e56dc3ad21cd698c8ba92ef" id="r_ae5d5a76a0e56dc3ad21cd698c8ba92ef"><td class="memTemplParams" colspan="2">template&lt;unsigned cellTopologyKey, typename OutputViewType , typename InputViewType &gt; </td></tr>
-<tr class="memitem:ae5d5a76a0e56dc3ad21cd698c8ba92ef"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_cell_tools.html#ae5d5a76a0e56dc3ad21cd698c8ba92ef">checkPointwiseInclusion</a> (OutputViewType inCell, const InputViewType points, const typename <a class="el" href="struct_intrepid2_1_1_scalar_traits.html">ScalarTraits</a>&lt; typename InputViewType::value_type &gt;::scalar_type thresh=threshold&lt; typename <a class="el" href="struct_intrepid2_1_1_scalar_traits.html">ScalarTraits</a>&lt; typename InputViewType::value_type &gt;::scalar_type &gt;())</td></tr>
-<tr class="memdesc:ae5d5a76a0e56dc3ad21cd698c8ba92ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks every point for inclusion in the reference cell of a given topology. The points can belong to a global set and stored in a rank-2 view (P,D) , or to multiple sets indexed by a cell ordinal and stored in a rank-3 view (C,P,D). The cell topology key is a template argument. Requires cell topology with a reference cell.  <br /></td></tr>
-<tr class="separator:ae5d5a76a0e56dc3ad21cd698c8ba92ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6f843f79de3e7a1b342f1ff7c16983d" id="r_ab6f843f79de3e7a1b342f1ff7c16983d"><td class="memTemplParams" colspan="2">template&lt;typename InCellViewType , typename PointViewType &gt; </td></tr>
-<tr class="memitem:ab6f843f79de3e7a1b342f1ff7c16983d"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_cell_tools.html#ab6f843f79de3e7a1b342f1ff7c16983d">checkPointwiseInclusion</a> (InCellViewType inCell, const PointViewType points, const shards::CellTopology cellTopo, const typename <a class="el" href="struct_intrepid2_1_1_scalar_traits.html">ScalarTraits</a>&lt; typename PointViewType::value_type &gt;::scalar_type thres=threshold&lt; typename <a class="el" href="struct_intrepid2_1_1_scalar_traits.html">ScalarTraits</a>&lt; typename PointViewType::value_type &gt;::scalar_type &gt;())</td></tr>
-<tr class="memdesc:ab6f843f79de3e7a1b342f1ff7c16983d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks every point in multiple sets indexed by a cell ordinal for inclusion in the reference cell of a given topology. Requires cell topology with a reference cell.  <br /></td></tr>
-<tr class="separator:ab6f843f79de3e7a1b342f1ff7c16983d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53e163b90214964f7d79a30f4c51ea82" id="r_a53e163b90214964f7d79a30f4c51ea82"><td class="memTemplParams" colspan="2">template&lt;typename inCellValueType , class ... inCellProperties, typename pointValueType , class ... pointProperties, typename cellWorksetValueType , class ... cellWorksetProperties&gt; </td></tr>
-<tr class="memitem:a53e163b90214964f7d79a30f4c51ea82"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_cell_tools.html#a53e163b90214964f7d79a30f4c51ea82">checkPointwiseInclusion</a> (Kokkos::DynRankView&lt; inCellValueType, inCellProperties... &gt; inCell, const Kokkos::DynRankView&lt; pointValueType, pointProperties... &gt; points, const Kokkos::DynRankView&lt; cellWorksetValueType, cellWorksetProperties... &gt; cellWorkset, const shards::CellTopology cellTopo, const typename <a class="el" href="struct_intrepid2_1_1_scalar_traits.html">ScalarTraits</a>&lt; pointValueType &gt;::scalar_type thres=threshold&lt; typename <a class="el" href="struct_intrepid2_1_1_scalar_traits.html">ScalarTraits</a>&lt; pointValueType &gt;::scalar_type &gt;())</td></tr>
-<tr class="memdesc:a53e163b90214964f7d79a30f4c51ea82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks every points for inclusion in physical cells from a cell workset. The points can belong to a global set and stored in a rank-2 (P,D) view, or to multiple sets indexed by a cell ordinal and stored in a rank-3 (C,P,D) view cells in a cell workset.  <br /></td></tr>
-<tr class="separator:a53e163b90214964f7d79a30f4c51ea82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a009df0ff7b450cbe0e2259703713f82d" id="r_a009df0ff7b450cbe0e2259703713f82d"><td class="memTemplParams" colspan="2">template&lt;typename PointViewType &gt; </td></tr>
+<tr class="memitem:a009df0ff7b450cbe0e2259703713f82d"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="struct_intrepid2_1_1_scalar_traits.html">ScalarTraits</a>&lt; typenamePointViewType::value_type &gt;::scalar_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_cell_tools.html#a009df0ff7b450cbe0e2259703713f82d">parametricDistance</a> (const PointViewType refPoint, const shards::CellTopology cellTopo)</td></tr>
+<tr class="memdesc:a009df0ff7b450cbe0e2259703713f82d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the parametric distance of the point in the specified reference cell. The parametric distance is a continuous piecewise linear function that it is (a) 0 at the centroid of the reference cell, (b) less than 1 for points inside the cell (c) 1 on the cell boundary (d) greater than 1 for points outside the cell.  <br /></td></tr>
+<tr class="separator:a009df0ff7b450cbe0e2259703713f82d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fd081ed232067c780df56cd292aba7f" id="r_a5fd081ed232067c780df56cd292aba7f"><td class="memTemplParams" colspan="2">template&lt;typename PointViewType &gt; </td></tr>
+<tr class="memitem:a5fd081ed232067c780df56cd292aba7f"><td class="memTemplItemLeft" align="right" valign="top">static bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_cell_tools.html#a5fd081ed232067c780df56cd292aba7f">checkPointInclusion</a> (const PointViewType refPoint, const shards::CellTopology cellTopo, const typename <a class="el" href="struct_intrepid2_1_1_scalar_traits.html">ScalarTraits</a>&lt; typename PointViewType::value_type &gt;::scalar_type thres=threshold&lt; typename <a class="el" href="struct_intrepid2_1_1_scalar_traits.html">ScalarTraits</a>&lt; typename PointViewType::value_type &gt;::scalar_type &gt;())</td></tr>
+<tr class="memdesc:a5fd081ed232067c780df56cd292aba7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a point belongs to a reference cell.  <br /></td></tr>
+<tr class="separator:a5fd081ed232067c780df56cd292aba7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5a7c6a84705be4f2d60cc2df540d248" id="r_ad5a7c6a84705be4f2d60cc2df540d248"><td class="memTemplParams" colspan="2">template&lt;unsigned cellTopologyKey, typename OutputViewType , typename InputViewType &gt; </td></tr>
+<tr class="memitem:ad5a7c6a84705be4f2d60cc2df540d248"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_cell_tools.html#ad5a7c6a84705be4f2d60cc2df540d248">checkPointwiseInclusion</a> (OutputViewType inCell, const InputViewType refPoints, const typename <a class="el" href="struct_intrepid2_1_1_scalar_traits.html">ScalarTraits</a>&lt; typename InputViewType::value_type &gt;::scalar_type thresh=threshold&lt; typename <a class="el" href="struct_intrepid2_1_1_scalar_traits.html">ScalarTraits</a>&lt; typename InputViewType::value_type &gt;::scalar_type &gt;())</td></tr>
+<tr class="memdesc:ad5a7c6a84705be4f2d60cc2df540d248"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks every point for inclusion in the reference cell of a given topology. The points can belong to a global set and stored in a rank-2 view (P,D) , or to multiple sets indexed by a cell ordinal and stored in a rank-3 view (C,P,D). The cell topology key is a template argument. Requires cell topology with a reference cell.  <br /></td></tr>
+<tr class="separator:ad5a7c6a84705be4f2d60cc2df540d248"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf4791963834d1b7f140a74b2be0df51" id="r_aaf4791963834d1b7f140a74b2be0df51"><td class="memTemplParams" colspan="2">template&lt;typename InCellViewType , typename PointViewType &gt; </td></tr>
+<tr class="memitem:aaf4791963834d1b7f140a74b2be0df51"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_cell_tools.html#aaf4791963834d1b7f140a74b2be0df51">checkPointwiseInclusion</a> (InCellViewType inCell, const PointViewType refPoints, const shards::CellTopology cellTopo, const typename <a class="el" href="struct_intrepid2_1_1_scalar_traits.html">ScalarTraits</a>&lt; typename PointViewType::value_type &gt;::scalar_type thres=threshold&lt; typename <a class="el" href="struct_intrepid2_1_1_scalar_traits.html">ScalarTraits</a>&lt; typename PointViewType::value_type &gt;::scalar_type &gt;())</td></tr>
+<tr class="memdesc:aaf4791963834d1b7f140a74b2be0df51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks every point in multiple sets indexed by a cell ordinal for inclusion in the reference cell of a given topology. Requires cell topology with a reference cell.  <br /></td></tr>
+<tr class="separator:aaf4791963834d1b7f140a74b2be0df51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac1ffbd2b47142297b74b06703f7daf8" id="r_aac1ffbd2b47142297b74b06703f7daf8"><td class="memTemplParams" colspan="2">template&lt;typename inCellValueType , class ... inCellProperties, typename pointValueType , class ... pointProperties, typename cellWorksetValueType , class ... cellWorksetProperties&gt; </td></tr>
+<tr class="memitem:aac1ffbd2b47142297b74b06703f7daf8"><td class="memTemplItemLeft" align="right" valign="top">static bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_cell_tools.html#aac1ffbd2b47142297b74b06703f7daf8">checkPointwiseInclusion</a> (Kokkos::DynRankView&lt; inCellValueType, inCellProperties... &gt; inCell, const Kokkos::DynRankView&lt; pointValueType, pointProperties... &gt; points, const Kokkos::DynRankView&lt; cellWorksetValueType, cellWorksetProperties... &gt; cellWorkset, const shards::CellTopology cellTopo, const typename <a class="el" href="struct_intrepid2_1_1_scalar_traits.html">ScalarTraits</a>&lt; pointValueType &gt;::scalar_type thres=threshold&lt; typename <a class="el" href="struct_intrepid2_1_1_scalar_traits.html">ScalarTraits</a>&lt; pointValueType &gt;::scalar_type &gt;(), const typename <a class="el" href="struct_intrepid2_1_1_scalar_traits.html">ScalarTraits</a>&lt; pointValueType &gt;::scalar_type shellThickness=-1.0)</td></tr>
+<tr class="memdesc:aac1ffbd2b47142297b74b06703f7daf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks every points for inclusion in physical cells from a cell workset. The points can belong to a global set and stored in a rank-2 (P,D) view, or to multiple sets indexed by a cell ordinal and stored in a rank-3 (C,P,D) view cells in a cell workset.  <br /></td></tr>
+<tr class="separator:aac1ffbd2b47142297b74b06703f7daf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-types" name="pri-types"></a>
 Private Types</h2></td></tr>
@@ -263,13 +286,6 @@ Private Types</h2></td></tr>
 <tr class="separator:a1708f89f20a2b99bdd02cdef9e07e1f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09d1a19112a7ef620be067c43119c4c3" id="r_a09d1a19112a7ef620be067c43119c4c3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_cell_tools.html#a09d1a19112a7ef620be067c43119c4c3">MemSpaceType</a> = typename DeviceType::memory_space</td></tr>
 <tr class="separator:a09d1a19112a7ef620be067c43119c4c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
-Static Private Member Functions</h2></td></tr>
-<tr class="memitem:a046c51a9ac2de45222ad3c592f1d95cc" id="r_a046c51a9ac2de45222ad3c592f1d95cc"><td class="memTemplParams" colspan="2">template&lt;typename outputValueType , typename pointValueType &gt; </td></tr>
-<tr class="memitem:a046c51a9ac2de45222ad3c592f1d95cc"><td class="memTemplItemLeft" align="right" valign="top">static Teuchos::RCP&lt; <a class="el" href="class_intrepid2_1_1_basis.html">Basis</a>&lt; DeviceType, outputValueType, pointValueType &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_cell_tools.html#a046c51a9ac2de45222ad3c592f1d95cc">createHGradBasis</a> (const shards::CellTopology cellTopo)</td></tr>
-<tr class="memdesc:a046c51a9ac2de45222ad3c592f1d95cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates default HGrad basis based on cell topology.  <br /></td></tr>
-<tr class="separator:a046c51a9ac2de45222ad3c592f1d95cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename DeviceType&gt;<br />
@@ -282,7 +298,7 @@ class Intrepid2::CellTools&lt; DeviceType &gt;</div><p>A stateless class for ope
 <li>inclusion tests for point sets in reference and physical cells. </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_8hpp_source.html#l00077">77</a> of file <a class="el" href="_intrepid2___cell_tools_8hpp_source.html">Intrepid2_CellTools.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_8hpp_source.html#l00112">112</a> of file <a class="el" href="_intrepid2___cell_tools_8hpp_source.html">Intrepid2_CellTools.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a1708f89f20a2b99bdd02cdef9e07e1f2" name="a1708f89f20a2b99bdd02cdef9e07e1f2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1708f89f20a2b99bdd02cdef9e07e1f2">&#9670;&#160;</a></span>ExecSpaceType</h2>
@@ -306,7 +322,7 @@ template&lt;typename DeviceType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_8hpp_source.html#l00078">78</a> of file <a class="el" href="_intrepid2___cell_tools_8hpp_source.html">Intrepid2_CellTools.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_8hpp_source.html#l00113">113</a> of file <a class="el" href="_intrepid2___cell_tools_8hpp_source.html">Intrepid2_CellTools.hpp</a>.</p>
 
 </div>
 </div>
@@ -332,7 +348,7 @@ template&lt;typename DeviceType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_8hpp_source.html#l00079">79</a> of file <a class="el" href="_intrepid2___cell_tools_8hpp_source.html">Intrepid2_CellTools.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_8hpp_source.html#l00114">114</a> of file <a class="el" href="_intrepid2___cell_tools_8hpp_source.html">Intrepid2_CellTools.hpp</a>.</p>
 
 </div>
 </div>
@@ -374,7 +390,7 @@ template&lt;class PointScalar &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_intrepid2_1_1_data.html" title="Wrapper around a Kokkos::View that allows data that is constant or repeating in various logical dimen...">Data</a> container with shape (C,P) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html#l00092">92</a> of file <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html">Intrepid2_CellToolsDefJacobian.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html#l00095">95</a> of file <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html">Intrepid2_CellToolsDefJacobian.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_intrepid2___data_variation_type_8hpp_source.html#l00040">Intrepid2::CONSTANT</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l00865">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::getExtents()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l00984">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::getUnderlyingView1()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l00998">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::getUnderlyingView3()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l01005">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::getUnderlyingView4()</a>, and <a class="el" href="_intrepid2___data_8hpp_source.html#l01168">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::getVariationTypes()</a>.</p>
 
@@ -417,14 +433,14 @@ template&lt;class PointScalar &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_intrepid2_1_1_data.html" title="Wrapper around a Kokkos::View that allows data that is constant or repeating in various logical dimen...">Data</a> container with shape (C,P,D,D) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html#l00126">126</a> of file <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html">Intrepid2_CellToolsDefJacobian.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html#l00129">129</a> of file <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html">Intrepid2_CellToolsDefJacobian.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_intrepid2___data_8hpp_source.html#l00865">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::getExtents()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l00984">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::getUnderlyingView1()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l00991">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::getUnderlyingView2()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l00998">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::getUnderlyingView3()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l01005">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::getUnderlyingView4()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l01049">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::getUnderlyingViewRank()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l01168">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::getVariationTypes()</a>, and <a class="el" href="_intrepid2___utils_8hpp_source.html#l00071">INTREPID2_TEST_FOR_EXCEPTION_DEVICE_SAFE</a>.</p>
 
 </div>
 </div>
-<a id="a0831be92f02c6e6b51bd2a7cf877519d" name="a0831be92f02c6e6b51bd2a7cf877519d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0831be92f02c6e6b51bd2a7cf877519d">&#9670;&#160;</a></span>checkPointInclusion()</h2>
+<a id="a5fd081ed232067c780df56cd292aba7f" name="a5fd081ed232067c780df56cd292aba7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fd081ed232067c780df56cd292aba7f">&#9670;&#160;</a></span>checkPointInclusion()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -440,7 +456,7 @@ template&lt;typename PointViewType &gt; </div>
           <td class="memname">bool <a class="el" href="class_intrepid2_1_1_cell_tools.html">Intrepid2::CellTools</a>&lt; DeviceType &gt;::checkPointInclusion </td>
           <td>(</td>
           <td class="paramtype">const PointViewType&#160;</td>
-          <td class="paramname"><em>point</em>, </td>
+          <td class="paramname"><em>refPoint</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -471,7 +487,7 @@ template&lt;typename PointViewType &gt; </div>
 <p>Requires cell topology with a reference cell.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">point</td><td>[in] - rank-1 view (D) of the point tested for inclusion </td></tr>
+    <tr><td class="paramname">refPoint</td><td>[in] - rank-1 view (D) of the reference point tested for inclusion </td></tr>
     <tr><td class="paramname">cellTopo</td><td>[in] - cell topology </td></tr>
     <tr><td class="paramname">threshold</td><td>[in] - "tightness" of the inclusion test </td></tr>
   </table>
@@ -479,7 +495,7 @@ template&lt;typename PointViewType &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the point is in the closure of the specified reference cell and false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_inclusion_8hpp_source.html#l00036">36</a> of file <a class="el" href="_intrepid2___cell_tools_def_inclusion_8hpp_source.html">Intrepid2_CellToolsDefInclusion.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_inclusion_8hpp_source.html#l00093">93</a> of file <a class="el" href="_intrepid2___cell_tools_def_inclusion_8hpp_source.html">Intrepid2_CellToolsDefInclusion.hpp</a>.</p>
 
 </div>
 </div>
@@ -525,12 +541,12 @@ template&lt;typename InCellViewType , typename InputViewType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_inclusion_8hpp_source.html#l00150">150</a> of file <a class="el" href="_intrepid2___cell_tools_def_inclusion_8hpp_source.html">Intrepid2_CellToolsDefInclusion.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_inclusion_8hpp_source.html#l00161">161</a> of file <a class="el" href="_intrepid2___cell_tools_def_inclusion_8hpp_source.html">Intrepid2_CellToolsDefInclusion.hpp</a>.</p>
 
 </div>
 </div>
-<a id="ab6f843f79de3e7a1b342f1ff7c16983d" name="ab6f843f79de3e7a1b342f1ff7c16983d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6f843f79de3e7a1b342f1ff7c16983d">&#9670;&#160;</a></span>checkPointwiseInclusion() <span class="overload">[2/4]</span></h2>
+<a id="aaf4791963834d1b7f140a74b2be0df51" name="aaf4791963834d1b7f140a74b2be0df51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf4791963834d1b7f140a74b2be0df51">&#9670;&#160;</a></span>checkPointwiseInclusion() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -552,7 +568,7 @@ template&lt;typename InCellViewType , typename PointViewType &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const PointViewType&#160;</td>
-          <td class="paramname"><em>points</em>, </td>
+          <td class="paramname"><em>refPoints</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -592,8 +608,8 @@ template&lt;typename InCellViewType , typename PointViewType &gt; </div>
 
 </div>
 </div>
-<a id="a53e163b90214964f7d79a30f4c51ea82" name="a53e163b90214964f7d79a30f4c51ea82"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53e163b90214964f7d79a30f4c51ea82">&#9670;&#160;</a></span>checkPointwiseInclusion() <span class="overload">[3/4]</span></h2>
+<a id="aac1ffbd2b47142297b74b06703f7daf8" name="aac1ffbd2b47142297b74b06703f7daf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac1ffbd2b47142297b74b06703f7daf8">&#9670;&#160;</a></span>checkPointwiseInclusion() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -606,7 +622,7 @@ template&lt;typename inCellValueType , class ... inCellProperties, typename poin
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_intrepid2_1_1_cell_tools.html">Intrepid2::CellTools</a>&lt; DeviceType &gt;::checkPointwiseInclusion </td>
+          <td class="memname">bool <a class="el" href="class_intrepid2_1_1_cell_tools.html">Intrepid2::CellTools</a>&lt; DeviceType &gt;::checkPointwiseInclusion </td>
           <td>(</td>
           <td class="paramtype">Kokkos::DynRankView&lt; inCellValueType, inCellProperties... &gt;&#160;</td>
           <td class="paramname"><em>inCell</em>, </td>
@@ -633,7 +649,13 @@ template&lt;typename inCellValueType , class ... inCellProperties, typename poin
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const typename <a class="el" href="struct_intrepid2_1_1_scalar_traits.html">ScalarTraits</a>&lt; pointValueType &gt;::scalar_type&#160;</td>
-          <td class="paramname"><em>thres</em> = <code>threshold&lt;typename&#160;<a class="el" href="struct_intrepid2_1_1_scalar_traits.html">ScalarTraits</a>&lt;pointValueType&gt;::scalar_type&gt;()</code>&#160;</td>
+          <td class="paramname"><em>thres</em> = <code>threshold&lt;typename&#160;<a class="el" href="struct_intrepid2_1_1_scalar_traits.html">ScalarTraits</a>&lt;pointValueType&gt;::scalar_type&gt;()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const typename <a class="el" href="struct_intrepid2_1_1_scalar_traits.html">ScalarTraits</a>&lt; pointValueType &gt;::scalar_type&#160;</td>
+          <td class="paramname"><em>shellThickness</em> = <code>-1.0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -649,6 +671,7 @@ template&lt;typename inCellValueType , class ... inCellProperties, typename poin
 </div><div class="memdoc">
 
 <p>Checks every points for inclusion in physical cells from a cell workset. The points can belong to a global set and stored in a rank-2 (P,D) view, or to multiple sets indexed by a cell ordinal and stored in a rank-3 (C,P,D) view cells in a cell workset. </p>
+<p>returns true if the computation is valid (map to reference cell converged), false otherwise</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">inCell</td><td>[out] - rank-2 view (P,D) with results from the pointwise inclusion test </td></tr>
@@ -660,14 +683,14 @@ template&lt;typename inCellValueType , class ... inCellProperties, typename poin
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_inclusion_8hpp_source.html#l00215">215</a> of file <a class="el" href="_intrepid2___cell_tools_def_inclusion_8hpp_source.html">Intrepid2_CellToolsDefInclusion.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_inclusion_8hpp_source.html#l00242">242</a> of file <a class="el" href="_intrepid2___cell_tools_def_inclusion_8hpp_source.html">Intrepid2_CellToolsDefInclusion.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html#l00334">Intrepid2::RealSpaceTools&lt; DeviceType &gt;::clone()</a>.</p>
 
 </div>
 </div>
-<a id="ae5d5a76a0e56dc3ad21cd698c8ba92ef" name="ae5d5a76a0e56dc3ad21cd698c8ba92ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5d5a76a0e56dc3ad21cd698c8ba92ef">&#9670;&#160;</a></span>checkPointwiseInclusion() <span class="overload">[4/4]</span></h2>
+<a id="ad5a7c6a84705be4f2d60cc2df540d248" name="ad5a7c6a84705be4f2d60cc2df540d248"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5a7c6a84705be4f2d60cc2df540d248">&#9670;&#160;</a></span>checkPointwiseInclusion() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -689,7 +712,7 @@ template&lt;unsigned cellTopologyKey, typename OutputViewType , typename InputVi
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const InputViewType&#160;</td>
-          <td class="paramname"><em>points</em>, </td>
+          <td class="paramname"><em>refPoints</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -714,13 +737,13 @@ template&lt;unsigned cellTopologyKey, typename OutputViewType , typename InputVi
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">inCell</td><td>[out] - rank-1 view (P) or rank-2 view (C,P). On return, its entries will be set to 1 or 0 depending on whether points are included in cells </td></tr>
-    <tr><td class="paramname">point</td><td>[in] - rank-2 view (P,D) or rank-3 view (C,P,D) with reference coordinates of the points tested for inclusion </td></tr>
+    <tr><td class="paramname">refPoints</td><td>[in] - rank-2 view (P,D) or rank-3 view (C,P,D) with coordinates of the reference points tested for inclusion </td></tr>
     <tr><td class="paramname">threshold</td><td>[in] - "tightness" of the inclusion test </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_inclusion_8hpp_source.html#l00130">130</a> of file <a class="el" href="_intrepid2___cell_tools_def_inclusion_8hpp_source.html">Intrepid2_CellToolsDefInclusion.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_inclusion_8hpp_source.html#l00141">141</a> of file <a class="el" href="_intrepid2___cell_tools_def_inclusion_8hpp_source.html">Intrepid2_CellToolsDefInclusion.hpp</a>.</p>
 
 </div>
 </div>
@@ -747,7 +770,7 @@ template&lt;typename outputValueType , typename pointValueType &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -760,7 +783,125 @@ template&lt;typename outputValueType , typename pointValueType &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_8hpp_source.html#l00100">100</a> of file <a class="el" href="_intrepid2___cell_tools_8hpp_source.html">Intrepid2_CellTools.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_8hpp_source.html#l00133">133</a> of file <a class="el" href="_intrepid2___cell_tools_8hpp_source.html">Intrepid2_CellTools.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a3d46964bbdab75ff0be193cac8bc32e9" name="a3d46964bbdab75ff0be193cac8bc32e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d46964bbdab75ff0be193cac8bc32e9">&#9670;&#160;</a></span>getHGradValues() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DeviceType &gt; </div>
+<div class="memtemplate">
+template&lt;EOperator Operator, typename OutputViewType , typename InputViewType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="class_intrepid2_1_1_cell_tools.html">Intrepid2::CellTools</a>&lt; DeviceType &gt;::getHGradValues </td>
+          <td>(</td>
+          <td class="paramtype">OutputViewType&#160;</td>
+          <td class="paramname"><em>output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const InputViewType&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_intrepid2_1_1_basis.html">Basis</a>&lt; DeviceType, typename OutputViewType::value_type, typename InputViewType::value_type &gt; *&#160;</td>
+          <td class="paramname"><em>basis</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Computes the value or gradient of HGRAD basis functions at input points. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">output</td><td>[out] - view of dimensions [C,N,P] or [C,N,P,D] containing the basis value or their gradients at input points </td></tr>
+    <tr><td class="paramname">input</td><td>[in] - view of dimension [C,P,D], containing the points at which the basis values or gradients are evaluated </td></tr>
+    <tr><td class="paramname">basis</td><td>[in] - basis pointer</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>the template parameter Operator can either be OPERATOR_VALUE or OPERATOR_GRAD. </p>
+
+<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_8hpp_source.html#l00188">188</a> of file <a class="el" href="_intrepid2___cell_tools_8hpp_source.html">Intrepid2_CellTools.hpp</a>.</p>
+
+</div>
+</div>
+<a id="acc81d68e0a43cfd68a3e06122935eb84" name="acc81d68e0a43cfd68a3e06122935eb84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc81d68e0a43cfd68a3e06122935eb84">&#9670;&#160;</a></span>getHGradValues() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DeviceType &gt; </div>
+<div class="memtemplate">
+template&lt;EOperator Operator, typename OutputViewType , typename InputViewType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="class_intrepid2_1_1_cell_tools.html">Intrepid2::CellTools</a>&lt; DeviceType &gt;::getHGradValues </td>
+          <td>(</td>
+          <td class="paramtype">OutputViewType&#160;</td>
+          <td class="paramname"><em>output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const InputViewType&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const shards::CellTopology&#160;</td>
+          <td class="paramname"><em>cellTopo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Computes the value or gradient of HGRAD basis functions at input points. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">output</td><td>[out] - view of dimensions [C,N,P] or [C,N,P,D] containing the basis value or their gradients at input points </td></tr>
+    <tr><td class="paramname">input</td><td>[in] - view of dimension [C,P,D], containing the points at which the basis values or gradients are evaluated </td></tr>
+    <tr><td class="paramname">cellTopo</td><td>[in] - cell topology</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>the template parameter Operator can either be OPERATOR_VALUE or OPERATOR_GRAD. </p>
+
+<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_8hpp_source.html#l00259">259</a> of file <a class="el" href="_intrepid2___cell_tools_8hpp_source.html">Intrepid2_CellTools.hpp</a>.</p>
 
 </div>
 </div>
@@ -828,7 +969,7 @@ template&lt;typename edgeTangentValueType , class ... edgeTangentProperties, typ
 
 <p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_node_info_8hpp_source.html#l00451">451</a> of file <a class="el" href="_intrepid2___cell_tools_def_node_info_8hpp_source.html">Intrepid2_CellToolsDefNodeInfo.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_intrepid2___cell_data_def_8hpp_source.html#l00069">Intrepid2::RefSubcellParametrization&lt; DeviceType &gt;::get()</a>, and <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html#l01407">Intrepid2::RealSpaceTools&lt; DeviceType &gt;::matvec()</a>.</p>
+<p class="reference">References <a class="el" href="_intrepid2___cell_data_def_8hpp_source.html#l00069">Intrepid2::RefSubcellParametrization&lt; DeviceType &gt;::get()</a>, and <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html#l01411">Intrepid2::RealSpaceTools&lt; DeviceType &gt;::matvec()</a>.</p>
 
 </div>
 </div>
@@ -907,7 +1048,7 @@ DF_c(\hat{\Phi}_i(t_p))\cdot {\partial{\hat{\Phi}}_{i}(t_p)\over\partial t}\,; \
 
 <p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_node_info_8hpp_source.html#l00370">370</a> of file <a class="el" href="_intrepid2___cell_tools_def_node_info_8hpp_source.html">Intrepid2_CellToolsDefNodeInfo.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html#l01407">Intrepid2::RealSpaceTools&lt; DeviceType &gt;::matvec()</a>.</p>
+<p class="reference">References <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html#l01411">Intrepid2::RealSpaceTools&lt; DeviceType &gt;::matvec()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_intrepid2___function_space_tools_def_8hpp_source.html#l00620">Intrepid2::FunctionSpaceTools&lt; DeviceType &gt;::computeEdgeMeasure()</a>.</p>
 
@@ -976,7 +1117,7 @@ template&lt;typename faceNormalValueType , class ... faceNormalProperties, typen
 
 <p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_node_info_8hpp_source.html#l00861">861</a> of file <a class="el" href="_intrepid2___cell_tools_def_node_info_8hpp_source.html">Intrepid2_CellToolsDefNodeInfo.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html#l01597">Intrepid2::RealSpaceTools&lt; DeviceType &gt;::vecprod()</a>.</p>
+<p class="reference">References <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html#l01604">Intrepid2::RealSpaceTools&lt; DeviceType &gt;::vecprod()</a>.</p>
 
 </div>
 </div>
@@ -1066,7 +1207,7 @@ R = \left\{\begin{array}{rl}
 
 <p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_node_info_8hpp_source.html#l00800">800</a> of file <a class="el" href="_intrepid2___cell_tools_def_node_info_8hpp_source.html">Intrepid2_CellToolsDefNodeInfo.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html#l01597">Intrepid2::RealSpaceTools&lt; DeviceType &gt;::vecprod()</a>.</p>
+<p class="reference">References <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html#l01604">Intrepid2::RealSpaceTools&lt; DeviceType &gt;::vecprod()</a>.</p>
 
 </div>
 </div>
@@ -1141,7 +1282,7 @@ template&lt;typename faceTanValueType , class ... faceTanProperties, typename wo
 
 <p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_node_info_8hpp_source.html#l00610">610</a> of file <a class="el" href="_intrepid2___cell_tools_def_node_info_8hpp_source.html">Intrepid2_CellToolsDefNodeInfo.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_intrepid2___cell_data_def_8hpp_source.html#l00069">Intrepid2::RefSubcellParametrization&lt; DeviceType &gt;::get()</a>, and <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html#l01407">Intrepid2::RealSpaceTools&lt; DeviceType &gt;::matvec()</a>.</p>
+<p class="reference">References <a class="el" href="_intrepid2___cell_data_def_8hpp_source.html#l00069">Intrepid2::RefSubcellParametrization&lt; DeviceType &gt;::get()</a>, and <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html#l01411">Intrepid2::RealSpaceTools&lt; DeviceType &gt;::matvec()</a>.</p>
 
 </div>
 </div>
@@ -1238,7 +1379,7 @@ R =
 
 <p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_node_info_8hpp_source.html#l00515">515</a> of file <a class="el" href="_intrepid2___cell_tools_def_node_info_8hpp_source.html">Intrepid2_CellToolsDefNodeInfo.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html#l01407">Intrepid2::RealSpaceTools&lt; DeviceType &gt;::matvec()</a>.</p>
+<p class="reference">References <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html#l01411">Intrepid2::RealSpaceTools&lt; DeviceType &gt;::matvec()</a>.</p>
 
 </div>
 </div>
@@ -1461,7 +1602,7 @@ template&lt;typename cellCenterValueType , class ... cellCenterProperties&gt; </
 
 <p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_node_info_8hpp_source.html#l00035">35</a> of file <a class="el" href="_intrepid2___cell_tools_def_node_info_8hpp_source.html">Intrepid2_CellToolsDefNodeInfo.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_intrepid2___cell_data_def_8hpp_source.html#l00734">Intrepid2::RefCellCenter&lt; DeviceType &gt;::get()</a>.</p>
+<p class="reference">References <a class="el" href="_intrepid2___cell_data_def_8hpp_source.html#l00775">Intrepid2::RefCellCenter&lt; DeviceType &gt;::get()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_intrepid2___h_v_o_l___c0___f_e_m_def_8hpp_source.html#l00096">Intrepid2::Basis_HVOL_C0_FEM&lt; DeviceType, outputValueType, pointValueType &gt;::Basis_HVOL_C0_FEM()</a>.</p>
 
@@ -1633,7 +1774,7 @@ R = \left\{\begin{array}{rl}
 
 <p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_node_info_8hpp_source.html#l00334">334</a> of file <a class="el" href="_intrepid2___cell_tools_def_node_info_8hpp_source.html">Intrepid2_CellToolsDefNodeInfo.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html#l01597">Intrepid2::RealSpaceTools&lt; DeviceType &gt;::vecprod()</a>.</p>
+<p class="reference">References <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html#l01604">Intrepid2::RealSpaceTools&lt; DeviceType &gt;::vecprod()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_intrepid2___projection_tools_def_h_c_u_r_l_8hpp_source.html#l00400">Intrepid2::ProjectionTools&lt; DeviceType &gt;::getHCurlBasisCoeffs()</a>, and <a class="el" href="_intrepid2___projection_tools_def_h_g_r_a_d_8hpp_source.html#l00288">Intrepid2::ProjectionTools&lt; DeviceType &gt;::getHGradBasisCoeffs()</a>.</p>
 
@@ -1796,7 +1937,7 @@ template&lt;typename cellNodeValueType , class ... cellNodeProperties&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_node_info_8hpp_source.html#l00138">138</a> of file <a class="el" href="_intrepid2___cell_tools_def_node_info_8hpp_source.html">Intrepid2_CellToolsDefNodeInfo.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_intrepid2___cell_data_def_8hpp_source.html#l00486">Intrepid2::RefCellNodes&lt; DeviceType &gt;::get()</a>.</p>
+<p class="reference">References <a class="el" href="_intrepid2___cell_data_def_8hpp_source.html#l00527">Intrepid2::RefCellNodes&lt; DeviceType &gt;::get()</a>.</p>
 
 </div>
 </div>
@@ -2101,7 +2242,7 @@ template&lt;typename cellVertexValueType , class ... cellVertexProperties&gt; </
 
 <p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_node_info_8hpp_source.html#l00067">67</a> of file <a class="el" href="_intrepid2___cell_tools_def_node_info_8hpp_source.html">Intrepid2_CellToolsDefNodeInfo.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_intrepid2___cell_data_def_8hpp_source.html#l00486">Intrepid2::RefCellNodes&lt; DeviceType &gt;::get()</a>.</p>
+<p class="reference">References <a class="el" href="_intrepid2___cell_data_def_8hpp_source.html#l00527">Intrepid2::RefCellNodes&lt; DeviceType &gt;::get()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_intrepid2___projection_struct_def_8hpp_source.html#l00201">Intrepid2::ProjectionStruct&lt; DeviceType, ValueType &gt;::createHGradProjectionStruct()</a>, and <a class="el" href="_intrepid2___projection_struct_def_8hpp_source.html#l00033">Intrepid2::ProjectionStruct&lt; DeviceType, ValueType &gt;::createL2ProjectionStruct()</a>.</p>
 
@@ -2244,7 +2385,7 @@ template&lt;typename DeviceType &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the cell topology has reference cell, false otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_8hpp_source.html#l00088">88</a> of file <a class="el" href="_intrepid2___cell_tools_8hpp_source.html">Intrepid2_CellTools.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_8hpp_source.html#l00123">123</a> of file <a class="el" href="_intrepid2___cell_tools_8hpp_source.html">Intrepid2_CellTools.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_intrepid2___cell_data_def_8hpp_source.html#l00027">Intrepid2::RefSubcellParametrization&lt; DeviceType &gt;::isSupported()</a>.</p>
 
@@ -2302,38 +2443,39 @@ template&lt;typename PhysPointValueType , typename RefPointValueType , typename 
 
 <p>Computes <em>F</em>, the reference-to-physical frame map. </p>
 <p>There are 2 use cases: </p><ul>
-<li>Applies <picture><source srcset="form_67_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ F_{c} $" src="form_67.png" width="13" height="13"/></picture> for <b>all</b> cells in a cell workset to a <b>single</b> point set stored in a rank-2 (P,D) array; </li>
-<li>Applies <picture><source srcset="form_67_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ F_{c} $" src="form_67.png" width="13" height="13"/></picture> for <b>all</b> cells in a cell workset to <b>multiple</b> point sets having the same number of points, indexed by cell ordinal, and stored in a rank-3 (C,P,D) array;</li>
+<li>Applies <picture><source srcset="form_67_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ F_{c} $" src="form_67.png" width="13" height="13"/></picture> for <b>all</b> cells in a cell workset to a <b>single</b> point set stored in a rank-2 (P,D2) array; </li>
+<li>Applies <picture><source srcset="form_67_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ F_{c} $" src="form_67.png" width="13" height="13"/></picture> for <b>all</b> cells in a cell workset to <b>multiple</b> point sets having the same number of points, indexed by cell ordinal, and stored in a rank-3 (C,P,D2) array;</li>
 </ul>
-<p>For a single point set in a rank-2 array (P,D) returns a rank-3 (C,P,D) array such that  </p><p class="formulaDsp">
+<p>For a single point set in a rank-2 array (P,D1) returns a rank-3 (C,P,D2) array such that  </p><p class="formulaDsp">
 <picture><source srcset="form_68_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
 \mbox{physPoints}(c,p,d) = \Big(F_c(\mbox{refPoint}(p,*)) \Big)_d \quad c=0,\ldots, C
 \]" src="form_68.png" width="309" height="24"/></picture>
 </p>
-<p> For multiple point sets in a rank-3 (C,P,D) array returns a rank-3 (C,P,D) array such that  </p><p class="formulaDsp">
+<p> For multiple point sets in a rank-3 (C,P,D1) array returns a rank-3 (C,P,D2) array such that  </p><p class="formulaDsp">
 <picture><source srcset="form_69_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
 \mbox{physPoints}(c,p,d) = \Big(F_c(\mbox{refPoint}(c,p,*)) \Big)_d \quad c=0,\ldots, C
 \]" src="form_69.png" width="319" height="24"/></picture>
 </p>
 <p> This corresponds to mapping multiple sets of reference points to a matching number of physical cells.</p>
+<p>The reference (D1) and physics D2 dimensions don't have to be the same, as long as D1 is not greater than D2.</p>
 <p>Requires pointer to HGrad basis that defines reference to physical cell mapping. See Section <a class="el" href="cell_tools_page.html#sec_cell_topology_ref_map">Reference-to-physical cell mapping</a> for definition of the mapping function.</p>
 <dl class="section warning"><dt>Warning</dt><dd>The array <code>refPoints</code> represents an arbitrary set of points in the reference frame that are not required to be in the reference cell corresponding to the specified cell topology. As a result, the images of these points under a given reference-to-physical map are not necessarily contained in the physical cell that is the image of the reference cell under that map. <a class="el" href="class_intrepid2_1_1_cell_tools.html" title="A stateless class for operations on cell data. Provides methods for:">CellTools</a> provides several inclusion tests methods to check whether or not the points are inside a reference cell.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">physPoints</td><td>[out] - rank-3 array with dimensions (C,P,D) with the images of the ref. points </td></tr>
-    <tr><td class="paramname">refPoints</td><td>[in] - rank-3/2 array with dimensions (C,P,D)/(P,D) with points in reference frame </td></tr>
-    <tr><td class="paramname">cellWorkset</td><td>[in] - rank-3 container with logical dimensions (C,N,D) with the nodes of the cell workset </td></tr>
+    <tr><td class="paramname">physPoints</td><td>[out] - rank-3 array with dimensions (C,P,D2) with the images of the ref. points </td></tr>
+    <tr><td class="paramname">refPoints</td><td>[in] - rank-3/2 array with dimensions (C,P,D1)/(P,D1) with points in reference frame </td></tr>
+    <tr><td class="paramname">cellWorkset</td><td>[in] - rank-3 container with logical dimensions (C,N,D2) with the nodes of the cell workset </td></tr>
     <tr><td class="paramname">basis</td><td>[in] - pointer to HGrad basis used in reference-to-physical cell mapping </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="reference">Referenced by <a class="el" href="_intrepid2___cell_tools_8hpp_source.html#l01051">Intrepid2::CellTools&lt; DeviceType &gt;::mapToPhysicalFrame()</a>, and <a class="el" href="_intrepid2___projected_geometry_8hpp_source.html#l00050">Intrepid2::ProjectedGeometry&lt; spaceDim, PointScalar, DeviceType &gt;::projectOntoHGRADBasis()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_intrepid2___projected_geometry_8hpp_source.html#l00050">Intrepid2::ProjectedGeometry&lt; spaceDim, PointScalar, DeviceType &gt;::projectOntoHGRADBasis()</a>.</p>
 
 </div>
 </div>
-<a id="a42a27c76bece1882e3e6d12879b5d7eb" name="a42a27c76bece1882e3e6d12879b5d7eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42a27c76bece1882e3e6d12879b5d7eb">&#9670;&#160;</a></span>mapToPhysicalFrame() <span class="overload">[2/3]</span></h2>
+<a id="a9b0993d4fbd5803fbb255719503ed835" name="a9b0993d4fbd5803fbb255719503ed835"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b0993d4fbd5803fbb255719503ed835">&#9670;&#160;</a></span>mapToPhysicalFrame() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2346,7 +2488,7 @@ template&lt;typename PhysPointViewType , typename RefPointViewType , typename Wo
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void <a class="el" href="class_intrepid2_1_1_cell_tools.html">Intrepid2::CellTools</a>&lt; DeviceType &gt;::mapToPhysicalFrame </td>
+          <td class="memname">void <a class="el" href="class_intrepid2_1_1_cell_tools.html">Intrepid2::CellTools</a>&lt; DeviceType &gt;::mapToPhysicalFrame </td>
           <td>(</td>
           <td class="paramtype">PhysPointViewType&#160;</td>
           <td class="paramname"><em>physPoints</em>, </td>
@@ -2377,27 +2519,28 @@ template&lt;typename PhysPointViewType , typename RefPointViewType , typename Wo
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Computes <em>F</em>, the reference-to-physical frame map. </p>
 <p>There are 2 use cases: </p><ul>
-<li>Applies <picture><source srcset="form_67_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ F_{c} $" src="form_67.png" width="13" height="13"/></picture> for <b>all</b> cells in a cell workset to a <b>single</b> point set stored in a rank-2 (P,D) array; </li>
-<li>Applies <picture><source srcset="form_67_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ F_{c} $" src="form_67.png" width="13" height="13"/></picture> for <b>all</b> cells in a cell workset to <b>multiple</b> point sets having the same number of points, indexed by cell ordinal, and stored in a rank-3 (C,P,D) array;</li>
+<li>Applies <picture><source srcset="form_67_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ F_{c} $" src="form_67.png" width="13" height="13"/></picture> for <b>all</b> cells in a cell workset to a <b>single</b> point set stored in a rank-2 (P,D2) array; </li>
+<li>Applies <picture><source srcset="form_67_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ F_{c} $" src="form_67.png" width="13" height="13"/></picture> for <b>all</b> cells in a cell workset to <b>multiple</b> point sets having the same number of points, indexed by cell ordinal, and stored in a rank-3 (C,P,D2) array;</li>
 </ul>
-<p>For a single point set in a rank-2 array (P,D) returns a rank-3 (C,P,D) array such that  </p><p class="formulaDsp">
+<p>For a single point set in a rank-2 array (P,D1) returns a rank-3 (C,P,D2) array such that  </p><p class="formulaDsp">
 <picture><source srcset="form_68_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
 \mbox{physPoints}(c,p,d) = \Big(F_c(\mbox{refPoint}(p,*)) \Big)_d \quad c=0,\ldots, C
 \]" src="form_68.png" width="309" height="24"/></picture>
 </p>
-<p> For multiple point sets in a rank-3 (C,P,D) array returns a rank-3 (C,P,D) array such that  </p><p class="formulaDsp">
+<p> For multiple point sets in a rank-3 (C,P,D1) array returns a rank-3 (C,P,D2) array such that  </p><p class="formulaDsp">
 <picture><source srcset="form_69_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
 \mbox{physPoints}(c,p,d) = \Big(F_c(\mbox{refPoint}(c,p,*)) \Big)_d \quad c=0,\ldots, C
 \]" src="form_69.png" width="319" height="24"/></picture>
 </p>
 <p> This corresponds to mapping multiple sets of reference points to a matching number of physical cells.</p>
+<p>The reference (D1) and physics D2 dimensions do not have to be the same, as long as D1 is not greater than D2. For beam and shell cells, D1 = D2; however, the reference-to-physical frame map, sends the in-plane (D1-1) reference coordinats into the D2 physiscal space. As a result, for beam and shell cells, the orthogonal reference coordinates are ignored.</p>
 <p>Requires cell topology with a reference cell. See Section <a class="el" href="cell_tools_page.html#sec_cell_topology_ref_map">Reference-to-physical cell mapping</a> for definition of the mapping function. Presently supported cell topologies are</p>
 <ul>
 <li>1D: <code>Line&lt;2&gt;</code> </li>
@@ -2407,17 +2550,17 @@ template&lt;typename PhysPointViewType , typename RefPointViewType , typename Wo
 <dl class="section warning"><dt>Warning</dt><dd>The array <code>refPoints</code> represents an arbitrary set of points in the reference frame that are not required to be in the reference cell corresponding to the specified cell topology. As a result, the images of these points under a given reference-to-physical map are not necessarily contained in the physical cell that is the image of the reference cell under that map. <a class="el" href="class_intrepid2_1_1_cell_tools.html" title="A stateless class for operations on cell data. Provides methods for:">CellTools</a> provides several inclusion tests methods to check whether or not the points are inside a reference cell.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">physPoints</td><td>[out] - rank-3 array with dimensions (C,P,D) with the images of the ref. points </td></tr>
-    <tr><td class="paramname">refPoints</td><td>[in] - rank-3/2 array with dimensions (C,P,D)/(P,D) with points in reference frame </td></tr>
-    <tr><td class="paramname">cellWorkset</td><td>[in] - rank-3 array with dimensions (C,N,D) with the nodes of the cell workset </td></tr>
+    <tr><td class="paramname">physPoints</td><td>[out] - rank-3 array with dimensions (C,P,D2) with the images of the ref. points </td></tr>
+    <tr><td class="paramname">refPoints</td><td>[in] - rank-3/2 array with dimensions (C,P,D1)/(P,D1) with points in reference frame </td></tr>
+    <tr><td class="paramname">cellWorkset</td><td>[in] - rank-3 array with dimensions (C,N,D2) with the nodes of the cell workset </td></tr>
     <tr><td class="paramname">cellTopo</td><td>[in] - cell topology of the cells stored in <code>cellWorkset</code> </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_8hpp_source.html#l01051">1051</a> of file <a class="el" href="_intrepid2___cell_tools_8hpp_source.html">Intrepid2_CellTools.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_ref_to_phys_8hpp_source.html#l00192">192</a> of file <a class="el" href="_intrepid2___cell_tools_def_ref_to_phys_8hpp_source.html">Intrepid2_CellToolsDefRefToPhys.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="class_intrepid2_1_1_cell_tools.html#a4647855c7283cf8bf47c365498121314">Intrepid2::CellTools&lt; DeviceType &gt;::mapToPhysicalFrame()</a>.</p>
+<p class="reference">References <a class="el" href="_intrepid2___cell_tools_def_validate_arguments_8hpp_source.html#l00184">Intrepid2::CellTools_mapToPhysicalFrameArgs()</a>.</p>
 
 </div>
 </div>
@@ -2467,8 +2610,8 @@ template&lt;typename PhysPointViewType , typename RefPointViewType , typename Wo
 
 </div>
 </div>
-<a id="a006dc4e9c5f5ac25be8b513b8f63ca04" name="a006dc4e9c5f5ac25be8b513b8f63ca04"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a006dc4e9c5f5ac25be8b513b8f63ca04">&#9670;&#160;</a></span>mapToReferenceFrame()</h2>
+<a id="a5bd5ba197b89e1450dfef46c6adaac49" name="a5bd5ba197b89e1450dfef46c6adaac49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bd5ba197b89e1450dfef46c6adaac49">&#9670;&#160;</a></span>mapToReferenceFrame() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2481,7 +2624,88 @@ template&lt;typename refPointValueType , class ... refPointProperties, typename 
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_intrepid2_1_1_cell_tools.html">Intrepid2::CellTools</a>&lt; DeviceType &gt;::mapToReferenceFrame </td>
+          <td class="memname">bool <a class="el" href="class_intrepid2_1_1_cell_tools.html">Intrepid2::CellTools</a>&lt; DeviceType &gt;::mapToReferenceFrame </td>
+          <td>(</td>
+          <td class="paramtype">Kokkos::DynRankView&lt; refPointValueType, refPointProperties... &gt;&#160;</td>
+          <td class="paramname"><em>refPoints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Kokkos::DynRankView&lt; physPointValueType, physPointProperties... &gt;&#160;</td>
+          <td class="paramname"><em>physPoints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Kokkos::DynRankView&lt; worksetCellValueType, worksetCellProperties... &gt;&#160;</td>
+          <td class="paramname"><em>worksetCell</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="_intrepid2___basis_8hpp.html#a73c7dfae712018bc9f59aa9fd385ed84">BasisPtr</a>&lt; DeviceType, refPointValueType, refPointValueType &gt;&#160;</td>
+          <td class="paramname"><em>basis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const physPointValueType&#160;</td>
+          <td class="paramname"><em>shellThickness</em> = <code>-1.0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Computation of <picture><source srcset="form_76_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ F^{-1}_{c} $" src="form_76.png" width="23" height="15"/></picture>, the inverse of the reference-to-physical frame map where refPoints is also used as initial guess. </p>
+<p>Applies <picture><source srcset="form_76_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ F^{-1}_{c} $" src="form_76.png" width="23" height="15"/></picture> for <b>all</b> cells in a cell workset to <b>multiple</b> point sets having the same number of points, indexed by cell ordinal, and stored in a rank-3 (C,P,D) array. Returns a rank-3 (C,P,D) array such that  </p><p class="formulaDsp">
+<picture><source srcset="form_77_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
+\mbox{refPoints}(c,p,d) = \Big(F^{-1}_c(physPoint(c,p,*)) \Big)_d
+\]" src="form_77.png" width="254" height="24"/></picture>
+</p>
+<p>Requires pointer to HGrad basis that defines reference to physical cell mapping. See Section <a class="el" href="cell_tools_page.html#sec_cell_topology_ref_map">Reference-to-physical cell mapping</a> for definition of the mapping function.</p>
+<p>Note, refPoints is used as initial guess.</p>
+<dl class="section warning"><dt>Warning</dt><dd>The array <code>physPoints</code> represents an arbitrary set (or sets) of points in the physical frame that are not required to belong in the physical cell (cells) that define(s) the reference to physical mapping. As a result, the images of these points in the reference frame are not necessarily contained in the reference cell corresponding to the specified cell topology.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">refPoints</td><td>[out] - rank-3 array with dimensions (C,P,D) with the images of the physical points </td></tr>
+    <tr><td class="paramname">physPoints</td><td>[in] - rank-3 array with dimensions (C,P,D) with points in physical frame </td></tr>
+    <tr><td class="paramname">worksetCell</td><td>[in] - rank-3 array with dimensions (C,N,D) with the nodes of the cell workset </td></tr>
+    <tr><td class="paramname">basis</td><td>[in] - pointer to HGrad basis used for reference to physical cell mapping </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_phys_to_ref_8hpp_source.html#l00191">191</a> of file <a class="el" href="_intrepid2___cell_tools_def_phys_to_ref_8hpp_source.html">Intrepid2_CellToolsDefPhysToRef.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_intrepid2___types_8hpp_source.html#l00116">Intrepid2::Parameters::MaxNewton</a>.</p>
+
+</div>
+</div>
+<a id="a62aba51bf0141d1cc73648a276119be4" name="a62aba51bf0141d1cc73648a276119be4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62aba51bf0141d1cc73648a276119be4">&#9670;&#160;</a></span>mapToReferenceFrame() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DeviceType &gt; </div>
+<div class="memtemplate">
+template&lt;typename refPointValueType , class ... refPointProperties, typename physPointValueType , class ... physPointProperties, typename worksetCellValueType , class ... worksetCellProperties&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_intrepid2_1_1_cell_tools.html">Intrepid2::CellTools</a>&lt; DeviceType &gt;::mapToReferenceFrame </td>
           <td>(</td>
           <td class="paramtype">Kokkos::DynRankView&lt; refPointValueType, refPointProperties... &gt;&#160;</td>
           <td class="paramname"><em>refPoints</em>, </td>
@@ -2502,7 +2726,13 @@ template&lt;typename refPointValueType , class ... refPointProperties, typename 
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const shards::CellTopology&#160;</td>
-          <td class="paramname"><em>cellTopo</em>&#160;</td>
+          <td class="paramname"><em>cellTopo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const physPointValueType&#160;</td>
+          <td class="paramname"><em>shellThickness</em> = <code>-1.0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2540,6 +2770,7 @@ template&lt;typename refPointValueType , class ... refPointProperties, typename 
 </dd>
 <dd>
 The array <code>physPoints</code> represents an arbitrary set (or sets) of points in the physical frame that are not required to belong in the physical cell (cells) that define(s) the reference to physical mapping. As a result, the images of these points in the reference frame are not necessarily contained in the reference cell corresponding to the specified cell topology.</dd></dl>
+<p>returns true if it converged to a solution, false otherwise</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">refPoints</td><td>[out] - rank-3 array with dimensions (C,P,D) with the images of the physical points </td></tr>
@@ -2550,16 +2781,16 @@ The array <code>physPoints</code> represents an arbitrary set (or sets) of point
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_phys_to_ref_8hpp_source.html#l00038">38</a> of file <a class="el" href="_intrepid2___cell_tools_def_phys_to_ref_8hpp_source.html">Intrepid2_CellToolsDefPhysToRef.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_phys_to_ref_8hpp_source.html#l00149">149</a> of file <a class="el" href="_intrepid2___cell_tools_def_phys_to_ref_8hpp_source.html">Intrepid2_CellToolsDefPhysToRef.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_intrepid2___cell_tools_def_validate_arguments_8hpp_source.html#l00262">Intrepid2::CellTools_mapToReferenceFrameArgs()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_intrepid2___point_tools_def_8hpp_source.html#l00754">Intrepid2::PointTools::getWarpBlendLatticeTetrahedron()</a>, and <a class="el" href="_intrepid2___point_tools_def_8hpp_source.html#l00465">Intrepid2::PointTools::getWarpBlendLatticeTriangle()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_intrepid2___point_tools_def_8hpp_source.html#l00754">Intrepid2::PointTools::getWarpBlendLatticeTetrahedron()</a>, <a class="el" href="_intrepid2___point_tools_def_8hpp_source.html#l00465">Intrepid2::PointTools::getWarpBlendLatticeTriangle()</a>, and <a class="el" href="_intrepid2___cell_tools_8hpp_source.html#l01485">Intrepid2::CellTools&lt; DeviceType &gt;::mapToReferenceFrameInitGuess()</a>.</p>
 
 </div>
 </div>
-<a id="a6b08ff3ec8d107e2ee85036f4f6e2025" name="a6b08ff3ec8d107e2ee85036f4f6e2025"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b08ff3ec8d107e2ee85036f4f6e2025">&#9670;&#160;</a></span>mapToReferenceFrameInitGuess() <span class="overload">[1/2]</span></h2>
+<a id="ae7ba1c33918414756800813c3ab82ac5" name="ae7ba1c33918414756800813c3ab82ac5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7ba1c33918414756800813c3ab82ac5">&#9670;&#160;</a></span>mapToReferenceFrameInitGuess() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2572,7 +2803,7 @@ template&lt;typename refPointValueType , class ... refPointProperties, typename 
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_intrepid2_1_1_cell_tools.html">Intrepid2::CellTools</a>&lt; DeviceType &gt;::mapToReferenceFrameInitGuess </td>
+          <td class="memname">static bool <a class="el" href="class_intrepid2_1_1_cell_tools.html">Intrepid2::CellTools</a>&lt; DeviceType &gt;::mapToReferenceFrameInitGuess </td>
           <td>(</td>
           <td class="paramtype">Kokkos::DynRankView&lt; refPointValueType, refPointProperties... &gt;&#160;</td>
           <td class="paramname"><em>refPoints</em>, </td>
@@ -2599,7 +2830,13 @@ template&lt;typename refPointValueType , class ... refPointProperties, typename 
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const HGradBasisPtrType&#160;</td>
-          <td class="paramname"><em>basis</em>&#160;</td>
+          <td class="paramname"><em>basis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const physPointValueType&#160;</td>
+          <td class="paramname"><em>shellThickness</em> = <code>-1.0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2609,12 +2846,12 @@ template&lt;typename refPointValueType , class ... refPointProperties, typename 
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Computation of <picture><source srcset="form_76_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ F^{-1}_{c} $" src="form_76.png" width="23" height="15"/></picture>, the inverse of the reference-to-physical frame map using user-supplied initial guess. </p>
+<p>[Deprecated] Computation of <picture><source srcset="form_76_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ F^{-1}_{c} $" src="form_76.png" width="23" height="15"/></picture>, the inverse of the reference-to-physical frame map using user-supplied initial guess. </p>
 <p>Applies <picture><source srcset="form_76_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ F^{-1}_{c} $" src="form_76.png" width="23" height="15"/></picture> for <b>all</b> cells in a cell workset to <b>multiple</b> point sets having the same number of points, indexed by cell ordinal, and stored in a rank-3 (C,P,D) array. Returns a rank-3 (C,P,D) array such that  </p><p class="formulaDsp">
 <picture><source srcset="form_77_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
 \mbox{refPoints}(c,p,d) = \Big(F^{-1}_c(physPoint(c,p,*)) \Big)_d
@@ -2624,25 +2861,23 @@ template&lt;typename refPointValueType , class ... refPointProperties, typename 
 <dl class="section warning"><dt>Warning</dt><dd>The array <code>physPoints</code> represents an arbitrary set (or sets) of points in the physical frame that are not required to belong in the physical cell (cells) that define(s) the reference to physical mapping. As a result, the images of these points in the reference frame are not necessarily contained in the reference cell corresponding to the specified cell topology.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">refPoints</td><td>[out] - rank-3/2 array with dimensions (C,P,D)/(P,D) with the images of the physical points </td></tr>
-    <tr><td class="paramname">initGuess</td><td>[in] - rank-3/2 array with dimensions (C,P,D)/(P,D) with the initial guesses for each point </td></tr>
-    <tr><td class="paramname">physPoints</td><td>[in] - rank-3/2 array with dimensions (C,P,D)/(P,D) with points in physical frame </td></tr>
+    <tr><td class="paramname">refPoints</td><td>[out] - rank-3 array with dimensions (C,P,D) with the images of the physical points </td></tr>
+    <tr><td class="paramname">initGuess</td><td>[in] - rank-3 array with dimensions (C,P,D) with the initial guesses for each point </td></tr>
+    <tr><td class="paramname">physPoints</td><td>[in] - rank-3 array with dimensions (C,P,D) with points in physical frame </td></tr>
     <tr><td class="paramname">worksetCell</td><td>[in] - rank-3 array with dimensions (C,N,D) with the nodes of the cell workset </td></tr>
     <tr><td class="paramname">basis</td><td>[in] - pointer to HGrad basis used for reference to physical cell mapping </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_phys_to_ref_8hpp_source.html#l00085">85</a> of file <a class="el" href="_intrepid2___cell_tools_def_phys_to_ref_8hpp_source.html">Intrepid2_CellToolsDefPhysToRef.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_8hpp_source.html#l01485">1485</a> of file <a class="el" href="_intrepid2___cell_tools_8hpp_source.html">Intrepid2_CellTools.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_intrepid2___types_8hpp_source.html#l00116">Intrepid2::Parameters::MaxNewton</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_intrepid2___cell_tools_8hpp_source.html#l01283">Intrepid2::CellTools&lt; DeviceType &gt;::mapToReferenceFrameInitGuess()</a>.</p>
+<p class="reference">References <a class="el" href="_intrepid2___cell_tools_def_phys_to_ref_8hpp_source.html#l00150">Intrepid2::CellTools&lt; DeviceType &gt;::mapToReferenceFrame()</a>.</p>
 
 </div>
 </div>
-<a id="a069100237b73970c9e72252d95dc2289" name="a069100237b73970c9e72252d95dc2289"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a069100237b73970c9e72252d95dc2289">&#9670;&#160;</a></span>mapToReferenceFrameInitGuess() <span class="overload">[2/2]</span></h2>
+<a id="a61c46d0bc3f8a6ad614492ce1c691b34" name="a61c46d0bc3f8a6ad614492ce1c691b34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61c46d0bc3f8a6ad614492ce1c691b34">&#9670;&#160;</a></span>mapToReferenceFrameInitGuess() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2655,7 +2890,7 @@ template&lt;typename refPointValueType , class ... refPointProperties, typename 
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void <a class="el" href="class_intrepid2_1_1_cell_tools.html">Intrepid2::CellTools</a>&lt; DeviceType &gt;::mapToReferenceFrameInitGuess </td>
+          <td class="memname">bool <a class="el" href="class_intrepid2_1_1_cell_tools.html">Intrepid2::CellTools</a>&lt; DeviceType &gt;::mapToReferenceFrameInitGuess </td>
           <td>(</td>
           <td class="paramtype">Kokkos::DynRankView&lt; refPointValueType, refPointProperties... &gt;&#160;</td>
           <td class="paramname"><em>refPoints</em>, </td>
@@ -2682,7 +2917,13 @@ template&lt;typename refPointValueType , class ... refPointProperties, typename 
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const shards::CellTopology&#160;</td>
-          <td class="paramname"><em>cellTopo</em>&#160;</td>
+          <td class="paramname"><em>cellTopo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const physPointValueType&#160;</td>
+          <td class="paramname"><em>shellThickness</em> = <code>-1.0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2692,7 +2933,7 @@ template&lt;typename refPointValueType , class ... refPointProperties, typename 
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -2712,18 +2953,16 @@ template&lt;typename refPointValueType , class ... refPointProperties, typename 
 <dl class="section warning"><dt>Warning</dt><dd>The array <code>physPoints</code> represents an arbitrary set (or sets) of points in the physical frame that are not required to belong in the physical cell (cells) that define(s) the reference to physical mapping. As a result, the images of these points in the reference frame are not necessarily contained in the reference cell corresponding to the specified cell topology.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">refPoints</td><td>[out] - rank-3/2 array with dimensions (C,P,D)/(P,D) with the images of the physical points </td></tr>
-    <tr><td class="paramname">initGuess</td><td>[in] - rank-3/2 array with dimensions (C,P,D)/(P,D) with the initial guesses for each point </td></tr>
-    <tr><td class="paramname">physPoints</td><td>[in] - rank-3/2 array with dimensions (C,P,D)/(P,D) with points in physical frame </td></tr>
+    <tr><td class="paramname">refPoints</td><td>[out] - rank-3 array with dimensions (C,P,D) with the images of the physical points </td></tr>
+    <tr><td class="paramname">initGuess</td><td>[in] - rank-3 array with dimensions (C,P,D) with the initial guesses for each point </td></tr>
+    <tr><td class="paramname">physPoints</td><td>[in] - rank-3 array with dimensions (C,P,D) with points in physical frame </td></tr>
     <tr><td class="paramname">worksetCell</td><td>[in] - rank-3 array with dimensions (C,N,D) with the nodes of the cell workset </td></tr>
     <tr><td class="paramname">cellTopo</td><td>[in] - cell topology of the cells stored in <code>cellWorkset</code> </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_8hpp_source.html#l01283">1283</a> of file <a class="el" href="_intrepid2___cell_tools_8hpp_source.html">Intrepid2_CellTools.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="_intrepid2___cell_tools_def_phys_to_ref_8hpp_source.html#l00086">Intrepid2::CellTools&lt; DeviceType &gt;::mapToReferenceFrameInitGuess()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_phys_to_ref_8hpp_source.html#l00350">350</a> of file <a class="el" href="_intrepid2___cell_tools_def_phys_to_ref_8hpp_source.html">Intrepid2_CellToolsDefPhysToRef.hpp</a>.</p>
 
 </div>
 </div>
@@ -2988,7 +3227,7 @@ template&lt;typename refSubcellViewType , typename paramViewType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_ref_to_phys_8hpp_source.html#l00195">195</a> of file <a class="el" href="_intrepid2___cell_tools_def_ref_to_phys_8hpp_source.html">Intrepid2_CellToolsDefRefToPhys.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_ref_to_phys_8hpp_source.html#l00212">212</a> of file <a class="el" href="_intrepid2___cell_tools_def_ref_to_phys_8hpp_source.html">Intrepid2_CellToolsDefRefToPhys.hpp</a>.</p>
 
 </div>
 </div>
@@ -3034,7 +3273,7 @@ template&lt;typename refSubcellViewType , typename paramViewType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_ref_to_phys_8hpp_source.html#l00240">240</a> of file <a class="el" href="_intrepid2___cell_tools_def_ref_to_phys_8hpp_source.html">Intrepid2_CellToolsDefRefToPhys.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_ref_to_phys_8hpp_source.html#l00257">257</a> of file <a class="el" href="_intrepid2___cell_tools_def_ref_to_phys_8hpp_source.html">Intrepid2_CellToolsDefRefToPhys.hpp</a>.</p>
 
 </div>
 </div>
@@ -3080,7 +3319,131 @@ template&lt;typename refSubcellViewType , typename paramViewType , typename ordV
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_ref_to_phys_8hpp_source.html#l00278">278</a> of file <a class="el" href="_intrepid2___cell_tools_def_ref_to_phys_8hpp_source.html">Intrepid2_CellToolsDefRefToPhys.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_ref_to_phys_8hpp_source.html#l00295">295</a> of file <a class="el" href="_intrepid2___cell_tools_def_ref_to_phys_8hpp_source.html">Intrepid2_CellToolsDefRefToPhys.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a009df0ff7b450cbe0e2259703713f82d" name="a009df0ff7b450cbe0e2259703713f82d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a009df0ff7b450cbe0e2259703713f82d">&#9670;&#160;</a></span>parametricDistance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DeviceType &gt; </div>
+<div class="memtemplate">
+template&lt;typename PointViewType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_intrepid2_1_1_scalar_traits.html">ScalarTraits</a>&lt; typenamePointViewType::value_type &gt;::scalar_type <a class="el" href="class_intrepid2_1_1_cell_tools.html">Intrepid2::CellTools</a>&lt; DeviceType &gt;::parametricDistance </td>
+          <td>(</td>
+          <td class="paramtype">const PointViewType&#160;</td>
+          <td class="paramname"><em>refPoint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const shards::CellTopology&#160;</td>
+          <td class="paramname"><em>cellTopo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compute the parametric distance of the point in the specified reference cell. The parametric distance is a continuous piecewise linear function that it is (a) 0 at the centroid of the reference cell, (b) less than 1 for points inside the cell (c) 1 on the cell boundary (d) greater than 1 for points outside the cell. </p>
+<p>Requires cell topology with a reference cell.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">refPoint</td><td>[in] - rank-1 view (D) of the reference point tested for inclusion </td></tr>
+    <tr><td class="paramname">cellTopo</td><td>[in] - cell topology </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the parametric distance of the point in the specified reference cell. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_inclusion_8hpp_source.html#l00036">36</a> of file <a class="el" href="_intrepid2___cell_tools_def_inclusion_8hpp_source.html">Intrepid2_CellToolsDefInclusion.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aa018e3797329a445e53219a833523802" name="aa018e3797329a445e53219a833523802"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa018e3797329a445e53219a833523802">&#9670;&#160;</a></span>scaledResidualNormalComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DeviceType &gt; </div>
+<div class="memtemplate">
+template&lt;typename OutViewType , typename TanViewType , typename InViewType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_intrepid2_1_1_cell_tools.html">Intrepid2::CellTools</a>&lt; DeviceType &gt;::scaledResidualNormalComponent </td>
+          <td>(</td>
+          <td class="paramtype">OutViewType&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const TanViewType&#160;</td>
+          <td class="paramname"><em>tangents</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const InViewType&#160;</td>
+          <td class="paramname"><em>residual</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const typename InViewType::value_type&#160;</td>
+          <td class="paramname"><em>scaling</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Computes the scaled normal component of a d-dimensional resudial vecor with respect to a (d-1) dimensional manifold, given the manifold tangents. </p>
+<p>The dimension d can be either 2 or 3. Typically, the input residual is the difference between points in d space and their projections onto the manifold. This function compute the normal n to the manifold as the outer product of the manifold tangents. It then computes the normal component as  </p><p class="formulaDsp">
+<picture><source srcset="form_340_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
+(n \cdot \mbox{residual}) / |n|
+\]" src="form_340.png" width="89" height="14"/></picture>
+</p>
+<p> and multiplies it by the input scaling term.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">result</td><td>[out] - rank-2 array with dimensions (C,P) containing the normal component of the residual scaled by scaling </td></tr>
+    <tr><td class="paramname">tangents</td><td>[in] - rank-4 container with logical dimensions (C,P,D,D-1) containing the tangents of a (D-1) dimensional manifold at points </td></tr>
+    <tr><td class="paramname">residual</td><td>[in] - rank-3 array with dimensions (C,P,D), containing a vector in D dimensional space, typically the difference between points in 3D space and their projection on the manifold </td></tr>
+    <tr><td class="paramname">scaling</td><td>[in] - a scalar quantity to scale the normal component. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_phys_to_ref_8hpp_source.html#l00116">116</a> of file <a class="el" href="_intrepid2___cell_tools_def_phys_to_ref_8hpp_source.html">Intrepid2_CellToolsDefPhysToRef.hpp</a>.</p>
 
 </div>
 </div>
@@ -3167,9 +3530,9 @@ template&lt;typename JacobianViewType , typename PointViewType , typename Workse
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_8hpp_source.html#l00284">284</a> of file <a class="el" href="_intrepid2___cell_tools_8hpp_source.html">Intrepid2_CellTools.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_8hpp_source.html#l00453">453</a> of file <a class="el" href="_intrepid2___cell_tools_8hpp_source.html">Intrepid2_CellTools.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html#l00799">Intrepid2::CellTools&lt; DeviceType &gt;::setJacobian()</a>.</p>
+<p class="reference">References <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html#l00806">Intrepid2::CellTools&lt; DeviceType &gt;::setJacobian()</a>.</p>
 
 </div>
 </div>
@@ -3270,9 +3633,9 @@ template&lt;typename JacobianViewType , typename PointViewType , typename Workse
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html#l00798">798</a> of file <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html">Intrepid2_CellToolsDefJacobian.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html#l00805">805</a> of file <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html">Intrepid2_CellToolsDefJacobian.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_intrepid2___cubature_control_volume_def_8hpp_source.html#l00060">Intrepid2::CubatureControlVolume&lt; DeviceType, pointValueType, weightValueType &gt;::getCubature()</a>, <a class="el" href="_intrepid2___cubature_control_volume_boundary_def_8hpp_source.html#l00146">Intrepid2::CubatureControlVolumeBoundary&lt; DeviceType, pointValueType, weightValueType &gt;::getCubature()</a>, <a class="el" href="_intrepid2___cubature_control_volume_side_def_8hpp_source.html#l00079">Intrepid2::CubatureControlVolumeSide&lt; DeviceType, pointValueType, weightValueType &gt;::getCubature()</a>, <a class="el" href="_intrepid2___cell_tools_8hpp_source.html#l00284">Intrepid2::CellTools&lt; DeviceType &gt;::setJacobian()</a>, and <a class="el" href="_intrepid2___cell_geometry_def_8hpp_source.html#l00243">Intrepid2::CellGeometry&lt; PointScalar, spaceDim, DeviceType &gt;::setJacobianDataPrivate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_intrepid2___cubature_control_volume_def_8hpp_source.html#l00060">Intrepid2::CubatureControlVolume&lt; DeviceType, pointValueType, weightValueType &gt;::getCubature()</a>, <a class="el" href="_intrepid2___cubature_control_volume_boundary_def_8hpp_source.html#l00146">Intrepid2::CubatureControlVolumeBoundary&lt; DeviceType, pointValueType, weightValueType &gt;::getCubature()</a>, <a class="el" href="_intrepid2___cubature_control_volume_side_def_8hpp_source.html#l00079">Intrepid2::CubatureControlVolumeSide&lt; DeviceType, pointValueType, weightValueType &gt;::getCubature()</a>, <a class="el" href="_intrepid2___cell_tools_8hpp_source.html#l00453">Intrepid2::CellTools&lt; DeviceType &gt;::setJacobian()</a>, and <a class="el" href="_intrepid2___cell_geometry_def_8hpp_source.html#l00243">Intrepid2::CellGeometry&lt; PointScalar, spaceDim, DeviceType &gt;::setJacobianDataPrivate()</a>.</p>
 
 </div>
 </div>
@@ -3366,7 +3729,7 @@ template&lt;typename JacobianViewType , typename BasisGradientsType , typename W
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html#l00770">770</a> of file <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html">Intrepid2_CellToolsDefJacobian.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html#l00773">773</a> of file <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html">Intrepid2_CellToolsDefJacobian.hpp</a>.</p>
 
 </div>
 </div>
@@ -3417,7 +3780,7 @@ template&lt;class PointScalar &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html#l00165">165</a> of file <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html">Intrepid2_CellToolsDefJacobian.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html#l00168">168</a> of file <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html">Intrepid2_CellToolsDefJacobian.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_intrepid2___data_variation_type_8hpp_source.html#l00042">Intrepid2::BLOCK_PLUS_DIAGONAL</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l00858">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::blockPlusDiagonalLastNonDiagonal()</a>, <a class="el" href="_intrepid2___data_variation_type_8hpp_source.html#l00040">Intrepid2::CONSTANT</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l01216">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::extent_int()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l00984">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::getUnderlyingView1()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l00991">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::getUnderlyingView2()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l00998">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::getUnderlyingView3()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l01005">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::getUnderlyingView4()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l01049">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::getUnderlyingViewRank()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l01168">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::getVariationTypes()</a>, and <a class="el" href="_intrepid2___utils_8hpp_source.html#l00071">INTREPID2_TEST_FOR_EXCEPTION_DEVICE_SAFE</a>.</p>
 
@@ -3475,9 +3838,9 @@ template&lt;typename JacobianDetViewType , typename JacobianViewType &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html#l00868">868</a> of file <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html">Intrepid2_CellToolsDefJacobian.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html#l00870">870</a> of file <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html">Intrepid2_CellToolsDefJacobian.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_intrepid2___cell_tools_def_validate_arguments_8hpp_source.html#l00154">Intrepid2::CellTools_setJacobianDetArgs()</a>.</p>
+<p class="reference">References <a class="el" href="_intrepid2___cell_tools_def_validate_arguments_8hpp_source.html#l00148">Intrepid2::CellTools_setJacobianDetArgs()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_intrepid2___cubature_control_volume_def_8hpp_source.html#l00060">Intrepid2::CubatureControlVolume&lt; DeviceType, pointValueType, weightValueType &gt;::getCubature()</a>, and <a class="el" href="_intrepid2___cubature_control_volume_boundary_def_8hpp_source.html#l00146">Intrepid2::CubatureControlVolumeBoundary&lt; DeviceType, pointValueType, weightValueType &gt;::getCubature()</a>.</p>
 
@@ -3530,7 +3893,7 @@ template&lt;class PointScalar &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html#l00432">432</a> of file <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html">Intrepid2_CellToolsDefJacobian.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html#l00435">435</a> of file <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html">Intrepid2_CellToolsDefJacobian.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_intrepid2___data_8hpp_source.html#l01248">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::allocateConstantData()</a>, and <a class="el" href="_intrepid2___data_8hpp_source.html#l01763">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::storeInPlaceQuotient()</a>.</p>
 
@@ -3628,7 +3991,7 @@ template&lt;typename Scalar &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html#l00880">880</a> of file <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html">Intrepid2_CellToolsDefJacobian.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html#l00882">882</a> of file <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html">Intrepid2_CellToolsDefJacobian.hpp</a>.</p>
 
 </div>
 </div>
@@ -3679,7 +4042,7 @@ template&lt;class PointScalar &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html#l00442">442</a> of file <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html">Intrepid2_CellToolsDefJacobian.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html#l00445">445</a> of file <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html">Intrepid2_CellToolsDefJacobian.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_intrepid2___data_variation_type_8hpp_source.html#l00042">Intrepid2::BLOCK_PLUS_DIAGONAL</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l00858">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::blockPlusDiagonalLastNonDiagonal()</a>, <a class="el" href="_intrepid2___data_variation_type_8hpp_source.html#l00040">Intrepid2::CONSTANT</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l00984">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::getUnderlyingView1()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l00991">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::getUnderlyingView2()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l00998">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::getUnderlyingView3()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l01005">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::getUnderlyingView4()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l01049">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::getUnderlyingViewRank()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l01168">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::getVariationTypes()</a>, <a class="el" href="_intrepid2___utils_8hpp_source.html#l00071">INTREPID2_TEST_FOR_EXCEPTION_DEVICE_SAFE</a>, and <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html#l00750">Intrepid2::RealSpaceTools&lt; DeviceType &gt;::inverse()</a>.</p>
 
@@ -3737,9 +4100,9 @@ template&lt;typename JacobianInvViewType , typename JacobianViewType &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html#l00855">855</a> of file <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html">Intrepid2_CellToolsDefJacobian.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html#l00857">857</a> of file <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html">Intrepid2_CellToolsDefJacobian.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_intrepid2___cell_tools_def_validate_arguments_8hpp_source.html#l00122">Intrepid2::CellTools_setJacobianInvArgs()</a>, and <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html#l00750">Intrepid2::RealSpaceTools&lt; DeviceType &gt;::inverse()</a>.</p>
+<p class="reference">References <a class="el" href="_intrepid2___cell_tools_def_validate_arguments_8hpp_source.html#l00116">Intrepid2::CellTools_setJacobianInvArgs()</a>, and <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html#l00750">Intrepid2::RealSpaceTools&lt; DeviceType &gt;::inverse()</a>.</p>
 
 </div>
 </div>

@@ -228,13 +228,15 @@ Macros</h2></td></tr>
 <div class="line">    TEST_GROUP##_##TEST_NAME##_UnitTest(<span class="keyword">const</span> std::string&amp; typeName) \</div>
 <div class="line">      : <a class="code hl_class" href="class_teuchos_1_1_unit_test_base.html">Teuchos::UnitTestBase</a>( std::string(#TEST_GROUP)+<span class="stringliteral">&quot;_&quot;</span>+typeName, #TEST_NAME ) \</div>
 <div class="line">    {} \</div>
-<div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="class_teuchos_1_1_unit_test_base.html#a3ebf0a6e4f883730caf8b0c94c9d06c9">runUnitTestImpl</a>( <a class="code hl_class" href="class_teuchos_1_1basic___fancy_o_stream.html">Teuchos::FancyOStream</a> &amp;out, <span class="keywordtype">bool</span> &amp;success ) <span class="keyword">const</span>; \</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_teuchos_1_1_unit_test_base.html#a3ebf0a6e4f883730caf8b0c94c9d06c9">runUnitTestImpl</a>( <a class="code hl_class" href="class_teuchos_1_1basic___fancy_o_stream.html">Teuchos::FancyOStream</a> &amp;out, <span class="keywordtype">bool</span> &amp;success ) <span class="keyword">const</span> <span class="keyword">override</span> \</div>
+<div class="line">    { runUnitTestImplBody(out, success); } \</div>
+<div class="line">    <span class="keywordtype">void</span> runUnitTestImplBody( <a class="code hl_class" href="class_teuchos_1_1basic___fancy_o_stream.html">Teuchos::FancyOStream</a> &amp;out, <span class="keywordtype">bool</span> &amp;success ) <span class="keyword">const</span>; \</div>
 <div class="line">    <span class="keyword">virtual</span> std::string <a class="code hl_function" href="class_teuchos_1_1_unit_test_base.html#af027ec352f30017e49bcbc4d1231ab29">unitTestFile</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> __FILE__; } \</div>
 <div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_teuchos_1_1_unit_test_base.html#aed40b66aa9769be8f7f193df2488aa6d">unitTestFileLineNumber</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> __LINE__; } \</div>
 <div class="line">  }; \</div>
 <div class="line">  \</div>
 <div class="line">  <span class="keyword">template</span>&lt;<span class="keyword">class</span> TYPE&gt; \</div>
-<div class="line">        <span class="keywordtype">void</span> TEST_GROUP##_##TEST_NAME##_UnitTest&lt;TYPE&gt;::runUnitTestImpl( \</div>
+<div class="line">        <span class="keywordtype">void</span> TEST_GROUP##_##TEST_NAME##_UnitTest&lt;TYPE&gt;::runUnitTestImplBody( \</div>
 <div class="line">    <a class="code hl_class" href="class_teuchos_1_1basic___fancy_o_stream.html">Teuchos::FancyOStream</a> &amp;out, <span class="keywordtype">bool</span> &amp;success ) <span class="keyword">const</span> \</div>
 </div><!-- fragment -->
 <p>Macro for defining a templated unit test with one template parameter. </p>
@@ -263,7 +265,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="comment">// Typedef to work around Bug 5757 (TYPE values cannot have spaces).</span></div>
 <div class="line"><span class="keyword">typedef</span> <span class="keywordtype">long</span> <span class="keywordtype">double</span> long_double_type;</div>
 <div class="line"><a class="code hl_define" href="group___teuchos___unit_test_definition_macros__grp.html#gae2e0ab156466c99eabf74c3210beaa5c">TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT</a>( myTestGroup, myTestName, long_double_type )</div>
-<div class="ttc" id="agroup___teuchos___unit_test_definition_macros__grp_html_gae2e0ab156466c99eabf74c3210beaa5c"><div class="ttname"><a href="group___teuchos___unit_test_definition_macros__grp.html#gae2e0ab156466c99eabf74c3210beaa5c">TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT</a></div><div class="ttdeci">#define TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT(TEST_GROUP, TEST_NAME, TYPE)</div><div class="ttdoc">Instantiate a templated unit test with one template parameter.</div><div class="ttdef"><b>Definition</b> <a href="_teuchos___unit_test_helpers_8hpp_source.html#l00155">Teuchos_UnitTestHelpers.hpp:155</a></div></div>
+<div class="ttc" id="agroup___teuchos___unit_test_definition_macros__grp_html_gae2e0ab156466c99eabf74c3210beaa5c"><div class="ttname"><a href="group___teuchos___unit_test_definition_macros__grp.html#gae2e0ab156466c99eabf74c3210beaa5c">TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT</a></div><div class="ttdeci">#define TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT(TEST_GROUP, TEST_NAME, TYPE)</div><div class="ttdoc">Instantiate a templated unit test with one template parameter.</div><div class="ttdef"><b>Definition</b> <a href="_teuchos___unit_test_helpers_8hpp_source.html#l00157">Teuchos_UnitTestHelpers.hpp:157</a></div></div>
 </div><!-- fragment --> 
 <p class="definition">Definition at line <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html#l00128">128</a> of file <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html">Teuchos_UnitTestHelpers.hpp</a>.</p>
 
@@ -308,7 +310,7 @@ Macros</h2></td></tr>
 <p>Instantiate a templated unit test with one template parameter. </p>
 <p>Use this macro to <em>instantiate</em> for a particular template parameter value the templated unit test defined by TEUCHOS_UNIT_TEST_TEMPLATE_1_DECL with the same TEST_GROUP and TEST_NAME values. For more details and examples, see the documentation of TEUCHOS_UNIT_TEST_TEMPLATE_1_DECL. </p>
 
-<p class="definition">Definition at line <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html#l00155">155</a> of file <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html">Teuchos_UnitTestHelpers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html#l00157">157</a> of file <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html">Teuchos_UnitTestHelpers.hpp</a>.</p>
 
 </div>
 </div>
@@ -342,7 +344,7 @@ Macros</h2></td></tr>
 </div><!-- fragment -->
 <p>Instantiate a whole group of tests for supported real Scalar types. </p>
 
-<p class="definition">Definition at line <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html#l00194">194</a> of file <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html">Teuchos_UnitTestHelpers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html#l00196">196</a> of file <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html">Teuchos_UnitTestHelpers.hpp</a>.</p>
 
 </div>
 </div>
@@ -378,7 +380,7 @@ Macros</h2></td></tr>
 </div><!-- fragment -->
 <p>Instantiate a whole group of tests for supported Scalar types. </p>
 
-<p class="definition">Definition at line <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html#l00203">203</a> of file <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html">Teuchos_UnitTestHelpers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html#l00205">205</a> of file <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html">Teuchos_UnitTestHelpers.hpp</a>.</p>
 
 </div>
 </div>
@@ -430,13 +432,15 @@ Macros</h2></td></tr>
 <div class="line">      :<a class="code hl_class" href="class_teuchos_1_1_unit_test_base.html">Teuchos::UnitTestBase</a>( \</div>
 <div class="line">         std::string(#TEST_GROUP)+<span class="stringliteral">&quot;_&quot;</span>+type1Name+<span class="stringliteral">&quot;_&quot;</span>+type2Name, #TEST_NAME ) \</div>
 <div class="line">    {} \</div>
-<div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="class_teuchos_1_1_unit_test_base.html#a3ebf0a6e4f883730caf8b0c94c9d06c9">runUnitTestImpl</a>( <a class="code hl_class" href="class_teuchos_1_1basic___fancy_o_stream.html">Teuchos::FancyOStream</a> &amp;out, <span class="keywordtype">bool</span> &amp;success ) <span class="keyword">const</span>; \</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_teuchos_1_1_unit_test_base.html#a3ebf0a6e4f883730caf8b0c94c9d06c9">runUnitTestImpl</a>( <a class="code hl_class" href="class_teuchos_1_1basic___fancy_o_stream.html">Teuchos::FancyOStream</a> &amp;out, <span class="keywordtype">bool</span> &amp;success ) <span class="keyword">const</span> <span class="keyword">override</span> \</div>
+<div class="line">    { runUnitTestImplBody(out, success); } \</div>
+<div class="line">    <span class="keywordtype">void</span> runUnitTestImplBody( <a class="code hl_class" href="class_teuchos_1_1basic___fancy_o_stream.html">Teuchos::FancyOStream</a> &amp;out, <span class="keywordtype">bool</span> &amp;success ) <span class="keyword">const</span>; \</div>
 <div class="line">    <span class="keyword">virtual</span> std::string <a class="code hl_function" href="class_teuchos_1_1_unit_test_base.html#af027ec352f30017e49bcbc4d1231ab29">unitTestFile</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> __FILE__; } \</div>
 <div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_teuchos_1_1_unit_test_base.html#aed40b66aa9769be8f7f193df2488aa6d">unitTestFileLineNumber</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> __LINE__; } \</div>
 <div class="line">  }; \</div>
 <div class="line">  \</div>
 <div class="line">  <span class="keyword">template</span>&lt;<span class="keyword">class</span> TYPE1, <span class="keyword">class</span> TYPE2&gt; \</div>
-<div class="line">        <span class="keywordtype">void</span> TEST_GROUP##_##TEST_NAME##_UnitTest&lt;TYPE1,TYPE2&gt;::runUnitTestImpl( \</div>
+<div class="line">        <span class="keywordtype">void</span> TEST_GROUP##_##TEST_NAME##_UnitTest&lt;TYPE1,TYPE2&gt;::runUnitTestImplBody( \</div>
 <div class="line">    <a class="code hl_class" href="class_teuchos_1_1basic___fancy_o_stream.html">Teuchos::FancyOStream</a> &amp;out, <span class="keywordtype">bool</span> &amp;success ) <span class="keyword">const</span> \</div>
 </div><!-- fragment -->
 <p>Macro for defining a templated unit test with two template parameters. </p>
@@ -448,7 +452,7 @@ Macros</h2></td></tr>
 <div class="line">  <span class="keyword">typedef</span> <span class="keyword">typename</span> StlContainer2Type::value_type value2_type;</div>
 <div class="line">  <span class="comment">// ... the rest of the unit test ...</span></div>
 <div class="line">}</div>
-<div class="ttc" id="agroup___teuchos___unit_test_definition_macros__grp_html_gac8774758ef1f4d0d8e1b06bbecb85f45"><div class="ttname"><a href="group___teuchos___unit_test_definition_macros__grp.html#gac8774758ef1f4d0d8e1b06bbecb85f45">TEUCHOS_UNIT_TEST_TEMPLATE_2_DECL</a></div><div class="ttdeci">#define TEUCHOS_UNIT_TEST_TEMPLATE_2_DECL(TEST_GROUP, TEST_NAME, TYPE1, TYPE2)</div><div class="ttdoc">Macro for defining a templated unit test with two template parameters.</div><div class="ttdef"><b>Definition</b> <a href="_teuchos___unit_test_helpers_8hpp_source.html#l00270">Teuchos_UnitTestHelpers.hpp:270</a></div></div>
+<div class="ttc" id="agroup___teuchos___unit_test_definition_macros__grp_html_gac8774758ef1f4d0d8e1b06bbecb85f45"><div class="ttname"><a href="group___teuchos___unit_test_definition_macros__grp.html#gac8774758ef1f4d0d8e1b06bbecb85f45">TEUCHOS_UNIT_TEST_TEMPLATE_2_DECL</a></div><div class="ttdeci">#define TEUCHOS_UNIT_TEST_TEMPLATE_2_DECL(TEST_GROUP, TEST_NAME, TYPE1, TYPE2)</div><div class="ttdoc">Macro for defining a templated unit test with two template parameters.</div><div class="ttdef"><b>Definition</b> <a href="_teuchos___unit_test_helpers_8hpp_source.html#l00272">Teuchos_UnitTestHelpers.hpp:272</a></div></div>
 </div><!-- fragment --><p>When instantiating the unit test for a particular template parameter using TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT, the macro parameter values TYPE1 and TYPE2 must not contain any spaces (Bug 5757). If you want TYPE1 or TYPE2 to be a type with spaces, like <code>unsigned int</code> or <code>long double</code>, you must first use a typedef to alias the original type to a name without spaces, and then use the name without spaces. For example:</p>
 <div class="fragment"><div class="line"><span class="comment">// Define the templated unit test.</span></div>
 <div class="line"><a class="code hl_define" href="group___teuchos___unit_test_definition_macros__grp.html#gac8774758ef1f4d0d8e1b06bbecb85f45">TEUCHOS_UNIT_TEST_TEMPLATE_2_DECL</a>( myTestGroup, myTestName, IntegerType, RealType ) {</div>
@@ -467,9 +471,9 @@ Macros</h2></td></tr>
 <div class="line"><span class="comment">// Typedef to work around Bug 5757 (TYPE values cannot have spaces).</span></div>
 <div class="line"><span class="keyword">typedef</span> <span class="keywordtype">long</span> <span class="keywordtype">double</span> long_double_type;</div>
 <div class="line"><a class="code hl_define" href="group___teuchos___unit_test_definition_macros__grp.html#gaedbb2182994534c90b18160e519def67">TEUCHOS_UNIT_TEST_TEMPLATE_2_INSTANT</a>( myTestGroup, myTestName, <span class="keywordtype">int</span>, long_double_type )</div>
-<div class="ttc" id="agroup___teuchos___unit_test_definition_macros__grp_html_gaedbb2182994534c90b18160e519def67"><div class="ttname"><a href="group___teuchos___unit_test_definition_macros__grp.html#gaedbb2182994534c90b18160e519def67">TEUCHOS_UNIT_TEST_TEMPLATE_2_INSTANT</a></div><div class="ttdeci">#define TEUCHOS_UNIT_TEST_TEMPLATE_2_INSTANT(TEST_GROUP, TEST_NAME, TYPE1, TYPE2)</div><div class="ttdoc">Instantiate a templated unit test with two template parameters.</div><div class="ttdef"><b>Definition</b> <a href="_teuchos___unit_test_helpers_8hpp_source.html#l00301">Teuchos_UnitTestHelpers.hpp:301</a></div></div>
+<div class="ttc" id="agroup___teuchos___unit_test_definition_macros__grp_html_gaedbb2182994534c90b18160e519def67"><div class="ttname"><a href="group___teuchos___unit_test_definition_macros__grp.html#gaedbb2182994534c90b18160e519def67">TEUCHOS_UNIT_TEST_TEMPLATE_2_INSTANT</a></div><div class="ttdeci">#define TEUCHOS_UNIT_TEST_TEMPLATE_2_INSTANT(TEST_GROUP, TEST_NAME, TYPE1, TYPE2)</div><div class="ttdoc">Instantiate a templated unit test with two template parameters.</div><div class="ttdef"><b>Definition</b> <a href="_teuchos___unit_test_helpers_8hpp_source.html#l00305">Teuchos_UnitTestHelpers.hpp:305</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html#l00270">270</a> of file <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html">Teuchos_UnitTestHelpers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html#l00272">272</a> of file <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html">Teuchos_UnitTestHelpers.hpp</a>.</p>
 
 </div>
 </div>
@@ -518,7 +522,7 @@ Macros</h2></td></tr>
 <p>Instantiate a templated unit test with two template parameters. </p>
 <p>Use this macro to <em>instantiate</em> for particular template parameter values the templated unit test defined by TEUCHOS_UNIT_TEST_TEMPLATE_2_DECL with the same TEST_GROUP and TEST_NAME values. For more details and examples, see the documentation of TEUCHOS_UNIT_TEST_TEMPLATE_2_DECL. </p>
 
-<p class="definition">Definition at line <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html#l00301">301</a> of file <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html">Teuchos_UnitTestHelpers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html#l00305">305</a> of file <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html">Teuchos_UnitTestHelpers.hpp</a>.</p>
 
 </div>
 </div>
@@ -577,18 +581,20 @@ Macros</h2></td></tr>
 <div class="line">      :<a class="code hl_class" href="class_teuchos_1_1_unit_test_base.html">Teuchos::UnitTestBase</a>( \</div>
 <div class="line">         std::string(#TEST_GROUP)+<span class="stringliteral">&quot;_&quot;</span>+type1Name+<span class="stringliteral">&quot;_&quot;</span>+type2Name+<span class="stringliteral">&quot;_&quot;</span>+type3Name, #TEST_NAME ) \</div>
 <div class="line">    {} \</div>
-<div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="class_teuchos_1_1_unit_test_base.html#a3ebf0a6e4f883730caf8b0c94c9d06c9">runUnitTestImpl</a>( <a class="code hl_class" href="class_teuchos_1_1basic___fancy_o_stream.html">Teuchos::FancyOStream</a> &amp;out, <span class="keywordtype">bool</span> &amp;success ) <span class="keyword">const</span>; \</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_teuchos_1_1_unit_test_base.html#a3ebf0a6e4f883730caf8b0c94c9d06c9">runUnitTestImpl</a>( <a class="code hl_class" href="class_teuchos_1_1basic___fancy_o_stream.html">Teuchos::FancyOStream</a> &amp;out, <span class="keywordtype">bool</span> &amp;success ) <span class="keyword">const</span> <span class="keyword">override</span> \</div>
+<div class="line">    { runUnitTestImplBody(out, success); } \</div>
+<div class="line">    <span class="keywordtype">void</span> runUnitTestImplBody( <a class="code hl_class" href="class_teuchos_1_1basic___fancy_o_stream.html">Teuchos::FancyOStream</a> &amp;out, <span class="keywordtype">bool</span> &amp;success ) <span class="keyword">const</span>; \</div>
 <div class="line">    <span class="keyword">virtual</span> std::string <a class="code hl_function" href="class_teuchos_1_1_unit_test_base.html#af027ec352f30017e49bcbc4d1231ab29">unitTestFile</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> __FILE__; } \</div>
 <div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_teuchos_1_1_unit_test_base.html#aed40b66aa9769be8f7f193df2488aa6d">unitTestFileLineNumber</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> __LINE__; } \</div>
 <div class="line">  }; \</div>
 <div class="line">  \</div>
 <div class="line">  <span class="keyword">template</span>&lt;<span class="keyword">class</span> TYPE1, <span class="keyword">class</span> TYPE2, <span class="keyword">class</span> TYPE3&gt; \</div>
-<div class="line">        <span class="keywordtype">void</span> TEST_GROUP##_##TEST_NAME##_UnitTest&lt;TYPE1,TYPE2,TYPE3&gt;::runUnitTestImpl( \</div>
+<div class="line">        <span class="keywordtype">void</span> TEST_GROUP##_##TEST_NAME##_UnitTest&lt;TYPE1,TYPE2,TYPE3&gt;::runUnitTestImplBody( \</div>
 <div class="line">    <a class="code hl_class" href="class_teuchos_1_1basic___fancy_o_stream.html">Teuchos::FancyOStream</a> &amp;out, <span class="keywordtype">bool</span> &amp;success ) <span class="keyword">const</span> \</div>
 </div><!-- fragment -->
 <p>Macro for defining a templated unit test with three template parameters. </p>
 
-<p class="definition">Definition at line <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html#l00312">312</a> of file <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html">Teuchos_UnitTestHelpers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html#l00316">316</a> of file <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html">Teuchos_UnitTestHelpers.hpp</a>.</p>
 
 </div>
 </div>
@@ -642,7 +648,7 @@ Macros</h2></td></tr>
 </div><!-- fragment -->
 <p>Instantiate a templated unit test with three template parameters. </p>
 
-<p class="definition">Definition at line <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html#l00339">339</a> of file <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html">Teuchos_UnitTestHelpers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html#l00345">345</a> of file <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html">Teuchos_UnitTestHelpers.hpp</a>.</p>
 
 </div>
 </div>
@@ -708,18 +714,20 @@ Macros</h2></td></tr>
 <div class="line">      :<a class="code hl_class" href="class_teuchos_1_1_unit_test_base.html">Teuchos::UnitTestBase</a>( \</div>
 <div class="line">         std::string(#TEST_GROUP)+<span class="stringliteral">&quot;_&quot;</span>+type1Name+<span class="stringliteral">&quot;_&quot;</span>+type2Name+<span class="stringliteral">&quot;_&quot;</span>+type3Name+<span class="stringliteral">&quot;_&quot;</span>+type4Name, #TEST_NAME ) \</div>
 <div class="line">    {} \</div>
-<div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="class_teuchos_1_1_unit_test_base.html#a3ebf0a6e4f883730caf8b0c94c9d06c9">runUnitTestImpl</a>( <a class="code hl_class" href="class_teuchos_1_1basic___fancy_o_stream.html">Teuchos::FancyOStream</a> &amp;out, <span class="keywordtype">bool</span> &amp;success ) <span class="keyword">const</span>; \</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_teuchos_1_1_unit_test_base.html#a3ebf0a6e4f883730caf8b0c94c9d06c9">runUnitTestImpl</a>( <a class="code hl_class" href="class_teuchos_1_1basic___fancy_o_stream.html">Teuchos::FancyOStream</a> &amp;out, <span class="keywordtype">bool</span> &amp;success ) <span class="keyword">const</span> <span class="keyword">override</span> \</div>
+<div class="line">    { runUnitTestImplBody(out, success); } \</div>
+<div class="line">    <span class="keywordtype">void</span> runUnitTestImplBody( <a class="code hl_class" href="class_teuchos_1_1basic___fancy_o_stream.html">Teuchos::FancyOStream</a> &amp;out, <span class="keywordtype">bool</span> &amp;success ) <span class="keyword">const</span>; \</div>
 <div class="line">    <span class="keyword">virtual</span> std::string <a class="code hl_function" href="class_teuchos_1_1_unit_test_base.html#af027ec352f30017e49bcbc4d1231ab29">unitTestFile</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> __FILE__; } \</div>
 <div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_teuchos_1_1_unit_test_base.html#aed40b66aa9769be8f7f193df2488aa6d">unitTestFileLineNumber</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> __LINE__; } \</div>
 <div class="line">  }; \</div>
 <div class="line">  \</div>
 <div class="line">  <span class="keyword">template</span>&lt;<span class="keyword">class</span> TYPE1, <span class="keyword">class</span> TYPE2, <span class="keyword">class</span> TYPE3, <span class="keyword">class</span> TYPE4&gt; \</div>
-<div class="line">        <span class="keywordtype">void</span> TEST_GROUP##_##TEST_NAME##_UnitTest&lt;TYPE1,TYPE2,TYPE3,TYPE4&gt;::runUnitTestImpl( \</div>
+<div class="line">        <span class="keywordtype">void</span> TEST_GROUP##_##TEST_NAME##_UnitTest&lt;TYPE1,TYPE2,TYPE3,TYPE4&gt;::runUnitTestImplBody( \</div>
 <div class="line">    <a class="code hl_class" href="class_teuchos_1_1basic___fancy_o_stream.html">Teuchos::FancyOStream</a> &amp;out, <span class="keywordtype">bool</span> &amp;success ) <span class="keyword">const</span> \</div>
 </div><!-- fragment -->
 <p>Macro for defining a templated unit test with four template parameters. </p>
 
-<p class="definition">Definition at line <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html#l00350">350</a> of file <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html">Teuchos_UnitTestHelpers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html#l00356">356</a> of file <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html">Teuchos_UnitTestHelpers.hpp</a>.</p>
 
 </div>
 </div>
@@ -779,7 +787,7 @@ Macros</h2></td></tr>
 </div><!-- fragment -->
 <p>Instantiate a templated unit test with four template parameters. </p>
 
-<p class="definition">Definition at line <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html#l00378">378</a> of file <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html">Teuchos_UnitTestHelpers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html#l00386">386</a> of file <a class="el" href="_teuchos___unit_test_helpers_8hpp_source.html">Teuchos_UnitTestHelpers.hpp</a>.</p>
 
 </div>
 </div>

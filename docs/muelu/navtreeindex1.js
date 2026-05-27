@@ -81,7 +81,7 @@ var NAVTREEINDEX1 =
 "_mue_lu___coarsening_visualization_factory__fwd_8hpp.html#a9988846f0116861f02d13bc1ee454307":[11,0,2,9,0,31,0],
 "_mue_lu___coarsening_visualization_factory__fwd_8hpp_source.html":[11,0,2,9,0,31],
 "_mue_lu___combine_p_factory__decl_8hpp.html":[11,0,2,8,6,0],
-"_mue_lu___combine_p_factory__decl_8hpp.html#a27ed203f4eb061868f91370bcacd41c5":[11,0,2,8,6,0,1],
+"_mue_lu___combine_p_factory__decl_8hpp.html#a27ed203f4eb061868f91370bcacd41c5":[11,0,2,8,6,0,2],
 "_mue_lu___combine_p_factory__decl_8hpp_source.html":[11,0,2,8,6,0],
 "_mue_lu___combine_p_factory__def_8hpp.html":[11,0,2,8,6,1],
 "_mue_lu___combine_p_factory__def_8hpp.html#a27ed203f4eb061868f91370bcacd41c5":[11,0,2,8,6,1,0],
