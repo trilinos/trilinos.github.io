@@ -180,8 +180,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>      retval = <span class="keyword">dynamic_cast&lt;</span>basedist_t *<span class="keyword">&gt;</span>(dist);</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>      <span class="comment">// Linear map similar to Trilinos default.</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>      Distribution1DLinear&lt;global_ordinal_type, scalar_type&gt; *dist =</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>          <span class="keyword">new</span> Distribution1DLinear&lt;global_ordinal_type, scalar_type&gt;(</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>      <span class="keyword">auto</span> *dist =</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>          <span class="keyword">new</span> Distribution1DLinear&lt;global_ordinal_type, scalar_type, node_type&gt;(</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>              nRow, comm, params);</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>      retval = <span class="keyword">dynamic_cast&lt;</span>basedist_t *<span class="keyword">&gt;</span>(dist);</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    }</div>
@@ -191,8 +191,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                &lt;&lt; <span class="stringliteral">&quot;LowerTriangularBlock distributions.&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    }</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    DistributionLowerTriangularBlock&lt;global_ordinal_type, scalar_type&gt; *dist =</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keyword">new</span> DistributionLowerTriangularBlock&lt;global_ordinal_type, scalar_type&gt;(</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keyword">auto</span> *dist =</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keyword">new</span> DistributionLowerTriangularBlock&lt;global_ordinal_type, scalar_type, node_type&gt;(</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            nRow, comm, params);</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    retval = <span class="keyword">dynamic_cast&lt;</span>basedist_t *<span class="keyword">&gt;</span>(dist);</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (distribution == <span class="stringliteral">&quot;MMFile&quot;</span>) {</div>
@@ -447,7 +447,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>      <span class="comment">// Add nonzero (I,J) to the map if it should be on this processor</span></div>
 <div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>      <span class="comment">// Some file-based distributions have processor assignment stored as</span></div>
 <div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>      <span class="comment">// the non-zero&#39;s value, so pass the value to Mine.</span></div>
-<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>      <span class="keywordflow">if</span> (dist-&gt;Mine(I, J, <span class="keywordtype">int</span>(V))) {</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>      <span class="keywordflow">if</span> (dist-&gt;Mine(I, J, me + 1)) {</div>
 <div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>        nzindex_t idx = std::make_pair(I, J);</div>
 <div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>        localNZ[idx]  = V;</div>
 <div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>        <span class="keywordflow">if</span> (requireDiagonal &amp;&amp; (I == J)) diagset.insert(I);</div>
@@ -456,7 +456,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>      <span class="comment">// If symmetrizing, add (J,I) to the map if it should be on this processor</span></div>
 <div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>      <span class="comment">// Some file-based distributions have processor assignment stored as</span></div>
 <div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>      <span class="comment">// the non-zero&#39;s value, so pass the value to Mine.</span></div>
-<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>      <span class="keywordflow">if</span> (symmetrize &amp;&amp; (I != J) &amp;&amp; dist-&gt;Mine(J, I, <span class="keywordtype">int</span>(V))) {</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>      <span class="keywordflow">if</span> (symmetrize &amp;&amp; (I != J) &amp;&amp; dist-&gt;Mine(J, I, me + 1)) {</div>
 <div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>        <span class="comment">//  Add entry (J, I) if need to symmetrize</span></div>
 <div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>        <span class="comment">//  This processor keeps this non-zero.</span></div>
 <div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>        nzindex_t idx = std::make_pair(J, I);</div>
@@ -731,7 +731,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span>      <span class="comment">// Add nonzero (I,J) to the map if it should be on this processor</span></div>
 <div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span>      <span class="comment">// Some file-based distributions have processor assignment stored as</span></div>
 <div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span>      <span class="comment">// the non-zero&#39;s value, so pass the value to Mine.</span></div>
-<div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span>      <span class="keywordflow">if</span> (dist-&gt;Mine(I, J, ONE)) {</div>
+<div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span>      <span class="keywordflow">if</span> (dist-&gt;Mine(I, J, me + 1)) {</div>
 <div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span>        nzindex_t idx = std::make_pair(I, J);</div>
 <div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span>        localNZ[idx]  = ONE;  <span class="comment">// For now, the input binary format does not</span></div>
 <div class="line"><a id="l00661" name="l00661"></a><span class="lineno">  661</span>                              <span class="comment">// support numeric values, so we insert one.</span></div>
@@ -741,7 +741,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span>      <span class="comment">// If symmetrizing, add (J,I) to the map if it should be on this processor</span></div>
 <div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span>      <span class="comment">// Some file-based distributions have processor assignment stored as</span></div>
 <div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span>      <span class="comment">// the non-zero&#39;s value, so pass the value to Mine.</span></div>
-<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>      <span class="keywordflow">if</span> (symmetrize &amp;&amp; (I != J) &amp;&amp; dist-&gt;Mine(J, I, ONE)) {</div>
+<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>      <span class="keywordflow">if</span> (symmetrize &amp;&amp; (I != J) &amp;&amp; dist-&gt;Mine(J, I, me + 1)) {</div>
 <div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span>        <span class="comment">//  Add entry (J, I) if need to symmetrize</span></div>
 <div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span>        <span class="comment">//  This processor keeps this non-zero.</span></div>
 <div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span>        nzindex_t idx = std::make_pair(J, I);</div>
@@ -1072,8 +1072,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01000" name="l01000"></a><span class="lineno"> 1000</span> </div>
 <div class="line"><a id="l01001" name="l01001"></a><span class="lineno"> 1001</span>  <span class="comment">// Create a new RowMap with only rows having non-zero entries.</span></div>
 <div class="line"><a id="l01002" name="l01002"></a><span class="lineno"> 1002</span>  <span class="keywordtype">size_t</span> dummy = Teuchos::OrdinalTraits&lt;Tpetra::global_size_t&gt;::invalid();</div>
-<div class="line"><a id="l01003" name="l01003"></a><span class="lineno"> 1003</span>  Teuchos::RCP&lt;const Tpetra::Map&lt;&gt; &gt; rowMap =</div>
-<div class="line"><a id="l01004" name="l01004"></a><span class="lineno"> 1004</span>      Teuchos::rcp(<span class="keyword">new</span> <a class="code hl_class" href="class_tpetra_1_1_crs_matrix_struct.html">Tpetra::Map&lt;&gt;</a>(dummy, rowIdx(), 0, comm));</div>
+<div class="line"><a id="l01003" name="l01003"></a><span class="lineno"> 1003</span>  <span class="keyword">auto</span> rowMap =</div>
+<div class="line"><a id="l01004" name="l01004"></a><span class="lineno"> 1004</span>      Teuchos::rcp(<span class="keyword">new</span> <a class="code hl_class" href="class_tpetra_1_1_crs_matrix_struct.html">Tpetra::Map&lt;local_ordinal_type, global_ordinal_type, node_type&gt;</a>(dummy, rowIdx(), 0, comm));</div>
 <div class="line"><a id="l01005" name="l01005"></a><span class="lineno"> 1005</span> </div>
 <div class="line"><a id="l01006" name="l01006"></a><span class="lineno"> 1006</span>  Teuchos::RCP&lt;sparse_matrix_type&gt; A =</div>
 <div class="line"><a id="l01007" name="l01007"></a><span class="lineno"> 1007</span>      rcp(<span class="keyword">new</span> sparse_matrix_type(rowMap, nnzPerRow()));</div>
@@ -1127,8 +1127,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01055" name="l01055"></a><span class="lineno"> 1055</span>      <span class="keywordflow">if</span> (dist-&gt;VecMine(i)) vectorSet.push_back(i);</div>
 <div class="line"><a id="l01056" name="l01056"></a><span class="lineno"> 1056</span> </div>
 <div class="line"><a id="l01057" name="l01057"></a><span class="lineno"> 1057</span>    dummy = Teuchos::OrdinalTraits&lt;Tpetra::global_size_t&gt;::invalid();</div>
-<div class="line"><a id="l01058" name="l01058"></a><span class="lineno"> 1058</span>    Teuchos::RCP&lt;const Tpetra::Map&lt;&gt; &gt; domainMap =</div>
-<div class="line"><a id="l01059" name="l01059"></a><span class="lineno"> 1059</span>        Teuchos::rcp(<span class="keyword">new</span> <a class="code hl_class" href="class_tpetra_1_1_crs_matrix_struct.html">Tpetra::Map&lt;&gt;</a>(dummy, vectorSet(), 0, comm));</div>
+<div class="line"><a id="l01058" name="l01058"></a><span class="lineno"> 1058</span>    <span class="keyword">auto</span> domainMap =</div>
+<div class="line"><a id="l01059" name="l01059"></a><span class="lineno"> 1059</span>        Teuchos::rcp(<span class="keyword">new</span> <a class="code hl_class" href="class_tpetra_1_1_crs_matrix_struct.html">Tpetra::Map&lt;local_ordinal_type, global_ordinal_type, node_type&gt;</a>(dummy, vectorSet(), 0, comm));</div>
 <div class="line"><a id="l01060" name="l01060"></a><span class="lineno"> 1060</span> </div>
 <div class="line"><a id="l01061" name="l01061"></a><span class="lineno"> 1061</span>    Teuchos::Array&lt;global_ordinal_type&gt;().swap(vectorSet);</div>
 <div class="line"><a id="l01062" name="l01062"></a><span class="lineno"> 1062</span> </div>
@@ -1138,8 +1138,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01066" name="l01066"></a><span class="lineno"> 1066</span>      <span class="keywordflow">if</span> (dist-&gt;VecMine(i)) vectorSet.push_back(i);</div>
 <div class="line"><a id="l01067" name="l01067"></a><span class="lineno"> 1067</span> </div>
 <div class="line"><a id="l01068" name="l01068"></a><span class="lineno"> 1068</span>    dummy = Teuchos::OrdinalTraits&lt;Tpetra::global_size_t&gt;::invalid();</div>
-<div class="line"><a id="l01069" name="l01069"></a><span class="lineno"> 1069</span>    Teuchos::RCP&lt;const Tpetra::Map&lt;&gt; &gt; rangeMap =</div>
-<div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span>        Teuchos::rcp(<span class="keyword">new</span> <a class="code hl_class" href="class_tpetra_1_1_crs_matrix_struct.html">Tpetra::Map&lt;&gt;</a>(dummy, vectorSet(), 0, comm));</div>
+<div class="line"><a id="l01069" name="l01069"></a><span class="lineno"> 1069</span>    <span class="keyword">auto</span> rangeMap =</div>
+<div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span>        Teuchos::rcp(<span class="keyword">new</span> <a class="code hl_class" href="class_tpetra_1_1_crs_matrix_struct.html">Tpetra::Map&lt;local_ordinal_type, global_ordinal_type, node_type&gt;</a>(dummy, vectorSet(), 0, comm));</div>
 <div class="line"><a id="l01071" name="l01071"></a><span class="lineno"> 1071</span> </div>
 <div class="line"><a id="l01072" name="l01072"></a><span class="lineno"> 1072</span>    Teuchos::Array&lt;global_ordinal_type&gt;().swap(vectorSet);</div>
 <div class="line"><a id="l01073" name="l01073"></a><span class="lineno"> 1073</span> </div>

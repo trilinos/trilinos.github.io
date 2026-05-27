@@ -56,6 +56,7 @@ var class_mue_lu_1_1_utilities_base =
     [ "ZeroDirichletCols", "class_mue_lu_1_1_utilities_base.html#af92ec5c7022b7b6802c00259fa3bc052", null ],
     [ "FindDirichletRowsAndPropagateToCols", "class_mue_lu_1_1_utilities_base.html#a064353fe2fa592f6e622e6ec18407c13", null ],
     [ "ReplaceNonZerosWithOnes", "class_mue_lu_1_1_utilities_base.html#ae6ce0856e2df02cef901208e56b6ed41", null ],
+    [ "SPAI", "class_mue_lu_1_1_utilities_base.html#a3bd703b863911661af74b033f79f6795", null ],
     [ "GeneratedBlockedTargetMap", "class_mue_lu_1_1_utilities_base.html#a9cdbb4ad474ae9885ffb992d4cbf4389", null ],
     [ "MapsAreNested", "class_mue_lu_1_1_utilities_base.html#a5772f0667c15ed7c6cb0c92528e54242", null ],
     [ "CuthillMcKee", "class_mue_lu_1_1_utilities_base.html#a429fe32da21a728163f1deac77d34025", null ],

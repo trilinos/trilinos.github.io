@@ -1045,6 +1045,12 @@ Functions</h2></td></tr>
 <tr class="memitem:afb12dcc66b201ae719f5440fe4c397af" id="r_afb12dcc66b201ae719f5440fe4c397af"><td class="memTemplParams" colspan="2">template&lt;typename ScalarT , typename LO , typename GO &gt; </td></tr>
 <tr class="memitem:afb12dcc66b201ae719f5440fe4c397af"><td class="memTemplItemLeft" align="right" valign="top">Teuchos::RCP&lt; <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/class_thyra_1_1_model_evaluator.html">Thyra::ModelEvaluator</a>&lt; ScalarT &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepanzer.html#afb12dcc66b201ae719f5440fe4c397af">buildModelEvaluator</a> (const RCP&lt; <a class="el" href="classpanzer_1_1_field_manager_builder.html">panzer::FieldManagerBuilder</a> &amp;fmb, const RCP&lt; <a class="el" href="classpanzer_1_1_blocked_epetra_linear_obj_factory.html">panzer::BlockedEpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">panzer::Traits</a>, int &gt; &gt; &amp;lof)</td></tr>
 <tr class="separator:afb12dcc66b201ae719f5440fe4c397af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7480773f7085c19b908f8a57d9414a7d" id="r_a7480773f7085c19b908f8a57d9414a7d"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer.html#a7480773f7085c19b908f8a57d9414a7d">findParameterIndex</a> (const std::string &amp;p_name, const <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/class_thyra_1_1_model_evaluator.html">Thyra::ModelEvaluator</a>&lt; double &gt; &amp;me, const bool &amp;throw_if_not_found=true)</td></tr>
+<tr class="memdesc:a7480773f7085c19b908f8a57d9414a7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a parameter name and a <a class="el" href="classpanzer_1_1_model_evaluator.html">ModelEvaluator</a>, returns the index and subindex of the parameter in the <a class="el" href="classpanzer_1_1_model_evaluator.html">ModelEvaluator</a>.  <br /></td></tr>
+<tr class="separator:a7480773f7085c19b908f8a57d9414a7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc9b378403f636b8cf58b82ced85af33" id="r_acc9b378403f636b8cf58b82ced85af33"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer.html#acc9b378403f636b8cf58b82ced85af33">findResponseIndex</a> (const std::string &amp;g_name, const <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/class_thyra_1_1_model_evaluator.html">Thyra::ModelEvaluator</a>&lt; double &gt; &amp;me, const bool &amp;throw_if_not_found=true)</td></tr>
+<tr class="memdesc:acc9b378403f636b8cf58b82ced85af33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a response name and a <a class="el" href="classpanzer_1_1_model_evaluator.html">ModelEvaluator</a>, returns the index and subindex of the response in the <a class="el" href="classpanzer_1_1_model_evaluator.html">ModelEvaluator</a>.  <br /></td></tr>
+<tr class="separator:acc9b378403f636b8cf58b82ced85af33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88836f191384a1cd3cf1d2ddc17547e2" id="r_a88836f191384a1cd3cf1d2ddc17547e2"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Array &gt; </td></tr>
 <tr class="memitem:a88836f191384a1cd3cf1d2ddc17547e2"><td class="memTemplItemLeft" align="right" valign="top">Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_orientation_container_base.html">panzer::OrientationContainerBase</a>&lt; Scalar, Array &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepanzer.html#a88836f191384a1cd3cf1d2ddc17547e2">buildOrientationContainer</a> (const Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_global_indexer.html">panzer::GlobalIndexer</a> &gt; &amp;globalIndexer, const std::string &amp;fieldName)</td></tr>
 <tr class="separator:a88836f191384a1cd3cf1d2ddc17547e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3570,6 +3576,82 @@ template&lt;typename ScalarT , typename LO , typename GO &gt; </div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_panzer___model_evaluator___factory__impl_8hpp_source.html#l00023">23</a> of file <a class="el" href="_panzer___model_evaluator___factory__impl_8hpp_source.html">Panzer_ModelEvaluator_Factory_impl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a7480773f7085c19b908f8a57d9414a7d" name="a7480773f7085c19b908f8a57d9414a7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7480773f7085c19b908f8a57d9414a7d">&#9670;&#160;</a></span>findParameterIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::tuple&lt; int, int &gt; panzer::findParameterIndex </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>p_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/class_thyra_1_1_model_evaluator.html">Thyra::ModelEvaluator</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>me</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool &amp;&#160;</td>
+          <td class="paramname"><em>throw_if_not_found</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Given a parameter name and a <a class="el" href="classpanzer_1_1_model_evaluator.html">ModelEvaluator</a>, returns the index and subindex of the parameter in the <a class="el" href="classpanzer_1_1_model_evaluator.html">ModelEvaluator</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="_panzer___model_evaluator___utilities_8cpp_source.html#l00005">5</a> of file <a class="el" href="_panzer___model_evaluator___utilities_8cpp_source.html">Panzer_ModelEvaluator_Utilities.cpp</a>.</p>
+
+</div>
+</div>
+<a id="acc9b378403f636b8cf58b82ced85af33" name="acc9b378403f636b8cf58b82ced85af33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc9b378403f636b8cf58b82ced85af33">&#9670;&#160;</a></span>findResponseIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::tuple&lt; int, int &gt; panzer::findResponseIndex </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>g_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/class_thyra_1_1_model_evaluator.html">Thyra::ModelEvaluator</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>me</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool &amp;&#160;</td>
+          <td class="paramname"><em>throw_if_not_found</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Given a response name and a <a class="el" href="classpanzer_1_1_model_evaluator.html">ModelEvaluator</a>, returns the index and subindex of the response in the <a class="el" href="classpanzer_1_1_model_evaluator.html">ModelEvaluator</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="_panzer___model_evaluator___utilities_8cpp_source.html#l00029">29</a> of file <a class="el" href="_panzer___model_evaluator___utilities_8cpp_source.html">Panzer_ModelEvaluator_Utilities.cpp</a>.</p>
 
 </div>
 </div>

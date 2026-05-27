@@ -6,6 +6,8 @@ var class_mue_lu_1_1_combine_p_factory =
     [ "DeclareInput", "class_mue_lu_1_1_combine_p_factory.html#ab6cb797e67a3dc08a9757dc78a71c7de", null ],
     [ "Build", "class_mue_lu_1_1_combine_p_factory.html#a07f998e58739bca9ec49e7100e0c0d79", null ],
     [ "BuildP", "class_mue_lu_1_1_combine_p_factory.html#a1e293afd8dd449bde580753ac7be390c", null ],
+    [ "BuildPBlocked", "class_mue_lu_1_1_combine_p_factory.html#a30b12b73e8866b4808bb824ceab9dddd", null ],
+    [ "BuildPBlockedImpl", "class_mue_lu_1_1_combine_p_factory.html#a3401b86511c5bec0968c8e9e3d3d64cd", null ],
     [ "MueLuTests::CombinePFactoryTester< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_combine_p_factory.html#a65b09d6e3bdf6b13194729bbeb68d625", null ],
     [ "numPDEs_", "class_mue_lu_1_1_combine_p_factory.html#a0a39b099e7a0e6b67a59fcacbb5e060c", null ]
 ];

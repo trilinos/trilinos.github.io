@@ -66,7 +66,7 @@ var searchData=
   ['timings1_63',['Timings1',['../namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1fa0c18ff65eb02d5002ba1c674c5d0efd5',1,'MueLu']]],
   ['timingsbylevel_64',['TimingsByLevel',['../namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1faebba10f17b7058eaeca4978a313e72c1',1,'MueLu']]],
   ['tmultivec_65',['TMultiVec',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_ifpack2_1_1_details_1_1_fast_i_l_u___base.html#ab8fad249c26e07c0456621594622040d',1,'Ifpack2::Details::FastILU_Base']]],
-  ['tmv_66',['tmv',['../class_mue_lu_1_1_shifted_laplacian.html#a010da6792030d1b3d8fd281bdb378f6c',1,'MueLu::ShiftedLaplacian::TMV'],['../class_mue_lu_1_1_belos_smoother.html#a11778e83d4125ae248411c8546f78c46',1,'MueLu::BelosSmoother::tMV']]],
+  ['tmv_66',['tmv',['../class_mue_lu_1_1_belos_smoother.html#a11778e83d4125ae248411c8546f78c46',1,'MueLu::BelosSmoother::tMV'],['../class_mue_lu_1_1_shifted_laplacian.html#a010da6792030d1b3d8fd281bdb378f6c',1,'MueLu::ShiftedLaplacian::TMV']]],
   ['todo_20list_67',['Todo List',['../todo.html',1,'']]],
   ['toggle_68',['toggle',['../_mue_lu___product_operator__def_8hpp.html#ac676b0c4ee641986412e57f97612e972',1,'MueLu_ProductOperator_def.hpp']]],
   ['togglecoordinatestransferfactory_69',['togglecoordinatestransferfactory',['../class_mue_lu_1_1_toggle_coordinates_transfer_factory.html#a1a11ee0fb281f6c66f79cd892afdf010',1,'MueLu::ToggleCoordinatesTransferFactory::ToggleCoordinatesTransferFactory()'],['../class_mue_lu_1_1_toggle_coordinates_transfer_factory.html',1,'MueLu::ToggleCoordinatesTransferFactory&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;']]],

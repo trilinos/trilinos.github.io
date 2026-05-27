@@ -128,170 +128,178 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="preprocessor">    TEST_GROUP##_##TEST_NAME##_UnitTest(const std::string&amp; typeName) \</span></div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="preprocessor">      : Teuchos::UnitTestBase( std::string(#TEST_GROUP)+&quot;_&quot;+typeName, #TEST_NAME ) \</span></div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="preprocessor">    {} \</span></div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="preprocessor">    void runUnitTestImpl( Teuchos::FancyOStream &amp;out, bool &amp;success ) const; \</span></div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="preprocessor">    virtual std::string unitTestFile() const { return __FILE__; } \</span></div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="preprocessor">    virtual long int unitTestFileLineNumber() const { return __LINE__; } \</span></div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="preprocessor">  }; \</span></div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="preprocessor">  \</span></div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="preprocessor">  template&lt;class TYPE&gt; \</span></div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="preprocessor">        void TEST_GROUP##_##TEST_NAME##_UnitTest&lt;TYPE&gt;::runUnitTestImpl( \</span></div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="preprocessor">    Teuchos::FancyOStream &amp;out, bool &amp;success ) const \</span></div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="preprocessor"></span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="preprocessor">    virtual void runUnitTestImpl( Teuchos::FancyOStream &amp;out, bool &amp;success ) const override \</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="preprocessor">    { runUnitTestImplBody(out, success); } \</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="preprocessor">    void runUnitTestImplBody( Teuchos::FancyOStream &amp;out, bool &amp;success ) const; \</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="preprocessor">    virtual std::string unitTestFile() const { return __FILE__; } \</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="preprocessor">    virtual long int unitTestFileLineNumber() const { return __LINE__; } \</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="preprocessor">  }; \</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="preprocessor">  \</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="preprocessor">  template&lt;class TYPE&gt; \</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="preprocessor">        void TEST_GROUP##_##TEST_NAME##_UnitTest&lt;TYPE&gt;::runUnitTestImplBody( \</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="preprocessor">    Teuchos::FancyOStream &amp;out, bool &amp;success ) const \</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="preprocessor"></span> </div>
 </div>
-<div class="foldopen" id="foldopen00155" data-start="" data-end="">
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="group___teuchos___unit_test_definition_macros__grp.html#gae2e0ab156466c99eabf74c3210beaa5c">  155</a></span><span class="preprocessor">#define TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT(TEST_GROUP, TEST_NAME, TYPE) \</span></div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="preprocessor">  \</span></div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="preprocessor">  template class TEST_GROUP##_##TEST_NAME##_UnitTest&lt;TYPE&gt;; \</span></div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="preprocessor">  TEST_GROUP##_##TEST_NAME##_UnitTest&lt;TYPE&gt; \</span></div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="preprocessor">  instance_##TEST_GROUP##_##TYPE##_##TEST_NAME##_UnitTest(#TYPE);</span></div>
+<div class="foldopen" id="foldopen00157" data-start="" data-end="">
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="group___teuchos___unit_test_definition_macros__grp.html#gae2e0ab156466c99eabf74c3210beaa5c">  157</a></span><span class="preprocessor">#define TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT(TEST_GROUP, TEST_NAME, TYPE) \</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="preprocessor">  \</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="preprocessor">  template class TEST_GROUP##_##TEST_NAME##_UnitTest&lt;TYPE&gt;; \</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="preprocessor">  TEST_GROUP##_##TEST_NAME##_UnitTest&lt;TYPE&gt; \</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="preprocessor">  instance_##TEST_GROUP##_##TYPE##_##TEST_NAME##_UnitTest(#TYPE);</span></div>
 </div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="preprocessor">#ifdef HAVE_TEUCHOS_INST_FLOAT</span></div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="preprocessor">#  define TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT_FLOAT(TEST_GROUP, TEST_NAME)\</span></div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="preprocessor">    TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT(TEST_GROUP, TEST_NAME, float)</span></div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="preprocessor">#  define TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT_FLOAT(TEST_GROUP, TEST_NAME)</span></div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="preprocessor">#define TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT_DOUBLE(TEST_GROUP, TEST_NAME)\</span></div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="preprocessor">  TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT(TEST_GROUP, TEST_NAME, double)</span></div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="preprocessor">#ifdef HAVE_TEUCHOS_INST_COMPLEX_FLOAT</span></div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span><span class="preprocessor">#  define TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT_COMPLEX_FLOAT(TEST_GROUP, TEST_NAME)\</span></div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="preprocessor">     typedef std::complex&lt;float&gt; ComplexFloat; \</span></div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="preprocessor">     TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT(TEST_GROUP, TEST_NAME, ComplexFloat)</span></div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="preprocessor">#  define TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT_COMPLEX_FLOAT(TEST_GROUP, TEST_NAME)</span></div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="preprocessor">#ifdef HAVE_TEUCHOS_INST_COMPLEX_DOUBLE</span></div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span><span class="preprocessor">#  define TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT_COMPLEX_DOUBLE(TEST_GROUP, TEST_NAME)\</span></div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span><span class="preprocessor">     typedef std::complex&lt;double&gt; ComplexDouble; \</span></div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span><span class="preprocessor">     TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT(TEST_GROUP, TEST_NAME, ComplexDouble)</span></div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="preprocessor">#  define TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT_COMPLEX_DOUBLE(TEST_GROUP, TEST_NAME)</span></div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
-<div class="foldopen" id="foldopen00194" data-start="" data-end="">
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno"><a class="line" href="group___teuchos___unit_test_definition_macros__grp.html#gaa161ff2e0b5f8eb1a29650e4547828c0">  194</a></span><span class="preprocessor">#define TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT_REAL_SCALAR_TYPES(TEST_GROUP, TEST_NAME)\</span></div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span><span class="preprocessor">  TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT_FLOAT(TEST_GROUP, TEST_NAME) \</span></div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="preprocessor">  TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT_DOUBLE(TEST_GROUP, TEST_NAME)</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="preprocessor">#ifdef HAVE_TEUCHOS_INST_FLOAT</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="preprocessor">#  define TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT_FLOAT(TEST_GROUP, TEST_NAME)\</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="preprocessor">    TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT(TEST_GROUP, TEST_NAME, float)</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="preprocessor">#  define TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT_FLOAT(TEST_GROUP, TEST_NAME)</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="preprocessor">#define TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT_DOUBLE(TEST_GROUP, TEST_NAME)\</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="preprocessor">  TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT(TEST_GROUP, TEST_NAME, double)</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="preprocessor">#ifdef HAVE_TEUCHOS_INST_COMPLEX_FLOAT</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="preprocessor">#  define TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT_COMPLEX_FLOAT(TEST_GROUP, TEST_NAME)\</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="preprocessor">     typedef std::complex&lt;float&gt; ComplexFloat; \</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="preprocessor">     TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT(TEST_GROUP, TEST_NAME, ComplexFloat)</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span><span class="preprocessor">#  define TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT_COMPLEX_FLOAT(TEST_GROUP, TEST_NAME)</span></div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span><span class="preprocessor">#ifdef HAVE_TEUCHOS_INST_COMPLEX_DOUBLE</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span><span class="preprocessor">#  define TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT_COMPLEX_DOUBLE(TEST_GROUP, TEST_NAME)\</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span><span class="preprocessor">     typedef std::complex&lt;double&gt; ComplexDouble; \</span></div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="preprocessor">     TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT(TEST_GROUP, TEST_NAME, ComplexDouble)</span></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="preprocessor">#  define TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT_COMPLEX_DOUBLE(TEST_GROUP, TEST_NAME)</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="foldopen" id="foldopen00196" data-start="" data-end="">
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno"><a class="line" href="group___teuchos___unit_test_definition_macros__grp.html#gaa161ff2e0b5f8eb1a29650e4547828c0">  196</a></span><span class="preprocessor">#define TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT_REAL_SCALAR_TYPES(TEST_GROUP, TEST_NAME)\</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="preprocessor">  TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT_FLOAT(TEST_GROUP, TEST_NAME) \</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="preprocessor">  TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT_DOUBLE(TEST_GROUP, TEST_NAME)</span></div>
 </div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
-<div class="foldopen" id="foldopen00203" data-start="" data-end="">
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno"><a class="line" href="group___teuchos___unit_test_definition_macros__grp.html#gad62d2ff0f36e11c9e8e59890840b73a2">  203</a></span><span class="preprocessor">#define TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT_SCALAR_TYPES(TEST_GROUP, TEST_NAME)\</span></div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="preprocessor">  TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT_FLOAT(TEST_GROUP, TEST_NAME) \</span></div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="preprocessor">  TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT_DOUBLE(TEST_GROUP, TEST_NAME) \</span></div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="preprocessor">  TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT_COMPLEX_FLOAT(TEST_GROUP, TEST_NAME) \</span></div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="preprocessor">  TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT_COMPLEX_DOUBLE(TEST_GROUP, TEST_NAME)</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
+<div class="foldopen" id="foldopen00205" data-start="" data-end="">
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno"><a class="line" href="group___teuchos___unit_test_definition_macros__grp.html#gad62d2ff0f36e11c9e8e59890840b73a2">  205</a></span><span class="preprocessor">#define TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT_SCALAR_TYPES(TEST_GROUP, TEST_NAME)\</span></div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="preprocessor">  TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT_FLOAT(TEST_GROUP, TEST_NAME) \</span></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="preprocessor">  TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT_DOUBLE(TEST_GROUP, TEST_NAME) \</span></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="preprocessor">  TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT_COMPLEX_FLOAT(TEST_GROUP, TEST_NAME) \</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="preprocessor">  TEUCHOS_UNIT_TEST_TEMPLATE_1_INSTANT_COMPLEX_DOUBLE(TEST_GROUP, TEST_NAME)</span></div>
 </div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
-<div class="foldopen" id="foldopen00270" data-start="" data-end="">
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno"><a class="line" href="group___teuchos___unit_test_definition_macros__grp.html#gac8774758ef1f4d0d8e1b06bbecb85f45">  270</a></span><span class="preprocessor">#define TEUCHOS_UNIT_TEST_TEMPLATE_2_DECL(TEST_GROUP, TEST_NAME, TYPE1, TYPE2) \</span></div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span><span class="preprocessor">  template&lt;class TYPE1, class TYPE2&gt; \</span></div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span><span class="preprocessor">  class TEST_GROUP##_##TEST_NAME##_UnitTest : public Teuchos::UnitTestBase \</span></div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span><span class="preprocessor">        { \</span></div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span><span class="preprocessor">  public: \</span></div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span><span class="preprocessor">    TEST_GROUP##_##TEST_NAME##_UnitTest( \</span></div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span><span class="preprocessor">      const std::string&amp; type1Name, \</span></div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span><span class="preprocessor">      const std::string&amp; type2Name \</span></div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span><span class="preprocessor">       ) \</span></div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span><span class="preprocessor">      :Teuchos::UnitTestBase( \</span></div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span><span class="preprocessor">         std::string(#TEST_GROUP)+&quot;_&quot;+type1Name+&quot;_&quot;+type2Name, #TEST_NAME ) \</span></div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span><span class="preprocessor">    {} \</span></div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span><span class="preprocessor">    void runUnitTestImpl( Teuchos::FancyOStream &amp;out, bool &amp;success ) const; \</span></div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span><span class="preprocessor">    virtual std::string unitTestFile() const { return __FILE__; } \</span></div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span><span class="preprocessor">    virtual long int unitTestFileLineNumber() const { return __LINE__; } \</span></div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span><span class="preprocessor">  }; \</span></div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span><span class="preprocessor">  \</span></div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span><span class="preprocessor">  template&lt;class TYPE1, class TYPE2&gt; \</span></div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span><span class="preprocessor">        void TEST_GROUP##_##TEST_NAME##_UnitTest&lt;TYPE1,TYPE2&gt;::runUnitTestImpl( \</span></div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span><span class="preprocessor">    Teuchos::FancyOStream &amp;out, bool &amp;success ) const \</span></div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span><span class="preprocessor"></span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
+<div class="foldopen" id="foldopen00272" data-start="" data-end="">
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno"><a class="line" href="group___teuchos___unit_test_definition_macros__grp.html#gac8774758ef1f4d0d8e1b06bbecb85f45">  272</a></span><span class="preprocessor">#define TEUCHOS_UNIT_TEST_TEMPLATE_2_DECL(TEST_GROUP, TEST_NAME, TYPE1, TYPE2) \</span></div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span><span class="preprocessor">  template&lt;class TYPE1, class TYPE2&gt; \</span></div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span><span class="preprocessor">  class TEST_GROUP##_##TEST_NAME##_UnitTest : public Teuchos::UnitTestBase \</span></div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span><span class="preprocessor">        { \</span></div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span><span class="preprocessor">  public: \</span></div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span><span class="preprocessor">    TEST_GROUP##_##TEST_NAME##_UnitTest( \</span></div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span><span class="preprocessor">      const std::string&amp; type1Name, \</span></div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span><span class="preprocessor">      const std::string&amp; type2Name \</span></div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span><span class="preprocessor">       ) \</span></div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span><span class="preprocessor">      :Teuchos::UnitTestBase( \</span></div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span><span class="preprocessor">         std::string(#TEST_GROUP)+&quot;_&quot;+type1Name+&quot;_&quot;+type2Name, #TEST_NAME ) \</span></div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span><span class="preprocessor">    {} \</span></div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span><span class="preprocessor">    virtual void runUnitTestImpl( Teuchos::FancyOStream &amp;out, bool &amp;success ) const override \</span></div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span><span class="preprocessor">    { runUnitTestImplBody(out, success); } \</span></div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span><span class="preprocessor">    void runUnitTestImplBody( Teuchos::FancyOStream &amp;out, bool &amp;success ) const; \</span></div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span><span class="preprocessor">    virtual std::string unitTestFile() const { return __FILE__; } \</span></div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span><span class="preprocessor">    virtual long int unitTestFileLineNumber() const { return __LINE__; } \</span></div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span><span class="preprocessor">  }; \</span></div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span><span class="preprocessor">  \</span></div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span><span class="preprocessor">  template&lt;class TYPE1, class TYPE2&gt; \</span></div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span><span class="preprocessor">        void TEST_GROUP##_##TEST_NAME##_UnitTest&lt;TYPE1,TYPE2&gt;::runUnitTestImplBody( \</span></div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span><span class="preprocessor">    Teuchos::FancyOStream &amp;out, bool &amp;success ) const \</span></div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span><span class="preprocessor"></span> </div>
 </div>
-<div class="foldopen" id="foldopen00301" data-start="" data-end="">
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno"><a class="line" href="group___teuchos___unit_test_definition_macros__grp.html#gaedbb2182994534c90b18160e519def67">  301</a></span><span class="preprocessor">#define TEUCHOS_UNIT_TEST_TEMPLATE_2_INSTANT(TEST_GROUP, TEST_NAME, TYPE1, TYPE2) \</span></div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span><span class="preprocessor">  \</span></div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span><span class="preprocessor">  template class TEST_GROUP##_##TEST_NAME##_UnitTest&lt;TYPE1, TYPE2 &gt;; \</span></div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span><span class="preprocessor">  TEST_GROUP##_##TEST_NAME##_UnitTest&lt;TYPE1, TYPE2 &gt; \</span></div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span><span class="preprocessor">  instance_##TEST_GROUP##_##TYPE1##_##TYPE2##_##TEST_NAME##_UnitTest(#TYPE1,#TYPE2);</span></div>
+<div class="foldopen" id="foldopen00305" data-start="" data-end="">
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno"><a class="line" href="group___teuchos___unit_test_definition_macros__grp.html#gaedbb2182994534c90b18160e519def67">  305</a></span><span class="preprocessor">#define TEUCHOS_UNIT_TEST_TEMPLATE_2_INSTANT(TEST_GROUP, TEST_NAME, TYPE1, TYPE2) \</span></div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span><span class="preprocessor">  \</span></div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span><span class="preprocessor">  template class TEST_GROUP##_##TEST_NAME##_UnitTest&lt;TYPE1, TYPE2 &gt;; \</span></div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span><span class="preprocessor">  TEST_GROUP##_##TEST_NAME##_UnitTest&lt;TYPE1, TYPE2 &gt; \</span></div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span><span class="preprocessor">  instance_##TEST_GROUP##_##TYPE1##_##TYPE2##_##TEST_NAME##_UnitTest(#TYPE1,#TYPE2);</span></div>
 </div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span> </div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span> </div>
-<div class="foldopen" id="foldopen00312" data-start="" data-end="">
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno"><a class="line" href="group___teuchos___unit_test_definition_macros__grp.html#ga9c1573038634352f2e1ff4c5a2ee058e">  312</a></span><span class="preprocessor">#define TEUCHOS_UNIT_TEST_TEMPLATE_3_DECL(TEST_GROUP, TEST_NAME, TYPE1, TYPE2, TYPE3) \</span></div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span><span class="preprocessor">  template&lt;class TYPE1, class TYPE2, class TYPE3&gt; \</span></div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span><span class="preprocessor">  class TEST_GROUP##_##TEST_NAME##_UnitTest : public Teuchos::UnitTestBase \</span></div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span><span class="preprocessor">        { \</span></div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span><span class="preprocessor">  public: \</span></div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span><span class="preprocessor">    TEST_GROUP##_##TEST_NAME##_UnitTest( \</span></div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span><span class="preprocessor">      const std::string&amp; type1Name, \</span></div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span><span class="preprocessor">      const std::string&amp; type2Name, \</span></div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span><span class="preprocessor">      const std::string&amp; type3Name \</span></div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span><span class="preprocessor">       ) \</span></div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span><span class="preprocessor">      :Teuchos::UnitTestBase( \</span></div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span><span class="preprocessor">         std::string(#TEST_GROUP)+&quot;_&quot;+type1Name+&quot;_&quot;+type2Name+&quot;_&quot;+type3Name, #TEST_NAME ) \</span></div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span><span class="preprocessor">    {} \</span></div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span><span class="preprocessor">    void runUnitTestImpl( Teuchos::FancyOStream &amp;out, bool &amp;success ) const; \</span></div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span><span class="preprocessor">    virtual std::string unitTestFile() const { return __FILE__; } \</span></div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span><span class="preprocessor">    virtual long int unitTestFileLineNumber() const { return __LINE__; } \</span></div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span><span class="preprocessor">  }; \</span></div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span><span class="preprocessor">  \</span></div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span><span class="preprocessor">  template&lt;class TYPE1, class TYPE2, class TYPE3&gt; \</span></div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span><span class="preprocessor">        void TEST_GROUP##_##TEST_NAME##_UnitTest&lt;TYPE1,TYPE2,TYPE3&gt;::runUnitTestImpl( \</span></div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span><span class="preprocessor">    Teuchos::FancyOStream &amp;out, bool &amp;success ) const \</span></div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span><span class="preprocessor"></span> </div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span> </div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span> </div>
+<div class="foldopen" id="foldopen00316" data-start="" data-end="">
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno"><a class="line" href="group___teuchos___unit_test_definition_macros__grp.html#ga9c1573038634352f2e1ff4c5a2ee058e">  316</a></span><span class="preprocessor">#define TEUCHOS_UNIT_TEST_TEMPLATE_3_DECL(TEST_GROUP, TEST_NAME, TYPE1, TYPE2, TYPE3) \</span></div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span><span class="preprocessor">  template&lt;class TYPE1, class TYPE2, class TYPE3&gt; \</span></div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span><span class="preprocessor">  class TEST_GROUP##_##TEST_NAME##_UnitTest : public Teuchos::UnitTestBase \</span></div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span><span class="preprocessor">        { \</span></div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span><span class="preprocessor">  public: \</span></div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span><span class="preprocessor">    TEST_GROUP##_##TEST_NAME##_UnitTest( \</span></div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span><span class="preprocessor">      const std::string&amp; type1Name, \</span></div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span><span class="preprocessor">      const std::string&amp; type2Name, \</span></div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span><span class="preprocessor">      const std::string&amp; type3Name \</span></div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span><span class="preprocessor">       ) \</span></div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span><span class="preprocessor">      :Teuchos::UnitTestBase( \</span></div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span><span class="preprocessor">         std::string(#TEST_GROUP)+&quot;_&quot;+type1Name+&quot;_&quot;+type2Name+&quot;_&quot;+type3Name, #TEST_NAME ) \</span></div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span><span class="preprocessor">    {} \</span></div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span><span class="preprocessor">    virtual void runUnitTestImpl( Teuchos::FancyOStream &amp;out, bool &amp;success ) const override \</span></div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span><span class="preprocessor">    { runUnitTestImplBody(out, success); } \</span></div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span><span class="preprocessor">    void runUnitTestImplBody( Teuchos::FancyOStream &amp;out, bool &amp;success ) const; \</span></div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span><span class="preprocessor">    virtual std::string unitTestFile() const { return __FILE__; } \</span></div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span><span class="preprocessor">    virtual long int unitTestFileLineNumber() const { return __LINE__; } \</span></div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span><span class="preprocessor">  }; \</span></div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span><span class="preprocessor">  \</span></div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span><span class="preprocessor">  template&lt;class TYPE1, class TYPE2, class TYPE3&gt; \</span></div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span><span class="preprocessor">        void TEST_GROUP##_##TEST_NAME##_UnitTest&lt;TYPE1,TYPE2,TYPE3&gt;::runUnitTestImplBody( \</span></div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span><span class="preprocessor">    Teuchos::FancyOStream &amp;out, bool &amp;success ) const \</span></div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span><span class="preprocessor"></span> </div>
 </div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span> </div>
-<div class="foldopen" id="foldopen00339" data-start="" data-end="">
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno"><a class="line" href="group___teuchos___unit_test_definition_macros__grp.html#ga60e51e9c157596f0b81fb9ddd95a88bd">  339</a></span><span class="preprocessor">#define TEUCHOS_UNIT_TEST_TEMPLATE_3_INSTANT(TEST_GROUP, TEST_NAME, TYPE1, TYPE2, TYPE3) \</span></div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span><span class="preprocessor">  \</span></div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span><span class="preprocessor">  template class TEST_GROUP##_##TEST_NAME##_UnitTest&lt;TYPE1, TYPE2, TYPE3 &gt;; \</span></div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span><span class="preprocessor">  TEST_GROUP##_##TEST_NAME##_UnitTest&lt;TYPE1, TYPE2, TYPE3 &gt; \</span></div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span><span class="preprocessor">  instance_##TEST_GROUP##_##TYPE1##_##TYPE2##_##TYPE3##_##TEST_NAME##_UnitTest(#TYPE1,#TYPE2,#TYPE3);</span></div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span> </div>
+<div class="foldopen" id="foldopen00345" data-start="" data-end="">
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno"><a class="line" href="group___teuchos___unit_test_definition_macros__grp.html#ga60e51e9c157596f0b81fb9ddd95a88bd">  345</a></span><span class="preprocessor">#define TEUCHOS_UNIT_TEST_TEMPLATE_3_INSTANT(TEST_GROUP, TEST_NAME, TYPE1, TYPE2, TYPE3) \</span></div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span><span class="preprocessor">  \</span></div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span><span class="preprocessor">  template class TEST_GROUP##_##TEST_NAME##_UnitTest&lt;TYPE1, TYPE2, TYPE3 &gt;; \</span></div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span><span class="preprocessor">  TEST_GROUP##_##TEST_NAME##_UnitTest&lt;TYPE1, TYPE2, TYPE3 &gt; \</span></div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span><span class="preprocessor">  instance_##TEST_GROUP##_##TYPE1##_##TYPE2##_##TYPE3##_##TEST_NAME##_UnitTest(#TYPE1,#TYPE2,#TYPE3);</span></div>
 </div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span> </div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span> </div>
-<div class="foldopen" id="foldopen00350" data-start="" data-end="">
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno"><a class="line" href="group___teuchos___unit_test_definition_macros__grp.html#ga1de30af4c911da22031b27358819dddd">  350</a></span><span class="preprocessor">#define TEUCHOS_UNIT_TEST_TEMPLATE_4_DECL(TEST_GROUP, TEST_NAME, TYPE1, TYPE2, TYPE3, TYPE4) \</span></div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span><span class="preprocessor">  template&lt;class TYPE1, class TYPE2, class TYPE3, class TYPE4&gt; \</span></div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span><span class="preprocessor">  class TEST_GROUP##_##TEST_NAME##_UnitTest : public Teuchos::UnitTestBase \</span></div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span><span class="preprocessor">        { \</span></div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span><span class="preprocessor">  public: \</span></div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span><span class="preprocessor">    TEST_GROUP##_##TEST_NAME##_UnitTest( \</span></div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span><span class="preprocessor">      const std::string&amp; type1Name, \</span></div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span><span class="preprocessor">      const std::string&amp; type2Name, \</span></div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span><span class="preprocessor">      const std::string&amp; type3Name, \</span></div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span><span class="preprocessor">      const std::string&amp; type4Name \</span></div>
-<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span><span class="preprocessor">       ) \</span></div>
-<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span><span class="preprocessor">      :Teuchos::UnitTestBase( \</span></div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span><span class="preprocessor">         std::string(#TEST_GROUP)+&quot;_&quot;+type1Name+&quot;_&quot;+type2Name+&quot;_&quot;+type3Name+&quot;_&quot;+type4Name, #TEST_NAME ) \</span></div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span><span class="preprocessor">    {} \</span></div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span><span class="preprocessor">    void runUnitTestImpl( Teuchos::FancyOStream &amp;out, bool &amp;success ) const; \</span></div>
-<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span><span class="preprocessor">    virtual std::string unitTestFile() const { return __FILE__; } \</span></div>
-<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span><span class="preprocessor">    virtual long int unitTestFileLineNumber() const { return __LINE__; } \</span></div>
-<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span><span class="preprocessor">  }; \</span></div>
-<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span><span class="preprocessor">  \</span></div>
-<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span><span class="preprocessor">  template&lt;class TYPE1, class TYPE2, class TYPE3, class TYPE4&gt; \</span></div>
-<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span><span class="preprocessor">        void TEST_GROUP##_##TEST_NAME##_UnitTest&lt;TYPE1,TYPE2,TYPE3,TYPE4&gt;::runUnitTestImpl( \</span></div>
-<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span><span class="preprocessor">    Teuchos::FancyOStream &amp;out, bool &amp;success ) const \</span></div>
-<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span><span class="preprocessor"></span> </div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span> </div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span> </div>
+<div class="foldopen" id="foldopen00356" data-start="" data-end="">
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno"><a class="line" href="group___teuchos___unit_test_definition_macros__grp.html#ga1de30af4c911da22031b27358819dddd">  356</a></span><span class="preprocessor">#define TEUCHOS_UNIT_TEST_TEMPLATE_4_DECL(TEST_GROUP, TEST_NAME, TYPE1, TYPE2, TYPE3, TYPE4) \</span></div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span><span class="preprocessor">  template&lt;class TYPE1, class TYPE2, class TYPE3, class TYPE4&gt; \</span></div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span><span class="preprocessor">  class TEST_GROUP##_##TEST_NAME##_UnitTest : public Teuchos::UnitTestBase \</span></div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span><span class="preprocessor">        { \</span></div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span><span class="preprocessor">  public: \</span></div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span><span class="preprocessor">    TEST_GROUP##_##TEST_NAME##_UnitTest( \</span></div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span><span class="preprocessor">      const std::string&amp; type1Name, \</span></div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span><span class="preprocessor">      const std::string&amp; type2Name, \</span></div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span><span class="preprocessor">      const std::string&amp; type3Name, \</span></div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span><span class="preprocessor">      const std::string&amp; type4Name \</span></div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span><span class="preprocessor">       ) \</span></div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span><span class="preprocessor">      :Teuchos::UnitTestBase( \</span></div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span><span class="preprocessor">         std::string(#TEST_GROUP)+&quot;_&quot;+type1Name+&quot;_&quot;+type2Name+&quot;_&quot;+type3Name+&quot;_&quot;+type4Name, #TEST_NAME ) \</span></div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span><span class="preprocessor">    {} \</span></div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span><span class="preprocessor">    virtual void runUnitTestImpl( Teuchos::FancyOStream &amp;out, bool &amp;success ) const override \</span></div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span><span class="preprocessor">    { runUnitTestImplBody(out, success); } \</span></div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span><span class="preprocessor">    void runUnitTestImplBody( Teuchos::FancyOStream &amp;out, bool &amp;success ) const; \</span></div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span><span class="preprocessor">    virtual std::string unitTestFile() const { return __FILE__; } \</span></div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span><span class="preprocessor">    virtual long int unitTestFileLineNumber() const { return __LINE__; } \</span></div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span><span class="preprocessor">  }; \</span></div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span><span class="preprocessor">  \</span></div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span><span class="preprocessor">  template&lt;class TYPE1, class TYPE2, class TYPE3, class TYPE4&gt; \</span></div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span><span class="preprocessor">        void TEST_GROUP##_##TEST_NAME##_UnitTest&lt;TYPE1,TYPE2,TYPE3,TYPE4&gt;::runUnitTestImplBody( \</span></div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span><span class="preprocessor">    Teuchos::FancyOStream &amp;out, bool &amp;success ) const \</span></div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span><span class="preprocessor"></span> </div>
 </div>
-<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span> </div>
-<div class="foldopen" id="foldopen00378" data-start="" data-end="">
-<div class="line"><a id="l00378" name="l00378"></a><span class="lineno"><a class="line" href="group___teuchos___unit_test_definition_macros__grp.html#ga319d4809dc01c87082a935090e30c94e">  378</a></span><span class="preprocessor">#define TEUCHOS_UNIT_TEST_TEMPLATE_4_INSTANT(TEST_GROUP, TEST_NAME, TYPE1, TYPE2, TYPE3, TYPE4) \</span></div>
-<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span><span class="preprocessor">  \</span></div>
-<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span><span class="preprocessor">  template class TEST_GROUP##_##TEST_NAME##_UnitTest&lt;TYPE1, TYPE2, TYPE3, TYPE4 &gt;; \</span></div>
-<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span><span class="preprocessor">  TEST_GROUP##_##TEST_NAME##_UnitTest&lt;TYPE1, TYPE2, TYPE3, TYPE4 &gt; \</span></div>
-<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span><span class="preprocessor">  instance_##TEST_GROUP##_##TYPE1##_##TYPE2##_##TYPE3##_##TYPE4##_##TEST_NAME##_UnitTest(#TYPE1,#TYPE2,#TYPE3,#TYPE4);</span></div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span> </div>
+<div class="foldopen" id="foldopen00386" data-start="" data-end="">
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno"><a class="line" href="group___teuchos___unit_test_definition_macros__grp.html#ga319d4809dc01c87082a935090e30c94e">  386</a></span><span class="preprocessor">#define TEUCHOS_UNIT_TEST_TEMPLATE_4_INSTANT(TEST_GROUP, TEST_NAME, TYPE1, TYPE2, TYPE3, TYPE4) \</span></div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span><span class="preprocessor">  \</span></div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span><span class="preprocessor">  template class TEST_GROUP##_##TEST_NAME##_UnitTest&lt;TYPE1, TYPE2, TYPE3, TYPE4 &gt;; \</span></div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span><span class="preprocessor">  TEST_GROUP##_##TEST_NAME##_UnitTest&lt;TYPE1, TYPE2, TYPE3, TYPE4 &gt; \</span></div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span><span class="preprocessor">  instance_##TEST_GROUP##_##TYPE1##_##TYPE2##_##TYPE3##_##TYPE4##_##TEST_NAME##_UnitTest(#TYPE1,#TYPE2,#TYPE3,#TYPE4);</span></div>
 </div>
-<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span> </div>
-<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span> </div>
-<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span><span class="preprocessor">#endif  </span><span class="comment">// TEUCHOS_UNIT_TEST_HELPERS_HPP</span></div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span> </div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span> </div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span><span class="preprocessor">#endif  </span><span class="comment">// TEUCHOS_UNIT_TEST_HELPERS_HPP</span></div>
 <div class="ttc" id="a_teuchos___unit_test_base_8hpp_html"><div class="ttname"><a href="_teuchos___unit_test_base_8hpp.html">Teuchos_UnitTestBase.hpp</a></div><div class="ttdoc">Unit testing support.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
