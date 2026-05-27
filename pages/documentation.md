@@ -27,9 +27,8 @@ Find out more about Trilinos: how to use it, install it, configure it, and even 
 
 - [Quick Configure, Build, and Install Hints](https://github.com/trilinos/Trilinos/blob/master/INSTALL.rst)
     - Basic instructions for setting up Trilinos.
-- [Trilinos Configure, Build, Test, and Install Reference Guide](pdfs/TrilinosBuildReference.pdf)
+- Trilinos Configure, Build, Test, and Install Reference Guide [html](TrilinosBuildReference.html), [pdf](pdfs/TrilinosBuildReference.pdf) 
     - Instructions for building Trilinos 10.0 and later.
-    - [Partial version](https://github.com/trilinos/Trilinos/blob/master/doc/build_ref/TrilinosBuildReferenceTemplate.rst)
 - [Simple Example of Building Against Installed Trilinos with CMake](https://github.com/trilinos/Trilinos/tree/master/demos/simpleBuildAgainstTrilinos)
     - A functional example for applications using `find_package(Trilinos)`.
 - [TriBITS Users Guide and Reference](https://tribitspub.github.io/TriBITS/users_guide/index.html)
