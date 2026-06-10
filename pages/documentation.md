@@ -56,9 +56,11 @@ If you are using Trilinos, please cite us in your publications:
   issn      = {0098-3500},
   url       = {https://doi.org/10.1145/3802822},
   doi       = {10.1145/3802822},
+  number    = {2},
+  volume    = {52},
+  pages     = {12},
   abstract  = {Trilinos is a community-developed, open-source software framework that facilitates building large-scale, complex, multiscale, multiphysics simulation code bases for scientific and engineering problems. Since the Trilinos framework has undergone substantial changes to support new applications and new hardware architectures, this document is an update to “An Overview of the Trilinos project” by Heroux et al. (ACM Transactions on Mathematical Software, 31(3):397–423, 2005). It describes the design of Trilinos, introduces its new organization in product areas, and highlights established and new features available in Trilinos. Particular focus is put on the modernized software stack based on the Kokkos ecosystem to deliver performance portability across heterogeneous hardware architectures. This paper also outlines the organization of the Trilinos community and the contribution model to help onboard interested users and contributors.},
   journal   = {ACM Transactions on Mathematical Software},
-  month     = March,
   keywords  = {Heterogeneous Hardware Architectures, High-Performance Computing, Performance Portability, Scientific Software Frameworks}
   }
 ```
