@@ -263,7 +263,7 @@ Additionally, the <a href="download.html#devsecops-team" title="DevSecOps">**Dev
   <tr>
     <td><a href="https://github.com/trilinos/Trilinos/tree/master/packages/stk">STK</a></td>
     <td>Massively parallel multiphysics on dynamically changing unstructured meshes.<sup>&ast;</sup></td>
-    <td><a href="pages/packages/stk/STKManual_2024-07-12-final.pdf">Manual</a></td>
+    <td><a href="pdfs/STKManual_2024-07-12-final.pdf">Manual</a></td>
   </tr>
   <tr>
     <td><a href="https://github.com/trilinos/Trilinos/tree/master/packages/percept">Percept</a></td>
