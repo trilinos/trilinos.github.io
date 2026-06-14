@@ -91,9 +91,10 @@ Inheritance diagram for Teuchos::Comm&lt; Ordinal &gt;:</div>
  <div class="center">
   <img src="class_teuchos_1_1_comm.png" usemap="#Teuchos::Comm_3C_20Ordinal_20_3E_map" alt=""/>
   <map id="Teuchos::Comm_3C_20Ordinal_20_3E_map" name="Teuchos::Comm_3C_20Ordinal_20_3E_map">
-<area href="class_teuchos_1_1_describable.html" title="Base class for all objects that can describe themselves." alt="Teuchos::Describable" shape="rect" coords="0,56,199,80"/>
-<area href="class_teuchos_1_1_labeled_object.html" title="Base class for objects that contain a std::string label." alt="Teuchos::LabeledObject" shape="rect" coords="0,0,199,24"/>
-<area href="class_teuchos_1_1_serial_comm.html" title="Concrete serial communicator subclass." alt="Teuchos::SerialComm&lt; Ordinal &gt;" shape="rect" coords="0,168,199,192"/>
+<area href="class_teuchos_1_1_describable.html" title="Base class for all objects that can describe themselves." alt="Teuchos::Describable" shape="rect" coords="104,56,303,80"/>
+<area href="class_teuchos_1_1_labeled_object.html" title="Base class for objects that contain a std::string label." alt="Teuchos::LabeledObject" shape="rect" coords="104,0,303,24"/>
+<area href="class_teuchos_1_1_mpi_comm.html" title="Implementation of Comm that uses MPI for communication." alt="Teuchos::MpiComm&lt; Ordinal &gt;" shape="rect" coords="0,168,199,192"/>
+<area href="class_teuchos_1_1_serial_comm.html" title="Concrete serial communicator subclass." alt="Teuchos::SerialComm&lt; Ordinal &gt;" shape="rect" coords="209,168,408,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -453,18 +454,19 @@ class Teuchos::Comm&lt; Ordinal &gt;</div><p>Abstract interface for distributed-
 <h1><a class="anchor" id="Teuchos_Comm_What"></a>
 What is Comm?</h1>
 <p>This class is <a class="el" href="namespace_teuchos.html" title="The Teuchos namespace contains all of the classes, structs and enums used by Teuchos,...">Teuchos</a>' interface to distributed-memory communication between one or more parallel processes. It presents an interface very much like that of MPI (the Message Passing Interface). <a class="el" href="namespace_teuchos.html" title="The Teuchos namespace contains all of the classes, structs and enums used by Teuchos,...">Teuchos</a> provides two implementations of <a class="el" href="class_teuchos_1_1_comm.html" title="Abstract interface for distributed-memory communication.">Comm</a>:</p><ul>
-<li>An MPI (Message Passing Interface) implementation, MpiComm</li>
+<li>An MPI (Message Passing Interface) implementation, <a class="el" href="class_teuchos_1_1_mpi_comm.html" title="Implementation of Comm that uses MPI for communication.">MpiComm</a></li>
 <li>A "serial" implementation, <a class="el" href="class_teuchos_1_1_serial_comm.html" title="Concrete serial communicator subclass.">SerialComm</a>, that only has one process</li>
 </ul>
 <p><a class="el" href="class_teuchos_1_1_comm.html" title="Abstract interface for distributed-memory communication.">Comm</a> is an abstract interface. You cannot create a <a class="el" href="class_teuchos_1_1_comm.html" title="Abstract interface for distributed-memory communication.">Comm</a> directly. You have to create one of the subclasses. The normal way to handle a <a class="el" href="class_teuchos_1_1_comm.html" title="Abstract interface for distributed-memory communication.">Comm</a> is to pass it around using <a class="el" href="class_teuchos_1_1_r_c_p.html" title="Smart reference counting pointer class for automatic garbage collection.">RCP</a> (a reference-counted "smart" pointer). For example:</p>
 <div class="fragment"><div class="line"><span class="comment">// Make a Comm.  This one happens to wrap MPI_COMM_WORLD.</span></div>
-<div class="line"><a class="code hl_class" href="class_teuchos_1_1_r_c_p.html">RCP&lt;const Comm&lt;int&gt;</a> &gt; <a class="code hl_class" href="class_teuchos_1_1_r_c_p.html">comm</a> = <a class="code hl_function" href="namespace_teuchos.html#a39378f1892f1d484eb697574a8a8c5af">rcp</a> (<span class="keyword">new</span> <a class="code hl_class" href="class_teuchos_1_1_r_c_p.html">MpiComm</a> (<a class="code hl_class" href="class_teuchos_1_1_r_c_p.html">MPI_COMM_WORLD</a>));</div>
+<div class="line"><a class="code hl_class" href="class_teuchos_1_1_r_c_p.html">RCP&lt;const Comm&lt;int&gt;</a> &gt; <a class="code hl_class" href="class_teuchos_1_1_r_c_p.html">comm</a> = <a class="code hl_function" href="namespace_teuchos.html#a39378f1892f1d484eb697574a8a8c5af">rcp</a> (<span class="keyword">new</span> <a class="code hl_class" href="class_teuchos_1_1_mpi_comm.html">MpiComm</a> (<a class="code hl_class" href="class_teuchos_1_1_r_c_p.html">MPI_COMM_WORLD</a>));</div>
 <div class="line"><span class="comment">// Equivalent of MPI_Comm_rank</span></div>
 <div class="line"><span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_class" href="class_teuchos_1_1_r_c_p.html">myRank</a> = <a class="code hl_class" href="class_teuchos_1_1_r_c_p.html">comm</a>-&gt;getRank ();</div>
 <div class="line"><span class="comment">// Equivalent of MPI_Comm_size</span></div>
 <div class="line"><span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_class" href="class_teuchos_1_1_r_c_p.html">numProcs</a> = <a class="code hl_class" href="class_teuchos_1_1_r_c_p.html">comm</a>-&gt;getSize ();</div>
 <div class="line"><span class="comment">// Equivalent of MPI_Comm_barrier</span></div>
 <div class="line"><a class="code hl_class" href="class_teuchos_1_1_r_c_p.html">comm</a>-&gt;barrier ();</div>
+<div class="ttc" id="aclass_teuchos_1_1_mpi_comm_html"><div class="ttname"><a href="class_teuchos_1_1_mpi_comm.html">Teuchos::MpiComm</a></div><div class="ttdoc">Implementation of Comm that uses MPI for communication.</div><div class="ttdef"><b>Definition</b> <a href="_teuchos___default_mpi_comm__decl_8hpp_source.html#l00189">Teuchos_DefaultMpiComm_decl.hpp:189</a></div></div>
 <div class="ttc" id="aclass_teuchos_1_1_r_c_p_html"><div class="ttname"><a href="class_teuchos_1_1_r_c_p.html">Teuchos::RCP</a></div><div class="ttdoc">Smart reference counting pointer class for automatic garbage collection.</div><div class="ttdef"><b>Definition</b> <a href="_teuchos___r_c_p_decl_8hpp_source.html#l00397">Teuchos_RCPDecl.hpp:397</a></div></div>
 <div class="ttc" id="anamespace_teuchos_html_a39378f1892f1d484eb697574a8a8c5af"><div class="ttname"><a href="namespace_teuchos.html#a39378f1892f1d484eb697574a8a8c5af">Teuchos::rcp</a></div><div class="ttdeci">TEUCHOS_DEPRECATED RCP&lt; T &gt; rcp(T *p, Dealloc_T dealloc, bool owns_mem)</div><div class="ttdoc">Deprecated.</div><div class="ttdef"><b>Definition</b> <a href="_teuchos___r_c_p_decl_8hpp_source.html#l01234">Teuchos_RCPDecl.hpp:1234</a></div></div>
 </div><!-- fragment --><p><a class="el" href="class_teuchos_1_1_comm.html" title="Abstract interface for distributed-memory communication.">Comm</a>'s communication methods that actually send or receive data accept that data as an array of <code>char</code>. You should never call these methods directly. Instead, you should use the nonmember "helper" functions in <a class="el" href="_teuchos___comm_helpers_8hpp_source.html">Teuchos_CommHelpers.hpp</a>. These methods are templated on the <code>Packet</code> type, that is, the type of data you want to send or receive. See the example below.</p>
@@ -503,8 +505,8 @@ How do I make a Comm?</h1>
 <div class="ttc" id="aclass_teuchos_1_1_comm_html"><div class="ttname"><a href="class_teuchos_1_1_comm.html">Teuchos::Comm</a></div><div class="ttdoc">Abstract interface for distributed-memory communication.</div><div class="ttdef"><b>Definition</b> <a href="_teuchos___comm_8hpp_source.html#l00282">Teuchos_Comm.hpp:282</a></div></div>
 <div class="ttc" id="aclass_teuchos_1_1_default_comm_html"><div class="ttname"><a href="class_teuchos_1_1_default_comm.html">Teuchos::DefaultComm</a></div><div class="ttdoc">Return a default global communicator appropriate for the build.</div><div class="ttdef"><b>Definition</b> <a href="_teuchos___default_comm_8hpp_source.html#l00062">Teuchos_DefaultComm.hpp:62</a></div></div>
 <div class="ttc" id="aclass_teuchos_1_1_default_comm_html_abc7ddf1efece7114864ba584825457e3"><div class="ttname"><a href="class_teuchos_1_1_default_comm.html#abc7ddf1efece7114864ba584825457e3">Teuchos::DefaultComm::getComm</a></div><div class="ttdeci">static Teuchos::RCP&lt; const Comm&lt; OrdinalType &gt; &gt; getComm()</div><div class="ttdoc">Return the default global communicator.</div><div class="ttdef"><b>Definition</b> <a href="_teuchos___default_comm_8hpp_source.html#l00180">Teuchos_DefaultComm.hpp:180</a></div></div>
-</div><!-- fragment --><p> This code works whether or not you built <a class="el" href="namespace_trilinos.html" title="Namespace of things generally useful to many Trilinos packages.">Trilinos</a> with MPI support. It is not necessary to use <a class="el" href="class_teuchos_1_1_global_m_p_i_session.html" title="Initialize, finalize, and query the global MPI session.">GlobalMPISession</a>, but it's useful so you don't have to remember to call MPI_Finalize. If you don't want to use <a class="el" href="class_teuchos_1_1_global_m_p_i_session.html" title="Initialize, finalize, and query the global MPI session.">GlobalMPISession</a>, you can still call <code><a class="el" href="class_teuchos_1_1_default_comm.html#abc7ddf1efece7114864ba584825457e3" title="Return the default global communicator.">DefaultComm&lt;int&gt;::getComm()</a></code>, though you must have called MPI_Init first if you build <a class="el" href="namespace_trilinos.html" title="Namespace of things generally useful to many Trilinos packages.">Trilinos</a> with MPI support. Furthermore, if you know MPI is present, you don't need to use <a class="el" href="class_teuchos_1_1_default_comm.html" title="Return a default global communicator appropriate for the build.">DefaultComm</a>. You may simply pass MPI_COMM_WORLD directly to MpiComm, like this: </p><div class="fragment"><div class="line"><a class="code hl_class" href="class_teuchos_1_1_r_c_p.html">RCP&lt;const Comm&lt;int&gt;</a> &gt; <a class="code hl_class" href="class_teuchos_1_1_r_c_p.html">comm</a> = <a class="code hl_function" href="namespace_teuchos.html#a39378f1892f1d484eb697574a8a8c5af">rcp</a> (<span class="keyword">new</span> <a class="code hl_class" href="class_teuchos_1_1_r_c_p.html">MpiComm</a> (<a class="code hl_class" href="class_teuchos_1_1_r_c_p.html">MPI_COMM_WORLD</a>));</div>
-</div><!-- fragment --><p> You may also pass an arbitrary MPI_Comm directly into MpiComm's constructor, though you are responsible for freeing it after use (via MPI_Comm_free) if necessary. You may automate the freeing of your MPI_Comm by using <a class="el" href="class_teuchos_1_1_opaque_wrapper.html" title="Base class for wrapped opaque objects.">OpaqueWrapper</a> (which see).</p>
+</div><!-- fragment --><p> This code works whether or not you built <a class="el" href="namespace_trilinos.html" title="Namespace of things generally useful to many Trilinos packages.">Trilinos</a> with MPI support. It is not necessary to use <a class="el" href="class_teuchos_1_1_global_m_p_i_session.html" title="Initialize, finalize, and query the global MPI session.">GlobalMPISession</a>, but it's useful so you don't have to remember to call MPI_Finalize. If you don't want to use <a class="el" href="class_teuchos_1_1_global_m_p_i_session.html" title="Initialize, finalize, and query the global MPI session.">GlobalMPISession</a>, you can still call <code><a class="el" href="class_teuchos_1_1_default_comm.html#abc7ddf1efece7114864ba584825457e3" title="Return the default global communicator.">DefaultComm&lt;int&gt;::getComm()</a></code>, though you must have called MPI_Init first if you build <a class="el" href="namespace_trilinos.html" title="Namespace of things generally useful to many Trilinos packages.">Trilinos</a> with MPI support. Furthermore, if you know MPI is present, you don't need to use <a class="el" href="class_teuchos_1_1_default_comm.html" title="Return a default global communicator appropriate for the build.">DefaultComm</a>. You may simply pass MPI_COMM_WORLD directly to <a class="el" href="class_teuchos_1_1_mpi_comm.html" title="Implementation of Comm that uses MPI for communication.">MpiComm</a>, like this: </p><div class="fragment"><div class="line"><a class="code hl_class" href="class_teuchos_1_1_r_c_p.html">RCP&lt;const Comm&lt;int&gt;</a> &gt; <a class="code hl_class" href="class_teuchos_1_1_r_c_p.html">comm</a> = <a class="code hl_function" href="namespace_teuchos.html#a39378f1892f1d484eb697574a8a8c5af">rcp</a> (<span class="keyword">new</span> <a class="code hl_class" href="class_teuchos_1_1_mpi_comm.html">MpiComm</a> (<a class="code hl_class" href="class_teuchos_1_1_r_c_p.html">MPI_COMM_WORLD</a>));</div>
+</div><!-- fragment --><p> You may also pass an arbitrary MPI_Comm directly into <a class="el" href="class_teuchos_1_1_mpi_comm.html" title="Implementation of Comm that uses MPI for communication.">MpiComm</a>'s constructor, though you are responsible for freeing it after use (via MPI_Comm_free) if necessary. You may automate the freeing of your MPI_Comm by using <a class="el" href="class_teuchos_1_1_opaque_wrapper.html" title="Base class for wrapped opaque objects.">OpaqueWrapper</a> (which see).</p>
 <h1><a class="anchor" id="Teuchos_Comm_Use"></a>
 How do I use Comm?</h1>
 <p>As we mentioned above, for communication of data with <a class="el" href="class_teuchos_1_1_comm.html" title="Abstract interface for distributed-memory communication.">Comm</a>, you you should use the nonmember "helper" functions in <a class="el" href="_teuchos___comm_helpers_8hpp_source.html">Teuchos_CommHelpers.hpp</a>. These methods are templated on the <code>Packet</code> type, that is, the type of data you want to send or receive. For example, suppose you have two processes (with ranks 0 and 1, respectively), and you want to send an array of 10 <code>double</code> from Process 0 to Process 1. Both processes have defined <code><a class="el" href="class_teuchos_1_1_r_c_p.html" title="Smart reference counting pointer class for automatic garbage collection.">RCP</a>&lt;const <a class="el" href="class_teuchos_1_1_comm.html">Comm&lt;int&gt;</a> &gt; comm</code> as above. Here is the code on Process 0: </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">int</span> count = 10; <span class="comment">// Send 10 doubles</span></div>
@@ -584,7 +586,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">typename</a> Ordin
 <p>The current tag. </p>
 <dl class="section warning"><dt>Warning</dt><dd>This method is ONLY for use by <a class="el" href="namespace_teuchos.html" title="The Teuchos namespace contains all of the classes, structs and enums used by Teuchos,...">Teuchos</a> developers. Users should not depend on the interface of this method. It may change or disappear at any time without warning. </dd></dl>
 
-<p>Implemented in <a class="el" href="class_teuchos_1_1_serial_comm.html#a7e5020e5a61b53291819262c7b0a19dd">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_teuchos_1_1_mpi_comm.html#a34d25359a98e85b544b6947f743c73d9">Teuchos::MpiComm&lt; Ordinal &gt;</a>, and <a class="el" href="class_teuchos_1_1_serial_comm.html#a7e5020e5a61b53291819262c7b0a19dd">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
 
 </div>
 </div>
@@ -615,7 +617,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">typename</a> Ordin
 
 <p>Increments the tag and then returns it. </p>
 
-<p>Implemented in <a class="el" href="class_teuchos_1_1_serial_comm.html#a654f77b8545afc96dc15a820a4b76068">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_teuchos_1_1_mpi_comm.html#a21256ccb525a33675c031fec71e54615">Teuchos::MpiComm&lt; Ordinal &gt;</a>, and <a class="el" href="class_teuchos_1_1_serial_comm.html#a654f77b8545afc96dc15a820a4b76068">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
 
 </div>
 </div>
@@ -650,7 +652,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">typename</a> Ordin
 <code>0 &lt;= return &amp;&amp; return &lt; this-&gt;<a class="el" href="class_teuchos_1_1_comm.html#a2d9a627e01bc6b9cb19134a855a81df2" title="Returns the number of processes that make up this communicator.">getSize()</a></code> </li>
 </ul>
 
-<p>Implemented in <a class="el" href="class_teuchos_1_1_serial_comm.html#af5c528f8768831065058ef49ef74e55d">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_teuchos_1_1_mpi_comm.html#aa41b3318fd78748063c9acf6c5ba0f6f">Teuchos::MpiComm&lt; Ordinal &gt;</a>, and <a class="el" href="class_teuchos_1_1_serial_comm.html#af5c528f8768831065058ef49ef74e55d">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
 
 </div>
 </div>
@@ -685,7 +687,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">typename</a> Ordin
 <code>return &gt; 0</code> </li>
 </ul>
 
-<p>Implemented in <a class="el" href="class_teuchos_1_1_serial_comm.html#a91205a69587677e2df30a04ff90cb2ad">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_teuchos_1_1_mpi_comm.html#a58ca7805b00b99ad24adb9e04a3385b8">Teuchos::MpiComm&lt; Ordinal &gt;</a>, and <a class="el" href="class_teuchos_1_1_serial_comm.html#a91205a69587677e2df30a04ff90cb2ad">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
 
 </div>
 </div>
@@ -716,7 +718,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">typename</a> Ordin
 
 <p>Pause every process in <code>*this</code> communicator until all the processes reach this point. </p>
 
-<p>Implemented in <a class="el" href="class_teuchos_1_1_serial_comm.html#a1106121b49c4464069db4aa1c9ae3262">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_teuchos_1_1_mpi_comm.html#ae49f2b03ebdb3719dbe8647e1be7b6a3">Teuchos::MpiComm&lt; Ordinal &gt;</a>, and <a class="el" href="class_teuchos_1_1_serial_comm.html#a1106121b49c4464069db4aa1c9ae3262">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
 
 </div>
 </div>
@@ -776,7 +778,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">typename</a> Ordin
 <code>0 &lt;= rootRank &amp;&amp; rootRank &lt; this-&gt;<a class="el" href="class_teuchos_1_1_comm.html#a2d9a627e01bc6b9cb19134a855a81df2" title="Returns the number of processes that make up this communicator.">getSize()</a></code> </li>
 </ul>
 
-<p>Implemented in <a class="el" href="class_teuchos_1_1_serial_comm.html#a42e0f552a41b76afa3598828c8054a6b">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_teuchos_1_1_mpi_comm.html#aeef6ac0ccb8206d55bef614bfe630a6f">Teuchos::MpiComm&lt; Ordinal &gt;</a>, and <a class="el" href="class_teuchos_1_1_serial_comm.html#a42e0f552a41b76afa3598828c8054a6b">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
 
 </div>
 </div>
@@ -836,7 +838,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">typename</a> Ordin
 
 <p>Gather values from all processes to the root process. </p>
 
-<p>Implemented in <a class="el" href="class_teuchos_1_1_serial_comm.html#a6dab010ef68571fc15feded8f64e4116">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_teuchos_1_1_mpi_comm.html#aa312aee2f95ec05e4fefafe4c5c6492a">Teuchos::MpiComm&lt; Ordinal &gt;</a>, and <a class="el" href="class_teuchos_1_1_serial_comm.html#a6dab010ef68571fc15feded8f64e4116">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
 
 </div>
 </div>
@@ -903,7 +905,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">typename</a> Ordin
 <code>recvBytes==sendBytes*this-&gt;<a class="el" href="class_teuchos_1_1_comm.html#a2d9a627e01bc6b9cb19134a855a81df2" title="Returns the number of processes that make up this communicator.">getSize()</a></code> </li>
 </ul>
 
-<p>Implemented in <a class="el" href="class_teuchos_1_1_serial_comm.html#ae232c9bab54084a5dfe9d3623459b0b1">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_teuchos_1_1_mpi_comm.html#a7c9acde9fdfff0c4cacf2627913344e9">Teuchos::MpiComm&lt; Ordinal &gt;</a>, and <a class="el" href="class_teuchos_1_1_serial_comm.html#ae232c9bab54084a5dfe9d3623459b0b1">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
 
 </div>
 </div>
@@ -966,7 +968,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">typename</a> Ordin
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_teuchos_1_1_serial_comm.html#a644c04362cbd2253912c6e21d57ae9ab">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_teuchos_1_1_mpi_comm.html#a027fb1b10713a88b8bd6065c4bfc63b3">Teuchos::MpiComm&lt; Ordinal &gt;</a>, and <a class="el" href="class_teuchos_1_1_serial_comm.html#a644c04362cbd2253912c6e21d57ae9ab">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
 
 </div>
 </div>
@@ -1029,7 +1031,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">typename</a> Ordin
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_teuchos_1_1_serial_comm.html#ac75388c48b52ef9f9da7e36536717921">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_teuchos_1_1_mpi_comm.html#ac8c4bea02c1938bb843f9e1e82a87ac7">Teuchos::MpiComm&lt; Ordinal &gt;</a>, and <a class="el" href="class_teuchos_1_1_serial_comm.html#ac75388c48b52ef9f9da7e36536717921">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
 
 </div>
 </div>
@@ -1092,7 +1094,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">typename</a> Ordin
 <code>destRank != this-&gt;<a class="el" href="class_teuchos_1_1_comm.html#a94011508d8ea7f12816e8d31a0985190" title="Returns the rank of this process.">getRank()</a></code> </li>
 </ul>
 
-<p>Implemented in <a class="el" href="class_teuchos_1_1_serial_comm.html#ac9b65110226d2d21e5aa26009709c46a">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_teuchos_1_1_mpi_comm.html#ab48a2c69d6d98a6565ec1ec0730dc62e">Teuchos::MpiComm&lt; Ordinal &gt;</a>, and <a class="el" href="class_teuchos_1_1_serial_comm.html#ac9b65110226d2d21e5aa26009709c46a">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
 
 </div>
 </div>
@@ -1146,7 +1148,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">typename</a> Ordin
 
 <p>Variant of <a class="el" href="class_teuchos_1_1_comm.html#a4bf2b611582e169bb4ed16e7defbfce9" title="Possibly blocking send of data from this process to another process.">send()</a> that takes a tag. </p>
 
-<p>Implemented in <a class="el" href="class_teuchos_1_1_serial_comm.html#a247bef3f6138883737ad9b6ee566c7b6">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_teuchos_1_1_mpi_comm.html#a4bdeb46906757c3749ff3870a4b46d33">Teuchos::MpiComm&lt; Ordinal &gt;</a>, and <a class="el" href="class_teuchos_1_1_serial_comm.html#a247bef3f6138883737ad9b6ee566c7b6">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
 
 </div>
 </div>
@@ -1209,7 +1211,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">typename</a> Ordin
 <code>destRank != this-&gt;<a class="el" href="class_teuchos_1_1_comm.html#a94011508d8ea7f12816e8d31a0985190" title="Returns the rank of this process.">getRank()</a></code> </li>
 </ul>
 
-<p>Implemented in <a class="el" href="class_teuchos_1_1_serial_comm.html#aec85bdb075c7117eb2ae4670e4000ab0">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_teuchos_1_1_mpi_comm.html#ad7e4722d212efe9ca1d4d6ab45bf04a3">Teuchos::MpiComm&lt; Ordinal &gt;</a>, and <a class="el" href="class_teuchos_1_1_serial_comm.html#aec85bdb075c7117eb2ae4670e4000ab0">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
 
 </div>
 </div>
@@ -1263,7 +1265,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">typename</a> Ordin
 
 <p>Variant of <a class="el" href="class_teuchos_1_1_comm.html#a8485a8a0a0e265490d0a64fb57fc21cc" title="Always blocking send of data from this process to another process.">ssend()</a> that takes a message tag. </p>
 
-<p>Implemented in <a class="el" href="class_teuchos_1_1_serial_comm.html#ab7a1162034d472d34a5aff967ace2dcb">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_teuchos_1_1_mpi_comm.html#a7dbd640ce9dcc1a90c34596592a31e6e">Teuchos::MpiComm&lt; Ordinal &gt;</a>, and <a class="el" href="class_teuchos_1_1_serial_comm.html#ab7a1162034d472d34a5aff967ace2dcb">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
 
 </div>
 </div>
@@ -1327,7 +1329,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">typename</a> Ordin
 <p><code></p><dl class="section return"><dt>Returns</dt><dd>Returns the senders rank. </dd></dl>
 <p></code></p>
 
-<p>Implemented in <a class="el" href="class_teuchos_1_1_serial_comm.html#a776014e960b63e25c2cb065ab59d4ef2">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_teuchos_1_1_mpi_comm.html#a63178e9aba33754635ed42ce384b566b">Teuchos::MpiComm&lt; Ordinal &gt;</a>, and <a class="el" href="class_teuchos_1_1_serial_comm.html#a776014e960b63e25c2cb065ab59d4ef2">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
 
 </div>
 </div>
@@ -1382,7 +1384,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">typename</a> Ordin
 <code>destRank != this-&gt;<a class="el" href="class_teuchos_1_1_comm.html#a94011508d8ea7f12816e8d31a0985190" title="Returns the rank of this process.">getRank()</a></code> </li>
 </ul>
 
-<p>Implemented in <a class="el" href="class_teuchos_1_1_serial_comm.html#a86cb500053f01078894dfef00ba320f6">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_teuchos_1_1_mpi_comm.html#a5a831fe738c371daa2b1ae14c8d0344c">Teuchos::MpiComm&lt; Ordinal &gt;</a>, and <a class="el" href="class_teuchos_1_1_serial_comm.html#a86cb500053f01078894dfef00ba320f6">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
 
 </div>
 </div>
@@ -1436,7 +1438,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">typename</a> Ordin
 
 <p>Variant of <a class="el" href="class_teuchos_1_1_comm.html#a14bd1be2cec6880ddd9ac19345c6d525" title="Ready send of data from this process to another process.">readySend()</a> that accepts a message tag. </p>
 
-<p>Implemented in <a class="el" href="class_teuchos_1_1_serial_comm.html#a7efc0ca089d1502e8c7c6299014acb79">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_teuchos_1_1_mpi_comm.html#afc405953b50b96b98fe4a6feee64a01b">Teuchos::MpiComm&lt; Ordinal &gt;</a>, and <a class="el" href="class_teuchos_1_1_serial_comm.html#a7efc0ca089d1502e8c7c6299014acb79">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
 
 </div>
 </div>
@@ -1491,7 +1493,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">typename</a> Ordin
 <code>destRank != this-&gt;<a class="el" href="class_teuchos_1_1_comm.html#a94011508d8ea7f12816e8d31a0985190" title="Returns the rank of this process.">getRank()</a></code> </li>
 </ul>
 
-<p>Implemented in <a class="el" href="class_teuchos_1_1_serial_comm.html#a273219f2d02449a08726670f2421e272">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_teuchos_1_1_mpi_comm.html#a1c42c05bc11ee01b7e26051888743e96">Teuchos::MpiComm&lt; Ordinal &gt;</a>, and <a class="el" href="class_teuchos_1_1_serial_comm.html#a273219f2d02449a08726670f2421e272">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
 
 </div>
 </div>
@@ -1539,7 +1541,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">typename</a> Ordin
 
 <p>Variant of <a class="el" href="class_teuchos_1_1_comm.html#aee6c27ddc354a989fbb5fe42a1e1fa4e" title="Non-blocking send.">isend()</a> that takes a tag. </p>
 
-<p>Implemented in <a class="el" href="class_teuchos_1_1_serial_comm.html#a77c18b510e9f23fd50fa9b3376c4ee40">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_teuchos_1_1_mpi_comm.html#aef09de4f420745b9a07610e0a66a6228">Teuchos::MpiComm&lt; Ordinal &gt;</a>, and <a class="el" href="class_teuchos_1_1_serial_comm.html#a77c18b510e9f23fd50fa9b3376c4ee40">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
 
 </div>
 </div>
@@ -1596,7 +1598,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">typename</a> Ordin
 <p><code></p><dl class="section return"><dt>Returns</dt><dd>Returns the senders rank. </dd></dl>
 <p></code></p>
 
-<p>Implemented in <a class="el" href="class_teuchos_1_1_serial_comm.html#a13fe9d03436c6418f378637847f92805">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_teuchos_1_1_mpi_comm.html#a7700156f5bca66fd7cc7a97cd65ab3b6">Teuchos::MpiComm&lt; Ordinal &gt;</a>, and <a class="el" href="class_teuchos_1_1_serial_comm.html#a13fe9d03436c6418f378637847f92805">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
 
 </div>
 </div>
@@ -1644,7 +1646,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">typename</a> Ordin
 
 <p>Variant of ireceive that takes a tag. </p>
 
-<p>Implemented in <a class="el" href="class_teuchos_1_1_serial_comm.html#a2a6475d47456e3e4d126e8fefafa1efb">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_teuchos_1_1_mpi_comm.html#ab71ac99dd6ad86bc6520d4ee3ddaafd2">Teuchos::MpiComm&lt; Ordinal &gt;</a>, and <a class="el" href="class_teuchos_1_1_serial_comm.html#a2a6475d47456e3e4d126e8fefafa1efb">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
 
 </div>
 </div>
@@ -1684,7 +1686,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">typename</a> Ordin
 <code>is_null(request[i]))</code> for <code>i=0...requests.size()-1</code> </li>
 </ul>
 
-<p>Implemented in <a class="el" href="class_teuchos_1_1_serial_comm.html#ad296be5e20a90f5674b4e7b91550498f">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_teuchos_1_1_mpi_comm.html#a66a59ed43b8ef72fb7c854c7a4784e59">Teuchos::MpiComm&lt; Ordinal &gt;</a>, and <a class="el" href="class_teuchos_1_1_serial_comm.html#ad296be5e20a90f5674b4e7b91550498f">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
 
 </div>
 </div>
@@ -1737,7 +1739,7 @@ For i in 0, 1, ..., requests.size()-1, requests[i] is either null or requests[i]
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_teuchos_1_1_serial_comm.html#aa21a8a21e2cdea8f2d9aed14cfbea1c0">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_teuchos_1_1_mpi_comm.html#ab32e09aac0a9e4b0e5adc07a8c77903a">Teuchos::MpiComm&lt; Ordinal &gt;</a>, and <a class="el" href="class_teuchos_1_1_serial_comm.html#aa21a8a21e2cdea8f2d9aed14cfbea1c0">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
 
 </div>
 </div>
@@ -1779,7 +1781,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">typename</a> Ordin
 <dl class="section post"><dt>Postcondition</dt><dd><code>is_null(*request)</code> (that is, the <a class="el" href="class_teuchos_1_1_r_c_p.html" title="Smart reference counting pointer class for automatic garbage collection.">RCP</a> is null).</dd></dl>
 <p>This function blocks until the communication operation associated with the <a class="el" href="class_teuchos_1_1_comm_request.html" title="Encapsulation of a pending nonblocking communication operation.">CommRequest</a> object has completed. </p>
 
-<p>Implemented in <a class="el" href="class_teuchos_1_1_serial_comm.html#ad0bd8010433ca239deca6a980f7e8555">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_teuchos_1_1_mpi_comm.html#ac1f3e7df1110d5cf3e5944550168c3b2">Teuchos::MpiComm&lt; Ordinal &gt;</a>, and <a class="el" href="class_teuchos_1_1_serial_comm.html#ad0bd8010433ca239deca6a980f7e8555">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
 
 </div>
 </div>
@@ -1809,7 +1811,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">typename</a> Ordin
 </div><div class="memdoc">
 
 <p>Duplicate this communicator. </p>
-<p>Make a copy of this communicator with a duplicate communication space. Note that the returned communicator has the same properties (including process ranks, attributes and topologies) as this communicator, but is distinct from the original. "Distinct" means that if you send a message on the original communicator, you can't receive it on the new one, and vice versa. The new communicator represents a separate message space. This has the same semantics as MPI_Comm_dup. (In fact, the subclass MpiComm implements this using MPI_Comm_dup.)</p>
+<p>Make a copy of this communicator with a duplicate communication space. Note that the returned communicator has the same properties (including process ranks, attributes and topologies) as this communicator, but is distinct from the original. "Distinct" means that if you send a message on the original communicator, you can't receive it on the new one, and vice versa. The new communicator represents a separate message space. This has the same semantics as MPI_Comm_dup. (In fact, the subclass <a class="el" href="class_teuchos_1_1_mpi_comm.html" title="Implementation of Comm that uses MPI for communication.">MpiComm</a> implements this using MPI_Comm_dup.)</p>
 <p>Most users don't want to do this. The <a class="el" href="class_teuchos_1_1_comm.html#a1775f0e2d0fadcdde08714ee2b154ea4" title="Duplicate this communicator.">duplicate()</a> method returns a <em>new communicator</em>. In MPI terms, it is a <em>different MPI_Comm</em>. If you want a shallow copy of the handle, you should pass the <code>Comm&lt;Ordinal&gt;<code> around by const pointer, like this: </p><div class="fragment"><div class="line"><a class="code hl_class" href="class_teuchos_1_1_r_c_p.html">RCP&lt;const Comm&lt;int&gt;</a> &gt; <a class="code hl_class" href="class_teuchos_1_1_r_c_p.html">comm</a> = ...; <span class="comment">// my original communicator</span></div>
 <div class="line"><span class="comment">// ... do some stuff with comm ...</span></div>
 <div class="line"><span class="comment">// Make a shallow copy.</span></div>
@@ -1835,7 +1837,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">typename</a> Ordin
 <p><code><code></p><dl class="section return"><dt>Returns</dt><dd>A new communicator. </dd></dl>
 <p></code></code></p>
 
-<p>Implemented in <a class="el" href="class_teuchos_1_1_serial_comm.html#ab53d262529fbeea1ae965c6997211747">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_teuchos_1_1_mpi_comm.html#a97dd53e33d72fd09ca8fc254386645b0">Teuchos::MpiComm&lt; Ordinal &gt;</a>, and <a class="el" href="class_teuchos_1_1_serial_comm.html#ab53d262529fbeea1ae965c6997211747">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
 
 </div>
 </div>
@@ -1889,7 +1891,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">typename</a> Ordin
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A partitioned communicator. </dd></dl>
 
-<p>Implemented in <a class="el" href="class_teuchos_1_1_serial_comm.html#ae0c11b380a92c7ea7ab8cc12ef4cbf05">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_teuchos_1_1_mpi_comm.html#a7fdf0a9f35bac094c78d1681c8cf90fc">Teuchos::MpiComm&lt; Ordinal &gt;</a>, and <a class="el" href="class_teuchos_1_1_serial_comm.html#ae0c11b380a92c7ea7ab8cc12ef4cbf05">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
 
 </div>
 </div>
@@ -1932,7 +1934,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">typename</a> Ordin
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The subcommunicator. </dd></dl>
 
-<p>Implemented in <a class="el" href="class_teuchos_1_1_serial_comm.html#a4bbd675456a02874116fc6e92895103d">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_teuchos_1_1_mpi_comm.html#a09aad5e4003aaf81b3c3b741670c85d9">Teuchos::MpiComm&lt; Ordinal &gt;</a>, and <a class="el" href="class_teuchos_1_1_serial_comm.html#a4bbd675456a02874116fc6e92895103d">Teuchos::SerialComm&lt; Ordinal &gt;</a>.</p>
 
 </div>
 </div>
@@ -2476,7 +2478,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">typename</a> Ordin
 </div><div class="memdoc">
 
 <p>Gather values from each process to the root process. </p>
-<p>This wraps MPI_Gather in an MPI build, when <a class="el" href="class_teuchos_1_1_comm.html" title="Abstract interface for distributed-memory communication.">Comm</a> implements MpiComm. </p>
+<p>This wraps MPI_Gather in an MPI build, when <a class="el" href="class_teuchos_1_1_comm.html" title="Abstract interface for distributed-memory communication.">Comm</a> implements <a class="el" href="class_teuchos_1_1_mpi_comm.html" title="Implementation of Comm that uses MPI for communication.">MpiComm</a>. </p>
 
 </div>
 </div>
@@ -2547,7 +2549,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">typename</a> Ordin
 </div><div class="memdoc">
 
 <p>Gather arrays of possibly different lengths from each process to the root process. </p>
-<p>This wraps MPI_Gatherv in an MPI build, when <a class="el" href="class_teuchos_1_1_comm.html" title="Abstract interface for distributed-memory communication.">Comm</a> implements MpiComm. </p>
+<p>This wraps MPI_Gatherv in an MPI build, when <a class="el" href="class_teuchos_1_1_comm.html" title="Abstract interface for distributed-memory communication.">Comm</a> implements <a class="el" href="class_teuchos_1_1_mpi_comm.html" title="Implementation of Comm that uses MPI for communication.">MpiComm</a>. </p>
 
 </div>
 </div>
@@ -2805,7 +2807,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">typename</a> Ordin
   </table>
   </dd>
 </dl>
-<p>If <a class="el" href="class_teuchos_1_1_comm.html" title="Abstract interface for distributed-memory communication.">Comm</a> is an MpiComm, then this wraps MPI_Scatter(). This function is a collective operation over the input communicator.</p>
+<p>If <a class="el" href="class_teuchos_1_1_comm.html" title="Abstract interface for distributed-memory communication.">Comm</a> is an <a class="el" href="class_teuchos_1_1_mpi_comm.html" title="Implementation of Comm that uses MPI for communication.">MpiComm</a>, then this wraps MPI_Scatter(). This function is a collective operation over the input communicator.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sendBuf</td><td>[in] <a class="el" href="class_teuchos_1_1_array.html" title="Replacement for std::vector that is compatible with the Teuchos Memory Management classes.">Array</a> of Packet things to scatter out. This may NOT alias <code>recvBuf</code>. This is ONLY read on the root process of the collective. </td></tr>
@@ -2890,7 +2892,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">typename</a> Ordin
   </table>
   </dd>
 </dl>
-<p>If <a class="el" href="class_teuchos_1_1_comm.html" title="Abstract interface for distributed-memory communication.">Comm</a> is an MpiComm, then this wraps MPI_Reduce(). This function is a collective operation over the input communicator.</p>
+<p>If <a class="el" href="class_teuchos_1_1_comm.html" title="Abstract interface for distributed-memory communication.">Comm</a> is an <a class="el" href="class_teuchos_1_1_mpi_comm.html" title="Implementation of Comm that uses MPI for communication.">MpiComm</a>, then this wraps MPI_Reduce(). This function is a collective operation over the input communicator.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sendBuf</td><td>[in] <a class="el" href="class_teuchos_1_1_array.html" title="Replacement for std::vector that is compatible with the Teuchos Memory Management classes.">Array</a> of <code>count</code> Packet things to send. This may NOT alias <code>recvBuf</code>. </td></tr>
@@ -2967,7 +2969,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">typename</a> Ordin
   </table>
   </dd>
 </dl>
-<p>If <a class="el" href="class_teuchos_1_1_comm.html" title="Abstract interface for distributed-memory communication.">Comm</a> is an MpiComm, then this wraps MPI_Allreduce(). This function is a collective operation over the input communicator.</p>
+<p>If <a class="el" href="class_teuchos_1_1_comm.html" title="Abstract interface for distributed-memory communication.">Comm</a> is an <a class="el" href="class_teuchos_1_1_mpi_comm.html" title="Implementation of Comm that uses MPI for communication.">MpiComm</a>, then this wraps MPI_Allreduce(). This function is a collective operation over the input communicator.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">comm</td><td>[in] The communicator over which to reduce. </td></tr>
@@ -4563,7 +4565,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">typename</a> Ordin
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>To implementers: A negative source rank is the equivalent of MPI_ANY_SOURCE, if the given <a class="el" href="class_teuchos_1_1_comm.html" title="Abstract interface for distributed-memory communication.">Comm</a> is an MpiComm. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>To implementers: A negative source rank is the equivalent of MPI_ANY_SOURCE, if the given <a class="el" href="class_teuchos_1_1_comm.html" title="Abstract interface for distributed-memory communication.">Comm</a> is an <a class="el" href="class_teuchos_1_1_mpi_comm.html" title="Implementation of Comm that uses MPI for communication.">MpiComm</a>. </dd></dl>
 
 </div>
 </div>

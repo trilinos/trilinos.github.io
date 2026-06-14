@@ -7,7 +7,7 @@ var searchData=
   ['addstatustest_4',['addStatusTest',['../class_belos_1_1_status_test_combo.html#ab3f80678c14d0cd5614407458876b6ba',1,'Belos::StatusTestCombo']]],
   ['algorithm_5',['Algorithm',['../class_belos_1_1_l_s_q_r_sol_mgr.html#Belos_LSQR_alg',1,'']]],
   ['all_20of_20belos_20as_20a_20single_20doxygen_20collection_6',['Browse all of Belos as a single doxygen collection',['../index.html#belos_browser',1,'']]],
-  ['alpha_7',['alpha',['../struct_belos_1_1_bi_c_g_stab_iteration_state.html#a4b4e6547275ddee7f7cab7917819d261',1,'Belos::BiCGStabIterationState::alpha'],['../struct_belos_1_1_pseudo_block_t_f_q_m_r_iter_state.html#a80f3edd5cdaf2c643b9527a191fcffee',1,'Belos::PseudoBlockTFQMRIterState::alpha'],['../struct_belos_1_1_r_c_g_iter_state.html#ae06e247436e1f698c39806308009c4de',1,'Belos::RCGIterState::Alpha']]],
+  ['alpha_7',['alpha',['../struct_belos_1_1_r_c_g_iter_state.html#ae06e247436e1f698c39806308009c4de',1,'Belos::RCGIterState::Alpha'],['../struct_belos_1_1_bi_c_g_stab_iteration_state.html#a4b4e6547275ddee7f7cab7917819d261',1,'Belos::BiCGStabIterationState::alpha'],['../struct_belos_1_1_pseudo_block_t_f_q_m_r_iter_state.html#a80f3edd5cdaf2c643b9527a191fcffee',1,'Belos::PseudoBlockTFQMRIterState::alpha']]],
   ['an_20iterative_20linear_20solvers_20package_8',['Belos: An Iterative Linear Solvers Package',['../index.html',1,'']]],
   ['and_9',['AND',['../class_belos_1_1_status_test_combo.html#a0d2b491520f3106f4e50890f1770e2fea7d6ae520d5098b38e047c53270666ed3',1,'Belos::StatusTestCombo']]],
   ['andop_10',['andOp',['../class_belos_1_1_status_test_combo.html#a390f03c81555d6e874572378ae40e7c1',1,'Belos::StatusTestCombo']]],

@@ -13,5 +13,5 @@ var searchData=
   ['json_2fexample_5f01_2ehpp_10',['example_01.hpp',['../json_2example__01_8hpp.html',1,'']]],
   ['json_5fparameters_11',['JSON_Parameters',['../namespaceROL.html#a86f9362f68c091dd37df2aaf448f4130',1,'ROL']]],
   ['jthjv_5f_12',['JtHJv_',['../classROL_1_1ChainRuleObjective.html#a97def015dd72de3605eec6d2395e3c27',1,'ROL::ChainRuleObjective']]],
-  ['jv_5f_13',['jv_',['../classROL_1_1Constraint__SimOpt.html#acb95b667c1f65c1f5cbf927a0f5f8a45',1,'ROL::Constraint_SimOpt::jv_'],['../classROL_1_1DynamicConstraint.html#abab5f1e2a8e4ee65cc1bd85301077466',1,'ROL::DynamicConstraint::jv_'],['../classROL_1_1ChainRuleObjective.html#acc1b6c1c5f6e2f06e30cae7554596e83',1,'ROL::ChainRuleObjective::Jv_']]]
+  ['jv_5f_13',['jv_',['../classROL_1_1ChainRuleObjective.html#acc1b6c1c5f6e2f06e30cae7554596e83',1,'ROL::ChainRuleObjective::Jv_'],['../classROL_1_1Constraint__SimOpt.html#acb95b667c1f65c1f5cbf927a0f5f8a45',1,'ROL::Constraint_SimOpt::jv_'],['../classROL_1_1DynamicConstraint.html#abab5f1e2a8e4ee65cc1bd85301077466',1,'ROL::DynamicConstraint::jv_']]]
 ];

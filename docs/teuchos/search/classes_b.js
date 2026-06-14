@@ -20,7 +20,11 @@ var searchData=
   ['missingvalidatorexception_17',['MissingValidatorException',['../class_teuchos_1_1_missing_validator_exception.html',1,'Teuchos']]],
   ['missingvaluesandvalidatorstagexception_18',['MissingValuesAndValidatorsTagException',['../class_teuchos_1_1_missing_values_and_validators_tag_exception.html',1,'Teuchos']]],
   ['missingvaluestagexception_19',['MissingValuesTagException',['../class_teuchos_1_1_missing_values_tag_exception.html',1,'Teuchos']]],
-  ['mpicommrequest_20',['MpiCommRequest',['../class_teuchos_1_1_details_1_1_mpi_comm_request.html',1,'Teuchos::Details']]],
-  ['multiplicationfunction_21',['MultiplicationFunction',['../class_teuchos_1_1_multiplication_function.html',1,'Teuchos']]],
-  ['multiplicationfunctionxmlconverter_22',['MultiplicationFunctionXMLConverter',['../class_teuchos_1_1_multiplication_function_x_m_l_converter.html',1,'Teuchos']]]
+  ['mpicomm_20',['MpiComm',['../class_teuchos_1_1_mpi_comm.html',1,'Teuchos']]],
+  ['mpicommrequest_21',['mpicommrequest',['../class_teuchos_1_1_details_1_1_mpi_comm_request.html',1,'Teuchos::Details::MpiCommRequest'],['../class_teuchos_1_1_mpi_comm_request.html',1,'Teuchos::MpiCommRequest&lt; OrdinalType &gt;']]],
+  ['mpicommrequestbase_22',['MpiCommRequestBase',['../class_teuchos_1_1_mpi_comm_request_base.html',1,'Teuchos']]],
+  ['mpicommrequestbase_3c_20int_20_3e_23',['MpiCommRequestBase&lt; int &gt;',['../class_teuchos_1_1_mpi_comm_request_base.html',1,'Teuchos']]],
+  ['mpicommstatus_24',['MpiCommStatus',['../class_teuchos_1_1_mpi_comm_status.html',1,'Teuchos']]],
+  ['multiplicationfunction_25',['MultiplicationFunction',['../class_teuchos_1_1_multiplication_function.html',1,'Teuchos']]],
+  ['multiplicationfunctionxmlconverter_26',['MultiplicationFunctionXMLConverter',['../class_teuchos_1_1_multiplication_function_x_m_l_converter.html',1,'Teuchos']]]
 ];

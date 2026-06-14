@@ -60,7 +60,8 @@ var searchData=
   ['arrayvalidator_3c_20stringvalidator_2c_20std_3a_3astring_20_3e_57',['ArrayValidator&lt; StringValidator, std::string &gt;',['../class_teuchos_1_1_array_validator.html',1,'Teuchos']]],
   ['arrayvalidatorxmlconverter_58',['ArrayValidatorXMLConverter',['../class_teuchos_1_1_array_validator_x_m_l_converter.html',1,'Teuchos']]],
   ['arrayview_59',['ArrayView',['../class_teuchos_1_1_array_view.html',1,'Teuchos']]],
-  ['arrayview_3c_20const_20t_20_3e_60',['ArrayView&lt; const T &gt;',['../class_teuchos_1_1_array_view_3_01const_01_t_01_4.html',1,'Teuchos']]],
-  ['arrayview_3c_20int_20_3e_61',['ArrayView&lt; int &gt;',['../class_teuchos_1_1_array_view.html',1,'Teuchos']]],
-  ['asfunc_62',['asFunc',['../class_teuchos_1_1as_func.html',1,'Teuchos']]]
+  ['arrayview_3c_20char_20_3e_60',['ArrayView&lt; char &gt;',['../class_teuchos_1_1_array_view.html',1,'Teuchos']]],
+  ['arrayview_3c_20const_20t_20_3e_61',['ArrayView&lt; const T &gt;',['../class_teuchos_1_1_array_view_3_01const_01_t_01_4.html',1,'Teuchos']]],
+  ['arrayview_3c_20int_20_3e_62',['ArrayView&lt; int &gt;',['../class_teuchos_1_1_array_view.html',1,'Teuchos']]],
+  ['asfunc_63',['asFunc',['../class_teuchos_1_1as_func.html',1,'Teuchos']]]
 ];

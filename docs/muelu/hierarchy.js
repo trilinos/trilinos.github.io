@@ -324,7 +324,6 @@ var hierarchy =
     ] ],
     [ "MueLu::LocalAggregationAlgorithm< LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_local_aggregation_algorithm.html", null ],
     [ "LocalPermutationStrategy", "class_local_permutation_strategy.html", null ],
-    [ "MueLu::LocalSPAIFunctor< local_matrix_type >", "class_mue_lu_1_1_local_s_p_a_i_functor.html", null ],
     [ "MueLu::LWGraphBase< LocalOrdinal, GlobalOrdinal, Node, OnHost >", "class_mue_lu_1_1_l_w_graph_base.html", [
       [ "MueLu::LWGraph< LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_l_w_graph.html", null ]
     ] ],

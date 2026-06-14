@@ -90,7 +90,8 @@ Inheritance diagram for Teuchos::CommStatus&lt; OrdinalType &gt;:</div>
  <div class="center">
   <img src="class_teuchos_1_1_comm_status.png" usemap="#Teuchos::CommStatus_3C_20OrdinalType_20_3E_map" alt=""/>
   <map id="Teuchos::CommStatus_3C_20OrdinalType_20_3E_map" name="Teuchos::CommStatus_3C_20OrdinalType_20_3E_map">
-<area href="class_teuchos_1_1_serial_comm_status.html" title="Implementation of CommStatus for a serial communicator." alt="Teuchos::SerialCommStatus&lt; OrdinalType &gt;" shape="rect" coords="0,56,261,80"/>
+<area href="class_teuchos_1_1_mpi_comm_status.html" title="MPI-specific implementation of CommStatus." alt="Teuchos::MpiCommStatus&lt; OrdinalType &gt;" shape="rect" coords="0,56,261,80"/>
+<area href="class_teuchos_1_1_serial_comm_status.html" title="Implementation of CommStatus for a serial communicator." alt="Teuchos::SerialCommStatus&lt; OrdinalType &gt;" shape="rect" coords="271,56,532,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -116,7 +117,7 @@ class Teuchos::CommStatus&lt; OrdinalType &gt;</div><p>Encapsulation of the resu
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>For now, this class only exposes the rank of the process that sent the message (the "source rank") and its tag. Later, we might expose other fields of MPI_Status in this interface. For now, you can attempt a dynamic cast to MpiCommStatus to access all three fields (MPI_SOURCE, MPI_TAG, and MPI_ERROR). </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>For now, this class only exposes the rank of the process that sent the message (the "source rank") and its tag. Later, we might expose other fields of MPI_Status in this interface. For now, you can attempt a dynamic cast to <a class="el" href="class_teuchos_1_1_mpi_comm_status.html" title="MPI-specific implementation of CommStatus.">MpiCommStatus</a> to access all three fields (MPI_SOURCE, MPI_TAG, and MPI_ERROR). </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_teuchos___comm_8hpp_source.html#l00039">39</a> of file <a class="el" href="_teuchos___comm_8hpp_source.html">Teuchos_Comm.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -179,7 +180,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">class</a> <a class
 
 <p>The source rank that sent the message. </p>
 
-<p>Implemented in <a class="el" href="class_teuchos_1_1_serial_comm_status.html#a55a1227d33bab0e760ea2667be3fbbf0">Teuchos::SerialCommStatus&lt; OrdinalType &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_teuchos_1_1_mpi_comm_status.html#a4e0ff6b015286b64ac2d107c09a6236f">Teuchos::MpiCommStatus&lt; OrdinalType &gt;</a>, and <a class="el" href="class_teuchos_1_1_serial_comm_status.html#a55a1227d33bab0e760ea2667be3fbbf0">Teuchos::SerialCommStatus&lt; OrdinalType &gt;</a>.</p>
 
 </div>
 </div>
@@ -210,7 +211,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">class</a> <a class
 
 <p>The tag of the received message. </p>
 
-<p>Implemented in <a class="el" href="class_teuchos_1_1_serial_comm_status.html#a9799b27fb9d8b06f7e644b8bd2038a32">Teuchos::SerialCommStatus&lt; OrdinalType &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_teuchos_1_1_mpi_comm_status.html#ab78350b52ef1e7928b6588dcde9992f4">Teuchos::MpiCommStatus&lt; OrdinalType &gt;</a>, and <a class="el" href="class_teuchos_1_1_serial_comm_status.html#a9799b27fb9d8b06f7e644b8bd2038a32">Teuchos::SerialCommStatus&lt; OrdinalType &gt;</a>.</p>
 
 </div>
 </div>
