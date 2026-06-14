@@ -371,12 +371,12 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span> </div>
 <div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>  <span class="keyword">auto</span> &amp;environmentVariables = getEnvironmentVariablesSet();</div>
 <div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;envVariable : environmentVariables) {</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *varVal = std::getenv(envVariable.c_str());</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    <span class="keywordflow">if</span> (varVal == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* varVal = <a class="code hl_function" href="namespace_teuchos.html#acf00020dd69ccf520c876d2fd39deaee">Teuchos::getEnvironmentVariableValue</a>(envVariable);</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    <span class="keywordflow">if</span>(varVal == <span class="keyword">nullptr</span>) {</div>
 <div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>      data[envVariable] = <span class="stringliteral">&quot;NOT SET&quot;</span>;</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>      data[envVariable] =</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>          <a class="code hl_class" href="class_teuchos_1_1_r_c_p.html">Teuchos::getEnvironmentVariable&lt;std::string&gt;</a>(envVariable, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    }</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>      data[envVariable] = varVal;</div>
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    }</div>
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>  }</div>
 <div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> </div>
@@ -390,6 +390,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclass_teuchos_1_1_r_c_p_html"><div class="ttname"><a href="class_teuchos_1_1_r_c_p.html">Teuchos::RCP</a></div><div class="ttdoc">Smart reference counting pointer class for automatic garbage collection.</div><div class="ttdef"><b>Definition</b> <a href="_teuchos___r_c_p_decl_8hpp_source.html#l00397">Teuchos_RCPDecl.hpp:397</a></div></div>
 <div class="ttc" id="aclass_teuchos_1_1_str_utils_html_ae632c5e72589c4615eb9f03693262b3b"><div class="ttname"><a href="class_teuchos_1_1_str_utils.html#ae632c5e72589c4615eb9f03693262b3b">Teuchos::StrUtils::splitString</a></div><div class="ttdeci">static Array&lt; std::string &gt; splitString(const std::string_view s, const char sep=',')</div><div class="ttdoc">Split an input std::string using a seperator char sep.</div><div class="ttdef"><b>Definition</b> <a href="_teuchos___str_utils_8cpp_source.html#l00051">Teuchos_StrUtils.cpp:51</a></div></div>
 <div class="ttc" id="agroup___test_for_exception__grp_html_gaadb9556c5c1ba7da1c141e7529a8ebdf"><div class="ttname"><a href="group___test_for_exception__grp.html#gaadb9556c5c1ba7da1c141e7529a8ebdf">TEUCHOS_TEST_FOR_EXCEPTION</a></div><div class="ttdeci">#define TEUCHOS_TEST_FOR_EXCEPTION(throw_exception_test, Exception, msg)</div><div class="ttdoc">Macro for throwing an exception with breakpointing to ease debugging.</div><div class="ttdef"><b>Definition</b> <a href="_teuchos___test_for_exception_8hpp_source.html#l00146">Teuchos_TestForException.hpp:146</a></div></div>
+<div class="ttc" id="anamespace_teuchos_html_acf00020dd69ccf520c876d2fd39deaee"><div class="ttname"><a href="namespace_teuchos.html#acf00020dd69ccf520c876d2fd39deaee">Teuchos::getEnvironmentVariableValue</a></div><div class="ttdeci">const char * getEnvironmentVariableValue(const char name[])</div><div class="ttdoc">Read a process environment variable by name.</div><div class="ttdef"><b>Definition</b> <a href="_teuchos___env_variables_8cpp_source.html#l00156">Teuchos_EnvVariables.cpp:156</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

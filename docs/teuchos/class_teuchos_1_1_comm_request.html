@@ -90,8 +90,12 @@ Inheritance diagram for Teuchos::CommRequest&lt; OrdinalType &gt;:</div>
  <div class="center">
   <img src="class_teuchos_1_1_comm_request.png" usemap="#Teuchos::CommRequest_3C_20OrdinalType_20_3E_map" alt=""/>
   <map id="Teuchos::CommRequest_3C_20OrdinalType_20_3E_map" name="Teuchos::CommRequest_3C_20OrdinalType_20_3E_map">
-<area href="class_teuchos_1_1_describable.html" title="Base class for all objects that can describe themselves." alt="Teuchos::Describable" shape="rect" coords="0,56,238,80"/>
-<area href="class_teuchos_1_1_labeled_object.html" title="Base class for objects that contain a std::string label." alt="Teuchos::LabeledObject" shape="rect" coords="0,0,238,24"/>
+<area href="class_teuchos_1_1_describable.html" title="Base class for all objects that can describe themselves." alt="Teuchos::Describable" shape="rect" coords="148,56,435,80"/>
+<area href="class_teuchos_1_1_labeled_object.html" title="Base class for objects that contain a std::string label." alt="Teuchos::LabeledObject" shape="rect" coords="148,0,435,24"/>
+<area href="class_teuchos_1_1_mpi_comm_request_base.html" alt="Teuchos::MpiCommRequestBase&lt; int &gt;" shape="rect" coords="0,168,287,192"/>
+<area href="class_teuchos_1_1_mpi_comm_request_base.html" title="Base class MPI implementation of CommRequest." alt="Teuchos::MpiCommRequestBase&lt; OrdinalType &gt;" shape="rect" coords="297,168,584,192"/>
+<area href="class_teuchos_1_1_details_1_1_mpi_comm_request.html" title="MPI implementation of CommRequest&lt;int&gt;." alt="Teuchos::Details::MpiCommRequest" shape="rect" coords="0,224,287,248"/>
+<area href="class_teuchos_1_1_mpi_comm_request.html" title="MPI implementation of CommRequest." alt="Teuchos::MpiCommRequest&lt; OrdinalType &gt;" shape="rect" coords="297,224,584,248"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -178,7 +182,7 @@ class Teuchos::CommRequest&lt; OrdinalType &gt;</div><p>Encapsulation of a pendi
 <div class="line"><span class="comment">// This cancels the request.  We could also just let</span></div>
 <div class="line"><span class="comment">// the one reference to the request fall out of scope.</span></div>
 <div class="line"><a class="code hl_class" href="class_teuchos_1_1_r_c_p.html">req</a> = null;</div>
-</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>To implementers: The MPI implementation of this class (MpiCommRequest) wraps MPI_Request. The MPI version of waitAll() will need to unpack the array of wrapped requests, and then pack up the resulting MPI_Request after waiting on them. It would be preferable to have a class <code>CommRequests</code> that encapsulates a set of requests, so that you can avoid this unpacking and packing. </dd></dl>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>To implementers: The MPI implementation of this class (<a class="el" href="class_teuchos_1_1_mpi_comm_request.html" title="MPI implementation of CommRequest.">MpiCommRequest</a>) wraps MPI_Request. The MPI version of waitAll() will need to unpack the array of wrapped requests, and then pack up the resulting MPI_Request after waiting on them. It would be preferable to have a class <code>CommRequests</code> that encapsulates a set of requests, so that you can avoid this unpacking and packing. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_teuchos___comm_8hpp_source.html#l00105">105</a> of file <a class="el" href="_teuchos___comm_8hpp_source.html">Teuchos_Comm.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -241,6 +245,8 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">class</a> <a class
 </div><div class="memdoc">
 
 <p>Wait on this request (a blocking operation). </p>
+
+<p>Implemented in <a class="el" href="class_teuchos_1_1_mpi_comm_request_base.html#a20c1776d0ad92bd6205c69d4e359b55d">Teuchos::MpiCommRequestBase&lt; OrdinalType &gt;</a>, and <a class="el" href="class_teuchos_1_1_mpi_comm_request_base.html#a20c1776d0ad92bd6205c69d4e359b55d">Teuchos::MpiCommRequestBase&lt; int &gt;</a>.</p>
 
 </div>
 </div>

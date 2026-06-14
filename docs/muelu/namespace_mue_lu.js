@@ -156,7 +156,6 @@ var namespace_mue_lu =
     [ "LocalLexicographicIndexManager", "class_mue_lu_1_1_local_lexicographic_index_manager.html", "class_mue_lu_1_1_local_lexicographic_index_manager" ],
     [ "LocalOrdinalTransferFactory", "class_mue_lu_1_1_local_ordinal_transfer_factory.html", "class_mue_lu_1_1_local_ordinal_transfer_factory" ],
     [ "LocalPermutationStrategy", "class_mue_lu_1_1_local_permutation_strategy.html", "class_mue_lu_1_1_local_permutation_strategy" ],
-    [ "LocalSPAIFunctor", "class_mue_lu_1_1_local_s_p_a_i_functor.html", "class_mue_lu_1_1_local_s_p_a_i_functor" ],
     [ "LowPrecisionFactory", "class_mue_lu_1_1_low_precision_factory.html", "class_mue_lu_1_1_low_precision_factory" ],
     [ "LWGraph", "class_mue_lu_1_1_l_w_graph.html", "class_mue_lu_1_1_l_w_graph" ],
     [ "LWGraph_kokkos", "class_mue_lu_1_1_l_w_graph__kokkos.html", "class_mue_lu_1_1_l_w_graph__kokkos" ],

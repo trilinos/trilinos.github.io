@@ -14,12 +14,11 @@ var searchData=
   ['locallexicographicindexmanager_11',['LocalLexicographicIndexManager',['../class_mue_lu_1_1_local_lexicographic_index_manager.html',1,'MueLu']]],
   ['localordinaltransferfactory_12',['LocalOrdinalTransferFactory',['../class_mue_lu_1_1_local_ordinal_transfer_factory.html',1,'MueLu']]],
   ['localpermutationstrategy_13',['localpermutationstrategy',['../class_local_permutation_strategy.html',1,'LocalPermutationStrategy'],['../class_mue_lu_1_1_local_permutation_strategy.html',1,'MueLu::LocalPermutationStrategy&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;']]],
-  ['localspaifunctor_14',['LocalSPAIFunctor',['../class_mue_lu_1_1_local_s_p_a_i_functor.html',1,'MueLu']]],
-  ['localsparsetriangularsolver_15',['LocalSparseTriangularSolver',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_ifpack2_1_1_local_sparse_triangular_solver.html',1,'Ifpack2']]],
-  ['lowprecisionfactory_16',['LowPrecisionFactory',['../class_mue_lu_1_1_low_precision_factory.html',1,'MueLu']]],
-  ['lwgraph_17',['LWGraph',['../class_mue_lu_1_1_l_w_graph.html',1,'MueLu']]],
-  ['lwgraph_5fkokkos_18',['LWGraph_kokkos',['../class_mue_lu_1_1_l_w_graph__kokkos.html',1,'MueLu']]],
-  ['lwgraphbase_19',['LWGraphBase',['../class_mue_lu_1_1_l_w_graph_base.html',1,'MueLu']]],
-  ['lwgraphbase_3c_20defaultlocalordinal_2c_20defaultglobalordinal_2c_20defaultnode_2c_20true_20_3e_20',['LWGraphBase&lt; DefaultLocalOrdinal, DefaultGlobalOrdinal, DefaultNode, true &gt;',['../class_mue_lu_1_1_l_w_graph_base.html',1,'MueLu']]],
-  ['lwgraphbase_3c_20localordinal_2c_20globalordinal_2c_20node_2c_20false_20_3e_21',['LWGraphBase&lt; LocalOrdinal, GlobalOrdinal, Node, false &gt;',['../class_mue_lu_1_1_l_w_graph_base.html',1,'MueLu']]]
+  ['localsparsetriangularsolver_14',['LocalSparseTriangularSolver',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_ifpack2_1_1_local_sparse_triangular_solver.html',1,'Ifpack2']]],
+  ['lowprecisionfactory_15',['LowPrecisionFactory',['../class_mue_lu_1_1_low_precision_factory.html',1,'MueLu']]],
+  ['lwgraph_16',['LWGraph',['../class_mue_lu_1_1_l_w_graph.html',1,'MueLu']]],
+  ['lwgraph_5fkokkos_17',['LWGraph_kokkos',['../class_mue_lu_1_1_l_w_graph__kokkos.html',1,'MueLu']]],
+  ['lwgraphbase_18',['LWGraphBase',['../class_mue_lu_1_1_l_w_graph_base.html',1,'MueLu']]],
+  ['lwgraphbase_3c_20defaultlocalordinal_2c_20defaultglobalordinal_2c_20defaultnode_2c_20true_20_3e_19',['LWGraphBase&lt; DefaultLocalOrdinal, DefaultGlobalOrdinal, DefaultNode, true &gt;',['../class_mue_lu_1_1_l_w_graph_base.html',1,'MueLu']]],
+  ['lwgraphbase_3c_20localordinal_2c_20globalordinal_2c_20node_2c_20false_20_3e_20',['LWGraphBase&lt; LocalOrdinal, GlobalOrdinal, Node, false &gt;',['../class_mue_lu_1_1_l_w_graph_base.html',1,'MueLu']]]
 ];

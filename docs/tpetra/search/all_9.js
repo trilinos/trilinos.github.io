@@ -35,7 +35,7 @@ var searchData=
   ['initialize_32',['initialize',['../namespace_tpetra.html#a85e6e71f886b78a39fef12dd3c207cf2',1,'Tpetra::initialize(int *argc, char ***argv, const Teuchos::RCP&lt; const Teuchos::Comm&lt; int &gt; &gt; &amp;comm)'],['../namespace_tpetra.html#a16d03623c0a0da2088c779f062b9f452',1,'Tpetra::initialize(int *argc, char ***argv)'],['../class_tpetra_1_1_directory.html#add8564abb908bb46459fe8dadcc35359',1,'Tpetra::Directory::initialize(const map_type &amp;map, const Tpetra::Details::TieBreak&lt; LocalOrdinal, GlobalOrdinal &gt; &amp;tieBreak)'],['../class_tpetra_1_1_directory.html#a80b1268e836c9da3f73489f001b6f395',1,'Tpetra::Directory::initialize(const map_type &amp;map)']]],
   ['initialize_20maps_20and_20vectors_33',['Code example: Initialize Maps and Vectors',['../_tpetra__lesson02.html#Tpetra_Lesson02_example_init',1,'']]],
   ['initialized_34',['initialized',['../class_tpetra_1_1_directory.html#a926dc64a5bce8eb51643ba5bbff9f49c',1,'Tpetra::Directory']]],
-  ['initializekokkos_35',['initializeKokkos',['../namespace_tpetra_1_1_details.html#adaa76b662c001e76357fad5f0f5378ef',1,'Tpetra::Details']]],
+  ['initializekokkos_35',['initializeKokkos',['../namespace_tpetra_1_1_details.html#af71908a8245102f20a3d994faab67e35',1,'Tpetra::Details']]],
   ['input_5farray_5ftype_36',['input_array_type',['../struct_tpetra_1_1_details_1_1_pack_traits.html#ad75f536ded97caa720badeea0e97d701',1,'Tpetra::Details::PackTraits']]],
   ['input_5fbuffer_5ftype_37',['input_buffer_type',['../struct_tpetra_1_1_details_1_1_pack_traits.html#a77e93b25f20d8174bb1e185f85468435',1,'Tpetra::Details::PackTraits']]],
   ['insert_38',['INSERT',['../namespace_tpetra.html#ae2e9d143601fd81d01d9317bf4d9094ba8311a4172e79c1f3a25a4ffc2e637b28',1,'Tpetra']]],

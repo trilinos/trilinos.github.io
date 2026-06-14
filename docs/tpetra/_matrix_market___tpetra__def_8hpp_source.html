@@ -4353,7 +4353,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l04234" name="l04234"></a><span class="lineno"> 4234</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> numProcs = comm-&gt;getSize();</div>
 <div class="line"><a id="l04235" name="l04235"></a><span class="lineno"> 4235</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> myRank   = comm-&gt;getRank();</div>
 <div class="line"><a id="l04236" name="l04236"></a><span class="lineno"> 4236</span> </div>
-<div class="line"><a id="l04237" name="l04237"></a><span class="lineno"> 4237</span>  <span class="keywordflow">if</span> (err.is_null()) {</div>
+<div class="line"><a id="l04237" name="l04237"></a><span class="lineno"> 4237</span>  <span class="keywordflow">if</span> (!err.is_null()) {</div>
 <div class="line"><a id="l04238" name="l04238"></a><span class="lineno"> 4238</span>    err-&gt;pushTab();</div>
 <div class="line"><a id="l04239" name="l04239"></a><span class="lineno"> 4239</span>  }</div>
 <div class="line"><a id="l04240" name="l04240"></a><span class="lineno"> 4240</span>  <span class="keywordflow">if</span> (debug) {</div>
@@ -4361,7 +4361,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l04242" name="l04242"></a><span class="lineno"> 4242</span>    os &lt;&lt; myRank &lt;&lt; <span class="stringliteral">&quot;: readMap: &quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a id="l04243" name="l04243"></a><span class="lineno"> 4243</span>    *err &lt;&lt; os.str();</div>
 <div class="line"><a id="l04244" name="l04244"></a><span class="lineno"> 4244</span>  }</div>
-<div class="line"><a id="l04245" name="l04245"></a><span class="lineno"> 4245</span>  <span class="keywordflow">if</span> (err.is_null()) {</div>
+<div class="line"><a id="l04245" name="l04245"></a><span class="lineno"> 4245</span>  <span class="keywordflow">if</span> (!err.is_null()) {</div>
 <div class="line"><a id="l04246" name="l04246"></a><span class="lineno"> 4246</span>    err-&gt;pushTab();</div>
 <div class="line"><a id="l04247" name="l04247"></a><span class="lineno"> 4247</span>  }</div>
 <div class="line"><a id="l04248" name="l04248"></a><span class="lineno"> 4248</span> </div>
@@ -4648,7 +4648,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l04529" name="l04529"></a><span class="lineno"> 4529</span>  }</div>
 <div class="line"><a id="l04530" name="l04530"></a><span class="lineno"> 4530</span>  TEUCHOS_TEST_FOR_EXCEPTION(gblSuccess != 1, std::runtime_error, <span class="stringliteral">&quot;Map constructor failed!&quot;</span>);</div>
 <div class="line"><a id="l04531" name="l04531"></a><span class="lineno"> 4531</span> </div>
-<div class="line"><a id="l04532" name="l04532"></a><span class="lineno"> 4532</span>  <span class="keywordflow">if</span> (err.is_null()) {</div>
+<div class="line"><a id="l04532" name="l04532"></a><span class="lineno"> 4532</span>  <span class="keywordflow">if</span> (!err.is_null()) {</div>
 <div class="line"><a id="l04533" name="l04533"></a><span class="lineno"> 4533</span>    err-&gt;popTab();</div>
 <div class="line"><a id="l04534" name="l04534"></a><span class="lineno"> 4534</span>  }</div>
 <div class="line"><a id="l04535" name="l04535"></a><span class="lineno"> 4535</span>  <span class="keywordflow">if</span> (debug) {</div>
@@ -4656,7 +4656,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l04537" name="l04537"></a><span class="lineno"> 4537</span>    os &lt;&lt; myRank &lt;&lt; <span class="stringliteral">&quot;: readMap: done&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a id="l04538" name="l04538"></a><span class="lineno"> 4538</span>    *err &lt;&lt; os.str();</div>
 <div class="line"><a id="l04539" name="l04539"></a><span class="lineno"> 4539</span>  }</div>
-<div class="line"><a id="l04540" name="l04540"></a><span class="lineno"> 4540</span>  <span class="keywordflow">if</span> (err.is_null()) {</div>
+<div class="line"><a id="l04540" name="l04540"></a><span class="lineno"> 4540</span>  <span class="keywordflow">if</span> (!err.is_null()) {</div>
 <div class="line"><a id="l04541" name="l04541"></a><span class="lineno"> 4541</span>    err-&gt;popTab();</div>
 <div class="line"><a id="l04542" name="l04542"></a><span class="lineno"> 4542</span>  }</div>
 <div class="line"><a id="l04543" name="l04543"></a><span class="lineno"> 4543</span>  <span class="keywordflow">return</span> newMap;</div>
@@ -6965,7 +6965,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l06814" name="l06814"></a><span class="lineno"> 6814</span>  std::string tmpFile   = <span class="stringliteral">&quot;__TMP__&quot;</span> + fileName;</div>
 <div class="line"><a id="l06815" name="l06815"></a><span class="lineno"> 6815</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> myRank      = A.getDomainMap()-&gt;getComm()-&gt;getRank();</div>
 <div class="line"><a id="l06816" name="l06816"></a><span class="lineno"> 6816</span>  <span class="keywordtype">bool</span> precisionChanged = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l06817" name="l06817"></a><span class="lineno"> 6817</span>  <span class="keywordtype">int</span> oldPrecision;</div>
+<div class="line"><a id="l06817" name="l06817"></a><span class="lineno"> 6817</span>  <span class="keywordtype">int</span> oldPrecision      = 0;</div>
 <div class="line"><a id="l06818" name="l06818"></a><span class="lineno"> 6818</span>  <span class="comment">// The number of nonzero entries in a Tpetra::Operator is</span></div>
 <div class="line"><a id="l06819" name="l06819"></a><span class="lineno"> 6819</span>  <span class="comment">// unknown until probing is completed.  In order to write a</span></div>
 <div class="line"><a id="l06820" name="l06820"></a><span class="lineno"> 6820</span>  <span class="comment">// MatrixMarket header, we write the matrix to a temporary</span></div>

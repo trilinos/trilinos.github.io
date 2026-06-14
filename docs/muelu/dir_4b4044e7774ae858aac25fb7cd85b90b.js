@@ -21,7 +21,7 @@ var dir_4b4044e7774ae858aac25fb7cd85b90b =
     [ "MueLu_InterfaceMappingTransferFactory_decl.hpp", "_mue_lu___interface_mapping_transfer_factory__decl_8hpp.html", "_mue_lu___interface_mapping_transfer_factory__decl_8hpp" ],
     [ "MueLu_InterfaceMappingTransferFactory_def.hpp", "_mue_lu___interface_mapping_transfer_factory__def_8hpp.html", null ],
     [ "MueLu_InverseApproximationFactory_decl.hpp", "_mue_lu___inverse_approximation_factory__decl_8hpp.html", "_mue_lu___inverse_approximation_factory__decl_8hpp" ],
-    [ "MueLu_InverseApproximationFactory_def.hpp", "_mue_lu___inverse_approximation_factory__def_8hpp.html", "_mue_lu___inverse_approximation_factory__def_8hpp" ],
+    [ "MueLu_InverseApproximationFactory_def.hpp", "_mue_lu___inverse_approximation_factory__def_8hpp.html", null ],
     [ "MueLu_LineDetectionFactory_decl.hpp", "_mue_lu___line_detection_factory__decl_8hpp.html", "_mue_lu___line_detection_factory__decl_8hpp" ],
     [ "MueLu_LineDetectionFactory_def.hpp", "_mue_lu___line_detection_factory__def_8hpp.html", "_mue_lu___line_detection_factory__def_8hpp" ],
     [ "MueLu_LocalOrdinalTransferFactory_decl.hpp", "_mue_lu___local_ordinal_transfer_factory__decl_8hpp.html", "_mue_lu___local_ordinal_transfer_factory__decl_8hpp" ],
