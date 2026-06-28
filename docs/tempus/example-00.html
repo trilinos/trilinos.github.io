@@ -74,7 +74,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This example provides a minimal application code for integrating the van der Pol problem using a hand-written Forward Euler time loop. It does not yet use <a class="el" href="namespace_tempus.html">Tempus</a>, <a class="el" href="namespace_thyra.html">Thyra</a>, or other Trilinos abstractions for the state or time integration algorithm.</p>
-<p>The purpose of this example is to establish the baseline structure used throughout the tutorial sequence. Later examples introduce <a class="el" href="namespace_tempus.html">Tempus</a> and Trilinos capabilities one step at a time while preserving the same basic problem setup whenever possible.</p>
+<p>The purpose of this example is to establish the baseline structure used throughout the progression tutorial. Later examples introduce <a class="el" href="namespace_tempus.html">Tempus</a> and Trilinos capabilities one step at a time while preserving the same basic problem setup whenever possible.</p>
 <h1><a class="anchor" id="vanderpol"></a>
 van der Pol Problem</h1>
 <p>The scaled explicit first-order ODE is  </p><p class="formulaDsp">
@@ -93,24 +93,18 @@ van der Pol Problem</h1>
 <h1><a class="anchor" id="example-00-outline"></a>
 Outline</h1>
 <p>This example demonstrates the basic structure of an application-level time integration loop:</p><ul>
-<li>declare the state and its time derivative</li>
+<li>declare the solution and its time derivative (stored in raw C++ arrays)</li>
 <li>set the initial conditions</li>
 <li>advance the solution from the initial time to the final time<ul>
-<li>select the timestep size</li>
+<li>set hardcoded timestep size</li>
 <li>evaluate the right-hand side of the governing equations</li>
 <li>apply the Forward Euler update</li>
 <li>check a simple pass/fail criterion</li>
-<li>accept the step and promote the solution</li>
+<li>accept the step and promote the solution to the next time step</li>
 </ul>
 </li>
 </ul>
 <p>The regression check at the end of the run is secondary to the tutorial discussion and can be ignored on a first reading.</p>
-<p>In this version:</p><ul>
-<li>the solution is stored in raw C++ arrays,</li>
-<li>the right-hand side is evaluated directly in the application code,</li>
-<li>timestep management is handled manually,</li>
-<li>solution status is tracked with local scalar variables.</li>
-</ul>
 <p>The next example replaces raw arrays with <a class="el" href="namespace_thyra.html">Thyra</a> vectors while preserving the same overall algorithmic structure.</p>
 <p> 
 <div style="text-align:center;">

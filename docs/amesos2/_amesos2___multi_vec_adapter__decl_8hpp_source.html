@@ -133,167 +133,205 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>                        <a class="code hl_enumeration" href="_amesos2___type_decl_8hpp.html#a46863e983ea61d9547a05756fa8c56fd">EDistribution</a> distribution );</div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    };</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <span class="comment">/*</span></div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="comment">     * In the case where the scalar type of the multi-vector and the</span></div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="comment">     * corresponding S type are different, then we need to first get a</span></div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span><span class="comment">     * copy of the scalar values, then convert each one into the S</span></div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span><span class="comment">     * type before inserting into the vals array.</span></div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span><span class="comment">     */</span></div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MV, <span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    <span class="keyword">struct </span>diff_type_get_copy {</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>      <span class="keyword">static</span> <span class="keywordtype">void</span> apply(<span class="keyword">const</span> Teuchos::Ptr&lt;const MV&gt; mv,</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                        <span class="keyword">const</span> Teuchos::ArrayView&lt;S&gt;&amp; v,</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                        <span class="keyword">const</span> <span class="keywordtype">size_t</span> ldx,</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>                        Teuchos::Ptr&lt;<span class="keyword">const</span> Tpetra::Map&lt;typename MV::local_ordinal_t, typename MV::global_ordinal_t, typename MV::node_t&gt; &gt; distribution_map,</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>                        <a class="code hl_enumeration" href="_amesos2___type_decl_8hpp.html#a46863e983ea61d9547a05756fa8c56fd">EDistribution</a> distribution );</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    };</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> MV, <span class="keyword">typename</span> S&gt;</div>
-<div class="foldopen" id="foldopen00233" data-start="{" data-end="};">
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno"><a class="line" href="struct_amesos2_1_1_util_1_1get__1d__copy__helper.html">  233</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_amesos2_1_1_util_1_1get__1d__copy__helper.html">get_1d_copy_helper</a> {</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>      <span class="keyword">static</span> <span class="keywordtype">void</span></div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>      <a class="code hl_function" href="struct_amesos2_1_1_util_1_1get__1d__copy__helper.html#aab206480cea5b200c7029b08ea5998f6">do_get</a> (<span class="keyword">const</span> Teuchos::Ptr&lt;const MV&gt;&amp; mv,</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>              <span class="keyword">const</span> Teuchos::ArrayView&lt;S&gt;&amp; vals,</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>              <span class="keyword">const</span> <span class="keywordtype">size_t</span> ldx,</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>              Teuchos::Ptr&lt;<span class="keyword">const</span> Tpetra::Map&lt;typename MV::local_ordinal_t, typename MV::global_ordinal_t, typename MV::node_t&gt; &gt; distribution_map,</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>              <a class="code hl_enumeration" href="_amesos2___type_decl_8hpp.html#a46863e983ea61d9547a05756fa8c56fd">EDistribution</a> distribution = <a class="code hl_enumvalue" href="_amesos2___type_decl_8hpp.html#a46863e983ea61d9547a05756fa8c56fdae1aabcfb90f3c53debc498683b03fbcf">ROOTED</a>);</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span> </div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>      <span class="keyword">static</span> <span class="keywordtype">void</span></div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>      <a class="code hl_function" href="struct_amesos2_1_1_util_1_1get__1d__copy__helper.html#aab206480cea5b200c7029b08ea5998f6">do_get</a> (<span class="keyword">const</span> Teuchos::Ptr&lt;const MV&gt;&amp; mv,</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>              <span class="keyword">const</span> Teuchos::ArrayView&lt;S&gt;&amp; vals,</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>              <span class="keyword">const</span> <span class="keywordtype">size_t</span> ldx,</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>              <a class="code hl_enumeration" href="_amesos2___type_decl_8hpp.html#a46863e983ea61d9547a05756fa8c56fd">EDistribution</a> distribution,</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>              <span class="keyword">typename</span> MV::global_ordinal_t indexBase = 0);</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span> </div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>      <span class="keyword">static</span> <span class="keywordtype">void</span></div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>      <a class="code hl_function" href="struct_amesos2_1_1_util_1_1get__1d__copy__helper.html#aab206480cea5b200c7029b08ea5998f6">do_get</a> (<span class="keyword">const</span> Teuchos::Ptr&lt;const MV&gt;&amp; mv,</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>              <span class="keyword">const</span> Teuchos::ArrayView&lt;S&gt;&amp; vals,</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>              <span class="keyword">const</span> <span class="keywordtype">size_t</span> ldx);</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    };</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MV, <span class="keyword">typename</span> KV&gt;</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <span class="keyword">struct </span>same_type_get_view {</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>      <span class="keyword">static</span> <span class="keywordtype">bool</span> apply (<span class="keywordtype">bool</span> bInitialize,</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>                        <span class="keyword">const</span> Teuchos::Ptr&lt;const MV&gt;&amp; mv,</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>                        KV&amp; kokkos_vals,</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>                        <span class="keyword">const</span> <span class="keywordtype">size_t</span> ldx,</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>                        Teuchos::Ptr&lt;<span class="keyword">const</span> Tpetra::Map&lt;typename MV::local_ordinal_t, typename MV::global_ordinal_t, typename MV::node_t&gt; &gt; distribution_map,</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>                        <a class="code hl_enumeration" href="_amesos2___type_decl_8hpp.html#a46863e983ea61d9547a05756fa8c56fd">EDistribution</a> distribution);</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    };</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span> </div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span><span class="comment">     * In the case where the scalar type of the multi-vector and the</span></div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span><span class="comment">     * corresponding S type are different, then we need to first get a</span></div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="comment">     * copy of the scalar values, then convert each one into the S</span></div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="comment">     * type before inserting into the vals array.</span></div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MV, <span class="keyword">typename</span> S&gt;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    <span class="keyword">struct </span>diff_type_get_copy {</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>      <span class="keyword">static</span> <span class="keywordtype">void</span> apply(<span class="keyword">const</span> Teuchos::Ptr&lt;const MV&gt; mv,</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                        <span class="keyword">const</span> Teuchos::ArrayView&lt;S&gt;&amp; v,</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>                        <span class="keyword">const</span> <span class="keywordtype">size_t</span> ldx,</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>                        Teuchos::Ptr&lt;<span class="keyword">const</span> Tpetra::Map&lt;typename MV::local_ordinal_t, typename MV::global_ordinal_t, typename MV::node_t&gt; &gt; distribution_map,</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>                        EDistribution distribution );</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    };</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MV, <span class="keyword">typename</span> KV&gt;</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    <span class="keyword">struct </span>diff_type_get_view {</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>      <span class="keyword">static</span> <span class="keywordtype">bool</span> apply (<span class="keywordtype">bool</span> bInitialize,</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                        <span class="keyword">const</span> Teuchos::Ptr&lt;const MV&gt;&amp; mv,</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>                        KV&amp; kokkos_vals,</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>                        <span class="keyword">const</span> <span class="keywordtype">size_t</span> ldx,</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>                        Teuchos::Ptr&lt;<span class="keyword">const</span> Tpetra::Map&lt;typename MV::local_ordinal_t, typename MV::global_ordinal_t, typename MV::node_t&gt; &gt; distribution_map,</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>                        EDistribution distribution);</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    };</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> MV, <span class="keyword">typename</span> S&gt;</div>
+<div class="foldopen" id="foldopen00253" data-start="{" data-end="};">
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno"><a class="line" href="struct_amesos2_1_1_util_1_1get__1d__copy__helper.html">  253</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_amesos2_1_1_util_1_1get__1d__copy__helper.html">get_1d_copy_helper</a> {</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>      <span class="keyword">static</span> <span class="keywordtype">void</span></div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>      <a class="code hl_function" href="struct_amesos2_1_1_util_1_1get__1d__copy__helper.html#aab206480cea5b200c7029b08ea5998f6">do_get</a> (<span class="keyword">const</span> Teuchos::Ptr&lt;const MV&gt;&amp; mv,</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>              <span class="keyword">const</span> Teuchos::ArrayView&lt;S&gt;&amp; vals,</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>              <span class="keyword">const</span> <span class="keywordtype">size_t</span> ldx,</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>              Teuchos::Ptr&lt;<span class="keyword">const</span> Tpetra::Map&lt;typename MV::local_ordinal_t, typename MV::global_ordinal_t, typename MV::node_t&gt; &gt; distribution_map,</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>              <a class="code hl_enumeration" href="_amesos2___type_decl_8hpp.html#a46863e983ea61d9547a05756fa8c56fd">EDistribution</a> distribution = <a class="code hl_enumvalue" href="_amesos2___type_decl_8hpp.html#a46863e983ea61d9547a05756fa8c56fdae1aabcfb90f3c53debc498683b03fbcf">ROOTED</a>);</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span> </div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>      <span class="keyword">static</span> <span class="keywordtype">void</span></div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>      <a class="code hl_function" href="struct_amesos2_1_1_util_1_1get__1d__copy__helper.html#aab206480cea5b200c7029b08ea5998f6">do_get</a> (<span class="keyword">const</span> Teuchos::Ptr&lt;const MV&gt;&amp; mv,</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>              <span class="keyword">const</span> Teuchos::ArrayView&lt;S&gt;&amp; vals,</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>              <span class="keyword">const</span> <span class="keywordtype">size_t</span> ldx,</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>              <a class="code hl_enumeration" href="_amesos2___type_decl_8hpp.html#a46863e983ea61d9547a05756fa8c56fd">EDistribution</a> distribution,</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>              <span class="keyword">typename</span> MV::global_ordinal_t indexBase = 0);</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>      <span class="keyword">static</span> <span class="keywordtype">void</span></div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>      <a class="code hl_function" href="struct_amesos2_1_1_util_1_1get__1d__copy__helper.html#aab206480cea5b200c7029b08ea5998f6">do_get</a> (<span class="keyword">const</span> Teuchos::Ptr&lt;const MV&gt;&amp; mv,</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>              <span class="keyword">const</span> Teuchos::ArrayView&lt;S&gt;&amp; vals,</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>              <span class="keyword">const</span> <span class="keywordtype">size_t</span> ldx);</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    };</div>
 </div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span> </div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    <span class="comment">/*</span></div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span><span class="comment">      do_get</span></div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span><span class="comment"></span> </div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span><span class="comment">      Return type (bool):</span></div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span><span class="comment">        true:  The input kokkos_vals view is now pointing directly to the adapter&#39;s data (same memory and type).</span></div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span><span class="comment">               If this is x for an Ax=b solve, you don&#39;t need &#39;do_put x&#39; after the solve since you modified the adapter directly.</span></div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span><span class="comment">        false: The input kokkos_vals view is now resized to match the adapter&#39;s size.</span></div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span><span class="comment">               kokkos_vals will only have the adapter values deep_copied if bInitialize is true (see below).</span></div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span><span class="comment">               If this is x for an Ax=b solve, you must call &#39;do_put x&#39; after the solve to deep copy back to the adapter.</span></div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span><span class="comment"></span> </div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span><span class="comment">      Inputs</span></div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span><span class="comment">        bInitialize (bool): tells the adapter whether kokkos_vals needs to have the values of the adapter.</span></div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span><span class="comment">          true:  We require kokkos_vals to have the same size and values of the adapter.</span></div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span><span class="comment">                 For b in Ax=b solves, set bInitialize true because you need the size and values of the adapter.</span></div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span><span class="comment">          false: We require kokkos_vals to have the same size as the adapter but we don&#39;t need the values.</span></div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span><span class="comment">                 For x in Ax=b solves, set bInitialize false because you just need the size, not the values.</span></div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span><span class="comment"></span> </div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span><span class="comment">          Note: When this method returns true, meaning direct assignment of the view occurred,</span></div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span><span class="comment">                bInitialize is not used because you already have the values whether you need them or not.</span></div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span><span class="comment"></span> </div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span><span class="comment">        kokkos_vals (View&lt;scalar_t**&gt;): The view which will contain the x or b data.</span></div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span><span class="comment">          Do not allocate the size of kokkos_vals, let the do_get method do it for you.</span></div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span><span class="comment">          This is because kokkos_vals may be set to point directly to the adapter memory</span></div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span><span class="comment">          and then any pre-allocation of size will have been wasted.</span></div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span><span class="comment">    */</span></div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> MV, <span class="keyword">typename</span> KV&gt;</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    <span class="keyword">struct </span>get_1d_copy_helper_kokkos_view {</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>      <span class="keyword">static</span> <span class="keywordtype">bool</span></div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>      do_get (<span class="keywordtype">bool</span> bInitialize,</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>              <span class="keyword">const</span> Teuchos::Ptr&lt;const MV&gt;&amp; mv,</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>              KV&amp; kokkos_vals,</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>              <span class="keyword">const</span> <span class="keywordtype">size_t</span> ldx,</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>              Teuchos::Ptr&lt;<span class="keyword">const</span> Tpetra::Map&lt;typename MV::local_ordinal_t, typename MV::global_ordinal_t, typename MV::node_t&gt; &gt; distribution_map,</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>              <a class="code hl_enumeration" href="_amesos2___type_decl_8hpp.html#a46863e983ea61d9547a05756fa8c56fd">EDistribution</a> distribution = ROOTED);</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span> </div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>      <span class="keyword">static</span> <span class="keywordtype">bool</span></div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>      do_get (<span class="keywordtype">bool</span> bInitialize,</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>              <span class="keyword">const</span> Teuchos::Ptr&lt;const MV&gt;&amp; mv,</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>              KV&amp; kokkos_vals,</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>              <span class="keyword">const</span> <span class="keywordtype">size_t</span> ldx,</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>              <a class="code hl_enumeration" href="_amesos2___type_decl_8hpp.html#a46863e983ea61d9547a05756fa8c56fd">EDistribution</a> distribution,</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>              <span class="keyword">typename</span> MV::global_ordinal_t indexBase = 0);</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span> </div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>      <span class="keyword">static</span> <span class="keywordtype">bool</span></div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>      do_get (<span class="keywordtype">bool</span> bInitialize,</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>              <span class="keyword">const</span> Teuchos::Ptr&lt;const MV&gt;&amp; mv,</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>              KV&amp; kokkos_vals,</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>              <span class="keyword">const</span> <span class="keywordtype">size_t</span> ldx);</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    };</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    <span class="comment">/*</span></div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span><span class="comment">     * If the multivector scalar type and the desired scalar tpye are</span></div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span><span class="comment">     * the same, then we can do a simple straight copy.</span></div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span><span class="comment">     */</span></div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MV&gt;</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>    <span class="keyword">struct </span>same_type_data_put {</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>      <span class="keyword">static</span> <span class="keywordtype">void</span> apply(<span class="keyword">const</span> Teuchos::Ptr&lt;MV&gt;&amp; mv,</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>                        <span class="keyword">const</span> Teuchos::ArrayView&lt;typename MV::scalar_t&gt;&amp; data,</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>                        <span class="keyword">const</span> <span class="keywordtype">size_t</span> ldx,</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>                        Teuchos::Ptr&lt;<span class="keyword">const</span> Tpetra::Map&lt;typename MV::local_ordinal_t, typename MV::global_ordinal_t, typename MV::node_t&gt; &gt; distribution_map,</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>                        <a class="code hl_enumeration" href="_amesos2___type_decl_8hpp.html#a46863e983ea61d9547a05756fa8c56fd">EDistribution</a> distribution );</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>    };</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span><span class="comment">      do_get</span></div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span><span class="comment"></span> </div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span><span class="comment">      Return type (bool):</span></div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span><span class="comment">        true:  The input kokkos_vals view is now pointing directly to the adapter&#39;s data (same memory and type).</span></div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span><span class="comment">               If this is x for an Ax=b solve, you don&#39;t need &#39;do_put x&#39; after the solve since you modified the adapter directly.</span></div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span><span class="comment">        false: The input kokkos_vals view is now resized to match the adapter&#39;s size.</span></div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span><span class="comment">               kokkos_vals will only have the adapter values deep_copied if bInitialize is true (see below).</span></div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span><span class="comment">               If this is x for an Ax=b solve, you must call &#39;do_put x&#39; after the solve to deep copy back to the adapter.</span></div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span><span class="comment"></span> </div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span><span class="comment">      Inputs</span></div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span><span class="comment">        bInitialize (bool): tells the adapter whether kokkos_vals needs to have the values of the adapter.</span></div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span><span class="comment">          true:  We require kokkos_vals to have the same size and values of the adapter.</span></div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span><span class="comment">                 For b in Ax=b solves, set bInitialize true because you need the size and values of the adapter.</span></div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span><span class="comment">          false: We require kokkos_vals to have the same size as the adapter but we don&#39;t need the values.</span></div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span><span class="comment">                 For x in Ax=b solves, set bInitialize false because you just need the size, not the values.</span></div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span><span class="comment"></span> </div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span><span class="comment">          Note: When this method returns true, meaning direct assignment of the view occurred,</span></div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span><span class="comment">                bInitialize is not used because you already have the values whether you need them or not.</span></div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span><span class="comment"></span> </div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span><span class="comment">        kokkos_vals (View&lt;scalar_t**&gt;): The view which will contain the x or b data.</span></div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span><span class="comment">          Do not allocate the size of kokkos_vals, let the do_get method do it for you.</span></div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span><span class="comment">          This is because kokkos_vals may be set to point directly to the adapter memory</span></div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span><span class="comment">          and then any pre-allocation of size will have been wasted.</span></div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span><span class="comment">    */</span></div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> MV, <span class="keyword">typename</span> KV&gt;</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    <span class="keyword">struct </span>get_1d_copy_helper_kokkos_view {</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>      <span class="keyword">static</span> <span class="keywordtype">bool</span></div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>      do_get (<span class="keywordtype">bool</span> bInitialize,</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>              <span class="keyword">const</span> Teuchos::Ptr&lt;const MV&gt;&amp; mv,</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>              KV&amp; kokkos_vals,</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>              <span class="keyword">const</span> <span class="keywordtype">size_t</span> ldx,</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>              Teuchos::Ptr&lt;<span class="keyword">const</span> Tpetra::Map&lt;typename MV::local_ordinal_t, typename MV::global_ordinal_t, typename MV::node_t&gt; &gt; distribution_map,</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>              <a class="code hl_enumeration" href="_amesos2___type_decl_8hpp.html#a46863e983ea61d9547a05756fa8c56fd">EDistribution</a> distribution = ROOTED);</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span> </div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>      <span class="keyword">static</span> <span class="keywordtype">bool</span></div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>      do_get (<span class="keywordtype">bool</span> bInitialize,</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>              <span class="keyword">const</span> Teuchos::Ptr&lt;const MV&gt;&amp; mv,</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>              KV&amp; kokkos_vals,</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>              <span class="keyword">const</span> <span class="keywordtype">size_t</span> ldx,</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>              <a class="code hl_enumeration" href="_amesos2___type_decl_8hpp.html#a46863e983ea61d9547a05756fa8c56fd">EDistribution</a> distribution,</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>              <span class="keyword">typename</span> MV::global_ordinal_t indexBase = 0);</div>
 <div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span> </div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>    <span class="comment">/*</span></div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span><span class="comment">     * In the case where the scalar type of the multi-vector and the</span></div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span><span class="comment">     * corresponding S type are different, then we need to first get a</span></div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span><span class="comment">     * copy of the scalar values, then convert each one into the S</span></div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span><span class="comment">     * type before inserting into the vals array.</span></div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span><span class="comment">     */</span></div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MV, <span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>    <span class="keyword">struct </span>diff_type_data_put {</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>      <span class="keyword">static</span> <span class="keywordtype">void</span> apply(<span class="keyword">const</span> Teuchos::Ptr&lt;MV&gt;&amp; mv,</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>                        <span class="keyword">const</span> Teuchos::ArrayView&lt;S&gt;&amp; data,</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>                        <span class="keyword">const</span> <span class="keywordtype">size_t</span> ldx,</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>                        Teuchos::Ptr&lt;<span class="keyword">const</span> Tpetra::Map&lt;typename MV::local_ordinal_t, typename MV::global_ordinal_t, typename MV::node_t&gt; &gt; distribution_map,</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>                        EDistribution distribution );</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>    };</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span> </div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> MV, <span class="keyword">typename</span> S&gt;</div>
-<div class="foldopen" id="foldopen00339" data-start="{" data-end="};">
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno"><a class="line" href="struct_amesos2_1_1_util_1_1put__1d__data__helper.html">  339</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_amesos2_1_1_util_1_1put__1d__data__helper.html">put_1d_data_helper</a> {</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>      <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="struct_amesos2_1_1_util_1_1put__1d__data__helper.html#ae5bd07e3c8aaae297d3fbf8e87fd3a31">do_put</a>(<span class="keyword">const</span> Teuchos::Ptr&lt;MV&gt;&amp; mv,</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>                         <span class="keyword">const</span> Teuchos::ArrayView&lt;S&gt;&amp; data,</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>                         <span class="keyword">const</span> <span class="keywordtype">size_t</span> ldx,</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>                         Teuchos::Ptr&lt;<span class="keyword">const</span> Tpetra::Map&lt;typename MV::local_ordinal_t, typename MV::global_ordinal_t, typename MV::node_t&gt; &gt; distribution_map,</div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>                         <a class="code hl_enumeration" href="_amesos2___type_decl_8hpp.html#a46863e983ea61d9547a05756fa8c56fd">EDistribution</a> distribution = <a class="code hl_enumvalue" href="_amesos2___type_decl_8hpp.html#a46863e983ea61d9547a05756fa8c56fdae1aabcfb90f3c53debc498683b03fbcf">ROOTED</a>);</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>      <span class="keyword">static</span> <span class="keywordtype">bool</span></div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>      do_get (<span class="keywordtype">bool</span> bInitialize,</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>              <span class="keyword">const</span> Teuchos::Ptr&lt;const MV&gt;&amp; mv,</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>              KV&amp; kokkos_vals,</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>              <span class="keyword">const</span> <span class="keywordtype">size_t</span> ldx);</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>    };</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span> </div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span><span class="comment">     * If the multivector scalar type and the desired scalar tpye are</span></div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span><span class="comment">     * the same, then we can do a simple straight copy.</span></div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MV&gt;</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    <span class="keyword">struct </span>same_type_data_put {</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>      <span class="keyword">static</span> <span class="keywordtype">void</span> apply(<span class="keyword">const</span> Teuchos::Ptr&lt;MV&gt;&amp; mv,</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>                        <span class="keyword">const</span> Teuchos::ArrayView&lt;typename MV::scalar_t&gt;&amp; data,</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>                        <span class="keyword">const</span> <span class="keywordtype">size_t</span> ldx,</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>                        Teuchos::Ptr&lt;<span class="keyword">const</span> Tpetra::Map&lt;typename MV::local_ordinal_t, typename MV::global_ordinal_t, typename MV::node_t&gt; &gt; distribution_map,</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>                        <a class="code hl_enumeration" href="_amesos2___type_decl_8hpp.html#a46863e983ea61d9547a05756fa8c56fd">EDistribution</a> distribution );</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>    };</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span> </div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MV, <span class="keyword">typename</span> KV&gt;</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    <span class="keyword">struct </span>same_type_put_view {</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>      <span class="keyword">static</span> <span class="keywordtype">void</span> apply(<span class="keyword">const</span> Teuchos::Ptr&lt;MV&gt;&amp; mv,</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>                        KV&amp; data,</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>                        <span class="keyword">const</span> <span class="keywordtype">size_t</span> ldx,</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>                        Teuchos::Ptr&lt;<span class="keyword">const</span> Tpetra::Map&lt;typename MV::local_ordinal_t, typename MV::global_ordinal_t, typename MV::node_t&gt; &gt; distribution_map,</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>                        EDistribution distribution );</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>    };</div>
 <div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span> </div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>      <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="struct_amesos2_1_1_util_1_1put__1d__data__helper.html#ae5bd07e3c8aaae297d3fbf8e87fd3a31">do_put</a>(<span class="keyword">const</span> Teuchos::Ptr&lt;MV&gt;&amp; mv,</div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>                         <span class="keyword">const</span> Teuchos::ArrayView&lt;S&gt;&amp; data,</div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>                         <span class="keyword">const</span> <span class="keywordtype">size_t</span> ldx,</div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>                         <a class="code hl_enumeration" href="_amesos2___type_decl_8hpp.html#a46863e983ea61d9547a05756fa8c56fd">EDistribution</a> distribution, <span class="keyword">typename</span> MV::global_ordinal_t indexBase = 0);</div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span> </div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>      <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="struct_amesos2_1_1_util_1_1put__1d__data__helper.html#ae5bd07e3c8aaae297d3fbf8e87fd3a31">do_put</a>(<span class="keyword">const</span> Teuchos::Ptr&lt;MV&gt;&amp; mv,</div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>                         <span class="keyword">const</span> Teuchos::ArrayView&lt;S&gt;&amp; data,</div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>                         <span class="keyword">const</span> <span class="keywordtype">size_t</span> ldx);</div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>    };</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span><span class="comment">     * In the case where the scalar type of the multi-vector and the</span></div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span><span class="comment">     * corresponding S type are different, then we need to first get a</span></div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span><span class="comment">     * copy of the scalar values, then convert each one into the S</span></div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span><span class="comment">     * type before inserting into the vals array.</span></div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MV, <span class="keyword">typename</span> S&gt;</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>    <span class="keyword">struct </span>diff_type_data_put {</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>      <span class="keyword">static</span> <span class="keywordtype">void</span> apply(<span class="keyword">const</span> Teuchos::Ptr&lt;MV&gt;&amp; mv,</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>                        <span class="keyword">const</span> Teuchos::ArrayView&lt;S&gt;&amp; data,</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>                        <span class="keyword">const</span> <span class="keywordtype">size_t</span> ldx,</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>                        Teuchos::Ptr&lt;<span class="keyword">const</span> Tpetra::Map&lt;typename MV::local_ordinal_t, typename MV::global_ordinal_t, typename MV::node_t&gt; &gt; distribution_map,</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>                        EDistribution distribution );</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>    };</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span> </div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MV, <span class="keyword">typename</span> KV&gt;</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>    <span class="keyword">struct </span>diff_type_put_view {</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>      <span class="keyword">static</span> <span class="keywordtype">void</span> apply(<span class="keyword">const</span> Teuchos::Ptr&lt;MV&gt;&amp; mv,</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>                        KV&amp; kokkos_data,</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>                        <span class="keyword">const</span> <span class="keywordtype">size_t</span> ldx,</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>                        Teuchos::Ptr&lt;<span class="keyword">const</span> Tpetra::Map&lt;typename MV::local_ordinal_t, typename MV::global_ordinal_t, typename MV::node_t&gt; &gt; distribution_map,</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>                        EDistribution distribution );</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>    };</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span> </div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> MV, <span class="keyword">typename</span> S&gt;</div>
+<div class="foldopen" id="foldopen00377" data-start="{" data-end="};">
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno"><a class="line" href="struct_amesos2_1_1_util_1_1put__1d__data__helper.html">  377</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_amesos2_1_1_util_1_1put__1d__data__helper.html">put_1d_data_helper</a> {</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>      <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="struct_amesos2_1_1_util_1_1put__1d__data__helper.html#ae5bd07e3c8aaae297d3fbf8e87fd3a31">do_put</a>(<span class="keyword">const</span> Teuchos::Ptr&lt;MV&gt;&amp; mv,</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>                         <span class="keyword">const</span> Teuchos::ArrayView&lt;S&gt;&amp; data,</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>                         <span class="keyword">const</span> <span class="keywordtype">size_t</span> ldx,</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>                         Teuchos::Ptr&lt;<span class="keyword">const</span> Tpetra::Map&lt;typename MV::local_ordinal_t, typename MV::global_ordinal_t, typename MV::node_t&gt; &gt; distribution_map,</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>                         <a class="code hl_enumeration" href="_amesos2___type_decl_8hpp.html#a46863e983ea61d9547a05756fa8c56fd">EDistribution</a> distribution = <a class="code hl_enumvalue" href="_amesos2___type_decl_8hpp.html#a46863e983ea61d9547a05756fa8c56fdae1aabcfb90f3c53debc498683b03fbcf">ROOTED</a>);</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span> </div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>      <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="struct_amesos2_1_1_util_1_1put__1d__data__helper.html#ae5bd07e3c8aaae297d3fbf8e87fd3a31">do_put</a>(<span class="keyword">const</span> Teuchos::Ptr&lt;MV&gt;&amp; mv,</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>                         <span class="keyword">const</span> Teuchos::ArrayView&lt;S&gt;&amp; data,</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>                         <span class="keyword">const</span> <span class="keywordtype">size_t</span> ldx,</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>                         <a class="code hl_enumeration" href="_amesos2___type_decl_8hpp.html#a46863e983ea61d9547a05756fa8c56fd">EDistribution</a> distribution, <span class="keyword">typename</span> MV::global_ordinal_t indexBase = 0);</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span> </div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>      <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="struct_amesos2_1_1_util_1_1put__1d__data__helper.html#ae5bd07e3c8aaae297d3fbf8e87fd3a31">do_put</a>(<span class="keyword">const</span> Teuchos::Ptr&lt;MV&gt;&amp; mv,</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>                         <span class="keyword">const</span> Teuchos::ArrayView&lt;S&gt;&amp; data,</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>                         <span class="keyword">const</span> <span class="keywordtype">size_t</span> ldx);</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>    };</div>
 </div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span> </div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> MV, <span class="keyword">typename</span> KV&gt;</div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>    <span class="keyword">struct </span>put_1d_data_helper_kokkos_view {</div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>      <span class="keyword">static</span> <span class="keywordtype">void</span> do_put(<span class="keyword">const</span> Teuchos::Ptr&lt;MV&gt;&amp; mv,</div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>                         KV&amp; kokkos_data,</div>
-<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>                         <span class="keyword">const</span> <span class="keywordtype">size_t</span> ldx,</div>
-<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>                         Teuchos::Ptr&lt;<span class="keyword">const</span> Tpetra::Map&lt;typename MV::local_ordinal_t, typename MV::global_ordinal_t, typename MV::node_t&gt; &gt; distribution_map,</div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>                         <a class="code hl_enumeration" href="_amesos2___type_decl_8hpp.html#a46863e983ea61d9547a05756fa8c56fd">EDistribution</a> distribution = ROOTED);</div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span> </div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>      <span class="keyword">static</span> <span class="keywordtype">void</span> do_put(<span class="keyword">const</span> Teuchos::Ptr&lt;MV&gt;&amp; mv,</div>
-<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>                         KV&amp; kokkos_data,</div>
-<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>                         <span class="keyword">const</span> <span class="keywordtype">size_t</span> ldx,</div>
-<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>                         <a class="code hl_enumeration" href="_amesos2___type_decl_8hpp.html#a46863e983ea61d9547a05756fa8c56fd">EDistribution</a> distribution, <span class="keyword">typename</span> MV::global_ordinal_t indexBase = 0);</div>
-<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span> </div>
-<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>      <span class="keyword">static</span> <span class="keywordtype">void</span> do_put(<span class="keyword">const</span> Teuchos::Ptr&lt;MV&gt;&amp; mv,</div>
-<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>                         KV&amp; kokkos_data,</div>
-<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>                         <span class="keyword">const</span> <span class="keywordtype">size_t</span> ldx);</div>
-<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>    };</div>
-<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>  }</div>
-<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>} <span class="comment">// end namespace Amesos2</span></div>
-<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span> </div>
-<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span><span class="preprocessor">#include &quot;<a class="code" href="_amesos2___tpetra_multi_vec_adapter__decl_8hpp.html">Amesos2_TpetraMultiVecAdapter_decl.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span><span class="preprocessor">#include &quot;<a class="code" href="_amesos2___kokkos_multi_vec_adapter__decl_8hpp.html">Amesos2_KokkosMultiVecAdapter_decl.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span> </div>
-<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span><span class="preprocessor">#endif  </span><span class="comment">// AMESOS2_MULTIVEC_ADAPTER_DECL_HPP</span></div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span> </div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> MV, <span class="keyword">typename</span> KV&gt;</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>    <span class="keyword">struct </span>put_1d_data_helper_kokkos_view {</div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>      <span class="keyword">static</span> <span class="keywordtype">void</span> do_put(<span class="keyword">const</span> Teuchos::Ptr&lt;MV&gt;&amp; mv,</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>                         KV&amp; kokkos_data,</div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>                         <span class="keyword">const</span> <span class="keywordtype">size_t</span> ldx,</div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>                         Teuchos::Ptr&lt;<span class="keyword">const</span> Tpetra::Map&lt;typename MV::local_ordinal_t, typename MV::global_ordinal_t, typename MV::node_t&gt; &gt; distribution_map,</div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>                         <a class="code hl_enumeration" href="_amesos2___type_decl_8hpp.html#a46863e983ea61d9547a05756fa8c56fd">EDistribution</a> distribution = ROOTED);</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span> </div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>      <span class="keyword">static</span> <span class="keywordtype">void</span> do_put(<span class="keyword">const</span> Teuchos::Ptr&lt;MV&gt;&amp; mv,</div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>                         KV&amp; kokkos_data,</div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>                         <span class="keyword">const</span> <span class="keywordtype">size_t</span> ldx,</div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>                         <a class="code hl_enumeration" href="_amesos2___type_decl_8hpp.html#a46863e983ea61d9547a05756fa8c56fd">EDistribution</a> distribution, <span class="keyword">typename</span> MV::global_ordinal_t indexBase = 0);</div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span> </div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>      <span class="keyword">static</span> <span class="keywordtype">void</span> do_put(<span class="keyword">const</span> Teuchos::Ptr&lt;MV&gt;&amp; mv,</div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>                         KV&amp; kokkos_data,</div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>                         <span class="keyword">const</span> <span class="keywordtype">size_t</span> ldx);</div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>    };</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>  }</div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>} <span class="comment">// end namespace Amesos2</span></div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span> </div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span><span class="preprocessor">#include &quot;<a class="code" href="_amesos2___tpetra_multi_vec_adapter__decl_8hpp.html">Amesos2_TpetraMultiVecAdapter_decl.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span><span class="preprocessor">#include &quot;<a class="code" href="_amesos2___kokkos_multi_vec_adapter__decl_8hpp.html">Amesos2_KokkosMultiVecAdapter_decl.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span> </div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span><span class="preprocessor">#endif  </span><span class="comment">// AMESOS2_MULTIVEC_ADAPTER_DECL_HPP</span></div>
 <div class="ttc" id="a_amesos2___kokkos_multi_vec_adapter__decl_8hpp_html"><div class="ttname"><a href="_amesos2___kokkos_multi_vec_adapter__decl_8hpp.html">Amesos2_KokkosMultiVecAdapter_decl.hpp</a></div><div class="ttdoc">Amesos2::MultiVecAdapter specialization for the Kokkos::View class.</div></div>
 <div class="ttc" id="a_amesos2___tpetra_multi_vec_adapter__decl_8hpp_html"><div class="ttname"><a href="_amesos2___tpetra_multi_vec_adapter__decl_8hpp.html">Amesos2_TpetraMultiVecAdapter_decl.hpp</a></div><div class="ttdoc">Amesos2::MultiVecAdapter specialization for the Tpetra::MultiVector class.</div></div>
 <div class="ttc" id="a_amesos2___type_decl_8hpp_html"><div class="ttname"><a href="_amesos2___type_decl_8hpp.html">Amesos2_TypeDecl.hpp</a></div><div class="ttdoc">Enum and other types declarations for Amesos2.</div></div>
@@ -301,10 +339,10 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="a_amesos2___type_decl_8hpp_html_a46863e983ea61d9547a05756fa8c56fdae1aabcfb90f3c53debc498683b03fbcf"><div class="ttname"><a href="_amesos2___type_decl_8hpp.html#a46863e983ea61d9547a05756fa8c56fdae1aabcfb90f3c53debc498683b03fbcf">Amesos2::ROOTED</a></div><div class="ttdeci">@ ROOTED</div><div class="ttdef"><b>Definition</b> Amesos2_TypeDecl.hpp:93</div></div>
 <div class="ttc" id="astruct_amesos2_1_1_multi_vec_adapter_html"><div class="ttname"><a href="struct_amesos2_1_1_multi_vec_adapter.html">Amesos2::MultiVecAdapter</a></div><div class="ttdoc">A templated MultiVector class adapter for Amesos2.</div><div class="ttdef"><b>Definition</b> Amesos2_MultiVecAdapter_decl.hpp:142</div></div>
 <div class="ttc" id="astruct_amesos2_1_1_multi_vec_adapter_html_aa88614d354e69013eb107dcde2e32fef"><div class="ttname"><a href="struct_amesos2_1_1_multi_vec_adapter.html#aa88614d354e69013eb107dcde2e32fef">Amesos2::MultiVecAdapter::createMultiVecAdapter</a></div><div class="ttdeci">Teuchos::RCP&lt; MultiVecAdapter&lt; MV &gt; &gt; createMultiVecAdapter(Teuchos::RCP&lt; MV &gt; mv)</div><div class="ttdoc">Factory creation method for MultiVecAdapters.</div><div class="ttdef"><b>Definition</b> Amesos2_MultiVecAdapter_decl.hpp:154</div></div>
-<div class="ttc" id="astruct_amesos2_1_1_util_1_1get__1d__copy__helper_html"><div class="ttname"><a href="struct_amesos2_1_1_util_1_1get__1d__copy__helper.html">Amesos2::Util::get_1d_copy_helper</a></div><div class="ttdoc">Helper class for getting 1-D copies of multivectors.</div><div class="ttdef"><b>Definition</b> Amesos2_MultiVecAdapter_decl.hpp:233</div></div>
+<div class="ttc" id="astruct_amesos2_1_1_util_1_1get__1d__copy__helper_html"><div class="ttname"><a href="struct_amesos2_1_1_util_1_1get__1d__copy__helper.html">Amesos2::Util::get_1d_copy_helper</a></div><div class="ttdoc">Helper class for getting 1-D copies of multivectors.</div><div class="ttdef"><b>Definition</b> Amesos2_MultiVecAdapter_decl.hpp:253</div></div>
 <div class="ttc" id="astruct_amesos2_1_1_util_1_1get__1d__copy__helper_html_aab206480cea5b200c7029b08ea5998f6"><div class="ttname"><a href="struct_amesos2_1_1_util_1_1get__1d__copy__helper.html#aab206480cea5b200c7029b08ea5998f6">Amesos2::Util::get_1d_copy_helper::do_get</a></div><div class="ttdeci">static void do_get(const Teuchos::Ptr&lt; const MV &gt; &amp;mv, const Teuchos::ArrayView&lt; S &gt; &amp;vals, const size_t ldx, Teuchos::Ptr&lt; const Tpetra::Map&lt; typename MV::local_ordinal_t, typename MV::global_ordinal_t, typename MV::node_t &gt; &gt; distribution_map, EDistribution distribution=ROOTED)</div><div class="ttdoc">Helper class for getting 1-D copies of multivectors.</div><div class="ttdef"><b>Definition</b> Amesos2_MultiVecAdapter_def.hpp:111</div></div>
-<div class="ttc" id="astruct_amesos2_1_1_util_1_1put__1d__data__helper_html"><div class="ttname"><a href="struct_amesos2_1_1_util_1_1put__1d__data__helper.html">Amesos2::Util::put_1d_data_helper</a></div><div class="ttdoc">Helper class for putting 1-D data arrays into multivectors.</div><div class="ttdef"><b>Definition</b> Amesos2_MultiVecAdapter_decl.hpp:339</div></div>
-<div class="ttc" id="astruct_amesos2_1_1_util_1_1put__1d__data__helper_html_ae5bd07e3c8aaae297d3fbf8e87fd3a31"><div class="ttname"><a href="struct_amesos2_1_1_util_1_1put__1d__data__helper.html#ae5bd07e3c8aaae297d3fbf8e87fd3a31">Amesos2::Util::put_1d_data_helper::do_put</a></div><div class="ttdeci">static void do_put(const Teuchos::Ptr&lt; MV &gt; &amp;mv, const Teuchos::ArrayView&lt; S &gt; &amp;data, const size_t ldx, Teuchos::Ptr&lt; const Tpetra::Map&lt; typename MV::local_ordinal_t, typename MV::global_ordinal_t, typename MV::node_t &gt; &gt; distribution_map, EDistribution distribution=ROOTED)</div><div class="ttdoc">Helper class for putting 1-D data arrays into multivectors.</div><div class="ttdef"><b>Definition</b> Amesos2_MultiVecAdapter_def.hpp:287</div></div>
+<div class="ttc" id="astruct_amesos2_1_1_util_1_1put__1d__data__helper_html"><div class="ttname"><a href="struct_amesos2_1_1_util_1_1put__1d__data__helper.html">Amesos2::Util::put_1d_data_helper</a></div><div class="ttdoc">Helper class for putting 1-D data arrays into multivectors.</div><div class="ttdef"><b>Definition</b> Amesos2_MultiVecAdapter_decl.hpp:377</div></div>
+<div class="ttc" id="astruct_amesos2_1_1_util_1_1put__1d__data__helper_html_ae5bd07e3c8aaae297d3fbf8e87fd3a31"><div class="ttname"><a href="struct_amesos2_1_1_util_1_1put__1d__data__helper.html#ae5bd07e3c8aaae297d3fbf8e87fd3a31">Amesos2::Util::put_1d_data_helper::do_put</a></div><div class="ttdeci">static void do_put(const Teuchos::Ptr&lt; MV &gt; &amp;mv, const Teuchos::ArrayView&lt; S &gt; &amp;data, const size_t ldx, Teuchos::Ptr&lt; const Tpetra::Map&lt; typename MV::local_ordinal_t, typename MV::global_ordinal_t, typename MV::node_t &gt; &gt; distribution_map, EDistribution distribution=ROOTED)</div><div class="ttdoc">Helper class for putting 1-D data arrays into multivectors.</div><div class="ttdef"><b>Definition</b> Amesos2_MultiVecAdapter_def.hpp:350</div></div>
 <div class="ttc" id="astruct_amesos2_1_1_util_1_1vector__pointer__helper_html"><div class="ttname"><a href="struct_amesos2_1_1_util_1_1vector__pointer__helper.html">Amesos2::Util::vector_pointer_helper</a></div><div class="ttdoc">Helper struct for getting pointers to the MV data - only used when number of vectors = 1 and single M...</div><div class="ttdef"><b>Definition</b> Amesos2_MultiVecAdapter_decl.hpp:185</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

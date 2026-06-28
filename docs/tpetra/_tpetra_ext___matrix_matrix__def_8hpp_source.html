@@ -1975,7 +1975,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01882" name="l01882"></a><span class="lineno"> 1882</span>                                                       <span class="keyword">typename</span> device_t::memory_space,</div>
 <div class="line"><a id="l01883" name="l01883"></a><span class="lineno"> 1883</span>                                                       <span class="keyword">typename</span> device_t::memory_space&gt;;</div>
 <div class="line"><a id="l01884" name="l01884"></a><span class="lineno"> 1884</span>  <span class="keywordtype">int</span> team_work_size = 16;  <span class="comment">// Defaults to 16 as per Deveci 12/7/16 - csiefer</span></div>
-<div class="line"><a id="l01885" name="l01885"></a><span class="lineno"> 1885</span>  std::string myalg(<span class="stringliteral">&quot;SPGEMM_KK_MEMORY&quot;</span>);</div>
+<div class="line"><a id="l01885" name="l01885"></a><span class="lineno"> 1885</span>  std::string myalg(<span class="stringliteral">&quot;SPGEMM_DEFAULT&quot;</span>);</div>
 <div class="line"><a id="l01886" name="l01886"></a><span class="lineno"> 1886</span>  KokkosSparse::SPGEMMAlgorithm alg_enum = KokkosSparse::StringToSPGEMMAlgorithm(myalg);</div>
 <div class="line"><a id="l01887" name="l01887"></a><span class="lineno"> 1887</span> </div>
 <div class="line"><a id="l01888" name="l01888"></a><span class="lineno"> 1888</span>  KernelHandle kh;</div>
@@ -2419,7 +2419,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l02326" name="l02326"></a><span class="lineno"> 2326</span>          LO Bkj = Bcolind[j];</div>
 <div class="line"><a id="l02327" name="l02327"></a><span class="lineno"> 2327</span>          LO Cij = Bcol2Ccol[Bkj];</div>
 <div class="line"><a id="l02328" name="l02328"></a><span class="lineno"> 2328</span> </div>
-<div class="line"><a id="l02329" name="l02329"></a><span class="lineno"> 2329</span>          <span class="keyword">const</span> <span class="keywordtype">bool</span> badInsert = c_status[Cij] &lt; OLD_ip || c_status[Cij] &gt;= CSR_ip;</div>
+<div class="line"><a id="l02329" name="l02329"></a><span class="lineno"> 2329</span>          <span class="keyword">const</span> <span class="keywordtype">bool</span> badInsert = (Cij == LO_INVALID) || (c_status[Cij] &lt; OLD_ip) || (c_status[Cij] &gt;= CSR_ip);</div>
 <div class="line"><a id="l02330" name="l02330"></a><span class="lineno"> 2330</span>          <span class="keywordflow">if</span> (!badInsert)</div>
 <div class="line"><a id="l02331" name="l02331"></a><span class="lineno"> 2331</span>            Cvals[c_status[Cij]] += Aval * Bvals[j];</div>
 <div class="line"><a id="l02332" name="l02332"></a><span class="lineno"> 2332</span>          <span class="keywordflow">else</span> <span class="keywordflow">if</span> (throwOnInsert)</div>
@@ -2435,7 +2435,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l02342" name="l02342"></a><span class="lineno"> 2342</span>          LO Ikj = Icolind[j];</div>
 <div class="line"><a id="l02343" name="l02343"></a><span class="lineno"> 2343</span>          LO Cij = Icol2Ccol[Ikj];</div>
 <div class="line"><a id="l02344" name="l02344"></a><span class="lineno"> 2344</span> </div>
-<div class="line"><a id="l02345" name="l02345"></a><span class="lineno"> 2345</span>          <span class="keyword">const</span> <span class="keywordtype">bool</span> badInsert = c_status[Cij] &lt; OLD_ip || c_status[Cij] &gt;= CSR_ip;</div>
+<div class="line"><a id="l02345" name="l02345"></a><span class="lineno"> 2345</span>          <span class="keyword">const</span> <span class="keywordtype">bool</span> badInsert = (Cij == LO_INVALID) || (c_status[Cij] &lt; OLD_ip) || (c_status[Cij] &gt;= CSR_ip);</div>
 <div class="line"><a id="l02346" name="l02346"></a><span class="lineno"> 2346</span>          <span class="keywordflow">if</span> (!badInsert)</div>
 <div class="line"><a id="l02347" name="l02347"></a><span class="lineno"> 2347</span>            Cvals[c_status[Cij]] += Aval * Ivals[j];</div>
 <div class="line"><a id="l02348" name="l02348"></a><span class="lineno"> 2348</span>          <span class="keywordflow">else</span> <span class="keywordflow">if</span> (throwOnInsert)</div>

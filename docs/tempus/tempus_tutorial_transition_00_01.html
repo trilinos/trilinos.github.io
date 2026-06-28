@@ -99,7 +99,7 @@ Goal</h1>
 </ul>
 </li>
 </ul>
-<p>This allows <a class="el" href="namespace_tempus.html">Tempus</a> and other Trilinos packages to operate on abstract numerical interfaces rather than concrete array types. Moving from raw arrays to <a class="el" href="namespace_thyra.html">Thyra</a> vectors is the first step toward interoperability with <a class="el" href="namespace_tempus.html">Tempus</a> steppers, model evaluators, and solver infrastructure.</p>
+<p>This allows <a class="el" href="namespace_tempus.html">Tempus</a> and other Trilinos packages to operate on <a href="https://www.osti.gov/servlets/purl/1264635">abstract numerical interfaces</a> rather than concrete array types. Moving from raw arrays to <a class="el" href="namespace_thyra.html">Thyra</a> vectors is the first step toward interoperability with <a class="el" href="namespace_tempus.html">Tempus</a> steppers, model evaluators, and solver infrastructure.</p>
 <h1><a class="anchor" id="tempus_tutorial_transition_00_01_same"></a>
 What stays the same</h1>
 <ul>
@@ -179,10 +179,11 @@ How to compare the examples</h1>
 </ul>
 <p>From the <code>packages/tempus</code> directory, a focused comparison of the main time-integration logic between these two examples can be generated locally in <code>bash</code> or <code>zsh</code> with:</p>
 <div class="fragment"><div class="line">git diff --no-index \</div>
-<div class="line">  &lt;(sed -n &#39;81,141p&#39; examples/00_Basic_Problem/00_Basic_Problem.cpp) \</div>
-<div class="line">  &lt;(sed -n &#39;60,130p&#39; examples/01_Utilize_Thyra/01_Utilize_Thyra.cpp)</div>
-</div><!-- fragment --><p>This ignores leading header lines (for example, <code>#include</code> statements and Doxygen comments) and trailing regression-testing lines.</p>
-<p> 
+<div class="line">  &lt;(sed -n &#39;75,135p&#39; examples/00_Basic_Problem/00_Basic_Problem.cpp) \</div>
+<div class="line">  &lt;(sed -n &#39;59,129p&#39; examples/01_Utilize_Thyra/01_Utilize_Thyra.cpp)</div>
+</div><!-- fragment --><p>This ignores leading header lines (e.g., <code>#include</code> statements and Doxygen comments) and trailing regression-testing lines.</p>
+<hr  style="border:0; border-top:5px solid #ccc;" />
+<p>  
 <div style="text-align:center;">
   <a href="example-00.html">← Previous Example</a> |
   <a href="example-01.html">Current Example</a> |

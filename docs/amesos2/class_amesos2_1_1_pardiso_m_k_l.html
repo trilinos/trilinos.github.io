@@ -146,6 +146,9 @@ typedef Kokkos::View&lt; int_t *, HostExecSpaceType &gt;&#160;</td><td class="me
 <tr class="memitem:a15dab4026b294505cbbf0b766f4bc9d7" id="r_a15dab4026b294505cbbf0b766f4bc9d7"><td class="memItemLeft" align="right" valign="top"><a id="a15dab4026b294505cbbf0b766f4bc9d7" name="a15dab4026b294505cbbf0b766f4bc9d7"></a>
 typedef Kokkos::View&lt; solver_scalar_type *, HostExecSpaceType &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>host_value_type_array</b></td></tr>
 <tr class="separator:a15dab4026b294505cbbf0b766f4bc9d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a665f2544f5fdc9a1527aea5d831fcf57" id="r_a665f2544f5fdc9a1527aea5d831fcf57"><td class="memItemLeft" align="right" valign="top"><a id="a665f2544f5fdc9a1527aea5d831fcf57" name="a665f2544f5fdc9a1527aea5d831fcf57"></a>
+typedef Kokkos::View&lt; solver_scalar_type **, Kokkos::LayoutLeft, typename HostExecSpaceType::memory_space &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>host_solver_scalar_view</b></td></tr>
+<tr class="separator:a665f2544f5fdc9a1527aea5d831fcf57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72590dc022547f05817085cfc3bc4ace" id="r_a72590dc022547f05817085cfc3bc4ace"><td class="memItemLeft" align="right" valign="top"><a id="a72590dc022547f05817085cfc3bc4ace" name="a72590dc022547f05817085cfc3bc4ace"></a>
 typedef <a class="el" href="class_amesos2_1_1_pardiso_m_k_l.html">Amesos2::PardisoMKL</a>&lt; Matrix, Vector &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>solver_type</b></td></tr>
 <tr class="separator:a72590dc022547f05817085cfc3bc4ace"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -265,14 +268,14 @@ host_ordinal_type_array&#160;</td><td class="memItemRight" valign="bottom"><b>co
 host_size_type_array&#160;</td><td class="memItemRight" valign="bottom"><b>rowptr_view_</b></td></tr>
 <tr class="memdesc:af7562699465f1cfb0a783294b646980e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the row indices of the nonzero entries. <br /></td></tr>
 <tr class="separator:af7562699465f1cfb0a783294b646980e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7a37c52c899f8dd2d00f5186eb4478e" id="r_ad7a37c52c899f8dd2d00f5186eb4478e"><td class="memItemLeft" align="right" valign="top"><a id="ad7a37c52c899f8dd2d00f5186eb4478e" name="ad7a37c52c899f8dd2d00f5186eb4478e"></a>
-Teuchos::Array&lt; solver_scalar_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>xvals_</b></td></tr>
-<tr class="memdesc:ad7a37c52c899f8dd2d00f5186eb4478e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Persisting, contiguous, 1D store for X. <br /></td></tr>
-<tr class="separator:ad7a37c52c899f8dd2d00f5186eb4478e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa92547927e30d3eba062339b3534b357" id="r_aa92547927e30d3eba062339b3534b357"><td class="memItemLeft" align="right" valign="top"><a id="aa92547927e30d3eba062339b3534b357" name="aa92547927e30d3eba062339b3534b357"></a>
-Teuchos::Array&lt; solver_scalar_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>bvals_</b></td></tr>
-<tr class="memdesc:aa92547927e30d3eba062339b3534b357"><td class="mdescLeft">&#160;</td><td class="mdescRight">Persisting, contiguous, 1D store for B. <br /></td></tr>
-<tr class="separator:aa92547927e30d3eba062339b3534b357"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3747c4555cbbf1b26f8405e417eaf51" id="r_ab3747c4555cbbf1b26f8405e417eaf51"><td class="memItemLeft" align="right" valign="top"><a id="ab3747c4555cbbf1b26f8405e417eaf51" name="ab3747c4555cbbf1b26f8405e417eaf51"></a>
+host_solver_scalar_view&#160;</td><td class="memItemRight" valign="bottom"><b>xvals_</b></td></tr>
+<tr class="memdesc:ab3747c4555cbbf1b26f8405e417eaf51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Persisting, contiguous, 2D view for X. <br /></td></tr>
+<tr class="separator:ab3747c4555cbbf1b26f8405e417eaf51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb663c5e95c0cea244d619e8c1291767" id="r_adb663c5e95c0cea244d619e8c1291767"><td class="memItemLeft" align="right" valign="top"><a id="adb663c5e95c0cea244d619e8c1291767" name="adb663c5e95c0cea244d619e8c1291767"></a>
+host_solver_scalar_view&#160;</td><td class="memItemRight" valign="bottom"><b>bvals_</b></td></tr>
+<tr class="memdesc:adb663c5e95c0cea244d619e8c1291767"><td class="mdescLeft">&#160;</td><td class="mdescRight">Persisting, contiguous, 2D view for B. <br /></td></tr>
+<tr class="separator:adb663c5e95c0cea244d619e8c1291767"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad304f9d77b373af4a0a44e755d67e57e" id="r_ad304f9d77b373af4a0a44e755d67e57e"><td class="memItemLeft" align="right" valign="top"><a id="ad304f9d77b373af4a0a44e755d67e57e" name="ad304f9d77b373af4a0a44e755d67e57e"></a>
 void *&#160;</td><td class="memItemRight" valign="bottom"><b>pt_</b> [64]</td></tr>
 <tr class="memdesc:ad304f9d77b373af4a0a44e755d67e57e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_amesos2_1_1_pardiso_m_k_l.html" title="Amesos2 interface to the PardisoMKL package.">PardisoMKL</a> internal data address pointer. <br /></td></tr>

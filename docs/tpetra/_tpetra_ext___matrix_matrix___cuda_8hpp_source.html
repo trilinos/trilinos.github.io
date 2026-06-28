@@ -211,7 +211,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  <span class="comment">// Options</span></div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  <span class="keywordtype">int</span> team_work_size = 16;  <span class="comment">// Defaults to 16 as per Deveci 12/7/16 - csiefer</span></div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  std::string myalg(<span class="stringliteral">&quot;SPGEMM_KK_MEMORY&quot;</span>);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  std::string myalg(<span class="stringliteral">&quot;SPGEMM_DEFAULT&quot;</span>);</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>  <span class="keywordflow">if</span> (!params.is_null()) {</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keywordflow">if</span> (params-&gt;isParameter(<span class="stringliteral">&quot;cuda: algorithm&quot;</span>))</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>      myalg = params-&gt;get(<span class="stringliteral">&quot;cuda: algorithm&quot;</span>, myalg);</div>
@@ -481,7 +481,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>          LO Bkj = Bcolind[j];</div>
 <div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>          LO Cij = Bcol2Ccol[Bkj];</div>
 <div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span> </div>
-<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>          <span class="keyword">const</span> <span class="keywordtype">bool</span> badInsert = c_status[Cij] &lt; OLD_ip || c_status[Cij] &gt;= CSR_ip;</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>          <span class="keyword">const</span> <span class="keywordtype">bool</span> badInsert = (Cij == LO_INVALID) || (c_status[Cij] &lt; OLD_ip) || (c_status[Cij] &gt;= CSR_ip);</div>
 <div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>          <span class="keywordflow">if</span> (!badInsert)</div>
 <div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>            Cvals[c_status[Cij]] += Aval * Bvals[j];</div>
 <div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>          <span class="keywordflow">else</span> <span class="keywordflow">if</span> (throwOnInsert)</div>
@@ -497,7 +497,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>          LO Ikj = Icolind[j];</div>
 <div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>          LO Cij = Icol2Ccol[Ikj];</div>
 <div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span> </div>
-<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>          <span class="keyword">const</span> <span class="keywordtype">bool</span> badInsert = c_status[Cij] &lt; OLD_ip || c_status[Cij] &gt;= CSR_ip;</div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>          <span class="keyword">const</span> <span class="keywordtype">bool</span> badInsert = (Cij == LO_INVALID) || (c_status[Cij] &lt; OLD_ip) || (c_status[Cij] &gt;= CSR_ip);</div>
 <div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>          <span class="keywordflow">if</span> (!badInsert)</div>
 <div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>            Cvals[c_status[Cij]] += Aval * Ivals[j];</div>
 <div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>          <span class="keywordflow">else</span> <span class="keywordflow">if</span> (throwOnInsert)</div>
@@ -813,7 +813,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00730" name="l00730"></a><span class="lineno">  730</span> </div>
 <div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span>  <span class="comment">// Options</span></div>
 <div class="line"><a id="l00732" name="l00732"></a><span class="lineno">  732</span>  <span class="keywordtype">int</span> team_work_size = 16;</div>
-<div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span>  std::string myalg(<span class="stringliteral">&quot;SPGEMM_KK_MEMORY&quot;</span>);</div>
+<div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span>  std::string myalg(<span class="stringliteral">&quot;SPGEMM_DEFAULT&quot;</span>);</div>
 <div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span>  <span class="keywordflow">if</span> (!params.is_null()) {</div>
 <div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span>    <span class="keywordflow">if</span> (params-&gt;isParameter(<span class="stringliteral">&quot;cuda: algorithm&quot;</span>))</div>
 <div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span>      myalg = params-&gt;get(<span class="stringliteral">&quot;cuda: algorithm&quot;</span>, myalg);</div>
