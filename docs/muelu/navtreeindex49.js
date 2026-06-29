@@ -1,5 +1,9 @@
 var NAVTREEINDEX49 =
 {
+"struct_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison_1_1_comparator.html#a6e0a0c607626192d8ef56767e0b92e0a":[9,0,3,4,5,0,12],
+"struct_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison_1_1_comparator.html#a6e0a0c607626192d8ef56767e0b92e0a":[10,0,2,2,5,0,12],
+"struct_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison_1_1_comparator.html#a9f22bc4cbb1caf7d80cb96e3f64c447d":[10,0,2,2,5,0,3],
+"struct_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison_1_1_comparator.html#a9f22bc4cbb1caf7d80cb96e3f64c447d":[9,0,3,4,5,0,3],
 "struct_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison_1_1_comparator.html#aa57fe5d155a2ab432b758afc49f3bc73":[10,0,2,2,5,0,11],
 "struct_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison_1_1_comparator.html#aa57fe5d155a2ab432b758afc49f3bc73":[9,0,3,4,5,0,11],
 "struct_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison_1_1_comparator.html#aaf41a71d3bc619c502d62e952ac17bd5":[9,0,3,4,5,0,16],
@@ -245,9 +249,5 @@ var NAVTREEINDEX49 =
 "struct_mue_lu_1_1_zoltan2_utilities.html":[9,0,3,265],
 "struct_mue_lu_1_1_zoltan2_utilities.html":[10,0,2,258],
 "struct_mue_lu_1_1_zoltan2_utilities.html#ac4eb45928da6ce9c300377260c54f2d7":[9,0,3,265,0],
-"struct_mue_lu_1_1_zoltan2_utilities.html#ac4eb45928da6ce9c300377260c54f2d7":[10,0,2,258,0],
-"struct_mue_lu_1_1_zoltan2_utilities.html#ae9b8c4f21c4d2037abb9141faff0fa6e":[9,0,3,265,1],
-"struct_mue_lu_1_1_zoltan2_utilities.html#ae9b8c4f21c4d2037abb9141faff0fa6e":[10,0,2,258,1],
-"struct_mue_lu_1_1_zoltan2_utilities.html#af3ea63af43356317c1af4ee2eb9a88fc":[9,0,3,265,2],
-"struct_mue_lu_1_1_zoltan2_utilities.html#af3ea63af43356317c1af4ee2eb9a88fc":[10,0,2,258,2]
+"struct_mue_lu_1_1_zoltan2_utilities.html#ac4eb45928da6ce9c300377260c54f2d7":[10,0,2,258,0]
 };

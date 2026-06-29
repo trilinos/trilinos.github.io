@@ -141,7 +141,54 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>enableStaticInitSolve
 <tr class="memitem:a4e5454b8fab363ebd150718e20b6c846" id="r_a4e5454b8fab363ebd150718e20b6c846"><td class="memItemLeft" align="right" valign="top"><a id="a4e5454b8fab363ebd150718e20b6c846" name="a4e5454b8fab363ebd150718e20b6c846"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>disableStaticInitSolve</b> ()</td></tr>
 <tr class="separator:a4e5454b8fab363ebd150718e20b6c846"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a223d4f30ae5807b3eda38ec605f9c0fe" id="r_a223d4f30ae5807b3eda38ec605f9c0fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_piro_1_1_trapezoid_rule_solver.html#a223d4f30ae5807b3eda38ec605f9c0fe">setStartTime</a> (const Scalar start_time)</td></tr>
+<tr class="memdesc:a223d4f30ae5807b3eda38ec605f9c0fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the start time of the integration window.  <br /></td></tr>
+<tr class="separator:a223d4f30ae5807b3eda38ec605f9c0fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9619417b8fdd896b633aec49e56027a" id="r_aa9619417b8fdd896b633aec49e56027a"><td class="memItemLeft" align="right" valign="top"><a id="aa9619417b8fdd896b633aec49e56027a" name="aa9619417b8fdd896b633aec49e56027a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setFinalTime</b> (const Scalar final_time)</td></tr>
+<tr class="memdesc:aa9619417b8fdd896b633aec49e56027a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the final time of the integration window (recomputes delta_t). <br /></td></tr>
+<tr class="separator:aa9619417b8fdd896b633aec49e56027a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d37fad769d9cf5d51e47854d6bd5ac4" id="r_a7d37fad769d9cf5d51e47854d6bd5ac4"><td class="memItemLeft" align="right" valign="top"><a id="a7d37fad769d9cf5d51e47854d6bd5ac4" name="a7d37fad769d9cf5d51e47854d6bd5ac4"></a>
+Scalar&#160;</td><td class="memItemRight" valign="bottom"><b>getStartTime</b> () const</td></tr>
+<tr class="memdesc:a7d37fad769d9cf5d51e47854d6bd5ac4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start time of the current integration window. <br /></td></tr>
+<tr class="separator:a7d37fad769d9cf5d51e47854d6bd5ac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cf1ea1e724178761129549b22f40eff" id="r_a0cf1ea1e724178761129549b22f40eff"><td class="memItemLeft" align="right" valign="top"><a id="a0cf1ea1e724178761129549b22f40eff" name="a0cf1ea1e724178761129549b22f40eff"></a>
+Scalar&#160;</td><td class="memItemRight" valign="bottom"><b>getFinalTime</b> () const</td></tr>
+<tr class="memdesc:a0cf1ea1e724178761129549b22f40eff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Final time of the current integration window. <br /></td></tr>
+<tr class="separator:a0cf1ea1e724178761129549b22f40eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a223d4f30ae5807b3eda38ec605f9c0fe" name="a223d4f30ae5807b3eda38ec605f9c0fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a223d4f30ae5807b3eda38ec605f9c0fe">&#9670;&#160;</a></span>setStartTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Scalar &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_piro_1_1_trapezoid_rule_solver.html">Piro::TrapezoidRuleSolver</a>&lt; Scalar &gt;::setStartTime </td>
+          <td>(</td>
+          <td class="paramtype">const Scalar&#160;</td>
+          <td class="paramname"><em>start_time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the start time of the integration window. </p>
+<p>By default the window (Initial Time, Final Time) is fixed at construction from the "Trapezoid Rule" parameter list. These setters let a driver &ndash; e.g. a coupling loop that advances the solver one outer step at a time &ndash; retarget the window to successive segments of global simulation time before each evalModel call, mirroring <a class="el" href="class_piro_1_1_tempus_solver.html" title="Thyra-based Model Evaluator for Tempus solves.">Piro::TempusSolver</a>'s setStartTime/setFinalTime. The model then sees true simulation time through InArgs::set_t (a time-dependent boundary condition, body force, or material lookup gets the correct time instead of the fixed window's). The internal time step delta_t = (Final - Initial) / Num Time Steps is recomputed; the dynamics depend only on delta_t, so shifting the window's origin leaves the integration unchanged. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><b>Piro_TrapezoidRuleSolver.hpp</b></li>
 </ul>

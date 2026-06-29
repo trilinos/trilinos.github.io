@@ -82,16 +82,16 @@ Goal</h1>
 <li>provides a standard Trilinos interface for evaluating the application model</li>
 </ul>
 </li>
+<li><code>getNominalValues()</code><ul>
+<li>provides nominal initial conditions from the model</li>
+</ul>
+</li>
 <li><code>Thyra::ModelEvaluatorBase::InArgs</code><ul>
 <li>supplies the model inputs such as time and state</li>
 </ul>
 </li>
 <li><code>Thyra::ModelEvaluatorBase::OutArgs</code><ul>
 <li>receives the model outputs such as the right-hand side</li>
-</ul>
-</li>
-<li><code>getNominalValues()</code><ul>
-<li>provides nominal initial conditions from the model</li>
 </ul>
 </li>
 <li><code>evalModel()</code><ul>
@@ -161,10 +161,11 @@ How to compare the examples</h1>
 </ul>
 <p>From the <code>packages/tempus</code> directory, a focused comparison of the main time-integration logic between these two examples can be generated locally in <code>bash</code> or <code>zsh</code> with:</p>
 <div class="fragment"><div class="line">git diff --no-index \</div>
-<div class="line">  &lt;(sed -n &#39;60,130p&#39; examples/01_Utilize_Thyra/01_Utilize_Thyra.cpp) \</div>
-<div class="line">  &lt;(sed -n &#39;67,131p&#39; examples/02_Use_ModelEvaluator/02_Use_ModelEvaluator.cpp)</div>
-</div><!-- fragment --><p>This ignores leading header lines (for example, <code>#include</code> statements and Doxygen comments) and trailing regression-testing lines.</p>
-<p> 
+<div class="line">  &lt;(sed -n &#39;59,129p&#39; examples/01_Utilize_Thyra/01_Utilize_Thyra.cpp) \</div>
+<div class="line">  &lt;(sed -n &#39;66,130p&#39; examples/02_Use_ModelEvaluator/02_Use_ModelEvaluator.cpp)</div>
+</div><!-- fragment --><p>This ignores leading header lines (e.g., <code>#include</code> statements and Doxygen comments) and trailing regression-testing lines.</p>
+<hr  style="border:0; border-top:5px solid #ccc;" />
+<p>  
 <div style="text-align:center;">
   <a href="example-01.html">← Previous Example</a> |
   <a href="example-02.html">Current Example</a> |
