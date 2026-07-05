@@ -1286,12 +1286,18 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01276" name="l01276"></a><span class="lineno"> 1276</span><span class="preprocessor">  template class Details::FixedHashTable&lt;LO, LO, Kokkos::Device&lt;Kokkos::Serial, Kokkos::HostSpace&gt;&gt;;</span></div>
 <div class="line"><a id="l01277" name="l01277"></a><span class="lineno"> 1277</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l01278" name="l01278"></a><span class="lineno"> 1278</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l01279" name="l01279"></a><span class="lineno"> 1279</span><span class="preprocessor">#define TPETRA_DETAILS_FIXEDHASHTABLE_INSTANT(LO, GO, NODE)                       \</span></div>
-<div class="line"><a id="l01280" name="l01280"></a><span class="lineno"> 1280</span><span class="preprocessor">  template class Details::FixedHashTable&lt;GO, LO, typename NODE::device_type&gt;;     \</span></div>
-<div class="line"><a id="l01281" name="l01281"></a><span class="lineno"> 1281</span><span class="preprocessor">  template class Details::FixedHashTable&lt;GO, LO, Kokkos::HostSpace::device_type&gt;; \</span></div>
-<div class="line"><a id="l01282" name="l01282"></a><span class="lineno"> 1282</span><span class="preprocessor">  template class Details::FixedHashTable&lt;LO, LO, Kokkos::HostSpace::device_type&gt;;</span></div>
-<div class="line"><a id="l01283" name="l01283"></a><span class="lineno"> 1283</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l01284" name="l01284"></a><span class="lineno"> 1284</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l01279" name="l01279"></a><span class="lineno"> 1279</span><span class="preprocessor">#if defined(HAVE_TPETRA_INST_INT_INT)</span></div>
+<div class="line"><a id="l01280" name="l01280"></a><span class="lineno"> 1280</span><span class="preprocessor">#define TPETRA_DETAILS_FIXEDHASHTABLE_INSTANT(LO, GO, NODE)                   \</span></div>
+<div class="line"><a id="l01281" name="l01281"></a><span class="lineno"> 1281</span><span class="preprocessor">  template class Details::FixedHashTable&lt;GO, LO, typename NODE::device_type&gt;; \</span></div>
+<div class="line"><a id="l01282" name="l01282"></a><span class="lineno"> 1282</span><span class="preprocessor">  template class Details::FixedHashTable&lt;GO, LO, Kokkos::HostSpace::device_type&gt;;</span></div>
+<div class="line"><a id="l01283" name="l01283"></a><span class="lineno"> 1283</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l01284" name="l01284"></a><span class="lineno"> 1284</span><span class="preprocessor">#define TPETRA_DETAILS_FIXEDHASHTABLE_INSTANT(LO, GO, NODE)                       \</span></div>
+<div class="line"><a id="l01285" name="l01285"></a><span class="lineno"> 1285</span><span class="preprocessor">  template class Details::FixedHashTable&lt;GO, LO, typename NODE::device_type&gt;;     \</span></div>
+<div class="line"><a id="l01286" name="l01286"></a><span class="lineno"> 1286</span><span class="preprocessor">  template class Details::FixedHashTable&lt;GO, LO, Kokkos::HostSpace::device_type&gt;; \</span></div>
+<div class="line"><a id="l01287" name="l01287"></a><span class="lineno"> 1287</span><span class="preprocessor">  template class Details::FixedHashTable&lt;LO, LO, Kokkos::HostSpace::device_type&gt;;</span></div>
+<div class="line"><a id="l01288" name="l01288"></a><span class="lineno"> 1288</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l01289" name="l01289"></a><span class="lineno"> 1289</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l01290" name="l01290"></a><span class="lineno"> 1290</span><span class="preprocessor">#endif</span></div>
 </div>
 </div>
 </div>
