@@ -194,8 +194,8 @@ Functions</h2></td></tr>
 <tr class="memitem:a406442f7223aebb34951cbb52f1718cd" id="r_a406442f7223aebb34951cbb52f1718cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer__stk.html#a406442f7223aebb34951cbb52f1718cd">computeSidesetNodeNormals</a> (std::unordered_map&lt; std::size_t, Kokkos::DynRankView&lt; double, PHX::Device &gt; &gt; &amp;elementToNormalMap, const Teuchos::RCP&lt; const <a class="el" href="classpanzer__stk_1_1_s_t_k___interface.html">panzer_stk::STK_Interface</a> &gt; &amp;mesh, const std::string &amp;sidesetName, const std::string &amp;elementBlockName, std::ostream *out=NULL, std::ostream *pout=NULL)</td></tr>
 <tr class="memdesc:a406442f7223aebb34951cbb52f1718cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the normals for all nodes associated with a sideset surface.  <br /></td></tr>
 <tr class="separator:a406442f7223aebb34951cbb52f1718cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2566c73ccf84f7cb9b164f071d9973cc" id="r_a2566c73ccf84f7cb9b164f071d9973cc"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer__stk.html#a2566c73ccf84f7cb9b164f071d9973cc">transformBCNameForIOSS</a> (std::string &amp;bc_name)</td></tr>
-<tr class="separator:a2566c73ccf84f7cb9b164f071d9973cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92d093d2f40e8f96b8dcf75936f2fa0d" id="r_a92d093d2f40e8f96b8dcf75936f2fa0d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer__stk.html#a92d093d2f40e8f96b8dcf75936f2fa0d">transformBCNameForIOSS</a> (std::string &amp;bc_name, const bool make_lower_case=false)</td></tr>
+<tr class="separator:a92d093d2f40e8f96b8dcf75936f2fa0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91b44689021f957b06321ee80c26dd60" id="r_a91b44689021f957b06321ee80c26dd60"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer__stk.html#a91b44689021f957b06321ee80c26dd60">version</a> ()</td></tr>
 <tr class="separator:a91b44689021f957b06321ee80c26dd60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a449868fb7af9c3c6ed172d6e169b80" id="r_a8a449868fb7af9c3c6ed172d6e169b80"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer__stk.html#a8a449868fb7af9c3c6ed172d6e169b80">getElementIdx</a> (const std::vector&lt; stk::mesh::Entity &gt; &amp;elements, stk::mesh::Entity const e)</td></tr>
@@ -803,8 +803,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a2566c73ccf84f7cb9b164f071d9973cc" name="a2566c73ccf84f7cb9b164f071d9973cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2566c73ccf84f7cb9b164f071d9973cc">&#9670;&#160;</a></span>transformBCNameForIOSS()</h2>
+<a id="a92d093d2f40e8f96b8dcf75936f2fa0d" name="a92d093d2f40e8f96b8dcf75936f2fa0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92d093d2f40e8f96b8dcf75936f2fa0d">&#9670;&#160;</a></span>transformBCNameForIOSS()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -813,12 +813,31 @@ Functions</h2></td></tr>
           <td class="memname">std::string panzer_stk::transformBCNameForIOSS </td>
           <td>(</td>
           <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>bc_name</em></td><td>)</td>
+          <td class="paramname"><em>bc_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>make_lower_case</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Takes a sideset or nodeset name and transforms it for IOSS restrictions. Cubit replaces whitespace in sideset and nodeset names with underscores when writing to exodus. When IOSS reads exodus files into STK, it replaces all capital letters with lowercase letters. This function allows you to use the name labels used in Cubit and tie them to the correct nodeset or sideset in a STK mesh database. </p>
+<p>Takes a sideset or nodeset name and transforms it for IOSS restrictions. Cubit replaces whitespace in sideset and nodeset names with underscores when writing to exodus. When IOSS reads exodus files into STK, it replaces all capital letters with lowercase letters. This function allows you to use the name labels used in Cubit and tie them to the correct nodeset or sideset in a STK mesh database.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bc_name</td><td>String to be converted - this object is transformed in-place </td></tr>
+    <tr><td class="paramname">make_lower_case</td><td>If set to true, convert to lower case. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns the transformed name</dd></dl>
+<p>NOTE: On 2026.05.30, IOSS was changed to allow for upper case in sideset names. We now only have to account for the spaces being changed to underscores. This behavior can be reversed with IOSS properties. </p>
 
 <p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___transform_b_c_name_for_i_o_s_s_8cpp_source.html#l00016">16</a> of file <a class="el" href="_panzer___s_t_k___transform_b_c_name_for_i_o_s_s_8cpp_source.html">Panzer_STK_TransformBCNameForIOSS.cpp</a>.</p>
 

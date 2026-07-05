@@ -5,5 +5,6 @@ var searchData=
   ['preconditionerfactory_2',['PreconditionerFactory',['../class_teko_1_1_preconditioner_factory.html',1,'Teko']]],
   ['preconditionerlinearop_3',['PreconditionerLinearOp',['../class_teko_1_1_preconditioner_linear_op.html',1,'Teko']]],
   ['preconditionerstate_4',['PreconditionerState',['../class_teko_1_1_preconditioner_state.html',1,'Teko']]],
-  ['preslaplacelscstrategy_5',['PresLaplaceLSCStrategy',['../class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html',1,'Teko::NS']]]
+  ['preslaplacelscstrategy_5',['PresLaplaceLSCStrategy',['../class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html',1,'Teko::NS']]],
+  ['probingpreconditionerfactory_6',['ProbingPreconditionerFactory',['../class_teko_1_1_probing_preconditioner_factory.html',1,'Teko']]]
 ];
