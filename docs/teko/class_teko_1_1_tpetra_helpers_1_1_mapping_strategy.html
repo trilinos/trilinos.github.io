@@ -80,7 +80,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Abstract Mapping strategy for an <a class="el" href="class_teko_1_1_tpetra_helpers_1_1_tpetra_operator_wrapper.html" title="Implements the Epetra_Operator interface with a Thyra LinearOperator. This enables the use of absrtac...">TpetraOperatorWrapper</a>.  
+<p>Abstract Mapping strategy for an <a class="el" href="class_teko_1_1_tpetra_helpers_1_1_tpetra_operator_wrapper.html" title="Implements the Tpetra::Operator interface with a Thyra LinearOperator. This enables the use of absrta...">TpetraOperatorWrapper</a>.  
  <a href="class_teko_1_1_tpetra_helpers_1_1_mapping_strategy.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_teko___tpetra_operator_wrapper_8hpp_source.html">Teko_TpetraOperatorWrapper.hpp</a>&gt;</code></p>
@@ -100,10 +100,10 @@ Inheritance diagram for Teko::TpetraHelpers::MappingStrategy:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aafaa609b645d919b002da66bb69308ce" id="r_aafaa609b645d919b002da66bb69308ce"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_teko_1_1_tpetra_helpers_1_1_mapping_strategy.html#aafaa609b645d919b002da66bb69308ce">copyTpetraIntoThyra</a> (const Tpetra::MultiVector&lt; ST, LO, GO, NT &gt; &amp;tpetraX, const Teuchos::Ptr&lt; Thyra::MultiVectorBase&lt; ST &gt; &gt; &amp;thyraX) const =0</td></tr>
-<tr class="memdesc:aafaa609b645d919b002da66bb69308ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy an Epetra_MultiVector into a Thyra::MultiVectorBase.  <br /></td></tr>
+<tr class="memdesc:aafaa609b645d919b002da66bb69308ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy a Tpetra::MultiVector into a Thyra::MultiVectorBase.  <br /></td></tr>
 <tr class="separator:aafaa609b645d919b002da66bb69308ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8299615dc6224b448b6f2ea1e3e0815" id="r_ab8299615dc6224b448b6f2ea1e3e0815"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_teko_1_1_tpetra_helpers_1_1_mapping_strategy.html#ab8299615dc6224b448b6f2ea1e3e0815">copyThyraIntoTpetra</a> (const RCP&lt; const Thyra::MultiVectorBase&lt; ST &gt; &gt; &amp;thyraX, Tpetra::MultiVector&lt; ST, LO, GO, NT &gt; &amp;tpetraX) const =0</td></tr>
-<tr class="memdesc:ab8299615dc6224b448b6f2ea1e3e0815"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy an Thyra::MultiVectorBase into a Epetra_MultiVector.  <br /></td></tr>
+<tr class="memdesc:ab8299615dc6224b448b6f2ea1e3e0815"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy an Thyra::MultiVectorBase into a Tpetra::MultiVector.  <br /></td></tr>
 <tr class="separator:ab8299615dc6224b448b6f2ea1e3e0815"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6862e502401eefa3b71554e75499a698" id="r_a6862e502401eefa3b71554e75499a698"><td class="memItemLeft" align="right" valign="top">virtual const RCP&lt; const Tpetra::Map&lt; LO, GO, NT &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_teko_1_1_tpetra_helpers_1_1_mapping_strategy.html#a6862e502401eefa3b71554e75499a698">domainMap</a> () const =0</td></tr>
 <tr class="memdesc:a6862e502401eefa3b71554e75499a698"><td class="mdescLeft">&#160;</td><td class="mdescRight">Domain map for this strategy.  <br /></td></tr>
@@ -116,7 +116,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a423a137f28eb2521f69ec0396cce406f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Abstract Mapping strategy for an <a class="el" href="class_teko_1_1_tpetra_helpers_1_1_tpetra_operator_wrapper.html" title="Implements the Epetra_Operator interface with a Thyra LinearOperator. This enables the use of absrtac...">TpetraOperatorWrapper</a>. </p>
+<div class="textblock"><p>Abstract Mapping strategy for an <a class="el" href="class_teko_1_1_tpetra_helpers_1_1_tpetra_operator_wrapper.html" title="Implements the Tpetra::Operator interface with a Thyra LinearOperator. This enables the use of absrta...">TpetraOperatorWrapper</a>. </p>
 
 <p class="definition">Definition at line <a class="el" href="_teko___tpetra_operator_wrapper_8hpp_source.html#l00028">28</a> of file <a class="el" href="_teko___tpetra_operator_wrapper_8hpp_source.html">Teko_TpetraOperatorWrapper.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
@@ -154,11 +154,11 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Copy an Epetra_MultiVector into a Thyra::MultiVectorBase. </p>
-<p>Copy an Epetra_MultiVector into a Thyra::MultiVectorBase. The exact method for copying is specified by the concrete implementations.</p>
+<p>Copy a Tpetra::MultiVector into a Thyra::MultiVectorBase. </p>
+<p>Copy a Tpetra::MultiVector into a Thyra::MultiVectorBase. The exact method for copying is specified by the concrete implementations.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">epetraX</td><td>Vector to be copied into the Thyra object </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tpetraX</td><td>Vector to be copied into the Thyra object </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">thyraX</td><td>Destination Thyra object </td></tr>
   </table>
   </dd>
@@ -202,12 +202,12 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Copy an Thyra::MultiVectorBase into a Epetra_MultiVector. </p>
-<p>Copy an Thyra::MultiVectorBase into an Epetra_MultiVector. The exact method for copying is specified by the concrete implementations.</p>
+<p>Copy an Thyra::MultiVectorBase into a Tpetra::MultiVector. </p>
+<p>Copy an Thyra::MultiVectorBase into a Tpetra::MultiVector. The exact method for copying is specified by the concrete implementations.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">thyraX</td><td>Source Thyra object </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">epetraX</td><td>Destination Epetra object </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">tpetraX</td><td>Destination Tpetra object </td></tr>
   </table>
   </dd>
 </dl>

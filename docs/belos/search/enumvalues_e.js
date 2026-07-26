@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['unconverged_0',['Unconverged',['../namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18ba200eaf745e4085dd838cb9ce24fad19c',1,'Belos']]],
-  ['undefined_1',['Undefined',['../namespace_belos.html#a342eae302936d58ef9d7426063340863a60770bedf2472b3ef2e23f87f3a4d1cc',1,'Belos']]],
-  ['user_2',['User',['../namespace_belos.html#a9ced295f4b474d2c545f344204940f41a1fd73f9e3f93d404e651e3ccf5dd877e',1,'Belos']]],
-  ['userprovided_3',['UserProvided',['../namespace_belos.html#ab2a257ae715c1d7d646de3bd67d3d9b3a2266d47170ca1dbf0b95330ea120bfaa',1,'Belos']]]
+  ['seq_0',['SEQ',['../class_belos_1_1_status_test_combo.html#a0d2b491520f3106f4e50890f1770e2feaaaf00b661ed3be7ce910a43868f8be45',1,'Belos::StatusTestCombo']]],
+  ['statustestdetails_1',['StatusTestDetails',['../namespace_belos.html#a2a2aa51a3ef87c278fd43945578b3612a214b85228315388f0b0fea24202ba4e4',1,'Belos']]]
 ];

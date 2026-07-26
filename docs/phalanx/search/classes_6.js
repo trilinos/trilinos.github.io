@@ -1,12 +1,18 @@
 var searchData=
 [
-  ['kokkosdimtype_0',['KokkosDimType',['../struct_p_h_x_1_1_kokkos_dim_type.html',1,'PHX']]],
-  ['kokkosdimtype_3c_20datat_2c_200_20_3e_1',['KokkosDimType&lt; DataT, 0 &gt;',['../struct_p_h_x_1_1_kokkos_dim_type_3_01_data_t_00_010_01_4.html',1,'PHX']]],
-  ['kokkosviewcreatefunctor_2',['KokkosViewCreateFunctor',['../class_p_h_x_1_1_kokkos_view_create_functor.html',1,'PHX']]],
-  ['kokkosviewfactory_3',['KokkosViewFactory',['../class_p_h_x_1_1_kokkos_view_factory.html',1,'PHX']]],
-  ['kokkosviewfactory_3c_20sacado_3a_3aelrcachefad_3a_3adfad_3c_20scalart_20_3e_2c_20layout_2c_20device_20_3e_4',['KokkosViewFactory&lt; Sacado::ELRCacheFad::DFad&lt; ScalarT &gt;, Layout, Device &gt;',['../class_p_h_x_1_1_kokkos_view_factory_3_01_sacado_1_1_e_l_r_cache_fad_1_1_d_fad_3_01_scalar_t_01_4_00_01_layout_00_01_device_01_4.html',1,'PHX']]],
-  ['kokkosviewfactory_3c_20sacado_3a_3afad_3a_3adfad_3c_20scalart_20_3e_2c_20layout_2c_20device_20_3e_5',['KokkosViewFactory&lt; Sacado::Fad::DFad&lt; ScalarT &gt;, Layout, Device &gt;',['../class_p_h_x_1_1_kokkos_view_factory_3_01_sacado_1_1_fad_1_1_d_fad_3_01_scalar_t_01_4_00_01_layout_00_01_device_01_4.html',1,'PHX']]],
-  ['kokkosviewfactory_3c_20sacado_3a_3afad_3a_3aslfad_3c_20scalart_2c_20n_20_3e_2c_20layout_2c_20device_20_3e_6',['KokkosViewFactory&lt; Sacado::Fad::SLFad&lt; ScalarT, N &gt;, Layout, Device &gt;',['../class_p_h_x_1_1_kokkos_view_factory_3_01_sacado_1_1_fad_1_1_s_l_fad_3_01_scalar_t_00_01_n_01_4_00_01_layout_00_01_device_01_4.html',1,'PHX']]],
-  ['kokkosviewfactoryfunctor_7',['KokkosViewFactoryFunctor',['../class_p_h_x_1_1_kokkos_view_factory_functor.html',1,'PHX']]],
-  ['kokkosviewsizefunctor_8',['KokkosViewSizeFunctor',['../class_p_h_x_1_1_kokkos_view_size_functor.html',1,'PHX']]]
+  ['is_5fdevice_0',['is_device',['../struct_p_h_x_1_1is__device.html',1,'PHX']]],
+  ['is_5fdevice_3c_20phx_3a_3adevice_20_3e_1',['is_device&lt; PHX::Device &gt;',['../struct_p_h_x_1_1is__device_3_01_p_h_x_1_1_device_01_4.html',1,'PHX']]],
+  ['is_5fdyn_5frank_5fview_2',['is_dyn_rank_view',['../struct_p_h_x_1_1is__dyn__rank__view.html',1,'PHX']]],
+  ['is_5fdyn_5frank_5fview_3c_20const_20kokkos_3a_3adynrankview_3c_20t_2c_20props_2e_2e_2e_20_3e_20_3e_3',['is_dyn_rank_view&lt; const Kokkos::DynRankView&lt; T, Props... &gt; &gt;',['../struct_p_h_x_1_1is__dyn__rank__view_3_01const_01_kokkos_1_1_dyn_rank_view_3_01_t_00_01_props_8_8_8_01_4_01_4.html',1,'PHX']]],
+  ['is_5fdyn_5frank_5fview_3c_20kokkos_3a_3adynrankview_3c_20t_2c_20props_2e_2e_2e_20_3e_20_3e_4',['is_dyn_rank_view&lt; Kokkos::DynRankView&lt; T, Props... &gt; &gt;',['../struct_p_h_x_1_1is__dyn__rank__view_3_01_kokkos_1_1_dyn_rank_view_3_01_t_00_01_props_8_8_8_01_4_01_4.html',1,'PHX']]],
+  ['is_5fextent_5',['is_extent',['../struct_p_h_x_1_1is__extent.html',1,'PHX']]],
+  ['is_5ffield_6',['is_field',['../struct_p_h_x_1_1is__field.html',1,'PHX']]],
+  ['is_5ffield_3c_20const_20phx_3a_3afield_3c_20t_2c_20rank_2c_20layout_20_3e_20_3e_7',['is_field&lt; const PHX::Field&lt; T, Rank, Layout &gt; &gt;',['../struct_p_h_x_1_1is__field_3_01const_01_p_h_x_1_1_field_3_01_t_00_01_rank_00_01_layout_01_4_01_4.html',1,'PHX']]],
+  ['is_5ffield_3c_20phx_3a_3afield_3c_20t_2c_20rank_2c_20layout_20_3e_20_3e_8',['is_field&lt; PHX::Field&lt; T, Rank, Layout &gt; &gt;',['../struct_p_h_x_1_1is__field_3_01_p_h_x_1_1_field_3_01_t_00_01_rank_00_01_layout_01_4_01_4.html',1,'PHX']]],
+  ['is_5flayout_9',['is_layout',['../struct_p_h_x_1_1is__layout.html',1,'PHX']]],
+  ['is_5flayout_3c_20kokkos_3a_3alayoutleft_20_3e_10',['is_layout&lt; Kokkos::LayoutLeft &gt;',['../struct_p_h_x_1_1is__layout_3_01_kokkos_1_1_layout_left_01_4.html',1,'PHX']]],
+  ['is_5flayout_3c_20kokkos_3a_3alayoutright_20_3e_11',['is_layout&lt; Kokkos::LayoutRight &gt;',['../struct_p_h_x_1_1is__layout_3_01_kokkos_1_1_layout_right_01_4.html',1,'PHX']]],
+  ['is_5fmdfield_12',['is_mdfield',['../struct_p_h_x_1_1is__mdfield.html',1,'PHX']]],
+  ['is_5fmdfield_3c_20const_20phx_3a_3amdfield_3c_20t_2c_20props_2e_2e_2e_20_3e_20_3e_13',['is_mdfield&lt; const PHX::MDField&lt; T, Props... &gt; &gt;',['../struct_p_h_x_1_1is__mdfield_3_01const_01_p_h_x_1_1_m_d_field_3_01_t_00_01_props_8_8_8_01_4_01_4.html',1,'PHX']]],
+  ['is_5fmdfield_3c_20phx_3a_3amdfield_3c_20t_2c_20props_2e_2e_2e_20_3e_20_3e_14',['is_mdfield&lt; PHX::MDField&lt; T, Props... &gt; &gt;',['../struct_p_h_x_1_1is__mdfield_3_01_p_h_x_1_1_m_d_field_3_01_t_00_01_props_8_8_8_01_4_01_4.html',1,'PHX']]]
 ];

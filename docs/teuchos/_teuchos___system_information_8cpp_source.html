@@ -310,80 +310,85 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <span class="comment">// ignore</span></div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>  }</div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>  <span class="comment">// CPUs</span></div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>  registerCommand(<span class="stringliteral">&quot;lscpu&quot;</span>);</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>  <span class="comment">// preload</span></div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>  registerEnvironmentVariable(<span class="stringliteral">&quot;LD_PRELOAD&quot;</span>);</div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>  <span class="comment">// temperature sensors</span></div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>  registerCommand(<span class="stringliteral">&quot;sensors&quot;</span>);</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>  <span class="comment">// CPUs</span></div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>  registerCommand(<span class="stringliteral">&quot;lscpu&quot;</span>);</div>
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>  <span class="comment">// OpenMP</span></div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>  registerEnvironmentVariablePrefix(<span class="stringliteral">&quot;OMP&quot;</span>);</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>  <span class="comment">// temperature sensors</span></div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>  registerCommand(<span class="stringliteral">&quot;sensors&quot;</span>);</div>
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>  <span class="comment">// OpenMPI</span></div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>  registerCommand(<span class="stringliteral">&quot;ompi_info&quot;</span>);</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>  registerEnvironmentVariablePrefix(<span class="stringliteral">&quot;OMPI&quot;</span>);</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>  <span class="comment">// MPICH</span></div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>  registerCommand(<span class="stringliteral">&quot;mpichinfo&quot;</span>);</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>  registerEnvironmentVariablePrefix(<span class="stringliteral">&quot;MPICH&quot;</span>);</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>  <span class="comment">// CRAY</span></div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>  registerEnvironmentVariablePrefix(<span class="stringliteral">&quot;CRAY&quot;</span>);</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>  <span class="comment">// OpenMP</span></div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>  registerEnvironmentVariablePrefix(<span class="stringliteral">&quot;OMP&quot;</span>);</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span> </div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>  <span class="comment">// OpenMPI</span></div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>  registerCommand(<span class="stringliteral">&quot;ompi_info&quot;</span>);</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>  registerEnvironmentVariablePrefix(<span class="stringliteral">&quot;OMPI&quot;</span>);</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>  <span class="comment">// MPICH</span></div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>  registerCommand(<span class="stringliteral">&quot;mpichinfo&quot;</span>);</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>  registerEnvironmentVariablePrefix(<span class="stringliteral">&quot;MPICH&quot;</span>);</div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>  <span class="comment">// modules</span></div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>  registerCommand(<span class="stringliteral">&quot;module&quot;</span>, <span class="stringliteral">&quot;module list 2&gt;&amp;1&quot;</span>, <span class="stringliteral">&quot;module&quot;</span>);</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>  <span class="comment">// CRAY</span></div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>  registerEnvironmentVariablePrefix(<span class="stringliteral">&quot;CRAY&quot;</span>);</div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span> </div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>  <span class="comment">// CUDA</span></div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>  registerCommand(<span class="stringliteral">&quot;nvidia-smi&quot;</span>, <span class="stringliteral">&quot;nvidia-smi --query&quot;</span>, <span class="stringliteral">&quot;nvidia-smi&quot;</span>);</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>  registerEnvironmentVariablePrefix(<span class="stringliteral">&quot;CUDA&quot;</span>);</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>  <span class="comment">// ROCm</span></div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>  registerCommand(<span class="stringliteral">&quot;rocm-smi&quot;</span>, <span class="stringliteral">&quot;rocm-smi --showallinfo&quot;</span>, <span class="stringliteral">&quot;rocm-smi&quot;</span>);</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>  <span class="comment">// modules</span></div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>  registerCommand(<span class="stringliteral">&quot;module&quot;</span>, <span class="stringliteral">&quot;module list 2&gt;&amp;1&quot;</span>, <span class="stringliteral">&quot;module&quot;</span>);</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>  <span class="comment">// CUDA</span></div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>  registerCommand(<span class="stringliteral">&quot;nvidia-smi&quot;</span>, <span class="stringliteral">&quot;nvidia-smi --query&quot;</span>, <span class="stringliteral">&quot;nvidia-smi&quot;</span>);</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>  registerEnvironmentVariablePrefix(<span class="stringliteral">&quot;CUDA&quot;</span>);</div>
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span> </div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>  <span class="comment">// SYCL</span></div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>  registerCommand(<span class="stringliteral">&quot;sycl-ls&quot;</span>, <span class="stringliteral">&quot;sycl-ls --verbose&quot;</span>, <span class="stringliteral">&quot;sycl-ls&quot;</span>);</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span> </div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>  <span class="comment">// package namespaced environment variables</span></div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;prefix : {<span class="stringliteral">&quot;TEUCHOS&quot;</span>, <span class="stringliteral">&quot;KOKKOS&quot;</span>, <span class="stringliteral">&quot;TPETRA&quot;</span>, <span class="stringliteral">&quot;STK&quot;</span>, <span class="stringliteral">&quot;MUELU&quot;</span>, <span class="stringliteral">&quot;IFPACK2&quot;</span>})</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    registerEnvironmentVariablePrefix(prefix);</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>}</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>  <span class="comment">// ROCm</span></div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>  registerCommand(<span class="stringliteral">&quot;rocm-smi&quot;</span>, <span class="stringliteral">&quot;rocm-smi --showallinfo&quot;</span>, <span class="stringliteral">&quot;rocm-smi&quot;</span>);</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>  registerEnvironmentVariablePrefix(<span class="stringliteral">&quot;HIP&quot;</span>);</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>  registerEnvironmentVariablePrefix(<span class="stringliteral">&quot;HSA&quot;</span>);</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span> </div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>  <span class="comment">// SYCL</span></div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>  registerCommand(<span class="stringliteral">&quot;sycl-ls&quot;</span>, <span class="stringliteral">&quot;sycl-ls --verbose&quot;</span>, <span class="stringliteral">&quot;sycl-ls&quot;</span>);</div>
 <div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>std::map&lt;std::string, std::string&gt; collectSystemInformation() {</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>  std::map&lt;std::string, std::string&gt; data;</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span> </div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>  <span class="keyword">const</span> std::string DATA_NOT_AVAILABLE = <span class="stringliteral">&quot;NOT AVAILABLE&quot;</span>;</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>  <span class="keyword">auto</span> &amp;commands = getCommandsMap();</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;command : commands) {</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> isAvailable = commandIsAvailable(command.second.first);</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    <span class="keywordflow">if</span> (isAvailable) {</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>      data[command.first] = runCommandAndCaptureOutput(command.second.second);</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>      data[command.first] = DATA_NOT_AVAILABLE;</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    }</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>  }</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span> </div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>  <span class="keyword">auto</span> &amp;environmentVariablePrefixes = getEnvironmentVariablePrefixSet();</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;prefix : environmentVariablePrefixes) {</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    registerAllPrefixedVariables(prefix);</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>  <span class="comment">// package namespaced environment variables</span></div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;prefix : {<span class="stringliteral">&quot;TRILINOS&quot;</span>, <span class="stringliteral">&quot;TEUCHOS&quot;</span>, <span class="stringliteral">&quot;KOKKOS&quot;</span>, <span class="stringliteral">&quot;TPETRA&quot;</span>, <span class="stringliteral">&quot;STK&quot;</span>, <span class="stringliteral">&quot;MUELU&quot;</span>, <span class="stringliteral">&quot;IFPACK2&quot;</span>})</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    registerEnvironmentVariablePrefix(prefix);</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>}</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>std::map&lt;std::string, std::string&gt; collectSystemInformation() {</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span> </div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>  std::map&lt;std::string, std::string&gt; data;</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> </div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>  <span class="keyword">const</span> std::string DATA_NOT_AVAILABLE = <span class="stringliteral">&quot;NOT AVAILABLE&quot;</span>;</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span> </div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>  <span class="keyword">auto</span> &amp;commands = getCommandsMap();</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;command : commands) {</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> isAvailable = commandIsAvailable(command.second.first);</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    <span class="keywordflow">if</span> (isAvailable) {</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>      data[command.first] = runCommandAndCaptureOutput(command.second.second);</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>      data[command.first] = DATA_NOT_AVAILABLE;</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    }</div>
 <div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>  }</div>
 <div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span> </div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>  <span class="keyword">auto</span> &amp;environmentVariables = getEnvironmentVariablesSet();</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;envVariable : environmentVariables) {</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* varVal = <a class="code hl_function" href="namespace_teuchos.html#acf00020dd69ccf520c876d2fd39deaee">Teuchos::getEnvironmentVariableValue</a>(envVariable);</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    <span class="keywordflow">if</span>(varVal == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>      data[envVariable] = <span class="stringliteral">&quot;NOT SET&quot;</span>;</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    }</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>      data[envVariable] = varVal;</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    }</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>  }</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> </div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>  <span class="keywordflow">return</span> data;</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>}</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span> </div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>} <span class="comment">// namespace Teuchos::SystemInformation</span></div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>  <span class="keyword">auto</span> &amp;environmentVariablePrefixes = getEnvironmentVariablePrefixSet();</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;prefix : environmentVariablePrefixes) {</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    registerAllPrefixedVariables(prefix);</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>  }</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span> </div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>  <span class="keyword">auto</span> &amp;environmentVariables = getEnvironmentVariablesSet();</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;envVariable : environmentVariables) {</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* varVal = <a class="code hl_function" href="namespace_teuchos.html#acf00020dd69ccf520c876d2fd39deaee">Teuchos::getEnvironmentVariableValue</a>(envVariable);</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    <span class="keywordflow">if</span>(varVal == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>      data[envVariable] = <span class="stringliteral">&quot;NOT SET&quot;</span>;</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>    }</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>      data[envVariable] = varVal;</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    }</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>  }</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span> </div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>  <span class="keywordflow">return</span> data;</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>}</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span> </div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>} <span class="comment">// namespace Teuchos::SystemInformation</span></div>
 <div class="ttc" id="a_teuchos___str_utils_8hpp_html"><div class="ttname"><a href="_teuchos___str_utils_8hpp.html">Teuchos_StrUtils.hpp</a></div><div class="ttdoc">A std::string utilities class for Teuchos.</div></div>
 <div class="ttc" id="a_teuchos___system_information_8hpp_html"><div class="ttname"><a href="_teuchos___system_information_8hpp.html">Teuchos_SystemInformation.hpp</a></div><div class="ttdoc">Collect information about the runtime environment.</div></div>
 <div class="ttc" id="a_teuchos___test_for_exception_8hpp_html"><div class="ttname"><a href="_teuchos___test_for_exception_8hpp.html">Teuchos_TestForException.hpp</a></div><div class="ttdoc">Standard test and throw macros.</div></div>

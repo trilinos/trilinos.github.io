@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['seq_0',['SEQ',['../class_belos_1_1_status_test_combo.html#a0d2b491520f3106f4e50890f1770e2feaaaf00b661ed3be7ce910a43868f8be45',1,'Belos::StatusTestCombo']]],
-  ['statustestdetails_1',['StatusTestDetails',['../namespace_belos.html#a2a2aa51a3ef87c278fd43945578b3612a214b85228315388f0b0fea24202ba4e4',1,'Belos']]]
+  ['passed_0',['Passed',['../namespace_belos.html#a342eae302936d58ef9d7426063340863af0d98a687db4f51b258b4df00353f5ee',1,'Belos']]],
+  ['preconditionernorm_1',['PreconditionerNorm',['../namespace_belos.html#a24aa69bf4f5cd54d0c704958cb556893a7622e5179219aefd1c72d7caf5bb6d4d',1,'Belos']]],
+  ['problem_2',['Problem',['../namespace_belos.html#ad8be32ab19b9ea8822407ca681ee021da7ebc9f36b728b335379bbefc359df7dc',1,'Belos']]]
 ];

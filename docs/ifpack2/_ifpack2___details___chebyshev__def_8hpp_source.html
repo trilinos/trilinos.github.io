@@ -233,8 +233,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>template &lt;class ScalarType, const bool lapackSupportsScalarType = LapackSupportsScalar&lt;ScalarType&gt;::value&gt;</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="keyword">struct </span>LapackHelper {</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>  <span class="keyword">static</span> ScalarType</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  tri_diag_spectral_radius(Teuchos::ArrayRCP&lt;<span class="keyword">typename</span> Teuchos::ScalarTraits&lt;ScalarType&gt;::magnitudeType&gt; diag,</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                           Teuchos::ArrayRCP&lt;<span class="keyword">typename</span> Teuchos::ScalarTraits&lt;ScalarType&gt;::magnitudeType&gt; offdiag) {</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  tri_diag_spectral_radius(Teuchos::ArrayRCP&lt;<span class="keyword">typename</span> Teuchos::ScalarTraits&lt;ScalarType&gt;::magnitudeType&gt; <span class="comment">/*diag*/</span>,</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                           Teuchos::ArrayRCP&lt;<span class="keyword">typename</span> Teuchos::ScalarTraits&lt;ScalarType&gt;::magnitudeType&gt; <span class="comment">/*offdiag*/</span>) {</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;LAPACK does not support the scalar type.&quot;</span>);</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>  }</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>};</div>
@@ -1144,7 +1144,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01040" name="l01040"></a><span class="lineno"> 1040</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> ScalarType, <span class="keyword">class</span> MV&gt;</div>
 <div class="line"><a id="l01041" name="l01041"></a><span class="lineno"> 1041</span><span class="keywordtype">void</span> <a class="code hl_class" href="class_ifpack2_1_1_chebyshev.html">Chebyshev&lt;ScalarType, MV&gt;::</a></div>
 <div class="line"><a id="l01042" name="l01042"></a><span class="lineno"> 1042</span><a class="code hl_class" href="class_ifpack2_1_1_chebyshev.html">    computeResidual</a>(MV&amp; R, <span class="keyword">const</span> MV&amp; B, <span class="keyword">const</span> op_type&amp; A, <span class="keyword">const</span> MV&amp; X,</div>
-<div class="line"><a id="l01043" name="l01043"></a><span class="lineno"> 1043</span>                    <span class="keyword">const</span> Teuchos::ETransp mode) {</div>
+<div class="line"><a id="l01043" name="l01043"></a><span class="lineno"> 1043</span>                    <span class="keyword">const</span> Teuchos::ETransp <span class="comment">/*mode*/</span>) {</div>
 <div class="line"><a id="l01044" name="l01044"></a><span class="lineno"> 1044</span>  Tpetra::Details::residual(A, X, B, R);</div>
 <div class="line"><a id="l01045" name="l01045"></a><span class="lineno"> 1045</span>}</div>
 <div class="line"><a id="l01046" name="l01046"></a><span class="lineno"> 1046</span> </div>
@@ -1371,7 +1371,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01267" name="l01267"></a><span class="lineno"> 1267</span> </div>
 <div class="line"><a id="l01268" name="l01268"></a><span class="lineno"> 1268</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> ScalarType, <span class="keyword">class</span> MV&gt;</div>
 <div class="line"><a id="l01269" name="l01269"></a><span class="lineno"> 1269</span><span class="keywordtype">void</span> Chebyshev&lt;ScalarType, MV&gt;::</div>
-<div class="line"><a id="l01270" name="l01270"></a><span class="lineno"> 1270</span>    fourthKindApplyImpl(<span class="keyword">const</span> op_type&amp; A,</div>
+<div class="line"><a id="l01270" name="l01270"></a><span class="lineno"> 1270</span>    fourthKindApplyImpl(<span class="keyword">const</span> op_type&amp; <span class="comment">/*A*/</span>,</div>
 <div class="line"><a id="l01271" name="l01271"></a><span class="lineno"> 1271</span>                        <span class="keyword">const</span> MV&amp; B,</div>
 <div class="line"><a id="l01272" name="l01272"></a><span class="lineno"> 1272</span>                        MV&amp; X,</div>
 <div class="line"><a id="l01273" name="l01273"></a><span class="lineno"> 1273</span>                        <span class="keyword">const</span> <span class="keywordtype">int</span> numIters,</div>
@@ -1447,7 +1447,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01343" name="l01343"></a><span class="lineno"> 1343</span> </div>
 <div class="line"><a id="l01344" name="l01344"></a><span class="lineno"> 1344</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> ScalarType, <span class="keyword">class</span> MV&gt;</div>
 <div class="line"><a id="l01345" name="l01345"></a><span class="lineno"> 1345</span><span class="keywordtype">void</span> Chebyshev&lt;ScalarType, MV&gt;::</div>
-<div class="line"><a id="l01346" name="l01346"></a><span class="lineno"> 1346</span>    ifpackApplyImpl(<span class="keyword">const</span> op_type&amp; A,</div>
+<div class="line"><a id="l01346" name="l01346"></a><span class="lineno"> 1346</span>    ifpackApplyImpl(<span class="keyword">const</span> op_type&amp; <span class="comment">/*A*/</span>,</div>
 <div class="line"><a id="l01347" name="l01347"></a><span class="lineno"> 1347</span>                    <span class="keyword">const</span> MV&amp; B,</div>
 <div class="line"><a id="l01348" name="l01348"></a><span class="lineno"> 1348</span>                    MV&amp; X,</div>
 <div class="line"><a id="l01349" name="l01349"></a><span class="lineno"> 1349</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> numIters,</div>

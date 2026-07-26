@@ -158,7 +158,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af563fe8d87151453bb57de3ec18dc505 inherit pub_methods_class_belos_1_1_solver_manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Solver application methods</h2></td></tr>
-<tr class="memitem:acc058e75306dda7e294520df82155b27" id="r_acc058e75306dda7e294520df82155b27"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_block_g_c_r_o_d_r_sol_mgr.html#acc058e75306dda7e294520df82155b27">solve</a> ()</td></tr>
+<tr class="memitem:acc058e75306dda7e294520df82155b27" id="r_acc058e75306dda7e294520df82155b27"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_belos.html#a2ab2fec66d34a6ec385de5eb8008c53e">ReturnType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_block_g_c_r_o_d_r_sol_mgr.html#acc058e75306dda7e294520df82155b27">solve</a> ()</td></tr>
 <tr class="memdesc:acc058e75306dda7e294520df82155b27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve the current linear problem.  <br /></td></tr>
 <tr class="separator:acc058e75306dda7e294520df82155b27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -618,7 +618,7 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">ReturnType</a> <a class="el" href="class_belos_1_1_block_g_c_r_o_d_r_sol_mgr.html">Belos::BlockGCRODRSolMgr</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;::solve </td>
+          <td class="memname"><a class="el" href="namespace_belos.html#a2ab2fec66d34a6ec385de5eb8008c53e">ReturnType</a> <a class="el" href="class_belos_1_1_block_g_c_r_o_d_r_sol_mgr.html">Belos::BlockGCRODRSolMgr</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;::solve </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -635,10 +635,10 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
 <p>This method performs possibly repeated calls to the underlying linear solver's <code>iterate()</code> routine until the problem has been solved (as decided by the solver manager) or the solver manager decides to quit.</p>
 <p>This method calls <a class="el" href="class_belos_1_1_block_g_c_r_o_d_r_iter.html#a9f40b9e2bcbe9a6adb45ad8b76ed07fc" title="This method performs block GCRODR iterations until the status test indicates the need to stop or an e...">BlockGCRODRIter::iterate()</a>, which will return either because a specially constructed status test evaluates to <a class="el" href="namespace_belos.html#a342eae302936d58ef9d7426063340863af0d98a687db4f51b258b4df00353f5ee">Passed</a> or an exception is thrown.</p>
 <p>A return from <a class="el" href="class_belos_1_1_block_g_c_r_o_d_r_iter.html#a9f40b9e2bcbe9a6adb45ad8b76ed07fc" title="This method performs block GCRODR iterations until the status test indicates the need to stop or an e...">BlockGCRODRIter::iterate()</a> signifies one of the following scenarios:</p><ul>
-<li>the maximum number of restarts has been exceeded. In this scenario, the current solutions to the linear system will be placed in the linear problem and return <a class="el" href="namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18ba200eaf745e4085dd838cb9ce24fad19c">Unconverged</a>.</li>
-<li>global convergence has been met. In this case, the current solutions to the linear system will be placed in the linear problem and the solver manager will return <a class="el" href="namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18ba6ea972a4ffdcac04da6f3cd6369f22c4">Converged</a>.</li>
-<li><a class="el" href="namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18ba6ea972a4ffdcac04da6f3cd6369f22c4">Converged</a>: the linear problem was solved to the specification required by the solver manager.</li>
-<li><a class="el" href="namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18ba200eaf745e4085dd838cb9ce24fad19c">Unconverged</a>: the linear problem was not solved to the specification desired by the solver manager. </li>
+<li>the maximum number of restarts has been exceeded. In this scenario, the current solutions to the linear system will be placed in the linear problem and return <a class="el" href="namespace_belos.html#a2ab2fec66d34a6ec385de5eb8008c53ea200eaf745e4085dd838cb9ce24fad19c">Unconverged</a>.</li>
+<li>global convergence has been met. In this case, the current solutions to the linear system will be placed in the linear problem and the solver manager will return <a class="el" href="namespace_belos.html#a2ab2fec66d34a6ec385de5eb8008c53ea6ea972a4ffdcac04da6f3cd6369f22c4">Converged</a>.</li>
+<li><a class="el" href="namespace_belos.html#a2ab2fec66d34a6ec385de5eb8008c53ea6ea972a4ffdcac04da6f3cd6369f22c4">Converged</a>: the linear problem was solved to the specification required by the solver manager.</li>
+<li><a class="el" href="namespace_belos.html#a2ab2fec66d34a6ec385de5eb8008c53ea200eaf745e4085dd838cb9ce24fad19c">Unconverged</a>: the linear problem was not solved to the specification desired by the solver manager. </li>
 </ul>
 
 <p>Implements <a class="el" href="class_belos_1_1_solver_manager.html#a3c8eed7635105c3e9b71512a6021c6cf">Belos::SolverManager&lt; ScalarType, MV, OP &gt;</a>.</p>

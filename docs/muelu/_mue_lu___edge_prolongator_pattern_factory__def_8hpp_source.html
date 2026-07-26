@@ -157,101 +157,102 @@ $(document).ready(function(){initNavTree('_mue_lu___edge_prolongator_pattern_fac
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <span class="keyword">auto</span> Dc = Get&lt;RCP&lt;Matrix&gt; &gt;(coarseLevel, <span class="stringliteral">&quot;D0&quot;</span>, <span class="stringliteral">&quot;CoarseD0&quot;</span>);</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <span class="keyword">auto</span> Pn = Get&lt;RCP&lt;Matrix&gt; &gt;(coarseLevel, <span class="stringliteral">&quot;PnodalEmin&quot;</span>);</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="keyword">const</span> <span class="keyword">auto</span> one = Teuchos::ScalarTraits&lt;Scalar&gt;::one();</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="comment">// |FineD| * |Pnodal| * |CoarseD^T|</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  RCP&lt;Matrix&gt; absD_absPn_absDcT;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  RCP&lt;Matrix&gt; absDc;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  {</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <a class="code hl_class" href="class_mue_lu_1_1_sub_factory_monitor.html">SubFactoryMonitor</a> m2(*<span class="keyword">this</span>, <span class="stringliteral">&quot;Matrix manipulations&quot;</span>, coarseLevel);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">auto</span> absD = MatrixFactory::BuildCopy(D);</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    absD-&gt;setAllToScalar(one);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keyword">auto</span> absPn = MatrixFactory::BuildCopy(Pn);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    absPn-&gt;setAllToScalar(one);</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    RCP&lt;Matrix&gt; absD_absPn = MatrixMatrix::Multiply(*absD, <span class="keyword">false</span>, *absPn, <span class="keyword">false</span>, GetOStream(<a class="code hl_enumvalue" href="namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1fa18d960e5bd7364c1ea53ae67f5891ff5">Statistics2</a>), <span class="keyword">true</span>, <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    absD_absPn-&gt;setAllToScalar(one);</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="comment">// If we rebalanced then Dc lives on a smaller communicator than D.</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="comment">// Since we need to perform matrix-matrix multiplications with Dc, we construct a version of it that lives on the same communicator.</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keyword">auto</span> comm = absD_absPn-&gt;getRowMap()-&gt;getComm();</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordflow">if</span> (Dc.is_null() || Dc-&gt;getRowMap()-&gt;getComm()-&gt;getSize() &lt; comm-&gt;getSize()) {</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>      <span class="keyword">auto</span> lib = absD_absPn-&gt;getRowMap()-&gt;lib();</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>      <span class="keywordflow">if</span> (Dc.is_null()) {</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        Kokkos::View&lt;GlobalOrdinal*, typename Node::memory_space&gt; dummy(<span class="stringliteral">&quot;&quot;</span>, 0);</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keyword">auto</span> big_coarse_nodal_map    = MapFactory::Build(lib, -1, dummy, 0, comm);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keyword">auto</span> big_coarse_edge_map     = MapFactory::Build(lib, -1, dummy, 0, comm);</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keyword">auto</span> big_coarse_nodal_colmap = MapFactory::Build(lib, -1, dummy, 0, comm);</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keyword">typename</span> Matrix::local_matrix_device_type dummyLocalMatrix;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        Dc = MatrixFactory::Build(dummyLocalMatrix, big_coarse_edge_map, big_coarse_nodal_colmap, big_coarse_nodal_map, big_coarse_edge_map);</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keyword">auto</span> big_coarse_nodal_map    = MapFactory::Build(lib, -1, Dc-&gt;getDomainMap()-&gt;getMyGlobalIndicesDevice(), 0, comm);</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keyword">auto</span> big_coarse_edge_map     = MapFactory::Build(lib, -1, Dc-&gt;getRangeMap()-&gt;getMyGlobalIndicesDevice(), 0, comm);</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keyword">auto</span> big_coarse_nodal_colmap = MapFactory::Build(lib, -1, Dc-&gt;getColMap()-&gt;getMyGlobalIndicesDevice(), 0, comm);</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        Dc = MatrixFactory::Build(Dc-&gt;getLocalMatrixDevice(), big_coarse_edge_map, big_coarse_nodal_colmap, big_coarse_nodal_map, big_coarse_edge_map);</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>      }</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    }</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    absDc = MatrixFactory::BuildCopy(Dc);</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    absDc-&gt;setAllToScalar(one);</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    absD_absPn_absDcT = MatrixMatrix::Multiply(*absD_absPn, <span class="keyword">false</span>, *absDc, <span class="keyword">true</span>, GetOStream(<a class="code hl_enumvalue" href="namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1fa18d960e5bd7364c1ea53ae67f5891ff5">Statistics2</a>), <span class="keyword">true</span>, <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  }</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  RCP&lt;Matrix&gt; filtered;</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  {</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <a class="code hl_class" href="class_mue_lu_1_1_sub_factory_monitor.html">SubFactoryMonitor</a> m2(*<span class="keyword">this</span>, <span class="stringliteral">&quot;Filtering&quot;</span>, coarseLevel);</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keyword">using </span>ATS           = KokkosKernels::ArithTraits&lt;typename Matrix::impl_scalar_type&gt;;</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keyword">using </span>magnitudeType = <span class="keyword">typename</span> ATS::magnitudeType;</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keyword">using </span>magATS        = KokkosKernels::ArithTraits&lt;magnitudeType&gt;;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keyword">auto</span> eps            = magATS::epsilon();</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    RCP&lt;MultiVector&gt; oneVec = MultiVectorFactory::Build(absDc-&gt;getDomainMap(), 1);</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    oneVec-&gt;putScalar(one);</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    RCP&lt;MultiVector&gt; singleParent = MultiVectorFactory::Build(absDc-&gt;getRowMap(), 1);</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    absDc-&gt;apply(*oneVec, *singleParent, Teuchos::NO_TRANS);</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="comment">// ghost singleParent</span></div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    RCP&lt;MultiVector&gt; singleParentGhosted;</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keyword">auto</span> importer = absD_absPn_absDcT-&gt;getCrsGraph()-&gt;getImporter();</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordflow">if</span> (importer.is_null()) {</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>      singleParentGhosted = singleParent;</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>      singleParentGhosted = MultiVectorFactory::Build(importer-&gt;getTargetMap(), 1);</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>      singleParentGhosted-&gt;doImport(*singleParent, *importer, Xpetra::INSERT);</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    }</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keyword">auto</span> lclSingleParent = singleParentGhosted-&gt;getLocalViewDevice(Tpetra::Access::ReadOnly);</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="comment">// Filter matrix using criterion</span></div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    filtered = Xpetra::applyFilter_LID(</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        absD_absPn_absDcT,</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        KOKKOS_LAMBDA(<span class="keyword">const</span> <a class="code hl_typedef" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> row,</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                      <span class="keyword">const</span> <a class="code hl_typedef" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> col,</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                      <span class="keyword">const</span> <span class="keyword">typename</span> Matrix::impl_scalar_type val) {</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>          <span class="keywordflow">return</span> ((ATS::magnitude(val - 2.0) &lt; eps) || ((lclSingleParent(col, 0) == 1.0) &amp;&amp; (ATS::magnitude(val - 1.0) &lt; eps)));</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        });</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keywordflow">if</span> (IsPrint(<a class="code hl_enumvalue" href="namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1fa83a3214cf3b7416fa80a3de3d1965e73">Statistics1</a>)) {</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>      <span class="keyword">auto</span> numEntriesBeforeFiltering = absD_absPn_absDcT-&gt;getGlobalNumEntries();</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>      <span class="keyword">auto</span> numEntriesAfterFiltering  = filtered-&gt;getGlobalNumEntries();</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>      GetOStream(<a class="code hl_enumvalue" href="namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1fa83a3214cf3b7416fa80a3de3d1965e73">Statistics1</a>) &lt;&lt; <span class="stringliteral">&quot;Number of kept entries in filtered pattern for P: &quot;</span> &lt;&lt; numEntriesAfterFiltering &lt;&lt; <span class="stringliteral">&quot;/&quot;</span> &lt;&lt; numEntriesBeforeFiltering &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    }</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>  }</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>  <span class="keyword">auto</span> Ppattern = filtered-&gt;getCrsGraph();</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>  Set(coarseLevel, <span class="stringliteral">&quot;Ppattern&quot;</span>, Ppattern);</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>}</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="keyword">const</span> <span class="keyword">auto</span> one     = Teuchos::ScalarTraits&lt;Scalar&gt;::one();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keyword">const</span> <span class="keyword">auto</span> invalid = Teuchos::OrdinalTraits&lt;Xpetra::global_size_t&gt;::invalid();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="comment">// |FineD| * |Pnodal| * |CoarseD^T|</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  RCP&lt;Matrix&gt; absD_absPn_absDcT;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  RCP&lt;Matrix&gt; absDc;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_class" href="class_mue_lu_1_1_sub_factory_monitor.html">SubFactoryMonitor</a> m2(*<span class="keyword">this</span>, <span class="stringliteral">&quot;Matrix manipulations&quot;</span>, coarseLevel);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">auto</span> absD = MatrixFactory::BuildCopy(D);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    absD-&gt;setAllToScalar(one);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keyword">auto</span> absPn = MatrixFactory::BuildCopy(Pn);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    absPn-&gt;setAllToScalar(one);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    RCP&lt;Matrix&gt; absD_absPn = MatrixMatrix::Multiply(*absD, <span class="keyword">false</span>, *absPn, <span class="keyword">false</span>, GetOStream(<a class="code hl_enumvalue" href="namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1fa18d960e5bd7364c1ea53ae67f5891ff5">Statistics2</a>), <span class="keyword">true</span>, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    absD_absPn-&gt;setAllToScalar(one);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="comment">// If we rebalanced then Dc lives on a smaller communicator than D.</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="comment">// Since we need to perform matrix-matrix multiplications with Dc, we construct a version of it that lives on the same communicator.</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keyword">auto</span> comm = absD_absPn-&gt;getRowMap()-&gt;getComm();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordflow">if</span> (Dc.is_null() || Dc-&gt;getRowMap()-&gt;getComm()-&gt;getSize() &lt; comm-&gt;getSize()) {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>      <span class="keyword">auto</span> lib = absD_absPn-&gt;getRowMap()-&gt;lib();</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      <span class="keywordflow">if</span> (Dc.is_null()) {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        Kokkos::View&lt;GlobalOrdinal*, typename Node::memory_space&gt; dummy(<span class="stringliteral">&quot;&quot;</span>, 0);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keyword">auto</span> big_coarse_nodal_map    = MapFactory::Build(lib, invalid, dummy, 0, comm);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keyword">auto</span> big_coarse_edge_map     = MapFactory::Build(lib, invalid, dummy, 0, comm);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keyword">auto</span> big_coarse_nodal_colmap = MapFactory::Build(lib, invalid, dummy, 0, comm);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keyword">typename</span> Matrix::local_matrix_device_type dummyLocalMatrix;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        Dc = MatrixFactory::Build(dummyLocalMatrix, big_coarse_edge_map, big_coarse_nodal_colmap, big_coarse_nodal_map, big_coarse_edge_map);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keyword">auto</span> big_coarse_nodal_map    = MapFactory::Build(lib, invalid, Dc-&gt;getDomainMap()-&gt;getMyGlobalIndicesDevice(), 0, comm);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keyword">auto</span> big_coarse_edge_map     = MapFactory::Build(lib, invalid, Dc-&gt;getRangeMap()-&gt;getMyGlobalIndicesDevice(), 0, comm);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keyword">auto</span> big_coarse_nodal_colmap = MapFactory::Build(lib, invalid, Dc-&gt;getColMap()-&gt;getMyGlobalIndicesDevice(), 0, comm);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        Dc = MatrixFactory::Build(Dc-&gt;getLocalMatrixDevice(), big_coarse_edge_map, big_coarse_nodal_colmap, big_coarse_nodal_map, big_coarse_edge_map);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>      }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    }</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    absDc = MatrixFactory::BuildCopy(Dc);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    absDc-&gt;setAllToScalar(one);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    absD_absPn_absDcT = MatrixMatrix::Multiply(*absD_absPn, <span class="keyword">false</span>, *absDc, <span class="keyword">true</span>, GetOStream(<a class="code hl_enumvalue" href="namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1fa18d960e5bd7364c1ea53ae67f5891ff5">Statistics2</a>), <span class="keyword">true</span>, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  }</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  RCP&lt;Matrix&gt; filtered;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <a class="code hl_class" href="class_mue_lu_1_1_sub_factory_monitor.html">SubFactoryMonitor</a> m2(*<span class="keyword">this</span>, <span class="stringliteral">&quot;Filtering&quot;</span>, coarseLevel);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keyword">using </span>ATS           = KokkosKernels::ArithTraits&lt;typename Matrix::impl_scalar_type&gt;;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keyword">using </span>magnitudeType = <span class="keyword">typename</span> ATS::magnitudeType;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keyword">using </span>magATS        = KokkosKernels::ArithTraits&lt;magnitudeType&gt;;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keyword">auto</span> eps            = magATS::epsilon();</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    RCP&lt;MultiVector&gt; oneVec = MultiVectorFactory::Build(absDc-&gt;getDomainMap(), 1);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    oneVec-&gt;putScalar(one);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    RCP&lt;MultiVector&gt; singleParent = MultiVectorFactory::Build(absDc-&gt;getRowMap(), 1);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    absDc-&gt;apply(*oneVec, *singleParent, Teuchos::NO_TRANS);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="comment">// ghost singleParent</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    RCP&lt;MultiVector&gt; singleParentGhosted;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keyword">auto</span> importer = absD_absPn_absDcT-&gt;getCrsGraph()-&gt;getImporter();</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordflow">if</span> (importer.is_null()) {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>      singleParentGhosted = singleParent;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>      singleParentGhosted = MultiVectorFactory::Build(importer-&gt;getTargetMap(), 1);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>      singleParentGhosted-&gt;doImport(*singleParent, *importer, Xpetra::INSERT);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    }</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keyword">auto</span> lclSingleParent = singleParentGhosted-&gt;getLocalViewDevice(Tpetra::Access::ReadOnly);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="comment">// Filter matrix using criterion</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    filtered = Xpetra::applyFilter_LID(</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        absD_absPn_absDcT,</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        KOKKOS_LAMBDA(<span class="keyword">const</span> <a class="code hl_typedef" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> <span class="comment">/*row*/</span>,</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                      <span class="keyword">const</span> <a class="code hl_typedef" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> col,</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                      <span class="keyword">const</span> <span class="keyword">typename</span> Matrix::impl_scalar_type val) {</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>          <span class="keywordflow">return</span> ((ATS::magnitude(val - 2.0) &lt; eps) || ((lclSingleParent(col, 0) == 1.0) &amp;&amp; (ATS::magnitude(val - 1.0) &lt; eps)));</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        });</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keywordflow">if</span> (IsPrint(<a class="code hl_enumvalue" href="namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1fa83a3214cf3b7416fa80a3de3d1965e73">Statistics1</a>)) {</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>      <span class="keyword">auto</span> numEntriesBeforeFiltering = absD_absPn_absDcT-&gt;getGlobalNumEntries();</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>      <span class="keyword">auto</span> numEntriesAfterFiltering  = filtered-&gt;getGlobalNumEntries();</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>      GetOStream(<a class="code hl_enumvalue" href="namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1fa83a3214cf3b7416fa80a3de3d1965e73">Statistics1</a>) &lt;&lt; <span class="stringliteral">&quot;Number of kept entries in filtered pattern for P: &quot;</span> &lt;&lt; numEntriesAfterFiltering &lt;&lt; <span class="stringliteral">&quot;/&quot;</span> &lt;&lt; numEntriesBeforeFiltering &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    }</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  }</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>  <span class="keyword">auto</span> Ppattern = filtered-&gt;getCrsGraph();</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>  Set(coarseLevel, <span class="stringliteral">&quot;Ppattern&quot;</span>, Ppattern);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>}</div>
 </div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>}  <span class="comment">// namespace MueLu</span></div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="preprocessor">#endif  </span><span class="comment">// MUELU_EDGEPROLONGATORPATTERNFACTORY_DEF_HPP</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>}  <span class="comment">// namespace MueLu</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="preprocessor">#endif  </span><span class="comment">// MUELU_EDGEPROLONGATORPATTERNFACTORY_DEF_HPP</span></div>
 <div class="ttc" id="a_mue_lu___edge_prolongator_pattern_factory__decl_8hpp_html"><div class="ttname"><a href="_mue_lu___edge_prolongator_pattern_factory__decl_8hpp.html">MueLu_EdgeProlongatorPatternFactory_decl.hpp</a></div></div>
 <div class="ttc" id="a_mue_lu___monitor_8hpp_html"><div class="ttname"><a href="_mue_lu___monitor_8hpp.html">MueLu_Monitor.hpp</a></div></div>
 <div class="ttc" id="a_mue_lu___use_default_types_8hpp_html_a226b8cca25ba3f3d741bc52854fe8601"><div class="ttname"><a href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a></div><div class="ttdeci">MueLu::DefaultLocalOrdinal LocalOrdinal</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___use_default_types_8hpp_source.html#l00013">MueLu_UseDefaultTypes.hpp:13</a></div></div>
@@ -261,7 +262,7 @@ $(document).ready(function(){initNavTree('_mue_lu___edge_prolongator_pattern_fac
 <div class="ttc" id="aclass_mue_lu_1_1_factory_monitor_html"><div class="ttname"><a href="class_mue_lu_1_1_factory_monitor.html">MueLu::FactoryMonitor</a></div><div class="ttdoc">Timer to be used in factories. Similar to Monitor but with additional timers.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___monitor_8hpp_source.html#l00165">MueLu_Monitor.hpp:165</a></div></div>
 <div class="ttc" id="aclass_mue_lu_1_1_level_html"><div class="ttname"><a href="class_mue_lu_1_1_level.html">MueLu::Level</a></div><div class="ttdoc">Class that holds all level-specific information.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___level_8hpp_source.html#l00063">MueLu_Level.hpp:63</a></div></div>
 <div class="ttc" id="aclass_mue_lu_1_1_sub_factory_monitor_html"><div class="ttname"><a href="class_mue_lu_1_1_sub_factory_monitor.html">MueLu::SubFactoryMonitor</a></div><div class="ttdoc">Timer to be used in factories. Similar to SubMonitor but adds a timer level by level.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___monitor_8hpp_source.html#l00214">MueLu_Monitor.hpp:214</a></div></div>
-<div class="ttc" id="anamespace_mue_lu_html"><div class="ttname"><a href="namespace_mue_lu.html">MueLu</a></div><div class="ttdoc">Namespace for MueLu classes and methods.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___brick_aggregation_factory__decl_8hpp_source.html#l00042">MueLu_BrickAggregationFactory_decl.hpp:42</a></div></div>
+<div class="ttc" id="anamespace_mue_lu_html"><div class="ttname"><a href="namespace_mue_lu.html">MueLu</a></div><div class="ttdoc">Namespace for MueLu classes and methods.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___brick_aggregation_factory__decl_8hpp_source.html#l00041">MueLu_BrickAggregationFactory_decl.hpp:41</a></div></div>
 <div class="ttc" id="anamespace_mue_lu_html_a1f14cd8d51f6e963d8e5a8dd03dbcf1fa18d960e5bd7364c1ea53ae67f5891ff5"><div class="ttname"><a href="namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1fa18d960e5bd7364c1ea53ae67f5891ff5">MueLu::Statistics2</a></div><div class="ttdeci">@ Statistics2</div><div class="ttdoc">Print even more statistics.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___verbosity_level_8hpp_source.html#l00035">MueLu_VerbosityLevel.hpp:35</a></div></div>
 <div class="ttc" id="anamespace_mue_lu_html_a1f14cd8d51f6e963d8e5a8dd03dbcf1fa83a3214cf3b7416fa80a3de3d1965e73"><div class="ttname"><a href="namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1fa83a3214cf3b7416fa80a3de3d1965e73">MueLu::Statistics1</a></div><div class="ttdeci">@ Statistics1</div><div class="ttdoc">Print more statistics.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___verbosity_level_8hpp_source.html#l00034">MueLu_VerbosityLevel.hpp:34</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

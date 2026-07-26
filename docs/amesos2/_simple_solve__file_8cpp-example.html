@@ -302,10 +302,11 @@ $(function() {
 <div class="line">  <span class="keywordflow">if</span> (xml_filename != <span class="stringliteral">&quot;&quot;</span>) {</div>
 <div class="line">    Teuchos::ParameterList test_params = Teuchos::ParameterXMLFileReader(xml_filename).getParameters();</div>
 <div class="line">    Teuchos::ParameterList&amp; amesos2_params = test_params.sublist(<span class="stringliteral">&quot;Amesos2&quot;</span>);</div>
-<div class="line">    <span class="keywordflow">if</span> (Amesos2::tolower (solvername) == <span class="stringliteral">&quot;shylubasker&quot;</span>) {</div>
+<div class="line">    <span class="keywordflow">if</span> (Amesos2::tolower (solvername) == <span class="stringliteral">&quot;shylubasker&quot;</span> ||</div>
+<div class="line">        Amesos2::tolower (solvername) == <span class="stringliteral">&quot;pardisomkl&quot;</span>) {</div>
 <div class="line">      <span class="comment">// Partial factorization (only for ShyLU-Basker)</span></div>
-<div class="line">      Teuchos::ParameterList&amp; shylubasker_params = amesos2_params.sublist(<span class="stringliteral">&quot;ShyLUBasker&quot;</span>);</div>
-<div class="line">      partial_facto = (shylubasker_params.isParameter(<span class="stringliteral">&quot;PartialFacto&quot;</span>) ? shylubasker_params.get&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;PartialFacto&quot;</span>) : 0);</div>
+<div class="line">      Teuchos::ParameterList&amp; solver_params = amesos2_params.sublist(solvername);</div>
+<div class="line">      partial_facto = (solver_params.isParameter(<span class="stringliteral">&quot;PartialFacto&quot;</span>) ? solver_params.get&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;PartialFacto&quot;</span>) : 0);</div>
 <div class="line">      <span class="keywordflow">if</span> (partial_facto != 0 &amp;&amp; myRank == 0) {</div>
 <div class="line">        RCP&lt;const Teuchos::Comm&lt;LO&gt; &gt; SerialComm = rcp(<span class="keyword">new</span> Teuchos::SerialComm&lt;int&gt;());</div>
 <div class="line">        <span class="keyword">const</span> LO indexBase = 0;</div>
@@ -320,12 +321,12 @@ $(function() {
 <div class="line">          SchurPart-&gt;putScalar(0); <span class="comment">// no schur</span></div>
 <div class="line">        }</div>
 <div class="line">        SchurPart_type schurPart = SchurPart-&gt;getData(0);</div>
-<div class="line">        shylubasker_params.set(<span class="stringliteral">&quot;SchurPart&quot;</span>, schurPart.getRawPtr());</div>
+<div class="line">        solver_params.set(<span class="stringliteral">&quot;SchurPart&quot;</span>, schurPart.getRawPtr());</div>
 <div class="line"> </div>
 <div class="line">        <span class="comment">// storage for output schur comp</span></div>
 <div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;nrows; i++) <span class="keywordflow">if</span> (schurPart[i] == 1) n2 ++;</div>
 <div class="line">        schurOut.resize(n2*n2);</div>
-<div class="line">        shylubasker_params.set(<span class="stringliteral">&quot;SchurOut&quot;</span>, schurOut.getRawPtr());</div>
+<div class="line">        solver_params.set(<span class="stringliteral">&quot;SchurOut&quot;</span>, schurOut.getRawPtr());</div>
 <div class="line">      }</div>
 <div class="line">    }</div>
 <div class="line">    *fos &lt;&lt; amesos2_params.currentParametersString() &lt;&lt; std::endl;</div>

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['onenorm_0',['OneNorm',['../namespace_belos.html#a24aa69bf4f5cd54d0c704958cb556893a44c08344422fe847638af90a9eb0239c',1,'Belos']]],
-  ['or_1',['OR',['../class_belos_1_1_status_test_combo.html#a0d2b491520f3106f4e50890f1770e2fea6e5370d071c3bd647f263ec32bba603a',1,'Belos::StatusTestCombo']]],
-  ['orthodetails_2',['OrthoDetails',['../namespace_belos.html#a2a2aa51a3ef87c278fd43945578b3612a0648b38d022117f279763523cf1c6484',1,'Belos']]]
+  ['maxitersreached_0',['MaxItersReached',['../namespace_belos.html#a2ab2fec66d34a6ec385de5eb8008c53ea22f6be54668fc0a306d0c722db9bba53',1,'Belos']]],
+  ['maxrestartsreached_1',['MaxRestartsReached',['../namespace_belos.html#a2ab2fec66d34a6ec385de5eb8008c53ea47ce88b281b64970674df1a803a68e53',1,'Belos']]]
 ];

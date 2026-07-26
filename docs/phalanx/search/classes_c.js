@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['tag_0',['Tag',['../class_p_h_x_1_1_tag.html',1,'PHX']]],
-  ['templateiterator_1',['TemplateIterator',['../class_p_h_x_1_1_template_iterator.html',1,'PHX']]],
-  ['templatemanager_2',['TemplateManager',['../class_p_h_x_1_1_template_manager.html',1,'PHX']]],
-  ['templatemanager_3c_20traits_3a_3aevaltypes_2c_20phx_3a_3aevaluationcontainerbase_3c_20traits_20_3e_2c_20phx_3a_3aevaluationcontainer_3c_20_5f_2c_20traits_20_3e_20_3e_3',['TemplateManager&lt; Traits::EvalTypes, PHX::EvaluationContainerBase&lt; Traits &gt;, PHX::EvaluationContainer&lt; _, Traits &gt; &gt;',['../class_p_h_x_1_1_template_manager.html',1,'PHX']]],
-  ['templatemanager_3c_20traits_3a_3aevaltypes_2c_20phx_3a_3aevaluatorbase_3c_20traits_20_3e_2c_20phx_3a_3aevaluatorderived_3c_20_5f_2c_20traits_20_3e_20_3e_4',['TemplateManager&lt; Traits::EvalTypes, PHX::EvaluatorBase&lt; Traits &gt;, PHX::EvaluatorDerived&lt; _, Traits &gt; &gt;',['../class_p_h_x_1_1_template_manager.html',1,'PHX']]],
-  ['traitsbase_5',['TraitsBase',['../struct_p_h_x_1_1_traits_base.html',1,'PHX']]]
+  ['setextentsimpl_0',['SetExtentsImpl',['../struct_p_h_x_1_1_set_extents_impl.html',1,'PHX']]],
+  ['setextentsimpl_3c_20t_2c_20extent_5fpack_2e_2e_2e_20_3e_1',['SetExtentsImpl&lt; T, extent_pack... &gt;',['../struct_p_h_x_1_1_set_extents_impl_3_01_t_00_01extent__pack_8_8_8_01_4.html',1,'PHX']]],
+  ['setextentsimpl_3c_3e_2',['SetExtentsImpl&lt;&gt;',['../struct_p_h_x_1_1_set_extents_impl_3_4.html',1,'PHX']]]
 ];

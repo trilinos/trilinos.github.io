@@ -81,35 +81,7 @@ $(function() {
 <hr/>
 </p>
 <p>An example parameter list in XML form that selects AztecOO and Ifpack is shown below:</p>
-<pre class="fragment">&lt;ParameterList&gt;
-  &lt;Parameter name="Linear Solver Type" type="string" value="AztecOO"/&gt;
-  &lt;ParameterList name="Linear Solver Types"&gt;
-    &lt;ParameterList name="AztecOO"&gt;
-      &lt;ParameterList name="Forward Solve"&gt;
-        &lt;ParameterList name="AztecOO Settings"&gt;
-          &lt;Parameter name="Aztec Solver" type="string" value="GMRES"/&gt;
-          &lt;Parameter name="Convergence Test" type="string" value="r0"/&gt;
-          &lt;Parameter name="Size of Krylov Subspace" type="int" value="300"/&gt;
-        &lt;/ParameterList&gt;
-        &lt;Parameter name="Max Iterations" type="int" value="400"/&gt;
-        &lt;Parameter name="Tolerance" type="double" value="1e-13"/&gt;
-      &lt;/ParameterList&gt;
-      &lt;Parameter name="Output Every RHS" type="bool" value="1"/&gt;
-    &lt;/ParameterList&gt;
-  &lt;/ParameterList&gt;
-  &lt;Parameter name="Preconditioner Type" type="string" value="Ifpack"/&gt;
-  &lt;ParameterList name="Preconditioner Types"&gt;
-    &lt;ParameterList name="Ifpack"&gt;
-      &lt;Parameter name="Prec Type" type="string" value="ILU"/&gt;
-      &lt;Parameter name="Overlap" type="int" value="1"/&gt;
-      &lt;ParameterList name="Ifpack Settings"&gt;
-        &lt;Parameter name="fact: level-of-fill" type="int" value="2"/&gt;
-      &lt;/ParameterList&gt;
-    &lt;/ParameterList&gt;
-  &lt;/ParameterList&gt;
-&lt;/ParameterList&gt;
-
-</pre><p>Many other example XML input files (e.g. <code>*.xml</code>) can be found in the directory <code>stratimikos/example</code>.</p>
+<pre class="fragment"></pre><p>Many other example XML input files (e.g. <code>*.xml</code>) can be found in the directory <code>stratimikos/example</code>.</p>
 <p>The example <code>simple_stratimikos_example.cpp</code> shows how to wrap Epetra objects and then use <code><a class="el" href="class_stratimikos_1_1_linear_solver_builder.html" title="Concrete subclass of Thyra::LinearSolverBuilderBase for creating Thyra::LinearOpWithSolveFactoryBase ...">Stratimikos::LinearSolverBuilder</a></code> to solve a linear system.</p>
 <p>The example <code>MixedOrderPhysicsBasedPreconditioner.cpp</code> shows the use of Stratimikos in a more sophisticated context.</p>
 <p>See how all of the examples and tests are run by looking at <code>stratimikos/test/definition</code>.</p>
@@ -118,11 +90,11 @@ Linear solver adapters</h1>
 <p>These adapters provide concrete subclasses implementing the abstract interfaces <code>Thyra::LinearOpWithSolveFactoryBase</code> and <code>Thyra::LinearOpWithSolveBase</code>. It is these implementations that are used in the implementation of <code><a class="el" href="class_stratimikos_1_1_linear_solver_builder.html" title="Concrete subclass of Thyra::LinearSolverBuilderBase for creating Thyra::LinearOpWithSolveFactoryBase ...">Stratimikos::LinearSolverBuilder</a></code> but they can also be used on their own.</p>
 <ul>
 <li>
-<p class="startli"><code><a class="el" href="class_thyra_1_1_amesos_linear_op_with_solve_factory.html" title="Concrete LinearOpWithSolveFactoryBase adapter subclass that uses Amesos direct solvers.">Thyra::AmesosLinearOpWithSolveFactory</a></code> : Amesos/Thyra adapters.</p>
+<p class="startli"><code>Thyra::AmesosLinearOpWithSolveFactory</code> : Amesos/Thyra adapters.</p>
 <p class="endli"></p>
 </li>
 <li>
-<p class="startli"><code><a class="el" href="class_thyra_1_1_aztec_o_o_linear_op_with_solve_factory.html" title="LinearOpWithSolveFactoryBase subclass implemented in terms of AztecOO.">Thyra::AztecOOLinearOpWithSolveFactory</a></code> : AztecOO/Thyra adapters.</p>
+<p class="startli"><code>Thyra::AztecOOLinearOpWithSolveFactory</code> : AztecOO/Thyra adapters.</p>
 <p class="endli"></p>
 </li>
 <li>
@@ -135,11 +107,11 @@ Preconditioner adapters</h1>
 <p>These adapters provide concrete subclasses implementing the abstract interface <code>Thyra::PreconditionerFactoryBase</code>. It is these implementations that are used in the implementation of <code><a class="el" href="class_stratimikos_1_1_linear_solver_builder.html" title="Concrete subclass of Thyra::LinearSolverBuilderBase for creating Thyra::LinearOpWithSolveFactoryBase ...">Stratimikos::LinearSolverBuilder</a></code> but can also be used on their own.</p>
 <ul>
 <li>
-<p class="startli"><code><a class="el" href="class_thyra_1_1_ifpack_preconditioner_factory.html" title="Concrete preconditioner factory subclass based on Ifpack.">Thyra::IfpackPreconditionerFactory</a></code> : Ifpack/Thyra adapters.</p>
+<p class="startli"><code>Thyra::IfpackPreconditionerFactory</code> : Ifpack/Thyra adapters.</p>
 <p class="endli"></p>
 </li>
 <li>
-<p class="startli"><code><a class="el" href="class_thyra_1_1_m_l_preconditioner_factory.html" title="Concrete preconditioner factory subclass based on ML.">Thyra::MLPreconditionerFactory</a></code> : ML/Thyra adapters.</p>
+<p class="startli"><code>Thyra::MLPreconditionerFactory</code> : ML/Thyra adapters.</p>
 <p class="endli"></p>
 </li>
 </ul>

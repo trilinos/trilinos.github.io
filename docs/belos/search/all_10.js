@@ -35,7 +35,7 @@ var searchData=
   ['resscalefactor_32',['resScaleFactor',['../struct_belos_1_1_default_solver_parameters.html#a22137e3c741bd84f31b507fa30c995f3',1,'Belos::DefaultSolverParameters']]],
   ['restype_33',['ResType',['../class_belos_1_1_status_test_gen_res_norm.html#ad8268a1af6b9cad38dfafa2f5ace40ac',1,'Belos::StatusTestGenResNorm']]],
   ['result_34',['result',['../class_belos_1_1_inner_solve_result.html#a68c5d73ff09bc03c9d399d64103696f7',1,'Belos::InnerSolveResult']]],
-  ['returntype_35',['ReturnType',['../namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18b',1,'Belos']]],
+  ['returntype_35',['ReturnType',['../namespace_belos.html#a2ab2fec66d34a6ec385de5eb8008c53e',1,'Belos']]],
   ['revealrank_36',['revealrank',['../class_belos_1_1details_1_1_multi_vec_tsqr_adapter.html#a4425f324630fb5eb29dddf472b883a97',1,'Belos::details::MultiVecTsqrAdapter::revealRank()'],['../class_belos_1_1details_1_1_stub_tsqr_adapter.html#a1795d8588fb95f334febde2bc8ce761b',1,'Belos::details::StubTsqrAdapter::revealRank()']]],
   ['reviseparameterlistforalias_37',['reviseParameterListForAlias',['../namespace_belos_1_1_details.html#a3fce99d637cfc961d47735639c597c97',1,'Belos::Details']]],
   ['rhat_38',['Rhat',['../struct_belos_1_1_bi_c_g_stab_iteration_state.html#a1c0383ef441118d5245ba697b4def658',1,'Belos::BiCGStabIterationState']]],
