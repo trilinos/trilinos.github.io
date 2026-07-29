@@ -80,6 +80,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Abstract factory for building a Tempus integrator observer that has access to the STK mesh, DOF manager, and linear object factory, e.g. for writing solution snapshots to disk between time steps.  
+ <a href="classpanzer__stk_1_1_tempus_observer_factory.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_panzer___s_t_k___tempus_observer_factory_8hpp_source.html">Panzer_STK_TempusObserverFactory.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -87,14 +90,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2ea2c4bbe7829422fc6ed4053e645875" id="r_a2ea2c4bbe7829422fc6ed4053e645875"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_tempus_observer_factory.html#a2ea2c4bbe7829422fc6ed4053e645875">~TempusObserverFactory</a> ()</td></tr>
 <tr class="separator:a2ea2c4bbe7829422fc6ed4053e645875"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaeda558b2da137600a6444d32f260d81" id="r_aaeda558b2da137600a6444d32f260d81"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_tempus_observer_factory.html#aaeda558b2da137600a6444d32f260d81">useNOXObserver</a> () const =0</td></tr>
-<tr class="memdesc:aaeda558b2da137600a6444d32f260d81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use the <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/namespace_n_o_x.html">NOX</a> observer as well?  <br /></td></tr>
+<tr class="memdesc:aaeda558b2da137600a6444d32f260d81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if a <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/namespace_n_o_x.html">NOX</a> observer should also be attached alongside the Tempus observer.  <br /></td></tr>
 <tr class="separator:aaeda558b2da137600a6444d32f260d81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a428b7161b9098fdc6982b05c236fdc3a" id="r_a428b7161b9098fdc6982b05c236fdc3a"><td class="memItemLeft" align="right" valign="top">virtual Teuchos::RCP&lt; Tempus::IntegratorObserver&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_tempus_observer_factory.html#a428b7161b9098fdc6982b05c236fdc3a">buildTempusObserver</a> (const Teuchos::RCP&lt; <a class="el" href="classpanzer__stk_1_1_s_t_k___interface.html">panzer_stk::STK_Interface</a> &gt; &amp;mesh, const Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_global_indexer.html">panzer::GlobalIndexer</a> &gt; &amp;dof_manager, const Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_linear_obj_factory.html">panzer::LinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">panzer::Traits</a> &gt; &gt; &amp;lof) const =0</td></tr>
+<tr class="memdesc:a428b7161b9098fdc6982b05c236fdc3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds a Tempus integrator observer configured with the given mesh, DOF manager, and linear object factory.  <br /></td></tr>
 <tr class="separator:a428b7161b9098fdc6982b05c236fdc3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___tempus_observer_factory_8hpp_source.html#l00027">27</a> of file <a class="el" href="_panzer___s_t_k___tempus_observer_factory_8hpp_source.html">Panzer_STK_TempusObserverFactory.hpp</a>.</p>
+<div class="textblock"><p>Abstract factory for building a Tempus integrator observer that has access to the STK mesh, DOF manager, and linear object factory, e.g. for writing solution snapshots to disk between time steps. </p>
+
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___tempus_observer_factory_8hpp_source.html#l00032">32</a> of file <a class="el" href="_panzer___s_t_k___tempus_observer_factory_8hpp_source.html">Panzer_STK_TempusObserverFactory.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2ea2c4bbe7829422fc6ed4053e645875" name="a2ea2c4bbe7829422fc6ed4053e645875"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2ea2c4bbe7829422fc6ed4053e645875">&#9670;&#160;</a></span>~TempusObserverFactory()</h2>
@@ -119,7 +124,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___tempus_observer_factory_8hpp_source.html#l00031">31</a> of file <a class="el" href="_panzer___s_t_k___tempus_observer_factory_8hpp_source.html">Panzer_STK_TempusObserverFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___tempus_observer_factory_8hpp_source.html#l00036">36</a> of file <a class="el" href="_panzer___s_t_k___tempus_observer_factory_8hpp_source.html">Panzer_STK_TempusObserverFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -147,7 +152,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Use the <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/namespace_n_o_x.html">NOX</a> observer as well? </p>
+<p>Returns true if a <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/namespace_n_o_x.html">NOX</a> observer should also be attached alongside the Tempus observer. </p>
 
 </div>
 </div>
@@ -190,6 +195,16 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Builds a Tempus integrator observer configured with the given mesh, DOF manager, and linear object factory. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>the STK mesh the observer may write solution data to. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dof_manager</td><td>maps solution vector entries to mesh fields. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lof</td><td>linear object factory used to interpret the solution vector passed to the observer. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

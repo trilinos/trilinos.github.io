@@ -97,8 +97,10 @@ Inheritance diagram for panzer_stk::Quad8ToQuad4MeshFactory:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a75bd2f5a4ee90c9d8941c4cfaa7d6e9f" id="r_a75bd2f5a4ee90c9d8941c4cfaa7d6e9f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_quad8_to_quad4_mesh_factory.html#a75bd2f5a4ee90c9d8941c4cfaa7d6e9f">Quad8ToQuad4MeshFactory</a> (const std::string &amp;quad8MeshFileName, stk::ParallelMachine mpi_comm=MPI_COMM_WORLD, const bool print_debug=false)</td></tr>
+<tr class="memdesc:a75bd2f5a4ee90c9d8941c4cfaa7d6e9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct by reading the Quad8 mesh from the given Exodus file.  <br /></td></tr>
 <tr class="separator:a75bd2f5a4ee90c9d8941c4cfaa7d6e9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb0be5f1c100d967403e73971d007581" id="r_abb0be5f1c100d967403e73971d007581"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_quad8_to_quad4_mesh_factory.html#abb0be5f1c100d967403e73971d007581">Quad8ToQuad4MeshFactory</a> (const Teuchos::RCP&lt; <a class="el" href="classpanzer__stk_1_1_s_t_k___interface.html">panzer_stk::STK_Interface</a> &gt; &amp;quad8Mesh, const bool print_debug=false)</td></tr>
+<tr class="memdesc:abb0be5f1c100d967403e73971d007581"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from an already-built Quad8 <a class="el" href="classpanzer__stk_1_1_s_t_k___interface.html">STK_Interface</a> mesh.  <br /></td></tr>
 <tr class="separator:abb0be5f1c100d967403e73971d007581"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e27ed8d328a54fdf13974dc17d152b2" id="r_a7e27ed8d328a54fdf13974dc17d152b2"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; <a class="el" href="classpanzer__stk_1_1_s_t_k___interface.html">STK_Interface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_quad8_to_quad4_mesh_factory.html#a7e27ed8d328a54fdf13974dc17d152b2">buildMesh</a> (stk::ParallelMachine parallelMach) const</td></tr>
 <tr class="memdesc:a7e27ed8d328a54fdf13974dc17d152b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build the mesh object.  <br /></td></tr>
@@ -210,6 +212,16 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Construct by reading the Quad8 mesh from the given Exodus file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">quad8MeshFileName</td><td>Exodus file to read the Quad8 mesh from. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mpi_comm</td><td>the MPI communicator to build the mesh on. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">print_debug</td><td>if true, prints debug diagnostics while converting the mesh. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___quad8_to_quad4_mesh_factory_8cpp_source.html#l00027">27</a> of file <a class="el" href="_panzer___s_t_k___quad8_to_quad4_mesh_factory_8cpp_source.html">Panzer_STK_Quad8ToQuad4MeshFactory.cpp</a>.</p>
 
 </div>
@@ -239,6 +251,15 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Construct from an already-built Quad8 <a class="el" href="classpanzer__stk_1_1_s_t_k___interface.html">STK_Interface</a> mesh. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">quad8Mesh</td><td>the already-built Quad8 mesh to convert. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">print_debug</td><td>if true, prints debug diagnostics while converting the mesh. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___quad8_to_quad4_mesh_factory_8cpp_source.html#l00042">42</a> of file <a class="el" href="_panzer___s_t_k___quad8_to_quad4_mesh_factory_8cpp_source.html">Panzer_STK_Quad8ToQuad4MeshFactory.cpp</a>.</p>
 
@@ -270,6 +291,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Build the mesh object. </p>
+<p>Build the mesh object </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">parallelMach</td><td>descriptor for the STK parallel machine to build this mesh on. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="classpanzer__stk_1_1_s_t_k___mesh_factory.html#a2def076ad0193e764df29a45cdfd43df">panzer_stk::STK_MeshFactory</a>.</p>
 
@@ -603,7 +630,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___quad8_to_quad4_mesh_factory_8hpp_source.html#l00058">58</a> of file <a class="el" href="_panzer___s_t_k___quad8_to_quad4_mesh_factory_8hpp_source.html">Panzer_STK_Quad8ToQuad4MeshFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___quad8_to_quad4_mesh_factory_8hpp_source.html#l00071">71</a> of file <a class="el" href="_panzer___s_t_k___quad8_to_quad4_mesh_factory_8hpp_source.html">Panzer_STK_Quad8ToQuad4MeshFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -627,7 +654,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___quad8_to_quad4_mesh_factory_8hpp_source.html#l00060">60</a> of file <a class="el" href="_panzer___s_t_k___quad8_to_quad4_mesh_factory_8hpp_source.html">Panzer_STK_Quad8ToQuad4MeshFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___quad8_to_quad4_mesh_factory_8hpp_source.html#l00073">73</a> of file <a class="el" href="_panzer___s_t_k___quad8_to_quad4_mesh_factory_8hpp_source.html">Panzer_STK_Quad8ToQuad4MeshFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -651,7 +678,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___quad8_to_quad4_mesh_factory_8hpp_source.html#l00060">60</a> of file <a class="el" href="_panzer___s_t_k___quad8_to_quad4_mesh_factory_8hpp_source.html">Panzer_STK_Quad8ToQuad4MeshFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___quad8_to_quad4_mesh_factory_8hpp_source.html#l00073">73</a> of file <a class="el" href="_panzer___s_t_k___quad8_to_quad4_mesh_factory_8hpp_source.html">Panzer_STK_Quad8ToQuad4MeshFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -675,7 +702,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___quad8_to_quad4_mesh_factory_8hpp_source.html#l00062">62</a> of file <a class="el" href="_panzer___s_t_k___quad8_to_quad4_mesh_factory_8hpp_source.html">Panzer_STK_Quad8ToQuad4MeshFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___quad8_to_quad4_mesh_factory_8hpp_source.html#l00075">75</a> of file <a class="el" href="_panzer___s_t_k___quad8_to_quad4_mesh_factory_8hpp_source.html">Panzer_STK_Quad8ToQuad4MeshFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -701,7 +728,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>If true, offset mesh GIDs to exercise 32-bit limits. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___quad8_to_quad4_mesh_factory_8hpp_source.html#l00065">65</a> of file <a class="el" href="_panzer___s_t_k___quad8_to_quad4_mesh_factory_8hpp_source.html">Panzer_STK_Quad8ToQuad4MeshFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___quad8_to_quad4_mesh_factory_8hpp_source.html#l00078">78</a> of file <a class="el" href="_panzer___s_t_k___quad8_to_quad4_mesh_factory_8hpp_source.html">Panzer_STK_Quad8ToQuad4MeshFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -725,7 +752,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___quad8_to_quad4_mesh_factory_8hpp_source.html#l00066">66</a> of file <a class="el" href="_panzer___s_t_k___quad8_to_quad4_mesh_factory_8hpp_source.html">Panzer_STK_Quad8ToQuad4MeshFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___quad8_to_quad4_mesh_factory_8hpp_source.html#l00079">79</a> of file <a class="el" href="_panzer___s_t_k___quad8_to_quad4_mesh_factory_8hpp_source.html">Panzer_STK_Quad8ToQuad4MeshFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -749,7 +776,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___quad8_to_quad4_mesh_factory_8hpp_source.html#l00068">68</a> of file <a class="el" href="_panzer___s_t_k___quad8_to_quad4_mesh_factory_8hpp_source.html">Panzer_STK_Quad8ToQuad4MeshFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___quad8_to_quad4_mesh_factory_8hpp_source.html#l00081">81</a> of file <a class="el" href="_panzer___s_t_k___quad8_to_quad4_mesh_factory_8hpp_source.html">Panzer_STK_Quad8ToQuad4MeshFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -773,7 +800,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___quad8_to_quad4_mesh_factory_8hpp_source.html#l00070">70</a> of file <a class="el" href="_panzer___s_t_k___quad8_to_quad4_mesh_factory_8hpp_source.html">Panzer_STK_Quad8ToQuad4MeshFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___quad8_to_quad4_mesh_factory_8hpp_source.html#l00083">83</a> of file <a class="el" href="_panzer___s_t_k___quad8_to_quad4_mesh_factory_8hpp_source.html">Panzer_STK_Quad8ToQuad4MeshFactory.hpp</a>.</p>
 
 </div>
 </div>

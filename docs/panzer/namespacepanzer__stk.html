@@ -103,8 +103,10 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_gather_ref_coords.html">GatherRefCoords</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_i_o_closure_model_factory.html">IOClosureModelFactory</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classpanzer_1_1_closure_model_factory.html">panzer::ClosureModelFactory</a> decorator that provides evaluators for writing fields to exodus files. Wraps a user closure model factory. <a class="el" href="classpanzer__stk_1_1_i_o_closure_model_factory.html#aef5be8a7e473810ee9cb20a9e5901e22" title="Delegates to the wrapped factory&#39;s buildClosureModels() for the named model.">buildClosureModels()</a> delegates to the wrapped factory for every evaluation type; the <a class="el" href="structpanzer_1_1_traits_1_1_residual.html" title="Evaluation type for computing the residual only, using RealType as the scalar type.">panzer::Traits::Residual</a> specialization additionally builds the scatter evaluators needed to write selected nodal/cell fields out to the STK mesh for visualization/output, since output only needs to happen once per workset regardless of evaluation type.  <a href="classpanzer__stk_1_1_i_o_closure_model_factory.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_i_o_closure_model_factory___template_builder.html">IOClosureModelFactory_TemplateBuilder</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builder functor used with Sacado::mpl::TemplateManager to construct one panzer_stk::IOClosureModelFactory&lt;EvalT&gt; per evaluation type, each wrapping the same underlying closure model factory template manager, mesh, and output field selection.  <a href="classpanzer__stk_1_1_i_o_closure_model_factory___template_builder.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_line_mesh_factory.html">LineMeshFactory</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -113,6 +115,7 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_multi_block_mesh_factory.html">MultiBlockMeshFactory</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_n_o_x_observer_factory.html">NOXObserverFactory</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract factory for building a <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/class_n_o_x_1_1_observer.html">NOX::Observer</a> that has access to the STK mesh, DOF manager, and linear object factory, e.g. for writing solution snapshots to disk between nonlinear iterations.  <a href="classpanzer__stk_1_1_n_o_x_observer_factory.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_periodic_b_c___matcher.html">PeriodicBC_Matcher</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,10 +161,12 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_s_t_k___mesh_factory.html">STK_MeshFactory</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_s_t_k_conn_manager.html">STKConnManager</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classpanzer_1_1_conn_manager.html" title="Pure virtual base class for supplying mesh connectivity information to the DOF Manager.">panzer::ConnManager</a> implementation backed by an STK mesh, mapping local element IDs to global mesh-entity (node/edge/face/cell) IDs according to a given field pattern.  <a href="classpanzer__stk_1_1_s_t_k_conn_manager.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_s_t_k_mesh_accessor.html">STKMeshAccessor</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_tempus_observer_factory.html">TempusObserverFactory</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract factory for building a Tempus integrator observer that has access to the STK mesh, DOF manager, and linear object factory, e.g. for writing solution snapshots to disk between time steps.  <a href="classpanzer__stk_1_1_tempus_observer_factory.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_wedge_matcher.html">WedgeMatcher</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,16 +181,18 @@ Functions</h2></td></tr>
 <tr class="memitem:a64cb1d3aba2b999575fe5784a3da3edb" id="r_a64cb1d3aba2b999575fe5784a3da3edb"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; <a class="el" href="structpanzer_1_1_local_mesh_info.html">panzer::LocalMeshInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer__stk.html#a64cb1d3aba2b999575fe5784a3da3edb">generateLocalMeshInfo</a> (const <a class="el" href="classpanzer__stk_1_1_s_t_k___interface.html">panzer_stk::STK_Interface</a> &amp;mesh)</td></tr>
 <tr class="memdesc:a64cb1d3aba2b999575fe5784a3da3edb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a structure containing information about the local portion of a given element block.  <br /></td></tr>
 <tr class="separator:a64cb1d3aba2b999575fe5784a3da3edb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a711cd0be4e787cea92504cec9c98ed21" id="r_a711cd0be4e787cea92504cec9c98ed21"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/class_thyra_1_1_linear_op_with_solve_factory_base.html">Thyra::LinearOpWithSolveFactoryBase</a>&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer__stk.html#a711cd0be4e787cea92504cec9c98ed21">buildLOWSFactory</a> (bool blockedAssembly, const Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_global_indexer.html">panzer::GlobalIndexer</a> &gt; &amp;globalIndexer, const Teuchos::RCP&lt; <a class="el" href="classpanzer__stk_1_1_s_t_k_conn_manager.html">panzer_stk::STKConnManager</a> &gt; &amp;stkConn_manager, int spatialDim, const Teuchos::RCP&lt; const <a class="el" href="class_teuchos_1_1_mpi_comm.html">Teuchos::MpiComm</a>&lt; int &gt; &gt; &amp;mpi_comm, const Teuchos::RCP&lt; Teuchos::ParameterList &gt; &amp;strat_params, bool writeCoordinates, bool writeTopo, const Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_global_indexer.html">panzer::GlobalIndexer</a> &gt; &amp;auxGlobalIndexer, bool useCoordinates)</td></tr>
-<tr class="separator:a711cd0be4e787cea92504cec9c98ed21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab68f39009178296d6ca017afd881c791" id="r_ab68f39009178296d6ca017afd881c791"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/class_thyra_1_1_linear_op_with_solve_factory_base.html">Thyra::LinearOpWithSolveFactoryBase</a>&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer__stk.html#ab68f39009178296d6ca017afd881c791">buildLOWSFactory</a> (bool blockedAssembly, const Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_global_indexer.html">panzer::GlobalIndexer</a> &gt; &amp;globalIndexer, const Teuchos::RCP&lt; <a class="el" href="classpanzer_1_1_conn_manager.html">panzer::ConnManager</a> &gt; &amp;conn_manager, int spatialDim, const Teuchos::RCP&lt; const <a class="el" href="class_teuchos_1_1_mpi_comm.html">Teuchos::MpiComm</a>&lt; int &gt; &gt; &amp;mpi_comm, const Teuchos::RCP&lt; Teuchos::ParameterList &gt; &amp;strat_params, bool writeCoordinates, bool writeTopo, const Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_global_indexer.html">panzer::GlobalIndexer</a> &gt; &amp;auxGlobalIndexer, bool useCoordinates)</td></tr>
-<tr class="separator:ab68f39009178296d6ca017afd881c791"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af659a0c1b548566129a41c3d5c166e38" id="r_af659a0c1b548566129a41c3d5c166e38"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/class_thyra_1_1_linear_op_with_solve_factory_base.html">Thyra::LinearOpWithSolveFactoryBase</a>&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer__stk.html#af659a0c1b548566129a41c3d5c166e38">buildLOWSFactory</a> (bool blockedAssembly, const Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_global_indexer.html">panzer::GlobalIndexer</a> &gt; &amp;globalIndexer, const Teuchos::RCP&lt; <a class="el" href="classpanzer__stk_1_1_s_t_k_conn_manager.html">panzer_stk::STKConnManager</a> &gt; &amp;stkConn_manager, int spatialDim, const Teuchos::RCP&lt; const <a class="el" href="class_teuchos_1_1_mpi_comm.html">Teuchos::MpiComm</a>&lt; int &gt; &gt; &amp;mpi_comm, const Teuchos::RCP&lt; Teuchos::ParameterList &gt; &amp;strat_params, bool writeCoordinates=false, bool writeTopo=false, const Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_global_indexer.html">panzer::GlobalIndexer</a> &gt; &amp;auxGlobalIndexer=Teuchos::null, bool useCoordinates=true)</td></tr>
+<tr class="memdesc:af659a0c1b548566129a41c3d5c166e38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds a <a class="el" href="namespace_thyra.html">Thyra</a> LOWS (linear-op-with-solve) factory from a Stratimikos parameter list, configured for the given global indexer and STK connection manager.  <br /></td></tr>
+<tr class="separator:af659a0c1b548566129a41c3d5c166e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2a67a87f2cd32a11f5ddd42896478b7" id="r_ae2a67a87f2cd32a11f5ddd42896478b7"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/class_thyra_1_1_linear_op_with_solve_factory_base.html">Thyra::LinearOpWithSolveFactoryBase</a>&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer__stk.html#ae2a67a87f2cd32a11f5ddd42896478b7">buildLOWSFactory</a> (bool blockedAssembly, const Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_global_indexer.html">panzer::GlobalIndexer</a> &gt; &amp;globalIndexer, const Teuchos::RCP&lt; <a class="el" href="classpanzer_1_1_conn_manager.html">panzer::ConnManager</a> &gt; &amp;conn_manager, int spatialDim, const Teuchos::RCP&lt; const <a class="el" href="class_teuchos_1_1_mpi_comm.html">Teuchos::MpiComm</a>&lt; int &gt; &gt; &amp;mpi_comm, const Teuchos::RCP&lt; Teuchos::ParameterList &gt; &amp;strat_params, bool writeCoordinates=false, bool writeTopo=false, const Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_global_indexer.html">panzer::GlobalIndexer</a> &gt; &amp;auxGlobalIndexer=Teuchos::null, bool useCoordinates=true)</td></tr>
+<tr class="memdesc:ae2a67a87f2cd32a11f5ddd42896478b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience overload accepting a generic <a class="el" href="classpanzer_1_1_conn_manager.html" title="Pure virtual base class for supplying mesh connectivity information to the DOF Manager.">panzer::ConnManager</a>, which must actually be a <a class="el" href="classpanzer__stk_1_1_s_t_k_conn_manager.html" title="A panzer::ConnManager implementation backed by an STK mesh, mapping local element IDs to global mesh-...">panzer_stk::STKConnManager</a>; dynamic-casts conn_manager and delegates to the <a class="el" href="classpanzer__stk_1_1_s_t_k_conn_manager.html" title="A panzer::ConnManager implementation backed by an STK mesh, mapping local element IDs to global mesh-...">panzer_stk::STKConnManager</a> overload of <a class="el" href="namespacepanzer__stk.html#af659a0c1b548566129a41c3d5c166e38" title="Builds a Thyra LOWS (linear-op-with-solve) factory from a Stratimikos parameter list,...">buildLOWSFactory()</a> below.  <br /></td></tr>
+<tr class="separator:ae2a67a87f2cd32a11f5ddd42896478b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2713e661c9bd1590b3ad7fa636dbf642" id="r_a2713e661c9bd1590b3ad7fa636dbf642"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; std::vector&lt; <a class="el" href="classpanzer_1_1_workset.html">panzer::Workset</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer__stk.html#a2713e661c9bd1590b3ad7fa636dbf642">buildWorksets</a> (const <a class="el" href="classpanzer__stk_1_1_s_t_k___interface.html">panzer_stk::STK_Interface</a> &amp;mesh, const std::string &amp;eBlock, const <a class="el" href="structpanzer_1_1_workset_needs.html">panzer::WorksetNeeds</a> &amp;needs)</td></tr>
 <tr class="separator:a2713e661c9bd1590b3ad7fa636dbf642"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70312a6502beb5d1ae9a830307b450ca" id="r_a70312a6502beb5d1ae9a830307b450ca"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; std::vector&lt; <a class="el" href="classpanzer_1_1_workset.html">panzer::Workset</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer__stk.html#a70312a6502beb5d1ae9a830307b450ca">buildWorksets</a> (const <a class="el" href="classpanzer__stk_1_1_s_t_k___interface.html">panzer_stk::STK_Interface</a> &amp;mesh, const <a class="el" href="structpanzer_1_1_workset_needs.html">panzer::WorksetNeeds</a> &amp;needs, const std::string &amp;sideset, const std::string &amp;eBlock, bool useCascade)</td></tr>
 <tr class="separator:a70312a6502beb5d1ae9a830307b450ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a095665c8ddc7bdd53ca25bdd03130b82" id="r_a095665c8ddc7bdd53ca25bdd03130b82"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; std::map&lt; unsigned, <a class="el" href="classpanzer_1_1_workset.html">panzer::Workset</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer__stk.html#a095665c8ddc7bdd53ca25bdd03130b82">buildBCWorksets</a> (const <a class="el" href="classpanzer__stk_1_1_s_t_k___interface.html">panzer_stk::STK_Interface</a> &amp;mesh, const <a class="el" href="structpanzer_1_1_workset_needs.html">panzer::WorksetNeeds</a> &amp;needs_a, const std::string &amp;blockid_a, const <a class="el" href="structpanzer_1_1_workset_needs.html">panzer::WorksetNeeds</a> &amp;needs_b, const std::string &amp;blockid_b, const std::string &amp;sideset)</td></tr>
-<tr class="separator:a095665c8ddc7bdd53ca25bdd03130b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b81bf1c4091ce365a8fa6bf7343f926" id="r_a5b81bf1c4091ce365a8fa6bf7343f926"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; std::map&lt; unsigned, <a class="el" href="classpanzer_1_1_workset.html">panzer::Workset</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer__stk.html#a5b81bf1c4091ce365a8fa6bf7343f926">buildBCWorksets</a> (const <a class="el" href="classpanzer__stk_1_1_s_t_k___interface.html">panzer_stk::STK_Interface</a> &amp;mesh, const <a class="el" href="structpanzer_1_1_workset_needs.html">panzer::WorksetNeeds</a> &amp;needs_a, const std::string &amp;eblock_a, const <a class="el" href="structpanzer_1_1_workset_needs.html">panzer::WorksetNeeds</a> &amp;needs_b, const std::string &amp;eblock_b, const std::string &amp;sideset)</td></tr>
+<tr class="separator:a5b81bf1c4091ce365a8fa6bf7343f926"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87d79574bdfb3b974974e7de141770cb" id="r_a87d79574bdfb3b974974e7de141770cb"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; std::map&lt; unsigned, <a class="el" href="classpanzer_1_1_workset.html">panzer::Workset</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer__stk.html#a87d79574bdfb3b974974e7de141770cb">buildBCWorksets</a> (const <a class="el" href="classpanzer__stk_1_1_s_t_k___interface.html">panzer_stk::STK_Interface</a> &amp;mesh, const <a class="el" href="structpanzer_1_1_workset_needs.html">panzer::WorksetNeeds</a> &amp;needs, const std::string &amp;eblockID, const std::string &amp;sidesetID)</td></tr>
 <tr class="separator:a87d79574bdfb3b974974e7de141770cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5abae32447a393b453a30bee8b09231" id="r_af5abae32447a393b453a30bee8b09231"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer__stk.html#af5abae32447a393b453a30bee8b09231">computeSidesetNodeNormals</a> (std::unordered_map&lt; unsigned, std::vector&lt; double &gt; &gt; &amp;normals, const Teuchos::RCP&lt; const <a class="el" href="classpanzer__stk_1_1_s_t_k___interface.html">panzer_stk::STK_Interface</a> &gt; &amp;mesh, const std::string &amp;sidesetName, const std::string &amp;elementBlockName, std::ostream *out=NULL, std::ostream *pout=NULL)</td></tr>
@@ -197,6 +204,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a92d093d2f40e8f96b8dcf75936f2fa0d" id="r_a92d093d2f40e8f96b8dcf75936f2fa0d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer__stk.html#a92d093d2f40e8f96b8dcf75936f2fa0d">transformBCNameForIOSS</a> (std::string &amp;bc_name, const bool make_lower_case=false)</td></tr>
 <tr class="separator:a92d093d2f40e8f96b8dcf75936f2fa0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91b44689021f957b06321ee80c26dd60" id="r_a91b44689021f957b06321ee80c26dd60"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer__stk.html#a91b44689021f957b06321ee80c26dd60">version</a> ()</td></tr>
+<tr class="memdesc:a91b44689021f957b06321ee80c26dd60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a human-readable string identifying the <a class="el" href="namespacepanzer__stk.html">panzer_stk</a> (STK mesh adapter) version being used.  <br /></td></tr>
 <tr class="separator:a91b44689021f957b06321ee80c26dd60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a449868fb7af9c3c6ed172d6e169b80" id="r_a8a449868fb7af9c3c6ed172d6e169b80"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer__stk.html#a8a449868fb7af9c3c6ed172d6e169b80">getElementIdx</a> (const std::vector&lt; stk::mesh::Entity &gt; &amp;elements, stk::mesh::Entity const e)</td></tr>
 <tr class="separator:a8a449868fb7af9c3c6ed172d6e169b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -246,6 +254,16 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns true if the sidesets overlap. </p>
+<p>Checks whether two sidesets share any nodes.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">side_a_name</td><td>the name of the first sideset. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">side_b_name</td><td>the name of the second sideset. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>the mesh containing both sidesets. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the two sidesets overlap (share at least one node). </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___check_sideset_overlap_8cpp_source.html#l00018">18</a> of file <a class="el" href="_panzer___s_t_k___check_sideset_overlap_8cpp_source.html">Panzer_STK_CheckSidesetOverlap.cpp</a>.</p>
 
@@ -280,8 +298,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a711cd0be4e787cea92504cec9c98ed21" name="a711cd0be4e787cea92504cec9c98ed21"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a711cd0be4e787cea92504cec9c98ed21">&#9670;&#160;</a></span>buildLOWSFactory() <span class="overload">[1/2]</span></h2>
+<a id="af659a0c1b548566129a41c3d5c166e38" name="af659a0c1b548566129a41c3d5c166e38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af659a0c1b548566129a41c3d5c166e38">&#9670;&#160;</a></span>buildLOWSFactory() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -353,14 +371,32 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Build LOWS factory. </p>
+
+<p>Builds a <a class="el" href="namespace_thyra.html">Thyra</a> LOWS (linear-op-with-solve) factory from a Stratimikos parameter list, configured for the given global indexer and STK connection manager. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">blockedAssembly</td><td>true if the linear system is assembled in blocked form (one block per physics/DOF group). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">globalIndexer</td><td>the DOF manager describing the linear system's unknowns. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">stkConn_manager</td><td>the mesh connection manager. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">spatialDim</td><td>the spatial dimension of the mesh. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mpi_comm</td><td>the MPI communicator to build the solver on. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">strat_params</td><td>the Stratimikos parameter list describing the requested solver/preconditioner. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">req_handler</td><td>(only if PANZER_HAVE_TEKO) an optional Teko request handler; a default one is created if null. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">writeCoordinates</td><td>if true, writes mesh coordinates to file (e.g. for preconditioner setup diagnostics). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">writeTopo</td><td>if true, writes the mesh topology to file. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">auxGlobalIndexer</td><td>an optional auxiliary DOF manager, e.g. for preconditioners needing extra unknowns. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">useCoordinates</td><td>if true, supplies mesh coordinates to the solver/preconditioner (e.g. for algebraic multigrid). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the constructed LOWS factory. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___setup_l_o_w_s_factory_8cpp_source.html#l00116">116</a> of file <a class="el" href="_panzer___s_t_k___setup_l_o_w_s_factory_8cpp_source.html">Panzer_STK_SetupLOWSFactory.cpp</a>.</p>
 
 </div>
 </div>
-<a id="ab68f39009178296d6ca017afd881c791" name="ab68f39009178296d6ca017afd881c791"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab68f39009178296d6ca017afd881c791">&#9670;&#160;</a></span>buildLOWSFactory() <span class="overload">[2/2]</span></h2>
+<a id="ae2a67a87f2cd32a11f5ddd42896478b7" name="ae2a67a87f2cd32a11f5ddd42896478b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2a67a87f2cd32a11f5ddd42896478b7">&#9670;&#160;</a></span>buildLOWSFactory() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -405,25 +441,25 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>writeCoordinates</em> = <code>false</code>, </td>
+          <td class="paramname"><em>writeCoordinates</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>writeTopo</em> = <code>false</code>, </td>
+          <td class="paramname"><em>writeTopo</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_global_indexer.html">panzer::GlobalIndexer</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>auxGlobalIndexer</em> = <code>Teuchos::null</code>, </td>
+          <td class="paramname"><em>auxGlobalIndexer</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>useCoordinates</em> = <code>true</code>&#160;</td>
+          <td class="paramname"><em>useCoordinates</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -432,7 +468,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Build LOWS factory. </p>
+
+<p>Convenience overload accepting a generic <a class="el" href="classpanzer_1_1_conn_manager.html" title="Pure virtual base class for supplying mesh connectivity information to the DOF Manager.">panzer::ConnManager</a>, which must actually be a <a class="el" href="classpanzer__stk_1_1_s_t_k_conn_manager.html" title="A panzer::ConnManager implementation backed by an STK mesh, mapping local element IDs to global mesh-...">panzer_stk::STKConnManager</a>; dynamic-casts conn_manager and delegates to the <a class="el" href="classpanzer__stk_1_1_s_t_k_conn_manager.html" title="A panzer::ConnManager implementation backed by an STK mesh, mapping local element IDs to global mesh-...">panzer_stk::STKConnManager</a> overload of <a class="el" href="namespacepanzer__stk.html#af659a0c1b548566129a41c3d5c166e38" title="Builds a Thyra LOWS (linear-op-with-solve) factory from a Stratimikos parameter list,...">buildLOWSFactory()</a> below. </p>
 
 <p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___setup_l_o_w_s_factory_8cpp_source.html#l00448">448</a> of file <a class="el" href="_panzer___s_t_k___setup_l_o_w_s_factory_8cpp_source.html">Panzer_STK_SetupLOWSFactory.cpp</a>.</p>
 
@@ -545,8 +582,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a095665c8ddc7bdd53ca25bdd03130b82" name="a095665c8ddc7bdd53ca25bdd03130b82"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a095665c8ddc7bdd53ca25bdd03130b82">&#9670;&#160;</a></span>buildBCWorksets() <span class="overload">[1/2]</span></h2>
+<a id="a5b81bf1c4091ce365a8fa6bf7343f926" name="a5b81bf1c4091ce365a8fa6bf7343f926"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b81bf1c4091ce365a8fa6bf7343f926">&#9670;&#160;</a></span>buildBCWorksets() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -594,6 +631,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p></p>
 <p>Build side worksets with elements on both sides (this is for DG)</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -607,7 +646,21 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>vector of worksets for the corresponding edge </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>vector of worksets for the corresponding edge</dd></dl>
+<p>Build side worksets with elements on both sides (this is for DG)</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>A pointer to the <a class="el" href="classpanzer__stk_1_1_s_t_k___interface.html">STK_Interface</a> used to construct the worksets </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">needs_a</td><td>Needs of these worksets </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">blockid_a</td><td>Element block id </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">needs_b</td><td>Needs of these worksets </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">blockid_b</td><td>Element block id </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">workset_size</td><td>The size of each workset measured in the number of elements </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sideset</td><td>The sideset id used to locate volume elements associated with the sideset</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>vector of worksets for the corresponding edge</dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___setup_utilities_8cpp_source.html#l00161">161</a> of file <a class="el" href="_panzer___s_t_k___setup_utilities_8cpp_source.html">Panzer_STK_SetupUtilities.cpp</a>.</p>
 
@@ -858,6 +911,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Returns a human-readable string identifying the <a class="el" href="namespacepanzer__stk.html">panzer_stk</a> (STK mesh adapter) version being used. </p>
+
 <p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___version_8cpp_source.html#l00016">16</a> of file <a class="el" href="_panzer___s_t_k___version_8cpp_source.html">Panzer_STK_Version.cpp</a>.</p>
 
 </div>
@@ -972,7 +1027,7 @@ template&lt;typename Matcher &gt; </div>
 </div><div class="memdoc">
 <p>A simple constructor function for building a matcher object. This prevents the need to directly instantiate the templated derived class. It is a convenience. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___periodic_b_c___matcher_8hpp_source.html#l00374">374</a> of file <a class="el" href="_panzer___s_t_k___periodic_b_c___matcher_8hpp_source.html">Panzer_STK_PeriodicBC_Matcher.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___periodic_b_c___matcher_8hpp_source.html#l00378">378</a> of file <a class="el" href="_panzer___s_t_k___periodic_b_c___matcher_8hpp_source.html">Panzer_STK_PeriodicBC_Matcher.hpp</a>.</p>
 
 </div>
 </div>

@@ -87,13 +87,16 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>A <a class="el" href="classpanzer_1_1_conn_manager.html" title="Pure virtual base class for supplying mesh connectivity information to the DOF Manager.">panzer::ConnManager</a> implementation backed by an STK mesh, mapping local element IDs to global mesh-entity (node/edge/face/cell) IDs according to a given field pattern.  
+ <a href="classpanzer__stk_1_1_s_t_k_conn_manager.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for panzer_stk::STKConnManager:</div>
 <div class="dyncontent">
 <div class="center"><img src="classpanzer__stk_1_1_s_t_k_conn_manager__inherit__graph.gif" border="0" usemap="#apanzer__stk_1_1_s_t_k_conn_manager_inherit__map" alt="Inheritance graph"/></div>
 <map name="apanzer__stk_1_1_s_t_k_conn_manager_inherit__map" id="apanzer__stk_1_1_s_t_k_conn_manager_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,79,220,104"/>
+<area shape="rect" title="A panzer::ConnManager implementation backed by an STK mesh, mapping local element IDs to global mesh&#45;..." alt="" coords="5,79,220,104"/>
 <area shape="rect" href="classpanzer_1_1_conn_manager.html" title="Pure virtual base class for supplying mesh connectivity information to the DOF Manager." alt="" coords="31,5,195,31"/>
 <area shape="poly" title=" " alt="" coords="115,44,115,79,110,79,110,44"/>
 </map>
@@ -123,8 +126,10 @@ Public Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a60231d3c0aefd0c2433b8e04c82ab860" id="r_a60231d3c0aefd0c2433b8e04c82ab860"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_s_t_k_conn_manager.html#a60231d3c0aefd0c2433b8e04c82ab860">STKConnManager</a> (const Teuchos::RCP&lt; const <a class="el" href="classpanzer__stk_1_1_s_t_k___interface.html">STK_Interface</a> &gt; &amp;stkMeshDB)</td></tr>
+<tr class="memdesc:a60231d3c0aefd0c2433b8e04c82ab860"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from the STK mesh to build connectivity from. <a class="el" href="classpanzer__stk_1_1_s_t_k_conn_manager.html#a6750200bf4f8224ad6643e4033377bd2">buildConnectivity()</a> must be called before connectivity queries are valid.  <br /></td></tr>
 <tr class="separator:a60231d3c0aefd0c2433b8e04c82ab860"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0c81840d22f324cf5b358a8fdcfece2" id="r_af0c81840d22f324cf5b358a8fdcfece2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_s_t_k_conn_manager.html#af0c81840d22f324cf5b358a8fdcfece2">STKConnManager</a> (const <a class="el" href="classpanzer__stk_1_1_s_t_k_conn_manager.html">panzer_stk::STKConnManager</a> &amp;cm)</td></tr>
+<tr class="memdesc:af0c81840d22f324cf5b358a8fdcfece2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <br /></td></tr>
 <tr class="separator:af0c81840d22f324cf5b358a8fdcfece2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ec96fc1f2b5c3d6a307fe7703934c13" id="r_a7ec96fc1f2b5c3d6a307fe7703934c13"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_s_t_k_conn_manager.html#a7ec96fc1f2b5c3d6a307fe7703934c13">~STKConnManager</a> ()</td></tr>
 <tr class="separator:a7ec96fc1f2b5c3d6a307fe7703934c13"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -139,10 +144,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8ac238aae12ccf35275137c393a993e9" id="r_a8ac238aae12ccf35275137c393a993e9"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classpanzer__stk_1_1_s_t_k_conn_manager.html#a28858e817afada91add09bc2ec906c1e">LocalOrdinal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_s_t_k_conn_manager.html#a8ac238aae12ccf35275137c393a993e9">getConnectivitySize</a> (<a class="el" href="classpanzer__stk_1_1_s_t_k_conn_manager.html#a28858e817afada91add09bc2ec906c1e">LocalOrdinal</a> localElmtId) const</td></tr>
 <tr class="separator:a8ac238aae12ccf35275137c393a993e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff65cb8164656e3c0668d06cabdb06dd" id="r_aff65cb8164656e3c0668d06cabdb06dd"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classpanzer__stk_1_1_s_t_k_conn_manager.html#a16c9ca494dfa50bf980429bc90143542">GlobalOrdinalView</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_s_t_k_conn_manager.html#aff65cb8164656e3c0668d06cabdb06dd">getConnectivityView</a> ()</td></tr>
+<tr class="memdesc:aff65cb8164656e3c0668d06cabdb06dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a view of the flat connectivity array (all elements' global IDs, concatenated).  <br /></td></tr>
 <tr class="separator:aff65cb8164656e3c0668d06cabdb06dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ee8c14837ef0b1089a5840640178cfb" id="r_a6ee8c14837ef0b1089a5840640178cfb"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classpanzer__stk_1_1_s_t_k_conn_manager.html#a8fec3fe0a3b2912330593ef7bccda92f">LocalOrdinalView</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_s_t_k_conn_manager.html#a6ee8c14837ef0b1089a5840640178cfb">getConnectivitySizeView</a> ()</td></tr>
+<tr class="memdesc:a6ee8c14837ef0b1089a5840640178cfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a view of the per-element connectivity size array.  <br /></td></tr>
 <tr class="separator:a6ee8c14837ef0b1089a5840640178cfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a116597c6fa4f54b26c29c6baa583bbc0" id="r_a116597c6fa4f54b26c29c6baa583bbc0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classpanzer__stk_1_1_s_t_k_conn_manager.html#a8fec3fe0a3b2912330593ef7bccda92f">LocalOrdinalView</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_s_t_k_conn_manager.html#a116597c6fa4f54b26c29c6baa583bbc0">getElementLidToConnView</a> ()</td></tr>
+<tr class="memdesc:a116597c6fa4f54b26c29c6baa583bbc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a view of the per-element offset into the flat connectivity array returned by <a class="el" href="classpanzer__stk_1_1_s_t_k_conn_manager.html#aff65cb8164656e3c0668d06cabdb06dd" title="Returns a view of the flat connectivity array (all elements&#39; global IDs, concatenated).">getConnectivityView()</a>.  <br /></td></tr>
 <tr class="separator:a116597c6fa4f54b26c29c6baa583bbc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad83cd3498deea573da0aea2d1cb45aac" id="r_ad83cd3498deea573da0aea2d1cb45aac"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_s_t_k_conn_manager.html#ad83cd3498deea573da0aea2d1cb45aac">getBlockId</a> (<a class="el" href="classpanzer__stk_1_1_s_t_k_conn_manager.html#a28858e817afada91add09bc2ec906c1e">LocalOrdinal</a> localElmtId) const</td></tr>
 <tr class="separator:ad83cd3498deea573da0aea2d1cb45aac"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -246,8 +254,9 @@ Static Protected Attributes</h2></td></tr>
 <tr class="separator:a10e3b7f80c8acc8895eab7fdfbf16d92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00030">30</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<div class="textblock"><p>A <a class="el" href="classpanzer_1_1_conn_manager.html" title="Pure virtual base class for supplying mesh connectivity information to the DOF Manager.">panzer::ConnManager</a> implementation backed by an STK mesh, mapping local element IDs to global mesh-entity (node/edge/face/cell) IDs according to a given field pattern. </p>
+
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00034">34</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a28858e817afada91add09bc2ec906c1e" name="a28858e817afada91add09bc2ec906c1e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a28858e817afada91add09bc2ec906c1e">&#9670;&#160;</a></span>LocalOrdinal</h2>
@@ -261,7 +270,7 @@ Static Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00032">32</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00036">36</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -277,7 +286,7 @@ Static Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00033">33</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00037">37</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -293,7 +302,7 @@ Static Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00034">34</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00038">38</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -309,7 +318,7 @@ Static Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00035">35</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00039">39</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -333,7 +342,7 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00263">263</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00272">272</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -354,6 +363,8 @@ Static Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Construct from the STK mesh to build connectivity from. <a class="el" href="classpanzer__stk_1_1_s_t_k_conn_manager.html#a6750200bf4f8224ad6643e4033377bd2">buildConnectivity()</a> must be called before connectivity queries are valid. </p>
+
 <p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8cpp_source.html#l00051">51</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8cpp_source.html">Panzer_STKConnManager.cpp</a>.</p>
 
 </div>
@@ -373,6 +384,8 @@ Static Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Copy constructor. </p>
 
 <p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8cpp_source.html#l00056">56</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8cpp_source.html">Panzer_STKConnManager.cpp</a>.</p>
 
@@ -401,7 +414,7 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00041">41</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00047">47</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -507,7 +520,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classpanzer_1_1_conn_manager.html#ab55cd2fbb415d232e598d19c975fee2d">panzer::ConnManager</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00063">63</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00069">69</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -543,7 +556,7 @@ Static Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to beginning of indices, with total size equal to <code>getConnectivitySize(localElmtId)</code> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00073">73</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00079">79</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -581,7 +594,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classpanzer_1_1_conn_manager.html#af0e7ae1db106bbbc1475c5f55d2103b8">panzer::ConnManager</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00082">82</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00088">88</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -608,7 +621,9 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00085">85</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p>Returns a view of the flat connectivity array (all elements' global IDs, concatenated). </p>
+
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00092">92</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -635,7 +650,9 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00088">88</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p>Returns a view of the per-element connectivity size array. </p>
+
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00096">96</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -662,7 +679,9 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00091">91</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p>Returns a view of the per-element offset into the flat connectivity array returned by <a class="el" href="classpanzer__stk_1_1_s_t_k_conn_manager.html#aff65cb8164656e3c0668d06cabdb06dd" title="Returns a view of the flat connectivity array (all elements&#39; global IDs, concatenated).">getConnectivityView()</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00100">100</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -729,7 +748,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classpanzer_1_1_conn_manager.html#a1f5d18d59bb05c4eb03e7753e4a349b8">panzer::ConnManager</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00102">102</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00111">111</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -760,7 +779,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classpanzer_1_1_conn_manager.html#abb64bb56657ee022a33b33093154147e">panzer::ConnManager</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00107">107</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00116">116</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -791,7 +810,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classpanzer_1_1_conn_manager.html#ae367e6b4acd9a4c67bf211e97890ba9a">panzer::ConnManager</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00112">112</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00121">121</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -829,7 +848,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classpanzer_1_1_conn_manager.html#a8c109da764fa318bd4d65e6bf927b985">panzer::ConnManager</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00128">128</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00137">137</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -867,7 +886,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classpanzer_1_1_conn_manager.html#ac438955320f9c9647b0f2054dbf7c44e">panzer::ConnManager</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00139">139</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00148">148</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -956,7 +975,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Get STK interface that this connection manager is built on. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00157">157</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00166">166</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -984,7 +1003,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>How many elements are owned by this processor. Further, the ordering of the local ids is suct that the first <code><a class="el" href="classpanzer__stk_1_1_s_t_k_conn_manager.html#aa4f0e0b71764527eb4494ed2f675b959">getOwnedElementCount()</a></code> elements are owned by this processor. This is true only because of the local element ids generated by the <code><a class="el" href="classpanzer__stk_1_1_s_t_k___interface.html">STK_Interface</a></code> object. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00167">167</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00176">176</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1116,7 +1135,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Enables the caching of connectivity data. Be sure to call <a class="el" href="classpanzer__stk_1_1_s_t_k_conn_manager.html#af033369a53f38c761ffb0bd6f0b1faba" title="If you enable caching with cacheConnectivity(), this must be called prior to exiting the code.">clearCachedConnectivityData()</a> before exiting your program. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00193">193</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00202">202</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1145,7 +1164,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>If you enable caching with <a class="el" href="classpanzer__stk_1_1_s_t_k_conn_manager.html#a57ed0a67271d1d635d3938943df740d1" title="Enables the caching of connectivity data. Be sure to call clearCachedConnectivityData() before exitin...">cacheConnectivity()</a>, this must be called prior to exiting the code. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00197">197</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00206">206</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1174,7 +1193,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>This is purely for unit testing. Returns the number of times that <a class="el" href="classpanzer__stk_1_1_s_t_k_conn_manager.html#a6750200bf4f8224ad6643e4033377bd2">buildConnectivity()</a> was called, but a cached version was found to use instead. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00204">204</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00213">213</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1550,7 +1569,7 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00244">244</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00253">253</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1574,7 +1593,7 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00246">246</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00255">255</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1598,7 +1617,7 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00249">249</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00258">258</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1622,7 +1641,7 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00250">250</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00259">259</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1646,7 +1665,7 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00251">251</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00260">260</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1670,7 +1689,7 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00253">253</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00262">262</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1694,7 +1713,7 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00254">254</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00263">263</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1718,7 +1737,7 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00255">255</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00264">264</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1742,7 +1761,7 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00257">257</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00266">266</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1766,7 +1785,7 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00259">259</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00268">268</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1790,7 +1809,7 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00260">260</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00269">269</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1814,7 +1833,7 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00261">261</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00270">270</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1838,7 +1857,7 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00271">271</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00280">280</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1862,7 +1881,7 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00272">272</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00281">281</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -1886,7 +1905,7 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00273">273</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html#l00282">282</a> of file <a class="el" href="_panzer___s_t_k_conn_manager_8hpp_source.html">Panzer_STKConnManager.hpp</a>.</p>
 
 </div>
 </div>

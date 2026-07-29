@@ -103,12 +103,16 @@ Inheritance diagram for panzer_stk::ScatterFields&lt; EvalT, TraitsT &gt;:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a458c08fd7dd3c953103ecb4d7fc639f5" id="r_a458c08fd7dd3c953103ecb4d7fc639f5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_scatter_fields.html#a458c08fd7dd3c953103ecb4d7fc639f5">ScatterFields</a> (const std::string &amp;scatterName, const Teuchos::RCP&lt; <a class="el" href="classpanzer__stk_1_1_s_t_k___interface.html">STK_Interface</a> &gt; mesh, const Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_pure_basis.html">panzer::PureBasis</a> &gt; &amp;basis, const std::vector&lt; std::string &gt; &amp;names)</td></tr>
+<tr class="memdesc:a458c08fd7dd3c953103ecb4d7fc639f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from the mesh, basis, field names to scatter, and a per-field scaling factor (must be the same length as names).  <br /></td></tr>
 <tr class="separator:a458c08fd7dd3c953103ecb4d7fc639f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e6d5a768f49ddb56e290158773b8d19" id="r_a8e6d5a768f49ddb56e290158773b8d19"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_scatter_fields.html#a8e6d5a768f49ddb56e290158773b8d19">ScatterFields</a> (const std::string &amp;scatterName, const Teuchos::RCP&lt; <a class="el" href="classpanzer__stk_1_1_s_t_k___interface.html">STK_Interface</a> &gt; mesh, const Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_pure_basis.html">panzer::PureBasis</a> &gt; &amp;basis, const std::vector&lt; std::string &gt; &amp;names, const std::vector&lt; double &gt; &amp;scaling)</td></tr>
+<tr class="memdesc:a8e6d5a768f49ddb56e290158773b8d19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from the mesh, basis, field names to scatter, and a per-field scaling factor (must be the same length as names).  <br /></td></tr>
 <tr class="separator:a8e6d5a768f49ddb56e290158773b8d19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec5eb58b9ec7e6ece40d624084398ff3" id="r_aec5eb58b9ec7e6ece40d624084398ff3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_scatter_fields.html#aec5eb58b9ec7e6ece40d624084398ff3">postRegistrationSetup</a> (typename TraitsT::SetupData d, <a class="el" href="class_p_h_x_1_1_field_manager.html">PHX::FieldManager</a>&lt; TraitsT &gt; &amp;fm)</td></tr>
+<tr class="memdesc:aec5eb58b9ec7e6ece40d624084398ff3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Looks up the STK field pointers needed by <a class="el" href="classpanzer__stk_1_1_scatter_fields.html#a40c56d0478cd84be5244ceadf876c4f2" title="Writes this workset&#39;s (scaled) field values to the STK mesh per the class description.">evaluateFields()</a>. Called once before the first evaluation.  <br /></td></tr>
 <tr class="separator:aec5eb58b9ec7e6ece40d624084398ff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40c56d0478cd84be5244ceadf876c4f2" id="r_a40c56d0478cd84be5244ceadf876c4f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_scatter_fields.html#a40c56d0478cd84be5244ceadf876c4f2">evaluateFields</a> (typename TraitsT::EvalData d)</td></tr>
+<tr class="memdesc:a40c56d0478cd84be5244ceadf876c4f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes this workset's (scaled) field values to the STK mesh per the class description.  <br /></td></tr>
 <tr class="separator:a40c56d0478cd84be5244ceadf876c4f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a3ffbe28aa7da1cd6d9e4751a06e94d" id="r_a1a3ffbe28aa7da1cd6d9e4751a06e94d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_scatter_fields.html#a1a3ffbe28aa7da1cd6d9e4751a06e94d">evaluateFields</a> (<a class="el" href="structpanzer_1_1_traits.html#acd15edee621ca934dcca460b0bb0de11">panzer::Traits::EvalData</a> workset)</td></tr>
 <tr class="separator:a1a3ffbe28aa7da1cd6d9e4751a06e94d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -146,6 +150,7 @@ Private Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a1b1339f980512aad08843b7587f7b273" id="r_a1b1339f980512aad08843b7587f7b273"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_scatter_fields.html#a1b1339f980512aad08843b7587f7b273">initialize</a> (const std::string &amp;scatterName, const Teuchos::RCP&lt; <a class="el" href="classpanzer__stk_1_1_s_t_k___interface.html">STK_Interface</a> &gt; mesh, const Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_pure_basis.html">panzer::PureBasis</a> &gt; &amp;basis, const std::vector&lt; std::string &gt; &amp;names, const std::vector&lt; double &gt; &amp;scaling)</td></tr>
+<tr class="memdesc:a1b1339f980512aad08843b7587f7b273"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shared setup logic for both constructors: sets up dependent fields and per-field scaling.  <br /></td></tr>
 <tr class="separator:a1b1339f980512aad08843b7587f7b273"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
@@ -277,6 +282,17 @@ template&lt;typename EvalT , typename TraitsT &gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Construct from the mesh, basis, field names to scatter, and a per-field scaling factor (must be the same length as names). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">scatterName</td><td>name to give this evaluator. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>the STK mesh to write field values to. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">basis</td><td>the basis whose node values are gathered from the fields and written to the mesh. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">names</td><td>names of the fields to scatter. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___scatter_fields__impl_8hpp_source.html#l00030">30</a> of file <a class="el" href="_panzer___s_t_k___scatter_fields__impl_8hpp_source.html">Panzer_STK_ScatterFields_impl.hpp</a>.</p>
 
 </div>
@@ -326,6 +342,18 @@ template&lt;typename EvalT , typename TraitsT &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Construct from the mesh, basis, field names to scatter, and a per-field scaling factor (must be the same length as names). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">scatterName</td><td>name to give this evaluator. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>the STK mesh to write field values to. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">basis</td><td>the basis whose node values are gathered from the fields and written to the mesh. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">names</td><td>names of the fields to scatter. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">scaling</td><td>per-field scale factor applied before writing; must be the same length as names. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___scatter_fields__impl_8hpp_source.html#l00042">42</a> of file <a class="el" href="_panzer___s_t_k___scatter_fields__impl_8hpp_source.html">Panzer_STK_ScatterFields_impl.hpp</a>.</p>
 
@@ -386,6 +414,18 @@ template&lt;typename EvalT , typename TraitsT &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Shared setup logic for both constructors: sets up dependent fields and per-field scaling. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">scatterName</td><td>name to give this evaluator. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>the STK mesh to write field values to. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">basis</td><td>the basis whose node values are gathered from the fields and written to the mesh. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">names</td><td>names of the fields to scatter. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">scaling</td><td>per-field scale factor applied before writing; must be the same length as names. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___scatter_fields__impl_8hpp_source.html#l00053">53</a> of file <a class="el" href="_panzer___s_t_k___scatter_fields__impl_8hpp_source.html">Panzer_STK_ScatterFields_impl.hpp</a>.</p>
 
 </div>
@@ -418,6 +458,8 @@ template&lt;typename EvalT , typename TraitsT &gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Looks up the STK field pointers needed by <a class="el" href="classpanzer__stk_1_1_scatter_fields.html#a40c56d0478cd84be5244ceadf876c4f2" title="Writes this workset&#39;s (scaled) field values to the STK mesh per the class description.">evaluateFields()</a>. Called once before the first evaluation. </p>
+
 <p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___scatter_fields__impl_8hpp_source.html#l00090">90</a> of file <a class="el" href="_panzer___s_t_k___scatter_fields__impl_8hpp_source.html">Panzer_STK_ScatterFields_impl.hpp</a>.</p>
 
 </div>
@@ -439,6 +481,8 @@ template&lt;typename EvalT , typename TraitsT &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Writes this workset's (scaled) field values to the STK mesh per the class description. </p>
 
 <p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___scatter_fields__impl_8hpp_source.html#l00099">99</a> of file <a class="el" href="_panzer___s_t_k___scatter_fields__impl_8hpp_source.html">Panzer_STK_ScatterFields_impl.hpp</a>.</p>
 
