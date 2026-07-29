@@ -80,14 +80,17 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Abstract interface for scattering a functional response's derivative back into global sensitivity vectors.  
+ <a href="classpanzer_1_1_functional_scatter_base.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_panzer___response_scatter_evaluator___functional_8hpp_source.html">Panzer_ResponseScatterEvaluator_Functional.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for panzer::FunctionalScatterBase:</div>
 <div class="dyncontent">
 <div class="center"><img src="classpanzer_1_1_functional_scatter_base__inherit__graph.gif" border="0" usemap="#apanzer_1_1_functional_scatter_base_inherit__map" alt="Inheritance graph"/></div>
 <map name="apanzer_1_1_functional_scatter_base_inherit__map" id="apanzer_1_1_functional_scatter_base_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,5,224,31"/>
-<area shape="rect" href="classpanzer_1_1_functional_scatter.html" title=" " alt="" coords="21,79,208,119"/>
+<area shape="rect" title="Abstract interface for scattering a functional response&#39;s derivative back into global sensitivity vec..." alt="" coords="5,5,224,31"/>
+<area shape="rect" href="classpanzer_1_1_functional_scatter.html" title="Concrete FunctionalScatterBase that scatters using one or more panzer::GlobalIndexer objects." alt="" coords="21,79,208,119"/>
 <area shape="poly" title=" " alt="" coords="117,44,117,79,112,79,112,44"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -97,13 +100,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab6a80f9d5245950255d6a4a3d8dbeb91" id="r_ab6a80f9d5245950255d6a4a3d8dbeb91"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_functional_scatter_base.html#ab6a80f9d5245950255d6a4a3d8dbeb91">~FunctionalScatterBase</a> ()</td></tr>
 <tr class="separator:ab6a80f9d5245950255d6a4a3d8dbeb91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05592f91cd7682cdec7e436326daf051" id="r_a05592f91cd7682cdec7e436326daf051"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_functional_scatter_base.html#a05592f91cd7682cdec7e436326daf051">scatterDerivative</a> (const PHX::MDField&lt; const <a class="el" href="structpanzer_1_1_traits_1_1_jacobian.html#ac105a3e775f64b5684921d1c1a9efdde">panzer::Traits::Jacobian::ScalarT</a>, <a class="el" href="structpanzer_1_1_cell.html">panzer::Cell</a> &gt; &amp;cellIntegral, <a class="el" href="structpanzer_1_1_traits.html#acd15edee621ca934dcca460b0bb0de11">panzer::Traits::EvalData</a> workset, <a class="el" href="classpanzer_1_1_workset_details_accessor.html">WorksetDetailsAccessor</a> &amp;wda, const std::vector&lt; Teuchos::ArrayRCP&lt; double &gt; &gt; &amp;dgdx) const =0</td></tr>
+<tr class="memdesc:a05592f91cd7682cdec7e436326daf051"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accumulates dg/dx contributions from one workset's cell integrals into the global gradient vector(s).  <br /></td></tr>
 <tr class="separator:a05592f91cd7682cdec7e436326daf051"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1708261597b05ea3f0b1226afeaed59" id="r_ad1708261597b05ea3f0b1226afeaed59"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_functional_scatter_base.html#ad1708261597b05ea3f0b1226afeaed59">scatterHessian</a> (const PHX::MDField&lt; const <a class="el" href="structpanzer_1_1_traits_1_1_hessian.html#a81a99dccf5fd5d17b20c14953159d534">panzer::Traits::Hessian::ScalarT</a>, <a class="el" href="structpanzer_1_1_cell.html">panzer::Cell</a> &gt; &amp;cellIntegral, <a class="el" href="structpanzer_1_1_traits.html#acd15edee621ca934dcca460b0bb0de11">panzer::Traits::EvalData</a> workset, <a class="el" href="classpanzer_1_1_workset_details_accessor.html">WorksetDetailsAccessor</a> &amp;wda, const std::vector&lt; Teuchos::ArrayRCP&lt; double &gt; &gt; &amp;d2gdx2) const =0</td></tr>
+<tr class="memdesc:ad1708261597b05ea3f0b1226afeaed59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accumulates d2g/dx2 contributions from one workset's cell integrals into the global Hessian-vector product(s). Only defined when built with Hessian support.  <br /></td></tr>
 <tr class="separator:ad1708261597b05ea3f0b1226afeaed59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_panzer___response_scatter_evaluator___functional_8hpp_source.html#l00031">31</a> of file <a class="el" href="_panzer___response_scatter_evaluator___functional_8hpp_source.html">Panzer_ResponseScatterEvaluator_Functional.hpp</a>.</p>
+<div class="textblock"><p>Abstract interface for scattering a functional response's derivative back into global sensitivity vectors. </p>
+<p><a class="el" href="classpanzer_1_1_response_scatter_evaluator___functional.html">ResponseScatterEvaluator_Functional</a> computes a scalar functional integral per cell; a <a class="el" href="classpanzer_1_1_functional_scatter_base.html" title="Abstract interface for scattering a functional response&#39;s derivative back into global sensitivity vec...">FunctionalScatterBase</a> implementation is responsible for taking that per-cell integral's derivative (with respect to local solution unknowns) and accumulating it into the appropriate entries of the response's global gradient (<code>dgdx</code>) or, if enabled, Hessian-vector product (<code>d2gdx2</code>). </p>
+
+<p class="definition">Definition at line <a class="el" href="_panzer___response_scatter_evaluator___functional_8hpp_source.html#l00041">41</a> of file <a class="el" href="_panzer___response_scatter_evaluator___functional_8hpp_source.html">Panzer_ResponseScatterEvaluator_Functional.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab6a80f9d5245950255d6a4a3d8dbeb91" name="ab6a80f9d5245950255d6a4a3d8dbeb91"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab6a80f9d5245950255d6a4a3d8dbeb91">&#9670;&#160;</a></span>~FunctionalScatterBase()</h2>
@@ -128,7 +135,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___response_scatter_evaluator___functional_8hpp_source.html#l00033">33</a> of file <a class="el" href="_panzer___response_scatter_evaluator___functional_8hpp_source.html">Panzer_ResponseScatterEvaluator_Functional.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___response_scatter_evaluator___functional_8hpp_source.html#l00043">43</a> of file <a class="el" href="_panzer___response_scatter_evaluator___functional_8hpp_source.html">Panzer_ResponseScatterEvaluator_Functional.hpp</a>.</p>
 
 </div>
 </div>
@@ -179,6 +186,17 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Accumulates dg/dx contributions from one workset's cell integrals into the global gradient vector(s). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cellIntegral</td><td>per-cell functional integral for this workset, carrying Jacobian (first-derivative) sensitivities. </td></tr>
+    <tr><td class="paramname">workset</td><td>the workset being processed. </td></tr>
+    <tr><td class="paramname">wda</td><td>accessor used to pull cell/block details out of <code>workset</code>. </td></tr>
+    <tr><td class="paramname">dgdx</td><td>one global gradient vector per global indexer (block), to be accumulated into. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Implemented in <a class="el" href="classpanzer_1_1_functional_scatter.html#ade4cfdef3511ca4e3ccf9fe9d80de7e2">panzer::FunctionalScatter&lt; LO, GO &gt;</a>.</p>
 
 </div>
@@ -228,6 +246,17 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Accumulates d2g/dx2 contributions from one workset's cell integrals into the global Hessian-vector product(s). Only defined when built with Hessian support. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cellIntegral</td><td>per-cell functional integral for this workset, carrying Hessian (second-derivative) sensitivities. </td></tr>
+    <tr><td class="paramname">workset</td><td>the workset being processed. </td></tr>
+    <tr><td class="paramname">wda</td><td>accessor used to pull cell/block details out of <code>workset</code>. </td></tr>
+    <tr><td class="paramname">d2gdx2</td><td>one global Hessian-vector product vector per global indexer (block), to be accumulated into. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implemented in <a class="el" href="classpanzer_1_1_functional_scatter.html#af272b8d1ce75607be9760b6f059f452e">panzer::FunctionalScatter&lt; LO, GO &gt;</a>.</p>
 

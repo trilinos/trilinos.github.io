@@ -82,6 +82,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Vector-valued <a class="el" href="classpanzer_1_1_d_o_f.html" title="Interpolates basis DOF values to IP DOF values.">DOF</a> interpolation functor using the fast-sensitivity optimization.  
+ <a href="classpanzer_1_1dof__functors_1_1_evaluate_d_o_f_fast_sens___vector.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_panzer___d_o_f___functors_8hpp_source.html">Panzer_DOF_Functors.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
@@ -92,8 +95,10 @@ Public Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a707285e1e054e24c0fd40c496cb8a875" id="r_a707285e1e054e24c0fd40c496cb8a875"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1dof__functors_1_1_evaluate_d_o_f_fast_sens___vector.html#a707285e1e054e24c0fd40c496cb8a875">EvaluateDOFFastSens_Vector</a> (PHX::MDField&lt; const ScalarT, <a class="el" href="structpanzer_1_1_cell.html">Cell</a>, <a class="el" href="structpanzer_1_1_point.html">Point</a> &gt; in_dof_basis, PHX::MDField&lt; ScalarT, <a class="el" href="structpanzer_1_1_cell.html">Cell</a>, <a class="el" href="structpanzer_1_1_point.html">Point</a>, <a class="el" href="structpanzer_1_1_dim.html">Dim</a> &gt; in_dof_ip, PHX::View&lt; const int * &gt; in_offsets, Array in_basis)</td></tr>
+<tr class="memdesc:a707285e1e054e24c0fd40c496cb8a875"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
 <tr class="separator:a707285e1e054e24c0fd40c496cb8a875"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad212625ab0b149340ef68b13d928984c" id="r_ad212625ab0b149340ef68b13d928984c"><td class="memItemLeft" align="right" valign="top">KOKKOS_INLINE_FUNCTION void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1dof__functors_1_1_evaluate_d_o_f_fast_sens___vector.html#ad212625ab0b149340ef68b13d928984c">operator()</a> (const unsigned int cell) const</td></tr>
+<tr class="memdesc:ad212625ab0b149340ef68b13d928984c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes dof_ip (value and its one nonzero sensitivity) for all points/dimensions of one cell.  <br /></td></tr>
 <tr class="separator:ad212625ab0b149340ef68b13d928984c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
@@ -113,8 +118,18 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename ScalarT, typename Array, int spaceDim&gt;<br />
-class panzer::dof_functors::EvaluateDOFFastSens_Vector&lt; ScalarT, Array, spaceDim &gt;</div>
-<p class="definition">Definition at line <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html#l00158">158</a> of file <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html">Panzer_DOF_Functors.hpp</a>.</p>
+class panzer::dof_functors::EvaluateDOFFastSens_Vector&lt; ScalarT, Array, spaceDim &gt;</div><p>Vector-valued <a class="el" href="classpanzer_1_1_d_o_f.html" title="Interpolates basis DOF values to IP DOF values.">DOF</a> interpolation functor using the fast-sensitivity optimization. </p>
+<p>Assumes each cell-local <a class="el" href="classpanzer_1_1_d_o_f.html" title="Interpolates basis DOF values to IP DOF values.">DOF</a>'s derivative contribution is confined to a single entry of <code>offsets</code>, so only that one derivative component is computed via <code>fastAccessDx()</code> rather than propagating a full AD derivative array. Not valid if <code>basis</code> itself carries derivatives (e.g. sensitivity to coordinates). </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ScalarT</td><td>the field scalar type (AD type carrying derivatives). </td></tr>
+    <tr><td class="paramname">Array</td><td>the basis-value array type. </td></tr>
+    <tr><td class="paramname">spaceDim</td><td>number of spatial dimensions (vector components) to compute. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacepanzer_1_1dof__functors.html" title="Device functors that interpolate DOF coefficients to values at integration points.">dof_functors</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html#l00227">227</a> of file <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html">Panzer_DOF_Functors.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a53978b65aa57da0422554be26cf9ec53" name="a53978b65aa57da0422554be26cf9ec53"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a53978b65aa57da0422554be26cf9ec53">&#9670;&#160;</a></span>execution_space</h2>
@@ -130,7 +145,7 @@ template&lt;typename ScalarT , typename Array , int spaceDim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html#l00168">168</a> of file <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html">Panzer_DOF_Functors.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html#l00237">237</a> of file <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html">Panzer_DOF_Functors.hpp</a>.</p>
 
 </div>
 </div>
@@ -183,7 +198,18 @@ template&lt;typename ScalarT , typename Array , int spaceDim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html#l00170">170</a> of file <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html">Panzer_DOF_Functors.hpp</a>.</p>
+<p>Constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in_dof_basis</td><td>input field of per-cell, per-basis-function <a class="el" href="classpanzer_1_1_d_o_f.html" title="Interpolates basis DOF values to IP DOF values.">DOF</a> coefficients. </td></tr>
+    <tr><td class="paramname">in_dof_ip</td><td>output field values at integration points. </td></tr>
+    <tr><td class="paramname">in_offsets</td><td>maps each basis function to the derivative array index holding its (only nonzero) sensitivity. </td></tr>
+    <tr><td class="paramname">in_basis</td><td>basis values at integration points. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html#l00246">246</a> of file <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html">Panzer_DOF_Functors.hpp</a>.</p>
 
 </div>
 </div>
@@ -214,7 +240,9 @@ template&lt;typename ScalarT , typename Array , int spaceDim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html#l00180">180</a> of file <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html">Panzer_DOF_Functors.hpp</a>.</p>
+<p>Computes dof_ip (value and its one nonzero sensitivity) for all points/dimensions of one cell. </p>
+
+<p class="definition">Definition at line <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html#l00257">257</a> of file <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html">Panzer_DOF_Functors.hpp</a>.</p>
 
 </div>
 </div>
@@ -241,7 +269,7 @@ template&lt;typename ScalarT , typename Array , int spaceDim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html#l00159">159</a> of file <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html">Panzer_DOF_Functors.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html#l00228">228</a> of file <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html">Panzer_DOF_Functors.hpp</a>.</p>
 
 </div>
 </div>
@@ -267,7 +295,7 @@ template&lt;typename ScalarT , typename Array , int spaceDim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html#l00160">160</a> of file <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html">Panzer_DOF_Functors.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html#l00229">229</a> of file <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html">Panzer_DOF_Functors.hpp</a>.</p>
 
 </div>
 </div>
@@ -293,7 +321,7 @@ template&lt;typename ScalarT , typename Array , int spaceDim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html#l00161">161</a> of file <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html">Panzer_DOF_Functors.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html#l00230">230</a> of file <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html">Panzer_DOF_Functors.hpp</a>.</p>
 
 </div>
 </div>
@@ -319,7 +347,7 @@ template&lt;typename ScalarT , typename Array , int spaceDim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html#l00162">162</a> of file <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html">Panzer_DOF_Functors.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html#l00231">231</a> of file <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html">Panzer_DOF_Functors.hpp</a>.</p>
 
 </div>
 </div>
@@ -345,7 +373,7 @@ template&lt;typename ScalarT , typename Array , int spaceDim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html#l00164">164</a> of file <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html">Panzer_DOF_Functors.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html#l00233">233</a> of file <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html">Panzer_DOF_Functors.hpp</a>.</p>
 
 </div>
 </div>
@@ -371,7 +399,7 @@ template&lt;typename ScalarT , typename Array , int spaceDim&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html#l00165">165</a> of file <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html">Panzer_DOF_Functors.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html#l00234">234</a> of file <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html">Panzer_DOF_Functors.hpp</a>.</p>
 
 </div>
 </div>

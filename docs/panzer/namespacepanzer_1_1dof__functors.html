@@ -78,22 +78,37 @@ $(function() {
   <div class="headertitle"><div class="title">panzer::dof_functors Namespace Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Device functors that interpolate <a class="el" href="classpanzer_1_1_d_o_f.html" title="Interpolates basis DOF values to IP DOF values.">DOF</a> coefficients to values at integration points.  
+<a href="namespacepanzer_1_1dof__functors.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1dof__functors_1_1_evaluate_d_o_f_fast_sens___scalar.html">EvaluateDOFFastSens_Scalar</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scalar-valued <a class="el" href="classpanzer_1_1_d_o_f.html" title="Interpolates basis DOF values to IP DOF values.">DOF</a> interpolation functor using the fast-sensitivity optimization.  <a href="classpanzer_1_1dof__functors_1_1_evaluate_d_o_f_fast_sens___scalar.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1dof__functors_1_1_evaluate_d_o_f_fast_sens___vector.html">EvaluateDOFFastSens_Vector</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector-valued <a class="el" href="classpanzer_1_1_d_o_f.html" title="Interpolates basis DOF values to IP DOF values.">DOF</a> interpolation functor using the fast-sensitivity optimization.  <a href="classpanzer_1_1dof__functors_1_1_evaluate_d_o_f_fast_sens___vector.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1dof__functors_1_1_evaluate_d_o_f_with_sens___scalar.html">EvaluateDOFWithSens_Scalar</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scalar-valued <a class="el" href="classpanzer_1_1_d_o_f.html" title="Interpolates basis DOF values to IP DOF values.">DOF</a> interpolation functor with full derivative propagation.  <a href="classpanzer_1_1dof__functors_1_1_evaluate_d_o_f_with_sens___scalar.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1dof__functors_1_1_evaluate_d_o_f_with_sens___vector.html">EvaluateDOFWithSens_Vector</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector-valued <a class="el" href="classpanzer_1_1_d_o_f.html" title="Interpolates basis DOF values to IP DOF values.">DOF</a> interpolation functor with full derivative propagation.  <a href="classpanzer_1_1dof__functors_1_1_evaluate_d_o_f_with_sens___vector.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpanzer_1_1dof__functors_1_1_sum_rank2.html">SumRank2</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sums all entries of a Rank 2 Kokkos View.  <a href="structpanzer_1_1dof__functors_1_1_sum_rank2.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Device functors that interpolate <a class="el" href="classpanzer_1_1_d_o_f.html" title="Interpolates basis DOF values to IP DOF values.">DOF</a> coefficients to values at integration points. </p>
+<p>Each functor here performs one Kokkos-parallel evaluation of <code>dof_ip(cell,pt) = sum_bf dof_basis(cell,bf) * basis(cell,bf,pt)</code>, i.e. it computes the value (or vector/gradient components) of a field at every integration point of every cell in a workset, given per-basis-function <a class="el" href="classpanzer_1_1_d_o_f.html" title="Interpolates basis DOF values to IP DOF values.">DOF</a> coefficients. They are used by evaluators such as <a class="el" href="classpanzer_1_1_d_o_f.html" title="Interpolates basis DOF values to IP DOF values.">panzer::DOF</a> and <a class="el" href="classpanzer_1_1_d_o_f_gradient.html" title="Interpolates basis DOF values to IP DOF Gradient values.">panzer::DOFGradient</a>.</p>
+<p>Two evaluation strategies are provided:</p><ul>
+<li><code>*WithSens</code>: propagates derivatives with respect to all local <a class="el" href="classpanzer_1_1_d_o_f.html" title="Interpolates basis DOF values to IP DOF values.">DOF</a> coefficients using whatever AD type <code>ScalarT</code> already carries. Correct in general, but loops over every derivative component.</li>
+<li><code>*FastSens</code>: exploits the fact that <code>dof_ip</code>'s derivative with respect to a given cell-local <a class="el" href="classpanzer_1_1_d_o_f.html" title="Interpolates basis DOF values to IP DOF values.">DOF</a> depends only on that <a class="el" href="classpanzer_1_1_d_o_f.html" title="Interpolates basis DOF values to IP DOF values.">DOF</a>'s entry in <code>offsets</code>, so the functor sets exactly that one nonzero derivative component via <code>fastAccessDx()</code> instead of iterating over the whole FAD array. This is a significant performance optimization for the Jacobian evaluation type, but assumes the <code>basis</code> values themselves carry no derivative information (see the per-functor note about coordinate sensitivities).</li>
+</ul>
+<p><code>*_Vector</code> variants compute all <code>spaceDim</code> components of a vector-valued (or gradient) field; <code>*_Scalar</code> variants compute a single scalar field. </p>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8

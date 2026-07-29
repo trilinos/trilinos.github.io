@@ -81,16 +81,22 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Builder functor used with Sacado::mpl::TemplateManager to construct one panzer_stk::IOClosureModelFactory&lt;EvalT&gt; per evaluation type, each wrapping the same underlying closure model factory template manager, mesh, and output field selection.  
+ <a href="classpanzer__stk_1_1_i_o_closure_model_factory___template_builder.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html">Panzer_STK_IOClosureModel_Factory_TemplateBuilder.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9c2e6dff988d87e3a1ba7cf0b32e0f39" id="r_a9c2e6dff988d87e3a1ba7cf0b32e0f39"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_i_o_closure_model_factory___template_builder.html#a9c2e6dff988d87e3a1ba7cf0b32e0f39">IOClosureModelFactory_TemplateBuilder</a> (const <a class="el" href="classpanzer_1_1_closure_model_factory___template_manager.html">panzer::ClosureModelFactory_TemplateManager</a>&lt; TraitsT &gt; &amp;cmf_tm, const Teuchos::RCP&lt; <a class="el" href="classpanzer__stk_1_1_s_t_k___interface.html">STK_Interface</a> &gt; &amp;mesh, const Teuchos::ParameterList &amp;outputList)</td></tr>
+<tr class="memdesc:a9c2e6dff988d87e3a1ba7cf0b32e0f39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with the output fields to write specified via a ParameterList.  <br /></td></tr>
 <tr class="separator:a9c2e6dff988d87e3a1ba7cf0b32e0f39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8b65805d78c73c5fc37a6dbc25e9880" id="r_aa8b65805d78c73c5fc37a6dbc25e9880"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_i_o_closure_model_factory___template_builder.html#aa8b65805d78c73c5fc37a6dbc25e9880">IOClosureModelFactory_TemplateBuilder</a> (const <a class="el" href="classpanzer_1_1_closure_model_factory___template_manager.html">panzer::ClosureModelFactory_TemplateManager</a>&lt; TraitsT &gt; &amp;cmf_tm, const Teuchos::RCP&lt; <a class="el" href="classpanzer__stk_1_1_s_t_k___interface.html">STK_Interface</a> &gt; &amp;mesh, const std::map&lt; std::string, std::vector&lt; std::string &gt; &gt; &amp;nodalFields, const std::map&lt; std::string, std::vector&lt; std::string &gt; &gt; &amp;cellFields)</td></tr>
+<tr class="memdesc:aa8b65805d78c73c5fc37a6dbc25e9880"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with the output fields to write specified explicitly, split into nodal and cell fields per element block.  <br /></td></tr>
 <tr class="separator:aa8b65805d78c73c5fc37a6dbc25e9880"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa661eef2da83c41d20d91ba4aafb7255" id="r_aa661eef2da83c41d20d91ba4aafb7255"><td class="memTemplParams" colspan="2">template&lt;typename EvalT &gt; </td></tr>
 <tr class="memitem:aa661eef2da83c41d20d91ba4aafb7255"><td class="memTemplItemLeft" align="right" valign="top">Teuchos::RCP&lt; <a class="el" href="classpanzer_1_1_closure_model_factory_base.html">panzer::ClosureModelFactoryBase</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_i_o_closure_model_factory___template_builder.html#aa661eef2da83c41d20d91ba4aafb7255">build</a> () const</td></tr>
+<tr class="memdesc:aa661eef2da83c41d20d91ba4aafb7255"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a panzer_stk::IOClosureModelFactory&lt;EvalT&gt; for the given evaluation type.  <br /></td></tr>
 <tr class="separator:aa661eef2da83c41d20d91ba4aafb7255"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
@@ -110,8 +116,15 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename TraitsT&gt;<br />
-class panzer_stk::IOClosureModelFactory_TemplateBuilder&lt; TraitsT &gt;</div>
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html#l00024">24</a> of file <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html">Panzer_STK_IOClosureModel_Factory_TemplateBuilder.hpp</a>.</p>
+class panzer_stk::IOClosureModelFactory_TemplateBuilder&lt; TraitsT &gt;</div><p>Builder functor used with Sacado::mpl::TemplateManager to construct one panzer_stk::IOClosureModelFactory&lt;EvalT&gt; per evaluation type, each wrapping the same underlying closure model factory template manager, mesh, and output field selection. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TraitsT</td><td>the traits class supplying the set of evaluation types (e.g. <a class="el" href="structpanzer_1_1_traits.html" title="Panzer&#39;s specialization of the Phalanx traits class.">panzer::Traits</a>). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html#l00031">31</a> of file <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html">Panzer_STK_IOClosureModel_Factory_TemplateBuilder.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a9c2e6dff988d87e3a1ba7cf0b32e0f39" name="a9c2e6dff988d87e3a1ba7cf0b32e0f39"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9c2e6dff988d87e3a1ba7cf0b32e0f39">&#9670;&#160;</a></span>IOClosureModelFactory_TemplateBuilder() <span class="overload">[1/2]</span></h2>
@@ -155,7 +168,17 @@ template&lt;typename TraitsT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html#l00027">27</a> of file <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html">Panzer_STK_IOClosureModel_Factory_TemplateBuilder.hpp</a>.</p>
+<p>Construct with the output fields to write specified via a ParameterList. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmf_tm</td><td>the underlying closure model factory template manager to wrap for every evaluation type. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>the STK mesh to write output fields to. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">outputList</td><td>ParameterList naming the fields to write out (parsed by <a class="el" href="classpanzer__stk_1_1_i_o_closure_model_factory.html#ad1139b1c83a847567bbc76f52934bd04">IOClosureModelFactory::parseOutputList()</a>). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html#l00040">40</a> of file <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html">Panzer_STK_IOClosureModel_Factory_TemplateBuilder.hpp</a>.</p>
 
 </div>
 </div>
@@ -207,7 +230,18 @@ template&lt;typename TraitsT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html#l00032">32</a> of file <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html">Panzer_STK_IOClosureModel_Factory_TemplateBuilder.hpp</a>.</p>
+<p>Construct with the output fields to write specified explicitly, split into nodal and cell fields per element block. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmf_tm</td><td>the underlying closure model factory template manager to wrap for every evaluation type. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>the STK mesh to write output fields to. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nodalFields</td><td>nodal field names to write out, keyed by element block ID. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cellFields</td><td>cell (element-averaged) field names to write out, keyed by element block ID. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html#l00052">52</a> of file <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html">Panzer_STK_IOClosureModel_Factory_TemplateBuilder.hpp</a>.</p>
 
 </div>
 </div>
@@ -239,7 +273,9 @@ template&lt;typename EvalT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html#l00040">40</a> of file <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html">Panzer_STK_IOClosureModel_Factory_TemplateBuilder.hpp</a>.</p>
+<p>Constructs a panzer_stk::IOClosureModelFactory&lt;EvalT&gt; for the given evaluation type. </p>
+
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html#l00061">61</a> of file <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html">Panzer_STK_IOClosureModel_Factory_TemplateBuilder.hpp</a>.</p>
 
 </div>
 </div>
@@ -266,7 +302,7 @@ template&lt;typename TraitsT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html#l00050">50</a> of file <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html">Panzer_STK_IOClosureModel_Factory_TemplateBuilder.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html#l00071">71</a> of file <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html">Panzer_STK_IOClosureModel_Factory_TemplateBuilder.hpp</a>.</p>
 
 </div>
 </div>
@@ -292,7 +328,7 @@ template&lt;typename TraitsT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html#l00051">51</a> of file <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html">Panzer_STK_IOClosureModel_Factory_TemplateBuilder.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html#l00072">72</a> of file <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html">Panzer_STK_IOClosureModel_Factory_TemplateBuilder.hpp</a>.</p>
 
 </div>
 </div>
@@ -318,7 +354,7 @@ template&lt;typename TraitsT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html#l00052">52</a> of file <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html">Panzer_STK_IOClosureModel_Factory_TemplateBuilder.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html#l00073">73</a> of file <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html">Panzer_STK_IOClosureModel_Factory_TemplateBuilder.hpp</a>.</p>
 
 </div>
 </div>
@@ -344,7 +380,7 @@ template&lt;typename TraitsT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html#l00053">53</a> of file <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html">Panzer_STK_IOClosureModel_Factory_TemplateBuilder.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html#l00074">74</a> of file <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html">Panzer_STK_IOClosureModel_Factory_TemplateBuilder.hpp</a>.</p>
 
 </div>
 </div>
@@ -370,7 +406,7 @@ template&lt;typename TraitsT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html#l00054">54</a> of file <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html">Panzer_STK_IOClosureModel_Factory_TemplateBuilder.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html#l00075">75</a> of file <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html">Panzer_STK_IOClosureModel_Factory_TemplateBuilder.hpp</a>.</p>
 
 </div>
 </div>
@@ -396,7 +432,7 @@ template&lt;typename TraitsT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html#l00055">55</a> of file <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html">Panzer_STK_IOClosureModel_Factory_TemplateBuilder.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html#l00076">76</a> of file <a class="el" href="_panzer___s_t_k___i_o_closure_model___factory___template_builder_8hpp_source.html">Panzer_STK_IOClosureModel_Factory_TemplateBuilder.hpp</a>.</p>
 
 </div>
 </div>

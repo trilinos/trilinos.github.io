@@ -89,7 +89,7 @@ Inheritance diagram for panzer::BlockedTpetraLinearObjContainer&lt; ScalarT, Loc
 <div class="center"><img src="classpanzer_1_1_blocked_tpetra_linear_obj_container__inherit__graph.gif" border="0" usemap="#apanzer_1_1_blocked_tpetra_linear_obj_container_3_01_scalar_t_00_01_local_ordinal_t_00_01_global_ordinal_t_00_01_node_t_01_4_inherit__map" alt="Inheritance graph"/></div>
 <map name="apanzer_1_1_blocked_tpetra_linear_obj_container_3_01_scalar_t_00_01_local_ordinal_t_00_01_global_ordinal_t_00_01_node_t_01_4_inherit__map" id="apanzer_1_1_blocked_tpetra_linear_obj_container_3_01_scalar_t_00_01_local_ordinal_t_00_01_global_ordinal_t_00_01_node_t_01_4_inherit__map">
 <area shape="rect" title=" " alt="" coords="95,255,353,309"/>
-<area shape="rect" href="classpanzer_1_1_linear_obj_container.html" title=" " alt="" coords="14,174,213,199"/>
+<area shape="rect" href="classpanzer_1_1_linear_obj_container.html" title="Abstract, linear&#45;algebra&#45;library&#45;agnostic container for the vectors and matrix used in a nonlinear/tr..." alt="" coords="14,174,213,199"/>
 <area shape="poly" title=" " alt="" coords="139,206,194,252,191,256,135,210"/>
 <area shape="rect" href="classpanzer_1_1_global_evaluation_data___default.html" title=" " alt="" coords="21,79,206,119"/>
 <area shape="poly" title=" " alt="" coords="116,133,116,174,111,174,111,133"/>
@@ -114,6 +114,7 @@ Public Types</h2></td></tr>
 , <a class="el" href="classpanzer_1_1_linear_obj_container.html#a170960cb3593e4f53ee768a7f7421620a2f6e4c7846134a95dcbec2dcbc587837">F</a> =0x4
 , <a class="el" href="classpanzer_1_1_linear_obj_container.html#a170960cb3593e4f53ee768a7f7421620a3dc95d734492f26f1358ed7db944e163">Mat</a> =0x8
  }</td></tr>
+<tr class="memdesc:a170960cb3593e4f53ee768a7f7421620"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bitmask flags identifying which of the linear objects (solution, time derivative, residual, matrix) are present/requested.  <a href="classpanzer_1_1_linear_obj_container.html#a170960cb3593e4f53ee768a7f7421620">More...</a><br /></td></tr>
 <tr class="separator:a170960cb3593e4f53ee768a7f7421620 inherit pub_types_classpanzer_1_1_linear_obj_container"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -147,6 +148,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a607eed119e70704ee65209e568b46abc" id="r_a607eed119e70704ee65209e568b46abc"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_container.html#af5bc2027198c46b2b217ff9f5f24d61a">CrsMatrixType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_container.html#a607eed119e70704ee65209e568b46abc">get_A</a> () const</td></tr>
 <tr class="separator:a607eed119e70704ee65209e568b46abc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d1c536ba7f5132b71ca959f802f5729" id="r_a0d1c536ba7f5132b71ca959f802f5729"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_container.html#a0d1c536ba7f5132b71ca959f802f5729">initialize</a> ()</td></tr>
+<tr class="memdesc:a0d1c536ba7f5132b71ca959f802f5729"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zeroes out all linear objects currently held by this container.  <br /></td></tr>
 <tr class="separator:a0d1c536ba7f5132b71ca959f802f5729"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca0bd31a1d705cc9bfb2679b883f6984" id="r_aca0bd31a1d705cc9bfb2679b883f6984"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_container.html#aca0bd31a1d705cc9bfb2679b883f6984">set_x_th</a> (const Teuchos::RCP&lt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_container.html#ac142e690c4884ded1b59f8a316517402">VectorType</a> &gt; &amp;in)</td></tr>
 <tr class="separator:aca0bd31a1d705cc9bfb2679b883f6984"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -678,6 +680,8 @@ template&lt;typename ScalarT , typename LocalOrdinalT , typename GlobalOrdinalT 
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Zeroes out all linear objects currently held by this container. </p>
 
 <p>Implements <a class="el" href="classpanzer_1_1_linear_obj_container.html#aa1858039657edc870fa701e0b3264358">panzer::LinearObjContainer</a>.</p>
 

@@ -103,10 +103,13 @@ Inheritance diagram for panzer::TestScatter&lt; EvalT, Traits &gt;:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a497e1f8e9eaf48456d7ba0784a0a0451" id="r_a497e1f8e9eaf48456d7ba0784a0a0451"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_test_scatter.html#a497e1f8e9eaf48456d7ba0784a0a0451">TestScatter</a> (const Teuchos::ParameterList &amp;p)</td></tr>
+<tr class="memdesc:a497e1f8e9eaf48456d7ba0784a0a0451"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a ParameterList specifying the input/output field names and shared data layout.  <br /></td></tr>
 <tr class="separator:a497e1f8e9eaf48456d7ba0784a0a0451"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a834b1cdccdb6ce456167dd6a84273d85" id="r_a834b1cdccdb6ce456167dd6a84273d85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_test_scatter.html#a834b1cdccdb6ce456167dd6a84273d85">postRegistrationSetup</a> (typename <a class="el" href="structpanzer_1_1_traits.html#ae28ed1de48b795d0567437935cf2119c">Traits::SetupData</a> d, <a class="el" href="class_p_h_x_1_1_field_manager.html">PHX::FieldManager</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a> &gt; &amp;fm)</td></tr>
+<tr class="memdesc:a834b1cdccdb6ce456167dd6a84273d85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Looks up the number of nodes per cell needed by <a class="el" href="classpanzer_1_1_test_scatter.html#ac3eeec39ea5cea4ed9451974aeaed6f2" title="Computes the output field for this workset per the class description.">evaluateFields()</a>. Called once before the first evaluation.  <br /></td></tr>
 <tr class="separator:a834b1cdccdb6ce456167dd6a84273d85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3eeec39ea5cea4ed9451974aeaed6f2" id="r_ac3eeec39ea5cea4ed9451974aeaed6f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_test_scatter.html#ac3eeec39ea5cea4ed9451974aeaed6f2">evaluateFields</a> (typename <a class="el" href="structpanzer_1_1_traits.html#acd15edee621ca934dcca460b0bb0de11">Traits::EvalData</a> d)</td></tr>
+<tr class="memdesc:ac3eeec39ea5cea4ed9451974aeaed6f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the output field for this workset per the class description.  <br /></td></tr>
 <tr class="separator:ac3eeec39ea5cea4ed9451974aeaed6f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classpanzer_1_1_evaluator_with_base_impl"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classpanzer_1_1_evaluator_with_base_impl')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classpanzer_1_1_evaluator_with_base_impl.html">panzer::EvaluatorWithBaseImpl&lt; Traits &gt;</a></td></tr>
 <tr class="memitem:a148dfeda8365bd4882d07cf971fec27f inherit pub_methods_classpanzer_1_1_evaluator_with_base_impl" id="r_a148dfeda8365bd4882d07cf971fec27f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_evaluator_with_base_impl.html#a148dfeda8365bd4882d07cf971fec27f">setDetailsIndex</a> (const int di)</td></tr>
@@ -174,8 +177,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename EvalT, typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a>&gt;<br />
-class panzer::TestScatter&lt; EvalT, Traits &gt;</div>
-<p class="definition">Definition at line <a class="el" href="_panzer___test_scatter__decl_8hpp_source.html#l00022">22</a> of file <a class="el" href="_panzer___test_scatter__decl_8hpp_source.html">Panzer_TestScatter_decl.hpp</a>.</p>
+class panzer::TestScatter&lt; EvalT, Traits &gt;</div><p>A test-only evaluator that computes each cell's node average of an input field and scatters a scaled copy of that average back out to every node of an output field. Used for exercising the scatter machinery in unit tests, not for production physics. </p>
+
+<p class="definition">Definition at line <a class="el" href="_panzer___test_scatter__decl_8hpp_source.html#l00027">27</a> of file <a class="el" href="_panzer___test_scatter__decl_8hpp_source.html">Panzer_TestScatter_decl.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a29f104629732d9fb2b56f68576c9d629" name="a29f104629732d9fb2b56f68576c9d629"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a29f104629732d9fb2b56f68576c9d629">&#9670;&#160;</a></span>ScalarT</h2>
@@ -199,7 +203,7 @@ template&lt;typename EvalT , typename <a class="el" href="structpanzer_1_1_trait
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___test_scatter__decl_8hpp_source.html#l00043">43</a> of file <a class="el" href="_panzer___test_scatter__decl_8hpp_source.html">Panzer_TestScatter_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___test_scatter__decl_8hpp_source.html#l00051">51</a> of file <a class="el" href="_panzer___test_scatter__decl_8hpp_source.html">Panzer_TestScatter_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -221,6 +225,8 @@ template&lt;typename EvalT , typename <a class="el" href="structpanzer_1_1_trait
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Construct from a ParameterList specifying the input/output field names and shared data layout. </p>
 
 <p class="definition">Definition at line <a class="el" href="_panzer___test_scatter__impl_8hpp_source.html#l00020">20</a> of file <a class="el" href="_panzer___test_scatter__impl_8hpp_source.html">Panzer_TestScatter_impl.hpp</a>.</p>
 
@@ -255,6 +261,8 @@ template&lt;typename EvalT , typename <a class="el" href="structpanzer_1_1_trait
       </table>
 </div><div class="memdoc">
 
+<p>Looks up the number of nodes per cell needed by <a class="el" href="classpanzer_1_1_test_scatter.html#ac3eeec39ea5cea4ed9451974aeaed6f2" title="Computes the output field for this workset per the class description.">evaluateFields()</a>. Called once before the first evaluation. </p>
+
 <p class="definition">Definition at line <a class="el" href="_panzer___test_scatter__impl_8hpp_source.html#l00044">44</a> of file <a class="el" href="_panzer___test_scatter__impl_8hpp_source.html">Panzer_TestScatter_impl.hpp</a>.</p>
 
 </div>
@@ -276,6 +284,8 @@ template&lt;typename EvalT , typename <a class="el" href="structpanzer_1_1_trait
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Computes the output field for this workset per the class description. </p>
 
 <p class="definition">Definition at line <a class="el" href="_panzer___test_scatter__impl_8hpp_source.html#l00054">54</a> of file <a class="el" href="_panzer___test_scatter__impl_8hpp_source.html">Panzer_TestScatter_impl.hpp</a>.</p>
 
@@ -304,7 +314,7 @@ template&lt;typename EvalT , typename <a class="el" href="structpanzer_1_1_trait
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___test_scatter__decl_8hpp_source.html#l00044">44</a> of file <a class="el" href="_panzer___test_scatter__decl_8hpp_source.html">Panzer_TestScatter_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___test_scatter__decl_8hpp_source.html#l00052">52</a> of file <a class="el" href="_panzer___test_scatter__decl_8hpp_source.html">Panzer_TestScatter_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -330,7 +340,7 @@ template&lt;typename EvalT , typename <a class="el" href="structpanzer_1_1_trait
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___test_scatter__decl_8hpp_source.html#l00045">45</a> of file <a class="el" href="_panzer___test_scatter__decl_8hpp_source.html">Panzer_TestScatter_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___test_scatter__decl_8hpp_source.html#l00053">53</a> of file <a class="el" href="_panzer___test_scatter__decl_8hpp_source.html">Panzer_TestScatter_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -356,7 +366,7 @@ template&lt;typename EvalT , typename <a class="el" href="structpanzer_1_1_trait
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___test_scatter__decl_8hpp_source.html#l00046">46</a> of file <a class="el" href="_panzer___test_scatter__decl_8hpp_source.html">Panzer_TestScatter_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___test_scatter__decl_8hpp_source.html#l00054">54</a> of file <a class="el" href="_panzer___test_scatter__decl_8hpp_source.html">Panzer_TestScatter_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -382,7 +392,7 @@ template&lt;typename EvalT , typename <a class="el" href="structpanzer_1_1_trait
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___test_scatter__decl_8hpp_source.html#l00048">48</a> of file <a class="el" href="_panzer___test_scatter__decl_8hpp_source.html">Panzer_TestScatter_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___test_scatter__decl_8hpp_source.html#l00056">56</a> of file <a class="el" href="_panzer___test_scatter__decl_8hpp_source.html">Panzer_TestScatter_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -408,7 +418,7 @@ template&lt;typename EvalT , typename TRAITS &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___test_scatter__decl_8hpp_source.html#l00049">49</a> of file <a class="el" href="_panzer___test_scatter__decl_8hpp_source.html">Panzer_TestScatter_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___test_scatter__decl_8hpp_source.html#l00057">57</a> of file <a class="el" href="_panzer___test_scatter__decl_8hpp_source.html">Panzer_TestScatter_decl.hpp</a>.</p>
 
 </div>
 </div>

@@ -83,6 +83,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>RAII helper that saves a stream's formatting state on construction and restores it on destruction (or explicit <a class="el" href="classpanzer_1_1basic__ios__all__saver.html#adafe4fced83aedcc4d2d5b6fd97f9093" title="Restores the stream&#39;s formatting state as captured at construction.">restore()</a>).  
+ <a href="classpanzer_1_1basic__ios__all__saver.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_panzer___ios_all_saver_8hpp_source.html">Panzer_IosAllSaver.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
@@ -93,10 +96,13 @@ Public Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab73bcb65f40d9de08c4f3dc651c8b7ac" id="r_ab73bcb65f40d9de08c4f3dc651c8b7ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1basic__ios__all__saver.html#ab73bcb65f40d9de08c4f3dc651c8b7ac">basic_ios_all_saver</a> (<a class="el" href="classpanzer_1_1basic__ios__all__saver.html#ad3704a6dfd7d1a9e7cf0e51e81a88fdb">state_type</a> &amp;s)</td></tr>
+<tr class="memdesc:ab73bcb65f40d9de08c4f3dc651c8b7ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Captures the current formatting state of the given stream.  <br /></td></tr>
 <tr class="separator:ab73bcb65f40d9de08c4f3dc651c8b7ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f0588cc3d664630598794a59dd4ec12" id="r_a3f0588cc3d664630598794a59dd4ec12"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1basic__ios__all__saver.html#a3f0588cc3d664630598794a59dd4ec12">~basic_ios_all_saver</a> ()</td></tr>
+<tr class="memdesc:a3f0588cc3d664630598794a59dd4ec12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restores the stream's formatting state as captured at construction.  <br /></td></tr>
 <tr class="separator:a3f0588cc3d664630598794a59dd4ec12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adafe4fced83aedcc4d2d5b6fd97f9093" id="r_adafe4fced83aedcc4d2d5b6fd97f9093"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1basic__ios__all__saver.html#adafe4fced83aedcc4d2d5b6fd97f9093">restore</a> ()</td></tr>
+<tr class="memdesc:adafe4fced83aedcc4d2d5b6fd97f9093"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restores the stream's formatting state as captured at construction.  <br /></td></tr>
 <tr class="separator:adafe4fced83aedcc4d2d5b6fd97f9093"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
@@ -127,8 +133,10 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename Ch, class Tr&gt;<br />
-class panzer::basic_ios_all_saver&lt; Ch, Tr &gt;</div>
-<p class="definition">Definition at line <a class="el" href="_panzer___ios_all_saver_8hpp_source.html#l00042">42</a> of file <a class="el" href="_panzer___ios_all_saver_8hpp_source.html">Panzer_IosAllSaver.hpp</a>.</p>
+class panzer::basic_ios_all_saver&lt; Ch, Tr &gt;</div><p>RAII helper that saves a stream's formatting state on construction and restores it on destruction (or explicit <a class="el" href="classpanzer_1_1basic__ios__all__saver.html#adafe4fced83aedcc4d2d5b6fd97f9093" title="Restores the stream&#39;s formatting state as captured at construction.">restore()</a>). </p>
+<p>Captures the flags, precision, width, error state, exception mask, tied stream, stream buffer, and fill character of the given std::basic_ios, and restores all of them when the saver is destroyed (or <a class="el" href="classpanzer_1_1basic__ios__all__saver.html#adafe4fced83aedcc4d2d5b6fd97f9093" title="Restores the stream&#39;s formatting state as captured at construction.">restore()</a> is called explicitly). </p>
+
+<p class="definition">Definition at line <a class="el" href="_panzer___ios_all_saver_8hpp_source.html#l00052">52</a> of file <a class="el" href="_panzer___ios_all_saver_8hpp_source.html">Panzer_IosAllSaver.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="ad3704a6dfd7d1a9e7cf0e51e81a88fdb" name="ad3704a6dfd7d1a9e7cf0e51e81a88fdb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad3704a6dfd7d1a9e7cf0e51e81a88fdb">&#9670;&#160;</a></span>state_type</h2>
@@ -144,7 +152,7 @@ template&lt;typename Ch , class Tr &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___ios_all_saver_8hpp_source.html#l00045">45</a> of file <a class="el" href="_panzer___ios_all_saver_8hpp_source.html">Panzer_IosAllSaver.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___ios_all_saver_8hpp_source.html#l00055">55</a> of file <a class="el" href="_panzer___ios_all_saver_8hpp_source.html">Panzer_IosAllSaver.hpp</a>.</p>
 
 </div>
 </div>
@@ -175,7 +183,9 @@ template&lt;typename Ch , class Tr &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___ios_all_saver_8hpp_source.html#l00047">47</a> of file <a class="el" href="_panzer___ios_all_saver_8hpp_source.html">Panzer_IosAllSaver.hpp</a>.</p>
+<p>Captures the current formatting state of the given stream. </p>
+
+<p class="definition">Definition at line <a class="el" href="_panzer___ios_all_saver_8hpp_source.html#l00058">58</a> of file <a class="el" href="_panzer___ios_all_saver_8hpp_source.html">Panzer_IosAllSaver.hpp</a>.</p>
 
 </div>
 </div>
@@ -204,7 +214,9 @@ template&lt;typename Ch , class Tr &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___ios_all_saver_8hpp_source.html#l00054">54</a> of file <a class="el" href="_panzer___ios_all_saver_8hpp_source.html">Panzer_IosAllSaver.hpp</a>.</p>
+<p>Restores the stream's formatting state as captured at construction. </p>
+
+<p class="definition">Definition at line <a class="el" href="_panzer___ios_all_saver_8hpp_source.html#l00066">66</a> of file <a class="el" href="_panzer___ios_all_saver_8hpp_source.html">Panzer_IosAllSaver.hpp</a>.</p>
 
 </div>
 </div>
@@ -234,7 +246,9 @@ template&lt;typename Ch , class Tr &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___ios_all_saver_8hpp_source.html#l00057">57</a> of file <a class="el" href="_panzer___ios_all_saver_8hpp_source.html">Panzer_IosAllSaver.hpp</a>.</p>
+<p>Restores the stream's formatting state as captured at construction. </p>
+
+<p class="definition">Definition at line <a class="el" href="_panzer___ios_all_saver_8hpp_source.html#l00070">70</a> of file <a class="el" href="_panzer___ios_all_saver_8hpp_source.html">Panzer_IosAllSaver.hpp</a>.</p>
 
 </div>
 </div>
@@ -289,7 +303,7 @@ template&lt;typename Ch , class Tr &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___ios_all_saver_8hpp_source.html#l00070">70</a> of file <a class="el" href="_panzer___ios_all_saver_8hpp_source.html">Panzer_IosAllSaver.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___ios_all_saver_8hpp_source.html#l00083">83</a> of file <a class="el" href="_panzer___ios_all_saver_8hpp_source.html">Panzer_IosAllSaver.hpp</a>.</p>
 
 </div>
 </div>
@@ -315,7 +329,7 @@ template&lt;typename Ch , class Tr &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___ios_all_saver_8hpp_source.html#l00071">71</a> of file <a class="el" href="_panzer___ios_all_saver_8hpp_source.html">Panzer_IosAllSaver.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___ios_all_saver_8hpp_source.html#l00084">84</a> of file <a class="el" href="_panzer___ios_all_saver_8hpp_source.html">Panzer_IosAllSaver.hpp</a>.</p>
 
 </div>
 </div>
@@ -341,7 +355,7 @@ template&lt;typename Ch , class Tr &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___ios_all_saver_8hpp_source.html#l00072">72</a> of file <a class="el" href="_panzer___ios_all_saver_8hpp_source.html">Panzer_IosAllSaver.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___ios_all_saver_8hpp_source.html#l00085">85</a> of file <a class="el" href="_panzer___ios_all_saver_8hpp_source.html">Panzer_IosAllSaver.hpp</a>.</p>
 
 </div>
 </div>
@@ -367,7 +381,7 @@ template&lt;typename Ch , class Tr &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___ios_all_saver_8hpp_source.html#l00073">73</a> of file <a class="el" href="_panzer___ios_all_saver_8hpp_source.html">Panzer_IosAllSaver.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___ios_all_saver_8hpp_source.html#l00086">86</a> of file <a class="el" href="_panzer___ios_all_saver_8hpp_source.html">Panzer_IosAllSaver.hpp</a>.</p>
 
 </div>
 </div>
@@ -393,7 +407,7 @@ template&lt;typename Ch , class Tr &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___ios_all_saver_8hpp_source.html#l00074">74</a> of file <a class="el" href="_panzer___ios_all_saver_8hpp_source.html">Panzer_IosAllSaver.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___ios_all_saver_8hpp_source.html#l00087">87</a> of file <a class="el" href="_panzer___ios_all_saver_8hpp_source.html">Panzer_IosAllSaver.hpp</a>.</p>
 
 </div>
 </div>
@@ -419,7 +433,7 @@ template&lt;typename Ch , class Tr &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___ios_all_saver_8hpp_source.html#l00075">75</a> of file <a class="el" href="_panzer___ios_all_saver_8hpp_source.html">Panzer_IosAllSaver.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___ios_all_saver_8hpp_source.html#l00088">88</a> of file <a class="el" href="_panzer___ios_all_saver_8hpp_source.html">Panzer_IosAllSaver.hpp</a>.</p>
 
 </div>
 </div>
@@ -445,7 +459,7 @@ template&lt;typename Ch , class Tr &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___ios_all_saver_8hpp_source.html#l00076">76</a> of file <a class="el" href="_panzer___ios_all_saver_8hpp_source.html">Panzer_IosAllSaver.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___ios_all_saver_8hpp_source.html#l00089">89</a> of file <a class="el" href="_panzer___ios_all_saver_8hpp_source.html">Panzer_IosAllSaver.hpp</a>.</p>
 
 </div>
 </div>
@@ -471,7 +485,7 @@ template&lt;typename Ch , class Tr &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___ios_all_saver_8hpp_source.html#l00077">77</a> of file <a class="el" href="_panzer___ios_all_saver_8hpp_source.html">Panzer_IosAllSaver.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___ios_all_saver_8hpp_source.html#l00090">90</a> of file <a class="el" href="_panzer___ios_all_saver_8hpp_source.html">Panzer_IosAllSaver.hpp</a>.</p>
 
 </div>
 </div>
@@ -497,7 +511,7 @@ template&lt;typename Ch , class Tr &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___ios_all_saver_8hpp_source.html#l00078">78</a> of file <a class="el" href="_panzer___ios_all_saver_8hpp_source.html">Panzer_IosAllSaver.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___ios_all_saver_8hpp_source.html#l00091">91</a> of file <a class="el" href="_panzer___ios_all_saver_8hpp_source.html">Panzer_IosAllSaver.hpp</a>.</p>
 
 </div>
 </div>
