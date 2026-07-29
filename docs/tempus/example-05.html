@@ -78,7 +78,7 @@ $(function() {
 <p>Relative to <a class="el" href="example-04.html">Example 4: Add SolutionHistory</a>:</p><ul>
 <li>the Forward Euler update is performed by a <a class="el" href="class_tempus_1_1_stepper.html">Tempus::Stepper</a></li>
 <li>the specific stepper used is <a class="el" href="class_tempus_1_1_stepper_forward_euler.html">Tempus::StepperForwardEuler</a></li>
-<li>the application still manages the time loop and solution history</li>
+<li>the application still manages the time loop and <a class="el" href="class_tempus_1_1_solution_history.html">Tempus::SolutionHistory</a></li>
 <li>the stepper advances the working state using the model and timestep information already stored in the history</li>
 </ul>
 <p>The central idea behind <a class="el" href="class_tempus_1_1_stepper.html">Tempus::Stepper</a> is that a time integration algorithm should be encapsulated in its own object. This allows the application to reuse the same surrounding logic while changing only the stepping algorithm.</p>
@@ -89,6 +89,7 @@ $(function() {
 <li>advancing one step at a time through the stepper</li>
 <li>continued use of <a class="el" href="class_tempus_1_1_solution_history.html">Tempus::SolutionHistory</a> under application control</li>
 </ul>
+<p>The example continues to print the evolving solution in a simple table with columns for step index, time, <picture><source srcset="form_454_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$x_0$" src="form_454.png" width="13" height="9"/></picture>, and <picture><source srcset="form_455_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$x_1$" src="form_455.png" width="13" height="9"/></picture>. Here, the local variable <code>passed</code> at the end reflects whether the final accepted <a class="el" href="class_tempus_1_1_solution_state.html">Tempus::SolutionState</a> has status <code>PASSED</code>. Overall tutorial success additionally requires that the final solution satisfy the regression check.</p>
 <hr  />
  <dl class="section user"><dt>Transition notes</dt><dd>See <a class="el" href="tempus_tutorial_transition_04_05.html">Transition from Example 4 to Example 5</a> for a detailed explanation of what changed from <a class="el" href="example-04.html">Example 4: Add SolutionHistory</a>.</dd></dl>
 <p> 

@@ -22,7 +22,7 @@ var searchData=
   ['and_20physics_20based_20preconditioners_19',['Teko: For block and physics-based preconditioners',['../index.html',1,'']]],
   ['apply_20',['apply',['../class_teko_1_1_tpetra_helpers_1_1_zeroed_operator.html#a5353bdd911da775a92ae6cb2cf5c12af',1,'Teko::TpetraHelpers::ZeroedOperator::apply()'],['../class_teko_1_1_epetra_1_1_zeroed_operator.html#ace8adf87740887fa8e977ec01f01ac0e',1,'Teko::Epetra::ZeroedOperator::Apply()']]],
   ['applyimpl_21',['applyImpl',['../class_teko_1_1_preconditioner_linear_op.html#a983a68c52fc0eb0dd8cb727a06e5a96a',1,'Teko::PreconditionerLinearOp']]],
-  ['applyinverse_22',['applyinverse',['../class_teko_1_1_tpetra_helpers_1_1_zeroed_operator.html#aefb9e0e5602ce27a83a5b45ab64f2e25',1,'Teko::TpetraHelpers::ZeroedOperator::applyInverse()'],['../class_teko_1_1_epetra_1_1_zeroed_operator.html#a0a10436fc3c3746011b4c250721c9787',1,'Teko::Epetra::ZeroedOperator::ApplyInverse()']]],
+  ['applyinverse_22',['applyinverse',['../class_teko_1_1_epetra_1_1_zeroed_operator.html#a0a10436fc3c3746011b4c250721c9787',1,'Teko::Epetra::ZeroedOperator::ApplyInverse()'],['../class_teko_1_1_tpetra_helpers_1_1_zeroed_operator.html#aefb9e0e5602ce27a83a5b45ab64f2e25',1,'Teko::TpetraHelpers::ZeroedOperator::applyInverse()']]],
   ['applyop_23',['applyOp',['../_teko___utilities_8hpp.html#a1516c0134d1cbe835293976b839ab44d',1,'Teko']]],
   ['applysupportsconj_24',['applySupportsConj',['../class_teko_1_1_stratimikos_factory.html#a579f11de6a9aa871d46bc0cdc7ce3520',1,'Teko::StratimikosFactory']]],
   ['applytransposeop_25',['applyTransposeOp',['../_teko___utilities_8hpp.html#a46bc53106c387498061691ddeb1a8988',1,'Teko']]],

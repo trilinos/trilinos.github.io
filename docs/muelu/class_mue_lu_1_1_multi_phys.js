@@ -4,7 +4,7 @@ var class_mue_lu_1_1_multi_phys =
     [ "coordinateType", "class_mue_lu_1_1_multi_phys.html#a4be231cc43367d2faa3c03eff6ddcb6a", null ],
     [ "RealValuedMultiVector", "class_mue_lu_1_1_multi_phys.html#a723abe4c96c6ca712d8fe626e750f0a0", null ],
     [ "MultiPhys", "class_mue_lu_1_1_multi_phys.html#a6eb200a16843068808bef2be84a7ceb5", null ],
-    [ "MultiPhys", "class_mue_lu_1_1_multi_phys.html#a12b106cd80049ac6abd5988d11dde619", null ],
+    [ "MultiPhys", "class_mue_lu_1_1_multi_phys.html#ac7df627625bd4a7f962c9526d7da8096", null ],
     [ "~MultiPhys", "class_mue_lu_1_1_multi_phys.html#a9c96b4850deafd90de081824bbb06402", null ],
     [ "getDomainMap", "class_mue_lu_1_1_multi_phys.html#a8f11e040eb419f7a0f9872f86d3813f8", null ],
     [ "getRangeMap", "class_mue_lu_1_1_multi_phys.html#a0d3187f3ce4df571f30279b9d0911431", null ],

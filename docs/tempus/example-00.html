@@ -95,16 +95,23 @@ Outline</h1>
 <p>This example demonstrates the basic structure of an application-level time integration loop:</p><ul>
 <li>declare the solution and its time derivative (stored in raw C++ arrays)</li>
 <li>set the initial conditions</li>
+<li>choose a constant timestep size</li>
 <li>advance the solution from the initial time to the final time<ul>
-<li>set hardcoded timestep size</li>
 <li>evaluate the right-hand side of the governing equations</li>
 <li>apply the Forward Euler update</li>
 <li>check a simple pass/fail criterion</li>
 <li>accept the step and promote the solution to the next time step</li>
 </ul>
 </li>
+<li>compare the final solution against regression gold values</li>
 </ul>
-<p>The regression check at the end of the run is secondary to the tutorial discussion and can be ignored on a first reading.</p>
+<p>The example also prints the evolving solution in a simple table with the columns:</p><ul>
+<li>step index</li>
+<li>time</li>
+<li>solution component <picture><source srcset="form_454_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$x_0$" src="form_454.png" width="13" height="9"/></picture></li>
+<li>solution component <picture><source srcset="form_455_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$x_1$" src="form_455.png" width="13" height="9"/></picture></li>
+</ul>
+<p>Here, <code>passed</code> indicates whether the hand-written stepping loop completed without producing an invalid solution. The final tutorial success condition additionally requires that the computed final solution match the regression gold values through the shared helper <a class="el" href="_tutorial___regression___tester_8hpp.html#aae9de31aa3fd78934bc4205147f4e816">tutorialRegressionTest</a>.</p>
 <p>The next example replaces raw arrays with <a class="el" href="namespace_thyra.html">Thyra</a> vectors while preserving the same overall algorithmic structure.</p>
 <p> 
 <div style="text-align:center;">

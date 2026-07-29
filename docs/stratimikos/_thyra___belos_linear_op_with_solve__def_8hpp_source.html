@@ -762,7 +762,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span>  <span class="comment">// Solve the linear system</span></div>
 <div class="line"><a id="l00643" name="l00643"></a><span class="lineno">  643</span>  <span class="comment">//</span></div>
 <div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span> </div>
-<div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span>  <a class="code hl_enumerationRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/belos/doc/html/namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">Belos::ReturnType</a> belosSolveStatus;</div>
+<div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span>  <a class="code hl_enumerationRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/belos/doc/html/namespace_belos.html#a2ab2fec66d34a6ec385de5eb8008c53e">Belos::ReturnType</a> belosSolveStatus;</div>
 <div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span>  {</div>
 <div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span>    <span class="comment">// Write detailed convergence information if requested for levels &gt;= VERB_LOW</span></div>
 <div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span>    RCP&lt;std::ostream&gt;</div>
@@ -797,103 +797,97 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span>  totalTimer.stop();</div>
 <div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span> </div>
 <div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span>  SolveStatus&lt;Scalar&gt; solveStatus;</div>
-<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span> </div>
-<div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span>  <span class="keywordflow">switch</span> (belosSolveStatus) {</div>
-<div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span>    <span class="keywordflow">case</span> <a class="code hl_variableRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/belos/doc/html/namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18ba200eaf745e4085dd838cb9ce24fad19c">Belos::Unconverged</a>: {</div>
-<div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span>      solveStatus.solveStatus = SOLVE_STATUS_UNCONVERGED;</div>
-<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>      <span class="comment">// Set achievedTol even if the solver did not converge.  This is</span></div>
-<div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span>      <span class="comment">// helpful for things like nonlinear solvers, which might be</span></div>
-<div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span>      <span class="comment">// able to use a partially converged result, and which would</span></div>
-<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span>      <span class="comment">// like to know the achieved convergence tolerance for use in</span></div>
-<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>      <span class="comment">// computing bounds.  It&#39;s also helpful for estimating whether a</span></div>
-<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>      <span class="comment">// small increase in the maximum iteration count might be</span></div>
-<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>      <span class="comment">// helpful next time.</span></div>
-<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>      <span class="keywordflow">try</span> {</div>
-<div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span>        <span class="comment">// Some solvers might not have implemented achievedTol().</span></div>
-<div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span>        <span class="comment">// The default implementation throws std::runtime_error.</span></div>
-<div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span>        solveStatus.achievedTol = iterativeSolver_-&gt;achievedTol();</div>
-<div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span>      } <span class="keywordflow">catch</span> (std::runtime_error&amp;) {</div>
-<div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span>        <span class="comment">// Do nothing; use the default value of achievedTol.</span></div>
-<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>      }</div>
-<div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span>    }</div>
-<div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span>    <span class="keywordflow">case</span> <a class="code hl_variableRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/belos/doc/html/namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18ba6ea972a4ffdcac04da6f3cd6369f22c4">Belos::Converged</a>: {</div>
-<div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span>      solveStatus.solveStatus = SOLVE_STATUS_CONVERGED;</div>
-<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span>      <span class="keywordflow">if</span> (nonnull(generalSolveCriteriaBelosStatusTest)) {</div>
-<div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span>        <span class="comment">// The user set a custom status test.  This means that we</span></div>
-<div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span>        <span class="comment">// should ask the custom status test itself, rather than the</span></div>
-<div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span>        <span class="comment">// Belos solver, what the final achieved convergence tolerance</span></div>
-<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span>        <span class="comment">// was.</span></div>
-<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span>        <span class="keyword">const</span> ArrayView&lt;const ScalarMag&gt; achievedTol =</div>
-<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span>          generalSolveCriteriaBelosStatusTest-&gt;achievedTol();</div>
-<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span>        solveStatus.achievedTol = Teuchos::ScalarTraits&lt;ScalarMag&gt;::zero();</div>
-<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span>        <span class="keywordflow">for</span> (Ordinal i = 0; i &lt; achievedTol.size(); ++i) {</div>
-<div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span>          solveStatus.achievedTol = std::max(solveStatus.achievedTol, achievedTol[i]);</div>
-<div class="line"><a id="l00712" name="l00712"></a><span class="lineno">  712</span>        }</div>
-<div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span>      }</div>
-<div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span>      <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span>        <span class="keywordflow">try</span> {</div>
-<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span>          <span class="comment">// Some solvers might not have implemented achievedTol().</span></div>
-<div class="line"><a id="l00717" name="l00717"></a><span class="lineno">  717</span>          <span class="comment">// The default implementation throws std::runtime_error.</span></div>
-<div class="line"><a id="l00718" name="l00718"></a><span class="lineno">  718</span>          solveStatus.achievedTol = iterativeSolver_-&gt;achievedTol();</div>
-<div class="line"><a id="l00719" name="l00719"></a><span class="lineno">  719</span>        } <span class="keywordflow">catch</span> (std::runtime_error&amp;) {</div>
-<div class="line"><a id="l00720" name="l00720"></a><span class="lineno">  720</span>          <span class="comment">// Use the default convergence tolerance.  This is a correct</span></div>
-<div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span>          <span class="comment">// upper bound, since we did actually converge.</span></div>
-<div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span>          solveStatus.achievedTol = tmpPL-&gt;get(<span class="stringliteral">&quot;Convergence Tolerance&quot;</span>, defaultTol_);</div>
-<div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span>        }</div>
-<div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span>      }</div>
-<div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span>    }</div>
-<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span>    TEUCHOS_SWITCH_DEFAULT_DEBUG_ASSERT();</div>
-<div class="line"><a id="l00728" name="l00728"></a><span class="lineno">  728</span>  }</div>
-<div class="line"><a id="l00729" name="l00729"></a><span class="lineno">  729</span> </div>
-<div class="line"><a id="l00730" name="l00730"></a><span class="lineno">  730</span>  std::ostringstream ossmessage;</div>
-<div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span>  ossmessage</div>
-<div class="line"><a id="l00732" name="l00732"></a><span class="lineno">  732</span>    &lt;&lt; <span class="stringliteral">&quot;The Belos solver &quot;</span> &lt;&lt; (label_ != <span class="stringliteral">&quot;&quot;</span> ? (<span class="stringliteral">&quot;\&quot;&quot;</span> + label_  + <span class="stringliteral">&quot;\&quot; &quot;</span>) : <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span>    &lt;&lt; <span class="stringliteral">&quot;of type \&quot;&quot;</span>&lt;&lt;iterativeSolver_-&gt;description()</div>
-<div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span>    &lt;&lt;<span class="stringliteral">&quot;\&quot; returned a solve status of \&quot;&quot;</span>&lt;&lt; toString(solveStatus.solveStatus) &lt;&lt; <span class="stringliteral">&quot;\&quot;&quot;</span></div>
-<div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span>    &lt;&lt; <span class="stringliteral">&quot; in &quot;</span> &lt;&lt; iterativeSolver_-&gt;getNumIters() &lt;&lt; <span class="stringliteral">&quot; iterations&quot;</span></div>
-<div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span>    &lt;&lt; <span class="stringliteral">&quot; with total CPU time of &quot;</span> &lt;&lt; totalTimer.totalElapsedTime() &lt;&lt; <span class="stringliteral">&quot; sec&quot;</span> ;</div>
-<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>  <span class="keywordflow">if</span> (out.get() &amp;&amp; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(verbLevel) &gt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(Teuchos::VERB_LOW))</div>
-<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>    *out &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span> &lt;&lt; ossmessage.str() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span> </div>
-<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span>  solveStatus.message = ossmessage.str();</div>
-<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span> </div>
-<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>  <span class="comment">// Dump the getNumIters() and the achieved convergence tolerance</span></div>
-<div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span>  <span class="comment">// into solveStatus.extraParameters, as the &quot;Belos/Iteration Count&quot;</span></div>
-<div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span>  <span class="comment">// resp. &quot;Belos/Achieved Tolerance&quot; parameters.</span></div>
-<div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span>  <span class="keywordflow">if</span> (solveStatus.extraParameters.is_null()) {</div>
-<div class="line"><a id="l00746" name="l00746"></a><span class="lineno">  746</span>    solveStatus.extraParameters = parameterList ();</div>
-<div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span>  }</div>
-<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>  solveStatus.extraParameters-&gt;set (<span class="stringliteral">&quot;Belos/Iteration Count&quot;</span>,</div>
-<div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>                                    iterativeSolver_-&gt;getNumIters());\</div>
-<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>  <span class="comment">// package independent version of the same</span></div>
-<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span>  solveStatus.extraParameters-&gt;set (<span class="stringliteral">&quot;Iteration Count&quot;</span>,</div>
-<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span>                                    iterativeSolver_-&gt;getNumIters());\</div>
-<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>  <span class="comment">// NOTE (mfh 13 Dec 2011) Though the most commonly used Belos</span></div>
-<div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span>  <span class="comment">// solvers do implement achievedTol(), some Belos solvers currently</span></div>
-<div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span>  <span class="comment">// do not.  In the latter case, if the solver did not converge, the</span></div>
-<div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span>  <span class="comment">// reported achievedTol() value may just be the default &quot;invalid&quot;</span></div>
-<div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span>  <span class="comment">// value -1, and if the solver did converge, the reported value will</span></div>
-<div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span>  <span class="comment">// just be the convergence tolerance (a correct upper bound).</span></div>
-<div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span>  solveStatus.extraParameters-&gt;set (<span class="stringliteral">&quot;Belos/Achieved Tolerance&quot;</span>,</div>
-<div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span>                                    solveStatus.achievedTol);</div>
-<div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span> </div>
-<div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span><span class="comment">//  This information is in the previous line, which is printed anytime the verbosity</span></div>
-<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span><span class="comment">//  is not set to Teuchos::VERB_NONE, so I&#39;m commenting this out for now.</span></div>
-<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span><span class="comment">//  if (out.get() &amp;&amp; static_cast&lt;int&gt;(verbLevel) &gt; static_cast&lt;int&gt;(Teuchos::VERB_NONE))</span></div>
-<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span><span class="comment">//    *out &lt;&lt; &quot;\nTotal solve time in Belos = &quot;&lt;&lt;totalTimer.totalElapsedTime()&lt;&lt;&quot; sec\n&quot;;</span></div>
-<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span> </div>
-<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span>  <span class="keywordflow">return</span> solveStatus;</div>
-<div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span> </div>
-<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>}</div>
+<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span>  <span class="keywordflow">if</span> (belosSolveStatus == <a class="code hl_variableRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/belos/doc/html/namespace_belos.html#a2ab2fec66d34a6ec385de5eb8008c53ea6ea972a4ffdcac04da6f3cd6369f22c4">Belos::Converged</a>) {</div>
+<div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span>    solveStatus.solveStatus = SOLVE_STATUS_CONVERGED;</div>
+<div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span>    <span class="keywordflow">if</span> (nonnull(generalSolveCriteriaBelosStatusTest)) {</div>
+<div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span>      <span class="comment">// The user set a custom status test.  This means that we</span></div>
+<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>      <span class="comment">// should ask the custom status test itself, rather than the</span></div>
+<div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span>      <span class="comment">// Belos solver, what the final achieved convergence tolerance</span></div>
+<div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span>      <span class="comment">// was.</span></div>
+<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span>      <span class="keyword">const</span> ArrayView&lt;const ScalarMag&gt; achievedTol =</div>
+<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>        generalSolveCriteriaBelosStatusTest-&gt;achievedTol();</div>
+<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>      solveStatus.achievedTol = Teuchos::ScalarTraits&lt;ScalarMag&gt;::zero();</div>
+<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>      <span class="keywordflow">for</span> (Ordinal i = 0; i &lt; achievedTol.size(); ++i) {</div>
+<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>        solveStatus.achievedTol = std::max(solveStatus.achievedTol, achievedTol[i]);</div>
+<div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span>      }</div>
+<div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span>    }</div>
+<div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span>      <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span>        <span class="comment">// Some solvers might not have implemented achievedTol().</span></div>
+<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>        <span class="comment">// The default implementation throws std::runtime_error.</span></div>
+<div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span>        solveStatus.achievedTol = iterativeSolver_-&gt;achievedTol();</div>
+<div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span>      } <span class="keywordflow">catch</span> (std::runtime_error&amp;) {</div>
+<div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span>        <span class="comment">// Use the default convergence tolerance.  This is a correct</span></div>
+<div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span>        <span class="comment">// upper bound, since we did actually converge.</span></div>
+<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span>        solveStatus.achievedTol = tmpPL-&gt;get(<span class="stringliteral">&quot;Convergence Tolerance&quot;</span>, defaultTol_);</div>
+<div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span>      }</div>
+<div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span>    }</div>
+<div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span>  }</div>
+<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span>  <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span>    solveStatus.solveStatus = SOLVE_STATUS_UNCONVERGED;</div>
+<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span>    <span class="comment">// Set achievedTol even if the solver did not converge.  This is</span></div>
+<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span>    <span class="comment">// helpful for things like nonlinear solvers, which might be</span></div>
+<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span>    <span class="comment">// able to use a partially converged result, and which would</span></div>
+<div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span>    <span class="comment">// like to know the achieved convergence tolerance for use in</span></div>
+<div class="line"><a id="l00712" name="l00712"></a><span class="lineno">  712</span>    <span class="comment">// computing bounds.  It&#39;s also helpful for estimating whether a</span></div>
+<div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span>    <span class="comment">// small increase in the maximum iteration count might be</span></div>
+<div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span>    <span class="comment">// helpful next time.</span></div>
+<div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span>    <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span>      <span class="comment">// Some solvers might not have implemented achievedTol().</span></div>
+<div class="line"><a id="l00717" name="l00717"></a><span class="lineno">  717</span>      <span class="comment">// The default implementation throws std::runtime_error.</span></div>
+<div class="line"><a id="l00718" name="l00718"></a><span class="lineno">  718</span>      solveStatus.achievedTol = iterativeSolver_-&gt;achievedTol();</div>
+<div class="line"><a id="l00719" name="l00719"></a><span class="lineno">  719</span>    } <span class="keywordflow">catch</span> (std::runtime_error&amp;) {</div>
+<div class="line"><a id="l00720" name="l00720"></a><span class="lineno">  720</span>      <span class="comment">// Do nothing; use the default value of achievedTol.</span></div>
+<div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span>    }</div>
+<div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span>  }</div>
+<div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span> </div>
+<div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span>  std::ostringstream ossmessage;</div>
+<div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span>  ossmessage</div>
+<div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span>    &lt;&lt; <span class="stringliteral">&quot;The Belos solver &quot;</span> &lt;&lt; (label_ != <span class="stringliteral">&quot;&quot;</span> ? (<span class="stringliteral">&quot;\&quot;&quot;</span> + label_  + <span class="stringliteral">&quot;\&quot; &quot;</span>) : <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span>    &lt;&lt; <span class="stringliteral">&quot;of type \&quot;&quot;</span>&lt;&lt;iterativeSolver_-&gt;description()</div>
+<div class="line"><a id="l00728" name="l00728"></a><span class="lineno">  728</span>    &lt;&lt;<span class="stringliteral">&quot;\&quot; returned a solve status of \&quot;&quot;</span>&lt;&lt; toString(solveStatus.solveStatus) &lt;&lt; <span class="stringliteral">&quot;\&quot;&quot;</span></div>
+<div class="line"><a id="l00729" name="l00729"></a><span class="lineno">  729</span>    &lt;&lt; <span class="stringliteral">&quot; in &quot;</span> &lt;&lt; iterativeSolver_-&gt;getNumIters() &lt;&lt; <span class="stringliteral">&quot; iterations&quot;</span></div>
+<div class="line"><a id="l00730" name="l00730"></a><span class="lineno">  730</span>    &lt;&lt; <span class="stringliteral">&quot; with total CPU time of &quot;</span> &lt;&lt; totalTimer.totalElapsedTime() &lt;&lt; <span class="stringliteral">&quot; sec&quot;</span> ;</div>
+<div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span>  <span class="keywordflow">if</span> (out.get() &amp;&amp; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(verbLevel) &gt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(Teuchos::VERB_LOW))</div>
+<div class="line"><a id="l00732" name="l00732"></a><span class="lineno">  732</span>    *out &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span> &lt;&lt; ossmessage.str() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span> </div>
+<div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span>  solveStatus.message = ossmessage.str();</div>
+<div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span> </div>
+<div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span>  <span class="comment">// Dump the getNumIters() and the achieved convergence tolerance</span></div>
+<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>  <span class="comment">// into solveStatus.extraParameters, as the &quot;Belos/Iteration Count&quot;</span></div>
+<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>  <span class="comment">// resp. &quot;Belos/Achieved Tolerance&quot; parameters.</span></div>
+<div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span>  <span class="keywordflow">if</span> (solveStatus.extraParameters.is_null()) {</div>
+<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span>    solveStatus.extraParameters = parameterList ();</div>
+<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span>  }</div>
+<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>  solveStatus.extraParameters-&gt;set (<span class="stringliteral">&quot;Belos/Iteration Count&quot;</span>,</div>
+<div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span>                                    iterativeSolver_-&gt;getNumIters());\</div>
+<div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span>  <span class="comment">// package independent version of the same</span></div>
+<div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span>  solveStatus.extraParameters-&gt;set (<span class="stringliteral">&quot;Iteration Count&quot;</span>,</div>
+<div class="line"><a id="l00746" name="l00746"></a><span class="lineno">  746</span>                                    iterativeSolver_-&gt;getNumIters());\</div>
+<div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span>  <span class="comment">// NOTE (mfh 13 Dec 2011) Though the most commonly used Belos</span></div>
+<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>  <span class="comment">// solvers do implement achievedTol(), some Belos solvers currently</span></div>
+<div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>  <span class="comment">// do not.  In the latter case, if the solver did not converge, the</span></div>
+<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>  <span class="comment">// reported achievedTol() value may just be the default &quot;invalid&quot;</span></div>
+<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span>  <span class="comment">// value -1, and if the solver did converge, the reported value will</span></div>
+<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span>  <span class="comment">// just be the convergence tolerance (a correct upper bound).</span></div>
+<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>  solveStatus.extraParameters-&gt;set (<span class="stringliteral">&quot;Belos/Achieved Tolerance&quot;</span>,</div>
+<div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span>                                    solveStatus.achievedTol);</div>
+<div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span> </div>
+<div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span><span class="comment">//  This information is in the previous line, which is printed anytime the verbosity</span></div>
+<div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span><span class="comment">//  is not set to Teuchos::VERB_NONE, so I&#39;m commenting this out for now.</span></div>
+<div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span><span class="comment">//  if (out.get() &amp;&amp; static_cast&lt;int&gt;(verbLevel) &gt; static_cast&lt;int&gt;(Teuchos::VERB_NONE))</span></div>
+<div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span><span class="comment">//    *out &lt;&lt; &quot;\nTotal solve time in Belos = &quot;&lt;&lt;totalTimer.totalElapsedTime()&lt;&lt;&quot; sec\n&quot;;</span></div>
+<div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span> </div>
+<div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span>  <span class="keywordflow">return</span> solveStatus;</div>
+<div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span> </div>
+<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>}</div>
 </div>
-<div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span> </div>
-<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span> </div>
-<div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span>}       <span class="comment">// end namespace Thyra</span></div>
-<div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span> </div>
-<div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span> </div>
-<div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span><span class="preprocessor">#endif </span><span class="comment">// THYRA_BELOS_LINEAR_OP_WITH_SOLVE_HPP</span></div>
+<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span> </div>
+<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span> </div>
+<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span>}       <span class="comment">// end namespace Thyra</span></div>
+<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span> </div>
+<div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span> </div>
+<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span><span class="preprocessor">#endif </span><span class="comment">// THYRA_BELOS_LINEAR_OP_WITH_SOLVE_HPP</span></div>
 <div class="ttc" id="aclass_belos_1_1_belos_error_html"><div class="ttname"><a href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/belos/doc/html/class_belos_1_1_belos_error.html">Belos::BelosError</a></div></div>
 <div class="ttc" id="aclass_belos_1_1_linear_problem_html"><div class="ttname"><a href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/belos/doc/html/class_belos_1_1_linear_problem.html">Belos::LinearProblem</a></div></div>
 <div class="ttc" id="aclass_belos_1_1_solver_manager_html"><div class="ttname"><a href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/belos/doc/html/class_belos_1_1_solver_manager.html">Belos::SolverManager</a></div></div>
@@ -916,9 +910,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclass_thyra_1_1_belos_linear_op_with_solve_html_af2330ccf5ffc9ad20c1c43f55224528f"><div class="ttname"><a href="class_thyra_1_1_belos_linear_op_with_solve.html#af2330ccf5ffc9ad20c1c43f55224528f">Thyra::BelosLinearOpWithSolve::extract_fwdOpSrc</a></div><div class="ttdeci">RCP&lt; const LinearOpSourceBase&lt; Scalar &gt; &gt; extract_fwdOpSrc()</div><div class="ttdef"><b>Definition</b> <a href="_thyra___belos_linear_op_with_solve__def_8hpp_source.html#l00257">Thyra_BelosLinearOpWithSolve_def.hpp:257</a></div></div>
 <div class="ttc" id="aclass_thyra_1_1_belos_linear_op_with_solve_html_afaeb041217745a8c7cef585771f258b5"><div class="ttname"><a href="class_thyra_1_1_belos_linear_op_with_solve.html#afaeb041217745a8c7cef585771f258b5">Thyra::BelosLinearOpWithSolve::applyImpl</a></div><div class="ttdeci">virtual void applyImpl(const EOpTransp M_trans, const MultiVectorBase&lt; Scalar &gt; &amp;X, const Ptr&lt; MultiVectorBase&lt; Scalar &gt; &gt; &amp;Y, const Scalar alpha, const Scalar beta) const</div><div class="ttdef"><b>Definition</b> <a href="_thyra___belos_linear_op_with_solve__def_8hpp_source.html#l00446">Thyra_BelosLinearOpWithSolve_def.hpp:446</a></div></div>
 <div class="ttc" id="aclass_thyra_1_1_belos_linear_op_with_solve_html_afbf257b2dd376565db1b86504d5aab6e"><div class="ttname"><a href="class_thyra_1_1_belos_linear_op_with_solve.html#afbf257b2dd376565db1b86504d5aab6e">Thyra::BelosLinearOpWithSolve::initialize</a></div><div class="ttdeci">void initialize(const RCP&lt; Belos::LinearProblem&lt; Scalar, MV_t, LO_t &gt; &gt; &amp;lp, const RCP&lt; Teuchos::ParameterList &gt; &amp;solverPL, const RCP&lt; Belos::SolverManager&lt; Scalar, MV_t, LO_t &gt; &gt; &amp;iterativeSolver, const RCP&lt; const LinearOpSourceBase&lt; Scalar &gt; &gt; &amp;fwdOpSrc, const RCP&lt; const PreconditionerBase&lt; Scalar &gt; &gt; &amp;prec, const bool isExternalPrec, const RCP&lt; const LinearOpSourceBase&lt; Scalar &gt; &gt; &amp;approxFwdOpSrc, const ESupportSolveUse &amp;supportSolveUse, const int convergenceTestFrequency)</div><div class="ttdoc">Initializes given precreated solver objects.</div><div class="ttdef"><b>Definition</b> <a href="_thyra___belos_linear_op_with_solve__def_8hpp_source.html#l00134">Thyra_BelosLinearOpWithSolve_def.hpp:134</a></div></div>
-<div class="ttc" id="anamespace_belos_html_a58f4f203f3b36e10cb1ffd4614bbd18b"><div class="ttname"><a href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/belos/doc/html/namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">Belos::ReturnType</a></div><div class="ttdeci">ReturnType</div></div>
-<div class="ttc" id="anamespace_belos_html_a58f4f203f3b36e10cb1ffd4614bbd18ba200eaf745e4085dd838cb9ce24fad19c"><div class="ttname"><a href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/belos/doc/html/namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18ba200eaf745e4085dd838cb9ce24fad19c">Belos::Unconverged</a></div><div class="ttdeci">Unconverged</div></div>
-<div class="ttc" id="anamespace_belos_html_a58f4f203f3b36e10cb1ffd4614bbd18ba6ea972a4ffdcac04da6f3cd6369f22c4"><div class="ttname"><a href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/belos/doc/html/namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18ba6ea972a4ffdcac04da6f3cd6369f22c4">Belos::Converged</a></div><div class="ttdeci">Converged</div></div>
+<div class="ttc" id="anamespace_belos_html_a2ab2fec66d34a6ec385de5eb8008c53e"><div class="ttname"><a href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/belos/doc/html/namespace_belos.html#a2ab2fec66d34a6ec385de5eb8008c53e">Belos::ReturnType</a></div><div class="ttdeci">ReturnType</div></div>
+<div class="ttc" id="anamespace_belos_html_a2ab2fec66d34a6ec385de5eb8008c53ea6ea972a4ffdcac04da6f3cd6369f22c4"><div class="ttname"><a href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/belos/doc/html/namespace_belos.html#a2ab2fec66d34a6ec385de5eb8008c53ea6ea972a4ffdcac04da6f3cd6369f22c4">Belos::Converged</a></div><div class="ttdeci">Converged</div></div>
 <div class="ttc" id="anamespace_belos_html_ad0d6e7d6a71587de42b3af8d5c6e26dca241ef2f90694985620f8721ffe9d2ec8"><div class="ttname"><a href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/belos/doc/html/namespace_belos.html#ad0d6e7d6a71587de42b3af8d5c6e26dca241ef2f90694985620f8721ffe9d2ec8">NOTRANS</a></div><div class="ttdeci">NOTRANS</div></div>
 </div><!-- fragment --></div><!-- contents -->
 

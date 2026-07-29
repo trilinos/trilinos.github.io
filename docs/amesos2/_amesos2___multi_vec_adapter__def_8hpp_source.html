@@ -282,7 +282,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>      <span class="keyword">using </span>output_scalar_type = <span class="keyword">typename</span> KV::non_const_value_type;</div>
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>      <span class="comment">// call appropriate apply based on if the input and output scalar types are the same or different</span></div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>      <span class="keywordtype">bool</span> bAssigned =  std::conditional_t&lt;std::is_same_v&lt;input_scalar_type, output_scalar_type&gt;,</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>      <span class="keywordtype">bool</span> bAssigned = std::conditional_t&lt;std::is_same_v&lt;input_scalar_type, output_scalar_type&gt;,</div>
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>               same_type_get_view&lt;MV, KV&gt;,</div>
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>               diff_type_get_view&lt;MV, KV&gt;&gt;::apply (bInitialize, mv, kokkos_vals, ldx, distribution_map, distribution);</div>
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>      <span class="keywordflow">return</span> bAssigned;</div>

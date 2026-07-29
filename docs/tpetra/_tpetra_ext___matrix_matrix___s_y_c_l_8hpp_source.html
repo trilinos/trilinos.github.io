@@ -870,69 +870,71 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span>      valuesC  = scalar_view_t(Kokkos::ViewAllocateWithoutInitializing(<span class="stringliteral">&quot;valuesC&quot;</span>), c_nnz_size);</div>
 <div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span>    }</div>
 <div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span> </div>
-<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span>    <span class="comment">// even though there is no TPL for this, we have to use the same handle that was used in the symbolic phase,</span></div>
-<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>    <span class="comment">// so need to have a special int-typed call for this as well.</span></div>
-<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>    KokkosSparse::Experimental::spgemm_jacobi(&amp;kh, AnumRows, BnumRows, BnumCols,</div>
-<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>                                              Aint.graph.row_map, Aint.graph.entries, Amat.values, <span class="keyword">false</span>,</div>
-<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>                                              Bint.graph.row_map, Bint.graph.entries, Bint.values, <span class="keyword">false</span>,</div>
-<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span>                                              int_row_mapC, entriesC, valuesC,</div>
-<div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>                                              jacobiOmega, Dinv.getLocalViewDevice(Access::ReadOnly));</div>
-<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span>    <span class="comment">// transfer the integer rowptrs back to the correct rowptr type</span></div>
-<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span>    Kokkos::parallel_for(</div>
-<div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span>        int_row_mapC.size(), KOKKOS_LAMBDA(<span class="keywordtype">int</span> i) { row_mapC(i) = int_row_mapC(i); });</div>
-<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span>    kh.destroy_spgemm_handle();</div>
-<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span>    handle_t kh;</div>
-<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span>    kh.create_spgemm_handle(alg_enum);</div>
-<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span>    kh.set_team_work_size(team_work_size);</div>
-<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span> </div>
-<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span>    KokkosSparse::spgemm_symbolic(&amp;kh, AnumRows, BnumRows, BnumCols,</div>
-<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span>                                  Amat.graph.row_map, Amat.graph.entries, <span class="keyword">false</span>,</div>
-<div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span>                                  Bmerged.graph.row_map, Bmerged.graph.entries, <span class="keyword">false</span>,</div>
-<div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span>                                  row_mapC);</div>
-<div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span> </div>
-<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>    <span class="keywordtype">size_t</span> c_nnz_size = kh.get_spgemm_handle()-&gt;get_c_nnz();</div>
-<div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span>    <span class="keywordflow">if</span> (c_nnz_size) {</div>
-<div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span>      entriesC = lno_nnz_view_t(Kokkos::ViewAllocateWithoutInitializing(<span class="stringliteral">&quot;entriesC&quot;</span>), c_nnz_size);</div>
-<div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span>      valuesC  = scalar_view_t(Kokkos::ViewAllocateWithoutInitializing(<span class="stringliteral">&quot;valuesC&quot;</span>), c_nnz_size);</div>
-<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span>    }</div>
-<div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span>    KokkosSparse::Experimental::spgemm_jacobi(&amp;kh, AnumRows, BnumRows, BnumCols,</div>
-<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span>                                              Amat.graph.row_map, Amat.graph.entries, Amat.values, <span class="keyword">false</span>,</div>
-<div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span>                                              Bmerged.graph.row_map, Bmerged.graph.entries, Bmerged.values, <span class="keyword">false</span>,</div>
-<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>                                              row_mapC, entriesC, valuesC,</div>
-<div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span>                                              jacobiOmega, Dinv.getLocalViewDevice(Access::ReadOnly));</div>
-<div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span>    kh.destroy_spgemm_handle();</div>
-<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>  }</div>
-<div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span> </div>
-<div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span><span class="preprocessor">#ifdef HAVE_TPETRA_MMM_TIMINGS</span></div>
-<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>  MM = Teuchos::null;</div>
-<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span>  MM = rcp(<span class="keyword">new</span> TimeMonitor(*TimeMonitor::getNewTimer(prefix_mmm + std::string(<span class="stringliteral">&quot;Jacobi Newmatrix SYCLSort&quot;</span>))));</div>
-<div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span> </div>
-<div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span>  <span class="comment">// Sort &amp; set values</span></div>
-<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span>  <span class="keywordflow">if</span> (params.is_null() || params-&gt;get(<span class="stringliteral">&quot;sort entries&quot;</span>, <span class="keyword">true</span>))</div>
-<div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span>    Import_Util::sortCrsEntries(row_mapC, entriesC, valuesC);</div>
-<div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>  C.setAllValues(row_mapC, entriesC, valuesC);</div>
-<div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span> </div>
-<div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span><span class="preprocessor">#ifdef HAVE_TPETRA_MMM_TIMINGS</span></div>
-<div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span>  MM = Teuchos::null;</div>
-<div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span>  MM = rcp(<span class="keyword">new</span> TimeMonitor(*TimeMonitor::getNewTimer(prefix_mmm + std::string(<span class="stringliteral">&quot;Jacobi Newmatrix SYCLESFC&quot;</span>))));</div>
-<div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00838" name="l00838"></a><span class="lineno">  838</span> </div>
-<div class="line"><a id="l00839" name="l00839"></a><span class="lineno">  839</span>  <span class="comment">// Final Fillcomplete</span></div>
-<div class="line"><a id="l00840" name="l00840"></a><span class="lineno">  840</span>  Teuchos::RCP&lt;Teuchos::ParameterList&gt; labelList = rcp(<span class="keyword">new</span> Teuchos::ParameterList);</div>
-<div class="line"><a id="l00841" name="l00841"></a><span class="lineno">  841</span>  labelList-&gt;set(<span class="stringliteral">&quot;Timer Label&quot;</span>, label);</div>
-<div class="line"><a id="l00842" name="l00842"></a><span class="lineno">  842</span>  <span class="keywordflow">if</span> (!params.is_null()) labelList-&gt;set(<span class="stringliteral">&quot;compute global constants&quot;</span>, params-&gt;get(<span class="stringliteral">&quot;compute global constants&quot;</span>, <span class="keyword">true</span>));</div>
-<div class="line"><a id="l00843" name="l00843"></a><span class="lineno">  843</span>  Teuchos::RCP&lt;const Export&lt;LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosSYCLWrapperNode&gt; &gt; dummyExport;</div>
-<div class="line"><a id="l00844" name="l00844"></a><span class="lineno">  844</span>  C.expertStaticFillComplete(Bview.origMatrix-&gt;getDomainMap(), Aview.origMatrix-&gt;getRangeMap(), Cimport, dummyExport, labelList);</div>
-<div class="line"><a id="l00845" name="l00845"></a><span class="lineno">  845</span>}</div>
-<div class="line"><a id="l00846" name="l00846"></a><span class="lineno">  846</span> </div>
-<div class="line"><a id="l00847" name="l00847"></a><span class="lineno">  847</span>}  <span class="comment">// namespace MMdetails</span></div>
-<div class="line"><a id="l00848" name="l00848"></a><span class="lineno">  848</span>}  <span class="comment">// namespace Tpetra</span></div>
-<div class="line"><a id="l00849" name="l00849"></a><span class="lineno">  849</span> </div>
-<div class="line"><a id="l00850" name="l00850"></a><span class="lineno">  850</span><span class="preprocessor">#endif  </span><span class="comment">// SYCL</span></div>
+<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span>    <span class="keywordflow">if</span> (c_nnz_size) {</div>
+<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>      <span class="comment">// even though there is no TPL for this, we have to use the same handle that was used in the symbolic phase,</span></div>
+<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>      <span class="comment">// so need to have a special int-typed call for this as well.</span></div>
+<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>      KokkosSparse::Experimental::spgemm_jacobi(&amp;kh, AnumRows, BnumRows, BnumCols,</div>
+<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>                                                Aint.graph.row_map, Aint.graph.entries, Amat.values, <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span>                                                Bint.graph.row_map, Bint.graph.entries, Bint.values, <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>                                                int_row_mapC, entriesC, valuesC,</div>
+<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span>                                                jacobiOmega, Dinv.getLocalViewDevice(Access::ReadOnly));</div>
+<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span>    }</div>
+<div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span>    <span class="comment">// transfer the integer rowptrs back to the correct rowptr type</span></div>
+<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span>    Kokkos::parallel_for(</div>
+<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span>        int_row_mapC.size(), KOKKOS_LAMBDA(<span class="keywordtype">int</span> i) { row_mapC(i) = int_row_mapC(i); });</div>
+<div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span>    kh.destroy_spgemm_handle();</div>
+<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span>    handle_t kh;</div>
+<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span>    kh.create_spgemm_handle(alg_enum);</div>
+<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span>    kh.set_team_work_size(team_work_size);</div>
+<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span> </div>
+<div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span>    KokkosSparse::spgemm_symbolic(&amp;kh, AnumRows, BnumRows, BnumCols,</div>
+<div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span>                                  Amat.graph.row_map, Amat.graph.entries, <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span>                                  Bmerged.graph.row_map, Bmerged.graph.entries, <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>                                  row_mapC);</div>
+<div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span> </div>
+<div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span>    <span class="keywordtype">size_t</span> c_nnz_size = kh.get_spgemm_handle()-&gt;get_c_nnz();</div>
+<div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span>    <span class="keywordflow">if</span> (c_nnz_size) {</div>
+<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span>      entriesC = lno_nnz_view_t(Kokkos::ViewAllocateWithoutInitializing(<span class="stringliteral">&quot;entriesC&quot;</span>), c_nnz_size);</div>
+<div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span>      valuesC  = scalar_view_t(Kokkos::ViewAllocateWithoutInitializing(<span class="stringliteral">&quot;valuesC&quot;</span>), c_nnz_size);</div>
+<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span>      KokkosSparse::Experimental::spgemm_jacobi(&amp;kh, AnumRows, BnumRows, BnumCols,</div>
+<div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span>                                                Amat.graph.row_map, Amat.graph.entries, Amat.values, <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>                                                Bmerged.graph.row_map, Bmerged.graph.entries, Bmerged.values, <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span>                                                row_mapC, entriesC, valuesC,</div>
+<div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span>                                                jacobiOmega, Dinv.getLocalViewDevice(Access::ReadOnly));</div>
+<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>    }</div>
+<div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span>    kh.destroy_spgemm_handle();</div>
+<div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span>  }</div>
+<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span> </div>
+<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span><span class="preprocessor">#ifdef HAVE_TPETRA_MMM_TIMINGS</span></div>
+<div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span>  MM = Teuchos::null;</div>
+<div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span>  MM = rcp(<span class="keyword">new</span> TimeMonitor(*TimeMonitor::getNewTimer(prefix_mmm + std::string(<span class="stringliteral">&quot;Jacobi Newmatrix SYCLSort&quot;</span>))));</div>
+<div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span> </div>
+<div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span>  <span class="comment">// Sort &amp; set values</span></div>
+<div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>  <span class="keywordflow">if</span> (params.is_null() || params-&gt;get(<span class="stringliteral">&quot;sort entries&quot;</span>, <span class="keyword">true</span>))</div>
+<div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span>    Import_Util::sortCrsEntries(row_mapC, entriesC, valuesC);</div>
+<div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span>  C.setAllValues(row_mapC, entriesC, valuesC);</div>
+<div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span> </div>
+<div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span><span class="preprocessor">#ifdef HAVE_TPETRA_MMM_TIMINGS</span></div>
+<div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span>  MM = Teuchos::null;</div>
+<div class="line"><a id="l00838" name="l00838"></a><span class="lineno">  838</span>  MM = rcp(<span class="keyword">new</span> TimeMonitor(*TimeMonitor::getNewTimer(prefix_mmm + std::string(<span class="stringliteral">&quot;Jacobi Newmatrix SYCLESFC&quot;</span>))));</div>
+<div class="line"><a id="l00839" name="l00839"></a><span class="lineno">  839</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00840" name="l00840"></a><span class="lineno">  840</span> </div>
+<div class="line"><a id="l00841" name="l00841"></a><span class="lineno">  841</span>  <span class="comment">// Final Fillcomplete</span></div>
+<div class="line"><a id="l00842" name="l00842"></a><span class="lineno">  842</span>  Teuchos::RCP&lt;Teuchos::ParameterList&gt; labelList = rcp(<span class="keyword">new</span> Teuchos::ParameterList);</div>
+<div class="line"><a id="l00843" name="l00843"></a><span class="lineno">  843</span>  labelList-&gt;set(<span class="stringliteral">&quot;Timer Label&quot;</span>, label);</div>
+<div class="line"><a id="l00844" name="l00844"></a><span class="lineno">  844</span>  <span class="keywordflow">if</span> (!params.is_null()) labelList-&gt;set(<span class="stringliteral">&quot;compute global constants&quot;</span>, params-&gt;get(<span class="stringliteral">&quot;compute global constants&quot;</span>, <span class="keyword">true</span>));</div>
+<div class="line"><a id="l00845" name="l00845"></a><span class="lineno">  845</span>  Teuchos::RCP&lt;const Export&lt;LocalOrdinal, GlobalOrdinal, Tpetra::KokkosCompat::KokkosSYCLWrapperNode&gt; &gt; dummyExport;</div>
+<div class="line"><a id="l00846" name="l00846"></a><span class="lineno">  846</span>  C.expertStaticFillComplete(Bview.origMatrix-&gt;getDomainMap(), Aview.origMatrix-&gt;getRangeMap(), Cimport, dummyExport, labelList);</div>
+<div class="line"><a id="l00847" name="l00847"></a><span class="lineno">  847</span>}</div>
+<div class="line"><a id="l00848" name="l00848"></a><span class="lineno">  848</span> </div>
+<div class="line"><a id="l00849" name="l00849"></a><span class="lineno">  849</span>}  <span class="comment">// namespace MMdetails</span></div>
+<div class="line"><a id="l00850" name="l00850"></a><span class="lineno">  850</span>}  <span class="comment">// namespace Tpetra</span></div>
 <div class="line"><a id="l00851" name="l00851"></a><span class="lineno">  851</span> </div>
-<div class="line"><a id="l00852" name="l00852"></a><span class="lineno">  852</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00852" name="l00852"></a><span class="lineno">  852</span><span class="preprocessor">#endif  </span><span class="comment">// SYCL</span></div>
+<div class="line"><a id="l00853" name="l00853"></a><span class="lineno">  853</span> </div>
+<div class="line"><a id="l00854" name="l00854"></a><span class="lineno">  854</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_tpetra_1_1_crs_matrix_html_a8043e2e365146c4ab22b3ba8c9d9a2fb"><div class="ttname"><a href="class_tpetra_1_1_crs_matrix.html#a8043e2e365146c4ab22b3ba8c9d9a2fb">Tpetra::CrsMatrix::local_matrix_device_type</a></div><div class="ttdeci">KokkosSparse::CrsMatrix&lt; impl_scalar_type, local_ordinal_type, device_type, void, typename local_graph_device_type::size_type &gt; local_matrix_device_type</div><div class="ttdoc">The specialization of Kokkos::CrsMatrix that represents the part of the sparse matrix on each MPI pro...</div><div class="ttdef"><b>Definition</b> <a href="_tpetra___crs_matrix__decl_8hpp_source.html#l00467">Tpetra_CrsMatrix_decl.hpp:472</a></div></div>
 <div class="ttc" id="aclass_tpetra_1_1_crs_matrix_struct_html"><div class="ttname"><a href="class_tpetra_1_1_crs_matrix_struct.html">Tpetra::CrsMatrixStruct</a></div><div class="ttdoc">Struct that holds views of the contents of a CrsMatrix.</div><div class="ttdef"><b>Definition</b> <a href="_tpetra_ext___m_m_helpers__decl_8hpp_source.html#l00036">TpetraExt_MMHelpers_decl.hpp:36</a></div></div>
 <div class="ttc" id="aclass_tpetra_1_1_crs_matrix_struct_html_a3f1bb6e946883b266bee5742539aec49"><div class="ttname"><a href="class_tpetra_1_1_crs_matrix_struct.html#a3f1bb6e946883b266bee5742539aec49">Tpetra::CrsMatrixStruct::origMatrix</a></div><div class="ttdeci">Teuchos::RCP&lt; const CrsMatrix&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt; &gt; origMatrix</div><div class="ttdoc">The original matrix.</div><div class="ttdef"><b>Definition</b> <a href="_tpetra_ext___m_m_helpers__decl_8hpp_source.html#l00060">TpetraExt_MMHelpers_decl.hpp:60</a></div></div>

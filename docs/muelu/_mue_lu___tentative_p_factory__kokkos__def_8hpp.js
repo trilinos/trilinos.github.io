@@ -13,5 +13,6 @@ var _mue_lu___tentative_p_factory__kokkos__def_8hpp =
     [ "rowsAux", "_mue_lu___tentative_p_factory__kokkos__def_8hpp.html#a0c5ada37e6791cdaf11e92c8dbcd9e5c", null ],
     [ "colsAux", "_mue_lu___tentative_p_factory__kokkos__def_8hpp.html#a585f11a4d46fc06b75fdb59ed81e14bd", null ],
     [ "valsAux", "_mue_lu___tentative_p_factory__kokkos__def_8hpp.html#a959a03b27b7afbab574aa1e8eb32e2cb", null ],
-    [ "doQRStep", "_mue_lu___tentative_p_factory__kokkos__def_8hpp.html#a15bfb577184fa0cfc43f4694f138b102", null ]
+    [ "doQRStep", "_mue_lu___tentative_p_factory__kokkos__def_8hpp.html#a15bfb577184fa0cfc43f4694f138b102", null ],
+    [ "scratchLevel", "_mue_lu___tentative_p_factory__kokkos__def_8hpp.html#a6aafcdc875a6c77567e5390e02d88b86", null ]
 ];

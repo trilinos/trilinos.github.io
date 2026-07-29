@@ -301,7 +301,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    <span class="comment">//After solving the system w/ LAPACK, Phi contains A^T</span></div>
 <div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span> </div>
 <div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    <span class="comment">// transpose and clean up numerical noise (for permutation matrices)</span></div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> eps = tolerance();</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> eps = std::sqrt(tolerance()); <span class="comment">// NVR: loosened this to allow better noise-cleaning for high-order polynomials</span></div>
 <div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    <span class="keywordflow">for</span> (ordinal_type i=0;i&lt;ndofSubcell;++i) {</div>
 <div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>      <span class="keyword">auto</span> intmatii = std::round(OrtMat(i,i));</div>
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>      OrtMat(i,i) = (std::abs(OrtMat(i,i) - intmatii) &lt; eps) ? intmatii : OrtMat(i,i);</div>

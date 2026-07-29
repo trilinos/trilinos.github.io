@@ -1,10 +1,12 @@
 var searchData=
 [
-  ['z_5fmax_5f_0',['z_max_',['../class_tempus___test_1_1_c_d_r___model.html#a9da88c4d5b94236b3c208fd617cb3798',1,'Tempus_Test::CDR_Model']]],
-  ['z_5fmin_5f_1',['z_min_',['../class_tempus___test_1_1_c_d_r___model.html#ad677c2d951632567141143f88e7fd641',1,'Tempus_Test::CDR_Model']]],
-  ['zeroinitialguess_5f_2',['zeroInitialGuess_',['../class_tempus_1_1_stepper_implicit.html#aa47edc4f9820e162daeb41878d7c0a3d',1,'Tempus::StepperImplicit']]],
-  ['zmax_5f_3',['zMax_',['../class_tempus___test_1_1_c_d_r___model___tpetra.html#af903b1147325cb7527c04925309480a5',1,'Tempus_Test::CDR_Model_Tpetra']]],
-  ['zmin_5f_4',['zmin_',['../struct_tempus___test_1_1_coord_filler.html#a9bc4d2ef8b92015b3b5418998941aaef',1,'Tempus_Test::CoordFiller::zMin_'],['../class_tempus___test_1_1_c_d_r___model___tpetra.html#a3d8a8729a96b225661d0b19e40bf0a13',1,'Tempus_Test::CDR_Model_Tpetra::zMin_']]],
-  ['zvector_5',['zVector',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_l_o_c_a_1_1_hopf_1_1_moore_spence_1_1_salinger_bordering.html#a5e82a223a9ca02538f23c8281b289539',1,'LOCA::Hopf::MooreSpence::SalingerBordering']]],
-  ['zz_6',['zz',['../class_tempus___test_1_1_basis.html#a33fa2ac906ece123f9e472de1ffa7f48',1,'Tempus_Test::Basis::zz'],['../class_tempus___test_1_1_t_basis.html#aa7c0c73b09fddc4dadb43b14cf9b5445',1,'Tempus_Test::TBasis::zz']]]
+  ['y_5f_0',['y_',['../class_tempus_1_1_wrapper_model_evaluator_basic.html#a77f2ade624e0a8e0d8f94339048a9978',1,'Tempus::WrapperModelEvaluatorBasic::y_'],['../class_tempus_1_1_wrapper_model_evaluator_pair_i_m_e_x___basic.html#a5553f375d4faf1b8919845996c250ab5',1,'Tempus::WrapperModelEvaluatorPairIMEX_Basic::y_'],['../class_tempus___test_1_1_linear_regression.html#a310aecb92d323e7054461cf5203f1cbb',1,'Tempus_Test::LinearRegression::y_']]],
+  ['y_5fp_1',['Y_p',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_l_o_c_a_1_1_epetra_1_1_compact_w_y_op.html#a14c19423bf41589651c57c93c6a7916c',1,'LOCA::Epetra::CompactWYOp']]],
+  ['y_5fspace_5f_2',['y_space_',['../class_tempus___test_1_1_van_der_pol___i_m_e_x_part___implicit_model.html#ae4c0bd78554de40f32e3fa8ba217cc9c',1,'Tempus_Test::VanDerPol_IMEXPart_ImplicitModel']]],
+  ['y_5ftangent_5findex_5f_3',['y_tangent_index_',['../class_tempus_1_1_wrapper_model_evaluator_pair_part_i_m_e_x___combined_f_s_a.html#aeb8f9ca74c76d49b3f79463c19a57db6',1,'Tempus::WrapperModelEvaluatorPairPartIMEX_CombinedFSA::y_tangent_index_'],['../class_tempus_1_1_wrapper_model_evaluator_pair_part_i_m_e_x___staggered_f_s_a.html#a5bd61829a7d93477f213425defe7c456',1,'Tempus::WrapperModelEvaluatorPairPartIMEX_StaggeredFSA::y_tangent_index_']]],
+  ['y_5fx_4',['Y_x',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_l_o_c_a_1_1_epetra_1_1_compact_w_y_op.html#aa6bff64089b240687a3baa7161b35e52',1,'LOCA::Epetra::CompactWYOp']]],
+  ['yintercept_5f_5',['yIntercept_',['../class_tempus___test_1_1_linear_regression.html#a32b6c7e7a1a782f44bbbc3ad28253225',1,'Tempus_Test::LinearRegression']]],
+  ['your_20code_6',['Step 3: Call NOX from your code',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/step3.html',1,'']]],
+  ['your_20code_20to_20nox_7',['Step 4: Link your code to NOX',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/step4.html',1,'']]],
+  ['yvector_8',['yVector',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_l_o_c_a_1_1_hopf_1_1_moore_spence_1_1_salinger_bordering.html#a9764d9b65e9b6c77ee39b3e8b5fda8c7',1,'LOCA::Hopf::MooreSpence::SalingerBordering']]]
 ];

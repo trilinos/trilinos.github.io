@@ -75,9 +75,9 @@ $(function() {
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="tempus_tutorial_transition_04_05_goal"></a>
 Goal</h1>
-<p>The primary goal of <a class="el" href="example-05.html">Example 5: Introduce Stepper</a> is to introduce <a class="el" href="class_tempus_1_1_stepper.html">Tempus::Stepper</a> through <a class="el" href="class_tempus_1_1_stepper_forward_euler.html">Tempus::StepperForwardEuler</a> while preserving the same Thyra::ModelEvaluator-based van der Pol model, the same <a class="el" href="class_tempus_1_1_solution_history.html">Tempus::SolutionHistory</a>, and the same application-managed time loop used in <a class="el" href="example-04.html">Example 4: Add SolutionHistory</a>.</p>
+<p>The primary goal of <a class="el" href="example-05.html">Example 5: Introduce Stepper</a> is to introduce <a class="el" href="class_tempus_1_1_stepper.html">Tempus::Stepper</a> through <a class="el" href="class_tempus_1_1_stepper_forward_euler.html">Tempus::StepperForwardEuler</a> while preserving the same Thyra::ModelEvaluator-based van der Pol model, the same <a class="el" href="class_tempus_1_1_solution_history.html">Tempus::SolutionHistory</a>, the same simple tabular output, and the same application-managed time loop used in <a class="el" href="example-04.html">Example 4: Add SolutionHistory</a>.</p>
 <p><a class="el" href="class_tempus_1_1_stepper.html">Tempus::Stepper</a> performs a single time step by applying the algorithm associated with a particular ODE formulation, such as an explicit update formula or an implicit linear or nonlinear solve. In doing so, it uses the governing equations provided by the <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_thyra_1_1_model_evaluator.html">Thyra::ModelEvaluator</a> in their explicit and/or implicit forms.</p>
-<p>Upon completion of the step, the <a class="el" href="class_tempus_1_1_stepper.html">Tempus::Stepper</a> updates the next <a class="el" href="class_tempus_1_1_solution_state.html">Tempus::SolutionState</a> (the working state), reports the solution status (for example, passed or failed), and may propose a timestep size for the next step. In this way, <a class="el" href="class_tempus_1_1_stepper.html">Tempus::Stepper</a> separates the time-stepping algorithm from the details of the governing equations in the <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_thyra_1_1_model_evaluator.html">Thyra::ModelEvaluator</a>, the linear and nonlinear solver infrastructure (for example, Belos and <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/namespace_n_o_x.html">NOX</a>), and the orchestration of multiple time steps, which is introduced later in Utilize IntegratorBasic.</p>
+<p>Upon completion of the step, the <a class="el" href="class_tempus_1_1_stepper.html">Tempus::Stepper</a> updates the next <a class="el" href="class_tempus_1_1_solution_state.html">Tempus::SolutionState</a> (the working state), reports the solution status (for example, passed or failed), and may propose a timestep size for a future step. In this way, <a class="el" href="class_tempus_1_1_stepper.html">Tempus::Stepper</a> separates the time-stepping algorithm from the details of the governing equations in the <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_thyra_1_1_model_evaluator.html">Thyra::ModelEvaluator</a>, the linear and nonlinear solver infrastructure, and the orchestration of multiple time steps.</p>
 <p>New concepts introduced are:</p>
 <ul>
 <li><a class="el" href="class_tempus_1_1_stepper.html">Tempus::Stepper</a><ul>
@@ -105,14 +105,14 @@ Goal</h1>
 </ul>
 </li>
 </ul>
-<p><b>Note:</b> A solution state is termed "&lt;b&gt;consistent&lt;/b&gt;" when the solution and its derivatives satisfy the governing equations at time <picture><source srcset="form_466_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$t$" src="form_466.png" width="5" height="9"/></picture>, i.e., satisfy the explicit and/or implicit forms of the model.</p>
+<p><b>Note:</b> A solution state is termed "&lt;b&gt;consistent&lt;/b&gt;" when the solution and its derivatives satisfy the governing equations at time <picture><source srcset="form_471_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$t$" src="form_471.png" width="5" height="9"/></picture>, i.e., satisfy the explicit and/or implicit forms of the model.</p>
 <p class="formulaDsp">
-<picture><source srcset="form_467_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\begin{eqnarray*}
+<picture><source srcset="form_472_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\begin{eqnarray*}
   \mbox{Explicit:} &amp; \dot{x} = \mathbf{f}(x,t),
                    &amp; \ddot{x} = \mathbf{f}(\dot{x},x,t) \\
   \mbox{Implicit:} &amp; \mathcal{F}(\dot{x},x,t) = 0,
                    &amp; \mathcal{F}(\ddot{x},\dot{x},x,t) = 0
-\end{eqnarray*}" src="form_467.png" width="233" height="33"/></picture>
+\end{eqnarray*}" src="form_472.png" width="233" height="33"/></picture>
 </p>
 <p>This is the first step in separating the stepping algorithm from the surrounding application logic. Rather than coding the Forward Euler right-hand-side evaluation and update directly in the time loop, the application now delegates that work to a <a class="el" href="namespace_tempus.html">Tempus</a> stepper object.</p>
 <h1><a class="anchor" id="tempus_tutorial_transition_04_05_same"></a>
@@ -121,8 +121,9 @@ What stays the same</h1>
 <li>The van der Pol model is still provided by a <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_thyra_1_1_model_evaluator.html">Thyra::ModelEvaluator</a>.</li>
 <li>The application still manages the overall time loop directly.</li>
 <li>The application still manages the <a class="el" href="class_tempus_1_1_solution_history.html">Tempus::SolutionHistory</a>.</li>
-<li>The timestep size is still selected manually.</li>
-<li>The regression check follows the same pattern.</li>
+<li>The timestep size is still selected manually and assigned to the working state by the application.</li>
+<li>The output table still reports the step index, time, <picture><source srcset="form_454_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$x_0$" src="form_454.png" width="13" height="9"/></picture>, and <picture><source srcset="form_455_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$x_1$" src="form_455.png" width="13" height="9"/></picture>.</li>
+<li>The regression check remains a separate final comparison.</li>
 </ul>
 <h1><a class="anchor" id="tempus_tutorial_transition_04_05_snippets"></a>
 Selected code excerpts</h1>
@@ -137,8 +138,7 @@ Construct and initialize the stepper</h2>
 <div class="line">stepper-&gt;initialize();</div>
 <div class="line">stepper-&gt;setInitialConditions(solHistory);</div>
 <div class="ttc" id="aclass_tempus_1_1_stepper_forward_euler_html"><div class="ttname"><a href="class_tempus_1_1_stepper_forward_euler.html">Tempus::StepperForwardEuler</a></div><div class="ttdoc">Forward Euler time stepper.</div><div class="ttdef"><b>Definition</b> <a href="_tempus___stepper_forward_euler__decl_8hpp_source.html#l00077">Tempus_StepperForwardEuler_decl.hpp:77</a></div></div>
-</div><!-- fragment --><p>This introduces the first <a class="el" href="namespace_tempus.html">Tempus</a> stepping abstraction in the progression tutorial.</p>
-<hr  style="border:0; border-top:5px solid #ccc;" />
+</div><!-- fragment --><hr  style="border:0; border-top:5px solid #ccc;" />
  <h2><a class="anchor" id="tempus_tutorial_transition_04_05_snippet2"></a>
 Replace the hand-written update</h2>
 <p><b>Delegate the step to the stepper.</b> The details of the Forward Euler update, including interaction with the <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_thyra_1_1_model_evaluator.html">Thyra::ModelEvaluator</a>, are now handled by <a class="el" href="class_tempus_1_1_stepper_forward_euler.html">Tempus::StepperForwardEuler</a>. In this way, the stepper encapsulates everything needed to perform a single Forward Euler time step. This also makes it easier to replace Forward Euler with another <a class="el" href="class_tempus_1_1_stepper.html">Tempus::Stepper</a> while leaving the surrounding application-level time-loop logic unchanged.</p>
@@ -156,7 +156,7 @@ Replace the hand-written update</h2>
 </div><!-- fragment --><p>The stepper now performs the model evaluation and Forward Euler update.</p>
 <hr  style="border:0; border-top:5px solid #ccc;" />
  <h2><a class="anchor" id="tempus_tutorial_transition_04_05_snippet3"></a>
-Checking the Solution Status</h2>
+Use the status assigned by the stepper</h2>
 <p><b>Use the solution status set by the stepper.</b> The <a class="el" href="class_tempus_1_1_stepper.html">Tempus::Stepper</a> sets the status of the working state as part of <code>takeStep(...)</code>. As a result, the application no longer needs to set the pass/fail status explicitly after the Forward Euler update. The remaining task is to promote the working state through the solution history.</p>
 <p><b>Before</b> </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> ( std::isnan(Thyra::norm(*x_np1)) ) {</div>
 <div class="line">  workingState-&gt;setSolutionStatus(<a class="code hl_enumvalue" href="namespace_tempus.html#a24f0b0a527fc0ff0f86f64b5cff4532baf898b16214feccb468bff5e226e602e1">Tempus::Status::FAILED</a>);</div>
@@ -168,6 +168,7 @@ Checking the Solution Status</h2>
 <div class="ttc" id="anamespace_tempus_html_a24f0b0a527fc0ff0f86f64b5cff4532baf898b16214feccb468bff5e226e602e1"><div class="ttname"><a href="namespace_tempus.html#a24f0b0a527fc0ff0f86f64b5cff4532baf898b16214feccb468bff5e226e602e1">Tempus::FAILED</a></div><div class="ttdeci">@ FAILED</div><div class="ttdef"><b>Definition</b> <a href="_tempus___types_8hpp_source.html#l00019">Tempus_Types.hpp:19</a></div></div>
 </div><!-- fragment --><p><b>After</b> </p><div class="fragment"><div class="line">solHistory-&gt;promoteWorkingState();</div>
 </div><!-- fragment --><p>The time loop is still application-controlled; only the single-step algorithm and step-status assignment have moved into the stepper.</p>
+<p>As in the updated examples, final tutorial success is determined after the loop by combining the final state status with the separate regression test.</p>
 <hr  style="border:0; border-top:5px solid #ccc;" />
  <h1><a class="anchor" id="tempus_tutorial_transition_04_05_compare"></a>
 How to compare the examples</h1>
@@ -177,8 +178,8 @@ How to compare the examples</h1>
 </ul>
 <p>From the <code>packages/tempus</code> directory, a focused comparison of the main time-integration logic between these two examples can be generated locally in <code>bash</code> or <code>zsh</code> with:</p>
 <div class="fragment"><div class="line">git diff --no-index \</div>
-<div class="line">  &lt;(sed -n &#39;79,157p&#39; examples/04_Adding_SolutionHistory/04_Adding_SolutionHistory.cpp) \</div>
-<div class="line">  &lt;(sed -n &#39;77,138p&#39; examples/05_Intro_Stepper/05_Intro_Stepper.cpp)</div>
+<div class="line">  &lt;(sed -n &#39;87,195p&#39; examples/04_Adding_SolutionHistory/04_Adding_SolutionHistory.cpp) \</div>
+<div class="line">  &lt;(sed -n &#39;86,177p&#39; examples/05_Intro_Stepper/05_Intro_Stepper.cpp)</div>
 </div><!-- fragment --><p>This ignores leading header lines (e.g., <code>#include</code> statements and Doxygen comments) and trailing regression-testing lines.</p>
 <hr  style="border:0; border-top:5px solid #ccc;" />
 <p>  

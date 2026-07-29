@@ -150,7 +150,7 @@ var searchData=
   ['blockreorthogthreshold_147',['blockReorthogThreshold',['../class_belos_1_1_tsqr_ortho_manager_impl.html#ad66eb2308d6bcdb10d5bfe0439c79f64',1,'Belos::TsqrOrthoManagerImpl']]],
   ['blocksize_5f_148',['blocksize_',['../class_belos_1_1_linear_problem.html#a2323de7f2e3e59c1333e2c6e48441def',1,'Belos::LinearProblem']]],
   ['bnorm_149',['bnorm',['../struct_belos_1_1_l_s_q_r_iteration_state.html#addd322e03b5e88f163a9bbc0c6f07bd0',1,'Belos::LSQRIterationState']]],
-  ['breakdowndetected_150',['breakdownDetected',['../class_belos_1_1_bi_c_g_stab_iter.html#a1a06c4d06199a29034c3946d812f59a2',1,'Belos::BiCGStabIter']]],
+  ['breakdowndetected_150',['breakdowndetected',['../class_belos_1_1_bi_c_g_stab_iter.html#a1a06c4d06199a29034c3946d812f59a2',1,'Belos::BiCGStabIter::breakdownDetected()'],['../namespace_belos.html#a2ab2fec66d34a6ec385de5eb8008c53ea949f603f85c2edfd315fc18aba2fc8ac',1,'Belos::BreakdownDetected']]],
   ['brief_151',['Brief',['../namespace_belos.html#a9ced295f4b474d2c545f344204940f41a71563ba06e0e9c47c0277314d4171df3',1,'Belos']]],
   ['browse_20all_20of_20belos_20as_20a_20single_20doxygen_20collection_152',['Browse all of Belos as a single doxygen collection',['../index.html#belos_browser',1,'']]],
   ['buildstatustests_153',['buildStatusTests',['../class_belos_1_1_status_test_factory.html#ac0e93c29009d114b8b7bb919372a5c2d',1,'Belos::StatusTestFactory']]]

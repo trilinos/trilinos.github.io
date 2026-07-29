@@ -75,7 +75,7 @@ $(function() {
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="tempus_tutorial_transition_02_03_goal"></a>
 Goal</h1>
-<p>The primary goal of <a class="el" href="example-03.html">Example 3: Introduce SolutionState</a> is to move the evolving solution and selected time-integration metadata into <a class="el" href="class_tempus_1_1_solution_state.html">Tempus::SolutionState</a> while preserving the same Thyra::ModelEvaluator-based model and the same explicit Forward Euler update used in <a class="el" href="example-02.html">Example 2: Use ModelEvaluator</a>.</p>
+<p>The primary goal of <a class="el" href="example-03.html">Example 3: Introduce SolutionState</a> is to move the evolving solution and selected time-integration metadata into <a class="el" href="class_tempus_1_1_solution_state.html">Tempus::SolutionState</a> while preserving the same Thyra::ModelEvaluator-based model, the same explicit Forward Euler update, the same simple tabular output, and the same regression-testing workflow used in <a class="el" href="example-02.html">Example 2: Use ModelEvaluator</a>.</p>
 <p>New concepts introduced are:</p>
 <ul>
 <li><a class="el" href="class_tempus_1_1_solution_state.html">Tempus::SolutionState</a><ul>
@@ -102,7 +102,8 @@ What stays the same</h1>
 <li>The van der Pol model is still provided by a <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_thyra_1_1_model_evaluator.html">Thyra::ModelEvaluator</a>.</li>
 <li>The timestepper is still Forward Euler.</li>
 <li>The application still controls the time loop directly.</li>
-<li>The regression check follows the same pattern.</li>
+<li>The output table still reports the step index, time, <picture><source srcset="form_454_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$x_0$" src="form_454.png" width="13" height="9"/></picture>, and <picture><source srcset="form_455_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$x_1$" src="form_455.png" width="13" height="9"/></picture>.</li>
+<li>The regression check is still a separate final comparison against gold values.</li>
 </ul>
 <h1><a class="anchor" id="tempus_tutorial_transition_02_03_snippets"></a>
 Selected code excerpts</h1>
@@ -153,7 +154,11 @@ Record step outcome</h2>
 <div class="line">  solState-&gt;setSolutionStatus(<a class="code hl_enumvalue" href="namespace_tempus.html#a24f0b0a527fc0ff0f86f64b5cff4532bae16fd3d6bcfba25f965511bdaf4594e0">Tempus::Status::PASSED</a>);</div>
 <div class="line">}</div>
 <div class="ttc" id="anamespace_tempus_html_a24f0b0a527fc0ff0f86f64b5cff4532baf898b16214feccb468bff5e226e602e1"><div class="ttname"><a href="namespace_tempus.html#a24f0b0a527fc0ff0f86f64b5cff4532baf898b16214feccb468bff5e226e602e1">Tempus::FAILED</a></div><div class="ttdeci">@ FAILED</div><div class="ttdef"><b>Definition</b> <a href="_tempus___types_8hpp_source.html#l00019">Tempus_Types.hpp:19</a></div></div>
-</div><!-- fragment --><hr  style="border:0; border-top:5px solid #ccc;" />
+</div><!-- fragment --><p>In the updated example, the final tutorial success condition is formed after the time loop by combining:</p><ul>
+<li>whether the final <code>SolutionState</code> has status <code>PASSED</code>, and</li>
+<li>whether the final solution satisfies the regression test.</li>
+</ul>
+<hr  style="border:0; border-top:5px solid #ccc;" />
  <h1><a class="anchor" id="tempus_tutorial_transition_02_03_compare"></a>
 How to compare the examples</h1>
 <p>A more detailed comparison can be made by diffing:</p><ul>
@@ -162,8 +167,8 @@ How to compare the examples</h1>
 </ul>
 <p>From the <code>packages/tempus</code> directory, a focused comparison of the main time-integration logic between these two examples can be generated locally in <code>bash</code> or <code>zsh</code> with:</p>
 <div class="fragment"><div class="line">git diff --no-index \</div>
-<div class="line">  &lt;(sed -n &#39;66,130p&#39; examples/02_Use_ModelEvaluator/02_Use_ModelEvaluator.cpp) \</div>
-<div class="line">  &lt;(sed -n &#39;73,146p&#39; examples/03_Intro_SolutionState/03_Intro_SolutionState.cpp)</div>
+<div class="line">  &lt;(sed -n &#39;76,164p&#39; examples/02_Use_ModelEvaluator/02_Use_ModelEvaluator.cpp) \</div>
+<div class="line">  &lt;(sed -n &#39;83,184p&#39; examples/03_Intro_SolutionState/03_Intro_SolutionState.cpp)</div>
 </div><!-- fragment --><p>This ignores leading header lines (e.g., <code>#include</code> statements and Doxygen comments) and trailing regression-testing lines.</p>
 <hr  style="border:0; border-top:5px solid #ccc;" />
 <p>  

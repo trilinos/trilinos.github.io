@@ -75,7 +75,7 @@ $(function() {
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="tempus_tutorial_transition_03_04_goal"></a>
 Goal</h1>
-<p>The primary goal of <a class="el" href="example-04.html">Example 4: Add SolutionHistory</a> is to move from a single <a class="el" href="class_tempus_1_1_solution_state.html">Tempus::SolutionState</a> to a <a class="el" href="class_tempus_1_1_solution_history.html">Tempus::SolutionHistory</a> while preserving the same Thyra::ModelEvaluator-based model and the same explicit Forward Euler update used in <a class="el" href="example-03.html">Example 3: Introduce SolutionState</a>.</p>
+<p>The primary goal of <a class="el" href="example-04.html">Example 4: Add SolutionHistory</a> is to move from a single <a class="el" href="class_tempus_1_1_solution_state.html">Tempus::SolutionState</a> to a <a class="el" href="class_tempus_1_1_solution_history.html">Tempus::SolutionHistory</a> while preserving the same Thyra::ModelEvaluator-based model, the same explicit Forward Euler update, the same simple tabular output, and the same regression-testing workflow used in <a class="el" href="example-03.html">Example 3: Introduce SolutionState</a>.</p>
 <p>New concepts introduced are:</p>
 <ul>
 <li><a class="el" href="class_tempus_1_1_solution_history.html">Tempus::SolutionHistory</a><ul>
@@ -98,6 +98,14 @@ Goal</h1>
 <li>returns the tentative working solution state</li>
 </ul>
 </li>
+<li><code>getCurrentTime()</code><ul>
+<li>returns the time of the current accepted solution state</li>
+</ul>
+</li>
+<li><code>getCurrentIndex()</code><ul>
+<li>returns the index of the current accepted solution state</li>
+</ul>
+</li>
 <li><code>promoteWorkingState()</code><ul>
 <li>promotes the accepted working state to become the new current state</li>
 </ul>
@@ -110,7 +118,8 @@ What stays the same</h1>
 <li>The van der Pol model is still provided by a <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_thyra_1_1_model_evaluator.html">Thyra::ModelEvaluator</a>.</li>
 <li>The timestepper is still Forward Euler.</li>
 <li>The application still controls the time loop directly.</li>
-<li>The regression check follows the same pattern.</li>
+<li>The output table still reports the step index, time, <picture><source srcset="form_454_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$x_0$" src="form_454.png" width="13" height="9"/></picture>, and <picture><source srcset="form_455_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$x_1$" src="form_455.png" width="13" height="9"/></picture>.</li>
+<li>The regression check remains a separate final comparison.</li>
 </ul>
 <h1><a class="anchor" id="tempus_tutorial_transition_03_04_snippets"></a>
 Selected code excerpts</h1>
@@ -150,8 +159,8 @@ Access current and working states</h2>
 <div class="ttc" id="anamespace_tempus_html_a24f0b0a527fc0ff0f86f64b5cff4532ba3cf4240b78211ea422d238fd1cbc2bd4"><div class="ttname"><a href="namespace_tempus.html#a24f0b0a527fc0ff0f86f64b5cff4532ba3cf4240b78211ea422d238fd1cbc2bd4">Tempus::WORKING</a></div><div class="ttdeci">@ WORKING</div><div class="ttdef"><b>Definition</b> <a href="_tempus___types_8hpp_source.html#l00020">Tempus_Types.hpp:20</a></div></div>
 </div><!-- fragment --><p><b>After</b> </p><div class="fragment"><div class="line"><span class="keywordflow">while</span> (solHistory-&gt;getCurrentState()-&gt;getSolutionStatus() ==</div>
 <div class="line">         <a class="code hl_enumvalue" href="namespace_tempus.html#a24f0b0a527fc0ff0f86f64b5cff4532bae16fd3d6bcfba25f965511bdaf4594e0">Tempus::Status::PASSED</a> &amp;&amp;</div>
-<div class="line">       solHistory-&gt;getCurrentState()-&gt;getTime() &lt; finalTime &amp;&amp;</div>
-<div class="line">       solHistory-&gt;getCurrentState()-&gt;getIndex() &lt; nTimeSteps) {</div>
+<div class="line">       solHistory-&gt;getCurrentTime() &lt; finalTime &amp;&amp;</div>
+<div class="line">       solHistory-&gt;getCurrentIndex() &lt; nTimeSteps) {</div>
 <div class="line"> </div>
 <div class="line">  solHistory-&gt;initWorkingState();</div>
 <div class="line">  <span class="keyword">auto</span> currentState = solHistory-&gt;getCurrentState();</div>
@@ -192,7 +201,8 @@ Record and promote the working state</h2>
 <div class="line">  workingState-&gt;setSolutionStatus(<a class="code hl_enumvalue" href="namespace_tempus.html#a24f0b0a527fc0ff0f86f64b5cff4532bae16fd3d6bcfba25f965511bdaf4594e0">Tempus::Status::PASSED</a>);</div>
 <div class="line">}</div>
 <div class="line">solHistory-&gt;promoteWorkingState();</div>
-</div><!-- fragment --><p>The step result is now associated with the working state, and the history object manages the promotion of that state to the current state.</p>
+</div><!-- fragment --><p>The new solution is written into the working state, the step result is associated with that state, and the history object manages promotion of that state to become the new current state.</p>
+<p>As in the updated examples, the regression comparison remains separate from step status. Final tutorial success is determined after the loop by combining the final state status with the result of the regression test.</p>
 <hr  style="border:0; border-top:5px solid #ccc;" />
  <h1><a class="anchor" id="tempus_tutorial_transition_03_04_compare"></a>
 How to compare the examples</h1>
@@ -202,8 +212,8 @@ How to compare the examples</h1>
 </ul>
 <p>From the <code>packages/tempus</code> directory, a focused comparison of the main time-integration logic between these two examples can be generated locally in <code>bash</code> or <code>zsh</code> with:</p>
 <div class="fragment"><div class="line">git diff --no-index \</div>
-<div class="line">  &lt;(sed -n &#39;69,149p&#39; examples/03_Intro_SolutionState/03_Intro_SolutionState.cpp) \</div>
-<div class="line">  &lt;(sed -n &#39;128,213p&#39; examples/04_Adding_SolutionHistory/04_Adding_SolutionHistory.cpp)</div>
+<div class="line">  &lt;(sed -n &#39;83,184p&#39; examples/03_Intro_SolutionState/03_Intro_SolutionState.cpp) \</div>
+<div class="line">  &lt;(sed -n &#39;88,195p&#39; examples/04_Adding_SolutionHistory/04_Adding_SolutionHistory.cpp)</div>
 </div><!-- fragment --><p>This ignores leading header lines (e.g., <code>#include</code> statements and Doxygen comments) and trailing regression-testing lines.</p>
 <hr  style="border:0; border-top:5px solid #ccc;" />
 <p>  

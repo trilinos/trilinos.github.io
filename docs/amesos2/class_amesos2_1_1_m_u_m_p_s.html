@@ -142,6 +142,9 @@ typedef Kokkos::View&lt; local_ordinal_type *, HostExecSpaceType &gt;&#160;</td>
 <tr class="memitem:a44baab2cbe0af82938a07fecfcc86006" id="r_a44baab2cbe0af82938a07fecfcc86006"><td class="memItemLeft" align="right" valign="top"><a id="a44baab2cbe0af82938a07fecfcc86006" name="a44baab2cbe0af82938a07fecfcc86006"></a>
 typedef Kokkos::View&lt; mumps_type *, HostExecSpaceType &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>host_value_type_view</b></td></tr>
 <tr class="separator:a44baab2cbe0af82938a07fecfcc86006"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbc1ca149d14bf9de13703c6ccb648ce" id="r_abbc1ca149d14bf9de13703c6ccb648ce"><td class="memItemLeft" align="right" valign="top"><a id="abbc1ca149d14bf9de13703c6ccb648ce" name="abbc1ca149d14bf9de13703c6ccb648ce"></a>
+typedef Kokkos::View&lt; mumps_type **, Kokkos::LayoutLeft, typename HostExecSpaceType::memory_space &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>host_mv_view</b></td></tr>
+<tr class="separator:abbc1ca149d14bf9de13703c6ccb648ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72590dc022547f05817085cfc3bc4ace" id="r_a72590dc022547f05817085cfc3bc4ace"><td class="memItemLeft" align="right" valign="top"><a id="a72590dc022547f05817085cfc3bc4ace" name="a72590dc022547f05817085cfc3bc4ace"></a>
 typedef <a class="el" href="class_amesos2_1_1_m_u_m_p_s.html">Amesos2::MUMPS</a>&lt; Matrix, Vector &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>solver_type</b></td></tr>
 <tr class="separator:a72590dc022547f05817085cfc3bc4ace"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -283,6 +286,27 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>MUMPS_ERROR</b> () co
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:ac574c4e4e6913a578baeb88689c04996" id="r_ac574c4e4e6913a578baeb88689c04996"><td class="memItemLeft" align="right" valign="top"><a id="ac574c4e4e6913a578baeb88689c04996" name="ac574c4e4e6913a578baeb88689c04996"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>schur_size</b></td></tr>
+<tr class="separator:ac574c4e4e6913a578baeb88689c04996"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f7d30b15ecc392657239969ae6a7116" id="r_a0f7d30b15ecc392657239969ae6a7116"><td class="memItemLeft" align="right" valign="top"><a id="a0f7d30b15ecc392657239969ae6a7116" name="a0f7d30b15ecc392657239969ae6a7116"></a>
+host_ordinal_type_view&#160;</td><td class="memItemRight" valign="bottom"><b>schur_part</b></td></tr>
+<tr class="separator:a0f7d30b15ecc392657239969ae6a7116"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a500cf7f81e6bd7d824567a1b4e4462c2" id="r_a500cf7f81e6bd7d824567a1b4e4462c2"><td class="memItemLeft" align="right" valign="top"><a id="a500cf7f81e6bd7d824567a1b4e4462c2" name="a500cf7f81e6bd7d824567a1b4e4462c2"></a>
+host_value_type_view&#160;</td><td class="memItemRight" valign="bottom"><b>schur_out</b></td></tr>
+<tr class="separator:a500cf7f81e6bd7d824567a1b4e4462c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a526e6fd3eea33fb8b25c7a9675427bb5" id="r_a526e6fd3eea33fb8b25c7a9675427bb5"><td class="memItemLeft" align="right" valign="top"><a id="a526e6fd3eea33fb8b25c7a9675427bb5" name="a526e6fd3eea33fb8b25c7a9675427bb5"></a>
+scalar_type *&#160;</td><td class="memItemRight" valign="bottom"><b>schur_out_ptr</b></td></tr>
+<tr class="separator:a526e6fd3eea33fb8b25c7a9675427bb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7b1c39678d21d96c7f5b2de7c54cedf" id="r_aa7b1c39678d21d96c7f5b2de7c54cedf"><td class="memItemLeft" align="right" valign="top"><a id="aa7b1c39678d21d96c7f5b2de7c54cedf" name="aa7b1c39678d21d96c7f5b2de7c54cedf"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>only_forward_solve</b></td></tr>
+<tr class="separator:aa7b1c39678d21d96c7f5b2de7c54cedf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7986d576fcf4101a934b761c10520178" id="r_a7986d576fcf4101a934b761c10520178"><td class="memItemLeft" align="right" valign="top"><a id="a7986d576fcf4101a934b761c10520178" name="a7986d576fcf4101a934b761c10520178"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>only_backward_solve</b></td></tr>
+<tr class="separator:a7986d576fcf4101a934b761c10520178"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ff435e969f5a3738b03afd60eeab967" id="r_a7ff435e969f5a3738b03afd60eeab967"><td class="memItemLeft" align="right" valign="top"><a id="a7ff435e969f5a3738b03afd60eeab967" name="a7ff435e969f5a3738b03afd60eeab967"></a>
+host_value_type_view&#160;</td><td class="memItemRight" valign="bottom"><b>schur_rhs</b></td></tr>
+<tr class="separator:a7ff435e969f5a3738b03afd60eeab967"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3dae7f89033502e690c54c782bc01fc2" id="r_a3dae7f89033502e690c54c782bc01fc2"><td class="memItemLeft" align="right" valign="top"><a id="a3dae7f89033502e690c54c782bc01fc2" name="a3dae7f89033502e690c54c782bc01fc2"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>MUMPS_MATRIX_LOAD</b></td></tr>
 <tr class="separator:a3dae7f89033502e690c54c782bc01fc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -304,17 +328,17 @@ host_ordinal_type_view&#160;</td><td class="memItemRight" valign="bottom"><b>hos
 host_ordinal_type_view&#160;</td><td class="memItemRight" valign="bottom"><b>host_col_ptr_view_</b></td></tr>
 <tr class="memdesc:a6dd135841a0b085425fe65ba11a4adfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the row indices of the nonzero entries. <br /></td></tr>
 <tr class="separator:a6dd135841a0b085425fe65ba11a4adfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03472ae26c4f976cda22c9141f0b6792" id="r_a03472ae26c4f976cda22c9141f0b6792"><td class="memItemLeft" align="right" valign="top"><a id="a03472ae26c4f976cda22c9141f0b6792" name="a03472ae26c4f976cda22c9141f0b6792"></a>
-Teuchos::Array&lt; mumps_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>xvals_</b></td></tr>
-<tr class="memdesc:a03472ae26c4f976cda22c9141f0b6792"><td class="mdescLeft">&#160;</td><td class="mdescRight">Persisting 1D store for X. <br /></td></tr>
-<tr class="separator:a03472ae26c4f976cda22c9141f0b6792"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3e88361bfdf2d113195106f07e4d438" id="r_ac3e88361bfdf2d113195106f07e4d438"><td class="memItemLeft" align="right" valign="top"><a id="ac3e88361bfdf2d113195106f07e4d438" name="ac3e88361bfdf2d113195106f07e4d438"></a>
+host_mv_view&#160;</td><td class="memItemRight" valign="bottom"><b>xvals_</b></td></tr>
+<tr class="memdesc:ac3e88361bfdf2d113195106f07e4d438"><td class="mdescLeft">&#160;</td><td class="mdescRight">Persisting 1D store for X. <br /></td></tr>
+<tr class="separator:ac3e88361bfdf2d113195106f07e4d438"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afca4ceb80828b317266a78b64f05b687" id="r_afca4ceb80828b317266a78b64f05b687"><td class="memItemLeft" align="right" valign="top"><a id="afca4ceb80828b317266a78b64f05b687" name="afca4ceb80828b317266a78b64f05b687"></a>
 local_ordinal_type&#160;</td><td class="memItemRight" valign="bottom"><b>ldx_</b></td></tr>
 <tr class="separator:afca4ceb80828b317266a78b64f05b687"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7606ffba17418f21abba281ce83e40e" id="r_ac7606ffba17418f21abba281ce83e40e"><td class="memItemLeft" align="right" valign="top"><a id="ac7606ffba17418f21abba281ce83e40e" name="ac7606ffba17418f21abba281ce83e40e"></a>
-Teuchos::Array&lt; mumps_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>bvals_</b></td></tr>
-<tr class="memdesc:ac7606ffba17418f21abba281ce83e40e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Persisting 1D store for B. <br /></td></tr>
-<tr class="separator:ac7606ffba17418f21abba281ce83e40e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa26ec568c1804b17ffe866ae8324fed3" id="r_aa26ec568c1804b17ffe866ae8324fed3"><td class="memItemLeft" align="right" valign="top"><a id="aa26ec568c1804b17ffe866ae8324fed3" name="aa26ec568c1804b17ffe866ae8324fed3"></a>
+host_mv_view&#160;</td><td class="memItemRight" valign="bottom"><b>bvals_</b></td></tr>
+<tr class="memdesc:aa26ec568c1804b17ffe866ae8324fed3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Persisting 1D store for B. <br /></td></tr>
+<tr class="separator:aa26ec568c1804b17ffe866ae8324fed3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a548703c608ca4bb51992fa9ed05996db" id="r_a548703c608ca4bb51992fa9ed05996db"><td class="memItemLeft" align="right" valign="top"><a id="a548703c608ca4bb51992fa9ed05996db" name="a548703c608ca4bb51992fa9ed05996db"></a>
 local_ordinal_type&#160;</td><td class="memItemRight" valign="bottom"><b>ldb_</b></td></tr>
 <tr class="separator:a548703c608ca4bb51992fa9ed05996db"><td class="memSeparator" colspan="2">&#160;</td></tr>

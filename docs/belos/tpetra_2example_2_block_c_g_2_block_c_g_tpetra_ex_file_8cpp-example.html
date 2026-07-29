@@ -230,7 +230,7 @@ $(function() {
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Perform solve</span></div>
-<div class="line">    <a class="code hl_enumeration" href="namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">Belos::ReturnType</a> ret = newSolver-&gt;solve();</div>
+<div class="line">    <a class="code hl_enumeration" href="namespace_belos.html#a2ab2fec66d34a6ec385de5eb8008c53e">Belos::ReturnType</a> ret = newSolver-&gt;solve();</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Get the number of iterations for this solve.</span></div>
 <div class="line">    <span class="keywordtype">int</span> numIters = newSolver-&gt;getNumIters();</div>
@@ -255,14 +255,14 @@ $(function() {
 <div class="line">      }</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordflow">if</span> (ret!=<a id="a5" name="a5"></a><a class="code hl_enumvalue" href="namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18ba6ea972a4ffdcac04da6f3cd6369f22c4">Belos::Converged</a> || badRes) {</div>
-<div class="line">      success = <span class="keyword">false</span>;</div>
-<div class="line">      <span class="keywordflow">if</span> (procVerbose)</div>
-<div class="line">        std::cout &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot;ERROR:  Belos did not converge!&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line">    } <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="keywordflow">if</span> (ret==<a id="a5" name="a5"></a><a class="code hl_enumvalue" href="namespace_belos.html#a2ab2fec66d34a6ec385de5eb8008c53ea6ea972a4ffdcac04da6f3cd6369f22c4">Belos::Converged</a> &amp;&amp; !badRes) {</div>
 <div class="line">      success = <span class="keyword">true</span>;</div>
 <div class="line">      <span class="keywordflow">if</span> (procVerbose)</div>
 <div class="line">        std::cout &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot;SUCCESS:  Belos converged!&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">    } <span class="keywordflow">else</span> {</div>
+<div class="line">      success = <span class="keyword">false</span>;</div>
+<div class="line">      <span class="keywordflow">if</span> (procVerbose)</div>
+<div class="line">        std::cout &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot;ERROR:  Belos did not converge!&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line">    }</div>
 <div class="line">  }</div>
 <div class="line">  TEUCHOS_STANDARD_CATCH_STATEMENTS(verbose, std::cerr, success);</div>
@@ -279,12 +279,12 @@ $(function() {
 <div class="ttc" id="a_belos_config_defs_8hpp_html"><div class="ttname"><a href="_belos_config_defs_8hpp.html">BelosConfigDefs.hpp</a></div><div class="ttdoc">Belos header file which uses auto-configuration information to include necessary C++ headers.</div></div>
 <div class="ttc" id="a_belos_linear_problem_8hpp_html"><div class="ttname"><a href="_belos_linear_problem_8hpp.html">BelosLinearProblem.hpp</a></div><div class="ttdoc">Class which describes the linear problem to be solved by the iterative solver.</div></div>
 <div class="ttc" id="aclass_belos_1_1_operator_html"><div class="ttname"><a href="class_belos_1_1_operator.html">Belos::Operator</a></div><div class="ttdoc">Alternative run-time polymorphic interface for operators.</div><div class="ttdef"><b>Definition</b> <a href="_belos_operator_8hpp_source.html#l00048">BelosOperator.hpp:48</a></div></div>
-<div class="ttc" id="anamespace_belos_html_a2a2aa51a3ef87c278fd43945578b3612a214b85228315388f0b0fea24202ba4e4"><div class="ttname"><a href="namespace_belos.html#a2a2aa51a3ef87c278fd43945578b3612a214b85228315388f0b0fea24202ba4e4">Belos::StatusTestDetails</a></div><div class="ttdeci">@ StatusTestDetails</div><div class="ttdef"><b>Definition</b> <a href="_belos_types_8hpp_source.html#l00229">BelosTypes.hpp:229</a></div></div>
-<div class="ttc" id="anamespace_belos_html_a2a2aa51a3ef87c278fd43945578b3612a54629124d7d6823ab26d8e1df854d962"><div class="ttname"><a href="namespace_belos.html#a2a2aa51a3ef87c278fd43945578b3612a54629124d7d6823ab26d8e1df854d962">Belos::TimingDetails</a></div><div class="ttdeci">@ TimingDetails</div><div class="ttdef"><b>Definition</b> <a href="_belos_types_8hpp_source.html#l00228">BelosTypes.hpp:228</a></div></div>
-<div class="ttc" id="anamespace_belos_html_a2a2aa51a3ef87c278fd43945578b3612a63033b406b3bb6a654a538f9b13e34ec"><div class="ttname"><a href="namespace_belos.html#a2a2aa51a3ef87c278fd43945578b3612a63033b406b3bb6a654a538f9b13e34ec">Belos::Errors</a></div><div class="ttdeci">@ Errors</div><div class="ttdef"><b>Definition</b> <a href="_belos_types_8hpp_source.html#l00223">BelosTypes.hpp:223</a></div></div>
-<div class="ttc" id="anamespace_belos_html_a2a2aa51a3ef87c278fd43945578b3612a7ea40ab539dda8218818a3b391f88ff7"><div class="ttname"><a href="namespace_belos.html#a2a2aa51a3ef87c278fd43945578b3612a7ea40ab539dda8218818a3b391f88ff7">Belos::Warnings</a></div><div class="ttdeci">@ Warnings</div><div class="ttdef"><b>Definition</b> <a href="_belos_types_8hpp_source.html#l00224">BelosTypes.hpp:224</a></div></div>
-<div class="ttc" id="anamespace_belos_html_a58f4f203f3b36e10cb1ffd4614bbd18b"><div class="ttname"><a href="namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18b">Belos::ReturnType</a></div><div class="ttdeci">ReturnType</div><div class="ttdoc">Whether the Belos solve converged for all linear systems.</div><div class="ttdef"><b>Definition</b> <a href="_belos_types_8hpp_source.html#l00123">BelosTypes.hpp:123</a></div></div>
-<div class="ttc" id="anamespace_belos_html_a58f4f203f3b36e10cb1ffd4614bbd18ba6ea972a4ffdcac04da6f3cd6369f22c4"><div class="ttname"><a href="namespace_belos.html#a58f4f203f3b36e10cb1ffd4614bbd18ba6ea972a4ffdcac04da6f3cd6369f22c4">Belos::Converged</a></div><div class="ttdeci">@ Converged</div><div class="ttdef"><b>Definition</b> <a href="_belos_types_8hpp_source.html#l00124">BelosTypes.hpp:124</a></div></div>
+<div class="ttc" id="anamespace_belos_html_a2a2aa51a3ef87c278fd43945578b3612a214b85228315388f0b0fea24202ba4e4"><div class="ttname"><a href="namespace_belos.html#a2a2aa51a3ef87c278fd43945578b3612a214b85228315388f0b0fea24202ba4e4">Belos::StatusTestDetails</a></div><div class="ttdeci">@ StatusTestDetails</div><div class="ttdef"><b>Definition</b> <a href="_belos_types_8hpp_source.html#l00282">BelosTypes.hpp:282</a></div></div>
+<div class="ttc" id="anamespace_belos_html_a2a2aa51a3ef87c278fd43945578b3612a54629124d7d6823ab26d8e1df854d962"><div class="ttname"><a href="namespace_belos.html#a2a2aa51a3ef87c278fd43945578b3612a54629124d7d6823ab26d8e1df854d962">Belos::TimingDetails</a></div><div class="ttdeci">@ TimingDetails</div><div class="ttdef"><b>Definition</b> <a href="_belos_types_8hpp_source.html#l00281">BelosTypes.hpp:281</a></div></div>
+<div class="ttc" id="anamespace_belos_html_a2a2aa51a3ef87c278fd43945578b3612a63033b406b3bb6a654a538f9b13e34ec"><div class="ttname"><a href="namespace_belos.html#a2a2aa51a3ef87c278fd43945578b3612a63033b406b3bb6a654a538f9b13e34ec">Belos::Errors</a></div><div class="ttdeci">@ Errors</div><div class="ttdef"><b>Definition</b> <a href="_belos_types_8hpp_source.html#l00276">BelosTypes.hpp:276</a></div></div>
+<div class="ttc" id="anamespace_belos_html_a2a2aa51a3ef87c278fd43945578b3612a7ea40ab539dda8218818a3b391f88ff7"><div class="ttname"><a href="namespace_belos.html#a2a2aa51a3ef87c278fd43945578b3612a7ea40ab539dda8218818a3b391f88ff7">Belos::Warnings</a></div><div class="ttdeci">@ Warnings</div><div class="ttdef"><b>Definition</b> <a href="_belos_types_8hpp_source.html#l00277">BelosTypes.hpp:277</a></div></div>
+<div class="ttc" id="anamespace_belos_html_a2ab2fec66d34a6ec385de5eb8008c53e"><div class="ttname"><a href="namespace_belos.html#a2ab2fec66d34a6ec385de5eb8008c53e">Belos::ReturnType</a></div><div class="ttdeci">ReturnType</div><div class="ttdoc">Whether the Belos solve converged for all linear systems.</div><div class="ttdef"><b>Definition</b> <a href="_belos_types_8hpp_source.html#l00123">BelosTypes.hpp:123</a></div></div>
+<div class="ttc" id="anamespace_belos_html_a2ab2fec66d34a6ec385de5eb8008c53ea6ea972a4ffdcac04da6f3cd6369f22c4"><div class="ttname"><a href="namespace_belos.html#a2ab2fec66d34a6ec385de5eb8008c53ea6ea972a4ffdcac04da6f3cd6369f22c4">Belos::Converged</a></div><div class="ttdeci">@ Converged</div><div class="ttdef"><b>Definition</b> <a href="_belos_types_8hpp_source.html#l00124">BelosTypes.hpp:124</a></div></div>
 </div><!-- fragment --> </div><!-- contents -->
 
 <!-- Assumes Doxygen adds the jquery script. Otherwise, uncomment following

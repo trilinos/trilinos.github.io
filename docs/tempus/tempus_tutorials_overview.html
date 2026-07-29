@@ -77,6 +77,7 @@ $(function() {
 <h1><a class="anchor" id="progression_tutorial"></a>
 Progression Tutorial</h1>
 <p>The progression tutorials use the van der Pol problem to introduce <a class="el" href="namespace_tempus.html">Tempus</a> capabilities in a stepwise manner. Starting from a simple application with a hand-written Forward Euler loop, the examples progressively introduce core <a class="el" href="namespace_tempus.html">Tempus</a> and Trilinos abstractions. Each example is runnable on its own, and each step adds one major concept while preserving as much of the previous example structure as possible.</p>
+<p>Across the progression examples, the same basic problem is retained so the reader can focus on what changes in the software structure rather than on a changing mathematical model. The examples also print the evolving solution in a simple table with columns for the step index, time, <picture><source srcset="form_454_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$x_0$" src="form_454.png" width="13" height="9"/></picture>, and <picture><source srcset="form_455_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$x_1$" src="form_455.png" width="13" height="9"/></picture>, and they conclude with a regression comparison against shared gold values for the final solution.</p>
 <p>The tutorial sequence introduces the following concepts:</p>
 <div style="margin:0.5em 0; padding:0.6em 0.8em; border:1px solid #ddd; border-radius:6px;"> <b>Example 0: Problem description</b><br  />
  <a class="el" href="example-00.html">Basic Problem</a> - baseline application code for the van der Pol problem using raw C++ arrays and a hand-written Forward Euler loop. </div><div style="margin:0.5em 0; padding:0.6em 0.8em; border:1px solid #ddd; border-radius:6px;"> <b>Example 1: Solution data representation</b><br  />
@@ -85,7 +86,7 @@ Progression Tutorial</h1>
  <a class="el" href="example-03.html">Introduce SolutionState</a> - introduce <a class="el" href="class_tempus_1_1_solution_state.html">Tempus::SolutionState</a> to store the solution and selected integration metadata. </div><div style="margin:0.5em 0; padding:0.6em 0.8em; border:1px solid #ddd; border-radius:6px;"> <b>Example 4: Solution history</b><br  />
  <a class="el" href="example-04.html">Add SolutionHistory</a> - introduce <a class="el" href="class_tempus_1_1_solution_history.html">Tempus::SolutionHistory</a> to manage current and working solution states during time integration. </div><div style="margin:0.5em 0; padding:0.6em 0.8em; border:1px solid #ddd; border-radius:6px;"> <b>Example 5: Time stepping algorithms</b><br  />
  <a class="el" href="example-05.html">Introduce Stepper</a> - introduce <a class="el" href="class_tempus_1_1_stepper.html">Tempus::Stepper</a> through <a class="el" href="class_tempus_1_1_stepper_forward_euler.html">Tempus::StepperForwardEuler</a> to perform Forward Euler timesteps. </div><div style="margin:0.5em 0; padding:0.6em 0.8em; border:1px solid #ddd; border-radius:6px;"> <b>Example 6: Time step control</b><br  />
- Introduce TimeStepControl - introduce <a class="el" href="class_tempus_1_1_time_step_control.html">Tempus::TimeStepControl</a> to control timesteps with various strategies. </div><div style="margin:0.5em 0; padding:0.6em 0.8em; border:1px solid #ddd; border-radius:6px;"> <b>Example 7: Time integrator orchestration</b><br  />
+ <a class="el" href="example-06.html">Introduce TimeStepControl</a> - introduce <a class="el" href="class_tempus_1_1_time_step_control.html">Tempus::TimeStepControl</a> to control timestep sizes independently of the stepper. </div><div style="margin:0.5em 0; padding:0.6em 0.8em; border:1px solid #ddd; border-radius:6px;"> <b>Example 7: Time integrator orchestration</b><br  />
  Utilize IntegratorBasic - use <a class="el" href="class_tempus_1_1_integrator_basic.html">Tempus::IntegratorBasic</a> to manage the overall time integration process. </div><p>This progression is intended to show how applications can adopt <a class="el" href="namespace_tempus.html">Tempus</a> incrementally rather than all at once.</p>
 <h1><a class="anchor" id="how_to_read_tutorials"></a>
 How to read these examples</h1>
@@ -95,9 +96,10 @@ How to read these examples</h1>
 <li>read the transition page describing what changed from the previous step</li>
 <li>compare the files directly when line-by-line detail is needed</li>
 </ul>
+<p>The early examples show the control flow explicitly in application code. Later examples move more of that responsibility into <a class="el" href="namespace_tempus.html">Tempus</a> objects such as <a class="el" href="class_tempus_1_1_solution_state.html">Tempus::SolutionState</a>, <a class="el" href="class_tempus_1_1_solution_history.html">Tempus::SolutionHistory</a>, <a class="el" href="class_tempus_1_1_stepper.html">Tempus::Stepper</a>, and <a class="el" href="class_tempus_1_1_time_step_control.html">Tempus::TimeStepControl</a>. This progression is intentional: the tutorials are designed to make it clear which pieces of logic remain in the application and which pieces are delegated to <a class="el" href="namespace_tempus.html">Tempus</a> as the abstraction level increases.</p>
 <p> 
 <div style="text-align:center;">
-  <a href="example-00.html">Begin with Example 0: Problem Description →</a>
+  <a href="example-00.html">Begin with Example 0: Basic Problem →</a>
 </div>
  </p>
 </div></div><!-- contents -->

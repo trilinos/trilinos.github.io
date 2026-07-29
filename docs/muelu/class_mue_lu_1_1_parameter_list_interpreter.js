@@ -11,6 +11,7 @@ var class_mue_lu_1_1_parameter_list_interpreter =
     [ "SetupHierarchy", "class_mue_lu_1_1_parameter_list_interpreter.html#ae0a25d9da1cc5c255736d1d4dc1f5e4d", null ],
     [ "SetupOperator", "class_mue_lu_1_1_parameter_list_interpreter.html#a57fa6d7f11d2aba072222d6441eb10f6", null ],
     [ "SetEasyParameterList", "class_mue_lu_1_1_parameter_list_interpreter.html#a3c9a9b59d46006c70b9b53c6ac37bdec", null ],
+    [ "SetMinvAProjectionVariables", "class_mue_lu_1_1_parameter_list_interpreter.html#a2b86de7b7045be7d402ec85f4aef55b2", null ],
     [ "Validate", "class_mue_lu_1_1_parameter_list_interpreter.html#a8143077c1490d5fc71b39a4f3e3ada3c", null ],
     [ "UpdateFactoryManager", "class_mue_lu_1_1_parameter_list_interpreter.html#ad03132847212d6232344b86140fdcb26", null ],
     [ "UpdateFactoryManager_Smoothers", "class_mue_lu_1_1_parameter_list_interpreter.html#a281dd60c95d5ca038da742d251d5aab7", null ],
@@ -51,6 +52,9 @@ var class_mue_lu_1_1_parameter_list_interpreter =
     [ "useBlockNumber_", "class_mue_lu_1_1_parameter_list_interpreter.html#ac5e4a75b455b0a6b570477487992fe3b", null ],
     [ "useMaterial_", "class_mue_lu_1_1_parameter_list_interpreter.html#a13376521e276f77b08427ac07f8fb31a", null ],
     [ "useKokkos_", "class_mue_lu_1_1_parameter_list_interpreter.html#a29687db2ee2ff906eb7aefc9f41047fb", null ],
+    [ "projectM_", "class_mue_lu_1_1_parameter_list_interpreter.html#a88571da747350f05dc2ccf9e061b9afb", null ],
+    [ "projectMinv_", "class_mue_lu_1_1_parameter_list_interpreter.html#a8e4c9f2d997bbaf7c380fef9248528fb", null ],
+    [ "projectMinvA_", "class_mue_lu_1_1_parameter_list_interpreter.html#a4be4497e194dfbc7325d9bd83ca976d3", null ],
     [ "factFact_", "class_mue_lu_1_1_parameter_list_interpreter.html#aadb5407798458e5279162eff48b60e49", null ],
     [ "facadeFact_", "class_mue_lu_1_1_parameter_list_interpreter.html#a749f506be5713ea0107c6ba522e44df5", null ]
 ];
