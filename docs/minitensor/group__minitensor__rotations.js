@@ -1,0 +1,37 @@
+var group__minitensor__rotations =
+[
+    [ "minitensor::Quaternion&lt; T &gt;", "classminitensor_1_1_quaternion.html", [
+      [ "Quaternion", "classminitensor_1_1_quaternion.html#aa1e6234ba00b30cc166fd1274bef107f", null ],
+      [ "Quaternion", "classminitensor_1_1_quaternion.html#aec6f901dc78d0e826c0cecac6a81f2d1", null ],
+      [ "Quaternion", "classminitensor_1_1_quaternion.html#a5119f440ea95c3c3b93bc9b82f9b02cd", null ],
+      [ "Quaternion", "classminitensor_1_1_quaternion.html#ad8531739d5a39618acc7f051a72ffb6a", null ],
+      [ "scalar", "classminitensor_1_1_quaternion.html#ac4e8991c7ad0112378ec7271e6d4d7da", null ],
+      [ "scalar", "classminitensor_1_1_quaternion.html#a41b1c81e5d6c34964420148b6b0ff146", null ],
+      [ "vector", "classminitensor_1_1_quaternion.html#a98d032d9f9f594ba080480c811b78920", null ],
+      [ "vector", "classminitensor_1_1_quaternion.html#a538a6d3942f22edec2107c7a3bd0bdb2", null ],
+      [ "operator()", "classminitensor_1_1_quaternion.html#a013e56085c42797cfede8f2572fefec1", null ],
+      [ "operator()", "classminitensor_1_1_quaternion.html#a5407e257f65912829431a1d6aa31fc21", null ],
+      [ "to_vector", "classminitensor_1_1_quaternion.html#a9d27c20d0e6cd7f093a2b988899b489f", null ],
+      [ "s_", "classminitensor_1_1_quaternion.html#a8f4c11f2a18a58bb033d486e9c17b675", null ],
+      [ "v_", "classminitensor_1_1_quaternion.html#ae8fde02572fc3fb1d35aa6d23b4e38a8", null ]
+    ] ],
+    [ "minitensor::operator*", "group__minitensor__rotations.html#ga3d4700e2b2539c831bea9b027a7f87cc", null ],
+    [ "minitensor::operator==", "group__minitensor__rotations.html#gaefe98de92b4dad538598e79fb8795659", null ],
+    [ "minitensor::operator!=", "group__minitensor__rotations.html#gaab2e81236a69080baf4536db41227eda", null ],
+    [ "minitensor::conjugate", "group__minitensor__rotations.html#ga543e6a066b02fe2b764ea358d96146b7", null ],
+    [ "minitensor::norm", "group__minitensor__rotations.html#gae2af75a48543fd041ffa6326a9faece5", null ],
+    [ "minitensor::inverse", "group__minitensor__rotations.html#gaf400cd3a656697b7877e3b67cf0ef6ea", null ],
+    [ "minitensor::unit", "group__minitensor__rotations.html#gafb0f2dda1ac51b58043c66204dcd24e8", null ],
+    [ "minitensor::operator<<", "group__minitensor__rotations.html#gac784b2a7e87448a9dfc5a5ae42f9f36f", null ],
+    [ "minitensor::q_of_rt", "group__minitensor__rotations.html#gaedb78cac4268e41759435f20b80470cb", null ],
+    [ "minitensor::rv_of_q", "group__minitensor__rotations.html#ga8d6705f1ee03cb9748c41d18416a66a4", null ],
+    [ "minitensor::q_of_rv", "group__minitensor__rotations.html#gae33cd1ba353c6f79f295edfb092b87f9", null ],
+    [ "minitensor::rt_of_q", "group__minitensor__rotations.html#gacb3725fee79391f4823974d52f0513b1", null ],
+    [ "minitensor::rv_of_rt", "group__minitensor__rotations.html#ga2d41407bbefb63fd5a7d6ac5a2a235b9", null ],
+    [ "minitensor::rt_of_rv", "group__minitensor__rotations.html#gae46a93e1af7d3460d4b4daf204fbb367", null ],
+    [ "minitensor::rv_continue", "group__minitensor__rotations.html#ga0582e06e16810f0dc5341f2031b09832", null ],
+    [ "minitensor::log_rotation", "group__minitensor__rotations.html#gab2a37322df785988423b890a1ab04566", null ],
+    [ "minitensor::log_rotation_pi", "group__minitensor__rotations.html#ga2596ecf757f97f363fc200a23425664f", null ],
+    [ "minitensor::exp_skew_symmetric", "group__minitensor__rotations.html#gaf627008268cc4e030952a20d6ca97571", null ],
+    [ "minitensor::vee", "group__minitensor__rotations.html#ga5602d99b87c25e55f98d76101f9a88c9", null ]
+];
