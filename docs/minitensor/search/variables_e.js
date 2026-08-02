@@ -6,5 +6,5 @@ var searchData=
   ['rel_5ftol_3',['rel_tol',['../group__minitensor__solvers.html#gad6b1b48836aadadda4500a0f7c189259',1,'minitensor::Minimizer']]],
   ['restart_5fdirections_5fcounter_4',['restart_directions_counter',['../group__minitensor__solvers.html#ga8bcbf95b2029b0fc92d1255d3ec0476c',1,'minitensor::ConjugateGradientStep']]],
   ['restart_5fdirections_5finterval_5',['restart_directions_interval',['../group__minitensor__solvers.html#ga8d363349a84cae536d57eebc99032ec4',1,'minitensor::ConjugateGradientStep']]],
-  ['rows_5f_6',['rows_',['../group__minitensor__containers.html#ga569df860e63b8b6da469babbdbbba329',1,'minitensor::Matrix::rows_'],['../group__minitensor__containers.html#ga569df860e63b8b6da469babbdbbba329',1,'Sacado::Matrix::rows_']]]
+  ['rows_5f_6',['rows_',['../group__minitensor__containers.html#ga569df860e63b8b6da469babbdbbba329',1,'minitensor::Matrix']]]
 ];

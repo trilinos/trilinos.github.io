@@ -1,4 +1,5 @@
 var files_dup =
 [
-    [ "home", "dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html", "dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2" ]
+    [ "src", "dir_68267d1309a1af8e8297ef4c3efbcdba.html", "dir_68267d1309a1af8e8297ef4c3efbcdba" ],
+    [ "MiniTensor_DoxygenDocumentation.hpp", "_mini_tensor___doxygen_documentation_8hpp.html", null ]
 ];
