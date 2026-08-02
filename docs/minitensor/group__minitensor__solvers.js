@@ -1,6 +1,6 @@
 var group__minitensor__solvers =
 [
-    [ "minitensor::Function_Base&lt; FunctionDerived, S, M &gt;", "structminitensor_1_1_function___base.html", [
+    [ "minitensor::Function_Base< FunctionDerived, S, M >", "structminitensor_1_1_function___base.html", [
       [ "Function_Base", "group__minitensor__solvers.html#ga3d9903eeaa51d0fa9933e86e2749986b", null ],
       [ "value", "group__minitensor__solvers.html#ga2973fd530770bd3415bd2d31abf27a43", null ],
       [ "gradient", "group__minitensor__solvers.html#ga035ae15ff91ec30786a9db32c5ee8db2", null ],
@@ -15,7 +15,7 @@ var group__minitensor__solvers =
       [ "failed", "group__minitensor__solvers.html#ga704c81c88cf30fe3daa27c437301e0fa", null ],
       [ "failure_message", "group__minitensor__solvers.html#gadd483ab3156ce9fb0e0765a065ba41cf", null ]
     ] ],
-    [ "minitensor::Equality_Constraint&lt; ConstraintDerived, S, NC, NV &gt;", "structminitensor_1_1_equality___constraint.html", [
+    [ "minitensor::Equality_Constraint< ConstraintDerived, S, NC, NV >", "structminitensor_1_1_equality___constraint.html", [
       [ "Equality_Constraint", "group__minitensor__solvers.html#ga5adff42f058cfe62fbc5da2621ae4fd5", null ],
       [ "value", "group__minitensor__solvers.html#ga4834a946bc1c036940bf39e9eb615286", null ],
       [ "gradient", "group__minitensor__solvers.html#gabe42bf2fad47cf563395904b591cee6a", null ],
@@ -24,15 +24,15 @@ var group__minitensor__solvers =
       [ "NUM_CONSTR", "group__minitensor__solvers.html#ga6a79efaa3810c7d1133204fec3c1978e", null ],
       [ "NUM_VAR", "group__minitensor__solvers.html#ga63b8f925eab2bf067c2ff7ec17dd0032", null ]
     ] ],
-    [ "minitensor::Inequality_Constraint&lt; ConstraintDerived, S, NC, NV &gt;", "structminitensor_1_1_inequality___constraint.html", [
+    [ "minitensor::Inequality_Constraint< ConstraintDerived, S, NC, NV >", "structminitensor_1_1_inequality___constraint.html", [
       [ "IS_EQUALITY", "group__minitensor__solvers.html#ga9ca1929c7382fd5e85266ffd87140de9", null ]
     ] ],
-    [ "minitensor::Bounds&lt; T, N &gt;", "structminitensor_1_1_bounds.html", [
+    [ "minitensor::Bounds< T, N >", "structminitensor_1_1_bounds.html", [
       [ "Bounds", "group__minitensor__solvers.html#ga3f7193b13bd928973ed30eb5e6a1a092", null ],
       [ "lower", "group__minitensor__solvers.html#gac18f6ec5cba55b2ca1c0c6b8e970e3a3", null ],
       [ "upper", "group__minitensor__solvers.html#ga4611e72e44d600081fe1f3ae90dd51f9", null ]
     ] ],
-    [ "minitensor::Minimizer&lt; T, N &gt;", "structminitensor_1_1_minimizer.html", [
+    [ "minitensor::Minimizer< T, N >", "structminitensor_1_1_minimizer.html", [
       [ "Minimizer", "group__minitensor__solvers.html#ga093a37638133383afeabb1bed756761b", null ],
       [ "solve", "group__minitensor__solvers.html#gacef4d411cea64da1c4767aae3eee7a7d", null ],
       [ "printReport", "group__minitensor__solvers.html#ga5093c9f6ba51731f96236d8cd8c1ba62", null ],
@@ -74,12 +74,12 @@ var group__minitensor__solvers =
       [ "failure_message", "group__minitensor__solvers.html#ga5bd4f3d44ee6fe33666f9cba25fd4f54", null ],
       [ "warning_message", "group__minitensor__solvers.html#ga84701776fa7f99a63206b63a2bec0561", null ]
     ] ],
-    [ "minitensor::NewtonLineSearch&lt; T, N &gt;", "structminitensor_1_1_newton_line_search.html", [
+    [ "minitensor::NewtonLineSearch< T, N >", "structminitensor_1_1_newton_line_search.html", [
       [ "step", "group__minitensor__solvers.html#gad822f389dfe027a6965e03e6a113f2a7", null ],
       [ "max_num_iter", "group__minitensor__solvers.html#ga4eeee0727424c67f448d11cf40ffe97a", null ],
       [ "tolerance", "group__minitensor__solvers.html#gad29da030f889b5108613b31cd9561622", null ]
     ] ],
-    [ "minitensor::BacktrackingLineSearch&lt; T, N &gt;", "structminitensor_1_1_backtracking_line_search.html", [
+    [ "minitensor::BacktrackingLineSearch< T, N >", "structminitensor_1_1_backtracking_line_search.html", [
       [ "step", "group__minitensor__solvers.html#ga3d5c6201930d7705fd42fb0a762ee699", null ],
       [ "max_num_iter", "group__minitensor__solvers.html#ga74e00fdbf3684f5963147590f47e0b98", null ],
       [ "max_line_iter", "group__minitensor__solvers.html#gac9f9935c79098ee53c5261b35dff2a54", null ],
@@ -88,29 +88,29 @@ var group__minitensor__solvers =
       [ "alpha", "group__minitensor__solvers.html#gaaec6adc0f8fbf0251eb1773e7ef57e4c", null ],
       [ "tolerance", "group__minitensor__solvers.html#gac738f530fa98907a96cc5c4ed53c690c", null ]
     ] ],
-    [ "minitensor::TrustRegionSubproblemBase&lt; T, N &gt;", "structminitensor_1_1_trust_region_subproblem_base.html", [
+    [ "minitensor::TrustRegionSubproblemBase< T, N >", "structminitensor_1_1_trust_region_subproblem_base.html", [
       [ "lin_solve", "group__minitensor__solvers.html#gabcfe3327e0500d5d99bf63db30701831", null ],
       [ "preconditioner_type", "group__minitensor__solvers.html#ga3f98c4965de23688279d65d62a66c5f0", null ]
     ] ],
-    [ "minitensor::TrustRegionExactValue&lt; T, N &gt;", "structminitensor_1_1_trust_region_exact_value.html", [
+    [ "minitensor::TrustRegionExactValue< T, N >", "structminitensor_1_1_trust_region_exact_value.html", [
       [ "step", "group__minitensor__solvers.html#gabb8e901fff15b5feffc336e3b4258b72", null ],
       [ "max_num_iter", "group__minitensor__solvers.html#ga55d2731453fbeda5fececb2059b56c8b", null ],
       [ "region_size", "group__minitensor__solvers.html#ga6a7e79e73c86f658015ee995086acd57", null ]
     ] ],
-    [ "minitensor::TrustRegionExactGradient&lt; T, N &gt;", "structminitensor_1_1_trust_region_exact_gradient.html", [
+    [ "minitensor::TrustRegionExactGradient< T, N >", "structminitensor_1_1_trust_region_exact_gradient.html", [
       [ "step", "group__minitensor__solvers.html#ga1915d34b90b58495861608d5c53c04a4", null ],
       [ "max_num_iter", "group__minitensor__solvers.html#gabde9f4bc4e4a08e166806d389ab7cc23", null ],
       [ "region_size", "group__minitensor__solvers.html#ga7339bdaf7fe4687c5e390fac2d2e21b0", null ]
     ] ],
-    [ "minitensor::TrustRegionDogLegValue&lt; T, N &gt;", "structminitensor_1_1_trust_region_dog_leg_value.html", [
+    [ "minitensor::TrustRegionDogLegValue< T, N >", "structminitensor_1_1_trust_region_dog_leg_value.html", [
       [ "step", "group__minitensor__solvers.html#ga575b2255471e1b640627562d5da75e9c", null ],
       [ "region_size", "group__minitensor__solvers.html#ga0aaecc26ab013708a49368b225737176", null ]
     ] ],
-    [ "minitensor::TrustRegionDogLegGradient&lt; T, N &gt;", "structminitensor_1_1_trust_region_dog_leg_gradient.html", [
+    [ "minitensor::TrustRegionDogLegGradient< T, N >", "structminitensor_1_1_trust_region_dog_leg_gradient.html", [
       [ "step", "group__minitensor__solvers.html#ga39a1ad5cc904ed6c964fc4a627bd538d", null ],
       [ "region_size", "group__minitensor__solvers.html#ga6a310fb71dfc99435127d81901522889", null ]
     ] ],
-    [ "minitensor::StepBase&lt; FN, T, N &gt;", "structminitensor_1_1_step_base.html", [
+    [ "minitensor::StepBase< FN, T, N >", "structminitensor_1_1_step_base.html", [
       [ "StepBase", "group__minitensor__solvers.html#ga40b054de07d406f667bd6d5518805951", null ],
       [ "~StepBase", "group__minitensor__solvers.html#gaf1a1a4e95959a813a4676a0fd4ea1197", null ],
       [ "name", "group__minitensor__solvers.html#ga31c7432fbb89422dbebb403f6cf80a73", null ],
@@ -119,21 +119,21 @@ var group__minitensor__solvers =
       [ "lin_solve", "group__minitensor__solvers.html#ga37ba5c62dc0791fc3fdd067f49a8ffc0", null ],
       [ "preconditioner_type", "group__minitensor__solvers.html#ga0a301a2c7eb16a9ee4207d600e9914be", null ]
     ] ],
-    [ "minitensor::NewtonStep&lt; FN, T, N &gt;", "structminitensor_1_1_newton_step.html", [
+    [ "minitensor::NewtonStep< FN, T, N >", "structminitensor_1_1_newton_step.html", [
       [ "~NewtonStep", "group__minitensor__solvers.html#ga3e24e160b0476d47d18c8ffa76328430", null ],
       [ "name", "group__minitensor__solvers.html#ga5ef3b1f9d957faef9b72a45d996e508d", null ],
       [ "initialize", "group__minitensor__solvers.html#gad330522e78d5f7fbeadeb38681b2eacc", null ],
       [ "step", "group__minitensor__solvers.html#ga1a6df5b682896dfd97a2172c4e29b0d5", null ],
       [ "NAME", "group__minitensor__solvers.html#ga77a73493a02cd651eba2cfd386dc7677", null ]
     ] ],
-    [ "minitensor::NewtonWithLineSearchStep&lt; FN, T, N &gt;", "structminitensor_1_1_newton_with_line_search_step.html", [
+    [ "minitensor::NewtonWithLineSearchStep< FN, T, N >", "structminitensor_1_1_newton_with_line_search_step.html", [
       [ "~NewtonWithLineSearchStep", "group__minitensor__solvers.html#ga0fa2fed4ad74c99934514a13087c506a", null ],
       [ "name", "group__minitensor__solvers.html#gaacd02c830cac4f2058204b2d599356e1", null ],
       [ "initialize", "group__minitensor__solvers.html#gaac77999a6cd4131c3efe8d7a6939441c", null ],
       [ "step", "group__minitensor__solvers.html#gac501abe9d35935a628241e8178e043fa", null ],
       [ "NAME", "group__minitensor__solvers.html#ga6065924ca1a845331a92bcfc4ba474f6", null ]
     ] ],
-    [ "minitensor::TrustRegionStep&lt; FN, T, N &gt;", "structminitensor_1_1_trust_region_step.html", [
+    [ "minitensor::TrustRegionStep< FN, T, N >", "structminitensor_1_1_trust_region_step.html", [
       [ "~TrustRegionStep", "group__minitensor__solvers.html#ga850ccf8deab2544d6c08489c7653250b", null ],
       [ "name", "group__minitensor__solvers.html#gaee8ce6a45c7bc36300053cb5795aea34", null ],
       [ "initialize", "group__minitensor__solvers.html#ga39df27941afdd27f4d46e30d5ecd2595", null ],
@@ -144,7 +144,7 @@ var group__minitensor__solvers =
       [ "min_reduction", "group__minitensor__solvers.html#gaf58c96105d288d8942e25d9dc44a24ad", null ],
       [ "region_size", "group__minitensor__solvers.html#ga7fec886dbd9cffd2a21e1525ff046c1a", null ]
     ] ],
-    [ "minitensor::ConjugateGradientStep&lt; FN, T, N &gt;", "structminitensor_1_1_conjugate_gradient_step.html", [
+    [ "minitensor::ConjugateGradientStep< FN, T, N >", "structminitensor_1_1_conjugate_gradient_step.html", [
       [ "~ConjugateGradientStep", "group__minitensor__solvers.html#gaf15720ffc7b44c27a0302bfc3c36d026", null ],
       [ "name", "group__minitensor__solvers.html#ga4ad2d3c9ed38eab1b48657ce193d937c", null ],
       [ "initialize", "group__minitensor__solvers.html#gace77226077997eccc689c1c4916c8a5e", null ],
@@ -156,7 +156,7 @@ var group__minitensor__solvers =
       [ "projection_new", "group__minitensor__solvers.html#gad2207ccf579a62742a914565c1d67c0d", null ],
       [ "restart_directions_counter", "group__minitensor__solvers.html#ga8bcbf95b2029b0fc92d1255d3ec0476c", null ]
     ] ],
-    [ "minitensor::LineSearchRegularizedStep&lt; FN, T, N &gt;", "structminitensor_1_1_line_search_regularized_step.html", [
+    [ "minitensor::LineSearchRegularizedStep< FN, T, N >", "structminitensor_1_1_line_search_regularized_step.html", [
       [ "~LineSearchRegularizedStep", "group__minitensor__solvers.html#ga784ce9b30bf9977429fcd23a6f0f9ad4", null ],
       [ "name", "group__minitensor__solvers.html#ga1f080e95628cb6d7e6cda09c29415089", null ],
       [ "initialize", "group__minitensor__solvers.html#gae4da16c195261f4c2ba47461becce881", null ],
@@ -165,7 +165,7 @@ var group__minitensor__solvers =
       [ "step_length", "group__minitensor__solvers.html#ga5ea0991048c9350a67669a223f52fbe1", null ],
       [ "hessian_cond_tol", "group__minitensor__solvers.html#ga71272a6d8d6a4afcf8f749e99d5917a6", null ]
     ] ],
-    [ "minitensor::SquareRoot&lt; S, M &gt;", "classminitensor_1_1_square_root.html", [
+    [ "minitensor::SquareRoot< S, M >", "classminitensor_1_1_square_root.html", [
       [ "Base", "classminitensor_1_1_square_root.html#a9afec0c524f678e9c16b28e273065fc1", null ],
       [ "SquareRoot", "classminitensor_1_1_square_root.html#abc7576d88235bfc1a70311628b941723", null ],
       [ "value", "classminitensor_1_1_square_root.html#a9e499e714ef2064adf0372bfe9feff49", null ],
@@ -174,7 +174,7 @@ var group__minitensor__solvers =
       [ "NAME", "classminitensor_1_1_square_root.html#a59de229cb8aea0a3dcc2a94078c36569", null ],
       [ "c_", "classminitensor_1_1_square_root.html#a741cfe4d08aa782e1f8198e12d803f05", null ]
     ] ],
-    [ "minitensor::Quadratic&lt; S, M &gt;", "classminitensor_1_1_quadratic.html", [
+    [ "minitensor::Quadratic< S, M >", "classminitensor_1_1_quadratic.html", [
       [ "Base", "classminitensor_1_1_quadratic.html#ac625aa58aae80fe0a9b88302c2ed3cd5", null ],
       [ "Quadratic", "classminitensor_1_1_quadratic.html#a19bd8f9bd929e17c0c1074133d2b3217", null ],
       [ "value", "classminitensor_1_1_quadratic.html#a54cc08aa9925459108ec187ccc5ad846", null ],
@@ -185,7 +185,7 @@ var group__minitensor__solvers =
       [ "b_", "classminitensor_1_1_quadratic.html#aabf8ce4bd96ad0ef6a4f7abee02e99d4", null ],
       [ "c_", "classminitensor_1_1_quadratic.html#a5c495a071737da7a2425eca9845c3b98", null ]
     ] ],
-    [ "minitensor::Gaussian&lt; S, M &gt;", "classminitensor_1_1_gaussian.html", [
+    [ "minitensor::Gaussian< S, M >", "classminitensor_1_1_gaussian.html", [
       [ "Base", "classminitensor_1_1_gaussian.html#ad8789925e16adbd29653f1d6667d66e2", null ],
       [ "Gaussian", "classminitensor_1_1_gaussian.html#a7b1b081504e8527467fd14190d1efcf7", null ],
       [ "value", "classminitensor_1_1_gaussian.html#aad611698ff8bc4a2533d18f7c98e939b", null ],
@@ -196,7 +196,7 @@ var group__minitensor__solvers =
       [ "b_", "classminitensor_1_1_gaussian.html#a2d2ce688adaacc3c1c9d6d2a51a26c13", null ],
       [ "c_", "classminitensor_1_1_gaussian.html#a2edbba79cad09a53765363706141348c", null ]
     ] ],
-    [ "minitensor::Banana&lt; S, M &gt;", "classminitensor_1_1_banana.html", [
+    [ "minitensor::Banana< S, M >", "classminitensor_1_1_banana.html", [
       [ "Base", "classminitensor_1_1_banana.html#acdab07dda56e09d02e4fa7d3abfc3154", null ],
       [ "Banana", "classminitensor_1_1_banana.html#aa3af935efb20030478d275a06e9380d5", null ],
       [ "value", "classminitensor_1_1_banana.html#a8ddee1c8f5ab33f1be6afead4fa25667", null ],
@@ -204,7 +204,7 @@ var group__minitensor__solvers =
       [ "hessian", "classminitensor_1_1_banana.html#a1bb7c5b6298403930602c23ef17224be", null ],
       [ "NAME", "classminitensor_1_1_banana.html#a2608ee049d0cb569370ebefaa11987f4", null ]
     ] ],
-    [ "minitensor::Matyas&lt; S, M &gt;", "classminitensor_1_1_matyas.html", [
+    [ "minitensor::Matyas< S, M >", "classminitensor_1_1_matyas.html", [
       [ "Base", "classminitensor_1_1_matyas.html#a029957f8cfa0797907c5ead20792307f", null ],
       [ "Matyas", "classminitensor_1_1_matyas.html#a5c3cf421d18c88ffd1ec30b48822fc0f", null ],
       [ "value", "classminitensor_1_1_matyas.html#ae251eaab686b974f121e719aff50cdf9", null ],
@@ -212,7 +212,7 @@ var group__minitensor__solvers =
       [ "hessian", "classminitensor_1_1_matyas.html#a6dedc3f50a386f11f57359ac6cffed18", null ],
       [ "NAME", "classminitensor_1_1_matyas.html#a4160eb75f0451bfeb0c3cb2d1e92964e", null ]
     ] ],
-    [ "minitensor::McCormick&lt; S, M &gt;", "classminitensor_1_1_mc_cormick.html", [
+    [ "minitensor::McCormick< S, M >", "classminitensor_1_1_mc_cormick.html", [
       [ "Base", "classminitensor_1_1_mc_cormick.html#a447490d6abb646fb9b0eadeba1b04ace", null ],
       [ "McCormick", "classminitensor_1_1_mc_cormick.html#a56e8ada82a4b40d0af1af7dddba65bc3", null ],
       [ "value", "classminitensor_1_1_mc_cormick.html#a8a0d444a81c08218a0469fbd45a1dc41", null ],
@@ -220,7 +220,7 @@ var group__minitensor__solvers =
       [ "hessian", "classminitensor_1_1_mc_cormick.html#a7ccb1ae2e6ec4acbe272cf37b4ab8c42", null ],
       [ "NAME", "classminitensor_1_1_mc_cormick.html#a4dc57b489dd88d1aade3d962b0f8101d", null ]
     ] ],
-    [ "minitensor::StyblinskiTang&lt; S, M &gt;", "classminitensor_1_1_styblinski_tang.html", [
+    [ "minitensor::StyblinskiTang< S, M >", "classminitensor_1_1_styblinski_tang.html", [
       [ "Base", "classminitensor_1_1_styblinski_tang.html#a41de1c59de629c33d73aae52ef0a7438", null ],
       [ "StyblinskiTang", "classminitensor_1_1_styblinski_tang.html#aea4dd9d518357480f00769c412c40f83", null ],
       [ "value", "classminitensor_1_1_styblinski_tang.html#a17798501f73458a5c2a3d9383ba12b2a", null ],
@@ -228,7 +228,7 @@ var group__minitensor__solvers =
       [ "hessian", "classminitensor_1_1_styblinski_tang.html#a6e89d4bb0f8803bea678483c358c1105", null ],
       [ "NAME", "classminitensor_1_1_styblinski_tang.html#aaa8e641b797dd5cfa434b3f6731a78a1", null ]
     ] ],
-    [ "minitensor::Paraboloid&lt; S, M &gt;", "classminitensor_1_1_paraboloid.html", [
+    [ "minitensor::Paraboloid< S, M >", "classminitensor_1_1_paraboloid.html", [
       [ "Base", "classminitensor_1_1_paraboloid.html#a7a2c22214775bb16509f23edf2cbe946", null ],
       [ "Paraboloid", "classminitensor_1_1_paraboloid.html#a5245db591a5effeac5b380e4bf6aca58", null ],
       [ "value", "classminitensor_1_1_paraboloid.html#a13822bc9c90d520722304859e2114190", null ],
@@ -238,7 +238,7 @@ var group__minitensor__solvers =
       [ "xc_", "classminitensor_1_1_paraboloid.html#aca3902ae3d0dcc9078e2c01f4ac7a885", null ],
       [ "yc_", "classminitensor_1_1_paraboloid.html#ac0e707c40826d568fff5daa9e4d2e2cd", null ]
     ] ],
-    [ "minitensor::Rosenbrock&lt; S, M &gt;", "classminitensor_1_1_rosenbrock.html", [
+    [ "minitensor::Rosenbrock< S, M >", "classminitensor_1_1_rosenbrock.html", [
       [ "Base", "classminitensor_1_1_rosenbrock.html#ac8b0ca1182b399e89a62b76237e27f0f", null ],
       [ "Rosenbrock", "classminitensor_1_1_rosenbrock.html#ab42b8183c0a8393950db21cb54fe5746", null ],
       [ "value", "classminitensor_1_1_rosenbrock.html#a3cb39a0c9c82f5a7f531a657fe04a348", null ],
@@ -248,7 +248,7 @@ var group__minitensor__solvers =
       [ "a_", "classminitensor_1_1_rosenbrock.html#ab9403cd69157fada6e95403a036f9b83", null ],
       [ "b_", "classminitensor_1_1_rosenbrock.html#ac2f933704aa5233c167643a6d81138b1", null ]
     ] ],
-    [ "minitensor::Beale&lt; S, M &gt;", "classminitensor_1_1_beale.html", [
+    [ "minitensor::Beale< S, M >", "classminitensor_1_1_beale.html", [
       [ "Base", "classminitensor_1_1_beale.html#aa75cb705d12f5f1bf81807b70b64ccad", null ],
       [ "Beale", "classminitensor_1_1_beale.html#a8d33cf74977633aae976cfaf1d0e8756", null ],
       [ "value", "classminitensor_1_1_beale.html#a31feb0257157d3541cb3f2fcd5079bdb", null ],
@@ -256,7 +256,7 @@ var group__minitensor__solvers =
       [ "hessian", "classminitensor_1_1_beale.html#ad04c6d6ad99381d7e2560b250fdf89d2", null ],
       [ "NAME", "classminitensor_1_1_beale.html#adfd7802e798a4e7d7db28225eb6781f9", null ]
     ] ],
-    [ "minitensor::Booth&lt; S, M &gt;", "classminitensor_1_1_booth.html", [
+    [ "minitensor::Booth< S, M >", "classminitensor_1_1_booth.html", [
       [ "Base", "classminitensor_1_1_booth.html#a3ebe58d0642b343b7f04030d03047b85", null ],
       [ "Booth", "classminitensor_1_1_booth.html#a982f716e0de10678a4f6fc812ac11b27", null ],
       [ "value", "classminitensor_1_1_booth.html#aba022426cfa5714adbc5f0d59398eedb", null ],
@@ -264,7 +264,7 @@ var group__minitensor__solvers =
       [ "hessian", "classminitensor_1_1_booth.html#af94b61bdb4fdadb29f415710f92e5943", null ],
       [ "NAME", "classminitensor_1_1_booth.html#a17460ff06dd0d204c9f67efc7d858237", null ]
     ] ],
-    [ "minitensor::GoldsteinPrice&lt; S, M &gt;", "classminitensor_1_1_goldstein_price.html", [
+    [ "minitensor::GoldsteinPrice< S, M >", "classminitensor_1_1_goldstein_price.html", [
       [ "Base", "classminitensor_1_1_goldstein_price.html#a8d19e930dd7130a9641ecc0d564c2109", null ],
       [ "GoldsteinPrice", "classminitensor_1_1_goldstein_price.html#a5d661764d3a9eff7113fd0b25a47aa67", null ],
       [ "value", "classminitensor_1_1_goldstein_price.html#a138e6e8f1f43b7336ec86f4220fad641", null ],
@@ -272,7 +272,7 @@ var group__minitensor__solvers =
       [ "hessian", "classminitensor_1_1_goldstein_price.html#a1459b5581ca643674fc54e8138a804b1", null ],
       [ "NAME", "classminitensor_1_1_goldstein_price.html#ae325e64b54b87cb294938ad8fbbbd07e", null ]
     ] ],
-    [ "minitensor::Failure&lt; S, M &gt;", "classminitensor_1_1_failure.html", [
+    [ "minitensor::Failure< S, M >", "classminitensor_1_1_failure.html", [
       [ "Base", "classminitensor_1_1_failure.html#a097a9cb56efeb922bcbe6f0a6eeda1b1", null ],
       [ "Failure", "classminitensor_1_1_failure.html#a674296fec39a0dd01a338a5f45bc7c20", null ],
       [ "value", "classminitensor_1_1_failure.html#a797cdaf00303c76ab2286ef6d5449bc6", null ],
@@ -280,7 +280,7 @@ var group__minitensor__solvers =
       [ "hessian", "classminitensor_1_1_failure.html#a2671c5c960115135d1e76ced957f2825", null ],
       [ "NAME", "classminitensor_1_1_failure.html#ab801aa94416783a7e307dd50a3fa840f", null ]
     ] ],
-    [ "minitensor::Mesa&lt; S, M &gt;", "classminitensor_1_1_mesa.html", [
+    [ "minitensor::Mesa< S, M >", "classminitensor_1_1_mesa.html", [
       [ "Base", "classminitensor_1_1_mesa.html#a7cdad630bc33a6de8835552e246ba4c8", null ],
       [ "Mesa", "classminitensor_1_1_mesa.html#ad5cbf4d66de2a3300cc8be93928027a2", null ],
       [ "value", "classminitensor_1_1_mesa.html#ab31be0f1059888f8f7dd4e8edaf4189d", null ],
@@ -288,7 +288,7 @@ var group__minitensor__solvers =
       [ "hessian", "classminitensor_1_1_mesa.html#ac6f9c458b2c5bae3896040f75cc1ae34", null ],
       [ "NAME", "classminitensor_1_1_mesa.html#ac0a6537023123b2ed3d45deb98556774", null ]
     ] ],
-    [ "minitensor::Sigmoid&lt; S, M &gt;", "classminitensor_1_1_sigmoid.html", [
+    [ "minitensor::Sigmoid< S, M >", "classminitensor_1_1_sigmoid.html", [
       [ "Base", "classminitensor_1_1_sigmoid.html#a16e3528d0f76424e6382e3d5eb96719b", null ],
       [ "Sigmoid", "classminitensor_1_1_sigmoid.html#a5801912bfa6affee2881902b41da2cee", null ],
       [ "value", "classminitensor_1_1_sigmoid.html#aa5f59336b07485f547dce60892a390cc", null ],
@@ -296,21 +296,21 @@ var group__minitensor__solvers =
       [ "hessian", "classminitensor_1_1_sigmoid.html#a6681f368bef1235f9f8f22a2562a8064", null ],
       [ "NAME", "classminitensor_1_1_sigmoid.html#ad7224607416b853b08a96146003ddfce", null ]
     ] ],
-    [ "minitensor::Identity&lt; S, NC, NV &gt;", "classminitensor_1_1_identity.html", [
+    [ "minitensor::Identity< S, NC, NV >", "classminitensor_1_1_identity.html", [
       [ "Base", "classminitensor_1_1_identity.html#a30f2c2d08674c908bcc939c2614b1d53", null ],
       [ "Identity", "classminitensor_1_1_identity.html#a40844ba27afa1e0acf6421d7300cf462", null ],
       [ "value", "classminitensor_1_1_identity.html#a6a3b4d4fc6ad5f5e0ad9ac50496ec3c9", null ],
       [ "gradient", "classminitensor_1_1_identity.html#af5fd5f8e48e00d3fca74f1788e9565e8", null ],
       [ "NAME", "classminitensor_1_1_identity.html#a5972b1d921419ea50c465a22de4db529", null ]
     ] ],
-    [ "minitensor::Nonlinear01&lt; S, NC, NV &gt;", "classminitensor_1_1_nonlinear01.html", [
+    [ "minitensor::Nonlinear01< S, NC, NV >", "classminitensor_1_1_nonlinear01.html", [
       [ "Base", "classminitensor_1_1_nonlinear01.html#aa7bc2dc4d062c19e154bcdd170fb7a62", null ],
       [ "Nonlinear01", "classminitensor_1_1_nonlinear01.html#aa4379b4a23475e1f3a1109c3ba3c31e4", null ],
       [ "value", "classminitensor_1_1_nonlinear01.html#a5853323fef70512c7f78aa91fca41834", null ],
       [ "gradient", "classminitensor_1_1_nonlinear01.html#a648e71b45f4080c99667dc495f2de7f2", null ],
       [ "NAME", "classminitensor_1_1_nonlinear01.html#aab02614d573c0d21bf5e6e4e2d09c681", null ]
     ] ],
-    [ "minitensor::Circumference&lt; S, NC, NV &gt;", "classminitensor_1_1_circumference.html", [
+    [ "minitensor::Circumference< S, NC, NV >", "classminitensor_1_1_circumference.html", [
       [ "Base", "classminitensor_1_1_circumference.html#a87672110905774805930e7b9f1b1ec5f", null ],
       [ "Circumference", "classminitensor_1_1_circumference.html#a5425b7c4bdcbd3bf565490c63cedd5d2", null ],
       [ "value", "classminitensor_1_1_circumference.html#a7cafd52886c83df4e5b13da095f2c915", null ],
@@ -319,7 +319,7 @@ var group__minitensor__solvers =
       [ "r_", "classminitensor_1_1_circumference.html#a73413b298e201767cf0b00817f46f8b8", null ],
       [ "c_", "classminitensor_1_1_circumference.html#a91262a16ebf5b0109a45d78de3784dcb", null ]
     ] ],
-    [ "minitensor::Circle&lt; S, NC, NV &gt;", "classminitensor_1_1_circle.html", [
+    [ "minitensor::Circle< S, NC, NV >", "classminitensor_1_1_circle.html", [
       [ "Base", "classminitensor_1_1_circle.html#a271b6432af4c57ccfc0b9f87d1b20575", null ],
       [ "Circle", "classminitensor_1_1_circle.html#a211decf413ecab5ce811f99860441755", null ],
       [ "value", "classminitensor_1_1_circle.html#a4e74345e967703c80de9cec94ff1faee", null ],
@@ -328,7 +328,7 @@ var group__minitensor__solvers =
       [ "r_", "classminitensor_1_1_circle.html#aad854d88478900e36f60f573f44f795a", null ],
       [ "c_", "classminitensor_1_1_circle.html#a939048d80895af083e7747f5415c56c1", null ]
     ] ],
-    [ "minitensor::FAD", "group__minitensor__solvers.html#gadf0de15a4ebbc5518a2be10337c021b3", null ],
+    [ "minitensor::FAD", "group__minitensor__solvers.html#gaec0da66af7037357b1b95a39f4038395", null ],
     [ "minitensor::StepType", "group__minitensor__solvers.html#ga24e6c438b6dc8ea1c382c967e2716ebb", [
       [ "minitensor::StepType::UNDEFINED", "group__minitensor__solvers.html#gga24e6c438b6dc8ea1c382c967e2716ebba0db45d2a4141101bdfe48e3314cfbca3", null ],
       [ "minitensor::StepType::NEWTON", "group__minitensor__solvers.html#gga24e6c438b6dc8ea1c382c967e2716ebba543a80c769aa267bbf02f31e2d7e07e6", null ],

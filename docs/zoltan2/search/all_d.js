@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['machine_0',['machine',['../class_zoltan2_1_1_machine.html#a71f3b389c13d208e835fca52be091bcd',1,'Zoltan2::Machine::Machine()'],['../class_zoltan2_1_1_coordinate_communication_model.html#a164d4dd1108018b9ebc97113c3c9d48a',1,'Zoltan2::CoordinateCommunicationModel::machine'],['../class_zoltan2_1_1_partition_mapping.html#a608bb66545ddeeee3854a78c2c913ebd',1,'Zoltan2::PartitionMapping::machine'],['../class_zoltan2_1_1_machine.html',1,'Zoltan2::Machine&lt; pcoord_t, part_t &gt;']]],
+  ['machine_0',['machine',['../class_zoltan2_1_1_coordinate_communication_model.html#a164d4dd1108018b9ebc97113c3c9d48a',1,'Zoltan2::CoordinateCommunicationModel::machine'],['../class_zoltan2_1_1_partition_mapping.html#a608bb66545ddeeee3854a78c2c913ebd',1,'Zoltan2::PartitionMapping::machine'],['../class_zoltan2_1_1_machine.html#a71f3b389c13d208e835fca52be091bcd',1,'Zoltan2::Machine::Machine()'],['../class_zoltan2_1_1_machine.html',1,'Zoltan2::Machine&lt; pcoord_t, part_t &gt;']]],
   ['machine_2ecpp_1',['Machine.cpp',['../_machine_8cpp.html',1,'']]],
   ['machine_5fextent_2',['machine_extent',['../class_zoltan2_1_1_coordinate_communication_model.html#a45605a5efd285295a6d1cb10266fe7c6',1,'Zoltan2::CoordinateCommunicationModel']]],
   ['machine_5fextent_5fwrap_5faround_3',['machine_extent_wrap_around',['../class_zoltan2_1_1_coordinate_communication_model.html#a3fd6ae57853847b9b0b287cab5862c2d',1,'Zoltan2::CoordinateCommunicationModel']]],

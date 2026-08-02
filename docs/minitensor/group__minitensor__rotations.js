@@ -1,6 +1,6 @@
 var group__minitensor__rotations =
 [
-    [ "minitensor::Quaternion&lt; T &gt;", "classminitensor_1_1_quaternion.html", [
+    [ "minitensor::Quaternion< T >", "classminitensor_1_1_quaternion.html", [
       [ "Quaternion", "classminitensor_1_1_quaternion.html#aa1e6234ba00b30cc166fd1274bef107f", null ],
       [ "Quaternion", "classminitensor_1_1_quaternion.html#aec6f901dc78d0e826c0cecac6a81f2d1", null ],
       [ "Quaternion", "classminitensor_1_1_quaternion.html#a5119f440ea95c3c3b93bc9b82f9b02cd", null ],

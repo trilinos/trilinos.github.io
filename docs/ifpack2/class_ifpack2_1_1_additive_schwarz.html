@@ -1007,7 +1007,7 @@ template&lt;class MatrixType , class LocalInverseType &gt; </div>
     parameters" or "schwarz: subdomain solver parameters" or "schwarz: inner preconditioner parameters" (sublist): parameters for the subdomain solver. If not provided, the subdomain solver will use its specific default parameters. See discussion below.</li>
 <li>"schwarz: combine mode" (<code>std::string</code>): The rule for combining incoming data with existing data in overlap regions. Valid values include "ADD", "INSERT", "REPLACE", "ABSMAX", and "ZERO". These correspond to the valid values of Tpetra::CombineMode. The default combine mode is "ZERO", meaning that overlapping incoming entries from different processes are not combined. (See the class documentation for an explanation and example of the "ZERO" vs. "ADD" combine modes.)</li>
 <li>"schwarz: overlap level" (<code>int</code>): The level of overlap. The default is zero, meaning no overlap.</li>
-<li>"schwarz: use reordering" (<code>bool</code>): Whether to use Zoltan2 to do reordering. If true, then Trilinos must have been built with Zoltan2 and Xpetra enabled. Default is false.</li>
+<li>"schwarz: use reordering" (<code>bool</code>): Whether to use Zoltan2 to do reordering. If true, then Trilinos must have been built with Zoltan2 enabled. Default is false.</li>
 <li>"schwarz: subdomain id" (<code>int</code>): This option does not currently work.</li>
 <li>"schwarz: filter singletons" (<code>bool</code>): If true, exclude rows with just a single entry on the calling process. Default is false.</li>
 <li>"schwarz: num iterations" (<code>int</code>): Numter of iterations to perform. Default is 1.</li>

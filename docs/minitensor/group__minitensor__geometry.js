@@ -1,7 +1,7 @@
 var group__minitensor__geometry =
 [
     [ "minitensor::ELEMENT", "namespaceminitensor_1_1_e_l_e_m_e_n_t.html", null ],
-    [ "minitensor::SphericalParametrization&lt; T, N &gt;", "classminitensor_1_1_spherical_parametrization.html", [
+    [ "minitensor::SphericalParametrization< T, N >", "classminitensor_1_1_spherical_parametrization.html", [
       [ "SphericalParametrization", "group__minitensor__geometry.html#ga6553f85238d114ab86ea6155dc1c3fc0", null ],
       [ "operator()", "group__minitensor__geometry.html#ga82b5fdd6b0f8f19b05f31691daa4f034", null ],
       [ "get_normal", "group__minitensor__geometry.html#ga353aebb1229ecd8585cbba978e76c73b", null ],
@@ -17,7 +17,7 @@ var group__minitensor__geometry =
       [ "maximum_", "group__minitensor__geometry.html#ga949dda4aae0844e381df3751e69deb92", null ],
       [ "arg_maximum_", "group__minitensor__geometry.html#gaee78b675c11cf67a4a6c074feb819096", null ]
     ] ],
-    [ "minitensor::StereographicParametrization&lt; T, N &gt;", "classminitensor_1_1_stereographic_parametrization.html", [
+    [ "minitensor::StereographicParametrization< T, N >", "classminitensor_1_1_stereographic_parametrization.html", [
       [ "StereographicParametrization", "group__minitensor__geometry.html#ga7fe699f8b91b11b60b6bbb65c9bde9b8", null ],
       [ "get_normal", "group__minitensor__geometry.html#gafc6b4fb9942eb62fa4f6c2d46f2dfed7", null ],
       [ "operator()", "group__minitensor__geometry.html#ga4544abada1ab46732dbaa3bab91981c0", null ],
@@ -33,7 +33,7 @@ var group__minitensor__geometry =
       [ "maximum_", "group__minitensor__geometry.html#ga47fda83fe271f3c3b99067eced130cfa", null ],
       [ "arg_maximum_", "group__minitensor__geometry.html#gacc5faa92c9e115a30e5121ec33f60a21", null ]
     ] ],
-    [ "minitensor::ProjectiveParametrization&lt; T, N &gt;", "classminitensor_1_1_projective_parametrization.html", [
+    [ "minitensor::ProjectiveParametrization< T, N >", "classminitensor_1_1_projective_parametrization.html", [
       [ "ProjectiveParametrization", "group__minitensor__geometry.html#ga977b707fe3443dafd62d86a245977cbf", null ],
       [ "operator()", "group__minitensor__geometry.html#gafad90d14f7b487c92fb533c4ecccf05d", null ],
       [ "get_normal", "group__minitensor__geometry.html#gabb52839ee4ed16d9eba2010ad85d214a", null ],
@@ -49,7 +49,7 @@ var group__minitensor__geometry =
       [ "maximum_", "group__minitensor__geometry.html#ga8f33dd59b134e38ea3fc3420644e4888", null ],
       [ "arg_maximum_", "group__minitensor__geometry.html#ga5d4f9d9343d8d411183e5c20d9917362", null ]
     ] ],
-    [ "minitensor::TangentParametrization&lt; T, N &gt;", "classminitensor_1_1_tangent_parametrization.html", [
+    [ "minitensor::TangentParametrization< T, N >", "classminitensor_1_1_tangent_parametrization.html", [
       [ "TangentParametrization", "group__minitensor__geometry.html#ga67e684cf73b14b0b93b54e3d735aa3f3", null ],
       [ "operator()", "group__minitensor__geometry.html#ga2c08a3cad8056802c0787ea6cc293479", null ],
       [ "get_normal", "group__minitensor__geometry.html#ga236a740465536900c28fe55676588c9d", null ],
@@ -65,7 +65,7 @@ var group__minitensor__geometry =
       [ "maximum_", "group__minitensor__geometry.html#ga41b688e01003dd71d82a00163bedf79e", null ],
       [ "arg_maximum_", "group__minitensor__geometry.html#gac34aad14691538db992fd06ffc119846", null ]
     ] ],
-    [ "minitensor::CartesianParametrization&lt; T, N &gt;", "classminitensor_1_1_cartesian_parametrization.html", [
+    [ "minitensor::CartesianParametrization< T, N >", "classminitensor_1_1_cartesian_parametrization.html", [
       [ "CartesianParametrization", "group__minitensor__geometry.html#ga33dcf46949b5abd32055ba5b45add7bc", null ],
       [ "operator()", "group__minitensor__geometry.html#ga0cee3d246924bb216067fad81382b92d", null ],
       [ "get_normal", "group__minitensor__geometry.html#gac4da51f668f33117c2e3f28edd27770e", null ],
@@ -81,7 +81,7 @@ var group__minitensor__geometry =
       [ "maximum_", "group__minitensor__geometry.html#gab317588de23743756d9283475a7a7566", null ],
       [ "arg_maximum_", "group__minitensor__geometry.html#ga66109c689335333b3bf968d152ea5d82", null ]
     ] ],
-    [ "minitensor::ParametricGrid&lt; T, N &gt;", "classminitensor_1_1_parametric_grid.html", [
+    [ "minitensor::ParametricGrid< T, N >", "classminitensor_1_1_parametric_grid.html", [
       [ "ParametricGrid", "group__minitensor__geometry.html#ga8118d2334594f2a44960a4711e340641", null ],
       [ "ParametricGrid", "group__minitensor__geometry.html#ga12135d1a152d0c1705cb3f1e2edd3bd4", null ],
       [ "traverse", "group__minitensor__geometry.html#gaeedf80fb953a3822190ce9f56f4ed77f", null ],

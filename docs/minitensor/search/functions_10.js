@@ -8,7 +8,7 @@ var searchData=
   ['rank_5fone_5fright_5',['rank_one_right',['../group__minitensor__inverse.html#ga3e572b67cd415170399197767394fce6',1,'minitensor']]],
   ['recordfinals_6',['recordFinals',['../group__minitensor__solvers.html#ga54debd7778c85b694f7c1c78b0f4e648',1,'minitensor::Minimizer']]],
   ['residual_7',['residual',['../group__minitensor__solvers.html#ga5aec1425cb928219f8d5f896398f9353',1,'minitensor::Function_Base']]],
-  ['resize_8',['resize',['../group__minitensor__containers.html#ga292c7e3731a1c07e871e5125d3d9abc0',1,'minitensor::Storage::resize()'],['../group__minitensor__containers.html#gadfe09ad726e637defa1c409a273f09c7',1,'minitensor::Storage&lt; T, DYNAMIC &gt;::resize()']]],
+  ['resize_8',['resize',['../group__minitensor__containers.html#gadfe09ad726e637defa1c409a273f09c7',1,'minitensor::Storage&lt; T, DYNAMIC &gt;::resize()'],['../group__minitensor__containers.html#ga292c7e3731a1c07e871e5125d3d9abc0',1,'minitensor::Storage::resize()']]],
   ['rosenbrock_9',['Rosenbrock',['../classminitensor_1_1_rosenbrock.html#ab42b8183c0a8393950db21cb54fe5746',1,'minitensor::Rosenbrock']]],
   ['row_10',['row',['../group__minitensor__containers.html#gafec6b0d7f3ea1673dcea7a63589060ce',1,'minitensor::row(Matrix&lt; T, M, N &gt; const &amp;A, Index const i)'],['../group__minitensor__containers.html#gaea031dd83c79c822a1e5d21a368b3930',1,'minitensor::row(Tensor&lt; T, N &gt; const &amp;A, Index const i)']]],
   ['rt_5fof_5fq_11',['rt_of_q',['../group__minitensor__rotations.html#gacb3725fee79391f4823974d52f0513b1',1,'minitensor']]],

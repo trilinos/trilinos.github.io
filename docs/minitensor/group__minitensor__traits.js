@@ -1,6 +1,6 @@
 var group__minitensor__traits =
 [
-    [ "minitensor::Vector&lt; T, N &gt;", "classminitensor_1_1_vector.html", [
+    [ "minitensor::Vector< T, N >", "classminitensor_1_1_vector.html", [
       [ "Store", "group__minitensor__containers.html#gaae2c61c5cbea2954f257ef662d6d7805", null ],
       [ "Vector", "group__minitensor__containers.html#ga112322644405d3beb07fab64a82bd4b3", null ],
       [ "Vector", "group__minitensor__containers.html#ga783f050154a2c8955c2a961c60dd5ecb", null ],
@@ -36,7 +36,7 @@ var group__minitensor__traits =
       [ "ORDER", "group__minitensor__containers.html#gac93861d1ce054ad1316b295b85a8bb94", null ],
       [ "IS_DYNAMIC", "group__minitensor__containers.html#ga0d9c875053fc36b4c48c7d5037e8bf32", null ]
     ] ],
-    [ "minitensor::Tensor&lt; T, N &gt;", "classminitensor_1_1_tensor.html", [
+    [ "minitensor::Tensor< T, N >", "classminitensor_1_1_tensor.html", [
       [ "Store", "group__minitensor__containers.html#gaab68709ae096defcdf845a7308030986", null ],
       [ "Tensor", "group__minitensor__containers.html#ga4a532a4ce2cd2da32205fe1ba5027a38", null ],
       [ "Tensor", "group__minitensor__containers.html#ga90732c445915ac72819e60d082b4ac93", null ],
@@ -73,7 +73,7 @@ var group__minitensor__traits =
       [ "ORDER", "group__minitensor__containers.html#gad72f755122fda08066c371e54d548305", null ],
       [ "IS_DYNAMIC", "group__minitensor__containers.html#gac1676b71191fcfa1742fd23b6c524a6b", null ]
     ] ],
-    [ "minitensor::Tensor3&lt; T, N &gt;", "classminitensor_1_1_tensor3.html", [
+    [ "minitensor::Tensor3< T, N >", "classminitensor_1_1_tensor3.html", [
       [ "Store", "group__minitensor__containers.html#gab386971eaec10e247331cf9e7951cd0e", null ],
       [ "Tensor3", "group__minitensor__containers.html#ga924b061ae69dfdfb6e0e2182f16bba79", null ],
       [ "Tensor3", "group__minitensor__containers.html#ga48ee515cbd519472e99655cc21512df4", null ],
@@ -91,7 +91,7 @@ var group__minitensor__traits =
       [ "ORDER", "group__minitensor__containers.html#ga3a0c83c5d5b1008bca0b24bbd141d843", null ],
       [ "IS_DYNAMIC", "group__minitensor__containers.html#ga34a1ccbfdf48cad9111d3bb9847215cc", null ]
     ] ],
-    [ "minitensor::Tensor4&lt; T, N &gt;", "classminitensor_1_1_tensor4.html", [
+    [ "minitensor::Tensor4< T, N >", "classminitensor_1_1_tensor4.html", [
       [ "Store", "group__minitensor__containers.html#ga302d4f3caa0a4be64a55fe8725d06dcf", null ],
       [ "Tensor4", "group__minitensor__containers.html#ga8bb0b046e2d045eaaf01be040922edc0", null ],
       [ "Tensor4", "group__minitensor__containers.html#gae05a6c9515daaf25d037599c70119bde", null ],
@@ -110,7 +110,7 @@ var group__minitensor__traits =
       [ "ORDER", "group__minitensor__containers.html#gac1c11cbc59e44fc6e16e551e703f6dc8", null ],
       [ "IS_DYNAMIC", "group__minitensor__containers.html#gac96079272b52118d4f48d23db2048a4a", null ]
     ] ],
-    [ "minitensor::Matrix&lt; T, M, N &gt;", "classminitensor_1_1_matrix.html", [
+    [ "minitensor::Matrix< T, M, N >", "classminitensor_1_1_matrix.html", [
       [ "Store", "group__minitensor__containers.html#ga108accf90e6c74d5e83cc2ced8358210", null ],
       [ "Matrix", "group__minitensor__containers.html#ga2205dc81af135b4247c87d57f3f4396f", null ],
       [ "Matrix", "group__minitensor__containers.html#ga1274ab111953aa8769ff77e14e0d0db6", null ],
@@ -144,96 +144,91 @@ var group__minitensor__traits =
       [ "rows_", "group__minitensor__containers.html#ga569df860e63b8b6da469babbdbbba329", null ],
       [ "cols_", "group__minitensor__containers.html#gaf0f9b92d087efef3f3944cc619f7b661", null ]
     ] ],
-    [ "minitensor::is_vector&lt; T &gt;", "structminitensor_1_1is__vector.html", [
+    [ "minitensor::is_vector< T >", "structminitensor_1_1is__vector.html", [
       [ "value", "structminitensor_1_1is__vector.html#ae2bdf4c15be3fbb51c6504d28d7c5bd7", null ]
     ] ],
-    [ "minitensor::is_vector&lt; Vector&lt; T, N &gt; &gt;", "structminitensor_1_1is__vector_3_01_vector_3_01_t_00_01_n_01_4_01_4.html", [
+    [ "minitensor::is_vector< Vector< T, N > >", "structminitensor_1_1is__vector_3_01_vector_3_01_t_00_01_n_01_4_01_4.html", [
       [ "value", "structminitensor_1_1is__vector_3_01_vector_3_01_t_00_01_n_01_4_01_4.html#a08be7e27fb14e76f2736f89cf80ab5ba", null ]
     ] ],
-    [ "minitensor::apply_vector&lt; T, N &gt;", "structminitensor_1_1apply__vector.html", [
+    [ "minitensor::apply_vector< T, N >", "structminitensor_1_1apply__vector.html", [
       [ "type", "structminitensor_1_1apply__vector.html#a3108c35387c03cf7516359db12204a0a", null ]
     ] ],
-    [ "minitensor::is_tensor&lt; T &gt;", "structminitensor_1_1is__tensor.html", [
+    [ "minitensor::is_tensor< T >", "structminitensor_1_1is__tensor.html", [
       [ "value", "structminitensor_1_1is__tensor.html#adfc23215609effe8e9da152b84880395", null ]
     ] ],
-    [ "minitensor::is_tensor&lt; Tensor&lt; T, N &gt; &gt;", "structminitensor_1_1is__tensor_3_01_tensor_3_01_t_00_01_n_01_4_01_4.html", [
+    [ "minitensor::is_tensor< Tensor< T, N > >", "structminitensor_1_1is__tensor_3_01_tensor_3_01_t_00_01_n_01_4_01_4.html", [
       [ "value", "structminitensor_1_1is__tensor_3_01_tensor_3_01_t_00_01_n_01_4_01_4.html#ad0f3d913e208ff0a84cc6eedda7d3b2b", null ]
     ] ],
-    [ "minitensor::apply_tensor&lt; T, N &gt;", "structminitensor_1_1apply__tensor.html", [
+    [ "minitensor::apply_tensor< T, N >", "structminitensor_1_1apply__tensor.html", [
       [ "type", "structminitensor_1_1apply__tensor.html#a03adb769d67a5bb6efac54c26d1104b7", null ]
     ] ],
-    [ "minitensor::is_tensor3&lt; T &gt;", "structminitensor_1_1is__tensor3.html", [
+    [ "minitensor::is_tensor3< T >", "structminitensor_1_1is__tensor3.html", [
       [ "value", "structminitensor_1_1is__tensor3.html#a07d4062f724f562d3b3bf099dc747c80", null ]
     ] ],
-    [ "minitensor::is_tensor3&lt; Tensor3&lt; T, N &gt; &gt;", "structminitensor_1_1is__tensor3_3_01_tensor3_3_01_t_00_01_n_01_4_01_4.html", [
+    [ "minitensor::is_tensor3< Tensor3< T, N > >", "structminitensor_1_1is__tensor3_3_01_tensor3_3_01_t_00_01_n_01_4_01_4.html", [
       [ "value", "structminitensor_1_1is__tensor3_3_01_tensor3_3_01_t_00_01_n_01_4_01_4.html#aec5a0250b5da34f5aaf14de23082b4bb", null ]
     ] ],
-    [ "minitensor::apply_tensor3&lt; T, N &gt;", "structminitensor_1_1apply__tensor3.html", [
+    [ "minitensor::apply_tensor3< T, N >", "structminitensor_1_1apply__tensor3.html", [
       [ "type", "structminitensor_1_1apply__tensor3.html#a05770e1302462fb4b07122a3e4195cf8", null ]
     ] ],
-    [ "minitensor::is_tensor4&lt; T &gt;", "structminitensor_1_1is__tensor4.html", [
+    [ "minitensor::is_tensor4< T >", "structminitensor_1_1is__tensor4.html", [
       [ "value", "structminitensor_1_1is__tensor4.html#a53bd3f76c619163634c04a63d10fed1c", null ]
     ] ],
-    [ "minitensor::is_tensor4&lt; Tensor4&lt; T, N &gt; &gt;", "structminitensor_1_1is__tensor4_3_01_tensor4_3_01_t_00_01_n_01_4_01_4.html", [
+    [ "minitensor::is_tensor4< Tensor4< T, N > >", "structminitensor_1_1is__tensor4_3_01_tensor4_3_01_t_00_01_n_01_4_01_4.html", [
       [ "value", "structminitensor_1_1is__tensor4_3_01_tensor4_3_01_t_00_01_n_01_4_01_4.html#af9aedf8ac637701c17ab1a9612aa4b0b", null ]
     ] ],
-    [ "minitensor::apply_tensor4&lt; T, N &gt;", "structminitensor_1_1apply__tensor4.html", [
+    [ "minitensor::apply_tensor4< T, N >", "structminitensor_1_1apply__tensor4.html", [
       [ "type", "structminitensor_1_1apply__tensor4.html#a3960152c005d9c6dc07d6e86e8a6a69d", null ]
     ] ],
-    [ "minitensor::is_matrix&lt; T &gt;", "structminitensor_1_1is__matrix.html", [
+    [ "minitensor::is_matrix< T >", "structminitensor_1_1is__matrix.html", [
       [ "value", "structminitensor_1_1is__matrix.html#aa7114b169b03a0ef2a8bf40c0b7b3f94", null ]
     ] ],
-    [ "minitensor::is_matrix&lt; Matrix&lt; T, M, N &gt; &gt;", "structminitensor_1_1is__matrix_3_01_matrix_3_01_t_00_01_m_00_01_n_01_4_01_4.html", [
+    [ "minitensor::is_matrix< Matrix< T, M, N > >", "structminitensor_1_1is__matrix_3_01_matrix_3_01_t_00_01_m_00_01_n_01_4_01_4.html", [
       [ "value", "structminitensor_1_1is__matrix_3_01_matrix_3_01_t_00_01_m_00_01_n_01_4_01_4.html#a7c8c9d978f536e9e77a09062a5567d16", null ]
     ] ],
-    [ "minitensor::apply_matrix&lt; T, M, N &gt;", "structminitensor_1_1apply__matrix.html", [
+    [ "minitensor::apply_matrix< T, M, N >", "structminitensor_1_1apply__matrix.html", [
       [ "type", "structminitensor_1_1apply__matrix.html#a2499bbf292d6a9ab49814d983e8a83bf", null ]
     ] ],
-    [ "minitensor::order_1234&lt; T &gt;", "structminitensor_1_1order__1234.html", [
+    [ "minitensor::order_1234< T >", "structminitensor_1_1order__1234.html", [
       [ "value", "structminitensor_1_1order__1234.html#a8cad4f8365d8c3a179049020ab0e70b8", null ]
     ] ],
-    [ "minitensor::order_1234&lt; Vector&lt; T, N &gt; &gt;", "structminitensor_1_1order__1234_3_01_vector_3_01_t_00_01_n_01_4_01_4.html", [
+    [ "minitensor::order_1234< Vector< T, N > >", "structminitensor_1_1order__1234_3_01_vector_3_01_t_00_01_n_01_4_01_4.html", [
       [ "value", "structminitensor_1_1order__1234_3_01_vector_3_01_t_00_01_n_01_4_01_4.html#a285c4256de097658bf10ff919e4fb1f8", null ]
     ] ],
-    [ "minitensor::order_1234&lt; Tensor&lt; T, N &gt; &gt;", "structminitensor_1_1order__1234_3_01_tensor_3_01_t_00_01_n_01_4_01_4.html", [
+    [ "minitensor::order_1234< Tensor< T, N > >", "structminitensor_1_1order__1234_3_01_tensor_3_01_t_00_01_n_01_4_01_4.html", [
       [ "value", "structminitensor_1_1order__1234_3_01_tensor_3_01_t_00_01_n_01_4_01_4.html#ad580e2a85d85efaedb5f57c30b2dc44c", null ]
     ] ],
-    [ "minitensor::order_1234&lt; Tensor3&lt; T, N &gt; &gt;", "structminitensor_1_1order__1234_3_01_tensor3_3_01_t_00_01_n_01_4_01_4.html", [
+    [ "minitensor::order_1234< Tensor3< T, N > >", "structminitensor_1_1order__1234_3_01_tensor3_3_01_t_00_01_n_01_4_01_4.html", [
       [ "value", "structminitensor_1_1order__1234_3_01_tensor3_3_01_t_00_01_n_01_4_01_4.html#a1dc477b11670f83555ebdfefeba3eb8f", null ]
     ] ],
-    [ "minitensor::order_1234&lt; Tensor4&lt; T, N &gt; &gt;", "structminitensor_1_1order__1234_3_01_tensor4_3_01_t_00_01_n_01_4_01_4.html", [
+    [ "minitensor::order_1234< Tensor4< T, N > >", "structminitensor_1_1order__1234_3_01_tensor4_3_01_t_00_01_n_01_4_01_4.html", [
       [ "value", "structminitensor_1_1order__1234_3_01_tensor4_3_01_t_00_01_n_01_4_01_4.html#a90d7dbab36a90347f7dc759a2f625f50", null ]
     ] ],
-    [ "minitensor::order_1234&lt; Matrix&lt; T, M, N &gt; &gt;", "structminitensor_1_1order__1234_3_01_matrix_3_01_t_00_01_m_00_01_n_01_4_01_4.html", [
+    [ "minitensor::order_1234< Matrix< T, M, N > >", "structminitensor_1_1order__1234_3_01_matrix_3_01_t_00_01_m_00_01_n_01_4_01_4.html", [
       [ "value", "structminitensor_1_1order__1234_3_01_matrix_3_01_t_00_01_m_00_01_n_01_4_01_4.html#af0a00b6c143f23409c618a612418d4ef", null ]
     ] ],
-    [ "minitensor::dimension_string&lt; N &gt;", "structminitensor_1_1dimension__string.html", [
+    [ "minitensor::dimension_string< N >", "structminitensor_1_1dimension__string.html", [
       [ "eval", "structminitensor_1_1dimension__string.html#afcac5dad87b01067e6ff59e1afca43e1", null ]
     ] ],
-    [ "minitensor::dimension_string&lt; DYNAMIC &gt;", "structminitensor_1_1dimension__string_3_01_d_y_n_a_m_i_c_01_4.html", [
-      [ "eval", "structminitensor_1_1dimension__string_3_01_d_y_n_a_m_i_c_01_4.html#a1f0d270c22e6799f9cb23bc6c5373069", null ],
-      [ "eval", "struct_sacado_1_1dimension__string.html#afcac5dad87b01067e6ff59e1afca43e1", null ]
+    [ "minitensor::dimension_string< DYNAMIC >", "structminitensor_1_1dimension__string_3_01_d_y_n_a_m_i_c_01_4.html", [
+      [ "eval", "structminitensor_1_1dimension__string_3_01_d_y_n_a_m_i_c_01_4.html#a1f0d270c22e6799f9cb23bc6c5373069", null ]
     ] ],
-    [ "minitensor::dimension_string&lt; 1 &gt;", "structminitensor_1_1dimension__string_3_011_01_4.html", [
-      [ "eval", "structminitensor_1_1dimension__string_3_011_01_4.html#ad6033ef64c5d85355a01325314da3a2a", null ],
-      [ "eval", "struct_sacado_1_1dimension__string.html#afcac5dad87b01067e6ff59e1afca43e1", null ]
+    [ "minitensor::dimension_string< 1 >", "structminitensor_1_1dimension__string_3_011_01_4.html", [
+      [ "eval", "structminitensor_1_1dimension__string_3_011_01_4.html#ad6033ef64c5d85355a01325314da3a2a", null ]
     ] ],
-    [ "minitensor::dimension_string&lt; 2 &gt;", "structminitensor_1_1dimension__string_3_012_01_4.html", [
-      [ "eval", "structminitensor_1_1dimension__string_3_012_01_4.html#aafb12980820cd0d3d8fbb052e7081574", null ],
-      [ "eval", "struct_sacado_1_1dimension__string.html#afcac5dad87b01067e6ff59e1afca43e1", null ]
+    [ "minitensor::dimension_string< 2 >", "structminitensor_1_1dimension__string_3_012_01_4.html", [
+      [ "eval", "structminitensor_1_1dimension__string_3_012_01_4.html#aafb12980820cd0d3d8fbb052e7081574", null ]
     ] ],
-    [ "minitensor::dimension_string&lt; 3 &gt;", "structminitensor_1_1dimension__string_3_013_01_4.html", [
-      [ "eval", "structminitensor_1_1dimension__string_3_013_01_4.html#ab3d393165b512ac3360edb4891197474", null ],
-      [ "eval", "struct_sacado_1_1dimension__string.html#afcac5dad87b01067e6ff59e1afca43e1", null ]
+    [ "minitensor::dimension_string< 3 >", "structminitensor_1_1dimension__string_3_013_01_4.html", [
+      [ "eval", "structminitensor_1_1dimension__string_3_013_01_4.html#ab3d393165b512ac3360edb4891197474", null ]
     ] ],
-    [ "minitensor::dimension_string&lt; 4 &gt;", "structminitensor_1_1dimension__string_3_014_01_4.html", [
-      [ "eval", "structminitensor_1_1dimension__string_3_014_01_4.html#a3cb223b96a06984a86a74c02e4239280", null ],
-      [ "eval", "struct_sacado_1_1dimension__string.html#afcac5dad87b01067e6ff59e1afca43e1", null ]
+    [ "minitensor::dimension_string< 4 >", "structminitensor_1_1dimension__string_3_014_01_4.html", [
+      [ "eval", "structminitensor_1_1dimension__string_3_014_01_4.html#a3cb223b96a06984a86a74c02e4239280", null ]
     ] ],
-    [ "minitensor::Index", "group__minitensor__traits.html#gaeceb58b2bd35b614526068a280100953", null ],
-    [ "minitensor::LongIndex", "group__minitensor__traits.html#ga19ff70a66975e248e6957208891e12db", null ],
-    [ "minitensor::Real", "group__minitensor__traits.html#ga8983e06d22e22b99ccdb179f56b4d446", null ],
-    [ "minitensor::Complex", "group__minitensor__traits.html#ga25e91a7e2e3a7b4f55deda9669bb3715", null ],
+    [ "minitensor::Index", "group__minitensor__traits.html#ga0b43f4361828e9143540f323db532866", null ],
+    [ "minitensor::LongIndex", "group__minitensor__traits.html#gaf2a608234deee6230ea1e1e85cb68552", null ],
+    [ "minitensor::Real", "group__minitensor__traits.html#ga0727cc39c6917ffcdbd42a152640e4d1", null ],
+    [ "minitensor::Complex", "group__minitensor__traits.html#ga95a864c9608d134d3c62f49b2cd527c3", null ],
     [ "minitensor::abs", "group__minitensor__traits.html#ga8b5474c18c235a18f9d1c4114f9f51e4", null ],
     [ "minitensor::swap", "group__minitensor__traits.html#ga9896ea22275132cbd9188256bb308826", null ],
     [ "minitensor::max", "group__minitensor__traits.html#gae84370b1847e3346098370266d7e4cc6", null ],

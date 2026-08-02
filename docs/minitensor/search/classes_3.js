@@ -25,7 +25,7 @@ var searchData=
   ['dimension_5fsquare_3c_203_20_3e_22',['dimension_square&lt; 3 &gt;',['../structminitensor_1_1dimension__square_3_013_01_4.html',1,'minitensor']]],
   ['dimension_5fsquare_3c_204_20_3e_23',['dimension_square&lt; 4 &gt;',['../structminitensor_1_1dimension__square_3_014_01_4.html',1,'minitensor']]],
   ['dimension_5fsquare_3c_20dynamic_20_3e_24',['dimension_square&lt; DYNAMIC &gt;',['../structminitensor_1_1dimension__square_3_01_d_y_n_a_m_i_c_01_4.html',1,'minitensor']]],
-  ['dimension_5fstring_25',['dimension_string',['../structminitensor_1_1dimension__string.html',1,'minitensor::dimension_string&lt; N &gt;'],['../struct_sacado_1_1dimension__string.html',1,'Sacado::dimension_string&lt; N &gt;']]],
+  ['dimension_5fstring_25',['dimension_string',['../structminitensor_1_1dimension__string.html',1,'minitensor']]],
   ['dimension_5fstring_3c_201_20_3e_26',['dimension_string&lt; 1 &gt;',['../structminitensor_1_1dimension__string_3_011_01_4.html',1,'minitensor']]],
   ['dimension_5fstring_3c_202_20_3e_27',['dimension_string&lt; 2 &gt;',['../structminitensor_1_1dimension__string_3_012_01_4.html',1,'minitensor']]],
   ['dimension_5fstring_3c_203_20_3e_28',['dimension_string&lt; 3 &gt;',['../structminitensor_1_1dimension__string_3_013_01_4.html',1,'minitensor']]],
