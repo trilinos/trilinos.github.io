@@ -1,7 +1,7 @@
 var searchData=
 [
   ['wait_0',['wait',['../class_tpetra_1_1_details_1_1_comm_request.html#ae8fee43d6f046a495f80d9b21015e218',1,'Tpetra::Details::CommRequest']]],
-  ['wdvtrackingenabled_1',['wdvTrackingEnabled',['../namespace_tpetra_1_1_details.html#aa90772ef7153f3d04b733da81dd2d69a',1,'Tpetra::Details']]],
+  ['wdvtrackingenabled_1',['wdvTrackingEnabled',['../namespace_tpetra_1_1_details.html#a1be26baf8c1abe348bf7100298380104',1,'Tpetra::Details']]],
   ['we_20didn_20t_20explain_20above_2',['Things we didn&apos;t explain above',['../_tpetra__lesson01.html#Tpetra_Lesson01_Other',1,'']]],
   ['we_20expose_20local_20indices_20for_20performance_20reasons_3',['We expose local indices for performance reasons',['../_tpetra__lesson02.html#Tpetra_Lesson02_Map_assigns_exposeLIDs',1,'']]],
   ['what_20are_20rcp_20and_20rcp_4',['What are RCP and rcp?',['../_tpetra__lesson01.html#Tpetra_Lesson01_Other_RCP',1,'']]],

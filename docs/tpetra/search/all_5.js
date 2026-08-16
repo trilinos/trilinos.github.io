@@ -7,7 +7,7 @@ var searchData=
   ['enable_5ftiming_4',['enable_timing',['../class_tpetra_1_1_details_1_1_behavior.html#aa41c5848c3a728502e5304543666c7db',1,'Tpetra::Details::Behavior']]],
   ['enable_5fverbose_5fbehavior_5',['enable_verbose_behavior',['../class_tpetra_1_1_details_1_1_behavior.html#a27f8fa516043a3678a5bddb61f1667ec',1,'Tpetra::Details::Behavior']]],
   ['enablegranulartransfers_6',['enableGranularTransfers',['../class_tpetra_1_1_details_1_1_behavior.html#a9e34fc0579846f78635b8d7e729be31b',1,'Tpetra::Details::Behavior']]],
-  ['enablewdvtracking_7',['enableWDVTracking',['../namespace_tpetra_1_1_details.html#ade054639c69d59d6a39c3211f947b5d3',1,'Tpetra::Details']]],
+  ['enablewdvtracking_7',['enableWDVTracking',['../namespace_tpetra_1_1_details.html#a2656e21c0d474fdaa18ffc709e513532',1,'Tpetra::Details']]],
   ['endassembly_8',['endassembly',['../class_tpetra_1_1_f_e_crs_matrix.html#a72c0349897dfa2e8a8055c58d07df437',1,'Tpetra::FECrsMatrix::endAssembly()'],['../class_tpetra_1_1_f_e_crs_graph.html#a0571a142dd5fe4c75ceb76132c0c2479',1,'Tpetra::FECrsGraph::endAssembly()']]],
   ['endmodify_9',['endModify',['../class_tpetra_1_1_f_e_crs_matrix.html#a935edfdd5cbde133a71dae73e658c431',1,'Tpetra::FECrsMatrix']]],
   ['entries_20of_20a_20data_20structure_20to_20processes_10',['A Map assigns entries of a data structure to processes',['../_tpetra__lesson02.html#Tpetra_Lesson02_Map_assigns',1,'']]],

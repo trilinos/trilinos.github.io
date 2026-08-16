@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['matrixfreedecorator_0',['MatrixFreeDecorator',['../class_piro_1_1_matrix_free_decorator.html',1,'Piro']]],
-  ['matrixfreelinearop_1',['MatrixFreeLinearOp',['../class_piro_1_1_matrix_free_linear_op.html',1,'Piro']]]
+  ['locasolver_0',['LOCASolver',['../class_piro_1_1_l_o_c_a_solver.html',1,'Piro']]]
 ];

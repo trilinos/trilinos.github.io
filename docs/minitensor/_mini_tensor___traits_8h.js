@@ -69,5 +69,6 @@ var _mini_tensor___traits_8h =
     [ "Complex", "_mini_tensor___traits_8h.html#ga95a864c9608d134d3c62f49b2cd527c3", null ],
     [ "INDEX_SIZE", "_mini_tensor___traits_8h.html#ga627502469acb93b57127c01431be990b", null ],
     [ "LONG_INDEX_SIZE", "_mini_tensor___traits_8h.html#ga7618aa960dcaba3fcc1a947c6bd2dce9", null ],
-    [ "DYNAMIC", "_mini_tensor___traits_8h.html#ga6be6d3779f63b6610bdd350ecf51007c", null ]
+    [ "DYNAMIC", "_mini_tensor___traits_8h.html#ga6be6d3779f63b6610bdd350ecf51007c", null ],
+    [ "dimension_reachable", "_mini_tensor___traits_8h.html#ga10cf3f94ad5aafb0c93240d1dd277ba3", null ]
 ];

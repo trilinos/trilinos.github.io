@@ -254,6 +254,7 @@ var namespaceminitensor =
     [ "log_sym", "group__minitensor__matrix__functions.html#gaf5959778cb7da78e7cadc08523af14e7", null ],
     [ "log_eig_sym", "group__minitensor__matrix__functions.html#gadb45fca569d05f810dd5d848eab4d365", null ],
     [ "bch", "group__minitensor__matrix__functions.html#ga955e0a93f70ae1ff396ed21ddb5d650b", null ],
+    [ "binary_powering", "group__minitensor__matrix__functions.html#ga8b0a2cc3532c5bd2cf5ddc16debbd2c4", null ],
     [ "scaling_squaring_theta_ah09", "group__minitensor__matrix__functions.html#ga01de3b095380140edfab84fad3ef6b36", null ],
     [ "expm_ell", "group__minitensor__matrix__functions.html#ga3e35e74f241ef01e124669acc768d262", null ],
     [ "sqrt_dbp", "group__minitensor__matrix__functions.html#ga14a2623eac60288c851ef38177e61d08", null ],
@@ -509,5 +510,6 @@ var namespaceminitensor =
     [ "version", "namespaceminitensor.html#a9ab0b2ca9feb1b57a53d811915a31cbc", null ],
     [ "INDEX_SIZE", "group__minitensor__traits.html#ga627502469acb93b57127c01431be990b", null ],
     [ "LONG_INDEX_SIZE", "group__minitensor__traits.html#ga7618aa960dcaba3fcc1a947c6bd2dce9", null ],
-    [ "DYNAMIC", "group__minitensor__traits.html#ga6be6d3779f63b6610bdd350ecf51007c", null ]
+    [ "DYNAMIC", "group__minitensor__traits.html#ga6be6d3779f63b6610bdd350ecf51007c", null ],
+    [ "dimension_reachable", "group__minitensor__traits.html#ga10cf3f94ad5aafb0c93240d1dd277ba3", null ]
 ];

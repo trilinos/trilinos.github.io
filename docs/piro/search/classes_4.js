@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['noxsolver_0',['NOXSolver',['../class_piro_1_1_n_o_x_solver.html',1,'Piro']]]
+  ['matrixfreedecorator_0',['MatrixFreeDecorator',['../class_piro_1_1_matrix_free_decorator.html',1,'Piro']]],
+  ['matrixfreelinearop_1',['MatrixFreeLinearOp',['../class_piro_1_1_matrix_free_linear_op.html',1,'Piro']]]
 ];

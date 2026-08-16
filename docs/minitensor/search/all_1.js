@@ -7,9 +7,10 @@ var searchData=
   ['basic_20usage_4',['Basic Usage',['../index.html#minitensor_usage',1,'']]],
   ['bch_5',['bch',['../group__minitensor__matrix__functions.html#ga955e0a93f70ae1ff396ed21ddb5d650b',1,'minitensor']]],
   ['beale_6',['beale',['../classminitensor_1_1_beale.html',1,'minitensor::Beale&lt; S, M &gt;'],['../classminitensor_1_1_beale.html#a8d33cf74977633aae976cfaf1d0e8756',1,'minitensor::Beale::Beale()']]],
-  ['booth_7',['booth',['../classminitensor_1_1_booth.html',1,'minitensor::Booth&lt; S, M &gt;'],['../classminitensor_1_1_booth.html#a982f716e0de10678a4f6fc812ac11b27',1,'minitensor::Booth::Booth()']]],
-  ['bounded_8',['bounded',['../group__minitensor__solvers.html#gaad3316efbdefa1f7c329bbd2d52c7470',1,'minitensor::Minimizer']]],
-  ['bounding_5fbox_9',['bounding_box',['../group__minitensor__geometry.html#ga452a9795b6e5ec36d55db522ddf843e1',1,'minitensor::bounding_box(I start, I end)'],['../group__minitensor__geometry.html#gaf7406a87e4f3f601262b0e8721f026a3',1,'minitensor::bounding_box(I start, I end)']]],
-  ['bounds_10',['bounds',['../group__minitensor__solvers.html#ga3f7193b13bd928973ed30eb5e6a1a092',1,'minitensor::Bounds::Bounds()'],['../structminitensor_1_1_bounds.html',1,'minitensor::Bounds&lt; T, N &gt;']]],
-  ['bun_11',['bun',['../group__minitensor__containers.html#ga4ec0d2a22c8158ca1b7d4a63822fa303',1,'minitensor']]]
+  ['binary_5fpowering_7',['binary_powering',['../group__minitensor__matrix__functions.html#ga8b0a2cc3532c5bd2cf5ddc16debbd2c4',1,'minitensor']]],
+  ['booth_8',['booth',['../classminitensor_1_1_booth.html',1,'minitensor::Booth&lt; S, M &gt;'],['../classminitensor_1_1_booth.html#a982f716e0de10678a4f6fc812ac11b27',1,'minitensor::Booth::Booth()']]],
+  ['bounded_9',['bounded',['../group__minitensor__solvers.html#gaad3316efbdefa1f7c329bbd2d52c7470',1,'minitensor::Minimizer']]],
+  ['bounding_5fbox_10',['bounding_box',['../group__minitensor__geometry.html#ga452a9795b6e5ec36d55db522ddf843e1',1,'minitensor::bounding_box(I start, I end)'],['../group__minitensor__geometry.html#gaf7406a87e4f3f601262b0e8721f026a3',1,'minitensor::bounding_box(I start, I end)']]],
+  ['bounds_11',['bounds',['../group__minitensor__solvers.html#ga3f7193b13bd928973ed30eb5e6a1a092',1,'minitensor::Bounds::Bounds()'],['../structminitensor_1_1_bounds.html',1,'minitensor::Bounds&lt; T, N &gt;']]],
+  ['bun_12',['bun',['../group__minitensor__containers.html#ga4ec0d2a22c8158ca1b7d4a63822fa303',1,'minitensor']]]
 ];
