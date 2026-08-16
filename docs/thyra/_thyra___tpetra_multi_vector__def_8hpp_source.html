@@ -325,7 +325,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>  <span class="comment">// If the cast succeeded, call Tpetra directly.</span></div>
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>  <span class="comment">// Otherwise, fall back to the RTOp implementation.</span></div>
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>  <span class="keywordflow">if</span> (nonnull(tmv)) {</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    tpetraMultiVector_.getConstObj()-&gt;dot(*tmv, prods);</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    tpetraMultiVector_.getConstObj()-&gt;dot(*tmv, prods(0, tmv-&gt;getNumVectors()));</div>
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>  } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    <a class="code hl_function" href="class_thyra_1_1_multi_vector_default_base.html#a06128a51c17542e627748b167a468a5b">MultiVectorDefaultBase&lt;Scalar&gt;::dotsImpl</a>(mv, prods);</div>
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>  }</div>

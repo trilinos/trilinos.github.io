@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"group__minitensor__solvers.html#ga0a301a2c7eb16a9ee4207d600e9914be":[6,9,152],
 "group__minitensor__solvers.html#ga0aaecc26ab013708a49368b225737176":[6,9,150],
 "group__minitensor__solvers.html#ga0ba8030e3e317a0769f2246904624fbe":[6,9,120],
 "group__minitensor__solvers.html#ga0bc7e0103976ade1028e5a4656cd376e":[6,9,43],
@@ -136,6 +137,7 @@ var NAVTREEINDEX4 =
 "group__minitensor__traits.html#ga0727cc39c6917ffcdbd42a152640e4d1":[6,1,34],
 "group__minitensor__traits.html#ga08fa270cb72c44d8b63f27697f90a802":[6,1,45],
 "group__minitensor__traits.html#ga0b43f4361828e9143540f323db532866":[6,1,32],
+"group__minitensor__traits.html#ga10cf3f94ad5aafb0c93240d1dd277ba3":[6,1,64],
 "group__minitensor__traits.html#ga386dc0c238aaaee01c8a8d8b6fbe26fc":[6,1,57],
 "group__minitensor__traits.html#ga4ce9de7becfdac58e3343eed7d49e95a":[6,1,43],
 "group__minitensor__traits.html#ga4cee8aea08d4711f7cc962aef37b8fce":[6,1,60],
@@ -224,7 +226,7 @@ var NAVTREEINDEX4 =
 "namespacemembers_v.html":[7,1,0,20],
 "namespacemembers_vars.html":[7,1,2],
 "namespacemembers_z.html":[7,1,0,21],
-"namespaceminitensor.html#a9ab0b2ca9feb1b57a53d811915a31cbc":[7,0,0,471],
+"namespaceminitensor.html#a9ab0b2ca9feb1b57a53d811915a31cbc":[7,0,0,472],
 "namespaces.html":[7,0],
 "pages.html":[],
 "struct_sacado_1_1_is_a_d_type_3_01_matrix_3_01_t_00_01_m_00_01_n_01_4_01_4.html":[7,0,1,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX4 =
 "struct_sacado_1_1_is_a_d_type_3_01_vector_3_01_t_00_01_n_01_4_01_4.html":[7,0,1,4],
 "struct_sacado_1_1_is_a_d_type_3_01_vector_3_01_t_00_01_n_01_4_01_4.html#a65365b84706c386262dc493ef6ccfdce":[8,0,1,4,0],
 "struct_sacado_1_1_is_a_d_type_3_01_vector_3_01_t_00_01_n_01_4_01_4.html#a65365b84706c386262dc493ef6ccfdce":[7,0,1,4,0],
-"struct_sacado_1_1_is_equal_3_01_matrix_3_01_t_00_01_m_00_01_n_01_4_01_4.html":[7,0,1,5],
-"struct_sacado_1_1_is_equal_3_01_matrix_3_01_t_00_01_m_00_01_n_01_4_01_4.html":[8,0,1,5],
-"struct_sacado_1_1_is_equal_3_01_matrix_3_01_t_00_01_m_00_01_n_01_4_01_4.html#a58779df8396044fa8a49286868d62721":[8,0,1,5,0]
+"struct_sacado_1_1_is_equal_3_01_matrix_3_01_t_00_01_m_00_01_n_01_4_01_4.html":[7,0,1,5]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX5 =
 {
+"struct_sacado_1_1_is_equal_3_01_matrix_3_01_t_00_01_m_00_01_n_01_4_01_4.html":[8,0,1,5],
+"struct_sacado_1_1_is_equal_3_01_matrix_3_01_t_00_01_m_00_01_n_01_4_01_4.html#a58779df8396044fa8a49286868d62721":[8,0,1,5,0],
 "struct_sacado_1_1_is_equal_3_01_matrix_3_01_t_00_01_m_00_01_n_01_4_01_4.html#a58779df8396044fa8a49286868d62721":[7,0,1,5,0],
 "struct_sacado_1_1_is_equal_3_01_tensor3_3_01_t_00_01_n_01_4_01_4.html":[8,0,1,6],
 "struct_sacado_1_1_is_equal_3_01_tensor3_3_01_t_00_01_n_01_4_01_4.html":[7,0,1,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX5 =
 "structminitensor_1_1_minimizer.html":[6,9,4],
 "structminitensor_1_1_newton_line_search.html":[6,9,5],
 "structminitensor_1_1_newton_step.html":[6,9,13],
-"structminitensor_1_1_newton_with_line_search_step.html":[6,9,14],
-"structminitensor_1_1_step_base.html":[6,9,12],
-"structminitensor_1_1_trust_region_dog_leg_gradient.html":[6,9,11]
+"structminitensor_1_1_newton_with_line_search_step.html":[6,9,14]
 };

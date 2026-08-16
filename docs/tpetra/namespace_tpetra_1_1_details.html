@@ -560,12 +560,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a77b9156e3e6d288f02a3f93f7ae3796e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_tpetra_1_1_details.html#a77b9156e3e6d288f02a3f93f7ae3796e">unpackCrsMatrixAndCombine</a> (<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> <a class="el" href="class_tpetra_1_1_crs_matrix.html">CrsMatrix</a>&lt; ST, LO, GO, Node &gt; &amp;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">sourceMatrix</a>, <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> Teuchos::ArrayView&lt; <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">char</a> &gt; &amp;imports, <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> Teuchos::ArrayView&lt; <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">size_t</a> &gt; &amp;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">numPacketsPerLID</a>, <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> Teuchos::ArrayView&lt; <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> LO &gt; &amp;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">importLIDs</a>, <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">size_t</a>, <a class="el" href="namespace_tpetra.html#ae2e9d143601fd81d01d9317bf4d9094b">CombineMode</a> <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">combineMode</a>)</td></tr>
 <tr class="memdesc:a77b9156e3e6d288f02a3f93f7ae3796e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unpack the imported column indices and values, and combine into matrix.  <br /></td></tr>
 <tr class="separator:a77b9156e3e6d288f02a3f93f7ae3796e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade054639c69d59d6a39c3211f947b5d3" id="r_ade054639c69d59d6a39c3211f947b5d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_tpetra_1_1_details.html#ade054639c69d59d6a39c3211f947b5d3">enableWDVTracking</a> ()</td></tr>
-<tr class="memdesc:ade054639c69d59d6a39c3211f947b5d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable <a class="el" href="class_tpetra_1_1_details_1_1_wrapped_dual_view.html" title="A wrapper around Kokkos::DualView to safely manage data that might be replicated between host and dev...">WrappedDualView</a> reference-count tracking and syncing. Call this after exiting a host-parallel region that uses <a class="el" href="class_tpetra_1_1_details_1_1_wrapped_dual_view.html" title="A wrapper around Kokkos::DualView to safely manage data that might be replicated between host and dev...">WrappedDualView</a>.  <br /></td></tr>
-<tr class="separator:ade054639c69d59d6a39c3211f947b5d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30eb7dfeae4281fcf3a8183939accb0b" id="r_a30eb7dfeae4281fcf3a8183939accb0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_tpetra_1_1_details.html#a30eb7dfeae4281fcf3a8183939accb0b">disableWDVTracking</a> ()</td></tr>
-<tr class="memdesc:a30eb7dfeae4281fcf3a8183939accb0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable <a class="el" href="class_tpetra_1_1_details_1_1_wrapped_dual_view.html" title="A wrapper around Kokkos::DualView to safely manage data that might be replicated between host and dev...">WrappedDualView</a> reference-count tracking and syncing. Call this before entering a host-parallel region that uses <a class="el" href="class_tpetra_1_1_details_1_1_wrapped_dual_view.html" title="A wrapper around Kokkos::DualView to safely manage data that might be replicated between host and dev...">WrappedDualView</a>. For each <a class="el" href="class_tpetra_1_1_details_1_1_wrapped_dual_view.html" title="A wrapper around Kokkos::DualView to safely manage data that might be replicated between host and dev...">WrappedDualView</a> used in the parallel region, its view must be accessed (e.g. getHostView...) before disabling the tracking, so that it may be synced and marked modified correctly.  <br /></td></tr>
-<tr class="separator:a30eb7dfeae4281fcf3a8183939accb0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2656e21c0d474fdaa18ffc709e513532" id="r_a2656e21c0d474fdaa18ffc709e513532"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_tpetra_1_1_details.html#a2656e21c0d474fdaa18ffc709e513532">enableWDVTracking</a> ()</td></tr>
+<tr class="memdesc:a2656e21c0d474fdaa18ffc709e513532"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable <a class="el" href="class_tpetra_1_1_details_1_1_wrapped_dual_view.html" title="A wrapper around Kokkos::DualView to safely manage data that might be replicated between host and dev...">WrappedDualView</a> reference-count tracking and syncing. Call this after exiting a host-parallel region that uses <a class="el" href="class_tpetra_1_1_details_1_1_wrapped_dual_view.html" title="A wrapper around Kokkos::DualView to safely manage data that might be replicated between host and dev...">WrappedDualView</a>.  <br /></td></tr>
+<tr class="separator:a2656e21c0d474fdaa18ffc709e513532"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1720c32472e0630c659422c0c302b0f6" id="r_a1720c32472e0630c659422c0c302b0f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_tpetra_1_1_details.html#a1720c32472e0630c659422c0c302b0f6">disableWDVTracking</a> ()</td></tr>
+<tr class="memdesc:a1720c32472e0630c659422c0c302b0f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable <a class="el" href="class_tpetra_1_1_details_1_1_wrapped_dual_view.html" title="A wrapper around Kokkos::DualView to safely manage data that might be replicated between host and dev...">WrappedDualView</a> reference-count tracking and syncing. Call this before entering a host-parallel region that uses <a class="el" href="class_tpetra_1_1_details_1_1_wrapped_dual_view.html" title="A wrapper around Kokkos::DualView to safely manage data that might be replicated between host and dev...">WrappedDualView</a>. For each <a class="el" href="class_tpetra_1_1_details_1_1_wrapped_dual_view.html" title="A wrapper around Kokkos::DualView to safely manage data that might be replicated between host and dev...">WrappedDualView</a> used in the parallel region, its view must be accessed (e.g. getHostView...) before disabling the tracking, so that it may be synced and marked modified correctly.  <br /></td></tr>
+<tr class="separator:a1720c32472e0630c659422c0c302b0f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:addbcaa8e0b1271cb192f0370b417d162" id="r_addbcaa8e0b1271cb192f0370b417d162"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</a> MV , <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</a> <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">ResultView</a> , <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">bool</a> runOnDevice&gt; </td></tr>
 <tr class="memitem:addbcaa8e0b1271cb192f0370b417d162"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_tpetra_1_1_details.html#addbcaa8e0b1271cb192f0370b417d162">idotLocal</a> (<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">ResultView</a> &amp;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">localResult</a>, <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> MV &amp;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">X</a>, <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> MV &amp;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">Y</a>)</td></tr>
 <tr class="memdesc:addbcaa8e0b1271cb192f0370b417d162"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute dot product locally. Where the kernel runs controlled by runOnDevice.  <br /></td></tr>
@@ -630,9 +630,9 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:aa90772ef7153f3d04b733da81dd2d69a" id="r_aa90772ef7153f3d04b733da81dd2d69a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_tpetra_1_1_details.html#aa90772ef7153f3d04b733da81dd2d69a">wdvTrackingEnabled</a> = <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">true</a></td></tr>
-<tr class="memdesc:aa90772ef7153f3d04b733da81dd2d69a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether <a class="el" href="class_tpetra_1_1_details_1_1_wrapped_dual_view.html" title="A wrapper around Kokkos::DualView to safely manage data that might be replicated between host and dev...">WrappedDualView</a> reference count checking is enabled. Initially true. Since the DualView sync functions are not thread-safe, tracking should be disabled during host-parallel regions where <a class="el" href="class_tpetra_1_1_details_1_1_wrapped_dual_view.html" title="A wrapper around Kokkos::DualView to safely manage data that might be replicated between host and dev...">WrappedDualView</a> is used.  <br /></td></tr>
-<tr class="separator:aa90772ef7153f3d04b733da81dd2d69a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1be26baf8c1abe348bf7100298380104" id="r_a1be26baf8c1abe348bf7100298380104"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">TPETRA_LIB_DLL_EXPORT</a> <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_tpetra_1_1_details.html#a1be26baf8c1abe348bf7100298380104">wdvTrackingEnabled</a> = <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">true</a></td></tr>
+<tr class="memdesc:a1be26baf8c1abe348bf7100298380104"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether <a class="el" href="class_tpetra_1_1_details_1_1_wrapped_dual_view.html" title="A wrapper around Kokkos::DualView to safely manage data that might be replicated between host and dev...">WrappedDualView</a> reference count checking is enabled. Initially true. Since the DualView sync functions are not thread-safe, tracking should be disabled during host-parallel regions where <a class="el" href="class_tpetra_1_1_details_1_1_wrapped_dual_view.html" title="A wrapper around Kokkos::DualView to safely manage data that might be replicated between host and dev...">WrappedDualView</a> is used.  <br /></td></tr>
+<tr class="separator:a1be26baf8c1abe348bf7100298380104"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Nonmember function that computes a residual Computes R = B - A * X. </p>
@@ -5663,14 +5663,14 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">typenam
 
 </div>
 </div>
-<a id="ade054639c69d59d6a39c3211f947b5d3" name="ade054639c69d59d6a39c3211f947b5d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade054639c69d59d6a39c3211f947b5d3">&#9670;&#160;</a></span>enableWDVTracking()</h2>
+<a id="a2656e21c0d474fdaa18ffc709e513532" name="a2656e21c0d474fdaa18ffc709e513532"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2656e21c0d474fdaa18ffc709e513532">&#9670;&#160;</a></span>enableWDVTracking()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">void</a> Tpetra::Details::enableWDVTracking </td>
+          <td class="memname"><a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">TPETRA_LIB_DLL_EXPORT</a> <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">void</a> Tpetra::Details::enableWDVTracking </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -5684,14 +5684,14 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">typenam
 
 </div>
 </div>
-<a id="a30eb7dfeae4281fcf3a8183939accb0b" name="a30eb7dfeae4281fcf3a8183939accb0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30eb7dfeae4281fcf3a8183939accb0b">&#9670;&#160;</a></span>disableWDVTracking()</h2>
+<a id="a1720c32472e0630c659422c0c302b0f6" name="a1720c32472e0630c659422c0c302b0f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1720c32472e0630c659422c0c302b0f6">&#9670;&#160;</a></span>disableWDVTracking()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">void</a> Tpetra::Details::disableWDVTracking </td>
+          <td class="memname"><a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">TPETRA_LIB_DLL_EXPORT</a> <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">void</a> Tpetra::Details::disableWDVTracking </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -6668,19 +6668,20 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="aa90772ef7153f3d04b733da81dd2d69a" name="aa90772ef7153f3d04b733da81dd2d69a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa90772ef7153f3d04b733da81dd2d69a">&#9670;&#160;</a></span>wdvTrackingEnabled</h2>
+<a id="a1be26baf8c1abe348bf7100298380104" name="a1be26baf8c1abe348bf7100298380104"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1be26baf8c1abe348bf7100298380104">&#9670;&#160;</a></span>wdvTrackingEnabled</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">bool</a> Tpetra::Details::wdvTrackingEnabled = <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">true</a></td>
+          <td class="memname"><a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">TPETRA_LIB_DLL_EXPORT</a> <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">bool</a> Tpetra::Details::wdvTrackingEnabled = <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">true</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Whether <a class="el" href="class_tpetra_1_1_details_1_1_wrapped_dual_view.html" title="A wrapper around Kokkos::DualView to safely manage data that might be replicated between host and dev...">WrappedDualView</a> reference count checking is enabled. Initially true. Since the DualView sync functions are not thread-safe, tracking should be disabled during host-parallel regions where <a class="el" href="class_tpetra_1_1_details_1_1_wrapped_dual_view.html" title="A wrapper around Kokkos::DualView to safely manage data that might be replicated between host and dev...">WrappedDualView</a> is used. </p>
+<dl class="section note"><dt>Note</dt><dd>On Windows shared builds this DATA symbol must be dllimport'd by consumers (tpetraext, etc.); otherwise the linker looks for a local definition and fails with LNK2019. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_tpetra___details___wrapped_dual_view_8cpp_source.html#l00015">15</a> of file <a class="el" href="_tpetra___details___wrapped_dual_view_8cpp_source.html">Tpetra_Details_WrappedDualView.cpp</a>.</p>
 

@@ -256,5 +256,6 @@ var group__minitensor__traits =
     [ "minitensor::levi_civita", "group__minitensor__traits.html#ga4cee8aea08d4711f7cc962aef37b8fce", null ],
     [ "minitensor::INDEX_SIZE", "group__minitensor__traits.html#ga627502469acb93b57127c01431be990b", null ],
     [ "minitensor::LONG_INDEX_SIZE", "group__minitensor__traits.html#ga7618aa960dcaba3fcc1a947c6bd2dce9", null ],
-    [ "minitensor::DYNAMIC", "group__minitensor__traits.html#ga6be6d3779f63b6610bdd350ecf51007c", null ]
+    [ "minitensor::DYNAMIC", "group__minitensor__traits.html#ga6be6d3779f63b6610bdd350ecf51007c", null ],
+    [ "minitensor::dimension_reachable", "group__minitensor__traits.html#ga10cf3f94ad5aafb0c93240d1dd277ba3", null ]
 ];

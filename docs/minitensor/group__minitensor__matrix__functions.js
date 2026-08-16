@@ -12,6 +12,7 @@ var group__minitensor__matrix__functions =
     [ "minitensor::log_sym", "group__minitensor__matrix__functions.html#gaf5959778cb7da78e7cadc08523af14e7", null ],
     [ "minitensor::log_eig_sym", "group__minitensor__matrix__functions.html#gadb45fca569d05f810dd5d848eab4d365", null ],
     [ "minitensor::bch", "group__minitensor__matrix__functions.html#ga955e0a93f70ae1ff396ed21ddb5d650b", null ],
+    [ "minitensor::binary_powering", "group__minitensor__matrix__functions.html#ga8b0a2cc3532c5bd2cf5ddc16debbd2c4", null ],
     [ "minitensor::scaling_squaring_theta_ah09", "group__minitensor__matrix__functions.html#ga01de3b095380140edfab84fad3ef6b36", null ],
     [ "minitensor::expm_ell", "group__minitensor__matrix__functions.html#ga3e35e74f241ef01e124669acc768d262", null ],
     [ "minitensor::sqrt_dbp", "group__minitensor__matrix__functions.html#ga14a2623eac60288c851ef38177e61d08", null ],
