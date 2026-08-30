@@ -101,7 +101,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;Intrepid2_OrientationTools.hpp&quot;</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="_panzer___pure_basis_8hpp.html">Panzer_PureBasis.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;Kokkos_ViewFactory.hpp&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;Sacado_Fad_Kokkos_ViewFactory.hpp&quot;</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;Teuchos_FancyOStream.hpp&quot;</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
@@ -185,7 +185,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> cellDim = parentCell.getDimension();</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> numEdges = gatherFieldTangents_.extent(1);</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keyword">auto</span> workspace_tmp = Kokkos::createDynRankView(gatherFieldTangents_.get_static_view(),<span class="stringliteral">&quot;workspace&quot;</span>, workset.<a class="code hl_variable" href="classpanzer_1_1_workset_details.html#a697e6b93372f86f0f782d1ffe8eccc01">num_cells</a>,4, cellDim);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keyword">auto</span> workspace_tmp = Sacado::createDynRankView(gatherFieldTangents_.get_static_view(),<span class="stringliteral">&quot;workspace&quot;</span>, workset.<a class="code hl_variable" href="classpanzer_1_1_workset_details.html#a697e6b93372f86f0f782d1ffe8eccc01">num_cells</a>,4, cellDim);</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keyword">const</span> <span class="keyword">auto</span> worksetJacobians = pointValues_.jac.get_view();</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keyword">const</span> <span class="keyword">auto</span> cell_local_ids = workset.<a class="code hl_function" href="classpanzer_1_1_workset_details.html#a68cc932223355cc8b24f305a55121c45">getLocalCellIDs</a>();</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keyword">auto</span> gatherFieldTangents = gatherFieldTangents_.get_static_view();</div>

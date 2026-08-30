@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MueLu: MueLu::MatrixConstruction::VectorFillFunctor&lt; local_matrix_type, lumping, reuse &gt; Class Template Reference</title>
+<title>MueLu: MueLu::MatrixConstruction::VectorFillFunctor&lt; local_matrix_type, lumping, reuse, constructFilteredA &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -101,7 +101,7 @@ $(document).ready(function(){initNavTree('class_mue_lu_1_1_matrix_construction_1
 <a href="#pri-types">Private Types</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">MueLu::MatrixConstruction::VectorFillFunctor&lt; local_matrix_type, lumping, reuse &gt; Class Template Reference</div></div>
+  <div class="headertitle"><div class="title">MueLu::MatrixConstruction::VectorFillFunctor&lt; local_matrix_type, lumping, reuse, constructFilteredA &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -109,181 +109,77 @@ $(document).ready(function(){initNavTree('class_mue_lu_1_1_matrix_construction_1
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac039167e121322a0ca6dc2dcfa06d628" id="r_ac039167e121322a0ca6dc2dcfa06d628"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#ac039167e121322a0ca6dc2dcfa06d628">VectorFillFunctor</a> (local_matrix_type &amp;A_, <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a4d91d9edf7f26d8c6a1f3b7a44041264">local_ordinal_type</a> blockSize_, <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a0a00125e04e9022583d0e2209bc2b68c">block_indices_view_type</a> ghosted_point_to_block_, <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a8e6af137ff0f4f6c1bc8a604fc1879e8">results_view</a> &amp;results_, local_matrix_type &amp;filteredA_, <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#af3179aa1c1337c11adef60db92cdf0fd">local_graph_type</a> &amp;graph_, <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a8407cecdee6e52b9d7cac254a7b818a1">magnitudeType</a> dirichletThreshold_)</td></tr>
-<tr class="separator:ac039167e121322a0ca6dc2dcfa06d628"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab15809cef9bacf8b893d3cf6ad12989c" id="r_ab15809cef9bacf8b893d3cf6ad12989c"><td class="memItemLeft" align="right" valign="top">KOKKOS_INLINE_FUNCTION void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#ab15809cef9bacf8b893d3cf6ad12989c">operator()</a> (const <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a4d91d9edf7f26d8c6a1f3b7a44041264">local_ordinal_type</a> brlid) const</td></tr>
-<tr class="separator:ab15809cef9bacf8b893d3cf6ad12989c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d1b3e0cab50d2a4a0cc4853f7d4ecac" id="r_a8d1b3e0cab50d2a4a0cc4853f7d4ecac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a8d1b3e0cab50d2a4a0cc4853f7d4ecac">VectorFillFunctor</a> (local_matrix_type &amp;A_, <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#aeaa9d209597f236632a492fcd5d9b2a5">local_ordinal_type</a> blockSize_, <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#aface1653e4d6f44f590dc1b30a5fa751">block_indices_view_type</a> ghosted_point_to_block_, <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a4874fbc399d10165dea927a8c97611d3">results_view</a> &amp;results_, local_matrix_type &amp;filteredA_, <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a3a94befffa5e59b77a97c70d7bd9fa56">local_graph_type</a> &amp;graph_, <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a68a1785978c1f7da89ea2bbb397aa984">magnitudeType</a> dirichletThreshold_)</td></tr>
+<tr class="separator:a8d1b3e0cab50d2a4a0cc4853f7d4ecac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47887f113c8ee0feb50bc9a20741c55b" id="r_a47887f113c8ee0feb50bc9a20741c55b"><td class="memItemLeft" align="right" valign="top">KOKKOS_INLINE_FUNCTION void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a47887f113c8ee0feb50bc9a20741c55b">operator()</a> (const <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#aeaa9d209597f236632a492fcd5d9b2a5">local_ordinal_type</a> brlid) const</td></tr>
+<tr class="separator:a47887f113c8ee0feb50bc9a20741c55b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-types" name="pri-types"></a>
 Private Types</h2></td></tr>
-<tr class="memitem:afe3ef17f841a55c015772b5b8665ce9e" id="r_afe3ef17f841a55c015772b5b8665ce9e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#afe3ef17f841a55c015772b5b8665ce9e">scalar_type</a> = typename local_matrix_type::value_type</td></tr>
-<tr class="separator:afe3ef17f841a55c015772b5b8665ce9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d91d9edf7f26d8c6a1f3b7a44041264" id="r_a4d91d9edf7f26d8c6a1f3b7a44041264"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a4d91d9edf7f26d8c6a1f3b7a44041264">local_ordinal_type</a> = typename local_matrix_type::ordinal_type</td></tr>
-<tr class="separator:a4d91d9edf7f26d8c6a1f3b7a44041264"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3179aa1c1337c11adef60db92cdf0fd" id="r_af3179aa1c1337c11adef60db92cdf0fd"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#af3179aa1c1337c11adef60db92cdf0fd">local_graph_type</a> = typename local_matrix_type::staticcrsgraph_type</td></tr>
-<tr class="separator:af3179aa1c1337c11adef60db92cdf0fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f4a40bae29c4b42091d2855c13508ce" id="r_a6f4a40bae29c4b42091d2855c13508ce"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a6f4a40bae29c4b42091d2855c13508ce">memory_space</a> = typename local_matrix_type::memory_space</td></tr>
-<tr class="separator:a6f4a40bae29c4b42091d2855c13508ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e6af137ff0f4f6c1bc8a604fc1879e8" id="r_a8e6af137ff0f4f6c1bc8a604fc1879e8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a8e6af137ff0f4f6c1bc8a604fc1879e8">results_view</a> = Kokkos::View&lt; <a class="el" href="namespace_mue_lu.html#a68ae14477561647a8c38a292b7fb6c59">DecisionType</a> *, <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a6f4a40bae29c4b42091d2855c13508ce">memory_space</a> &gt;</td></tr>
-<tr class="separator:a8e6af137ff0f4f6c1bc8a604fc1879e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae4425dd4cfe2f87b97cf9dd738d2cd3" id="r_aae4425dd4cfe2f87b97cf9dd738d2cd3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#aae4425dd4cfe2f87b97cf9dd738d2cd3">ATS</a> = KokkosKernels::ArithTraits&lt; <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#afe3ef17f841a55c015772b5b8665ce9e">scalar_type</a> &gt;</td></tr>
-<tr class="separator:aae4425dd4cfe2f87b97cf9dd738d2cd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a018900d97c765d813a8c861cb649815e" id="r_a018900d97c765d813a8c861cb649815e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a018900d97c765d813a8c861cb649815e">OTS</a> = KokkosKernels::ArithTraits&lt; <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a4d91d9edf7f26d8c6a1f3b7a44041264">local_ordinal_type</a> &gt;</td></tr>
-<tr class="separator:a018900d97c765d813a8c861cb649815e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a00125e04e9022583d0e2209bc2b68c" id="r_a0a00125e04e9022583d0e2209bc2b68c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a0a00125e04e9022583d0e2209bc2b68c">block_indices_view_type</a> = Kokkos::View&lt; <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a4d91d9edf7f26d8c6a1f3b7a44041264">local_ordinal_type</a> *, <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a6f4a40bae29c4b42091d2855c13508ce">memory_space</a> &gt;</td></tr>
-<tr class="separator:a0a00125e04e9022583d0e2209bc2b68c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2d18408cfc13f414dc6236e57dff96a" id="r_ac2d18408cfc13f414dc6236e57dff96a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#ac2d18408cfc13f414dc6236e57dff96a">permutation_type</a> = Kokkos::View&lt; <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a4d91d9edf7f26d8c6a1f3b7a44041264">local_ordinal_type</a> *, <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a6f4a40bae29c4b42091d2855c13508ce">memory_space</a> &gt;</td></tr>
-<tr class="separator:ac2d18408cfc13f414dc6236e57dff96a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8407cecdee6e52b9d7cac254a7b818a1" id="r_a8407cecdee6e52b9d7cac254a7b818a1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a8407cecdee6e52b9d7cac254a7b818a1">magnitudeType</a> = typename ATS::magnitudeType</td></tr>
-<tr class="separator:a8407cecdee6e52b9d7cac254a7b818a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace243ba8cba2b661ce1fb353ee4536aa" id="r_ace243ba8cba2b661ce1fb353ee4536aa"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#ace243ba8cba2b661ce1fb353ee4536aa">scalar_type</a> = typename local_matrix_type::value_type</td></tr>
+<tr class="separator:ace243ba8cba2b661ce1fb353ee4536aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaa9d209597f236632a492fcd5d9b2a5" id="r_aeaa9d209597f236632a492fcd5d9b2a5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#aeaa9d209597f236632a492fcd5d9b2a5">local_ordinal_type</a> = typename local_matrix_type::ordinal_type</td></tr>
+<tr class="separator:aeaa9d209597f236632a492fcd5d9b2a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a94befffa5e59b77a97c70d7bd9fa56" id="r_a3a94befffa5e59b77a97c70d7bd9fa56"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a3a94befffa5e59b77a97c70d7bd9fa56">local_graph_type</a> = typename local_matrix_type::staticcrsgraph_type</td></tr>
+<tr class="separator:a3a94befffa5e59b77a97c70d7bd9fa56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc720eb1bb5b926da0c752f6eb00678f" id="r_afc720eb1bb5b926da0c752f6eb00678f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#afc720eb1bb5b926da0c752f6eb00678f">memory_space</a> = typename local_matrix_type::memory_space</td></tr>
+<tr class="separator:afc720eb1bb5b926da0c752f6eb00678f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4874fbc399d10165dea927a8c97611d3" id="r_a4874fbc399d10165dea927a8c97611d3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a4874fbc399d10165dea927a8c97611d3">results_view</a> = Kokkos::View&lt; <a class="el" href="namespace_mue_lu.html#a68ae14477561647a8c38a292b7fb6c59">DecisionType</a> *, <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#afc720eb1bb5b926da0c752f6eb00678f">memory_space</a> &gt;</td></tr>
+<tr class="separator:a4874fbc399d10165dea927a8c97611d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bd0e965e535f0fb044a7a7daae8846a" id="r_a9bd0e965e535f0fb044a7a7daae8846a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a9bd0e965e535f0fb044a7a7daae8846a">ATS</a> = KokkosKernels::ArithTraits&lt; <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#ace243ba8cba2b661ce1fb353ee4536aa">scalar_type</a> &gt;</td></tr>
+<tr class="separator:a9bd0e965e535f0fb044a7a7daae8846a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b3279c350b35bd71843a9c9dc6e2adc" id="r_a1b3279c350b35bd71843a9c9dc6e2adc"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a1b3279c350b35bd71843a9c9dc6e2adc">OTS</a> = KokkosKernels::ArithTraits&lt; <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#aeaa9d209597f236632a492fcd5d9b2a5">local_ordinal_type</a> &gt;</td></tr>
+<tr class="separator:a1b3279c350b35bd71843a9c9dc6e2adc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aface1653e4d6f44f590dc1b30a5fa751" id="r_aface1653e4d6f44f590dc1b30a5fa751"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#aface1653e4d6f44f590dc1b30a5fa751">block_indices_view_type</a> = Kokkos::View&lt; <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#aeaa9d209597f236632a492fcd5d9b2a5">local_ordinal_type</a> *, <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#afc720eb1bb5b926da0c752f6eb00678f">memory_space</a> &gt;</td></tr>
+<tr class="separator:aface1653e4d6f44f590dc1b30a5fa751"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f84f62f9ae4b39f630bf10abe94a86e" id="r_a3f84f62f9ae4b39f630bf10abe94a86e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a3f84f62f9ae4b39f630bf10abe94a86e">permutation_type</a> = Kokkos::View&lt; <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#aeaa9d209597f236632a492fcd5d9b2a5">local_ordinal_type</a> *, <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#afc720eb1bb5b926da0c752f6eb00678f">memory_space</a> &gt;</td></tr>
+<tr class="separator:a3f84f62f9ae4b39f630bf10abe94a86e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68a1785978c1f7da89ea2bbb397aa984" id="r_a68a1785978c1f7da89ea2bbb397aa984"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a68a1785978c1f7da89ea2bbb397aa984">magnitudeType</a> = typename ATS::magnitudeType</td></tr>
+<tr class="separator:a68a1785978c1f7da89ea2bbb397aa984"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:ad5d3720e69e42fc1ef120e3ac45031b3" id="r_ad5d3720e69e42fc1ef120e3ac45031b3"><td class="memItemLeft" align="right" valign="top">local_matrix_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#ad5d3720e69e42fc1ef120e3ac45031b3">A</a></td></tr>
-<tr class="separator:ad5d3720e69e42fc1ef120e3ac45031b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd4a2d9ea914b584a8644169e801aab0" id="r_acd4a2d9ea914b584a8644169e801aab0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a4d91d9edf7f26d8c6a1f3b7a44041264">local_ordinal_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#acd4a2d9ea914b584a8644169e801aab0">blockSize</a></td></tr>
-<tr class="separator:acd4a2d9ea914b584a8644169e801aab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4509ea5484653ecc8da8057e05606e0" id="r_ae4509ea5484653ecc8da8057e05606e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a0a00125e04e9022583d0e2209bc2b68c">block_indices_view_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#ae4509ea5484653ecc8da8057e05606e0">ghosted_point_to_block</a></td></tr>
-<tr class="separator:ae4509ea5484653ecc8da8057e05606e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af31689a577c87ce39beb0cbf6a8bb96d" id="r_af31689a577c87ce39beb0cbf6a8bb96d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a8e6af137ff0f4f6c1bc8a604fc1879e8">results_view</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#af31689a577c87ce39beb0cbf6a8bb96d">results</a></td></tr>
-<tr class="separator:af31689a577c87ce39beb0cbf6a8bb96d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64c17c84e86052e4c20aa2baed11aeb1" id="r_a64c17c84e86052e4c20aa2baed11aeb1"><td class="memItemLeft" align="right" valign="top">local_matrix_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a64c17c84e86052e4c20aa2baed11aeb1">filteredA</a></td></tr>
-<tr class="separator:a64c17c84e86052e4c20aa2baed11aeb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49a8bddb85c03b7d53318168bb666d74" id="r_a49a8bddb85c03b7d53318168bb666d74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#af3179aa1c1337c11adef60db92cdf0fd">local_graph_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a49a8bddb85c03b7d53318168bb666d74">graph</a></td></tr>
-<tr class="separator:a49a8bddb85c03b7d53318168bb666d74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d944cbbbaf83b08ed5681de75cdd949" id="r_a3d944cbbbaf83b08ed5681de75cdd949"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a8407cecdee6e52b9d7cac254a7b818a1">magnitudeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a3d944cbbbaf83b08ed5681de75cdd949">dirichletThreshold</a></td></tr>
-<tr class="separator:a3d944cbbbaf83b08ed5681de75cdd949"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73cd0507163b0f1367637cf43809c6f0" id="r_a73cd0507163b0f1367637cf43809c6f0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#afe3ef17f841a55c015772b5b8665ce9e">scalar_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a73cd0507163b0f1367637cf43809c6f0">zero</a> = ATS::zero()</td></tr>
-<tr class="separator:a73cd0507163b0f1367637cf43809c6f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd6544c95eac3b0457b6f21c9d01f151" id="r_abd6544c95eac3b0457b6f21c9d01f151"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#afe3ef17f841a55c015772b5b8665ce9e">scalar_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#abd6544c95eac3b0457b6f21c9d01f151">one</a> = ATS::one()</td></tr>
-<tr class="separator:abd6544c95eac3b0457b6f21c9d01f151"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa314b2f5b4cbdfc89a3f27d8554aa1b7" id="r_aa314b2f5b4cbdfc89a3f27d8554aa1b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_block_row_comparison.html">BlockRowComparison</a>&lt; local_matrix_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#aa314b2f5b4cbdfc89a3f27d8554aa1b7">comparison</a></td></tr>
-<tr class="separator:aa314b2f5b4cbdfc89a3f27d8554aa1b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a759083def4b9d11f9cf7936bc701d790" id="r_a759083def4b9d11f9cf7936bc701d790"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#ac2d18408cfc13f414dc6236e57dff96a">permutation_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a759083def4b9d11f9cf7936bc701d790">permutation</a></td></tr>
-<tr class="separator:a759083def4b9d11f9cf7936bc701d790"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78aad48994f6543b782f5a60f1db1563" id="r_a78aad48994f6543b782f5a60f1db1563"><td class="memItemLeft" align="right" valign="top">local_matrix_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a78aad48994f6543b782f5a60f1db1563">A</a></td></tr>
+<tr class="separator:a78aad48994f6543b782f5a60f1db1563"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf93b5bbf1744c6de1e3d5daed390c77" id="r_adf93b5bbf1744c6de1e3d5daed390c77"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#aeaa9d209597f236632a492fcd5d9b2a5">local_ordinal_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#adf93b5bbf1744c6de1e3d5daed390c77">blockSize</a></td></tr>
+<tr class="separator:adf93b5bbf1744c6de1e3d5daed390c77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe328cfca9ac4ab336994d295f9b9d3c" id="r_afe328cfca9ac4ab336994d295f9b9d3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#aface1653e4d6f44f590dc1b30a5fa751">block_indices_view_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#afe328cfca9ac4ab336994d295f9b9d3c">ghosted_point_to_block</a></td></tr>
+<tr class="separator:afe328cfca9ac4ab336994d295f9b9d3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b3dda7732953cb1c917489ee942bcfc" id="r_a3b3dda7732953cb1c917489ee942bcfc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a4874fbc399d10165dea927a8c97611d3">results_view</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a3b3dda7732953cb1c917489ee942bcfc">results</a></td></tr>
+<tr class="separator:a3b3dda7732953cb1c917489ee942bcfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af37943ba17b47959255f3190b38e53f9" id="r_af37943ba17b47959255f3190b38e53f9"><td class="memItemLeft" align="right" valign="top">local_matrix_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#af37943ba17b47959255f3190b38e53f9">filteredA</a></td></tr>
+<tr class="separator:af37943ba17b47959255f3190b38e53f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a988063a58f920e4e41a728447a00c610" id="r_a988063a58f920e4e41a728447a00c610"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a3a94befffa5e59b77a97c70d7bd9fa56">local_graph_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a988063a58f920e4e41a728447a00c610">graph</a></td></tr>
+<tr class="separator:a988063a58f920e4e41a728447a00c610"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70d316756b2a7c1c160d57929a3fa784" id="r_a70d316756b2a7c1c160d57929a3fa784"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a68a1785978c1f7da89ea2bbb397aa984">magnitudeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a70d316756b2a7c1c160d57929a3fa784">dirichletThreshold</a></td></tr>
+<tr class="separator:a70d316756b2a7c1c160d57929a3fa784"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad51f5f71e4f4796de83f16cb96fb7877" id="r_ad51f5f71e4f4796de83f16cb96fb7877"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#ace243ba8cba2b661ce1fb353ee4536aa">scalar_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#ad51f5f71e4f4796de83f16cb96fb7877">zero</a> = ATS::zero()</td></tr>
+<tr class="separator:ad51f5f71e4f4796de83f16cb96fb7877"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1b8a90673e527a89993c53cefb9e3e0" id="r_ad1b8a90673e527a89993c53cefb9e3e0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#ace243ba8cba2b661ce1fb353ee4536aa">scalar_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#ad1b8a90673e527a89993c53cefb9e3e0">one</a> = ATS::one()</td></tr>
+<tr class="separator:ad1b8a90673e527a89993c53cefb9e3e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d33cc31b0e1cbe0a224f682891b9d7d" id="r_a2d33cc31b0e1cbe0a224f682891b9d7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_block_row_comparison.html">BlockRowComparison</a>&lt; local_matrix_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a2d33cc31b0e1cbe0a224f682891b9d7d">comparison</a></td></tr>
+<tr class="separator:a2d33cc31b0e1cbe0a224f682891b9d7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a371c61ad57cec464527df2fa76dbc1e6" id="r_a371c61ad57cec464527df2fa76dbc1e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a3f84f62f9ae4b39f630bf10abe94a86e">permutation_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a371c61ad57cec464527df2fa76dbc1e6">permutation</a></td></tr>
+<tr class="separator:a371c61ad57cec464527df2fa76dbc1e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;class local_matrix_type, bool lumping, bool reuse&gt;<br />
-class MueLu::MatrixConstruction::VectorFillFunctor&lt; local_matrix_type, lumping, reuse &gt;</div>
-<p class="definition">Definition at line <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html#l00811">811</a> of file <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html">MueLu_MatrixConstruction.hpp</a>.</p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="afe3ef17f841a55c015772b5b8665ce9e" name="afe3ef17f841a55c015772b5b8665ce9e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe3ef17f841a55c015772b5b8665ce9e">&#9670;&#160;</a></span>scalar_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse &gt;::scalar_type =  typename local_matrix_type::value_type</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html#l00813">813</a> of file <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html">MueLu_MatrixConstruction.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a4d91d9edf7f26d8c6a1f3b7a44041264" name="a4d91d9edf7f26d8c6a1f3b7a44041264"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d91d9edf7f26d8c6a1f3b7a44041264">&#9670;&#160;</a></span>local_ordinal_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse &gt;::local_ordinal_type =  typename local_matrix_type::ordinal_type</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html#l00814">814</a> of file <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html">MueLu_MatrixConstruction.hpp</a>.</p>
-
-</div>
-</div>
-<a id="af3179aa1c1337c11adef60db92cdf0fd" name="af3179aa1c1337c11adef60db92cdf0fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3179aa1c1337c11adef60db92cdf0fd">&#9670;&#160;</a></span>local_graph_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse &gt;::local_graph_type =  typename local_matrix_type::staticcrsgraph_type</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
+<div class="textblock"><div class="compoundTemplParams">template&lt;class local_matrix_type, bool lumping, bool reuse, bool constructFilteredA = true&gt;<br />
+class MueLu::MatrixConstruction::VectorFillFunctor&lt; local_matrix_type, lumping, reuse, constructFilteredA &gt;</div>
 <p class="definition">Definition at line <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html#l00815">815</a> of file <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html">MueLu_MatrixConstruction.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a6f4a40bae29c4b42091d2855c13508ce" name="a6f4a40bae29c4b42091d2855c13508ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f4a40bae29c4b42091d2855c13508ce">&#9670;&#160;</a></span>memory_space</h2>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="ace243ba8cba2b661ce1fb353ee4536aa" name="ace243ba8cba2b661ce1fb353ee4536aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace243ba8cba2b661ce1fb353ee4536aa">&#9670;&#160;</a></span>scalar_type</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
+template&lt;class local_matrix_type , bool lumping, bool reuse, bool constructFilteredA = true&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse &gt;::memory_space =  typename local_matrix_type::memory_space</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html#l00816">816</a> of file <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html">MueLu_MatrixConstruction.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a8e6af137ff0f4f6c1bc8a604fc1879e8" name="a8e6af137ff0f4f6c1bc8a604fc1879e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e6af137ff0f4f6c1bc8a604fc1879e8">&#9670;&#160;</a></span>results_view</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse &gt;::results_view =  Kokkos::View&lt;<a class="el" href="namespace_mue_lu.html#a68ae14477561647a8c38a292b7fb6c59">DecisionType</a>*, <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a6f4a40bae29c4b42091d2855c13508ce">memory_space</a>&gt;</td>
+          <td class="memname">using <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse, constructFilteredA &gt;::scalar_type =  typename local_matrix_type::value_type</td>
         </tr>
       </table>
   </td>
@@ -297,19 +193,19 @@ template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
 
 </div>
 </div>
-<a id="aae4425dd4cfe2f87b97cf9dd738d2cd3" name="aae4425dd4cfe2f87b97cf9dd738d2cd3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae4425dd4cfe2f87b97cf9dd738d2cd3">&#9670;&#160;</a></span>ATS</h2>
+<a id="aeaa9d209597f236632a492fcd5d9b2a5" name="aeaa9d209597f236632a492fcd5d9b2a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaa9d209597f236632a492fcd5d9b2a5">&#9670;&#160;</a></span>local_ordinal_type</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
+template&lt;class local_matrix_type , bool lumping, bool reuse, bool constructFilteredA = true&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse &gt;::ATS =  KokkosKernels::ArithTraits&lt;<a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#afe3ef17f841a55c015772b5b8665ce9e">scalar_type</a>&gt;</td>
+          <td class="memname">using <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse, constructFilteredA &gt;::local_ordinal_type =  typename local_matrix_type::ordinal_type</td>
         </tr>
       </table>
   </td>
@@ -323,19 +219,19 @@ template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
 
 </div>
 </div>
-<a id="a018900d97c765d813a8c861cb649815e" name="a018900d97c765d813a8c861cb649815e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a018900d97c765d813a8c861cb649815e">&#9670;&#160;</a></span>OTS</h2>
+<a id="a3a94befffa5e59b77a97c70d7bd9fa56" name="a3a94befffa5e59b77a97c70d7bd9fa56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a94befffa5e59b77a97c70d7bd9fa56">&#9670;&#160;</a></span>local_graph_type</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
+template&lt;class local_matrix_type , bool lumping, bool reuse, bool constructFilteredA = true&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse &gt;::OTS =  KokkosKernels::ArithTraits&lt;<a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a4d91d9edf7f26d8c6a1f3b7a44041264">local_ordinal_type</a>&gt;</td>
+          <td class="memname">using <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse, constructFilteredA &gt;::local_graph_type =  typename local_matrix_type::staticcrsgraph_type</td>
         </tr>
       </table>
   </td>
@@ -349,19 +245,19 @@ template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
 
 </div>
 </div>
-<a id="a0a00125e04e9022583d0e2209bc2b68c" name="a0a00125e04e9022583d0e2209bc2b68c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a00125e04e9022583d0e2209bc2b68c">&#9670;&#160;</a></span>block_indices_view_type</h2>
+<a id="afc720eb1bb5b926da0c752f6eb00678f" name="afc720eb1bb5b926da0c752f6eb00678f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc720eb1bb5b926da0c752f6eb00678f">&#9670;&#160;</a></span>memory_space</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
+template&lt;class local_matrix_type , bool lumping, bool reuse, bool constructFilteredA = true&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse &gt;::block_indices_view_type =  Kokkos::View&lt;<a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a4d91d9edf7f26d8c6a1f3b7a44041264">local_ordinal_type</a>*, <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a6f4a40bae29c4b42091d2855c13508ce">memory_space</a>&gt;</td>
+          <td class="memname">using <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse, constructFilteredA &gt;::memory_space =  typename local_matrix_type::memory_space</td>
         </tr>
       </table>
   </td>
@@ -375,19 +271,19 @@ template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
 
 </div>
 </div>
-<a id="ac2d18408cfc13f414dc6236e57dff96a" name="ac2d18408cfc13f414dc6236e57dff96a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2d18408cfc13f414dc6236e57dff96a">&#9670;&#160;</a></span>permutation_type</h2>
+<a id="a4874fbc399d10165dea927a8c97611d3" name="a4874fbc399d10165dea927a8c97611d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4874fbc399d10165dea927a8c97611d3">&#9670;&#160;</a></span>results_view</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
+template&lt;class local_matrix_type , bool lumping, bool reuse, bool constructFilteredA = true&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse &gt;::permutation_type =  Kokkos::View&lt;<a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a4d91d9edf7f26d8c6a1f3b7a44041264">local_ordinal_type</a>*, <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a6f4a40bae29c4b42091d2855c13508ce">memory_space</a>&gt;</td>
+          <td class="memname">using <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse, constructFilteredA &gt;::results_view =  Kokkos::View&lt;<a class="el" href="namespace_mue_lu.html#a68ae14477561647a8c38a292b7fb6c59">DecisionType</a>*, <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#afc720eb1bb5b926da0c752f6eb00678f">memory_space</a>&gt;</td>
         </tr>
       </table>
   </td>
@@ -401,19 +297,19 @@ template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
 
 </div>
 </div>
-<a id="a8407cecdee6e52b9d7cac254a7b818a1" name="a8407cecdee6e52b9d7cac254a7b818a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8407cecdee6e52b9d7cac254a7b818a1">&#9670;&#160;</a></span>magnitudeType</h2>
+<a id="a9bd0e965e535f0fb044a7a7daae8846a" name="a9bd0e965e535f0fb044a7a7daae8846a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bd0e965e535f0fb044a7a7daae8846a">&#9670;&#160;</a></span>ATS</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
+template&lt;class local_matrix_type , bool lumping, bool reuse, bool constructFilteredA = true&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse &gt;::magnitudeType =  typename ATS::magnitudeType</td>
+          <td class="memname">using <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse, constructFilteredA &gt;::ATS =  KokkosKernels::ArithTraits&lt;<a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#ace243ba8cba2b661ce1fb353ee4536aa">scalar_type</a>&gt;</td>
         </tr>
       </table>
   </td>
@@ -427,20 +323,124 @@ template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
 
 </div>
 </div>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ac039167e121322a0ca6dc2dcfa06d628" name="ac039167e121322a0ca6dc2dcfa06d628"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac039167e121322a0ca6dc2dcfa06d628">&#9670;&#160;</a></span>VectorFillFunctor()</h2>
+<a id="a1b3279c350b35bd71843a9c9dc6e2adc" name="a1b3279c350b35bd71843a9c9dc6e2adc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b3279c350b35bd71843a9c9dc6e2adc">&#9670;&#160;</a></span>OTS</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
+template&lt;class local_matrix_type , bool lumping, bool reuse, bool constructFilteredA = true&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse &gt;::VectorFillFunctor </td>
+          <td class="memname">using <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse, constructFilteredA &gt;::OTS =  KokkosKernels::ArithTraits&lt;<a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#aeaa9d209597f236632a492fcd5d9b2a5">local_ordinal_type</a>&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html#l00823">823</a> of file <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html">MueLu_MatrixConstruction.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aface1653e4d6f44f590dc1b30a5fa751" name="aface1653e4d6f44f590dc1b30a5fa751"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aface1653e4d6f44f590dc1b30a5fa751">&#9670;&#160;</a></span>block_indices_view_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class local_matrix_type , bool lumping, bool reuse, bool constructFilteredA = true&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse, constructFilteredA &gt;::block_indices_view_type =  Kokkos::View&lt;<a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#aeaa9d209597f236632a492fcd5d9b2a5">local_ordinal_type</a>*, <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#afc720eb1bb5b926da0c752f6eb00678f">memory_space</a>&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html#l00824">824</a> of file <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html">MueLu_MatrixConstruction.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a3f84f62f9ae4b39f630bf10abe94a86e" name="a3f84f62f9ae4b39f630bf10abe94a86e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f84f62f9ae4b39f630bf10abe94a86e">&#9670;&#160;</a></span>permutation_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class local_matrix_type , bool lumping, bool reuse, bool constructFilteredA = true&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse, constructFilteredA &gt;::permutation_type =  Kokkos::View&lt;<a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#aeaa9d209597f236632a492fcd5d9b2a5">local_ordinal_type</a>*, <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#afc720eb1bb5b926da0c752f6eb00678f">memory_space</a>&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html#l00825">825</a> of file <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html">MueLu_MatrixConstruction.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a68a1785978c1f7da89ea2bbb397aa984" name="a68a1785978c1f7da89ea2bbb397aa984"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68a1785978c1f7da89ea2bbb397aa984">&#9670;&#160;</a></span>magnitudeType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class local_matrix_type , bool lumping, bool reuse, bool constructFilteredA = true&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse, constructFilteredA &gt;::magnitudeType =  typename ATS::magnitudeType</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html#l00826">826</a> of file <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html">MueLu_MatrixConstruction.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a8d1b3e0cab50d2a4a0cc4853f7d4ecac" name="a8d1b3e0cab50d2a4a0cc4853f7d4ecac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d1b3e0cab50d2a4a0cc4853f7d4ecac">&#9670;&#160;</a></span>VectorFillFunctor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class local_matrix_type , bool lumping, bool reuse, bool constructFilteredA = true&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse, constructFilteredA &gt;::VectorFillFunctor </td>
           <td>(</td>
           <td class="paramtype">local_matrix_type &amp;&#160;</td>
           <td class="paramname"><em>A_</em>, </td>
@@ -448,19 +448,19 @@ template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a4d91d9edf7f26d8c6a1f3b7a44041264">local_ordinal_type</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#aeaa9d209597f236632a492fcd5d9b2a5">local_ordinal_type</a>&#160;</td>
           <td class="paramname"><em>blockSize_</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a0a00125e04e9022583d0e2209bc2b68c">block_indices_view_type</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#aface1653e4d6f44f590dc1b30a5fa751">block_indices_view_type</a>&#160;</td>
           <td class="paramname"><em>ghosted_point_to_block_</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a8e6af137ff0f4f6c1bc8a604fc1879e8">results_view</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a4874fbc399d10165dea927a8c97611d3">results_view</a> &amp;&#160;</td>
           <td class="paramname"><em>results_</em>, </td>
         </tr>
         <tr>
@@ -472,13 +472,13 @@ template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#af3179aa1c1337c11adef60db92cdf0fd">local_graph_type</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a3a94befffa5e59b77a97c70d7bd9fa56">local_graph_type</a> &amp;&#160;</td>
           <td class="paramname"><em>graph_</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a8407cecdee6e52b9d7cac254a7b818a1">magnitudeType</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a68a1785978c1f7da89ea2bbb397aa984">magnitudeType</a>&#160;</td>
           <td class="paramname"><em>dirichletThreshold_</em>&#160;</td>
         </tr>
         <tr>
@@ -494,26 +494,26 @@ template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html#l00838">838</a> of file <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html">MueLu_MatrixConstruction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html#l00842">842</a> of file <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html">MueLu_MatrixConstruction.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab15809cef9bacf8b893d3cf6ad12989c" name="ab15809cef9bacf8b893d3cf6ad12989c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab15809cef9bacf8b893d3cf6ad12989c">&#9670;&#160;</a></span>operator()()</h2>
+<a id="a47887f113c8ee0feb50bc9a20741c55b" name="a47887f113c8ee0feb50bc9a20741c55b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47887f113c8ee0feb50bc9a20741c55b">&#9670;&#160;</a></span>operator()()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
+template&lt;class local_matrix_type , bool lumping, bool reuse, bool constructFilteredA = true&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">KOKKOS_INLINE_FUNCTION void <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse &gt;::operator() </td>
+          <td class="memname">KOKKOS_INLINE_FUNCTION void <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse, constructFilteredA &gt;::operator() </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a4d91d9edf7f26d8c6a1f3b7a44041264">local_ordinal_type</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#aeaa9d209597f236632a492fcd5d9b2a5">local_ordinal_type</a>&#160;</td>
           <td class="paramname"><em>brlid</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -525,128 +525,24 @@ template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html#l00851">851</a> of file <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html">MueLu_MatrixConstruction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html#l00855">855</a> of file <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html">MueLu_MatrixConstruction.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="ad5d3720e69e42fc1ef120e3ac45031b3" name="ad5d3720e69e42fc1ef120e3ac45031b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5d3720e69e42fc1ef120e3ac45031b3">&#9670;&#160;</a></span>A</h2>
+<a id="a78aad48994f6543b782f5a60f1db1563" name="a78aad48994f6543b782f5a60f1db1563"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78aad48994f6543b782f5a60f1db1563">&#9670;&#160;</a></span>A</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
+template&lt;class local_matrix_type , bool lumping, bool reuse, bool constructFilteredA = true&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">local_matrix_type <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse &gt;::A</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html#l00824">824</a> of file <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html">MueLu_MatrixConstruction.hpp</a>.</p>
-
-</div>
-</div>
-<a id="acd4a2d9ea914b584a8644169e801aab0" name="acd4a2d9ea914b584a8644169e801aab0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd4a2d9ea914b584a8644169e801aab0">&#9670;&#160;</a></span>blockSize</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a4d91d9edf7f26d8c6a1f3b7a44041264">local_ordinal_type</a> <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse &gt;::blockSize</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html#l00825">825</a> of file <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html">MueLu_MatrixConstruction.hpp</a>.</p>
-
-</div>
-</div>
-<a id="ae4509ea5484653ecc8da8057e05606e0" name="ae4509ea5484653ecc8da8057e05606e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4509ea5484653ecc8da8057e05606e0">&#9670;&#160;</a></span>ghosted_point_to_block</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a0a00125e04e9022583d0e2209bc2b68c">block_indices_view_type</a> <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse &gt;::ghosted_point_to_block</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html#l00826">826</a> of file <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html">MueLu_MatrixConstruction.hpp</a>.</p>
-
-</div>
-</div>
-<a id="af31689a577c87ce39beb0cbf6a8bb96d" name="af31689a577c87ce39beb0cbf6a8bb96d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af31689a577c87ce39beb0cbf6a8bb96d">&#9670;&#160;</a></span>results</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a8e6af137ff0f4f6c1bc8a604fc1879e8">results_view</a> <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse &gt;::results</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html#l00827">827</a> of file <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html">MueLu_MatrixConstruction.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a64c17c84e86052e4c20aa2baed11aeb1" name="a64c17c84e86052e4c20aa2baed11aeb1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64c17c84e86052e4c20aa2baed11aeb1">&#9670;&#160;</a></span>filteredA</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">local_matrix_type <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse &gt;::filteredA</td>
+          <td class="memname">local_matrix_type <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse, constructFilteredA &gt;::A</td>
         </tr>
       </table>
   </td>
@@ -660,19 +556,19 @@ template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
 
 </div>
 </div>
-<a id="a49a8bddb85c03b7d53318168bb666d74" name="a49a8bddb85c03b7d53318168bb666d74"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49a8bddb85c03b7d53318168bb666d74">&#9670;&#160;</a></span>graph</h2>
+<a id="adf93b5bbf1744c6de1e3d5daed390c77" name="adf93b5bbf1744c6de1e3d5daed390c77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf93b5bbf1744c6de1e3d5daed390c77">&#9670;&#160;</a></span>blockSize</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
+template&lt;class local_matrix_type , bool lumping, bool reuse, bool constructFilteredA = true&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#af3179aa1c1337c11adef60db92cdf0fd">local_graph_type</a> <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse &gt;::graph</td>
+          <td class="memname"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#aeaa9d209597f236632a492fcd5d9b2a5">local_ordinal_type</a> <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse, constructFilteredA &gt;::blockSize</td>
         </tr>
       </table>
   </td>
@@ -686,19 +582,19 @@ template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
 
 </div>
 </div>
-<a id="a3d944cbbbaf83b08ed5681de75cdd949" name="a3d944cbbbaf83b08ed5681de75cdd949"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d944cbbbaf83b08ed5681de75cdd949">&#9670;&#160;</a></span>dirichletThreshold</h2>
+<a id="afe328cfca9ac4ab336994d295f9b9d3c" name="afe328cfca9ac4ab336994d295f9b9d3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe328cfca9ac4ab336994d295f9b9d3c">&#9670;&#160;</a></span>ghosted_point_to_block</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
+template&lt;class local_matrix_type , bool lumping, bool reuse, bool constructFilteredA = true&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a8407cecdee6e52b9d7cac254a7b818a1">magnitudeType</a> <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse &gt;::dirichletThreshold</td>
+          <td class="memname"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#aface1653e4d6f44f590dc1b30a5fa751">block_indices_view_type</a> <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse, constructFilteredA &gt;::ghosted_point_to_block</td>
         </tr>
       </table>
   </td>
@@ -712,19 +608,19 @@ template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
 
 </div>
 </div>
-<a id="a73cd0507163b0f1367637cf43809c6f0" name="a73cd0507163b0f1367637cf43809c6f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a73cd0507163b0f1367637cf43809c6f0">&#9670;&#160;</a></span>zero</h2>
+<a id="a3b3dda7732953cb1c917489ee942bcfc" name="a3b3dda7732953cb1c917489ee942bcfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b3dda7732953cb1c917489ee942bcfc">&#9670;&#160;</a></span>results</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
+template&lt;class local_matrix_type , bool lumping, bool reuse, bool constructFilteredA = true&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#afe3ef17f841a55c015772b5b8665ce9e">scalar_type</a> <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse &gt;::zero = ATS::zero()</td>
+          <td class="memname"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a4874fbc399d10165dea927a8c97611d3">results_view</a> <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse, constructFilteredA &gt;::results</td>
         </tr>
       </table>
   </td>
@@ -738,19 +634,19 @@ template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
 
 </div>
 </div>
-<a id="abd6544c95eac3b0457b6f21c9d01f151" name="abd6544c95eac3b0457b6f21c9d01f151"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd6544c95eac3b0457b6f21c9d01f151">&#9670;&#160;</a></span>one</h2>
+<a id="af37943ba17b47959255f3190b38e53f9" name="af37943ba17b47959255f3190b38e53f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af37943ba17b47959255f3190b38e53f9">&#9670;&#160;</a></span>filteredA</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
+template&lt;class local_matrix_type , bool lumping, bool reuse, bool constructFilteredA = true&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#afe3ef17f841a55c015772b5b8665ce9e">scalar_type</a> <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse &gt;::one = ATS::one()</td>
+          <td class="memname">local_matrix_type <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse, constructFilteredA &gt;::filteredA</td>
         </tr>
       </table>
   </td>
@@ -764,19 +660,45 @@ template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
 
 </div>
 </div>
-<a id="aa314b2f5b4cbdfc89a3f27d8554aa1b7" name="aa314b2f5b4cbdfc89a3f27d8554aa1b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa314b2f5b4cbdfc89a3f27d8554aa1b7">&#9670;&#160;</a></span>comparison</h2>
+<a id="a988063a58f920e4e41a728447a00c610" name="a988063a58f920e4e41a728447a00c610"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a988063a58f920e4e41a728447a00c610">&#9670;&#160;</a></span>graph</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
+template&lt;class local_matrix_type , bool lumping, bool reuse, bool constructFilteredA = true&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_block_row_comparison.html">BlockRowComparison</a>&lt;local_matrix_type&gt; <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse &gt;::comparison</td>
+          <td class="memname"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a3a94befffa5e59b77a97c70d7bd9fa56">local_graph_type</a> <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse, constructFilteredA &gt;::graph</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html#l00833">833</a> of file <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html">MueLu_MatrixConstruction.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a70d316756b2a7c1c160d57929a3fa784" name="a70d316756b2a7c1c160d57929a3fa784"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70d316756b2a7c1c160d57929a3fa784">&#9670;&#160;</a></span>dirichletThreshold</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class local_matrix_type , bool lumping, bool reuse, bool constructFilteredA = true&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a68a1785978c1f7da89ea2bbb397aa984">magnitudeType</a> <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse, constructFilteredA &gt;::dirichletThreshold</td>
         </tr>
       </table>
   </td>
@@ -790,19 +712,19 @@ template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
 
 </div>
 </div>
-<a id="a759083def4b9d11f9cf7936bc701d790" name="a759083def4b9d11f9cf7936bc701d790"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a759083def4b9d11f9cf7936bc701d790">&#9670;&#160;</a></span>permutation</h2>
+<a id="ad51f5f71e4f4796de83f16cb96fb7877" name="ad51f5f71e4f4796de83f16cb96fb7877"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad51f5f71e4f4796de83f16cb96fb7877">&#9670;&#160;</a></span>zero</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
+template&lt;class local_matrix_type , bool lumping, bool reuse, bool constructFilteredA = true&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#ac2d18408cfc13f414dc6236e57dff96a">permutation_type</a> <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse &gt;::permutation</td>
+          <td class="memname">const <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#ace243ba8cba2b661ce1fb353ee4536aa">scalar_type</a> <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse, constructFilteredA &gt;::zero = ATS::zero()</td>
         </tr>
       </table>
   </td>
@@ -813,6 +735,84 @@ template&lt;class local_matrix_type , bool lumping, bool reuse&gt; </div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html#l00835">835</a> of file <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html">MueLu_MatrixConstruction.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ad1b8a90673e527a89993c53cefb9e3e0" name="ad1b8a90673e527a89993c53cefb9e3e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1b8a90673e527a89993c53cefb9e3e0">&#9670;&#160;</a></span>one</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class local_matrix_type , bool lumping, bool reuse, bool constructFilteredA = true&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#ace243ba8cba2b661ce1fb353ee4536aa">scalar_type</a> <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse, constructFilteredA &gt;::one = ATS::one()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html#l00836">836</a> of file <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html">MueLu_MatrixConstruction.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a2d33cc31b0e1cbe0a224f682891b9d7d" name="a2d33cc31b0e1cbe0a224f682891b9d7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d33cc31b0e1cbe0a224f682891b9d7d">&#9670;&#160;</a></span>comparison</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class local_matrix_type , bool lumping, bool reuse, bool constructFilteredA = true&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_block_row_comparison.html">BlockRowComparison</a>&lt;local_matrix_type&gt; <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse, constructFilteredA &gt;::comparison</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html#l00838">838</a> of file <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html">MueLu_MatrixConstruction.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a371c61ad57cec464527df2fa76dbc1e6" name="a371c61ad57cec464527df2fa76dbc1e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a371c61ad57cec464527df2fa76dbc1e6">&#9670;&#160;</a></span>permutation</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class local_matrix_type , bool lumping, bool reuse, bool constructFilteredA = true&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a3f84f62f9ae4b39f630bf10abe94a86e">permutation_type</a> <a class="el" href="class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html">MueLu::MatrixConstruction::VectorFillFunctor</a>&lt; local_matrix_type, lumping, reuse, constructFilteredA &gt;::permutation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html#l00839">839</a> of file <a class="el" href="_mue_lu___matrix_construction_8hpp_source.html">MueLu_MatrixConstruction.hpp</a>.</p>
 
 </div>
 </div>

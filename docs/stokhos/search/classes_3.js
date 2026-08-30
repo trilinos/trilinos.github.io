@@ -14,7 +14,7 @@ var searchData=
   ['devicefornode2_11',['DeviceForNode2',['../struct_stokhos_1_1_device_for_node2.html',1,'Stokhos']]],
   ['devicefornode2_3c_20tpetra_3a_3akokkoscompat_3a_3akokkosdevicewrappernode_3c_20execspace_2c_20memspace_20_3e_20_3e_12',['DeviceForNode2&lt; Tpetra::KokkosCompat::KokkosDeviceWrapperNode&lt; ExecSpace, MemSpace &gt; &gt;',['../struct_stokhos_1_1_device_for_node2_3_01_tpetra_1_1_kokkos_compat_1_1_kokkos_device_wrapper_nodea06f8ad15bbd5be85326302395226e41.html',1,'Stokhos']]],
   ['deviceprop_13',['DeviceProp',['../class_stokhos_1_1_device_prop.html',1,'Stokhos']]],
-  ['dgksorthomanager_3c_20sacado_3a_3amp_3a_3avector_3c_20storage_20_3e_2c_20mv_2c_20op_20_3e_14',['DGKSOrthoManager&lt; Sacado::MP::Vector&lt; Storage &gt;, MV, OP &gt;',['../class_belos_1_1_d_g_k_s_ortho_manager_3_01_sacado_1_1_m_p_1_1_vector_3_01_storage_01_4_00_01_m_v_00_01_o_p_01_4.html',1,'Belos']]],
+  ['dgksorthomanager_3c_20sacado_3a_3amp_3a_3avector_3c_20storage_20_3e_2c_20mv_2c_20op_2c_20dm_20_3e_14',['DGKSOrthoManager&lt; Sacado::MP::Vector&lt; Storage &gt;, MV, OP, DM &gt;',['../class_belos_1_1_d_g_k_s_ortho_manager_3_01_sacado_1_1_m_p_1_1_vector_3_01_storage_01_4_00_01_m_v_00_01_o_p_00_01_d_m_01_4.html',1,'Belos']]],
   ['diagepetraop_15',['DiagEpetraOp',['../class_stokhos_1_1_diag_epetra_op.html',1,'Stokhos']]],
   ['diagonaloperator_16',['DiagonalOperator',['../class_stokhos_1_1_diagonal_operator.html',1,'Stokhos']]],
   ['diagpreconditioner_17',['DiagPreconditioner',['../class_stokhos_1_1_diag_preconditioner.html',1,'Stokhos']]],

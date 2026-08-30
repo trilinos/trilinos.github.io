@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['hasapplytranspose_0',['hasapplytranspose',['../class_belos_1_1_operator.html#a82aebbc870fc602ba5aaff5914828a90',1,'Belos::Operator::HasApplyTranspose()'],['../class_belos_1_1_operator_traits_3_01_scalar_type_00_01_multi_vec_3_01_scalar_type_01_4_00_01_ope7f47479b6bd5502cb0dd6d0158fd9231.html#a213e05307f07da7ab01661018d8155c8',1,'Belos::OperatorTraits&lt; ScalarType, MultiVec&lt; ScalarType &gt;, Operator&lt; ScalarType &gt; &gt;::HasApplyTranspose()'],['../class_belos_1_1_operator_traits.html#a9502748cb7385304333a7d638c64aca1',1,'Belos::OperatorTraits::HasApplyTranspose()']]],
-  ['hasconstantstride_1',['HasConstantStride',['../class_belos_1_1_multi_vec_traits.html#a821058b700f6ba57ba9d970f4eee8736',1,'Belos::MultiVecTraits']]]
+  ['hasapplytranspose_0',['hasapplytranspose',['../class_belos_1_1_operator.html#a1fba6cf21ef5852b3f44e24bd72eca7c',1,'Belos::Operator::HasApplyTranspose()'],['../class_belos_1_1_operator_traits_3_01_scalar_type_00_01_multi_vec_3_01_scalar_type_00_01_d_m_01_4e6cf3e27c1cd788dd1f184184619d1df.html#a9fb714ff43c7a0f6f569b1b515a5f3fe',1,'Belos::OperatorTraits&lt; ScalarType, MultiVec&lt; ScalarType, DM &gt;, Operator&lt; ScalarType, DM &gt; &gt;::HasApplyTranspose()'],['../class_belos_1_1_operator_traits.html#a9502748cb7385304333a7d638c64aca1',1,'Belos::OperatorTraits::HasApplyTranspose()']]],
+  ['hasconstantstride_1',['HasConstantStride',['../class_belos_1_1_multi_vec_traits.html#a0193991d02ec07b74c50e97fa62f49b1',1,'Belos::MultiVecTraits']]]
 ];

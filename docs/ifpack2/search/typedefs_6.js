@@ -5,5 +5,6 @@ var searchData=
   ['implscalararray_2',['ImplScalarArray',['../class_ifpack2_1_1_details_1_1_fast_i_l_u___base.html#ad1c2318329f3a813ea85c8bb9da5d390',1,'Ifpack2::Details::FastILU_Base']]],
   ['import_5ftype_3',['import_type',['../class_ifpack2_1_1_block_relaxation.html#a42c0227aafb0d1a704ea3d72eb0964fb',1,'Ifpack2::BlockRelaxation::import_type'],['../struct_ifpack2_1_1_container_factory.html#ac9b43d66752cc742713a454ac1aad92e',1,'Ifpack2::ContainerFactory::import_type']]],
   ['inner_5fsolver_5ftype_4',['inner_solver_type',['../../../../belos/doc/html/class_belos_1_1_inner_solver_traits.html#a0560d699c0d69d403bd3add26656cf4f',1,'Belos::InnerSolverTraits']]],
-  ['isc_5',['ISC',['../class_ifpack2_1_1_container.html#aae57d34cf92a1873dd54caf812a2b082',1,'Ifpack2::Container']]]
+  ['isc_5',['ISC',['../class_ifpack2_1_1_container.html#aae57d34cf92a1873dd54caf812a2b082',1,'Ifpack2::Container']]],
+  ['ist_6',['ist',['../../../../belos/doc/html/class_belos_1_1_dense_mat_traits_3_01_scalar_00_01_kokkos_1_1_dual_view_3_01typename_01_kokkos_k1e38db16fe9be22057613899f811a9c1.html#a7eacf8aeb03189fa4ad597d1272869b8',1,'Belos::DenseMatTraits&lt; Scalar, Kokkos::DualView&lt; typename KokkosKernels::ArithTraits&lt; Scalar &gt;::val_type **, Properties... &gt; &gt;::IST'],['../../../../belos/doc/html/class_belos_1_1_kokkos_dense_solver.html#a603cc910a1eb0099d51f606af601aa5a',1,'Belos::KokkosDenseSolver::IST']]]
 ];

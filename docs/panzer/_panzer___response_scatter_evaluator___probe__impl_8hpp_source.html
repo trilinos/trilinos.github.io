@@ -115,7 +115,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;Thyra_SpmdVectorBase.hpp&quot;</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &quot;Teuchos_ArrayRCP.hpp&quot;</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &quot;Kokkos_ViewFactory.hpp&quot;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &quot;Sacado_Fad_Kokkos_ViewFactory.hpp&quot;</span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacepanzer.html">panzer</a> {</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
@@ -346,7 +346,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>  <span class="keyword">auto</span> field_coeffs_host_subview = Kokkos::subview(field_coeffs_host,std::pair&lt;int,int&gt;(cellIndex_,cellIndex_+1),Kokkos::ALL);</div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span> </div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>  <span class="keyword">auto</span> field_val = Kokkos::createDynRankViewWithType&lt;Kokkos::DynRankView&lt;ScalarT,HostSpace&gt;&gt;(field_coeffs_host, <span class="stringliteral">&quot;field_val_at_point&quot;</span>, 1, 1); <span class="comment">// &lt;C,P&gt;</span></div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>  <span class="keyword">auto</span> field_val = Sacado::createDynRankViewWithType&lt;Kokkos::DynRankView&lt;ScalarT,HostSpace&gt;&gt;(field_coeffs_host, <span class="stringliteral">&quot;field_val_at_point&quot;</span>, 1, 1); <span class="comment">// &lt;C,P&gt;</span></div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>  <span class="keyword">auto</span> basis_values_host = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace(),basis_values_);</div>
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>

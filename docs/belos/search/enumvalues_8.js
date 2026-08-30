@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lossofaccuracydetected_0',['LossOfAccuracyDetected',['../namespace_belos.html#a2ab2fec66d34a6ec385de5eb8008c53ea7513836456ccabbb84a33337bf81338b',1,'Belos']]]
+  ['kokkosdualview_0',['KokkosDualView',['../namespace_belos.html#a6148400a6292d80c4305cd4bcc1c9ac1a18c9bc8019ea453f9b046cc73e02f543',1,'Belos']]]
 ];

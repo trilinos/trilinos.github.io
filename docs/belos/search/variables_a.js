@@ -2,8 +2,8 @@ var searchData=
 [
   ['mat_5fcond_5fnum_0',['mat_cond_num',['../struct_belos_1_1_l_s_q_r_iteration_state.html#af7c3b20cbca0d67ae112b818d11a43ec',1,'Belos::LSQRIterationState']]],
   ['mat_5fresid_5fnorm_1',['mat_resid_norm',['../struct_belos_1_1_l_s_q_r_iteration_state.html#a8f1fde973888e918b836875c5a7ed63d',1,'Belos::LSQRIterationState']]],
-  ['max_5fblk_5fortho_5fdefault_5f_2',['max_blk_ortho_default_',['../class_belos_1_1_d_g_k_s_ortho_manager.html#a0ee30f131394a50fcee552723b0b5e64',1,'Belos::DGKSOrthoManager']]],
-  ['max_5fblk_5fortho_5ffast_5f_3',['max_blk_ortho_fast_',['../class_belos_1_1_d_g_k_s_ortho_manager.html#a6653cbb850c1d09b160a1683b4fc47e2',1,'Belos::DGKSOrthoManager']]],
-  ['max_5fortho_5fsteps_5fdefault_5f_4',['max_ortho_steps_default_',['../class_belos_1_1_i_c_g_s_ortho_manager.html#a73909b4a0d57caeb2220151a1925884a',1,'Belos::ICGSOrthoManager::max_ortho_steps_default_'],['../class_belos_1_1_i_m_g_s_ortho_manager.html#ab6ae62b9d1d935a3cd02c8887cdbb8b3',1,'Belos::IMGSOrthoManager::max_ortho_steps_default_']]],
-  ['max_5fortho_5fsteps_5ffast_5f_5',['max_ortho_steps_fast_',['../class_belos_1_1_i_c_g_s_ortho_manager.html#afe4b3f3f7bf47afc08ac3ef0b2761811',1,'Belos::ICGSOrthoManager::max_ortho_steps_fast_'],['../class_belos_1_1_i_m_g_s_ortho_manager.html#a8b31ff0effb4325bd26142f3bb7e356d',1,'Belos::IMGSOrthoManager::max_ortho_steps_fast_']]]
+  ['max_5fblk_5fortho_5fdefault_5f_2',['max_blk_ortho_default_',['../class_belos_1_1_d_g_k_s_ortho_manager.html#a2d046e3add808fd3a3105e9e0c7c422e',1,'Belos::DGKSOrthoManager']]],
+  ['max_5fblk_5fortho_5ffast_5f_3',['max_blk_ortho_fast_',['../class_belos_1_1_d_g_k_s_ortho_manager.html#a4391bea042f5392c9608a5d931946af5',1,'Belos::DGKSOrthoManager']]],
+  ['max_5fortho_5fsteps_5fdefault_5f_4',['max_ortho_steps_default_',['../class_belos_1_1_i_c_g_s_ortho_manager.html#aa170f88b41cbdf41110b0faea495d8ec',1,'Belos::ICGSOrthoManager::max_ortho_steps_default_'],['../class_belos_1_1_i_m_g_s_ortho_manager.html#a29f6d47bdef8e0e7edc276bbe6fb0781',1,'Belos::IMGSOrthoManager::max_ortho_steps_default_']]],
+  ['max_5fortho_5fsteps_5ffast_5f_5',['max_ortho_steps_fast_',['../class_belos_1_1_i_c_g_s_ortho_manager.html#a9e2fdff8744b2aa501e1f886ddf59c1c',1,'Belos::ICGSOrthoManager::max_ortho_steps_fast_'],['../class_belos_1_1_i_m_g_s_ortho_manager.html#a4f060147a979794a00b66403a00a8c54',1,'Belos::IMGSOrthoManager::max_ortho_steps_fast_']]]
 ];

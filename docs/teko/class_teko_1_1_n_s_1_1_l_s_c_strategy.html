@@ -146,17 +146,17 @@ Public Member Functions</h2></td></tr>
 <p>[2] Elman, and Tuminaro, "Boundary Conditions in Approximate Commutator
     Preconditioners for the Navier-Stokes Equations," In press (8/2009)?</p>
 <p>The Least Squares Commuator preconditioner provides a (nearly) Algebraic approximation of the Schur complement of the (Navier-)Stokes system</p>
-<p><picture><source srcset="form_42_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ A = \left[\begin{array}{cc}
+<p><picture><source srcset="form_38_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ A = \left[\begin{array}{cc}
        F &amp; B^T \\
        B &amp; C
-    \end{array}\right] $" src="form_42.png" width="90" height="31"/></picture></p>
+    \end{array}\right] $" src="form_38.png" width="90" height="31"/></picture></p>
 <p>The approximation to the Schur complement is</p>
-<p><picture><source srcset="form_43_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ C - B F^{-1} B^T \approx (B \hat{Q}_u^{-1} B^T - \gamma C)^{-1}
+<p><picture><source srcset="form_39_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ C - B F^{-1} B^T \approx (B \hat{Q}_u^{-1} B^T - \gamma C)^{-1}
       (B \hat{Q}_u^{-1} F H B^T+C_I) (B H B^T - \gamma C)^{-1}
-    + C_O $" src="form_43.png" width="410" height="16"/></picture>.</p>
-<p>Where <picture><source srcset="form_44_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$\hat{Q}_u$" src="form_44.png" width="15" height="15"/></picture> is typically a diagonal approximation of the mass matrix, and <picture><source srcset="form_23_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$H$" src="form_23.png" width="11" height="10"/></picture> is an appropriate diagonal scaling matrix (see [2] for details). The scalars <picture><source srcset="form_45_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$\alpha$" src="form_45.png" width="8" height="6"/></picture> and <picture><source srcset="form_46_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$\gamma$" src="form_46.png" width="9" height="9"/></picture> are chosen to stabilize an unstable discretization (for the case of <picture><source srcset="form_47_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$C\neq 0$" src="form_47.png" width="33" height="13"/></picture>). If the system is stable then they can be set to <picture><source srcset="form_48_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$0$" src="form_48.png" width="8" height="9"/></picture> (see [1] for more details).</p>
-<p>In order to approximate <picture><source srcset="form_49_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$A$" src="form_49.png" width="10" height="10"/></picture> two decompositions can be chosen, a full LU decomposition and a purely upper triangular version. A full LU decomposition requires that the velocity convection-diffusion operator ( <picture><source srcset="form_21_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$F$" src="form_21.png" width="10" height="10"/></picture>) is inverted twice, while an upper triangular approximation requires only a single inverse.</p>
-<p>The methods of this strategy provide the different pieces. For instance <code>getInvF</code> provides <picture><source srcset="form_50_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$F^{-1}$" src="form_50.png" width="23" height="11"/></picture>. Similarly there are calls to get the inverses of <picture><source srcset="form_51_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$B \hat{Q}_u^{-1} B^T - \gamma C$" src="form_51.png" width="84" height="16"/></picture>, <picture><source srcset="form_51_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$B \hat{Q}_u^{-1} B^T - \gamma C$" src="form_51.png" width="84" height="16"/></picture>, and <picture><source srcset="form_52_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$\hat{Q}_u^{-1}$" src="form_52.png" width="23" height="16"/></picture> as well as the <picture><source srcset="form_23_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$H$" src="form_23.png" width="11" height="10"/></picture> operator. All these methods are required by the <code>LSCPreconditionerFactory</code>. Additionally there is a <code>buildState</code> method that is called everytime a preconditiner is (re)constructed. This is to allow for any preprocessing neccessary to be handled.</p>
+    + C_O $" src="form_39.png" width="410" height="16"/></picture>.</p>
+<p>Where <picture><source srcset="form_40_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$\hat{Q}_u$" src="form_40.png" width="15" height="15"/></picture> is typically a diagonal approximation of the mass matrix, and <picture><source srcset="form_19_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$H$" src="form_19.png" width="11" height="10"/></picture> is an appropriate diagonal scaling matrix (see [2] for details). The scalars <picture><source srcset="form_41_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$\alpha$" src="form_41.png" width="8" height="6"/></picture> and <picture><source srcset="form_42_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$\gamma$" src="form_42.png" width="9" height="9"/></picture> are chosen to stabilize an unstable discretization (for the case of <picture><source srcset="form_43_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$C\neq 0$" src="form_43.png" width="33" height="13"/></picture>). If the system is stable then they can be set to <picture><source srcset="form_44_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$0$" src="form_44.png" width="8" height="9"/></picture> (see [1] for more details).</p>
+<p>In order to approximate <picture><source srcset="form_45_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$A$" src="form_45.png" width="10" height="10"/></picture> two decompositions can be chosen, a full LU decomposition and a purely upper triangular version. A full LU decomposition requires that the velocity convection-diffusion operator ( <picture><source srcset="form_17_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$F$" src="form_17.png" width="10" height="10"/></picture>) is inverted twice, while an upper triangular approximation requires only a single inverse.</p>
+<p>The methods of this strategy provide the different pieces. For instance <code>getInvF</code> provides <picture><source srcset="form_46_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$F^{-1}$" src="form_46.png" width="23" height="11"/></picture>. Similarly there are calls to get the inverses of <picture><source srcset="form_47_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$B \hat{Q}_u^{-1} B^T - \gamma C$" src="form_47.png" width="84" height="16"/></picture>, <picture><source srcset="form_47_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$B \hat{Q}_u^{-1} B^T - \gamma C$" src="form_47.png" width="84" height="16"/></picture>, and <picture><source srcset="form_48_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$\hat{Q}_u^{-1}$" src="form_48.png" width="23" height="16"/></picture> as well as the <picture><source srcset="form_19_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$H$" src="form_19.png" width="11" height="10"/></picture> operator. All these methods are required by the <code>LSCPreconditionerFactory</code>. Additionally there is a <code>buildState</code> method that is called everytime a preconditiner is (re)constructed. This is to allow for any preprocessing neccessary to be handled.</p>
 <p>The final set of methods help construct a <a class="el" href="class_teko_1_1_n_s_1_1_l_s_c_strategy.html" title="Strategy for driving LSCPreconditionerFactory.">LSCStrategy</a> object, they are primarily used by the parameter list construction inteface. They are more advanced and can be ignored by initial implementations of this class. </p>
 
 <p class="definition">Definition at line <a class="el" href="_teko___l_s_c_strategy_8hpp_source.html#l00082">82</a> of file <a class="el" href="_teko___l_s_c_strategy_8hpp_source.html">Teko_LSCStrategy.hpp</a>.</p>
@@ -240,7 +240,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get the inverse of <picture><source srcset="form_53_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$B Q_u^{-1} B^T - \gamma C$" src="form_53.png" width="84" height="15"/></picture>.</p>
+<p>Get the inverse of <picture><source srcset="form_49_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$B Q_u^{-1} B^T - \gamma C$" src="form_49.png" width="84" height="15"/></picture>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">A</td><td>The linear operator to be preconditioned by LSC. </td></tr>
@@ -248,7 +248,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>An (approximate) inverse of <picture><source srcset="form_53_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$B Q_u^{-1} B^T - \gamma C$" src="form_53.png" width="84" height="15"/></picture>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>An (approximate) inverse of <picture><source srcset="form_49_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$B Q_u^{-1} B^T - \gamma C$" src="form_49.png" width="84" height="15"/></picture>. </dd></dl>
 
 <p>Implemented in <a class="el" href="class_teko_1_1_n_s_1_1_inv_l_s_c_strategy.html#ad13829e4e663ac0689a8653701dcf8bb">Teko::NS::InvLSCStrategy</a>, <a class="el" href="class_teko_1_1_n_s_1_1_l_s_c_s_i_m_p_l_e_c_strategy.html#a8a299a3d4f7f45b07c13a7d8a4d905a3">Teko::NS::LSCSIMPLECStrategy</a>, and <a class="el" href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#a6bddbefc92ff418533876b382e86a398">Teko::NS::PresLaplaceLSCStrategy</a>.</p>
 
@@ -287,7 +287,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get the inverse of <picture><source srcset="form_20_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$B H B^T - \gamma C$" src="form_20.png" width="71" height="14"/></picture>.</p>
+<p>Get the inverse of <picture><source srcset="form_16_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$B H B^T - \gamma C$" src="form_16.png" width="71" height="14"/></picture>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">A</td><td>The linear operator to be preconditioned by LSC. </td></tr>
@@ -295,7 +295,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>An (approximate) inverse of <picture><source srcset="form_20_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$B H B^T - \gamma C$" src="form_20.png" width="71" height="14"/></picture>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>An (approximate) inverse of <picture><source srcset="form_16_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$B H B^T - \gamma C$" src="form_16.png" width="71" height="14"/></picture>. </dd></dl>
 
 <p>Implemented in <a class="el" href="class_teko_1_1_n_s_1_1_inv_l_s_c_strategy.html#aac2ea38c2490ded5a8b3cbde03a8be1a">Teko::NS::InvLSCStrategy</a>, <a class="el" href="class_teko_1_1_n_s_1_1_l_s_c_s_i_m_p_l_e_c_strategy.html#a44b8c45fcf1b9acdf3f07879f1e586ad">Teko::NS::LSCSIMPLECStrategy</a>, and <a class="el" href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#abdbaf268bc5bd7cceff11d6ca86be279">Teko::NS::PresLaplaceLSCStrategy</a>.</p>
 
@@ -334,7 +334,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get the inverse of the <picture><source srcset="form_21_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$F$" src="form_21.png" width="10" height="10"/></picture> block.</p>
+<p>Get the inverse of the <picture><source srcset="form_17_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$F$" src="form_17.png" width="10" height="10"/></picture> block.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">A</td><td>The linear operator to be preconditioned by LSC. </td></tr>
@@ -342,7 +342,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>An (approximate) inverse of <picture><source srcset="form_21_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$F$" src="form_21.png" width="10" height="10"/></picture>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>An (approximate) inverse of <picture><source srcset="form_17_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$F$" src="form_17.png" width="10" height="10"/></picture>. </dd></dl>
 
 <p>Implemented in <a class="el" href="class_teko_1_1_n_s_1_1_inv_l_s_c_strategy.html#a88a88c0d1d5c75d1f111d0b64ffe43e8">Teko::NS::InvLSCStrategy</a>, <a class="el" href="class_teko_1_1_n_s_1_1_l_s_c_s_i_m_p_l_e_c_strategy.html#a46328d822b99c62480f04acb6dec331e">Teko::NS::LSCSIMPLECStrategy</a>, and <a class="el" href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#a8d9e60184d3cf67e4607c8c616d232a9">Teko::NS::PresLaplaceLSCStrategy</a>.</p>
 
@@ -381,7 +381,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get the inverse to stablized stabilizing the Schur complement approximation using a placement on the `&lsquo;outside&rsquo;'. That is what is the value for <picture><source srcset="form_54_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$C_O$" src="form_54.png" width="16" height="13"/></picture>. This quantity may be null.</p>
+<p>Get the inverse to stablized stabilizing the Schur complement approximation using a placement on the `&lsquo;outside&rsquo;'. That is what is the value for <picture><source srcset="form_50_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$C_O$" src="form_50.png" width="16" height="13"/></picture>. This quantity may be null.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">A</td><td>The linear operator to be preconditioned by LSC. </td></tr>
@@ -389,8 +389,8 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The operator to stabilize the whole Schur complement (originally <picture><source srcset="form_55_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$\alpha D^{-1}
-$" src="form_55.png" width="31" height="11"/></picture>). </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The operator to stabilize the whole Schur complement (originally <picture><source srcset="form_51_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$\alpha D^{-1}
+$" src="form_51.png" width="31" height="11"/></picture>). </dd></dl>
 
 <p>Implemented in <a class="el" href="class_teko_1_1_n_s_1_1_l_s_c_s_i_m_p_l_e_c_strategy.html#aded53db094b458035cabaece9243756e">Teko::NS::LSCSIMPLECStrategy</a>, <a class="el" href="class_teko_1_1_n_s_1_1_inv_l_s_c_strategy.html#a9dbc712237760ddea2baa0ea1b673860">Teko::NS::InvLSCStrategy</a>, and <a class="el" href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#a9e029f9ca85acb3a3ebcddac0425f72e">Teko::NS::PresLaplaceLSCStrategy</a>.</p>
 
@@ -429,7 +429,7 @@ $" src="form_55.png" width="31" height="11"/></picture>). </dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get the inverse to stablized stabilizing the Schur complement approximation using a placement on the `&lsquo;inside&rsquo;'. That is what is the value for <picture><source srcset="form_56_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$C_I$" src="form_56.png" width="14" height="13"/></picture>. This quantity may be null.</p>
+<p>Get the inverse to stablized stabilizing the Schur complement approximation using a placement on the `&lsquo;inside&rsquo;'. That is what is the value for <picture><source srcset="form_52_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$C_I$" src="form_52.png" width="14" height="13"/></picture>. This quantity may be null.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">A</td><td>The linear operator to be preconditioned by LSC. </td></tr>
@@ -484,7 +484,7 @@ $" src="form_55.png" width="31" height="11"/></picture>). </dd></dl>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The inverse of the mass matrix <picture><source srcset="form_22_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$Q_u$" src="form_22.png" width="15" height="13"/></picture>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The inverse of the mass matrix <picture><source srcset="form_18_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$Q_u$" src="form_18.png" width="15" height="13"/></picture>. </dd></dl>
 
 <p>Implemented in <a class="el" href="class_teko_1_1_n_s_1_1_inv_l_s_c_strategy.html#a61b5cf9af7eda011c9db00d71343d5da">Teko::NS::InvLSCStrategy</a>, <a class="el" href="class_teko_1_1_n_s_1_1_l_s_c_s_i_m_p_l_e_c_strategy.html#afa8c040c1da86c45f1387326ec05a48f">Teko::NS::LSCSIMPLECStrategy</a>, and <a class="el" href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#a5325270dbb5b6bf413cb5ea4d362ee3c">Teko::NS::PresLaplaceLSCStrategy</a>.</p>
 
@@ -523,7 +523,7 @@ $" src="form_55.png" width="31" height="11"/></picture>). </dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get the <picture><source srcset="form_23_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$H$" src="form_23.png" width="11" height="10"/></picture> scaling matrix.</p>
+<p>Get the <picture><source srcset="form_19_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$H$" src="form_19.png" width="11" height="10"/></picture> scaling matrix.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">A</td><td>The linear operator to be preconditioned by LSC. </td></tr>
@@ -531,7 +531,7 @@ $" src="form_55.png" width="31" height="11"/></picture>). </dd></dl>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The <picture><source srcset="form_23_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$H$" src="form_23.png" width="11" height="10"/></picture> scaling matrix. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The <picture><source srcset="form_19_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$H$" src="form_19.png" width="11" height="10"/></picture> scaling matrix. </dd></dl>
 
 <p>Implemented in <a class="el" href="class_teko_1_1_n_s_1_1_inv_l_s_c_strategy.html#a74372ddadae2e56756d3e78e3c9f3b65">Teko::NS::InvLSCStrategy</a>, <a class="el" href="class_teko_1_1_n_s_1_1_l_s_c_s_i_m_p_l_e_c_strategy.html#a73964cb247db75c3ea5840f1065c6b45">Teko::NS::LSCSIMPLECStrategy</a>, and <a class="el" href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#a3f10cc39ac47138a6af667bc8d37abcb">Teko::NS::PresLaplaceLSCStrategy</a>.</p>
 

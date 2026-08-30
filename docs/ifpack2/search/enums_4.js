@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['outputtype_0',['OutputType',['../../../../belos/doc/html/namespace_belos.html#a9ced295f4b474d2c545f344204940f41',1,'Belos']]]
+  ['normtype_0',['NormType',['../../../../belos/doc/html/namespace_belos.html#a24aa69bf4f5cd54d0c704958cb556893',1,'Belos']]]
 ];

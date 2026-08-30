@@ -109,7 +109,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;Shards_CellTopologyData.h&gt;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;PanzerAdaptersSTK_config.hpp&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;Kokkos_ViewFactory.hpp&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;Sacado_Fad_Kokkos_ViewFactory.hpp&gt;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
@@ -975,7 +975,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01692" name="l01692"></a><span class="lineno"> 1692</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l01693" name="l01693"></a><span class="lineno"> 1693</span>   <span class="keyword">const</span> std::vector&lt;stk::mesh::Entity&gt; &amp; elements = *(this-&gt;<a class="code hl_function" href="classpanzer__stk_1_1_s_t_k___interface.html#a321b68dbc57ab72ca01b752703eae406">getElementsOrderedByLID</a>());</div>
 <div class="line"><a id="l01694" name="l01694"></a><span class="lineno"> 1694</span> </div>
-<div class="line"><a id="l01695" name="l01695"></a><span class="lineno"> 1695</span>   solutionValues = Kokkos::createDynRankView(solutionValues,</div>
+<div class="line"><a id="l01695" name="l01695"></a><span class="lineno"> 1695</span>   solutionValues = Sacado::createDynRankView(solutionValues,</div>
 <div class="line"><a id="l01696" name="l01696"></a><span class="lineno"> 1696</span>                <span class="stringliteral">&quot;solutionValues&quot;</span>,</div>
 <div class="line"><a id="l01697" name="l01697"></a><span class="lineno"> 1697</span>                localElementIds.size(),</div>
 <div class="line"><a id="l01698" name="l01698"></a><span class="lineno"> 1698</span>                <a class="code hl_variable" href="classpanzer__stk_1_1_s_t_k___interface.html#a8674e8e1be2f231e6446846ed8ea6f06">bulkData_</a>-&gt;num_nodes(elements[localElementIds[0]]));</div>
@@ -1224,7 +1224,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01918" name="l01918"></a><span class="lineno"> 1918</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l01919" name="l01919"></a><span class="lineno"> 1919</span>   <span class="comment">// nothing to do! silently return</span></div>
 <div class="line"><a id="l01920" name="l01920"></a><span class="lineno"> 1920</span>   <span class="keywordflow">if</span>(elements.size() == 0) {</div>
-<div class="line"><a id="l01921" name="l01921"></a><span class="lineno"> 1921</span>     vertices = Kokkos::createDynRankView(vertices, <span class="stringliteral">&quot;vertices&quot;</span>, 0, 0, 0);</div>
+<div class="line"><a id="l01921" name="l01921"></a><span class="lineno"> 1921</span>     vertices = Sacado::createDynRankView(vertices, <span class="stringliteral">&quot;vertices&quot;</span>, 0, 0, 0);</div>
 <div class="line"><a id="l01922" name="l01922"></a><span class="lineno"> 1922</span>     <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l01923" name="l01923"></a><span class="lineno"> 1923</span>   }</div>
 <div class="line"><a id="l01924" name="l01924"></a><span class="lineno"> 1924</span> </div>
@@ -1237,7 +1237,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01931" name="l01931"></a><span class="lineno"> 1931</span>     = stk::mesh::get_cell_topology(<a class="code hl_variable" href="classpanzer__stk_1_1_s_t_k___interface.html#a8674e8e1be2f231e6446846ed8ea6f06">bulkData_</a>-&gt;bucket(elements[0]).topology()).getCellTopologyData()-&gt;vertex_count;</div>
 <div class="line"><a id="l01932" name="l01932"></a><span class="lineno"> 1932</span> </div>
 <div class="line"><a id="l01933" name="l01933"></a><span class="lineno"> 1933</span>   <span class="comment">// allocate space</span></div>
-<div class="line"><a id="l01934" name="l01934"></a><span class="lineno"> 1934</span>   vertices = Kokkos::createDynRankView(vertices, <span class="stringliteral">&quot;vertices&quot;</span>, elements.size(), masterVertexCount,<a class="code hl_function" href="classpanzer__stk_1_1_s_t_k___interface.html#aa97e610c7530bbd52752f591b85c280f">getDimension</a>());</div>
+<div class="line"><a id="l01934" name="l01934"></a><span class="lineno"> 1934</span>   vertices = Sacado::createDynRankView(vertices, <span class="stringliteral">&quot;vertices&quot;</span>, elements.size(), masterVertexCount,<a class="code hl_function" href="classpanzer__stk_1_1_s_t_k___interface.html#aa97e610c7530bbd52752f591b85c280f">getDimension</a>());</div>
 <div class="line"><a id="l01935" name="l01935"></a><span class="lineno"> 1935</span>   <span class="keyword">auto</span> vertices_h = Kokkos::create_mirror_view(vertices);</div>
 <div class="line"><a id="l01936" name="l01936"></a><span class="lineno"> 1936</span>   Kokkos::deep_copy(vertices_h, vertices);</div>
 <div class="line"><a id="l01937" name="l01937"></a><span class="lineno"> 1937</span> </div>
@@ -1327,7 +1327,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l02017" name="l02017"></a><span class="lineno"> 2017</span> </div>
 <div class="line"><a id="l02018" name="l02018"></a><span class="lineno"> 2018</span>   <span class="comment">// nothing to do! silently return</span></div>
 <div class="line"><a id="l02019" name="l02019"></a><span class="lineno"> 2019</span>   <span class="keywordflow">if</span>(elements.size()==0) {</div>
-<div class="line"><a id="l02020" name="l02020"></a><span class="lineno"> 2020</span>     vertices = Kokkos::createDynRankView(vertices,<span class="stringliteral">&quot;vertices&quot;</span>,0,0,0);</div>
+<div class="line"><a id="l02020" name="l02020"></a><span class="lineno"> 2020</span>     vertices = Sacado::createDynRankView(vertices,<span class="stringliteral">&quot;vertices&quot;</span>,0,0,0);</div>
 <div class="line"><a id="l02021" name="l02021"></a><span class="lineno"> 2021</span>      <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l02022" name="l02022"></a><span class="lineno"> 2022</span>   }</div>
 <div class="line"><a id="l02023" name="l02023"></a><span class="lineno"> 2023</span> </div>
@@ -1336,7 +1336,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l02026" name="l02026"></a><span class="lineno"> 2026</span>     = stk::mesh::get_cell_topology(<a class="code hl_variable" href="classpanzer__stk_1_1_s_t_k___interface.html#a8674e8e1be2f231e6446846ed8ea6f06">bulkData_</a>-&gt;bucket(elements[0]).topology()).getCellTopologyData()-&gt;vertex_count;</div>
 <div class="line"><a id="l02027" name="l02027"></a><span class="lineno"> 2027</span> </div>
 <div class="line"><a id="l02028" name="l02028"></a><span class="lineno"> 2028</span>   <span class="comment">// allocate space</span></div>
-<div class="line"><a id="l02029" name="l02029"></a><span class="lineno"> 2029</span>   vertices = Kokkos::createDynRankView(vertices,<span class="stringliteral">&quot;vertices&quot;</span>,elements.size(),masterVertexCount,<a class="code hl_function" href="classpanzer__stk_1_1_s_t_k___interface.html#aa97e610c7530bbd52752f591b85c280f">getDimension</a>());</div>
+<div class="line"><a id="l02029" name="l02029"></a><span class="lineno"> 2029</span>   vertices = Sacado::createDynRankView(vertices,<span class="stringliteral">&quot;vertices&quot;</span>,elements.size(),masterVertexCount,<a class="code hl_function" href="classpanzer__stk_1_1_s_t_k___interface.html#aa97e610c7530bbd52752f591b85c280f">getDimension</a>());</div>
 <div class="line"><a id="l02030" name="l02030"></a><span class="lineno"> 2030</span>   <span class="keyword">auto</span> vertices_h = Kokkos::create_mirror_view(vertices);</div>
 <div class="line"><a id="l02031" name="l02031"></a><span class="lineno"> 2031</span>   std::map&lt;std::string,std::vector&lt;std::string&gt; &gt;::const_iterator itr = <a class="code hl_variable" href="classpanzer__stk_1_1_s_t_k___interface.html#ab23c6e59c8eb87cf8ca63386e9e6cc1b">meshCoordFields_</a>.find(eBlock);</div>
 <div class="line"><a id="l02032" name="l02032"></a><span class="lineno"> 2032</span>   <span class="keywordflow">if</span>(itr==<a class="code hl_variable" href="classpanzer__stk_1_1_s_t_k___interface.html#ab23c6e59c8eb87cf8ca63386e9e6cc1b">meshCoordFields_</a>.end()) {</div>
@@ -1576,7 +1576,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l02247" name="l02247"></a><span class="lineno"> 2247</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l02248" name="l02248"></a><span class="lineno"> 2248</span>   <span class="comment">// nothing to do! silently return</span></div>
 <div class="line"><a id="l02249" name="l02249"></a><span class="lineno"> 2249</span>   <span class="keywordflow">if</span>(elements.size() == 0) {</div>
-<div class="line"><a id="l02250" name="l02250"></a><span class="lineno"> 2250</span>     nodes = Kokkos::createDynRankView(nodes, <span class="stringliteral">&quot;nodes&quot;</span>, 0, 0, 0);</div>
+<div class="line"><a id="l02250" name="l02250"></a><span class="lineno"> 2250</span>     nodes = Sacado::createDynRankView(nodes, <span class="stringliteral">&quot;nodes&quot;</span>, 0, 0, 0);</div>
 <div class="line"><a id="l02251" name="l02251"></a><span class="lineno"> 2251</span>     <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l02252" name="l02252"></a><span class="lineno"> 2252</span>   }</div>
 <div class="line"><a id="l02253" name="l02253"></a><span class="lineno"> 2253</span> </div>
@@ -1589,7 +1589,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l02260" name="l02260"></a><span class="lineno"> 2260</span>     = stk::mesh::get_cell_topology(<a class="code hl_variable" href="classpanzer__stk_1_1_s_t_k___interface.html#a8674e8e1be2f231e6446846ed8ea6f06">bulkData_</a>-&gt;bucket(elements[0]).topology()).getCellTopologyData()-&gt;node_count;</div>
 <div class="line"><a id="l02261" name="l02261"></a><span class="lineno"> 2261</span> </div>
 <div class="line"><a id="l02262" name="l02262"></a><span class="lineno"> 2262</span>   <span class="comment">// allocate space</span></div>
-<div class="line"><a id="l02263" name="l02263"></a><span class="lineno"> 2263</span>   nodes = Kokkos::createDynRankView(nodes, <span class="stringliteral">&quot;nodes&quot;</span>, elements.size(), masterNodeCount,<a class="code hl_function" href="classpanzer__stk_1_1_s_t_k___interface.html#aa97e610c7530bbd52752f591b85c280f">getDimension</a>());</div>
+<div class="line"><a id="l02263" name="l02263"></a><span class="lineno"> 2263</span>   nodes = Sacado::createDynRankView(nodes, <span class="stringliteral">&quot;nodes&quot;</span>, elements.size(), masterNodeCount,<a class="code hl_function" href="classpanzer__stk_1_1_s_t_k___interface.html#aa97e610c7530bbd52752f591b85c280f">getDimension</a>());</div>
 <div class="line"><a id="l02264" name="l02264"></a><span class="lineno"> 2264</span>   <span class="keyword">auto</span> nodes_h = Kokkos::create_mirror_view(nodes);</div>
 <div class="line"><a id="l02265" name="l02265"></a><span class="lineno"> 2265</span>   Kokkos::deep_copy(nodes_h, nodes);</div>
 <div class="line"><a id="l02266" name="l02266"></a><span class="lineno"> 2266</span> </div>
@@ -1679,7 +1679,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l02346" name="l02346"></a><span class="lineno"> 2346</span> </div>
 <div class="line"><a id="l02347" name="l02347"></a><span class="lineno"> 2347</span>   <span class="comment">// nothing to do! silently return</span></div>
 <div class="line"><a id="l02348" name="l02348"></a><span class="lineno"> 2348</span>   <span class="keywordflow">if</span>(elements.size()==0) {</div>
-<div class="line"><a id="l02349" name="l02349"></a><span class="lineno"> 2349</span>     nodes = Kokkos::createDynRankView(nodes,<span class="stringliteral">&quot;nodes&quot;</span>,0,0,0);</div>
+<div class="line"><a id="l02349" name="l02349"></a><span class="lineno"> 2349</span>     nodes = Sacado::createDynRankView(nodes,<span class="stringliteral">&quot;nodes&quot;</span>,0,0,0);</div>
 <div class="line"><a id="l02350" name="l02350"></a><span class="lineno"> 2350</span>      <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l02351" name="l02351"></a><span class="lineno"> 2351</span>   }</div>
 <div class="line"><a id="l02352" name="l02352"></a><span class="lineno"> 2352</span> </div>
@@ -1688,7 +1688,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l02355" name="l02355"></a><span class="lineno"> 2355</span>     = stk::mesh::get_cell_topology(<a class="code hl_variable" href="classpanzer__stk_1_1_s_t_k___interface.html#a8674e8e1be2f231e6446846ed8ea6f06">bulkData_</a>-&gt;bucket(elements[0]).topology()).getCellTopologyData()-&gt;node_count;</div>
 <div class="line"><a id="l02356" name="l02356"></a><span class="lineno"> 2356</span> </div>
 <div class="line"><a id="l02357" name="l02357"></a><span class="lineno"> 2357</span>   <span class="comment">// allocate space</span></div>
-<div class="line"><a id="l02358" name="l02358"></a><span class="lineno"> 2358</span>   nodes = Kokkos::createDynRankView(nodes,<span class="stringliteral">&quot;nodes&quot;</span>,elements.size(),masterNodeCount,<a class="code hl_function" href="classpanzer__stk_1_1_s_t_k___interface.html#aa97e610c7530bbd52752f591b85c280f">getDimension</a>());</div>
+<div class="line"><a id="l02358" name="l02358"></a><span class="lineno"> 2358</span>   nodes = Sacado::createDynRankView(nodes,<span class="stringliteral">&quot;nodes&quot;</span>,elements.size(),masterNodeCount,<a class="code hl_function" href="classpanzer__stk_1_1_s_t_k___interface.html#aa97e610c7530bbd52752f591b85c280f">getDimension</a>());</div>
 <div class="line"><a id="l02359" name="l02359"></a><span class="lineno"> 2359</span>   <span class="keyword">auto</span> nodes_h = Kokkos::create_mirror_view(nodes);</div>
 <div class="line"><a id="l02360" name="l02360"></a><span class="lineno"> 2360</span>   std::map&lt;std::string,std::vector&lt;std::string&gt; &gt;::const_iterator itr = <a class="code hl_variable" href="classpanzer__stk_1_1_s_t_k___interface.html#ab23c6e59c8eb87cf8ca63386e9e6cc1b">meshCoordFields_</a>.find(eBlock);</div>
 <div class="line"><a id="l02361" name="l02361"></a><span class="lineno"> 2361</span>   <span class="keywordflow">if</span>(itr==<a class="code hl_variable" href="classpanzer__stk_1_1_s_t_k___interface.html#ab23c6e59c8eb87cf8ca63386e9e6cc1b">meshCoordFields_</a>.end()) {</div>

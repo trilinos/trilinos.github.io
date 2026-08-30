@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Belos: Belos::StatusTest&lt; ScalarType, MV, OP &gt; Class Template Reference</title>
+<title>Belos: Belos::StatusTest&lt; ScalarType, MV, OP, DM &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -75,7 +75,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="class_belos_1_1_status_test-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Belos::StatusTest&lt; ScalarType, MV, OP &gt; Class Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+  <div class="headertitle"><div class="title">Belos::StatusTest&lt; ScalarType, MV, OP, DM &gt; Class Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -84,86 +84,102 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="_belos_status_test_8hpp_source.html">BelosStatusTest.hpp</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for Belos::StatusTest&lt; ScalarType, MV, OP &gt;:</div>
+Inheritance diagram for Belos::StatusTest&lt; ScalarType, MV, OP, DM &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_belos_1_1_status_test__inherit__graph.gif" border="0" usemap="#a_belos_1_1_status_test_3_01_scalar_type_00_01_m_v_00_01_o_p_01_4_inherit__map" alt="Inheritance graph"/></div>
-<map name="a_belos_1_1_status_test_3_01_scalar_type_00_01_m_v_00_01_o_p_01_4_inherit__map" id="a_belos_1_1_status_test_3_01_scalar_type_00_01_m_v_00_01_o_p_01_4_inherit__map">
-<area shape="rect" title="A pure virtual class for defining the status tests for the Belos iterative solvers." alt="" coords="5,165,172,205"/>
-<area shape="rect" href="class_belos_1_1_l_s_q_r_status_test.html" title="A Belos::StatusTest class for specifying convergence of LSQR. The outer status tests passes if an inn..." alt="" coords="239,5,417,45"/>
-<area shape="poly" title=" " alt="" coords="112,153,158,103,187,77,219,55,243,43,246,48,221,60,190,81,162,107,116,156"/>
-<area shape="rect" href="class_belos_1_1_status_test_combo.html" title="A class for extending the status testing capabilities of Belos via logical combinations." alt="" coords="239,69,417,109"/>
-<area shape="poly" title=" " alt="" coords="138,156,219,119,253,107,255,112,221,124,140,161"/>
-<area shape="rect" href="class_belos_1_1_status_test_log_res_norm.html" title="A Belos::StatusTest debugging class for storing the absolute residual norms generated during a solve." alt="" coords="220,133,436,173"/>
-<area shape="poly" title=" " alt="" coords="185,170,219,165,220,170,186,175"/>
-<area shape="rect" href="class_belos_1_1_status_test_max_iters.html" title="A Belos::StatusTest class for specifying a maximum number of iterations." alt="" coords="233,197,423,237"/>
-<area shape="poly" title=" " alt="" coords="186,196,233,202,232,207,185,201"/>
-<area shape="rect" href="class_belos_1_1_status_test_output.html" title="A virtual base class for StatusTest that print other status tests." alt="" coords="239,261,417,301"/>
-<area shape="poly" title=" " alt="" coords="140,209,221,247,255,259,253,264,219,252,138,214"/>
-<area shape="rect" href="class_belos_1_1_status_test_res_norm.html" title="An abstract class of StatusTest for stopping criteria using residual norms." alt="" coords="231,357,425,397"/>
-<area shape="poly" title=" " alt="" coords="119,214,165,262,222,311,290,355,287,359,218,315,162,265,115,217"/>
-<area shape="rect" href="class_belos_1_1_status_test_general_output.html" title="A special StatusTest for printing other status tests." alt="" coords="484,149,705,189"/>
-<area shape="poly" title=" " alt="" coords="423,253,435,247,449,236,458,224,467,211,483,199,507,187,510,192,485,204,471,215,462,227,453,239,437,252,425,258"/>
-<area shape="rect" href="class_belos_1_1_status_test_res_norm_output.html" title="A special StatusTest for printing other status tests in a simple format." alt="" coords="484,213,705,253"/>
-<area shape="poly" title=" " alt="" coords="430,260,483,251,484,256,431,266"/>
-<area shape="rect" href="class_belos_1_1_status_test_user_output.html" title="A special StatusTest for printing other status tests in a simple format." alt="" coords="491,277,698,317"/>
-<area shape="poly" title=" " alt="" coords="431,285,491,288,491,294,430,290"/>
-<area shape="rect" href="class_belos_1_1_status_test_gen_res_norm.html" title="An implementation of StatusTestResNorm using a family of residual norms." alt="" coords="485,341,704,381"/>
-<area shape="poly" title=" " alt="" coords="438,368,485,365,485,371,439,373"/>
-<area shape="rect" href="class_belos_1_1_status_test_gen_res_sub_norm.html" title="An implementation of StatusTestResNorm using a family of norms of subvectors of the residual vectors." alt="" coords="488,405,701,445"/>
-<area shape="poly" title=" " alt="" coords="439,395,488,404,487,409,438,400"/>
-<area shape="rect" href="class_belos_1_1_status_test_imp_res_norm.html" title="Convergence test using the implicit residual norm(s), with an explicit residual norm(s) check for los..." alt="" coords="485,469,704,509"/>
-<area shape="poly" title=" " alt="" coords="377,402,428,429,485,455,518,467,517,472,483,460,426,434,374,406"/>
+<div class="center"><img src="class_belos_1_1_status_test__inherit__graph.gif" border="0" usemap="#a_belos_1_1_status_test_3_01_scalar_type_00_01_m_v_00_01_o_p_00_01_d_m_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_belos_1_1_status_test_3_01_scalar_type_00_01_m_v_00_01_o_p_00_01_d_m_01_4_inherit__map" id="a_belos_1_1_status_test_3_01_scalar_type_00_01_m_v_00_01_o_p_00_01_d_m_01_4_inherit__map">
+<area shape="rect" title="A pure virtual class for defining the status tests for the Belos iterative solvers." alt="" coords="5,525,201,565"/>
+<area shape="rect" href="class_belos_1_1_status_test_combo.html" title=" " alt="" coords="906,32,1099,101"/>
+<area shape="poly" title=" " alt="" coords="107,510,122,419,148,302,164,244,181,192,201,150,223,122,261,93,302,69,345,49,389,33,482,12,577,4,670,5,759,12,838,24,906,38,905,43,837,30,758,18,670,10,577,9,483,18,391,38,347,54,304,73,264,97,227,125,206,153,186,194,169,245,153,303,128,420,112,511"/>
+<area shape="rect" href="class_belos_1_1_status_test_output.html" title=" " alt="" coords="906,126,1099,196"/>
+<area shape="poly" title=" " alt="" coords="123,512,166,458,194,429,224,403,337,325,386,298,433,276,536,240,669,202,729,188,791,177,905,163,906,169,792,182,730,193,670,207,537,245,435,281,388,303,340,330,227,407,197,432,170,461,127,515"/>
+<area shape="rect" href="class_belos_1_1_status_test_output.html" title=" " alt="" coords="902,442,1103,512"/>
+<area shape="poly" title=" " alt="" coords="212,520,225,518,412,499,598,486,902,475,902,481,599,492,412,504,226,523,212,525"/>
+<area shape="rect" href="class_belos_1_1_status_test_res_norm.html" title=" " alt="" coords="873,536,1132,591"/>
+<area shape="poly" title=" " alt="" coords="215,539,503,535,676,537,849,544,873,545,873,551,849,549,676,542,503,540,216,544"/>
+<area shape="rect" href="class_belos_1_1_l_s_q_r_status_test.html" title="A Belos::StatusTest class for specifying convergence of LSQR. The outer status tests passes if an inn..." alt="" coords="434,629,641,669"/>
+<area shape="poly" title=" " alt="" coords="189,566,226,576,443,626,442,631,225,581,188,571"/>
+<area shape="rect" href="class_belos_1_1_status_test_combo.html" title="A class for extending the status testing capabilities of Belos via logical combinations." alt="" coords="434,109,641,149"/>
+<area shape="poly" title=" " alt="" coords="102,511,106,437,123,343,138,294,160,246,188,203,224,165,247,149,272,136,326,120,381,113,434,113,434,118,381,118,327,125,274,141,249,154,227,170,192,206,164,249,143,296,128,344,111,438,107,511"/>
+<area shape="rect" href="class_belos_1_1_status_test_log_res_norm.html" title="A Belos::StatusTest debugging class for storing the absolute residual norms generated during a solve." alt="" coords="429,693,645,733"/>
+<area shape="poly" title=" " alt="" coords="142,571,181,599,226,624,278,645,331,663,433,690,432,695,330,668,276,650,224,629,179,603,139,575"/>
+<area shape="rect" href="class_belos_1_1_status_test_max_iters.html" title="A Belos::StatusTest class for specifying a maximum number of iterations." alt="" coords="434,757,641,797"/>
+<area shape="poly" title=" " alt="" coords="125,575,167,633,195,663,227,688,276,715,330,736,384,751,434,762,433,767,382,756,328,741,274,720,224,692,192,667,163,637,121,578"/>
+<area shape="rect" href="class_belos_1_1_status_test_output.html" title="A virtual base class for StatusTest that print other status tests." alt="" coords="434,328,641,368"/>
+<area shape="poly" title=" " alt="" coords="137,514,178,484,224,456,284,427,347,402,461,365,462,370,349,407,287,432,227,461,181,489,141,518"/>
+<area shape="rect" href="class_belos_1_1_status_test_res_norm.html" title="An abstract class of StatusTest for stopping criteria using residual norms." alt="" coords="434,565,641,605"/>
+<area shape="poly" title=" " alt="" coords="215,552,434,573,434,578,215,558"/>
+<area shape="rect" href="class_belos_1_1_status_test.html" title=" " alt="" coords="437,821,638,890"/>
+<area shape="poly" title=" " alt="" coords="112,578,124,630,146,692,179,754,201,782,227,805,275,833,329,850,384,858,437,861,436,866,384,864,328,855,273,838,224,810,197,785,175,757,141,694,119,631,107,579"/>
+<area shape="rect" href="class_belos_1_1_status_test.html" title=" " alt="" coords="453,914,621,984"/>
+<area shape="poly" title=" " alt="" coords="107,579,112,650,130,741,145,788,166,833,193,874,227,909,252,926,279,939,338,955,398,961,453,959,453,964,397,966,337,961,277,944,249,931,224,914,189,878,161,836,140,790,124,742,107,650,102,579"/>
+<area shape="poly" title=" " alt="" coords="655,141,751,142,800,136,848,126,860,120,872,112,905,97,907,102,875,116,863,125,850,131,801,142,751,147,655,146"/>
+<area shape="poly" title=" " alt="" coords="583,318,624,298,669,280,696,273,721,270,763,271,803,268,825,260,848,247,856,238,859,228,863,217,872,206,904,185,907,189,875,209,868,219,864,230,860,240,851,251,827,265,805,273,763,276,721,275,697,278,670,285,626,303,585,323"/>
+<area shape="poly" title=" " alt="" coords="576,374,620,403,670,428,712,439,771,449,902,465,901,470,770,454,711,444,668,433,617,408,573,378"/>
+<area shape="rect" href="class_belos_1_1_status_test_general_output.html" title="A special StatusTest for printing other status tests." alt="" coords="911,220,1095,275"/>
+<area shape="poly" title=" " alt="" coords="644,322,910,265,911,270,645,327"/>
+<area shape="rect" href="class_belos_1_1_status_test_res_norm_output.html" title="A special StatusTest for printing other status tests in a simple format." alt="" coords="906,299,1099,354"/>
+<area shape="poly" title=" " alt="" coords="654,339,906,328,906,333,655,345"/>
+<area shape="rect" href="class_belos_1_1_status_test_user_output.html" title="A special StatusTest for printing other status tests in a simple format." alt="" coords="899,378,1106,418"/>
+<area shape="poly" title=" " alt="" coords="654,357,899,384,899,390,654,363"/>
+<area shape="poly" title=" " alt="" coords="654,587,669,588,759,591,849,588,873,585,873,590,850,593,759,596,669,593,654,592"/>
+<area shape="rect" href="class_belos_1_1_status_test_gen_res_norm.html" title="An implementation of StatusTestResNorm using a family of residual norms." alt="" coords="893,680,1112,720"/>
+<area shape="poly" title=" " alt="" coords="620,606,646,614,670,622,789,652,901,677,899,682,788,658,669,627,645,619,619,611"/>
+<area shape="rect" href="class_belos_1_1_status_test_gen_res_sub_norm.html" title="An implementation of StatusTestResNorm using a family of norms of subvectors of the residual vectors." alt="" coords="881,744,1124,784"/>
+<area shape="poly" title=" " alt="" coords="642,610,647,615,657,630,660,645,662,659,671,672,696,691,719,704,764,715,813,718,874,729,920,741,919,746,873,734,813,724,763,720,717,709,693,696,667,676,657,661,655,646,652,632,643,619,638,614"/>
+<area shape="rect" href="class_belos_1_1_status_test_imp_res_norm.html" title="Convergence test using the implicit residual norm(s), with an explicit residual norm(s) check for los..." alt="" coords="893,616,1112,656"/>
+<area shape="poly" title=" " alt="" coords="655,595,670,597,894,621,893,627,669,602,654,600"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Constructors/destructors</div></td></tr>
-<tr class="memitem:abbf40048e697a72134585cbe8bb2fa7d" id="r_abbf40048e697a72134585cbe8bb2fa7d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_status_test.html#abbf40048e697a72134585cbe8bb2fa7d">StatusTest</a> ()</td></tr>
-<tr class="memdesc:abbf40048e697a72134585cbe8bb2fa7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
-<tr class="separator:abbf40048e697a72134585cbe8bb2fa7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3083faba99908af3cb19b0c914bdcf95" id="r_a3083faba99908af3cb19b0c914bdcf95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">virtual</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_status_test.html#a3083faba99908af3cb19b0c914bdcf95">~StatusTest</a> ()</td></tr>
-<tr class="memdesc:a3083faba99908af3cb19b0c914bdcf95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
-<tr class="separator:a3083faba99908af3cb19b0c914bdcf95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfb45c095dfd03c3360cd3505e73ca37" id="r_abfb45c095dfd03c3360cd3505e73ca37"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_status_test.html#abfb45c095dfd03c3360cd3505e73ca37">StatusTest</a> ()</td></tr>
+<tr class="memdesc:abfb45c095dfd03c3360cd3505e73ca37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="separator:abfb45c095dfd03c3360cd3505e73ca37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec1126a584241e8a5484f644ab46a183" id="r_aec1126a584241e8a5484f644ab46a183"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">virtual</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_status_test.html#aec1126a584241e8a5484f644ab46a183">~StatusTest</a> ()</td></tr>
+<tr class="memdesc:aec1126a584241e8a5484f644ab46a183"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="separator:aec1126a584241e8a5484f644ab46a183"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Status methods</div></td></tr>
-<tr class="memitem:a61a0b93031596d0fce8c3306362b1fd1" id="r_a61a0b93031596d0fce8c3306362b1fd1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">virtual</a> <a class="el" href="namespace_belos.html#a342eae302936d58ef9d7426063340863">StatusType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_status_test.html#a61a0b93031596d0fce8c3306362b1fd1">checkStatus</a> (<a class="el" href="class_belos_1_1_iteration.html">Iteration</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; *<a class="el" href="class_belos_1_1_operator.html">iSolver</a>)=0</td></tr>
-<tr class="memdesc:a61a0b93031596d0fce8c3306362b1fd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check convergence status: Unconverged, Converged, Failed.  <br /></td></tr>
-<tr class="separator:a61a0b93031596d0fce8c3306362b1fd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03b30dccf5bcc4ead72b0c42d9e1c3d3" id="r_a03b30dccf5bcc4ead72b0c42d9e1c3d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">virtual</a> <a class="el" href="namespace_belos.html#a342eae302936d58ef9d7426063340863">StatusType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_status_test.html#a03b30dccf5bcc4ead72b0c42d9e1c3d3">getStatus</a> () <a class="el" href="class_belos_1_1_operator.html">const</a> =0</td></tr>
-<tr class="memdesc:a03b30dccf5bcc4ead72b0c42d9e1c3d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the result of the most recent CheckStatus call.  <br /></td></tr>
-<tr class="separator:a03b30dccf5bcc4ead72b0c42d9e1c3d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8531487d7c184acff58c321fa3fc1be8" id="r_a8531487d7c184acff58c321fa3fc1be8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">virtual</a> <a class="el" href="namespace_belos.html#a342eae302936d58ef9d7426063340863">StatusType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_status_test.html#a8531487d7c184acff58c321fa3fc1be8">checkStatus</a> (<a class="el" href="class_belos_1_1_iteration.html">Iteration</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt; *<a class="el" href="class_belos_1_1_operator.html">iSolver</a>)=0</td></tr>
+<tr class="memdesc:a8531487d7c184acff58c321fa3fc1be8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check convergence status: Unconverged, Converged, Failed.  <br /></td></tr>
+<tr class="separator:a8531487d7c184acff58c321fa3fc1be8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca03e341ffed4484cc250c63b2ed8b75" id="r_aca03e341ffed4484cc250c63b2ed8b75"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">virtual</a> <a class="el" href="namespace_belos.html#a342eae302936d58ef9d7426063340863">StatusType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_status_test.html#aca03e341ffed4484cc250c63b2ed8b75">getStatus</a> () <a class="el" href="class_belos_1_1_operator.html">const</a> =0</td></tr>
+<tr class="memdesc:aca03e341ffed4484cc250c63b2ed8b75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the result of the most recent CheckStatus call.  <br /></td></tr>
+<tr class="separator:aca03e341ffed4484cc250c63b2ed8b75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Reset methods</div></td></tr>
-<tr class="memitem:ae4b40cfffd5032be9a81e64fe3461fc5" id="r_ae4b40cfffd5032be9a81e64fe3461fc5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">virtual</a> <a class="el" href="class_belos_1_1_operator.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_status_test.html#ae4b40cfffd5032be9a81e64fe3461fc5">reset</a> ()=0</td></tr>
-<tr class="memdesc:ae4b40cfffd5032be9a81e64fe3461fc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Informs the convergence test that it should reset its internal configuration to the initialized state.  <br /></td></tr>
-<tr class="separator:ae4b40cfffd5032be9a81e64fe3461fc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11246b4fb5f6d61914b61dd2f6acefe5" id="r_a11246b4fb5f6d61914b61dd2f6acefe5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">virtual</a> <a class="el" href="class_belos_1_1_operator.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_status_test.html#a11246b4fb5f6d61914b61dd2f6acefe5">reset</a> ()=0</td></tr>
+<tr class="memdesc:a11246b4fb5f6d61914b61dd2f6acefe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Informs the convergence test that it should reset its internal configuration to the initialized state.  <br /></td></tr>
+<tr class="separator:a11246b4fb5f6d61914b61dd2f6acefe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Print methods</div></td></tr>
-<tr class="memitem:a57ac6d8e2d496b974b51337981c76d5e" id="r_a57ac6d8e2d496b974b51337981c76d5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">virtual</a> <a class="el" href="class_belos_1_1_operator.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_status_test.html#a57ac6d8e2d496b974b51337981c76d5e">print</a> (std::ostream &amp;<a class="el" href="class_belos_1_1_operator.html">os</a>, <a class="el" href="class_belos_1_1_operator.html">int</a> <a class="el" href="class_belos_1_1_operator.html">indent</a>=0) <a class="el" href="class_belos_1_1_operator.html">const</a> =0</td></tr>
-<tr class="memdesc:a57ac6d8e2d496b974b51337981c76d5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output formatted description of stopping test to output stream.  <br /></td></tr>
-<tr class="separator:a57ac6d8e2d496b974b51337981c76d5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb74d8db2f62029cd5bdb64cdd17a36b" id="r_afb74d8db2f62029cd5bdb64cdd17a36b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">virtual</a> <a class="el" href="class_belos_1_1_operator.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_status_test.html#afb74d8db2f62029cd5bdb64cdd17a36b">printStatus</a> (std::ostream &amp;<a class="el" href="class_belos_1_1_operator.html">os</a>, <a class="el" href="namespace_belos.html#a342eae302936d58ef9d7426063340863">StatusType</a> type) <a class="el" href="class_belos_1_1_operator.html">const</a></td></tr>
-<tr class="memdesc:afb74d8db2f62029cd5bdb64cdd17a36b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output the result of the most recent CheckStatus call.  <br /></td></tr>
-<tr class="separator:afb74d8db2f62029cd5bdb64cdd17a36b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f36aebdf96780e8e7e2794284676a49" id="r_a4f36aebdf96780e8e7e2794284676a49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">virtual</a> <a class="el" href="class_belos_1_1_operator.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_status_test.html#a4f36aebdf96780e8e7e2794284676a49">print</a> (std::ostream &amp;<a class="el" href="class_belos_1_1_operator.html">os</a>, <a class="el" href="class_belos_1_1_operator.html">int</a> <a class="el" href="class_belos_1_1_operator.html">indent</a>=0) <a class="el" href="class_belos_1_1_operator.html">const</a> =0</td></tr>
+<tr class="memdesc:a4f36aebdf96780e8e7e2794284676a49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output formatted description of stopping test to output stream.  <br /></td></tr>
+<tr class="separator:a4f36aebdf96780e8e7e2794284676a49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae27dc34aadd48a4c4a9ab37e78a9152e" id="r_ae27dc34aadd48a4c4a9ab37e78a9152e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">virtual</a> <a class="el" href="class_belos_1_1_operator.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_status_test.html#ae27dc34aadd48a4c4a9ab37e78a9152e">printStatus</a> (std::ostream &amp;<a class="el" href="class_belos_1_1_operator.html">os</a>, <a class="el" href="namespace_belos.html#a342eae302936d58ef9d7426063340863">StatusType</a> type) <a class="el" href="class_belos_1_1_operator.html">const</a></td></tr>
+<tr class="memdesc:ae27dc34aadd48a4c4a9ab37e78a9152e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output the result of the most recent CheckStatus call.  <br /></td></tr>
+<tr class="separator:ae27dc34aadd48a4c4a9ab37e78a9152e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, <a class="el" href="class_belos_1_1_operator.html">class</a> MV, <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a>&gt;<br />
-class Belos::StatusTest&lt; ScalarType, MV, OP &gt;</div><p>A pure virtual class for defining the status tests for the <a class="el" href="namespace_belos.html">Belos</a> iterative solvers. </p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, <a class="el" href="class_belos_1_1_operator.html">class</a> MV, <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a>, <a class="el" href="class_belos_1_1_operator.html">class</a> DM = DefaultDenseMatrix&lt;int,ScalarType&gt;&gt;<br />
+class Belos::StatusTest&lt; ScalarType, MV, OP, DM &gt;</div><p>A pure virtual class for defining the status tests for the <a class="el" href="namespace_belos.html">Belos</a> iterative solvers. </p>
 <p><a class="el" href="class_belos_1_1_status_test.html" title="A pure virtual class for defining the status tests for the Belos iterative solvers.">Belos::StatusTest</a> is an interface that can be implemented to create convergence tests for all <a class="el" href="namespace_belos.html">Belos</a> solvers. Almost any kind of test can be expressed using this mechanism, including composite tests (see <a class="el" href="class_belos_1_1_status_test_combo.html" title="A class for extending the status testing capabilities of Belos via logical combinations.">Belos::StatusTestCombo</a>). </p>
 
 <p class="definition">Definition at line <a class="el" href="_belos_status_test_8hpp_source.html#l00050">50</a> of file <a class="el" href="_belos_status_test_8hpp_source.html">BelosStatusTest.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="abbf40048e697a72134585cbe8bb2fa7d" name="abbf40048e697a72134585cbe8bb2fa7d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abbf40048e697a72134585cbe8bb2fa7d">&#9670;&#160;</a></span>StatusTest()</h2>
+<a id="abfb45c095dfd03c3360cd3505e73ca37" name="abfb45c095dfd03c3360cd3505e73ca37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfb45c095dfd03c3360cd3505e73ca37">&#9670;&#160;</a></span>StatusTest()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> DM  = DefaultDenseMatrix&lt;int,ScalarType&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_status_test.html">Belos::StatusTest</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;::StatusTest </td>
+          <td class="memname"><a class="el" href="class_belos_1_1_status_test.html">Belos::StatusTest</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt;::StatusTest </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -182,19 +198,19 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
 
 </div>
 </div>
-<a id="a3083faba99908af3cb19b0c914bdcf95" name="a3083faba99908af3cb19b0c914bdcf95"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3083faba99908af3cb19b0c914bdcf95">&#9670;&#160;</a></span>~StatusTest()</h2>
+<a id="aec1126a584241e8a5484f644ab46a183" name="aec1126a584241e8a5484f644ab46a183"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec1126a584241e8a5484f644ab46a183">&#9670;&#160;</a></span>~StatusTest()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> DM  = DefaultDenseMatrix&lt;int,ScalarType&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">virtual</a> <a class="el" href="class_belos_1_1_status_test.html">Belos::StatusTest</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;::~<a class="el" href="class_belos_1_1_status_test.html">StatusTest</a> </td>
+          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">virtual</a> <a class="el" href="class_belos_1_1_status_test.html">Belos::StatusTest</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt;::~<a class="el" href="class_belos_1_1_status_test.html">StatusTest</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -214,21 +230,21 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a61a0b93031596d0fce8c3306362b1fd1" name="a61a0b93031596d0fce8c3306362b1fd1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a61a0b93031596d0fce8c3306362b1fd1">&#9670;&#160;</a></span>checkStatus()</h2>
+<a id="a8531487d7c184acff58c321fa3fc1be8" name="a8531487d7c184acff58c321fa3fc1be8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8531487d7c184acff58c321fa3fc1be8">&#9670;&#160;</a></span>checkStatus()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> DM  = DefaultDenseMatrix&lt;int,ScalarType&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">virtual</a> <a class="el" href="namespace_belos.html#a342eae302936d58ef9d7426063340863">StatusType</a> <a class="el" href="class_belos_1_1_status_test.html">Belos::StatusTest</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;::checkStatus </td>
+          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">virtual</a> <a class="el" href="namespace_belos.html#a342eae302936d58ef9d7426063340863">StatusType</a> <a class="el" href="class_belos_1_1_status_test.html">Belos::StatusTest</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt;::checkStatus </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_belos_1_1_iteration.html">Iteration</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; *&#160;</td>
+          <td class="paramtype"><a class="el" href="class_belos_1_1_iteration.html">Iteration</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt; *&#160;</td>
           <td class="paramname"><em>iSolver</em></td><td>)</td>
           <td></td>
         </tr>
@@ -244,23 +260,23 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
 <p>This method checks to see if the convergence criteria are met. The calling routine may pass in the current native residual std::vector (the one naturally produced as part of the iterative method) or a pre-computed estimate of the two-norm of the current residual, or both or neither. The calling routine should also indicate if the solution of the linear problem has been updated to be compatible with the residual. Some methods, such as GMRES do not update the solution at each iteration.</p>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="namespace_belos.html#a342eae302936d58ef9d7426063340863" title="Whether the StatusTest wants iteration to stop.">Belos::StatusType</a>: Unconverged, Converged or Failed. </dd></dl>
 
-<p>Implemented in <a class="el" href="class_belos_1_1_l_s_q_r_status_test.html#ae011a4daa0cd45c9651d0d411089d361">Belos::LSQRStatusTest&lt; ScalarType, MV, OP &gt;</a>, <a class="el" href="class_belos_1_1_status_test_gen_res_sub_norm.html#ae4549a6f8c0cbbc1272d423db62f87be">Belos::StatusTestGenResSubNorm&lt; ScalarType, MV, OP &gt;</a>, <a class="el" href="class_belos_1_1_status_test_combo.html#abc23fc387953c787582d6b7c8578e4a1">Belos::StatusTestCombo&lt; ScalarType, MV, OP &gt;</a>, <a class="el" href="class_belos_1_1_status_test_gen_res_norm.html#a66861d6f92b572996845ae52e2eb6a51">Belos::StatusTestGenResNorm&lt; ScalarType, MV, OP &gt;</a>, <a class="el" href="class_belos_1_1_status_test_imp_res_norm.html#a95249d6b3070c0f9aa3d148f56e367ef">Belos::StatusTestImpResNorm&lt; ScalarType, MV, OP &gt;</a>, <a class="el" href="class_belos_1_1_status_test_log_res_norm.html#a5fe4b5f9ae3bf65a6d97097a8821b36d">Belos::StatusTestLogResNorm&lt; ScalarType, MV, OP &gt;</a>, <a class="el" href="class_belos_1_1_status_test_max_iters.html#a16f868d602b9dbb3179836907ef96562">Belos::StatusTestMaxIters&lt; ScalarType, MV, OP &gt;</a>, <a class="el" href="class_belos_1_1_status_test_general_output.html#a6388a88736d5d8f63cc474c67f7a108f">Belos::StatusTestGeneralOutput&lt; ScalarType, MV, OP &gt;</a>, <a class="el" href="class_belos_1_1_status_test_res_norm_output.html#a3229b6737564a69477c653fedf845ee7">Belos::StatusTestResNormOutput&lt; ScalarType, MV, OP &gt;</a>, and <a class="el" href="class_belos_1_1_status_test_user_output.html#a23a9f126db59336af4058f1fcd1699a5">Belos::StatusTestUserOutput&lt; ScalarType, MV, OP &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_belos_1_1_l_s_q_r_status_test.html#acc3f38f898f7ff1d002517e19aca50e4">Belos::LSQRStatusTest&lt; ScalarType, MV, OP, DM &gt;</a>, <a class="el" href="class_belos_1_1_status_test_combo.html#a2b0fd562e267fe675d91c2470b889351">Belos::StatusTestCombo&lt; ScalarType, MV, OP, DefaultDenseMatrix&lt; int, ScalarType &gt; &gt;</a>, <a class="el" href="class_belos_1_1_status_test_gen_res_sub_norm.html#a4509fb927ee9ad7784e078939c15479b">Belos::StatusTestGenResSubNorm&lt; ScalarType, MV, OP, DM &gt;</a>, <a class="el" href="class_belos_1_1_status_test_combo.html#a2b0fd562e267fe675d91c2470b889351">Belos::StatusTestCombo&lt; ScalarType, MV, OP, DM &gt;</a>, <a class="el" href="class_belos_1_1_status_test_gen_res_norm.html#ad26f1345fd88d288830bf8012d6e5ee5">Belos::StatusTestGenResNorm&lt; ScalarType, MV, OP, DM &gt;</a>, <a class="el" href="class_belos_1_1_status_test_imp_res_norm.html#a1afc20964c67f8262a9c9d4217244f38">Belos::StatusTestImpResNorm&lt; ScalarType, MV, OP, DM &gt;</a>, <a class="el" href="class_belos_1_1_status_test_log_res_norm.html#afea11f8c7c22f187b0e9df3ef79ca56f">Belos::StatusTestLogResNorm&lt; ScalarType, MV, OP, DM &gt;</a>, <a class="el" href="class_belos_1_1_status_test_max_iters.html#ada81bff8cd279d85baf67e86489072b5">Belos::StatusTestMaxIters&lt; ScalarType, MV, OP, DM &gt;</a>, <a class="el" href="class_belos_1_1_status_test_general_output.html#a38757a16432523b0b08c9bedb02aa089">Belos::StatusTestGeneralOutput&lt; ScalarType, MV, OP, DM &gt;</a>, <a class="el" href="class_belos_1_1_status_test_res_norm_output.html#a54a92269aa271492bf2ca032bac46400">Belos::StatusTestResNormOutput&lt; ScalarType, MV, OP, DM &gt;</a>, and <a class="el" href="class_belos_1_1_status_test_user_output.html#ae6261361145c44ae72b40569dae46416">Belos::StatusTestUserOutput&lt; ScalarType, MV, OP, DM &gt;</a>.</p>
 
 </div>
 </div>
-<a id="a03b30dccf5bcc4ead72b0c42d9e1c3d3" name="a03b30dccf5bcc4ead72b0c42d9e1c3d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a03b30dccf5bcc4ead72b0c42d9e1c3d3">&#9670;&#160;</a></span>getStatus()</h2>
+<a id="aca03e341ffed4484cc250c63b2ed8b75" name="aca03e341ffed4484cc250c63b2ed8b75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca03e341ffed4484cc250c63b2ed8b75">&#9670;&#160;</a></span>getStatus()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> DM  = DefaultDenseMatrix&lt;int,ScalarType&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">virtual</a> <a class="el" href="namespace_belos.html#a342eae302936d58ef9d7426063340863">StatusType</a> <a class="el" href="class_belos_1_1_status_test.html">Belos::StatusTest</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;::getStatus </td>
+          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">virtual</a> <a class="el" href="namespace_belos.html#a342eae302936d58ef9d7426063340863">StatusType</a> <a class="el" href="class_belos_1_1_status_test.html">Belos::StatusTest</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt;::getStatus </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -275,23 +291,23 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
 
 <p>Return the result of the most recent CheckStatus call. </p>
 
-<p>Implemented in <a class="el" href="class_belos_1_1_l_s_q_r_status_test.html#acf9321841ea82fd27dc0ad67a44a8822">Belos::LSQRStatusTest&lt; ScalarType, MV, OP &gt;</a>, <a class="el" href="class_belos_1_1_status_test_combo.html#a723d0bc66d4c0c0fbef770c71936dcaa">Belos::StatusTestCombo&lt; ScalarType, MV, OP &gt;</a>, <a class="el" href="class_belos_1_1_status_test_general_output.html#a0bb7572e63367430996d294427af4558">Belos::StatusTestGeneralOutput&lt; ScalarType, MV, OP &gt;</a>, <a class="el" href="class_belos_1_1_status_test_gen_res_norm.html#ab2a9646d0d8f8caa58bd35d726cde5aa">Belos::StatusTestGenResNorm&lt; ScalarType, MV, OP &gt;</a>, <a class="el" href="class_belos_1_1_status_test_gen_res_sub_norm.html#aa4f15cadc748c25425f1c0d23b5f7a35">Belos::StatusTestGenResSubNorm&lt; ScalarType, MV, OP &gt;</a>, <a class="el" href="class_belos_1_1_status_test_imp_res_norm.html#a908a597588d01fecf4c49e82ec564fde">Belos::StatusTestImpResNorm&lt; ScalarType, MV, OP &gt;</a>, <a class="el" href="class_belos_1_1_status_test_log_res_norm.html#ad2adc9cd9728b14e99c9fd779252d38c">Belos::StatusTestLogResNorm&lt; ScalarType, MV, OP &gt;</a>, <a class="el" href="class_belos_1_1_status_test_max_iters.html#a9f8c4f60fcfefc44317318682608efd6">Belos::StatusTestMaxIters&lt; ScalarType, MV, OP &gt;</a>, <a class="el" href="class_belos_1_1_status_test_res_norm_output.html#aa145c09c96b2f203499fabd6921176af">Belos::StatusTestResNormOutput&lt; ScalarType, MV, OP &gt;</a>, and <a class="el" href="class_belos_1_1_status_test_user_output.html#a5f3f65b095ada5d28f3d988ebd6ee9ad">Belos::StatusTestUserOutput&lt; ScalarType, MV, OP &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_belos_1_1_l_s_q_r_status_test.html#a7f99c706d02cb094a55e969d8bf502a5">Belos::LSQRStatusTest&lt; ScalarType, MV, OP, DM &gt;</a>, <a class="el" href="class_belos_1_1_status_test_combo.html#a2e3434e9db756ba3b03097922008ac6b">Belos::StatusTestCombo&lt; ScalarType, MV, OP, DM &gt;</a>, <a class="el" href="class_belos_1_1_status_test_combo.html#a2e3434e9db756ba3b03097922008ac6b">Belos::StatusTestCombo&lt; ScalarType, MV, OP, DefaultDenseMatrix&lt; int, ScalarType &gt; &gt;</a>, <a class="el" href="class_belos_1_1_status_test_general_output.html#af96e471f03f1da96edc541ca36107836">Belos::StatusTestGeneralOutput&lt; ScalarType, MV, OP, DM &gt;</a>, <a class="el" href="class_belos_1_1_status_test_gen_res_norm.html#a40e2c11bdb6b244650a65245382a25f9">Belos::StatusTestGenResNorm&lt; ScalarType, MV, OP, DM &gt;</a>, <a class="el" href="class_belos_1_1_status_test_gen_res_sub_norm.html#a6f2bc715aa973f7e2f89c045fe55794b">Belos::StatusTestGenResSubNorm&lt; ScalarType, MV, OP, DM &gt;</a>, <a class="el" href="class_belos_1_1_status_test_imp_res_norm.html#a01fd00d23d89c2fb5aa45d8b26036db7">Belos::StatusTestImpResNorm&lt; ScalarType, MV, OP, DM &gt;</a>, <a class="el" href="class_belos_1_1_status_test_log_res_norm.html#aff8b687be8a9cfb10a12517c645db65c">Belos::StatusTestLogResNorm&lt; ScalarType, MV, OP, DM &gt;</a>, <a class="el" href="class_belos_1_1_status_test_max_iters.html#aa69f7bd26bdb34cd324c87ec4f9aa9f9">Belos::StatusTestMaxIters&lt; ScalarType, MV, OP, DM &gt;</a>, <a class="el" href="class_belos_1_1_status_test_res_norm_output.html#a3d2284d65114118fc57a82daa4147a8e">Belos::StatusTestResNormOutput&lt; ScalarType, MV, OP, DM &gt;</a>, and <a class="el" href="class_belos_1_1_status_test_user_output.html#a422bacd28489d87018bb8ea727702bfa">Belos::StatusTestUserOutput&lt; ScalarType, MV, OP, DM &gt;</a>.</p>
 
 </div>
 </div>
-<a id="ae4b40cfffd5032be9a81e64fe3461fc5" name="ae4b40cfffd5032be9a81e64fe3461fc5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4b40cfffd5032be9a81e64fe3461fc5">&#9670;&#160;</a></span>reset()</h2>
+<a id="a11246b4fb5f6d61914b61dd2f6acefe5" name="a11246b4fb5f6d61914b61dd2f6acefe5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11246b4fb5f6d61914b61dd2f6acefe5">&#9670;&#160;</a></span>reset()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> DM  = DefaultDenseMatrix&lt;int,ScalarType&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">virtual</a> <a class="el" href="class_belos_1_1_operator.html">void</a> <a class="el" href="class_belos_1_1_status_test.html">Belos::StatusTest</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;::reset </td>
+          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">virtual</a> <a class="el" href="class_belos_1_1_operator.html">void</a> <a class="el" href="class_belos_1_1_status_test.html">Belos::StatusTest</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt;::reset </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -307,23 +323,23 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
 <p>Informs the convergence test that it should reset its internal configuration to the initialized state. </p>
 <p>This is necessary for the case when the status test is being reused by another solver or for another linear problem. The status test may have information that pertains to a particular linear system. The internal information will be reset back to the initialized state. The user specified information that the convergence test uses will remain. </p>
 
-<p>Implemented in <a class="el" href="class_belos_1_1_l_s_q_r_status_test.html#a2e4133e3da1b4571fb7371621101542e">Belos::LSQRStatusTest&lt; ScalarType, MV, OP &gt;</a>, <a class="el" href="class_belos_1_1_status_test_combo.html#ae97cec0fadb5fefbe1fd1c98fdc8b0f9">Belos::StatusTestCombo&lt; ScalarType, MV, OP &gt;</a>, <a class="el" href="class_belos_1_1_status_test_general_output.html#a3892cfafa4a6e766bf1097b8b5df590f">Belos::StatusTestGeneralOutput&lt; ScalarType, MV, OP &gt;</a>, <a class="el" href="class_belos_1_1_status_test_gen_res_norm.html#a38da28d85e79a2809cb45827219b2476">Belos::StatusTestGenResNorm&lt; ScalarType, MV, OP &gt;</a>, <a class="el" href="class_belos_1_1_status_test_gen_res_sub_norm.html#addea12a2a67635e9e81802a5749e105f">Belos::StatusTestGenResSubNorm&lt; ScalarType, MV, OP &gt;</a>, <a class="el" href="class_belos_1_1_status_test_imp_res_norm.html#a71a1df40442010e6889dd3af0d60efda">Belos::StatusTestImpResNorm&lt; ScalarType, MV, OP &gt;</a>, <a class="el" href="class_belos_1_1_status_test_log_res_norm.html#a175a73cfb0c8aabb95b236170cb2b84f">Belos::StatusTestLogResNorm&lt; ScalarType, MV, OP &gt;</a>, <a class="el" href="class_belos_1_1_status_test_max_iters.html#a24eefe1ac54584d6f30003d1ce1a2fc0">Belos::StatusTestMaxIters&lt; ScalarType, MV, OP &gt;</a>, <a class="el" href="class_belos_1_1_status_test_res_norm_output.html#a2c365c99a66ffc9ec23db4a8e04c254d">Belos::StatusTestResNormOutput&lt; ScalarType, MV, OP &gt;</a>, and <a class="el" href="class_belos_1_1_status_test_user_output.html#a9406d49d79825ca09408a3fc0b02cee9">Belos::StatusTestUserOutput&lt; ScalarType, MV, OP &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_belos_1_1_l_s_q_r_status_test.html#a60eb8bfffafbef8fbeda6926af249b5e">Belos::LSQRStatusTest&lt; ScalarType, MV, OP, DM &gt;</a>, <a class="el" href="class_belos_1_1_status_test_combo.html#abc0ee6b591faf641389f357f6061fb92">Belos::StatusTestCombo&lt; ScalarType, MV, OP, DM &gt;</a>, <a class="el" href="class_belos_1_1_status_test_combo.html#abc0ee6b591faf641389f357f6061fb92">Belos::StatusTestCombo&lt; ScalarType, MV, OP, DefaultDenseMatrix&lt; int, ScalarType &gt; &gt;</a>, <a class="el" href="class_belos_1_1_status_test_general_output.html#adff7202ba457c3ddc08adada9aea426e">Belos::StatusTestGeneralOutput&lt; ScalarType, MV, OP, DM &gt;</a>, <a class="el" href="class_belos_1_1_status_test_gen_res_norm.html#a66c16f5de72d178852feb311fb3d011d">Belos::StatusTestGenResNorm&lt; ScalarType, MV, OP, DM &gt;</a>, <a class="el" href="class_belos_1_1_status_test_gen_res_sub_norm.html#a5dcb7158ff039874bb6abc599ba5e9f3">Belos::StatusTestGenResSubNorm&lt; ScalarType, MV, OP, DM &gt;</a>, <a class="el" href="class_belos_1_1_status_test_imp_res_norm.html#aed48eabfd74cb2d219e545dc94ef931f">Belos::StatusTestImpResNorm&lt; ScalarType, MV, OP, DM &gt;</a>, <a class="el" href="class_belos_1_1_status_test_log_res_norm.html#a09e607d37b88520e96c72dad8cd9af36">Belos::StatusTestLogResNorm&lt; ScalarType, MV, OP, DM &gt;</a>, <a class="el" href="class_belos_1_1_status_test_max_iters.html#ab32f35dfe1949f8070e2dba565076601">Belos::StatusTestMaxIters&lt; ScalarType, MV, OP, DM &gt;</a>, <a class="el" href="class_belos_1_1_status_test_res_norm_output.html#a1b72b72f28ad335a70f929a44c4d3f48">Belos::StatusTestResNormOutput&lt; ScalarType, MV, OP, DM &gt;</a>, and <a class="el" href="class_belos_1_1_status_test_user_output.html#a3ba945a1536bc2b50e7764adbcff06e4">Belos::StatusTestUserOutput&lt; ScalarType, MV, OP, DM &gt;</a>.</p>
 
 </div>
 </div>
-<a id="a57ac6d8e2d496b974b51337981c76d5e" name="a57ac6d8e2d496b974b51337981c76d5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a57ac6d8e2d496b974b51337981c76d5e">&#9670;&#160;</a></span>print()</h2>
+<a id="a4f36aebdf96780e8e7e2794284676a49" name="a4f36aebdf96780e8e7e2794284676a49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f36aebdf96780e8e7e2794284676a49">&#9670;&#160;</a></span>print()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> DM  = DefaultDenseMatrix&lt;int,ScalarType&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">virtual</a> <a class="el" href="class_belos_1_1_operator.html">void</a> <a class="el" href="class_belos_1_1_status_test.html">Belos::StatusTest</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;::print </td>
+          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">virtual</a> <a class="el" href="class_belos_1_1_operator.html">void</a> <a class="el" href="class_belos_1_1_status_test.html">Belos::StatusTest</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt;::print </td>
           <td>(</td>
           <td class="paramtype">std::ostream &amp;&#160;</td>
           <td class="paramname"><em>os</em>, </td>
@@ -349,23 +365,23 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
 
 <p>Output formatted description of stopping test to output stream. </p>
 
-<p>Implemented in <a class="el" href="class_belos_1_1_status_test_gen_res_sub_norm.html#a91d05c003d56d2ec14baa9bef18582e4">Belos::StatusTestGenResSubNorm&lt; ScalarType, MV, OP &gt;</a>, <a class="el" href="class_belos_1_1_l_s_q_r_status_test.html#a7cf4dec0371075d2abff1b8a2b6447e0">Belos::LSQRStatusTest&lt; ScalarType, MV, OP &gt;</a>, <a class="el" href="class_belos_1_1_status_test_combo.html#adee79deb6ac6083ec276cb0aab82913b">Belos::StatusTestCombo&lt; ScalarType, MV, OP &gt;</a>, <a class="el" href="class_belos_1_1_status_test_general_output.html#ad467c2e760816152bc86e187ab24b350">Belos::StatusTestGeneralOutput&lt; ScalarType, MV, OP &gt;</a>, <a class="el" href="class_belos_1_1_status_test_gen_res_norm.html#af7139ed7498048fe5339c9e0cffcf8b7">Belos::StatusTestGenResNorm&lt; ScalarType, MV, OP &gt;</a>, <a class="el" href="class_belos_1_1_status_test_imp_res_norm.html#a6d54495ca8436639a63077fd27789186">Belos::StatusTestImpResNorm&lt; ScalarType, MV, OP &gt;</a>, <a class="el" href="class_belos_1_1_status_test_log_res_norm.html#a62bee344657b6048f4de6980648079a8">Belos::StatusTestLogResNorm&lt; ScalarType, MV, OP &gt;</a>, <a class="el" href="class_belos_1_1_status_test_max_iters.html#a02448795fa37cb0d9939054d89dc05c7">Belos::StatusTestMaxIters&lt; ScalarType, MV, OP &gt;</a>, <a class="el" href="class_belos_1_1_status_test_res_norm_output.html#a313883d0e9f239be17b23aa797e5bef8">Belos::StatusTestResNormOutput&lt; ScalarType, MV, OP &gt;</a>, and <a class="el" href="class_belos_1_1_status_test_user_output.html#a52c0f13907cd74a0b8d7e77e198413fd">Belos::StatusTestUserOutput&lt; ScalarType, MV, OP &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_belos_1_1_status_test_gen_res_sub_norm.html#a82d1dbda7d98c6ea542a683061adcb6d">Belos::StatusTestGenResSubNorm&lt; ScalarType, MV, OP, DM &gt;</a>, <a class="el" href="class_belos_1_1_l_s_q_r_status_test.html#af4eec0e0422c71404f69d5a751f98f31">Belos::LSQRStatusTest&lt; ScalarType, MV, OP, DM &gt;</a>, <a class="el" href="class_belos_1_1_status_test_combo.html#a64e25ac46187ef4e8207d443c0744152">Belos::StatusTestCombo&lt; ScalarType, MV, OP, DM &gt;</a>, <a class="el" href="class_belos_1_1_status_test_combo.html#a64e25ac46187ef4e8207d443c0744152">Belos::StatusTestCombo&lt; ScalarType, MV, OP, DefaultDenseMatrix&lt; int, ScalarType &gt; &gt;</a>, <a class="el" href="class_belos_1_1_status_test_general_output.html#abebb560e04f1bb02a675b2e5579aeba1">Belos::StatusTestGeneralOutput&lt; ScalarType, MV, OP, DM &gt;</a>, <a class="el" href="class_belos_1_1_status_test_gen_res_norm.html#ad43ab938cd9214cf1f209e77bc7ff9eb">Belos::StatusTestGenResNorm&lt; ScalarType, MV, OP, DM &gt;</a>, <a class="el" href="class_belos_1_1_status_test_imp_res_norm.html#ad24000a651b2a28758e08b6f58108b93">Belos::StatusTestImpResNorm&lt; ScalarType, MV, OP, DM &gt;</a>, <a class="el" href="class_belos_1_1_status_test_log_res_norm.html#a92959d45e16a9fbad9302144a351ba33">Belos::StatusTestLogResNorm&lt; ScalarType, MV, OP, DM &gt;</a>, <a class="el" href="class_belos_1_1_status_test_max_iters.html#a1dca3682ece8e5b38c6c5cf46d111739">Belos::StatusTestMaxIters&lt; ScalarType, MV, OP, DM &gt;</a>, <a class="el" href="class_belos_1_1_status_test_res_norm_output.html#a6bd1486c99ad9655f66b96ec2867659d">Belos::StatusTestResNormOutput&lt; ScalarType, MV, OP, DM &gt;</a>, and <a class="el" href="class_belos_1_1_status_test_user_output.html#a280489d91ee4ae5359024bff0228e447">Belos::StatusTestUserOutput&lt; ScalarType, MV, OP, DM &gt;</a>.</p>
 
 </div>
 </div>
-<a id="afb74d8db2f62029cd5bdb64cdd17a36b" name="afb74d8db2f62029cd5bdb64cdd17a36b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb74d8db2f62029cd5bdb64cdd17a36b">&#9670;&#160;</a></span>printStatus()</h2>
+<a id="ae27dc34aadd48a4c4a9ab37e78a9152e" name="ae27dc34aadd48a4c4a9ab37e78a9152e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae27dc34aadd48a4c4a9ab37e78a9152e">&#9670;&#160;</a></span>printStatus()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> DM  = DefaultDenseMatrix&lt;int,ScalarType&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">virtual</a> <a class="el" href="class_belos_1_1_operator.html">void</a> <a class="el" href="class_belos_1_1_status_test.html">Belos::StatusTest</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;::printStatus </td>
+          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">virtual</a> <a class="el" href="class_belos_1_1_operator.html">void</a> <a class="el" href="class_belos_1_1_status_test.html">Belos::StatusTest</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt;::printStatus </td>
           <td>(</td>
           <td class="paramtype">std::ostream &amp;&#160;</td>
           <td class="paramname"><em>os</em>, </td>
@@ -391,7 +407,7 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
 
 <p>Output the result of the most recent CheckStatus call. </p>
 
-<p>Reimplemented in <a class="el" href="class_belos_1_1_status_test_gen_res_sub_norm.html#a933a3b9c325c3881ba23d3e1eb401fac">Belos::StatusTestGenResSubNorm&lt; ScalarType, MV, OP &gt;</a>, <a class="el" href="class_belos_1_1_l_s_q_r_status_test.html#a261e577920a7a611e264664eb5ccdae4">Belos::LSQRStatusTest&lt; ScalarType, MV, OP &gt;</a>, <a class="el" href="class_belos_1_1_status_test_gen_res_norm.html#ae0fb244c0b794be9d33e2833b78b9720">Belos::StatusTestGenResNorm&lt; ScalarType, MV, OP &gt;</a>, <a class="el" href="class_belos_1_1_status_test_imp_res_norm.html#a5e2d5468aef81195eb7acc8ffda4e7ea">Belos::StatusTestImpResNorm&lt; ScalarType, MV, OP &gt;</a>, <a class="el" href="class_belos_1_1_status_test_log_res_norm.html#ab37df7b386cb75060c3699fe3654a14b">Belos::StatusTestLogResNorm&lt; ScalarType, MV, OP &gt;</a>, and <a class="el" href="class_belos_1_1_status_test_max_iters.html#ad790fa30864b4130973a3c681d933eab">Belos::StatusTestMaxIters&lt; ScalarType, MV, OP &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="class_belos_1_1_status_test_gen_res_sub_norm.html#ab14a76d9683df68453ed20b83fd5ba43">Belos::StatusTestGenResSubNorm&lt; ScalarType, MV, OP, DM &gt;</a>, <a class="el" href="class_belos_1_1_l_s_q_r_status_test.html#a5d921767b2cef998c3c70bae61ffca3b">Belos::LSQRStatusTest&lt; ScalarType, MV, OP, DM &gt;</a>, <a class="el" href="class_belos_1_1_status_test_gen_res_norm.html#aec7ce91e67527383e5019511ed7688a4">Belos::StatusTestGenResNorm&lt; ScalarType, MV, OP, DM &gt;</a>, <a class="el" href="class_belos_1_1_status_test_imp_res_norm.html#a747dd80e7e96b42762d2fa2317243123">Belos::StatusTestImpResNorm&lt; ScalarType, MV, OP, DM &gt;</a>, <a class="el" href="class_belos_1_1_status_test_log_res_norm.html#ae6db1fb0f4b222b9a63897d959013e65">Belos::StatusTestLogResNorm&lt; ScalarType, MV, OP, DM &gt;</a>, and <a class="el" href="class_belos_1_1_status_test_max_iters.html#a98265bacfa64543331ae3dfa9f89afbd">Belos::StatusTestMaxIters&lt; ScalarType, MV, OP, DM &gt;</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_belos_status_test_8hpp_source.html#l00098">98</a> of file <a class="el" href="_belos_status_test_8hpp_source.html">BelosStatusTest.hpp</a>.</p>
 

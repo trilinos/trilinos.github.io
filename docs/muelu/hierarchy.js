@@ -391,7 +391,7 @@ var hierarchy =
     [ "MueLu::MatrixConstruction::PointwiseCountingFunctor< local_matrix_type, functor_type, remaining_functor_types >", "class_mue_lu_1_1_matrix_construction_1_1_pointwise_counting_functor.html", null ],
     [ "MueLu::MatrixConstruction::PointwiseCountingFunctor< local_matrix_type, functor_type >", "class_mue_lu_1_1_matrix_construction_1_1_pointwise_counting_functor_3_01local__matrix__type_00_01functor__type_01_4.html", null ],
     [ "MueLu::Misc::PointwiseDropBoundaryFunctor< local_matrix_type >", "class_mue_lu_1_1_misc_1_1_pointwise_drop_boundary_functor.html", null ],
-    [ "MueLu::MatrixConstruction::PointwiseFillNoReuseFunctor< local_matrix_type, lumpingChoice >", "class_mue_lu_1_1_matrix_construction_1_1_pointwise_fill_no_reuse_functor.html", null ],
+    [ "MueLu::MatrixConstruction::PointwiseFillNoReuseFunctor< local_matrix_type, lumpingChoice, constructFilteredA >", "class_mue_lu_1_1_matrix_construction_1_1_pointwise_fill_no_reuse_functor.html", null ],
     [ "MueLu::MatrixConstruction::PointwiseFillReuseFunctor< local_matrix_type, local_graph_type, lumping >", "class_mue_lu_1_1_matrix_construction_1_1_pointwise_fill_reuse_functor.html", null ],
     [ "MueLu::Misc::PointwiseSymmetricDropBoundaryFunctor< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_misc_1_1_pointwise_symmetric_drop_boundary_functor.html", null ],
     [ "PreconditionerFactoryBase", null, [
@@ -421,7 +421,7 @@ var hierarchy =
     [ "Amesos2::Solver< OP, MV >", "class_amesos2_1_1_solver.html", null ],
     [ "Sparse", "class_sparse.html", null ],
     [ "StatusTestResNorm", null, [
-      [ "Belos::StatusTestGenResSubNorm< Scalar, Xpetra::MultiVector< Scalar, LocalOrdinal, GlobalOrdinal, Node >, Belos::OperatorT< Xpetra::MultiVector< Scalar, LocalOrdinal, GlobalOrdinal, Node > > >", "class_belos_1_1_status_test_gen_res_sub_norm_3_01_scalar_00_01_xpetra_1_1_multi_vector_3_01_scalb5dcf6a9ef93bfb0db805b34e83d96ba.html", null ]
+      [ "Belos::StatusTestGenResSubNorm< Scalar, Xpetra::MultiVector< Scalar, LocalOrdinal, GlobalOrdinal, Node >, Belos::OperatorT< Xpetra::MultiVector< Scalar, LocalOrdinal, GlobalOrdinal, Node > >, Teuchos::SerialDenseMatrix< LocalOrdinal, Scalar > >", "class_belos_1_1_status_test_gen_res_sub_norm_3_01_scalar_00_01_xpetra_1_1_multi_vector_3_01_scal8e772064c09be5d4ee302f92ef6edb70.html", null ]
     ] ],
     [ "MueLu::Misc::SymmetrizeFunctor< local_matrix_type >", "class_mue_lu_1_1_misc_1_1_symmetrize_functor.html", null ],
     [ "MueLu::BlockInverseFunctor< Scalar, LocalOrdinal, GlobalOrdinal, Node >::TagApply", "class_mue_lu_1_1_block_inverse_functor_1_1_tag_apply.html", null ],
@@ -447,7 +447,7 @@ var hierarchy =
       [ "MueLu::VectorDroppingClassical< Scalar, LocalOrdinal, GlobalOrdinal, Node, SoC >", "class_mue_lu_1_1_vector_dropping_classical.html", null ],
       [ "MueLu::VectorDroppingDistanceLaplacian< Scalar, LocalOrdinal, GlobalOrdinal, Node, SoC >", "class_mue_lu_1_1_vector_dropping_distance_laplacian.html", null ]
     ] ],
-    [ "MueLu::MatrixConstruction::VectorFillFunctor< local_matrix_type, lumping, reuse >", "class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html", null ],
+    [ "MueLu::MatrixConstruction::VectorFillFunctor< local_matrix_type, lumping, reuse, constructFilteredA >", "class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html", null ],
     [ "VectorFillNoReuseFunctor", "class_vector_fill_no_reuse_functor.html", null ],
     [ "MueLu::Misc::VectorSymmetricDropBoundaryFunctor< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_misc_1_1_vector_symmetric_drop_boundary_functor.html", null ],
     [ "Teuchos::VerboseObject", null, [

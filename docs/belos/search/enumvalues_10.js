@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['unconverged_0',['Unconverged',['../namespace_belos.html#a2ab2fec66d34a6ec385de5eb8008c53ea200eaf745e4085dd838cb9ce24fad19c',1,'Belos']]],
-  ['undefined_1',['Undefined',['../namespace_belos.html#a342eae302936d58ef9d7426063340863a60770bedf2472b3ef2e23f87f3a4d1cc',1,'Belos']]],
-  ['undetermined_2',['Undetermined',['../namespace_belos.html#a2ab2fec66d34a6ec385de5eb8008c53ead5a1a29c1be6a48471be448d85d7b34b',1,'Belos']]],
-  ['user_3',['User',['../namespace_belos.html#a9ced295f4b474d2c545f344204940f41a1fd73f9e3f93d404e651e3ccf5dd877e',1,'Belos']]],
-  ['userprovided_4',['UserProvided',['../namespace_belos.html#ab2a257ae715c1d7d646de3bd67d3d9b3a2266d47170ca1dbf0b95330ea120bfaa',1,'Belos']]]
+  ['teuchosserialdensematrix_0',['TeuchosSerialDenseMatrix',['../namespace_belos.html#a6148400a6292d80c4305cd4bcc1c9ac1ae3f18ecf54e93c6b0e60fe924bd4006d',1,'Belos']]],
+  ['timingdetails_1',['TimingDetails',['../namespace_belos.html#a2a2aa51a3ef87c278fd43945578b3612a54629124d7d6823ab26d8e1df854d962',1,'Belos']]],
+  ['trans_2',['TRANS',['../namespace_belos.html#ad0d6e7d6a71587de42b3af8d5c6e26dcafceb610e6ca74cf89a347fbbc20dc12c',1,'Belos']]],
+  ['twonorm_3',['TwoNorm',['../namespace_belos.html#a24aa69bf4f5cd54d0c704958cb556893ae58e27e451bb781298c8212ec5df7f6f',1,'Belos']]]
 ];

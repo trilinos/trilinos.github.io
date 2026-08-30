@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['recyclesubspace_0',['RecycleSubspace',['../namespace_belos.html#ad8be32ab19b9ea8822407ca681ee021daa53ca23268f3dea8f40a7df79274ae81',1,'Belos']]],
-  ['robustness_5finvalid_1',['ROBUSTNESS_INVALID',['../namespace_belos_1_1details.html#a05bc807f8daacda97634f46ded62adfeaf78083034b642ee97afd4b87d313776e',1,'Belos::details']]],
-  ['robustness_5flots_2',['ROBUSTNESS_LOTS',['../namespace_belos_1_1details.html#a05bc807f8daacda97634f46ded62adfea2837d067913425b6279342d1e0f405a2',1,'Belos::details']]],
-  ['robustness_5fnone_3',['ROBUSTNESS_NONE',['../namespace_belos_1_1details.html#a05bc807f8daacda97634f46ded62adfea7c00a13d1ab30f47de58763504fd9d50',1,'Belos::details']]],
-  ['robustness_5fsome_4',['ROBUSTNESS_SOME',['../namespace_belos_1_1details.html#a05bc807f8daacda97634f46ded62adfea4c0000ab10503cf9942a38072a6219d1',1,'Belos::details']]]
+  ['passed_0',['Passed',['../namespace_belos.html#a342eae302936d58ef9d7426063340863af0d98a687db4f51b258b4df00353f5ee',1,'Belos']]],
+  ['preconditionernorm_1',['PreconditionerNorm',['../namespace_belos.html#a24aa69bf4f5cd54d0c704958cb556893a7622e5179219aefd1c72d7caf5bb6d4d',1,'Belos']]],
+  ['problem_2',['Problem',['../namespace_belos.html#ad8be32ab19b9ea8822407ca681ee021da7ebc9f36b728b335379bbefc359df7dc',1,'Belos']]]
 ];

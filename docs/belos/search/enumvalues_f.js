@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['timingdetails_0',['TimingDetails',['../namespace_belos.html#a2a2aa51a3ef87c278fd43945578b3612a54629124d7d6823ab26d8e1df854d962',1,'Belos']]],
-  ['trans_1',['TRANS',['../namespace_belos.html#ad0d6e7d6a71587de42b3af8d5c6e26dcafceb610e6ca74cf89a347fbbc20dc12c',1,'Belos']]],
-  ['twonorm_2',['TwoNorm',['../namespace_belos.html#a24aa69bf4f5cd54d0c704958cb556893ae58e27e451bb781298c8212ec5df7f6f',1,'Belos']]]
+  ['seq_0',['SEQ',['../class_belos_1_1_status_test_combo.html#a0d2b491520f3106f4e50890f1770e2feaf78c088490e11bfc493e931d2fea002c',1,'Belos::StatusTestCombo']]],
+  ['statustestdetails_1',['StatusTestDetails',['../namespace_belos.html#a2a2aa51a3ef87c278fd43945578b3612a214b85228315388f0b0fea24202ba4e4',1,'Belos']]]
 ];

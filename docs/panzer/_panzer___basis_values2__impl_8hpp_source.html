@@ -95,7 +95,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_panzer___traits_8hpp.html">Panzer_Traits.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="_panzer___common_array_factories_8hpp.html">Panzer_CommonArrayFactories.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;Kokkos_ViewFactory.hpp&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;Sacado_Fad_Kokkos_ViewFactory.hpp&quot;</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="_panzer___orientations_interface_8hpp.html">Panzer_OrientationsInterface.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;Intrepid2_Utils.hpp&quot;</span></div>
@@ -124,7 +124,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <span class="keywordflow">if</span>(view.rank() == 3){</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="comment">// Grab subview of object to re-orient and create a copy of it</span></div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">auto</span> sub_view = Kokkos::subview(view, std::make_pair(0,num_cells), Kokkos::ALL(), Kokkos::ALL());</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">auto</span> sub_view_clone = Kokkos::createDynRankView(view, <span class="stringliteral">&quot;sub_view_clone&quot;</span>, sub_view.extent(0), sub_view.extent(1), sub_view.extent(2));</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">auto</span> sub_view_clone = Sacado::createDynRankView(view, <span class="stringliteral">&quot;sub_view_clone&quot;</span>, sub_view.extent(0), sub_view.extent(1), sub_view.extent(2));</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    Kokkos::deep_copy(sub_view_clone, sub_view);</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="comment">// Apply the orientations to the subview</span></div>
@@ -132,7 +132,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (view.rank() == 4){</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="comment">// Grab subview of object to re-orient and create a copy of it</span></div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">auto</span> sub_view = Kokkos::subview(view, std::make_pair(0,num_cells), Kokkos::ALL(), Kokkos::ALL(), Kokkos::ALL());</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">auto</span> sub_view_clone = Kokkos::createDynRankView(view, <span class="stringliteral">&quot;sub_view_clone&quot;</span>, sub_view.extent(0), sub_view.extent(1), sub_view.extent(2), sub_view.extent(3));</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">auto</span> sub_view_clone = Sacado::createDynRankView(view, <span class="stringliteral">&quot;sub_view_clone&quot;</span>, sub_view.extent(0), sub_view.extent(1), sub_view.extent(2), sub_view.extent(3));</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    Kokkos::deep_copy(sub_view_clone, sub_view);</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="comment">// Apply the orientations to the subview</span></div>

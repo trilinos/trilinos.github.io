@@ -60,7 +60,7 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:ae82f1d53346239c036d77321787a13b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61ccee0943406ae53d1cc1b04b6ad7cd" id="r_a61ccee0943406ae53d1cc1b04b6ad7cd"><td class="memTemplParams" colspan="2">template&lt;typename implBasisType , typename refPointViewType , typename phyPointViewType , typename nodeViewType &gt; </td></tr>
 <tr class="memitem:a61ccee0943406ae53d1cc1b04b6ad7cd"><td class="memTemplItemLeft" align="right" valign="top">static KOKKOS_INLINE_FUNCTION bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="struct_intrepid2_1_1_impl_1_1_cell_tools_1_1_serial.html#a61ccee0943406ae53d1cc1b04b6ad7cd">mapToReferenceFrame</a> (const refPointViewType &amp;refPoint, const phyPointViewType &amp;physPoint, const nodeViewType &amp;nodes, const double tol=tolerance(), const typename phyPointViewType::value_type shellThickness=-1.0)</td></tr>
-<tr class="memdesc:a61ccee0943406ae53d1cc1b04b6ad7cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computation of <picture><source srcset="form_76_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ F^{-1}_{c} $" src="form_76.png" width="23" height="15"/></picture>, the inverse of the reference-to-physical frame map.  <br /></td></tr>
+<tr class="memdesc:a61ccee0943406ae53d1cc1b04b6ad7cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computation of <picture><source srcset="form_77_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ F^{-1}_{c} $" src="form_77.png" width="23" height="15"/></picture>, the inverse of the reference-to-physical frame map.  <br /></td></tr>
 <tr class="separator:a61ccee0943406ae53d1cc1b04b6ad7cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0241eb1563b661606daeb9720f446b2" id="r_ad0241eb1563b661606daeb9720f446b2"><td class="memTemplParams" colspan="2">template&lt;typename refEdgeTanViewType , typename ParamViewType &gt; </td></tr>
 <tr class="memitem:ad0241eb1563b661606daeb9720f446b2"><td class="memTemplItemLeft" align="right" valign="top">static KOKKOS_INLINE_FUNCTION void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="struct_intrepid2_1_1_impl_1_1_cell_tools_1_1_serial.html#ad0241eb1563b661606daeb9720f446b2">getReferenceEdgeTangent</a> (const refEdgeTanViewType refEdgeTangent, const ParamViewType edgeParametrization, const ordinal_type edgeOrdinal)</td></tr>
@@ -543,11 +543,11 @@ template&lt;typename implBasisType , typename refPointViewType , typename phyPoi
 </table>
 </div><div class="memdoc">
 
-<p>Computation of <picture><source srcset="form_76_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ F^{-1}_{c} $" src="form_76.png" width="23" height="15"/></picture>, the inverse of the reference-to-physical frame map. </p>
-<p>Applies <picture><source srcset="form_76_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ F^{-1}_{c} $" src="form_76.png" width="23" height="15"/></picture> for <b>a</b> cell workset to <b>a</b> single point (P,D) view. Computes a rank-2 (P,D) view such that  </p><p class="formulaDsp">
-<picture><source srcset="form_78_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
+<p>Computation of <picture><source srcset="form_77_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ F^{-1}_{c} $" src="form_77.png" width="23" height="15"/></picture>, the inverse of the reference-to-physical frame map. </p>
+<p>Applies <picture><source srcset="form_77_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ F^{-1}_{c} $" src="form_77.png" width="23" height="15"/></picture> for <b>a</b> cell workset to <b>a</b> single point (P,D) view. Computes a rank-2 (P,D) view such that  </p><p class="formulaDsp">
+<picture><source srcset="form_79_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
 \mbox{refPoints}(p,d) = \Big(F^{-1}_c(physPoint(p,*)) \Big)_d
-\]" src="form_78.png" width="231" height="24"/></picture>
+\]" src="form_79.png" width="231" height="24"/></picture>
 </p>
 <p>Requires pointer to HGrad basis that defines reference to physical cell mapping. See Section <a class="el" href="cell_tools_page.html#sec_cell_topology_ref_map">Reference-to-physical cell mapping</a> for definition of the mapping function. Note that the physical point can be in a space with larger dimension, e.g. if mapping a reference quadrilateral into a side in 3D space.</p>
 <p>Note, it doesn't work with FAD Types</p>
