@@ -10,5 +10,6 @@ var searchData=
   ['invalidnumtargvecs_7',['InvalidNumTargVecs',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/rtop/src/interfaces/doc/html/class_r_t_op_pack_1_1_invalid_num_targ_vecs.html',1,'RTOpPack']]],
   ['invalidnumvecs_8',['InvalidNumVecs',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/rtop/src/interfaces/doc/html/class_r_t_op_pack_1_1_invalid_num_vecs.html',1,'RTOpPack']]],
   ['invalidusage_9',['InvalidUsage',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/rtop/src/interfaces/doc/html/class_r_t_op_pack_1_1_invalid_usage.html',1,'RTOpPack']]],
-  ['iteration_10',['Iteration',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/belos/doc/html/class_belos_1_1_iteration.html',1,'Belos']]]
+  ['iteration_10',['Iteration',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/belos/doc/html/class_belos_1_1_iteration.html',1,'Belos']]],
+  ['iteration_3c_20scalartype_2c_20mv_2c_20op_2c_20dm_20_3e_11',['Iteration&lt; ScalarType, MV, OP, DM &gt;',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/belos/doc/html/class_belos_1_1_iteration.html',1,'Belos']]]
 ];

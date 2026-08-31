@@ -669,7 +669,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span><span class="preprocessor">#endif  </span><span class="comment">// KOKKOS_ENABLE_CUDA</span></div>
 <div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span> </div>
 <div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span><span class="preprocessor">#ifdef KOKKOS_ENABLE_SYCL</span></div>
-<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>  <span class="keyword">static_assert</span>(!std::is_same&lt;typename ImpView::memory_space, Kokkos::Experimental::SYCLSharedUSMSpace&gt;::value,</div>
+<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>  <span class="keyword">static_assert</span>(!std::is_same&lt;typename ImpView::memory_space, Kokkos::SYCLSharedUSMSpace&gt;::value,</div>
 <div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>                <span class="stringliteral">&quot;Please do not use Tpetra::Distributor with SharedUSM &quot;</span></div>
 <div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>                <span class="stringliteral">&quot;allocations.  See GitHub issue #1088 (corresponding to CUDA).&quot;</span>);</div>
 <div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span><span class="preprocessor">#endif  </span><span class="comment">// KOKKOS_ENABLE_SYCL</span></div>
@@ -812,8 +812,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00729" name="l00729"></a><span class="lineno">  729</span><span class="preprocessor">#endif  </span><span class="comment">// KOKKOS_ENABLE_CUDA</span></div>
 <div class="line"><a id="l00730" name="l00730"></a><span class="lineno">  730</span> </div>
 <div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span><span class="preprocessor">#ifdef KOKKOS_ENABLE_SYCL</span></div>
-<div class="line"><a id="l00732" name="l00732"></a><span class="lineno">  732</span>  <span class="keyword">static_assert</span>(!std::is_same&lt;typename ExpView::memory_space, Kokkos::Experimental::SYCLSharedUSMSpace&gt;::value &amp;&amp;</div>
-<div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span>                    !std::is_same&lt;typename ImpView::memory_space, Kokkos::Experimental::SYCLSharedUSMSpace&gt;::value,</div>
+<div class="line"><a id="l00732" name="l00732"></a><span class="lineno">  732</span>  <span class="keyword">static_assert</span>(!std::is_same&lt;typename ExpView::memory_space, Kokkos::SYCLSharedUSMSpace&gt;::value &amp;&amp;</div>
+<div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span>                    !std::is_same&lt;typename ImpView::memory_space, Kokkos::SYCLSharedUSMSpace&gt;::value,</div>
 <div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span>                <span class="stringliteral">&quot;Please do not use Tpetra::Distributor with SharedUSM allocations.  &quot;</span></div>
 <div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span>                <span class="stringliteral">&quot;See Trilinos GitHub issue #1088 (corresponding to CUDA).&quot;</span>);</div>
 <div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span><span class="preprocessor">#endif  </span><span class="comment">// KOKKOS_ENABLE_SYCL</span></div>

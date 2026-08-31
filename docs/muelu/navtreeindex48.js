@@ -1,5 +1,13 @@
 var NAVTREEINDEX48 =
 {
+"struct_mue_lu_1_1_aggregation_structured_algorithm_1_1compute_graph_data_linear_functor.html#ad750208891e5823cd7b2a166abc0b003":[9,0,3,25,1,0],
+"struct_mue_lu_1_1_aggregation_structured_algorithm_1_1compute_graph_data_linear_functor.html#ae7a315392e21ee5d43be01e52fc4ef14":[10,0,2,18,1,12],
+"struct_mue_lu_1_1_aggregation_structured_algorithm_1_1compute_graph_data_linear_functor.html#ae7a315392e21ee5d43be01e52fc4ef14":[9,0,3,25,1,12],
+"struct_mue_lu_1_1_aggregation_structured_algorithm_1_1compute_graph_data_linear_functor.html#af647be096c7d25bb7b28852b85fe5890":[10,0,2,18,1,11],
+"struct_mue_lu_1_1_aggregation_structured_algorithm_1_1compute_graph_data_linear_functor.html#af647be096c7d25bb7b28852b85fe5890":[9,0,3,25,1,11],
+"struct_mue_lu_1_1_aggregation_structured_algorithm_1_1compute_graph_row_ptr_functor.html":[9,0,3,25,2],
+"struct_mue_lu_1_1_aggregation_structured_algorithm_1_1compute_graph_row_ptr_functor.html":[10,0,2,18,2],
+"struct_mue_lu_1_1_aggregation_structured_algorithm_1_1compute_graph_row_ptr_functor.html#a523933d23a6c18ec3b86192fafb52c82":[10,0,2,18,2,2],
 "struct_mue_lu_1_1_aggregation_structured_algorithm_1_1compute_graph_row_ptr_functor.html#a523933d23a6c18ec3b86192fafb52c82":[9,0,3,25,2,2],
 "struct_mue_lu_1_1_aggregation_structured_algorithm_1_1compute_graph_row_ptr_functor.html#a7b0c7e7d00ff9d06dd58da4f44402467":[9,0,3,25,2,7],
 "struct_mue_lu_1_1_aggregation_structured_algorithm_1_1compute_graph_row_ptr_functor.html#a7b0c7e7d00ff9d06dd58da4f44402467":[10,0,2,18,2,7],
@@ -241,13 +249,5 @@ var NAVTREEINDEX48 =
 "struct_mue_lu_1_1_cut_drop_1_1_unscaled_comparison_1_1_comparator.html#aeb12a66e5ea4ac7cb4eb6790511de3ab":[9,0,3,4,4,0,10],
 "struct_mue_lu_1_1_cut_drop_1_1_unscaled_comparison_1_1_comparator.html#aee0dfebd82d1c941b9c63cc1bd71ed10":[10,0,2,2,4,0,13],
 "struct_mue_lu_1_1_cut_drop_1_1_unscaled_comparison_1_1_comparator.html#aee0dfebd82d1c941b9c63cc1bd71ed10":[9,0,3,4,4,0,13],
-"struct_mue_lu_1_1_cut_drop_1_1_unscaled_comparison_1_1_comparator.html#afa8c13b79fe44ea401dc2e8858327a2e":[10,0,2,2,4,0,9],
-"struct_mue_lu_1_1_cut_drop_1_1_unscaled_comparison_1_1_comparator.html#afa8c13b79fe44ea401dc2e8858327a2e":[9,0,3,4,4,0,9],
-"struct_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison_1_1_comparator.html":[10,0,2,2,5,0],
-"struct_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison_1_1_comparator.html":[9,0,3,4,5,0],
-"struct_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison_1_1_comparator.html#a0df919493b9ecfad13126a4040653de3":[10,0,2,2,5,0,15],
-"struct_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison_1_1_comparator.html#a0df919493b9ecfad13126a4040653de3":[9,0,3,4,5,0,15],
-"struct_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison_1_1_comparator.html#a1382ff309c09211d645e3c040271bcb6":[10,0,2,2,5,0,5],
-"struct_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison_1_1_comparator.html#a1382ff309c09211d645e3c040271bcb6":[9,0,3,4,5,0,5],
-"struct_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison_1_1_comparator.html#a13f8f2fad3df9721f62c3c64775bd428":[10,0,2,2,5,0,10]
+"struct_mue_lu_1_1_cut_drop_1_1_unscaled_comparison_1_1_comparator.html#afa8c13b79fe44ea401dc2e8858327a2e":[10,0,2,2,4,0,9]
 };

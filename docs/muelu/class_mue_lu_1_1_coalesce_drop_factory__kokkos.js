@@ -12,6 +12,6 @@ var class_mue_lu_1_1_coalesce_drop_factory__kokkos =
     [ "DeclareInput", "class_mue_lu_1_1_coalesce_drop_factory__kokkos.html#a0cb8ebb0b81fee8dd91b849491771c76", null ],
     [ "Build", "class_mue_lu_1_1_coalesce_drop_factory__kokkos.html#a805043840cb326a1dce0b893eb4617e9", null ],
     [ "GetMaterial", "class_mue_lu_1_1_coalesce_drop_factory__kokkos.html#ad63228c3a2ffe4210018a34c69acb70a", null ],
-    [ "BuildScalar", "class_mue_lu_1_1_coalesce_drop_factory__kokkos.html#abbe3a74336c3765b1969abea06a82863", null ],
-    [ "BuildVector", "class_mue_lu_1_1_coalesce_drop_factory__kokkos.html#aa9fce9ccc5621624eb6724461de70a2d", null ]
+    [ "BuildScalar", "class_mue_lu_1_1_coalesce_drop_factory__kokkos.html#a0d3cc96334d111543b0a08cf283ddd70", null ],
+    [ "BuildVector", "class_mue_lu_1_1_coalesce_drop_factory__kokkos.html#aec4e0ca11fb7d11e5426c1e228601220", null ]
 ];

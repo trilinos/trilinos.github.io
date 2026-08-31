@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Belos: Belos::Test::OrthoManagerTester&lt; Scalar, MV &gt; Class Template Reference</title>
+<title>Belos: Belos::Test::OrthoManagerTester&lt; Scalar, MV, DM &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -77,7 +77,7 @@ $(function() {
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="class_belos_1_1_test_1_1_ortho_manager_tester-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Belos::Test::OrthoManagerTester&lt; Scalar, MV &gt; Class Template Reference</div></div>
+  <div class="headertitle"><div class="title">Belos::Test::OrthoManagerTester&lt; Scalar, MV, DM &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -88,59 +88,41 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a1334202143a32fc8c8d05965ac87b225" id="r_a1334202143a32fc8c8d05965ac87b225"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">typedef</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html#a1334202143a32fc8c8d05965ac87b225">scalar_type</a></td></tr>
-<tr class="separator:a1334202143a32fc8c8d05965ac87b225"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63c5015a02692e3de3b8f3e2683a5bc0" id="r_a63c5015a02692e3de3b8f3e2683a5bc0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">typedef</a> Teuchos::ScalarTraits&lt; <a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html#a1334202143a32fc8c8d05965ac87b225">scalar_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html#a63c5015a02692e3de3b8f3e2683a5bc0">SCT</a></td></tr>
-<tr class="separator:a63c5015a02692e3de3b8f3e2683a5bc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff73cf3312879357b4ce7d45d08264d9" id="r_aff73cf3312879357b4ce7d45d08264d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">typedef</a> SCT::magnitudeType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html#aff73cf3312879357b4ce7d45d08264d9">magnitude_type</a></td></tr>
-<tr class="separator:aff73cf3312879357b4ce7d45d08264d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97173ada716fc626b4e9a014b17aa45a" id="r_a97173ada716fc626b4e9a014b17aa45a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">typedef</a> Teuchos::ScalarTraits&lt; <a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html#aff73cf3312879357b4ce7d45d08264d9">magnitude_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html#a97173ada716fc626b4e9a014b17aa45a">SMT</a></td></tr>
-<tr class="separator:a97173ada716fc626b4e9a014b17aa45a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5f552fc782ac6730857d91d352aba4c" id="r_ad5f552fc782ac6730857d91d352aba4c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">typedef</a> <a class="el" href="class_belos_1_1_multi_vec_traits.html">MultiVecTraits</a>&lt; <a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html#a1334202143a32fc8c8d05965ac87b225">scalar_type</a>, MV &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html#ad5f552fc782ac6730857d91d352aba4c">MVT</a></td></tr>
-<tr class="separator:ad5f552fc782ac6730857d91d352aba4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4d3aa2ff1eff3c4164ce60561306e8a" id="r_ad4d3aa2ff1eff3c4164ce60561306e8a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">typedef</a> Teuchos::SerialDenseMatrix&lt; <a class="el" href="class_belos_1_1_operator.html">int</a>, <a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html#a1334202143a32fc8c8d05965ac87b225">scalar_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html#ad4d3aa2ff1eff3c4164ce60561306e8a">mat_type</a></td></tr>
-<tr class="separator:ad4d3aa2ff1eff3c4164ce60561306e8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c8e43b0466f06d29037d276a666cb88" id="r_a3c8e43b0466f06d29037d276a666cb88"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">typedef</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html#a3c8e43b0466f06d29037d276a666cb88">scalar_type</a></td></tr>
+<tr class="separator:a3c8e43b0466f06d29037d276a666cb88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afee72b06a855397d2d3c71b22f79177e" id="r_afee72b06a855397d2d3c71b22f79177e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">typedef</a> Teuchos::ScalarTraits&lt; <a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html#a3c8e43b0466f06d29037d276a666cb88">scalar_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html#afee72b06a855397d2d3c71b22f79177e">SCT</a></td></tr>
+<tr class="separator:afee72b06a855397d2d3c71b22f79177e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e0482ed12acea67ef413df6e84d5192" id="r_a9e0482ed12acea67ef413df6e84d5192"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">typedef</a> SCT::magnitudeType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html#a9e0482ed12acea67ef413df6e84d5192">magnitude_type</a></td></tr>
+<tr class="separator:a9e0482ed12acea67ef413df6e84d5192"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67c83ade70469b2c05685bbe18c084e2" id="r_a67c83ade70469b2c05685bbe18c084e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">typedef</a> Teuchos::ScalarTraits&lt; <a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html#a9e0482ed12acea67ef413df6e84d5192">magnitude_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html#a67c83ade70469b2c05685bbe18c084e2">SMT</a></td></tr>
+<tr class="separator:a67c83ade70469b2c05685bbe18c084e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13282ea0187355135f732f9d15271a04" id="r_a13282ea0187355135f732f9d15271a04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">typedef</a> <a class="el" href="class_belos_1_1_multi_vec_traits.html">MultiVecTraits</a>&lt; <a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html#a3c8e43b0466f06d29037d276a666cb88">scalar_type</a>, MV, DM &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html#a13282ea0187355135f732f9d15271a04">MVT</a></td></tr>
+<tr class="separator:a13282ea0187355135f732f9d15271a04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2f1a6261942b55b1f28f333e544362d" id="r_ac2f1a6261942b55b1f28f333e544362d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">typedef</a> <a class="el" href="class_belos_1_1_dense_mat_traits.html">DenseMatTraits</a>&lt; <a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html#a3c8e43b0466f06d29037d276a666cb88">scalar_type</a>, DM &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html#ac2f1a6261942b55b1f28f333e544362d">DMT</a></td></tr>
+<tr class="separator:ac2f1a6261942b55b1f28f333e544362d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a1d83266d9fc0aac0ffa298f0601328ad" id="r_a1d83266d9fc0aac0ffa298f0601328ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">static</a> <a class="el" href="class_belos_1_1_operator.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html#a1d83266d9fc0aac0ffa298f0601328ad">runTests</a> (<a class="el" href="class_belos_1_1_operator.html">const</a> Teuchos::RCP&lt; <a class="el" href="class_belos_1_1_ortho_manager.html">OrthoManager</a>&lt; <a class="el" href="class_belos_1_1_operator.html">Scalar</a>, MV &gt; &gt; &amp;<a class="el" href="class_belos_1_1_operator.html">OM</a>, <a class="el" href="class_belos_1_1_operator.html">const</a> <a class="el" href="class_belos_1_1_operator.html">bool</a> isRankRevealing, <a class="el" href="class_belos_1_1_operator.html">const</a> Teuchos::RCP&lt; MV &gt; &amp;S, <a class="el" href="class_belos_1_1_operator.html">const</a> <a class="el" href="class_belos_1_1_operator.html">int</a> <a class="el" href="class_belos_1_1_operator.html">sizeX1</a>, <a class="el" href="class_belos_1_1_operator.html">const</a> <a class="el" href="class_belos_1_1_operator.html">int</a> <a class="el" href="class_belos_1_1_operator.html">sizeX2</a>, <a class="el" href="class_belos_1_1_operator.html">const</a> Teuchos::RCP&lt; <a class="el" href="class_belos_1_1_output_manager.html">OutputManager</a>&lt; <a class="el" href="class_belos_1_1_operator.html">Scalar</a> &gt; &gt; &amp;<a class="el" href="class_belos_1_1_operator.html">MyOM</a>)</td></tr>
-<tr class="memdesc:a1d83266d9fc0aac0ffa298f0601328ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run all the tests.  <br /></td></tr>
-<tr class="separator:a1d83266d9fc0aac0ffa298f0601328ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a580894c9f79fc4da2a8d7e60d96de78e" id="r_a580894c9f79fc4da2a8d7e60d96de78e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">static</a> <a class="el" href="class_belos_1_1_operator.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html#a580894c9f79fc4da2a8d7e60d96de78e">runTests</a> (<a class="el" href="class_belos_1_1_operator.html">const</a> Teuchos::RCP&lt; <a class="el" href="class_belos_1_1_ortho_manager.html">OrthoManager</a>&lt; <a class="el" href="class_belos_1_1_operator.html">Scalar</a>, MV, DM &gt; &gt; &amp;<a class="el" href="class_belos_1_1_operator.html">OM</a>, <a class="el" href="class_belos_1_1_operator.html">const</a> <a class="el" href="class_belos_1_1_operator.html">bool</a> isRankRevealing, <a class="el" href="class_belos_1_1_operator.html">const</a> Teuchos::RCP&lt; MV &gt; &amp;S, <a class="el" href="class_belos_1_1_operator.html">const</a> <a class="el" href="class_belos_1_1_operator.html">int</a> <a class="el" href="class_belos_1_1_operator.html">sizeX1</a>, <a class="el" href="class_belos_1_1_operator.html">const</a> <a class="el" href="class_belos_1_1_operator.html">int</a> <a class="el" href="class_belos_1_1_operator.html">sizeX2</a>, <a class="el" href="class_belos_1_1_operator.html">const</a> Teuchos::RCP&lt; <a class="el" href="class_belos_1_1_output_manager.html">OutputManager</a>&lt; <a class="el" href="class_belos_1_1_operator.html">Scalar</a> &gt; &gt; &amp;<a class="el" href="class_belos_1_1_operator.html">MyOM</a>)</td></tr>
+<tr class="memdesc:a580894c9f79fc4da2a8d7e60d96de78e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run all the tests.  <br /></td></tr>
+<tr class="separator:a580894c9f79fc4da2a8d7e60d96de78e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a>, <a class="el" href="class_belos_1_1_operator.html">class</a> MV&gt;<br />
-class Belos::Test::OrthoManagerTester&lt; Scalar, MV &gt;</div><p>Wrapper around <a class="el" href="class_belos_1_1_ortho_manager.html" title="Belos&#39;s templated virtual class for providing routines for orthogonalization and orthonormzalition of...">OrthoManager</a> test functionality. </p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a>, <a class="el" href="class_belos_1_1_operator.html">class</a> MV, <a class="el" href="class_belos_1_1_operator.html">class</a> DM&gt;<br />
+class Belos::Test::OrthoManagerTester&lt; Scalar, MV, DM &gt;</div><p>Wrapper around <a class="el" href="class_belos_1_1_ortho_manager.html" title="Belos&#39;s templated virtual class for providing routines for orthogonalization and orthonormzalition of...">OrthoManager</a> test functionality. </p>
 
-<p class="definition">Definition at line <a class="el" href="_belos_ortho_manager_test_8hpp_source.html#l00293">293</a> of file <a class="el" href="_belos_ortho_manager_test_8hpp_source.html">BelosOrthoManagerTest.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_belos_ortho_manager_test_8hpp_source.html#l00294">294</a> of file <a class="el" href="_belos_ortho_manager_test_8hpp_source.html">BelosOrthoManagerTest.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a1334202143a32fc8c8d05965ac87b225" name="a1334202143a32fc8c8d05965ac87b225"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1334202143a32fc8c8d05965ac87b225">&#9670;&#160;</a></span>scalar_type</h2>
+<a id="a3c8e43b0466f06d29037d276a666cb88" name="a3c8e43b0466f06d29037d276a666cb88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c8e43b0466f06d29037d276a666cb88">&#9670;&#160;</a></span>scalar_type</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">typedef</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a> <a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html">Belos::Test::OrthoManagerTester</a>&lt; <a class="el" href="class_belos_1_1_operator.html">Scalar</a>, MV &gt;::scalar_type</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_belos_ortho_manager_test_8hpp_source.html#l00298">298</a> of file <a class="el" href="_belos_ortho_manager_test_8hpp_source.html">BelosOrthoManagerTest.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a63c5015a02692e3de3b8f3e2683a5bc0" name="a63c5015a02692e3de3b8f3e2683a5bc0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63c5015a02692e3de3b8f3e2683a5bc0">&#9670;&#160;</a></span>SCT</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">typedef</a> Teuchos::ScalarTraits&lt;<a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html#a1334202143a32fc8c8d05965ac87b225">scalar_type</a>&gt; <a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html">Belos::Test::OrthoManagerTester</a>&lt; <a class="el" href="class_belos_1_1_operator.html">Scalar</a>, MV &gt;::SCT</td>
+          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">typedef</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a> <a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html">Belos::Test::OrthoManagerTester</a>&lt; <a class="el" href="class_belos_1_1_operator.html">Scalar</a>, MV, DM &gt;::scalar_type</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -149,16 +131,16 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
 
 </div>
 </div>
-<a id="aff73cf3312879357b4ce7d45d08264d9" name="aff73cf3312879357b4ce7d45d08264d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff73cf3312879357b4ce7d45d08264d9">&#9670;&#160;</a></span>magnitude_type</h2>
+<a id="afee72b06a855397d2d3c71b22f79177e" name="afee72b06a855397d2d3c71b22f79177e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afee72b06a855397d2d3c71b22f79177e">&#9670;&#160;</a></span>SCT</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">typedef</a> SCT::magnitudeType <a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html">Belos::Test::OrthoManagerTester</a>&lt; <a class="el" href="class_belos_1_1_operator.html">Scalar</a>, MV &gt;::magnitude_type</td>
+          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">typedef</a> Teuchos::ScalarTraits&lt;<a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html#a3c8e43b0466f06d29037d276a666cb88">scalar_type</a>&gt; <a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html">Belos::Test::OrthoManagerTester</a>&lt; <a class="el" href="class_belos_1_1_operator.html">Scalar</a>, MV, DM &gt;::SCT</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -167,16 +149,16 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
 
 </div>
 </div>
-<a id="a97173ada716fc626b4e9a014b17aa45a" name="a97173ada716fc626b4e9a014b17aa45a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a97173ada716fc626b4e9a014b17aa45a">&#9670;&#160;</a></span>SMT</h2>
+<a id="a9e0482ed12acea67ef413df6e84d5192" name="a9e0482ed12acea67ef413df6e84d5192"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e0482ed12acea67ef413df6e84d5192">&#9670;&#160;</a></span>magnitude_type</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">typedef</a> Teuchos::ScalarTraits&lt;<a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html#aff73cf3312879357b4ce7d45d08264d9">magnitude_type</a>&gt; <a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html">Belos::Test::OrthoManagerTester</a>&lt; <a class="el" href="class_belos_1_1_operator.html">Scalar</a>, MV &gt;::SMT</td>
+          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">typedef</a> SCT::magnitudeType <a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html">Belos::Test::OrthoManagerTester</a>&lt; <a class="el" href="class_belos_1_1_operator.html">Scalar</a>, MV, DM &gt;::magnitude_type</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -185,16 +167,16 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
 
 </div>
 </div>
-<a id="ad5f552fc782ac6730857d91d352aba4c" name="ad5f552fc782ac6730857d91d352aba4c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5f552fc782ac6730857d91d352aba4c">&#9670;&#160;</a></span>MVT</h2>
+<a id="a67c83ade70469b2c05685bbe18c084e2" name="a67c83ade70469b2c05685bbe18c084e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67c83ade70469b2c05685bbe18c084e2">&#9670;&#160;</a></span>SMT</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">typedef</a> <a class="el" href="class_belos_1_1_multi_vec_traits.html">MultiVecTraits</a>&lt;<a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html#a1334202143a32fc8c8d05965ac87b225">scalar_type</a>, MV&gt; <a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html">Belos::Test::OrthoManagerTester</a>&lt; <a class="el" href="class_belos_1_1_operator.html">Scalar</a>, MV &gt;::MVT</td>
+          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">typedef</a> Teuchos::ScalarTraits&lt;<a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html#a9e0482ed12acea67ef413df6e84d5192">magnitude_type</a>&gt; <a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html">Belos::Test::OrthoManagerTester</a>&lt; <a class="el" href="class_belos_1_1_operator.html">Scalar</a>, MV, DM &gt;::SMT</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -203,16 +185,16 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
 
 </div>
 </div>
-<a id="ad4d3aa2ff1eff3c4164ce60561306e8a" name="ad4d3aa2ff1eff3c4164ce60561306e8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4d3aa2ff1eff3c4164ce60561306e8a">&#9670;&#160;</a></span>mat_type</h2>
+<a id="a13282ea0187355135f732f9d15271a04" name="a13282ea0187355135f732f9d15271a04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13282ea0187355135f732f9d15271a04">&#9670;&#160;</a></span>MVT</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">typedef</a> Teuchos::SerialDenseMatrix&lt;<a class="el" href="class_belos_1_1_operator.html">int</a>, <a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html#a1334202143a32fc8c8d05965ac87b225">scalar_type</a>&gt; <a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html">Belos::Test::OrthoManagerTester</a>&lt; <a class="el" href="class_belos_1_1_operator.html">Scalar</a>, MV &gt;::mat_type</td>
+          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">typedef</a> <a class="el" href="class_belos_1_1_multi_vec_traits.html">MultiVecTraits</a>&lt;<a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html#a3c8e43b0466f06d29037d276a666cb88">scalar_type</a>, MV, DM&gt; <a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html">Belos::Test::OrthoManagerTester</a>&lt; <a class="el" href="class_belos_1_1_operator.html">Scalar</a>, MV, DM &gt;::MVT</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -221,22 +203,40 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a1d83266d9fc0aac0ffa298f0601328ad" name="a1d83266d9fc0aac0ffa298f0601328ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d83266d9fc0aac0ffa298f0601328ad">&#9670;&#160;</a></span>runTests()</h2>
+<a id="ac2f1a6261942b55b1f28f333e544362d" name="ac2f1a6261942b55b1f28f333e544362d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2f1a6261942b55b1f28f333e544362d">&#9670;&#160;</a></span>DMT</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">typedef</a> <a class="el" href="class_belos_1_1_dense_mat_traits.html">DenseMatTraits</a>&lt;<a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html#a3c8e43b0466f06d29037d276a666cb88">scalar_type</a>, DM&gt; <a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html">Belos::Test::OrthoManagerTester</a>&lt; <a class="el" href="class_belos_1_1_operator.html">Scalar</a>, MV, DM &gt;::DMT</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_belos_ortho_manager_test_8hpp_source.html#l00304">304</a> of file <a class="el" href="_belos_ortho_manager_test_8hpp_source.html">BelosOrthoManagerTest.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a580894c9f79fc4da2a8d7e60d96de78e" name="a580894c9f79fc4da2a8d7e60d96de78e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a580894c9f79fc4da2a8d7e60d96de78e">&#9670;&#160;</a></span>runTests()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">static</a> <a class="el" href="class_belos_1_1_operator.html">int</a> <a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html">Belos::Test::OrthoManagerTester</a>&lt; <a class="el" href="class_belos_1_1_operator.html">Scalar</a>, MV &gt;::runTests </td>
+          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">static</a> <a class="el" href="class_belos_1_1_operator.html">int</a> <a class="el" href="class_belos_1_1_test_1_1_ortho_manager_tester.html">Belos::Test::OrthoManagerTester</a>&lt; <a class="el" href="class_belos_1_1_operator.html">Scalar</a>, MV, DM &gt;::runTests </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_belos_1_1_operator.html">const</a> Teuchos::RCP&lt; <a class="el" href="class_belos_1_1_ortho_manager.html">OrthoManager</a>&lt; <a class="el" href="class_belos_1_1_operator.html">Scalar</a>, MV &gt; &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_belos_1_1_operator.html">const</a> Teuchos::RCP&lt; <a class="el" href="class_belos_1_1_ortho_manager.html">OrthoManager</a>&lt; <a class="el" href="class_belos_1_1_operator.html">Scalar</a>, MV, DM &gt; &gt; &amp;&#160;</td>
           <td class="paramname"><em>OM</em>, </td>
         </tr>
         <tr>
@@ -296,7 +296,7 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Number of tests that failed (zero means success) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_belos_ortho_manager_test_8hpp_source.html#l00322">322</a> of file <a class="el" href="_belos_ortho_manager_test_8hpp_source.html">BelosOrthoManagerTest.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_belos_ortho_manager_test_8hpp_source.html#l00323">323</a> of file <a class="el" href="_belos_ortho_manager_test_8hpp_source.html">BelosOrthoManagerTest.hpp</a>.</p>
 
 </div>
 </div>

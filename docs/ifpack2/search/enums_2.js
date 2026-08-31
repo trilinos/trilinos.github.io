@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['msgtype_0',['msgtype',['../../../../belos/doc/html/namespace_belos.html#a2a2aa51a3ef87c278fd43945578b3612',1,'Belos::MsgType'],['../../../../anasazi/doc/html/namespace_anasazi.html#ac1cd930ca09987d38fe97bbb8c65507d',1,'Anasazi::MsgType'],['../../../../anasazi/doc/html/namespace_anasazi.html#ac1cd930ca09987d38fe97bbb8c65507d',1,'Anasazi::MsgType']]]
+  ['erobustness_0',['ERobustness',['../../../../belos/doc/html/namespace_belos_1_1details.html#a05bc807f8daacda97634f46ded62adfe',1,'Belos::details']]],
+  ['etrans_1',['ETrans',['../../../../belos/doc/html/namespace_belos.html#ad0d6e7d6a71587de42b3af8d5c6e26dc',1,'Belos']]]
 ];

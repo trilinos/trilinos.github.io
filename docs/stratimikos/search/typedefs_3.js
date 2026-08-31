@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['inner_5fsolver_5ftype_0',['inner_solver_type',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/belos/doc/html/class_belos_1_1_inner_solver_traits.html#a0560d699c0d69d403bd3add26656cf4f',1,'Belos::InnerSolverTraits']]]
+  ['inner_5fsolver_5ftype_0',['inner_solver_type',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/belos/doc/html/class_belos_1_1_inner_solver_traits.html#a0560d699c0d69d403bd3add26656cf4f',1,'Belos::InnerSolverTraits']]],
+  ['ist_1',['ist',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/belos/doc/html/class_belos_1_1_dense_mat_traits_3_01_scalar_00_01_kokkos_1_1_dual_view_3_01typename_01_kokkos_k1e38db16fe9be22057613899f811a9c1.html#a7eacf8aeb03189fa4ad597d1272869b8',1,'Belos::DenseMatTraits&lt; Scalar, Kokkos::DualView&lt; typename KokkosKernels::ArithTraits&lt; Scalar &gt;::val_type **, Properties... &gt; &gt;::IST'],['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/stratimikos/doc/../../../packages/belos/doc/html/class_belos_1_1_kokkos_dense_solver.html#a603cc910a1eb0099d51f606af601aa5a',1,'Belos::KokkosDenseSolver::IST']]]
 ];

@@ -141,7 +141,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>      </div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>      <span class="keyword">using </span>UnmanagedPointScalarView = Kokkos::View&lt;PointScalarType*, Layout, Kokkos::MemoryTraits&lt;Kokkos::Unmanaged&gt; &gt;;</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>      UnmanagedPointScalarView pointView;</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="preprocessor">#if defined(HAVE_INTREPID2_SACADO) &amp;&amp; defined(SACADO_HAS_NEW_KOKKOS_VIEW_IMPL)</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="preprocessor">#if defined(HAVE_INTREPID2_SACADO)</span></div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>      <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (Sacado::is_view_fad&lt;UnmanagedPointScalarView&gt;::value) {</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="comment">// This is super weird and doesn&#39;t actually wrap the Sacado derivatives</span></div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        pointView = UnmanagedPointScalarView(&amp;x.val(), numPoints, 1);</div>

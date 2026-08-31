@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Belos: Belos::GCRODRIter&lt; ScalarType, MV, OP &gt; Class Template Reference</title>
+<title>Belos: Belos::GCRODRIter&lt; ScalarType, MV, OP, DM &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -76,212 +76,237 @@ $(function() {
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="class_belos_1_1_g_c_r_o_d_r_iter-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Belos::GCRODRIter&lt; ScalarType, MV, OP &gt; Class Template Reference</div></div>
+  <div class="headertitle"><div class="title">Belos::GCRODRIter&lt; ScalarType, MV, OP, DM &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>This class implements the GCRODR iteration, where a single-std::vector Krylov subspace is constructed. The QR decomposition of block, upper Hessenberg matrix is performed each iteration to update the least squares system and give the current linear system residuals.  
+<p>This class implements the GCRODR iteration, where a single-vector Krylov subspace is constructed. The QR decomposition of block, upper Hessenberg matrix is performed each iteration to update the least squares system and give the current linear system residuals.  
  <a href="class_belos_1_1_g_c_r_o_d_r_iter.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for Belos::GCRODRIter&lt; ScalarType, MV, OP &gt;:</div>
+Inheritance diagram for Belos::GCRODRIter&lt; ScalarType, MV, OP, DM &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_belos_1_1_g_c_r_o_d_r_iter__inherit__graph.gif" border="0" usemap="#a_belos_1_1_g_c_r_o_d_r_iter_3_01_scalar_type_00_01_m_v_00_01_o_p_01_4_inherit__map" alt="Inheritance graph"/></div>
-<map name="a_belos_1_1_g_c_r_o_d_r_iter_3_01_scalar_type_00_01_m_v_00_01_o_p_01_4_inherit__map" id="a_belos_1_1_g_c_r_o_d_r_iter_3_01_scalar_type_00_01_m_v_00_01_o_p_01_4_inherit__map">
-<area shape="rect" title="This class implements the GCRODR iteration, where a single&#45;std::vector Krylov subspace is constructed..." alt="" coords="10,93,177,133"/>
-<area shape="rect" href="class_belos_1_1_iteration.html" title=" " alt="" coords="5,5,181,45"/>
-<area shape="poly" title=" " alt="" coords="96,59,96,93,91,93,91,59"/>
+<div class="center"><img src="class_belos_1_1_g_c_r_o_d_r_iter__inherit__graph.gif" border="0" usemap="#a_belos_1_1_g_c_r_o_d_r_iter_3_01_scalar_type_00_01_m_v_00_01_o_p_00_01_d_m_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_belos_1_1_g_c_r_o_d_r_iter_3_01_scalar_type_00_01_m_v_00_01_o_p_00_01_d_m_01_4_inherit__map" id="a_belos_1_1_g_c_r_o_d_r_iter_3_01_scalar_type_00_01_m_v_00_01_o_p_00_01_d_m_01_4_inherit__map">
+<area shape="rect" title="This class implements the GCRODR iteration, where a single&#45;vector Krylov subspace is constructed...." alt="" coords="1039,48,1235,88"/>
+<area shape="rect" href="class_belos_1_1_g_c_r_o_d_r_iteration.html" title=" " alt="" coords="783,48,989,88"/>
+<area shape="poly" title=" " alt="" coords="1003,65,1038,65,1038,71,1003,71"/>
+<area shape="rect" href="class_belos_1_1_iteration.html" title=" " alt="" coords="394,15,570,55"/>
+<area shape="poly" title=" " alt="" coords="584,40,759,55,783,57,782,62,758,60,584,46"/>
+<area shape="rect" href="class_belos_1_1_iteration.html" title=" " alt="" coords="5,15,181,55"/>
+<area shape="poly" title=" " alt="" coords="195,32,394,32,394,37,195,37"/>
+<area shape="rect" href="class_belos_1_1_g_c_r_o_d_r_iteration.html" title="Common base interface for GCRODRIter and FGCRODRIter." alt="" coords="379,79,585,119"/>
+<area shape="poly" title=" " alt="" coords="599,94,758,84,782,81,783,87,759,89,599,99"/>
+<area shape="rect" href="class_belos_1_1_iteration.html" title=" " alt="" coords="5,79,181,119"/>
+<area shape="poly" title=" " alt="" coords="195,96,378,96,378,101,195,101"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a79011944c4e9a3c3c734356143d2cd8a" id="r_a79011944c4e9a3c3c734356143d2cd8a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">typedef</a> <a class="el" href="class_belos_1_1_multi_vec_traits.html">MultiVecTraits</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a79011944c4e9a3c3c734356143d2cd8a">MVT</a></td></tr>
-<tr class="separator:a79011944c4e9a3c3c734356143d2cd8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ea7455b62a8d352b589e4e87b8668dc" id="r_a4ea7455b62a8d352b589e4e87b8668dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">typedef</a> <a class="el" href="class_belos_1_1_operator_traits.html">OperatorTraits</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a4ea7455b62a8d352b589e4e87b8668dc">OPT</a></td></tr>
-<tr class="separator:a4ea7455b62a8d352b589e4e87b8668dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a067f960f11dfefd1536141ff50a181" id="r_a6a067f960f11dfefd1536141ff50a181"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">typedef</a> Teuchos::ScalarTraits&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a6a067f960f11dfefd1536141ff50a181">SCT</a></td></tr>
-<tr class="separator:a6a067f960f11dfefd1536141ff50a181"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac012bc3dd33769ce3d54a5584c3baa40" id="r_ac012bc3dd33769ce3d54a5584c3baa40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">typedef</a> SCT::magnitudeType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#ac012bc3dd33769ce3d54a5584c3baa40">MagnitudeType</a></td></tr>
-<tr class="separator:ac012bc3dd33769ce3d54a5584c3baa40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b8d1656cecc02cc080b8128aadec084" id="r_a6b8d1656cecc02cc080b8128aadec084"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">typedef</a> <a class="el" href="class_belos_1_1_multi_vec_traits.html">MultiVecTraits</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, DM &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a6b8d1656cecc02cc080b8128aadec084">MVT</a></td></tr>
+<tr class="separator:a6b8d1656cecc02cc080b8128aadec084"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe04621a8a019f74a37c627e7f5f7a6d" id="r_afe04621a8a019f74a37c627e7f5f7a6d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">typedef</a> <a class="el" href="class_belos_1_1_operator_traits.html">OperatorTraits</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#afe04621a8a019f74a37c627e7f5f7a6d">OPT</a></td></tr>
+<tr class="separator:afe04621a8a019f74a37c627e7f5f7a6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76d19aac1e42bc78923d8873f110cc2b" id="r_a76d19aac1e42bc78923d8873f110cc2b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">typedef</a> <a class="el" href="class_belos_1_1_dense_mat_traits.html">DenseMatTraits</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, DM &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a76d19aac1e42bc78923d8873f110cc2b">DMT</a></td></tr>
+<tr class="separator:a76d19aac1e42bc78923d8873f110cc2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a023509684726585f625e3f861afdddc1" id="r_a023509684726585f625e3f861afdddc1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">typedef</a> Teuchos::ScalarTraits&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a023509684726585f625e3f861afdddc1">SCT</a></td></tr>
+<tr class="separator:a023509684726585f625e3f861afdddc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20eff6d13c5c3fbd11cdbe12134bc9bc" id="r_a20eff6d13c5c3fbd11cdbe12134bc9bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">typedef</a> SCT::magnitudeType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a20eff6d13c5c3fbd11cdbe12134bc9bc">MagnitudeType</a></td></tr>
+<tr class="separator:a20eff6d13c5c3fbd11cdbe12134bc9bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Constructors/Destructor</div></td></tr>
-<tr class="memitem:a96e0fb4063e2cd3ddfb38c454a9f014a" id="r_a96e0fb4063e2cd3ddfb38c454a9f014a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a96e0fb4063e2cd3ddfb38c454a9f014a">GCRODRIter</a> (<a class="el" href="class_belos_1_1_operator.html">const</a> Teuchos::RCP&lt; <a class="el" href="class_belos_1_1_linear_problem.html">LinearProblem</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; &gt; &amp;<a class="el" href="class_belos_1_1_operator.html">problem</a>, <a class="el" href="class_belos_1_1_operator.html">const</a> Teuchos::RCP&lt; <a class="el" href="class_belos_1_1_output_manager.html">OutputManager</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> &gt; &gt; &amp;<a class="el" href="class_belos_1_1_operator.html">printer</a>, <a class="el" href="class_belos_1_1_operator.html">const</a> Teuchos::RCP&lt; <a class="el" href="class_belos_1_1_status_test.html">StatusTest</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; &gt; &amp;<a class="el" href="class_belos_1_1_operator.html">tester</a>, <a class="el" href="class_belos_1_1_operator.html">const</a> Teuchos::RCP&lt; <a class="el" href="class_belos_1_1_mat_ortho_manager.html">MatOrthoManager</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; &gt; &amp;<a class="el" href="class_belos_1_1_operator.html">ortho</a>, Teuchos::ParameterList &amp;<a class="el" href="class_belos_1_1_operator.html">params</a>)</td></tr>
-<tr class="memdesc:a96e0fb4063e2cd3ddfb38c454a9f014a"><td class="mdescLeft">&#160;</td><td class="mdescRight">GCRODRIter constructor with linear problem, solver utilities, and parameter list of solver options.  <br /></td></tr>
-<tr class="separator:a96e0fb4063e2cd3ddfb38c454a9f014a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1157b79dd4e703ad896189cf50af648c" id="r_a1157b79dd4e703ad896189cf50af648c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">virtual</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a1157b79dd4e703ad896189cf50af648c">~GCRODRIter</a> ()</td></tr>
-<tr class="memdesc:a1157b79dd4e703ad896189cf50af648c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
-<tr class="separator:a1157b79dd4e703ad896189cf50af648c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19ebfeef1f638861cda9ea4a0b9f0a06" id="r_a19ebfeef1f638861cda9ea4a0b9f0a06"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a19ebfeef1f638861cda9ea4a0b9f0a06">GCRODRIter</a> (<a class="el" href="class_belos_1_1_operator.html">const</a> Teuchos::RCP&lt; <a class="el" href="class_belos_1_1_linear_problem.html">LinearProblem</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt; &gt; &amp;<a class="el" href="class_belos_1_1_operator.html">problem</a>, <a class="el" href="class_belos_1_1_operator.html">const</a> Teuchos::RCP&lt; <a class="el" href="class_belos_1_1_output_manager.html">OutputManager</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> &gt; &gt; &amp;<a class="el" href="class_belos_1_1_operator.html">printer</a>, <a class="el" href="class_belos_1_1_operator.html">const</a> Teuchos::RCP&lt; <a class="el" href="class_belos_1_1_status_test.html">StatusTest</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt; &gt; &amp;<a class="el" href="class_belos_1_1_operator.html">tester</a>, <a class="el" href="class_belos_1_1_operator.html">const</a> Teuchos::RCP&lt; <a class="el" href="class_belos_1_1_mat_ortho_manager.html">MatOrthoManager</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt; &gt; &amp;<a class="el" href="class_belos_1_1_operator.html">ortho</a>, Teuchos::ParameterList &amp;<a class="el" href="class_belos_1_1_operator.html">params</a>)</td></tr>
+<tr class="memdesc:a19ebfeef1f638861cda9ea4a0b9f0a06"><td class="mdescLeft">&#160;</td><td class="mdescRight">GCRODRIter constructor with linear problem, solver utilities, and parameter list of solver options.  <br /></td></tr>
+<tr class="separator:a19ebfeef1f638861cda9ea4a0b9f0a06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e5a89a3f2d10629ba7e7838837067f3" id="r_a8e5a89a3f2d10629ba7e7838837067f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">virtual</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a8e5a89a3f2d10629ba7e7838837067f3">~GCRODRIter</a> ()</td></tr>
+<tr class="memdesc:a8e5a89a3f2d10629ba7e7838837067f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="separator:a8e5a89a3f2d10629ba7e7838837067f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Solver methods</div></td></tr>
-<tr class="memitem:aa8295fc48df626c446cb650547068635" id="r_aa8295fc48df626c446cb650547068635"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#aa8295fc48df626c446cb650547068635">iterate</a> ()</td></tr>
-<tr class="memdesc:aa8295fc48df626c446cb650547068635"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method performs block Gmres iterations until the status test indicates the need to stop or an error occurs (in which case, an std::exception is thrown).  <br /></td></tr>
-<tr class="separator:aa8295fc48df626c446cb650547068635"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fe05bff82ed936f8367518e316ed2b3" id="r_a1fe05bff82ed936f8367518e316ed2b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a1fe05bff82ed936f8367518e316ed2b3">initialize</a> (<a class="el" href="struct_belos_1_1_g_c_r_o_d_r_iter_state.html">GCRODRIterState</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV &gt; &amp;<a class="el" href="class_belos_1_1_operator.html">newstate</a>)</td></tr>
-<tr class="memdesc:a1fe05bff82ed936f8367518e316ed2b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the solver to an iterate, providing a complete state.  <br /></td></tr>
-<tr class="separator:a1fe05bff82ed936f8367518e316ed2b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa518b3c9dcdb4b0b3e6623988b7acf38" id="r_aa518b3c9dcdb4b0b3e6623988b7acf38"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#aa518b3c9dcdb4b0b3e6623988b7acf38">initialize</a> ()</td></tr>
-<tr class="memdesc:aa518b3c9dcdb4b0b3e6623988b7acf38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the solver with empty data. Calling this method will result in error, as <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html" title="This class implements the GCRODR iteration, where a single-std::vector Krylov subspace is constructed...">GCRODRIter</a> must be initialized with a valid state.  <br /></td></tr>
-<tr class="separator:aa518b3c9dcdb4b0b3e6623988b7acf38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59ecdecf33b4a3f18378e776c5596959" id="r_a59ecdecf33b4a3f18378e776c5596959"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_belos_1_1_g_c_r_o_d_r_iter_state.html">GCRODRIterState</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a59ecdecf33b4a3f18378e776c5596959">getState</a> () <a class="el" href="class_belos_1_1_operator.html">const</a></td></tr>
-<tr class="memdesc:a59ecdecf33b4a3f18378e776c5596959"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current state of the linear solver.  <br /></td></tr>
-<tr class="separator:a59ecdecf33b4a3f18378e776c5596959"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad14ecc3687b6af5f0130e1d357945ef" id="r_aad14ecc3687b6af5f0130e1d357945ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#aad14ecc3687b6af5f0130e1d357945ef">iterate</a> ()</td></tr>
+<tr class="memdesc:aad14ecc3687b6af5f0130e1d357945ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method performs block Gmres iterations until the status test indicates the need to stop or an error occurs (in which case, an std::exception is thrown).  <br /></td></tr>
+<tr class="separator:aad14ecc3687b6af5f0130e1d357945ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ab0e13cdf3d79f5cae506acfb33c003" id="r_a4ab0e13cdf3d79f5cae506acfb33c003"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a4ab0e13cdf3d79f5cae506acfb33c003">initialize</a> (<a class="el" href="struct_belos_1_1_g_c_r_o_d_r_iter_state.html">GCRODRIterState</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, DM &gt; &amp;<a class="el" href="class_belos_1_1_operator.html">newstate</a>)</td></tr>
+<tr class="memdesc:a4ab0e13cdf3d79f5cae506acfb33c003"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the solver to an iterate, providing a complete state.  <br /></td></tr>
+<tr class="separator:a4ab0e13cdf3d79f5cae506acfb33c003"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad464a9dbaad656775e92a88274342b39" id="r_ad464a9dbaad656775e92a88274342b39"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#ad464a9dbaad656775e92a88274342b39">initialize</a> ()</td></tr>
+<tr class="memdesc:ad464a9dbaad656775e92a88274342b39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the solver with empty data. Calling this method will result in error, as <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html" title="This class implements the GCRODR iteration, where a single-vector Krylov subspace is constructed....">GCRODRIter</a> must be initialized with a valid state.  <br /></td></tr>
+<tr class="separator:ad464a9dbaad656775e92a88274342b39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ac190fbc1e40e76f0169a57c7d6bb3d" id="r_a1ac190fbc1e40e76f0169a57c7d6bb3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_belos_1_1_g_c_r_o_d_r_iter_state.html">GCRODRIterState</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, DM &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a1ac190fbc1e40e76f0169a57c7d6bb3d">getState</a> () <a class="el" href="class_belos_1_1_operator.html">const</a></td></tr>
+<tr class="memdesc:a1ac190fbc1e40e76f0169a57c7d6bb3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current state of the linear solver.  <br /></td></tr>
+<tr class="separator:a1ac190fbc1e40e76f0169a57c7d6bb3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Status methods</div></td></tr>
-<tr class="memitem:a8f881c4dba6500aa73b899e00c6d2c31" id="r_a8f881c4dba6500aa73b899e00c6d2c31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a8f881c4dba6500aa73b899e00c6d2c31">getNumIters</a> () <a class="el" href="class_belos_1_1_operator.html">const</a></td></tr>
-<tr class="memdesc:a8f881c4dba6500aa73b899e00c6d2c31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current iteration count.  <br /></td></tr>
-<tr class="separator:a8f881c4dba6500aa73b899e00c6d2c31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a567ac052dd0c80cae38e35328de1c7fd" id="r_a567ac052dd0c80cae38e35328de1c7fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a567ac052dd0c80cae38e35328de1c7fd">resetNumIters</a> (<a class="el" href="class_belos_1_1_operator.html">int</a> <a class="el" href="class_belos_1_1_operator.html">iter</a>=0)</td></tr>
-<tr class="memdesc:a567ac052dd0c80cae38e35328de1c7fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the iteration count.  <br /></td></tr>
-<tr class="separator:a567ac052dd0c80cae38e35328de1c7fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab508820b552c3484321165298a32f5eb" id="r_ab508820b552c3484321165298a32f5eb"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; <a class="el" href="class_belos_1_1_operator.html">const</a> MV &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#ab508820b552c3484321165298a32f5eb">getNativeResiduals</a> (std::vector&lt; <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#ac012bc3dd33769ce3d54a5584c3baa40">MagnitudeType</a> &gt; *<a class="el" href="class_belos_1_1_operator.html">norms</a>) <a class="el" href="class_belos_1_1_operator.html">const</a></td></tr>
-<tr class="memdesc:ab508820b552c3484321165298a32f5eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the norms of the residuals native to the solver.  <br /></td></tr>
-<tr class="separator:ab508820b552c3484321165298a32f5eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bbc58fe9e8eaec7580cb4eaa005f7da" id="r_a1bbc58fe9e8eaec7580cb4eaa005f7da"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; MV &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a1bbc58fe9e8eaec7580cb4eaa005f7da">getCurrentUpdate</a> () <a class="el" href="class_belos_1_1_operator.html">const</a></td></tr>
-<tr class="memdesc:a1bbc58fe9e8eaec7580cb4eaa005f7da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current update to the linear system.  <br /></td></tr>
-<tr class="separator:a1bbc58fe9e8eaec7580cb4eaa005f7da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abfb4cfe8437b2c29a209a01f20cde95d" id="r_abfb4cfe8437b2c29a209a01f20cde95d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#abfb4cfe8437b2c29a209a01f20cde95d">updateLSQR</a> (<a class="el" href="class_belos_1_1_operator.html">int</a> <a class="el" href="class_belos_1_1_operator.html">dim</a>=-1)</td></tr>
-<tr class="memdesc:abfb4cfe8437b2c29a209a01f20cde95d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method for updating QR factorization of upper Hessenberg matrix.  <br /></td></tr>
-<tr class="separator:abfb4cfe8437b2c29a209a01f20cde95d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48b4bb136d2ecba1926efc25410aebd7" id="r_a48b4bb136d2ecba1926efc25410aebd7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a48b4bb136d2ecba1926efc25410aebd7">getCurSubspaceDim</a> () <a class="el" href="class_belos_1_1_operator.html">const</a></td></tr>
-<tr class="memdesc:a48b4bb136d2ecba1926efc25410aebd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the dimension of the search subspace used to generate the current solution to the linear problem.  <br /></td></tr>
-<tr class="separator:a48b4bb136d2ecba1926efc25410aebd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72af7bc7601e51b17fae375ffbdfad45" id="r_a72af7bc7601e51b17fae375ffbdfad45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a72af7bc7601e51b17fae375ffbdfad45">getMaxSubspaceDim</a> () <a class="el" href="class_belos_1_1_operator.html">const</a></td></tr>
-<tr class="memdesc:a72af7bc7601e51b17fae375ffbdfad45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the maximum dimension allocated for the search subspace.  <br /></td></tr>
-<tr class="separator:a72af7bc7601e51b17fae375ffbdfad45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_belos_1_1_iteration"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_belos_1_1_iteration')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_belos_1_1_iteration.html">Belos::Iteration&lt; ScalarType, MV, OP &gt;</a></td></tr>
-<tr class="memitem:a6d93397c03d95e68a2ee1c0aa3263b60 inherit pub_methods_class_belos_1_1_iteration" id="r_a6d93397c03d95e68a2ee1c0aa3263b60"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_iteration.html#a6d93397c03d95e68a2ee1c0aa3263b60">Iteration</a> ()</td></tr>
-<tr class="memdesc:a6d93397c03d95e68a2ee1c0aa3263b60 inherit pub_methods_class_belos_1_1_iteration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Constructor.  <br /></td></tr>
-<tr class="separator:a6d93397c03d95e68a2ee1c0aa3263b60 inherit pub_methods_class_belos_1_1_iteration"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4eb7d6c6ed9649b6845562530812f446 inherit pub_methods_class_belos_1_1_iteration" id="r_a4eb7d6c6ed9649b6845562530812f446"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">virtual</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_iteration.html#a4eb7d6c6ed9649b6845562530812f446">~Iteration</a> ()</td></tr>
-<tr class="memdesc:a4eb7d6c6ed9649b6845562530812f446 inherit pub_methods_class_belos_1_1_iteration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
-<tr class="separator:a4eb7d6c6ed9649b6845562530812f446 inherit pub_methods_class_belos_1_1_iteration"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41743ceabffbeb474cc4db14529718df inherit pub_methods_class_belos_1_1_iteration" id="r_a41743ceabffbeb474cc4db14529718df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">virtual</a> Teuchos::RCP&lt; <a class="el" href="class_belos_1_1_operator.html">const</a> MV &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_iteration.html#a41743ceabffbeb474cc4db14529718df">getNativeResiduals</a> (std::vector&lt; <a class="el" href="class_belos_1_1_operator.html">typename</a> Teuchos::ScalarTraits&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> &gt;::magnitudeType &gt; *<a class="el" href="class_belos_1_1_operator.html">norms</a>) <a class="el" href="class_belos_1_1_operator.html">const</a> =0</td></tr>
-<tr class="memdesc:a41743ceabffbeb474cc4db14529718df inherit pub_methods_class_belos_1_1_iteration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the residuals native to the solver.  <br /></td></tr>
-<tr class="separator:a41743ceabffbeb474cc4db14529718df inherit pub_methods_class_belos_1_1_iteration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0c01767487f4e53528c2549f228e4e8" id="r_af0c01767487f4e53528c2549f228e4e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#af0c01767487f4e53528c2549f228e4e8">getNumIters</a> () <a class="el" href="class_belos_1_1_operator.html">const</a></td></tr>
+<tr class="memdesc:af0c01767487f4e53528c2549f228e4e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current iteration count.  <br /></td></tr>
+<tr class="separator:af0c01767487f4e53528c2549f228e4e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa3d70823dee1a0bb0e52dffcdcac012" id="r_afa3d70823dee1a0bb0e52dffcdcac012"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#afa3d70823dee1a0bb0e52dffcdcac012">resetNumIters</a> (<a class="el" href="class_belos_1_1_operator.html">int</a> <a class="el" href="class_belos_1_1_operator.html">iter</a>=0)</td></tr>
+<tr class="memdesc:afa3d70823dee1a0bb0e52dffcdcac012"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the iteration count.  <br /></td></tr>
+<tr class="separator:afa3d70823dee1a0bb0e52dffcdcac012"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab296623b7b8fcec6b4beab2a17accce0" id="r_ab296623b7b8fcec6b4beab2a17accce0"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; <a class="el" href="class_belos_1_1_operator.html">const</a> MV &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#ab296623b7b8fcec6b4beab2a17accce0">getNativeResiduals</a> (std::vector&lt; <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a20eff6d13c5c3fbd11cdbe12134bc9bc">MagnitudeType</a> &gt; *<a class="el" href="class_belos_1_1_operator.html">norms</a>) <a class="el" href="class_belos_1_1_operator.html">const</a></td></tr>
+<tr class="memdesc:ab296623b7b8fcec6b4beab2a17accce0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the norms of the residuals native to the solver.  <br /></td></tr>
+<tr class="separator:ab296623b7b8fcec6b4beab2a17accce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22c709a142a75d80a928072f0e8babb5" id="r_a22c709a142a75d80a928072f0e8babb5"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; MV &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a22c709a142a75d80a928072f0e8babb5">getCurrentUpdate</a> () <a class="el" href="class_belos_1_1_operator.html">const</a></td></tr>
+<tr class="memdesc:a22c709a142a75d80a928072f0e8babb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current update to the linear system.  <br /></td></tr>
+<tr class="separator:a22c709a142a75d80a928072f0e8babb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8f25c0a0ea2cbeeb1187c06e7fc375c" id="r_ac8f25c0a0ea2cbeeb1187c06e7fc375c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#ac8f25c0a0ea2cbeeb1187c06e7fc375c">updateLSQR</a> (<a class="el" href="class_belos_1_1_operator.html">int</a> <a class="el" href="class_belos_1_1_operator.html">dim</a>=-1)</td></tr>
+<tr class="memdesc:ac8f25c0a0ea2cbeeb1187c06e7fc375c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method for updating QR factorization of upper Hessenberg matrix.  <br /></td></tr>
+<tr class="separator:ac8f25c0a0ea2cbeeb1187c06e7fc375c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0666ec94f48d3dd5d83c7b10a366b1e5" id="r_a0666ec94f48d3dd5d83c7b10a366b1e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a0666ec94f48d3dd5d83c7b10a366b1e5">getCurSubspaceDim</a> () <a class="el" href="class_belos_1_1_operator.html">const</a></td></tr>
+<tr class="memdesc:a0666ec94f48d3dd5d83c7b10a366b1e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the dimension of the search subspace used to generate the current solution to the linear problem.  <br /></td></tr>
+<tr class="separator:a0666ec94f48d3dd5d83c7b10a366b1e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62cb54ca2e7dfe65999448ee080e57a0" id="r_a62cb54ca2e7dfe65999448ee080e57a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a62cb54ca2e7dfe65999448ee080e57a0">getMaxSubspaceDim</a> () <a class="el" href="class_belos_1_1_operator.html">const</a></td></tr>
+<tr class="memdesc:a62cb54ca2e7dfe65999448ee080e57a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the maximum dimension allocated for the search subspace.  <br /></td></tr>
+<tr class="separator:a62cb54ca2e7dfe65999448ee080e57a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_belos_1_1_g_c_r_o_d_r_iteration"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_belos_1_1_g_c_r_o_d_r_iteration')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iteration.html">Belos::GCRODRIteration&lt; ScalarType, MV, OP, DM &gt;</a></td></tr>
+<tr class="memitem:ac55ef46e56c19e38c14a1107f4bbc9d2 inherit pub_methods_class_belos_1_1_g_c_r_o_d_r_iteration" id="r_ac55ef46e56c19e38c14a1107f4bbc9d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">virtual</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iteration.html#ac55ef46e56c19e38c14a1107f4bbc9d2">~GCRODRIteration</a> ()</td></tr>
+<tr class="separator:ac55ef46e56c19e38c14a1107f4bbc9d2 inherit pub_methods_class_belos_1_1_g_c_r_o_d_r_iteration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_belos_1_1_iteration"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_belos_1_1_iteration')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_belos_1_1_iteration.html">Belos::Iteration&lt; ScalarType, MV, OP, DM &gt;</a></td></tr>
+<tr class="memitem:ad6870e3ffc55db2d07ed617b16fab3b9 inherit pub_methods_class_belos_1_1_iteration" id="r_ad6870e3ffc55db2d07ed617b16fab3b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_iteration.html#ad6870e3ffc55db2d07ed617b16fab3b9">Iteration</a> ()</td></tr>
+<tr class="memdesc:ad6870e3ffc55db2d07ed617b16fab3b9 inherit pub_methods_class_belos_1_1_iteration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Constructor.  <br /></td></tr>
+<tr class="separator:ad6870e3ffc55db2d07ed617b16fab3b9 inherit pub_methods_class_belos_1_1_iteration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a504b7f0583cc56514838cb4701688133 inherit pub_methods_class_belos_1_1_iteration" id="r_a504b7f0583cc56514838cb4701688133"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">virtual</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_iteration.html#a504b7f0583cc56514838cb4701688133">~Iteration</a> ()</td></tr>
+<tr class="memdesc:a504b7f0583cc56514838cb4701688133 inherit pub_methods_class_belos_1_1_iteration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="separator:a504b7f0583cc56514838cb4701688133 inherit pub_methods_class_belos_1_1_iteration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18b6ddaf1972b73731e97fc755d06204 inherit pub_methods_class_belos_1_1_iteration" id="r_a18b6ddaf1972b73731e97fc755d06204"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">virtual</a> Teuchos::RCP&lt; <a class="el" href="class_belos_1_1_operator.html">const</a> MV &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_iteration.html#a18b6ddaf1972b73731e97fc755d06204">getNativeResiduals</a> (std::vector&lt; <a class="el" href="class_belos_1_1_operator.html">typename</a> Teuchos::ScalarTraits&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> &gt;::magnitudeType &gt; *<a class="el" href="class_belos_1_1_operator.html">norms</a>) <a class="el" href="class_belos_1_1_operator.html">const</a>=0</td></tr>
+<tr class="memdesc:a18b6ddaf1972b73731e97fc755d06204 inherit pub_methods_class_belos_1_1_iteration"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the residuals native to the solver.  <br /></td></tr>
+<tr class="separator:a18b6ddaf1972b73731e97fc755d06204 inherit pub_methods_class_belos_1_1_iteration"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Accessor methods</h2></td></tr>
-<tr class="memitem:a200a5d6d8c4b48ba4d65d8139da00119" id="r_a200a5d6d8c4b48ba4d65d8139da00119"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">const</a> <a class="el" href="class_belos_1_1_linear_problem.html">LinearProblem</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a200a5d6d8c4b48ba4d65d8139da00119">getProblem</a> () <a class="el" href="class_belos_1_1_operator.html">const</a></td></tr>
-<tr class="memdesc:a200a5d6d8c4b48ba4d65d8139da00119"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a constant reference to the linear problem.  <br /></td></tr>
-<tr class="separator:a200a5d6d8c4b48ba4d65d8139da00119"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e0a072001e60dd0442c83bd45b70ac7" id="r_a0e0a072001e60dd0442c83bd45b70ac7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a0e0a072001e60dd0442c83bd45b70ac7">getNumBlocks</a> () <a class="el" href="class_belos_1_1_operator.html">const</a></td></tr>
-<tr class="memdesc:a0e0a072001e60dd0442c83bd45b70ac7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the maximum number of blocks used by the iterative solver in solving this linear problem.  <br /></td></tr>
-<tr class="separator:a0e0a072001e60dd0442c83bd45b70ac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48f4ce297f27392666bd326ac9241b2e" id="r_a48f4ce297f27392666bd326ac9241b2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a48f4ce297f27392666bd326ac9241b2e">setNumBlocks</a> (<a class="el" href="class_belos_1_1_operator.html">int</a> <a class="el" href="class_belos_1_1_operator.html">numBlocks</a>)</td></tr>
-<tr class="memdesc:a48f4ce297f27392666bd326ac9241b2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the maximum number of blocks used by the iterative solver.  <br /></td></tr>
-<tr class="separator:a48f4ce297f27392666bd326ac9241b2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fce44ba095679431baa403bdbfc92ee" id="r_a5fce44ba095679431baa403bdbfc92ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a5fce44ba095679431baa403bdbfc92ee">getRecycledBlocks</a> () <a class="el" href="class_belos_1_1_operator.html">const</a></td></tr>
-<tr class="memdesc:a5fce44ba095679431baa403bdbfc92ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the maximum number of recycled blocks used by the iterative solver in solving this linear problem.  <br /></td></tr>
-<tr class="separator:a5fce44ba095679431baa403bdbfc92ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b577a47332afb7a1e3d1c7b890051b8" id="r_a1b577a47332afb7a1e3d1c7b890051b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a1b577a47332afb7a1e3d1c7b890051b8">setRecycledBlocks</a> (<a class="el" href="class_belos_1_1_operator.html">int</a> <a class="el" href="class_belos_1_1_operator.html">recycledBlocks</a>)</td></tr>
-<tr class="memdesc:a1b577a47332afb7a1e3d1c7b890051b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the maximum number of recycled blocks used by the iterative solver.  <br /></td></tr>
-<tr class="separator:a1b577a47332afb7a1e3d1c7b890051b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a4b5b2e53455e7fc642721b6fcad335" id="r_a6a4b5b2e53455e7fc642721b6fcad335"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a6a4b5b2e53455e7fc642721b6fcad335">getBlockSize</a> () <a class="el" href="class_belos_1_1_operator.html">const</a></td></tr>
-<tr class="memdesc:a6a4b5b2e53455e7fc642721b6fcad335"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the blocksize to be used by the iterative solver in solving this linear problem.  <br /></td></tr>
-<tr class="separator:a6a4b5b2e53455e7fc642721b6fcad335"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20dff90ae72cf224c22e7ea1d4d65deb" id="r_a20dff90ae72cf224c22e7ea1d4d65deb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a20dff90ae72cf224c22e7ea1d4d65deb">setBlockSize</a> (<a class="el" href="class_belos_1_1_operator.html">int</a> <a class="el" href="class_belos_1_1_operator.html">blockSize</a>)</td></tr>
-<tr class="memdesc:a20dff90ae72cf224c22e7ea1d4d65deb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the blocksize.  <br /></td></tr>
-<tr class="separator:a20dff90ae72cf224c22e7ea1d4d65deb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaebe4331317179b0fefa2f9a17e91e8a" id="r_aaebe4331317179b0fefa2f9a17e91e8a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#aaebe4331317179b0fefa2f9a17e91e8a">setSize</a> (<a class="el" href="class_belos_1_1_operator.html">int</a> <a class="el" href="class_belos_1_1_operator.html">recycledBlocks</a>, <a class="el" href="class_belos_1_1_operator.html">int</a> <a class="el" href="class_belos_1_1_operator.html">numBlocks</a>)</td></tr>
-<tr class="memdesc:aaebe4331317179b0fefa2f9a17e91e8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the maximum number of blocks used by the iterative solver and the number of recycled vectors.  <br /></td></tr>
-<tr class="separator:aaebe4331317179b0fefa2f9a17e91e8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7614c88b7bc17f99392283adecd4b316" id="r_a7614c88b7bc17f99392283adecd4b316"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a7614c88b7bc17f99392283adecd4b316">isInitialized</a> ()</td></tr>
-<tr class="memdesc:a7614c88b7bc17f99392283adecd4b316"><td class="mdescLeft">&#160;</td><td class="mdescRight">States whether the solver has been initialized or not.  <br /></td></tr>
-<tr class="separator:a7614c88b7bc17f99392283adecd4b316"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a408fe1466d00ad5a75c4dbea8e152d57" id="r_a408fe1466d00ad5a75c4dbea8e152d57"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">const</a> <a class="el" href="class_belos_1_1_linear_problem.html">LinearProblem</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a408fe1466d00ad5a75c4dbea8e152d57">getProblem</a> () <a class="el" href="class_belos_1_1_operator.html">const</a></td></tr>
+<tr class="memdesc:a408fe1466d00ad5a75c4dbea8e152d57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a constant reference to the linear problem.  <br /></td></tr>
+<tr class="separator:a408fe1466d00ad5a75c4dbea8e152d57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f39afa0114b448f5c05e41e3593f9ef" id="r_a0f39afa0114b448f5c05e41e3593f9ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a0f39afa0114b448f5c05e41e3593f9ef">getNumBlocks</a> () <a class="el" href="class_belos_1_1_operator.html">const</a></td></tr>
+<tr class="memdesc:a0f39afa0114b448f5c05e41e3593f9ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the maximum number of blocks used by the iterative solver in solving this linear problem.  <br /></td></tr>
+<tr class="separator:a0f39afa0114b448f5c05e41e3593f9ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25ea3b625cde5e97ac78400681e56303" id="r_a25ea3b625cde5e97ac78400681e56303"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a25ea3b625cde5e97ac78400681e56303">setNumBlocks</a> (<a class="el" href="class_belos_1_1_operator.html">int</a> <a class="el" href="class_belos_1_1_operator.html">numBlocks</a>)</td></tr>
+<tr class="memdesc:a25ea3b625cde5e97ac78400681e56303"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the maximum number of blocks used by the iterative solver.  <br /></td></tr>
+<tr class="separator:a25ea3b625cde5e97ac78400681e56303"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81ca693d021606d177dbe828c8d07ec3" id="r_a81ca693d021606d177dbe828c8d07ec3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a81ca693d021606d177dbe828c8d07ec3">getBlockSize</a> () <a class="el" href="class_belos_1_1_operator.html">const</a></td></tr>
+<tr class="memdesc:a81ca693d021606d177dbe828c8d07ec3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the blocksize to be used by the iterative solver in solving this linear problem.  <br /></td></tr>
+<tr class="separator:a81ca693d021606d177dbe828c8d07ec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a329fbee10cc94036e92ffb555be871a1" id="r_a329fbee10cc94036e92ffb555be871a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a329fbee10cc94036e92ffb555be871a1">setBlockSize</a> (<a class="el" href="class_belos_1_1_operator.html">int</a> <a class="el" href="class_belos_1_1_operator.html">blockSize</a>)</td></tr>
+<tr class="memdesc:a329fbee10cc94036e92ffb555be871a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the blocksize.  <br /></td></tr>
+<tr class="separator:a329fbee10cc94036e92ffb555be871a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51d349cbca52de9d15d90a2c897b7e28" id="r_a51d349cbca52de9d15d90a2c897b7e28"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a51d349cbca52de9d15d90a2c897b7e28">setSize</a> (<a class="el" href="class_belos_1_1_operator.html">int</a> <a class="el" href="class_belos_1_1_operator.html">recycledBlocks</a>, <a class="el" href="class_belos_1_1_operator.html">int</a> <a class="el" href="class_belos_1_1_operator.html">numBlocks</a>)</td></tr>
+<tr class="memdesc:a51d349cbca52de9d15d90a2c897b7e28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the maximum number of blocks used by the iterative solver and the number of recycled vectors.  <br /></td></tr>
+<tr class="separator:a51d349cbca52de9d15d90a2c897b7e28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a768fe8bdfe2936bff6647febc0bcff20" id="r_a768fe8bdfe2936bff6647febc0bcff20"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_belos_1_1_operator.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a768fe8bdfe2936bff6647febc0bcff20">isInitialized</a> ()</td></tr>
+<tr class="memdesc:a768fe8bdfe2936bff6647febc0bcff20"><td class="mdescLeft">&#160;</td><td class="mdescRight">States whether the solver has been initialized or not.  <br /></td></tr>
+<tr class="separator:a768fe8bdfe2936bff6647febc0bcff20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, <a class="el" href="class_belos_1_1_operator.html">class</a> MV, <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a>&gt;<br />
-class Belos::GCRODRIter&lt; ScalarType, MV, OP &gt;</div><p>This class implements the GCRODR iteration, where a single-std::vector Krylov subspace is constructed. The QR decomposition of block, upper Hessenberg matrix is performed each iteration to update the least squares system and give the current linear system residuals. </p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, <a class="el" href="class_belos_1_1_operator.html">class</a> MV, <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a>, <a class="el" href="class_belos_1_1_operator.html">class</a> DM&gt;<br />
+class Belos::GCRODRIter&lt; ScalarType, MV, OP, DM &gt;</div><p>This class implements the GCRODR iteration, where a single-vector Krylov subspace is constructed. The QR decomposition of block, upper Hessenberg matrix is performed each iteration to update the least squares system and give the current linear system residuals. </p>
 <dl class="section author"><dt>Author</dt><dd>Michael Parks and Heidi Thornquist </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00122">122</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a79011944c4e9a3c3c734356143d2cd8a" name="a79011944c4e9a3c3c734356143d2cd8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79011944c4e9a3c3c734356143d2cd8a">&#9670;&#160;</a></span>MVT</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">typedef</a> <a class="el" href="class_belos_1_1_multi_vec_traits.html">MultiVecTraits</a>&lt;<a class="el" href="class_belos_1_1_operator.html">ScalarType</a>,MV&gt; <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;::MVT</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00129">129</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a4ea7455b62a8d352b589e4e87b8668dc" name="a4ea7455b62a8d352b589e4e87b8668dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ea7455b62a8d352b589e4e87b8668dc">&#9670;&#160;</a></span>OPT</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">typedef</a> <a class="el" href="class_belos_1_1_operator_traits.html">OperatorTraits</a>&lt;<a class="el" href="class_belos_1_1_operator.html">ScalarType</a>,MV,<a class="el" href="class_belos_1_1_operator.html">OP</a>&gt; <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;::OPT</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
 <p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00130">130</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a6a067f960f11dfefd1536141ff50a181" name="a6a067f960f11dfefd1536141ff50a181"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a067f960f11dfefd1536141ff50a181">&#9670;&#160;</a></span>SCT</h2>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a6b8d1656cecc02cc080b8128aadec084" name="a6b8d1656cecc02cc080b8128aadec084"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b8d1656cecc02cc080b8128aadec084">&#9670;&#160;</a></span>MVT</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">typedef</a> Teuchos::ScalarTraits&lt;<a class="el" href="class_belos_1_1_operator.html">ScalarType</a>&gt; <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;::SCT</td>
+          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">typedef</a> <a class="el" href="class_belos_1_1_multi_vec_traits.html">MultiVecTraits</a>&lt;<a class="el" href="class_belos_1_1_operator.html">ScalarType</a>,MV,DM&gt; <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt;::MVT</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00131">131</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00137">137</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
 
 </div>
 </div>
-<a id="ac012bc3dd33769ce3d54a5584c3baa40" name="ac012bc3dd33769ce3d54a5584c3baa40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac012bc3dd33769ce3d54a5584c3baa40">&#9670;&#160;</a></span>MagnitudeType</h2>
+<a id="afe04621a8a019f74a37c627e7f5f7a6d" name="afe04621a8a019f74a37c627e7f5f7a6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe04621a8a019f74a37c627e7f5f7a6d">&#9670;&#160;</a></span>OPT</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">typedef</a> SCT::magnitudeType <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;::MagnitudeType</td>
+          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">typedef</a> <a class="el" href="class_belos_1_1_operator_traits.html">OperatorTraits</a>&lt;<a class="el" href="class_belos_1_1_operator.html">ScalarType</a>,MV,<a class="el" href="class_belos_1_1_operator.html">OP</a>&gt; <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt;::OPT</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00132">132</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00138">138</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a76d19aac1e42bc78923d8873f110cc2b" name="a76d19aac1e42bc78923d8873f110cc2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76d19aac1e42bc78923d8873f110cc2b">&#9670;&#160;</a></span>DMT</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">typedef</a> <a class="el" href="class_belos_1_1_dense_mat_traits.html">DenseMatTraits</a>&lt;<a class="el" href="class_belos_1_1_operator.html">ScalarType</a>,DM&gt; <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt;::DMT</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00139">139</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a023509684726585f625e3f861afdddc1" name="a023509684726585f625e3f861afdddc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a023509684726585f625e3f861afdddc1">&#9670;&#160;</a></span>SCT</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">typedef</a> Teuchos::ScalarTraits&lt;<a class="el" href="class_belos_1_1_operator.html">ScalarType</a>&gt; <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt;::SCT</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00140">140</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a20eff6d13c5c3fbd11cdbe12134bc9bc" name="a20eff6d13c5c3fbd11cdbe12134bc9bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20eff6d13c5c3fbd11cdbe12134bc9bc">&#9670;&#160;</a></span>MagnitudeType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">typedef</a> SCT::magnitudeType <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt;::MagnitudeType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00141">141</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a96e0fb4063e2cd3ddfb38c454a9f014a" name="a96e0fb4063e2cd3ddfb38c454a9f014a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a96e0fb4063e2cd3ddfb38c454a9f014a">&#9670;&#160;</a></span>GCRODRIter()</h2>
+<a id="a19ebfeef1f638861cda9ea4a0b9f0a06" name="a19ebfeef1f638861cda9ea4a0b9f0a06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19ebfeef1f638861cda9ea4a0b9f0a06">&#9670;&#160;</a></span>GCRODRIter()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;::GCRODRIter </td>
+          <td class="memname"><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt;::GCRODRIter </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_belos_1_1_operator.html">const</a> Teuchos::RCP&lt; <a class="el" href="class_belos_1_1_linear_problem.html">LinearProblem</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_belos_1_1_operator.html">const</a> Teuchos::RCP&lt; <a class="el" href="class_belos_1_1_linear_problem.html">LinearProblem</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt; &gt; &amp;&#160;</td>
           <td class="paramname"><em>problem</em>, </td>
         </tr>
         <tr>
@@ -293,13 +318,13 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_belos_1_1_operator.html">const</a> Teuchos::RCP&lt; <a class="el" href="class_belos_1_1_status_test.html">StatusTest</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_belos_1_1_operator.html">const</a> Teuchos::RCP&lt; <a class="el" href="class_belos_1_1_status_test.html">StatusTest</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt; &gt; &amp;&#160;</td>
           <td class="paramname"><em>tester</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_belos_1_1_operator.html">const</a> Teuchos::RCP&lt; <a class="el" href="class_belos_1_1_mat_ortho_manager.html">MatOrthoManager</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_belos_1_1_operator.html">const</a> Teuchos::RCP&lt; <a class="el" href="class_belos_1_1_mat_ortho_manager.html">MatOrthoManager</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt; &gt; &amp;&#160;</td>
           <td class="paramname"><em>ortho</em>, </td>
         </tr>
         <tr>
@@ -319,27 +344,27 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
 <p>GCRODRIter constructor with linear problem, solver utilities, and parameter list of solver options. </p>
 <p>This constructor takes pointers required by the linear solver, in addition to a parameter list of options for the linear solver. These options include the following:</p><ul>
 <li>"Num Blocks" - an <code>int</code> specifying the maximum number of blocks allocated for the solver basis. Default: 25</li>
-<li>"Restart Timers" = a <code>bool</code> specifying whether the timers should be restarted each time <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#aa8295fc48df626c446cb650547068635" title="This method performs block Gmres iterations until the status test indicates the need to stop or an er...">iterate()</a> is called. Default: false</li>
+<li>"Restart Timers" = a <code>bool</code> specifying whether the timers should be restarted each time <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#aad14ecc3687b6af5f0130e1d357945ef" title="This method performs block Gmres iterations until the status test indicates the need to stop or an er...">iterate()</a> is called. Default: false</li>
 <li>"Keep Hessenberg" = a <code>bool</code> specifying whether the upper Hessenberg should be stored separately from the least squares system. Default: false </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00381">381</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00393">393</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a1157b79dd4e703ad896189cf50af648c" name="a1157b79dd4e703ad896189cf50af648c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1157b79dd4e703ad896189cf50af648c">&#9670;&#160;</a></span>~GCRODRIter()</h2>
+<a id="a8e5a89a3f2d10629ba7e7838837067f3" name="a8e5a89a3f2d10629ba7e7838837067f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e5a89a3f2d10629ba7e7838837067f3">&#9670;&#160;</a></span>~GCRODRIter()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">virtual</a> <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;::~<a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">GCRODRIter</a> </td>
+          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">virtual</a> <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt;::~<a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">GCRODRIter</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -354,24 +379,24 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00152">152</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00161">161</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa8295fc48df626c446cb650547068635" name="aa8295fc48df626c446cb650547068635"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8295fc48df626c446cb650547068635">&#9670;&#160;</a></span>iterate()</h2>
+<a id="aad14ecc3687b6af5f0130e1d357945ef" name="aad14ecc3687b6af5f0130e1d357945ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad14ecc3687b6af5f0130e1d357945ef">&#9670;&#160;</a></span>iterate()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">void</a> <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;::iterate </td>
+          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">void</a> <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt;::iterate </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -385,7 +410,7 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
 </div><div class="memdoc">
 
 <p>This method performs block Gmres iterations until the status test indicates the need to stop or an error occurs (in which case, an std::exception is thrown). </p>
-<p><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#aa8295fc48df626c446cb650547068635" title="This method performs block Gmres iterations until the status test indicates the need to stop or an er...">iterate()</a> will first determine whether the solver is inintialized; if not, it will call <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#aa518b3c9dcdb4b0b3e6623988b7acf38" title="Initialize the solver with empty data. Calling this method will result in error, as GCRODRIter must b...">initialize()</a> using default arguments. After initialization, the solver performs block Gmres iterations until the status test evaluates as <a class="el" href="namespace_belos.html#a342eae302936d58ef9d7426063340863af0d98a687db4f51b258b4df00353f5ee">Passed</a>, at which point the method returns to the caller.</p>
+<p><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#aad14ecc3687b6af5f0130e1d357945ef" title="This method performs block Gmres iterations until the status test indicates the need to stop or an er...">iterate()</a> will first determine whether the solver is inintialized; if not, it will call <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#ad464a9dbaad656775e92a88274342b39" title="Initialize the solver with empty data. Calling this method will result in error, as GCRODRIter must b...">initialize()</a> using default arguments. After initialization, the solver performs block Gmres iterations until the status test evaluates as <a class="el" href="namespace_belos.html#a342eae302936d58ef9d7426063340863af0d98a687db4f51b258b4df00353f5ee">Passed</a>, at which point the method returns to the caller.</p>
 <p>The block Gmres iteration proceeds as follows:</p><ol type="1">
 <li>The operator problem-&gt;applyOp() is applied to the newest <code>blockSize</code> vectors in the Krylov basis.</li>
 <li>The resulting vectors are orthogonalized against the previous basis vectors, and made orthonormal.</li>
@@ -395,54 +420,64 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
 <p>The status test is queried at the beginning of the iteration.</p>
 <p>Possible exceptions thrown include the <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter_ortho_failure.html" title="GCRODRIterOrthoFailure is thrown when the GCRODRIter object is unable to compute independent directio...">GCRODRIterOrthoFailure</a>. </p>
 
-<p>Implements <a class="el" href="class_belos_1_1_iteration.html#a70b79f95b186fe62912ff11cf880f016">Belos::Iteration&lt; ScalarType, MV, OP &gt;</a>.</p>
+<p>Implements <a class="el" href="class_belos_1_1_iteration.html#a5c6492d5a2ec86a96883522354a51d32">Belos::Iteration&lt; ScalarType, MV, OP, DM &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00512">512</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00546">546</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a1fe05bff82ed936f8367518e316ed2b3" name="a1fe05bff82ed936f8367518e316ed2b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1fe05bff82ed936f8367518e316ed2b3">&#9670;&#160;</a></span>initialize() <span class="overload">[1/2]</span></h2>
+<a id="a4ab0e13cdf3d79f5cae506acfb33c003" name="a4ab0e13cdf3d79f5cae506acfb33c003"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ab0e13cdf3d79f5cae506acfb33c003">&#9670;&#160;</a></span>initialize() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">void</a> <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;::initialize </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_belos_1_1_g_c_r_o_d_r_iter_state.html">GCRODRIterState</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV &gt; &amp;&#160;</td>
-          <td class="paramname"><em>newstate</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Initialize the solver to an iterate, providing a complete state. </p>
-<p>The GCRODRIter contains a certain amount of state, consisting of the current Krylov basis and the associated Hessenberg matrix.</p>
-<p><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#aa518b3c9dcdb4b0b3e6623988b7acf38" title="Initialize the solver with empty data. Calling this method will result in error, as GCRODRIter must b...">initialize()</a> gives the user the opportunity to manually set these, although this must be done with caution, abiding by the rules given below. All notions of orthogonality and orthonormality are derived from the inner product specified by the orthogonalization manager.</p>
-<dl class="section post"><dt>Postcondition</dt><dd><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a7614c88b7bc17f99392283adecd4b316" title="States whether the solver has been initialized or not.">isInitialized()</a> == <code>true</code> (see post-conditions of isInitialize())</dd></dl>
-<p>The user has the option of specifying any component of the state using <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#aa518b3c9dcdb4b0b3e6623988b7acf38" title="Initialize the solver with empty data. Calling this method will result in error, as GCRODRIter must b...">initialize()</a>. However, these arguments are assumed to match the post-conditions specified under <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a7614c88b7bc17f99392283adecd4b316" title="States whether the solver has been initialized or not.">isInitialized()</a>. Any necessary component of the state not given to <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#aa518b3c9dcdb4b0b3e6623988b7acf38" title="Initialize the solver with empty data. Calling this method will result in error, as GCRODRIter must b...">initialize()</a> will be generated.</p>
-<dl class="section note"><dt>Note</dt><dd>For any pointer in <code>newstate</code> which directly points to the multivectors in the solver, the data is not copied. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00488">488</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
-
-</div>
-</div>
-<a id="aa518b3c9dcdb4b0b3e6623988b7acf38" name="aa518b3c9dcdb4b0b3e6623988b7acf38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa518b3c9dcdb4b0b3e6623988b7acf38">&#9670;&#160;</a></span>initialize() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">void</a> <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;::initialize </td>
+          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">void</a> <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt;::initialize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_belos_1_1_g_c_r_o_d_r_iter_state.html">GCRODRIterState</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, DM &gt; &amp;&#160;</td>
+          <td class="paramname"><em>newstate</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialize the solver to an iterate, providing a complete state. </p>
+<p>The GCRODRIter contains a certain amount of state, consisting of the current Krylov basis and the associated Hessenberg matrix.</p>
+<p><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#ad464a9dbaad656775e92a88274342b39" title="Initialize the solver with empty data. Calling this method will result in error, as GCRODRIter must b...">initialize()</a> gives the user the opportunity to manually set these, although this must be done with caution, abiding by the rules given below. All notions of orthogonality and orthonormality are derived from the inner product specified by the orthogonalization manager.</p>
+<dl class="section post"><dt>Postcondition</dt><dd><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a768fe8bdfe2936bff6647febc0bcff20" title="States whether the solver has been initialized or not.">isInitialized()</a> == <code>true</code> (see post-conditions of isInitialize())</dd></dl>
+<p>The user has the option of specifying any component of the state using <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#ad464a9dbaad656775e92a88274342b39" title="Initialize the solver with empty data. Calling this method will result in error, as GCRODRIter must b...">initialize()</a>. However, these arguments are assumed to match the post-conditions specified under <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a768fe8bdfe2936bff6647febc0bcff20" title="States whether the solver has been initialized or not.">isInitialized()</a>. Any necessary component of the state not given to <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#ad464a9dbaad656775e92a88274342b39" title="Initialize the solver with empty data. Calling this method will result in error, as GCRODRIter must b...">initialize()</a> will be generated.</p>
+<dl class="section note"><dt>Note</dt><dd>For any pointer in <code>newstate</code> which directly points to the multivectors in the solver, the data is not copied. </dd></dl>
+
+<p>Implements <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iteration.html#a98d359d0d050bb3ece76026ce6289e3b">Belos::GCRODRIteration&lt; ScalarType, MV, OP, DM &gt;</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00512">512</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ad464a9dbaad656775e92a88274342b39" name="ad464a9dbaad656775e92a88274342b39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad464a9dbaad656775e92a88274342b39">&#9670;&#160;</a></span>initialize() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">void</a> <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt;::initialize </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -455,27 +490,27 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
 </table>
 </div><div class="memdoc">
 
-<p>Initialize the solver with empty data. Calling this method will result in error, as <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html" title="This class implements the GCRODR iteration, where a single-std::vector Krylov subspace is constructed...">GCRODRIter</a> must be initialized with a valid state. </p>
+<p>Initialize the solver with empty data. Calling this method will result in error, as <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html" title="This class implements the GCRODR iteration, where a single-vector Krylov subspace is constructed....">GCRODRIter</a> must be initialized with a valid state. </p>
 
-<p>Implements <a class="el" href="class_belos_1_1_iteration.html#a0d834f780327ce4f22be5e302f6236e9">Belos::Iteration&lt; ScalarType, MV, OP &gt;</a>.</p>
+<p>Implements <a class="el" href="class_belos_1_1_iteration.html#aa4963cf135f20b6e55ba6728ec21add8">Belos::Iteration&lt; ScalarType, MV, OP, DM &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00208">208</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00217">217</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a59ecdecf33b4a3f18378e776c5596959" name="a59ecdecf33b4a3f18378e776c5596959"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59ecdecf33b4a3f18378e776c5596959">&#9670;&#160;</a></span>getState()</h2>
+<a id="a1ac190fbc1e40e76f0169a57c7d6bb3d" name="a1ac190fbc1e40e76f0169a57c7d6bb3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ac190fbc1e40e76f0169a57c7d6bb3d">&#9670;&#160;</a></span>getState()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_belos_1_1_g_c_r_o_d_r_iter_state.html">GCRODRIterState</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV &gt; <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;::getState </td>
+          <td class="memname"><a class="el" href="struct_belos_1_1_g_c_r_o_d_r_iter_state.html">GCRODRIterState</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, DM &gt; <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt;::getState </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -483,32 +518,34 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Get the current state of the linear solver. </p>
-<p>The data is only valid if <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a7614c88b7bc17f99392283adecd4b316" title="States whether the solver has been initialized or not.">isInitialized()</a> == <code>true</code>.</p>
+<p>The data is only valid if <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a768fe8bdfe2936bff6647febc0bcff20" title="States whether the solver has been initialized or not.">isInitialized()</a> == <code>true</code>.</p>
 <dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="struct_belos_1_1_g_c_r_o_d_r_iter_state.html" title="Structure to contain pointers to GCRODRIter state variables.">GCRODRIterState</a> object containing const pointers to the current solver state. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00220">220</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
+<p>Implements <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iteration.html#acfac25dee968082acc081dbee1eba55f">Belos::GCRODRIteration&lt; ScalarType, MV, OP, DM &gt;</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00229">229</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a8f881c4dba6500aa73b899e00c6d2c31" name="a8f881c4dba6500aa73b899e00c6d2c31"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f881c4dba6500aa73b899e00c6d2c31">&#9670;&#160;</a></span>getNumIters()</h2>
+<a id="af0c01767487f4e53528c2549f228e4e8" name="af0c01767487f4e53528c2549f228e4e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0c01767487f4e53528c2549f228e4e8">&#9670;&#160;</a></span>getNumIters()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">int</a> <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;::getNumIters </td>
+          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">int</a> <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt;::getNumIters </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -523,25 +560,25 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
 
 <p>Get the current iteration count. </p>
 
-<p>Implements <a class="el" href="class_belos_1_1_iteration.html#a3b0083482cb4f74a83032ee844a88153">Belos::Iteration&lt; ScalarType, MV, OP &gt;</a>.</p>
+<p>Implements <a class="el" href="class_belos_1_1_iteration.html#a305e31805250e25ae3358a660c032a68">Belos::Iteration&lt; ScalarType, MV, OP, DM &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00238">238</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00250">250</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a567ac052dd0c80cae38e35328de1c7fd" name="a567ac052dd0c80cae38e35328de1c7fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a567ac052dd0c80cae38e35328de1c7fd">&#9670;&#160;</a></span>resetNumIters()</h2>
+<a id="afa3d70823dee1a0bb0e52dffcdcac012" name="afa3d70823dee1a0bb0e52dffcdcac012"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa3d70823dee1a0bb0e52dffcdcac012">&#9670;&#160;</a></span>resetNumIters()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">void</a> <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;::resetNumIters </td>
+          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">void</a> <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt;::resetNumIters </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_belos_1_1_operator.html">int</a>&#160;</td>
           <td class="paramname"><em>iter</em> = <code>0</code></td><td>)</td>
@@ -557,24 +594,24 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
 
 <p>Reset the iteration count. </p>
 
-<p>Implements <a class="el" href="class_belos_1_1_iteration.html#aaa4fbfc020d27c37fc65911b1f48acbc">Belos::Iteration&lt; ScalarType, MV, OP &gt;</a>.</p>
+<p>Implements <a class="el" href="class_belos_1_1_iteration.html#ad4a402ef748f03a3129f40bf02ee1e10">Belos::Iteration&lt; ScalarType, MV, OP, DM &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00241">241</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00253">253</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
 
 </div>
 </div>
-<a id="ab508820b552c3484321165298a32f5eb" name="ab508820b552c3484321165298a32f5eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab508820b552c3484321165298a32f5eb">&#9670;&#160;</a></span>getNativeResiduals()</h2>
+<a id="ab296623b7b8fcec6b4beab2a17accce0" name="ab296623b7b8fcec6b4beab2a17accce0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab296623b7b8fcec6b4beab2a17accce0">&#9670;&#160;</a></span>getNativeResiduals()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">Teuchos::RCP&lt; <a class="el" href="class_belos_1_1_operator.html">const</a> MV &gt; <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;::getNativeResiduals </td>
+          <td class="memname">Teuchos::RCP&lt; <a class="el" href="class_belos_1_1_operator.html">const</a> MV &gt; <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt;::getNativeResiduals </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#ac012bc3dd33769ce3d54a5584c3baa40">MagnitudeType</a> &gt; *&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a20eff6d13c5c3fbd11cdbe12134bc9bc">MagnitudeType</a> &gt; *&#160;</td>
           <td class="paramname"><em>norms</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -584,23 +621,23 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
 <p>Get the norms of the residuals native to the solver. </p>
 <dl class="section return"><dt>Returns</dt><dd>A std::vector of length blockSize containing the native residuals. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00469">469</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00492">492</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a1bbc58fe9e8eaec7580cb4eaa005f7da" name="a1bbc58fe9e8eaec7580cb4eaa005f7da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1bbc58fe9e8eaec7580cb4eaa005f7da">&#9670;&#160;</a></span>getCurrentUpdate()</h2>
+<a id="a22c709a142a75d80a928072f0e8babb5" name="a22c709a142a75d80a928072f0e8babb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22c709a142a75d80a928072f0e8babb5">&#9670;&#160;</a></span>getCurrentUpdate()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Teuchos::RCP&lt; MV &gt; <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;::getCurrentUpdate </td>
+          <td class="memname">Teuchos::RCP&lt; MV &gt; <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt;::getCurrentUpdate </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -614,52 +651,62 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
 </div><div class="memdoc">
 
 <p>Get the current update to the linear system. </p>
-<dl class="section note"><dt>Note</dt><dd>Some solvers, like GMRES, do not compute updates to the solution every iteration. This method forces its computation. Other solvers, like CG, update the solution each iteration, so this method will return a zero std::vector indicating that the linear problem contains the current solution. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Some solvers, like GMRES, do not compute updates to the solution every iteration. This method forces its computation. Other solvers, like CG, update the solution each iteration, so this method will return a zero vector indicating that the linear problem contains the current solution. </dd></dl>
 
-<p>Implements <a class="el" href="class_belos_1_1_iteration.html#aa339a84db29f5a8dc23a21a4ce799053">Belos::Iteration&lt; ScalarType, MV, OP &gt;</a>.</p>
+<p>Implements <a class="el" href="class_belos_1_1_iteration.html#aee9aa96eaf3e2aff7ae7d08899dd9d62">Belos::Iteration&lt; ScalarType, MV, OP, DM &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00421">421</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00434">434</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
 
 </div>
 </div>
-<a id="abfb4cfe8437b2c29a209a01f20cde95d" name="abfb4cfe8437b2c29a209a01f20cde95d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abfb4cfe8437b2c29a209a01f20cde95d">&#9670;&#160;</a></span>updateLSQR()</h2>
+<a id="ac8f25c0a0ea2cbeeb1187c06e7fc375c" name="ac8f25c0a0ea2cbeeb1187c06e7fc375c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8f25c0a0ea2cbeeb1187c06e7fc375c">&#9670;&#160;</a></span>updateLSQR()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">void</a> <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;::updateLSQR </td>
+          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">void</a> <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt;::updateLSQR </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_belos_1_1_operator.html">int</a>&#160;</td>
           <td class="paramname"><em>dim</em> = <code>-1</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Method for updating QR factorization of upper Hessenberg matrix. </p>
-<dl class="section note"><dt>Note</dt><dd>If <code>dim</code> &gt;= <code><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a48b4bb136d2ecba1926efc25410aebd7" title="Get the dimension of the search subspace used to generate the current solution to the linear problem.">getCurSubspaceDim()</a></code> and <code>dim</code> &lt; <code><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a72af7bc7601e51b17fae375ffbdfad45" title="Get the maximum dimension allocated for the search subspace.">getMaxSubspaceDim()</a></code>, then the <code>dim-th</code> equations of the least squares problem will be updated. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If <code>dim</code> &gt;= <code><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a0666ec94f48d3dd5d83c7b10a366b1e5" title="Get the dimension of the search subspace used to generate the current solution to the linear problem.">getCurSubspaceDim()</a></code> and <code>dim</code> &lt; <code><a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html#a62cb54ca2e7dfe65999448ee080e57a0" title="Get the maximum dimension allocated for the search subspace.">getMaxSubspaceDim()</a></code>, then the <code>dim-th</code> equations of the least squares problem will be updated. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00662">662</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
+<p>Implements <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iteration.html#adb383fb3fb4e35c03b270264d1185af4">Belos::GCRODRIteration&lt; ScalarType, MV, OP, DM &gt;</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00692">692</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a48b4bb136d2ecba1926efc25410aebd7" name="a48b4bb136d2ecba1926efc25410aebd7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a48b4bb136d2ecba1926efc25410aebd7">&#9670;&#160;</a></span>getCurSubspaceDim()</h2>
+<a id="a0666ec94f48d3dd5d83c7b10a366b1e5" name="a0666ec94f48d3dd5d83c7b10a366b1e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0666ec94f48d3dd5d83c7b10a366b1e5">&#9670;&#160;</a></span>getCurSubspaceDim()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">int</a> <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;::getCurSubspaceDim </td>
+          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">int</a> <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt;::getCurSubspaceDim </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -667,30 +714,32 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Get the dimension of the search subspace used to generate the current solution to the linear problem. </p>
 
-<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00262">262</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
+<p>Implements <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iteration.html#ab57a7509e85d40397e41eff8b399a5b7">Belos::GCRODRIteration&lt; ScalarType, MV, OP, DM &gt;</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00274">274</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a72af7bc7601e51b17fae375ffbdfad45" name="a72af7bc7601e51b17fae375ffbdfad45"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72af7bc7601e51b17fae375ffbdfad45">&#9670;&#160;</a></span>getMaxSubspaceDim()</h2>
+<a id="a62cb54ca2e7dfe65999448ee080e57a0" name="a62cb54ca2e7dfe65999448ee080e57a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62cb54ca2e7dfe65999448ee080e57a0">&#9670;&#160;</a></span>getMaxSubspaceDim()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">int</a> <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;::getMaxSubspaceDim </td>
+          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">int</a> <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt;::getMaxSubspaceDim </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -698,30 +747,32 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Get the maximum dimension allocated for the search subspace. </p>
 
-<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00268">268</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
+<p>Implements <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iteration.html#a0ca25972c62f3f84507e740e2d7dec71">Belos::GCRODRIteration&lt; ScalarType, MV, OP, DM &gt;</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00280">280</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a200a5d6d8c4b48ba4d65d8139da00119" name="a200a5d6d8c4b48ba4d65d8139da00119"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a200a5d6d8c4b48ba4d65d8139da00119">&#9670;&#160;</a></span>getProblem()</h2>
+<a id="a408fe1466d00ad5a75c4dbea8e152d57" name="a408fe1466d00ad5a75c4dbea8e152d57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a408fe1466d00ad5a75c4dbea8e152d57">&#9670;&#160;</a></span>getProblem()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">const</a> <a class="el" href="class_belos_1_1_linear_problem.html">LinearProblem</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; &amp; <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;::getProblem </td>
+          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">const</a> <a class="el" href="class_belos_1_1_linear_problem.html">LinearProblem</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt; &amp; <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt;::getProblem </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -736,25 +787,25 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
 
 <p>Get a constant reference to the linear problem. </p>
 
-<p>Implements <a class="el" href="class_belos_1_1_iteration.html#ac96c23e263463600514a5f742431996e">Belos::Iteration&lt; ScalarType, MV, OP &gt;</a>.</p>
+<p>Implements <a class="el" href="class_belos_1_1_iteration.html#aa714d823d50d49d481f5a92e7e15707b">Belos::Iteration&lt; ScalarType, MV, OP, DM &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00277">277</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00289">289</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a0e0a072001e60dd0442c83bd45b70ac7" name="a0e0a072001e60dd0442c83bd45b70ac7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e0a072001e60dd0442c83bd45b70ac7">&#9670;&#160;</a></span>getNumBlocks()</h2>
+<a id="a0f39afa0114b448f5c05e41e3593f9ef" name="a0f39afa0114b448f5c05e41e3593f9ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f39afa0114b448f5c05e41e3593f9ef">&#9670;&#160;</a></span>getNumBlocks()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">int</a> <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;::getNumBlocks </td>
+          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">int</a> <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt;::getNumBlocks </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -769,23 +820,23 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
 
 <p>Get the maximum number of blocks used by the iterative solver in solving this linear problem. </p>
 
-<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00280">280</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00292">292</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a48f4ce297f27392666bd326ac9241b2e" name="a48f4ce297f27392666bd326ac9241b2e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a48f4ce297f27392666bd326ac9241b2e">&#9670;&#160;</a></span>setNumBlocks()</h2>
+<a id="a25ea3b625cde5e97ac78400681e56303" name="a25ea3b625cde5e97ac78400681e56303"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25ea3b625cde5e97ac78400681e56303">&#9670;&#160;</a></span>setNumBlocks()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">void</a> <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;::setNumBlocks </td>
+          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">void</a> <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt;::setNumBlocks </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_belos_1_1_operator.html">int</a>&#160;</td>
           <td class="paramname"><em>numBlocks</em></td><td>)</td>
@@ -801,86 +852,23 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
 
 <p>Set the maximum number of blocks used by the iterative solver. </p>
 
-<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00283">283</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00295">295</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a5fce44ba095679431baa403bdbfc92ee" name="a5fce44ba095679431baa403bdbfc92ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5fce44ba095679431baa403bdbfc92ee">&#9670;&#160;</a></span>getRecycledBlocks()</h2>
+<a id="a81ca693d021606d177dbe828c8d07ec3" name="a81ca693d021606d177dbe828c8d07ec3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81ca693d021606d177dbe828c8d07ec3">&#9670;&#160;</a></span>getBlockSize()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">int</a> <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;::getRecycledBlocks </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the maximum number of recycled blocks used by the iterative solver in solving this linear problem. </p>
-
-<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00286">286</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a1b577a47332afb7a1e3d1c7b890051b8" name="a1b577a47332afb7a1e3d1c7b890051b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b577a47332afb7a1e3d1c7b890051b8">&#9670;&#160;</a></span>setRecycledBlocks()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">void</a> <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;::setRecycledBlocks </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_belos_1_1_operator.html">int</a>&#160;</td>
-          <td class="paramname"><em>recycledBlocks</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set the maximum number of recycled blocks used by the iterative solver. </p>
-
-<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00289">289</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a6a4b5b2e53455e7fc642721b6fcad335" name="a6a4b5b2e53455e7fc642721b6fcad335"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a4b5b2e53455e7fc642721b6fcad335">&#9670;&#160;</a></span>getBlockSize()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">int</a> <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;::getBlockSize </td>
+          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">int</a> <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt;::getBlockSize </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -895,25 +883,25 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
 
 <p>Get the blocksize to be used by the iterative solver in solving this linear problem. </p>
 
-<p>Implements <a class="el" href="class_belos_1_1_iteration.html#a94c49bbad1ff6af11181115efa515c81">Belos::Iteration&lt; ScalarType, MV, OP &gt;</a>.</p>
+<p>Implements <a class="el" href="class_belos_1_1_iteration.html#a8c9390a75125cc787d1e459d612d80c3">Belos::Iteration&lt; ScalarType, MV, OP, DM &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00292">292</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00298">298</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a20dff90ae72cf224c22e7ea1d4d65deb" name="a20dff90ae72cf224c22e7ea1d4d65deb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20dff90ae72cf224c22e7ea1d4d65deb">&#9670;&#160;</a></span>setBlockSize()</h2>
+<a id="a329fbee10cc94036e92ffb555be871a1" name="a329fbee10cc94036e92ffb555be871a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a329fbee10cc94036e92ffb555be871a1">&#9670;&#160;</a></span>setBlockSize()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">void</a> <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;::setBlockSize </td>
+          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">void</a> <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt;::setBlockSize </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_belos_1_1_operator.html">int</a>&#160;</td>
           <td class="paramname"><em>blockSize</em></td><td>)</td>
@@ -929,25 +917,25 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
 
 <p>Set the blocksize. </p>
 
-<p>Implements <a class="el" href="class_belos_1_1_iteration.html#a5fe3e63d408933181b17acab46077a31">Belos::Iteration&lt; ScalarType, MV, OP &gt;</a>.</p>
+<p>Implements <a class="el" href="class_belos_1_1_iteration.html#aed1bf8fc3971cd87b600fbd0e4217bfa">Belos::Iteration&lt; ScalarType, MV, OP, DM &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00295">295</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00301">301</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
 
 </div>
 </div>
-<a id="aaebe4331317179b0fefa2f9a17e91e8a" name="aaebe4331317179b0fefa2f9a17e91e8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaebe4331317179b0fefa2f9a17e91e8a">&#9670;&#160;</a></span>setSize()</h2>
+<a id="a51d349cbca52de9d15d90a2c897b7e28" name="a51d349cbca52de9d15d90a2c897b7e28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51d349cbca52de9d15d90a2c897b7e28">&#9670;&#160;</a></span>setSize()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">void</a> <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;::setSize </td>
+          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">void</a> <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt;::setSize </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_belos_1_1_operator.html">int</a>&#160;</td>
           <td class="paramname"><em>recycledBlocks</em>, </td>
@@ -966,30 +954,32 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Set the maximum number of blocks used by the iterative solver and the number of recycled vectors. </p>
 
-<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00300">300</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
+<p>Implements <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iteration.html#a68ad1e0fb5956f62d8fb133a1e8c4af9">Belos::GCRODRIteration&lt; ScalarType, MV, OP, DM &gt;</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00306">306</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a7614c88b7bc17f99392283adecd4b316" name="a7614c88b7bc17f99392283adecd4b316"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7614c88b7bc17f99392283adecd4b316">&#9670;&#160;</a></span>isInitialized()</h2>
+<a id="a768fe8bdfe2936bff6647febc0bcff20" name="a768fe8bdfe2936bff6647febc0bcff20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a768fe8bdfe2936bff6647febc0bcff20">&#9670;&#160;</a></span>isInitialized()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">ScalarType</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">OP</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">bool</a> <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a> &gt;::isInitialized </td>
+          <td class="memname"><a class="el" href="class_belos_1_1_operator.html">bool</a> <a class="el" href="class_belos_1_1_g_c_r_o_d_r_iter.html">Belos::GCRODRIter</a>&lt; <a class="el" href="class_belos_1_1_operator.html">ScalarType</a>, MV, <a class="el" href="class_belos_1_1_operator.html">OP</a>, DM &gt;::isInitialized </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1004,9 +994,9 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
 
 <p>States whether the solver has been initialized or not. </p>
 
-<p>Implements <a class="el" href="class_belos_1_1_iteration.html#a696a003c63b306d38bb3059393b57303">Belos::Iteration&lt; ScalarType, MV, OP &gt;</a>.</p>
+<p>Implements <a class="el" href="class_belos_1_1_iteration.html#abb6f8abaf8d491a03d9468129d11dd0c">Belos::Iteration&lt; ScalarType, MV, OP, DM &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00313">313</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html#l00320">320</a> of file <a class="el" href="_belos_g_c_r_o_d_r_iter_8hpp_source.html">BelosGCRODRIter.hpp</a>.</p>
 
 </div>
 </div>

@@ -235,7 +235,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keywordtype">bool</span> use_shared_memory = <a class="code hl_function" href="classpanzer_1_1_h_p.html#a2a29ef1780ed300a703fae06c15946cf">panzer::HP::inst</a>().<a class="code hl_function" href="classpanzer_1_1_h_p.html#a50d085628427637a2bdc0ae96bed1294">useSharedMemory</a>&lt;<a class="code hl_typedef" href="classpanzer_1_1_integrator___grad_basis_dot_tensor_times_vector.html#a7b2d1610b8206a44aa35237dbf720bb3">ScalarT</a>&gt;();</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <span class="keywordflow">if</span> (!use_shared_memory) {</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>      <span class="keywordflow">if</span> (Sacado::IsADType&lt;ScalarT&gt;::value) {</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>  <span class="keyword">const</span> <span class="keyword">auto</span> fadSize = Kokkos::dimension_scalar(field_.get_view());</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>  <span class="keyword">const</span> <span class="keyword">auto</span> fadSize = Sacado::dimension_scalar(field_.get_view());</div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>  tmp_ = PHX::View&lt;ScalarT*&gt;(<span class="stringliteral">&quot;GradBasisDotTensorTimesVector::tmp_&quot;</span>,field_.extent(0),fadSize);</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>      } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>  tmp_ = PHX::View&lt;ScalarT*&gt;(<span class="stringliteral">&quot;GradBasisDotTensorTimesVector::tmp_&quot;</span>,field_.extent(0));</div>
@@ -304,7 +304,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> numQP = vector_.extent(1);</div>
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> numDim = vector_.extent(2);</div>
 <div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> numBases = basis_.extent(1);</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> fadSize = Kokkos::dimension_scalar(field_.get_view());</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> fadSize = Sacado::dimension_scalar(field_.get_view());</div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    <a class="code hl_typedef" href="classpanzer_1_1_integrator___grad_basis_dot_tensor_times_vector.html#a78b85d025eba45c6cf19b083d39cca92">scratch_view</a> tmp;</div>
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    <a class="code hl_typedef" href="classpanzer_1_1_integrator___grad_basis_dot_tensor_times_vector.html#a78b85d025eba45c6cf19b083d39cca92">scratch_view</a> tmp_field;</div>
@@ -375,7 +375,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    <span class="keywordflow">if</span> (use_shared_memory) {</div>
 <div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>      <span class="keywordtype">int</span> bytes;</div>
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>      <span class="keywordflow">if</span> (Sacado::IsADType&lt;ScalarT&gt;::value) {</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> fadSize = Kokkos::dimension_scalar(field_.get_view());</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> fadSize = Sacado::dimension_scalar(field_.get_view());</div>
 <div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>  bytes = scratch_view::shmem_size(1,fadSize) + scratch_view::shmem_size(basis_.extent(1),fadSize);</div>
 <div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>      }</div>
 <div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>      <span class="keywordflow">else</span></div>

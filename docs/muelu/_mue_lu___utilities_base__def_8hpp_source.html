@@ -2535,9 +2535,9 @@ $(document).ready(function(){initNavTree('_mue_lu___utilities_base__def_8hpp_sou
 <div class="line"><a id="l02283" name="l02283"></a><span class="lineno"> 2283</span>    Ac-&gt;SetMaxEigenvalueEstimate(-Teuchos::ScalarTraits&lt;Scalar&gt;::one());</div>
 <div class="line"><a id="l02284" name="l02284"></a><span class="lineno"> 2284</span>  }</div>
 <div class="line"><a id="l02285" name="l02285"></a><span class="lineno"> 2285</span> </div>
-<div class="line"><a id="l02286" name="l02286"></a><span class="lineno"> 2286</span>  <span class="comment">// We *always* need global constants for the RAP, but not for the temps</span></div>
+<div class="line"><a id="l02286" name="l02286"></a><span class="lineno"> 2286</span>  <span class="comment">// We compute global constants by default for the RAP, but not for the temps</span></div>
 <div class="line"><a id="l02287" name="l02287"></a><span class="lineno"> 2287</span>  RAPparams-&gt;set(<span class="stringliteral">&quot;compute global constants: temporaries&quot;</span>, RAPparams-&gt;get(<span class="stringliteral">&quot;compute global constants: temporaries&quot;</span>, <span class="keyword">false</span>));</div>
-<div class="line"><a id="l02288" name="l02288"></a><span class="lineno"> 2288</span>  RAPparams-&gt;set(<span class="stringliteral">&quot;compute global constants&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l02288" name="l02288"></a><span class="lineno"> 2288</span>  RAPparams-&gt;set(<span class="stringliteral">&quot;compute global constants&quot;</span>, RAPparams-&gt;get(<span class="stringliteral">&quot;compute global constants&quot;</span>, <span class="keyword">true</span>));</div>
 <div class="line"><a id="l02289" name="l02289"></a><span class="lineno"> 2289</span> </div>
 <div class="line"><a id="l02290" name="l02290"></a><span class="lineno"> 2290</span>  <span class="keywordflow">if</span> (pL.get&lt;<span class="keywordtype">bool</span>&gt;(<span class="stringliteral">&quot;rap: triple product&quot;</span>) == <span class="keyword">false</span> || isGPU) {</div>
 <div class="line"><a id="l02291" name="l02291"></a><span class="lineno"> 2291</span>    <span class="keywordflow">if</span> (pL.get&lt;<span class="keywordtype">bool</span>&gt;(<span class="stringliteral">&quot;rap: triple product&quot;</span>) &amp;&amp; isGPU)</div>

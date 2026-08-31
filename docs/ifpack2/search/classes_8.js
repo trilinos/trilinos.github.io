@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['icgsorthomanager_0',['icgsorthomanager',['../../../../belos/doc/html/class_belos_1_1_i_c_g_s_ortho_manager.html',1,'Belos::ICGSOrthoManager&lt; class ScalarType, class MV, class OP &gt;'],['../../../../anasazi/doc/html/class_anasazi_1_1_i_c_g_s_ortho_manager.html',1,'Anasazi::ICGSOrthoManager&lt; class ScalarType, class MV, class OP &gt;']]],
+  ['icgsorthomanager_0',['icgsorthomanager',['../../../../belos/doc/html/class_belos_1_1_i_c_g_s_ortho_manager.html',1,'Belos::ICGSOrthoManager&lt; class ScalarType, class MV, class OP, class DM &gt;'],['../../../../anasazi/doc/html/class_anasazi_1_1_i_c_g_s_ortho_manager.html',1,'Anasazi::ICGSOrthoManager&lt; class ScalarType, class MV, class OP &gt;']]],
   ['identitysolver_1',['IdentitySolver',['../class_ifpack2_1_1_identity_solver.html',1,'Ifpack2']]],
   ['ilukgraph_2',['IlukGraph',['../class_ifpack2_1_1_iluk_graph.html',1,'Ifpack2']]],
   ['ilut_3',['ILUT',['../class_ifpack2_1_1_i_l_u_t.html',1,'Ifpack2']]],
@@ -17,5 +17,6 @@ var searchData=
   ['is_5fcuda_14',['is_cuda',['../struct_ifpack2_1_1_block_helper_details_1_1is__cuda.html',1,'Ifpack2::BlockHelperDetails']]],
   ['is_5fhip_15',['is_hip',['../struct_ifpack2_1_1_block_helper_details_1_1is__hip.html',1,'Ifpack2::BlockHelperDetails']]],
   ['is_5fsycl_16',['is_sycl',['../struct_ifpack2_1_1_block_helper_details_1_1is__sycl.html',1,'Ifpack2::BlockHelperDetails']]],
-  ['iteration_17',['Iteration',['../../../../belos/doc/html/class_belos_1_1_iteration.html',1,'Belos']]]
+  ['iteration_17',['Iteration',['../../../../belos/doc/html/class_belos_1_1_iteration.html',1,'Belos']]],
+  ['iteration_3c_20scalartype_2c_20mv_2c_20op_2c_20dm_20_3e_18',['Iteration&lt; ScalarType, MV, OP, DM &gt;',['../../../../belos/doc/html/class_belos_1_1_iteration.html',1,'Belos']]]
 ];

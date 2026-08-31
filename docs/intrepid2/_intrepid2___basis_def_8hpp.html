@@ -173,8 +173,8 @@ template&lt;EOperator operatorType, ordinal_type spaceDim&gt; </div>
 </div><div class="memdoc">
 
 <p>Returns cardinality of Dk, i.e., the number of all derivatives of order k. </p>
-<p>The set of all partial derivatives of order k is isomorphic to the set of all multisets of cardinality k with elements taken from the sets {x}, {x,y}, and {x,y,z} in 1D, 2D, and 3D respectively. For example, the partial derivative <picture><source srcset="form_118_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$\displaystyle D\{1,2,1\}f = \frac{d^4 f}{dx dy^2 dz}$" src="form_118.png" width="124" height="31"/></picture> maps to the multiset <picture><source srcset="form_119_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$\{x, y, z\}$" src="form_119.png" width="43" height="14"/></picture> with multiplicities <picture><source srcset="form_120_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$\{1,2,1\}$" src="form_120.png" width="41" height="14"/></picture>. The number of all such multisets is given by the binomial coefficient </p><p class="formulaDsp">
-<picture><source srcset="form_121_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[       \begin{pmatrix} spaceDim + k - 1 \\ spaceDim - 1 \end{pmatrix}              \]" src="form_121.png" width="114" height="31"/></picture>
+<p>The set of all partial derivatives of order k is isomorphic to the set of all multisets of cardinality k with elements taken from the sets {x}, {x,y}, and {x,y,z} in 1D, 2D, and 3D respectively. For example, the partial derivative <picture><source srcset="form_119_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$\displaystyle D\{1,2,1\}f = \frac{d^4 f}{dx dy^2 dz}$" src="form_119.png" width="124" height="31"/></picture> maps to the multiset <picture><source srcset="form_120_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$\{x, y, z\}$" src="form_120.png" width="43" height="14"/></picture> with multiplicities <picture><source srcset="form_121_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$\{1,2,1\}$" src="form_121.png" width="41" height="14"/></picture>. The number of all such multisets is given by the binomial coefficient </p><p class="formulaDsp">
+<picture><source srcset="form_122_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[       \begin{pmatrix} spaceDim + k - 1 \\ spaceDim - 1 \end{pmatrix}              \]" src="form_122.png" width="114" height="31"/></picture>
 </p>
 <p> Therefore: </p><ul>
 <li>in 1D: cardinality = 1<br  />
@@ -238,11 +238,11 @@ template&lt;ordinal_type spaceDim&gt; </div>
 <p>By default, any implementation of <a class="el" href="class_intrepid2_1_1_basis.html" title="An abstract base class that defines interface for concrete basis implementations for Finite Element (...">Intrepid2::Basis</a> method returns partials of order k (specified by OPERATOR_Dk) as a multiset ordered by the lexicographical order of the partial derivatives multiplicities. For example, the 10 derivatives of order 3 in 3D are enumerated as: </p><pre class="fragment">D3={(3,0,0),(2,1,0),(2,0,1),(1,2,0),(1,1,1),(1,0,2),(0,3,0),(0,2,1),(0,1,2),(0,0,3)}
 </pre><p> The enumeration formula for this lexicographical order is </p><table class="doxtable">
 <tr>
-<td><picture><source srcset="form_113_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$i()            = 0$" src="form_113.png" width="38" height="14"/></picture>  </td><td>in 1D (only 1 derivative)  </td></tr>
+<td><picture><source srcset="form_114_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$i()            = 0$" src="form_114.png" width="38" height="14"/></picture>  </td><td>in 1D (only 1 derivative)  </td></tr>
 <tr>
-<td><picture><source srcset="form_114_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$i(yMult)      =yMult$" src="form_114.png" width="103" height="14"/></picture>  </td><td>in 2D  </td></tr>
+<td><picture><source srcset="form_115_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$i(yMult)      =yMult$" src="form_115.png" width="103" height="14"/></picture>  </td><td>in 2D  </td></tr>
 <tr>
-<td><picture><source srcset="form_115_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$i(yMult,zMult)=zMult+\sum_{r = 0}^{k-xMult} r$" src="form_115.png" width="223" height="18"/></picture> </td><td>in 3D  </td></tr>
+<td><picture><source srcset="form_116_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$i(yMult,zMult)=zMult+\sum_{r = 0}^{k-xMult} r$" src="form_116.png" width="223" height="18"/></picture> </td><td>in 3D  </td></tr>
 </table>
 <p>where the order k of Dk is defined by xMult + yMult + zMult. However, xMult is not really needed needed. Enumeration goes from 0 to ( (k+spaceDim-1) choose (spaceDim-1) )-1.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -361,14 +361,14 @@ template&lt;typename value_type &gt; </div>
   </dd>
 </dl>
 <p>The recurrence is  </p><p class="formulaDsp">
-<picture><source srcset="form_116_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
+<picture><source srcset="form_117_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
 P^{\alpha,\beta}_{n+1} = \left( a_n + b_n x\right) P^{\alpha,\beta}_n - c_n P^{\alpha,\beta}_{n-1}
-\]" src="form_116.png" width="184" height="18"/></picture>
+\]" src="form_117.png" width="184" height="18"/></picture>
 </p>
 <p>, where  </p><p class="formulaDsp">
-<picture><source srcset="form_117_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
+<picture><source srcset="form_118_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\[
 P^{\alpha,\beta}_0 = 1
-\]" src="form_117.png" width="49" height="16"/></picture>
+\]" src="form_118.png" width="49" height="16"/></picture>
 </p>
  
 <p class="definition">Definition at line <a class="el" href="_intrepid2___basis_def_8hpp_source.html#l00237">237</a> of file <a class="el" href="_intrepid2___basis_def_8hpp_source.html">Intrepid2_BasisDef.hpp</a>.</p>
