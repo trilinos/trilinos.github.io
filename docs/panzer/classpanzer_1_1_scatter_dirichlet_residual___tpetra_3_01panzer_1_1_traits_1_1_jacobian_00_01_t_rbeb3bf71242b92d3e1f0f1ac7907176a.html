@@ -78,6 +78,7 @@ $(function() {
 <a href="#pri-types">Private Types</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classpanzer_1_1_scatter_dirichlet_residual___tpetra_3_01panzer_1_1_traits_1_1_jacobian_00_01_t_r8332331f31278b6d1d30015a8545d2a8.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">panzer::ScatterDirichletResidual_Tpetra&lt; panzer::Traits::Jacobian, TRAITS, LO, GO, NodeT &gt; Class Template Reference</div></div>
 </div><!--header-->
@@ -148,6 +149,10 @@ Private Types</h2></td></tr>
 <tr class="separator:ad24161b8193d08d136555ad3ab1fb465"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75b2e2e2dff62399f4516ed889bc502a" id="r_a75b2e2e2dff62399f4516ed889bc502a"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classpanzer_1_1_tpetra_linear_obj_container.html">TpetraLinearObjContainer</a>&lt; double, LO, GO, NodeT &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_scatter_dirichlet_residual___tpetra_3_01panzer_1_1_traits_1_1_jacobian_00_01_t_rbeb3bf71242b92d3e1f0f1ac7907176a.html#a75b2e2e2dff62399f4516ed889bc502a">LOC</a></td></tr>
 <tr class="separator:a75b2e2e2dff62399f4516ed889bc502a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a853773a96626cc38d3769a7ea8f9b592" id="r_a853773a96626cc38d3769a7ea8f9b592"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_scatter_dirichlet_residual___tpetra_3_01panzer_1_1_traits_1_1_jacobian_00_01_t_rbeb3bf71242b92d3e1f0f1ac7907176a.html#a853773a96626cc38d3769a7ea8f9b592">LIDsDeviceView</a> = Kokkos::View&lt; const panzer::LocalOrdinal **, Kokkos::LayoutRight, PHX::Device &gt;</td></tr>
+<tr class="separator:a853773a96626cc38d3769a7ea8f9b592"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01247909c8b360880f35f81e0d019b17" id="r_a01247909c8b360880f35f81e0d019b17"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_scatter_dirichlet_residual___tpetra_3_01panzer_1_1_traits_1_1_jacobian_00_01_t_rbeb3bf71242b92d3e1f0f1ac7907176a.html#a01247909c8b360880f35f81e0d019b17">ScatterFieldDeviceView</a> = typename PHX::MDField&lt; const <a class="el" href="classpanzer_1_1_scatter_dirichlet_residual___tpetra_3_01panzer_1_1_traits_1_1_jacobian_00_01_t_rbeb3bf71242b92d3e1f0f1ac7907176a.html#ad24161b8193d08d136555ad3ab1fb465">ScalarT</a>, <a class="el" href="structpanzer_1_1_cell.html">Cell</a>, <a class="el" href="namespacepanzer.html#ad59a8ca472aaf73fb4b8725c6c5b92be">NODE</a> &gt;::array_type</td></tr>
+<tr class="separator:a01247909c8b360880f35f81e0d019b17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -174,8 +179,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a65782a1878ace537279092ca1fc75bf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad59e1377db5b982315f0e160fff00859" id="r_ad59e1377db5b982315f0e160fff00859"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_scatter_dirichlet_residual___tpetra_3_01panzer_1_1_traits_1_1_jacobian_00_01_t_rbeb3bf71242b92d3e1f0f1ac7907176a.html#ad59e1377db5b982315f0e160fff00859">local_side_id_</a></td></tr>
 <tr class="separator:ad59e1377db5b982315f0e160fff00859"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe4fa31d60aae37003aea7da5a78cb0d" id="r_abe4fa31d60aae37003aea7da5a78cb0d"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; typename <a class="el" href="classpanzer_1_1_tpetra_linear_obj_container.html#afcc4237d9a02fbdd1bca124ef2856706">LOC::VectorType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_scatter_dirichlet_residual___tpetra_3_01panzer_1_1_traits_1_1_jacobian_00_01_t_rbeb3bf71242b92d3e1f0f1ac7907176a.html#abe4fa31d60aae37003aea7da5a78cb0d">dirichletCounter_</a></td></tr>
-<tr class="separator:abe4fa31d60aae37003aea7da5a78cb0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a317480687f164cf815a88fbbecfb4300" id="r_a317480687f164cf815a88fbbecfb4300"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; typename <a class="el" href="classpanzer_1_1_tpetra_linear_obj_container.html#ad62827ff375bca5dce7c5e6a4566fd5c">LOC::MultiVectorType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_scatter_dirichlet_residual___tpetra_3_01panzer_1_1_traits_1_1_jacobian_00_01_t_rbeb3bf71242b92d3e1f0f1ac7907176a.html#a317480687f164cf815a88fbbecfb4300">dirichletCounter_</a></td></tr>
+<tr class="separator:a317480687f164cf815a88fbbecfb4300"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a238eb971250edd7a5a0f552ce49b5d81" id="r_a238eb971250edd7a5a0f552ce49b5d81"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_scatter_dirichlet_residual___tpetra_3_01panzer_1_1_traits_1_1_jacobian_00_01_t_rbeb3bf71242b92d3e1f0f1ac7907176a.html#a238eb971250edd7a5a0f552ce49b5d81">globalDataKey_</a></td></tr>
 <tr class="separator:a238eb971250edd7a5a0f552ce49b5d81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7aea686d4ed9175c135b75c0f07c8d10" id="r_a7aea686d4ed9175c135b75c0f07c8d10"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_tpetra_linear_obj_container.html">TpetraLinearObjContainer</a>&lt; double, LO, GO, NodeT &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_scatter_dirichlet_residual___tpetra_3_01panzer_1_1_traits_1_1_jacobian_00_01_t_rbeb3bf71242b92d3e1f0f1ac7907176a.html#a7aea686d4ed9175c135b75c0f07c8d10">tpetraContainer_</a></td></tr>
@@ -185,6 +190,21 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a68ef5e512a54cf94495915064d0a8b71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa60f68394a161ca35bb1d5c9cd5783e3" id="r_aa60f68394a161ca35bb1d5c9cd5783e3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; PHX::MDField&lt; const bool, <a class="el" href="structpanzer_1_1_cell.html">Cell</a>, <a class="el" href="namespacepanzer.html#ad59a8ca472aaf73fb4b8725c6c5b92be">NODE</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_scatter_dirichlet_residual___tpetra_3_01panzer_1_1_traits_1_1_jacobian_00_01_t_rbeb3bf71242b92d3e1f0f1ac7907176a.html#aa60f68394a161ca35bb1d5c9cd5783e3">applyBC_</a></td></tr>
 <tr class="separator:aa60f68394a161ca35bb1d5c9cd5783e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5dc2098060ca16681de08c8a7224212" id="r_af5dc2098060ca16681de08c8a7224212"><td class="memItemLeft" align="right" valign="top">decltype(Kokkos::create_mirror_view(Kokkos::HostSpace(), std::declval&lt; <a class="el" href="classpanzer_1_1_scatter_dirichlet_residual___tpetra_3_01panzer_1_1_traits_1_1_jacobian_00_01_t_rbeb3bf71242b92d3e1f0f1ac7907176a.html#a853773a96626cc38d3769a7ea8f9b592">LIDsDeviceView</a> &gt;()))&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_scatter_dirichlet_residual___tpetra_3_01panzer_1_1_traits_1_1_jacobian_00_01_t_rbeb3bf71242b92d3e1f0f1ac7907176a.html#af5dc2098060ca16681de08c8a7224212">lids_h_</a></td></tr>
+<tr class="separator:af5dc2098060ca16681de08c8a7224212"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5b330d143770507eff90fa585cfcced" id="r_af5b330d143770507eff90fa585cfcced"><td class="memItemLeft" align="right" valign="top">std::vector&lt; decltype(Kokkos::create_mirror_view(std::declval&lt; <a class="el" href="classpanzer_1_1_scatter_dirichlet_residual___tpetra_3_01panzer_1_1_traits_1_1_jacobian_00_01_t_rbeb3bf71242b92d3e1f0f1ac7907176a.html#a01247909c8b360880f35f81e0d019b17">ScatterFieldDeviceView</a> &gt;()))&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_scatter_dirichlet_residual___tpetra_3_01panzer_1_1_traits_1_1_jacobian_00_01_t_rbeb3bf71242b92d3e1f0f1ac7907176a.html#af5b330d143770507eff90fa585cfcced">scatterFields_h_</a></td></tr>
+<tr class="separator:af5b330d143770507eff90fa585cfcced"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67b55dd8674b8a402b40368229c5f5ec" id="r_a67b55dd8674b8a402b40368229c5f5ec"><td class="memItemLeft" align="right" valign="top">LOC::CrsMatrixType::nonconst_local_inds_host_view_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_scatter_dirichlet_residual___tpetra_3_01panzer_1_1_traits_1_1_jacobian_00_01_t_rbeb3bf71242b92d3e1f0f1ac7907176a.html#a67b55dd8674b8a402b40368229c5f5ec">rowIndices_</a></td></tr>
+<tr class="separator:a67b55dd8674b8a402b40368229c5f5ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada58736d9d953ec9241a2691d48eff92" id="r_ada58736d9d953ec9241a2691d48eff92"><td class="memItemLeft" align="right" valign="top">LOC::CrsMatrixType::nonconst_values_host_view_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_scatter_dirichlet_residual___tpetra_3_01panzer_1_1_traits_1_1_jacobian_00_01_t_rbeb3bf71242b92d3e1f0f1ac7907176a.html#ada58736d9d953ec9241a2691d48eff92">rowValues_</a></td></tr>
+<tr class="separator:ada58736d9d953ec9241a2691d48eff92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5357882344c14eb19a44086694e660b4" id="r_a5357882344c14eb19a44086694e660b4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_scatter_dirichlet_residual___tpetra_3_01panzer_1_1_traits_1_1_jacobian_00_01_t_rbeb3bf71242b92d3e1f0f1ac7907176a.html#a5357882344c14eb19a44086694e660b4">jacRow_</a></td></tr>
+<tr class="separator:a5357882344c14eb19a44086694e660b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:ace5bd237524e6104f99d598e930153fd" id="r_ace5bd237524e6104f99d598e930153fd"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_scatter_dirichlet_residual___tpetra_3_01panzer_1_1_traits_1_1_jacobian_00_01_t_rbeb3bf71242b92d3e1f0f1ac7907176a.html#ace5bd237524e6104f99d598e930153fd">lidsAreHostResident_</a></td></tr>
+<tr class="separator:ace5bd237524e6104f99d598e930153fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -208,7 +228,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename TRAITS, typename LO, typename GO, typename NodeT&gt;<br />
 class panzer::ScatterDirichletResidual_Tpetra&lt; panzer::Traits::Jacobian, TRAITS, LO, GO, NodeT &gt;</div>
-<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00204">204</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00211">211</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="ad24161b8193d08d136555ad3ab1fb465" name="ad24161b8193d08d136555ad3ab1fb465"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad24161b8193d08d136555ad3ab1fb465">&#9670;&#160;</a></span>ScalarT</h2>
@@ -232,7 +252,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00228">228</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00235">235</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -258,7 +278,60 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00229">229</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00236">236</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a853773a96626cc38d3769a7ea8f9b592" name="a853773a96626cc38d3769a7ea8f9b592"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a853773a96626cc38d3769a7ea8f9b592">&#9670;&#160;</a></span>LIDsDeviceView</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classpanzer_1_1_scatter_dirichlet_residual___tpetra.html">panzer::ScatterDirichletResidual_Tpetra</a>&lt; <a class="el" href="structpanzer_1_1_traits_1_1_jacobian.html">panzer::Traits::Jacobian</a>, TRAITS, LO, GO, NodeT &gt;::LIDsDeviceView =  Kokkos::View&lt;const panzer::LocalOrdinal**,Kokkos::LayoutRight,PHX::Device&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Scratch reused across <a class="el" href="classpanzer_1_1_scatter_dirichlet_residual___tpetra_3_01panzer_1_1_traits_1_1_jacobian_00_01_t_rbeb3bf71242b92d3e1f0f1ac7907176a.html#ac3572660a0c914b0b01f71de6762bcb6">evaluateFields()</a> calls, so the scatter loop does no allocation of its own. Each is grown on demand and never shrunk, so a buffer always fits the largest request seen so far. </p>
+
+<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00278">278</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a01247909c8b360880f35f81e0d019b17" name="a01247909c8b360880f35f81e0d019b17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01247909c8b360880f35f81e0d019b17">&#9670;&#160;</a></span>ScatterFieldDeviceView</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classpanzer_1_1_scatter_dirichlet_residual___tpetra.html">panzer::ScatterDirichletResidual_Tpetra</a>&lt; <a class="el" href="structpanzer_1_1_traits_1_1_jacobian.html">panzer::Traits::Jacobian</a>, TRAITS, LO, GO, NodeT &gt;::ScatterFieldDeviceView =  typename PHX::MDField&lt;const <a class="el" href="classpanzer_1_1_scatter_dirichlet_residual___tpetra_3_01panzer_1_1_traits_1_1_jacobian_00_01_t_rbeb3bf71242b92d3e1f0f1ac7907176a.html#ad24161b8193d08d136555ad3ab1fb465">ScalarT</a>,<a class="el" href="structpanzer_1_1_cell.html">Cell</a>,<a class="el" href="namespacepanzer.html#ad59a8ca472aaf73fb4b8725c6c5b92be">NODE</a>&gt;::array_type</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00279">279</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -289,7 +362,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00210">210</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00217">217</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -321,7 +394,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__impl_8hpp_source.html#l00586">586</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__impl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__impl_8hpp_source.html#l00601">601</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__impl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -371,7 +444,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__impl_8hpp_source.html#l00657">657</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__impl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__impl_8hpp_source.html#l00672">672</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__impl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -403,7 +476,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__impl_8hpp_source.html#l00638">638</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__impl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__impl_8hpp_source.html#l00653">653</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__impl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -425,7 +498,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__impl_8hpp_source.html#l00682">682</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__impl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__impl_8hpp_source.html#l00697">697</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__impl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -457,7 +530,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 
 <p>Implements <a class="el" href="classpanzer_1_1_cloneable_evaluator.html#ae78ab7b517aeba4d93c007cc5d3752f3">panzer::CloneableEvaluator</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00223">223</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00230">230</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -484,7 +557,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00232">232</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00239">239</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -510,7 +583,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00235">235</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00242">242</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -536,7 +609,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00239">239</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00246">246</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -562,7 +635,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00240">240</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00247">247</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -588,7 +661,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00246">246</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00253">253</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -614,7 +687,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00248">248</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00255">255</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -640,7 +713,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00249">249</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00256">256</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -666,7 +739,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00251">251</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00258">258</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -692,12 +765,12 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00252">252</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00259">259</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
 
 </div>
 </div>
-<a id="abe4fa31d60aae37003aea7da5a78cb0d" name="abe4fa31d60aae37003aea7da5a78cb0d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe4fa31d60aae37003aea7da5a78cb0d">&#9670;&#160;</a></span>dirichletCounter_</h2>
+<a id="a317480687f164cf815a88fbbecfb4300" name="a317480687f164cf815a88fbbecfb4300"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a317480687f164cf815a88fbbecfb4300">&#9670;&#160;</a></span>dirichletCounter_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -708,7 +781,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Teuchos::RCP&lt;typename <a class="el" href="classpanzer_1_1_tpetra_linear_obj_container.html#afcc4237d9a02fbdd1bca124ef2856706">LOC::VectorType</a>&gt; <a class="el" href="classpanzer_1_1_scatter_dirichlet_residual___tpetra.html">panzer::ScatterDirichletResidual_Tpetra</a>&lt; <a class="el" href="structpanzer_1_1_traits_1_1_jacobian.html">panzer::Traits::Jacobian</a>, TRAITS, LO, GO, NodeT &gt;::dirichletCounter_</td>
+          <td class="memname">Teuchos::RCP&lt;typename <a class="el" href="classpanzer_1_1_tpetra_linear_obj_container.html#ad62827ff375bca5dce7c5e6a4566fd5c">LOC::MultiVectorType</a>&gt; <a class="el" href="classpanzer_1_1_scatter_dirichlet_residual___tpetra.html">panzer::ScatterDirichletResidual_Tpetra</a>&lt; <a class="el" href="structpanzer_1_1_traits_1_1_jacobian.html">panzer::Traits::Jacobian</a>, TRAITS, LO, GO, NodeT &gt;::dirichletCounter_</td>
         </tr>
       </table>
   </td>
@@ -718,7 +791,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00254">254</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00261">261</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -744,7 +817,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00258">258</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00265">265</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -770,7 +843,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00259">259</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00266">266</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -798,7 +871,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 
 <p>If set to true, allows runtime disabling of dirichlet BCs on node-by-node basis. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00262">262</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00269">269</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -824,7 +897,165 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00265">265</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00272">272</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ace5bd237524e6104f99d598e930153fd" name="ace5bd237524e6104f99d598e930153fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace5bd237524e6104f99d598e930153fd">&#9670;&#160;</a></span>lidsAreHostResident_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool <a class="el" href="classpanzer_1_1_scatter_dirichlet_residual___tpetra.html">panzer::ScatterDirichletResidual_Tpetra</a>&lt; <a class="el" href="structpanzer_1_1_traits_1_1_jacobian.html">panzer::Traits::Jacobian</a>, TRAITS, LO, GO, NodeT &gt;::lidsAreHostResident_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">    std::is_same&lt;typename LIDsDeviceView::memory_space,Kokkos::HostSpace&gt;::value</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00284">284</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="af5dc2098060ca16681de08c8a7224212" name="af5dc2098060ca16681de08c8a7224212"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5dc2098060ca16681de08c8a7224212">&#9670;&#160;</a></span>lids_h_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">decltype(Kokkos::create_mirror_view(Kokkos::HostSpace(),std::declval&lt;<a class="el" href="classpanzer_1_1_scatter_dirichlet_residual___tpetra_3_01panzer_1_1_traits_1_1_jacobian_00_01_t_rbeb3bf71242b92d3e1f0f1ac7907176a.html#a853773a96626cc38d3769a7ea8f9b592">LIDsDeviceView</a>&gt;())) <a class="el" href="classpanzer_1_1_scatter_dirichlet_residual___tpetra.html">panzer::ScatterDirichletResidual_Tpetra</a>&lt; <a class="el" href="structpanzer_1_1_traits_1_1_jacobian.html">panzer::Traits::Jacobian</a>, TRAITS, LO, GO, NodeT &gt;::lids_h_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00287">287</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="af5b330d143770507eff90fa585cfcced" name="af5b330d143770507eff90fa585cfcced"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5b330d143770507eff90fa585cfcced">&#9670;&#160;</a></span>scatterFields_h_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;decltype(Kokkos::create_mirror_view(std::declval&lt;<a class="el" href="classpanzer_1_1_scatter_dirichlet_residual___tpetra_3_01panzer_1_1_traits_1_1_jacobian_00_01_t_rbeb3bf71242b92d3e1f0f1ac7907176a.html#a01247909c8b360880f35f81e0d019b17">ScatterFieldDeviceView</a>&gt;()))&gt; <a class="el" href="classpanzer_1_1_scatter_dirichlet_residual___tpetra.html">panzer::ScatterDirichletResidual_Tpetra</a>&lt; <a class="el" href="structpanzer_1_1_traits_1_1_jacobian.html">panzer::Traits::Jacobian</a>, TRAITS, LO, GO, NodeT &gt;::scatterFields_h_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00288">288</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a67b55dd8674b8a402b40368229c5f5ec" name="a67b55dd8674b8a402b40368229c5f5ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67b55dd8674b8a402b40368229c5f5ec">&#9670;&#160;</a></span>rowIndices_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LOC::CrsMatrixType::nonconst_local_inds_host_view_type <a class="el" href="classpanzer_1_1_scatter_dirichlet_residual___tpetra.html">panzer::ScatterDirichletResidual_Tpetra</a>&lt; <a class="el" href="structpanzer_1_1_traits_1_1_jacobian.html">panzer::Traits::Jacobian</a>, TRAITS, LO, GO, NodeT &gt;::rowIndices_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00289">289</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ada58736d9d953ec9241a2691d48eff92" name="ada58736d9d953ec9241a2691d48eff92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada58736d9d953ec9241a2691d48eff92">&#9670;&#160;</a></span>rowValues_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LOC::CrsMatrixType::nonconst_values_host_view_type <a class="el" href="classpanzer_1_1_scatter_dirichlet_residual___tpetra.html">panzer::ScatterDirichletResidual_Tpetra</a>&lt; <a class="el" href="structpanzer_1_1_traits_1_1_jacobian.html">panzer::Traits::Jacobian</a>, TRAITS, LO, GO, NodeT &gt;::rowValues_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00290">290</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a5357882344c14eb19a44086694e660b4" name="a5357882344c14eb19a44086694e660b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5357882344c14eb19a44086694e660b4">&#9670;&#160;</a></span>jacRow_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;double&gt; <a class="el" href="classpanzer_1_1_scatter_dirichlet_residual___tpetra.html">panzer::ScatterDirichletResidual_Tpetra</a>&lt; <a class="el" href="structpanzer_1_1_traits_1_1_jacobian.html">panzer::Traits::Jacobian</a>, TRAITS, LO, GO, NodeT &gt;::jacRow_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html#l00291">291</a> of file <a class="el" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp_source.html">Panzer_ScatterDirichletResidual_Tpetra_decl.hpp</a>.</p>
 
 </div>
 </div>

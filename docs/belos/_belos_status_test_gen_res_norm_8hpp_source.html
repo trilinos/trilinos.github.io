@@ -617,10 +617,24 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span> </div>
 <div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span>} <span class="comment">// end namespace Belos</span></div>
 <div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span> </div>
-<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span><span class="preprocessor">#endif </span><span class="comment">/* BELOS_STATUS_TEST_RESNORM_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span><span class="preprocessor">#ifdef HAVE_BELOS_TPETRA</span></div>
+<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span><span class="preprocessor">#include &quot;<a class="code" href="_belos_tpetra_e_t_i_helpers_8hpp.html">BelosTpetraETIHelpers.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span> </div>
+<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span><span class="preprocessor">#define BELOS_TPETRA_STATUSTESTGENRESNORM_NOEXTERN_CALL(SC, LO, GO, NT)            \</span></div>
+<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span><span class="preprocessor">  BELOS_TPETRA_CALL(Belos::StatusTestGenResNorm, SC, LO, GO, NT)</span></div>
+<div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span> </div>
+<div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span><span class="preprocessor">#define BELOS_TPETRA_STATUSTESTGENRESNORM_EXTERN_CALL(SC, LO, GO, NT)              \</span></div>
+<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span><span class="preprocessor">  BELOS_TPETRA_EXTERN_CALL(Belos::StatusTestGenResNorm, SC, LO, GO, NT)</span></div>
+<div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span> </div>
+<div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span>TPETRA_INSTANTIATE_SLGN_NO_ORDINAL_SCALAR(BELOS_TPETRA_STATUSTESTGENRESNORM_EXTERN_CALL)</div>
+<div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span> </div>
+<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span> </div>
+<div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span><span class="preprocessor">#endif </span><span class="comment">/* BELOS_STATUS_TEST_RESNORM_H */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="a_belos_linear_problem_8hpp_html"><div class="ttname"><a href="_belos_linear_problem_8hpp.html">BelosLinearProblem.hpp</a></div><div class="ttdoc">Class which describes the linear problem to be solved by the iterative solver.</div></div>
 <div class="ttc" id="a_belos_multi_vec_traits_8hpp_html"><div class="ttname"><a href="_belos_multi_vec_traits_8hpp.html">BelosMultiVecTraits.hpp</a></div><div class="ttdoc">Declaration of basic traits for the multivector type.</div></div>
 <div class="ttc" id="a_belos_status_test_res_norm_8hpp_html"><div class="ttname"><a href="_belos_status_test_res_norm_8hpp.html">BelosStatusTestResNorm.hpp</a></div><div class="ttdoc">Belos::StatusTest abstract class for specifying a residual norm stopping criteria.</div></div>
+<div class="ttc" id="a_belos_tpetra_e_t_i_helpers_8hpp_html"><div class="ttname"><a href="_belos_tpetra_e_t_i_helpers_8hpp.html">BelosTpetraETIHelpers.hpp</a></div></div>
 <div class="ttc" id="aclass_belos_1_1_operator_html"><div class="ttname"><a href="class_belos_1_1_operator.html">Belos::Operator</a></div><div class="ttdoc">Alternative run-time polymorphic interface for operators.</div><div class="ttdef"><b>Definition</b> <a href="_belos_operator_8hpp_source.html#l00048">BelosOperator.hpp:48</a></div></div>
 <div class="ttc" id="aclass_belos_1_1_operator_html_a8db7474edfb248bab4b2a6e66e27720e"><div class="ttname"><a href="class_belos_1_1_operator.html#a8db7474edfb248bab4b2a6e66e27720e">Belos::Operator::Operator</a></div><div class="ttdeci">Operator()</div><div class="ttdoc">Default constructor (does nothing).</div><div class="ttdef"><b>Definition</b> <a href="_belos_operator_8hpp_source.html#l00054">BelosOperator.hpp:54</a></div></div>
 <div class="ttc" id="aclass_belos_1_1_status_test_error_html"><div class="ttname"><a href="class_belos_1_1_status_test_error.html">Belos::StatusTestError</a></div><div class="ttdoc">Exception thrown to signal error in a status test during Belos::StatusTest::checkStatus().</div><div class="ttdef"><b>Definition</b> <a href="_belos_status_test_8hpp_source.html#l00041">BelosStatusTest.hpp:42</a></div></div>

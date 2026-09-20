@@ -1,7 +1,7 @@
 var searchData=
 [
   ['fabsop_0',['fabsop',['../class_sacado_1_1_m_p_1_1_f_abs_op.html',1,'Sacado::MP::FAbsOp&lt; T &gt;'],['../class_sacado_1_1_e_t_p_c_e_1_1_f_abs_op.html',1,'Sacado::ETPCE::FAbsOp&lt; ExprT &gt;']]],
-  ['fabsop_3c_20t_2c_20exprspecmpvector_20_3e_1',['FAbsOp&lt; T, ExprSpecMPVector &gt;',['../class_sacado_1_1_fad_1_1_exp_1_1_f_abs_op_3_01_t_00_01_expr_spec_m_p_vector_01_4.html',1,'Sacado::Fad::Exp']]],
+  ['fabsop_3c_20t_2c_20exprspecmpvector_20_3e_1',['FAbsOp&lt; T, ExprSpecMPVector &gt;',['../class_sacado_1_1_fad_1_1_f_abs_op_3_01_t_00_01_expr_spec_m_p_vector_01_4.html',1,'Sacado::Fad']]],
   ['flatarraytype_2',['FlatArrayType',['../struct_kokkos_1_1_flat_array_type.html',1,'Kokkos']]],
   ['flatarraytype_3c_20view_3c_20d_2c_20p_2e_2e_2e_20_3e_2c_20typename_20std_3a_3aenable_5fif_3c_20is_5fview_5fmp_5fvector_3c_20view_3c_20d_2c_20p_2e_2e_2e_20_3e_20_3e_3a_3avalue_20_3e_3a_3atype_20_3e_3',['FlatArrayType&lt; View&lt; D, P... &gt;, typename std::enable_if&lt; is_view_mp_vector&lt; View&lt; D, P... &gt; &gt;::value &gt;::type &gt;',['../struct_kokkos_1_1_flat_array_type_3_01_view_3_01_d_00_01_p_8_8_8_01_4_00_01typename_01std_1_1enae324a089e5e7a1eca0331104488923d2.html',1,'Kokkos']]],
   ['flatarraytype_3c_20view_3c_20d_2c_20p_2e_2e_2e_20_3e_2c_20typename_20std_3a_3aenable_5fif_3c_20is_5fview_5fuq_5fpce_3c_20view_3c_20d_2c_20p_2e_2e_2e_20_3e_20_3e_3a_3avalue_20_3e_3a_3atype_20_3e_4',['FlatArrayType&lt; View&lt; D, P... &gt;, typename std::enable_if&lt; is_view_uq_pce&lt; View&lt; D, P... &gt; &gt;::value &gt;::type &gt;',['../struct_kokkos_1_1_flat_array_type_3_01_view_3_01_d_00_01_p_8_8_8_01_4_00_01typename_01std_1_1ena47d25d60f0bc449388626e64bf4edf7e.html',1,'Kokkos']]],

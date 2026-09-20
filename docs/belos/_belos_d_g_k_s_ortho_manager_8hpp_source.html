@@ -1692,13 +1692,26 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01776" name="l01776"></a><span class="lineno"> 1776</span> </div>
 <div class="line"><a id="l01777" name="l01777"></a><span class="lineno"> 1777</span>} <span class="comment">// namespace Belos</span></div>
 <div class="line"><a id="l01778" name="l01778"></a><span class="lineno"> 1778</span> </div>
-<div class="line"><a id="l01779" name="l01779"></a><span class="lineno"> 1779</span><span class="preprocessor">#endif </span><span class="comment">// BELOS_DGKS_ORTHOMANAGER_HPP</span></div>
-<div class="line"><a id="l01780" name="l01780"></a><span class="lineno"> 1780</span> </div>
+<div class="line"><a id="l01779" name="l01779"></a><span class="lineno"> 1779</span><span class="preprocessor">#ifdef HAVE_BELOS_TPETRA</span></div>
+<div class="line"><a id="l01780" name="l01780"></a><span class="lineno"> 1780</span><span class="preprocessor">#include &quot;<a class="code" href="_belos_tpetra_e_t_i_helpers_8hpp.html">BelosTpetraETIHelpers.hpp</a>&quot;</span></div>
+<div class="line"><a id="l01781" name="l01781"></a><span class="lineno"> 1781</span> </div>
+<div class="line"><a id="l01782" name="l01782"></a><span class="lineno"> 1782</span><span class="preprocessor">#define BELOS_TPETRA_DGKSORTHOMANAGER_NOEXTERN_CALL(SC, LO, GO, NT)            \</span></div>
+<div class="line"><a id="l01783" name="l01783"></a><span class="lineno"> 1783</span><span class="preprocessor">  BELOS_TPETRA_CALL(Belos::DGKSOrthoManager, SC, LO, GO, NT)</span></div>
+<div class="line"><a id="l01784" name="l01784"></a><span class="lineno"> 1784</span> </div>
+<div class="line"><a id="l01785" name="l01785"></a><span class="lineno"> 1785</span><span class="preprocessor">#define BELOS_TPETRA_DGKSORTHOMANAGER_EXTERN_CALL(SC, LO, GO, NT)              \</span></div>
+<div class="line"><a id="l01786" name="l01786"></a><span class="lineno"> 1786</span><span class="preprocessor">  BELOS_TPETRA_EXTERN_CALL(Belos::DGKSOrthoManager, SC, LO, GO, NT)</span></div>
+<div class="line"><a id="l01787" name="l01787"></a><span class="lineno"> 1787</span> </div>
+<div class="line"><a id="l01788" name="l01788"></a><span class="lineno"> 1788</span>TPETRA_INSTANTIATE_SLGN_NO_ORDINAL_SCALAR(BELOS_TPETRA_DGKSORTHOMANAGER_EXTERN_CALL)</div>
+<div class="line"><a id="l01789" name="l01789"></a><span class="lineno"> 1789</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l01790" name="l01790"></a><span class="lineno"> 1790</span> </div>
+<div class="line"><a id="l01791" name="l01791"></a><span class="lineno"> 1791</span><span class="preprocessor">#endif </span><span class="comment">// BELOS_DGKS_ORTHOMANAGER_HPP</span></div>
+<div class="line"><a id="l01792" name="l01792"></a><span class="lineno"> 1792</span> </div>
 <div class="ttc" id="a_belos_config_defs_8hpp_html"><div class="ttname"><a href="_belos_config_defs_8hpp.html">BelosConfigDefs.hpp</a></div><div class="ttdoc">Belos header file which uses auto-configuration information to include necessary C++ headers.</div></div>
 <div class="ttc" id="a_belos_dense_mat_traits_8hpp_html"><div class="ttname"><a href="_belos_dense_mat_traits_8hpp.html">BelosDenseMatTraits.hpp</a></div></div>
 <div class="ttc" id="a_belos_mat_ortho_manager_8hpp_html"><div class="ttname"><a href="_belos_mat_ortho_manager_8hpp.html">BelosMatOrthoManager.hpp</a></div><div class="ttdoc">Templated virtual class for providing orthogonalization/orthonormalization methods with matrix-based ...</div></div>
 <div class="ttc" id="a_belos_multi_vec_traits_8hpp_html"><div class="ttname"><a href="_belos_multi_vec_traits_8hpp.html">BelosMultiVecTraits.hpp</a></div><div class="ttdoc">Declaration of basic traits for the multivector type.</div></div>
 <div class="ttc" id="a_belos_operator_traits_8hpp_html"><div class="ttname"><a href="_belos_operator_traits_8hpp.html">BelosOperatorTraits.hpp</a></div><div class="ttdoc">Class which defines basic traits for the operator type.</div></div>
+<div class="ttc" id="a_belos_tpetra_e_t_i_helpers_8hpp_html"><div class="ttname"><a href="_belos_tpetra_e_t_i_helpers_8hpp.html">BelosTpetraETIHelpers.hpp</a></div></div>
 <div class="ttc" id="aclass_belos_1_1_d_g_k_s_ortho_manager_html"><div class="ttname"><a href="class_belos_1_1_d_g_k_s_ortho_manager.html">Belos::DGKSOrthoManager</a></div><div class="ttdoc">An implementation of the Belos::MatOrthoManager that performs orthogonalization using (potentially) m...</div><div class="ttdef"><b>Definition</b> <a href="_belos_d_g_k_s_ortho_manager_8hpp_source.html#l00049">BelosDGKSOrthoManager.hpp:51</a></div></div>
 <div class="ttc" id="aclass_belos_1_1_d_g_k_s_ortho_manager_html_a128fbd0bc39775f63a465d730512adef"><div class="ttname"><a href="class_belos_1_1_d_g_k_s_ortho_manager.html#a128fbd0bc39775f63a465d730512adef">Belos::DGKSOrthoManager::normalize</a></div><div class="ttdeci">int normalize(MV &amp;X, Teuchos::RCP&lt; DM &gt; B) const</div><div class="ttdoc">This method calls normalize(X,Teuchos::null,B); see documentation for that function.</div><div class="ttdef"><b>Definition</b> <a href="_belos_d_g_k_s_ortho_manager_8hpp_source.html#l00304">BelosDGKSOrthoManager.hpp:304</a></div></div>
 <div class="ttc" id="aclass_belos_1_1_d_g_k_s_ortho_manager_html_a148407b260a29a7fdae842004d3e36cd"><div class="ttname"><a href="class_belos_1_1_d_g_k_s_ortho_manager.html#a148407b260a29a7fdae842004d3e36cd">Belos::DGKSOrthoManager::sing_tol_fast_</a></div><div class="ttdeci">static const MagnitudeType sing_tol_fast_</div><div class="ttdoc">Singular block detection threshold (fast).</div><div class="ttdef"><b>Definition</b> <a href="_belos_d_g_k_s_ortho_manager_8hpp_source.html#l00445">BelosDGKSOrthoManager.hpp:445</a></div></div>

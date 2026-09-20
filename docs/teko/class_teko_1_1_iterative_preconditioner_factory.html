@@ -183,19 +183,19 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class which applies a preconditioner repeatedly. The inherit assumption is that the preconditioner corresponds to a residual correction. </p>
-<p>A class which applies a preconditioner repeatedly. The inherit assumption is that the preconditioner corresponds to a residual correction. For a linear operator <picture><source srcset="form_45_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$A$" src="form_45.png" width="10" height="10"/></picture> preconditioned by <picture><source srcset="form_79_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$P^{-1}$" src="form_79.png" width="23" height="11"/></picture> the initial residual correction is</p>
-<p><picture><source srcset="form_80_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$
+<p>A class which applies a preconditioner repeatedly. The inherit assumption is that the preconditioner corresponds to a residual correction. For a linear operator <picture><source srcset="form_61_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$A$" src="form_61.png"/></picture> preconditioned by <picture><source srcset="form_94_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$P^{-1}$" src="form_94.png"/></picture> the initial residual correction is</p>
+<p><picture><source srcset="form_95_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$
   e_0 = P^{-1} r_0.
-  $" src="form_80.png" width="65" height="14"/></picture></p>
-<p>Now because the preconditioner approximates <picture><source srcset="form_81_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$A^{-1}$" src="form_81.png" width="23" height="11"/></picture> we have <picture><source srcset="form_82_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$r_1 = r_0 - A e_0$" src="form_82.png" width="75" height="13"/></picture>. This leads to the following residual correction scheme</p>
-<p><picture><source srcset="form_83_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$
+  $" src="form_95.png"/></picture></p>
+<p>Now because the preconditioner approximates <picture><source srcset="form_1_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$A^{-1}$" src="form_1.png"/></picture> we have <picture><source srcset="form_96_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$r_1 = r_0 - A e_0$" src="form_96.png"/></picture>. This leads to the following residual correction scheme</p>
+<p><picture><source srcset="form_97_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$
   r_i = (I - A P^{-1})^i r_0.
-  $" src="form_83.png" width="110" height="15"/></picture></p>
+  $" src="form_97.png"/></picture></p>
 <p>An additional application of the preconditioner will give the $i^{th}$ correction</p>
-<p><picture><source srcset="form_84_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$
+<p><picture><source srcset="form_98_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$
   e_i = P^{-1} \sum_{j=0}^i r_j.
-  $" src="form_84.png" width="99" height="19"/></picture></p>
-<p>This factory takes a preconditioner (or inverse) factory and constructs <picture><source srcset="form_79_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$P^{-1}$" src="form_79.png" width="23" height="11"/></picture>, and then applies it, as outlined above, a user specified number of times.</p>
+  $" src="form_98.png"/></picture></p>
+<p>This factory takes a preconditioner (or inverse) factory and constructs <picture><source srcset="form_94_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$P^{-1}$" src="form_94.png"/></picture>, and then applies it, as outlined above, a user specified number of times.</p>
 <p>Similar to the other preconditioner in Teko this class can be constructed through an XML file. For example: </p><div class="fragment"><div class="line">&lt;ParameterList name=<span class="stringliteral">&quot;Iterative Solve&quot;</span>&gt;</div>
 <div class="line">  &lt;Parameter name=<span class="stringliteral">&quot;Type&quot;</span> type=<span class="stringliteral">&quot;string&quot;</span> value=<span class="stringliteral">&quot;Iterative Preconditioner&quot;</span>/&gt;</div>
 <div class="line">  &lt;Parameter name=<span class="stringliteral">&quot;Preconditioner Type&quot;</span> type=<span class="stringliteral">&quot;string&quot;</span> value=<span class="stringliteral">&quot;ML&quot;</span>/&gt;</div>
@@ -253,7 +253,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Construct a preconditioner factory that applies a specified preconditioner, a fixed number of times.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">correctionNum</td><td>The correction number to be returned by the preconditioner operator. If the preconditioner is only applied once than <code>correctionNum=0</code> and <picture><source srcset="form_85_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$e_0$" src="form_85.png" width="10" height="9"/></picture> is returned. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">correctionNum</td><td>The correction number to be returned by the preconditioner operator. If the preconditioner is only applied once than <code>correctionNum=0</code> and <picture><source srcset="form_99_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$e_0$" src="form_99.png"/></picture> is returned. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">precFactory</td><td>Factory used to construct the preconditioner</td></tr>
   </table>
   </dd>
@@ -292,7 +292,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Construct a preconditioner factory that applies a specified preconditioner, a fixed number of times.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">correctionNum</td><td>The correction number to be returned by the preconditioner operator. If the preconditioner is only applied once than <code>correctionNum=0</code> and <picture><source srcset="form_85_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$e_0$" src="form_85.png" width="10" height="9"/></picture> is returned. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">correctionNum</td><td>The correction number to be returned by the preconditioner operator. If the preconditioner is only applied once than <code>correctionNum=0</code> and <picture><source srcset="form_99_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$e_0$" src="form_99.png"/></picture> is returned. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">precFactory</td><td>Factory used to construct the preconditioner</td></tr>
   </table>
   </dd>

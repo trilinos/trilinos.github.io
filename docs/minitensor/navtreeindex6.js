@@ -1,5 +1,6 @@
 var NAVTREEINDEX6 =
 {
+"structminitensor_1_1_newton_with_line_search_step.html":[6,9,14],
 "structminitensor_1_1_step_base.html":[6,9,12],
 "structminitensor_1_1_trust_region_dog_leg_gradient.html":[6,9,11],
 "structminitensor_1_1_trust_region_dog_leg_value.html":[6,9,10],

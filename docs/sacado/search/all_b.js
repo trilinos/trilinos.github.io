@@ -1,8 +1,8 @@
 var searchData=
 [
   ['name_0',['name',['../class_sacado_1_1_parameter_family_base.html#acfcae6d0c2979ab085703eb0031fc878',1,'Sacado::ParameterFamilyBase']]],
-  ['nested_1',['nested',['../struct_sacado_1_1_fad_1_1_exp_1_1_power_impl_1_1_nested.html',1,'Sacado::Fad::Exp::PowerImpl::Nested'],['../struct_sacado_1_1_fad_1_1_power_impl_1_1_nested.html',1,'Sacado::Fad::PowerImpl::Nested']]],
-  ['nestedsimd_2',['nestedsimd',['../struct_sacado_1_1_fad_1_1_exp_1_1_power_impl_1_1_nested_simd.html',1,'Sacado::Fad::Exp::PowerImpl::NestedSimd'],['../struct_sacado_1_1_fad_1_1_power_impl_1_1_nested_simd.html',1,'Sacado::Fad::PowerImpl::NestedSimd']]],
+  ['nested_1',['Nested',['../struct_sacado_1_1_fad_1_1_power_impl_1_1_nested.html',1,'Sacado::Fad::PowerImpl']]],
+  ['nestedsimd_2',['NestedSimd',['../struct_sacado_1_1_fad_1_1_power_impl_1_1_nested_simd.html',1,'Sacado::Fad::PowerImpl']]],
   ['next_3',['next',['../struct_sacado_1_1mpl_1_1next.html',1,'Sacado::mpl']]],
   ['next_3c_20range_5fc_5fiterator_3c_20range_2c_20pos_20_3e_20_3e_4',['next&lt; range_c_iterator&lt; Range, Pos &gt; &gt;',['../struct_sacado_1_1mpl_1_1next_3_01range__c__iterator_3_01_range_00_01_pos_01_4_01_4.html',1,'Sacado::mpl']]],
   ['next_3c_20vector_5fiterator_3c_20vector_2c_20pos_20_3e_20_3e_5',['next&lt; vector_iterator&lt; Vector, Pos &gt; &gt;',['../struct_sacado_1_1mpl_1_1next_3_01vector__iterator_3_01_vector_00_01_pos_01_4_01_4.html',1,'Sacado::mpl']]],

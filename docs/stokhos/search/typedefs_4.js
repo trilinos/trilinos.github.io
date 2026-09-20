@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['k_5fiterator_0',['k_iterator',['../class_stokhos_1_1_sparse3_tensor.html#a676d438054dc3feebcb8a0cfe1951e48',1,'Stokhos::Sparse3Tensor']]],
-  ['k_5freverse_5fiterator_1',['k_reverse_iterator',['../class_stokhos_1_1_sparse3_tensor.html#ac7c789f2538a2cabfd4f6c4938a44c29',1,'Stokhos::Sparse3Tensor']]],
-  ['kj_5fiterator_2',['kj_iterator',['../class_stokhos_1_1_sparse3_tensor.html#acd4885417c6a51850230ba15fdd588a7',1,'Stokhos::Sparse3Tensor']]],
-  ['kji_5fiterator_3',['kji_iterator',['../class_stokhos_1_1_sparse3_tensor.html#acbec28adcecf22961d8c28d39030f3da',1,'Stokhos::Sparse3Tensor']]]
+  ['leveltoorderfnptr_0',['leveltoorderfnptr',['../class_stokhos_1_1_one_d_orthog_poly_basis.html#a707b965a4909c4c3d5b4aa7c11768df4',1,'Stokhos::OneDOrthogPolyBasis::LevelToOrderFnPtr'],['../class_stokhos_1_1_pecos_one_d_orthog_poly_basis.html#a3a976165040664d2943d0335c0014be0',1,'Stokhos::PecosOneDOrthogPolyBasis::LevelToOrderFnPtr'],['../class_stokhos_1_1_recurrence_basis.html#a37294e97f773f1d1d10018e89755b8de',1,'Stokhos::RecurrenceBasis::LevelToOrderFnPtr']]]
 ];

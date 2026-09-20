@@ -79,7 +79,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>A strategy that takes a single inverse factory and uses that for all inverses. If no mass matrix is passed in the diagonal of the 1,1 block is used.  
+<p>SIMPLEC-style LSC strategy: approximate the velocity mass matrix by a diagonal of the velocity block <picture><source srcset="form_6_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$F$" src="form_6.png"/></picture>.  
  <a href="class_teko_1_1_n_s_1_1_l_s_c_s_i_m_p_l_e_c_strategy.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_teko___l_s_c_s_i_m_p_l_e_c_strategy_8hpp_source.html">Teko_LSCSIMPLECStrategy.hpp</a>&gt;</code></p>
@@ -88,7 +88,7 @@ Inheritance diagram for Teko::NS::LSCSIMPLECStrategy:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_teko_1_1_n_s_1_1_l_s_c_s_i_m_p_l_e_c_strategy__inherit__graph.gif" border="0" usemap="#a_teko_1_1_n_s_1_1_l_s_c_s_i_m_p_l_e_c_strategy_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_teko_1_1_n_s_1_1_l_s_c_s_i_m_p_l_e_c_strategy_inherit__map" id="a_teko_1_1_n_s_1_1_l_s_c_s_i_m_p_l_e_c_strategy_inherit__map">
-<area shape="rect" title="A strategy that takes a single inverse factory and uses that for all inverses. If no mass matrix is p..." alt="" coords="5,79,225,104"/>
+<area shape="rect" title="SIMPLEC&#45;style LSC strategy: approximate the velocity mass matrix by a diagonal of the velocity block ..." alt="" coords="5,79,225,104"/>
 <area shape="rect" href="class_teko_1_1_n_s_1_1_l_s_c_strategy.html" title="Strategy for driving LSCPreconditionerFactory." alt="" coords="33,5,197,31"/>
 <area shape="poly" title=" " alt="" coords="118,44,118,79,113,79,113,44"/>
 </map>
@@ -145,10 +145,10 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:aaaa2b204fbca321fbe68bdbfb299eb99 inherit pub_methods_class_teko_1_1_n_s_1_1_l_s_c_strategy"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A strategy that takes a single inverse factory and uses that for all inverses. If no mass matrix is passed in the diagonal of the 1,1 block is used. </p>
-<p>A strategy that takes a single inverse factory and uses that for all inverses. Optionally the mass matrix can be passed in, if it is the diagonal is extracted and that is used to form the inverse approximation. </p>
+<div class="textblock"><p>SIMPLEC-style LSC strategy: approximate the velocity mass matrix by a diagonal of the velocity block <picture><source srcset="form_6_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$F$" src="form_6.png"/></picture>. </p>
+<p>A least-squares-commutator strategy in the spirit of SIMPLEC. Instead of requiring a separately supplied velocity mass matrix, it approximates <picture><source srcset="form_48_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$Q_u^{-1}$" src="form_48.png"/></picture> by a diagonal extracted from <picture><source srcset="form_6_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$F$" src="form_6.png"/></picture> (the diagonal form is selectable via the shared "Scaling Type" / DiagonalType option), and uses that to form the <picture><source srcset="form_47_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$BQ_u^{-1}B^T$" src="form_47.png"/></picture> Schur-complement approximation. One inverse factory is used for the velocity block <picture><source srcset="form_6_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$F$" src="form_6.png"/></picture> and one for the Schur complement. Optionally the full LDU decomposition can be used instead of the upper-triangular approximation. </p>
 
-<p class="definition">Definition at line <a class="el" href="_teko___l_s_c_s_i_m_p_l_e_c_strategy_8hpp_source.html#l00029">29</a> of file <a class="el" href="_teko___l_s_c_s_i_m_p_l_e_c_strategy_8hpp_source.html">Teko_LSCSIMPLECStrategy.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_teko___l_s_c_s_i_m_p_l_e_c_strategy_8hpp_source.html#l00032">32</a> of file <a class="el" href="_teko___l_s_c_s_i_m_p_l_e_c_strategy_8hpp_source.html">Teko_LSCSIMPLECStrategy.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a201ca6eaa8e513b5da688e3892c2f42d" name="a201ca6eaa8e513b5da688e3892c2f42d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a201ca6eaa8e513b5da688e3892c2f42d">&#9670;&#160;</a></span>buildState()</h2>
@@ -233,7 +233,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get the inverse of <picture><source srcset="form_15_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$B Q_u^{-1} B^T$" src="form_15.png" width="50" height="15"/></picture>.</p>
+<p>Get the inverse of <picture><source srcset="form_31_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$B Q_u^{-1} B^T$" src="form_31.png"/></picture>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">A</td><td>The linear operator to be preconditioned by LSC. </td></tr>
@@ -241,7 +241,7 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>An (approximate) inverse of <picture><source srcset="form_15_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$B Q_u^{-1} B^T$" src="form_15.png" width="50" height="15"/></picture>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>An (approximate) inverse of <picture><source srcset="form_31_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$B Q_u^{-1} B^T$" src="form_31.png"/></picture>. </dd></dl>
 
 <p>Implements <a class="el" href="class_teko_1_1_n_s_1_1_l_s_c_strategy.html#a2cec460fcbccda93ecc75dae961e2ca1">Teko::NS::LSCStrategy</a>.</p>
 
@@ -282,7 +282,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get the inverse of <picture><source srcset="form_16_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$B H B^T - \gamma C$" src="form_16.png" width="71" height="14"/></picture>.</p>
+<p>Get the inverse of <picture><source srcset="form_32_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$B H B^T - \gamma C$" src="form_32.png"/></picture>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">A</td><td>The linear operator to be preconditioned by LSC. </td></tr>
@@ -290,7 +290,7 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>An (approximate) inverse of <picture><source srcset="form_16_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$B H B^T - \gamma C$" src="form_16.png" width="71" height="14"/></picture>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>An (approximate) inverse of <picture><source srcset="form_32_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$B H B^T - \gamma C$" src="form_32.png"/></picture>. </dd></dl>
 
 <p>Implements <a class="el" href="class_teko_1_1_n_s_1_1_l_s_c_strategy.html#a28432d6a76f2e424ce1fe43399fcc430">Teko::NS::LSCStrategy</a>.</p>
 
@@ -331,7 +331,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get the inverse of the <picture><source srcset="form_17_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$F$" src="form_17.png" width="10" height="10"/></picture> block.</p>
+<p>Get the inverse of the <picture><source srcset="form_6_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$F$" src="form_6.png"/></picture> block.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">A</td><td>The linear operator to be preconditioned by LSC. </td></tr>
@@ -339,7 +339,7 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>An (approximate) inverse of <picture><source srcset="form_17_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$F$" src="form_17.png" width="10" height="10"/></picture>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>An (approximate) inverse of <picture><source srcset="form_6_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$F$" src="form_6.png"/></picture>. </dd></dl>
 
 <p>Implements <a class="el" href="class_teko_1_1_n_s_1_1_l_s_c_strategy.html#a3a99700349231ef20963917653f6b192">Teko::NS::LSCStrategy</a>.</p>
 
@@ -380,7 +380,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get the inverse for stabilizing the whole schur complement approximation. Returns <picture><source srcset="form_34_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$\alpha D^{-1}$" src="form_34.png" width="31" height="11"/></picture>.</p>
+<p>Get the inverse for stabilizing the whole schur complement approximation. Returns <picture><source srcset="form_51_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$\alpha D^{-1}$" src="form_51.png"/></picture>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">A</td><td>The linear operator to be preconditioned by LSC. </td></tr>
@@ -392,7 +392,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_teko_1_1_n_s_1_1_l_s_c_strategy.html#a0f7923822e9b7d732dc3ef7331458817">Teko::NS::LSCStrategy</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_teko___l_s_c_s_i_m_p_l_e_c_strategy_8hpp_source.html#l00089">89</a> of file <a class="el" href="_teko___l_s_c_s_i_m_p_l_e_c_strategy_8hpp_source.html">Teko_LSCSIMPLECStrategy.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_teko___l_s_c_s_i_m_p_l_e_c_strategy_8hpp_source.html#l00092">92</a> of file <a class="el" href="_teko___l_s_c_s_i_m_p_l_e_c_strategy_8hpp_source.html">Teko_LSCSIMPLECStrategy.hpp</a>.</p>
 
 </div>
 </div>
@@ -429,7 +429,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get the inverse to stablized stabilizing the Schur complement approximation using a placement on the `&lsquo;inside&rsquo;'. That is what is the value for <picture><source srcset="form_52_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$C_I$" src="form_52.png" width="14" height="13"/></picture>. This quantity may be null.</p>
+<p>Get the inverse to stablized stabilizing the Schur complement approximation using a placement on the `&lsquo;inside&rsquo;'. That is what is the value for <picture><source srcset="form_67_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$C_I$" src="form_67.png"/></picture>. This quantity may be null.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">A</td><td>The linear operator to be preconditioned by LSC. </td></tr>
@@ -486,7 +486,7 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The inverse of the mass matrix <picture><source srcset="form_18_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$Q_u$" src="form_18.png" width="15" height="13"/></picture>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The inverse of the mass matrix <picture><source srcset="form_33_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$Q_u$" src="form_33.png"/></picture>. </dd></dl>
 
 <p>Implements <a class="el" href="class_teko_1_1_n_s_1_1_l_s_c_strategy.html#a5e347cf4d24f2107bfdf56e75b71e32d">Teko::NS::LSCStrategy</a>.</p>
 
@@ -527,7 +527,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get the <picture><source srcset="form_19_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$H$" src="form_19.png" width="11" height="10"/></picture> scaling matrix.</p>
+<p>Get the <picture><source srcset="form_34_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$H$" src="form_34.png"/></picture> scaling matrix.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">A</td><td>The linear operator to be preconditioned by LSC. </td></tr>
@@ -535,7 +535,7 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The <picture><source srcset="form_19_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$H$" src="form_19.png" width="11" height="10"/></picture> scaling matrix. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The <picture><source srcset="form_34_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$H$" src="form_34.png"/></picture> scaling matrix. </dd></dl>
 
 <p>Implements <a class="el" href="class_teko_1_1_n_s_1_1_l_s_c_strategy.html#a9098d8247e0b35103f623e52f015decf">Teko::NS::LSCStrategy</a>.</p>
 
@@ -570,7 +570,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_teko_1_1_n_s_1_1_l_s_c_strategy.html#a006992c758db9523598fea2b759da675">Teko::NS::LSCStrategy</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_teko___l_s_c_s_i_m_p_l_e_c_strategy_8hpp_source.html#l00123">123</a> of file <a class="el" href="_teko___l_s_c_s_i_m_p_l_e_c_strategy_8hpp_source.html">Teko_LSCSIMPLECStrategy.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_teko___l_s_c_s_i_m_p_l_e_c_strategy_8hpp_source.html#l00126">126</a> of file <a class="el" href="_teko___l_s_c_s_i_m_p_l_e_c_strategy_8hpp_source.html">Teko_LSCSIMPLECStrategy.hpp</a>.</p>
 
 </div>
 </div>
@@ -714,7 +714,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Set to true to use the Full LDU decomposition, false otherwise. </p>
 
-<p class="definition">Definition at line <a class="el" href="_teko___l_s_c_s_i_m_p_l_e_c_strategy_8hpp_source.html#l00140">140</a> of file <a class="el" href="_teko___l_s_c_s_i_m_p_l_e_c_strategy_8hpp_source.html">Teko_LSCSIMPLECStrategy.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_teko___l_s_c_s_i_m_p_l_e_c_strategy_8hpp_source.html#l00143">143</a> of file <a class="el" href="_teko___l_s_c_s_i_m_p_l_e_c_strategy_8hpp_source.html">Teko_LSCSIMPLECStrategy.hpp</a>.</p>
 
 </div>
 </div>
@@ -751,7 +751,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_teko_1_1_n_s_1_1_l_s_c_strategy.html#ae7c0051dfdf64b555d773715ff9d9201">Teko::NS::LSCStrategy</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_teko___l_s_c_s_i_m_p_l_e_c_strategy_8hpp_source.html#l00142">142</a> of file <a class="el" href="_teko___l_s_c_s_i_m_p_l_e_c_strategy_8hpp_source.html">Teko_LSCSIMPLECStrategy.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_teko___l_s_c_s_i_m_p_l_e_c_strategy_8hpp_source.html#l00145">145</a> of file <a class="el" href="_teko___l_s_c_s_i_m_p_l_e_c_strategy_8hpp_source.html">Teko_LSCSIMPLECStrategy.hpp</a>.</p>
 
 </div>
 </div>

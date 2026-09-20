@@ -173,7 +173,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <span class="keyword">const</span> <span class="keywordtype">bool</span> allocateFadStorage = !(std::is_standard_layout&lt;Scalar&gt;::value &amp;&amp; std::is_trivial&lt;Scalar&gt;::value);  </div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        <span class="keywordflow">if</span> (allocateFadStorage)</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        {</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>          fad_size_output_ = Sacado::dimension_scalar(integralView_);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>          fad_size_output_ = get_dimension_scalar(integralView_);</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        }</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        </div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> R = numTensorComponents_ - 1;</div>
@@ -1112,7 +1112,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01067" name="l01067"></a><span class="lineno"> 1067</span>        <span class="keyword">const</span> <span class="keywordtype">bool</span> allocateFadStorage = !(std::is_standard_layout&lt;Scalar&gt;::value &amp;&amp; std::is_trivial&lt;Scalar&gt;::value);</div>
 <div class="line"><a id="l01068" name="l01068"></a><span class="lineno"> 1068</span>        <span class="keywordflow">if</span> (allocateFadStorage)</div>
 <div class="line"><a id="l01069" name="l01069"></a><span class="lineno"> 1069</span>        {</div>
-<div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span>          fad_size_output_ = Sacado::dimension_scalar(integralView_);</div>
+<div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span>          fad_size_output_ = get_dimension_scalar(integralView_);</div>
 <div class="line"><a id="l01071" name="l01071"></a><span class="lineno"> 1071</span>        }</div>
 <div class="line"><a id="l01072" name="l01072"></a><span class="lineno"> 1072</span>      }</div>
 <div class="line"><a id="l01073" name="l01073"></a><span class="lineno"> 1073</span> </div>
@@ -2308,7 +2308,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l02256" name="l02256"></a><span class="lineno"> 2256</span>                <span class="keyword">const</span> <span class="keywordtype">bool</span> allocateFadStorage = !(std::is_standard_layout&lt;Scalar&gt;::value &amp;&amp; std::is_trivial&lt;Scalar&gt;::value);</div>
 <div class="line"><a id="l02257" name="l02257"></a><span class="lineno"> 2257</span>                <span class="keywordflow">if</span> (allocateFadStorage)</div>
 <div class="line"><a id="l02258" name="l02258"></a><span class="lineno"> 2258</span>                {</div>
-<div class="line"><a id="l02259" name="l02259"></a><span class="lineno"> 2259</span>                  <span class="keyword">auto</span> fad_size_output = Sacado::dimension_scalar(integrals.<a class="code hl_function" href="class_intrepid2_1_1_data.html#a16eb6e591d230b34f46dccaacb6995d9">getUnderlyingView</a>());</div>
+<div class="line"><a id="l02259" name="l02259"></a><span class="lineno"> 2259</span>                  <span class="keyword">auto</span> fad_size_output = get_dimension_scalar(integrals.<a class="code hl_function" href="class_intrepid2_1_1_data.html#a16eb6e591d230b34f46dccaacb6995d9">getUnderlyingView</a>());</div>
 <div class="line"><a id="l02260" name="l02260"></a><span class="lineno"> 2260</span>                  componentIntegralView = ScalarView&lt;Scalar,DeviceType&gt;(<span class="stringliteral">&quot;componentIntegrals for tensor component &quot;</span> + std::to_string(r) + <span class="stringliteral">&quot;, in dimension &quot;</span> + std::to_string(d), leftTensorComponentFields, rightTensorComponentFields, fad_size_output);</div>
 <div class="line"><a id="l02261" name="l02261"></a><span class="lineno"> 2261</span>                }</div>
 <div class="line"><a id="l02262" name="l02262"></a><span class="lineno"> 2262</span>                <span class="keywordflow">else</span></div>

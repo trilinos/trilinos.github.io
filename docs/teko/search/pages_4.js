@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['teko_3a_20for_20block_20and_20physics_20based_20preconditioners_0',['Teko: For block and physics-based preconditioners',['../index.html',1,'']]]
+  ['getting_20started_0',['Getting Started',['../teko_getting_started.html',1,'index']]],
+  ['guide_1',['Teko User&apos;s Guide',['../teko_guide.html',1,'index']]]
 ];

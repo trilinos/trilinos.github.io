@@ -1,5 +1,8 @@
 var NAVTREEINDEX4 =
 {
+"_mue_lu___matlab_utils_8cpp.html#a5b737c4978e82da017a8470b37657db1":[11,0,1,0,3,19],
+"_mue_lu___matlab_utils_8cpp.html#a5fa9069fb64986ee28cfba460e96b38e":[11,0,1,0,3,40],
+"_mue_lu___matlab_utils_8cpp.html#a7de7a50f215b0f5bd6ad6906ce95ee0c":[11,0,1,0,3,1],
 "_mue_lu___matlab_utils_8cpp.html#a85763f1a44a46b9b8ed4ded1af49e85c":[11,0,1,0,3,39],
 "_mue_lu___matlab_utils_8cpp.html#a85d1dd0161ea5f885856e832eeaf905c":[11,0,1,0,3,4],
 "_mue_lu___matlab_utils_8cpp.html#a886b827dcabd461052f93403db19b37e":[11,0,1,0,3,24],
@@ -231,7 +234,8 @@ var NAVTREEINDEX4 =
 "_mue_lu___matrix_transfer_factory__fwd_8hpp.html#a29e5c3e9fd790f3be7215d9d35219803":[11,0,2,9,0,97,0],
 "_mue_lu___matrix_transfer_factory__fwd_8hpp_source.html":[11,0,2,9,0,97],
 "_mue_lu___maxwell1__decl_8hpp.html":[11,0,2,5,1],
-"_mue_lu___maxwell1__decl_8hpp.html#a98d9c8d72c3227d68835051009b877ab":[11,0,2,5,1,1],
+"_mue_lu___maxwell1__decl_8hpp.html#a8acd59e07c3a1a66a68129775791c5ae":[11,0,2,5,1,1],
+"_mue_lu___maxwell1__decl_8hpp.html#a98d9c8d72c3227d68835051009b877ab":[11,0,2,5,1,2],
 "_mue_lu___maxwell1__decl_8hpp_source.html":[11,0,2,5,1],
 "_mue_lu___maxwell1__def_8hpp.html":[11,0,2,5,2],
 "_mue_lu___maxwell1__def_8hpp.html#a98d9c8d72c3227d68835051009b877ab":[11,0,2,5,2,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX4 =
 "_mue_lu___maxwell___utils__decl_8hpp_source.html":[11,0,2,5,3],
 "_mue_lu___maxwell___utils__def_8hpp.html":[11,0,2,5,4],
 "_mue_lu___maxwell___utils__def_8hpp.html#a077196f0077c0cd344b622dfec9fccec":[11,0,2,5,4,0],
-"_mue_lu___maxwell___utils__def_8hpp_source.html":[11,0,2,5,4],
-"_mue_lu___maxwell___utils__fwd_8hpp.html":[11,0,2,9,0,99],
-"_mue_lu___maxwell___utils__fwd_8hpp.html#a077196f0077c0cd344b622dfec9fccec":[11,0,2,9,0,99,0],
-"_mue_lu___maxwell___utils__fwd_8hpp_source.html":[11,0,2,9,0,99],
-"_mue_lu___memory_8cpp.html":[11,0,2,9,32]
+"_mue_lu___maxwell___utils__def_8hpp_source.html":[11,0,2,5,4]
 };

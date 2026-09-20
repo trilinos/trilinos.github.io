@@ -919,11 +919,25 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01111" name="l01111"></a><span class="lineno"> 1111</span>  </div>
 <div class="line"><a id="l01112" name="l01112"></a><span class="lineno"> 1112</span>} <span class="comment">// end Belos namespace</span></div>
 <div class="line"><a id="l01113" name="l01113"></a><span class="lineno"> 1113</span> </div>
-<div class="line"><a id="l01114" name="l01114"></a><span class="lineno"> 1114</span><span class="preprocessor">#endif </span><span class="comment">/* BELOS_LINEAR_PROBLEM_HPP */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l01115" name="l01115"></a><span class="lineno"> 1115</span> </div>
+<div class="line"><a id="l01114" name="l01114"></a><span class="lineno"> 1114</span><span class="preprocessor">#ifdef HAVE_BELOS_TPETRA</span></div>
+<div class="line"><a id="l01115" name="l01115"></a><span class="lineno"> 1115</span><span class="preprocessor">#include &quot;<a class="code" href="_belos_tpetra_e_t_i_helpers_8hpp.html">BelosTpetraETIHelpers.hpp</a>&quot;</span></div>
 <div class="line"><a id="l01116" name="l01116"></a><span class="lineno"> 1116</span> </div>
+<div class="line"><a id="l01117" name="l01117"></a><span class="lineno"> 1117</span><span class="preprocessor">#define BELOS_TPETRA_LINEARPROBLEM_NOEXTERN_CALL(SC, LO, GO, NT)            \</span></div>
+<div class="line"><a id="l01118" name="l01118"></a><span class="lineno"> 1118</span><span class="preprocessor">  BELOS_TPETRA_CALL(Belos::LinearProblem, SC, LO, GO, NT)</span></div>
+<div class="line"><a id="l01119" name="l01119"></a><span class="lineno"> 1119</span> </div>
+<div class="line"><a id="l01120" name="l01120"></a><span class="lineno"> 1120</span><span class="preprocessor">#define BELOS_TPETRA_LINEARPROBLEM_EXTERN_CALL(SC, LO, GO, NT)              \</span></div>
+<div class="line"><a id="l01121" name="l01121"></a><span class="lineno"> 1121</span><span class="preprocessor">  BELOS_TPETRA_EXTERN_CALL(Belos::LinearProblem, SC, LO, GO, NT)</span></div>
+<div class="line"><a id="l01122" name="l01122"></a><span class="lineno"> 1122</span> </div>
+<div class="line"><a id="l01123" name="l01123"></a><span class="lineno"> 1123</span>TPETRA_INSTANTIATE_SLGN_NO_ORDINAL_SCALAR(BELOS_TPETRA_LINEARPROBLEM_EXTERN_CALL)</div>
+<div class="line"><a id="l01124" name="l01124"></a><span class="lineno"> 1124</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l01125" name="l01125"></a><span class="lineno"> 1125</span> </div>
+<div class="line"><a id="l01126" name="l01126"></a><span class="lineno"> 1126</span> </div>
+<div class="line"><a id="l01127" name="l01127"></a><span class="lineno"> 1127</span><span class="preprocessor">#endif </span><span class="comment">/* BELOS_LINEAR_PROBLEM_HPP */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l01128" name="l01128"></a><span class="lineno"> 1128</span> </div>
+<div class="line"><a id="l01129" name="l01129"></a><span class="lineno"> 1129</span> </div>
 <div class="ttc" id="a_belos_multi_vec_traits_8hpp_html"><div class="ttname"><a href="_belos_multi_vec_traits_8hpp.html">BelosMultiVecTraits.hpp</a></div><div class="ttdoc">Declaration of basic traits for the multivector type.</div></div>
 <div class="ttc" id="a_belos_operator_traits_8hpp_html"><div class="ttname"><a href="_belos_operator_traits_8hpp.html">BelosOperatorTraits.hpp</a></div><div class="ttdoc">Class which defines basic traits for the operator type.</div></div>
+<div class="ttc" id="a_belos_tpetra_e_t_i_helpers_8hpp_html"><div class="ttname"><a href="_belos_tpetra_e_t_i_helpers_8hpp.html">BelosTpetraETIHelpers.hpp</a></div></div>
 <div class="ttc" id="aclass_belos_1_1_belos_error_html"><div class="ttname"><a href="class_belos_1_1_belos_error.html">Belos::BelosError</a></div><div class="ttdoc">Parent class to all Belos exceptions.</div><div class="ttdef"><b>Definition</b> <a href="_belos_types_8hpp_source.html#l00038">BelosTypes.hpp:38</a></div></div>
 <div class="ttc" id="aclass_belos_1_1_linear_problem_error_html"><div class="ttname"><a href="class_belos_1_1_linear_problem_error.html">Belos::LinearProblemError</a></div><div class="ttdoc">Exception thrown to signal error with the Belos::LinearProblem object.</div><div class="ttdef"><b>Definition</b> <a href="_belos_linear_problem_8hpp_source.html#l00029">BelosLinearProblem.hpp:29</a></div></div>
 <div class="ttc" id="aclass_belos_1_1_linear_problem_error_html_ae28b1ac9203a228f7e20ea062c33f9ba"><div class="ttname"><a href="class_belos_1_1_linear_problem_error.html#ae28b1ac9203a228f7e20ea062c33f9ba">Belos::LinearProblemError::LinearProblemError</a></div><div class="ttdeci">LinearProblemError(const std::string &amp;what_arg)</div><div class="ttdef"><b>Definition</b> <a href="_belos_linear_problem_8hpp_source.html#l00031">BelosLinearProblem.hpp:31</a></div></div>

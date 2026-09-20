@@ -414,6 +414,7 @@ var group__minitensor__containers =
     [ "minitensor::matrix", "group__minitensor__containers.html#ga810ede2238741015c0ce4b14d3065e19", null ],
     [ "minitensor::transpose", "group__minitensor__containers.html#gae440ee1e0b379b3ff89db2f130b8303c", null ],
     [ "minitensor::adjoint", "group__minitensor__containers.html#ga8c579bcd45aa7325493bcd4a5ea25acb", null ],
+    [ "minitensor::bound_dimension", "group__minitensor__containers.html#ga216f7d8324d1d5894ed5ebe7e7faa0c2", null ],
     [ "minitensor::check_dynamic", "group__minitensor__containers.html#ga8dc7c0824e22461edc93704d34c1d123", null ],
     [ "minitensor::Storage::Storage", "group__minitensor__containers.html#gaf71c5fc29e62874ad949c0a21c045c13", null ],
     [ "minitensor::Storage::Storage", "group__minitensor__containers.html#gaca30e33d04c705941b24584f9cc6cf20", null ],

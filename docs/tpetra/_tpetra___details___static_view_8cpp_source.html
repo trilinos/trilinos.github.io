@@ -176,7 +176,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="keywordtype">void</span> finalize_sycl_memory() {</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  <span class="keywordflow">if</span> (sycl_memory_ != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    Kokkos::kokkos_free&lt;Kokkos::Experimental::SYCLDeviceUSMSpace&gt;(sycl_memory_);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    Kokkos::kokkos_free&lt;Kokkos::SYCLDeviceUSMSpace&gt;(sycl_memory_);</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    sycl_memory_      = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    sycl_memory_size_ = 0;</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  }</div>
@@ -187,7 +187,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="keywordtype">void</span> finalize_sycl_shared_memory() {</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  <span class="keywordflow">if</span> (sycl_shared_memory_ != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    Kokkos::kokkos_free&lt;Kokkos::Experimental::SYCLSharedUSMSpace&gt;(sycl_shared_memory_);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    Kokkos::kokkos_free&lt;Kokkos::SYCLSharedUSMSpace&gt;(sycl_shared_memory_);</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    sycl_shared_memory_      = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    sycl_shared_memory_size_ = 0;</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  }</div>
@@ -328,10 +328,10 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span><span class="preprocessor">#ifdef KOKKOS_ENABLE_SYCL</span></div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span><span class="keyword">template</span> &lt;&gt;</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span><span class="keywordtype">void</span>* StaticKokkosAllocation&lt;Kokkos::Experimental::SYCLDeviceUSMSpace&gt;::</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    resize(Kokkos::Experimental::SYCLDeviceUSMSpace <span class="comment">/* space */</span>,</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span><span class="keywordtype">void</span>* StaticKokkosAllocation&lt;Kokkos::SYCLDeviceUSMSpace&gt;::</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    resize(Kokkos::SYCLDeviceUSMSpace <span class="comment">/* space */</span>,</div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>           <span class="keyword">const</span> <span class="keywordtype">size_t</span> size) {</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>  <span class="keyword">using </span>memory_space                = Kokkos::Experimental::SYCLDeviceUSMSpace;</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>  <span class="keyword">using </span>memory_space                = Kokkos::SYCLDeviceUSMSpace;</div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>  <span class="keyword">static</span> <span class="keywordtype">bool</span> created_finalize_hook = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span> </div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>  <span class="keywordflow">if</span> (size &gt; sycl_memory_size_) {</div>
@@ -351,10 +351,10 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>}</div>
 <div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
 <div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span><span class="keyword">template</span> &lt;&gt;</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span><span class="keywordtype">void</span>* StaticKokkosAllocation&lt;Kokkos::Experimental::SYCLSharedUSMSpace&gt;::</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    resize(Kokkos::Experimental::SYCLSharedUSMSpace <span class="comment">/* space */</span>,</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span><span class="keywordtype">void</span>* StaticKokkosAllocation&lt;Kokkos::SYCLSharedUSMSpace&gt;::</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    resize(Kokkos::SYCLSharedUSMSpace <span class="comment">/* space */</span>,</div>
 <div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>           <span class="keyword">const</span> <span class="keywordtype">size_t</span> size) {</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>  <span class="keyword">using </span>memory_space                = Kokkos::Experimental::SYCLSharedUSMSpace;</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>  <span class="keyword">using </span>memory_space                = Kokkos::SYCLSharedUSMSpace;</div>
 <div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>  <span class="keyword">static</span> <span class="keywordtype">bool</span> created_finalize_hook = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> </div>
 <div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>  <span class="keyword">const</span> <span class="keywordtype">size_t</span> req_size = size &gt; minimum_initial_size ? size : minimum_initial_size;</div>

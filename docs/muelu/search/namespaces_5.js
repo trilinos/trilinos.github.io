@@ -10,11 +10,12 @@ var searchData=
   ['muelu_3a_3adistancelaplacian_7',['DistanceLaplacian',['../namespace_mue_lu_1_1_distance_laplacian.html',1,'MueLu']]],
   ['muelu_3a_3aexceptions_8',['Exceptions',['../namespace_mue_lu_1_1_exceptions.html',1,'MueLu']]],
   ['muelu_3a_3akokkostuningparams_9',['KokkosTuningParams',['../namespace_mue_lu_1_1_kokkos_tuning_params.html',1,'MueLu']]],
-  ['muelu_3a_3amatrixconstruction_10',['MatrixConstruction',['../namespace_mue_lu_1_1_matrix_construction.html',1,'MueLu']]],
-  ['muelu_3a_3amemutils_11',['MemUtils',['../namespace_mue_lu_1_1_mem_utils.html',1,'MueLu']]],
-  ['muelu_3a_3amisc_12',['Misc',['../namespace_mue_lu_1_1_misc.html',1,'MueLu']]],
-  ['muelu_3a_3amueluintrepid_13',['MueLuIntrepid',['../namespace_mue_lu_1_1_mue_lu_intrepid.html',1,'MueLu']]],
-  ['muelu_3a_3anotayutils_14',['NotayUtils',['../namespace_mue_lu_1_1_notay_utils.html',1,'MueLu']]],
-  ['muelu_3a_3aperfdetails_15',['PerfDetails',['../namespace_mue_lu_1_1_perf_details.html',1,'MueLu']]],
-  ['muelutests_16',['MueLuTests',['../namespace_mue_lu_tests.html',1,'']]]
+  ['muelu_3a_3alocalqr_10',['LocalQR',['../namespace_mue_lu_1_1_local_q_r.html',1,'MueLu']]],
+  ['muelu_3a_3amatrixconstruction_11',['MatrixConstruction',['../namespace_mue_lu_1_1_matrix_construction.html',1,'MueLu']]],
+  ['muelu_3a_3amemutils_12',['MemUtils',['../namespace_mue_lu_1_1_mem_utils.html',1,'MueLu']]],
+  ['muelu_3a_3amisc_13',['Misc',['../namespace_mue_lu_1_1_misc.html',1,'MueLu']]],
+  ['muelu_3a_3amueluintrepid_14',['MueLuIntrepid',['../namespace_mue_lu_1_1_mue_lu_intrepid.html',1,'MueLu']]],
+  ['muelu_3a_3anotayutils_15',['NotayUtils',['../namespace_mue_lu_1_1_notay_utils.html',1,'MueLu']]],
+  ['muelu_3a_3aperfdetails_16',['PerfDetails',['../namespace_mue_lu_1_1_perf_details.html',1,'MueLu']]],
+  ['muelutests_17',['MueLuTests',['../namespace_mue_lu_tests.html',1,'']]]
 ];

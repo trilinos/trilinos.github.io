@@ -327,8 +327,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>HierarchicalGaussSeidelPreconditionerFactory::HierarchicalGaussSeidelPreconditionerFactory() =</div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>LinearOp HierarchicalGaussSeidelPreconditionerFactory::buildPreconditionerOperator(</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    BlockedLinearOp&amp; blo, BlockPreconditionerState&amp; state)<span class="keyword"> const </span>{</div>
+<div class="foldopen" id="foldopen00247" data-start="{" data-end="}">
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno"><a class="line" href="class_teko_1_1_hierarchical_gauss_seidel_preconditioner_factory.html#a4780848097dea64fee347a6e125d66fe">  247</a></span>LinearOp HierarchicalGaussSeidelPreconditionerFactory::buildPreconditionerOperator(</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    BlockedLinearOp&amp; blo, <a class="code hl_class" href="class_teko_1_1_block_preconditioner_state.html">BlockPreconditionerState</a>&amp; state)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> [hierarchicalBlockNum, blocks] : blockToRow) {</div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    <span class="keyword">auto</span> A_bb                          = extractSubblockMatrix(blo, blocks, blocks);</div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    blockToInvOp[hierarchicalBlockNum] = this-&gt;buildBlockInverse(</div>
@@ -338,10 +339,11 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>  <span class="keywordflow">return</span> Teuchos::rcp(<span class="keyword">new</span> NestedBlockGS(blockToRow, blockToInvOp, blo, useLowerTriangle));</div>
 <div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>}</div>
+</div>
 <div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>LinearOp HierarchicalGaussSeidelPreconditionerFactory::buildBlockInverse(</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    <span class="keyword">const</span> InverseFactory&amp; invFact, <span class="keyword">const</span> Teuchos::RCP&lt;InverseFactory&gt;&amp; precFact,</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="keyword">const</span> BlockedLinearOp&amp; matrix, BlockPreconditionerState&amp; state,</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    <span class="keyword">const</span> <a class="code hl_class" href="class_teko_1_1_inverse_factory.html">InverseFactory</a>&amp; invFact, <span class="keyword">const</span> Teuchos::RCP&lt;InverseFactory&gt;&amp; precFact,</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="keyword">const</span> BlockedLinearOp&amp; matrix, <a class="code hl_class" href="class_teko_1_1_block_preconditioner_state.html">BlockPreconditionerState</a>&amp; state,</div>
 <div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    <span class="keywordtype">int</span> hierarchicalBlockNum)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>  <span class="comment">// special case: single 1x1 block system -- use non-block based inverses</span></div>
 <div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> nBlock = <a class="code hl_function" href="_teko___utilities_8hpp.html#a7c2e17a856db30644ba802956adbd31e">Teko::blockRowCount</a>(matrix);</div>
@@ -354,7 +356,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>  <span class="keywordflow">return</span> buildInverseImpl&lt;BlockedLinearOp&gt;(invFact, precFact, matrix, state, hierarchicalBlockNum);</div>
 <div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>}</div>
 <div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span><span class="keywordtype">void</span> HierarchicalGaussSeidelPreconditionerFactory::initializeFromParameterList(</div>
+<div class="foldopen" id="foldopen00274" data-start="{" data-end="}">
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno"><a class="line" href="class_teko_1_1_hierarchical_gauss_seidel_preconditioner_factory.html#ae2c60775b371e189ac4a2e4665d573ca">  274</a></span><span class="keywordtype">void</span> HierarchicalGaussSeidelPreconditionerFactory::initializeFromParameterList(</div>
 <div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    <span class="keyword">const</span> Teuchos::ParameterList&amp; pl) {</div>
 <div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>  RCP&lt;const InverseLibrary&gt; invLib = getInverseLibrary();</div>
 <div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
@@ -386,6 +389,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    useLowerTriangle = !pl.get&lt;<span class="keywordtype">bool</span>&gt;(<span class="stringliteral">&quot;Use Upper Triangle&quot;</span>);</div>
 <div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>  }</div>
 <div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>}</div>
+</div>
 <div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span> </div>
 <div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>}  <span class="comment">// namespace Teko</span></div>
 <div class="ttc" id="a_teko___utilities_8hpp_html"><div class="ttname"><a href="_teko___utilities_8hpp.html">Teko_Utilities.hpp</a></div></div>
@@ -396,6 +400,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="a_teko___utilities_8hpp_html_ac099aa1e458f47c42b98486f89e701bd"><div class="ttname"><a href="_teko___utilities_8hpp.html#ac099aa1e458f47c42b98486f89e701bd">Teko::deepcopy</a></div><div class="ttdeci">MultiVector deepcopy(const MultiVector &amp;v)</div><div class="ttdoc">Perform a deep copy of the vector.</div><div class="ttdef"><b>Definition</b> <a href="_teko___utilities_8hpp_source.html#l00211">Teko_Utilities.hpp:211</a></div></div>
 <div class="ttc" id="a_teko___utilities_8hpp_html_ac61bfa5cd2536919d0840b98ee77b428"><div class="ttname"><a href="_teko___utilities_8hpp.html#ac61bfa5cd2536919d0840b98ee77b428">Teko::blockColCount</a></div><div class="ttdeci">int blockColCount(const BlockedLinearOp &amp;blo)</div><div class="ttdoc">Get the column count in a block linear operator.</div><div class="ttdef"><b>Definition</b> <a href="_teko___utilities_8hpp_source.html#l00354">Teko_Utilities.hpp:354</a></div></div>
 <div class="ttc" id="a_teko___utilities_8hpp_html_acc90e100292df978a58e220e06ad9ac2"><div class="ttname"><a href="_teko___utilities_8hpp.html#acc90e100292df978a58e220e06ad9ac2">Teko::createBlockedOp</a></div><div class="ttdeci">BlockedLinearOp createBlockedOp()</div><div class="ttdoc">Build a new blocked linear operator.</div><div class="ttdef"><b>Definition</b> <a href="_teko___utilities_8hpp_source.html#l00365">Teko_Utilities.hpp:365</a></div></div>
+<div class="ttc" id="aclass_teko_1_1_block_preconditioner_state_html"><div class="ttname"><a href="class_teko_1_1_block_preconditioner_state.html">Teko::BlockPreconditionerState</a></div><div class="ttdoc">An implementation of a state object for block preconditioners.</div><div class="ttdef"><b>Definition</b> <a href="_teko___block_preconditioner_factory_8hpp_source.html#l00043">Teko_BlockPreconditionerFactory.hpp:43</a></div></div>
+<div class="ttc" id="aclass_teko_1_1_inverse_factory_html"><div class="ttname"><a href="class_teko_1_1_inverse_factory.html">Teko::InverseFactory</a></div><div class="ttdoc">Abstract class for building an inverse operator.</div><div class="ttdef"><b>Definition</b> <a href="_teko___inverse_factory_8hpp_source.html#l00034">Teko_InverseFactory.hpp:34</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

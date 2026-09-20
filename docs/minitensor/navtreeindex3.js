@@ -1,15 +1,16 @@
 var NAVTREEINDEX3 =
 {
-"group__minitensor__containers.html#gaf997ba5ccc09cbf3831e3d356f0b9d77":[6,0,463],
-"group__minitensor__containers.html#gafc715e9a382a16525cfc7eeccf0ba35e":[6,0,390],
-"group__minitensor__containers.html#gafc8f8a7e9bc7e2824426e0316eb5e76a":[6,0,327],
-"group__minitensor__containers.html#gafe3c1cd5eb96433fadaef2fee5de1938":[6,0,330],
+"group__minitensor__containers.html#gaf82bf76bf55d84d3a54cbf1317de38ae":[6,0,359],
+"group__minitensor__containers.html#gaf997ba5ccc09cbf3831e3d356f0b9d77":[6,0,464],
+"group__minitensor__containers.html#gafc715e9a382a16525cfc7eeccf0ba35e":[6,0,391],
+"group__minitensor__containers.html#gafc8f8a7e9bc7e2824426e0316eb5e76a":[6,0,328],
+"group__minitensor__containers.html#gafe3c1cd5eb96433fadaef2fee5de1938":[6,0,331],
 "group__minitensor__containers.html#gafec56ccda33cbe2773b77d0917fcdfcb":[6,0,100],
 "group__minitensor__containers.html#gafec6b0d7f3ea1673dcea7a63589060ce":[6,0,105],
-"group__minitensor__containers.html#gafee2a042f4dc6b8d725f4356eb6563ce":[6,0,461],
-"group__minitensor__containers.html#gafef8723b35dc1d8d9b204363fc433864":[6,0,172],
-"group__minitensor__containers.html#gaff238f27b5c75bff686e07c958bf5f94":[6,0,377],
-"group__minitensor__containers.html#gaff357df4a45585a66b104fdb8688451f":[6,0,446],
+"group__minitensor__containers.html#gafee2a042f4dc6b8d725f4356eb6563ce":[6,0,462],
+"group__minitensor__containers.html#gafef8723b35dc1d8d9b204363fc433864":[6,0,173],
+"group__minitensor__containers.html#gaff238f27b5c75bff686e07c958bf5f94":[6,0,378],
+"group__minitensor__containers.html#gaff357df4a45585a66b104fdb8688451f":[6,0,447],
 "group__minitensor__containers.html#gga1f89b6e8a7764dc1b8f3f6a50b6392c6a170e02e86972c2be8559884cc3c12254":[6,0,59,3],
 "group__minitensor__containers.html#gga1f89b6e8a7764dc1b8f3f6a50b6392c6a2cb198a10d0a4c217ff4c15e98a97215":[6,0,59,2],
 "group__minitensor__containers.html#gga1f89b6e8a7764dc1b8f3f6a50b6392c6a43846d884644ee4fb10e66b37370874b":[6,0,59,0],
@@ -148,8 +149,8 @@ var NAVTREEINDEX3 =
 "group__minitensor__geometry.html#ggae27c2fc194a99cf2d5ead60f65bb9efca04a7337a195da18e26b892a226ec50b6":[6,7,7,0],
 "group__minitensor__geometry.html#ggae27c2fc194a99cf2d5ead60f65bb9efca3eb87e17af57b34b2edf0a13bbf50633":[6,7,11],
 "group__minitensor__geometry.html#ggae27c2fc194a99cf2d5ead60f65bb9efca3eb87e17af57b34b2edf0a13bbf50633":[6,7,7,3],
-"group__minitensor__geometry.html#ggae27c2fc194a99cf2d5ead60f65bb9efca5c6fff9497de5eef9bae72dc1210139c":[6,7,7,4],
 "group__minitensor__geometry.html#ggae27c2fc194a99cf2d5ead60f65bb9efca5c6fff9497de5eef9bae72dc1210139c":[6,7,12],
+"group__minitensor__geometry.html#ggae27c2fc194a99cf2d5ead60f65bb9efca5c6fff9497de5eef9bae72dc1210139c":[6,7,7,4],
 "group__minitensor__geometry.html#ggae27c2fc194a99cf2d5ead60f65bb9efca6b258f095a0554392ddd512885a0728c":[6,7,13],
 "group__minitensor__geometry.html#ggae27c2fc194a99cf2d5ead60f65bb9efca6b258f095a0554392ddd512885a0728c":[6,7,7,5],
 "group__minitensor__geometry.html#ggae27c2fc194a99cf2d5ead60f65bb9efcab76de15679fac0cbf5577b45341881e8":[6,7,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "group__minitensor__solvers.html#ga032c17cc759d1a983c0429040c5369be":[6,9,130],
 "group__minitensor__solvers.html#ga035ae15ff91ec30786a9db32c5ee8db2":[6,9,41],
 "group__minitensor__solvers.html#ga08172ab40d6a438e1c1ec8b03469626a":[6,9,133],
-"group__minitensor__solvers.html#ga089c79b17d6cb13918d7b8d9c0d5be6b":[6,9,125],
-"group__minitensor__solvers.html#ga093a37638133383afeabb1bed756761b":[6,9,53]
+"group__minitensor__solvers.html#ga089c79b17d6cb13918d7b8d9c0d5be6b":[6,9,125]
 };

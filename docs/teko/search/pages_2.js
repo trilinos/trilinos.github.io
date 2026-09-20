@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['for_20block_20and_20physics_20based_20preconditioners_0',['Teko: For block and physics-based preconditioners',['../index.html',1,'']]]
+  ['configuration_20model_0',['Configuration Model',['../teko_config_model.html',1,'index']]],
+  ['cookbook_1',['Cookbook',['../teko_cookbook.html',1,'index']]]
 ];

@@ -338,6 +338,7 @@ var namespaceminitensor =
     [ "num_digits< Index >", "group__minitensor__traits.html#ga08fa270cb72c44d8b63f27697f90a802", null ],
     [ "num_digits< LongIndex >", "group__minitensor__traits.html#ga51435b157e27d0171a06e5b19ddc2f9c", null ],
     [ "stepFactory", "group__minitensor__solvers.html#ga8bc7327fcf12bd66e7a2772ef29b0074", null ],
+    [ "bound_dimension", "group__minitensor__containers.html#ga216f7d8324d1d5894ed5ebe7e7faa0c2", null ],
     [ "check_dynamic", "group__minitensor__containers.html#ga8dc7c0824e22461edc93704d34c1d123", null ],
     [ "operator+", "group__minitensor__containers.html#ga25bf99b1c9c16cfb44415a0e7726bcc9", null ],
     [ "operator-", "group__minitensor__containers.html#gaed8d147601fd83e0300be5c8f771455d", null ],
