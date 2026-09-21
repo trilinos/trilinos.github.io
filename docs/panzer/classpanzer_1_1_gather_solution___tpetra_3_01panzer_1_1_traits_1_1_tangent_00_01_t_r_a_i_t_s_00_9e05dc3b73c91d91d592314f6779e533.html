@@ -183,6 +183,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:ac51271f3ecb4cc211c03b1545d9af7e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7291a3573ab08de91a1f0167c213e6f1" id="r_a7291a3573ab08de91a1f0167c213e6f1"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_tpetra_linear_obj_container.html">TpetraLinearObjContainer</a>&lt; double, LO, GO, NodeT &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_gather_solution___tpetra_3_01panzer_1_1_traits_1_1_tangent_00_01_t_r_a_i_t_s_00_9e05dc3b73c91d91d592314f6779e533.html#a7291a3573ab08de91a1f0167c213e6f1">tpetraContainer_</a></td></tr>
 <tr class="separator:a7291a3573ab08de91a1f0167c213e6f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0bc08650af8847aad58ff57ea6ec059" id="r_aa0bc08650af8847aad58ff57ea6ec059"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; const typename <a class="el" href="classpanzer_1_1_tpetra_linear_obj_container.html">TpetraLinearObjContainer</a>&lt; double, LO, GO, NodeT &gt;::MultiVectorType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_gather_solution___tpetra_3_01panzer_1_1_traits_1_1_tangent_00_01_t_r_a_i_t_s_00_9e05dc3b73c91d91d592314f6779e533.html#aa0bc08650af8847aad58ff57ea6ec059">x_vector</a></td></tr>
+<tr class="separator:aa0bc08650af8847aad58ff57ea6ec059"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c2c6e4ce0f7852f490965fd607ed244" id="r_a1c2c6e4ce0f7852f490965fd607ed244"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_gather_solution___tpetra_3_01panzer_1_1_traits_1_1_tangent_00_01_t_r_a_i_t_s_00_9e05dc3b73c91d91d592314f6779e533.html#a1c2c6e4ce0f7852f490965fd607ed244">has_tangent_fields_</a></td></tr>
 <tr class="separator:a1c2c6e4ce0f7852f490965fd607ed244"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad93b7f2c8dc35a9a032cf8395ea717e1" id="r_ad93b7f2c8dc35a9a032cf8395ea717e1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; PHX::MDField&lt; const <a class="el" href="classpanzer_1_1_gather_solution___tpetra_3_01panzer_1_1_traits_1_1_tangent_00_01_t_r_a_i_t_s_00_9e05dc3b73c91d91d592314f6779e533.html#a761c1e74f3dae0557d7ca8c58e6071bb">RealT</a>, <a class="el" href="structpanzer_1_1_cell.html">Cell</a>, <a class="el" href="namespacepanzer.html#ad59a8ca472aaf73fb4b8725c6c5b92be">NODE</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_gather_solution___tpetra_3_01panzer_1_1_traits_1_1_tangent_00_01_t_r_a_i_t_s_00_9e05dc3b73c91d91d592314f6779e533.html#ad93b7f2c8dc35a9a032cf8395ea717e1">tangentFields_</a></td></tr>
@@ -216,7 +218,7 @@ Additional Inherited Members</h2></td></tr>
 class panzer::GatherSolution_Tpetra&lt; panzer::Traits::Tangent, TRAITS, LO, GO, NodeT &gt;</div><p>Tangent specialization of <a class="el" href="classpanzer_1_1_gather_solution___tpetra.html" title="Gathers solution values from the Newton solution vector into the nodal fields of the field manager.">GatherSolution_Tpetra</a>. </p>
 <p>Gathers solution values as in the Residual specialization, and additionally exposes the tangent fields dx/dp (derivatives of the solution with respect to parameters) so they can be carried through a forward sensitivity (tangent) evaluation. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00143">143</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00148">148</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a98e42e5c154a81c942d5ff49d940f4c4" name="a98e42e5c154a81c942d5ff49d940f4c4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a98e42e5c154a81c942d5ff49d940f4c4">&#9670;&#160;</a></span>EvalT</h2>
@@ -240,7 +242,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00175">175</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00180">180</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -266,7 +268,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00176">176</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00181">181</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -292,7 +294,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00177">177</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00182">182</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -325,7 +327,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 
 <p>Construct with a global indexer only; solution/parameter names must be set later (e.g. via <a class="el" href="classpanzer_1_1_gather_solution___tpetra_3_01panzer_1_1_traits_1_1_tangent_00_01_t_r_a_i_t_s_00_9e05dc3b73c91d91d592314f6779e533.html#a4288c189796f6d6cb50c151d45b76984" title="Creates a copy of this evaluator configured from a new ParameterList, sharing the same global indexer...">clone()</a>). </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00152">152</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00157">157</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -359,7 +361,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 
 <p>Construct from a global indexer and a ParameterList giving the <a class="el" href="classpanzer_1_1_d_o_f.html" title="Interpolates basis DOF values to IP DOF values.">DOF</a> names to gather (see the class-level Panzer_GatherSolution_Input options). </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__impl_8hpp_source.html#l00187">187</a> of file <a class="el" href="_panzer___gather_solution___tpetra__impl_8hpp_source.html">Panzer_GatherSolution_Tpetra_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__impl_8hpp_source.html#l00199">199</a> of file <a class="el" href="_panzer___gather_solution___tpetra__impl_8hpp_source.html">Panzer_GatherSolution_Tpetra_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -421,7 +423,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 
 <p>Looks up and caches the Tpetra linear object container and field offsets needed by <a class="el" href="classpanzer_1_1_gather_solution___tpetra_3_01panzer_1_1_traits_1_1_tangent_00_01_t_r_a_i_t_s_00_9e05dc3b73c91d91d592314f6779e533.html#a5d747030392b05a5b28261523e3763b9" title="Copies solution and tangent values for this workset from the Tpetra vector(s) into gatherFields_ / ta...">evaluateFields()</a>. Called once before the first evaluation. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__impl_8hpp_source.html#l00245">245</a> of file <a class="el" href="_panzer___gather_solution___tpetra__impl_8hpp_source.html">Panzer_GatherSolution_Tpetra_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__impl_8hpp_source.html#l00257">257</a> of file <a class="el" href="_panzer___gather_solution___tpetra__impl_8hpp_source.html">Panzer_GatherSolution_Tpetra_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -445,7 +447,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 
 <p>Fetches the Tpetra solution vector (and tangent vectors, if present) to gather from for the upcoming fill. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__impl_8hpp_source.html#l00289">289</a> of file <a class="el" href="_panzer___gather_solution___tpetra__impl_8hpp_source.html">Panzer_GatherSolution_Tpetra_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__impl_8hpp_source.html#l00301">301</a> of file <a class="el" href="_panzer___gather_solution___tpetra__impl_8hpp_source.html">Panzer_GatherSolution_Tpetra_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -469,7 +471,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 
 <p>Copies solution and tangent values for this workset from the Tpetra vector(s) into <a class="el" href="classpanzer_1_1_gather_solution___tpetra_3_01panzer_1_1_traits_1_1_tangent_00_01_t_r_a_i_t_s_00_9e05dc3b73c91d91d592314f6779e533.html#a7aeae1789ec009a0af61b550a4985822">gatherFields_</a> / <a class="el" href="classpanzer_1_1_gather_solution___tpetra_3_01panzer_1_1_traits_1_1_tangent_00_01_t_r_a_i_t_s_00_9e05dc3b73c91d91d592314f6779e533.html#ad93b7f2c8dc35a9a032cf8395ea717e1">tangentFields_</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__impl_8hpp_source.html#l00306">306</a> of file <a class="el" href="_panzer___gather_solution___tpetra__impl_8hpp_source.html">Panzer_GatherSolution_Tpetra_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__impl_8hpp_source.html#l00338">338</a> of file <a class="el" href="_panzer___gather_solution___tpetra__impl_8hpp_source.html">Panzer_GatherSolution_Tpetra_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -503,7 +505,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 
 <p>Implements <a class="el" href="classpanzer_1_1_cloneable_evaluator.html#ae78ab7b517aeba4d93c007cc5d3752f3">panzer::CloneableEvaluator</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00170">170</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00175">175</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -530,7 +532,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00181">181</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00186">186</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -556,7 +558,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00182">182</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00187">187</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -582,7 +584,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00184">184</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00189">189</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -608,7 +610,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00185">185</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00190">190</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -634,7 +636,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00187">187</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00192">192</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -660,7 +662,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00188">188</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00193">193</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -686,7 +688,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00189">189</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00194">194</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -712,7 +714,33 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00191">191</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00196">196</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aa0bc08650af8847aad58ff57ea6ec059" name="aa0bc08650af8847aad58ff57ea6ec059"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0bc08650af8847aad58ff57ea6ec059">&#9670;&#160;</a></span>x_vector</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Teuchos::RCP&lt;const typename <a class="el" href="classpanzer_1_1_tpetra_linear_obj_container.html">TpetraLinearObjContainer</a>&lt;double,LO,GO,NodeT&gt;::MultiVectorType&gt; <a class="el" href="classpanzer_1_1_gather_solution___tpetra.html">panzer::GatherSolution_Tpetra</a>&lt; <a class="el" href="structpanzer_1_1_traits_1_1_tangent.html">panzer::Traits::Tangent</a>, TRAITS, LO, GO, NodeT &gt;::x_vector</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00201">201</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -738,7 +766,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00194">194</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00204">204</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -764,7 +792,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00195">195</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00205">205</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -790,7 +818,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00196">196</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00206">206</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -816,7 +844,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00197">197</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html#l00207">207</a> of file <a class="el" href="_panzer___gather_solution___tpetra__decl_8hpp_source.html">Panzer_GatherSolution_Tpetra_decl.hpp</a>.</p>
 
 </div>
 </div>

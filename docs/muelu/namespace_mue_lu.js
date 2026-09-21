@@ -15,6 +15,7 @@ var namespace_mue_lu =
     [ "KokkosTuningParams", "namespace_mue_lu_1_1_kokkos_tuning_params.html", [
       [ "MAX_VALID_PARAMS", "namespace_mue_lu_1_1_kokkos_tuning_params.html#ad4cd1a5fe5e82f9a2212232882f7db65", null ]
     ] ],
+    [ "LocalQR", "namespace_mue_lu_1_1_local_q_r.html", "namespace_mue_lu_1_1_local_q_r" ],
     [ "MatrixConstruction", "namespace_mue_lu_1_1_matrix_construction.html", "namespace_mue_lu_1_1_matrix_construction" ],
     [ "MemUtils", "namespace_mue_lu_1_1_mem_utils.html", [
       [ "PrintMemoryUsage", "namespace_mue_lu_1_1_mem_utils.html#a11c27664227aac4e4dd39acfb87bb5af", null ],
@@ -153,6 +154,7 @@ var namespace_mue_lu =
     [ "Level", "class_mue_lu_1_1_level.html", "class_mue_lu_1_1_level" ],
     [ "LineDetectionFactory", "class_mue_lu_1_1_line_detection_factory.html", "class_mue_lu_1_1_line_detection_factory" ],
     [ "LocalAggregationAlgorithm", "class_mue_lu_1_1_local_aggregation_algorithm.html", null ],
+    [ "LocalFSAIFunctor", "class_mue_lu_1_1_local_f_s_a_i_functor.html", "class_mue_lu_1_1_local_f_s_a_i_functor" ],
     [ "LocalLexicographicIndexManager", "class_mue_lu_1_1_local_lexicographic_index_manager.html", "class_mue_lu_1_1_local_lexicographic_index_manager" ],
     [ "LocalOrdinalTransferFactory", "class_mue_lu_1_1_local_ordinal_transfer_factory.html", "class_mue_lu_1_1_local_ordinal_transfer_factory" ],
     [ "LocalPermutationStrategy", "class_mue_lu_1_1_local_permutation_strategy.html", "class_mue_lu_1_1_local_permutation_strategy" ],
@@ -468,6 +470,7 @@ var namespace_mue_lu =
     [ "scaleD0", "namespace_mue_lu.html#ab9f058e1d6085b06cb22dbebefa4a250", null ],
     [ "pop", "namespace_mue_lu.html#aa766d8240582d236652f036749fe9311", null ],
     [ "pop", "namespace_mue_lu.html#a21c35d07273bc907052103927827cfd6", null ],
+    [ "pop", "namespace_mue_lu.html#a1905f731516991d022dac1f3ac44d6fb", null ],
     [ "compareTriplets", "namespace_mue_lu.html#a1e11f0991e08e92080b0db5b4578dbce", null ],
     [ "allocateBlockDiagonalMatrix", "namespace_mue_lu.html#a65747e85b97630bac3cd282cb894fcaf", null ],
     [ "CreateCmpPairs", "namespace_mue_lu.html#accdd1d44a7f5c2620b7ce81fb21bea6b", null ],

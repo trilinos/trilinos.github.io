@@ -54,6 +54,10 @@ var annotated_dup =
         [ "Overflow", "class_mue_lu_1_1_exceptions_1_1_overflow.html", "class_mue_lu_1_1_exceptions_1_1_overflow" ],
         [ "RuntimeError", "class_mue_lu_1_1_exceptions_1_1_runtime_error.html", "class_mue_lu_1_1_exceptions_1_1_runtime_error" ]
       ] ],
+      [ "LocalQR", "namespace_mue_lu_1_1_local_q_r.html", [
+        [ "LocalQRDecompFunctor", "class_mue_lu_1_1_local_q_r_1_1_local_q_r_decomp_functor.html", "class_mue_lu_1_1_local_q_r_1_1_local_q_r_decomp_functor" ],
+        [ "ReduceMaxFunctor", "class_mue_lu_1_1_local_q_r_1_1_reduce_max_functor.html", "class_mue_lu_1_1_local_q_r_1_1_reduce_max_functor" ]
+      ] ],
       [ "MatrixConstruction", "namespace_mue_lu_1_1_matrix_construction.html", [
         [ "BlockRowComparison", "class_mue_lu_1_1_matrix_construction_1_1_block_row_comparison.html", "class_mue_lu_1_1_matrix_construction_1_1_block_row_comparison" ],
         [ "GraphConstruction", "class_mue_lu_1_1_matrix_construction_1_1_graph_construction.html", "class_mue_lu_1_1_matrix_construction_1_1_graph_construction" ],
@@ -188,6 +192,7 @@ var annotated_dup =
       [ "Level", "class_mue_lu_1_1_level.html", "class_mue_lu_1_1_level" ],
       [ "LineDetectionFactory", "class_mue_lu_1_1_line_detection_factory.html", "class_mue_lu_1_1_line_detection_factory" ],
       [ "LocalAggregationAlgorithm", "class_mue_lu_1_1_local_aggregation_algorithm.html", null ],
+      [ "LocalFSAIFunctor", "class_mue_lu_1_1_local_f_s_a_i_functor.html", "class_mue_lu_1_1_local_f_s_a_i_functor" ],
       [ "LocalLexicographicIndexManager", "class_mue_lu_1_1_local_lexicographic_index_manager.html", "class_mue_lu_1_1_local_lexicographic_index_manager" ],
       [ "LocalOrdinalTransferFactory", "class_mue_lu_1_1_local_ordinal_transfer_factory.html", "class_mue_lu_1_1_local_ordinal_transfer_factory" ],
       [ "LocalPermutationStrategy", "class_mue_lu_1_1_local_permutation_strategy.html", "class_mue_lu_1_1_local_permutation_strategy" ],

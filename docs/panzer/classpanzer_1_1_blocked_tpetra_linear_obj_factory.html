@@ -77,6 +77,7 @@ $(function() {
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classpanzer_1_1_blocked_tpetra_linear_obj_factory-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">panzer::BlockedTpetraLinearObjFactory&lt; Traits, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt; Class Template Reference</div></div>
@@ -117,6 +118,10 @@ Public Types</h2></td></tr>
 <tr class="separator:adac4046e9333f5eaa157e61a6e90fdeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7876f9fea08dc3f3114fbea78797e389" id="r_a7876f9fea08dc3f3114fbea78797e389"><td class="memItemLeft" align="right" valign="top">typedef Tpetra::Export&lt; LocalOrdinalT, GlobalOrdinalT, NodeT &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a7876f9fea08dc3f3114fbea78797e389">ExportType</a></td></tr>
 <tr class="separator:a7876f9fea08dc3f3114fbea78797e389"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc6776f0b1d5f8651de25121d7e40e88" id="r_abc6776f0b1d5f8651de25121d7e40e88"><td class="memItemLeft" align="right" valign="top">typedef Tpetra::FECrsGraph&lt; LocalOrdinalT, GlobalOrdinalT, NodeT &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#abc6776f0b1d5f8651de25121d7e40e88">FECrsGraphType</a></td></tr>
+<tr class="separator:abc6776f0b1d5f8651de25121d7e40e88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af46b5335bc10784a82a0c8e16fb554d8" id="r_af46b5335bc10784a82a0c8e16fb554d8"><td class="memItemLeft" align="right" valign="top">typedef Tpetra::FECrsMatrix&lt; ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#af46b5335bc10784a82a0c8e16fb554d8">FECrsMatrixType</a></td></tr>
+<tr class="separator:af46b5335bc10784a82a0c8e16fb554d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5e1b6f88f2b7424ea0477a8d718dc65" id="r_af5e1b6f88f2b7424ea0477a8d718dc65"><td class="memItemLeft" align="right" valign="top">typedef Thyra::TpetraVector&lt; ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#af5e1b6f88f2b7424ea0477a8d718dc65">ThyraVector</a></td></tr>
 <tr class="separator:af5e1b6f88f2b7424ea0477a8d718dc65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad24145b03fcb004d3126e7a7c2e3be16" id="r_ad24145b03fcb004d3126e7a7c2e3be16"><td class="memItemLeft" align="right" valign="top">typedef Thyra::TpetraLinearOp&lt; ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#ad24145b03fcb004d3126e7a7c2e3be16">ThyraLinearOp</a></td></tr>
@@ -124,11 +129,14 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac15c44c43f0317774cabecadd80648fe" id="r_ac15c44c43f0317774cabecadd80648fe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#ac15c44c43f0317774cabecadd80648fe">BlockedTpetraLinearObjFactory</a> (const Teuchos::RCP&lt; const <a class="el" href="class_teuchos_1_1_mpi_comm.html">Teuchos::MpiComm</a>&lt; int &gt; &gt; &amp;comm, const Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_blocked_d_o_f_manager.html">BlockedDOFManager</a> &gt; &amp;gidProvider)</td></tr>
-<tr class="separator:ac15c44c43f0317774cabecadd80648fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeef22db8e5b10b50906fdc4d6f87cb12" id="r_aeef22db8e5b10b50906fdc4d6f87cb12"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#aeef22db8e5b10b50906fdc4d6f87cb12">BlockedTpetraLinearObjFactory</a> (const Teuchos::RCP&lt; const <a class="el" href="class_teuchos_1_1_mpi_comm.html">Teuchos::MpiComm</a>&lt; int &gt; &gt; &amp;comm, const std::vector&lt; Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_global_indexer.html">panzer::GlobalIndexer</a> &gt; &gt; &amp;gidProviders)</td></tr>
-<tr class="memdesc:aeef22db8e5b10b50906fdc4d6f87cb12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ctor that takes a vector of DOFManagers instead of the <a class="el" href="classpanzer_1_1_blocked_d_o_f_manager.html">BlockedDOFManager</a>. Plan is to deprecate the <a class="el" href="classpanzer_1_1_blocked_d_o_f_manager.html">BlockedDOFManager</a>, but for now it is ingrained in all gather/scatter operators.  <br /></td></tr>
-<tr class="separator:aeef22db8e5b10b50906fdc4d6f87cb12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c1dfce4fd2e1461b832d83acd2851e7" id="r_a4c1dfce4fd2e1461b832d83acd2851e7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a4c1dfce4fd2e1461b832d83acd2851e7">BlockedTpetraLinearObjFactory</a> (const Teuchos::RCP&lt; const <a class="el" href="class_teuchos_1_1_mpi_comm.html">Teuchos::MpiComm</a>&lt; int &gt; &gt; &amp;comm, const Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_blocked_d_o_f_manager.html">BlockedDOFManager</a> &gt; &amp;gidProvider, bool <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a89d5a20dec825030b44825292d6de776">useFEAssembly</a>=false)</td></tr>
+<tr class="separator:a4c1dfce4fd2e1461b832d83acd2851e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0c4b9da704513778eb45e36ae43e79a" id="r_aa0c4b9da704513778eb45e36ae43e79a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#aa0c4b9da704513778eb45e36ae43e79a">BlockedTpetraLinearObjFactory</a> (const Teuchos::RCP&lt; const <a class="el" href="class_teuchos_1_1_mpi_comm.html">Teuchos::MpiComm</a>&lt; int &gt; &gt; &amp;comm, const std::vector&lt; Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_global_indexer.html">panzer::GlobalIndexer</a> &gt; &gt; &amp;gidProviders, bool <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a89d5a20dec825030b44825292d6de776">useFEAssembly</a>=false)</td></tr>
+<tr class="memdesc:aa0c4b9da704513778eb45e36ae43e79a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ctor that takes a vector of DOFManagers instead of the <a class="el" href="classpanzer_1_1_blocked_d_o_f_manager.html">BlockedDOFManager</a>. Plan is to deprecate the <a class="el" href="classpanzer_1_1_blocked_d_o_f_manager.html">BlockedDOFManager</a>, but for now it is ingrained in all gather/scatter operators.  <br /></td></tr>
+<tr class="separator:aa0c4b9da704513778eb45e36ae43e79a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ad8059673c48f6396b7d1c8ef2c6d5d" id="r_a5ad8059673c48f6396b7d1c8ef2c6d5d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a5ad8059673c48f6396b7d1c8ef2c6d5d">BlockedTpetraLinearObjFactory</a> (const Teuchos::RCP&lt; const <a class="el" href="class_teuchos_1_1_mpi_comm.html">Teuchos::MpiComm</a>&lt; int &gt; &gt; &amp;comm, const Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_global_indexer.html">GlobalIndexer</a> &gt; &amp;rowProvider, const Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_global_indexer.html">GlobalIndexer</a> &gt; &amp;colProvider, bool <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a89d5a20dec825030b44825292d6de776">useFEAssembly</a>=false)</td></tr>
+<tr class="memdesc:a5ad8059673c48f6396b7d1c8ef2c6d5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ctor for a non-square factory, whose range and domain differ.  <br /></td></tr>
+<tr class="separator:a5ad8059673c48f6396b7d1c8ef2c6d5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb9f885e2916b441015234f031beca6f" id="r_afb9f885e2916b441015234f031beca6f"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#afb9f885e2916b441015234f031beca6f">~BlockedTpetraLinearObjFactory</a> ()</td></tr>
 <tr class="separator:afb9f885e2916b441015234f031beca6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac05be35614c474332a02634b2e38b3f6" id="r_ac05be35614c474332a02634b2e38b3f6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#ac05be35614c474332a02634b2e38b3f6">readVector</a> (const std::string &amp;, <a class="el" href="classpanzer_1_1_linear_obj_container.html">LinearObjContainer</a> &amp;, int) const</td></tr>
@@ -241,10 +249,27 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af5d252f162a9e064d869be91409b093f" id="r_af5d252f162a9e064d869be91409b093f"><td class="memItemLeft" align="right" valign="top">virtual Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a7876f9fea08dc3f3114fbea78797e389">ExportType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#af5d252f162a9e064d869be91409b093f">getGhostedExport</a> (int j) const</td></tr>
 <tr class="memdesc:af5d252f162a9e064d869be91409b093f"><td class="mdescLeft">&#160;</td><td class="mdescRight">get exporter for converting an overalapped object to a "normal" object  <br /></td></tr>
 <tr class="separator:af5d252f162a9e064d869be91409b093f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6736cddbca50b6605f4f856aee9735a5" id="r_a6736cddbca50b6605f4f856aee9735a5"><td class="memItemLeft" align="right" valign="top">virtual Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#acf28978128b60e254604cc2d9cf14bb4">MapType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a6736cddbca50b6605f4f856aee9735a5">getColMap</a> (int i) const</td></tr>
+<tr class="separator:a6736cddbca50b6605f4f856aee9735a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1205f0bf54986ae20cd5b547bd092f8" id="r_af1205f0bf54986ae20cd5b547bd092f8"><td class="memItemLeft" align="right" valign="top">virtual Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#acf28978128b60e254604cc2d9cf14bb4">MapType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#af1205f0bf54986ae20cd5b547bd092f8">getGhostedColMap</a> (int i) const</td></tr>
+<tr class="separator:af1205f0bf54986ae20cd5b547bd092f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43308ba81167e7ccf4675ab4e268a928" id="r_a43308ba81167e7ccf4675ab4e268a928"><td class="memItemLeft" align="right" valign="top">virtual Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#adac4046e9333f5eaa157e61a6e90fdeb">ImportType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a43308ba81167e7ccf4675ab4e268a928">getGhostedColImport</a> (int i) const</td></tr>
+<tr class="separator:a43308ba81167e7ccf4675ab4e268a928"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af13c360fad83c7408bc45661857445f3" id="r_af13c360fad83c7408bc45661857445f3"><td class="memItemLeft" align="right" valign="top">virtual Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a7876f9fea08dc3f3114fbea78797e389">ExportType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#af13c360fad83c7408bc45661857445f3">getGhostedColExport</a> (int i) const</td></tr>
+<tr class="separator:af13c360fad83c7408bc45661857445f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9cb3038b59a132ae643b2f167e3c5f91" id="r_a9cb3038b59a132ae643b2f167e3c5f91"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#acc9fa49b8ed8a059a873d0e43cf85682">CrsMatrixType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a9cb3038b59a132ae643b2f167e3c5f91">getTpetraMatrix</a> (int i, int j) const</td></tr>
 <tr class="separator:a9cb3038b59a132ae643b2f167e3c5f91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2e2a6a6205395de6781aa22b26881d5" id="r_ad2e2a6a6205395de6781aa22b26881d5"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#acc9fa49b8ed8a059a873d0e43cf85682">CrsMatrixType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#ad2e2a6a6205395de6781aa22b26881d5">getGhostedTpetraMatrix</a> (int i, int j) const</td></tr>
 <tr class="separator:ad2e2a6a6205395de6781aa22b26881d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89d5a20dec825030b44825292d6de776" id="r_a89d5a20dec825030b44825292d6de776"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a89d5a20dec825030b44825292d6de776">useFEAssembly</a> () const</td></tr>
+<tr class="memdesc:a89d5a20dec825030b44825292d6de776"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if this factory was constructed with FE assembly enabled.  <br /></td></tr>
+<tr class="separator:a89d5a20dec825030b44825292d6de776"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a0eb0c12b2e85731392ae7242abbe28" id="r_a0a0eb0c12b2e85731392ae7242abbe28"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#abc6776f0b1d5f8651de25121d7e40e88">FECrsGraphType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a0a0eb0c12b2e85731392ae7242abbe28">getFEGraph</a> (int i, int j) const</td></tr>
+<tr class="memdesc:a0a0eb0c12b2e85731392ae7242abbe28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the (cached) FE graph for block (i,j), built via the Tpetra::FECrsGraph "V2" ctor.  <br /></td></tr>
+<tr class="separator:a0a0eb0c12b2e85731392ae7242abbe28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a82728df8b4ef8afd8720f83f8da28f" id="r_a0a82728df8b4ef8afd8720f83f8da28f"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#af46b5335bc10784a82a0c8e16fb554d8">FECrsMatrixType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a0a82728df8b4ef8afd8720f83f8da28f">getFEMatrix</a> (int i, int j) const</td></tr>
+<tr class="memdesc:a0a82728df8b4ef8afd8720f83f8da28f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the (cached) FECrsMatrix for block (i,j).  <br /></td></tr>
+<tr class="separator:a0a82728df8b4ef8afd8720f83f8da28f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a266246540ad3252000fdfff99c985528" id="r_a266246540ad3252000fdfff99c985528"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a7f738d2bd645812516e98fd236407738">VectorType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a266246540ad3252000fdfff99c985528">getTpetraDomainVector</a> (int i) const</td></tr>
 <tr class="separator:a266246540ad3252000fdfff99c985528"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82eab854cf31e4aa10cb21859d695c03" id="r_a82eab854cf31e4aa10cb21859d695c03"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a7f738d2bd645812516e98fd236407738">VectorType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a82eab854cf31e4aa10cb21859d695c03">getGhostedTpetraDomainVector</a> (int i) const</td></tr>
@@ -266,13 +291,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:af0f292b4c328092c7e92fd1bf05b6a51"><td class="mdescLeft">&#160;</td><td class="mdescRight">exclude a vector of pairs from the matrix  <br /></td></tr>
 <tr class="separator:af0f292b4c328092c7e92fd1bf05b6a51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94c843e43fd400c520f974035ca8f13f" id="r_a94c843e43fd400c520f974035ca8f13f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a94c843e43fd400c520f974035ca8f13f">beginFill</a> (<a class="el" href="classpanzer_1_1_linear_obj_container.html">LinearObjContainer</a> &amp;loc) const</td></tr>
+<tr class="memdesc:a94c843e43fd400c520f974035ca8f13f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a container for filling. Takes either a ghosted or an owned container.  <br /></td></tr>
 <tr class="separator:a94c843e43fd400c520f974035ca8f13f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac64fbe89bd971268f0cc735911f50286" id="r_ac64fbe89bd971268f0cc735911f50286"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#ac64fbe89bd971268f0cc735911f50286">beginFill</a> (<a class="el" href="classpanzer_1_1_linear_obj_container.html">LinearObjContainer</a> &amp;ghostContainer, const <a class="el" href="classpanzer_1_1_linear_obj_container.html">LinearObjContainer</a> &amp;container) const</td></tr>
+<tr class="memdesc:ac64fbe89bd971268f0cc735911f50286"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open the ghosted container for filling, giving it the owned container's operator.  <br /></td></tr>
+<tr class="separator:ac64fbe89bd971268f0cc735911f50286"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26adcc78a32fe10ca1b497a5355cc77d" id="r_a26adcc78a32fe10ca1b497a5355cc77d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a26adcc78a32fe10ca1b497a5355cc77d">endFill</a> (<a class="el" href="classpanzer_1_1_linear_obj_container.html">LinearObjContainer</a> &amp;loc) const</td></tr>
+<tr class="memdesc:a26adcc78a32fe10ca1b497a5355cc77d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close a container after filling. Takes either a ghosted or an owned container.  <br /></td></tr>
 <tr class="separator:a26adcc78a32fe10ca1b497a5355cc77d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4288e546f1773edaafb1507837b16f10" id="r_a4288e546f1773edaafb1507837b16f10"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a4288e546f1773edaafb1507837b16f10">endFill</a> (<a class="el" href="classpanzer_1_1_linear_obj_container.html">LinearObjContainer</a> &amp;ghostContainer, const <a class="el" href="classpanzer_1_1_linear_obj_container.html">LinearObjContainer</a> &amp;container) const</td></tr>
+<tr class="memdesc:a4288e546f1773edaafb1507837b16f10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close the ghosted container after filling, returning the borrowed matrix.  <br /></td></tr>
+<tr class="separator:a4288e546f1773edaafb1507837b16f10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc2b36b89514c881e035c166853c24e3" id="r_afc2b36b89514c881e035c166853c24e3"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_blocked_d_o_f_manager.html">panzer::BlockedDOFManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#afc2b36b89514c881e035c166853c24e3">getGlobalIndexer</a> () const</td></tr>
 <tr class="separator:afc2b36b89514c881e035c166853c24e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13a860ce929dda3440963d3346752364" id="r_a13a860ce929dda3440963d3346752364"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_global_indexer.html">panzer::GlobalIndexer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a13a860ce929dda3440963d3346752364">getDomainGlobalIndexer</a> () const</td></tr>
-<tr class="memdesc:a13a860ce929dda3440963d3346752364"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the domain unique global indexer this factory was created with.  <br /></td></tr>
 <tr class="separator:a13a860ce929dda3440963d3346752364"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08cfc1f7e462bbb1c0b4a21dada63e87" id="r_a08cfc1f7e462bbb1c0b4a21dada63e87"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_global_indexer.html">panzer::GlobalIndexer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a08cfc1f7e462bbb1c0b4a21dada63e87">getRangeGlobalIndexer</a> () const</td></tr>
 <tr class="memdesc:a08cfc1f7e462bbb1c0b4a21dada63e87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the range unique global indexer this factory was created with.  <br /></td></tr>
@@ -317,29 +349,42 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:ab3dec1f22d229342cc53d0ba2c7d4398" id="r_ab3dec1f22d229342cc53d0ba2c7d4398"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_global_indexer.html">GlobalIndexer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#ab3dec1f22d229342cc53d0ba2c7d4398">getGlobalIndexer</a> (int i) const</td></tr>
 <tr class="separator:ab3dec1f22d229342cc53d0ba2c7d4398"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d70f478c5fe262214cc701a8b946b63" id="r_a6d70f478c5fe262214cc701a8b946b63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a6d70f478c5fe262214cc701a8b946b63">makeRoomForBlocks</a> (std::size_t blockCnt)</td></tr>
-<tr class="memdesc:a6d70f478c5fe262214cc701a8b946b63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate the space in the std::vector objects so we can fill with appropriate Tpetra data.  <br /></td></tr>
-<tr class="separator:a6d70f478c5fe262214cc701a8b946b63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11916581935081d49ea80cb5031f67bb" id="r_a11916581935081d49ea80cb5031f67bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a11916581935081d49ea80cb5031f67bb">ghostToGlobalThyraVector</a> (const Teuchos::RCP&lt; const <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/class_thyra_1_1_vector_base.html">Thyra::VectorBase</a>&lt; ScalarT &gt; &gt; &amp;in, const Teuchos::RCP&lt; <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/class_thyra_1_1_vector_base.html">Thyra::VectorBase</a>&lt; ScalarT &gt; &gt; &amp;out) const</td></tr>
-<tr class="separator:a11916581935081d49ea80cb5031f67bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b63cd81da040ba1651cc5c1eea4fe01" id="r_a3b63cd81da040ba1651cc5c1eea4fe01"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_global_indexer.html">GlobalIndexer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a3b63cd81da040ba1651cc5c1eea4fe01">getColGlobalIndexer</a> (int i) const</td></tr>
+<tr class="separator:a3b63cd81da040ba1651cc5c1eea4fe01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89d36dcd817171bce550f22871a065cf" id="r_a89d36dcd817171bce550f22871a065cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a89d36dcd817171bce550f22871a065cf">makeRoomForBlocks</a> (std::size_t blockCnt, std::size_t colBlockCnt=0)</td></tr>
+<tr class="memdesc:a89d36dcd817171bce550f22871a065cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate the space in the std::vector objects so we can fill with appropriate Tpetra data.  <br /></td></tr>
+<tr class="separator:a89d36dcd817171bce550f22871a065cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1699168e429d36983b49167070081fc" id="r_af1699168e429d36983b49167070081fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#af1699168e429d36983b49167070081fc">ghostToGlobalThyraVector</a> (const Teuchos::RCP&lt; const <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/class_thyra_1_1_vector_base.html">Thyra::VectorBase</a>&lt; ScalarT &gt; &gt; &amp;in, const Teuchos::RCP&lt; <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/class_thyra_1_1_vector_base.html">Thyra::VectorBase</a>&lt; ScalarT &gt; &gt; &amp;out, bool col) const</td></tr>
+<tr class="separator:af1699168e429d36983b49167070081fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac63c270443eb561b5d00a4026cd6fedc" id="r_ac63c270443eb561b5d00a4026cd6fedc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#ac63c270443eb561b5d00a4026cd6fedc">ghostToGlobalThyraMatrix</a> (const <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/class_thyra_1_1_linear_op_base.html">Thyra::LinearOpBase</a>&lt; ScalarT &gt; &amp;in, <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/class_thyra_1_1_linear_op_base.html">Thyra::LinearOpBase</a>&lt; ScalarT &gt; &amp;out) const</td></tr>
 <tr class="separator:ac63c270443eb561b5d00a4026cd6fedc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2a58d5191d183ae743f2f2d4a76e318" id="r_aa2a58d5191d183ae743f2f2d4a76e318"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#aa2a58d5191d183ae743f2f2d4a76e318">globalToGhostThyraVector</a> (const Teuchos::RCP&lt; const <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/class_thyra_1_1_vector_base.html">Thyra::VectorBase</a>&lt; ScalarT &gt; &gt; &amp;in, const Teuchos::RCP&lt; <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/class_thyra_1_1_vector_base.html">Thyra::VectorBase</a>&lt; ScalarT &gt; &gt; &amp;out) const</td></tr>
-<tr class="separator:aa2a58d5191d183ae743f2f2d4a76e318"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a538aad761cab6bc1d7216eb3d49bda4f" id="r_a538aad761cab6bc1d7216eb3d49bda4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a538aad761cab6bc1d7216eb3d49bda4f">globalToGhostThyraVector</a> (const Teuchos::RCP&lt; const <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/class_thyra_1_1_vector_base.html">Thyra::VectorBase</a>&lt; ScalarT &gt; &gt; &amp;in, const Teuchos::RCP&lt; <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/class_thyra_1_1_vector_base.html">Thyra::VectorBase</a>&lt; ScalarT &gt; &gt; &amp;out, bool col) const</td></tr>
+<tr class="separator:a538aad761cab6bc1d7216eb3d49bda4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae80bf1c6e5cc837899a39d16080564cd" id="r_ae80bf1c6e5cc837899a39d16080564cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#ae80bf1c6e5cc837899a39d16080564cd">adjustForDirichletConditions</a> (const <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a7f738d2bd645812516e98fd236407738">VectorType</a> &amp;local_bcs, const <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a7f738d2bd645812516e98fd236407738">VectorType</a> &amp;global_bcs, const Teuchos::Ptr&lt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a7f738d2bd645812516e98fd236407738">VectorType</a> &gt; &amp;f, const Teuchos::Ptr&lt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#acc9fa49b8ed8a059a873d0e43cf85682">CrsMatrixType</a> &gt; &amp;A, bool zeroVectorRows) const</td></tr>
 <tr class="separator:ae80bf1c6e5cc837899a39d16080564cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac60625245486c5678cf39e8de1fc5873" id="r_ac60625245486c5678cf39e8de1fc5873"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#ac60625245486c5678cf39e8de1fc5873">ghostToGlobalTpetraVector</a> (int i, const <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a7f738d2bd645812516e98fd236407738">VectorType</a> &amp;in, <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a7f738d2bd645812516e98fd236407738">VectorType</a> &amp;out) const</td></tr>
-<tr class="separator:ac60625245486c5678cf39e8de1fc5873"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d90215f51bfc39c70076a4bcd562c88" id="r_a8d90215f51bfc39c70076a4bcd562c88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a8d90215f51bfc39c70076a4bcd562c88">ghostToGlobalTpetraVector</a> (int i, const <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a7f738d2bd645812516e98fd236407738">VectorType</a> &amp;in, <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a7f738d2bd645812516e98fd236407738">VectorType</a> &amp;out, bool col) const</td></tr>
+<tr class="separator:a8d90215f51bfc39c70076a4bcd562c88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac858be6cc953d90d53152c3daf77f86a" id="r_ac858be6cc953d90d53152c3daf77f86a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#ac858be6cc953d90d53152c3daf77f86a">ghostToGlobalTpetraMatrix</a> (int blockRow, const <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#acc9fa49b8ed8a059a873d0e43cf85682">CrsMatrixType</a> &amp;in, <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#acc9fa49b8ed8a059a873d0e43cf85682">CrsMatrixType</a> &amp;out) const</td></tr>
 <tr class="separator:ac858be6cc953d90d53152c3daf77f86a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe5231827b644a78d6a62dd4ae3469d9" id="r_abe5231827b644a78d6a62dd4ae3469d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#abe5231827b644a78d6a62dd4ae3469d9">globalToGhostTpetraVector</a> (int i, const <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a7f738d2bd645812516e98fd236407738">VectorType</a> &amp;in, <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a7f738d2bd645812516e98fd236407738">VectorType</a> &amp;out) const</td></tr>
-<tr class="separator:abe5231827b644a78d6a62dd4ae3469d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93e4d4ff154f8d95decbeb14f54fa35b" id="r_a93e4d4ff154f8d95decbeb14f54fa35b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a93e4d4ff154f8d95decbeb14f54fa35b">globalToGhostTpetraVector</a> (int i, const <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a7f738d2bd645812516e98fd236407738">VectorType</a> &amp;in, <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a7f738d2bd645812516e98fd236407738">VectorType</a> &amp;out, bool col) const</td></tr>
+<tr class="separator:a93e4d4ff154f8d95decbeb14f54fa35b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c668d5bd76cbfec4e8044a49870e130" id="r_a5c668d5bd76cbfec4e8044a49870e130"><td class="memItemLeft" align="right" valign="top">virtual Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#acf28978128b60e254604cc2d9cf14bb4">MapType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a5c668d5bd76cbfec4e8044a49870e130">buildTpetraMap</a> (int i) const</td></tr>
 <tr class="separator:a5c668d5bd76cbfec4e8044a49870e130"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c40f7c3efe7ffc32f0622dc9f5dc27f" id="r_a4c40f7c3efe7ffc32f0622dc9f5dc27f"><td class="memItemLeft" align="right" valign="top">virtual Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#acf28978128b60e254604cc2d9cf14bb4">MapType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a4c40f7c3efe7ffc32f0622dc9f5dc27f">buildTpetraGhostedMap</a> (int i) const</td></tr>
 <tr class="separator:a4c40f7c3efe7ffc32f0622dc9f5dc27f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2113e37acfab4668b3fbf458b54d398" id="r_ad2113e37acfab4668b3fbf458b54d398"><td class="memItemLeft" align="right" valign="top">virtual Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#acf28978128b60e254604cc2d9cf14bb4">MapType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#ad2113e37acfab4668b3fbf458b54d398">buildColTpetraMap</a> (int i) const</td></tr>
+<tr class="separator:ad2113e37acfab4668b3fbf458b54d398"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08b30a4908344f9d56ac9e1d4bb99be4" id="r_a08b30a4908344f9d56ac9e1d4bb99be4"><td class="memItemLeft" align="right" valign="top">virtual Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#acf28978128b60e254604cc2d9cf14bb4">MapType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a08b30a4908344f9d56ac9e1d4bb99be4">buildColTpetraGhostedMap</a> (int i) const</td></tr>
+<tr class="separator:a08b30a4908344f9d56ac9e1d4bb99be4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e3f36c2af17ff7f50974e0294a002ab" id="r_a5e3f36c2af17ff7f50974e0294a002ab"><td class="memItemLeft" align="right" valign="top">virtual Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a7132971a280845107f9ee79ec4f72296">CrsGraphType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a5e3f36c2af17ff7f50974e0294a002ab">buildTpetraGraph</a> (int i, int j) const</td></tr>
 <tr class="separator:a5e3f36c2af17ff7f50974e0294a002ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2774083e6ad099dc8e257bc6cd9b4cde" id="r_a2774083e6ad099dc8e257bc6cd9b4cde"><td class="memItemLeft" align="right" valign="top">virtual Teuchos::RCP&lt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#abc6776f0b1d5f8651de25121d7e40e88">FECrsGraphType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a2774083e6ad099dc8e257bc6cd9b4cde">buildFEGraph</a> (int i, int j) const</td></tr>
+<tr class="separator:a2774083e6ad099dc8e257bc6cd9b4cde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-static-methods" name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:acff21b8c03916fc99dbc3b53604992f4" id="r_acff21b8c03916fc99dbc3b53604992f4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#acff21b8c03916fc99dbc3b53604992f4">splitIntoBlocks</a> (const Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_global_indexer.html">GlobalIndexer</a> &gt; &amp;ugi, Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_blocked_d_o_f_manager.html">BlockedDOFManager</a> &gt; &amp;blocked, std::vector&lt; Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_global_indexer.html">GlobalIndexer</a> &gt; &gt; &amp;blocks)</td></tr>
+<tr class="separator:acff21b8c03916fc99dbc3b53604992f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -349,16 +394,24 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a3494b56ca305230ff538c997e0e38196"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13dfcfdb794d93db007ccba81045a6db" id="r_a13dfcfdb794d93db007ccba81045a6db"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_global_indexer.html">GlobalIndexer</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a13dfcfdb794d93db007ccba81045a6db">gidProviders_</a></td></tr>
 <tr class="separator:a13dfcfdb794d93db007ccba81045a6db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4c28083394d867e3fed4f969e16897d" id="r_ac4c28083394d867e3fed4f969e16897d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#ac4c28083394d867e3fed4f969e16897d">hasColProvider_</a></td></tr>
+<tr class="separator:ac4c28083394d867e3fed4f969e16897d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c7af11a8f8a302195549c749ed25a8c" id="r_a1c7af11a8f8a302195549c749ed25a8c"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_global_indexer.html">GlobalIndexer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a1c7af11a8f8a302195549c749ed25a8c">colBlockProvider_</a></td></tr>
+<tr class="separator:a1c7af11a8f8a302195549c749ed25a8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae28dd78839de4b02face170d4c953bde" id="r_ae28dd78839de4b02face170d4c953bde"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_blocked_d_o_f_manager.html">BlockedDOFManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#ae28dd78839de4b02face170d4c953bde">colBlockedDOFManager_</a></td></tr>
+<tr class="separator:ae28dd78839de4b02face170d4c953bde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3458112b409f6bb4343b621f42543873" id="r_a3458112b409f6bb4343b621f42543873"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_global_indexer.html">GlobalIndexer</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a3458112b409f6bb4343b621f42543873">colGidProviders_</a></td></tr>
+<tr class="separator:a3458112b409f6bb4343b621f42543873"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb390297ae865805668f071001ee74f0" id="r_acb390297ae865805668f071001ee74f0"><td class="memItemLeft" align="right" valign="top">std::unordered_set&lt; std::pair&lt; int, int &gt;, <a class="el" href="structpanzer_1_1pair__hash.html">panzer::pair_hash</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#acb390297ae865805668f071001ee74f0">excludedPairs_</a></td></tr>
 <tr class="separator:acb390297ae865805668f071001ee74f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7e89cfe68100bec8ade71e22200849d" id="r_ad7e89cfe68100bec8ade71e22200849d"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; Thyra::ProductVectorSpaceBase&lt; ScalarT &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#ad7e89cfe68100bec8ade71e22200849d">rangeSpace_</a></td></tr>
 <tr class="separator:ad7e89cfe68100bec8ade71e22200849d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf26432f9879bc6362050072cb38f132" id="r_acf26432f9879bc6362050072cb38f132"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; Thyra::ProductVectorSpaceBase&lt; ScalarT &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#acf26432f9879bc6362050072cb38f132">domainSpace_</a></td></tr>
-<tr class="separator:acf26432f9879bc6362050072cb38f132"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad55e13d3a2f5f0f911fbe58ab37d0e79" id="r_ad55e13d3a2f5f0f911fbe58ab37d0e79"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; Thyra::ProductVectorSpaceBase&lt; ScalarT &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#ad55e13d3a2f5f0f911fbe58ab37d0e79">ghostedRangeSpace_</a></td></tr>
 <tr class="separator:ad55e13d3a2f5f0f911fbe58ab37d0e79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a877ae958e96394988a740a447e565e7c" id="r_a877ae958e96394988a740a447e565e7c"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; Thyra::ProductVectorSpaceBase&lt; ScalarT &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a877ae958e96394988a740a447e565e7c">ghostedDomainSpace_</a></td></tr>
-<tr class="separator:a877ae958e96394988a740a447e565e7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3b2f4cd4c79728c8b72f94a9bf5fee4" id="r_ad3b2f4cd4c79728c8b72f94a9bf5fee4"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; const <a class="el" href="class_thyra_1_1_vector_space_base.html">Thyra::VectorSpaceBase</a>&lt; ScalarT &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#ad3b2f4cd4c79728c8b72f94a9bf5fee4">domainSpace_</a></td></tr>
+<tr class="separator:ad3b2f4cd4c79728c8b72f94a9bf5fee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0845604413d7fbcd0f7619e3cb73ff26" id="r_a0845604413d7fbcd0f7619e3cb73ff26"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; const <a class="el" href="class_thyra_1_1_vector_space_base.html">Thyra::VectorSpaceBase</a>&lt; ScalarT &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a0845604413d7fbcd0f7619e3cb73ff26">ghostedDomainSpace_</a></td></tr>
+<tr class="separator:a0845604413d7fbcd0f7619e3cb73ff26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20d726d96e28fe2919549a8bc2557281" id="r_a20d726d96e28fe2919549a8bc2557281"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; const <a class="el" href="class_teuchos_1_1_mpi_comm.html">Teuchos::MpiComm</a>&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a20d726d96e28fe2919549a8bc2557281">comm_</a></td></tr>
 <tr class="separator:a20d726d96e28fe2919549a8bc2557281"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa270be3b8047f59ea9d701911e06a805" id="r_aa270be3b8047f59ea9d701911e06a805"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#acf28978128b60e254604cc2d9cf14bb4">MapType</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#aa270be3b8047f59ea9d701911e06a805">maps_</a></td></tr>
@@ -373,11 +426,25 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:ac3b5546a294f269a6a476efcd40a5730"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a91c3cca53ae73e96088e12de412df6" id="r_a4a91c3cca53ae73e96088e12de412df6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a7876f9fea08dc3f3114fbea78797e389">ExportType</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a4a91c3cca53ae73e96088e12de412df6">exporters_</a></td></tr>
 <tr class="separator:a4a91c3cca53ae73e96088e12de412df6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0329a37f339596add7482ca7ba244ea" id="r_ac0329a37f339596add7482ca7ba244ea"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#acf28978128b60e254604cc2d9cf14bb4">MapType</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#ac0329a37f339596add7482ca7ba244ea">colMaps_</a></td></tr>
+<tr class="separator:ac0329a37f339596add7482ca7ba244ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e1638f33a3ebf6cbfd1656ca9aa3b10" id="r_a0e1638f33a3ebf6cbfd1656ca9aa3b10"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#acf28978128b60e254604cc2d9cf14bb4">MapType</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a0e1638f33a3ebf6cbfd1656ca9aa3b10">ghostedColMaps_</a></td></tr>
+<tr class="separator:a0e1638f33a3ebf6cbfd1656ca9aa3b10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92238089521291f4089aa26b890e26c5" id="r_a92238089521291f4089aa26b890e26c5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#adac4046e9333f5eaa157e61a6e90fdeb">ImportType</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a92238089521291f4089aa26b890e26c5">colImporters_</a></td></tr>
+<tr class="separator:a92238089521291f4089aa26b890e26c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1de904b3d33edaeee5431df393aa6bbb" id="r_a1de904b3d33edaeee5431df393aa6bbb"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a7876f9fea08dc3f3114fbea78797e389">ExportType</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a1de904b3d33edaeee5431df393aa6bbb">colExporters_</a></td></tr>
+<tr class="separator:a1de904b3d33edaeee5431df393aa6bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c6ed74c1a7832a27221e27056b20796" id="r_a1c6ed74c1a7832a27221e27056b20796"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a1c6ed74c1a7832a27221e27056b20796">useFEAssembly_</a></td></tr>
+<tr class="separator:a1c6ed74c1a7832a27221e27056b20796"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa474cd97d19308ccf7ca0dfd63c2a6d0" id="r_aa474cd97d19308ccf7ca0dfd63c2a6d0"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::pair&lt; int, int &gt;, Teuchos::RCP&lt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#abc6776f0b1d5f8651de25121d7e40e88">FECrsGraphType</a> &gt;, <a class="el" href="structpanzer_1_1pair__hash.html">panzer::pair_hash</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#aa474cd97d19308ccf7ca0dfd63c2a6d0">feGraphs_</a></td></tr>
+<tr class="separator:aa474cd97d19308ccf7ca0dfd63c2a6d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7e393923fd4879eae4ee8903a58995a" id="r_ae7e393923fd4879eae4ee8903a58995a"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::pair&lt; int, int &gt;, const <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#af46b5335bc10784a82a0c8e16fb554d8">FECrsMatrixType</a> *, <a class="el" href="structpanzer_1_1pair__hash.html">panzer::pair_hash</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#ae7e393923fd4879eae4ee8903a58995a">feAssemblyOpenOn_</a></td></tr>
+<tr class="separator:ae7e393923fd4879eae4ee8903a58995a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, typename ScalarT, typename LocalOrdinalT, typename GlobalOrdinalT, typename NodeT = panzer::TpetraNodeType&gt;<br />
 class panzer::BlockedTpetraLinearObjFactory&lt; Traits, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;</div>
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00049">49</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00052">52</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="ae5b637e86fbe1f50e208e8f9cad0193d" name="ae5b637e86fbe1f50e208e8f9cad0193d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae5b637e86fbe1f50e208e8f9cad0193d">&#9670;&#160;</a></span>BTLOC</h2>
@@ -393,7 +460,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00052">52</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00055">55</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -411,7 +478,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00053">53</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00056">56</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -429,7 +496,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00054">54</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00057">57</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -447,7 +514,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00055">55</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00058">58</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -465,7 +532,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00056">56</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00059">59</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -483,7 +550,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00057">57</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00060">60</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -501,7 +568,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00058">58</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00061">61</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -519,7 +586,43 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00059">59</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00062">62</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+
+</div>
+</div>
+<a id="abc6776f0b1d5f8651de25121d7e40e88" name="abc6776f0b1d5f8651de25121d7e40e88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc6776f0b1d5f8651de25121d7e40e88">&#9670;&#160;</a></span>FECrsGraphType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a> , typename ScalarT , typename LocalOrdinalT , typename GlobalOrdinalT , typename NodeT  = panzer::TpetraNodeType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef Tpetra::FECrsGraph&lt;LocalOrdinalT,GlobalOrdinalT,NodeT&gt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">panzer::BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;::FECrsGraphType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00064">64</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+
+</div>
+</div>
+<a id="af46b5335bc10784a82a0c8e16fb554d8" name="af46b5335bc10784a82a0c8e16fb554d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af46b5335bc10784a82a0c8e16fb554d8">&#9670;&#160;</a></span>FECrsMatrixType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a> , typename ScalarT , typename LocalOrdinalT , typename GlobalOrdinalT , typename NodeT  = panzer::TpetraNodeType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef Tpetra::FECrsMatrix&lt;ScalarT,LocalOrdinalT,GlobalOrdinalT,NodeT&gt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">panzer::BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;::FECrsMatrixType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00065">65</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -537,7 +640,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00061">61</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00067">67</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -555,13 +658,13 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00062">62</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00068">68</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ac15c44c43f0317774cabecadd80648fe" name="ac15c44c43f0317774cabecadd80648fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac15c44c43f0317774cabecadd80648fe">&#9670;&#160;</a></span>BlockedTpetraLinearObjFactory() <span class="overload">[1/2]</span></h2>
+<a id="a4c1dfce4fd2e1461b832d83acd2851e7" name="a4c1dfce4fd2e1461b832d83acd2851e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c1dfce4fd2e1461b832d83acd2851e7">&#9670;&#160;</a></span>BlockedTpetraLinearObjFactory() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -578,7 +681,13 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_blocked_d_o_f_manager.html">BlockedDOFManager</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>gidProvider</em>&#160;</td>
+          <td class="paramname"><em>gidProvider</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>useFEAssembly</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -587,13 +696,19 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">useFEAssembly</td><td>Opt in to assembling each (i,j) block into a Tpetra::FECrsMatrix instead of a separate owned/ghosted CrsMatrix pair joined by an explicit export. Defaults to false, which leaves the classic behavior of this class completely unchanged. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00046">46</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00047">47</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
-<a id="aeef22db8e5b10b50906fdc4d6f87cb12" name="aeef22db8e5b10b50906fdc4d6f87cb12"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeef22db8e5b10b50906fdc4d6f87cb12">&#9670;&#160;</a></span>BlockedTpetraLinearObjFactory() <span class="overload">[2/2]</span></h2>
+<a id="aa0c4b9da704513778eb45e36ae43e79a" name="aa0c4b9da704513778eb45e36ae43e79a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0c4b9da704513778eb45e36ae43e79a">&#9670;&#160;</a></span>BlockedTpetraLinearObjFactory() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -610,7 +725,13 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::vector&lt; Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_global_indexer.html">panzer::GlobalIndexer</a> &gt; &gt; &amp;&#160;</td>
-          <td class="paramname"><em>gidProviders</em>&#160;</td>
+          <td class="paramname"><em>gidProviders</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>useFEAssembly</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -622,7 +743,54 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>Ctor that takes a vector of DOFManagers instead of the <a class="el" href="classpanzer_1_1_blocked_d_o_f_manager.html">BlockedDOFManager</a>. Plan is to deprecate the <a class="el" href="classpanzer_1_1_blocked_d_o_f_manager.html">BlockedDOFManager</a>, but for now it is ingrained in all gather/scatter operators. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00062">62</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00065">65</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a5ad8059673c48f6396b7d1c8ef2c6d5d" name="a5ad8059673c48f6396b7d1c8ef2c6d5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ad8059673c48f6396b7d1c8ef2c6d5d">&#9670;&#160;</a></span>BlockedTpetraLinearObjFactory() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a> , typename ScalarT , typename LocalOrdinalT , typename GlobalOrdinalT , typename NodeT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">panzer::BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;::BlockedTpetraLinearObjFactory </td>
+          <td>(</td>
+          <td class="paramtype">const Teuchos::RCP&lt; const <a class="el" href="class_teuchos_1_1_mpi_comm.html">Teuchos::MpiComm</a>&lt; int &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>comm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_global_indexer.html">GlobalIndexer</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rowProvider</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_global_indexer.html">GlobalIndexer</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>colProvider</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>useFEAssembly</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ctor for a non-square factory, whose range and domain differ. </p>
+<p>This is what a distributed parameter needs: the rows are indexed by the solution, the columns by the parameter. Either provider may be a <a class="el" href="classpanzer_1_1_blocked_d_o_f_manager.html">BlockedDOFManager</a> or a flat <a class="el" href="classpanzer_1_1_global_indexer.html">GlobalIndexer</a>; a flat one contributes a single block. Not supported together with FE assembly. </p>
+
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00076">76</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -651,7 +819,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00071">71</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00124">124</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -709,7 +877,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>Implements <a class="el" href="classpanzer_1_1_linear_obj_factory.html#aa6f8724f58694acdeb26f0238c79454c">panzer::LinearObjFactory&lt; Traits &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00079">79</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00104">104</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -766,7 +934,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>Implements <a class="el" href="classpanzer_1_1_linear_obj_factory.html#ae0ba83949b7a8b73c52f948e6b1ae7d8">panzer::LinearObjFactory&lt; Traits &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00082">82</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00107">107</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -798,7 +966,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>Implements <a class="el" href="classpanzer_1_1_linear_obj_factory.html#a1127506bf6ca78353962366408cec1f9">panzer::LinearObjFactory&lt; Traits &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00080">80</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00133">133</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -830,7 +998,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>Implements <a class="el" href="classpanzer_1_1_linear_obj_factory.html#ac527c0de463f688337b766be10226fdf">panzer::LinearObjFactory&lt; Traits &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00087">87</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00112">112</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -862,7 +1030,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>Implements <a class="el" href="classpanzer_1_1_linear_obj_factory.html#a2ae9e22b446e991738a000ece67ae1d6">panzer::LinearObjFactory&lt; Traits &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00096">96</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00149">149</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -894,7 +1062,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>Implements <a class="el" href="classpanzer_1_1_linear_obj_factory.html#a4a5bcd904c10b102666fb74bea776a46">panzer::LinearObjFactory&lt; Traits &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00092">92</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00117">117</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -942,7 +1110,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>Implements <a class="el" href="classpanzer_1_1_linear_obj_factory.html#a4da32707b1430285cfec3a4529eb9446">panzer::LinearObjFactory&lt; Traits &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00111">111</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00164">164</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -990,7 +1158,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>Implements <a class="el" href="classpanzer_1_1_linear_obj_factory.html#a52107091d0c36df7ff1c857ef20d50fb">panzer::LinearObjFactory&lt; Traits &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00134">134</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00187">187</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1051,7 +1219,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>Implements <a class="el" href="classpanzer_1_1_linear_obj_factory.html#af6cd1b5b327f3e6c956a9abee04cbe45">panzer::LinearObjFactory&lt; Traits &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00157">157</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00210">210</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1094,7 +1262,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>Implements <a class="el" href="classpanzer_1_1_linear_obj_factory.html#a86747c04644cf8c6af10a9bc25d38c82">panzer::LinearObjFactory&lt; Traits &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00307">307</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00363">363</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1126,7 +1294,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>Implements <a class="el" href="classpanzer_1_1_linear_obj_factory.html#ab99c67b5270139552292ed1181ad3f89">panzer::LinearObjFactory&lt; Traits &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00323">323</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00379">379</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1158,7 +1326,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>Implements <a class="el" href="classpanzer_1_1_linear_obj_factory.html#ad7d0e79f965e561d7c162c0f70c8d9b1">panzer::LinearObjFactory&lt; Traits &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00368">368</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00434">434</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1191,7 +1359,7 @@ template&lt;typename EvalT &gt; </div>
 
 <p>Use preconstructed scatter evaluators. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00135">135</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00160">160</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -1224,7 +1392,7 @@ template&lt;typename EvalT &gt; </div>
 
 <p>Use preconstructed gather evaluators. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00140">140</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00172">172</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -1257,7 +1425,7 @@ template&lt;typename EvalT &gt; </div>
 
 <p>Use preconstructed gather evaluators. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00145">145</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00177">177</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -1290,7 +1458,7 @@ template&lt;typename EvalT &gt; </div>
 
 <p>Use preconstructed gather evaluators. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00150">150</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00182">182</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -1323,7 +1491,7 @@ template&lt;typename EvalT &gt; </div>
 
 <p>Use preconstructed gather evaluators. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00155">155</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00197">197</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -1356,7 +1524,7 @@ template&lt;typename EvalT &gt; </div>
 
 <p>Use preconstructed dirichlet scatter evaluators. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00160">160</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00202">202</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -1400,7 +1568,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>Implements <a class="el" href="classpanzer_1_1_linear_obj_factory.html#ad6f3105daa0ae4b6a230dd3b7888e33c">panzer::LinearObjFactory&lt; Traits &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00375">375</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00441">441</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1434,7 +1602,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 <p>Initialize container with a specific set of member values.</p>
 <dl class="section note"><dt>Note</dt><dd>This will overwrite everything in the container and zero out values not requested. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00394">394</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00460">460</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1478,7 +1646,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>Implements <a class="el" href="classpanzer_1_1_linear_obj_factory.html#a24bc3853f0895753225ba62206e0ae65">panzer::LinearObjFactory&lt; Traits &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00383">383</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00449">449</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1512,7 +1680,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 <p>Initialize container with a specific set of member values.</p>
 <dl class="section note"><dt>Note</dt><dd>This will overwrite everything in the container and zero out values not requested. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00415">415</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00481">481</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1545,7 +1713,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>Implements <a class="el" href="classpanzer_1_1_thyra_obj_factory.html#a73e0f81f2870cbfb897cbb455ed4f83d">panzer::ThyraObjFactory&lt; double &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00477">477</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00561">561</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1578,7 +1746,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>Implements <a class="el" href="classpanzer_1_1_thyra_obj_factory.html#af38fec74049d1bebb4ed2b4c00bacb17">panzer::ThyraObjFactory&lt; double &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00494">494</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00584">584</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1602,7 +1770,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>Get the domain vector space (x and dxdt) </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00511">511</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00601">601</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1626,7 +1794,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>Get the range vector space (f) </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00523">523</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00620">620</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1649,7 +1817,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>Get a domain vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00535">535</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00632">632</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1672,7 +1840,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>Get a range vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00553">553</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00661">661</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1705,7 +1873,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>Implements <a class="el" href="classpanzer_1_1_thyra_obj_factory.html#af86dda93e2a162241d389dda798a1e82">panzer::ThyraObjFactory&lt; double &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00565">565</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00673">673</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1716,6 +1884,9 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a> , typename ScalarT , typename LocalOrdinalT , typename GlobalOrdinalT , typename NodeT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Teuchos::RCP&lt; const <a class="el" href="class_thyra_1_1_vector_space_base.html">Thyra::VectorSpaceBase</a>&lt; ScalarT &gt; &gt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">panzer::BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;::getGhostedThyraDomainSpace </td>
@@ -1724,11 +1895,18 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Get the domain vector space (x and dxdt) </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00595">595</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p>Implements <a class="el" href="classpanzer_1_1_thyra_obj_factory.html#a408001f9ef310a8d1b1ef597d2aaa5d2">panzer::ThyraObjFactory&lt; double &gt;</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00715">715</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1751,7 +1929,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>Get the range vector space (f) </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00612">612</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00738">738</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1774,7 +1952,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>Get a domain vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00629">629</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00755">755</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1797,7 +1975,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>Get a range vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00641">641</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00767">767</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1820,7 +1998,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>Get a <a class="el" href="namespace_thyra.html">Thyra</a> operator. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00653">653</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00779">779</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1852,7 +2030,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>get the map from the matrix </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00831">831</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00977">977</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1884,7 +2062,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>get the ghosted map from the matrix </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00842">842</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00988">988</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1926,7 +2104,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>get the graph of the crs matrix </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00854">854</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01000">1000</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1968,7 +2146,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>get the ghosted graph of the crs matrix </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00874">874</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01020">1020</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2000,7 +2178,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>get importer for converting an overalapped object to a "normal" object </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00894">894</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01040">1040</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2032,7 +2210,128 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>get exporter for converting an overalapped object to a "normal" object </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00905">905</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01051">1051</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a6736cddbca50b6605f4f856aee9735a5" name="a6736cddbca50b6605f4f856aee9735a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6736cddbca50b6605f4f856aee9735a5">&#9670;&#160;</a></span>getColMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a> , typename ScalarT , typename LocalOrdinalT , typename GlobalOrdinalT , typename NodeT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Teuchos::RCP&lt; const Tpetra::Map&lt; LocalOrdinalT, GlobalOrdinalT, NodeT &gt; &gt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">panzer::BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;::getColMap </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The column-side counterparts of the four accessors above. For a square factory each simply forwards to the row-side version, so the two agree object for object and callers need not care which they asked for. </p>
+
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01062">1062</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="af1205f0bf54986ae20cd5b547bd092f8" name="af1205f0bf54986ae20cd5b547bd092f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1205f0bf54986ae20cd5b547bd092f8">&#9670;&#160;</a></span>getGhostedColMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a> , typename ScalarT , typename LocalOrdinalT , typename GlobalOrdinalT , typename NodeT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Teuchos::RCP&lt; const Tpetra::Map&lt; LocalOrdinalT, GlobalOrdinalT, NodeT &gt; &gt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">panzer::BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;::getGhostedColMap </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01076">1076</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a43308ba81167e7ccf4675ab4e268a928" name="a43308ba81167e7ccf4675ab4e268a928"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43308ba81167e7ccf4675ab4e268a928">&#9670;&#160;</a></span>getGhostedColImport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a> , typename ScalarT , typename LocalOrdinalT , typename GlobalOrdinalT , typename NodeT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Teuchos::RCP&lt; const Tpetra::Import&lt; LocalOrdinalT, GlobalOrdinalT, NodeT &gt; &gt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">panzer::BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;::getGhostedColImport </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01090">1090</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="af13c360fad83c7408bc45661857445f3" name="af13c360fad83c7408bc45661857445f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af13c360fad83c7408bc45661857445f3">&#9670;&#160;</a></span>getGhostedColExport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a> , typename ScalarT , typename LocalOrdinalT , typename GlobalOrdinalT , typename NodeT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Teuchos::RCP&lt; const Tpetra::Export&lt; LocalOrdinalT, GlobalOrdinalT, NodeT &gt; &gt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">panzer::BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;::getGhostedColExport </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01104">1104</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2064,7 +2363,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01227">1227</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01588">1588</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2096,7 +2395,107 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01242">1242</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01609">1609</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a89d5a20dec825030b44825292d6de776" name="a89d5a20dec825030b44825292d6de776"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89d5a20dec825030b44825292d6de776">&#9670;&#160;</a></span>useFEAssembly()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a> , typename ScalarT , typename LocalOrdinalT , typename GlobalOrdinalT , typename NodeT  = panzer::TpetraNodeType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">panzer::BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;::useFEAssembly </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>True if this factory was constructed with FE assembly enabled. </p>
+
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00315">315</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a0a0eb0c12b2e85731392ae7242abbe28" name="a0a0eb0c12b2e85731392ae7242abbe28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a0eb0c12b2e85731392ae7242abbe28">&#9670;&#160;</a></span>getFEGraph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a> , typename ScalarT , typename LocalOrdinalT , typename GlobalOrdinalT , typename NodeT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Teuchos::RCP&lt; typename <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;<a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#abc6776f0b1d5f8651de25121d7e40e88">::FECrsGraphType</a> &gt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">panzer::BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;::getFEGraph </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the (cached) FE graph for block (i,j), built via the Tpetra::FECrsGraph "V2" ctor. </p>
+
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01554">1554</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a0a82728df8b4ef8afd8720f83f8da28f" name="a0a82728df8b4ef8afd8720f83f8da28f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a82728df8b4ef8afd8720f83f8da28f">&#9670;&#160;</a></span>getFEMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a> , typename ScalarT , typename LocalOrdinalT , typename GlobalOrdinalT , typename NodeT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Teuchos::RCP&lt; typename <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;<a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#af46b5335bc10784a82a0c8e16fb554d8">::FECrsMatrixType</a> &gt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">panzer::BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;::getFEMatrix </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the (cached) FECrsMatrix for block (i,j). </p>
+<p>Unlike <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a9cb3038b59a132ae643b2f167e3c5f91">getTpetraMatrix()</a>/getGhostedTpetraMatrix(), which hand back a freshly allocated matrix on every call, this returns the same object each time. That sharing is the whole point in FE mode: the owned and ghosted containers must wrap one matrix so endAssembly() can perform the ghost-&gt;global migration in place. </p>
+
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01574">1574</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2118,7 +2517,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01257">1257</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01633">1633</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2140,7 +2539,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01266">1266</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01642">1642</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2162,7 +2561,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01275">1275</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01651">1651</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2184,7 +2583,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01284">1284</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01660">1660</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2207,7 +2606,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>how many block rows </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01293">1293</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01669">1669</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2230,7 +2629,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>how many block columns </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01301">1301</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01677">1677</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2264,7 +2663,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>exclude a block pair from the matrix </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00440">440</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00509">509</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2288,12 +2687,12 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>exclude a vector of pairs from the matrix </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00447">447</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00516">516</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a94c843e43fd400c520f974035ca8f13f" name="a94c843e43fd400c520f974035ca8f13f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94c843e43fd400c520f974035ca8f13f">&#9670;&#160;</a></span>beginFill()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a94c843e43fd400c520f974035ca8f13f">&#9670;&#160;</a></span>beginFill() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2307,7 +2706,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
           <td class="memname">void <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">panzer::BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;::beginFill </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classpanzer_1_1_linear_obj_container.html">LinearObjContainer</a> &amp;&#160;</td>
-          <td class="paramname"><em>loc</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -2318,14 +2717,62 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 </table>
 </div><div class="memdoc">
 
+<p>Open a container for filling. Takes either a ghosted or an owned container. </p>
+<p><a class="el" href="classpanzer_1_1_assembly_engine.html" title="Class for the matrix and residual fill.">AssemblyEngine</a> calls this on both, so nothing here may assume which it was handed. Use the two-argument overload for the ghosted container when the owned one it will be migrated into is known. </p>
+
 <p>Reimplemented from <a class="el" href="classpanzer_1_1_linear_obj_factory.html#a3fc15205c05df4ff50d2364443c29180">panzer::LinearObjFactory&lt; Traits &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01308">1308</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01736">1736</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ac64fbe89bd971268f0cc735911f50286" name="ac64fbe89bd971268f0cc735911f50286"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac64fbe89bd971268f0cc735911f50286">&#9670;&#160;</a></span>beginFill() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a> , typename ScalarT , typename LocalOrdinalT , typename GlobalOrdinalT , typename NodeT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">panzer::BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;::beginFill </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classpanzer_1_1_linear_obj_container.html">LinearObjContainer</a> &amp;&#160;</td>
+          <td class="paramname"><em>ghostContainer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classpanzer_1_1_linear_obj_container.html">LinearObjContainer</a> &amp;&#160;</td>
+          <td class="paramname"><em>container</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Open the ghosted container for filling, giving it the owned container's operator. </p>
+<p>Under FE assembly the ghosted container holds no operator of its own; this is where it borrows the owned one. Outside FE assembly it is exactly beginFill(ghostContainer). </p>
+
+<p>Reimplemented from <a class="el" href="classpanzer_1_1_linear_obj_factory.html#af25f39e4d040a6f7194482e9ce9a4620">panzer::LinearObjFactory&lt; Traits &gt;</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01716">1716</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a26adcc78a32fe10ca1b497a5355cc77d" name="a26adcc78a32fe10ca1b497a5355cc77d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26adcc78a32fe10ca1b497a5355cc77d">&#9670;&#160;</a></span>endFill()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a26adcc78a32fe10ca1b497a5355cc77d">&#9670;&#160;</a></span>endFill() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2339,7 +2786,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
           <td class="memname">void <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">panzer::BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;::endFill </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classpanzer_1_1_linear_obj_container.html">LinearObjContainer</a> &amp;&#160;</td>
-          <td class="paramname"><em>loc</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -2350,9 +2797,57 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 </table>
 </div><div class="memdoc">
 
+<p>Close a container after filling. Takes either a ghosted or an owned container. </p>
+<p>As with beginFill, <a class="el" href="classpanzer_1_1_assembly_engine.html" title="Class for the matrix and residual fill.">AssemblyEngine</a> calls this on both. </p>
+
 <p>Reimplemented from <a class="el" href="classpanzer_1_1_linear_obj_factory.html#a095d04aa3e191ca716c4b3f2667a8c50">panzer::LinearObjFactory&lt; Traits &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01317">1317</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01816">1816</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a4288e546f1773edaafb1507837b16f10" name="a4288e546f1773edaafb1507837b16f10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4288e546f1773edaafb1507837b16f10">&#9670;&#160;</a></span>endFill() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a> , typename ScalarT , typename LocalOrdinalT , typename GlobalOrdinalT , typename NodeT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">panzer::BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;::endFill </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classpanzer_1_1_linear_obj_container.html">LinearObjContainer</a> &amp;&#160;</td>
+          <td class="paramname"><em>ghostContainer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classpanzer_1_1_linear_obj_container.html">LinearObjContainer</a> &amp;&#160;</td>
+          <td class="paramname"><em>container</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Close the ghosted container after filling, returning the borrowed matrix. </p>
+<p>The counterpart of beginFill(ghostContainer,container). Outside FE assembly it is exactly endFill(ghostContainer). </p>
+
+<p>Reimplemented from <a class="el" href="classpanzer_1_1_linear_obj_factory.html#a695677319af430dddf93634f3ab8fdd9">panzer::LinearObjFactory&lt; Traits &gt;</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01800">1800</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2381,7 +2876,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00277">277</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00366">366</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -2409,12 +2904,11 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Get the domain unique global indexer this factory was created with. </p>
+<p>Get the domain unique global indexer this factory was created with. For a non-square factory this is the column provider; it is the row provider only when no separate column provider was supplied. </p>
 
 <p>Implements <a class="el" href="classpanzer_1_1_linear_obj_factory.html#a6c62f0f72bf9a3acef3f9a5d284ed669">panzer::LinearObjFactory&lt; Traits &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00281">281</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00373">373</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -2447,7 +2941,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>Implements <a class="el" href="classpanzer_1_1_linear_obj_factory.html#a88a53059711bf370de95f848380a02f6">panzer::LinearObjFactory&lt; Traits &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00285">285</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00377">377</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -2477,12 +2971,89 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00456">456</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00525">525</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a6d70f478c5fe262214cc701a8b946b63" name="a6d70f478c5fe262214cc701a8b946b63"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d70f478c5fe262214cc701a8b946b63">&#9670;&#160;</a></span>makeRoomForBlocks()</h2>
+<a id="a3b63cd81da040ba1651cc5c1eea4fe01" name="a3b63cd81da040ba1651cc5c1eea4fe01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b63cd81da040ba1651cc5c1eea4fe01">&#9670;&#160;</a></span>getColGlobalIndexer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a> , typename ScalarT , typename LocalOrdinalT , typename GlobalOrdinalT , typename NodeT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_global_indexer.html">GlobalIndexer</a> &gt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">panzer::BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;::getColGlobalIndexer </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00533">533</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="acff21b8c03916fc99dbc3b53604992f4" name="acff21b8c03916fc99dbc3b53604992f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acff21b8c03916fc99dbc3b53604992f4">&#9670;&#160;</a></span>splitIntoBlocks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a> , typename ScalarT , typename LocalOrdinalT , typename GlobalOrdinalT , typename NodeT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">panzer::BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;::splitIntoBlocks </td>
+          <td>(</td>
+          <td class="paramtype">const Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_global_indexer.html">GlobalIndexer</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ugi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_blocked_d_o_f_manager.html">BlockedDOFManager</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>blocked</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_global_indexer.html">GlobalIndexer</a> &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>blocks</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Split a global indexer into per-block field indexers: a <a class="el" href="classpanzer_1_1_blocked_d_o_f_manager.html">BlockedDOFManager</a> contributes its field managers, a flat indexer contributes itself. </p>
+
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00103">103</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a89d36dcd817171bce550f22871a065cf" name="a89d36dcd817171bce550f22871a065cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89d36dcd817171bce550f22871a065cf">&#9670;&#160;</a></span>makeRoomForBlocks()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2496,8 +3067,18 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
           <td class="memname">void <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">panzer::BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;::makeRoomForBlocks </td>
           <td>(</td>
           <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname"><em>blockCnt</em></td><td>)</td>
+          <td class="paramname"><em>blockCnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>colBlockCnt</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -2509,12 +3090,12 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 
 <p>Allocate the space in the std::vector objects so we can fill with appropriate Tpetra data. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00463">463</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00540">540</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a11916581935081d49ea80cb5031f67bb" name="a11916581935081d49ea80cb5031f67bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11916581935081d49ea80cb5031f67bb">&#9670;&#160;</a></span>ghostToGlobalThyraVector()</h2>
+<a id="af1699168e429d36983b49167070081fc" name="af1699168e429d36983b49167070081fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1699168e429d36983b49167070081fc">&#9670;&#160;</a></span>ghostToGlobalThyraVector()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2534,7 +3115,13 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const Teuchos::RCP&lt; <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/class_thyra_1_1_vector_base.html">Thyra::VectorBase</a>&lt; ScalarT &gt; &gt; &amp;&#160;</td>
-          <td class="paramname"><em>out</em>&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>col</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2549,7 +3136,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00682">682</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00815">815</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2589,12 +3176,12 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00710">710</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00843">843</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
-<a id="aa2a58d5191d183ae743f2f2d4a76e318" name="aa2a58d5191d183ae743f2f2d4a76e318"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2a58d5191d183ae743f2f2d4a76e318">&#9670;&#160;</a></span>globalToGhostThyraVector()</h2>
+<a id="a538aad761cab6bc1d7216eb3d49bda4f" name="a538aad761cab6bc1d7216eb3d49bda4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a538aad761cab6bc1d7216eb3d49bda4f">&#9670;&#160;</a></span>globalToGhostThyraVector()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2614,7 +3201,13 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const Teuchos::RCP&lt; <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/class_thyra_1_1_vector_base.html">Thyra::VectorBase</a>&lt; ScalarT &gt; &gt; &amp;&#160;</td>
-          <td class="paramname"><em>out</em>&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>col</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2629,7 +3222,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00756">756</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00902">902</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2687,12 +3280,12 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00241">241</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00297">297</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
-<a id="ac60625245486c5678cf39e8de1fc5873" name="ac60625245486c5678cf39e8de1fc5873"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac60625245486c5678cf39e8de1fc5873">&#9670;&#160;</a></span>ghostToGlobalTpetraVector()</h2>
+<a id="a8d90215f51bfc39c70076a4bcd562c88" name="a8d90215f51bfc39c70076a4bcd562c88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d90215f51bfc39c70076a4bcd562c88">&#9670;&#160;</a></span>ghostToGlobalTpetraVector()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2718,7 +3311,13 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a7f738d2bd645812516e98fd236407738">VectorType</a> &amp;&#160;</td>
-          <td class="paramname"><em>out</em>&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>col</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2733,7 +3332,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00787">787</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00933">933</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2779,12 +3378,12 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00799">799</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00945">945</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
-<a id="abe5231827b644a78d6a62dd4ae3469d9" name="abe5231827b644a78d6a62dd4ae3469d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe5231827b644a78d6a62dd4ae3469d9">&#9670;&#160;</a></span>globalToGhostTpetraVector()</h2>
+<a id="a93e4d4ff154f8d95decbeb14f54fa35b" name="a93e4d4ff154f8d95decbeb14f54fa35b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93e4d4ff154f8d95decbeb14f54fa35b">&#9670;&#160;</a></span>globalToGhostTpetraVector()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2810,7 +3409,13 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a7f738d2bd645812516e98fd236407738">VectorType</a> &amp;&#160;</td>
-          <td class="paramname"><em>out</em>&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>col</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2825,7 +3430,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00817">817</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00963">963</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2855,7 +3460,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00916">916</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01118">1118</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2885,7 +3490,67 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00930">930</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01132">1132</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ad2113e37acfab4668b3fbf458b54d398" name="ad2113e37acfab4668b3fbf458b54d398"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2113e37acfab4668b3fbf458b54d398">&#9670;&#160;</a></span>buildColTpetraMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a> , typename ScalarT , typename LocalOrdinalT , typename GlobalOrdinalT , typename NodeT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Teuchos::RCP&lt; const Tpetra::Map&lt; LocalOrdinalT, GlobalOrdinalT, NodeT &gt; &gt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">panzer::BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;::buildColTpetraMap </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01145">1145</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a08b30a4908344f9d56ac9e1d4bb99be4" name="a08b30a4908344f9d56ac9e1d4bb99be4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08b30a4908344f9d56ac9e1d4bb99be4">&#9670;&#160;</a></span>buildColTpetraGhostedMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a> , typename ScalarT , typename LocalOrdinalT , typename GlobalOrdinalT , typename NodeT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Teuchos::RCP&lt; const Tpetra::Map&lt; LocalOrdinalT, GlobalOrdinalT, NodeT &gt; &gt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">panzer::BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;::buildColTpetraGhostedMap </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01158">1158</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2925,7 +3590,47 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00944">944</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01172">1172</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a2774083e6ad099dc8e257bc6cd9b4cde" name="a2774083e6ad099dc8e257bc6cd9b4cde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2774083e6ad099dc8e257bc6cd9b4cde">&#9670;&#160;</a></span>buildFEGraph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a> , typename ScalarT , typename LocalOrdinalT , typename GlobalOrdinalT , typename NodeT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Teuchos::RCP&lt; typename <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;<a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#abc6776f0b1d5f8651de25121d7e40e88">::FECrsGraphType</a> &gt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">panzer::BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;::buildFEGraph </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01470">1470</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2965,7 +3670,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l00974">974</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html#l01202">1202</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory__impl_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2992,7 +3697,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00297">297</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00399">399</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -3018,7 +3723,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00298">298</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00400">400</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -3044,7 +3749,112 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00299">299</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00401">401</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ac4c28083394d867e3fed4f969e16897d" name="ac4c28083394d867e3fed4f969e16897d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4c28083394d867e3fed4f969e16897d">&#9670;&#160;</a></span>hasColProvider_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a> , typename ScalarT , typename LocalOrdinalT , typename GlobalOrdinalT , typename NodeT  = panzer::TpetraNodeType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">panzer::BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;::hasColProvider_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>False unless a separate column provider was supplied, in which case the three members below mirror the three above for the domain. </p>
+
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00405">405</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a1c7af11a8f8a302195549c749ed25a8c" name="a1c7af11a8f8a302195549c749ed25a8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c7af11a8f8a302195549c749ed25a8c">&#9670;&#160;</a></span>colBlockProvider_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a> , typename ScalarT , typename LocalOrdinalT , typename GlobalOrdinalT , typename NodeT  = panzer::TpetraNodeType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Teuchos::RCP&lt;const <a class="el" href="classpanzer_1_1_global_indexer.html">GlobalIndexer</a>&gt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">panzer::BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;::colBlockProvider_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00406">406</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ae28dd78839de4b02face170d4c953bde" name="ae28dd78839de4b02face170d4c953bde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae28dd78839de4b02face170d4c953bde">&#9670;&#160;</a></span>colBlockedDOFManager_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a> , typename ScalarT , typename LocalOrdinalT , typename GlobalOrdinalT , typename NodeT  = panzer::TpetraNodeType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Teuchos::RCP&lt;const <a class="el" href="classpanzer_1_1_blocked_d_o_f_manager.html">BlockedDOFManager</a>&gt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">panzer::BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;::colBlockedDOFManager_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00407">407</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a3458112b409f6bb4343b621f42543873" name="a3458112b409f6bb4343b621f42543873"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3458112b409f6bb4343b621f42543873">&#9670;&#160;</a></span>colGidProviders_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a> , typename ScalarT , typename LocalOrdinalT , typename GlobalOrdinalT , typename NodeT  = panzer::TpetraNodeType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;Teuchos::RCP&lt;const <a class="el" href="classpanzer_1_1_global_indexer.html">GlobalIndexer</a>&gt; &gt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">panzer::BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;::colGidProviders_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00408">408</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -3070,7 +3880,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00302">302</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00411">411</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -3096,33 +3906,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00312">312</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
-
-</div>
-</div>
-<a id="acf26432f9879bc6362050072cb38f132" name="acf26432f9879bc6362050072cb38f132"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf26432f9879bc6362050072cb38f132">&#9670;&#160;</a></span>domainSpace_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a> , typename ScalarT , typename LocalOrdinalT , typename GlobalOrdinalT , typename NodeT  = panzer::TpetraNodeType&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Teuchos::RCP&lt;Thyra::ProductVectorSpaceBase&lt;ScalarT&gt; &gt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">panzer::BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;::domainSpace_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00313">313</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00421">421</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -3148,12 +3932,12 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00315">315</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00422">422</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a877ae958e96394988a740a447e565e7c" name="a877ae958e96394988a740a447e565e7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a877ae958e96394988a740a447e565e7c">&#9670;&#160;</a></span>ghostedDomainSpace_</h2>
+<a id="ad3b2f4cd4c79728c8b72f94a9bf5fee4" name="ad3b2f4cd4c79728c8b72f94a9bf5fee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3b2f4cd4c79728c8b72f94a9bf5fee4">&#9670;&#160;</a></span>domainSpace_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3164,7 +3948,34 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Teuchos::RCP&lt;Thyra::ProductVectorSpaceBase&lt;ScalarT&gt; &gt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">panzer::BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;::ghostedDomainSpace_</td>
+          <td class="memname">Teuchos::RCP&lt;const <a class="el" href="class_thyra_1_1_vector_space_base.html">Thyra::VectorSpaceBase</a>&lt;ScalarT&gt; &gt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">panzer::BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;::domainSpace_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>These are only a product space when the column side is blocked. A flat column provider gives a single SPMD space, matching the single vector the non-blocked domain gather fills. </p>
+
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00428">428</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a0845604413d7fbcd0f7619e3cb73ff26" name="a0845604413d7fbcd0f7619e3cb73ff26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0845604413d7fbcd0f7619e3cb73ff26">&#9670;&#160;</a></span>ghostedDomainSpace_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a> , typename ScalarT , typename LocalOrdinalT , typename GlobalOrdinalT , typename NodeT  = panzer::TpetraNodeType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Teuchos::RCP&lt;const <a class="el" href="class_thyra_1_1_vector_space_base.html">Thyra::VectorSpaceBase</a>&lt;ScalarT&gt; &gt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">panzer::BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;::ghostedDomainSpace_</td>
         </tr>
       </table>
   </td>
@@ -3174,7 +3985,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00316">316</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00429">429</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -3200,7 +4011,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00343">343</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00461">461</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -3226,7 +4037,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00344">344</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00462">462</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -3252,7 +4063,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00345">345</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00463">463</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -3278,7 +4089,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00346">346</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00464">464</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -3304,7 +4115,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00347">347</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00465">465</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -3330,7 +4141,7 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00349">349</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00467">467</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -3356,7 +4167,192 @@ template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00350">350</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00468">468</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ac0329a37f339596add7482ca7ba244ea" name="ac0329a37f339596add7482ca7ba244ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0329a37f339596add7482ca7ba244ea">&#9670;&#160;</a></span>colMaps_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a> , typename ScalarT , typename LocalOrdinalT , typename GlobalOrdinalT , typename NodeT  = panzer::TpetraNodeType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;Teuchos::RCP&lt;const <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#acf28978128b60e254604cc2d9cf14bb4">MapType</a>&gt; &gt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">panzer::BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;::colMaps_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00472">472</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a0e1638f33a3ebf6cbfd1656ca9aa3b10" name="a0e1638f33a3ebf6cbfd1656ca9aa3b10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e1638f33a3ebf6cbfd1656ca9aa3b10">&#9670;&#160;</a></span>ghostedColMaps_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a> , typename ScalarT , typename LocalOrdinalT , typename GlobalOrdinalT , typename NodeT  = panzer::TpetraNodeType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;Teuchos::RCP&lt;const <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#acf28978128b60e254604cc2d9cf14bb4">MapType</a>&gt; &gt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">panzer::BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;::ghostedColMaps_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00473">473</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a92238089521291f4089aa26b890e26c5" name="a92238089521291f4089aa26b890e26c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92238089521291f4089aa26b890e26c5">&#9670;&#160;</a></span>colImporters_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a> , typename ScalarT , typename LocalOrdinalT , typename GlobalOrdinalT , typename NodeT  = panzer::TpetraNodeType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;Teuchos::RCP&lt;const <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#adac4046e9333f5eaa157e61a6e90fdeb">ImportType</a>&gt; &gt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">panzer::BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;::colImporters_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00474">474</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a1de904b3d33edaeee5431df393aa6bbb" name="a1de904b3d33edaeee5431df393aa6bbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1de904b3d33edaeee5431df393aa6bbb">&#9670;&#160;</a></span>colExporters_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a> , typename ScalarT , typename LocalOrdinalT , typename GlobalOrdinalT , typename NodeT  = panzer::TpetraNodeType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;Teuchos::RCP&lt;const <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#a7876f9fea08dc3f3114fbea78797e389">ExportType</a>&gt; &gt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">panzer::BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;::colExporters_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00475">475</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a1c6ed74c1a7832a27221e27056b20796" name="a1c6ed74c1a7832a27221e27056b20796"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c6ed74c1a7832a27221e27056b20796">&#9670;&#160;</a></span>useFEAssembly_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a> , typename ScalarT , typename LocalOrdinalT , typename GlobalOrdinalT , typename NodeT  = panzer::TpetraNodeType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">panzer::BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;::useFEAssembly_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00479">479</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aa474cd97d19308ccf7ca0dfd63c2a6d0" name="aa474cd97d19308ccf7ca0dfd63c2a6d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa474cd97d19308ccf7ca0dfd63c2a6d0">&#9670;&#160;</a></span>feGraphs_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a> , typename ScalarT , typename LocalOrdinalT , typename GlobalOrdinalT , typename NodeT  = panzer::TpetraNodeType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;std::pair&lt;int,int&gt;,Teuchos::RCP&lt;<a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#abc6776f0b1d5f8651de25121d7e40e88">FECrsGraphType</a>&gt;,<a class="el" href="structpanzer_1_1pair__hash.html">panzer::pair_hash</a>&gt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">panzer::BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;::feGraphs_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00481">481</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ae7e393923fd4879eae4ee8903a58995a" name="ae7e393923fd4879eae4ee8903a58995a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7e393923fd4879eae4ee8903a58995a">&#9670;&#160;</a></span>feAssemblyOpenOn_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="structpanzer_1_1_traits.html">Traits</a> , typename ScalarT , typename LocalOrdinalT , typename GlobalOrdinalT , typename NodeT  = panzer::TpetraNodeType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;std::pair&lt;int,int&gt;,const <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html#af46b5335bc10784a82a0c8e16fb554d8">FECrsMatrixType</a> *,<a class="el" href="structpanzer_1_1pair__hash.html">panzer::pair_hash</a>&gt; <a class="el" href="classpanzer_1_1_blocked_tpetra_linear_obj_factory.html">panzer::BlockedTpetraLinearObjFactory</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">Traits</a>, ScalarT, LocalOrdinalT, GlobalOrdinalT, NodeT &gt;::feAssemblyOpenOn_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Which FE matrices currently have an assembly open, tracked so the paired beginFill(ghosted)/beginFill(global) calls <a class="el" href="classpanzer_1_1_assembly_engine.html" title="Class for the matrix and residual fill.">AssemblyEngine</a> makes &ndash; which in FE mode hold the same matrix per block &ndash; collapse into a single beginAssembly()/endAssembly().</p>
+<p>This cannot be derived from the matrix itself: Tpetra::FECrsMatrix keeps its assembly state in a private fillState_, and the public isFillActive() reports the underlying CrsMatrix's state, which is decoupled from it.</p>
+<p>Keyed by block rather than by matrix pointer so a stray unbalanced call on one block cannot silently suppress the begin/end on another. </p>
+
+<p class="definition">Definition at line <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html#l00494">494</a> of file <a class="el" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp_source.html">Panzer_BlockedTpetraLinearObjFactory.hpp</a>.</p>
 
 </div>
 </div>

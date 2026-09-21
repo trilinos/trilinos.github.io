@@ -175,7 +175,7 @@ $(document).ready(function(){initNavTree('_mue_lu___maxwell1__def_8hpp_source.ht
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    Teuchos::ParameterList newList;</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="comment">// interpret ML list</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    newList.sublist(<span class="stringliteral">&quot;maxwell1: 22list&quot;</span>) = *Teuchos::getParametersFromXmlString(<a class="code hl_function" href="class_mue_lu_1_1_m_l2_mue_lu_parameter_translator.html#a9acb881089bb8271a07736d6710855ae">MueLu::ML2MueLuParameterTranslator::translate</a>(list, <span class="stringliteral">&quot;Maxwell&quot;</span>));</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    newList.sublist(<span class="stringliteral">&quot;maxwell1: 22list&quot;</span>) = *<a class="code hl_function" href="class_mue_lu_1_1_m_l2_mue_lu_parameter_translator.html#a212635318d420f8f5339b29d5ee9b600">MueLu::ML2MueLuParameterTranslator::translate</a>(list, <span class="stringliteral">&quot;Maxwell&quot;</span>);</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="comment">// Hardwiring options to ensure ML compatibility</span></div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    newList.sublist(<span class="stringliteral">&quot;maxwell1: 22list&quot;</span>).set(<span class="stringliteral">&quot;use kokkos refactor&quot;</span>, <span class="keyword">false</span>);</div>
@@ -1059,265 +1059,295 @@ $(document).ready(function(){initNavTree('_mue_lu___maxwell1__def_8hpp_source.ht
 <div class="line"><a id="l00927" name="l00927"></a><span class="lineno">  927</span> </div>
 <div class="line"><a id="l00928" name="l00928"></a><span class="lineno">  928</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Scalar, <span class="keyword">class</span> LocalOrdinal, <span class="keyword">class</span> GlobalOrdinal, <span class="keyword">class</span> Node&gt;</div>
 <div class="foldopen" id="foldopen00929" data-start="{" data-end="}">
-<div class="line"><a id="l00929" name="l00929"></a><span class="lineno"><a class="line" href="namespace_mue_lu.html#ab9f058e1d6085b06cb22dbebefa4a250">  929</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespace_mue_lu.html#ab9f058e1d6085b06cb22dbebefa4a250">scaleD0</a>(Xpetra::Matrix&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;&amp; D0) {</div>
-<div class="line"><a id="l00930" name="l00930"></a><span class="lineno">  930</span>  <span class="comment">// We assume that D0 has entries +-1.</span></div>
-<div class="line"><a id="l00931" name="l00931"></a><span class="lineno">  931</span>  <span class="comment">// Construction D0 via interpolation can instead give +-0.5</span></div>
-<div class="line"><a id="l00932" name="l00932"></a><span class="lineno">  932</span>  <span class="comment">// Let&#39;s check and scale D0.</span></div>
-<div class="line"><a id="l00933" name="l00933"></a><span class="lineno">  933</span> </div>
-<div class="line"><a id="l00934" name="l00934"></a><span class="lineno">  934</span>  <span class="keyword">using </span>range_type       = Kokkos::RangePolicy&lt;LocalOrdinal, typename Node::execution_space&gt;;</div>
-<div class="line"><a id="l00935" name="l00935"></a><span class="lineno">  935</span>  <span class="keyword">using </span>Matrix           = Xpetra::Matrix&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;;</div>
-<div class="line"><a id="l00936" name="l00936"></a><span class="lineno">  936</span>  <span class="keyword">using </span>impl_scalar_type = <span class="keyword">typename</span> Matrix::impl_scalar_type;</div>
-<div class="line"><a id="l00937" name="l00937"></a><span class="lineno">  937</span>  <span class="keyword">using </span>impl_ATS         = KokkosKernels::ArithTraits&lt;impl_scalar_type&gt;;</div>
-<div class="line"><a id="l00938" name="l00938"></a><span class="lineno">  938</span>  <span class="keyword">using </span>magnitude_type   = <span class="keyword">typename</span> impl_ATS::magnitudeType;</div>
-<div class="line"><a id="l00939" name="l00939"></a><span class="lineno">  939</span>  <span class="keyword">using </span>MinMax           = Kokkos::MinMax&lt;magnitude_type&gt;;</div>
-<div class="line"><a id="l00940" name="l00940"></a><span class="lineno">  940</span> </div>
-<div class="line"><a id="l00941" name="l00941"></a><span class="lineno">  941</span>  <span class="keyword">typename</span> MinMax::value_type result;</div>
-<div class="line"><a id="l00942" name="l00942"></a><span class="lineno">  942</span>  {</div>
-<div class="line"><a id="l00943" name="l00943"></a><span class="lineno">  943</span>    <span class="keyword">auto</span> lclD0 = D0.getLocalMatrixDevice();</div>
-<div class="line"><a id="l00944" name="l00944"></a><span class="lineno">  944</span>    Kokkos::parallel_reduce(</div>
-<div class="line"><a id="l00945" name="l00945"></a><span class="lineno">  945</span>        <span class="stringliteral">&quot;MueLu::Maxwell1::D0_fixup&quot;</span>,</div>
-<div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span>        range_type(0, lclD0.nnz()),</div>
-<div class="line"><a id="l00947" name="l00947"></a><span class="lineno">  947</span>        KOKKOS_LAMBDA(<span class="keyword">const</span> <a class="code hl_typedef" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> k, <span class="keyword">typename</span> MinMax::value_type&amp; res) {</div>
-<div class="line"><a id="l00948" name="l00948"></a><span class="lineno">  948</span>          <span class="keyword">auto</span> val    = impl_ATS::magnitude(lclD0.values(k));</div>
-<div class="line"><a id="l00949" name="l00949"></a><span class="lineno">  949</span>          res.min_val = Kokkos::min(res.min_val, val);</div>
-<div class="line"><a id="l00950" name="l00950"></a><span class="lineno">  950</span>          res.max_val = Kokkos::max(res.max_val, val);</div>
-<div class="line"><a id="l00951" name="l00951"></a><span class="lineno">  951</span>        },</div>
-<div class="line"><a id="l00952" name="l00952"></a><span class="lineno">  952</span>        MinMax(result));</div>
-<div class="line"><a id="l00953" name="l00953"></a><span class="lineno">  953</span>  }</div>
-<div class="line"><a id="l00954" name="l00954"></a><span class="lineno">  954</span> </div>
-<div class="line"><a id="l00955" name="l00955"></a><span class="lineno">  955</span>  TEUCHOS_ASSERT_EQUALITY(result.min_val, result.max_val);</div>
-<div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span> </div>
-<div class="line"><a id="l00957" name="l00957"></a><span class="lineno">  957</span>  <span class="keywordflow">if</span> (impl_ATS::magnitude(result.max_val - impl_ATS::one()) &gt; impl_ATS::eps()) {</div>
-<div class="line"><a id="l00958" name="l00958"></a><span class="lineno">  958</span>    <a class="code hl_typedef" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a> scaling = impl_ATS::one() / result.max_val;</div>
-<div class="line"><a id="l00959" name="l00959"></a><span class="lineno">  959</span>    D0.scale(scaling);</div>
-<div class="line"><a id="l00960" name="l00960"></a><span class="lineno">  960</span>  }</div>
-<div class="line"><a id="l00961" name="l00961"></a><span class="lineno">  961</span>}</div>
+<div class="line"><a id="l00929" name="l00929"></a><span class="lineno"><a class="line" href="class_mue_lu_1_1_maxwell1.html#ac6ba1b13c86da01644b5e0e5ed76ada0">  929</a></span>std::pair&lt;std::set&lt;std::string&gt;, std::set&lt;std::string&gt;&gt; <a class="code hl_function" href="class_mue_lu_1_1_maxwell1.html#ac6ba1b13c86da01644b5e0e5ed76ada0">Maxwell1&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;::requiredAndOptionalUserData</a>(<span class="keyword">const</span> Teuchos::ParameterList&amp; params) {</div>
+<div class="line"><a id="l00930" name="l00930"></a><span class="lineno">  930</span>  std::set&lt;std::string&gt; requiredUserData;</div>
+<div class="line"><a id="l00931" name="l00931"></a><span class="lineno">  931</span>  std::set&lt;std::string&gt; optionalUserData;</div>
+<div class="line"><a id="l00932" name="l00932"></a><span class="lineno">  932</span> </div>
+<div class="line"><a id="l00933" name="l00933"></a><span class="lineno">  933</span>  requiredUserData.insert(<span class="stringliteral">&quot;D0&quot;</span>);</div>
+<div class="line"><a id="l00934" name="l00934"></a><span class="lineno">  934</span> </div>
+<div class="line"><a id="l00935" name="l00935"></a><span class="lineno">  935</span>  <span class="comment">// auto [requiredUserData11, optionalUserData11] = ParameterListInterpreter&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;::requiredAndOptionalUserData(params.sublist(&quot;maxwell1: 11list&quot;));</span></div>
+<div class="line"><a id="l00936" name="l00936"></a><span class="lineno">  936</span>  <span class="keyword">auto</span> [requiredUserData22, optionalUserData22] = <a class="code hl_function" href="class_mue_lu_1_1_parameter_list_interpreter.html#af51d3dd0f2a930e76d9f831f0238de73">ParameterListInterpreter&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;::requiredAndOptionalUserData</a>(params.sublist(<span class="stringliteral">&quot;maxwell1: 22list&quot;</span>));</div>
+<div class="line"><a id="l00937" name="l00937"></a><span class="lineno">  937</span> </div>
+<div class="line"><a id="l00938" name="l00938"></a><span class="lineno">  938</span>  <span class="keywordflow">if</span> (requiredUserData22.contains(<span class="stringliteral">&quot;Coordinates&quot;</span>))</div>
+<div class="line"><a id="l00939" name="l00939"></a><span class="lineno">  939</span>    requiredUserData.insert(<span class="stringliteral">&quot;Coordinates&quot;</span>);</div>
+<div class="line"><a id="l00940" name="l00940"></a><span class="lineno">  940</span>  <span class="keywordflow">if</span> (requiredUserData22.contains(<span class="stringliteral">&quot;Material&quot;</span>))</div>
+<div class="line"><a id="l00941" name="l00941"></a><span class="lineno">  941</span>    requiredUserData.insert(<span class="stringliteral">&quot;Material&quot;</span>);</div>
+<div class="line"><a id="l00942" name="l00942"></a><span class="lineno">  942</span> </div>
+<div class="line"><a id="l00943" name="l00943"></a><span class="lineno">  943</span>  <span class="keywordflow">if</span> (params.sublist(<span class="stringliteral">&quot;maxwell1: 11list&quot;</span>).isType&lt;std::string&gt;(<span class="stringliteral">&quot;multigrid algorithm&quot;</span>) &amp;&amp;</div>
+<div class="line"><a id="l00944" name="l00944"></a><span class="lineno">  944</span>      params.sublist(<span class="stringliteral">&quot;maxwell1: 11list&quot;</span>).get&lt;std::string&gt;(<span class="stringliteral">&quot;multigrid algorithm&quot;</span>) == <span class="stringliteral">&quot;smoothed reitzinger&quot;</span> &amp;&amp;</div>
+<div class="line"><a id="l00945" name="l00945"></a><span class="lineno">  945</span>      (!params.sublist(<span class="stringliteral">&quot;maxwell1: 11list&quot;</span>).isType&lt;<span class="keywordtype">double</span>&gt;(<span class="stringliteral">&quot;sa: damping factor&quot;</span>) ||</div>
+<div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span>       params.sublist(<span class="stringliteral">&quot;maxwell1: 11list&quot;</span>).get&lt;<span class="keywordtype">double</span>&gt;(<span class="stringliteral">&quot;sa: damping factor&quot;</span>) == 0.))</div>
+<div class="line"><a id="l00947" name="l00947"></a><span class="lineno">  947</span>    requiredUserData.insert(<span class="stringliteral">&quot;CurlCurl&quot;</span>);</div>
+<div class="line"><a id="l00948" name="l00948"></a><span class="lineno">  948</span> </div>
+<div class="line"><a id="l00949" name="l00949"></a><span class="lineno">  949</span>  optionalUserData.insert(<span class="stringliteral">&quot;Nullspace&quot;</span>);</div>
+<div class="line"><a id="l00950" name="l00950"></a><span class="lineno">  950</span>  optionalUserData.insert(<span class="stringliteral">&quot;Kn&quot;</span>);</div>
+<div class="line"><a id="l00951" name="l00951"></a><span class="lineno">  951</span>  optionalUserData.insert(<span class="stringliteral">&quot;GmhdA&quot;</span>);</div>
+<div class="line"><a id="l00952" name="l00952"></a><span class="lineno">  952</span> </div>
+<div class="line"><a id="l00953" name="l00953"></a><span class="lineno">  953</span>  <span class="keywordflow">return</span> std::make_pair(requiredUserData, optionalUserData);</div>
+<div class="line"><a id="l00954" name="l00954"></a><span class="lineno">  954</span>}</div>
 </div>
-<div class="line"><a id="l00962" name="l00962"></a><span class="lineno">  962</span> </div>
-<div class="line"><a id="l00963" name="l00963"></a><span class="lineno">  963</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Scalar, <span class="keyword">class</span> LocalOrdinal, <span class="keyword">class</span> GlobalOrdinal, <span class="keyword">class</span> Node&gt;</div>
-<div class="foldopen" id="foldopen00964" data-start="{" data-end="}">
-<div class="line"><a id="l00964" name="l00964"></a><span class="lineno"><a class="line" href="class_mue_lu_1_1_maxwell1.html#aeec775122aa6622aa468951f39314af6">  964</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_mue_lu_1_1_maxwell1.html#aeec775122aa6622aa468951f39314af6">Maxwell1&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;::</a></div>
-<div class="line"><a id="l00965" name="l00965"></a><span class="lineno">  965</span><a class="code hl_function" href="class_mue_lu_1_1_maxwell1.html#aeec775122aa6622aa468951f39314af6">    initialize</a>(<span class="keyword">const</span> Teuchos::RCP&lt;Matrix&gt;&amp; D0_Matrix,</div>
-<div class="line"><a id="l00966" name="l00966"></a><span class="lineno">  966</span>               <span class="keyword">const</span> Teuchos::RCP&lt;Matrix&gt;&amp; Kn_Matrix,</div>
-<div class="line"><a id="l00967" name="l00967"></a><span class="lineno">  967</span>               <span class="keyword">const</span> Teuchos::RCP&lt;MultiVector&gt;&amp; Nullspace,</div>
-<div class="line"><a id="l00968" name="l00968"></a><span class="lineno">  968</span>               <span class="keyword">const</span> Teuchos::RCP&lt;RealValuedMultiVector&gt;&amp; Coords,</div>
-<div class="line"><a id="l00969" name="l00969"></a><span class="lineno">  969</span>               <span class="keyword">const</span> Teuchos::RCP&lt;Matrix&gt;&amp; CurlCurl_Matrix,</div>
-<div class="line"><a id="l00970" name="l00970"></a><span class="lineno">  970</span>               <span class="keyword">const</span> Teuchos::RCP&lt;MultiVector&gt;&amp; Material,</div>
-<div class="line"><a id="l00971" name="l00971"></a><span class="lineno">  971</span>               Teuchos::ParameterList&amp; List) {</div>
-<div class="line"><a id="l00972" name="l00972"></a><span class="lineno">  972</span>  <span class="comment">// some pre-conditions</span></div>
-<div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span>  TEUCHOS_ASSERT(D0_Matrix != Teuchos::null);</div>
-<div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span> </div>
-<div class="line"><a id="l00975" name="l00975"></a><span class="lineno">  975</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="class_mue_lu_1_1_behavior.html#a5fdba28f8460fe4ec09408d7b3a6123c">Behavior::debug</a>()) {</div>
-<div class="line"><a id="l00976" name="l00976"></a><span class="lineno">  976</span>    <span class="keywordflow">if</span> (!Kn_Matrix.is_null()) {</div>
-<div class="line"><a id="l00977" name="l00977"></a><span class="lineno">  977</span>      TEUCHOS_ASSERT(Kn_Matrix-&gt;getDomainMap()-&gt;isSameAs(*D0_Matrix-&gt;getDomainMap()));</div>
-<div class="line"><a id="l00978" name="l00978"></a><span class="lineno">  978</span>      TEUCHOS_ASSERT(Kn_Matrix-&gt;getRangeMap()-&gt;isSameAs(*D0_Matrix-&gt;getDomainMap()));</div>
-<div class="line"><a id="l00979" name="l00979"></a><span class="lineno">  979</span>    }</div>
-<div class="line"><a id="l00980" name="l00980"></a><span class="lineno">  980</span> </div>
-<div class="line"><a id="l00981" name="l00981"></a><span class="lineno">  981</span>    TEUCHOS_ASSERT(D0_Matrix-&gt;getRangeMap()-&gt;isSameAs(*D0_Matrix-&gt;getRowMap()));</div>
-<div class="line"><a id="l00982" name="l00982"></a><span class="lineno">  982</span>  }</div>
-<div class="line"><a id="l00983" name="l00983"></a><span class="lineno">  983</span> </div>
-<div class="line"><a id="l00984" name="l00984"></a><span class="lineno">  984</span>  Hierarchy11_   = Teuchos::null;</div>
-<div class="line"><a id="l00985" name="l00985"></a><span class="lineno">  985</span>  Hierarchy22_   = Teuchos::null;</div>
-<div class="line"><a id="l00986" name="l00986"></a><span class="lineno">  986</span>  HierarchyGmhd_ = Teuchos::null;</div>
-<div class="line"><a id="l00987" name="l00987"></a><span class="lineno">  987</span>  <span class="keywordflow">if</span> (mode_ != MODE_GMHD_STANDARD) mode_ = MODE_STANDARD;</div>
-<div class="line"><a id="l00988" name="l00988"></a><span class="lineno">  988</span> </div>
-<div class="line"><a id="l00989" name="l00989"></a><span class="lineno">  989</span>  <span class="comment">// Default settings</span></div>
-<div class="line"><a id="l00990" name="l00990"></a><span class="lineno">  990</span>  useKokkos_        = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00991" name="l00991"></a><span class="lineno">  991</span>  allEdgesBoundary_ = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00992" name="l00992"></a><span class="lineno">  992</span>  allNodesBoundary_ = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00993" name="l00993"></a><span class="lineno">  993</span>  dump_matrices_    = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00994" name="l00994"></a><span class="lineno">  994</span>  check_D0_scaling_ = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00995" name="l00995"></a><span class="lineno">  995</span>  enable_reuse_     = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00996" name="l00996"></a><span class="lineno">  996</span>  syncTimers_       = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00997" name="l00997"></a><span class="lineno">  997</span>  applyBCsTo22_     = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00998" name="l00998"></a><span class="lineno">  998</span> </div>
-<div class="line"><a id="l00999" name="l00999"></a><span class="lineno">  999</span>  <span class="comment">// set parameters</span></div>
-<div class="line"><a id="l01000" name="l01000"></a><span class="lineno"> 1000</span>  setParameters(List);</div>
-<div class="line"><a id="l01001" name="l01001"></a><span class="lineno"> 1001</span> </div>
-<div class="line"><a id="l01002" name="l01002"></a><span class="lineno"> 1002</span>  <span class="keywordflow">if</span> (D0_Matrix-&gt;getRowMap()-&gt;lib() == Xpetra::UseTpetra) {</div>
-<div class="line"><a id="l01003" name="l01003"></a><span class="lineno"> 1003</span>    <span class="comment">// We will remove boundary conditions from D0, and potentially change maps, so we copy the input.</span></div>
-<div class="line"><a id="l01004" name="l01004"></a><span class="lineno"> 1004</span>    <span class="comment">// Fortunately, D0 is quite sparse.</span></div>
-<div class="line"><a id="l01005" name="l01005"></a><span class="lineno"> 1005</span>    <span class="comment">// We cannot use the Tpetra copy constructor, since it does not copy the graph.</span></div>
-<div class="line"><a id="l01006" name="l01006"></a><span class="lineno"> 1006</span> </div>
-<div class="line"><a id="l01007" name="l01007"></a><span class="lineno"> 1007</span>    RCP&lt;Matrix&gt; D0copy       = MatrixFactory::Build(D0_Matrix-&gt;getRowMap(), D0_Matrix-&gt;getColMap(), 0);</div>
-<div class="line"><a id="l01008" name="l01008"></a><span class="lineno"> 1008</span>    RCP&lt;CrsMatrix&gt; D0copyCrs = toCrsMatrix(D0copy);</div>
-<div class="line"><a id="l01009" name="l01009"></a><span class="lineno"> 1009</span>    ArrayRCP&lt;const size_t&gt; D0rowptr_RCP;</div>
-<div class="line"><a id="l01010" name="l01010"></a><span class="lineno"> 1010</span>    ArrayRCP&lt;const LO&gt; D0colind_RCP;</div>
-<div class="line"><a id="l01011" name="l01011"></a><span class="lineno"> 1011</span>    ArrayRCP&lt;const SC&gt; D0vals_RCP;</div>
-<div class="line"><a id="l01012" name="l01012"></a><span class="lineno"> 1012</span>    toCrsMatrix(D0_Matrix)-&gt;getAllValues(D0rowptr_RCP, D0colind_RCP, D0vals_RCP);</div>
-<div class="line"><a id="l01013" name="l01013"></a><span class="lineno"> 1013</span> </div>
-<div class="line"><a id="l01014" name="l01014"></a><span class="lineno"> 1014</span>    ArrayRCP&lt;size_t&gt; D0copyrowptr_RCP;</div>
-<div class="line"><a id="l01015" name="l01015"></a><span class="lineno"> 1015</span>    ArrayRCP&lt;LO&gt; D0copycolind_RCP;</div>
-<div class="line"><a id="l01016" name="l01016"></a><span class="lineno"> 1016</span>    ArrayRCP&lt;SC&gt; D0copyvals_RCP;</div>
-<div class="line"><a id="l01017" name="l01017"></a><span class="lineno"> 1017</span>    D0copyCrs-&gt;allocateAllValues(D0vals_RCP.size(), D0copyrowptr_RCP, D0copycolind_RCP, D0copyvals_RCP);</div>
-<div class="line"><a id="l01018" name="l01018"></a><span class="lineno"> 1018</span>    D0copyrowptr_RCP.deepCopy(D0rowptr_RCP());</div>
-<div class="line"><a id="l01019" name="l01019"></a><span class="lineno"> 1019</span>    D0copycolind_RCP.deepCopy(D0colind_RCP());</div>
-<div class="line"><a id="l01020" name="l01020"></a><span class="lineno"> 1020</span>    D0copyvals_RCP.deepCopy(D0vals_RCP());</div>
-<div class="line"><a id="l01021" name="l01021"></a><span class="lineno"> 1021</span>    D0copyCrs-&gt;setAllValues(D0copyrowptr_RCP,</div>
-<div class="line"><a id="l01022" name="l01022"></a><span class="lineno"> 1022</span>                            D0copycolind_RCP,</div>
-<div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span>                            D0copyvals_RCP);</div>
-<div class="line"><a id="l01024" name="l01024"></a><span class="lineno"> 1024</span>    D0copyCrs-&gt;expertStaticFillComplete(D0_Matrix-&gt;getDomainMap(), D0_Matrix-&gt;getRangeMap(),</div>
-<div class="line"><a id="l01025" name="l01025"></a><span class="lineno"> 1025</span>                                        toCrsMatrix(D0_Matrix)-&gt;getCrsGraph()-&gt;getImporter(),</div>
-<div class="line"><a id="l01026" name="l01026"></a><span class="lineno"> 1026</span>                                        toCrsMatrix(D0_Matrix)-&gt;getCrsGraph()-&gt;getExporter());</div>
-<div class="line"><a id="l01027" name="l01027"></a><span class="lineno"> 1027</span>    D0_Matrix_ = D0copy;</div>
-<div class="line"><a id="l01028" name="l01028"></a><span class="lineno"> 1028</span>  } <span class="keywordflow">else</span></div>
-<div class="line"><a id="l01029" name="l01029"></a><span class="lineno"> 1029</span>    D0_Matrix_ = MatrixFactory::BuildCopy(D0_Matrix);</div>
-<div class="line"><a id="l01030" name="l01030"></a><span class="lineno"> 1030</span> </div>
-<div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span>  <span class="keywordflow">if</span> (check_D0_scaling_)</div>
-<div class="line"><a id="l01032" name="l01032"></a><span class="lineno"> 1032</span>    <a class="code hl_function" href="namespace_mue_lu.html#ab9f058e1d6085b06cb22dbebefa4a250">scaleD0</a>(*D0_Matrix_);</div>
-<div class="line"><a id="l01033" name="l01033"></a><span class="lineno"> 1033</span> </div>
-<div class="line"><a id="l01034" name="l01034"></a><span class="lineno"> 1034</span>  Kn_Matrix_ = Kn_Matrix;</div>
-<div class="line"><a id="l01035" name="l01035"></a><span class="lineno"> 1035</span>  Coords_    = Coords;</div>
-<div class="line"><a id="l01036" name="l01036"></a><span class="lineno"> 1036</span>  Material_  = Material;</div>
-<div class="line"><a id="l01037" name="l01037"></a><span class="lineno"> 1037</span>  Nullspace_ = Nullspace;</div>
-<div class="line"><a id="l01038" name="l01038"></a><span class="lineno"> 1038</span> </div>
-<div class="line"><a id="l01039" name="l01039"></a><span class="lineno"> 1039</span>  <span class="keywordflow">if</span> (!CurlCurl_Matrix.is_null()) {</div>
-<div class="line"><a id="l01040" name="l01040"></a><span class="lineno"> 1040</span>    precList11_.sublist(<span class="stringliteral">&quot;user data&quot;</span>).set(<span class="stringliteral">&quot;CurlCurl&quot;</span>, CurlCurl_Matrix);</div>
-<div class="line"><a id="l01041" name="l01041"></a><span class="lineno"> 1041</span>    dump(*CurlCurl_Matrix, <span class="stringliteral">&quot;CurlCurl.m&quot;</span>);</div>
-<div class="line"><a id="l01042" name="l01042"></a><span class="lineno"> 1042</span>  }</div>
-<div class="line"><a id="l01043" name="l01043"></a><span class="lineno"> 1043</span> </div>
-<div class="line"><a id="l01044" name="l01044"></a><span class="lineno"> 1044</span>  dump(*D0_Matrix_, <span class="stringliteral">&quot;D0.m&quot;</span>);</div>
-<div class="line"><a id="l01045" name="l01045"></a><span class="lineno"> 1045</span>  <span class="keywordflow">if</span> (!Kn_Matrix_.is_null()) dump(*Kn_Matrix_, <span class="stringliteral">&quot;Kn.m&quot;</span>);</div>
-<div class="line"><a id="l01046" name="l01046"></a><span class="lineno"> 1046</span>  <span class="keywordflow">if</span> (!Nullspace_.is_null()) dump(*Nullspace_, <span class="stringliteral">&quot;nullspace.m&quot;</span>);</div>
-<div class="line"><a id="l01047" name="l01047"></a><span class="lineno"> 1047</span>  <span class="keywordflow">if</span> (!Coords_.is_null()) dumpCoords(*Coords_, <span class="stringliteral">&quot;coords.m&quot;</span>);</div>
-<div class="line"><a id="l01048" name="l01048"></a><span class="lineno"> 1048</span>}</div>
+<div class="line"><a id="l00955" name="l00955"></a><span class="lineno">  955</span> </div>
+<div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Scalar, <span class="keyword">class</span> LocalOrdinal, <span class="keyword">class</span> GlobalOrdinal, <span class="keyword">class</span> Node&gt;</div>
+<div class="foldopen" id="foldopen00957" data-start="{" data-end="}">
+<div class="line"><a id="l00957" name="l00957"></a><span class="lineno"><a class="line" href="namespace_mue_lu.html#ab9f058e1d6085b06cb22dbebefa4a250">  957</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespace_mue_lu.html#ab9f058e1d6085b06cb22dbebefa4a250">scaleD0</a>(Xpetra::Matrix&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;&amp; D0) {</div>
+<div class="line"><a id="l00958" name="l00958"></a><span class="lineno">  958</span>  <span class="comment">// We assume that D0 has entries +-1.</span></div>
+<div class="line"><a id="l00959" name="l00959"></a><span class="lineno">  959</span>  <span class="comment">// Construction D0 via interpolation can instead give +-0.5</span></div>
+<div class="line"><a id="l00960" name="l00960"></a><span class="lineno">  960</span>  <span class="comment">// Let&#39;s check and scale D0.</span></div>
+<div class="line"><a id="l00961" name="l00961"></a><span class="lineno">  961</span> </div>
+<div class="line"><a id="l00962" name="l00962"></a><span class="lineno">  962</span>  <span class="keyword">using </span>range_type       = Kokkos::RangePolicy&lt;LocalOrdinal, typename Node::execution_space&gt;;</div>
+<div class="line"><a id="l00963" name="l00963"></a><span class="lineno">  963</span>  <span class="keyword">using </span>Matrix           = Xpetra::Matrix&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;;</div>
+<div class="line"><a id="l00964" name="l00964"></a><span class="lineno">  964</span>  <span class="keyword">using </span>impl_scalar_type = <span class="keyword">typename</span> Matrix::impl_scalar_type;</div>
+<div class="line"><a id="l00965" name="l00965"></a><span class="lineno">  965</span>  <span class="keyword">using </span>impl_ATS         = KokkosKernels::ArithTraits&lt;impl_scalar_type&gt;;</div>
+<div class="line"><a id="l00966" name="l00966"></a><span class="lineno">  966</span>  <span class="keyword">using </span>magnitude_type   = <span class="keyword">typename</span> impl_ATS::magnitudeType;</div>
+<div class="line"><a id="l00967" name="l00967"></a><span class="lineno">  967</span>  <span class="keyword">using </span>MinMax           = Kokkos::MinMax&lt;magnitude_type&gt;;</div>
+<div class="line"><a id="l00968" name="l00968"></a><span class="lineno">  968</span> </div>
+<div class="line"><a id="l00969" name="l00969"></a><span class="lineno">  969</span>  <span class="keyword">typename</span> MinMax::value_type result;</div>
+<div class="line"><a id="l00970" name="l00970"></a><span class="lineno">  970</span>  {</div>
+<div class="line"><a id="l00971" name="l00971"></a><span class="lineno">  971</span>    <span class="keyword">auto</span> lclD0 = D0.getLocalMatrixDevice();</div>
+<div class="line"><a id="l00972" name="l00972"></a><span class="lineno">  972</span>    Kokkos::parallel_reduce(</div>
+<div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span>        <span class="stringliteral">&quot;MueLu::Maxwell1::D0_fixup&quot;</span>,</div>
+<div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span>        range_type(0, lclD0.nnz()),</div>
+<div class="line"><a id="l00975" name="l00975"></a><span class="lineno">  975</span>        KOKKOS_LAMBDA(<span class="keyword">const</span> <a class="code hl_typedef" href="_mue_lu___use_default_types_8hpp.html#a226b8cca25ba3f3d741bc52854fe8601">LocalOrdinal</a> k, <span class="keyword">typename</span> MinMax::value_type&amp; res) {</div>
+<div class="line"><a id="l00976" name="l00976"></a><span class="lineno">  976</span>          <span class="keyword">auto</span> val    = impl_ATS::magnitude(lclD0.values(k));</div>
+<div class="line"><a id="l00977" name="l00977"></a><span class="lineno">  977</span>          res.min_val = Kokkos::min(res.min_val, val);</div>
+<div class="line"><a id="l00978" name="l00978"></a><span class="lineno">  978</span>          res.max_val = Kokkos::max(res.max_val, val);</div>
+<div class="line"><a id="l00979" name="l00979"></a><span class="lineno">  979</span>        },</div>
+<div class="line"><a id="l00980" name="l00980"></a><span class="lineno">  980</span>        MinMax(result));</div>
+<div class="line"><a id="l00981" name="l00981"></a><span class="lineno">  981</span>  }</div>
+<div class="line"><a id="l00982" name="l00982"></a><span class="lineno">  982</span> </div>
+<div class="line"><a id="l00983" name="l00983"></a><span class="lineno">  983</span>  TEUCHOS_ASSERT_EQUALITY(result.min_val, result.max_val);</div>
+<div class="line"><a id="l00984" name="l00984"></a><span class="lineno">  984</span> </div>
+<div class="line"><a id="l00985" name="l00985"></a><span class="lineno">  985</span>  <span class="keywordflow">if</span> (impl_ATS::magnitude(result.max_val - impl_ATS::one()) &gt; impl_ATS::eps()) {</div>
+<div class="line"><a id="l00986" name="l00986"></a><span class="lineno">  986</span>    <a class="code hl_typedef" href="_mue_lu___use_default_types_8hpp.html#a227573c7cbca9c75611ada9e032620cc">Scalar</a> scaling = impl_ATS::one() / result.max_val;</div>
+<div class="line"><a id="l00987" name="l00987"></a><span class="lineno">  987</span>    D0.scale(scaling);</div>
+<div class="line"><a id="l00988" name="l00988"></a><span class="lineno">  988</span>  }</div>
+<div class="line"><a id="l00989" name="l00989"></a><span class="lineno">  989</span>}</div>
 </div>
-<div class="line"><a id="l01049" name="l01049"></a><span class="lineno"> 1049</span> </div>
-<div class="line"><a id="l01050" name="l01050"></a><span class="lineno"> 1050</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Scalar, <span class="keyword">class</span> LocalOrdinal, <span class="keyword">class</span> GlobalOrdinal, <span class="keyword">class</span> Node&gt;</div>
-<div class="foldopen" id="foldopen01051" data-start="{" data-end="}">
-<div class="line"><a id="l01051" name="l01051"></a><span class="lineno"><a class="line" href="class_mue_lu_1_1_maxwell1.html#aa20a067eba4223b6f9af256133746a40"> 1051</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_mue_lu_1_1_maxwell1.html#aa20a067eba4223b6f9af256133746a40">Maxwell1&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;::</a></div>
-<div class="line"><a id="l01052" name="l01052"></a><span class="lineno"> 1052</span><a class="code hl_function" href="class_mue_lu_1_1_maxwell1.html#aa20a067eba4223b6f9af256133746a40">    describe</a>(Teuchos::FancyOStream&amp; out, <span class="keyword">const</span> Teuchos::EVerbosityLevel <span class="comment">/* verbLevel */</span>)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l01053" name="l01053"></a><span class="lineno"> 1053</span>  std::ostringstream oss;</div>
-<div class="line"><a id="l01054" name="l01054"></a><span class="lineno"> 1054</span> </div>
-<div class="line"><a id="l01055" name="l01055"></a><span class="lineno"> 1055</span>  RCP&lt;const Teuchos::Comm&lt;int&gt;&gt; comm = SM_Matrix_-&gt;getDomainMap()-&gt;getComm();</div>
-<div class="line"><a id="l01056" name="l01056"></a><span class="lineno"> 1056</span> </div>
-<div class="line"><a id="l01057" name="l01057"></a><span class="lineno"> 1057</span><span class="preprocessor">#ifdef HAVE_MPI</span></div>
-<div class="line"><a id="l01058" name="l01058"></a><span class="lineno"> 1058</span>  <span class="keywordtype">int</span> root;</div>
-<div class="line"><a id="l01059" name="l01059"></a><span class="lineno"> 1059</span>  <span class="keywordflow">if</span> (!Kn_Matrix_.is_null())</div>
-<div class="line"><a id="l01060" name="l01060"></a><span class="lineno"> 1060</span>    root = comm-&gt;getRank();</div>
-<div class="line"><a id="l01061" name="l01061"></a><span class="lineno"> 1061</span>  <span class="keywordflow">else</span></div>
-<div class="line"><a id="l01062" name="l01062"></a><span class="lineno"> 1062</span>    root = -1;</div>
-<div class="line"><a id="l01063" name="l01063"></a><span class="lineno"> 1063</span> </div>
-<div class="line"><a id="l01064" name="l01064"></a><span class="lineno"> 1064</span>  <span class="keywordtype">int</span> actualRoot;</div>
-<div class="line"><a id="l01065" name="l01065"></a><span class="lineno"> 1065</span>  reduceAll(*comm, Teuchos::REDUCE_MAX, root, Teuchos::ptr(&amp;actualRoot));</div>
-<div class="line"><a id="l01066" name="l01066"></a><span class="lineno"> 1066</span>  root = actualRoot;</div>
-<div class="line"><a id="l01067" name="l01067"></a><span class="lineno"> 1067</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l01068" name="l01068"></a><span class="lineno"> 1068</span> </div>
-<div class="line"><a id="l01069" name="l01069"></a><span class="lineno"> 1069</span>  oss &lt;&lt; <span class="stringliteral">&quot;\n--------------------------------------------------------------------------------\n&quot;</span></div>
-<div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span>      &lt;&lt; <span class="stringliteral">&quot;---                            Maxwell1 Summary                            ---\n&quot;</span></div>
-<div class="line"><a id="l01071" name="l01071"></a><span class="lineno"> 1071</span>         <span class="stringliteral">&quot;--------------------------------------------------------------------------------&quot;</span></div>
-<div class="line"><a id="l01072" name="l01072"></a><span class="lineno"> 1072</span>      &lt;&lt; std::endl;</div>
-<div class="line"><a id="l01073" name="l01073"></a><span class="lineno"> 1073</span>  oss &lt;&lt; std::endl;</div>
-<div class="line"><a id="l01074" name="l01074"></a><span class="lineno"> 1074</span> </div>
-<div class="line"><a id="l01075" name="l01075"></a><span class="lineno"> 1075</span>  <a class="code hl_typedef" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a> numRows;</div>
-<div class="line"><a id="l01076" name="l01076"></a><span class="lineno"> 1076</span>  <a class="code hl_typedef" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a> nnz;</div>
+<div class="line"><a id="l00990" name="l00990"></a><span class="lineno">  990</span> </div>
+<div class="line"><a id="l00991" name="l00991"></a><span class="lineno">  991</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Scalar, <span class="keyword">class</span> LocalOrdinal, <span class="keyword">class</span> GlobalOrdinal, <span class="keyword">class</span> Node&gt;</div>
+<div class="foldopen" id="foldopen00992" data-start="{" data-end="}">
+<div class="line"><a id="l00992" name="l00992"></a><span class="lineno"><a class="line" href="class_mue_lu_1_1_maxwell1.html#aeec775122aa6622aa468951f39314af6">  992</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_mue_lu_1_1_maxwell1.html#aeec775122aa6622aa468951f39314af6">Maxwell1&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;::</a></div>
+<div class="line"><a id="l00993" name="l00993"></a><span class="lineno">  993</span><a class="code hl_function" href="class_mue_lu_1_1_maxwell1.html#aeec775122aa6622aa468951f39314af6">    initialize</a>(<span class="keyword">const</span> Teuchos::RCP&lt;Matrix&gt;&amp; D0_Matrix,</div>
+<div class="line"><a id="l00994" name="l00994"></a><span class="lineno">  994</span>               <span class="keyword">const</span> Teuchos::RCP&lt;Matrix&gt;&amp; Kn_Matrix,</div>
+<div class="line"><a id="l00995" name="l00995"></a><span class="lineno">  995</span>               <span class="keyword">const</span> Teuchos::RCP&lt;MultiVector&gt;&amp; Nullspace,</div>
+<div class="line"><a id="l00996" name="l00996"></a><span class="lineno">  996</span>               <span class="keyword">const</span> Teuchos::RCP&lt;RealValuedMultiVector&gt;&amp; Coords,</div>
+<div class="line"><a id="l00997" name="l00997"></a><span class="lineno">  997</span>               <span class="keyword">const</span> Teuchos::RCP&lt;Matrix&gt;&amp; CurlCurl_Matrix,</div>
+<div class="line"><a id="l00998" name="l00998"></a><span class="lineno">  998</span>               <span class="keyword">const</span> Teuchos::RCP&lt;MultiVector&gt;&amp; Material,</div>
+<div class="line"><a id="l00999" name="l00999"></a><span class="lineno">  999</span>               Teuchos::ParameterList&amp; List) {</div>
+<div class="line"><a id="l01000" name="l01000"></a><span class="lineno"> 1000</span>  <span class="comment">// some pre-conditions</span></div>
+<div class="line"><a id="l01001" name="l01001"></a><span class="lineno"> 1001</span>  TEUCHOS_ASSERT(D0_Matrix != Teuchos::null);</div>
+<div class="line"><a id="l01002" name="l01002"></a><span class="lineno"> 1002</span> </div>
+<div class="line"><a id="l01003" name="l01003"></a><span class="lineno"> 1003</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="class_mue_lu_1_1_behavior.html#a5fdba28f8460fe4ec09408d7b3a6123c">Behavior::debug</a>()) {</div>
+<div class="line"><a id="l01004" name="l01004"></a><span class="lineno"> 1004</span>    <span class="keywordflow">if</span> (!Kn_Matrix.is_null()) {</div>
+<div class="line"><a id="l01005" name="l01005"></a><span class="lineno"> 1005</span>      TEUCHOS_ASSERT(Kn_Matrix-&gt;getDomainMap()-&gt;isSameAs(*D0_Matrix-&gt;getDomainMap()));</div>
+<div class="line"><a id="l01006" name="l01006"></a><span class="lineno"> 1006</span>      TEUCHOS_ASSERT(Kn_Matrix-&gt;getRangeMap()-&gt;isSameAs(*D0_Matrix-&gt;getDomainMap()));</div>
+<div class="line"><a id="l01007" name="l01007"></a><span class="lineno"> 1007</span>    }</div>
+<div class="line"><a id="l01008" name="l01008"></a><span class="lineno"> 1008</span> </div>
+<div class="line"><a id="l01009" name="l01009"></a><span class="lineno"> 1009</span>    TEUCHOS_ASSERT(D0_Matrix-&gt;getRangeMap()-&gt;isSameAs(*D0_Matrix-&gt;getRowMap()));</div>
+<div class="line"><a id="l01010" name="l01010"></a><span class="lineno"> 1010</span>  }</div>
+<div class="line"><a id="l01011" name="l01011"></a><span class="lineno"> 1011</span> </div>
+<div class="line"><a id="l01012" name="l01012"></a><span class="lineno"> 1012</span>  Hierarchy11_   = Teuchos::null;</div>
+<div class="line"><a id="l01013" name="l01013"></a><span class="lineno"> 1013</span>  Hierarchy22_   = Teuchos::null;</div>
+<div class="line"><a id="l01014" name="l01014"></a><span class="lineno"> 1014</span>  HierarchyGmhd_ = Teuchos::null;</div>
+<div class="line"><a id="l01015" name="l01015"></a><span class="lineno"> 1015</span>  <span class="keywordflow">if</span> (mode_ != MODE_GMHD_STANDARD) mode_ = MODE_STANDARD;</div>
+<div class="line"><a id="l01016" name="l01016"></a><span class="lineno"> 1016</span> </div>
+<div class="line"><a id="l01017" name="l01017"></a><span class="lineno"> 1017</span>  <span class="comment">// Default settings</span></div>
+<div class="line"><a id="l01018" name="l01018"></a><span class="lineno"> 1018</span>  useKokkos_        = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l01019" name="l01019"></a><span class="lineno"> 1019</span>  allEdgesBoundary_ = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l01020" name="l01020"></a><span class="lineno"> 1020</span>  allNodesBoundary_ = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l01021" name="l01021"></a><span class="lineno"> 1021</span>  dump_matrices_    = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l01022" name="l01022"></a><span class="lineno"> 1022</span>  check_D0_scaling_ = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span>  enable_reuse_     = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l01024" name="l01024"></a><span class="lineno"> 1024</span>  syncTimers_       = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l01025" name="l01025"></a><span class="lineno"> 1025</span>  applyBCsTo22_     = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l01026" name="l01026"></a><span class="lineno"> 1026</span> </div>
+<div class="line"><a id="l01027" name="l01027"></a><span class="lineno"> 1027</span>  <span class="comment">// set parameters</span></div>
+<div class="line"><a id="l01028" name="l01028"></a><span class="lineno"> 1028</span>  setParameters(List);</div>
+<div class="line"><a id="l01029" name="l01029"></a><span class="lineno"> 1029</span> </div>
+<div class="line"><a id="l01030" name="l01030"></a><span class="lineno"> 1030</span>  <span class="keywordflow">if</span> (D0_Matrix-&gt;getRowMap()-&gt;lib() == Xpetra::UseTpetra) {</div>
+<div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span>    <span class="comment">// We will remove boundary conditions from D0, and potentially change maps, so we copy the input.</span></div>
+<div class="line"><a id="l01032" name="l01032"></a><span class="lineno"> 1032</span>    <span class="comment">// Fortunately, D0 is quite sparse.</span></div>
+<div class="line"><a id="l01033" name="l01033"></a><span class="lineno"> 1033</span>    <span class="comment">// We cannot use the Tpetra copy constructor, since it does not copy the graph.</span></div>
+<div class="line"><a id="l01034" name="l01034"></a><span class="lineno"> 1034</span> </div>
+<div class="line"><a id="l01035" name="l01035"></a><span class="lineno"> 1035</span>    RCP&lt;Matrix&gt; D0copy       = MatrixFactory::Build(D0_Matrix-&gt;getRowMap(), D0_Matrix-&gt;getColMap(), 0);</div>
+<div class="line"><a id="l01036" name="l01036"></a><span class="lineno"> 1036</span>    RCP&lt;CrsMatrix&gt; D0copyCrs = toCrsMatrix(D0copy);</div>
+<div class="line"><a id="l01037" name="l01037"></a><span class="lineno"> 1037</span>    ArrayRCP&lt;const size_t&gt; D0rowptr_RCP;</div>
+<div class="line"><a id="l01038" name="l01038"></a><span class="lineno"> 1038</span>    ArrayRCP&lt;const LO&gt; D0colind_RCP;</div>
+<div class="line"><a id="l01039" name="l01039"></a><span class="lineno"> 1039</span>    ArrayRCP&lt;const SC&gt; D0vals_RCP;</div>
+<div class="line"><a id="l01040" name="l01040"></a><span class="lineno"> 1040</span>    toCrsMatrix(D0_Matrix)-&gt;getAllValues(D0rowptr_RCP, D0colind_RCP, D0vals_RCP);</div>
+<div class="line"><a id="l01041" name="l01041"></a><span class="lineno"> 1041</span> </div>
+<div class="line"><a id="l01042" name="l01042"></a><span class="lineno"> 1042</span>    ArrayRCP&lt;size_t&gt; D0copyrowptr_RCP;</div>
+<div class="line"><a id="l01043" name="l01043"></a><span class="lineno"> 1043</span>    ArrayRCP&lt;LO&gt; D0copycolind_RCP;</div>
+<div class="line"><a id="l01044" name="l01044"></a><span class="lineno"> 1044</span>    ArrayRCP&lt;SC&gt; D0copyvals_RCP;</div>
+<div class="line"><a id="l01045" name="l01045"></a><span class="lineno"> 1045</span>    D0copyCrs-&gt;allocateAllValues(D0vals_RCP.size(), D0copyrowptr_RCP, D0copycolind_RCP, D0copyvals_RCP);</div>
+<div class="line"><a id="l01046" name="l01046"></a><span class="lineno"> 1046</span>    D0copyrowptr_RCP.deepCopy(D0rowptr_RCP());</div>
+<div class="line"><a id="l01047" name="l01047"></a><span class="lineno"> 1047</span>    D0copycolind_RCP.deepCopy(D0colind_RCP());</div>
+<div class="line"><a id="l01048" name="l01048"></a><span class="lineno"> 1048</span>    D0copyvals_RCP.deepCopy(D0vals_RCP());</div>
+<div class="line"><a id="l01049" name="l01049"></a><span class="lineno"> 1049</span>    D0copyCrs-&gt;setAllValues(D0copyrowptr_RCP,</div>
+<div class="line"><a id="l01050" name="l01050"></a><span class="lineno"> 1050</span>                            D0copycolind_RCP,</div>
+<div class="line"><a id="l01051" name="l01051"></a><span class="lineno"> 1051</span>                            D0copyvals_RCP);</div>
+<div class="line"><a id="l01052" name="l01052"></a><span class="lineno"> 1052</span>    D0copyCrs-&gt;expertStaticFillComplete(D0_Matrix-&gt;getDomainMap(), D0_Matrix-&gt;getRangeMap(),</div>
+<div class="line"><a id="l01053" name="l01053"></a><span class="lineno"> 1053</span>                                        toCrsMatrix(D0_Matrix)-&gt;getCrsGraph()-&gt;getImporter(),</div>
+<div class="line"><a id="l01054" name="l01054"></a><span class="lineno"> 1054</span>                                        toCrsMatrix(D0_Matrix)-&gt;getCrsGraph()-&gt;getExporter());</div>
+<div class="line"><a id="l01055" name="l01055"></a><span class="lineno"> 1055</span>    D0_Matrix_ = D0copy;</div>
+<div class="line"><a id="l01056" name="l01056"></a><span class="lineno"> 1056</span>  } <span class="keywordflow">else</span></div>
+<div class="line"><a id="l01057" name="l01057"></a><span class="lineno"> 1057</span>    D0_Matrix_ = MatrixFactory::BuildCopy(D0_Matrix);</div>
+<div class="line"><a id="l01058" name="l01058"></a><span class="lineno"> 1058</span> </div>
+<div class="line"><a id="l01059" name="l01059"></a><span class="lineno"> 1059</span>  <span class="keywordflow">if</span> (check_D0_scaling_)</div>
+<div class="line"><a id="l01060" name="l01060"></a><span class="lineno"> 1060</span>    <a class="code hl_function" href="namespace_mue_lu.html#ab9f058e1d6085b06cb22dbebefa4a250">scaleD0</a>(*D0_Matrix_);</div>
+<div class="line"><a id="l01061" name="l01061"></a><span class="lineno"> 1061</span> </div>
+<div class="line"><a id="l01062" name="l01062"></a><span class="lineno"> 1062</span>  Kn_Matrix_ = Kn_Matrix;</div>
+<div class="line"><a id="l01063" name="l01063"></a><span class="lineno"> 1063</span>  Coords_    = Coords;</div>
+<div class="line"><a id="l01064" name="l01064"></a><span class="lineno"> 1064</span>  Material_  = Material;</div>
+<div class="line"><a id="l01065" name="l01065"></a><span class="lineno"> 1065</span>  Nullspace_ = Nullspace;</div>
+<div class="line"><a id="l01066" name="l01066"></a><span class="lineno"> 1066</span> </div>
+<div class="line"><a id="l01067" name="l01067"></a><span class="lineno"> 1067</span>  <span class="keywordflow">if</span> (!CurlCurl_Matrix.is_null()) {</div>
+<div class="line"><a id="l01068" name="l01068"></a><span class="lineno"> 1068</span>    precList11_.sublist(<span class="stringliteral">&quot;user data&quot;</span>).set(<span class="stringliteral">&quot;CurlCurl&quot;</span>, CurlCurl_Matrix);</div>
+<div class="line"><a id="l01069" name="l01069"></a><span class="lineno"> 1069</span>    dump(*CurlCurl_Matrix, <span class="stringliteral">&quot;CurlCurl.m&quot;</span>);</div>
+<div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span>  }</div>
+<div class="line"><a id="l01071" name="l01071"></a><span class="lineno"> 1071</span> </div>
+<div class="line"><a id="l01072" name="l01072"></a><span class="lineno"> 1072</span>  dump(*D0_Matrix_, <span class="stringliteral">&quot;D0.m&quot;</span>);</div>
+<div class="line"><a id="l01073" name="l01073"></a><span class="lineno"> 1073</span>  <span class="keywordflow">if</span> (!Kn_Matrix_.is_null()) dump(*Kn_Matrix_, <span class="stringliteral">&quot;Kn.m&quot;</span>);</div>
+<div class="line"><a id="l01074" name="l01074"></a><span class="lineno"> 1074</span>  <span class="keywordflow">if</span> (!Nullspace_.is_null()) dump(*Nullspace_, <span class="stringliteral">&quot;nullspace.m&quot;</span>);</div>
+<div class="line"><a id="l01075" name="l01075"></a><span class="lineno"> 1075</span>  <span class="keywordflow">if</span> (!Coords_.is_null()) dumpCoords(*Coords_, <span class="stringliteral">&quot;coords.m&quot;</span>);</div>
+<div class="line"><a id="l01076" name="l01076"></a><span class="lineno"> 1076</span>}</div>
+</div>
 <div class="line"><a id="l01077" name="l01077"></a><span class="lineno"> 1077</span> </div>
-<div class="line"><a id="l01078" name="l01078"></a><span class="lineno"> 1078</span>  SM_Matrix_-&gt;getRowMap()-&gt;getComm()-&gt;barrier();</div>
-<div class="line"><a id="l01079" name="l01079"></a><span class="lineno"> 1079</span> </div>
-<div class="line"><a id="l01080" name="l01080"></a><span class="lineno"> 1080</span>  numRows = SM_Matrix_-&gt;getGlobalNumRows();</div>
-<div class="line"><a id="l01081" name="l01081"></a><span class="lineno"> 1081</span>  nnz     = SM_Matrix_-&gt;getGlobalNumEntries();</div>
+<div class="line"><a id="l01078" name="l01078"></a><span class="lineno"> 1078</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Scalar, <span class="keyword">class</span> LocalOrdinal, <span class="keyword">class</span> GlobalOrdinal, <span class="keyword">class</span> Node&gt;</div>
+<div class="foldopen" id="foldopen01079" data-start="{" data-end="}">
+<div class="line"><a id="l01079" name="l01079"></a><span class="lineno"><a class="line" href="class_mue_lu_1_1_maxwell1.html#aa20a067eba4223b6f9af256133746a40"> 1079</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_mue_lu_1_1_maxwell1.html#aa20a067eba4223b6f9af256133746a40">Maxwell1&lt;Scalar, LocalOrdinal, GlobalOrdinal, Node&gt;::</a></div>
+<div class="line"><a id="l01080" name="l01080"></a><span class="lineno"> 1080</span><a class="code hl_function" href="class_mue_lu_1_1_maxwell1.html#aa20a067eba4223b6f9af256133746a40">    describe</a>(Teuchos::FancyOStream&amp; out, <span class="keyword">const</span> Teuchos::EVerbosityLevel <span class="comment">/* verbLevel */</span>)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01081" name="l01081"></a><span class="lineno"> 1081</span>  std::ostringstream oss;</div>
 <div class="line"><a id="l01082" name="l01082"></a><span class="lineno"> 1082</span> </div>
-<div class="line"><a id="l01083" name="l01083"></a><span class="lineno"> 1083</span>  Xpetra::global_size_t tt = numRows;</div>
-<div class="line"><a id="l01084" name="l01084"></a><span class="lineno"> 1084</span>  <span class="keywordtype">int</span> rowspacer            = 3;</div>
-<div class="line"><a id="l01085" name="l01085"></a><span class="lineno"> 1085</span>  <span class="keywordflow">while</span> (tt != 0) {</div>
-<div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span>    tt /= 10;</div>
-<div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span>    rowspacer++;</div>
-<div class="line"><a id="l01088" name="l01088"></a><span class="lineno"> 1088</span>  }</div>
-<div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span>  tt            = nnz;</div>
-<div class="line"><a id="l01090" name="l01090"></a><span class="lineno"> 1090</span>  <span class="keywordtype">int</span> nnzspacer = 2;</div>
-<div class="line"><a id="l01091" name="l01091"></a><span class="lineno"> 1091</span>  <span class="keywordflow">while</span> (tt != 0) {</div>
-<div class="line"><a id="l01092" name="l01092"></a><span class="lineno"> 1092</span>    tt /= 10;</div>
-<div class="line"><a id="l01093" name="l01093"></a><span class="lineno"> 1093</span>    nnzspacer++;</div>
-<div class="line"><a id="l01094" name="l01094"></a><span class="lineno"> 1094</span>  }</div>
-<div class="line"><a id="l01095" name="l01095"></a><span class="lineno"> 1095</span> </div>
-<div class="line"><a id="l01096" name="l01096"></a><span class="lineno"> 1096</span>  oss &lt;&lt; <span class="stringliteral">&quot;block &quot;</span> &lt;&lt; std::setw(rowspacer) &lt;&lt; <span class="stringliteral">&quot; rows &quot;</span> &lt;&lt; std::setw(nnzspacer) &lt;&lt; <span class="stringliteral">&quot; nnz &quot;</span> &lt;&lt; std::setw(9) &lt;&lt; <span class="stringliteral">&quot; nnz/row&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l01097" name="l01097"></a><span class="lineno"> 1097</span>  oss &lt;&lt; <span class="stringliteral">&quot;(1, 1)&quot;</span> &lt;&lt; std::setw(rowspacer) &lt;&lt; numRows &lt;&lt; std::setw(nnzspacer) &lt;&lt; nnz &lt;&lt; std::setw(9) &lt;&lt; as&lt;double&gt;(nnz) / numRows &lt;&lt; std::endl;</div>
-<div class="line"><a id="l01098" name="l01098"></a><span class="lineno"> 1098</span> </div>
-<div class="line"><a id="l01099" name="l01099"></a><span class="lineno"> 1099</span>  <span class="keywordflow">if</span> (!Kn_Matrix_.is_null()) {</div>
-<div class="line"><a id="l01100" name="l01100"></a><span class="lineno"> 1100</span>    <span class="comment">// ToDo: make sure that this is printed correctly</span></div>
-<div class="line"><a id="l01101" name="l01101"></a><span class="lineno"> 1101</span>    numRows = Kn_Matrix_-&gt;getGlobalNumRows();</div>
-<div class="line"><a id="l01102" name="l01102"></a><span class="lineno"> 1102</span>    nnz     = Kn_Matrix_-&gt;getGlobalNumEntries();</div>
-<div class="line"><a id="l01103" name="l01103"></a><span class="lineno"> 1103</span> </div>
-<div class="line"><a id="l01104" name="l01104"></a><span class="lineno"> 1104</span>    oss &lt;&lt; <span class="stringliteral">&quot;(2, 2)&quot;</span> &lt;&lt; std::setw(rowspacer) &lt;&lt; numRows &lt;&lt; std::setw(nnzspacer) &lt;&lt; nnz &lt;&lt; std::setw(9) &lt;&lt; as&lt;double&gt;(nnz) / numRows &lt;&lt; std::endl;</div>
-<div class="line"><a id="l01105" name="l01105"></a><span class="lineno"> 1105</span>  }</div>
-<div class="line"><a id="l01106" name="l01106"></a><span class="lineno"> 1106</span> </div>
-<div class="line"><a id="l01107" name="l01107"></a><span class="lineno"> 1107</span>  oss &lt;&lt; std::endl;</div>
-<div class="line"><a id="l01108" name="l01108"></a><span class="lineno"> 1108</span> </div>
-<div class="line"><a id="l01109" name="l01109"></a><span class="lineno"> 1109</span>  std::string outstr = oss.str();</div>
+<div class="line"><a id="l01083" name="l01083"></a><span class="lineno"> 1083</span>  RCP&lt;const Teuchos::Comm&lt;int&gt;&gt; comm = SM_Matrix_-&gt;getDomainMap()-&gt;getComm();</div>
+<div class="line"><a id="l01084" name="l01084"></a><span class="lineno"> 1084</span> </div>
+<div class="line"><a id="l01085" name="l01085"></a><span class="lineno"> 1085</span><span class="preprocessor">#ifdef HAVE_MPI</span></div>
+<div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span>  <span class="keywordtype">int</span> root;</div>
+<div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span>  <span class="keywordflow">if</span> (!Kn_Matrix_.is_null())</div>
+<div class="line"><a id="l01088" name="l01088"></a><span class="lineno"> 1088</span>    root = comm-&gt;getRank();</div>
+<div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span>  <span class="keywordflow">else</span></div>
+<div class="line"><a id="l01090" name="l01090"></a><span class="lineno"> 1090</span>    root = -1;</div>
+<div class="line"><a id="l01091" name="l01091"></a><span class="lineno"> 1091</span> </div>
+<div class="line"><a id="l01092" name="l01092"></a><span class="lineno"> 1092</span>  <span class="keywordtype">int</span> actualRoot;</div>
+<div class="line"><a id="l01093" name="l01093"></a><span class="lineno"> 1093</span>  reduceAll(*comm, Teuchos::REDUCE_MAX, root, Teuchos::ptr(&amp;actualRoot));</div>
+<div class="line"><a id="l01094" name="l01094"></a><span class="lineno"> 1094</span>  root = actualRoot;</div>
+<div class="line"><a id="l01095" name="l01095"></a><span class="lineno"> 1095</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l01096" name="l01096"></a><span class="lineno"> 1096</span> </div>
+<div class="line"><a id="l01097" name="l01097"></a><span class="lineno"> 1097</span>  oss &lt;&lt; <span class="stringliteral">&quot;\n--------------------------------------------------------------------------------\n&quot;</span></div>
+<div class="line"><a id="l01098" name="l01098"></a><span class="lineno"> 1098</span>      &lt;&lt; <span class="stringliteral">&quot;---                            Maxwell1 Summary                            ---\n&quot;</span></div>
+<div class="line"><a id="l01099" name="l01099"></a><span class="lineno"> 1099</span>         <span class="stringliteral">&quot;--------------------------------------------------------------------------------&quot;</span></div>
+<div class="line"><a id="l01100" name="l01100"></a><span class="lineno"> 1100</span>      &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01101" name="l01101"></a><span class="lineno"> 1101</span>  oss &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01102" name="l01102"></a><span class="lineno"> 1102</span> </div>
+<div class="line"><a id="l01103" name="l01103"></a><span class="lineno"> 1103</span>  <a class="code hl_typedef" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a> numRows;</div>
+<div class="line"><a id="l01104" name="l01104"></a><span class="lineno"> 1104</span>  <a class="code hl_typedef" href="_mue_lu___use_default_types_8hpp.html#a4730156daf25e1b41a9e14299c5d8f72">GlobalOrdinal</a> nnz;</div>
+<div class="line"><a id="l01105" name="l01105"></a><span class="lineno"> 1105</span> </div>
+<div class="line"><a id="l01106" name="l01106"></a><span class="lineno"> 1106</span>  SM_Matrix_-&gt;getRowMap()-&gt;getComm()-&gt;barrier();</div>
+<div class="line"><a id="l01107" name="l01107"></a><span class="lineno"> 1107</span> </div>
+<div class="line"><a id="l01108" name="l01108"></a><span class="lineno"> 1108</span>  numRows = SM_Matrix_-&gt;getGlobalNumRows();</div>
+<div class="line"><a id="l01109" name="l01109"></a><span class="lineno"> 1109</span>  nnz     = SM_Matrix_-&gt;getGlobalNumEntries();</div>
 <div class="line"><a id="l01110" name="l01110"></a><span class="lineno"> 1110</span> </div>
-<div class="line"><a id="l01111" name="l01111"></a><span class="lineno"> 1111</span><span class="preprocessor">#ifdef HAVE_MPI</span></div>
-<div class="line"><a id="l01112" name="l01112"></a><span class="lineno"> 1112</span>  RCP&lt;const Teuchos::MpiComm&lt;int&gt;&gt; mpiComm = rcp_dynamic_cast&lt;const Teuchos::MpiComm&lt;int&gt;&gt;(comm);</div>
-<div class="line"><a id="l01113" name="l01113"></a><span class="lineno"> 1113</span>  MPI_Comm rawComm                         = (*mpiComm-&gt;getRawMpiComm())();</div>
-<div class="line"><a id="l01114" name="l01114"></a><span class="lineno"> 1114</span> </div>
-<div class="line"><a id="l01115" name="l01115"></a><span class="lineno"> 1115</span>  <span class="keywordtype">int</span> strLength = outstr.size();</div>
-<div class="line"><a id="l01116" name="l01116"></a><span class="lineno"> 1116</span>  MPI_Bcast(&amp;strLength, 1, MPI_INT, root, rawComm);</div>
-<div class="line"><a id="l01117" name="l01117"></a><span class="lineno"> 1117</span>  <span class="keywordflow">if</span> (comm-&gt;getRank() != root)</div>
-<div class="line"><a id="l01118" name="l01118"></a><span class="lineno"> 1118</span>    outstr.resize(strLength);</div>
-<div class="line"><a id="l01119" name="l01119"></a><span class="lineno"> 1119</span>  MPI_Bcast(&amp;outstr[0], strLength, MPI_CHAR, root, rawComm);</div>
-<div class="line"><a id="l01120" name="l01120"></a><span class="lineno"> 1120</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l01121" name="l01121"></a><span class="lineno"> 1121</span> </div>
-<div class="line"><a id="l01122" name="l01122"></a><span class="lineno"> 1122</span>  out &lt;&lt; outstr;</div>
+<div class="line"><a id="l01111" name="l01111"></a><span class="lineno"> 1111</span>  Xpetra::global_size_t tt = numRows;</div>
+<div class="line"><a id="l01112" name="l01112"></a><span class="lineno"> 1112</span>  <span class="keywordtype">int</span> rowspacer            = 3;</div>
+<div class="line"><a id="l01113" name="l01113"></a><span class="lineno"> 1113</span>  <span class="keywordflow">while</span> (tt != 0) {</div>
+<div class="line"><a id="l01114" name="l01114"></a><span class="lineno"> 1114</span>    tt /= 10;</div>
+<div class="line"><a id="l01115" name="l01115"></a><span class="lineno"> 1115</span>    rowspacer++;</div>
+<div class="line"><a id="l01116" name="l01116"></a><span class="lineno"> 1116</span>  }</div>
+<div class="line"><a id="l01117" name="l01117"></a><span class="lineno"> 1117</span>  tt            = nnz;</div>
+<div class="line"><a id="l01118" name="l01118"></a><span class="lineno"> 1118</span>  <span class="keywordtype">int</span> nnzspacer = 2;</div>
+<div class="line"><a id="l01119" name="l01119"></a><span class="lineno"> 1119</span>  <span class="keywordflow">while</span> (tt != 0) {</div>
+<div class="line"><a id="l01120" name="l01120"></a><span class="lineno"> 1120</span>    tt /= 10;</div>
+<div class="line"><a id="l01121" name="l01121"></a><span class="lineno"> 1121</span>    nnzspacer++;</div>
+<div class="line"><a id="l01122" name="l01122"></a><span class="lineno"> 1122</span>  }</div>
 <div class="line"><a id="l01123" name="l01123"></a><span class="lineno"> 1123</span> </div>
-<div class="line"><a id="l01124" name="l01124"></a><span class="lineno"> 1124</span>  <span class="keywordflow">if</span> (!Hierarchy11_.is_null())</div>
-<div class="line"><a id="l01125" name="l01125"></a><span class="lineno"> 1125</span>    Hierarchy11_-&gt;describe(out, GetVerbLevel());</div>
+<div class="line"><a id="l01124" name="l01124"></a><span class="lineno"> 1124</span>  oss &lt;&lt; <span class="stringliteral">&quot;block &quot;</span> &lt;&lt; std::setw(rowspacer) &lt;&lt; <span class="stringliteral">&quot; rows &quot;</span> &lt;&lt; std::setw(nnzspacer) &lt;&lt; <span class="stringliteral">&quot; nnz &quot;</span> &lt;&lt; std::setw(9) &lt;&lt; <span class="stringliteral">&quot; nnz/row&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01125" name="l01125"></a><span class="lineno"> 1125</span>  oss &lt;&lt; <span class="stringliteral">&quot;(1, 1)&quot;</span> &lt;&lt; std::setw(rowspacer) &lt;&lt; numRows &lt;&lt; std::setw(nnzspacer) &lt;&lt; nnz &lt;&lt; std::setw(9) &lt;&lt; as&lt;double&gt;(nnz) / numRows &lt;&lt; std::endl;</div>
 <div class="line"><a id="l01126" name="l01126"></a><span class="lineno"> 1126</span> </div>
-<div class="line"><a id="l01127" name="l01127"></a><span class="lineno"> 1127</span>  <span class="keywordflow">if</span> (!Hierarchy22_.is_null())</div>
-<div class="line"><a id="l01128" name="l01128"></a><span class="lineno"> 1128</span>    Hierarchy22_-&gt;describe(out, GetVerbLevel());</div>
-<div class="line"><a id="l01129" name="l01129"></a><span class="lineno"> 1129</span> </div>
-<div class="line"><a id="l01130" name="l01130"></a><span class="lineno"> 1130</span>  <span class="keywordflow">if</span> (!HierarchyGmhd_.is_null())</div>
-<div class="line"><a id="l01131" name="l01131"></a><span class="lineno"> 1131</span>    HierarchyGmhd_-&gt;describe(out, GetVerbLevel());</div>
-<div class="line"><a id="l01132" name="l01132"></a><span class="lineno"> 1132</span> </div>
-<div class="line"><a id="l01133" name="l01133"></a><span class="lineno"> 1133</span>  <span class="keywordflow">if</span> (IsPrint(<a class="code hl_enumvalue" href="namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1fa18d960e5bd7364c1ea53ae67f5891ff5">Statistics2</a>)) {</div>
-<div class="line"><a id="l01134" name="l01134"></a><span class="lineno"> 1134</span>    <span class="comment">// Print the grid of processors</span></div>
-<div class="line"><a id="l01135" name="l01135"></a><span class="lineno"> 1135</span>    std::ostringstream oss2;</div>
+<div class="line"><a id="l01127" name="l01127"></a><span class="lineno"> 1127</span>  <span class="keywordflow">if</span> (!Kn_Matrix_.is_null()) {</div>
+<div class="line"><a id="l01128" name="l01128"></a><span class="lineno"> 1128</span>    <span class="comment">// ToDo: make sure that this is printed correctly</span></div>
+<div class="line"><a id="l01129" name="l01129"></a><span class="lineno"> 1129</span>    numRows = Kn_Matrix_-&gt;getGlobalNumRows();</div>
+<div class="line"><a id="l01130" name="l01130"></a><span class="lineno"> 1130</span>    nnz     = Kn_Matrix_-&gt;getGlobalNumEntries();</div>
+<div class="line"><a id="l01131" name="l01131"></a><span class="lineno"> 1131</span> </div>
+<div class="line"><a id="l01132" name="l01132"></a><span class="lineno"> 1132</span>    oss &lt;&lt; <span class="stringliteral">&quot;(2, 2)&quot;</span> &lt;&lt; std::setw(rowspacer) &lt;&lt; numRows &lt;&lt; std::setw(nnzspacer) &lt;&lt; nnz &lt;&lt; std::setw(9) &lt;&lt; as&lt;double&gt;(nnz) / numRows &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01133" name="l01133"></a><span class="lineno"> 1133</span>  }</div>
+<div class="line"><a id="l01134" name="l01134"></a><span class="lineno"> 1134</span> </div>
+<div class="line"><a id="l01135" name="l01135"></a><span class="lineno"> 1135</span>  oss &lt;&lt; std::endl;</div>
 <div class="line"><a id="l01136" name="l01136"></a><span class="lineno"> 1136</span> </div>
-<div class="line"><a id="l01137" name="l01137"></a><span class="lineno"> 1137</span>    oss2 &lt;&lt; <span class="stringliteral">&quot;Sub-solver distribution over ranks&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l01138" name="l01138"></a><span class="lineno"> 1138</span>    oss2 &lt;&lt; <span class="stringliteral">&quot;( (1,1) block only is indicated by &#39;1&#39;, (2,2) block only by &#39;2&#39;, and both blocks by &#39;B&#39; and none by &#39;.&#39;)&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l01139" name="l01139"></a><span class="lineno"> 1139</span> </div>
-<div class="line"><a id="l01140" name="l01140"></a><span class="lineno"> 1140</span>    <span class="keywordtype">int</span> numProcs = comm-&gt;getSize();</div>
-<div class="line"><a id="l01141" name="l01141"></a><span class="lineno"> 1141</span><span class="preprocessor">#ifdef HAVE_MPI</span></div>
-<div class="line"><a id="l01142" name="l01142"></a><span class="lineno"> 1142</span>    RCP&lt;const Teuchos::MpiComm&lt;int&gt;&gt; tmpic = rcp_dynamic_cast&lt;const Teuchos::MpiComm&lt;int&gt;&gt;(comm);</div>
-<div class="line"><a id="l01143" name="l01143"></a><span class="lineno"> 1143</span> </div>
-<div class="line"><a id="l01144" name="l01144"></a><span class="lineno"> 1144</span>    RCP&lt;const Teuchos::OpaqueWrapper&lt;MPI_Comm&gt;&gt; rawMpiComm = tmpic-&gt;getRawMpiComm();</div>
-<div class="line"><a id="l01145" name="l01145"></a><span class="lineno"> 1145</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l01146" name="l01146"></a><span class="lineno"> 1146</span> </div>
-<div class="line"><a id="l01147" name="l01147"></a><span class="lineno"> 1147</span>    <span class="keywordtype">char</span> status = 0;</div>
-<div class="line"><a id="l01148" name="l01148"></a><span class="lineno"> 1148</span>    <span class="keywordflow">if</span> (!Kn_Matrix_.is_null())</div>
-<div class="line"><a id="l01149" name="l01149"></a><span class="lineno"> 1149</span>      status += 1;</div>
-<div class="line"><a id="l01150" name="l01150"></a><span class="lineno"> 1150</span>    std::vector&lt;char&gt; states(numProcs, 0);</div>
-<div class="line"><a id="l01151" name="l01151"></a><span class="lineno"> 1151</span><span class="preprocessor">#ifdef HAVE_MPI</span></div>
-<div class="line"><a id="l01152" name="l01152"></a><span class="lineno"> 1152</span>    MPI_Gather(&amp;status, 1, MPI_CHAR, &amp;states[0], 1, MPI_CHAR, 0, *rawMpiComm);</div>
-<div class="line"><a id="l01153" name="l01153"></a><span class="lineno"> 1153</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l01154" name="l01154"></a><span class="lineno"> 1154</span>    states.push_back(status);</div>
-<div class="line"><a id="l01155" name="l01155"></a><span class="lineno"> 1155</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l01156" name="l01156"></a><span class="lineno"> 1156</span> </div>
-<div class="line"><a id="l01157" name="l01157"></a><span class="lineno"> 1157</span>    <span class="keywordtype">int</span> rowWidth = std::min(Teuchos::as&lt;int&gt;(ceil(sqrt(numProcs))), 100);</div>
-<div class="line"><a id="l01158" name="l01158"></a><span class="lineno"> 1158</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> proc = 0; proc &lt; numProcs; proc += rowWidth) {</div>
-<div class="line"><a id="l01159" name="l01159"></a><span class="lineno"> 1159</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; rowWidth; j++)</div>
-<div class="line"><a id="l01160" name="l01160"></a><span class="lineno"> 1160</span>        <span class="keywordflow">if</span> (proc + j &lt; numProcs)</div>
-<div class="line"><a id="l01161" name="l01161"></a><span class="lineno"> 1161</span>          <span class="keywordflow">if</span> (states[proc + j] == 0)</div>
-<div class="line"><a id="l01162" name="l01162"></a><span class="lineno"> 1162</span>            oss2 &lt;&lt; <span class="stringliteral">&quot;.&quot;</span>;</div>
-<div class="line"><a id="l01163" name="l01163"></a><span class="lineno"> 1163</span>          <span class="keywordflow">else</span> <span class="keywordflow">if</span> (states[proc + j] == 1)</div>
-<div class="line"><a id="l01164" name="l01164"></a><span class="lineno"> 1164</span>            oss2 &lt;&lt; <span class="stringliteral">&quot;1&quot;</span>;</div>
-<div class="line"><a id="l01165" name="l01165"></a><span class="lineno"> 1165</span>          <span class="keywordflow">else</span> <span class="keywordflow">if</span> (states[proc + j] == 2)</div>
-<div class="line"><a id="l01166" name="l01166"></a><span class="lineno"> 1166</span>            oss2 &lt;&lt; <span class="stringliteral">&quot;2&quot;</span>;</div>
-<div class="line"><a id="l01167" name="l01167"></a><span class="lineno"> 1167</span>          <span class="keywordflow">else</span></div>
-<div class="line"><a id="l01168" name="l01168"></a><span class="lineno"> 1168</span>            oss2 &lt;&lt; <span class="stringliteral">&quot;B&quot;</span>;</div>
-<div class="line"><a id="l01169" name="l01169"></a><span class="lineno"> 1169</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l01170" name="l01170"></a><span class="lineno"> 1170</span>          oss2 &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a id="l01137" name="l01137"></a><span class="lineno"> 1137</span>  std::string outstr = oss.str();</div>
+<div class="line"><a id="l01138" name="l01138"></a><span class="lineno"> 1138</span> </div>
+<div class="line"><a id="l01139" name="l01139"></a><span class="lineno"> 1139</span><span class="preprocessor">#ifdef HAVE_MPI</span></div>
+<div class="line"><a id="l01140" name="l01140"></a><span class="lineno"> 1140</span>  RCP&lt;const Teuchos::MpiComm&lt;int&gt;&gt; mpiComm = rcp_dynamic_cast&lt;const Teuchos::MpiComm&lt;int&gt;&gt;(comm);</div>
+<div class="line"><a id="l01141" name="l01141"></a><span class="lineno"> 1141</span>  MPI_Comm rawComm                         = (*mpiComm-&gt;getRawMpiComm())();</div>
+<div class="line"><a id="l01142" name="l01142"></a><span class="lineno"> 1142</span> </div>
+<div class="line"><a id="l01143" name="l01143"></a><span class="lineno"> 1143</span>  <span class="keywordtype">int</span> strLength = outstr.size();</div>
+<div class="line"><a id="l01144" name="l01144"></a><span class="lineno"> 1144</span>  MPI_Bcast(&amp;strLength, 1, MPI_INT, root, rawComm);</div>
+<div class="line"><a id="l01145" name="l01145"></a><span class="lineno"> 1145</span>  <span class="keywordflow">if</span> (comm-&gt;getRank() != root)</div>
+<div class="line"><a id="l01146" name="l01146"></a><span class="lineno"> 1146</span>    outstr.resize(strLength);</div>
+<div class="line"><a id="l01147" name="l01147"></a><span class="lineno"> 1147</span>  MPI_Bcast(&amp;outstr[0], strLength, MPI_CHAR, root, rawComm);</div>
+<div class="line"><a id="l01148" name="l01148"></a><span class="lineno"> 1148</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l01149" name="l01149"></a><span class="lineno"> 1149</span> </div>
+<div class="line"><a id="l01150" name="l01150"></a><span class="lineno"> 1150</span>  out &lt;&lt; outstr;</div>
+<div class="line"><a id="l01151" name="l01151"></a><span class="lineno"> 1151</span> </div>
+<div class="line"><a id="l01152" name="l01152"></a><span class="lineno"> 1152</span>  <span class="keywordflow">if</span> (!Hierarchy11_.is_null())</div>
+<div class="line"><a id="l01153" name="l01153"></a><span class="lineno"> 1153</span>    Hierarchy11_-&gt;describe(out, GetVerbLevel());</div>
+<div class="line"><a id="l01154" name="l01154"></a><span class="lineno"> 1154</span> </div>
+<div class="line"><a id="l01155" name="l01155"></a><span class="lineno"> 1155</span>  <span class="keywordflow">if</span> (!Hierarchy22_.is_null())</div>
+<div class="line"><a id="l01156" name="l01156"></a><span class="lineno"> 1156</span>    Hierarchy22_-&gt;describe(out, GetVerbLevel());</div>
+<div class="line"><a id="l01157" name="l01157"></a><span class="lineno"> 1157</span> </div>
+<div class="line"><a id="l01158" name="l01158"></a><span class="lineno"> 1158</span>  <span class="keywordflow">if</span> (!HierarchyGmhd_.is_null())</div>
+<div class="line"><a id="l01159" name="l01159"></a><span class="lineno"> 1159</span>    HierarchyGmhd_-&gt;describe(out, GetVerbLevel());</div>
+<div class="line"><a id="l01160" name="l01160"></a><span class="lineno"> 1160</span> </div>
+<div class="line"><a id="l01161" name="l01161"></a><span class="lineno"> 1161</span>  <span class="keywordflow">if</span> (IsPrint(<a class="code hl_enumvalue" href="namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1fa18d960e5bd7364c1ea53ae67f5891ff5">Statistics2</a>)) {</div>
+<div class="line"><a id="l01162" name="l01162"></a><span class="lineno"> 1162</span>    <span class="comment">// Print the grid of processors</span></div>
+<div class="line"><a id="l01163" name="l01163"></a><span class="lineno"> 1163</span>    std::ostringstream oss2;</div>
+<div class="line"><a id="l01164" name="l01164"></a><span class="lineno"> 1164</span> </div>
+<div class="line"><a id="l01165" name="l01165"></a><span class="lineno"> 1165</span>    oss2 &lt;&lt; <span class="stringliteral">&quot;Sub-solver distribution over ranks&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01166" name="l01166"></a><span class="lineno"> 1166</span>    oss2 &lt;&lt; <span class="stringliteral">&quot;( (1,1) block only is indicated by &#39;1&#39;, (2,2) block only by &#39;2&#39;, and both blocks by &#39;B&#39; and none by &#39;.&#39;)&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01167" name="l01167"></a><span class="lineno"> 1167</span> </div>
+<div class="line"><a id="l01168" name="l01168"></a><span class="lineno"> 1168</span>    <span class="keywordtype">int</span> numProcs = comm-&gt;getSize();</div>
+<div class="line"><a id="l01169" name="l01169"></a><span class="lineno"> 1169</span><span class="preprocessor">#ifdef HAVE_MPI</span></div>
+<div class="line"><a id="l01170" name="l01170"></a><span class="lineno"> 1170</span>    RCP&lt;const Teuchos::MpiComm&lt;int&gt;&gt; tmpic = rcp_dynamic_cast&lt;const Teuchos::MpiComm&lt;int&gt;&gt;(comm);</div>
 <div class="line"><a id="l01171" name="l01171"></a><span class="lineno"> 1171</span> </div>
-<div class="line"><a id="l01172" name="l01172"></a><span class="lineno"> 1172</span>      oss2 &lt;&lt; <span class="stringliteral">&quot;      &quot;</span> &lt;&lt; proc &lt;&lt; <span class="stringliteral">&quot;:&quot;</span> &lt;&lt; std::min(proc + rowWidth, numProcs) - 1 &lt;&lt; std::endl;</div>
-<div class="line"><a id="l01173" name="l01173"></a><span class="lineno"> 1173</span>    }</div>
-<div class="line"><a id="l01174" name="l01174"></a><span class="lineno"> 1174</span>    oss2 &lt;&lt; std::endl;</div>
-<div class="line"><a id="l01175" name="l01175"></a><span class="lineno"> 1175</span>    GetOStream(<a class="code hl_enumvalue" href="namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1fa18d960e5bd7364c1ea53ae67f5891ff5">Statistics2</a>) &lt;&lt; oss2.str();</div>
-<div class="line"><a id="l01176" name="l01176"></a><span class="lineno"> 1176</span>  }</div>
-<div class="line"><a id="l01177" name="l01177"></a><span class="lineno"> 1177</span>}</div>
+<div class="line"><a id="l01172" name="l01172"></a><span class="lineno"> 1172</span>    RCP&lt;const Teuchos::OpaqueWrapper&lt;MPI_Comm&gt;&gt; rawMpiComm = tmpic-&gt;getRawMpiComm();</div>
+<div class="line"><a id="l01173" name="l01173"></a><span class="lineno"> 1173</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l01174" name="l01174"></a><span class="lineno"> 1174</span> </div>
+<div class="line"><a id="l01175" name="l01175"></a><span class="lineno"> 1175</span>    <span class="keywordtype">char</span> status = 0;</div>
+<div class="line"><a id="l01176" name="l01176"></a><span class="lineno"> 1176</span>    <span class="keywordflow">if</span> (!Kn_Matrix_.is_null())</div>
+<div class="line"><a id="l01177" name="l01177"></a><span class="lineno"> 1177</span>      status += 1;</div>
+<div class="line"><a id="l01178" name="l01178"></a><span class="lineno"> 1178</span>    std::vector&lt;char&gt; states(numProcs, 0);</div>
+<div class="line"><a id="l01179" name="l01179"></a><span class="lineno"> 1179</span><span class="preprocessor">#ifdef HAVE_MPI</span></div>
+<div class="line"><a id="l01180" name="l01180"></a><span class="lineno"> 1180</span>    MPI_Gather(&amp;status, 1, MPI_CHAR, &amp;states[0], 1, MPI_CHAR, 0, *rawMpiComm);</div>
+<div class="line"><a id="l01181" name="l01181"></a><span class="lineno"> 1181</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l01182" name="l01182"></a><span class="lineno"> 1182</span>    states.push_back(status);</div>
+<div class="line"><a id="l01183" name="l01183"></a><span class="lineno"> 1183</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l01184" name="l01184"></a><span class="lineno"> 1184</span> </div>
+<div class="line"><a id="l01185" name="l01185"></a><span class="lineno"> 1185</span>    <span class="keywordtype">int</span> rowWidth = std::min(Teuchos::as&lt;int&gt;(ceil(sqrt(numProcs))), 100);</div>
+<div class="line"><a id="l01186" name="l01186"></a><span class="lineno"> 1186</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> proc = 0; proc &lt; numProcs; proc += rowWidth) {</div>
+<div class="line"><a id="l01187" name="l01187"></a><span class="lineno"> 1187</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; rowWidth; j++)</div>
+<div class="line"><a id="l01188" name="l01188"></a><span class="lineno"> 1188</span>        <span class="keywordflow">if</span> (proc + j &lt; numProcs)</div>
+<div class="line"><a id="l01189" name="l01189"></a><span class="lineno"> 1189</span>          <span class="keywordflow">if</span> (states[proc + j] == 0)</div>
+<div class="line"><a id="l01190" name="l01190"></a><span class="lineno"> 1190</span>            oss2 &lt;&lt; <span class="stringliteral">&quot;.&quot;</span>;</div>
+<div class="line"><a id="l01191" name="l01191"></a><span class="lineno"> 1191</span>          <span class="keywordflow">else</span> <span class="keywordflow">if</span> (states[proc + j] == 1)</div>
+<div class="line"><a id="l01192" name="l01192"></a><span class="lineno"> 1192</span>            oss2 &lt;&lt; <span class="stringliteral">&quot;1&quot;</span>;</div>
+<div class="line"><a id="l01193" name="l01193"></a><span class="lineno"> 1193</span>          <span class="keywordflow">else</span> <span class="keywordflow">if</span> (states[proc + j] == 2)</div>
+<div class="line"><a id="l01194" name="l01194"></a><span class="lineno"> 1194</span>            oss2 &lt;&lt; <span class="stringliteral">&quot;2&quot;</span>;</div>
+<div class="line"><a id="l01195" name="l01195"></a><span class="lineno"> 1195</span>          <span class="keywordflow">else</span></div>
+<div class="line"><a id="l01196" name="l01196"></a><span class="lineno"> 1196</span>            oss2 &lt;&lt; <span class="stringliteral">&quot;B&quot;</span>;</div>
+<div class="line"><a id="l01197" name="l01197"></a><span class="lineno"> 1197</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l01198" name="l01198"></a><span class="lineno"> 1198</span>          oss2 &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a id="l01199" name="l01199"></a><span class="lineno"> 1199</span> </div>
+<div class="line"><a id="l01200" name="l01200"></a><span class="lineno"> 1200</span>      oss2 &lt;&lt; <span class="stringliteral">&quot;      &quot;</span> &lt;&lt; proc &lt;&lt; <span class="stringliteral">&quot;:&quot;</span> &lt;&lt; std::min(proc + rowWidth, numProcs) - 1 &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01201" name="l01201"></a><span class="lineno"> 1201</span>    }</div>
+<div class="line"><a id="l01202" name="l01202"></a><span class="lineno"> 1202</span>    oss2 &lt;&lt; std::endl;</div>
+<div class="line"><a id="l01203" name="l01203"></a><span class="lineno"> 1203</span>    GetOStream(<a class="code hl_enumvalue" href="namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1fa18d960e5bd7364c1ea53ae67f5891ff5">Statistics2</a>) &lt;&lt; oss2.str();</div>
+<div class="line"><a id="l01204" name="l01204"></a><span class="lineno"> 1204</span>  }</div>
+<div class="line"><a id="l01205" name="l01205"></a><span class="lineno"> 1205</span>}</div>
 </div>
-<div class="line"><a id="l01178" name="l01178"></a><span class="lineno"> 1178</span> </div>
-<div class="line"><a id="l01179" name="l01179"></a><span class="lineno"> 1179</span>}  <span class="comment">// namespace MueLu</span></div>
-<div class="line"><a id="l01180" name="l01180"></a><span class="lineno"> 1180</span> </div>
-<div class="line"><a id="l01181" name="l01181"></a><span class="lineno"><a class="line" href="_mue_lu___maxwell1__def_8hpp.html#a98d9c8d72c3227d68835051009b877ab"> 1181</a></span><span class="preprocessor">#define MUELU_MAXWELL1_SHORT</span></div>
-<div class="line"><a id="l01182" name="l01182"></a><span class="lineno"> 1182</span><span class="preprocessor">#endif  </span><span class="comment">// ifdef MUELU_MAXWELL1_DEF_HPP</span></div>
+<div class="line"><a id="l01206" name="l01206"></a><span class="lineno"> 1206</span> </div>
+<div class="line"><a id="l01207" name="l01207"></a><span class="lineno"> 1207</span>}  <span class="comment">// namespace MueLu</span></div>
+<div class="line"><a id="l01208" name="l01208"></a><span class="lineno"> 1208</span> </div>
+<div class="line"><a id="l01209" name="l01209"></a><span class="lineno"><a class="line" href="_mue_lu___maxwell1__def_8hpp.html#a98d9c8d72c3227d68835051009b877ab"> 1209</a></span><span class="preprocessor">#define MUELU_MAXWELL1_SHORT</span></div>
+<div class="line"><a id="l01210" name="l01210"></a><span class="lineno"> 1210</span><span class="preprocessor">#endif  </span><span class="comment">// ifdef MUELU_MAXWELL1_DEF_HPP</span></div>
 <div class="ttc" id="a_mue_lu___behavior_8hpp_html"><div class="ttname"><a href="_mue_lu___behavior_8hpp.html">MueLu_Behavior.hpp</a></div></div>
 <div class="ttc" id="a_mue_lu___config_defs_8hpp_html"><div class="ttname"><a href="_mue_lu___config_defs_8hpp.html">MueLu_ConfigDefs.hpp</a></div></div>
 <div class="ttc" id="a_mue_lu___create_xpetra_preconditioner_8hpp_html"><div class="ttname"><a href="_mue_lu___create_xpetra_preconditioner_8hpp.html">MueLu_CreateXpetraPreconditioner.hpp</a></div><div class="ttdoc">Various adapters that will create a MueLu preconditioner that is an Xpetra::Matrix.</div></div>
@@ -1343,7 +1373,7 @@ $(document).ready(function(){initNavTree('_mue_lu___maxwell1__def_8hpp_source.ht
 <div class="ttc" id="aclass_mue_lu_1_1_level_html_ad7b55efe2bcb1721aa5dd82c0197e903"><div class="ttname"><a href="class_mue_lu_1_1_level.html#ad7b55efe2bcb1721aa5dd82c0197e903">MueLu::Level::Request</a></div><div class="ttdeci">void Request(const FactoryBase &amp;factory)</div><div class="ttdoc">Increment the storage counter for all the inputs of a factory.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___level_8cpp_source.html#l00143">MueLu_Level.cpp:143</a></div></div>
 <div class="ttc" id="aclass_mue_lu_1_1_level_html_adae6093d757a7f2b27e040121858a1ab"><div class="ttname"><a href="class_mue_lu_1_1_level.html#adae6093d757a7f2b27e040121858a1ab">MueLu::Level::SetPreviousLevel</a></div><div class="ttdeci">void SetPreviousLevel(const RCP&lt; Level &gt; &amp;previousLevel)</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___level_8cpp_source.html#l00063">MueLu_Level.cpp:63</a></div></div>
 <div class="ttc" id="aclass_mue_lu_1_1_level_html_adc20dade6c92f6a91bda5e47ede8175a"><div class="ttname"><a href="class_mue_lu_1_1_level.html#adc20dade6c92f6a91bda5e47ede8175a">MueLu::Level::SetFactoryManager</a></div><div class="ttdeci">void SetFactoryManager(const RCP&lt; const FactoryManagerBase &gt; &amp;factoryManager)</div><div class="ttdoc">Set default factories (used internally by Hierarchy::SetLevel()).</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___level_8cpp_source.html#l00070">MueLu_Level.cpp:70</a></div></div>
-<div class="ttc" id="aclass_mue_lu_1_1_m_l2_mue_lu_parameter_translator_html_a9acb881089bb8271a07736d6710855ae"><div class="ttname"><a href="class_mue_lu_1_1_m_l2_mue_lu_parameter_translator.html#a9acb881089bb8271a07736d6710855ae">MueLu::ML2MueLuParameterTranslator::translate</a></div><div class="ttdeci">static std::string translate(Teuchos::ParameterList &amp;paramList, const std::string &amp;defaultVals=&quot;&quot;)</div><div class="ttdoc">: Translate ML parameters to MueLu parameter XML string</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___m_l2_mue_lu_parameter_translator_8hpp_source.html#l00053">MueLu_ML2MueLuParameterTranslator.hpp:53</a></div></div>
+<div class="ttc" id="aclass_mue_lu_1_1_m_l2_mue_lu_parameter_translator_html_a212635318d420f8f5339b29d5ee9b600"><div class="ttname"><a href="class_mue_lu_1_1_m_l2_mue_lu_parameter_translator.html#a212635318d420f8f5339b29d5ee9b600">MueLu::ML2MueLuParameterTranslator::translate</a></div><div class="ttdeci">static Teuchos::RCP&lt; Teuchos::ParameterList &gt; translate(Teuchos::ParameterList &amp;paramList, const std::string &amp;defaultVals=&quot;&quot;)</div><div class="ttdoc">: Translate ML parameters to MueLu parameter XML string</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___m_l2_mue_lu_parameter_translator_8hpp_source.html#l00053">MueLu_ML2MueLuParameterTranslator.hpp:53</a></div></div>
 <div class="ttc" id="aclass_mue_lu_1_1_maxwell1_html_a0175329425dc07506e10e24f28a9956d"><div class="ttname"><a href="class_mue_lu_1_1_maxwell1.html#a0175329425dc07506e10e24f28a9956d">MueLu::Maxwell1::getDomainMap</a></div><div class="ttdeci">const Teuchos::RCP&lt; const Map &gt; getDomainMap() const</div><div class="ttdoc">Returns the Xpetra::Map object associated with the domain of this operator.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___maxwell1__def_8hpp_source.html#l00051">MueLu_Maxwell1_def.hpp:51</a></div></div>
 <div class="ttc" id="aclass_mue_lu_1_1_maxwell1_html_a15dbbb0cd9ff60080ea3284c52f2f72b"><div class="ttname"><a href="class_mue_lu_1_1_maxwell1.html#a15dbbb0cd9ff60080ea3284c52f2f72b">MueLu::Maxwell1::generate_kn</a></div><div class="ttdeci">Teuchos::RCP&lt; Matrix &gt; generate_kn() const</div><div class="ttdoc">Generates the Kn matrix.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___maxwell1__def_8hpp_source.html#l00747">MueLu_Maxwell1_def.hpp:747</a></div></div>
 <div class="ttc" id="aclass_mue_lu_1_1_maxwell1_html_a1bd25b22826147bce3be02b313c62927"><div class="ttname"><a href="class_mue_lu_1_1_maxwell1.html#a1bd25b22826147bce3be02b313c62927">MueLu::Maxwell1::magnitudeType</a></div><div class="ttdeci">typename Teuchos::ScalarTraits&lt; Scalar &gt;::magnitudeType magnitudeType</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___maxwell1__decl_8hpp_source.html#l00052">MueLu_Maxwell1_decl.hpp:52</a></div></div>
@@ -1354,26 +1384,28 @@ $(document).ready(function(){initNavTree('_mue_lu___maxwell1__def_8hpp_source.ht
 <div class="ttc" id="aclass_mue_lu_1_1_maxwell1_html_a6ab85aa7c230d96cad336833cc334ea2"><div class="ttname"><a href="class_mue_lu_1_1_maxwell1.html#a6ab85aa7c230d96cad336833cc334ea2">MueLu::Maxwell1::apply</a></div><div class="ttdeci">void apply(const MultiVector &amp;RHS, MultiVector &amp;X, Teuchos::ETransp mode=Teuchos::NO_TRANS, Scalar alpha=Teuchos::ScalarTraits&lt; Scalar &gt;::one(), Scalar beta=Teuchos::ScalarTraits&lt; Scalar &gt;::zero()) const</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___maxwell1__def_8hpp_source.html#l00908">MueLu_Maxwell1_def.hpp:908</a></div></div>
 <div class="ttc" id="aclass_mue_lu_1_1_maxwell1_html_a7a7bf2de8f42e852f275b0174e5e1ae8"><div class="ttname"><a href="class_mue_lu_1_1_maxwell1.html#a7a7bf2de8f42e852f275b0174e5e1ae8">MueLu::Maxwell1::applyInverseStandard</a></div><div class="ttdeci">void applyInverseStandard(const MultiVector &amp;RHS, MultiVector &amp;X) const</div><div class="ttdoc">apply standard Maxwell1 cycle</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___maxwell1__def_8hpp_source.html#l00903">MueLu_Maxwell1_def.hpp:903</a></div></div>
 <div class="ttc" id="aclass_mue_lu_1_1_maxwell1_html_a81a31ae18e9873326522cc5d538dfb62"><div class="ttname"><a href="class_mue_lu_1_1_maxwell1.html#a81a31ae18e9873326522cc5d538dfb62">MueLu::Maxwell1::dumpCoords</a></div><div class="ttdeci">void dumpCoords(const RealValuedMultiVector &amp;X, std::string name) const</div><div class="ttdoc">dump out real-valued multivector</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___maxwell1__def_8hpp_source.html#l00795">MueLu_Maxwell1_def.hpp:795</a></div></div>
-<div class="ttc" id="aclass_mue_lu_1_1_maxwell1_html_aa20a067eba4223b6f9af256133746a40"><div class="ttname"><a href="class_mue_lu_1_1_maxwell1.html#aa20a067eba4223b6f9af256133746a40">MueLu::Maxwell1::describe</a></div><div class="ttdeci">void describe(Teuchos::FancyOStream &amp;out, const Teuchos::EVerbosityLevel verbLevel=Teuchos::VERB_HIGH) const</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___maxwell1__def_8hpp_source.html#l01051">MueLu_Maxwell1_def.hpp:1052</a></div></div>
+<div class="ttc" id="aclass_mue_lu_1_1_maxwell1_html_aa20a067eba4223b6f9af256133746a40"><div class="ttname"><a href="class_mue_lu_1_1_maxwell1.html#aa20a067eba4223b6f9af256133746a40">MueLu::Maxwell1::describe</a></div><div class="ttdeci">void describe(Teuchos::FancyOStream &amp;out, const Teuchos::EVerbosityLevel verbLevel=Teuchos::VERB_HIGH) const</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___maxwell1__def_8hpp_source.html#l01079">MueLu_Maxwell1_def.hpp:1080</a></div></div>
 <div class="ttc" id="aclass_mue_lu_1_1_maxwell1_html_aa5792609cccf56dd660ce827a0495d04"><div class="ttname"><a href="class_mue_lu_1_1_maxwell1.html#aa5792609cccf56dd660ce827a0495d04">MueLu::Maxwell1::dump</a></div><div class="ttdeci">void dump(const Matrix &amp;A, std::string name) const</div><div class="ttdoc">dump out matrix</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___maxwell1__def_8hpp_source.html#l00779">MueLu_Maxwell1_def.hpp:779</a></div></div>
 <div class="ttc" id="aclass_mue_lu_1_1_maxwell1_html_aa934564a25288b7ae79184fe13834106"><div class="ttname"><a href="class_mue_lu_1_1_maxwell1.html#aa934564a25288b7ae79184fe13834106">MueLu::Maxwell1::RealValuedMultiVector</a></div><div class="ttdeci">typename Xpetra::MultiVector&lt; coordinateType, LO, GO, NO &gt; RealValuedMultiVector</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___maxwell1__decl_8hpp_source.html#l00054">MueLu_Maxwell1_decl.hpp:54</a></div></div>
 <div class="ttc" id="aclass_mue_lu_1_1_maxwell1_html_abb57060ac30027fabbd12b51a3b7e2b1"><div class="ttname"><a href="class_mue_lu_1_1_maxwell1.html#abb57060ac30027fabbd12b51a3b7e2b1">MueLu::Maxwell1::resetMatrix</a></div><div class="ttdeci">void resetMatrix(Teuchos::RCP&lt; Matrix &gt; SM_Matrix_new, bool ComputePrec=true)</div><div class="ttdoc">Reset system matrix.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___maxwell1__def_8hpp_source.html#l00840">MueLu_Maxwell1_def.hpp:840</a></div></div>
+<div class="ttc" id="aclass_mue_lu_1_1_maxwell1_html_ac6ba1b13c86da01644b5e0e5ed76ada0"><div class="ttname"><a href="class_mue_lu_1_1_maxwell1.html#ac6ba1b13c86da01644b5e0e5ed76ada0">MueLu::Maxwell1::requiredAndOptionalUserData</a></div><div class="ttdeci">static std::pair&lt; std::set&lt; std::string &gt;, std::set&lt; std::string &gt; &gt; requiredAndOptionalUserData(const Teuchos::ParameterList &amp;params)</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___maxwell1__def_8hpp_source.html#l00929">MueLu_Maxwell1_def.hpp:929</a></div></div>
 <div class="ttc" id="aclass_mue_lu_1_1_maxwell1_html_ade15a539f2580e1b4cbf670373cd83be"><div class="ttname"><a href="class_mue_lu_1_1_maxwell1.html#ade15a539f2580e1b4cbf670373cd83be">MueLu::Maxwell1::hasTransposeApply</a></div><div class="ttdeci">bool hasTransposeApply() const</div><div class="ttdoc">Indicates whether this operator supports applying the adjoint operator.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___maxwell1__def_8hpp_source.html#l00924">MueLu_Maxwell1_def.hpp:924</a></div></div>
 <div class="ttc" id="aclass_mue_lu_1_1_maxwell1_html_ae3a3bfdae1c8363991fb59b1ba83374b"><div class="ttname"><a href="class_mue_lu_1_1_maxwell1.html#ae3a3bfdae1c8363991fb59b1ba83374b">MueLu::Maxwell1::getTimer</a></div><div class="ttdeci">Teuchos::RCP&lt; Teuchos::TimeMonitor &gt; getTimer(std::string name, RCP&lt; const Teuchos::Comm&lt; int &gt; &gt; comm=Teuchos::null) const</div><div class="ttdoc">get a (synced) timer</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___maxwell1__def_8hpp_source.html#l00825">MueLu_Maxwell1_def.hpp:825</a></div></div>
-<div class="ttc" id="aclass_mue_lu_1_1_maxwell1_html_aeec775122aa6622aa468951f39314af6"><div class="ttname"><a href="class_mue_lu_1_1_maxwell1.html#aeec775122aa6622aa468951f39314af6">MueLu::Maxwell1::initialize</a></div><div class="ttdeci">void initialize(const Teuchos::RCP&lt; Matrix &gt; &amp;D0_Matrix, const Teuchos::RCP&lt; Matrix &gt; &amp;Kn_Matrix, const Teuchos::RCP&lt; MultiVector &gt; &amp;Nullspace, const Teuchos::RCP&lt; RealValuedMultiVector &gt; &amp;Coords, const Teuchos::RCP&lt; Matrix &gt; &amp;CurlCurl_Matrix, const Teuchos::RCP&lt; MultiVector &gt; &amp;Material, Teuchos::ParameterList &amp;List)</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___maxwell1__def_8hpp_source.html#l00964">MueLu_Maxwell1_def.hpp:965</a></div></div>
+<div class="ttc" id="aclass_mue_lu_1_1_maxwell1_html_aeec775122aa6622aa468951f39314af6"><div class="ttname"><a href="class_mue_lu_1_1_maxwell1.html#aeec775122aa6622aa468951f39314af6">MueLu::Maxwell1::initialize</a></div><div class="ttdeci">void initialize(const Teuchos::RCP&lt; Matrix &gt; &amp;D0_Matrix, const Teuchos::RCP&lt; Matrix &gt; &amp;Kn_Matrix, const Teuchos::RCP&lt; MultiVector &gt; &amp;Nullspace, const Teuchos::RCP&lt; RealValuedMultiVector &gt; &amp;Coords, const Teuchos::RCP&lt; Matrix &gt; &amp;CurlCurl_Matrix, const Teuchos::RCP&lt; MultiVector &gt; &amp;Material, Teuchos::ParameterList &amp;List)</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___maxwell1__def_8hpp_source.html#l00992">MueLu_Maxwell1_def.hpp:993</a></div></div>
 <div class="ttc" id="aclass_mue_lu_1_1_maxwell1_html_aefddec8f750a6b1c4175647532733dd7"><div class="ttname"><a href="class_mue_lu_1_1_maxwell1.html#aefddec8f750a6b1c4175647532733dd7">MueLu::Maxwell1::setParameters</a></div><div class="ttdeci">void setParameters(Teuchos::ParameterList &amp;list)</div><div class="ttdoc">Set parameters.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___maxwell1__def_8hpp_source.html#l00061">MueLu_Maxwell1_def.hpp:61</a></div></div>
 <div class="ttc" id="aclass_mue_lu_1_1_maxwell1_html_afe0b4e45b62776d98ed3abd78c36432a"><div class="ttname"><a href="class_mue_lu_1_1_maxwell1.html#afe0b4e45b62776d98ed3abd78c36432a">MueLu::Maxwell1::allocateMemory</a></div><div class="ttdeci">void allocateMemory(int numVectors) const</div><div class="ttdoc">allocate multivectors for solve</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___maxwell1__def_8hpp_source.html#l00758">MueLu_Maxwell1_def.hpp:758</a></div></div>
 <div class="ttc" id="aclass_mue_lu_1_1_maxwell___utils_html_a0961d59c3cc9f95718391e8886339e67"><div class="ttname"><a href="class_mue_lu_1_1_maxwell___utils.html#a0961d59c3cc9f95718391e8886339e67">MueLu::Maxwell_Utils::detectBoundaryConditionsSM</a></div><div class="ttdeci">static void detectBoundaryConditionsSM(RCP&lt; Matrix &gt; &amp;SM_Matrix, RCP&lt; Matrix &gt; &amp;D0_Matrix, magnitudeType rowSumTol, bool useKokkos_, Kokkos::View&lt; bool *, typename Node::device_type::memory_space &gt; &amp;BCrowsKokkos, Kokkos::View&lt; bool *, typename Node::device_type::memory_space &gt; &amp;BCcolsKokkos, Kokkos::View&lt; bool *, typename Node::device_type::memory_space &gt; &amp;BCdomainKokkos, int &amp;BCedges, int &amp;BCnodes, Teuchos::ArrayRCP&lt; bool &gt; &amp;BCrows, Teuchos::ArrayRCP&lt; bool &gt; &amp;BCcols, Teuchos::ArrayRCP&lt; bool &gt; &amp;BCdomain, bool &amp;allEdgesBoundary, bool &amp;allNodesBoundary)</div><div class="ttdoc">Detect Dirichlet boundary conditions.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___maxwell___utils__def_8hpp_source.html#l00031">MueLu_Maxwell_Utils_def.hpp:31</a></div></div>
 <div class="ttc" id="aclass_mue_lu_1_1_maxwell___utils_html_af4774192fab9a24151c9d9d4f11630af"><div class="ttname"><a href="class_mue_lu_1_1_maxwell___utils.html#af4774192fab9a24151c9d9d4f11630af">MueLu::Maxwell_Utils::PtAPWrapper</a></div><div class="ttdeci">static RCP&lt; Xpetra::Matrix&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt; &gt; PtAPWrapper(const RCP&lt; Matrix &gt; &amp;A, const RCP&lt; Matrix &gt; &amp;P, Teuchos::ParameterList &amp;params, const std::string &amp;label)</div><div class="ttdoc">Performs an P^T AP.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___maxwell___utils__def_8hpp_source.html#l00253">MueLu_Maxwell_Utils_def.hpp:254</a></div></div>
 <div class="ttc" id="aclass_mue_lu_1_1_parameter_list_interpreter_html"><div class="ttname"><a href="class_mue_lu_1_1_parameter_list_interpreter.html">MueLu::ParameterListInterpreter</a></div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___parameter_list_interpreter__decl_8hpp_source.html#l00085">MueLu_ParameterListInterpreter_decl.hpp:85</a></div></div>
+<div class="ttc" id="aclass_mue_lu_1_1_parameter_list_interpreter_html_af51d3dd0f2a930e76d9f831f0238de73"><div class="ttname"><a href="class_mue_lu_1_1_parameter_list_interpreter.html#af51d3dd0f2a930e76d9f831f0238de73">MueLu::ParameterListInterpreter::requiredAndOptionalUserData</a></div><div class="ttdeci">static std::pair&lt; std::set&lt; std::string &gt;, std::set&lt; std::string &gt; &gt; requiredAndOptionalUserData(const Teuchos::ParameterList &amp;paramList, Teuchos::RCP&lt; const Teuchos::ParameterList &gt; defaultList=Teuchos::null, int maxLevel=0)</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___parameter_list_interpreter__def_8hpp_source.html#l00445">MueLu_ParameterListInterpreter_def.hpp:446</a></div></div>
 <div class="ttc" id="aclass_mue_lu_1_1_perf_utils_html_ac7b7e0e13848f272100ab777e7931bb2"><div class="ttname"><a href="class_mue_lu_1_1_perf_utils.html#ac7b7e0e13848f272100ab777e7931bb2">MueLu::PerfUtils::PrintMatrixInfo</a></div><div class="ttdeci">static std::string PrintMatrixInfo(const Matrix &amp;A, const std::string &amp;msgTag, RCP&lt; const Teuchos::ParameterList &gt; params=Teuchos::null)</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___perf_utils__def_8hpp_source.html#l00092">MueLu_PerfUtils_def.hpp:92</a></div></div>
 <div class="ttc" id="aclass_mue_lu_1_1_rebalance_ac_factory_html"><div class="ttname"><a href="class_mue_lu_1_1_rebalance_ac_factory.html">MueLu::RebalanceAcFactory</a></div><div class="ttdoc">Factory for building coarse matrices.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___rebalance_ac_factory__decl_8hpp_source.html#l00034">MueLu_RebalanceAcFactory_decl.hpp:34</a></div></div>
 <div class="ttc" id="aclass_mue_lu_1_1_rebalance_transfer_factory_html"><div class="ttname"><a href="class_mue_lu_1_1_rebalance_transfer_factory.html">MueLu::RebalanceTransferFactory</a></div><div class="ttdoc">Applies permutation to grid transfer operators.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___rebalance_transfer_factory__decl_8hpp_source.html#l00042">MueLu_RebalanceTransferFactory_decl.hpp:42</a></div></div>
 <div class="ttc" id="aclass_mue_lu_1_1_ref_maxwell_smoother_html"><div class="ttname"><a href="class_mue_lu_1_1_ref_maxwell_smoother.html">MueLu::RefMaxwellSmoother</a></div><div class="ttdoc">Class that encapsulates Operator smoothers.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___ref_maxwell_smoother__decl_8hpp_source.html#l00038">MueLu_RefMaxwellSmoother_decl.hpp:38</a></div></div>
-<div class="ttc" id="aclass_mue_lu_1_1_utilities_base_html_a12930392884be58f94d5d18a800a824f"><div class="ttname"><a href="class_mue_lu_1_1_utilities_base.html#a12930392884be58f94d5d18a800a824f">MueLu::UtilitiesBase::ZeroDirichletRows</a></div><div class="ttdeci">static void ZeroDirichletRows(Teuchos::RCP&lt; Xpetra::Matrix&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt; &gt; &amp;A, const std::vector&lt; LocalOrdinal &gt; &amp;dirichletRows, Scalar replaceWith=Teuchos::ScalarTraits&lt; Scalar &gt;::zero())</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___utilities_base__def_8hpp_source.html#l01851">MueLu_UtilitiesBase_def.hpp:1852</a></div></div>
-<div class="ttc" id="aclass_mue_lu_1_1_utilities_base_html_a44da06ea16155d14fa4311cfe4bc6f71"><div class="ttname"><a href="class_mue_lu_1_1_utilities_base.html#a44da06ea16155d14fa4311cfe4bc6f71">MueLu::UtilitiesBase::ZeroDirichletCols</a></div><div class="ttdeci">static void ZeroDirichletCols(Teuchos::RCP&lt; Matrix &gt; &amp;A, const Teuchos::ArrayRCP&lt; const bool &gt; &amp;dirichletCols, Scalar replaceWith=Teuchos::ScalarTraits&lt; Scalar &gt;::zero())</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___utilities_base__def_8hpp_source.html#l01947">MueLu_UtilitiesBase_def.hpp:1948</a></div></div>
-<div class="ttc" id="aclass_mue_lu_1_1_utilities_base_html_ae6ce0856e2df02cef901208e56b6ed41"><div class="ttname"><a href="class_mue_lu_1_1_utilities_base.html#ae6ce0856e2df02cef901208e56b6ed41">MueLu::UtilitiesBase::ReplaceNonZerosWithOnes</a></div><div class="ttdeci">static RCP&lt; Xpetra::Matrix&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt; &gt; ReplaceNonZerosWithOnes(const RCP&lt; Matrix &gt; &amp;original)</div><div class="ttdoc">Creates a copy of a matrix where the non-zero entries are replaced by ones.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___utilities_base__def_8hpp_source.html#l02033">MueLu_UtilitiesBase_def.hpp:2034</a></div></div>
-<div class="ttc" id="aclass_mue_lu_1_1_utilities_base_html_af37802341b46cb6aa8eb808b2cbddbd4"><div class="ttname"><a href="class_mue_lu_1_1_utilities_base.html#af37802341b46cb6aa8eb808b2cbddbd4">MueLu::UtilitiesBase::Residual</a></div><div class="ttdeci">static RCP&lt; MultiVector &gt; Residual(const Xpetra::Operator&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt; &amp;Op, const MultiVector &amp;X, const MultiVector &amp;RHS)</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___utilities_base__def_8hpp_source.html#l00921">MueLu_UtilitiesBase_def.hpp:922</a></div></div>
+<div class="ttc" id="aclass_mue_lu_1_1_utilities_base_html_a12930392884be58f94d5d18a800a824f"><div class="ttname"><a href="class_mue_lu_1_1_utilities_base.html#a12930392884be58f94d5d18a800a824f">MueLu::UtilitiesBase::ZeroDirichletRows</a></div><div class="ttdeci">static void ZeroDirichletRows(Teuchos::RCP&lt; Xpetra::Matrix&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt; &gt; &amp;A, const std::vector&lt; LocalOrdinal &gt; &amp;dirichletRows, Scalar replaceWith=Teuchos::ScalarTraits&lt; Scalar &gt;::zero())</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___utilities_base__def_8hpp_source.html#l01944">MueLu_UtilitiesBase_def.hpp:1945</a></div></div>
+<div class="ttc" id="aclass_mue_lu_1_1_utilities_base_html_a44da06ea16155d14fa4311cfe4bc6f71"><div class="ttname"><a href="class_mue_lu_1_1_utilities_base.html#a44da06ea16155d14fa4311cfe4bc6f71">MueLu::UtilitiesBase::ZeroDirichletCols</a></div><div class="ttdeci">static void ZeroDirichletCols(Teuchos::RCP&lt; Matrix &gt; &amp;A, const Teuchos::ArrayRCP&lt; const bool &gt; &amp;dirichletCols, Scalar replaceWith=Teuchos::ScalarTraits&lt; Scalar &gt;::zero())</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___utilities_base__def_8hpp_source.html#l02040">MueLu_UtilitiesBase_def.hpp:2041</a></div></div>
+<div class="ttc" id="aclass_mue_lu_1_1_utilities_base_html_ae6ce0856e2df02cef901208e56b6ed41"><div class="ttname"><a href="class_mue_lu_1_1_utilities_base.html#ae6ce0856e2df02cef901208e56b6ed41">MueLu::UtilitiesBase::ReplaceNonZerosWithOnes</a></div><div class="ttdeci">static RCP&lt; Xpetra::Matrix&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt; &gt; ReplaceNonZerosWithOnes(const RCP&lt; Matrix &gt; &amp;original)</div><div class="ttdoc">Creates a copy of a matrix where the non-zero entries are replaced by ones.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___utilities_base__def_8hpp_source.html#l02139">MueLu_UtilitiesBase_def.hpp:2140</a></div></div>
+<div class="ttc" id="aclass_mue_lu_1_1_utilities_base_html_af37802341b46cb6aa8eb808b2cbddbd4"><div class="ttname"><a href="class_mue_lu_1_1_utilities_base.html#af37802341b46cb6aa8eb808b2cbddbd4">MueLu::UtilitiesBase::Residual</a></div><div class="ttdeci">static RCP&lt; MultiVector &gt; Residual(const Xpetra::Operator&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt; &amp;Op, const MultiVector &amp;X, const MultiVector &amp;RHS)</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___utilities_base__def_8hpp_source.html#l01008">MueLu_UtilitiesBase_def.hpp:1009</a></div></div>
 <div class="ttc" id="aclass_mue_lu_1_1_verbose_object_html_acb0e1cb557d90dd3e7ba062e19ad6cfc"><div class="ttname"><a href="class_mue_lu_1_1_verbose_object.html#acb0e1cb557d90dd3e7ba062e19ad6cfc">MueLu::VerboseObject::SetDefaultVerbLevel</a></div><div class="ttdeci">static void SetDefaultVerbLevel(const VerbLevel defaultVerbLevel)</div><div class="ttdoc">Set the default (global) verbosity level.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___verbose_object_8cpp_source.html#l00087">MueLu_VerboseObject.cpp:87</a></div></div>
 <div class="ttc" id="aclass_teuchos_1_1_comm_html"><div class="ttname"><a href="class_teuchos_1_1_comm.html">Teuchos::Comm</a></div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___memory_8hpp_source.html#l00022">MueLu_Memory.hpp:22</a></div></div>
 <div class="ttc" id="anamespace_mue_lu_html"><div class="ttname"><a href="namespace_mue_lu.html">MueLu</a></div><div class="ttdoc">Namespace for MueLu classes and methods.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___brick_aggregation_factory__decl_8hpp_source.html#l00041">MueLu_BrickAggregationFactory_decl.hpp:41</a></div></div>
@@ -1385,7 +1417,7 @@ $(document).ready(function(){initNavTree('_mue_lu___maxwell1__def_8hpp_source.ht
 <div class="ttc" id="anamespace_mue_lu_html_a1f14cd8d51f6e963d8e5a8dd03dbcf1faeed6207041b4d12935e395dcf691d725"><div class="ttname"><a href="namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1faeed6207041b4d12935e395dcf691d725">MueLu::Timings</a></div><div class="ttdeci">@ Timings</div><div class="ttdoc">Print all timing information.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___verbosity_level_8hpp_source.html#l00056">MueLu_VerbosityLevel.hpp:56</a></div></div>
 <div class="ttc" id="anamespace_mue_lu_html_aa4e469333ab3779dadcad445912b6380"><div class="ttname"><a href="namespace_mue_lu.html#aa4e469333ab3779dadcad445912b6380">MueLu::toVerbLevel</a></div><div class="ttdeci">MsgType toVerbLevel(const std::string &amp;verbLevelStr)</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___verbosity_level_8cpp_source.html#l00052">MueLu_VerbosityLevel.cpp:52</a></div></div>
 <div class="ttc" id="anamespace_mue_lu_html_ab497ec5add70e6dbe3dbb16a7446c399"><div class="ttname"><a href="namespace_mue_lu.html#ab497ec5add70e6dbe3dbb16a7446c399">MueLu::CreateXpetraPreconditioner</a></div><div class="ttdeci">Teuchos::RCP&lt; MueLu::Hierarchy&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt; &gt; CreateXpetraPreconditioner(Teuchos::RCP&lt; Xpetra::Matrix&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt; &gt; op, const Teuchos::ParameterList &amp;inParamList)</div><div class="ttdoc">Helper function to create a MueLu preconditioner that can be used by Xpetra.Given an Xpetra::Matrix,...</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___create_xpetra_preconditioner_8hpp_source.html#l00045">MueLu_CreateXpetraPreconditioner.hpp:45</a></div></div>
-<div class="ttc" id="anamespace_mue_lu_html_ab9f058e1d6085b06cb22dbebefa4a250"><div class="ttname"><a href="namespace_mue_lu.html#ab9f058e1d6085b06cb22dbebefa4a250">MueLu::scaleD0</a></div><div class="ttdeci">void scaleD0(Xpetra::Matrix&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt; &amp;D0)</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___maxwell1__def_8hpp_source.html#l00929">MueLu_Maxwell1_def.hpp:929</a></div></div>
+<div class="ttc" id="anamespace_mue_lu_html_ab9f058e1d6085b06cb22dbebefa4a250"><div class="ttname"><a href="namespace_mue_lu.html#ab9f058e1d6085b06cb22dbebefa4a250">MueLu::scaleD0</a></div><div class="ttdeci">void scaleD0(Xpetra::Matrix&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt; &amp;D0)</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___maxwell1__def_8hpp_source.html#l00957">MueLu_Maxwell1_def.hpp:957</a></div></div>
 <div class="ttc" id="astruct_mue_lu_1_1_formatting_helper_html_aaaeff3d7576f23a2ad266317c0eb1baa"><div class="ttname"><a href="struct_mue_lu_1_1_formatting_helper.html#aaaeff3d7576f23a2ad266317c0eb1baa">MueLu::FormattingHelper::getColonLabel</a></div><div class="ttdeci">static std::string getColonLabel(const std::string &amp;label)</div><div class="ttdoc">Helper function for object label.</div><div class="ttdef"><b>Definition</b> <a href="_mue_lu___monitor_8hpp_source.html#l00030">MueLu_Monitor.hpp:30</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

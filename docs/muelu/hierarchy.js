@@ -323,7 +323,9 @@ var hierarchy =
       [ "MueLu::Details::LinearSolverFactory< MV, OP, NormType >", "class_mue_lu_1_1_details_1_1_linear_solver_factory.html", null ]
     ] ],
     [ "MueLu::LocalAggregationAlgorithm< LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_local_aggregation_algorithm.html", null ],
+    [ "MueLu::LocalFSAIFunctor< local_matrix_type, global_ordinal_type >", "class_mue_lu_1_1_local_f_s_a_i_functor.html", null ],
     [ "LocalPermutationStrategy", "class_local_permutation_strategy.html", null ],
+    [ "MueLu::LocalQR::LocalQRDecompFunctor< LOType, GOType, SCType, DeviceType, NspType, aggRowsType, maxAggDofSizeType, agg2RowMapLOType, statusType, rowsType, rowsAuxType, colsAuxType, valsAuxType >", "class_mue_lu_1_1_local_q_r_1_1_local_q_r_decomp_functor.html", null ],
     [ "MueLu::LWGraphBase< LocalOrdinal, GlobalOrdinal, Node, OnHost >", "class_mue_lu_1_1_l_w_graph_base.html", [
       [ "MueLu::LWGraph< LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_l_w_graph.html", null ]
     ] ],
@@ -399,6 +401,7 @@ var hierarchy =
     ] ],
     [ "MueLu::PRFactory< LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_p_r_factory.html", null ],
     [ "MueLu::Projection< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_projection.html", null ],
+    [ "MueLu::LocalQR::ReduceMaxFunctor< LocalOrdinal, View >", "class_mue_lu_1_1_local_q_r_1_1_reduce_max_functor.html", null ],
     [ "MueLu::RepartitionUtilities< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "struct_mue_lu_1_1_repartition_utilities.html", null ],
     [ "MueLuTests::ReplicatePFactoryTester< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_tests_1_1_replicate_p_factory_tester.html", null ],
     [ "Tpetra::RowMatrix", null, [

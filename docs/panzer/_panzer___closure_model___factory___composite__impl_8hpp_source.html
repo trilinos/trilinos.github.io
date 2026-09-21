@@ -168,9 +168,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <span class="comment">// Loop over factories</span></div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  <span class="keywordflow">for</span> (std::vector&lt;Teuchos::RCP&lt;<a class="code hl_class" href="classpanzer_1_1_closure_model_factory___template_manager.html">panzer::ClosureModelFactory_TemplateManager&lt;panzer::Traits&gt;</a> &gt; &gt;::const_iterator factory = m_factories.begin(); factory != m_factories.end(); ++factory) {</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    (*factory)-&gt;getAsObject&lt;EvalT&gt;()-&gt;setThrowOnModelNotFound(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    (*factory)-&gt;template getAsObject&lt;EvalT&gt;()-&gt;setThrowOnModelNotFound(<span class="keyword">false</span>);</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    RCP&lt; vector&lt; RCP&lt;Evaluator&lt;panzer::Traits&gt; &gt; &gt; &gt; tmp_evaluators =</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>      (*factory)-&gt;getAsObject&lt;EvalT&gt;()-&gt;buildClosureModels(model_id,copy_of_my_model,fl,ir,default_params,user_data,global_data,fm);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>      (*factory)-&gt;template getAsObject&lt;EvalT&gt;()-&gt;buildClosureModels(model_id,copy_of_my_model,fl,ir,default_params,user_data,global_data,fm);</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordflow">if</span> (tmp_evaluators-&gt;size() &gt; 0) {</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>      <span class="keywordflow">for</span> (vector&lt; RCP&lt;Evaluator&lt;panzer::Traits&gt; &gt; &gt;::const_iterator eval = tmp_evaluators-&gt;begin(); eval != tmp_evaluators-&gt;end(); ++eval)</div>

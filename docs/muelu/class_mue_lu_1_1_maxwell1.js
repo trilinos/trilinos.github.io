@@ -26,6 +26,7 @@ var class_mue_lu_1_1_maxwell1 =
     [ "resetMatrix", "class_mue_lu_1_1_maxwell1.html#abb57060ac30027fabbd12b51a3b7e2b1", null ],
     [ "apply", "class_mue_lu_1_1_maxwell1.html#a6ab85aa7c230d96cad336833cc334ea2", null ],
     [ "hasTransposeApply", "class_mue_lu_1_1_maxwell1.html#ade15a539f2580e1b4cbf670373cd83be", null ],
+    [ "requiredAndOptionalUserData", "class_mue_lu_1_1_maxwell1.html#ac6ba1b13c86da01644b5e0e5ed76ada0", null ],
     [ "describe", "class_mue_lu_1_1_maxwell1.html#aa20a067eba4223b6f9af256133746a40", null ],
     [ "residual", "class_mue_lu_1_1_maxwell1.html#a8b1a61f83ec16cd86d80a06b7c5f7937", null ],
     [ "generate_kn", "class_mue_lu_1_1_maxwell1.html#a15dbbb0cd9ff60080ea3284c52f2f72b", null ],

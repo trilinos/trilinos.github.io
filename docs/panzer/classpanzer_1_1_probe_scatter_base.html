@@ -96,8 +96,8 @@ Inheritance diagram for panzer::ProbeScatterBase:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad7e76296839cd8087ae314e18e33fe7b" id="r_ad7e76296839cd8087ae314e18e33fe7b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_probe_scatter_base.html#ad7e76296839cd8087ae314e18e33fe7b">~ProbeScatterBase</a> ()</td></tr>
 <tr class="separator:ad7e76296839cd8087ae314e18e33fe7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7b468c72724c1c417cdc0525871ff08" id="r_af7b468c72724c1c417cdc0525871ff08"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_probe_scatter_base.html#af7b468c72724c1c417cdc0525871ff08">scatterDerivative</a> (const <a class="el" href="structpanzer_1_1_traits_1_1_jacobian.html#ac105a3e775f64b5684921d1c1a9efdde">panzer::Traits::Jacobian::ScalarT</a> &amp;probeValue, const size_t cell_index, const bool has_probe, <a class="el" href="structpanzer_1_1_traits.html#acd15edee621ca934dcca460b0bb0de11">panzer::Traits::EvalData</a> workset, <a class="el" href="classpanzer_1_1_workset_details_accessor.html">WorksetDetailsAccessor</a> &amp;wda, Teuchos::ArrayRCP&lt; double &gt; &amp;dgdx) const =0</td></tr>
-<tr class="separator:af7b468c72724c1c417cdc0525871ff08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4141eb5632b5c0306cbb0d452b78431c" id="r_a4141eb5632b5c0306cbb0d452b78431c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_probe_scatter_base.html#a4141eb5632b5c0306cbb0d452b78431c">scatterDerivative</a> (const <a class="el" href="structpanzer_1_1_traits_1_1_jacobian.html#ac105a3e775f64b5684921d1c1a9efdde">panzer::Traits::Jacobian::ScalarT</a> &amp;probeValue, const size_t cell_index, const bool has_probe, <a class="el" href="structpanzer_1_1_traits.html#acd15edee621ca934dcca460b0bb0de11">panzer::Traits::EvalData</a> workset, <a class="el" href="classpanzer_1_1_workset_details_accessor.html">WorksetDetailsAccessor</a> &amp;wda, const int derivativeOffset, Teuchos::ArrayRCP&lt; double &gt; &amp;dgdx) const =0</td></tr>
+<tr class="separator:a4141eb5632b5c0306cbb0d452b78431c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -131,8 +131,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="af7b468c72724c1c417cdc0525871ff08" name="af7b468c72724c1c417cdc0525871ff08"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af7b468c72724c1c417cdc0525871ff08">&#9670;&#160;</a></span>scatterDerivative()</h2>
+<a id="a4141eb5632b5c0306cbb0d452b78431c" name="a4141eb5632b5c0306cbb0d452b78431c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4141eb5632b5c0306cbb0d452b78431c">&#9670;&#160;</a></span>scatterDerivative()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -173,6 +173,12 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>derivativeOffset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">Teuchos::ArrayRCP&lt; double &gt; &amp;&#160;</td>
           <td class="paramname"><em>dgdx</em>&#160;</td>
         </tr>
@@ -188,8 +194,14 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">derivativeOffset</td><td>First Fad derivative component belonging to the probed field's product vector block. Zero when the global indexer is not blocked. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Implemented in <a class="el" href="classpanzer_1_1_probe_scatter.html#a811c2247bc4f7791612efec7b5165bb3">panzer::ProbeScatter&lt; LO, GO &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classpanzer_1_1_probe_scatter.html#adfa88f696c50f8a6c094a352a84a3cc1">panzer::ProbeScatter&lt; LO, GO &gt;</a>.</p>
 
 </div>
 </div>

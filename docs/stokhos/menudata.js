@@ -112,7 +112,6 @@ var menudata={children:[
 {text:"w",url:"functions_vars_w.html#index_w"},
 {text:"x",url:"functions_vars_x.html#index_x"}]},
 {text:"Typedefs",url:"functions_type.html",children:[
-{text:"b",url:"functions_type.html#index_b"},
 {text:"c",url:"functions_type.html#index_c"},
 {text:"e",url:"functions_type.html#index_e"},
 {text:"i",url:"functions_type.html#index_i"},

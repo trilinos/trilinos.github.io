@@ -90,11 +90,13 @@ Inheritance diagram for Belos::OutOfPlaceNormalizerMixin&lt; Scalar, MV, DM &gt;
 <div class="dyncontent">
 <div class="center"><img src="class_belos_1_1_out_of_place_normalizer_mixin__inherit__graph.gif" border="0" usemap="#a_belos_1_1_out_of_place_normalizer_mixin_3_01_scalar_00_01_m_v_00_01_d_m_01_4_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_belos_1_1_out_of_place_normalizer_mixin_3_01_scalar_00_01_m_v_00_01_d_m_01_4_inherit__map" id="a_belos_1_1_out_of_place_normalizer_mixin_3_01_scalar_00_01_m_v_00_01_d_m_01_4_inherit__map">
-<area shape="rect" title="Mixin for out&#45;of&#45;place orthogonalization." alt="" coords="5,37,216,77"/>
-<area shape="rect" href="class_belos_1_1_tsqr_mat_ortho_manager.html" title="MatOrthoManager subclass using TSQR or DGKS." alt="" coords="264,5,475,45"/>
-<area shape="poly" title=" " alt="" coords="229,40,264,36,264,41,230,45"/>
-<area shape="rect" href="class_belos_1_1_tsqr_ortho_manager.html" title="TSQR&#45;based OrthoManager subclass." alt="" coords="277,69,462,109"/>
-<area shape="poly" title=" " alt="" coords="230,69,277,75,276,81,229,75"/>
+<area shape="rect" title="Mixin for out&#45;of&#45;place orthogonalization." alt="" coords="5,69,216,109"/>
+<area shape="rect" href="class_belos_1_1_tsqr_mat_ortho_manager.html" title="MatOrthoManager subclass using TSQR or DGKS." alt="" coords="463,5,674,45"/>
+<area shape="poly" title=" " alt="" coords="229,70,240,68,463,37,463,42,240,73,230,75"/>
+<area shape="rect" href="class_belos_1_1_tsqr_ortho_manager.html" title="TSQR&#45;based OrthoManager subclass." alt="" coords="476,69,661,109"/>
+<area shape="poly" title=" " alt="" coords="230,87,476,87,476,92,230,92"/>
+<area shape="rect" href="class_belos_1_1_out_of_place_normalizer_mixin.html" title=" " alt="" coords="449,134,688,189"/>
+<area shape="poly" title=" " alt="" coords="192,110,241,121,347,138,450,150,449,155,347,143,239,127,191,116"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -125,7 +127,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a68c1320768fcc6c8fa7d8eba23db1755"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a>, <a class="el" href="class_belos_1_1_operator.html">class</a> MV, <a class="el" href="class_belos_1_1_operator.html">class</a> DM&gt;<br />
+<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a>, <a class="el" href="class_belos_1_1_operator.html">class</a> MV, <a class="el" href="class_belos_1_1_operator.html">class</a> DM = DefaultDenseMatrix&lt;int,ScalarType&gt;&gt;<br />
 class Belos::OutOfPlaceNormalizerMixin&lt; Scalar, MV, DM &gt;</div><p>Mixin for out-of-place orthogonalization. </p>
 <dl class="section author"><dt>Author</dt><dd>Mark Hoemmen</dd></dl>
 <p>This class presents an abstract interface for multiple inheritance ("mixin") for special orthogonalization methods that normalize "out-of-place." <a class="el" href="class_belos_1_1_ortho_manager.html" title="Belos&#39;s templated virtual class for providing routines for orthogonalization and orthonormzalition of...">OrthoManager</a> and <a class="el" href="class_belos_1_1_mat_ortho_manager.html" title="Belos&#39;s templated virtual class for providing routines for orthogonalization and orthonormzalition of...">MatOrthoManager</a> both normalize (and projectAndNormalize) multivectors "in place," meaning that the input and output multivectors are the same (X, in both cases). Gram-Schmidt (modified or classical) is an example of an orthogonalization method that can normalize (and projectAndNormalize) in place. TSQR (the Tall Skinny QR factorization, see TsqrOrthoManager.hpp for references) is an orthogonalization method which cannot normalize (or projectAndNormalize) in place.</p>
@@ -139,7 +141,7 @@ class Belos::OutOfPlaceNormalizerMixin&lt; Scalar, MV, DM &gt;</div><p>Mixin for
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> DM  = DefaultDenseMatrix&lt;int,ScalarType&gt;&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="class_belos_1_1_operator.html">typedef</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a> <a class="el" href="class_belos_1_1_out_of_place_normalizer_mixin.html">Belos::OutOfPlaceNormalizerMixin</a>&lt; <a class="el" href="class_belos_1_1_operator.html">Scalar</a>, MV, DM &gt;::scalar_type</td>
@@ -157,7 +159,7 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> DM  = DefaultDenseMatrix&lt;int,ScalarType&gt;&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="class_belos_1_1_operator.html">typedef</a> Teuchos::ScalarTraits&lt;<a class="el" href="class_belos_1_1_operator.html">Scalar</a>&gt;::magnitudeType <a class="el" href="class_belos_1_1_out_of_place_normalizer_mixin.html">Belos::OutOfPlaceNormalizerMixin</a>&lt; <a class="el" href="class_belos_1_1_operator.html">Scalar</a>, MV, DM &gt;::magnitude_type</td>
@@ -175,7 +177,7 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> DM  = DefaultDenseMatrix&lt;int,ScalarType&gt;&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="class_belos_1_1_out_of_place_normalizer_mixin.html">Belos::OutOfPlaceNormalizerMixin</a>&lt; <a class="el" href="class_belos_1_1_operator.html">Scalar</a>, MV, DM &gt;::multivector_type</td>
@@ -195,7 +197,7 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> DM  = DefaultDenseMatrix&lt;int,ScalarType&gt;&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="class_belos_1_1_operator.html">typedef</a> DM <a class="el" href="class_belos_1_1_out_of_place_normalizer_mixin.html">Belos::OutOfPlaceNormalizerMixin</a>&lt; <a class="el" href="class_belos_1_1_operator.html">Scalar</a>, MV, DM &gt;::mat_type</td>
@@ -213,7 +215,7 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> DM  = DefaultDenseMatrix&lt;int,ScalarType&gt;&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="class_belos_1_1_operator.html">typedef</a> Teuchos::RCP&lt;<a class="el" href="class_belos_1_1_out_of_place_normalizer_mixin.html#aae7de7f0a537e6d54cad7054d3416d81">mat_type</a>&gt; <a class="el" href="class_belos_1_1_out_of_place_normalizer_mixin.html">Belos::OutOfPlaceNormalizerMixin</a>&lt; <a class="el" href="class_belos_1_1_operator.html">Scalar</a>, MV, DM &gt;::mat_ptr</td>
@@ -232,7 +234,7 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> DM  = DefaultDenseMatrix&lt;int,ScalarType&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -264,7 +266,7 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> DM  = DefaultDenseMatrix&lt;int,ScalarType&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -321,7 +323,7 @@ template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a clas
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> DM &gt; </div>
+template&lt;<a class="el" href="class_belos_1_1_operator.html">class</a> <a class="el" href="class_belos_1_1_operator.html">Scalar</a> , <a class="el" href="class_belos_1_1_operator.html">class</a> MV , <a class="el" href="class_belos_1_1_operator.html">class</a> DM  = DefaultDenseMatrix&lt;int,ScalarType&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">

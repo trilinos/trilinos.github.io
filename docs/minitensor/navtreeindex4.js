@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"group__minitensor__solvers.html#ga093a37638133383afeabb1bed756761b":[6,9,53],
 "group__minitensor__solvers.html#ga0a301a2c7eb16a9ee4207d600e9914be":[6,9,152],
 "group__minitensor__solvers.html#ga0aaecc26ab013708a49368b225737176":[6,9,150],
 "group__minitensor__solvers.html#ga0ba8030e3e317a0769f2246904624fbe":[6,9,120],
@@ -226,7 +227,7 @@ var NAVTREEINDEX4 =
 "namespacemembers_v.html":[7,1,0,20],
 "namespacemembers_vars.html":[7,1,2],
 "namespacemembers_z.html":[7,1,0,21],
-"namespaceminitensor.html#a9ab0b2ca9feb1b57a53d811915a31cbc":[7,0,0,472],
+"namespaceminitensor.html#a9ab0b2ca9feb1b57a53d811915a31cbc":[7,0,0,473],
 "namespaces.html":[7,0],
 "pages.html":[],
 "struct_sacado_1_1_is_a_d_type_3_01_matrix_3_01_t_00_01_m_00_01_n_01_4_01_4.html":[7,0,1,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "struct_sacado_1_1_is_a_d_type_3_01_vector_3_01_t_00_01_n_01_4_01_4.html":[8,0,1,4],
 "struct_sacado_1_1_is_a_d_type_3_01_vector_3_01_t_00_01_n_01_4_01_4.html":[7,0,1,4],
 "struct_sacado_1_1_is_a_d_type_3_01_vector_3_01_t_00_01_n_01_4_01_4.html#a65365b84706c386262dc493ef6ccfdce":[8,0,1,4,0],
-"struct_sacado_1_1_is_a_d_type_3_01_vector_3_01_t_00_01_n_01_4_01_4.html#a65365b84706c386262dc493ef6ccfdce":[7,0,1,4,0],
-"struct_sacado_1_1_is_equal_3_01_matrix_3_01_t_00_01_m_00_01_n_01_4_01_4.html":[7,0,1,5]
+"struct_sacado_1_1_is_a_d_type_3_01_vector_3_01_t_00_01_n_01_4_01_4.html#a65365b84706c386262dc493ef6ccfdce":[7,0,1,4,0]
 };

@@ -79,7 +79,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Concrete preconditioner factory subclass based on ML.  
+<p>Adapts Teko block preconditioners to the Stratimikos framework.  
  <a href="class_teko_1_1_stratimikos_factory.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_teko___stratimikos_factory_8hpp_source.html">Teko_StratimikosFactory.hpp</a>&gt;</code></p>
@@ -130,10 +130,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af61d73d467e9e278fe181493c44b765f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Concrete preconditioner factory subclass based on ML. </p>
-<p>ToDo: Finish documentation! </p>
+<div class="textblock"><p>Adapts Teko block preconditioners to the Stratimikos framework. </p>
+<p>This factory is what registers Teko as a Stratimikos preconditioner named <code>"Teko"</code> (see Teko::addTekoToStratimikosBuilder). Once registered, an entire Teko block preconditioner can be configured from the Stratimikos parameter list / XML: the top-level keys describe how to segregate the monolithic operator into blocks (<code>"Strided Blocking"</code>, <code>"Reorder Type"</code>) and which named inverse to apply to the whole system (<code>"Inverse Type"</code>), while the <code>"Inverse Factory Library"</code> sublist defines every named inverse. The complete list of valid parameters is returned by <a class="el" href="class_teko_1_1_stratimikos_factory.html#ad0f79a97f037bf8c74de03bc5020def2">getValidParameters()</a>.</p>
+<p>See the <a class="el" href="teko_config_model.html">Configuration Model</a> page of the Teko user's guide for the parameter reference and worked XML examples. </p>
 
-<p class="definition">Definition at line <a class="el" href="_teko___stratimikos_factory_8hpp_source.html#l00028">28</a> of file <a class="el" href="_teko___stratimikos_factory_8hpp_source.html">Teko_StratimikosFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_teko___stratimikos_factory_8hpp_source.html#l00038">38</a> of file <a class="el" href="_teko___stratimikos_factory_8hpp_source.html">Teko_StratimikosFactory.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="accd1cf70be3f54ffa0c7bd7083fc70d6" name="accd1cf70be3f54ffa0c7bd7083fc70d6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#accd1cf70be3f54ffa0c7bd7083fc70d6">&#9670;&#160;</a></span>StratimikosFactory()</h2>
@@ -509,7 +510,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Access to the application communication request handling mechnism </p>
 
-<p class="definition">Definition at line <a class="el" href="_teko___stratimikos_factory_8hpp_source.html#l00097">97</a> of file <a class="el" href="_teko___stratimikos_factory_8hpp_source.html">Teko_StratimikosFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_teko___stratimikos_factory_8hpp_source.html#l00107">107</a> of file <a class="el" href="_teko___stratimikos_factory_8hpp_source.html">Teko_StratimikosFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -537,7 +538,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Access to the application communication request handling mechnism </p>
 
-<p class="definition">Definition at line <a class="el" href="_teko___stratimikos_factory_8hpp_source.html#l00101">101</a> of file <a class="el" href="_teko___stratimikos_factory_8hpp_source.html">Teko_StratimikosFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_teko___stratimikos_factory_8hpp_source.html#l00111">111</a> of file <a class="el" href="_teko___stratimikos_factory_8hpp_source.html">Teko_StratimikosFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -566,7 +567,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get the decomposition vector in use by this factory. </p>
 
-<p class="definition">Definition at line <a class="el" href="_teko___stratimikos_factory_8hpp_source.html#l00104">104</a> of file <a class="el" href="_teko___stratimikos_factory_8hpp_source.html">Teko_StratimikosFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_teko___stratimikos_factory_8hpp_source.html#l00114">114</a> of file <a class="el" href="_teko___stratimikos_factory_8hpp_source.html">Teko_StratimikosFactory.hpp</a>.</p>
 
 </div>
 </div>

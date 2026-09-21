@@ -127,6 +127,10 @@ $(function() {
 <tr class="memitem:aecd0bd5117ae8d5309821f20cf3d1ebd"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_model_evaluator_factory.html#aecd0bd5117ae8d5309821f20cf3d1ebd">addResponse</a> (const std::string &amp;responseName, const std::vector&lt; <a class="el" href="classpanzer_1_1_workset_descriptor.html">panzer::WorksetDescriptor</a> &gt; &amp;wkstDesc, const BuilderT &amp;builder)</td></tr>
 <tr class="memdesc:aecd0bd5117ae8d5309821f20cf3d1ebd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a response to be built by <a class="el" href="classpanzer__stk_1_1_model_evaluator_factory.html#a7c3fd3483ee1ee80d8bdcebd56db4955" title="Builds and registers the evaluators for all responses added via addResponse().">buildResponses()</a>, using the given response evaluator factory builder.  <br /></td></tr>
 <tr class="separator:aecd0bd5117ae8d5309821f20cf3d1ebd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d81d72ed265d6bdc55d626e0a64cb14" id="r_a7d81d72ed265d6bdc55d626e0a64cb14"><td class="memTemplParams" colspan="2">template&lt;typename BuilderT &gt; </td></tr>
+<tr class="memitem:a7d81d72ed265d6bdc55d626e0a64cb14"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_model_evaluator_factory.html#a7d81d72ed265d6bdc55d626e0a64cb14">addResponseWithDerivatives</a> (const std::string &amp;responseName, const std::vector&lt; <a class="el" href="classpanzer_1_1_workset_descriptor.html">panzer::WorksetDescriptor</a> &gt; &amp;wkstDesc, BuilderT &amp;builder)</td></tr>
+<tr class="memdesc:a7d81d72ed265d6bdc55d626e0a64cb14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a response <picture><source srcset="form_39_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$g$" src="form_39.png" width="8" height="9"/></picture> along with support for state and parameter derivatives <picture><source srcset="form_40_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$\frac{dg}{dx}$" src="form_40.png" width="13" height="18"/></picture> and <picture><source srcset="form_41_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$\frac{dg}{dp}$" src="form_41.png" width="13" height="19"/></picture>, respectively.  <br /></td></tr>
+<tr class="separator:a7d81d72ed265d6bdc55d626e0a64cb14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c3fd3483ee1ee80d8bdcebd56db4955" id="r_a7c3fd3483ee1ee80d8bdcebd56db4955"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer__stk_1_1_model_evaluator_factory.html#a7c3fd3483ee1ee80d8bdcebd56db4955">buildResponses</a> (const <a class="el" href="classpanzer_1_1_closure_model_factory___template_manager.html">panzer::ClosureModelFactory_TemplateManager</a>&lt; <a class="el" href="structpanzer_1_1_traits.html">panzer::Traits</a> &gt; &amp;cm_factory, const bool write_graphviz_file=false, const std::string &amp;graphviz_file_prefix=&quot;&quot;)</td></tr>
 <tr class="memdesc:a7c3fd3483ee1ee80d8bdcebd56db4955"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds and registers the evaluators for all responses added via <a class="el" href="classpanzer__stk_1_1_model_evaluator_factory.html#aecd0bd5117ae8d5309821f20cf3d1ebd" title="Registers a response to be built by buildResponses(), using the given response evaluator factory buil...">addResponse()</a>.  <br /></td></tr>
 <tr class="separator:a7c3fd3483ee1ee80d8bdcebd56db4955"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -366,7 +370,7 @@ template&lt;typename ScalarT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l00228">228</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l00233">233</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -389,7 +393,7 @@ template&lt;typename ScalarT &gt; </div>
 
 <p>Returns the physics model evaluator built by <a class="el" href="classpanzer__stk_1_1_model_evaluator_factory.html#a4e885b9ab5eb2f56d5f13824ec2c0d83" title="Builds the model evaluators for a panzer assembly.">buildObjects()</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l01139">1139</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l01159">1159</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -413,7 +417,7 @@ template&lt;typename ScalarT &gt; </div>
 
 <p>Sets the factory used to build a <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/namespace_n_o_x.html">NOX</a> observer for the solver built by <a class="el" href="classpanzer__stk_1_1_model_evaluator_factory.html#a722e25b6f000f8ffc8137acbb47097e2" title="Wraps the given physics model evaluator with a solver (e.g. NOX/Tempus), exposing only the registered...">buildResponseOnlyModelEvaluator()</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l01147">1147</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l01167">1167</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -455,7 +459,49 @@ template&lt;typename BuilderT &gt; </div>
 
 <p>Registers a response to be built by <a class="el" href="classpanzer__stk_1_1_model_evaluator_factory.html#a7c3fd3483ee1ee80d8bdcebd56db4955" title="Builds and registers the evaluators for all responses added via addResponse().">buildResponses()</a>, using the given response evaluator factory builder. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00348">348</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00353">353</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a7d81d72ed265d6bdc55d626e0a64cb14" name="a7d81d72ed265d6bdc55d626e0a64cb14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d81d72ed265d6bdc55d626e0a64cb14">&#9670;&#160;</a></span>addResponseWithDerivatives()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ScalarT &gt; </div>
+<div class="memtemplate">
+template&lt;typename BuilderT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classpanzer__stk_1_1_model_evaluator_factory.html">panzer_stk::ModelEvaluatorFactory</a>&lt; ScalarT &gt;::addResponseWithDerivatives </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>responseName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classpanzer_1_1_workset_descriptor.html">panzer::WorksetDescriptor</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>wkstDesc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BuilderT &amp;&#160;</td>
+          <td class="paramname"><em>builder</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a response <picture><source srcset="form_39_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$g$" src="form_39.png" width="8" height="9"/></picture> along with support for state and parameter derivatives <picture><source srcset="form_40_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$\frac{dg}{dx}$" src="form_40.png" width="13" height="18"/></picture> and <picture><source srcset="form_41_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$\frac{dg}{dp}$" src="form_41.png" width="13" height="19"/></picture>, respectively. </p>
+
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00385">385</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -495,7 +541,7 @@ template&lt;typename ScalarT &gt; </div>
 
 <p>Builds and registers the evaluators for all responses added via <a class="el" href="classpanzer__stk_1_1_model_evaluator_factory.html#aecd0bd5117ae8d5309821f20cf3d1ebd" title="Registers a response to be built by buildResponses(), using the given response evaluator factory buil...">addResponse()</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l01648">1648</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l01668">1668</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -518,7 +564,7 @@ template&lt;typename ScalarT &gt; </div>
 
 <p>Returns the response-only model evaluator built by <a class="el" href="classpanzer__stk_1_1_model_evaluator_factory.html#a722e25b6f000f8ffc8137acbb47097e2" title="Wraps the given physics model evaluator with a solver (e.g. NOX/Tempus), exposing only the registered...">buildResponseOnlyModelEvaluator()</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l01167">1167</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l01187">1187</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -558,7 +604,7 @@ template&lt;typename ScalarT &gt; </div>
 
 <p>Wraps the given physics model evaluator with a solver (e.g. NOX/Tempus), exposing only the registered responses. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l01176">1176</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l01196">1196</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -582,7 +628,7 @@ template&lt;typename ScalarT &gt; </div>
 
 <p>Set user defined workset factory. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l01161">1161</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l01181">1181</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -605,7 +651,7 @@ template&lt;typename ScalarT &gt; </div>
 
 <p>Returns the response library used to build and evaluate registered responses. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l01278">1278</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l01298">1298</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -628,7 +674,7 @@ template&lt;typename ScalarT &gt; </div>
 
 <p>Returns the physics blocks built by <a class="el" href="classpanzer__stk_1_1_model_evaluator_factory.html#a4e885b9ab5eb2f56d5f13824ec2c0d83" title="Builds the model evaluators for a panzer assembly.">buildObjects()</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l01287">1287</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l01307">1307</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -659,7 +705,7 @@ template&lt;typename ScalarT &gt; </div>
 
 <p>Get mesh object used to build model evaluator. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00164">164</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00169">169</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -690,7 +736,7 @@ template&lt;typename ScalarT &gt; </div>
 
 <p>Get global indexer used to build model evaluator. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00168">168</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00173">173</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -721,7 +767,7 @@ template&lt;typename ScalarT &gt; </div>
 
 <p>Get connection manager. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00172">172</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00177">177</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -752,7 +798,7 @@ template&lt;typename ScalarT &gt; </div>
 
 <p>Returns true if assembly is blocked. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00176">176</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00181">181</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -783,7 +829,7 @@ template&lt;typename ScalarT &gt; </div>
 
 <p>Get linear object factory used to build model evaluator. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00180">180</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00185">185</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -814,7 +860,7 @@ template&lt;typename ScalarT &gt; </div>
 
 <p>Returns true if this a transient problem. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00184">184</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00189">189</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -889,7 +935,7 @@ template&lt;typename ScalarT &gt; </div>
 </div><div class="memdoc">
 <p>Clone the internal model evaluator, but use new physics blocks. Note that the physics blocks must be in some sense compatible with the original set. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l01331">1331</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l01351">1351</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -971,7 +1017,7 @@ template&lt;typename ScalarT &gt; </div>
 
 <p>Setup the initial conditions in a model evaluator. Note that this is entirely self contained. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l00860">860</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l00878">878</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1053,7 +1099,7 @@ template&lt;typename ScalarT &gt; </div>
 
 <p>Write the initial conditions to exodus. Note that this is entirely self contained. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l00930">930</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l00948">948</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1134,7 +1180,7 @@ template&lt;typename ScalarT &gt; </div>
 </div><div class="memdoc">
 <p>This method is to assist with construction of the model evaluators. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l01469">1469</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l01489">1489</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1165,7 +1211,7 @@ template&lt;typename ScalarT &gt; </div>
 
 <p>Should coordinates be recomputed dynamically (e.g. for a moving mesh) rather than cached once? </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00242">242</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00247">247</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -1206,7 +1252,7 @@ template&lt;typename ScalarT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l01504">1504</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l01524">1524</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1258,7 +1304,7 @@ template&lt;typename ScalarT &gt; </div>
 
 <p>Builds a <a class="el" href="namespace_thyra.html">Thyra</a> LOWS (linear-op-with-solve) factory from this object's Stratimikos parameter list, for the given global indexer, connection manager, and mesh. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l01602">1602</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l01622">1622</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1289,7 +1335,7 @@ template&lt;typename ScalarT &gt; </div>
 
 <p>Get the workset container associated with the mesh database. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00266">266</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00271">271</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -1323,7 +1369,7 @@ template&lt;typename ScalarT &gt; </div>
 
 <p>Add the user fields specified by output_list to the mesh. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l00776">776</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l00794">794</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1348,7 +1394,7 @@ template&lt;typename ScalarT &gt; </div>
 <p>build STK mesh factory from a mesh parameter list </p>
 <p>build STK mesh from a mesh parameter list </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l00977">977</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l00995">995</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1394,7 +1440,7 @@ template&lt;typename ScalarT &gt; </div>
 
 <p>Commits the mesh's meta data, builds its bulk data, and writes it out if requested, completing construction started by an <a class="el" href="classpanzer__stk_1_1_s_t_k___mesh_factory.html">STK_MeshFactory</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l01067">1067</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l01085">1085</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1508,7 +1554,7 @@ template&lt;typename ScalarT &gt; </div>
 
 <p>Builds the field manager builder used to register and evaluate the physics/BC/closure-model evaluators for <a class="el" href="classpanzer__stk_1_1_model_evaluator_factory.html#a4e885b9ab5eb2f56d5f13824ec2c0d83" title="Builds the model evaluators for a panzer assembly.">buildObjects()</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l01297">1297</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l01317">1317</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1562,7 +1608,7 @@ template&lt;typename ScalarT &gt; </div>
 
 <p>Builds a response library configured to write the solution out to the STK mesh. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l01533">1533</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l01553">1553</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1628,7 +1674,7 @@ template&lt;typename ScalarT &gt; </div>
 
 <p>Builds and registers the evaluators needed by a solution-writer response library built with <a class="el" href="classpanzer__stk_1_1_model_evaluator_factory.html#a1b04eda0e89959e018d1f6379f9c3777" title="Builds a response library configured to write the solution out to the STK mesh.">initializeSolnWriterResponseLibrary()</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l01553">1553</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l01573">1573</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1670,7 +1716,7 @@ template&lt;typename ScalarT &gt; </div>
 
 <p>Registers the given mesh with a closure model factory template manager, e.g. so its closure models can reference mesh-derived fields. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l01594">1594</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html#l01614">1614</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1697,7 +1743,7 @@ template&lt;typename ScalarT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00319">319</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00324">324</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -1723,7 +1769,7 @@ template&lt;typename ScalarT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00320">320</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00325">325</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -1749,7 +1795,7 @@ template&lt;typename ScalarT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00322">322</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00327">327</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -1775,7 +1821,7 @@ template&lt;typename ScalarT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00323">323</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00328">328</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -1801,7 +1847,7 @@ template&lt;typename ScalarT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00325">325</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00330">330</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -1827,7 +1873,7 @@ template&lt;typename ScalarT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00326">326</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00331">331</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -1853,7 +1899,7 @@ template&lt;typename ScalarT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00327">327</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00332">332</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -1879,7 +1925,7 @@ template&lt;typename ScalarT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00328">328</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00333">333</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -1905,7 +1951,7 @@ template&lt;typename ScalarT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00329">329</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00334">334</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -1931,7 +1977,7 @@ template&lt;typename ScalarT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00330">330</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00335">335</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -1957,7 +2003,7 @@ template&lt;typename ScalarT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00331">331</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00336">336</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -1983,7 +2029,7 @@ template&lt;typename ScalarT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00332">332</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00337">337</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -2009,7 +2055,7 @@ template&lt;typename ScalarT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00333">333</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00338">338</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -2035,7 +2081,7 @@ template&lt;typename ScalarT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00335">335</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00340">340</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -2061,7 +2107,7 @@ template&lt;typename ScalarT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00339">339</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00344">344</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -2087,7 +2133,7 @@ template&lt;typename ScalarT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00340">340</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00345">345</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -2113,7 +2159,7 @@ template&lt;typename ScalarT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00342">342</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00347">347</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
 
 </div>
 </div>
@@ -2139,7 +2185,7 @@ template&lt;typename ScalarT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00343">343</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html#l00348">348</a> of file <a class="el" href="_panzer___s_t_k___model_evaluator_factory_8hpp_source.html">Panzer_STK_ModelEvaluatorFactory.hpp</a>.</p>
 
 </div>
 </div>

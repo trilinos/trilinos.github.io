@@ -1,0 +1,597 @@
+\documentclass{article}
+\usepackage{ifthen}
+\usepackage{epsfig}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\color{white}
+\pagecolor{black}
+\usepackage{newunicodechar}
+  \makeatletter
+    \def\doxynewunicodechar#1#2{%
+    \@tempswafalse
+    \edef\nuc@tempa{\detokenize{#1}}%
+    \if\relax\nuc@tempa\relax
+      \nuc@emptyargerr
+    \else
+      \edef\@tempb{\expandafter\@car\nuc@tempa\@nil}%
+      \nuc@check
+      \if@tempswa
+        \@namedef{u8:\nuc@tempa}{#2}%
+      \fi
+    \fi
+  }
+  \makeatother
+  \doxynewunicodechar{⁻}{${}^{-}$}% Superscript minus
+  \doxynewunicodechar{²}{${}^{2}$}% Superscript two
+  \doxynewunicodechar{³}{${}^{3}$}% Superscript three
+
+\pagestyle{empty}
+\begin{document}
+$A_{ij}$
+\pagebreak
+
+$A^{-1}$
+\pagebreak
+
+$M^{-1} = \operatorname{diag}(A_{00}^{-1}, A_{11}^{-1}, \dots)$
+\pagebreak
+
+$M^{-1} = M_A^{-1} + M_B^{-1}$
+\pagebreak
+
+$M^{-1} = M_A^{-1} M_B^{-1}$
+\pagebreak
+
+\[
+\begin{bmatrix} F & B^T \\ B & -C \end{bmatrix}
+\begin{bmatrix} u \\ p \end{bmatrix}
+=
+\begin{bmatrix} f \\ g \end{bmatrix},
+\]
+\pagebreak
+
+$F$
+\pagebreak
+
+$B$
+\pagebreak
+
+$B^T$
+\pagebreak
+
+$C$
+\pagebreak
+
+$S = -(C + B F^{-1} B^T)$
+\pagebreak
+
+$F^{-1}$
+\pagebreak
+
+$S^{-1} \approx M_p^{-1} F_p A_p^{-1}$
+\pagebreak
+
+$A_p$
+\pagebreak
+
+$M_p$
+\pagebreak
+
+\[
+\begin{bmatrix} A_{00} & A_{01} \\ A_{10} & A_{11} \end{bmatrix},
+\]
+\pagebreak
+
+$\in$
+\pagebreak
+
+$v = [ [v_0, v_1] ,
+v_2]^T$
+\pagebreak
+
+$v_0$
+\pagebreak
+
+$v_1$
+\pagebreak
+
+$v_2$
+\pagebreak
+
+$v$
+\pagebreak
+
+$v_0^0, v_0^1,\ldots,v_0^{n_0},
+     v_1^0, v_1^1,\ldots,v_1^{n_1}
+     v_2^0, v_2^1,\ldots,v_2^{n_2} $
+\pagebreak
+
+$v = [ [v_0, v_1] , v_2]^T$
+\pagebreak
+
+$v_0^0, v_0^1,\ldots,v_0^{n_0},
+   v_1^0, v_1^1,\ldots,v_1^{n_1}
+   v_2^0, v_2^1,\ldots,v_2^{n_2} $
+\pagebreak
+
+$
+\left[ \begin{array}{cc}
+A & B^T \\
+B & -C
+\end{array} \right]
+\left[ \begin{array}{c}
+u \\
+p
+\end{array} \right]
+=
+\left[ \begin{array}{c}
+f \\
+g
+\end{array} \right].
+$
+\pagebreak
+
+$
+\left[ \begin{array}{cc}
+A + \gamma B^T W^{-1} B & B^T - \gamma B^T W^{-1} C \\
+B & -C
+\end{array} \right]
+\left[ \begin{array}{c}
+u \\
+p
+\end{array} \right]
+=
+\left[ \begin{array}{c}
+f + \gamma B^T W^{-1} g \\
+g
+\end{array} \right]
+$
+\pagebreak
+
+$
+\widehat{\mathcal{A}} x = \hat{b}.
+$
+\pagebreak
+
+$ W $
+\pagebreak
+
+$ \gamma $
+\pagebreak
+
+$ \widehat{\mathcal{A}} $
+\pagebreak
+
+$B Q_u^{-1} B^T$
+\pagebreak
+
+$B H B^T - \gamma C$
+\pagebreak
+
+$Q_u$
+\pagebreak
+
+$H$
+\pagebreak
+
+$B H B^T$
+\pagebreak
+
+$W$
+\pagebreak
+
+$A_{ii}p = A_{ii} + \gamma B_i^T W^{-1} B_i$
+\pagebreak
+
+$S$
+\pagebreak
+
+$\gamma$
+\pagebreak
+
+$A_{11}p = A_{11} + \gamma B^T_1 W^{-1} B_1 $
+\pagebreak
+
+$A_{11}p$
+\pagebreak
+
+$A_{22}p = A_{22} + \gamma B^T_2 W^{-1} B_2 $
+\pagebreak
+
+$A_{22}p$
+\pagebreak
+
+$A_{33}p = A_{33} + \gamma B^T_3 W^{-1} B_3 $
+\pagebreak
+
+$A_{33}p$
+\pagebreak
+
+$ S $
+\pagebreak
+
+$BQ_u^{-1}B^T$
+\pagebreak
+
+$Q_u^{-1}$
+\pagebreak
+
+$B Q_u^{-1} B^T-\gamma C$
+\pagebreak
+
+$B H B^T-\gamma C$
+\pagebreak
+
+$\alpha D^{-1}$
+\pagebreak
+
+$\gamma = \rho(Q_u^{-1} F / 3)$
+\pagebreak
+
+$\alpha = 1/\rho(B \; diag(F)^{-1} B^T D^{-1})$
+\pagebreak
+
+$D = diag(B \; diag(F)^{-1} B^T + C)$
+\pagebreak
+
+$ A = \left[\begin{array}{cc}
+       F & B^T \\
+       B & C
+    \end{array}\right] $
+\pagebreak
+
+$ C - B F^{-1} B^T \approx (B \hat{Q}_u^{-1} B^T - \gamma C)^{-1}
+      (B \hat{Q}_u^{-1} F H B^T+C_I) (B H B^T - \gamma C)^{-1}
+    + C_O $
+\pagebreak
+
+$\hat{Q}_u$
+\pagebreak
+
+$\alpha$
+\pagebreak
+
+$C\neq 0$
+\pagebreak
+
+$0$
+\pagebreak
+
+$A$
+\pagebreak
+
+$B \hat{Q}_u^{-1} B^T - \gamma C$
+\pagebreak
+
+$\hat{Q}_u^{-1}$
+\pagebreak
+
+$B Q_u^{-1} B^T - \gamma C$
+\pagebreak
+
+$C_O$
+\pagebreak
+
+$\alpha D^{-1}
+$
+\pagebreak
+
+$C_I$
+\pagebreak
+
+$
+\left[ \begin{array}{cc}
+A + \gamma B^T W^{-1} B & B^T - \gamma B^T W^{-1} C \\
+B & -C
+\end{array} \right]
+\left[ \begin{array}{c}
+u \\
+p
+\end{array} \right]
+=
+\left[ \begin{array}{c}
+f + \gamma B^T W^{-1} g \\
+g
+\end{array} \right].
+$
+\pagebreak
+
+$ A = (A_{11}, A_{12}; A_{21}, A_{22})
+\quad \mathrm{and} \quad
+B = (B_1, B_2)
+$
+\pagebreak
+
+$
+\left[ \begin{array}{ccc}
+A_{11} + \gamma B_1^T W^{-1} B_1^T & A_{12} + \gamma B_1^T W^{-1} B_2^T & B_1^T - \gamma B_1^T
+W^{-1} C \\
+0 & A_{22} + \gamma B_2^T W^{-1} B_2^T & B_1^T - \gamma B_2^T W^{-1} C \\
+0 & 0 & S
+\end{array} \right].
+$
+\pagebreak
+
+$A_{00}$
+\pagebreak
+
+$S = -A_{11} + A_{10} \mbox{diag}(A_{00})^{-1} A_{01}$
+\pagebreak
+
+$\alpha D^{-1} $
+\pagebreak
+
+$ D^{-1} $
+\pagebreak
+
+$y$
+\pagebreak
+
+$M$
+\pagebreak
+
+$ y = \alpha M x + \beta y $
+\pagebreak
+
+$ Z = \left[\begin{array}{ccc}
+      A & B & C \\
+      D & E & F \\
+      G & H & I
+    \end{array}\right]$
+\pagebreak
+
+$ Z' = \left[\begin{array}{cc}
+    \left[\begin{array}{cc}
+       A & B \\
+       D & E
+    \end{array}\right] &
+    \left[\begin{array}{c}
+    C \\ F \end{array}\right] \\
+    \left[\begin{array}{cc}
+      G & H
+    \end{array}\right] & I
+    \end{array}\right]$
+\pagebreak
+
+$Z$
+\pagebreak
+
+$Z'$
+\pagebreak
+
+$ LDU $
+\pagebreak
+
+$ L $
+\pagebreak
+
+$ A $
+\pagebreak
+
+$ 2 \times 2 $
+\pagebreak
+
+$ A_{00} $
+\pagebreak
+
+$ S = -A_{11} + A_{10} A_{00}^{-1} A_{01} $
+\pagebreak
+
+$ U $
+\pagebreak
+
+$D$
+\pagebreak
+
+$D^{-1}$
+\pagebreak
+
+$ A D^{-1}$
+\pagebreak
+
+$D^{-1} \, \mbox{userInv} (A D^{-1})^{-1})$
+\pagebreak
+
+$2\times2$
+\pagebreak
+
+$P^{-1}$
+\pagebreak
+
+$
+  e_0 = P^{-1} r_0.
+  $
+\pagebreak
+
+$r_1 = r_0 - A e_0$
+\pagebreak
+
+$
+  r_i = (I - A P^{-1})^i r_0.
+  $
+\pagebreak
+
+$
+  e_i = P^{-1} \sum_{j=0}^i r_j.
+  $
+\pagebreak
+
+$e_0$
+\pagebreak
+
+$A_00^{-1}$
+\pagebreak
+
+$S^{-1}$
+\pagebreak
+
+$A_00$
+\pagebreak
+
+$A_{00}^{-1}$
+\pagebreak
+
+$ S = -A_{11} + A_{10} \mbox{diag}(A_{00})^{-1} A_{01} $
+\pagebreak
+
+$ \hat{A}_{00} $
+\pagebreak
+
+$ \tilde{A}_{00} $
+\pagebreak
+
+$ 2\times 2 $
+\pagebreak
+
+$ A = \left[\begin{array}{cc}
+          A_{00} & A_{01} \\
+          A_{10} & A_{11}
+          \end{array}\right] $
+\pagebreak
+
+$
+A = \left[ \begin{array}{cc}
+I & 0  \\
+A_{10} A_{00}^{-1} & I
+\end{array} \right]
+\left[ \begin{array}{cc}
+A_{00} & 0  \\
+0 & -S
+\end{array} \right]
+\left[ \begin{array}{cc}
+I &  A_{00}^{-1} A_{01} \\
+0 & I
+\end{array} \right]$
+\pagebreak
+
+$ S=-A_{11}+A_{10} A_{00}^{-1} A_{01} $
+\pagebreak
+
+$ A_{00}^{-1} $
+\pagebreak
+
+$ S^{-1} $
+\pagebreak
+
+$[f, g]^T$
+\pagebreak
+
+$[u,v]^T$
+\pagebreak
+
+$\hat{A}_{00} u^* = f$
+\pagebreak
+
+$\tilde{A}_{00} v = A_{01} v$
+\pagebreak
+
+$u^*$
+\pagebreak
+
+$(0,0)$
+\pagebreak
+
+$\hat{A}_{00}$
+\pagebreak
+
+$\tilde{A}_{00}$
+\pagebreak
+
+$ S = -A_{11} + A_{10}
+A_{00}^{-1} A_{01} $
+\pagebreak
+
+$ A_{10} $
+\pagebreak
+
+$ A_{01} $
+\pagebreak
+
+$
+A = \left[
+\begin{array}{cc}
+A_{00} & A_{01} \\
+A_{10} & A_{11}
+\end{array}
+\right]
+= \left[
+\begin{array}{cc}
+I & 0  \\
+A_{10} A_{00}^{-1} & I
+\end{array}
+\right]
+\left[
+\begin{array}{cc}
+A_{00} & 0  \\
+0 & -S
+\end{array}
+\right]
+\left[
+\begin{array}{cc}
+I &  A_{00}^{-1} A_{01} \\
+0 & I
+\end{array}
+\right]
+$
+\pagebreak
+
+$
+A = \left[
+\begin{array}{cc}
+A_{00} & A_{01} \\
+A_{10} & A_{11}
+\end{array}
+\right]
+$
+\pagebreak
+
+$
+A = \left[
+\begin{array}{cc}
+I & 0  \\
+A_{10} A_{00}^{-1} & I
+\end{array}
+\right]
+\left[
+\begin{array}{cc}
+A_{00} & 0  \\
+0 & -S
+\end{array}
+\right]
+\left[
+\begin{array}{cc}
+I &  A_{00}^{-1} A_{01} \\
+0 & I
+\end{array}
+\right]
+$
+\pagebreak
+
+$S = -A_{11} + A_{10} A_{00}^{-1} A_{01}$
+\pagebreak
+
+$\hat{A}_{00}^{-1}$
+\pagebreak
+
+$\tilde{A}_{00}^{-1}$
+\pagebreak
+
+$ y = \alpha A x + \beta y $
+\pagebreak
+
+$ y = \alpha A^T x + \beta y $
+\pagebreak
+
+$y = \alpha x+\beta y$
+\pagebreak
+
+$y=\alpha x + \beta y$
+\pagebreak
+
+$i^{th}$
+\pagebreak
+
+$\sum_j |A_{ij}|$
+\pagebreak
+
+\end{document}
