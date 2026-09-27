@@ -86,7 +86,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#define INTREPID2_ENABLE_DEVICE</span></div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#if defined(KOKKOS_OPT_RANGE_AGGRESSIVE_VECTORIZATION) \</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#if defined(KOKKOS_ENABLE_AGGRESSIVE_VECTORIZATION) \</span></div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">  &amp;&amp; defined(KOKKOS_ENABLE_PRAGMA_IVDEP) \</span></div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">  &amp;&amp; !defined(INTREPID2_COMPILE_DEVICE_CODE)</span></div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#define INTREPID2_USE_IVDEP</span></div>
@@ -884,7 +884,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00905" name="l00905"></a><span class="lineno">  905</span>  </div>
 <div class="line"><a id="l00906" name="l00906"></a><span class="lineno">  906</span>  <span class="comment">// define vector sizes for hierarchical parallelism</span></div>
 <div class="line"><a id="l00907" name="l00907"></a><span class="lineno">  907</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> VECTOR_SIZE = 1;</div>
-<div class="line"><a id="l00908" name="l00908"></a><span class="lineno">  908</span><span class="preprocessor">#if defined(SACADO_VIEW_CUDA_HIERARCHICAL_DFAD) &amp;&amp; defined(INTREPID2_ENABLE_DEVICE)</span></div>
+<div class="line"><a id="l00908" name="l00908"></a><span class="lineno">  908</span><span class="preprocessor">#if defined(SACADO_GPU_HIERARCHICAL_DFAD) &amp;&amp; defined(INTREPID2_ENABLE_DEVICE)</span></div>
 <div class="line"><a id="l00909" name="l00909"></a><span class="lineno">  909</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> FAD_VECTOR_SIZE = 32;</div>
 <div class="line"><a id="l00910" name="l00910"></a><span class="lineno">  910</span><span class="preprocessor">#else</span></div>
 <div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> FAD_VECTOR_SIZE = 1;</div>

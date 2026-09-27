@@ -299,6 +299,7 @@ var annotated_dup =
       [ "StructuredAggregationFactory", "class_mue_lu_1_1_structured_aggregation_factory.html", "class_mue_lu_1_1_structured_aggregation_factory" ],
       [ "StructuredAggregationFactory_kokkos", "class_mue_lu_1_1_structured_aggregation_factory__kokkos.html", "class_mue_lu_1_1_structured_aggregation_factory__kokkos" ],
       [ "StructuredLineDetectionFactory", "class_mue_lu_1_1_structured_line_detection_factory.html", "class_mue_lu_1_1_structured_line_detection_factory" ],
+      [ "StructuredRAPFactory", "class_mue_lu_1_1_structured_r_a_p_factory.html", "class_mue_lu_1_1_structured_r_a_p_factory" ],
       [ "SubBlockAFactory", "class_mue_lu_1_1_sub_block_a_factory.html", "class_mue_lu_1_1_sub_block_a_factory" ],
       [ "SubFactoryMonitor", "class_mue_lu_1_1_sub_factory_monitor.html", "class_mue_lu_1_1_sub_factory_monitor" ],
       [ "SubMonitor", "class_mue_lu_1_1_sub_monitor.html", "class_mue_lu_1_1_sub_monitor" ],

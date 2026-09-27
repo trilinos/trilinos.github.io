@@ -217,6 +217,7 @@ var hierarchy =
                 [ "MueLu::RegionRFactory< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_region_r_factory.html", null ],
                 [ "MueLu::RegionRFactory_kokkos< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_region_r_factory__kokkos.html", null ],
                 [ "MueLu::RfromP_Or_TransP< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_rfrom_p___or___trans_p.html", null ],
+                [ "MueLu::StructuredRAPFactory< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_structured_r_a_p_factory.html", null ],
                 [ "MueLu::ToggleCoordinatesTransferFactory< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_toggle_coordinates_transfer_factory.html", null ],
                 [ "MueLu::TopRAPFactory< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_top_r_a_p_factory.html", null ],
                 [ "MueLu::TransPFactory< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_trans_p_factory.html", null ],
@@ -426,6 +427,8 @@ var hierarchy =
     [ "StatusTestResNorm", null, [
       [ "Belos::StatusTestGenResSubNorm< Scalar, Xpetra::MultiVector< Scalar, LocalOrdinal, GlobalOrdinal, Node >, Belos::OperatorT< Xpetra::MultiVector< Scalar, LocalOrdinal, GlobalOrdinal, Node > >, Teuchos::SerialDenseMatrix< LocalOrdinal, Scalar > >", "class_belos_1_1_status_test_gen_res_sub_norm_3_01_scalar_00_01_xpetra_1_1_multi_vector_3_01_scal8e772064c09be5d4ee302f92ef6edb70.html", null ]
     ] ],
+    [ "MueLu::StructuredRAPFactory< Scalar, LocalOrdinal, GlobalOrdinal, Node >::StencilOffset", "struct_mue_lu_1_1_structured_r_a_p_factory_1_1_stencil_offset.html", null ],
+    [ "MueLu::StructuredRAPFactory< Scalar, LocalOrdinal, GlobalOrdinal, Node >::StructuredGraphSpec", "struct_mue_lu_1_1_structured_r_a_p_factory_1_1_structured_graph_spec.html", null ],
     [ "MueLu::Misc::SymmetrizeFunctor< local_matrix_type >", "class_mue_lu_1_1_misc_1_1_symmetrize_functor.html", null ],
     [ "MueLu::BlockInverseFunctor< Scalar, LocalOrdinal, GlobalOrdinal, Node >::TagApply", "class_mue_lu_1_1_block_inverse_functor_1_1_tag_apply.html", null ],
     [ "MueLu::BlockInverseFunctor< Scalar, LocalOrdinal, GlobalOrdinal, Node >::TagCountSingularBlocks", "class_mue_lu_1_1_block_inverse_functor_1_1_tag_count_singular_blocks.html", null ],

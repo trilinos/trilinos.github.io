@@ -168,6 +168,7 @@ var dir_cfdfa579cc9ebd771be538ec46031646 =
     [ "MueLu_StructuredAggregationFactory_fwd.hpp", "_mue_lu___structured_aggregation_factory__fwd_8hpp.html", "_mue_lu___structured_aggregation_factory__fwd_8hpp" ],
     [ "MueLu_StructuredAggregationFactory_kokkos_fwd.hpp", "_mue_lu___structured_aggregation_factory__kokkos__fwd_8hpp.html", "_mue_lu___structured_aggregation_factory__kokkos__fwd_8hpp" ],
     [ "MueLu_StructuredLineDetectionFactory_fwd.hpp", "_mue_lu___structured_line_detection_factory__fwd_8hpp.html", "_mue_lu___structured_line_detection_factory__fwd_8hpp" ],
+    [ "MueLu_StructuredRAPFactory_fwd.hpp", "_mue_lu___structured_r_a_p_factory__fwd_8hpp.html", "_mue_lu___structured_r_a_p_factory__fwd_8hpp" ],
     [ "MueLu_SubBlockAFactory_fwd.hpp", "_mue_lu___sub_block_a_factory__fwd_8hpp.html", "_mue_lu___sub_block_a_factory__fwd_8hpp" ],
     [ "MueLu_TekoSmoother_fwd.hpp", "_mue_lu___teko_smoother__fwd_8hpp.html", "_mue_lu___teko_smoother__fwd_8hpp" ],
     [ "MueLu_TentativePFactory_fwd.hpp", "_mue_lu___tentative_p_factory__fwd_8hpp.html", "_mue_lu___tentative_p_factory__fwd_8hpp" ],
