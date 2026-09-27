@@ -48,6 +48,10 @@ var namespace_mue_lu =
       [ "halopong_basic", "namespace_mue_lu_1_1_perf_details.html#a9f7199a9d920505f140e33a68955d236", null ],
       [ "GB", "namespace_mue_lu_1_1_perf_details.html#a8fa975d7c249a2f08ebd276cbccbd5cc", null ]
     ] ],
+    [ "StructuredRAPFactoryDetails", "namespace_mue_lu_1_1_structured_r_a_p_factory_details.html", [
+      [ "getLocalNodeIndices", "namespace_mue_lu_1_1_structured_r_a_p_factory_details.html#ac6a3fda17f060645b825e2bce25f8fa4", null ],
+      [ "resolveNeighbor", "namespace_mue_lu_1_1_structured_r_a_p_factory_details.html#af4b09167feb8744f2b9618c89346e4fc", null ]
+    ] ],
     [ "AdaptiveSaMLParameterListInterpreter", "class_mue_lu_1_1_adaptive_sa_m_l_parameter_list_interpreter.html", "class_mue_lu_1_1_adaptive_sa_m_l_parameter_list_interpreter" ],
     [ "AdvSmootherPrototype", "class_mue_lu_1_1_adv_smoother_prototype.html", "class_mue_lu_1_1_adv_smoother_prototype" ],
     [ "AggregateQualityEstimateFactory", "class_mue_lu_1_1_aggregate_quality_estimate_factory.html", "class_mue_lu_1_1_aggregate_quality_estimate_factory" ],
@@ -261,6 +265,7 @@ var namespace_mue_lu =
     [ "StructuredAggregationFactory", "class_mue_lu_1_1_structured_aggregation_factory.html", "class_mue_lu_1_1_structured_aggregation_factory" ],
     [ "StructuredAggregationFactory_kokkos", "class_mue_lu_1_1_structured_aggregation_factory__kokkos.html", "class_mue_lu_1_1_structured_aggregation_factory__kokkos" ],
     [ "StructuredLineDetectionFactory", "class_mue_lu_1_1_structured_line_detection_factory.html", "class_mue_lu_1_1_structured_line_detection_factory" ],
+    [ "StructuredRAPFactory", "class_mue_lu_1_1_structured_r_a_p_factory.html", "class_mue_lu_1_1_structured_r_a_p_factory" ],
     [ "SubBlockAFactory", "class_mue_lu_1_1_sub_block_a_factory.html", "class_mue_lu_1_1_sub_block_a_factory" ],
     [ "SubFactoryMonitor", "class_mue_lu_1_1_sub_factory_monitor.html", "class_mue_lu_1_1_sub_factory_monitor" ],
     [ "SubMonitor", "class_mue_lu_1_1_sub_monitor.html", "class_mue_lu_1_1_sub_monitor" ],

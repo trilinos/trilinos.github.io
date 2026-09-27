@@ -17,5 +17,6 @@ var searchData=
   ['muelu_3a_3amueluintrepid_14',['MueLuIntrepid',['../namespace_mue_lu_1_1_mue_lu_intrepid.html',1,'MueLu']]],
   ['muelu_3a_3anotayutils_15',['NotayUtils',['../namespace_mue_lu_1_1_notay_utils.html',1,'MueLu']]],
   ['muelu_3a_3aperfdetails_16',['PerfDetails',['../namespace_mue_lu_1_1_perf_details.html',1,'MueLu']]],
-  ['muelutests_17',['MueLuTests',['../namespace_mue_lu_tests.html',1,'']]]
+  ['muelu_3a_3astructuredrapfactorydetails_17',['StructuredRAPFactoryDetails',['../namespace_mue_lu_1_1_structured_r_a_p_factory_details.html',1,'MueLu']]],
+  ['muelutests_18',['MueLuTests',['../namespace_mue_lu_tests.html',1,'']]]
 ];
