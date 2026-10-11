@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"_mue_lu___e_t_i__3arg_8hpp_source.html":[11,0,2,9,18],
 "_mue_lu___e_t_i__4arg_8hpp.html":[11,0,2,9,19],
 "_mue_lu___e_t_i__4arg_8hpp_source.html":[11,0,2,9,19],
 "_mue_lu___e_t_i__4arg___xpetra_8hpp.html":[11,0,2,9,20],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "_mue_lu___indef_blocked_diagonal_smoother__decl_8hpp_source.html":[11,0,2,7,0,8],
 "_mue_lu___indef_blocked_diagonal_smoother__def_8hpp.html":[11,0,2,7,0,9],
 "_mue_lu___indef_blocked_diagonal_smoother__def_8hpp_source.html":[11,0,2,7,0,9],
-"_mue_lu___indef_blocked_diagonal_smoother__fwd_8hpp.html":[11,0,2,9,0,70],
-"_mue_lu___indef_blocked_diagonal_smoother__fwd_8hpp.html#a9b2a0dfa5d3618419ad7a97cdecec67d":[11,0,2,9,0,70,0]
+"_mue_lu___indef_blocked_diagonal_smoother__fwd_8hpp.html":[11,0,2,9,0,70]
 };

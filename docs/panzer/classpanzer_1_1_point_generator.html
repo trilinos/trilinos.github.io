@@ -84,9 +84,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7157218ccfb22b47a33631bd34b1b867" id="r_a7157218ccfb22b47a33631bd34b1b867"><td class="memItemLeft" align="right" valign="top">virtual Kokkos::DynRankView&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_point_generator.html#a7157218ccfb22b47a33631bd34b1b867">getPoints</a> (const shards::CellTopology &amp;topo) const =0</td></tr>
-<tr class="memdesc:a7157218ccfb22b47a33631bd34b1b867"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the points for a particular topology.  <br /></td></tr>
-<tr class="separator:a7157218ccfb22b47a33631bd34b1b867"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afee46a5bcc7d705006e6510cf9bb0a2e" id="r_afee46a5bcc7d705006e6510cf9bb0a2e"><td class="memItemLeft" align="right" valign="top">virtual Kokkos::DynRankView&lt; double, PHX::Device &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_point_generator.html#afee46a5bcc7d705006e6510cf9bb0a2e">getPoints</a> (const shards::CellTopology &amp;topo) const =0</td></tr>
+<tr class="memdesc:afee46a5bcc7d705006e6510cf9bb0a2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the points for a particular topology.  <br /></td></tr>
+<tr class="separator:afee46a5bcc7d705006e6510cf9bb0a2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae962343056308f6fa564b690f95f40d0" id="r_ae962343056308f6fa564b690f95f40d0"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_point_generator.html#ae962343056308f6fa564b690f95f40d0">numPoints</a> (const shards::CellTopology &amp;topo) const =0</td></tr>
 <tr class="memdesc:ae962343056308f6fa564b690f95f40d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the points for a particular topology.  <br /></td></tr>
 <tr class="separator:ae962343056308f6fa564b690f95f40d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -97,10 +97,10 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class that uses run time polymorphism to generate the reference cell points. This is a utility for <a class="el" href="classpanzer_1_1_point_descriptor.html">PointDescriptor</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___point_generator_8hpp_source.html#l00022">22</a> of file <a class="el" href="_panzer___point_generator_8hpp_source.html">Panzer_PointGenerator.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___point_generator_8hpp_source.html#l00023">23</a> of file <a class="el" href="_panzer___point_generator_8hpp_source.html">Panzer_PointGenerator.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a7157218ccfb22b47a33631bd34b1b867" name="a7157218ccfb22b47a33631bd34b1b867"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7157218ccfb22b47a33631bd34b1b867">&#9670;&#160;</a></span>getPoints()</h2>
+<a id="afee46a5bcc7d705006e6510cf9bb0a2e" name="afee46a5bcc7d705006e6510cf9bb0a2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afee46a5bcc7d705006e6510cf9bb0a2e">&#9670;&#160;</a></span>getPoints()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -109,7 +109,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual Kokkos::DynRankView&lt; double &gt; panzer::PointGenerator::getPoints </td>
+          <td class="memname">virtual Kokkos::DynRankView&lt; double, PHX::Device &gt; panzer::PointGenerator::getPoints </td>
           <td>(</td>
           <td class="paramtype">const shards::CellTopology &amp;&#160;</td>
           <td class="paramname"><em>topo</em></td><td>)</td>
@@ -124,6 +124,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the points for a particular topology. </p>
+<p>The view is on PHX::Device rather than on Kokkos' default device. Those are the same device in most configurations, but not when Phalanx_DEFAULT_EXECUTION_SPACE names a host space on a GPU build, and these points are handed to Intrepid2::Basis, whose view type is built from the device panzer asked for. </p>
 
 </div>
 </div>

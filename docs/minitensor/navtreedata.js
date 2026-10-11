@@ -70,9 +70,9 @@ var NAVTREEINDEX =
 "functions_func_f.html",
 "group__minitensor__containers.html#ga63400178704348382370bceb9b92b818",
 "group__minitensor__containers.html#gaf82bf76bf55d84d3a54cbf1317de38ae",
-"group__minitensor__solvers.html#ga093a37638133383afeabb1bed756761b",
+"group__minitensor__solvers.html#ga0a301a2c7eb16a9ee4207d600e9914be",
 "struct_sacado_1_1_is_equal_3_01_matrix_3_01_t_00_01_m_00_01_n_01_4_01_4.html",
-"structminitensor_1_1_newton_with_line_search_step.html"
+"structminitensor_1_1_step_base.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

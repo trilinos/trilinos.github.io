@@ -15,6 +15,5 @@ var _mini_tensor___mechanics_8h =
     [ "piola", "_mini_tensor___mechanics_8h.html#ga8865677006e408fddc4b24b47b121c04", null ],
     [ "piola_inverse", "_mini_tensor___mechanics_8h.html#gaab1bf840da9c43e8911d7f28edd1e9cd", null ],
     [ "smallest_eigenvalue", "_mini_tensor___mechanics_8h.html#ga8257439b963799a9989e28a6d62167a2", null ],
-    [ "check_strict_ellipticity", "_mini_tensor___mechanics_8h.html#gac56828c3f639a380d8b63d4998ab2535", null ],
     [ "check_strong_ellipticity", "_mini_tensor___mechanics_8h.html#ga0185ea1a87344fe8c70a11d699893031", null ]
 ];

@@ -425,37 +425,37 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>  <span class="keywordtype">int</span> offset                                     = 0;</div>
 <div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>  mpireq_idx                                     = 0;</div>
 <div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; ProcsTo.size(); ++i) {</div>
-<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>    <span class="keywordtype">int</span> recv_data_size     = ReverseRecvSizes[i] * 2;</div>
-<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>    <span class="keywordtype">int</span> recvData_MPI_Tag   = mpi_tag_base_ * 2 + ProcsTo[i];</div>
-<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>    MPI_Request rawRequest = MPI_REQUEST_NULL;</div>
-<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>    GO* rec_bptr;</div>
-<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>    <span class="keywordflow">if</span> (offset &lt; AllReverseRecv.size())</div>
-<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>      rec_bptr = (GO*)(&amp;AllReverseRecv[offset]);</div>
-<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>    offset += ReverseRecvSizes[i];</div>
-<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>    MPI_Irecv(rec_bptr,</div>
-<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>              recv_data_size,</div>
-<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>              ::Tpetra::Details::MpiTypeTraits&lt;GO&gt;::getType(rec_bptr[0]),</div>
-<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>              ProcsTo[i],</div>
-<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>              recvData_MPI_Tag,</div>
-<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>              rawComm,</div>
-<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>              &amp;rawRequest);</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>    MPI_Request rawRequest = MPI_REQUEST_NULL;</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>    <span class="keywordflow">if</span> (offset &lt; AllReverseRecv.size() &amp;&amp; (ReverseRecvSizes[i] &gt; 0)) {</div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>      <span class="keywordtype">int</span> recvData_MPI_Tag = mpi_tag_base_ * 2 + ProcsTo[i];</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>      <span class="keywordtype">int</span> recv_data_size   = ReverseRecvSizes[i] * 2;</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>      GO* rec_bptr         = (GO*)(&amp;AllReverseRecv[offset]);</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>      offset += ReverseRecvSizes[i];</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>      MPI_Irecv(rec_bptr,</div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>                recv_data_size,</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>                ::Tpetra::Details::MpiTypeTraits&lt;GO&gt;::getType(rec_bptr[0]),</div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>                ProcsTo[i],</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>                recvData_MPI_Tag,</div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>                rawComm,</div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>                &amp;rawRequest);</div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>    }</div>
 <div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>    rawBreq[mpireq_idx++] = rawRequest;</div>
 <div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>  }</div>
 <div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ii = 0; ii &lt; ProcsFrom.size(); ++ii) {</div>
-<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>    GO* send_bptr;</div>
-<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>    <span class="keywordflow">if</span> (RSB[ii].size() &gt; 0)</div>
-<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>      send_bptr = (GO*)(RSB[ii].getRawPtr());</div>
-<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>    MPI_Request rawSequest = MPI_REQUEST_NULL;</div>
-<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>    <span class="keywordtype">int</span> send_data_size     = ReverseSendSizes[ii] * 2;  <span class="comment">// 2 == count of pair</span></div>
-<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>    <span class="keywordtype">int</span> sendData_MPI_Tag   = mpi_tag_base_ * 2 + MyPID;</div>
-<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>    MPI_Isend(send_bptr,</div>
-<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>              send_data_size,</div>
-<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>              ::Tpetra::Details::MpiTypeTraits&lt;GO&gt;::getType(send_bptr[0]),</div>
-<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>              ProcsFrom[ii],</div>
-<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>              sendData_MPI_Tag,</div>
-<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>              rawComm,</div>
-<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>              &amp;rawSequest);</div>
-<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span> </div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>    MPI_Request rawSequest = MPI_REQUEST_NULL;</div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>    <span class="keywordflow">if</span> ((RSB[ii].size() &gt; 0) &amp;&amp; (ReverseSendSizes[ii] &gt; 0)) {</div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>      <span class="keywordtype">int</span> send_data_size = ReverseSendSizes[ii] * 2;  <span class="comment">// 2 == count of pair</span></div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>      GO* send_bptr      = (GO*)(RSB[ii].getRawPtr());</div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span> </div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>      <span class="keywordtype">int</span> sendData_MPI_Tag = mpi_tag_base_ * 2 + MyPID;</div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>      MPI_Isend(send_bptr,</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>                send_data_size,</div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>                ::Tpetra::Details::MpiTypeTraits&lt;GO&gt;::getType(send_bptr[0]),</div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>                ProcsFrom[ii],</div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>                sendData_MPI_Tag,</div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>                rawComm,</div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>                &amp;rawSequest);</div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>    }</div>
 <div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>    rawBreq[mpireq_idx++] = rawSequest;</div>
 <div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>  }</div>
 <div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span><span class="preprocessor">#ifdef HAVE_TPETRA_DEBUG</span></div>

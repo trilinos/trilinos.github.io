@@ -86,7 +86,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_amesos2_1_1_cholmod.html#aa28e3fb32bac6632bb7eeda1baa1b5cf">   50</a></span>  static const char* <a class="code hl_variable" href="class_amesos2_1_1_cholmod.html#aa28e3fb32bac6632bb7eeda1baa1b5cf">name</a>;      <span class="comment">// declaration. Initialization outside.</span></div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  using type                = <a class="code hl_class" href="class_amesos2_1_1_cholmod.html">Cholmod</a>&lt;Matrix,Vector&gt;;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  using <a class="code hl_class" href="class_amesos2_1_1_cholmod.html">type</a>                = <a class="code hl_class" href="class_amesos2_1_1_cholmod.html">Cholmod</a>&lt;Matrix,Vector&gt;;</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  using <a class="code hl_class" href="class_amesos2_1_1_solver_core.html">super_type</a>          = <a class="code hl_class" href="class_amesos2_1_1_solver_core.html">SolverCore</a>&lt;Amesos2::Cholmod,Matrix,Vector&gt;;</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="comment">// Since using&#39;s are not inheritted, go grab them</span></div>
@@ -96,7 +96,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  using global_size_type    = typename super_type::global_size_type;</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  using node_type           = typename super_type::node_type;</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  using type_map            = <a class="code hl_struct" href="struct_amesos2_1_1_type_map.html">TypeMap</a>&lt;Amesos2::Cholmod,scalar_type&gt;;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  using <a class="code hl_struct" href="struct_amesos2_1_1_type_map.html">type_map</a>            = <a class="code hl_struct" href="struct_amesos2_1_1_type_map.html">TypeMap</a>&lt;Amesos2::Cholmod,scalar_type&gt;;</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="comment">/*</span></div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">   * The CHOLMOD interface will need two other using&#39;s, which are:</span></div>
@@ -106,7 +106,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  using chol_type           = typename type_map::type;</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  using magnitude_type      = typename type_map::magnitude_type;</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  using function_map        = <a class="code hl_struct" href="struct_amesos2_1_1_function_map.html">FunctionMap</a>&lt;Amesos2::Cholmod,chol_type&gt;;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  using <a class="code hl_struct" href="struct_amesos2_1_1_function_map.html">function_map</a>        = <a class="code hl_struct" href="struct_amesos2_1_1_function_map.html">FunctionMap</a>&lt;Amesos2::Cholmod,chol_type&gt;;</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
@@ -257,7 +257,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>  <span class="keyword">typedef</span> Meta::make_list3&lt;double, std::complex&lt;double&gt;,</div>
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>                           Kokkos::complex&lt;double&gt;&gt; supported_scalars;</div>
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>  <span class="keyword">typedef</span> Meta::make_list1&lt;double&gt; supported_scalars;</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>  <span class="keyword">typedef</span> <a class="code hl_struct" href="struct_amesos2_1_1_meta_1_1make__list1.html">Meta::make_list1&lt;double&gt;</a> supported_scalars;</div>
 <div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>};</div>
 <div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span> </div>
@@ -290,6 +290,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclass_amesos2_1_1_cholmod_html_af4ed772fed888ca3e7566ae822a7d369"><div class="ttname"><a href="class_amesos2_1_1_cholmod.html#af4ed772fed888ca3e7566ae822a7d369">Amesos2::Cholmod::host_bValues_</a></div><div class="ttdeci">host_solve_array_t host_bValues_</div><div class="ttdoc">Persisting 1D store for B.</div><div class="ttdef"><b>Definition</b> Amesos2_Cholmod_decl.hpp:234</div></div>
 <div class="ttc" id="aclass_amesos2_1_1_solver_core_html"><div class="ttname"><a href="class_amesos2_1_1_solver_core.html">Amesos2::SolverCore</a></div><div class="ttdoc">Amesos2::SolverCore: A templated interface for interaction with third-party direct sparse solvers.</div><div class="ttdef"><b>Definition</b> Amesos2_SolverCore_decl.hpp:72</div></div>
 <div class="ttc" id="astruct_amesos2_1_1_function_map_html"><div class="ttname"><a href="struct_amesos2_1_1_function_map.html">Amesos2::FunctionMap</a></div><div class="ttdoc">Passes functions to TPL functions based on type.</div><div class="ttdef"><b>Definition</b> Amesos2_FunctionMap.hpp:43</div></div>
+<div class="ttc" id="astruct_amesos2_1_1_meta_1_1make__list1_html"><div class="ttname"><a href="struct_amesos2_1_1_meta_1_1make__list1.html">Amesos2::Meta::make_list1</a></div><div class="ttdoc">Utility meta-function for creating a type-list.</div><div class="ttdef"><b>Definition</b> Amesos2_Meta.hpp:103</div></div>
 <div class="ttc" id="astruct_amesos2_1_1_type_map_html"><div class="ttname"><a href="struct_amesos2_1_1_type_map.html">Amesos2::TypeMap</a></div><div class="ttdoc">Map types to solver-specific data-types and enums.</div><div class="ttdef"><b>Definition</b> Amesos2_TypeMap.hpp:48</div></div>
 <div class="ttc" id="astruct_amesos2_1_1solver__traits_html"><div class="ttname"><a href="struct_amesos2_1_1solver__traits.html">Amesos2::solver_traits</a></div><div class="ttdoc">Provides traits about solvers.</div><div class="ttdef"><b>Definition</b> Amesos2_SolverTraits.hpp:37</div></div>
 </div><!-- fragment --></div><!-- contents -->

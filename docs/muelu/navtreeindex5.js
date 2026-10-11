@@ -1,5 +1,6 @@
 var NAVTREEINDEX5 =
 {
+"_mue_lu___maxwell___utils__def_8hpp_source.html":[11,0,2,5,4],
 "_mue_lu___maxwell___utils__fwd_8hpp.html":[11,0,2,9,0,99],
 "_mue_lu___maxwell___utils__fwd_8hpp.html#a077196f0077c0cd344b622dfec9fccec":[11,0,2,9,0,99,0],
 "_mue_lu___maxwell___utils__fwd_8hpp_source.html":[11,0,2,9,0,99],
@@ -248,6 +249,5 @@ var NAVTREEINDEX5 =
 "_mue_lu___preserve_dirichlet_aggregation_algorithm__fwd_8hpp_source.html":[11,0,2,9,0,119],
 "_mue_lu___product_operator__decl_8hpp.html":[11,0,2,5,7],
 "_mue_lu___product_operator__decl_8hpp.html#a4cc7b4da116b2b9c67af631e0e1c214f":[11,0,2,5,7,1],
-"_mue_lu___product_operator__decl_8hpp_source.html":[11,0,2,5,7],
-"_mue_lu___product_operator__def_8hpp.html":[11,0,2,5,8]
+"_mue_lu___product_operator__decl_8hpp_source.html":[11,0,2,5,7]
 };

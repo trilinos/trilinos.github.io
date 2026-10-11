@@ -136,7 +136,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>      subcell_to_local_subcells(num_cells_per_face*face + 0) = face_to_lidx(face,0);</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>      subcell_to_local_subcells(num_cells_per_face*face + 1) = face_to_lidx(face,1);</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    });</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    PHX::Device::execution_space().fence();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  }</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <span class="comment">// This line not needed since kokkos initializes the arrays above to zero</span></div>
@@ -152,7 +152,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        cell_to_subcells(num_faces_per_cell*cell+local_face) = cell_to_faces(cell,local_face);</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>      }</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    });</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    PHX::Device::execution_space().fence();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  }</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <span class="comment">// Copy values to host</span></div>

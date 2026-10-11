@@ -22,6 +22,8 @@ var searchData=
   ['finelevelinputdata_19',['FineLevelInputData',['../class_fine_level_input_data.html',1,'']]],
   ['finelevelinputdatafactory_20',['FineLevelInputDataFactory',['../class_mue_lu_1_1_fine_level_input_data_factory.html',1,'MueLu']]],
   ['finelevelinputdatafactorytester_21',['FineLevelInputDataFactoryTester',['../class_mue_lu_tests_1_1_fine_level_input_data_factory_tester.html',1,'MueLuTests']]],
-  ['flatoperator_22',['FlatOperator',['../class_mue_lu_1_1_flat_operator.html',1,'MueLu']]],
-  ['formattinghelper_23',['FormattingHelper',['../struct_mue_lu_1_1_formatting_helper.html',1,'MueLu']]]
+  ['finestencilentry_22',['FineStencilEntry',['../struct_mue_lu_1_1_structured_r_a_p_factory_1_1_fine_stencil_entry.html',1,'MueLu::StructuredRAPFactory']]],
+  ['finestencilspec_23',['FineStencilSpec',['../struct_mue_lu_1_1_structured_r_a_p_factory_1_1_fine_stencil_spec.html',1,'MueLu::StructuredRAPFactory']]],
+  ['flatoperator_24',['FlatOperator',['../class_mue_lu_1_1_flat_operator.html',1,'MueLu']]],
+  ['formattinghelper_25',['FormattingHelper',['../struct_mue_lu_1_1_formatting_helper.html',1,'MueLu']]]
 ];

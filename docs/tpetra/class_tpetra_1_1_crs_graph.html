@@ -172,8 +172,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a572e4994ba3e2e0bea5bdf49e6d63b89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor specifying column <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> and number of entries in each row (legacy KokkosClassic version).  <br /></td></tr>
 <tr class="separator:a572e4994ba3e2e0bea5bdf49e6d63b89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85288da2ce21a0fd467c322053eb926e" id="r_a85288da2ce21a0fd467c322053eb926e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tpetra_1_1_crs_graph.html#a85288da2ce21a0fd467c322053eb926e">CrsGraph</a> (<a class="el" href="class_tpetra_1_1_crs_graph.html">CrsGraph</a>&lt; <a class="el" href="class_tpetra_1_1_crs_graph.html#a478df9e9a4d418c00f0acbf49bd8cc99">local_ordinal_type</a>, <a class="el" href="class_tpetra_1_1_crs_graph.html#a167d37a71a6a957932fb9c64c906d97b">global_ordinal_type</a>, <a class="el" href="class_tpetra_1_1_crs_graph.html#acbc61161c95c1bbd4b548e723c396b97">node_type</a> &gt; &amp;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">originalGraph</a>, <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> Teuchos::RCP&lt; <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> <a class="el" href="class_tpetra_1_1_crs_graph.html#a8edc8ff6c89cdb2b65015129f9207667">map_type</a> &gt; &amp;rowMap, <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> Teuchos::RCP&lt; Teuchos::ParameterList &gt; &amp;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">params</a>=Teuchos::null)</td></tr>
-<tr class="memdesc:a85288da2ce21a0fd467c322053eb926e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor specifying column <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> and an existing graph to subview. The graph created will point to the views of the existing graph, but only have the rows contained in the passed-in rowMap. This constructor assumes it will alias the first N rows of the graph, where N is the number of rows in rowMap.  <br /></td></tr>
+<tr class="memdesc:a85288da2ce21a0fd467c322053eb926e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor specifying row <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> and an existing graph to subview. The graph created will point to the views of the existing graph, but only have the rows contained in the passed-in rowMap. This constructor assumes it will alias the first N rows of the graph, where N is the number of rows in rowMap.  <br /></td></tr>
 <tr class="separator:a85288da2ce21a0fd467c322053eb926e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01e8b10fd5071aed38ec44e495d4b539" id="r_a01e8b10fd5071aed38ec44e495d4b539"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tpetra_1_1_crs_graph.html#a01e8b10fd5071aed38ec44e495d4b539">CrsGraph</a> (<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> Teuchos::RCP&lt; <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> <a class="el" href="class_tpetra_1_1_crs_graph.html#a8edc8ff6c89cdb2b65015129f9207667">map_type</a> &gt; &amp;rowMap, <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> Teuchos::RCP&lt; <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> <a class="el" href="class_tpetra_1_1_crs_graph.html#a8edc8ff6c89cdb2b65015129f9207667">map_type</a> &gt; &amp;colMap, <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> <a class="el" href="class_tpetra_1_1_crs_graph.html">CrsGraph</a>&lt; <a class="el" href="class_tpetra_1_1_crs_graph.html#a478df9e9a4d418c00f0acbf49bd8cc99">local_ordinal_type</a>, <a class="el" href="class_tpetra_1_1_crs_graph.html#a167d37a71a6a957932fb9c64c906d97b">global_ordinal_type</a>, <a class="el" href="class_tpetra_1_1_crs_graph.html#acbc61161c95c1bbd4b548e723c396b97">node_type</a> &gt; &amp;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">originalGraph</a>, <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> Teuchos::RCP&lt; Teuchos::ParameterList &gt; &amp;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">params</a>=Teuchos::null)</td></tr>
+<tr class="memdesc:a01e8b10fd5071aed38ec44e495d4b539"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor specifying row and column <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> and an existing graph to view.  <br /></td></tr>
+<tr class="separator:a01e8b10fd5071aed38ec44e495d4b539"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0089f504f70eab0012f86bd83195109a" id="r_a0089f504f70eab0012f86bd83195109a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tpetra_1_1_crs_graph.html#a0089f504f70eab0012f86bd83195109a">CrsGraph</a> (<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> Teuchos::RCP&lt; <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> <a class="el" href="class_tpetra_1_1_crs_graph.html#a8edc8ff6c89cdb2b65015129f9207667">map_type</a> &gt; &amp;rowMap, <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> Teuchos::RCP&lt; <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> <a class="el" href="class_tpetra_1_1_crs_graph.html#a8edc8ff6c89cdb2b65015129f9207667">map_type</a> &gt; &amp;colMap, <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> Teuchos::RCP&lt; <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> <a class="el" href="class_tpetra_1_1_crs_graph.html#a8edc8ff6c89cdb2b65015129f9207667">map_type</a> &gt; &amp;domainMap, <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> Teuchos::RCP&lt; <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> <a class="el" href="class_tpetra_1_1_crs_graph.html#a8edc8ff6c89cdb2b65015129f9207667">map_type</a> &gt; &amp;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">rangeMap</a>, <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> <a class="el" href="class_tpetra_1_1_crs_graph.html">CrsGraph</a>&lt; <a class="el" href="class_tpetra_1_1_crs_graph.html#a478df9e9a4d418c00f0acbf49bd8cc99">local_ordinal_type</a>, <a class="el" href="class_tpetra_1_1_crs_graph.html#a167d37a71a6a957932fb9c64c906d97b">global_ordinal_type</a>, <a class="el" href="class_tpetra_1_1_crs_graph.html#acbc61161c95c1bbd4b548e723c396b97">node_type</a> &gt; &amp;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">originalGraph</a>, <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> Teuchos::RCP&lt; Teuchos::ParameterList &gt; &amp;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">params</a>=Teuchos::null)</td></tr>
+<tr class="memdesc:a0089f504f70eab0012f86bd83195109a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor specifying maps and an existing graph to view.  <br /></td></tr>
+<tr class="separator:a0089f504f70eab0012f86bd83195109a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ee338baaa5c0088ac221529f2c12a2c" id="r_a6ee338baaa5c0088ac221529f2c12a2c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tpetra_1_1_crs_graph.html#a6ee338baaa5c0088ac221529f2c12a2c">CrsGraph</a> (<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> Teuchos::RCP&lt; <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> <a class="el" href="class_tpetra_1_1_crs_graph.html#a8edc8ff6c89cdb2b65015129f9207667">map_type</a> &gt; &amp;rowMap, <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> Teuchos::RCP&lt; <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> <a class="el" href="class_tpetra_1_1_crs_graph.html#a8edc8ff6c89cdb2b65015129f9207667">map_type</a> &gt; &amp;colMap, <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">typename</a> local_graph_device_type::row_map_type &amp;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">rowPointers</a>, <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">typename</a> local_graph_device_type::entries_type::non_const_type &amp;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">columnIndices</a>, <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> Teuchos::RCP&lt; Teuchos::ParameterList &gt; &amp;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">params</a>=Teuchos::null)</td></tr>
 <tr class="memdesc:a6ee338baaa5c0088ac221529f2c12a2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor specifying column <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> and arrays containing the graph. In almost all cases the indices must be sorted on input, but if they aren't sorted, "sorted" must be set to false in params.  <br /></td></tr>
 <tr class="separator:a6ee338baaa5c0088ac221529f2c12a2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1003,7 +1009,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Kokkos::Device specialization for communication buffers. </p>
 <p>See #1088 for why this is not just <code>device_type::device_type</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l01174">1174</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l01212">1212</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1023,7 +1029,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Type of each entry of the <a class="el" href="class_tpetra_1_1_dist_object.html" title="Base class for distributed Tpetra objects that support data redistribution.">DistObject</a> communication buffer. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l01176">1176</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l01214">1214</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1061,7 +1067,7 @@ space." If the graph's storage is packed, then there is no extra space, and the 
 <p>The type of k_numRowEntries_ (see below).</p>
 <p>This View gets used only on host. However, making this literally a host View (of Kokkos::HostSpace) causes inexplicable test failures only on CUDA. Thus, I left it as a host_mirror_type, which means (given Trilinos' current UVM requirement) that it will be a UVM allocation. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02421">2421</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02459">2459</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1121,7 +1127,7 @@ space." If the graph's storage is packed, then there is no extra space, and the 
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7980196303c304f8640a510b4b9f5be8" name="a7980196303c304f8640a510b4b9f5be8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7980196303c304f8640a510b4b9f5be8">&#9670;&#160;</a></span>CrsGraph() <span class="overload">[1/15]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7980196303c304f8640a510b4b9f5be8">&#9670;&#160;</a></span>CrsGraph() <span class="overload">[1/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1164,12 +1170,12 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00254">254</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00255">255</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a4b89eac255616e1e8bc6430e24be46e0" name="a4b89eac255616e1e8bc6430e24be46e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b89eac255616e1e8bc6430e24be46e0">&#9670;&#160;</a></span>CrsGraph() <span class="overload">[2/15]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b89eac255616e1e8bc6430e24be46e0">&#9670;&#160;</a></span>CrsGraph() <span class="overload">[2/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1212,12 +1218,12 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00347">347</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00348">348</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
 <a id="abd1f940ef75b0046333024ac3be739cb" name="abd1f940ef75b0046333024ac3be739cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd1f940ef75b0046333024ac3be739cb">&#9670;&#160;</a></span>CrsGraph() <span class="overload">[3/15]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abd1f940ef75b0046333024ac3be739cb">&#9670;&#160;</a></span>CrsGraph() <span class="overload">[3/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1260,12 +1266,12 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00297">297</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00298">298</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a98918e84f36968646e0a8d34ed429408" name="a98918e84f36968646e0a8d34ed429408"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98918e84f36968646e0a8d34ed429408">&#9670;&#160;</a></span>CrsGraph() <span class="overload">[4/15]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a98918e84f36968646e0a8d34ed429408">&#9670;&#160;</a></span>CrsGraph() <span class="overload">[4/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1315,12 +1321,12 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00274">274</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00275">275</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
 <a id="ad7e4f669e0ceeafaaf9dacff9e3dcb1d" name="ad7e4f669e0ceeafaaf9dacff9e3dcb1d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7e4f669e0ceeafaaf9dacff9e3dcb1d">&#9670;&#160;</a></span>CrsGraph() <span class="overload">[5/15]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7e4f669e0ceeafaaf9dacff9e3dcb1d">&#9670;&#160;</a></span>CrsGraph() <span class="overload">[5/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1370,12 +1376,12 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00380">380</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00381">381</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a572e4994ba3e2e0bea5bdf49e6d63b89" name="a572e4994ba3e2e0bea5bdf49e6d63b89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a572e4994ba3e2e0bea5bdf49e6d63b89">&#9670;&#160;</a></span>CrsGraph() <span class="overload">[6/15]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a572e4994ba3e2e0bea5bdf49e6d63b89">&#9670;&#160;</a></span>CrsGraph() <span class="overload">[6/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1425,12 +1431,12 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00415">415</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00416">416</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a85288da2ce21a0fd467c322053eb926e" name="a85288da2ce21a0fd467c322053eb926e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a85288da2ce21a0fd467c322053eb926e">&#9670;&#160;</a></span>CrsGraph() <span class="overload">[7/15]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a85288da2ce21a0fd467c322053eb926e">&#9670;&#160;</a></span>CrsGraph() <span class="overload">[7/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1463,7 +1469,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
       </table>
 </div><div class="memdoc">
 
-<p>Constructor specifying column <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> and an existing graph to subview. The graph created will point to the views of the existing graph, but only have the rows contained in the passed-in rowMap. This constructor assumes it will alias the first N rows of the graph, where N is the number of rows in rowMap. </p>
+<p>Constructor specifying row <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> and an existing graph to subview. The graph created will point to the views of the existing graph, but only have the rows contained in the passed-in rowMap. This constructor assumes it will alias the first N rows of the graph, where N is the number of rows in rowMap. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">originalGraph</td><td>[in] The existing graph to view. </td></tr>
@@ -1473,12 +1479,136 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00467">467</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00468">468</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a01e8b10fd5071aed38ec44e495d4b539" name="a01e8b10fd5071aed38ec44e495d4b539"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01e8b10fd5071aed38ec44e495d4b539">&#9670;&#160;</a></span>CrsGraph() <span class="overload">[8/17]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</a> <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">LocalOrdinal</a> , <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</a> <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">GlobalOrdinal</a> , <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</a> Node &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_tpetra_1_1_crs_graph.html">Tpetra::CrsGraph</a>&lt; <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">LocalOrdinal</a>, <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">GlobalOrdinal</a>, Node &gt;::CrsGraph </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> Teuchos::RCP&lt; <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> <a class="el" href="class_tpetra_1_1_crs_graph.html#a8edc8ff6c89cdb2b65015129f9207667">map_type</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rowMap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> Teuchos::RCP&lt; <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> <a class="el" href="class_tpetra_1_1_crs_graph.html#a8edc8ff6c89cdb2b65015129f9207667">map_type</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>colMap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> <a class="el" href="class_tpetra_1_1_crs_graph.html">CrsGraph</a>&lt; <a class="el" href="class_tpetra_1_1_crs_graph.html#a478df9e9a4d418c00f0acbf49bd8cc99">local_ordinal_type</a>, <a class="el" href="class_tpetra_1_1_crs_graph.html#a167d37a71a6a957932fb9c64c906d97b">global_ordinal_type</a>, <a class="el" href="class_tpetra_1_1_crs_graph.html#acbc61161c95c1bbd4b548e723c396b97">node_type</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>originalGraph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> Teuchos::RCP&lt; Teuchos::ParameterList &gt; &amp;&#160;</td>
+          <td class="paramname"><em>params</em> = <code>Teuchos::null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor specifying row and column <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> and an existing graph to view. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rowMap</td><td>[in] New distribution of rows of the graph. Needs to have the same number of elements on each rank as the row map of originalGraph. </td></tr>
+    <tr><td class="paramname">colMap</td><td>[in] Distribution of columns of the graph. Needs to have the same number of elements on each rank as the column map of originalGraph. </td></tr>
+    <tr><td class="paramname">originalGraph</td><td>[in] The existing graph to view.</td></tr>
+    <tr><td class="paramname">params</td><td>[in/out] Optional list of parameters. If not null, any missing parameters will be filled in with their default values. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00500">500</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a0089f504f70eab0012f86bd83195109a" name="a0089f504f70eab0012f86bd83195109a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0089f504f70eab0012f86bd83195109a">&#9670;&#160;</a></span>CrsGraph() <span class="overload">[9/17]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</a> <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">LocalOrdinal</a> , <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</a> <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">GlobalOrdinal</a> , <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</a> Node &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_tpetra_1_1_crs_graph.html">Tpetra::CrsGraph</a>&lt; <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">LocalOrdinal</a>, <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">GlobalOrdinal</a>, Node &gt;::CrsGraph </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> Teuchos::RCP&lt; <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> <a class="el" href="class_tpetra_1_1_crs_graph.html#a8edc8ff6c89cdb2b65015129f9207667">map_type</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rowMap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> Teuchos::RCP&lt; <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> <a class="el" href="class_tpetra_1_1_crs_graph.html#a8edc8ff6c89cdb2b65015129f9207667">map_type</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>colMap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> Teuchos::RCP&lt; <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> <a class="el" href="class_tpetra_1_1_crs_graph.html#a8edc8ff6c89cdb2b65015129f9207667">map_type</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>domainMap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> Teuchos::RCP&lt; <a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> <a class="el" href="class_tpetra_1_1_crs_graph.html#a8edc8ff6c89cdb2b65015129f9207667">map_type</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rangeMap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> <a class="el" href="class_tpetra_1_1_crs_graph.html">CrsGraph</a>&lt; <a class="el" href="class_tpetra_1_1_crs_graph.html#a478df9e9a4d418c00f0acbf49bd8cc99">local_ordinal_type</a>, <a class="el" href="class_tpetra_1_1_crs_graph.html#a167d37a71a6a957932fb9c64c906d97b">global_ordinal_type</a>, <a class="el" href="class_tpetra_1_1_crs_graph.html#acbc61161c95c1bbd4b548e723c396b97">node_type</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>originalGraph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">const</a> Teuchos::RCP&lt; Teuchos::ParameterList &gt; &amp;&#160;</td>
+          <td class="paramname"><em>params</em> = <code>Teuchos::null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor specifying maps and an existing graph to view. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rowMap</td><td>[in] Distribution of rows of the graph. Needs to have the same number of elements on each rank as the row map of originalGraph. </td></tr>
+    <tr><td class="paramname">colMap</td><td>[in] Distribution of columns of the graph. Needs to have the same number of elements on each rank as the column map of originalGraph. </td></tr>
+    <tr><td class="paramname">domainMap</td><td>[in] Distribution of domain of the graph. Needs to have the same number of elements on each rank as the domain map of originalGraph. </td></tr>
+    <tr><td class="paramname">domainMap</td><td>[in] Distribution of range of the graph. Needs to have the same number of elements on each rank as the range map of originalGraph. </td></tr>
+    <tr><td class="paramname">originalGraph</td><td>[in] The existing graph to view.</td></tr>
+    <tr><td class="paramname">params</td><td>[in/out] Optional list of parameters. If not null, any missing parameters will be filled in with their default values. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00508">508</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a6ee338baaa5c0088ac221529f2c12a2c" name="a6ee338baaa5c0088ac221529f2c12a2c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ee338baaa5c0088ac221529f2c12a2c">&#9670;&#160;</a></span>CrsGraph() <span class="overload">[8/15]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ee338baaa5c0088ac221529f2c12a2c">&#9670;&#160;</a></span>CrsGraph() <span class="overload">[10/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1535,12 +1665,12 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00499">499</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00568">568</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
 <a id="af1a69d84246dc71088c9d07adb4f9701" name="af1a69d84246dc71088c9d07adb4f9701"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1a69d84246dc71088c9d07adb4f9701">&#9670;&#160;</a></span>CrsGraph() <span class="overload">[9/15]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af1a69d84246dc71088c9d07adb4f9701">&#9670;&#160;</a></span>CrsGraph() <span class="overload">[11/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1597,12 +1727,12 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00524">524</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00593">593</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a4fc501099108f3236719138930681abe" name="a4fc501099108f3236719138930681abe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4fc501099108f3236719138930681abe">&#9670;&#160;</a></span>CrsGraph() <span class="overload">[10/15]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fc501099108f3236719138930681abe">&#9670;&#160;</a></span>CrsGraph() <span class="overload">[12/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1653,12 +1783,12 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00549">549</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00618">618</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
 <a id="aa310a66e8ea0a636fb84b3743b5d2002" name="aa310a66e8ea0a636fb84b3743b5d2002"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa310a66e8ea0a636fb84b3743b5d2002">&#9670;&#160;</a></span>CrsGraph() <span class="overload">[11/15]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa310a66e8ea0a636fb84b3743b5d2002">&#9670;&#160;</a></span>CrsGraph() <span class="overload">[13/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1723,12 +1853,12 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00562">562</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00631">631</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
 <a id="ae9401f5ac1652ab8df4e1dd12f57fd92" name="ae9401f5ac1652ab8df4e1dd12f57fd92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9401f5ac1652ab8df4e1dd12f57fd92">&#9670;&#160;</a></span>CrsGraph() <span class="overload">[12/15]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9401f5ac1652ab8df4e1dd12f57fd92">&#9670;&#160;</a></span>CrsGraph() <span class="overload">[14/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1804,12 +1934,12 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00631">631</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00700">700</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
 <a id="ae39841bf15562abc89ddb4de319d1a9c" name="ae39841bf15562abc89ddb4de319d1a9c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae39841bf15562abc89ddb4de319d1a9c">&#9670;&#160;</a></span>CrsGraph() <span class="overload">[13/15]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae39841bf15562abc89ddb4de319d1a9c">&#9670;&#160;</a></span>CrsGraph() <span class="overload">[15/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1895,12 +2025,12 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00683">683</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00752">752</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a323d0148ba33414d166036b488d34bea" name="a323d0148ba33414d166036b488d34bea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a323d0148ba33414d166036b488d34bea">&#9670;&#160;</a></span>CrsGraph() <span class="overload">[14/15]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a323d0148ba33414d166036b488d34bea">&#9670;&#160;</a></span>CrsGraph() <span class="overload">[16/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1930,7 +2060,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 </div>
 </div>
 <a id="a4109c31388d06392bd4ad9b3d1d6e126" name="a4109c31388d06392bd4ad9b3d1d6e126"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4109c31388d06392bd4ad9b3d1d6e126">&#9670;&#160;</a></span>CrsGraph() <span class="overload">[15/15]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4109c31388d06392bd4ad9b3d1d6e126">&#9670;&#160;</a></span>CrsGraph() <span class="overload">[17/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2094,7 +2224,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if the other <a class="el" href="class_tpetra_1_1_crs_graph.html" title="A distributed graph accessed by rows (adjacency lists) and stored sparsely.">CrsGraph</a>'s data structure is identical to this <a class="el" href="class_tpetra_1_1_crs_graph.html" title="A distributed graph accessed by rows (adjacency lists) and stored sparsely.">CrsGraph</a>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l06966">6966</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l07035">7035</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2126,7 +2256,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Set the given list of parameters (must be nonnull). </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00771">771</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00840">840</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2157,7 +2287,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Default parameter list suitable for validation. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00737">737</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00806">806</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2201,7 +2331,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>If <code>globalRow</code> does not belong to the graph on this process, then it will be communicated to the appropriate process when <a class="el" href="class_tpetra_1_1_crs_graph.html#a2a48aee1d10b05afe5046a182d5640a6" title="Communicate nonlocal contributions to other processes.">globalAssemble()</a> is called. (That method will be called automatically during the next call to <a class="el" href="class_tpetra_1_1_crs_graph.html#a32798a1f7119adbed7bfffcad7cf878f" title="Tell the graph that you are done changing its structure.">fillComplete()</a>.) Otherwise, the entries will be inserted into the part of the graph owned by the calling process.</p>
 <p>If the graph row already contains entries at the indices corresponding to values in <code>indices</code>, then the redundant indices will be eliminated. This may happen either at insertion or during the next call to <a class="el" href="class_tpetra_1_1_crs_graph.html#a32798a1f7119adbed7bfffcad7cf878f" title="Tell the graph that you are done changing its structure.">fillComplete()</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02377">2377</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02446">2446</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2242,7 +2372,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Epetra compatibility version of insertGlobalIndices (see above) that takes input as a raw pointer, rather than Teuchos::ArrayView. </p>
 <p>Arguments are the same and in the same order as Epetra_CrsGraph::InsertGlobalIndices. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02305">2305</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02374">2374</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2287,7 +2417,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <code><a class="el" href="class_tpetra_1_1_crs_graph.html#af9f3518804295407ccccf03ae6eefb50" title="Whether the graph&#39;s column indices are stored as local indices.">isLocallyIndexed()</a> == true</code></dd></dl>
 <dl class="section note"><dt>Note</dt><dd>If the graph row already contains entries at the indices corresponding to values in <code>indices</code>, then the redundant indices will be eliminated; this may happen at insertion or during the next call to <a class="el" href="class_tpetra_1_1_crs_graph.html#a32798a1f7119adbed7bfffcad7cf878f" title="Tell the graph that you are done changing its structure.">fillComplete()</a>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02230">2230</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02299">2299</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2328,7 +2458,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Epetra compatibility version of insertLocalIndices (see above) that takes input as a raw pointer, rather than Teuchos::ArrayView. </p>
 <p>Arguments are the same and in the same order as Epetra_CrsGraph::InsertMyIndices. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02296">2296</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02365">2365</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2362,7 +2492,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <dd>
 <code><a class="el" href="class_tpetra_1_1_crs_graph.html#af9f3518804295407ccccf03ae6eefb50" title="Whether the graph&#39;s column indices are stored as local indices.">isLocallyIndexed()</a> == true</code> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02461">2461</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02530">2530</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2387,7 +2517,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>This method is called automatically by <a class="el" href="class_tpetra_1_1_crs_graph.html#a32798a1f7119adbed7bfffcad7cf878f" title="Tell the graph that you are done changing its structure.">fillComplete()</a>. Most users do not need to call this themselves.</p>
 <p>This method must be called collectively (that is, like any MPI collective) over all processes in the graph's communicator. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02653">2653</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02722">2722</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2418,7 +2548,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <code><a class="el" href="class_tpetra_1_1_crs_graph.html#a8a275235a53ddac2b09b081432d3c466" title="Whether fillComplete() has been called and the graph is in compute mode.">isFillComplete()</a> == false</code></dd></dl>
 <p>This method must be called collectively (that is, like any MPI collective) over all processes in the graph's communicator. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02869">2869</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02938">2938</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2476,7 +2606,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 "Optimize Storage" (<code>bool</code>): Default is false. If true, then <a class="el" href="class_tpetra_1_1_crs_graph.html#a4a99742f2fb00b4bf59297a34a7be072" title="Returns true if storage has been optimized.">isStorageOptimized()</a> returns true after this method finishes. See <a class="el" href="class_tpetra_1_1_crs_graph.html#a4a99742f2fb00b4bf59297a34a7be072" title="Returns true if storage has been optimized.">isStorageOptimized()</a> for consequences.  </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02904">2904</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02973">2973</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2509,7 +2639,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02880">2880</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02949">2949</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2574,7 +2704,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l03115">3115</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l03184">3184</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2607,7 +2737,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Implements <a class="el" href="class_tpetra_1_1_row_graph.html#ad71cfdf295cb2c35f5e76686f00e2902">Tpetra::RowGraph&lt; LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01034">1034</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01103">1103</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2640,7 +2770,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Implements <a class="el" href="class_tpetra_1_1_row_graph.html#a5a11eec7fb5e21b70310212bf1d0a8d0">Tpetra::RowGraph&lt; LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00821">821</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00890">890</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2673,7 +2803,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Implements <a class="el" href="class_tpetra_1_1_row_graph.html#aebe26ea3698f738b8c64e4d2a9b41845">Tpetra::RowGraph&lt; LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00828">828</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00897">897</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2706,7 +2836,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Implements <a class="el" href="class_tpetra_1_1_row_graph.html#aa40c0d98495c9d6665f7c21551a43f1b">Tpetra::RowGraph&lt; LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00835">835</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00904">904</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2739,7 +2869,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Implements <a class="el" href="class_tpetra_1_1_row_graph.html#acaa52ea2e6b935e82721b1569ec3581f">Tpetra::RowGraph&lt; LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00842">842</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00911">911</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2772,7 +2902,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Implements <a class="el" href="class_tpetra_1_1_row_graph.html#ac791bb02c3b93aa0d3fa707088dab54f">Tpetra::RowGraph&lt; LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00849">849</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00918">918</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2805,7 +2935,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Implements <a class="el" href="class_tpetra_1_1_row_graph.html#a6273e198bc814be31c3c92497448ba39">Tpetra::RowGraph&lt; LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00856">856</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00925">925</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2839,7 +2969,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Implements <a class="el" href="class_tpetra_1_1_row_graph.html#a9049ba5907043bc7f70568d6079beb9f">Tpetra::RowGraph&lt; LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00781">781</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00850">850</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2873,7 +3003,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Implements <a class="el" href="class_tpetra_1_1_row_graph.html#a5d9a2ab9bbb20f59c401e7c87c87e942">Tpetra::RowGraph&lt; LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00788">788</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00857">857</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2906,7 +3036,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Implements <a class="el" href="class_tpetra_1_1_row_graph.html#a75d7528feb985e38452bfa6cf878e318">Tpetra::RowGraph&lt; LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00800">800</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00869">869</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2940,7 +3070,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Implements <a class="el" href="class_tpetra_1_1_row_graph.html#a7e0bba673c14a8d0da681aa6a0e2c24d">Tpetra::RowGraph&lt; LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00807">807</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00876">876</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -2973,7 +3103,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Implements <a class="el" href="class_tpetra_1_1_row_graph.html#a636ac8f2d051d17a2746400baa1a7f3f">Tpetra::RowGraph&lt; LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01041">1041</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01110">1110</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -3007,7 +3137,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Implements <a class="el" href="class_tpetra_1_1_row_graph.html#ac6f30024083403ca72f15d5ca48a1ae7">Tpetra::RowGraph&lt; LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00882">882</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00951">951</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -3042,7 +3172,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Implements <a class="el" href="class_tpetra_1_1_row_graph.html#a418259c5f547da1cd8c887f5bcef322e">Tpetra::RowGraph&lt; LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00894">894</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00963">963</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -3077,7 +3207,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Implements <a class="el" href="class_tpetra_1_1_row_graph.html#ae75b5e17bf23de1655633779060b0324">Tpetra::RowGraph&lt; LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02009">2009</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02078">2078</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -3112,7 +3242,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Implements <a class="el" href="class_tpetra_1_1_row_graph.html#a484e69767d0efb6134c77f6975bec662">Tpetra::RowGraph&lt; LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02021">2021</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02090">2090</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -3139,7 +3269,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>This is the allocation available to the user. Actual allocation may be larger, for example, after calling <a class="el" href="class_tpetra_1_1_crs_graph.html#a32798a1f7119adbed7bfffcad7cf878f" title="Tell the graph that you are done changing its structure.">fillComplete()</a>. Thus, this does not necessarily reflect the graph's memory consumption.</p>
 <dl class="section return"><dt>Returns</dt><dd>If indicesAreAllocated() is true, the allocation size. Otherwise, <code>Tpetra::Details::OrdinalTraits&lt;size_t&gt;::invalid()</code>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00996">996</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01065">1065</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -3164,7 +3294,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Current number of allocated entries in the given row on the calling (MPI) process, using a global row index. </p>
 <dl class="section return"><dt>Returns</dt><dd>If the given row index is in the row <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> on the calling process, then return this process' allocation size for that row. Otherwise, return <code>Tpetra::Details::OrdinalTraits&lt;size_t&gt;::invalid()</code>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02033">2033</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02102">2102</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -3189,7 +3319,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Current number of allocated entries in the given row on the calling (MPI) process, using a local row index. </p>
 <dl class="section return"><dt>Returns</dt><dd>If the given row index is in the row <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> on the calling process, then return this process' allocation size for that row. Otherwise, return <code>Tpetra::Details::OrdinalTraits&lt;size_t&gt;::invalid()</code>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02045">2045</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02114">2114</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -3224,7 +3354,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Implements <a class="el" href="class_tpetra_1_1_row_graph.html#a1aaf2b3041b4bec0256008b4cd3f5786">Tpetra::RowGraph&lt; LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00953">953</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01022">1022</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -3258,7 +3388,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Implements <a class="el" href="class_tpetra_1_1_row_graph.html#ae2723dce7be937b54b5220d320c31495">Tpetra::RowGraph&lt; LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00965">965</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01034">1034</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -3299,7 +3429,7 @@ compute an <a class="el" href="class_tpetra_1_1_import.html" title="Communicatio
 
 <p>Implements <a class="el" href="class_tpetra_1_1_row_graph.html#a421f6c76ceccc0ddf86a25a9253a699d">Tpetra::RowGraph&lt; LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00862">862</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00931">931</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -3333,7 +3463,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Implements <a class="el" href="class_tpetra_1_1_row_graph.html#ad363b4c0669968e7d3ae371e28592c87">Tpetra::RowGraph&lt; LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00983">983</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01052">1052</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -3367,7 +3497,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Implements <a class="el" href="class_tpetra_1_1_row_graph.html#a4a0fc5affa1c99b5ceda2d785d563551">Tpetra::RowGraph&lt; LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00989">989</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01058">1058</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -3400,7 +3530,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Implements <a class="el" href="class_tpetra_1_1_row_graph.html#a080d231ab3e2f7fcf8fc05dced58a127">Tpetra::RowGraph&lt; LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00971">971</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01040">1040</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -3423,7 +3553,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Whether <a class="el" href="class_tpetra_1_1_crs_graph.html#a63bd488d73f3fa2e83e8feec9f7fd3e8" title="Resume fill operations.">resumeFill()</a> has been called and the graph is in edit mode. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00977">977</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01046">1046</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -3447,7 +3577,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Whether graph indices in all rows are known to be sorted. </p>
 <p>A fill-complete graph is always sorted, as is a newly constructed graph. A graph is sorted immediately after calling <a class="el" href="class_tpetra_1_1_crs_graph.html#a63bd488d73f3fa2e83e8feec9f7fd3e8" title="Resume fill operations.">resumeFill()</a>, but any changes to the graph may result in the sorting status becoming unknown (and therefore, presumed unsorted). </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01053">1053</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01122">1122</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -3471,7 +3601,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Returns <code>true</code> if storage has been optimized. </p>
 <p>Optimized storage means that the allocation of each row is equal to the number of entries. The effect is that a pass through the matrix, i.e., during a mat-vec, requires minimal memory traffic. One limitation of optimized storage is that no new indices can be added to the graph. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00868">868</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l00937">937</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -3529,7 +3659,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Implements <a class="el" href="class_tpetra_1_1_row_graph.html#a79907e4f9994c478149b2f8f8a81e433">Tpetra::RowGraph&lt; LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02126">2126</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02195">2195</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -3588,7 +3718,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Implements <a class="el" href="class_tpetra_1_1_row_graph.html#accd158943130beea1745d997878e4a9b">Tpetra::RowGraph&lt; LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02084">2084</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02153">2153</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -3641,7 +3771,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Implements <a class="el" href="class_tpetra_1_1_row_graph.html#a7bfe94b9708a387ae1a2f3c0e0fc0205">Tpetra::RowGraph&lt; LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02200">2200</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02269">2269</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -3674,7 +3804,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Reimplemented from <a class="el" href="class_tpetra_1_1_row_graph.html#ae199dbc742c4e473f2d4236b28d88ef9">Tpetra::RowGraph&lt; LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l06285">6285</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l06354">6354</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -3727,7 +3857,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Implements <a class="el" href="class_tpetra_1_1_row_graph.html#ace92d4fa8ed3d19af12fed732794de3f">Tpetra::RowGraph&lt; LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02165">2165</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02234">2234</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -3760,7 +3890,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Reimplemented from <a class="el" href="class_tpetra_1_1_dist_object.html#adeca5fe82d6ff5af11d1fcb78753c1ef">Tpetra::DistObject&lt; GlobalOrdinal, LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l04333">4333</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l04402">4402</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -3804,7 +3934,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Reimplemented from <a class="el" href="class_tpetra_1_1_dist_object.html#a05ae001a87e9a244a334891d33de8fc7">Tpetra::DistObject&lt; GlobalOrdinal, LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l04352">4352</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l04421">4421</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -3839,7 +3969,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Implements <a class="el" href="class_tpetra_1_1_dist_object.html#a84bb8e0004dd8a4ae1b2cce20187ee50">Tpetra::DistObject&lt; GlobalOrdinal, LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l04471">4471</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l04540">4540</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -3898,7 +4028,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 </div><div class="memdoc">
 <p><a class="el" href="class_tpetra_1_1_dist_object.html" title="Base class for distributed Tpetra objects that support data redistribution.">DistObject</a> copyAndPermute has multiple overloads &ndash; use copyAndPermutes for anything we don't override </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l04480">4480</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l04549">4549</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -3953,7 +4083,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Reimplemented from <a class="el" href="class_tpetra_1_1_row_graph.html#a4b8319f303ba2e76973590783a2c92ed">Tpetra::RowGraph&lt; LocalOrdinal, GlobalOrdinal, Node &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l05260">5260</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l05329">5329</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -4012,7 +4142,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 </div><div class="memdoc">
 <p>&lt; <a class="el" href="class_tpetra_1_1_dist_object.html" title="Base class for distributed Tpetra objects that support data redistribution.">DistObject</a> has overloaded unpackAndCombine, use the <a class="el" href="class_tpetra_1_1_dist_object.html" title="Base class for distributed Tpetra objects that support data redistribution.">DistObject</a>'s implementation for anything we don't override. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l05687">5687</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l05756">5756</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -4055,7 +4185,7 @@ All diagonal entries of the graph must be populated on this process. Results are
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l05937">5937</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l06006">6006</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -4079,7 +4209,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Get offsets of the off-rank entries in the graph. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l06123">6123</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l06192">6192</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -4110,7 +4240,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l06250">6250</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l06319">6319</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -4152,7 +4282,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 No insert routines have been called.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>This method is intended for expert developer use only, and should never be called by user code. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02492">2492</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02561">2561</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -4194,7 +4324,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 No insert routines have been called.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>This method is intended for expert developer use only, and should never be called by user code. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02598">2598</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02667">2667</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -4217,7 +4347,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Get a host view of the packed row offsets. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02057">2057</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02126">2126</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -4240,7 +4370,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Get a device view of the packed row offsets. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02064">2064</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02133">2133</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -4263,7 +4393,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Get a host view of the packed column indicies. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02071">2071</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02140">2140</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -4286,7 +4416,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Get a device view of the packed column indicies. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02078">2078</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02147">2147</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -4318,7 +4448,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 </dl>
 <p>It is strongly recommended to use <code><a class="el" href="namespace_tpetra_1_1_details.html#a5ae8941ab056f2eb22132fc8eba55304" title="Make the graph&#39;s column Map.">Tpetra::Details::makeColMap()</a></code> to create the column map. makeColMap() follows Aztec ordering by default. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l03476">3476</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l03545">3545</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -4369,7 +4499,7 @@ If the new <a class="el" href="class_tpetra_1_1_import.html" title="Communicatio
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l03493">3493</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l03562">3562</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -4397,7 +4527,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <dd>
 <code><a class="el" href="class_tpetra_1_1_crs_graph.html#ab35bf93c964a7fc168ffb9fa4cd12e38" title="Whether resumeFill() has been called and the graph is in edit mode.">isFillActive()</a> == false</code> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l03723">3723</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l03792">3792</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -4441,7 +4571,7 @@ Either the given <a class="el" href="class_tpetra_1_1_import.html" title="Commun
 <dd>
 Either the given <a class="el" href="class_tpetra_1_1_import.html" title="Communication plan for data redistribution from a uniquely-owned to a (possibly) multiply-owned distr...">Import</a> object is null, or the source <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> of the given <a class="el" href="class_tpetra_1_1_import.html" title="Communication plan for data redistribution from a uniquely-owned to a (possibly) multiply-owned distr...">Import</a> is the same as this graph's domain <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l03742">3742</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l03811">3811</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -4469,7 +4599,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <dd>
 <code><a class="el" href="class_tpetra_1_1_crs_graph.html#ab35bf93c964a7fc168ffb9fa4cd12e38" title="Whether resumeFill() has been called and the graph is in edit mode.">isFillActive()</a> == false</code> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l03781">3781</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l03850">3850</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -4513,7 +4643,7 @@ Either the given <a class="el" href="class_tpetra_1_1_export.html" title="Commun
 <dd>
 Either the given <a class="el" href="class_tpetra_1_1_export.html" title="Communication plan for data redistribution from a (possibly) multiply-owned to a uniquely-owned distr...">Export</a> object is null, or the source <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> of the given <a class="el" href="class_tpetra_1_1_export.html" title="Communication plan for data redistribution from a (possibly) multiply-owned to a uniquely-owned distr...">Export</a> is the same as this graph's Row <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l03800">3800</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l03869">3869</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -4555,7 +4685,7 @@ We make NO promises of backwards compatibility. This method may change or disapp
 </dl>
 <p>This method satisfies the strong exception guarantee, as long the destructors of <a class="el" href="class_tpetra_1_1_export.html" title="Communication plan for data redistribution from a (possibly) multiply-owned to a uniquely-owned distr...">Export</a>, <a class="el" href="class_tpetra_1_1_import.html" title="Communication plan for data redistribution from a uniquely-owned to a (possibly) multiply-owned distr...">Import</a>, and <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> do not throw exceptions. This means that either the method returns normally (without throwing an exception), or there are no externally visible side effects. However, this does not guarantee no deadlock when the graph's original communicator contains more than one process. In order to prevent deadlock, you must still wrap this call in a try/catch block and do an all-reduce over all processes in the original communicator to test whether the call succeeded. This safety measure should usually be unnecessary, since the method call should only fail on user error or failure to allocate memory. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l05842">5842</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l05911">5911</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -4610,7 +4740,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Use of the "non-member constructor" version of this method, exportAndFillCompleteCrsGraph, is preferred for user applications.</p>
 <dl class="section warning"><dt>Warning</dt><dd>This method is intended for expert developer use only, and should never be called by user code. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l06872">6872</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l06941">6941</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -4671,7 +4801,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Use of the "non-member constructor" version of this method, exportAndFillCompleteCrsGraph, is preferred for user applications.</p>
 <dl class="section warning"><dt>Warning</dt><dd>This method is intended for expert developer use only, and should never be called by user code. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l06882">6882</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l06951">6951</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -4726,7 +4856,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Use of the "non-member constructor" version of this method, exportAndFillCompleteCrsGraph, is preferred for user applications.</p>
 <dl class="section warning"><dt>Warning</dt><dd>This method is intended for expert developer use only, and should never be called by user code. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l06893">6893</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l06962">6962</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -4787,7 +4917,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Use of the "non-member constructor" version of this method, exportAndFillCompleteCrsGraph, is preferred for user applications.</p>
 <dl class="section warning"><dt>Warning</dt><dd>This method is intended for expert developer use only, and should never be called by user code. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l06903">6903</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l06972">6972</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -4826,7 +4956,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l04087">4087</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l04156">4156</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -4869,7 +4999,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>First return value is the number of column indices on this process, counting duplicates, that could not be converted to local indices, because they were not in the column <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> on the calling process. If some error occurred before conversion happened, then this is <code>Tpetra::Details::OrdinalTraits&lt;size_t&gt;::invalid()</code>.</p>
 <p>Second return value is a human-readable error string. If the first return value is zero, then the string may be empty. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l03931">3931</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l04000">4000</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -4918,7 +5048,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l04272">4272</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l04341">4341</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -4984,7 +5114,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The number of indices inserted. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01455">1455</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01524">1524</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -5041,7 +5171,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The number of indices inserted. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01552">1552</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01621">1621</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -5105,7 +5235,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The number of indices inserted. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01562">1562</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01631">1631</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -5163,7 +5293,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The number of indices found. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01691">1691</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01760">1760</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -5220,7 +5350,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02385">2385</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02454">2454</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -5277,7 +5407,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02444">2444</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l02513">2513</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -5308,7 +5438,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Whether duplicate column indices in each row have been merged. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01059">1059</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01128">1128</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -5341,7 +5471,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Call this after making a local change to the graph's structure. Changing the structure locally invalidates the "is
 sorted" and "is merged" states. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01065">1065</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01134">1134</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -5390,7 +5520,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01734">1734</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01803">1803</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -5421,7 +5551,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Returns true if globalConstants have been computed; false otherwise. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02027">2027</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02065">2065</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -5457,7 +5587,7 @@ globalNumEntries_  </li>
 globalMaxNumRowEntries_  </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l03857">3857</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l03926">3926</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -5498,7 +5628,7 @@ nodeMaxNumRowEntries_  </li>
 </ul>
 <p>computeGlobalConstants calls this method, if global constants have not yet been computed. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l03904">3904</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l03973">3973</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -5530,7 +5660,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Get information about the locally owned row with local index myRow. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01322">1322</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01391">1391</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -5564,7 +5694,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>If <code>gblRow</code> is not locally owned, the <code>localRow</code> field of the returned struct is <code>Teuchos::OrdinalTraits&lt;size_t&gt;::invalid()</code>.</p>
 <p>The point of this method is to fuse the global-to-local row index lookup for checking whether <code>gblRow</code> is locally owned, with other error checking that <a class="el" href="class_tpetra_1_1_crs_graph.html#a7090717ed204fe6cc0a1cd8b90a65235" title="Get information about the locally owned row with local index myRow.">getRowInfo()</a> does. This avoids an extra global-to-local index lookup in methods like <a class="el" href="class_tpetra_1_1_crs_matrix.html#a1ce8f0e1318dbc065e7c04169b7e243d" title="Replace one or more entries&#39; values, using global indices.">CrsMatrix::replaceGlobalValues()</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01362">1362</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01431">1431</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -5589,7 +5719,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <dl class="section warning"><dt>Warning</dt><dd>THIS IS AN EXPERT MODE FUNCTION. THIS IS AN IMPLEMENTATION DETAIL. DO NOT CALL THIS FUNCTION!!!</dd></dl>
 <p>This is only a valid representation of the local graph if the (global) graph is fill complete. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l03840">3840</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l03909">3909</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -5620,7 +5750,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Throw an exception if the internal state is not consistent. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01759">1759</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01828">1828</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -5658,7 +5788,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l06914">6914</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l06983">6983</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -5689,7 +5819,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Get the unpacked row pointers on device. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02192">2192</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02230">2230</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -5720,7 +5850,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Get the unpacked row pointers on host. Lazily make a copy from device. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02197">2197</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02235">2235</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -5751,7 +5881,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Get the packed row pointers on device. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02228">2228</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02266">2266</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -5782,7 +5912,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Get the packed row pointers on host. Lazily make a copy from device. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02233">2233</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02271">2271</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -5814,7 +5944,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Get a const, locally indexed view of the locally owned row myRow, such that rowinfo = getRowInfo(myRow). </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01258">1258</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01327">1327</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -5846,7 +5976,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Get a const, locally indexed view of the locally owned row myRow, such that rowinfo = getRowInfo(myRow). </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01297">1297</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01366">1366</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -5878,7 +6008,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Get a const, globally indexed view of the locally owned row myRow, such that rowinfo = getRowInfo(myRow). </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01284">1284</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01353">1353</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -5910,7 +6040,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Get a const, globally indexed view of the locally owned row myRow, such that rowinfo = getRowInfo(myRow). </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01310">1310</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01379">1379</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -5942,7 +6072,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Get a ReadWrite locally indexed view of the locally owned row myRow, such that rowinfo = getRowInfo(myRow). </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01271">1271</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html#l01340">1340</a> of file <a class="el" href="_tpetra___crs_graph__def_8hpp_source.html">Tpetra_CrsGraph_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -7089,7 +7219,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Nonmember function to create an empty <a class="el" href="class_tpetra_1_1_crs_graph.html" title="A distributed graph accessed by rows (adjacency lists) and stored sparsely.">CrsGraph</a> given a row <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> and the max number of entries allowed locally per row. </p>
 <dl class="section return"><dt>Returns</dt><dd>A graph with at most the specified number of nonzeros per row (defaults to zero). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02543">2543</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02581">2581</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -7169,7 +7299,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02606">2606</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02644">2644</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -7256,7 +7386,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02674">2674</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02712">2712</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -7334,7 +7464,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02728">2728</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02766">2766</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -7419,7 +7549,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02779">2779</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02817">2817</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -7454,7 +7584,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Whether transformLocalValues should use atomic updates by default. </p>
 <dl class="section warning"><dt>Warning</dt><dd>This is an implementation detail. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l01975">1975</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02013">2013</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -7482,7 +7612,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>The <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> describing the distribution of rows of the graph. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02116">2116</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02154">2154</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -7510,7 +7640,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>The <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> describing the distribution of columns of the graph. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02118">2118</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02156">2156</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -7538,7 +7668,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>The <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> describing the range of the (matrix corresponding to the) graph. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02120">2120</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02158">2158</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -7566,7 +7696,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>The <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> describing the domain of the (matrix corresponding to the) graph. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02122">2122</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02160">2160</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -7595,7 +7725,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>The <a class="el" href="class_tpetra_1_1_import.html" title="Communication plan for data redistribution from a uniquely-owned to a (possibly) multiply-owned distr...">Import</a> from the domain <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> to the column <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a>. </p>
 <p>This gets constructed by fillComplete. It may be null if the domain <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> and the column <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> are the same, since no <a class="el" href="class_tpetra_1_1_import.html" title="Communication plan for data redistribution from a uniquely-owned to a (possibly) multiply-owned distr...">Import</a> is necessary in that case for sparse matrix-vector multiply. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02130">2130</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02168">2168</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -7624,7 +7754,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>The <a class="el" href="class_tpetra_1_1_export.html" title="Communication plan for data redistribution from a (possibly) multiply-owned to a uniquely-owned distr...">Export</a> from the row <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> to the range <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a>. </p>
 <p>This gets constructed by fillComplete. It may be null if the row <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> and the range <a class="el" href="class_tpetra_1_1_map.html" title="A parallel distribution of indices over processes.">Map</a> are the same, since no <a class="el" href="class_tpetra_1_1_export.html" title="Communication plan for data redistribution from a (possibly) multiply-owned to a uniquely-owned distr...">Export</a> is necessary in that case for sparse matrix-vector multiply. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02137">2137</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02175">2175</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -7655,7 +7785,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Local maximum of the number of entries in each row. </p>
 <p>Computed in computeLocalConstants; only valid when <a class="el" href="class_tpetra_1_1_crs_graph.html#a8a275235a53ddac2b09b081432d3c466" title="Whether fillComplete() has been called and the graph is in compute mode.">isFillComplete()</a> is true. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02143">2143</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02181">2181</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -7686,7 +7816,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Global number of entries in the graph. </p>
 <p>Only valid when <a class="el" href="class_tpetra_1_1_crs_graph.html#a8a275235a53ddac2b09b081432d3c466" title="Whether fillComplete() has been called and the graph is in compute mode.">isFillComplete()</a> is true. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02149">2149</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02187">2187</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -7717,7 +7847,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Global maximum of the number of entries in each row. </p>
 <p>Computed in <a class="el" href="class_tpetra_1_1_crs_graph.html#ad7bfbf0dcbbb0a63abe1c44e1db11e53" title="Compute global constants, if they have not yet been computed.">computeGlobalConstants()</a>; only valid when <a class="el" href="class_tpetra_1_1_crs_graph.html#a8a275235a53ddac2b09b081432d3c466" title="Whether fillComplete() has been called and the graph is in compute mode.">isFillComplete()</a> is true. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02156">2156</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02194">2194</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -7751,7 +7881,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 </ul>
 <p>UVM Removal Note: Device view takes place of k_lclInds1D_ </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02284">2284</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02322">2322</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -7785,7 +7915,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 </ul>
 <p>UVM Removal Note: Device view takes place of lclGraph_.entries </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02299">2299</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02337">2337</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -7820,7 +7950,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 </ul>
 <p>UVM Removal Note: Device view takes place of k_gblInds1D_ </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02314">2314</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02352">2352</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -7852,7 +7982,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>This array <em>only</em> exists on a process before the graph's indices are allocated on that process. After that point, it is discarded, since the graph's allocation implicitly or explicitly represents the same information.</p>
 <p>FIXME (mfh 07 Aug 2014) We want graph's constructors to allocate, rather than doing lazy allocation at first insert. This will make both k_numAllocPerRow_ and numAllocForAllRows_ obsolete. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02376">2376</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02414">2414</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -7882,7 +8012,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>This is an argument to some of the graph's constructors. Either this or k_numAllocPerRow_ is used, but not both.</p>
 <p>FIXME (mfh 07 Aug 2014) We want graph's constructors to allocate, rather than doing lazy allocation at first insert. This will make both k_numAllocPerRow_ and numAllocForAllRows_ obsolete. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02387">2387</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02425">2425</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -7912,7 +8042,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>This is deallocated in <a class="el" href="class_tpetra_1_1_crs_graph.html#a32798a1f7119adbed7bfffcad7cf878f" title="Tell the graph that you are done changing its structure.">fillComplete()</a> if <a class="el" href="class_tpetra_1_1_crs_graph.html#a32798a1f7119adbed7bfffcad7cf878f" title="Tell the graph that you are done changing its structure.">fillComplete()</a>'s "Optimize Storage" parameter is set to <code>true</code>.</p>
 <p>This may also exist with 1-D storage, if storage is unpacked. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02439">2439</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02477">2477</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -7941,7 +8071,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>The offsets for off-rank entries. </p>
 <p>When off-rank entries are sorted last, this rowPtr-lile view contains the offsets. It is compute on the first call to <a class="el" href="class_tpetra_1_1_crs_graph.html#ac7394d1861fd0b55b7d5d39030d9d0b1" title="Get offsets of the off-rank entries in the graph.">getLocalOffRankOffsets()</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02446">2446</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02484">2484</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -7972,7 +8102,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>Status of the graph's storage, when not in a fill-complete state. </p>
 <p>The phrase "When not in a fill-complete state" is important. When the graph is fill complete, it <em>always</em> uses 1-D "packed" storage. However, if the "Optimize Storage" parameter to fillComplete was false, the graph may keep unpacked 1-D storage around and resume it on the next resumeFill call. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02459">2459</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02497">2497</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -8000,7 +8130,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Whether the graph's indices are sorted in each row, on this process. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02468">2468</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02506">2506</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -8028,7 +8158,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Whether the graph's indices are non-redundant (merged) in each row, on this process. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02471">2471</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02509">2509</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -8056,7 +8186,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Whether this process has computed local constants. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02473">2473</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02511">2511</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -8084,7 +8214,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Whether all processes have computed global constants. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02475">2475</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02513">2513</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -8112,7 +8242,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 
 <p>Nonlocal data given to insertGlobalIndices. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02482">2482</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02520">2520</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -8142,7 +8272,7 @@ template&lt;<a class="el" href="class_tpetra_1_1_crs_matrix_struct.html">class</
 <p>makeColMap() always groups remote GIDs by process rank, so that all remote GIDs with the same owning rank occur contiguously. By default, it always sorts remote GIDs in increasing order within those groups. This behavior differs from Epetra, which does not sort remote GIDs with the same owning process.</p>
 <p>This is <code>true</code> by default, which means "sort remote GIDs." If you don't want to sort (for compatibility with Epetra), call sortGhostColumnGIDsWithinProcessBlock(false). </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02498">2498</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html#l02536">2536</a> of file <a class="el" href="_tpetra___crs_graph__decl_8hpp_source.html">Tpetra_CrsGraph_decl.hpp</a>.</p>
 
 </div>
 </div>

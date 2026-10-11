@@ -151,7 +151,7 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_misc_1_1_debug_functor.html">MueLu::Misc::DebugFunctor&lt; local_matrix_type &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functor that checks that all entries have been marked.  <a href="class_mue_lu_1_1_misc_1_1_debug_functor.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_misc_1_1_symmetrize_functor.html">MueLu::Misc::SymmetrizeFunctor&lt; local_matrix_type &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mue_lu_1_1_misc_1_1_symmetrize_functor.html">MueLu::Misc::SymmetrizeFunctor&lt; local_matrix_type, weakWins, offdiagNnzsCanBeReducedToZero &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functor that symmetrizes the dropping decisions.  <a href="class_mue_lu_1_1_misc_1_1_symmetrize_functor.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -170,10 +170,14 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a68ae14477561647a8c38a292b7fb6c59" id="r_a68ae14477561647a8c38a292b7fb6c59"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_mue_lu.html#a68ae14477561647a8c38a292b7fb6c59">MueLu::DecisionType</a> : char { <a class="el" href="namespace_mue_lu.html#a68ae14477561647a8c38a292b7fb6c59a482ff335ec48374518484e1af0428315">MueLu::UNDECIDED</a> = 0
+<tr class="memitem:a68ae14477561647a8c38a292b7fb6c59" id="r_a68ae14477561647a8c38a292b7fb6c59"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_mue_lu.html#a68ae14477561647a8c38a292b7fb6c59">MueLu::DecisionType</a> : char { <br />
+&#160;&#160;<a class="el" href="namespace_mue_lu.html#a68ae14477561647a8c38a292b7fb6c59a482ff335ec48374518484e1af0428315">MueLu::UNDECIDED</a> = 0
 , <a class="el" href="namespace_mue_lu.html#a68ae14477561647a8c38a292b7fb6c59ad7d908964a8c40518f58b80c4d2b3313">MueLu::KEEP</a> = 1
 , <a class="el" href="namespace_mue_lu.html#a68ae14477561647a8c38a292b7fb6c59a49e6002b873efc347f57bea4aebb1422">MueLu::DROP</a> = 2
-, <a class="el" href="namespace_mue_lu.html#a6885fdcb5195a495f93a25255638e911a4cc203a4812f8f710c7d2ed62289e4c5">MueLu::BOUNDARY</a> = 3
+, <a class="el" href="namespace_mue_lu.html#a68ae14477561647a8c38a292b7fb6c59a0641ed410a3ed0624dc14ec318f22cd9">MueLu::SYMDROP</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="namespace_mue_lu.html#a68ae14477561647a8c38a292b7fb6c59a260914c523c61e1d029e288a3b9124a4">MueLu::BOUNDARY_ENTRY</a> = 4
+<br />
  }</td></tr>
 <tr class="separator:a68ae14477561647a8c38a292b7fb6c59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50d23566733a68433eeb5eb474fbf7e5" id="r_a50d23566733a68433eeb5eb474fbf7e5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_mue_lu_1_1_misc.html#a50d23566733a68433eeb5eb474fbf7e5">MueLu::Misc::StrengthMeasure</a> : int { <a class="el" href="namespace_mue_lu_1_1_misc.html#a50d23566733a68433eeb5eb474fbf7e5ab4508b354ec60893aa484b277c5f1ed6">MueLu::Misc::SmoothedAggregationMeasure</a> = 0
@@ -238,7 +242,7 @@ Functions</h2></td></tr>
 <div class="line">  <span class="keyword">template</span> <span class="keyword">class </span>CLASSNAME&lt;SC, LO, GO, NO, MueLu::Misc::SignedSmoothedAggregationMeasure&gt;; \</div>
 <div class="line">  <span class="keyword">template</span> <span class="keyword">class </span>CLASSNAME&lt;SC, LO, GO, NO, MueLu::Misc::UnscaledMeasure&gt;;</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="_mue_lu___dropping_common_8hpp_source.html#l00638">638</a> of file <a class="el" href="_mue_lu___dropping_common_8hpp_source.html">MueLu_DroppingCommon.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_mue_lu___dropping_common_8hpp_source.html#l00695">695</a> of file <a class="el" href="_mue_lu___dropping_common_8hpp_source.html">MueLu_DroppingCommon.hpp</a>.</p>
 
 </div>
 </div>

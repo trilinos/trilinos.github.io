@@ -147,8 +147,8 @@ var NAVTREEINDEX3 =
 "group__minitensor__geometry.html#gafc6b4fb9942eb62fa4f6c2d46f2dfed7":[6,7,48],
 "group__minitensor__geometry.html#ggae27c2fc194a99cf2d5ead60f65bb9efca04a7337a195da18e26b892a226ec50b6":[6,7,8],
 "group__minitensor__geometry.html#ggae27c2fc194a99cf2d5ead60f65bb9efca04a7337a195da18e26b892a226ec50b6":[6,7,7,0],
-"group__minitensor__geometry.html#ggae27c2fc194a99cf2d5ead60f65bb9efca3eb87e17af57b34b2edf0a13bbf50633":[6,7,11],
 "group__minitensor__geometry.html#ggae27c2fc194a99cf2d5ead60f65bb9efca3eb87e17af57b34b2edf0a13bbf50633":[6,7,7,3],
+"group__minitensor__geometry.html#ggae27c2fc194a99cf2d5ead60f65bb9efca3eb87e17af57b34b2edf0a13bbf50633":[6,7,11],
 "group__minitensor__geometry.html#ggae27c2fc194a99cf2d5ead60f65bb9efca5c6fff9497de5eef9bae72dc1210139c":[6,7,12],
 "group__minitensor__geometry.html#ggae27c2fc194a99cf2d5ead60f65bb9efca5c6fff9497de5eef9bae72dc1210139c":[6,7,7,4],
 "group__minitensor__geometry.html#ggae27c2fc194a99cf2d5ead60f65bb9efca6b258f095a0554392ddd512885a0728c":[6,7,13],
@@ -195,7 +195,7 @@ var NAVTREEINDEX3 =
 "group__minitensor__matrix__functions.html#gaf95c012c7e5bd816f9592735034ab6bf":[6,5,0],
 "group__minitensor__matrix__functions.html#gafd885e46a6a4b6df7b0efb3e77052d4b":[6,5,4],
 "group__minitensor__mechanics.html":[6,8],
-"group__minitensor__mechanics.html#ga0185ea1a87344fe8c70a11d699893031":[6,8,16],
+"group__minitensor__mechanics.html#ga0185ea1a87344fe8c70a11d699893031":[6,8,15],
 "group__minitensor__mechanics.html#ga2cd96906e60fe14f023e3d0b9594e571":[6,8,10],
 "group__minitensor__mechanics.html#ga30a6ea82c7bdc6ab6a87df9bcc66e6c5":[6,8,4],
 "group__minitensor__mechanics.html#ga3763b12137e2c0cb20641902e155eab8":[6,8,1],
@@ -210,7 +210,6 @@ var NAVTREEINDEX3 =
 "group__minitensor__mechanics.html#ga96344efa659788c6a5e3184da4a2cfd1":[6,8,5],
 "group__minitensor__mechanics.html#gaab1bf840da9c43e8911d7f28edd1e9cd":[6,8,13],
 "group__minitensor__mechanics.html#gaaf8beb14617be35233bf92941b1989f0":[6,8,11],
-"group__minitensor__mechanics.html#gac56828c3f639a380d8b63d4998ab2535":[6,8,15],
 "group__minitensor__mechanics.html#gaff9c895cc23ea9f450b4f33a0b99e0b3":[6,8,9],
 "group__minitensor__norms.html":[6,2],
 "group__minitensor__norms.html#ga086a22daa088fe3e806206423261d10f":[6,2,6],
@@ -249,5 +248,6 @@ var NAVTREEINDEX3 =
 "group__minitensor__solvers.html#ga032c17cc759d1a983c0429040c5369be":[6,9,130],
 "group__minitensor__solvers.html#ga035ae15ff91ec30786a9db32c5ee8db2":[6,9,41],
 "group__minitensor__solvers.html#ga08172ab40d6a438e1c1ec8b03469626a":[6,9,133],
-"group__minitensor__solvers.html#ga089c79b17d6cb13918d7b8d9c0d5be6b":[6,9,125]
+"group__minitensor__solvers.html#ga089c79b17d6cb13918d7b8d9c0d5be6b":[6,9,125],
+"group__minitensor__solvers.html#ga093a37638133383afeabb1bed756761b":[6,9,53]
 };

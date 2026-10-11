@@ -12,13 +12,14 @@ var _mue_lu___dropping_common_8hpp =
     [ "MueLu::Misc::BlockDiagonalizeFunctor< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_misc_1_1_block_diagonalize_functor.html", "class_mue_lu_1_1_misc_1_1_block_diagonalize_functor" ],
     [ "MueLu::Misc::BlockDiagonalizeVectorFunctor< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_misc_1_1_block_diagonalize_vector_functor.html", "class_mue_lu_1_1_misc_1_1_block_diagonalize_vector_functor" ],
     [ "MueLu::Misc::DebugFunctor< local_matrix_type >", "class_mue_lu_1_1_misc_1_1_debug_functor.html", "class_mue_lu_1_1_misc_1_1_debug_functor" ],
-    [ "MueLu::Misc::SymmetrizeFunctor< local_matrix_type >", "class_mue_lu_1_1_misc_1_1_symmetrize_functor.html", "class_mue_lu_1_1_misc_1_1_symmetrize_functor" ],
+    [ "MueLu::Misc::SymmetrizeFunctor< local_matrix_type, weakWins, offdiagNnzsCanBeReducedToZero >", "class_mue_lu_1_1_misc_1_1_symmetrize_functor.html", "class_mue_lu_1_1_misc_1_1_symmetrize_functor" ],
     [ "MUELU_ETI_SLGN_SoC", "_mue_lu___dropping_common_8hpp.html#a03c68e3de8e601c273c0030c8bd50fdb", null ],
     [ "DecisionType", "_mue_lu___dropping_common_8hpp.html#a68ae14477561647a8c38a292b7fb6c59", [
       [ "UNDECIDED", "_mue_lu___dropping_common_8hpp.html#a68ae14477561647a8c38a292b7fb6c59a482ff335ec48374518484e1af0428315", null ],
       [ "KEEP", "_mue_lu___dropping_common_8hpp.html#a68ae14477561647a8c38a292b7fb6c59ad7d908964a8c40518f58b80c4d2b3313", null ],
       [ "DROP", "_mue_lu___dropping_common_8hpp.html#a68ae14477561647a8c38a292b7fb6c59a49e6002b873efc347f57bea4aebb1422", null ],
-      [ "BOUNDARY", "_mue_lu___dropping_common_8hpp.html#a6885fdcb5195a495f93a25255638e911a4cc203a4812f8f710c7d2ed62289e4c5", null ]
+      [ "SYMDROP", "_mue_lu___dropping_common_8hpp.html#a68ae14477561647a8c38a292b7fb6c59a0641ed410a3ed0624dc14ec318f22cd9", null ],
+      [ "BOUNDARY_ENTRY", "_mue_lu___dropping_common_8hpp.html#a68ae14477561647a8c38a292b7fb6c59a260914c523c61e1d029e288a3b9124a4", null ]
     ] ],
     [ "StrengthMeasure", "_mue_lu___dropping_common_8hpp.html#a50d23566733a68433eeb5eb474fbf7e5", [
       [ "SmoothedAggregationMeasure", "_mue_lu___dropping_common_8hpp.html#a50d23566733a68433eeb5eb474fbf7e5ab4508b354ec60893aa484b277c5f1ed6", null ],

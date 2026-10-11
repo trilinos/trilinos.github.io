@@ -89,7 +89,7 @@ Public Types</h2></td></tr>
 <a class="el" href="class_p_h_x_1_1_view_of_views3.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><b>OuterDataType</b> = <a class="el" href="class_p_h_x_1_1_view_of_views3.html">typename</a> <a class="el" href="struct_p_h_x_1_1v__of__v__utils_1_1add__pointer.html">PHX::v_of_v_utils::add_pointer</a>&lt; <a class="el" href="class_p_h_x_1_1_view_of_views3.html">InnerViewType</a>, <a class="el" href="class_p_h_x_1_1_view_of_views3.html">OuterViewRank</a> &gt;::type</td></tr>
 <tr class="separator:aadff8257c0a33542da1a229705bafdd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fd2d2eb65d77b96c106856545d9863d" id="r_a9fd2d2eb65d77b96c106856545d9863d"><td class="memItemLeft" align="right" valign="top"><a id="a9fd2d2eb65d77b96c106856545d9863d" name="a9fd2d2eb65d77b96c106856545d9863d"></a>
-<a class="el" href="class_p_h_x_1_1_view_of_views3.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><b>OuterViewType</b> = <a class="el" href="class_kokkos_1_1_view.html">Kokkos::View</a>&lt; OuterDataType, <a class="el" href="class_p_h_x_1_1_view_of_views3.html">MemorySpace</a> &gt;</td></tr>
+<a class="el" href="class_p_h_x_1_1_view_of_views3.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><b>OuterViewType</b> = <a class="el" href="class_kokkos_1_1_view.html">Kokkos::View</a>&lt; OuterDataType, MemorySpace &gt;</td></tr>
 <tr class="separator:a9fd2d2eb65d77b96c106856545d9863d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadff8257c0a33542da1a229705bafdd7" id="r_aadff8257c0a33542da1a229705bafdd7"><td class="memItemLeft" align="right" valign="top"><a id="aadff8257c0a33542da1a229705bafdd7" name="aadff8257c0a33542da1a229705bafdd7"></a>
 <a class="el" href="class_p_h_x_1_1_view_of_views3.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><b>OuterDataType</b> = <a class="el" href="class_p_h_x_1_1_view_of_views3.html">typename</a> <a class="el" href="struct_p_h_x_1_1v__of__v__utils_1_1add__pointer.html">PHX::v_of_v_utils::add_pointer</a>&lt; <a class="el" href="class_p_h_x_1_1_view_of_views3.html">InnerViewType</a>, <a class="el" href="class_p_h_x_1_1_view_of_views3.html">OuterViewRank</a> &gt;::type</td></tr>
@@ -167,7 +167,7 @@ template&lt;typename... Indices&gt; </td></tr>
 <tr class="separator:a3328b83a235e5faca9cbc5c0df460f89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="class_p_h_x_1_1_view_of_views3.html">int</a> OuterViewRank, <a class="el" href="class_p_h_x_1_1_view_of_views3.html">typename</a> <a class="el" href="class_p_h_x_1_1_view_of_views3.html">InnerViewType</a>, <a class="el" href="class_p_h_x_1_1_view_of_views3.html">typename</a> <a class="el" href="class_p_h_x_1_1_view_of_views3.html">MemorySpace</a>&gt;<br />
+<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="class_p_h_x_1_1_view_of_views3.html">int</a> OuterViewRank, <a class="el" href="class_p_h_x_1_1_view_of_views3.html">typename</a> <a class="el" href="class_p_h_x_1_1_view_of_views3.html">InnerViewType</a>, <a class="el" href="class_p_h_x_1_1_view_of_views3.html">typename</a> MemorySpace&gt;<br />
 class PHX::ViewOfViews&lt; OuterViewRank, InnerViewType, MemorySpace &gt;</div><p><a class="el" href="class_wrapper.html">Wrapper</a> class that correctly handles <a class="el" href="class_p_h_x_1_1_view_of_views.html">ViewOfViews</a> construction and object lifetime. Can be used for more than just Views as the inner object. This class makes sure the host view stays in scope for the life of the device view and makes sure that the device is synced to host before use.</p>
 <p>Main restrictions:</p>
 <ol type="1">
@@ -189,7 +189,7 @@ class PHX::ViewOfViews&lt; OuterViewRank, InnerViewType, MemorySpace &gt;</div><
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_p_h_x_1_1_view_of_views3.html">int</a> OuterViewRank, <a class="el" href="class_p_h_x_1_1_view_of_views3.html">typename</a> <a class="el" href="class_p_h_x_1_1_view_of_views3.html">InnerViewType</a> , <a class="el" href="class_p_h_x_1_1_view_of_views3.html">typename</a> <a class="el" href="class_p_h_x_1_1_view_of_views3.html">MemorySpace</a> &gt; </div>
+template&lt;<a class="el" href="class_p_h_x_1_1_view_of_views3.html">int</a> OuterViewRank, <a class="el" href="class_p_h_x_1_1_view_of_views3.html">typename</a> <a class="el" href="class_p_h_x_1_1_view_of_views3.html">InnerViewType</a> , <a class="el" href="class_p_h_x_1_1_view_of_views3.html">typename</a> MemorySpace &gt; </div>
 <div class="memtemplate">
 template&lt;<a class="el" href="class_p_h_x_1_1_view_of_views3.html">typename</a> ExecSpace , typename... Extents&gt; </div>
 <table class="mlabels">
@@ -197,7 +197,7 @@ template&lt;<a class="el" href="class_p_h_x_1_1_view_of_views3.html">typename</a
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_p_h_x_1_1_view_of_views.html">PHX::ViewOfViews</a>&lt; <a class="el" href="class_p_h_x_1_1_view_of_views3.html">OuterViewRank</a>, <a class="el" href="class_p_h_x_1_1_view_of_views3.html">InnerViewType</a>, <a class="el" href="class_p_h_x_1_1_view_of_views3.html">MemorySpace</a> &gt;::ViewOfViews </td>
+          <td class="memname"><a class="el" href="class_p_h_x_1_1_view_of_views.html">PHX::ViewOfViews</a>&lt; <a class="el" href="class_p_h_x_1_1_view_of_views3.html">OuterViewRank</a>, <a class="el" href="class_p_h_x_1_1_view_of_views3.html">InnerViewType</a>, MemorySpace &gt;::ViewOfViews </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_p_h_x_1_1_view_of_views3.html">const</a> ExecSpace &amp;&#160;</td>
           <td class="paramname"><em>e_space</em>, </td>
@@ -237,13 +237,13 @@ template&lt;<a class="el" href="class_p_h_x_1_1_view_of_views3.html">typename</a
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_p_h_x_1_1_view_of_views3.html">int</a> OuterViewRank, <a class="el" href="class_p_h_x_1_1_view_of_views3.html">typename</a> <a class="el" href="class_p_h_x_1_1_view_of_views3.html">InnerViewType</a> , <a class="el" href="class_p_h_x_1_1_view_of_views3.html">typename</a> <a class="el" href="class_p_h_x_1_1_view_of_views3.html">MemorySpace</a> &gt; </div>
+template&lt;<a class="el" href="class_p_h_x_1_1_view_of_views3.html">int</a> OuterViewRank, <a class="el" href="class_p_h_x_1_1_view_of_views3.html">typename</a> <a class="el" href="class_p_h_x_1_1_view_of_views3.html">InnerViewType</a> , <a class="el" href="class_p_h_x_1_1_view_of_views3.html">typename</a> MemorySpace &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_p_h_x_1_1_view_of_views3.html">auto</a> <a class="el" href="class_p_h_x_1_1_view_of_views.html">PHX::ViewOfViews</a>&lt; <a class="el" href="class_p_h_x_1_1_view_of_views3.html">OuterViewRank</a>, <a class="el" href="class_p_h_x_1_1_view_of_views3.html">InnerViewType</a>, <a class="el" href="class_p_h_x_1_1_view_of_views3.html">MemorySpace</a> &gt;::getViewHost </td>
+          <td class="memname"><a class="el" href="class_p_h_x_1_1_view_of_views3.html">auto</a> <a class="el" href="class_p_h_x_1_1_view_of_views.html">PHX::ViewOfViews</a>&lt; <a class="el" href="class_p_h_x_1_1_view_of_views3.html">OuterViewRank</a>, <a class="el" href="class_p_h_x_1_1_view_of_views3.html">InnerViewType</a>, MemorySpace &gt;::getViewHost </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -265,7 +265,7 @@ template&lt;<a class="el" href="class_p_h_x_1_1_view_of_views3.html">int</a> Out
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_p_h_x_1_1_view_of_views3.html">int</a> OuterViewRank, <a class="el" href="class_p_h_x_1_1_view_of_views3.html">typename</a> <a class="el" href="class_p_h_x_1_1_view_of_views3.html">InnerViewType</a> , <a class="el" href="class_p_h_x_1_1_view_of_views3.html">typename</a> <a class="el" href="class_p_h_x_1_1_view_of_views3.html">MemorySpace</a> &gt; </div>
+template&lt;<a class="el" href="class_p_h_x_1_1_view_of_views3.html">int</a> OuterViewRank, <a class="el" href="class_p_h_x_1_1_view_of_views3.html">typename</a> <a class="el" href="class_p_h_x_1_1_view_of_views3.html">InnerViewType</a> , <a class="el" href="class_p_h_x_1_1_view_of_views3.html">typename</a> MemorySpace &gt; </div>
 <div class="memtemplate">
 template&lt;<a class="el" href="class_p_h_x_1_1_view_of_views3.html">typename</a> ExecSpace , typename... Extents&gt; </div>
 <table class="mlabels">
@@ -273,7 +273,7 @@ template&lt;<a class="el" href="class_p_h_x_1_1_view_of_views3.html">typename</a
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_p_h_x_1_1_view_of_views3.html">void</a> <a class="el" href="class_p_h_x_1_1_view_of_views.html">PHX::ViewOfViews</a>&lt; <a class="el" href="class_p_h_x_1_1_view_of_views3.html">OuterViewRank</a>, <a class="el" href="class_p_h_x_1_1_view_of_views3.html">InnerViewType</a>, <a class="el" href="class_p_h_x_1_1_view_of_views3.html">MemorySpace</a> &gt;::initialize </td>
+          <td class="memname"><a class="el" href="class_p_h_x_1_1_view_of_views3.html">void</a> <a class="el" href="class_p_h_x_1_1_view_of_views.html">PHX::ViewOfViews</a>&lt; <a class="el" href="class_p_h_x_1_1_view_of_views3.html">OuterViewRank</a>, <a class="el" href="class_p_h_x_1_1_view_of_views3.html">InnerViewType</a>, MemorySpace &gt;::initialize </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_p_h_x_1_1_view_of_views3.html">const</a> ExecSpace &amp;&#160;</td>
           <td class="paramname"><em>e_space</em>, </td>
@@ -312,13 +312,13 @@ template&lt;<a class="el" href="class_p_h_x_1_1_view_of_views3.html">typename</a
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_p_h_x_1_1_view_of_views3.html">int</a> OuterViewRank, <a class="el" href="class_p_h_x_1_1_view_of_views3.html">typename</a> <a class="el" href="class_p_h_x_1_1_view_of_views3.html">InnerViewType</a> , <a class="el" href="class_p_h_x_1_1_view_of_views3.html">typename</a> <a class="el" href="class_p_h_x_1_1_view_of_views3.html">MemorySpace</a> &gt; </div>
+template&lt;<a class="el" href="class_p_h_x_1_1_view_of_views3.html">int</a> OuterViewRank, <a class="el" href="class_p_h_x_1_1_view_of_views3.html">typename</a> <a class="el" href="class_p_h_x_1_1_view_of_views3.html">InnerViewType</a> , <a class="el" href="class_p_h_x_1_1_view_of_views3.html">typename</a> MemorySpace &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_p_h_x_1_1_view_of_views3.html">void</a> <a class="el" href="class_p_h_x_1_1_view_of_views.html">PHX::ViewOfViews</a>&lt; <a class="el" href="class_p_h_x_1_1_view_of_views3.html">OuterViewRank</a>, <a class="el" href="class_p_h_x_1_1_view_of_views3.html">InnerViewType</a>, <a class="el" href="class_p_h_x_1_1_view_of_views3.html">MemorySpace</a> &gt;::syncHostToDevice </td>
+          <td class="memname"><a class="el" href="class_p_h_x_1_1_view_of_views3.html">void</a> <a class="el" href="class_p_h_x_1_1_view_of_views.html">PHX::ViewOfViews</a>&lt; <a class="el" href="class_p_h_x_1_1_view_of_views3.html">OuterViewRank</a>, <a class="el" href="class_p_h_x_1_1_view_of_views3.html">InnerViewType</a>, MemorySpace &gt;::syncHostToDevice </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -340,7 +340,7 @@ template&lt;<a class="el" href="class_p_h_x_1_1_view_of_views3.html">int</a> Out
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="class_p_h_x_1_1_view_of_views3.html">int</a> OuterViewRank, <a class="el" href="class_p_h_x_1_1_view_of_views3.html">typename</a> <a class="el" href="class_p_h_x_1_1_view_of_views3.html">InnerViewType</a> , <a class="el" href="class_p_h_x_1_1_view_of_views3.html">typename</a> <a class="el" href="class_p_h_x_1_1_view_of_views3.html">MemorySpace</a> &gt; </div>
+template&lt;<a class="el" href="class_p_h_x_1_1_view_of_views3.html">int</a> OuterViewRank, <a class="el" href="class_p_h_x_1_1_view_of_views3.html">typename</a> <a class="el" href="class_p_h_x_1_1_view_of_views3.html">InnerViewType</a> , <a class="el" href="class_p_h_x_1_1_view_of_views3.html">typename</a> MemorySpace &gt; </div>
 <div class="memtemplate">
 template&lt;<a class="el" href="class_p_h_x_1_1_view_of_views3.html">typename</a> ExecSpace &gt; </div>
 <table class="mlabels">
@@ -348,7 +348,7 @@ template&lt;<a class="el" href="class_p_h_x_1_1_view_of_views3.html">typename</a
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_p_h_x_1_1_view_of_views3.html">void</a> <a class="el" href="class_p_h_x_1_1_view_of_views.html">PHX::ViewOfViews</a>&lt; <a class="el" href="class_p_h_x_1_1_view_of_views3.html">OuterViewRank</a>, <a class="el" href="class_p_h_x_1_1_view_of_views3.html">InnerViewType</a>, <a class="el" href="class_p_h_x_1_1_view_of_views3.html">MemorySpace</a> &gt;::syncHostToDevice </td>
+          <td class="memname"><a class="el" href="class_p_h_x_1_1_view_of_views3.html">void</a> <a class="el" href="class_p_h_x_1_1_view_of_views.html">PHX::ViewOfViews</a>&lt; <a class="el" href="class_p_h_x_1_1_view_of_views3.html">OuterViewRank</a>, <a class="el" href="class_p_h_x_1_1_view_of_views3.html">InnerViewType</a>, MemorySpace &gt;::syncHostToDevice </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_p_h_x_1_1_view_of_views3.html">const</a> ExecSpace &amp;&#160;</td>
           <td class="paramname"><em>e_space</em></td><td>)</td>

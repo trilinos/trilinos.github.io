@@ -12,6 +12,5 @@ var searchData=
   ['usekokkos_5f_9',['usekokkos_',['../class_mue_lu_1_1_parameter_list_interpreter.html#a29687db2ee2ff906eb7aefc9f41047fb',1,'MueLu::ParameterListInterpreter::useKokkos_'],['../class_mue_lu_1_1_factory_manager.html#a4d1f28537444cb2c62a3468f0c7e0003',1,'MueLu::FactoryManager::useKokkos_'],['../class_mue_lu_1_1_maxwell1.html#a0f346ec8474a1bf633b66522c5b2bb32',1,'MueLu::Maxwell1::useKokkos_'],['../class_mue_lu_1_1_multi_phys.html#abd7875c4c8d80d6fee3694cde231f772',1,'MueLu::MultiPhys::useKokkos_'],['../class_mue_lu_1_1_ref_maxwell.html#a3ff15502ea810a953f3df7f3556d43e4',1,'MueLu::RefMaxwell::useKokkos_']]],
   ['usematerial_5f_10',['useMaterial_',['../class_mue_lu_1_1_parameter_list_interpreter.html#a13376521e276f77b08427ac07f8fb31a',1,'MueLu::ParameterListInterpreter']]],
   ['usesinglesourceimporters_5f_11',['UseSingleSourceImporters_',['../class_mue_lu_1_1_rebalance_block_restriction_factory.html#a56bff032bb68290fc0f7198e8daf32a8',1,'MueLu::RebalanceBlockRestrictionFactory']]],
-  ['usestackedtimer_5f_12',['useStackedTimer_',['../class_mue_lu_1_1_time_monitor.html#adf3fe527ecbfd527a9a1c6fa3b985c54',1,'MueLu::TimeMonitor']]],
-  ['usetransformation_5f_13',['useTransformation_',['../class_mue_lu_1_1_amesos2_smoother.html#ae5908a4dffa9ee186324c150fa8247a1',1,'MueLu::Amesos2Smoother']]]
+  ['usetransformation_5f_12',['useTransformation_',['../class_mue_lu_1_1_amesos2_smoother.html#ae5908a4dffa9ee186324c150fa8247a1',1,'MueLu::Amesos2Smoother']]]
 ];

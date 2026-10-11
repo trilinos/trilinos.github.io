@@ -291,7 +291,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; worksetLIDs = worksetLIDs_;</div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; fieldValues = gatherFields_[fieldIndex];</div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    Kokkos::parallel_for(Kokkos::RangePolicy&lt;PHX::Device&gt;(0,workset.num_cells), KOKKOS_LAMBDA (<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; cell) {       </div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    Kokkos::parallel_for(Kokkos::RangePolicy&lt;PHX::ExecutionSpace&gt;(0,workset.num_cells), KOKKOS_LAMBDA (<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; cell) {       </div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> basis=0; basis &lt; static_cast&lt;int&gt;(fieldOffsets.size()); ++basis) {</div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> lid = worksetLIDs(cell,fieldOffsets(basis));</div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        fieldValues(cell,basis) = kokkosSolution(lid,0);        </div>
@@ -486,7 +486,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> numTangents = tangentFields_[fieldIndex].size();</div>
 <div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>      <span class="keyword">const</span> <span class="keyword">auto</span> tangentFieldsDevice = tangentFieldsVoV_.getViewDevice();</div>
 <div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>      <span class="keyword">const</span> <span class="keyword">auto</span> kokkosTangents = Kokkos::subview(tangentFieldsDevice,fieldIndex,Kokkos::ALL());</div>
-<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>      Kokkos::parallel_for(Kokkos::RangePolicy&lt;PHX::Device&gt;(0,workset.num_cells), KOKKOS_LAMBDA (<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; cell) {  </div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>      Kokkos::parallel_for(Kokkos::RangePolicy&lt;PHX::ExecutionSpace&gt;(0,workset.num_cells), KOKKOS_LAMBDA (<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; cell) {  </div>
 <div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> basis=0; basis &lt; static_cast&lt;int&gt;(fieldOffsets.size()); ++basis) {</div>
 <div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>          <span class="keyword">const</span> <span class="keywordtype">int</span> rowLID = worksetLIDs(cell,fieldOffsets(basis));</div>
 <div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>         fieldValues(cell,basis).zero();</div>
@@ -496,7 +496,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>        }</div>
 <div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>      });</div>
 <div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>      Kokkos::parallel_for(Kokkos::RangePolicy&lt;PHX::Device&gt;(0,workset.num_cells), KOKKOS_LAMBDA (<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; cell) {  </div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>      Kokkos::parallel_for(Kokkos::RangePolicy&lt;PHX::ExecutionSpace&gt;(0,workset.num_cells), KOKKOS_LAMBDA (<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; cell) {  </div>
 <div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> basis=0; basis &lt; static_cast&lt;int&gt;(fieldOffsets.size()); ++basis) {</div>
 <div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>          <span class="keyword">const</span> <span class="keywordtype">int</span> rowLID = worksetLIDs(cell,fieldOffsets(basis));</div>
 <div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>         fieldValues(cell,basis).zero();</div>
@@ -704,7 +704,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span>    Kokkos::deep_copy(blockOffsets_h, blockOffsets);</div>
 <div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> blockStart = blockOffsets_h(blockRowIndex);</div>
 <div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span> </div>
-<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span>    Kokkos::parallel_for(Kokkos::RangePolicy&lt;PHX::Device&gt;(0,workset.num_cells), KOKKOS_LAMBDA (<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; cell) {  </div>
+<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span>    Kokkos::parallel_for(Kokkos::RangePolicy&lt;PHX::ExecutionSpace&gt;(0,workset.num_cells), KOKKOS_LAMBDA (<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; cell) {  </div>
 <div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> basis=0; basis &lt; static_cast&lt;int&gt;(fieldOffsets.size()); ++basis) {</div>
 <div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> rowLID = worksetLIDs(cell,fieldOffsets(basis));</div>
 <div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>  fieldValues(cell,basis).zero();</div>

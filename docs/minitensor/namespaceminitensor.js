@@ -277,7 +277,6 @@ var namespaceminitensor =
     [ "piola", "group__minitensor__mechanics.html#ga8865677006e408fddc4b24b47b121c04", null ],
     [ "piola_inverse", "group__minitensor__mechanics.html#gaab1bf840da9c43e8911d7f28edd1e9cd", null ],
     [ "smallest_eigenvalue", "group__minitensor__mechanics.html#ga8257439b963799a9989e28a6d62167a2", null ],
-    [ "check_strict_ellipticity", "group__minitensor__mechanics.html#gac56828c3f639a380d8b63d4998ab2535", null ],
     [ "check_strong_ellipticity", "group__minitensor__mechanics.html#ga0185ea1a87344fe8c70a11d699893031", null ],
     [ "norm", "group__minitensor__norms.html#ga2b5cf1a89baab379964c8222fa182c6d", null ],
     [ "norm_1", "group__minitensor__norms.html#ga7d174500938e454b3a750115de1c4dad", null ],

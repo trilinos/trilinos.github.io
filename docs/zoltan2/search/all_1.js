@@ -4,7 +4,7 @@ var searchData=
   ['abs_1',['ABS',['../absdefinitiontest_8cpp.html#a996f7be338ccb40d1a2a5abc1ad61759',1,'absdefinitiontest.cpp']]],
   ['absdefinitiontest_2ecpp_2',['absdefinitiontest.cpp',['../absdefinitiontest_8cpp.html',1,'']]],
   ['adapter_3',['adapter',['../class_zoltan2_1_1_alg_two_ghost_layer.html#ac7a1e2e156d685ea3dba12f5eeaa199a',1,'Zoltan2::AlgTwoGhostLayer::adapter'],['../struct_adapter_with_template_name.html#af41569b7f2a484b7a2b6c68cd41264d3',1,'AdapterWithTemplateName::adapter']]],
-  ['adapterfactory_4',['adapterfactory',['../class_adapter_factory.html#a6ef4102bd31da09ad0df8db612cb4a1b',1,'AdapterFactory::AdapterFactory()'],['../class_adapter_factory.html',1,'AdapterFactory'],['../class_comparison_source.html#a71ccdb520b83d7b0f21959bac8485feb',1,'ComparisonSource::adapterFactory']]],
+  ['adapterfactory_4',['adapterfactory',['../class_comparison_source.html#a71ccdb520b83d7b0f21959bac8485feb',1,'ComparisonSource::adapterFactory'],['../class_adapter_factory.html',1,'AdapterFactory'],['../class_adapter_factory.html#a6ef4102bd31da09ad0df8db612cb4a1b',1,'AdapterFactory::AdapterFactory()']]],
   ['adapterfortests_2ehpp_5',['AdapterForTests.hpp',['../_adapter_for_tests_8hpp.html',1,'']]],
   ['adapterlowestpartnum_6',['adapterLowestPartNum',['../class_very_simple_vector_adapter.html#ab94b9c5a805a0ab510f410d0cb2d7620',1,'VerySimpleVectorAdapter']]],
   ['adapternpartsperrow_7',['adapterNPartsPerRow',['../class_very_simple_vector_adapter.html#a0411f324e83d6aa81b9189edf851890b',1,'VerySimpleVectorAdapter']]],

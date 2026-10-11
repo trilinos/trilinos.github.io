@@ -15,7 +15,7 @@ var _mue_lu___types_8hpp =
       [ "AGGREGATED", "_mue_lu___types_8hpp.html#a6885fdcb5195a495f93a25255638e911ae74579d54f8f07c80658137176055ca7", null ],
       [ "ONEPT", "_mue_lu___types_8hpp.html#a6885fdcb5195a495f93a25255638e911a454af139db31b2baf5f1eed7dfaf1a5e", null ],
       [ "IGNORED", "_mue_lu___types_8hpp.html#a6885fdcb5195a495f93a25255638e911a632d712b1f0dce52ab1067f1e132df62", null ],
-      [ "BOUNDARY", "_mue_lu___types_8hpp.html#a6885fdcb5195a495f93a25255638e911a4cc203a4812f8f710c7d2ed62289e4c5", null ],
+      [ "BOUNDARY", "_mue_lu___types_8hpp.html#a6885fdcb5195a495f93a25255638e911a57536ec6aa30bd6df106563486d752d1", null ],
       [ "INTERFACE", "_mue_lu___types_8hpp.html#a6885fdcb5195a495f93a25255638e911a59cbdfb8e8afba4f8aff7369e823d8e2", null ]
     ] ],
     [ "IndexingType", "_mue_lu___types_8hpp.html#a01077b03f2e591becec32b504e9489dc", [

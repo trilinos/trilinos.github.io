@@ -89,17 +89,17 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ac5fe0d19a1f7af5d5e01e12f5ec9b656" id="r_ac5fe0d19a1f7af5d5e01e12f5ec9b656"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1dof__functors_1_1_evaluate_d_o_f_with_sens___vector.html#ac5fe0d19a1f7af5d5e01e12f5ec9b656">scratch_view</a> = Kokkos::View&lt; ScalarT *,typename PHX::DevLayout&lt; ScalarT &gt;::type, typename PHX::exec_space::scratch_memory_space, Kokkos::MemoryUnmanaged &gt;</td></tr>
-<tr class="separator:ac5fe0d19a1f7af5d5e01e12f5ec9b656"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af37974eeb1076bca97b014343a0b48a9" id="r_af37974eeb1076bca97b014343a0b48a9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1dof__functors_1_1_evaluate_d_o_f_with_sens___vector.html#af37974eeb1076bca97b014343a0b48a9">scratch_view</a> = Kokkos::View&lt; ScalarT *,typename PHX::DevLayout&lt; ScalarT &gt;::type, typename PHX::ExecutionSpace::scratch_memory_space, Kokkos::MemoryUnmanaged &gt;</td></tr>
+<tr class="separator:af37974eeb1076bca97b014343a0b48a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ac95002926fceb8aec10dee4912bac9dd" id="r_ac95002926fceb8aec10dee4912bac9dd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1dof__functors_1_1_evaluate_d_o_f_with_sens___vector.html#ac95002926fceb8aec10dee4912bac9dd">EvaluateDOFWithSens_Vector</a> (PHX::View&lt; const ScalarT ** &gt; in_dof_basis, PHX::View&lt; ScalarT *** &gt; in_dof_ip, Array in_basis, bool in_use_shared_memory=false)</td></tr>
 <tr class="memdesc:ac95002926fceb8aec10dee4912bac9dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
 <tr class="separator:ac95002926fceb8aec10dee4912bac9dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe6df3be7b3d6a522a1fff208a338f7e" id="r_abe6df3be7b3d6a522a1fff208a338f7e"><td class="memItemLeft" align="right" valign="top">KOKKOS_INLINE_FUNCTION void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1dof__functors_1_1_evaluate_d_o_f_with_sens___vector.html#abe6df3be7b3d6a522a1fff208a338f7e">operator()</a> (const Kokkos::TeamPolicy&lt; PHX::exec_space &gt;::member_type &amp;team) const</td></tr>
-<tr class="memdesc:abe6df3be7b3d6a522a1fff208a338f7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes dof_ip for one cell (team.league_rank()), optionally staging through team scratch memory.  <br /></td></tr>
-<tr class="separator:abe6df3be7b3d6a522a1fff208a338f7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a845d13d1bfd43fe83a0e11d61a20a6f8" id="r_a845d13d1bfd43fe83a0e11d61a20a6f8"><td class="memItemLeft" align="right" valign="top">KOKKOS_INLINE_FUNCTION void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1dof__functors_1_1_evaluate_d_o_f_with_sens___vector.html#a845d13d1bfd43fe83a0e11d61a20a6f8">operator()</a> (const Kokkos::TeamPolicy&lt; PHX::ExecutionSpace &gt;::member_type &amp;team) const</td></tr>
+<tr class="memdesc:a845d13d1bfd43fe83a0e11d61a20a6f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes dof_ip for one cell (team.league_rank()), optionally staging through team scratch memory.  <br /></td></tr>
+<tr class="separator:a845d13d1bfd43fe83a0e11d61a20a6f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab0f30fc59f7cbbb13c8d1d37f3d1adb" id="r_aab0f30fc59f7cbbb13c8d1d37f3d1adb"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1dof__functors_1_1_evaluate_d_o_f_with_sens___vector.html#aab0f30fc59f7cbbb13c8d1d37f3d1adb">team_shmem_size</a> (int) const</td></tr>
 <tr class="memdesc:aab0f30fc59f7cbbb13c8d1d37f3d1adb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the team scratch memory size (in bytes) required by operator() when use_shared_memory is enabled; 0 otherwise.  <br /></td></tr>
 <tr class="separator:aab0f30fc59f7cbbb13c8d1d37f3d1adb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,8 +136,8 @@ class panzer::dof_functors::EvaluateDOFWithSens_Vector&lt; ScalarT, Array, space
 
 <p class="definition">Definition at line <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html#l00059">59</a> of file <a class="el" href="_panzer___d_o_f___functors_8hpp_source.html">Panzer_DOF_Functors.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="ac5fe0d19a1f7af5d5e01e12f5ec9b656" name="ac5fe0d19a1f7af5d5e01e12f5ec9b656"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5fe0d19a1f7af5d5e01e12f5ec9b656">&#9670;&#160;</a></span>scratch_view</h2>
+<a id="af37974eeb1076bca97b014343a0b48a9" name="af37974eeb1076bca97b014343a0b48a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af37974eeb1076bca97b014343a0b48a9">&#9670;&#160;</a></span>scratch_view</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -145,7 +145,7 @@ class panzer::dof_functors::EvaluateDOFWithSens_Vector&lt; ScalarT, Array, space
 template&lt;typename ScalarT , typename Array , int spaceDim&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classpanzer_1_1dof__functors_1_1_evaluate_d_o_f_with_sens___vector.html">panzer::dof_functors::EvaluateDOFWithSens_Vector</a>&lt; ScalarT, Array, spaceDim &gt;::scratch_view =  Kokkos::View&lt;ScalarT* ,typename PHX::DevLayout&lt;ScalarT&gt;::type,typename PHX::exec_space::scratch_memory_space,Kokkos::MemoryUnmanaged&gt;</td>
+          <td class="memname">using <a class="el" href="classpanzer_1_1dof__functors_1_1_evaluate_d_o_f_with_sens___vector.html">panzer::dof_functors::EvaluateDOFWithSens_Vector</a>&lt; ScalarT, Array, spaceDim &gt;::scratch_view =  Kokkos::View&lt;ScalarT* ,typename PHX::DevLayout&lt;ScalarT&gt;::type,typename PHX::ExecutionSpace::scratch_memory_space,Kokkos::MemoryUnmanaged&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -219,8 +219,8 @@ template&lt;typename ScalarT , typename Array , int spaceDim&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="abe6df3be7b3d6a522a1fff208a338f7e" name="abe6df3be7b3d6a522a1fff208a338f7e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe6df3be7b3d6a522a1fff208a338f7e">&#9670;&#160;</a></span>operator()()</h2>
+<a id="a845d13d1bfd43fe83a0e11d61a20a6f8" name="a845d13d1bfd43fe83a0e11d61a20a6f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a845d13d1bfd43fe83a0e11d61a20a6f8">&#9670;&#160;</a></span>operator()()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -233,7 +233,7 @@ template&lt;typename ScalarT , typename Array , int spaceDim&gt; </div>
         <tr>
           <td class="memname">KOKKOS_INLINE_FUNCTION void <a class="el" href="classpanzer_1_1dof__functors_1_1_evaluate_d_o_f_with_sens___vector.html">panzer::dof_functors::EvaluateDOFWithSens_Vector</a>&lt; ScalarT, Array, spaceDim &gt;::operator() </td>
           <td>(</td>
-          <td class="paramtype">const Kokkos::TeamPolicy&lt; PHX::exec_space &gt;::member_type &amp;&#160;</td>
+          <td class="paramtype">const Kokkos::TeamPolicy&lt; PHX::ExecutionSpace &gt;::member_type &amp;&#160;</td>
           <td class="paramname"><em>team</em></td><td>)</td>
           <td> const</td>
         </tr>

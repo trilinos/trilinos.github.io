@@ -184,8 +184,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  Kokkos::deep_copy(sub_local_orts,orts_host);</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  <span class="comment">// TODO BWR Revisit this... maybe we don&#39;t need pure basis upstream?</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  Teuchos::RCP&lt;Intrepid2::Basis&lt;PHX::exec_space,double,double&gt; &gt; dstBasis = dstBasis_-&gt;getIntrepid2Basis();</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  Teuchos::RCP&lt;Intrepid2::Basis&lt;PHX::exec_space,double,double&gt; &gt; srcBasis = srcBasis_-&gt;getIntrepid2Basis();</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  Teuchos::RCP&lt;Intrepid2::Basis&lt;PHX::Device,double,double&gt; &gt; dstBasis = dstBasis_-&gt;getIntrepid2Basis();</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  Teuchos::RCP&lt;Intrepid2::Basis&lt;PHX::Device,double,double&gt; &gt; srcBasis = srcBasis_-&gt;getIntrepid2Basis();</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <span class="comment">// Same here, need subviews</span></div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  <span class="keyword">auto</span> sub_result = Kokkos::subview(result_.get_view(),cell_range,Kokkos::ALL());</div>
