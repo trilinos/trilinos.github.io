@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"_mue_lu___indef_blocked_diagonal_smoother__fwd_8hpp.html#a9b2a0dfa5d3618419ad7a97cdecec67d":[11,0,2,9,0,70,0],
 "_mue_lu___indef_blocked_diagonal_smoother__fwd_8hpp_source.html":[11,0,2,9,0,70],
 "_mue_lu___index_manager__decl_8hpp.html":[11,0,2,0,5,4],
 "_mue_lu___index_manager__decl_8hpp.html#a1e87d58549fdec7307acc241a51f6620":[11,0,2,0,5,4,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "_mue_lu___matlab_utils_8cpp.html#a557f3d498ae4cdd36671c45e066ae164":[11,0,1,0,3,48],
 "_mue_lu___matlab_utils_8cpp.html#a58a2dd02eab7cf4ac412d819f4fd2b38":[11,0,1,0,3,11],
 "_mue_lu___matlab_utils_8cpp.html#a58b8c3e8d94ea2e3cad83d943cce6d39":[11,0,1,0,3,37],
-"_mue_lu___matlab_utils_8cpp.html#a597c70ada81048a2cfe5f6db62ec8765":[11,0,1,0,3,7],
-"_mue_lu___matlab_utils_8cpp.html#a5a8539ae59725271d5f9e1f873637463":[11,0,1,0,3,20]
+"_mue_lu___matlab_utils_8cpp.html#a597c70ada81048a2cfe5f6db62ec8765":[11,0,1,0,3,7]
 };

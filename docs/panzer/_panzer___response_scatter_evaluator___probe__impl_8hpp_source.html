@@ -247,194 +247,198 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>  <span class="comment">// This evaluator needs to run on host until checkPointwiseInclusion</span></div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>  <span class="comment">// is moved to device.</span></div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  <span class="keyword">using </span>HostSpace = Kokkos::DefaultHostExecutionSpace;</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>  <span class="keyword">using </span>CTD = Intrepid2::CellTools&lt;HostSpace&gt;;</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  <span class="keyword">using </span>FST = Intrepid2::FunctionSpaceTools&lt;HostSpace&gt;;</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>  <span class="comment">// Find which cell contains our point</span></div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> num_points = 1;</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>  Kokkos::DynRankView&lt;int,HostSpace&gt; inCell(<span class="stringliteral">&quot;inCell&quot;</span>, this-&gt;wda(d).cell_node_coordinates.extent_int(0), num_points);</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>  Kokkos::DynRankView&lt;double,HostSpace&gt; physical_points_cell(<span class="stringliteral">&quot;physical_points_cell&quot;</span>, this-&gt;wda(d).cell_node_coordinates.extent_int(0), num_points, num_dim);</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>  <span class="keyword">auto</span> tmp_point = point_;</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>  {</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    Kokkos::MDRangePolicy&lt;HostSpace,Kokkos::Rank&lt;2&gt;&gt; policy({0,0},{d.<a class="code hl_variable" href="classpanzer_1_1_workset_details.html#a697e6b93372f86f0f782d1ffe8eccc01">num_cells</a>,<span class="keyword">static_cast&lt;</span>decltype(d.num_cells)<span class="keyword">&gt;</span>(num_dim)});</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    Kokkos::parallel_for(<span class="stringliteral">&quot;copy node coords&quot;</span>,policy,[&amp;](<span class="keyword">const</span> <span class="keywordtype">int</span> cell, <span class="keyword">const</span> <span class="keywordtype">int</span> dim){</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>      physical_points_cell(cell,0,dim) = tmp_point[dim];</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    });</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    HostSpace().fence();</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keyword">auto</span> cell_coords = this-&gt;wda(d).cell_node_coordinates.get_view();</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="keyword">auto</span> cell_coords_host = Kokkos::create_mirror_view(cell_coords);</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    Kokkos::deep_copy(cell_coords_host, cell_coords);</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> tol = 1.0e-12;</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    CTD::checkPointwiseInclusion(inCell,</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                                 physical_points_cell,</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                                 cell_coords_host,</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                                 *topology_,</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>                                 tol);</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>  }</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>  <span class="keywordflow">for</span> (index_t cell=0; cell&lt;static_cast&lt;int&gt;(d.<a class="code hl_variable" href="classpanzer_1_1_workset_details.html#a697e6b93372f86f0f782d1ffe8eccc01">num_cells</a>); ++cell) {</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <span class="keywordflow">if</span> (inCell(cell,0) == 1) {</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>      cellIndex_ = cell;</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>      workset_id_ = d.<a class="code hl_function" href="classpanzer_1_1_workset.html#a23af0de1a38b24c82a1e95c914a249e7">getIdentifier</a>();</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>      haveProbe_ = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    }</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>  }</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>  <span class="comment">// If no cell does, we&#39;re done</span></div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  <span class="keywordflow">if</span> (!haveProbe_) {</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>  }</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>  <span class="comment">// Map point to reference frame</span></div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>  <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_nodes = this-&gt;wda(d).cell_node_coordinates.extent(1);</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>  Kokkos::DynRankView&lt;double,HostSpace&gt; cell_coords(<span class="stringliteral">&quot;cell_coords&quot;</span>, 1, <span class="keywordtype">int</span>(num_nodes), <span class="keywordtype">int</span>(num_dim)); <span class="comment">// &lt;C,B,D&gt;</span></div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>  <span class="keyword">auto</span> cnc_host = Kokkos::create_mirror_view(this-&gt;wda(d).cell_node_coordinates.get_view());</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>  Kokkos::deep_copy(cnc_host,this-&gt;wda(d).cell_node_coordinates.get_view());</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i=0; i&lt;num_nodes; ++i) {</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j=0; j&lt;num_dim; ++j) {</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>      cell_coords(0,i,j) = cnc_host(cellIndex_,i,j);</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    }</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>  }</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>  Kokkos::DynRankView&lt;double,HostSpace&gt; physical_points(<span class="stringliteral">&quot;physical_points&quot;</span>, 1, 1, num_dim); <span class="comment">// &lt;C,P,D&gt;</span></div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i=0; i&lt;num_dim; ++i)</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    physical_points(0,0,i) = physical_points_cell(0,0,i);</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>  Kokkos::DynRankView&lt;double,HostSpace&gt; reference_points(<span class="stringliteral">&quot;reference_points&quot;</span>, 1, 1, num_dim); <span class="comment">// &lt;C,P,D&gt;</span></div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>  CTD::mapToReferenceFrame(reference_points, physical_points, cell_coords, *topology_);</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>  Kokkos::DynRankView&lt;double,HostSpace&gt; reference_points_cell(<span class="stringliteral">&quot;reference_points_cell&quot;</span>, 1, num_dim); <span class="comment">// &lt;P,D&gt;</span></div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i=0; i&lt;num_dim; ++i)</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    reference_points_cell(0,i) = reference_points(0,0,i);</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>  <span class="comment">// Compute basis functions at point</span></div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>  <span class="keywordflow">if</span> (basis_-&gt;getElementSpace() == <a class="code hl_enumvalue" href="classpanzer_1_1_pure_basis.html#ac55a0357e981bba9d69348050a038a84a9c14c104f97e0e4f4ff994b813c2b965">PureBasis::CONST</a> ||</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>      basis_-&gt;getElementSpace() == <a class="code hl_enumvalue" href="classpanzer_1_1_pure_basis.html#ac55a0357e981bba9d69348050a038a84a1ece55e22386220235519b451cd53727">PureBasis::HGRAD</a>) {</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    <span class="comment">// Evaluate basis at reference values</span></div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    Kokkos::DynRankView&lt;double,HostSpace&gt; ref_basis_values(<span class="stringliteral">&quot;ref_basis_values&quot;</span>, num_basis, 1); <span class="comment">// &lt;B,P&gt;</span></div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    basis_-&gt;getIntrepid2Basis&lt;HostSpace,double,<span class="keywordtype">double</span>&gt;()-&gt;getValues(ref_basis_values,</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                                                                    reference_points_cell,</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                                                                    Intrepid2::OPERATOR_VALUE);</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    <span class="comment">// Apply transformation to physical frame</span></div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    <span class="keyword">auto</span> basis_values_host = Kokkos::create_mirror_view(basis_values_);</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    FST::HGRADtransformVALUE&lt;double&gt;(basis_values_host, ref_basis_values);</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    Kokkos::deep_copy(basis_values_,basis_values_host);</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>  }</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (basis_-&gt;getElementSpace() == <a class="code hl_enumvalue" href="classpanzer_1_1_pure_basis.html#ac55a0357e981bba9d69348050a038a84accac9248b8183ef56b912036300e95e0">PureBasis::HCURL</a> ||</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>           basis_-&gt;getElementSpace() == <a class="code hl_enumvalue" href="classpanzer_1_1_pure_basis.html#ac55a0357e981bba9d69348050a038a84a864ffa40050ccfa6ad7cde5abe866dbb">PureBasis::HDIV</a>) {</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    <span class="comment">// Evaluate basis at reference values</span></div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    Kokkos::DynRankView&lt;double,HostSpace&gt; ref_basis_values(<span class="stringliteral">&quot;ref_basis_values&quot;</span>, num_basis, 1, num_dim); <span class="comment">// &lt;B,P,D&gt;</span></div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    basis_-&gt;getIntrepid2Basis&lt;HostSpace,double,<span class="keywordtype">double</span>&gt;()-&gt;getValues(ref_basis_values,</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>                                                                    reference_points_cell,</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>                                                                    Intrepid2::OPERATOR_VALUE);</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    <span class="comment">// Apply transformation to physical frame</span></div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    Kokkos::DynRankView&lt;double,HostSpace&gt; <a class="code hl_variable" href="_panzer___scatter_residual___tpetra__impl_8hpp.html#a565362aeb357bf5670a1131514095e14">jac</a>(<span class="stringliteral">&quot;jac&quot;</span>, 1, 1, num_dim, num_dim); <span class="comment">// &lt;C,P,D,D&gt;</span></div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    CTD::setJacobian(<a class="code hl_variable" href="_panzer___scatter_residual___tpetra__impl_8hpp.html#a565362aeb357bf5670a1131514095e14">jac</a>, reference_points, cell_coords, *topology_);</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    Kokkos::DynRankView&lt;double,HostSpace&gt; basis_values_vec(<span class="stringliteral">&quot;basis_values_vec&quot;</span>, 1, num_basis, 1, num_dim); <span class="comment">// &lt;C,B,P,D&gt;</span></div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    <span class="keywordflow">if</span> (basis_-&gt;getElementSpace() == <a class="code hl_enumvalue" href="classpanzer_1_1_pure_basis.html#ac55a0357e981bba9d69348050a038a84accac9248b8183ef56b912036300e95e0">PureBasis::HCURL</a>) {</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>      Kokkos::DynRankView&lt;double,HostSpace&gt; jac_inv(<span class="stringliteral">&quot;jac_inv&quot;</span>, 1, 1, num_dim, num_dim); <span class="comment">// &lt;C,P,D,D&gt;</span></div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>      CTD::setJacobianInv(jac_inv, <a class="code hl_variable" href="_panzer___scatter_residual___tpetra__impl_8hpp.html#a565362aeb357bf5670a1131514095e14">jac</a>);</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>      FST::HCURLtransformVALUE&lt;double&gt;(basis_values_vec, jac_inv,</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>                                       ref_basis_values);</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    }</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>      Kokkos::DynRankView&lt;double,HostSpace&gt; jac_det(<span class="stringliteral">&quot;jac_det&quot;</span>, 1, 1); <span class="comment">// &lt;C,P&gt;</span></div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>      CTD::setJacobianDet(jac_det, <a class="code hl_variable" href="_panzer___scatter_residual___tpetra__impl_8hpp.html#a565362aeb357bf5670a1131514095e14">jac</a>);</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>      FST::HDIVtransformVALUE&lt;double&gt;(basis_values_vec, <a class="code hl_variable" href="_panzer___scatter_residual___tpetra__impl_8hpp.html#a565362aeb357bf5670a1131514095e14">jac</a>, jac_det,</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>                                      ref_basis_values);</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    }</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span> </div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    <span class="comment">// Compute element orientations</span></div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    std::vector&lt;double&gt; orientation;</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    globalIndexer_-&gt;getElementOrientation(cellIndex_, orientation);</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    std::string blockId = this-&gt;wda(d).block_id;</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    <span class="keywordtype">int</span> fieldNum = globalIndexer_-&gt;getFieldNum(fieldName_);</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    <span class="keyword">const</span> std::vector&lt;int&gt; &amp; elmtOffset = globalIndexer_-&gt;getGIDFieldOffsets(blockId,fieldNum);</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span> </div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="comment">// Extract component of basis</span></div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i=0; i&lt;num_basis; ++i) {</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>      <span class="keywordtype">int</span> offset = elmtOffset[i];</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>      basis_values_(0,i,0) = orientation[offset] * basis_values_vec(0,i,0,fieldComponent_);</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    }</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>  }</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>  <span class="comment">// Intrepid2&#39;s first template parameter is a device, not an execution space.</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  <span class="keyword">using </span>HostDevice = HostSpace::device_type;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>  <span class="keyword">using </span>CTD = Intrepid2::CellTools&lt;HostDevice&gt;;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>  <span class="keyword">using </span>FST = Intrepid2::FunctionSpaceTools&lt;HostDevice&gt;;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>  <span class="comment">// Find which cell contains our point</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> num_points = 1;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>  Kokkos::DynRankView&lt;int,HostSpace&gt; inCell(<span class="stringliteral">&quot;inCell&quot;</span>, this-&gt;wda(d).cell_node_coordinates.extent_int(0), num_points);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>  Kokkos::DynRankView&lt;double,HostSpace&gt; physical_points_cell(<span class="stringliteral">&quot;physical_points_cell&quot;</span>, this-&gt;wda(d).cell_node_coordinates.extent_int(0), num_points, num_dim);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  <span class="keyword">auto</span> tmp_point = point_;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>  {</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    Kokkos::MDRangePolicy&lt;HostSpace,Kokkos::Rank&lt;2&gt;&gt; policy({0,0},{d.<a class="code hl_variable" href="classpanzer_1_1_workset_details.html#a697e6b93372f86f0f782d1ffe8eccc01">num_cells</a>,<span class="keyword">static_cast&lt;</span>decltype(d.num_cells)<span class="keyword">&gt;</span>(num_dim)});</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    Kokkos::parallel_for(<span class="stringliteral">&quot;copy node coords&quot;</span>,policy,[&amp;](<span class="keyword">const</span> <span class="keywordtype">int</span> cell, <span class="keyword">const</span> <span class="keywordtype">int</span> dim){</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>      physical_points_cell(cell,0,dim) = tmp_point[dim];</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    });</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    HostSpace().fence();</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="keyword">auto</span> cell_coords = this-&gt;wda(d).cell_node_coordinates.get_view();</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="keyword">auto</span> cell_coords_host = Kokkos::create_mirror_view(cell_coords);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    Kokkos::deep_copy(cell_coords_host, cell_coords);</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> tol = 1.0e-12;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    CTD::checkPointwiseInclusion(inCell,</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                                 physical_points_cell,</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>                                 cell_coords_host,</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                                 *topology_,</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>                                 tol);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>  }</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>  <span class="keywordflow">for</span> (index_t cell=0; cell&lt;static_cast&lt;int&gt;(d.<a class="code hl_variable" href="classpanzer_1_1_workset_details.html#a697e6b93372f86f0f782d1ffe8eccc01">num_cells</a>); ++cell) {</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <span class="keywordflow">if</span> (inCell(cell,0) == 1) {</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>      cellIndex_ = cell;</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>      workset_id_ = d.<a class="code hl_function" href="classpanzer_1_1_workset.html#a23af0de1a38b24c82a1e95c914a249e7">getIdentifier</a>();</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>      haveProbe_ = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    }</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>  }</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>  <span class="comment">// If no cell does, we&#39;re done</span></div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>  <span class="keywordflow">if</span> (!haveProbe_) {</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>  }</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>  <span class="comment">// Map point to reference frame</span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>  <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_nodes = this-&gt;wda(d).cell_node_coordinates.extent(1);</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>  Kokkos::DynRankView&lt;double,HostSpace&gt; cell_coords(<span class="stringliteral">&quot;cell_coords&quot;</span>, 1, <span class="keywordtype">int</span>(num_nodes), <span class="keywordtype">int</span>(num_dim)); <span class="comment">// &lt;C,B,D&gt;</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>  <span class="keyword">auto</span> cnc_host = Kokkos::create_mirror_view(this-&gt;wda(d).cell_node_coordinates.get_view());</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>  Kokkos::deep_copy(cnc_host,this-&gt;wda(d).cell_node_coordinates.get_view());</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i=0; i&lt;num_nodes; ++i) {</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j=0; j&lt;num_dim; ++j) {</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>      cell_coords(0,i,j) = cnc_host(cellIndex_,i,j);</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    }</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>  }</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>  Kokkos::DynRankView&lt;double,HostSpace&gt; physical_points(<span class="stringliteral">&quot;physical_points&quot;</span>, 1, 1, num_dim); <span class="comment">// &lt;C,P,D&gt;</span></div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i=0; i&lt;num_dim; ++i)</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    physical_points(0,0,i) = physical_points_cell(0,0,i);</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>  Kokkos::DynRankView&lt;double,HostSpace&gt; reference_points(<span class="stringliteral">&quot;reference_points&quot;</span>, 1, 1, num_dim); <span class="comment">// &lt;C,P,D&gt;</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>  CTD::mapToReferenceFrame(reference_points, physical_points, cell_coords, *topology_);</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>  Kokkos::DynRankView&lt;double,HostSpace&gt; reference_points_cell(<span class="stringliteral">&quot;reference_points_cell&quot;</span>, 1, num_dim); <span class="comment">// &lt;P,D&gt;</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i=0; i&lt;num_dim; ++i)</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    reference_points_cell(0,i) = reference_points(0,0,i);</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>  <span class="comment">// Compute basis functions at point</span></div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>  <span class="keywordflow">if</span> (basis_-&gt;getElementSpace() == <a class="code hl_enumvalue" href="classpanzer_1_1_pure_basis.html#ac55a0357e981bba9d69348050a038a84a9c14c104f97e0e4f4ff994b813c2b965">PureBasis::CONST</a> ||</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>      basis_-&gt;getElementSpace() == <a class="code hl_enumvalue" href="classpanzer_1_1_pure_basis.html#ac55a0357e981bba9d69348050a038a84a1ece55e22386220235519b451cd53727">PureBasis::HGRAD</a>) {</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    <span class="comment">// Evaluate basis at reference values</span></div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    Kokkos::DynRankView&lt;double,HostSpace&gt; ref_basis_values(<span class="stringliteral">&quot;ref_basis_values&quot;</span>, num_basis, 1); <span class="comment">// &lt;B,P&gt;</span></div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    basis_-&gt;getIntrepid2Basis&lt;HostDevice,double,<span class="keywordtype">double</span>&gt;()-&gt;getValues(ref_basis_values,</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>                                                                    reference_points_cell,</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>                                                                    Intrepid2::OPERATOR_VALUE);</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    <span class="comment">// Apply transformation to physical frame</span></div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    <span class="keyword">auto</span> basis_values_host = Kokkos::create_mirror_view(basis_values_);</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    FST::HGRADtransformVALUE&lt;double&gt;(basis_values_host, ref_basis_values);</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    Kokkos::deep_copy(basis_values_,basis_values_host);</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>  }</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (basis_-&gt;getElementSpace() == <a class="code hl_enumvalue" href="classpanzer_1_1_pure_basis.html#ac55a0357e981bba9d69348050a038a84accac9248b8183ef56b912036300e95e0">PureBasis::HCURL</a> ||</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>           basis_-&gt;getElementSpace() == <a class="code hl_enumvalue" href="classpanzer_1_1_pure_basis.html#ac55a0357e981bba9d69348050a038a84a864ffa40050ccfa6ad7cde5abe866dbb">PureBasis::HDIV</a>) {</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    <span class="comment">// Evaluate basis at reference values</span></div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    Kokkos::DynRankView&lt;double,HostSpace&gt; ref_basis_values(<span class="stringliteral">&quot;ref_basis_values&quot;</span>, num_basis, 1, num_dim); <span class="comment">// &lt;B,P,D&gt;</span></div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    basis_-&gt;getIntrepid2Basis&lt;HostDevice,double,<span class="keywordtype">double</span>&gt;()-&gt;getValues(ref_basis_values,</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>                                                                    reference_points_cell,</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>                                                                    Intrepid2::OPERATOR_VALUE);</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    <span class="comment">// Apply transformation to physical frame</span></div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    Kokkos::DynRankView&lt;double,HostSpace&gt; <a class="code hl_variable" href="_panzer___scatter_residual___tpetra__impl_8hpp.html#a565362aeb357bf5670a1131514095e14">jac</a>(<span class="stringliteral">&quot;jac&quot;</span>, 1, 1, num_dim, num_dim); <span class="comment">// &lt;C,P,D,D&gt;</span></div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    CTD::setJacobian(<a class="code hl_variable" href="_panzer___scatter_residual___tpetra__impl_8hpp.html#a565362aeb357bf5670a1131514095e14">jac</a>, reference_points, cell_coords, *topology_);</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    Kokkos::DynRankView&lt;double,HostSpace&gt; basis_values_vec(<span class="stringliteral">&quot;basis_values_vec&quot;</span>, 1, num_basis, 1, num_dim); <span class="comment">// &lt;C,B,P,D&gt;</span></div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    <span class="keywordflow">if</span> (basis_-&gt;getElementSpace() == <a class="code hl_enumvalue" href="classpanzer_1_1_pure_basis.html#ac55a0357e981bba9d69348050a038a84accac9248b8183ef56b912036300e95e0">PureBasis::HCURL</a>) {</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>      Kokkos::DynRankView&lt;double,HostSpace&gt; jac_inv(<span class="stringliteral">&quot;jac_inv&quot;</span>, 1, 1, num_dim, num_dim); <span class="comment">// &lt;C,P,D,D&gt;</span></div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>      CTD::setJacobianInv(jac_inv, <a class="code hl_variable" href="_panzer___scatter_residual___tpetra__impl_8hpp.html#a565362aeb357bf5670a1131514095e14">jac</a>);</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>      FST::HCURLtransformVALUE&lt;double&gt;(basis_values_vec, jac_inv,</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>                                       ref_basis_values);</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    }</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>      Kokkos::DynRankView&lt;double,HostSpace&gt; jac_det(<span class="stringliteral">&quot;jac_det&quot;</span>, 1, 1); <span class="comment">// &lt;C,P&gt;</span></div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>      CTD::setJacobianDet(jac_det, <a class="code hl_variable" href="_panzer___scatter_residual___tpetra__impl_8hpp.html#a565362aeb357bf5670a1131514095e14">jac</a>);</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>      FST::HDIVtransformVALUE&lt;double&gt;(basis_values_vec, <a class="code hl_variable" href="_panzer___scatter_residual___tpetra__impl_8hpp.html#a565362aeb357bf5670a1131514095e14">jac</a>, jac_det,</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>                                      ref_basis_values);</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    }</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    <span class="comment">// Compute element orientations</span></div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    std::vector&lt;double&gt; orientation;</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    globalIndexer_-&gt;getElementOrientation(cellIndex_, orientation);</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    std::string blockId = this-&gt;wda(d).block_id;</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    <span class="keywordtype">int</span> fieldNum = globalIndexer_-&gt;getFieldNum(fieldName_);</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="keyword">const</span> std::vector&lt;int&gt; &amp; elmtOffset = globalIndexer_-&gt;getGIDFieldOffsets(blockId,fieldNum);</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span> </div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    <span class="comment">// Extract component of basis</span></div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i=0; i&lt;num_basis; ++i) {</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>      <span class="keywordtype">int</span> offset = elmtOffset[i];</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>      basis_values_(0,i,0) = orientation[offset] * basis_values_vec(0,i,0,fieldComponent_);</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    }</div>
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>}</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>  }</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span> </div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>}</div>
 </div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span> </div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> EvalT, <span class="keyword">typename</span> Traits, <span class="keyword">typename</span> LO, <span class="keyword">typename</span> GO&gt;</div>
-<div class="foldopen" id="foldopen00273" data-start="{" data-end="}">
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno"><a class="line" href="classpanzer_1_1_response_scatter_evaluator___probe_base.html#a28754d8a2cee11cee633b2f83c41f42f">  273</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classpanzer_1_1_response_scatter_evaluator___probe_base.html#a28754d8a2cee11cee633b2f83c41f42f">ResponseScatterEvaluator_ProbeBase&lt;EvalT,Traits,LO,GO&gt;::</a></div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span><a class="code hl_function" href="classpanzer_1_1_response_scatter_evaluator___probe_base.html#a28754d8a2cee11cee633b2f83c41f42f">evaluateFields</a>(<span class="keyword">typename</span> <a class="code hl_class" href="classpanzer_1_1_workset.html">Traits::EvalData</a> d)</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>{</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>  <span class="keyword">using </span>HostSpace = Kokkos::DefaultHostExecutionSpace;</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>  <span class="keywordflow">if</span> ( !haveProbe_ ||</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>       (haveProbe_ &amp;&amp; d.<a class="code hl_function" href="classpanzer_1_1_workset.html#a23af0de1a38b24c82a1e95c914a249e7">getIdentifier</a>() != workset_id_) )</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> EvalT, <span class="keyword">typename</span> Traits, <span class="keyword">typename</span> LO, <span class="keyword">typename</span> GO&gt;</div>
+<div class="foldopen" id="foldopen00275" data-start="{" data-end="}">
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno"><a class="line" href="classpanzer_1_1_response_scatter_evaluator___probe_base.html#a28754d8a2cee11cee633b2f83c41f42f">  275</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classpanzer_1_1_response_scatter_evaluator___probe_base.html#a28754d8a2cee11cee633b2f83c41f42f">ResponseScatterEvaluator_ProbeBase&lt;EvalT,Traits,LO,GO&gt;::</a></div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span><a class="code hl_function" href="classpanzer_1_1_response_scatter_evaluator___probe_base.html#a28754d8a2cee11cee633b2f83c41f42f">evaluateFields</a>(<span class="keyword">typename</span> <a class="code hl_class" href="classpanzer_1_1_workset.html">Traits::EvalData</a> d)</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>{</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>  <span class="keyword">using </span>HostSpace = Kokkos::DefaultHostExecutionSpace;</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>  <span class="comment">// Intrepid2&#39;s first template parameter is a device, not an execution space.</span></div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>  <span class="keyword">using </span>HostDevice = HostSpace::device_type;</div>
 <div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span> </div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>  <span class="keyword">auto</span> field_coeffs_host = Kokkos::create_mirror_view(field_.get_view());</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>  Kokkos::deep_copy(field_coeffs_host,field_.get_view());</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span> </div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>  <span class="keyword">auto</span> field_coeffs_host_subview = Kokkos::subview(field_coeffs_host,std::pair&lt;int,int&gt;(cellIndex_,cellIndex_+1),Kokkos::ALL);</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span> </div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>  <span class="keyword">auto</span> field_val = Sacado::createDynRankViewWithType&lt;Kokkos::DynRankView&lt;ScalarT,HostSpace&gt;&gt;(field_coeffs_host, <span class="stringliteral">&quot;field_val_at_point&quot;</span>, 1, 1); <span class="comment">// &lt;C,P&gt;</span></div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>  <span class="keywordflow">if</span> ( !haveProbe_ ||</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>       (haveProbe_ &amp;&amp; d.<a class="code hl_function" href="classpanzer_1_1_workset.html#a23af0de1a38b24c82a1e95c914a249e7">getIdentifier</a>() != workset_id_) )</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span> </div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>  <span class="keyword">auto</span> field_coeffs_host = Kokkos::create_mirror_view(field_.get_view());</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>  Kokkos::deep_copy(field_coeffs_host,field_.get_view());</div>
 <div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span> </div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>  <span class="keyword">auto</span> basis_values_host = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace(),basis_values_);</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>  <span class="keyword">auto</span> field_coeffs_host_subview = Kokkos::subview(field_coeffs_host,std::pair&lt;int,int&gt;(cellIndex_,cellIndex_+1),Kokkos::ALL);</div>
 <div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span> </div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>  Intrepid2::FunctionSpaceTools&lt;HostSpace&gt;::evaluate(field_val, field_coeffs_host_subview, basis_values_host);</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>  responseObj_-&gt;value = field_val(0,0);</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>  responseObj_-&gt;have_probe = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>}</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>  <span class="keyword">auto</span> field_val = Sacado::createDynRankViewWithType&lt;Kokkos::DynRankView&lt;ScalarT,HostSpace&gt;&gt;(field_coeffs_host, <span class="stringliteral">&quot;field_val_at_point&quot;</span>, 1, 1); <span class="comment">// &lt;C,P&gt;</span></div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span> </div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>  <span class="keyword">auto</span> basis_values_host = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace(),basis_values_);</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span> </div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>  Intrepid2::FunctionSpaceTools&lt;HostDevice&gt;::evaluate(field_val, field_coeffs_host_subview, basis_values_host);</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>  responseObj_-&gt;value = field_val(0,0);</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>  responseObj_-&gt;have_probe = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>}</div>
 </div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span> </div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> LO, <span class="keyword">typename</span> GO&gt;</div>
-<div class="foldopen" id="foldopen00297" data-start="{" data-end="}">
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno"><a class="line" href="classpanzer_1_1_response_scatter_evaluator___probe_3_01panzer_1_1_traits_1_1_jacobian_00_01panze2fd2cc1cbf741279747cd47b41eea4ed.html#ad38cdac8f8b22442c9719e4d5c09358c">  297</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classpanzer_1_1_response_scatter_evaluator___probe_base.html#a28754d8a2cee11cee633b2f83c41f42f">ResponseScatterEvaluator_Probe&lt;panzer::Traits::Jacobian,panzer::Traits,LO,GO&gt;::</a></div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span><a class="code hl_function" href="classpanzer_1_1_response_scatter_evaluator___probe_base.html#a28754d8a2cee11cee633b2f83c41f42f">evaluateFields</a>(<a class="code hl_class" href="classpanzer_1_1_workset.html">panzer::Traits::EvalData</a> d)</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>{</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>  <span class="keyword">using </span>Teuchos::RCP;</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>  <span class="keyword">using </span>Teuchos::rcp_dynamic_cast;</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>  <span class="keyword">using </span>Thyra::SpmdVectorBase;</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>  TEUCHOS_ASSERT(this-&gt;scatterObj_!=Teuchos::null);</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span> </div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>  Base::evaluateFields(d);</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> </div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> LO, <span class="keyword">typename</span> GO&gt;</div>
+<div class="foldopen" id="foldopen00301" data-start="{" data-end="}">
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno"><a class="line" href="classpanzer_1_1_response_scatter_evaluator___probe_3_01panzer_1_1_traits_1_1_jacobian_00_01panze2fd2cc1cbf741279747cd47b41eea4ed.html#ad38cdac8f8b22442c9719e4d5c09358c">  301</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classpanzer_1_1_response_scatter_evaluator___probe_base.html#a28754d8a2cee11cee633b2f83c41f42f">ResponseScatterEvaluator_Probe&lt;panzer::Traits::Jacobian,panzer::Traits,LO,GO&gt;::</a></div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span><a class="code hl_function" href="classpanzer_1_1_response_scatter_evaluator___probe_base.html#a28754d8a2cee11cee633b2f83c41f42f">evaluateFields</a>(<a class="code hl_class" href="classpanzer_1_1_workset.html">panzer::Traits::EvalData</a> d)</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>{</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>  <span class="keyword">using </span>Teuchos::RCP;</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>  <span class="keyword">using </span>Teuchos::rcp_dynamic_cast;</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>  <span class="keyword">using </span>Thyra::SpmdVectorBase;</div>
 <div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span> </div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>  <span class="comment">// grab local data for inputing</span></div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>  Teuchos::ArrayRCP&lt;double&gt; local_dgdx;</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>  RCP&lt;SpmdVectorBase&lt;double&gt; &gt; dgdx =</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>    rcp_dynamic_cast&lt;SpmdVectorBase&lt;double&gt; &gt;(this-&gt;responseObj_-&gt;getGhostedVector());</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>  <span class="keywordflow">if</span> (dgdx.is_null()) {</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    <span class="comment">// Blocked system: scatter into the block that owns the probed field, which</span></div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    <span class="comment">// is the block the scatter object&#39;s indexer was taken from.</span></div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>    <span class="keyword">auto</span> blocked = rcp_dynamic_cast&lt;Thyra::ProductVectorBase&lt;double&gt; &gt;(</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>      this-&gt;responseObj_-&gt;getGhostedVector(),<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>    dgdx = rcp_dynamic_cast&lt;SpmdVectorBase&lt;double&gt; &gt;(</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>      blocked-&gt;getNonconstVectorBlock(this-&gt;getProductVectorBlockIndex()),<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>  }</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>  dgdx-&gt;getNonconstLocalData(ptrFromRef(local_dgdx));</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>  TEUCHOS_ASSERT(!local_dgdx.is_null());</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span> </div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>  this-&gt;scatterObj_-&gt;scatterDerivative(this-&gt;responseObj_-&gt;value,</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>                                       this-&gt;cellIndex_,</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>                                       this-&gt;responseObj_-&gt;have_probe,</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>                                       d,this-&gt;wda,</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>                                       this-&gt;getDerivativeOffset(this-&gt;wda(d).block_id),</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>                                       local_dgdx);</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>}</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>  TEUCHOS_ASSERT(this-&gt;scatterObj_!=Teuchos::null);</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span> </div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>  Base::evaluateFields(d);</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span> </div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>  <span class="comment">// grab local data for inputing</span></div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>  Teuchos::ArrayRCP&lt;double&gt; local_dgdx;</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>  RCP&lt;SpmdVectorBase&lt;double&gt; &gt; dgdx =</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>    rcp_dynamic_cast&lt;SpmdVectorBase&lt;double&gt; &gt;(this-&gt;responseObj_-&gt;getGhostedVector());</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>  <span class="keywordflow">if</span> (dgdx.is_null()) {</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>    <span class="comment">// Blocked system: scatter into the block that owns the probed field, which</span></div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    <span class="comment">// is the block the scatter object&#39;s indexer was taken from.</span></div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>    <span class="keyword">auto</span> blocked = rcp_dynamic_cast&lt;Thyra::ProductVectorBase&lt;double&gt; &gt;(</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>      this-&gt;responseObj_-&gt;getGhostedVector(),<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    dgdx = rcp_dynamic_cast&lt;SpmdVectorBase&lt;double&gt; &gt;(</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>      blocked-&gt;getNonconstVectorBlock(this-&gt;getProductVectorBlockIndex()),<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>  }</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>  dgdx-&gt;getNonconstLocalData(ptrFromRef(local_dgdx));</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>  TEUCHOS_ASSERT(!local_dgdx.is_null());</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span> </div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>  this-&gt;scatterObj_-&gt;scatterDerivative(this-&gt;responseObj_-&gt;value,</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>                                       this-&gt;cellIndex_,</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>                                       this-&gt;responseObj_-&gt;have_probe,</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>                                       d,this-&gt;wda,</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>                                       this-&gt;getDerivativeOffset(this-&gt;wda(d).block_id),</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>                                       local_dgdx);</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>}</div>
 </div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span> </div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>}</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span> </div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span> </div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>}</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span> </div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span><span class="preprocessor">#endif</span></div>
 </div>
 </div>
 </div>
@@ -459,7 +463,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclasspanzer_1_1_response_scatter_evaluator___probe_base_html_a03f4bbdd6a6ba8442c4b761823238647"><div class="ttname"><a href="classpanzer_1_1_response_scatter_evaluator___probe_base.html#a03f4bbdd6a6ba8442c4b761823238647">panzer::ResponseScatterEvaluator_ProbeBase::getDerivativeOffset</a></div><div class="ttdeci">int getDerivativeOffset(const std::string &amp;blockId) const</div><div class="ttdoc">First Fad derivative component belonging to the probed field's product vector block,...</div><div class="ttdef"><b>Definition</b> <a href="_panzer___response_scatter_evaluator___probe__impl_8hpp_source.html#l00121">Panzer_ResponseScatterEvaluator_Probe_impl.hpp:122</a></div></div>
 <div class="ttc" id="aclasspanzer_1_1_response_scatter_evaluator___probe_base_html_a1ccec50a61de0e320cd8a6fe1b9b37b2"><div class="ttname"><a href="classpanzer_1_1_response_scatter_evaluator___probe_base.html#a1ccec50a61de0e320cd8a6fe1b9b37b2">panzer::ResponseScatterEvaluator_ProbeBase::scatterHolder_</a></div><div class="ttdeci">Teuchos::RCP&lt; PHX::FieldTag &gt; scatterHolder_</div><div class="ttdef"><b>Definition</b> <a href="_panzer___response_scatter_evaluator___probe_8hpp_source.html#l00125">Panzer_ResponseScatterEvaluator_Probe.hpp:125</a></div></div>
 <div class="ttc" id="aclasspanzer_1_1_response_scatter_evaluator___probe_base_html_a222e4bab1dc00c9b9f496b3e3df55d7c"><div class="ttname"><a href="classpanzer_1_1_response_scatter_evaluator___probe_base.html#a222e4bab1dc00c9b9f496b3e3df55d7c">panzer::ResponseScatterEvaluator_ProbeBase::basis_</a></div><div class="ttdeci">Teuchos::RCP&lt; const panzer::PureBasis &gt; basis_</div><div class="ttdef"><b>Definition</b> <a href="_panzer___response_scatter_evaluator___probe_8hpp_source.html#l00120">Panzer_ResponseScatterEvaluator_Probe.hpp:120</a></div></div>
-<div class="ttc" id="aclasspanzer_1_1_response_scatter_evaluator___probe_base_html_a28754d8a2cee11cee633b2f83c41f42f"><div class="ttname"><a href="classpanzer_1_1_response_scatter_evaluator___probe_base.html#a28754d8a2cee11cee633b2f83c41f42f">panzer::ResponseScatterEvaluator_ProbeBase::evaluateFields</a></div><div class="ttdeci">void evaluateFields(typename Traits::EvalData d)</div><div class="ttdef"><b>Definition</b> <a href="_panzer___response_scatter_evaluator___probe__impl_8hpp_source.html#l00273">Panzer_ResponseScatterEvaluator_Probe_impl.hpp:274</a></div></div>
+<div class="ttc" id="aclasspanzer_1_1_response_scatter_evaluator___probe_base_html_a28754d8a2cee11cee633b2f83c41f42f"><div class="ttname"><a href="classpanzer_1_1_response_scatter_evaluator___probe_base.html#a28754d8a2cee11cee633b2f83c41f42f">panzer::ResponseScatterEvaluator_ProbeBase::evaluateFields</a></div><div class="ttdeci">void evaluateFields(typename Traits::EvalData d)</div><div class="ttdef"><b>Definition</b> <a href="_panzer___response_scatter_evaluator___probe__impl_8hpp_source.html#l00275">Panzer_ResponseScatterEvaluator_Probe_impl.hpp:276</a></div></div>
 <div class="ttc" id="aclasspanzer_1_1_response_scatter_evaluator___probe_base_html_a4122d1d7038df2af2e5936be43964616"><div class="ttname"><a href="classpanzer_1_1_response_scatter_evaluator___probe_base.html#a4122d1d7038df2af2e5936be43964616">panzer::ResponseScatterEvaluator_ProbeBase::num_dim</a></div><div class="ttdeci">size_t num_dim</div><div class="ttdef"><b>Definition</b> <a href="_panzer___response_scatter_evaluator___probe_8hpp_source.html#l00132">Panzer_ResponseScatterEvaluator_Probe.hpp:132</a></div></div>
 <div class="ttc" id="aclasspanzer_1_1_response_scatter_evaluator___probe_base_html_a538506c07004e736bbc5bca7f29bebe6"><div class="ttname"><a href="classpanzer_1_1_response_scatter_evaluator___probe_base.html#a538506c07004e736bbc5bca7f29bebe6">panzer::ResponseScatterEvaluator_ProbeBase::postRegistrationSetup</a></div><div class="ttdeci">void postRegistrationSetup(typename Traits::SetupData, PHX::FieldManager&lt; Traits &gt; &amp;)</div><div class="ttdef"><b>Definition</b> <a href="_panzer___response_scatter_evaluator___probe__impl_8hpp_source.html#l00090">Panzer_ResponseScatterEvaluator_Probe_impl.hpp:91</a></div></div>
 <div class="ttc" id="aclasspanzer_1_1_response_scatter_evaluator___probe_base_html_a67291812107522912bc8a5f406e4db93"><div class="ttname"><a href="classpanzer_1_1_response_scatter_evaluator___probe_base.html#a67291812107522912bc8a5f406e4db93">panzer::ResponseScatterEvaluator_ProbeBase::field_</a></div><div class="ttdeci">PHX::MDField&lt; const ScalarT, Cell, BASIS &gt; field_</div><div class="ttdef"><b>Definition</b> <a href="_panzer___response_scatter_evaluator___probe_8hpp_source.html#l00126">Panzer_ResponseScatterEvaluator_Probe.hpp:126</a></div></div>

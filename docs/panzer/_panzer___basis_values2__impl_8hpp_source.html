@@ -114,7 +114,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>applyOrientationsImpl(<span class="keyword">const</span> <span class="keywordtype">int</span> num_cells,</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                      Kokkos::DynRankView&lt;Scalar, PHX::Device&gt; view,</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                      Kokkos::DynRankView&lt;Intrepid2::Orientation, PHX::Device&gt; orientations,</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                      <span class="keyword">const</span> <span class="keyword">typename</span> <a class="code hl_typedef" href="classpanzer_1_1_basis_values2.html#a278dc31ff4efdb56c3733dd204bf5c04">BasisValues2&lt;Scalar&gt;::IntrepidBasis</a> &amp; basis)</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                      <span class="keyword">const</span> <span class="keyword">typename</span> <a class="code hl_typedef" href="classpanzer_1_1_basis_values2.html#ae2b88ecc4fd79c8e9d6a1d10c2ad83f4">BasisValues2&lt;Scalar&gt;::IntrepidBasis</a> &amp; basis)</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>{</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <span class="keyword">using </span>ots=Intrepid2::OrientationTools&lt;PHX::Device&gt;;</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
@@ -146,7 +146,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>applyOrientationsImpl(<span class="keyword">const</span> <span class="keywordtype">int</span> num_cells,</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                      Kokkos::DynRankView&lt;Scalar, PHX::Device&gt; view,</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                      <span class="keyword">const</span> std::vector&lt;Intrepid2::Orientation&gt; &amp; orientations,</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                      <span class="keyword">const</span> <span class="keyword">typename</span> <a class="code hl_typedef" href="classpanzer_1_1_basis_values2.html#a278dc31ff4efdb56c3733dd204bf5c04">BasisValues2&lt;Scalar&gt;::IntrepidBasis</a> &amp; basis)</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                      <span class="keyword">const</span> <span class="keyword">typename</span> <a class="code hl_typedef" href="classpanzer_1_1_basis_values2.html#ae2b88ecc4fd79c8e9d6a1d10c2ad83f4">BasisValues2&lt;Scalar&gt;::IntrepidBasis</a> &amp; basis)</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>{</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  <span class="comment">// Move orientations vector to device</span></div>
@@ -534,7 +534,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>  <a class="code hl_enumeration" href="classpanzer_1_1_pure_basis.html#ac55a0357e981bba9d69348050a038a84">panzer::PureBasis::EElementSpace</a> elmtspace = basisDesc-&gt;getElementSpace();</div>
 <div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>  cell_topology_ = basisDesc-&gt;getCellTopology();</div>
 <div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span> </div>
-<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>  intrepid_basis = basisDesc-&gt;getIntrepid2Basis&lt;PHX::Device::execution_space,Scalar,Scalar&gt;();</div>
+<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>  intrepid_basis = basisDesc-&gt;getIntrepid2Basis&lt;PHX::Device,Scalar,Scalar&gt;();</div>
 <div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span> </div>
 <div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>  <span class="comment">// allocate field containers</span></div>
 <div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>  <span class="comment">// field sizes defined by http://trilinos.sandia.gov/packages/docs/dev/packages/intrepid/doc/html/basis_page.html#basis_md_array_sec</span></div>
@@ -675,7 +675,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>      <span class="keyword">const</span> <span class="keywordtype">int</span>                                         num_evaluated_cells)</div>
 <div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span>{</div>
 <div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>  basis_layout = basis;</div>
-<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>  intrepid_basis = basis-&gt;getBasis()-&gt;getIntrepid2Basis&lt;PHX::Device::execution_space,Scalar,Scalar&gt;();</div>
+<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>  intrepid_basis = basis-&gt;getBasis()-&gt;getIntrepid2Basis&lt;PHX::Device,Scalar,Scalar&gt;();</div>
 <div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>  cell_topology_ = basis-&gt;getCellTopologyInfo()-&gt;getCellTopology();</div>
 <div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>  num_cells_ = basis_layout-&gt;numCells();</div>
 <div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>  num_evaluate_cells_ = num_evaluated_cells &gt;= 0 ? num_evaluated_cells : num_cells_;</div>
@@ -704,7 +704,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span>             <span class="keyword">const</span> <span class="keywordtype">int</span>                                          num_evaluated_cells)</div>
 <div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>{</div>
 <div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span>  basis_layout = basis;</div>
-<div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span>  intrepid_basis = basis-&gt;getBasis()-&gt;getIntrepid2Basis&lt;PHX::Device::execution_space,Scalar,Scalar&gt;();</div>
+<div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span>  intrepid_basis = basis-&gt;getBasis()-&gt;getIntrepid2Basis&lt;PHX::Device,Scalar,Scalar&gt;();</div>
 <div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span>  cell_topology_ = basis-&gt;getCellTopologyInfo()-&gt;getCellTopology();</div>
 <div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span>  num_cells_ = basis_layout-&gt;numCells();</div>
 <div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>  num_evaluate_cells_ = num_evaluated_cells &gt;= 0 ? num_evaluated_cells : num_cells_;</div>
@@ -866,10 +866,10 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> num_card  = basis_layout-&gt;cardinality();</div>
 <div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> num_dim   = basis_layout-&gt;dimension();</div>
 <div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span> </div>
-<div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span>  <span class="keyword">using </span>coordsScalarType = <span class="keyword">typename</span> Intrepid2::Basis&lt;PHX::Device::execution_space,Scalar,Scalar&gt;::scalarType;</div>
+<div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span>  <span class="keyword">using </span>coordsScalarType = <span class="keyword">typename</span> Intrepid2::Basis&lt;PHX::Device,Scalar,Scalar&gt;::scalarType;</div>
 <div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span>  <span class="keyword">auto</span> tmp_basis_coordinates_ref = af.<a class="code hl_function" href="classpanzer_1_1_m_d_field_array_factory.html#a87240dcc74e630df8f368c1f8f41f39c">buildStaticArray</a>&lt;coordsScalarType,<a class="code hl_struct" href="structpanzer_1_1_b_a_s_i_s.html">BASIS</a>,<a class="code hl_struct" href="structpanzer_1_1_dim.html">Dim</a>&gt;(<span class="stringliteral">&quot;basis_coordinates_ref&quot;</span>, num_card, num_dim);</div>
 <div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>  intrepid_basis-&gt;getDofCoords(tmp_basis_coordinates_ref.get_view());</div>
-<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span>  PHX::Device().fence();</div>
+<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span>  PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span> </div>
 <div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span>  <span class="comment">// Store for later if cache is enabled</span></div>
 <div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span>  <a class="code hl_define" href="_panzer___basis_values2__impl_8hpp.html#a3a1f549ae22320700bde39f858206b8a">PANZER_CACHE_DATA</a>(basis_coordinates_ref)</div>
@@ -907,7 +907,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span>  <span class="keyword">auto</span> cubature_points_uniform_ref = PHX::getNonConstDynRankViewFromConstMDField(cubature_points_uniform_ref_);</div>
 <div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span> </div>
 <div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span>  intrepid_basis-&gt;getValues(tmp_basis_ref_scalar.get_view(), cubature_points_uniform_ref, Intrepid2::OPERATOR_VALUE);</div>
-<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span>  PHX::Device().fence();</div>
+<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span>  PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span> </div>
 <div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span>  <span class="comment">// Store for later if cache is enabled</span></div>
 <div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span>  <a class="code hl_define" href="_panzer___basis_values2__impl_8hpp.html#a3a1f549ae22320700bde39f858206b8a">PANZER_CACHE_DATA</a>(basis_ref_scalar);</div>
@@ -946,7 +946,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span>  <span class="keyword">auto</span> cubature_points_uniform_ref = PHX::getNonConstDynRankViewFromConstMDField(cubature_points_uniform_ref_);</div>
 <div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span> </div>
 <div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span>  intrepid_basis-&gt;getValues(tmp_basis_ref_vector.get_view(),cubature_points_uniform_ref,Intrepid2::OPERATOR_VALUE);</div>
-<div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span>  PHX::Device().fence();</div>
+<div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span>  PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l00838" name="l00838"></a><span class="lineno">  838</span> </div>
 <div class="line"><a id="l00839" name="l00839"></a><span class="lineno">  839</span>  <span class="comment">// Store for later if cache is enabled</span></div>
 <div class="line"><a id="l00840" name="l00840"></a><span class="lineno">  840</span>  <a class="code hl_define" href="_panzer___basis_values2__impl_8hpp.html#a3a1f549ae22320700bde39f858206b8a">PANZER_CACHE_DATA</a>(basis_ref_vector);</div>
@@ -985,7 +985,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00871" name="l00871"></a><span class="lineno">  871</span>  <span class="keyword">auto</span> cubature_points_uniform_ref = PHX::getNonConstDynRankViewFromConstMDField(cubature_points_uniform_ref_);</div>
 <div class="line"><a id="l00872" name="l00872"></a><span class="lineno">  872</span> </div>
 <div class="line"><a id="l00873" name="l00873"></a><span class="lineno">  873</span>  intrepid_basis-&gt;getValues(tmp_grad_basis_ref.get_view(), cubature_points_uniform_ref, Intrepid2::OPERATOR_GRAD);</div>
-<div class="line"><a id="l00874" name="l00874"></a><span class="lineno">  874</span>  PHX::Device().fence();</div>
+<div class="line"><a id="l00874" name="l00874"></a><span class="lineno">  874</span>  PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l00875" name="l00875"></a><span class="lineno">  875</span> </div>
 <div class="line"><a id="l00876" name="l00876"></a><span class="lineno">  876</span>  <span class="comment">// Store for later if cache is enabled</span></div>
 <div class="line"><a id="l00877" name="l00877"></a><span class="lineno">  877</span>  <a class="code hl_define" href="_panzer___basis_values2__impl_8hpp.html#a3a1f549ae22320700bde39f858206b8a">PANZER_CACHE_DATA</a>(grad_basis_ref);</div>
@@ -1024,7 +1024,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00908" name="l00908"></a><span class="lineno">  908</span>  <span class="keyword">auto</span> cubature_points_uniform_ref = PHX::getNonConstDynRankViewFromConstMDField(cubature_points_uniform_ref_);</div>
 <div class="line"><a id="l00909" name="l00909"></a><span class="lineno">  909</span> </div>
 <div class="line"><a id="l00910" name="l00910"></a><span class="lineno">  910</span>  intrepid_basis-&gt;getValues(tmp_curl_basis_ref_scalar.get_view(), cubature_points_uniform_ref, Intrepid2::OPERATOR_CURL);</div>
-<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span>  PHX::Device().fence();</div>
+<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span>  PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l00912" name="l00912"></a><span class="lineno">  912</span> </div>
 <div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span>  <span class="comment">// Store for later if cache is enabled</span></div>
 <div class="line"><a id="l00914" name="l00914"></a><span class="lineno">  914</span>  <a class="code hl_define" href="_panzer___basis_values2__impl_8hpp.html#a3a1f549ae22320700bde39f858206b8a">PANZER_CACHE_DATA</a>(curl_basis_ref_scalar);</div>
@@ -1064,7 +1064,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span>  <span class="keyword">auto</span> cubature_points_uniform_ref = PHX::getNonConstDynRankViewFromConstMDField(cubature_points_uniform_ref_);</div>
 <div class="line"><a id="l00947" name="l00947"></a><span class="lineno">  947</span> </div>
 <div class="line"><a id="l00948" name="l00948"></a><span class="lineno">  948</span>  intrepid_basis-&gt;getValues(tmp_curl_basis_ref_vector.get_view(), cubature_points_uniform_ref, Intrepid2::OPERATOR_CURL);</div>
-<div class="line"><a id="l00949" name="l00949"></a><span class="lineno">  949</span>  PHX::Device().fence();</div>
+<div class="line"><a id="l00949" name="l00949"></a><span class="lineno">  949</span>  PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l00950" name="l00950"></a><span class="lineno">  950</span> </div>
 <div class="line"><a id="l00951" name="l00951"></a><span class="lineno">  951</span>  <span class="comment">// Store for later if cache is enabled</span></div>
 <div class="line"><a id="l00952" name="l00952"></a><span class="lineno">  952</span>  <a class="code hl_define" href="_panzer___basis_values2__impl_8hpp.html#a3a1f549ae22320700bde39f858206b8a">PANZER_CACHE_DATA</a>(curl_basis_ref_vector);</div>
@@ -1102,7 +1102,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00982" name="l00982"></a><span class="lineno">  982</span>  <span class="keyword">auto</span> cubature_points_uniform_ref = PHX::getNonConstDynRankViewFromConstMDField(cubature_points_uniform_ref_);</div>
 <div class="line"><a id="l00983" name="l00983"></a><span class="lineno">  983</span> </div>
 <div class="line"><a id="l00984" name="l00984"></a><span class="lineno">  984</span>  intrepid_basis-&gt;getValues(tmp_div_basis_ref.get_view(), cubature_points_uniform_ref, Intrepid2::OPERATOR_DIV);</div>
-<div class="line"><a id="l00985" name="l00985"></a><span class="lineno">  985</span>  PHX::Device().fence();</div>
+<div class="line"><a id="l00985" name="l00985"></a><span class="lineno">  985</span>  PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l00986" name="l00986"></a><span class="lineno">  986</span> </div>
 <div class="line"><a id="l00987" name="l00987"></a><span class="lineno">  987</span>  <span class="comment">// Store for later if cache is enabled</span></div>
 <div class="line"><a id="l00988" name="l00988"></a><span class="lineno">  988</span>  <a class="code hl_define" href="_panzer___basis_values2__impl_8hpp.html#a3a1f549ae22320700bde39f858206b8a">PANZER_CACHE_DATA</a>(div_basis_ref);</div>
@@ -1141,9 +1141,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01019" name="l01019"></a><span class="lineno"> 1019</span>  <span class="keyword">auto</span> const_bcr = getBasisCoordinatesRef(<span class="keyword">false</span>);</div>
 <div class="line"><a id="l01020" name="l01020"></a><span class="lineno"> 1020</span>  <span class="keyword">auto</span> bcr = PHX::getNonConstDynRankViewFromConstMDField(const_bcr);</div>
 <div class="line"><a id="l01021" name="l01021"></a><span class="lineno"> 1021</span> </div>
-<div class="line"><a id="l01022" name="l01022"></a><span class="lineno"> 1022</span>  Intrepid2::CellTools&lt;PHX::Device::execution_space&gt; cell_tools;</div>
+<div class="line"><a id="l01022" name="l01022"></a><span class="lineno"> 1022</span>  Intrepid2::CellTools&lt;PHX::Device&gt; cell_tools;</div>
 <div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span>  cell_tools.mapToPhysicalFrame(s_aux, bcr, s_node_coordinates, *cell_topology_);</div>
-<div class="line"><a id="l01024" name="l01024"></a><span class="lineno"> 1024</span>  PHX::Device().fence();</div>
+<div class="line"><a id="l01024" name="l01024"></a><span class="lineno"> 1024</span>  PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l01025" name="l01025"></a><span class="lineno"> 1025</span> </div>
 <div class="line"><a id="l01026" name="l01026"></a><span class="lineno"> 1026</span>  <span class="comment">// Store for later if cache is enabled</span></div>
 <div class="line"><a id="l01027" name="l01027"></a><span class="lineno"> 1027</span>  <a class="code hl_define" href="_panzer___basis_values2__impl_8hpp.html#a3a1f549ae22320700bde39f858206b8a">PANZER_CACHE_DATA</a>(basis_coordinates);</div>
@@ -1189,7 +1189,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01065" name="l01065"></a><span class="lineno"> 1065</span>    <span class="keyword">auto</span> s_cw = Kokkos::subview(cubature_weights_.get_view(),cell_range,Kokkos::ALL());</div>
 <div class="line"><a id="l01066" name="l01066"></a><span class="lineno"> 1066</span>    <span class="keyword">auto</span> s_bv = Kokkos::subview(bv.get_view(),cell_range,Kokkos::ALL(),Kokkos::ALL());</div>
 <div class="line"><a id="l01067" name="l01067"></a><span class="lineno"> 1067</span> </div>
-<div class="line"><a id="l01068" name="l01068"></a><span class="lineno"> 1068</span>    <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device::execution_space&gt;;</div>
+<div class="line"><a id="l01068" name="l01068"></a><span class="lineno"> 1068</span>    <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device&gt;;</div>
 <div class="line"><a id="l01069" name="l01069"></a><span class="lineno"> 1069</span>    fst::multiplyMeasure(s_aux,s_cw,s_bv);</div>
 <div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span> </div>
 <div class="line"><a id="l01071" name="l01071"></a><span class="lineno"> 1071</span>    <span class="comment">// NOTE: Weighted path has orientations already applied so doesn&#39;t</span></div>
@@ -1224,14 +1224,14 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01100" name="l01100"></a><span class="lineno"> 1100</span>      <span class="keyword">auto</span> s_aux = Kokkos::subview(tmp_basis_scalar.get_view(), cell_range, Kokkos::ALL(), Kokkos::ALL());</div>
 <div class="line"><a id="l01101" name="l01101"></a><span class="lineno"> 1101</span> </div>
 <div class="line"><a id="l01102" name="l01102"></a><span class="lineno"> 1102</span>      <span class="comment">// Apply transformation (HGRAD version is just a copy operation)</span></div>
-<div class="line"><a id="l01103" name="l01103"></a><span class="lineno"> 1103</span>      <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device::execution_space&gt;;</div>
+<div class="line"><a id="l01103" name="l01103"></a><span class="lineno"> 1103</span>      <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device&gt;;</div>
 <div class="line"><a id="l01104" name="l01104"></a><span class="lineno"> 1104</span>      <span class="keywordflow">if</span> (element_space == <a class="code hl_enumvalue" href="classpanzer_1_1_pure_basis.html#ac55a0357e981bba9d69348050a038a84a9f3bddffd8aaee296a64d497ec4e9d3a">PureBasis::HVOL</a>){</div>
 <div class="line"><a id="l01105" name="l01105"></a><span class="lineno"> 1105</span>        <span class="keyword">auto</span> s_cjd = Kokkos::subview(cubature_jacobian_determinant_.get_view(), cell_range, Kokkos::ALL());</div>
 <div class="line"><a id="l01106" name="l01106"></a><span class="lineno"> 1106</span>        fst::HVOLtransformVALUE(s_aux,s_cjd,cell_basis_ref_scalar.get_view());</div>
 <div class="line"><a id="l01107" name="l01107"></a><span class="lineno"> 1107</span>      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (element_space == <a class="code hl_enumvalue" href="classpanzer_1_1_pure_basis.html#ac55a0357e981bba9d69348050a038a84a1ece55e22386220235519b451cd53727">PureBasis::HGRAD</a> || element_space == <a class="code hl_enumvalue" href="classpanzer_1_1_pure_basis.html#ac55a0357e981bba9d69348050a038a84a9c14c104f97e0e4f4ff994b813c2b965">PureBasis::CONST</a>) {</div>
 <div class="line"><a id="l01108" name="l01108"></a><span class="lineno"> 1108</span>        fst::HGRADtransformVALUE(s_aux,cell_basis_ref_scalar.get_view());</div>
 <div class="line"><a id="l01109" name="l01109"></a><span class="lineno"> 1109</span>      }</div>
-<div class="line"><a id="l01110" name="l01110"></a><span class="lineno"> 1110</span>      PHX::Device().fence();</div>
+<div class="line"><a id="l01110" name="l01110"></a><span class="lineno"> 1110</span>      PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l01111" name="l01111"></a><span class="lineno"> 1111</span> </div>
 <div class="line"><a id="l01112" name="l01112"></a><span class="lineno"> 1112</span>    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l01113" name="l01113"></a><span class="lineno"> 1113</span>      <span class="comment">// getValues currently assumes a single reference cell. Calling</span></div>
@@ -1301,7 +1301,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01177" name="l01177"></a><span class="lineno"> 1177</span><span class="preprocessor">#if defined(KOKKOS_ENABLE_CUDA) || defined(KOKKOS_IMPL_HIP_UNIFIED_MEMORY)</span></div>
 <div class="line"><a id="l01178" name="l01178"></a><span class="lineno"> 1178</span>      }</div>
 <div class="line"><a id="l01179" name="l01179"></a><span class="lineno"> 1179</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l01180" name="l01180"></a><span class="lineno"> 1180</span>      PHX::Device().fence();</div>
+<div class="line"><a id="l01180" name="l01180"></a><span class="lineno"> 1180</span>      PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l01181" name="l01181"></a><span class="lineno"> 1181</span>    }</div>
 <div class="line"><a id="l01182" name="l01182"></a><span class="lineno"> 1182</span> </div>
 <div class="line"><a id="l01183" name="l01183"></a><span class="lineno"> 1183</span>    <span class="comment">// NOTE: weighted already has orientations applied, so this code</span></div>
@@ -1360,7 +1360,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01234" name="l01234"></a><span class="lineno"> 1234</span>    <span class="keyword">auto</span> s_cw = Kokkos::subview(cubature_weights_.get_view(),cell_range,Kokkos::ALL());</div>
 <div class="line"><a id="l01235" name="l01235"></a><span class="lineno"> 1235</span>    <span class="keyword">auto</span> s_bv = Kokkos::subview(bv.get_view(),cell_range,Kokkos::ALL(),Kokkos::ALL(),Kokkos::ALL());</div>
 <div class="line"><a id="l01236" name="l01236"></a><span class="lineno"> 1236</span> </div>
-<div class="line"><a id="l01237" name="l01237"></a><span class="lineno"> 1237</span>    <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device::execution_space&gt;;</div>
+<div class="line"><a id="l01237" name="l01237"></a><span class="lineno"> 1237</span>    <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device&gt;;</div>
 <div class="line"><a id="l01238" name="l01238"></a><span class="lineno"> 1238</span>    fst::multiplyMeasure(s_aux, s_cw, s_bv);</div>
 <div class="line"><a id="l01239" name="l01239"></a><span class="lineno"> 1239</span> </div>
 <div class="line"><a id="l01240" name="l01240"></a><span class="lineno"> 1240</span>    <span class="comment">// Store for later if cache is enabled</span></div>
@@ -1395,7 +1395,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01269" name="l01269"></a><span class="lineno"> 1269</span>      <span class="keyword">auto</span> s_aux = Kokkos::subview(tmp_basis_vector.get_view(), cell_range, Kokkos::ALL(), Kokkos::ALL(), Kokkos::ALL());</div>
 <div class="line"><a id="l01270" name="l01270"></a><span class="lineno"> 1270</span> </div>
 <div class="line"><a id="l01271" name="l01271"></a><span class="lineno"> 1271</span>      <span class="comment">// Apply transformation (HGRAD version is just a copy operation)</span></div>
-<div class="line"><a id="l01272" name="l01272"></a><span class="lineno"> 1272</span>      <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device::execution_space&gt;;</div>
+<div class="line"><a id="l01272" name="l01272"></a><span class="lineno"> 1272</span>      <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device&gt;;</div>
 <div class="line"><a id="l01273" name="l01273"></a><span class="lineno"> 1273</span>      <span class="keywordflow">if</span>(element_space == <a class="code hl_enumvalue" href="classpanzer_1_1_pure_basis.html#ac55a0357e981bba9d69348050a038a84accac9248b8183ef56b912036300e95e0">PureBasis::HCURL</a>){</div>
 <div class="line"><a id="l01274" name="l01274"></a><span class="lineno"> 1274</span>        <span class="keyword">auto</span> s_jac_inv = Kokkos::subview(cubature_jacobian_inverse_.get_view(), cell_range, Kokkos::ALL(), Kokkos::ALL(), Kokkos::ALL());</div>
 <div class="line"><a id="l01275" name="l01275"></a><span class="lineno"> 1275</span>        fst::HCURLtransformVALUE(s_aux,s_jac_inv,cell_basis_ref_vector.get_view());</div>
@@ -1404,7 +1404,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01278" name="l01278"></a><span class="lineno"> 1278</span>        <span class="keyword">auto</span> s_jac_det = Kokkos::subview(cubature_jacobian_determinant_.get_view(), cell_range, Kokkos::ALL());</div>
 <div class="line"><a id="l01279" name="l01279"></a><span class="lineno"> 1279</span>        fst::HDIVtransformVALUE(s_aux,s_jac, s_jac_det, cell_basis_ref_vector.get_view());</div>
 <div class="line"><a id="l01280" name="l01280"></a><span class="lineno"> 1280</span>      }</div>
-<div class="line"><a id="l01281" name="l01281"></a><span class="lineno"> 1281</span>      PHX::Device().fence();</div>
+<div class="line"><a id="l01281" name="l01281"></a><span class="lineno"> 1281</span>      PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l01282" name="l01282"></a><span class="lineno"> 1282</span> </div>
 <div class="line"><a id="l01283" name="l01283"></a><span class="lineno"> 1283</span>    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l01284" name="l01284"></a><span class="lineno"> 1284</span> </div>
@@ -1481,7 +1481,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01355" name="l01355"></a><span class="lineno"> 1355</span><span class="preprocessor">#if defined(KOKKOS_ENABLE_CUDA) || defined(KOKKOS_IMPL_HIP_UNIFIED_MEMORY)</span></div>
 <div class="line"><a id="l01356" name="l01356"></a><span class="lineno"> 1356</span>      }</div>
 <div class="line"><a id="l01357" name="l01357"></a><span class="lineno"> 1357</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l01358" name="l01358"></a><span class="lineno"> 1358</span>      PHX::Device().fence();</div>
+<div class="line"><a id="l01358" name="l01358"></a><span class="lineno"> 1358</span>      PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l01359" name="l01359"></a><span class="lineno"> 1359</span> </div>
 <div class="line"><a id="l01360" name="l01360"></a><span class="lineno"> 1360</span>    }</div>
 <div class="line"><a id="l01361" name="l01361"></a><span class="lineno"> 1361</span> </div>
@@ -1537,7 +1537,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01409" name="l01409"></a><span class="lineno"> 1409</span>    <span class="keyword">auto</span> s_cw = Kokkos::subview(cubature_weights_.get_view(), cell_range, Kokkos::ALL());</div>
 <div class="line"><a id="l01410" name="l01410"></a><span class="lineno"> 1410</span>    <span class="keyword">auto</span> s_bv = Kokkos::subview(bv.get_view(), cell_range, Kokkos::ALL(), Kokkos::ALL(), Kokkos::ALL());</div>
 <div class="line"><a id="l01411" name="l01411"></a><span class="lineno"> 1411</span> </div>
-<div class="line"><a id="l01412" name="l01412"></a><span class="lineno"> 1412</span>    <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device::execution_space&gt;;</div>
+<div class="line"><a id="l01412" name="l01412"></a><span class="lineno"> 1412</span>    <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device&gt;;</div>
 <div class="line"><a id="l01413" name="l01413"></a><span class="lineno"> 1413</span>    fst::multiplyMeasure(s_aux,s_cw,s_bv);</div>
 <div class="line"><a id="l01414" name="l01414"></a><span class="lineno"> 1414</span> </div>
 <div class="line"><a id="l01415" name="l01415"></a><span class="lineno"> 1415</span>    <span class="comment">// Store for later if cache is enabled</span></div>
@@ -1567,10 +1567,10 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01439" name="l01439"></a><span class="lineno"> 1439</span>      <span class="keyword">auto</span> s_jac_inv = Kokkos::subview(cubature_jacobian_inverse_.get_view(), cell_range, Kokkos::ALL(), Kokkos::ALL(), Kokkos::ALL());</div>
 <div class="line"><a id="l01440" name="l01440"></a><span class="lineno"> 1440</span> </div>
 <div class="line"><a id="l01441" name="l01441"></a><span class="lineno"> 1441</span>      <span class="comment">// Apply transformation</span></div>
-<div class="line"><a id="l01442" name="l01442"></a><span class="lineno"> 1442</span>      <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device::execution_space&gt;;</div>
+<div class="line"><a id="l01442" name="l01442"></a><span class="lineno"> 1442</span>      <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device&gt;;</div>
 <div class="line"><a id="l01443" name="l01443"></a><span class="lineno"> 1443</span>      fst::HGRADtransformGRAD(s_aux, s_jac_inv,cell_grad_basis_ref.get_view());</div>
 <div class="line"><a id="l01444" name="l01444"></a><span class="lineno"> 1444</span> </div>
-<div class="line"><a id="l01445" name="l01445"></a><span class="lineno"> 1445</span>      PHX::Device().fence();</div>
+<div class="line"><a id="l01445" name="l01445"></a><span class="lineno"> 1445</span>      PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l01446" name="l01446"></a><span class="lineno"> 1446</span> </div>
 <div class="line"><a id="l01447" name="l01447"></a><span class="lineno"> 1447</span>    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l01448" name="l01448"></a><span class="lineno"> 1448</span> </div>
@@ -1609,7 +1609,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01481" name="l01481"></a><span class="lineno"> 1481</span>        <span class="keyword">auto</span> s_ref = Kokkos::subview(tmp_grad_basis_ref.get_view(),cell_range,Kokkos::ALL(),Kokkos::ALL(),Kokkos::ALL());</div>
 <div class="line"><a id="l01482" name="l01482"></a><span class="lineno"> 1482</span> </div>
 <div class="line"><a id="l01483" name="l01483"></a><span class="lineno"> 1483</span>        <span class="comment">// Apply transformation</span></div>
-<div class="line"><a id="l01484" name="l01484"></a><span class="lineno"> 1484</span>        <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device::execution_space&gt;;</div>
+<div class="line"><a id="l01484" name="l01484"></a><span class="lineno"> 1484</span>        <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device&gt;;</div>
 <div class="line"><a id="l01485" name="l01485"></a><span class="lineno"> 1485</span>        fst::HGRADtransformGRAD(s_aux, s_jac_inv, s_ref);</div>
 <div class="line"><a id="l01486" name="l01486"></a><span class="lineno"> 1486</span>      } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l01487" name="l01487"></a><span class="lineno"> 1487</span><span class="preprocessor">#endif</span></div>
@@ -1632,12 +1632,12 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01504" name="l01504"></a><span class="lineno"> 1504</span>        <span class="keyword">auto</span> s_ref = Kokkos::subview(tmp_grad_basis_ref.get_view(),cell_range,Kokkos::ALL(),Kokkos::ALL(),Kokkos::ALL());</div>
 <div class="line"><a id="l01505" name="l01505"></a><span class="lineno"> 1505</span> </div>
 <div class="line"><a id="l01506" name="l01506"></a><span class="lineno"> 1506</span>        <span class="comment">// Apply transformation</span></div>
-<div class="line"><a id="l01507" name="l01507"></a><span class="lineno"> 1507</span>        <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device::execution_space&gt;;</div>
+<div class="line"><a id="l01507" name="l01507"></a><span class="lineno"> 1507</span>        <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device&gt;;</div>
 <div class="line"><a id="l01508" name="l01508"></a><span class="lineno"> 1508</span>        fst::HGRADtransformGRAD(s_aux, s_jac_inv, s_ref);</div>
 <div class="line"><a id="l01509" name="l01509"></a><span class="lineno"> 1509</span><span class="preprocessor">#if defined(KOKKOS_ENABLE_CUDA) || defined(KOKKOS_IMPL_HIP_UNIFIED_MEMORY)</span></div>
 <div class="line"><a id="l01510" name="l01510"></a><span class="lineno"> 1510</span>      }</div>
 <div class="line"><a id="l01511" name="l01511"></a><span class="lineno"> 1511</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l01512" name="l01512"></a><span class="lineno"> 1512</span>      PHX::Device().fence();</div>
+<div class="line"><a id="l01512" name="l01512"></a><span class="lineno"> 1512</span>      PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l01513" name="l01513"></a><span class="lineno"> 1513</span> </div>
 <div class="line"><a id="l01514" name="l01514"></a><span class="lineno"> 1514</span>    }</div>
 <div class="line"><a id="l01515" name="l01515"></a><span class="lineno"> 1515</span> </div>
@@ -1693,7 +1693,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01563" name="l01563"></a><span class="lineno"> 1563</span>    <span class="keyword">auto</span> s_cw = Kokkos::subview(cubature_weights_.get_view(), cell_range, Kokkos::ALL());</div>
 <div class="line"><a id="l01564" name="l01564"></a><span class="lineno"> 1564</span>    <span class="keyword">auto</span> s_bv = Kokkos::subview(bv.get_view(), cell_range, Kokkos::ALL(), Kokkos::ALL());</div>
 <div class="line"><a id="l01565" name="l01565"></a><span class="lineno"> 1565</span> </div>
-<div class="line"><a id="l01566" name="l01566"></a><span class="lineno"> 1566</span>    <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device::execution_space&gt;;</div>
+<div class="line"><a id="l01566" name="l01566"></a><span class="lineno"> 1566</span>    <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device&gt;;</div>
 <div class="line"><a id="l01567" name="l01567"></a><span class="lineno"> 1567</span>    fst::multiplyMeasure(s_aux,s_cw,s_bv);</div>
 <div class="line"><a id="l01568" name="l01568"></a><span class="lineno"> 1568</span> </div>
 <div class="line"><a id="l01569" name="l01569"></a><span class="lineno"> 1569</span>    <span class="comment">// Store for later if cache is enabled</span></div>
@@ -1725,9 +1725,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01595" name="l01595"></a><span class="lineno"> 1595</span>      <span class="comment">// note only volume deformation is needed!</span></div>
 <div class="line"><a id="l01596" name="l01596"></a><span class="lineno"> 1596</span>      <span class="comment">// this relates directly to this being in</span></div>
 <div class="line"><a id="l01597" name="l01597"></a><span class="lineno"> 1597</span>      <span class="comment">// the divergence space in 2D!</span></div>
-<div class="line"><a id="l01598" name="l01598"></a><span class="lineno"> 1598</span>      <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device::execution_space&gt;;</div>
+<div class="line"><a id="l01598" name="l01598"></a><span class="lineno"> 1598</span>      <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device&gt;;</div>
 <div class="line"><a id="l01599" name="l01599"></a><span class="lineno"> 1599</span>      fst::HDIVtransformDIV(s_aux,s_jac_det,cell_curl_basis_ref_scalar.get_view());</div>
-<div class="line"><a id="l01600" name="l01600"></a><span class="lineno"> 1600</span>      PHX::Device().fence();</div>
+<div class="line"><a id="l01600" name="l01600"></a><span class="lineno"> 1600</span>      PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l01601" name="l01601"></a><span class="lineno"> 1601</span> </div>
 <div class="line"><a id="l01602" name="l01602"></a><span class="lineno"> 1602</span>    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l01603" name="l01603"></a><span class="lineno"> 1603</span> </div>
@@ -1768,7 +1768,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01638" name="l01638"></a><span class="lineno"> 1638</span>        <span class="comment">// note only volume deformation is needed!</span></div>
 <div class="line"><a id="l01639" name="l01639"></a><span class="lineno"> 1639</span>        <span class="comment">// this relates directly to this being in</span></div>
 <div class="line"><a id="l01640" name="l01640"></a><span class="lineno"> 1640</span>        <span class="comment">// the divergence space in 2D!</span></div>
-<div class="line"><a id="l01641" name="l01641"></a><span class="lineno"> 1641</span>        <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device::execution_space&gt;;</div>
+<div class="line"><a id="l01641" name="l01641"></a><span class="lineno"> 1641</span>        <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device&gt;;</div>
 <div class="line"><a id="l01642" name="l01642"></a><span class="lineno"> 1642</span>        fst::HDIVtransformDIV(s_aux,s_jac_det,s_ref);</div>
 <div class="line"><a id="l01643" name="l01643"></a><span class="lineno"> 1643</span>      } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l01644" name="l01644"></a><span class="lineno"> 1644</span><span class="preprocessor">#endif</span></div>
@@ -1793,12 +1793,12 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01663" name="l01663"></a><span class="lineno"> 1663</span>        <span class="comment">// note only volume deformation is needed!</span></div>
 <div class="line"><a id="l01664" name="l01664"></a><span class="lineno"> 1664</span>        <span class="comment">// this relates directly to this being in</span></div>
 <div class="line"><a id="l01665" name="l01665"></a><span class="lineno"> 1665</span>        <span class="comment">// the divergence space in 2D!</span></div>
-<div class="line"><a id="l01666" name="l01666"></a><span class="lineno"> 1666</span>        <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device::execution_space&gt;;</div>
+<div class="line"><a id="l01666" name="l01666"></a><span class="lineno"> 1666</span>        <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device&gt;;</div>
 <div class="line"><a id="l01667" name="l01667"></a><span class="lineno"> 1667</span>        fst::HDIVtransformDIV(s_aux,s_jac_det,s_ref);</div>
 <div class="line"><a id="l01668" name="l01668"></a><span class="lineno"> 1668</span><span class="preprocessor">#if defined(KOKKOS_ENABLE_CUDA) || defined(KOKKOS_IMPL_HIP_UNIFIED_MEMORY)</span></div>
 <div class="line"><a id="l01669" name="l01669"></a><span class="lineno"> 1669</span>      }</div>
 <div class="line"><a id="l01670" name="l01670"></a><span class="lineno"> 1670</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l01671" name="l01671"></a><span class="lineno"> 1671</span>      PHX::Device().fence();</div>
+<div class="line"><a id="l01671" name="l01671"></a><span class="lineno"> 1671</span>      PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l01672" name="l01672"></a><span class="lineno"> 1672</span>    }</div>
 <div class="line"><a id="l01673" name="l01673"></a><span class="lineno"> 1673</span> </div>
 <div class="line"><a id="l01674" name="l01674"></a><span class="lineno"> 1674</span>    <span class="keywordflow">if</span>(orientations_.size() &gt; 0)</div>
@@ -1853,7 +1853,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01721" name="l01721"></a><span class="lineno"> 1721</span>    <span class="keyword">auto</span> s_cw = Kokkos::subview(cubature_weights_.get_view(), cell_range, Kokkos::ALL());</div>
 <div class="line"><a id="l01722" name="l01722"></a><span class="lineno"> 1722</span>    <span class="keyword">auto</span> s_bv = Kokkos::subview(bv.get_view(), cell_range, Kokkos::ALL(), Kokkos::ALL(), Kokkos::ALL());</div>
 <div class="line"><a id="l01723" name="l01723"></a><span class="lineno"> 1723</span> </div>
-<div class="line"><a id="l01724" name="l01724"></a><span class="lineno"> 1724</span>    <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device::execution_space&gt;;</div>
+<div class="line"><a id="l01724" name="l01724"></a><span class="lineno"> 1724</span>    <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device&gt;;</div>
 <div class="line"><a id="l01725" name="l01725"></a><span class="lineno"> 1725</span>    fst::multiplyMeasure(s_aux, s_cw, s_bv);</div>
 <div class="line"><a id="l01726" name="l01726"></a><span class="lineno"> 1726</span> </div>
 <div class="line"><a id="l01727" name="l01727"></a><span class="lineno"> 1727</span>    <span class="comment">// Store for later if cache is enabled</span></div>
@@ -1883,9 +1883,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01751" name="l01751"></a><span class="lineno"> 1751</span>      <span class="keyword">auto</span> s_jac = Kokkos::subview(cubature_jacobian_.get_view(), cell_range, Kokkos::ALL(), Kokkos::ALL(), Kokkos::ALL());</div>
 <div class="line"><a id="l01752" name="l01752"></a><span class="lineno"> 1752</span>      <span class="keyword">auto</span> s_jac_det = Kokkos::subview(cubature_jacobian_determinant_.get_view(), cell_range, Kokkos::ALL());</div>
 <div class="line"><a id="l01753" name="l01753"></a><span class="lineno"> 1753</span> </div>
-<div class="line"><a id="l01754" name="l01754"></a><span class="lineno"> 1754</span>      <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device::execution_space&gt;;</div>
+<div class="line"><a id="l01754" name="l01754"></a><span class="lineno"> 1754</span>      <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device&gt;;</div>
 <div class="line"><a id="l01755" name="l01755"></a><span class="lineno"> 1755</span>      fst::HCURLtransformCURL(s_aux, s_jac, s_jac_det,cell_curl_basis_ref_vector.get_view());</div>
-<div class="line"><a id="l01756" name="l01756"></a><span class="lineno"> 1756</span>      PHX::Device().fence();</div>
+<div class="line"><a id="l01756" name="l01756"></a><span class="lineno"> 1756</span>      PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l01757" name="l01757"></a><span class="lineno"> 1757</span> </div>
 <div class="line"><a id="l01758" name="l01758"></a><span class="lineno"> 1758</span>    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l01759" name="l01759"></a><span class="lineno"> 1759</span> </div>
@@ -1924,7 +1924,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01792" name="l01792"></a><span class="lineno"> 1792</span>        <span class="keyword">auto</span> s_jac_det = Kokkos::subview(cubature_jacobian_determinant_.get_view(), cell_range, Kokkos::ALL());</div>
 <div class="line"><a id="l01793" name="l01793"></a><span class="lineno"> 1793</span>        <span class="keyword">auto</span> s_ref = Kokkos::subview(tmp_curl_basis_vector_ref.get_view(), cell_range, Kokkos::ALL(), Kokkos::ALL(), Kokkos::ALL());</div>
 <div class="line"><a id="l01794" name="l01794"></a><span class="lineno"> 1794</span> </div>
-<div class="line"><a id="l01795" name="l01795"></a><span class="lineno"> 1795</span>        <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device::execution_space&gt;;</div>
+<div class="line"><a id="l01795" name="l01795"></a><span class="lineno"> 1795</span>        <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device&gt;;</div>
 <div class="line"><a id="l01796" name="l01796"></a><span class="lineno"> 1796</span>        fst::HCURLtransformCURL(s_aux, s_jac, s_jac_det, s_ref);</div>
 <div class="line"><a id="l01797" name="l01797"></a><span class="lineno"> 1797</span>      } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l01798" name="l01798"></a><span class="lineno"> 1798</span><span class="preprocessor">#endif</span></div>
@@ -1947,12 +1947,12 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01815" name="l01815"></a><span class="lineno"> 1815</span>        <span class="keyword">auto</span> s_jac_det = Kokkos::subview(cubature_jacobian_determinant_.get_view(), cell_range, Kokkos::ALL());</div>
 <div class="line"><a id="l01816" name="l01816"></a><span class="lineno"> 1816</span>        <span class="keyword">auto</span> s_ref = Kokkos::subview(tmp_curl_basis_vector_ref.get_view(), cell_range, Kokkos::ALL(), Kokkos::ALL(), Kokkos::ALL());</div>
 <div class="line"><a id="l01817" name="l01817"></a><span class="lineno"> 1817</span> </div>
-<div class="line"><a id="l01818" name="l01818"></a><span class="lineno"> 1818</span>        <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device::execution_space&gt;;</div>
+<div class="line"><a id="l01818" name="l01818"></a><span class="lineno"> 1818</span>        <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device&gt;;</div>
 <div class="line"><a id="l01819" name="l01819"></a><span class="lineno"> 1819</span>        fst::HCURLtransformCURL(s_aux, s_jac, s_jac_det, s_ref);</div>
 <div class="line"><a id="l01820" name="l01820"></a><span class="lineno"> 1820</span><span class="preprocessor">#if defined(KOKKOS_ENABLE_CUDA) || defined(KOKKOS_IMPL_HIP_UNIFIED_MEMORY)</span></div>
 <div class="line"><a id="l01821" name="l01821"></a><span class="lineno"> 1821</span>      }</div>
 <div class="line"><a id="l01822" name="l01822"></a><span class="lineno"> 1822</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l01823" name="l01823"></a><span class="lineno"> 1823</span>      PHX::Device().fence();</div>
+<div class="line"><a id="l01823" name="l01823"></a><span class="lineno"> 1823</span>      PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l01824" name="l01824"></a><span class="lineno"> 1824</span> </div>
 <div class="line"><a id="l01825" name="l01825"></a><span class="lineno"> 1825</span>    }</div>
 <div class="line"><a id="l01826" name="l01826"></a><span class="lineno"> 1826</span> </div>
@@ -2007,7 +2007,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01873" name="l01873"></a><span class="lineno"> 1873</span>    <span class="keyword">auto</span> s_cw = Kokkos::subview(cubature_weights_.get_view(), cell_range, Kokkos::ALL());</div>
 <div class="line"><a id="l01874" name="l01874"></a><span class="lineno"> 1874</span>    <span class="keyword">auto</span> s_bv = Kokkos::subview(bv.get_view(), cell_range, Kokkos::ALL(), Kokkos::ALL());</div>
 <div class="line"><a id="l01875" name="l01875"></a><span class="lineno"> 1875</span> </div>
-<div class="line"><a id="l01876" name="l01876"></a><span class="lineno"> 1876</span>    <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device::execution_space&gt;;</div>
+<div class="line"><a id="l01876" name="l01876"></a><span class="lineno"> 1876</span>    <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device&gt;;</div>
 <div class="line"><a id="l01877" name="l01877"></a><span class="lineno"> 1877</span>    fst::multiplyMeasure(s_aux, s_cw, s_bv);</div>
 <div class="line"><a id="l01878" name="l01878"></a><span class="lineno"> 1878</span> </div>
 <div class="line"><a id="l01879" name="l01879"></a><span class="lineno"> 1879</span>    <span class="comment">// Store for later if cache is enabled</span></div>
@@ -2035,9 +2035,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01901" name="l01901"></a><span class="lineno"> 1901</span>      <span class="keyword">auto</span> s_aux = Kokkos::subview(tmp_div_basis.get_view(), cell_range, Kokkos::ALL(), Kokkos::ALL());</div>
 <div class="line"><a id="l01902" name="l01902"></a><span class="lineno"> 1902</span>      <span class="keyword">auto</span> s_jac_det = Kokkos::subview(cubature_jacobian_determinant_.get_view(), cell_range, Kokkos::ALL());</div>
 <div class="line"><a id="l01903" name="l01903"></a><span class="lineno"> 1903</span> </div>
-<div class="line"><a id="l01904" name="l01904"></a><span class="lineno"> 1904</span>      <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device::execution_space&gt;;</div>
+<div class="line"><a id="l01904" name="l01904"></a><span class="lineno"> 1904</span>      <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device&gt;;</div>
 <div class="line"><a id="l01905" name="l01905"></a><span class="lineno"> 1905</span>      fst::HDIVtransformDIV(s_aux,s_jac_det,cell_div_basis_ref.get_view());</div>
-<div class="line"><a id="l01906" name="l01906"></a><span class="lineno"> 1906</span>      PHX::Device().fence();</div>
+<div class="line"><a id="l01906" name="l01906"></a><span class="lineno"> 1906</span>      PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l01907" name="l01907"></a><span class="lineno"> 1907</span> </div>
 <div class="line"><a id="l01908" name="l01908"></a><span class="lineno"> 1908</span>    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l01909" name="l01909"></a><span class="lineno"> 1909</span> </div>
@@ -2075,7 +2075,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01941" name="l01941"></a><span class="lineno"> 1941</span>        <span class="keyword">auto</span> s_jac_det = Kokkos::subview(cubature_jacobian_determinant_.get_view(), cell_range, Kokkos::ALL());</div>
 <div class="line"><a id="l01942" name="l01942"></a><span class="lineno"> 1942</span>        <span class="keyword">auto</span> s_ref = Kokkos::subview(tmp_div_basis_ref.get_view(), cell_range, Kokkos::ALL(), Kokkos::ALL());</div>
 <div class="line"><a id="l01943" name="l01943"></a><span class="lineno"> 1943</span> </div>
-<div class="line"><a id="l01944" name="l01944"></a><span class="lineno"> 1944</span>        <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device::execution_space&gt;;</div>
+<div class="line"><a id="l01944" name="l01944"></a><span class="lineno"> 1944</span>        <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device&gt;;</div>
 <div class="line"><a id="l01945" name="l01945"></a><span class="lineno"> 1945</span>        fst::HDIVtransformDIV(s_aux,s_jac_det,s_ref);</div>
 <div class="line"><a id="l01946" name="l01946"></a><span class="lineno"> 1946</span>      } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l01947" name="l01947"></a><span class="lineno"> 1947</span><span class="preprocessor">#endif</span></div>
@@ -2097,12 +2097,12 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01963" name="l01963"></a><span class="lineno"> 1963</span>        <span class="keyword">auto</span> s_jac_det = Kokkos::subview(cubature_jacobian_determinant_.get_view(), cell_range, Kokkos::ALL());</div>
 <div class="line"><a id="l01964" name="l01964"></a><span class="lineno"> 1964</span>        <span class="keyword">auto</span> s_ref = Kokkos::subview(tmp_div_basis_ref.get_view(), cell_range, Kokkos::ALL(), Kokkos::ALL());</div>
 <div class="line"><a id="l01965" name="l01965"></a><span class="lineno"> 1965</span> </div>
-<div class="line"><a id="l01966" name="l01966"></a><span class="lineno"> 1966</span>        <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device::execution_space&gt;;</div>
+<div class="line"><a id="l01966" name="l01966"></a><span class="lineno"> 1966</span>        <span class="keyword">using </span>fst=Intrepid2::FunctionSpaceTools&lt;PHX::Device&gt;;</div>
 <div class="line"><a id="l01967" name="l01967"></a><span class="lineno"> 1967</span>        fst::HDIVtransformDIV(s_aux,s_jac_det,s_ref);</div>
 <div class="line"><a id="l01968" name="l01968"></a><span class="lineno"> 1968</span><span class="preprocessor">#if defined(KOKKOS_ENABLE_CUDA) || defined(KOKKOS_IMPL_HIP_UNIFIED_MEMORY)</span></div>
 <div class="line"><a id="l01969" name="l01969"></a><span class="lineno"> 1969</span>      }</div>
 <div class="line"><a id="l01970" name="l01970"></a><span class="lineno"> 1970</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l01971" name="l01971"></a><span class="lineno"> 1971</span>      PHX::Device().fence();</div>
+<div class="line"><a id="l01971" name="l01971"></a><span class="lineno"> 1971</span>      PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l01972" name="l01972"></a><span class="lineno"> 1972</span> </div>
 <div class="line"><a id="l01973" name="l01973"></a><span class="lineno"> 1973</span>    }</div>
 <div class="line"><a id="l01974" name="l01974"></a><span class="lineno"> 1974</span> </div>
@@ -2132,7 +2132,6 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclasspanzer_1_1_basis_values2_html_a16fecec6526af25e32b687fb64f7a9bb"><div class="ttname"><a href="classpanzer_1_1_basis_values2.html#a16fecec6526af25e32b687fb64f7a9bb">panzer::BasisValues2::getCurl2DVectorBasisRef</a></div><div class="ttdeci">ConstArray_BasisIP getCurl2DVectorBasisRef(const bool cache=true, const bool force=false) const</div><div class="ttdoc">Get the curl of a vector basis evaluated at reference points.</div><div class="ttdef"><b>Definition</b> <a href="_panzer___basis_values2__impl_8hpp_source.html#l00884">Panzer_BasisValues2_impl.hpp:885</a></div></div>
 <div class="ttc" id="aclasspanzer_1_1_basis_values2_html_a20708abfc5f1b1eef114f9f63775c20b"><div class="ttname"><a href="classpanzer_1_1_basis_values2.html#a20708abfc5f1b1eef114f9f63775c20b">panzer::BasisValues2::weighted_div_basis_evaluated_</a></div><div class="ttdeci">bool weighted_div_basis_evaluated_</div><div class="ttdef"><b>Definition</b> <a href="_panzer___basis_values2_8hpp_source.html#l00283">Panzer_BasisValues2.hpp:283</a></div></div>
 <div class="ttc" id="aclasspanzer_1_1_basis_values2_html_a25adf200e3b8ca215cb66b6b1b064416"><div class="ttname"><a href="classpanzer_1_1_basis_values2.html#a25adf200e3b8ca215cb66b6b1b064416">panzer::BasisValues2::BasisValues2</a></div><div class="ttdeci">BasisValues2(const std::string &amp;prefix=&quot;&quot;, const bool allocArrays=false, const bool buildWeighted=false)</div><div class="ttdoc">Main constructor.</div><div class="ttdef"><b>Definition</b> <a href="_panzer___basis_values2__impl_8hpp_source.html#l00084">Panzer_BasisValues2_impl.hpp:85</a></div></div>
-<div class="ttc" id="aclasspanzer_1_1_basis_values2_html_a278dc31ff4efdb56c3733dd204bf5c04"><div class="ttname"><a href="classpanzer_1_1_basis_values2.html#a278dc31ff4efdb56c3733dd204bf5c04">panzer::BasisValues2::IntrepidBasis</a></div><div class="ttdeci">Intrepid2::Basis&lt; PHX::Device::execution_space, Scalar, Scalar &gt; IntrepidBasis</div><div class="ttdef"><b>Definition</b> <a href="_panzer___basis_values2_8hpp_source.html#l00071">Panzer_BasisValues2.hpp:71</a></div></div>
 <div class="ttc" id="aclasspanzer_1_1_basis_values2_html_a35e0b491cdf0039f182e1303c5f3f7f3"><div class="ttname"><a href="classpanzer_1_1_basis_values2.html#a35e0b491cdf0039f182e1303c5f3f7f3">panzer::BasisValues2::getDivVectorBasis</a></div><div class="ttdeci">ConstArray_CellBasisIP getDivVectorBasis(const bool weighted, const bool cache=true, const bool force=false) const</div><div class="ttdoc">Get the divergence of a vector basis evaluated at mesh points.</div><div class="ttdef"><b>Definition</b> <a href="_panzer___basis_values2__impl_8hpp_source.html#l01841">Panzer_BasisValues2_impl.hpp:1842</a></div></div>
 <div class="ttc" id="aclasspanzer_1_1_basis_values2_html_a36fdb3194a5b72df7c0b1d9344527dfc"><div class="ttname"><a href="classpanzer_1_1_basis_values2.html#a36fdb3194a5b72df7c0b1d9344527dfc">panzer::BasisValues2::grad_basis_evaluated_</a></div><div class="ttdeci">bool grad_basis_evaluated_</div><div class="ttdef"><b>Definition</b> <a href="_panzer___basis_values2_8hpp_source.html#l00271">Panzer_BasisValues2.hpp:271</a></div></div>
 <div class="ttc" id="aclasspanzer_1_1_basis_values2_html_a3a9b31e81d0a4d2d6ffb6a99798ba12e"><div class="ttname"><a href="classpanzer_1_1_basis_values2.html#a3a9b31e81d0a4d2d6ffb6a99798ba12e">panzer::BasisValues2::evaluateValuesCV</a></div><div class="ttdeci">void evaluateValuesCV(const PHX::MDField&lt; Scalar, Cell, IP, Dim &gt; &amp;cell_cub_points, const PHX::MDField&lt; Scalar, Cell, IP, Dim, Dim &gt; &amp;jac, const PHX::MDField&lt; Scalar, Cell, IP &gt; &amp;jac_det, const PHX::MDField&lt; Scalar, Cell, IP, Dim, Dim &gt; &amp;jac_inv)</div><div class="ttdef"><b>Definition</b> <a href="_panzer___basis_values2__impl_8hpp_source.html#l00304">Panzer_BasisValues2_impl.hpp:305</a></div></div>
@@ -2177,6 +2176,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclasspanzer_1_1_basis_values2_html_adce5893eb91a1281172e6a7e923c52d1"><div class="ttname"><a href="classpanzer_1_1_basis_values2.html#adce5893eb91a1281172e6a7e923c52d1">panzer::BasisValues2::curl_basis_scalar_evaluated_</a></div><div class="ttdeci">bool curl_basis_scalar_evaluated_</div><div class="ttdef"><b>Definition</b> <a href="_panzer___basis_values2_8hpp_source.html#l00273">Panzer_BasisValues2.hpp:273</a></div></div>
 <div class="ttc" id="aclasspanzer_1_1_basis_values2_html_adec80f6ced9b8e33aa5fcb5a3caf4a44"><div class="ttname"><a href="classpanzer_1_1_basis_values2.html#adec80f6ced9b8e33aa5fcb5a3caf4a44">panzer::BasisValues2::setupArrays</a></div><div class="ttdeci">void setupArrays(const Teuchos::RCP&lt; const panzer::BasisIRLayout &gt; &amp;basis, bool computeDerivatives=true)</div><div class="ttdoc">Sizes/allocates memory for arrays.</div><div class="ttdef"><b>Definition</b> <a href="_panzer___basis_values2__impl_8hpp_source.html#l00414">Panzer_BasisValues2_impl.hpp:415</a></div></div>
 <div class="ttc" id="aclasspanzer_1_1_basis_values2_html_adffa9f4d87f66dd00c3fb4b9a00458b3"><div class="ttname"><a href="classpanzer_1_1_basis_values2.html#adffa9f4d87f66dd00c3fb4b9a00458b3">panzer::BasisValues2::setupUniform</a></div><div class="ttdeci">void setupUniform(const Teuchos::RCP&lt; const panzer::BasisIRLayout &gt; &amp;basis, PHX::MDField&lt; const Scalar, IP, Dim &gt; reference_points, PHX::MDField&lt; const Scalar, Cell, IP, Dim, Dim &gt; point_jacobian, PHX::MDField&lt; const Scalar, Cell, IP &gt; point_jacobian_determinant, PHX::MDField&lt; const Scalar, Cell, IP, Dim, Dim &gt; point_jacobian_inverse, const int num_evaluated_cells=-1)</div><div class="ttdoc">Setup for lazy evaluation for uniform point layout.</div><div class="ttdef"><b>Definition</b> <a href="_panzer___basis_values2__impl_8hpp_source.html#l00604">Panzer_BasisValues2_impl.hpp:605</a></div></div>
+<div class="ttc" id="aclasspanzer_1_1_basis_values2_html_ae2b88ecc4fd79c8e9d6a1d10c2ad83f4"><div class="ttname"><a href="classpanzer_1_1_basis_values2.html#ae2b88ecc4fd79c8e9d6a1d10c2ad83f4">panzer::BasisValues2::IntrepidBasis</a></div><div class="ttdeci">Intrepid2::Basis&lt; PHX::Device, Scalar, Scalar &gt; IntrepidBasis</div><div class="ttdef"><b>Definition</b> <a href="_panzer___basis_values2_8hpp_source.html#l00071">Panzer_BasisValues2.hpp:71</a></div></div>
 <div class="ttc" id="aclasspanzer_1_1_basis_values2_html_ae2c3c86994d7ce56d44cf36e37355183"><div class="ttname"><a href="classpanzer_1_1_basis_values2.html#ae2c3c86994d7ce56d44cf36e37355183">panzer::BasisValues2::ConstArray_CellBasisDim</a></div><div class="ttdeci">PHX::MDField&lt; const Scalar, Cell, BASIS, Dim &gt; ConstArray_CellBasisDim</div><div class="ttdef"><b>Definition</b> <a href="_panzer___basis_values2_8hpp_source.html#l00087">Panzer_BasisValues2.hpp:87</a></div></div>
 <div class="ttc" id="aclasspanzer_1_1_basis_values2_html_aed0ba7353034aba606fd9c2e97896061"><div class="ttname"><a href="classpanzer_1_1_basis_values2.html#aed0ba7353034aba606fd9c2e97896061">panzer::BasisValues2::getVectorBasisValues</a></div><div class="ttdeci">ConstArray_CellBasisIPDim getVectorBasisValues(const bool weighted, const bool cache=true, const bool force=false) const</div><div class="ttdoc">Get the vector basis values evaluated at mesh points.</div><div class="ttdef"><b>Definition</b> <a href="_panzer___basis_values2__impl_8hpp_source.html#l01201">Panzer_BasisValues2_impl.hpp:1202</a></div></div>
 <div class="ttc" id="aclasspanzer_1_1_basis_values2_html_af05aaf26eb0813876e17505da6489ed3"><div class="ttname"><a href="classpanzer_1_1_basis_values2.html#af05aaf26eb0813876e17505da6489ed3">panzer::BasisValues2::getDivVectorBasisRef</a></div><div class="ttdeci">ConstArray_BasisIP getDivVectorBasisRef(const bool cache=true, const bool force=false) const</div><div class="ttdoc">Get the divergence of a vector basis evaluated at reference points.</div><div class="ttdef"><b>Definition</b> <a href="_panzer___basis_values2__impl_8hpp_source.html#l00959">Panzer_BasisValues2_impl.hpp:960</a></div></div>

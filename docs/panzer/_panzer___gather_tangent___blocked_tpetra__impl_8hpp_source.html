@@ -290,7 +290,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; worksetLIDs = worksetLIDs_;</div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; fieldValues = gatherFields_[fieldIndex];</div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    Kokkos::parallel_for(Kokkos::RangePolicy&lt;PHX::Device&gt;(0,workset.num_cells), KOKKOS_LAMBDA (<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; cell) {       </div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    Kokkos::parallel_for(Kokkos::RangePolicy&lt;PHX::ExecutionSpace&gt;(0,workset.num_cells), KOKKOS_LAMBDA (<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; cell) {       </div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> basis=0; basis &lt; static_cast&lt;int&gt;(fieldOffsets.size()); ++basis) {</div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> lid = worksetLIDs(cell,fieldOffsets(basis));</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        fieldValues(cell,basis) = kokkosSolution(lid,0);        </div>

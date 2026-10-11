@@ -94,22 +94,69 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef PANZER_KOKKOS_NODE_TYPE_HPP</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define PANZER_KOKKOS_NODE_TYPE_HPP</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">//#include &lt;Tpetra_KokkosCompat_DefaultNode.hpp&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//#include &quot;Tpetra_Map.hpp&quot;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;Phalanx_KokkosDeviceTypes.hpp&quot;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;Tpetra_KokkosCompat_ClassicNodeAPI_Wrapper.hpp&gt;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacepanzer.html">panzer</a> {</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="comment">// New Tpetra default node type</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <span class="comment">// typedef Tpetra::Map&lt;&gt;::node_type TpetraNodeType;</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="namespacepanzer.html#a99d6c2e247dadbef989f9acd93e94960">   35</a></span>  <span class="keyword">typedef</span> <span class="keyword">typename</span> Tpetra::KokkosCompat::KokkosDeviceWrapperNode&lt;PHX::Device&gt; <a class="code hl_typedef" href="namespacepanzer.html#a99d6c2e247dadbef989f9acd93e94960">TpetraNodeType</a>;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>}</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;Phalanx_KokkosDeviceTypes.hpp&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;Tpetra_KokkosCompat_ClassicNodeAPI_Wrapper.hpp&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;type_traits&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacepanzer.html">panzer</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="namespacepanzer.html#a6cdf40340055318465bd0a87fd5b9e52">   39</a></span>  <span class="keyword">using </span><a class="code hl_typedef" href="namespacepanzer.html#a6cdf40340055318465bd0a87fd5b9e52">TpetraNodeType</a> =</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>      Tpetra::KokkosCompat::KokkosDeviceWrapperNode&lt;PHX::ExecutionSpace,</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                                                    PHX::MemorySpace&gt;;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Node&gt;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="structpanzer_1_1_tpetra_node_is_instantiated.html">   59</a></span>  <span class="keyword">struct </span><a class="code hl_struct" href="structpanzer_1_1_tpetra_node_is_instantiated.html">TpetraNodeIsInstantiated</a> : std::false_type {};</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#if defined(HAVE_TPETRA_INST_SERIAL) &amp;&amp; defined(KOKKOS_ENABLE_SERIAL)</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structpanzer_1_1_tpetra_node_is_instantiated.html">TpetraNodeIsInstantiated</a>&lt;Tpetra::KokkosCompat::KokkosSerialWrapperNode&gt;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>      : std::true_type {};</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#if defined(HAVE_TPETRA_INST_OPENMP) &amp;&amp; defined(KOKKOS_ENABLE_OPENMP)</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  <span class="keyword">struct </span>TpetraNodeIsInstantiated&lt;Tpetra::KokkosCompat::KokkosOpenMPWrapperNode&gt;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>      : std::true_type {};</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#if defined(HAVE_TPETRA_INST_PTHREAD) &amp;&amp; defined(KOKKOS_ENABLE_THREADS)</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <span class="keyword">struct </span>TpetraNodeIsInstantiated&lt;Tpetra::KokkosCompat::KokkosThreadsWrapperNode&gt;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>      : std::true_type {};</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#if defined(HAVE_TPETRA_INST_CUDA) &amp;&amp; defined(KOKKOS_ENABLE_CUDA)</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  <span class="keyword">struct </span>TpetraNodeIsInstantiated&lt;Tpetra::KokkosCompat::KokkosCudaWrapperNode&gt;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      : std::true_type {};</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#if defined(HAVE_TPETRA_INST_HIP) &amp;&amp; defined(KOKKOS_ENABLE_HIP)</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  <span class="keyword">struct </span>TpetraNodeIsInstantiated&lt;Tpetra::KokkosCompat::KokkosHIPWrapperNode&gt;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>      : std::true_type {};</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">#if defined(HAVE_TPETRA_INST_SYCL) &amp;&amp; defined(KOKKOS_ENABLE_SYCL)</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  <span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <span class="keyword">struct </span>TpetraNodeIsInstantiated&lt;Tpetra::KokkosCompat::KokkosSYCLWrapperNode&gt;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>      : std::true_type {};</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  <span class="keyword">static_assert</span>(TpetraNodeIsInstantiated&lt;TpetraNodeType&gt;::value,</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                <span class="stringliteral">&quot;panzer: the Tpetra node type panzer derives from Phalanx&#39; &quot;</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                <span class="stringliteral">&quot;execution and memory spaces is not one that Tpetra &quot;</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                <span class="stringliteral">&quot;instantiated, so every Tpetra object panzer creates would &quot;</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                <span class="stringliteral">&quot;fail to link.  Either set the Tpetra_INST_&lt;BACKEND&gt; matching &quot;</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                <span class="stringliteral">&quot;Phalanx_DEFAULT_EXECUTION_SPACE -- note Tpetra_INST_HIP and &quot;</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                <span class="stringliteral">&quot;Tpetra_INST_SYCL are OFF by default, so a HIP or SYCL build &quot;</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                <span class="stringliteral">&quot;needs one set explicitly -- or make &quot;</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                <span class="stringliteral">&quot;Tpetra_ALLOCATE_IN_SHARED_SPACE agree with &quot;</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                <span class="stringliteral">&quot;Phalanx_ENABLE_SHARED_SPACE, since the two select the same &quot;</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                <span class="stringliteral">&quot;Kokkos::SharedSpace and enabling one alone changes the node&#39;s &quot;</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                <span class="stringliteral">&quot;memory space to one Tpetra did not instantiate.&quot;</span>);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>}</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="anamespacepanzer_html"><div class="ttname"><a href="namespacepanzer.html">panzer</a></div><div class="ttdoc">Computes .</div><div class="ttdef"><b>Definition</b> <a href="_panzer___basis_values___evaluator__decl_8hpp_source.html#l00022">Panzer_BasisValues_Evaluator_decl.hpp:22</a></div></div>
-<div class="ttc" id="anamespacepanzer_html_a99d6c2e247dadbef989f9acd93e94960"><div class="ttname"><a href="namespacepanzer.html#a99d6c2e247dadbef989f9acd93e94960">panzer::TpetraNodeType</a></div><div class="ttdeci">Tpetra::KokkosCompat::KokkosDeviceWrapperNode&lt; PHX::Device &gt; TpetraNodeType</div><div class="ttdoc">The Kokkos node type used to instantiate all Tpetra objects (Map, MultiVector, CrsGraph,...</div><div class="ttdef"><b>Definition</b> <a href="_panzer___node_type_8hpp_source.html#l00035">Panzer_NodeType.hpp:35</a></div></div>
+<div class="ttc" id="anamespacepanzer_html_a6cdf40340055318465bd0a87fd5b9e52"><div class="ttname"><a href="namespacepanzer.html#a6cdf40340055318465bd0a87fd5b9e52">panzer::TpetraNodeType</a></div><div class="ttdeci">Tpetra::KokkosCompat::KokkosDeviceWrapperNode&lt; PHX::ExecutionSpace, PHX::MemorySpace &gt; TpetraNodeType</div><div class="ttdoc">The Kokkos node type used to instantiate all Tpetra objects (Map, MultiVector, CrsGraph,...</div><div class="ttdef"><b>Definition</b> <a href="_panzer___node_type_8hpp_source.html#l00039">Panzer_NodeType.hpp:41</a></div></div>
+<div class="ttc" id="astructpanzer_1_1_tpetra_node_is_instantiated_html"><div class="ttname"><a href="structpanzer_1_1_tpetra_node_is_instantiated.html">panzer::TpetraNodeIsInstantiated</a></div><div class="ttdoc">Whether Tpetra explicitly instantiated its classes over Node.</div><div class="ttdef"><b>Definition</b> <a href="_panzer___node_type_8hpp_source.html#l00059">Panzer_NodeType.hpp:59</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

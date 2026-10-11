@@ -117,25 +117,25 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">namespace </span>{</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>Teuchos::RCP&lt;Intrepid2::Cubature&lt;PHX::Device::execution_space,double,double&gt;&gt;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>Teuchos::RCP&lt;Intrepid2::Cubature&lt;PHX::Device,double,double&gt;&gt;</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>getIntrepidCubature(<span class="keyword">const</span> <a class="code hl_class" href="classpanzer_1_1_integration_rule.html">panzer::IntegrationRule</a> &amp; ir)</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>{</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="keyword">typedef</span> <a class="code hl_class" href="classpanzer_1_1_integration_descriptor.html">panzer::IntegrationDescriptor</a> ID;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  Teuchos::RCP&lt;Intrepid2::Cubature&lt;PHX::Device::execution_space,double,double&gt; &gt; ic;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  Teuchos::RCP&lt;Intrepid2::Cubature&lt;PHX::Device,double,double&gt; &gt; ic;</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  Intrepid2::DefaultCubatureFactory cubature_factory;</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="keywordflow">if</span>(ir.<a class="code hl_function" href="classpanzer_1_1_integration_descriptor.html#a98f5bc8517ea5e13ebf4d64241919323">getType</a>() == ID::CV_SIDE){</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    ic = Teuchos::rcp(<span class="keyword">new</span> Intrepid2::CubatureControlVolumeSide&lt;PHX::Device::execution_space,double,double&gt;(*ir.<a class="code hl_variable" href="classpanzer_1_1_point_rule.html#ac5735e2351317dde5c9586a1bf2f15dd">topology</a>));</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    ic = Teuchos::rcp(<span class="keyword">new</span> Intrepid2::CubatureControlVolumeSide&lt;PHX::Device,double,double&gt;(*ir.<a class="code hl_variable" href="classpanzer_1_1_point_rule.html#ac5735e2351317dde5c9586a1bf2f15dd">topology</a>));</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(ir.<a class="code hl_function" href="classpanzer_1_1_integration_descriptor.html#a98f5bc8517ea5e13ebf4d64241919323">getType</a>() == ID::CV_VOLUME){</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    ic = Teuchos::rcp(<span class="keyword">new</span> Intrepid2::CubatureControlVolume&lt;PHX::Device::execution_space,double,double&gt;(*ir.<a class="code hl_variable" href="classpanzer_1_1_point_rule.html#ac5735e2351317dde5c9586a1bf2f15dd">topology</a>));</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    ic = Teuchos::rcp(<span class="keyword">new</span> Intrepid2::CubatureControlVolume&lt;PHX::Device,double,double&gt;(*ir.<a class="code hl_variable" href="classpanzer_1_1_point_rule.html#ac5735e2351317dde5c9586a1bf2f15dd">topology</a>));</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(ir.<a class="code hl_function" href="classpanzer_1_1_integration_descriptor.html#a98f5bc8517ea5e13ebf4d64241919323">getType</a>() == ID::CV_BOUNDARY){</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    TEUCHOS_ASSERT(ir.<a class="code hl_function" href="classpanzer_1_1_point_rule.html#ad0fab416b39a263a85978ffc4185f554">isSide</a>());</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    ic = Teuchos::rcp(<span class="keyword">new</span> Intrepid2::CubatureControlVolumeBoundary&lt;PHX::Device::execution_space,double,double&gt;(*ir.<a class="code hl_variable" href="classpanzer_1_1_point_rule.html#ac5735e2351317dde5c9586a1bf2f15dd">topology</a>,ir.<a class="code hl_function" href="classpanzer_1_1_integration_descriptor.html#a631d271a99f1dae892c0ae1831c058f1">getSide</a>()));</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    ic = Teuchos::rcp(<span class="keyword">new</span> Intrepid2::CubatureControlVolumeBoundary&lt;PHX::Device,double,double&gt;(*ir.<a class="code hl_variable" href="classpanzer_1_1_point_rule.html#ac5735e2351317dde5c9586a1bf2f15dd">topology</a>,ir.<a class="code hl_function" href="classpanzer_1_1_integration_descriptor.html#a631d271a99f1dae892c0ae1831c058f1">getSide</a>()));</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(ir.<a class="code hl_function" href="classpanzer_1_1_integration_descriptor.html#a98f5bc8517ea5e13ebf4d64241919323">getType</a>() == ID::VOLUME){</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    ic = cubature_factory.create&lt;PHX::Device::execution_space,double,<span class="keywordtype">double</span>&gt;(*(ir.<a class="code hl_variable" href="classpanzer_1_1_point_rule.html#ac5735e2351317dde5c9586a1bf2f15dd">topology</a>),ir.<a class="code hl_function" href="classpanzer_1_1_integration_descriptor.html#a2fc6eb1c1f86c537694c067c87200e3e">getOrder</a>());</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    ic = cubature_factory.create&lt;PHX::Device,double,<span class="keywordtype">double</span>&gt;(*(ir.<a class="code hl_variable" href="classpanzer_1_1_point_rule.html#ac5735e2351317dde5c9586a1bf2f15dd">topology</a>),ir.<a class="code hl_function" href="classpanzer_1_1_integration_descriptor.html#a2fc6eb1c1f86c537694c067c87200e3e">getOrder</a>());</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(ir.<a class="code hl_function" href="classpanzer_1_1_integration_descriptor.html#a98f5bc8517ea5e13ebf4d64241919323">getType</a>() == ID::SIDE){</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    ic = cubature_factory.create&lt;PHX::Device::execution_space,double,<span class="keywordtype">double</span>&gt;(*(ir.<a class="code hl_variable" href="classpanzer_1_1_point_rule.html#a63b082677d2f690c7f35f011e672168f">side_topology</a>),ir.<a class="code hl_function" href="classpanzer_1_1_integration_descriptor.html#a2fc6eb1c1f86c537694c067c87200e3e">getOrder</a>());</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    ic = cubature_factory.create&lt;PHX::Device,double,<span class="keywordtype">double</span>&gt;(*(ir.<a class="code hl_variable" href="classpanzer_1_1_point_rule.html#a63b082677d2f690c7f35f011e672168f">side_topology</a>),ir.<a class="code hl_function" href="classpanzer_1_1_integration_descriptor.html#a2fc6eb1c1f86c537694c067c87200e3e">getOrder</a>());</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(ir.<a class="code hl_function" href="classpanzer_1_1_integration_descriptor.html#a98f5bc8517ea5e13ebf4d64241919323">getType</a>() == ID::SURFACE){</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">// closed surface integrals don&#39;t exist in intrepid.</span></div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  } <span class="keywordflow">else</span> {</div>
@@ -209,7 +209,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>      }</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    }</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>  });</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  PHX::Device::execution_space().fence();</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>}</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
@@ -261,7 +261,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>      }</div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    }</div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>  });</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>  PHX::Device::execution_space().fence();</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>  PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>}</div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> Scalar&gt;</div>
@@ -281,7 +281,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>      <span class="keywordflow">if</span> (ip != permutations(0,ip))</div>
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        <a class="code hl_variable" href="_panzer___integrator___curl_basis_dot_vector__impl_8hpp.html#abdbd394f4d89d79e2a0441e731ce8bd3">field</a>(ip) = scratch(permutations(0,ip));</div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>  });</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>  PHX::Device::execution_space().fence();</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>  PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>}</div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> Scalar&gt;</div>
@@ -303,7 +303,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> dim=0; dim&lt;num_dim; ++dim)</div>
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        <a class="code hl_variable" href="_panzer___integrator___curl_basis_dot_vector__impl_8hpp.html#abdbd394f4d89d79e2a0441e731ce8bd3">field</a>(ip,dim) = scratch(permutations(0,ip),dim);</div>
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>  });</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>  PHX::Device::execution_space().fence();</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>  PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>}</div>
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
 <div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> Scalar&gt;</div>
@@ -324,7 +324,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>      <span class="keywordflow">if</span> (ip != permutations(cell,ip))</div>
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        <a class="code hl_variable" href="_panzer___integrator___curl_basis_dot_vector__impl_8hpp.html#abdbd394f4d89d79e2a0441e731ce8bd3">field</a>(cell,ip) = scratch(cell,permutations(cell,ip));</div>
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>  });</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>  PHX::Device::execution_space().fence();</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>  PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>}</div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> Scalar&gt;</div>
@@ -347,7 +347,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> dim=0; dim&lt;num_dim; ++dim)</div>
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>          <a class="code hl_variable" href="_panzer___integrator___curl_basis_dot_vector__impl_8hpp.html#abdbd394f4d89d79e2a0441e731ce8bd3">field</a>(cell,ip,dim) = scratch(cell,permutations(cell,ip),dim);</div>
 <div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>  });</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>  PHX::Device::execution_space().fence();</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>  PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>}</div>
 <div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
 <div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> Scalar&gt;</div>
@@ -372,7 +372,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>          <span class="keywordflow">for</span>(<span class="keywordtype">int</span> dim2=0; dim2&lt;num_dim2; ++dim2)</div>
 <div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>            <a class="code hl_variable" href="_panzer___integrator___curl_basis_dot_vector__impl_8hpp.html#abdbd394f4d89d79e2a0441e731ce8bd3">field</a>(cell,ip,dim,dim2) = scratch(cell,permutations(cell,ip),dim,dim2);</div>
 <div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>  });</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>  PHX::Device::execution_space().fence();</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>  PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>}</div>
 <div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span> </div>
 <div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span> </div>
@@ -426,7 +426,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>      taken(cell,i_min) = 1;</div>
 <div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>    }</div>
 <div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>  });</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>  PHX::Device::execution_space().fence();</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>  PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span> </div>
 <div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>  <span class="keywordflow">return</span> permutation;</div>
 <div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span> </div>
@@ -619,7 +619,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span>        }</div>
 <div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>      }</div>
 <div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>    });</div>
-<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>    PHX::Device::execution_space().fence();</div>
+<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>    PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>  }</div>
 <div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span> </div>
 <div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span><span class="preprocessor">#undef PANZER_DOT</span></div>
@@ -852,11 +852,11 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span>    TEUCHOS_ASSERT(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(cell_node_coordinates.extent(1)) == num_nodes);</div>
 <div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span> </div>
 <div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span>    <span class="keyword">auto</span> aux = af.template buildStaticArray&lt;Scalar,Cell,NODE,Dim&gt;(<span class="stringliteral">&quot;node_coordinates&quot;</span>,num_cells_,num_nodes, num_space_dim);</div>
-<div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span>    Kokkos::MDRangePolicy&lt;PHX::Device,Kokkos::Rank&lt;3&gt;&gt; policy({0,0,0},{num_evaluate_cells_,num_nodes,num_space_dim});</div>
+<div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span>    Kokkos::MDRangePolicy&lt;PHX::ExecutionSpace,Kokkos::Rank&lt;3&gt;&gt; policy({0,0,0},{num_evaluate_cells_,num_nodes,num_space_dim});</div>
 <div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span>    Kokkos::parallel_for(policy,KOKKOS_LAMBDA(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp; cell, <span class="keyword">const</span> <span class="keywordtype">int</span> &amp; point, <span class="keyword">const</span> <span class="keywordtype">int</span> &amp; dim){</div>
 <div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span>      aux(cell,point,dim) = cell_node_coordinates(cell,point,dim);</div>
 <div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span>    });</div>
-<div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span>    PHX::Device::execution_space().fence();</div>
+<div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span>    PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span>    node_coordinates = aux;</div>
 <div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>  }</div>
 <div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span> </div>
@@ -877,7 +877,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span>  <span class="comment">// Only log time if values computed (i.e. don&#39;t log if values are already cached)</span></div>
 <div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span>  PANZER_FUNC_TIME_MONITOR_DIFF(<span class="stringliteral">&quot;panzer::integrationValues2::getUniformCubaturePointsRef()&quot;</span>,get_uniform_cub_pts_ref);</div>
 <div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span> </div>
-<div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span>  Intrepid2::CellTools&lt;PHX::Device::execution_space&gt; cell_tools;</div>
+<div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span>  Intrepid2::CellTools&lt;PHX::Device&gt; cell_tools;</div>
 <div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span>  <a class="code hl_class" href="classpanzer_1_1_m_d_field_array_factory.html">MDFieldArrayFactory</a> af(prefix_,<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span> </div>
 <div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span>  <span class="keywordtype">int</span> num_space_dim = int_rule-&gt;topology-&gt;getDimension();</div>
@@ -908,7 +908,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span>    cell_tools.mapToReferenceSubcell(aux.get_view(), s_cub_points.get_view(), num_space_dim-1, int_rule-&gt;getSide(), *(int_rule-&gt;topology));</div>
 <div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span>  }</div>
 <div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span> </div>
-<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>  PHX::Device::execution_space().fence();</div>
+<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>  PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span> </div>
 <div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span>  <span class="keywordflow">if</span>(apply_permutation and requires_permutation_)</div>
 <div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span>    applyBasePermutation(aux, permutations_);</div>
@@ -963,7 +963,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00861" name="l00861"></a><span class="lineno">  861</span> </div>
 <div class="line"><a id="l00862" name="l00862"></a><span class="lineno">  862</span>  intrepid_cubature-&gt;getCubature(aux.get_view(), weights.get_view());</div>
 <div class="line"><a id="l00863" name="l00863"></a><span class="lineno">  863</span> </div>
-<div class="line"><a id="l00864" name="l00864"></a><span class="lineno">  864</span>  PHX::Device::execution_space().fence();</div>
+<div class="line"><a id="l00864" name="l00864"></a><span class="lineno">  864</span>  PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l00865" name="l00865"></a><span class="lineno">  865</span> </div>
 <div class="line"><a id="l00866" name="l00866"></a><span class="lineno">  866</span>  <span class="keywordflow">if</span>(apply_permutation and requires_permutation_)</div>
 <div class="line"><a id="l00867" name="l00867"></a><span class="lineno">  867</span>    applyBasePermutation(aux, permutations_);</div>
@@ -1014,7 +1014,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00910" name="l00910"></a><span class="lineno">  910</span> </div>
 <div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span>  intrepid_cubature-&gt;getCubature(points.get_view(), aux.get_view());</div>
 <div class="line"><a id="l00912" name="l00912"></a><span class="lineno">  912</span> </div>
-<div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span>  PHX::Device::execution_space().fence();</div>
+<div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span>  PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l00914" name="l00914"></a><span class="lineno">  914</span> </div>
 <div class="line"><a id="l00915" name="l00915"></a><span class="lineno">  915</span>  <span class="keywordflow">if</span>(apply_permutation and requires_permutation_)</div>
 <div class="line"><a id="l00916" name="l00916"></a><span class="lineno">  916</span>    applyBasePermutation(aux, permutations_);</div>
@@ -1052,7 +1052,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00944" name="l00944"></a><span class="lineno">  944</span>  <span class="comment">// Only log time if values computed (i.e. don&#39;t log if values are already cached)</span></div>
 <div class="line"><a id="l00945" name="l00945"></a><span class="lineno">  945</span>  PANZER_FUNC_TIME_MONITOR_DIFF(<span class="stringliteral">&quot;panzer::integrationValues2::getJacobian()&quot;</span>,get_jacobian);</div>
 <div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span> </div>
-<div class="line"><a id="l00947" name="l00947"></a><span class="lineno">  947</span>  Intrepid2::CellTools&lt;PHX::Device::execution_space&gt; cell_tools;</div>
+<div class="line"><a id="l00947" name="l00947"></a><span class="lineno">  947</span>  Intrepid2::CellTools&lt;PHX::Device&gt; cell_tools;</div>
 <div class="line"><a id="l00948" name="l00948"></a><span class="lineno">  948</span>  <a class="code hl_class" href="classpanzer_1_1_m_d_field_array_factory.html">MDFieldArrayFactory</a> af(prefix_,<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00949" name="l00949"></a><span class="lineno">  949</span> </div>
 <div class="line"><a id="l00950" name="l00950"></a><span class="lineno">  950</span>  <span class="keywordtype">int</span> num_space_dim = int_rule-&gt;topology-&gt;getDimension();</div>
@@ -1096,7 +1096,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00988" name="l00988"></a><span class="lineno">  988</span> </div>
 <div class="line"><a id="l00989" name="l00989"></a><span class="lineno">  989</span>  }</div>
 <div class="line"><a id="l00990" name="l00990"></a><span class="lineno">  990</span> </div>
-<div class="line"><a id="l00991" name="l00991"></a><span class="lineno">  991</span>  PHX::Device::execution_space().fence();</div>
+<div class="line"><a id="l00991" name="l00991"></a><span class="lineno">  991</span>  PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l00992" name="l00992"></a><span class="lineno">  992</span> </div>
 <div class="line"><a id="l00993" name="l00993"></a><span class="lineno">  993</span>  <span class="keywordflow">if</span>(cache){</div>
 <div class="line"><a id="l00994" name="l00994"></a><span class="lineno">  994</span>    <a class="code hl_variable" href="_panzer___scatter_residual___tpetra__impl_8hpp.html#a565362aeb357bf5670a1131514095e14">jac</a> = aux;</div>
@@ -1120,7 +1120,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01010" name="l01010"></a><span class="lineno"> 1010</span>  <span class="comment">// Only log time if values computed (i.e. don&#39;t log if values are already cached)</span></div>
 <div class="line"><a id="l01011" name="l01011"></a><span class="lineno"> 1011</span>  PANZER_FUNC_TIME_MONITOR_DIFF(<span class="stringliteral">&quot;panzer::integrationValues2::getJacobianInverse()&quot;</span>,get_jacobian_inv);</div>
 <div class="line"><a id="l01012" name="l01012"></a><span class="lineno"> 1012</span> </div>
-<div class="line"><a id="l01013" name="l01013"></a><span class="lineno"> 1013</span>  Intrepid2::CellTools&lt;PHX::Device::execution_space&gt; cell_tools;</div>
+<div class="line"><a id="l01013" name="l01013"></a><span class="lineno"> 1013</span>  Intrepid2::CellTools&lt;PHX::Device&gt; cell_tools;</div>
 <div class="line"><a id="l01014" name="l01014"></a><span class="lineno"> 1014</span>  <a class="code hl_class" href="classpanzer_1_1_m_d_field_array_factory.html">MDFieldArrayFactory</a> af(prefix_,<span class="keyword">true</span>);</div>
 <div class="line"><a id="l01015" name="l01015"></a><span class="lineno"> 1015</span> </div>
 <div class="line"><a id="l01016" name="l01016"></a><span class="lineno"> 1016</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> num_space_dim = int_rule-&gt;topology-&gt;getDimension();</div>
@@ -1135,7 +1135,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01025" name="l01025"></a><span class="lineno"> 1025</span> </div>
 <div class="line"><a id="l01026" name="l01026"></a><span class="lineno"> 1026</span>  cell_tools.setJacobianInv(s_jac_inv, s_jac);</div>
 <div class="line"><a id="l01027" name="l01027"></a><span class="lineno"> 1027</span> </div>
-<div class="line"><a id="l01028" name="l01028"></a><span class="lineno"> 1028</span>  PHX::Device::execution_space().fence();</div>
+<div class="line"><a id="l01028" name="l01028"></a><span class="lineno"> 1028</span>  PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l01029" name="l01029"></a><span class="lineno"> 1029</span> </div>
 <div class="line"><a id="l01030" name="l01030"></a><span class="lineno"> 1030</span>  <span class="keywordflow">if</span>(cache){</div>
 <div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span>    jac_inv = aux;</div>
@@ -1159,7 +1159,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01047" name="l01047"></a><span class="lineno"> 1047</span>  <span class="comment">// Only log time if values computed (i.e. don&#39;t log if values are already cached)</span></div>
 <div class="line"><a id="l01048" name="l01048"></a><span class="lineno"> 1048</span>  PANZER_FUNC_TIME_MONITOR_DIFF(<span class="stringliteral">&quot;panzer::integrationValues2::getJacobianDeterminant()&quot;</span>,get_jacobian_det);</div>
 <div class="line"><a id="l01049" name="l01049"></a><span class="lineno"> 1049</span> </div>
-<div class="line"><a id="l01050" name="l01050"></a><span class="lineno"> 1050</span>  Intrepid2::CellTools&lt;PHX::Device::execution_space&gt; cell_tools;</div>
+<div class="line"><a id="l01050" name="l01050"></a><span class="lineno"> 1050</span>  Intrepid2::CellTools&lt;PHX::Device&gt; cell_tools;</div>
 <div class="line"><a id="l01051" name="l01051"></a><span class="lineno"> 1051</span>  <a class="code hl_class" href="classpanzer_1_1_m_d_field_array_factory.html">MDFieldArrayFactory</a> af(prefix_,<span class="keyword">true</span>);</div>
 <div class="line"><a id="l01052" name="l01052"></a><span class="lineno"> 1052</span> </div>
 <div class="line"><a id="l01053" name="l01053"></a><span class="lineno"> 1053</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> num_ip = int_rule-&gt;num_points;</div>
@@ -1173,7 +1173,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01061" name="l01061"></a><span class="lineno"> 1061</span> </div>
 <div class="line"><a id="l01062" name="l01062"></a><span class="lineno"> 1062</span>  cell_tools.setJacobianDet(s_jac_det, s_jac);</div>
 <div class="line"><a id="l01063" name="l01063"></a><span class="lineno"> 1063</span> </div>
-<div class="line"><a id="l01064" name="l01064"></a><span class="lineno"> 1064</span>  PHX::Device::execution_space().fence();</div>
+<div class="line"><a id="l01064" name="l01064"></a><span class="lineno"> 1064</span>  PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l01065" name="l01065"></a><span class="lineno"> 1065</span> </div>
 <div class="line"><a id="l01066" name="l01066"></a><span class="lineno"> 1066</span>  <span class="keywordflow">if</span>(cache){</div>
 <div class="line"><a id="l01067" name="l01067"></a><span class="lineno"> 1067</span>    jac_det = aux;</div>
@@ -1248,7 +1248,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01134" name="l01134"></a><span class="lineno"> 1134</span>        <span class="comment">// Get the face topology from the cell topology</span></div>
 <div class="line"><a id="l01135" name="l01135"></a><span class="lineno"> 1135</span>        <span class="keyword">const</span> shards::CellTopology face_topology(cell_topology.getCellTopologyData(cell_dim-1,side));</div>
 <div class="line"><a id="l01136" name="l01136"></a><span class="lineno"> 1136</span> </div>
-<div class="line"><a id="l01137" name="l01137"></a><span class="lineno"> 1137</span>        <span class="keyword">auto</span> ic = cubature_factory.create&lt;PHX::Device::execution_space,double,<span class="keywordtype">double</span>&gt;(face_topology,cubature_order);</div>
+<div class="line"><a id="l01137" name="l01137"></a><span class="lineno"> 1137</span>        <span class="keyword">auto</span> ic = cubature_factory.create&lt;PHX::Device,double,<span class="keywordtype">double</span>&gt;(face_topology,cubature_order);</div>
 <div class="line"><a id="l01138" name="l01138"></a><span class="lineno"> 1138</span> </div>
 <div class="line"><a id="l01139" name="l01139"></a><span class="lineno"> 1139</span>        side_cub_weights = Kokkos::DynRankView&lt;double,PHX::Device&gt;(<span class="stringliteral">&quot;side_cub_weights&quot;</span>,num_points_on_side);</div>
 <div class="line"><a id="l01140" name="l01140"></a><span class="lineno"> 1140</span>        <span class="keyword">auto</span> subcell_cub_points = Kokkos::DynRankView&lt;double,PHX::Device&gt;(<span class="stringliteral">&quot;subcell_cub_points&quot;</span>,num_points_on_side,cell_dim-1);</div>
@@ -1257,10 +1257,10 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01143" name="l01143"></a><span class="lineno"> 1143</span>        ic-&gt;getCubature(subcell_cub_points, side_cub_weights);</div>
 <div class="line"><a id="l01144" name="l01144"></a><span class="lineno"> 1144</span>      }</div>
 <div class="line"><a id="l01145" name="l01145"></a><span class="lineno"> 1145</span> </div>
-<div class="line"><a id="l01146" name="l01146"></a><span class="lineno"> 1146</span>      PHX::Device::execution_space().fence();</div>
+<div class="line"><a id="l01146" name="l01146"></a><span class="lineno"> 1146</span>      PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l01147" name="l01147"></a><span class="lineno"> 1147</span> </div>
 <div class="line"><a id="l01148" name="l01148"></a><span class="lineno"> 1148</span>      <span class="comment">// Iterating over face points</span></div>
-<div class="line"><a id="l01149" name="l01149"></a><span class="lineno"> 1149</span>      Kokkos::MDRangePolicy&lt;PHX::Device::execution_space,Kokkos::Rank&lt;2&gt;&gt; policy({0,0},{num_evaluate_cells_,num_points_on_side});</div>
+<div class="line"><a id="l01149" name="l01149"></a><span class="lineno"> 1149</span>      Kokkos::MDRangePolicy&lt;PHX::ExecutionSpace,Kokkos::Rank&lt;2&gt;&gt; policy({0,0},{num_evaluate_cells_,num_points_on_side});</div>
 <div class="line"><a id="l01150" name="l01150"></a><span class="lineno"> 1150</span> </div>
 <div class="line"><a id="l01151" name="l01151"></a><span class="lineno"> 1151</span>      <span class="comment">// Calculate measures (quadrature weights in physical space) for this side</span></div>
 <div class="line"><a id="l01152" name="l01152"></a><span class="lineno"> 1152</span>      <span class="keyword">auto</span> side_weighted_measure = Kokkos::DynRankView&lt;Scalar,PHX::Device&gt;(<span class="stringliteral">&quot;side_weighted_measure&quot;</span>,num_evaluate_cells_,num_points_on_side);</div>
@@ -1281,17 +1281,17 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01167" name="l01167"></a><span class="lineno"> 1167</span>        <span class="keyword">auto</span> scratch = af.template buildStaticArray&lt;Scalar,Point&gt;(<span class="stringliteral">&quot;scratch_for_compute_measure&quot;</span>, num_evaluate_cells_*num_points_on_side*num_space_dim*num_space_dim);</div>
 <div class="line"><a id="l01168" name="l01168"></a><span class="lineno"> 1168</span> </div>
 <div class="line"><a id="l01169" name="l01169"></a><span class="lineno"> 1169</span>        <span class="keywordflow">if</span>(cell_dim == 2){</div>
-<div class="line"><a id="l01170" name="l01170"></a><span class="lineno"> 1170</span>          Intrepid2::FunctionSpaceTools&lt;PHX::Device::execution_space&gt;::</div>
+<div class="line"><a id="l01170" name="l01170"></a><span class="lineno"> 1170</span>          Intrepid2::FunctionSpaceTools&lt;PHX::Device&gt;::</div>
 <div class="line"><a id="l01171" name="l01171"></a><span class="lineno"> 1171</span>            computeEdgeMeasure(side_weighted_measure, side_jacobian, side_cub_weights,</div>
 <div class="line"><a id="l01172" name="l01172"></a><span class="lineno"> 1172</span>                               side,cell_topology,</div>
 <div class="line"><a id="l01173" name="l01173"></a><span class="lineno"> 1173</span>                               scratch.get_view());</div>
-<div class="line"><a id="l01174" name="l01174"></a><span class="lineno"> 1174</span>          PHX::Device::execution_space().fence();</div>
+<div class="line"><a id="l01174" name="l01174"></a><span class="lineno"> 1174</span>          PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l01175" name="l01175"></a><span class="lineno"> 1175</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(cell_dim == 3){</div>
-<div class="line"><a id="l01176" name="l01176"></a><span class="lineno"> 1176</span>          Intrepid2::FunctionSpaceTools&lt;PHX::Device::execution_space&gt;::</div>
+<div class="line"><a id="l01176" name="l01176"></a><span class="lineno"> 1176</span>          Intrepid2::FunctionSpaceTools&lt;PHX::Device&gt;::</div>
 <div class="line"><a id="l01177" name="l01177"></a><span class="lineno"> 1177</span>            computeFaceMeasure(side_weighted_measure, side_jacobian, side_cub_weights,</div>
 <div class="line"><a id="l01178" name="l01178"></a><span class="lineno"> 1178</span>                               side,cell_topology,</div>
 <div class="line"><a id="l01179" name="l01179"></a><span class="lineno"> 1179</span>                               scratch.get_view());</div>
-<div class="line"><a id="l01180" name="l01180"></a><span class="lineno"> 1180</span>          PHX::Device::execution_space().fence();</div>
+<div class="line"><a id="l01180" name="l01180"></a><span class="lineno"> 1180</span>          PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l01181" name="l01181"></a><span class="lineno"> 1181</span>        }</div>
 <div class="line"><a id="l01182" name="l01182"></a><span class="lineno"> 1182</span>      }</div>
 <div class="line"><a id="l01183" name="l01183"></a><span class="lineno"> 1183</span> </div>
@@ -1300,7 +1300,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01186" name="l01186"></a><span class="lineno"> 1186</span>      Kokkos::parallel_for(<span class="stringliteral">&quot;copy surface weighted measure values&quot;</span>,policy,KOKKOS_LAMBDA (<span class="keyword">const</span> <span class="keywordtype">int</span> cell,<span class="keyword">const</span> <span class="keywordtype">int</span> point) {</div>
 <div class="line"><a id="l01187" name="l01187"></a><span class="lineno"> 1187</span>        aux(cell,point_offset + point) = side_weighted_measure(cell,point);</div>
 <div class="line"><a id="l01188" name="l01188"></a><span class="lineno"> 1188</span>      });</div>
-<div class="line"><a id="l01189" name="l01189"></a><span class="lineno"> 1189</span>      PHX::Device::execution_space().fence();</div>
+<div class="line"><a id="l01189" name="l01189"></a><span class="lineno"> 1189</span>      PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l01190" name="l01190"></a><span class="lineno"> 1190</span>    }</div>
 <div class="line"><a id="l01191" name="l01191"></a><span class="lineno"> 1191</span> </div>
 <div class="line"><a id="l01192" name="l01192"></a><span class="lineno"> 1192</span>  } <span class="keywordflow">else</span> {</div>
@@ -1312,14 +1312,14 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01198" name="l01198"></a><span class="lineno"> 1198</span>    <span class="keywordflow">if</span> (!int_rule-&gt;isSide()) {</div>
 <div class="line"><a id="l01199" name="l01199"></a><span class="lineno"> 1199</span> </div>
 <div class="line"><a id="l01200" name="l01200"></a><span class="lineno"> 1200</span>      <span class="keyword">auto</span> s_jac_det = Kokkos::subview(getJacobianDeterminant(<span class="keyword">false</span>,force).get_view(),cell_range,Kokkos::ALL());</div>
-<div class="line"><a id="l01201" name="l01201"></a><span class="lineno"> 1201</span>      Intrepid2::FunctionSpaceTools&lt;PHX::Device::execution_space&gt;::</div>
+<div class="line"><a id="l01201" name="l01201"></a><span class="lineno"> 1201</span>      Intrepid2::FunctionSpaceTools&lt;PHX::Device&gt;::</div>
 <div class="line"><a id="l01202" name="l01202"></a><span class="lineno"> 1202</span>      computeCellMeasure(s_weighted_measure, s_jac_det, cubature_weights.get_view());</div>
 <div class="line"><a id="l01203" name="l01203"></a><span class="lineno"> 1203</span> </div>
 <div class="line"><a id="l01204" name="l01204"></a><span class="lineno"> 1204</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(int_rule-&gt;spatial_dimension==3) {</div>
 <div class="line"><a id="l01205" name="l01205"></a><span class="lineno"> 1205</span> </div>
 <div class="line"><a id="l01206" name="l01206"></a><span class="lineno"> 1206</span>      <span class="keyword">auto</span> s_jac = Kokkos::subview(getJacobian(<span class="keyword">false</span>,force).get_view(),cell_range,Kokkos::ALL(),Kokkos::ALL(),Kokkos::ALL());</div>
 <div class="line"><a id="l01207" name="l01207"></a><span class="lineno"> 1207</span>      <span class="keyword">auto</span> scratch = af.template buildStaticArray&lt;Scalar,Point&gt;(<span class="stringliteral">&quot;scratch_for_compute_measure&quot;</span>, num_evaluate_cells_*num_ip*num_space_dim*num_space_dim);</div>
-<div class="line"><a id="l01208" name="l01208"></a><span class="lineno"> 1208</span>      Intrepid2::FunctionSpaceTools&lt;PHX::Device::execution_space&gt;::</div>
+<div class="line"><a id="l01208" name="l01208"></a><span class="lineno"> 1208</span>      Intrepid2::FunctionSpaceTools&lt;PHX::Device&gt;::</div>
 <div class="line"><a id="l01209" name="l01209"></a><span class="lineno"> 1209</span>      computeFaceMeasure(s_weighted_measure, s_jac, cubature_weights.get_view(),</div>
 <div class="line"><a id="l01210" name="l01210"></a><span class="lineno"> 1210</span>                         int_rule-&gt;side, *int_rule-&gt;topology,</div>
 <div class="line"><a id="l01211" name="l01211"></a><span class="lineno"> 1211</span>                         scratch.get_view());</div>
@@ -1328,7 +1328,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01214" name="l01214"></a><span class="lineno"> 1214</span> </div>
 <div class="line"><a id="l01215" name="l01215"></a><span class="lineno"> 1215</span>      <span class="keyword">auto</span> s_jac = Kokkos::subview(getJacobian(<span class="keyword">false</span>,force).get_view(),cell_range,Kokkos::ALL(),Kokkos::ALL(),Kokkos::ALL());</div>
 <div class="line"><a id="l01216" name="l01216"></a><span class="lineno"> 1216</span>      <span class="keyword">auto</span> scratch = af.template buildStaticArray&lt;Scalar,Point&gt;(<span class="stringliteral">&quot;scratch_for_compute_measure&quot;</span>, num_evaluate_cells_*num_ip*num_space_dim*num_space_dim);</div>
-<div class="line"><a id="l01217" name="l01217"></a><span class="lineno"> 1217</span>      Intrepid2::FunctionSpaceTools&lt;PHX::Device::execution_space&gt;::</div>
+<div class="line"><a id="l01217" name="l01217"></a><span class="lineno"> 1217</span>      Intrepid2::FunctionSpaceTools&lt;PHX::Device&gt;::</div>
 <div class="line"><a id="l01218" name="l01218"></a><span class="lineno"> 1218</span>      computeEdgeMeasure(s_weighted_measure, s_jac, cubature_weights.get_view(),</div>
 <div class="line"><a id="l01219" name="l01219"></a><span class="lineno"> 1219</span>                         int_rule-&gt;side,*int_rule-&gt;topology,</div>
 <div class="line"><a id="l01220" name="l01220"></a><span class="lineno"> 1220</span>                         scratch.get_view());</div>
@@ -1339,7 +1339,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01225" name="l01225"></a><span class="lineno"> 1225</span> </div>
 <div class="line"><a id="l01226" name="l01226"></a><span class="lineno"> 1226</span>  }</div>
 <div class="line"><a id="l01227" name="l01227"></a><span class="lineno"> 1227</span> </div>
-<div class="line"><a id="l01228" name="l01228"></a><span class="lineno"> 1228</span>  PHX::Device::execution_space().fence();</div>
+<div class="line"><a id="l01228" name="l01228"></a><span class="lineno"> 1228</span>  PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l01229" name="l01229"></a><span class="lineno"> 1229</span> </div>
 <div class="line"><a id="l01230" name="l01230"></a><span class="lineno"> 1230</span>  <span class="comment">// Apply permutations if necessary</span></div>
 <div class="line"><a id="l01231" name="l01231"></a><span class="lineno"> 1231</span>  <span class="keywordflow">if</span>(requires_permutation_)</div>
@@ -1388,7 +1388,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01272" name="l01272"></a><span class="lineno"> 1272</span> </div>
 <div class="line"><a id="l01273" name="l01273"></a><span class="lineno"> 1273</span>  intrepid_cubature-&gt;getCubature(s_cub_points,s_weighted_normals,s_node_coord);</div>
 <div class="line"><a id="l01274" name="l01274"></a><span class="lineno"> 1274</span> </div>
-<div class="line"><a id="l01275" name="l01275"></a><span class="lineno"> 1275</span>  PHX::Device::execution_space().fence();</div>
+<div class="line"><a id="l01275" name="l01275"></a><span class="lineno"> 1275</span>  PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l01276" name="l01276"></a><span class="lineno"> 1276</span> </div>
 <div class="line"><a id="l01277" name="l01277"></a><span class="lineno"> 1277</span>  <span class="comment">// Apply permutations if necessary</span></div>
 <div class="line"><a id="l01278" name="l01278"></a><span class="lineno"> 1278</span>  <span class="keywordflow">if</span>(requires_permutation_)</div>
@@ -1425,7 +1425,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01307" name="l01307"></a><span class="lineno"> 1307</span>  TEUCHOS_TEST_FOR_EXCEPT_MSG(int_rule-&gt;getType() != <a class="code hl_enumvalue" href="classpanzer_1_1_integration_descriptor.html#a1b94c027ba98a227c9b4d7f93ef024abaf8de08d230d18107339b429f3aad30d6">IntegrationDescriptor::SURFACE</a>,</div>
 <div class="line"><a id="l01308" name="l01308"></a><span class="lineno"> 1308</span>                              <span class="stringliteral">&quot;IntegrationValues2::getSurfaceNormals : Can only build for surface integrators.&quot;</span>);</div>
 <div class="line"><a id="l01309" name="l01309"></a><span class="lineno"> 1309</span> </div>
-<div class="line"><a id="l01310" name="l01310"></a><span class="lineno"> 1310</span>  Intrepid2::CellTools&lt;PHX::Device::execution_space&gt; cell_tools;</div>
+<div class="line"><a id="l01310" name="l01310"></a><span class="lineno"> 1310</span>  Intrepid2::CellTools&lt;PHX::Device&gt; cell_tools;</div>
 <div class="line"><a id="l01311" name="l01311"></a><span class="lineno"> 1311</span>  <a class="code hl_class" href="classpanzer_1_1_m_d_field_array_factory.html">MDFieldArrayFactory</a> af(prefix_,<span class="keyword">true</span>);</div>
 <div class="line"><a id="l01312" name="l01312"></a><span class="lineno"> 1312</span> </div>
 <div class="line"><a id="l01313" name="l01313"></a><span class="lineno"> 1313</span>  <span class="keyword">const</span> shards::CellTopology &amp; cell_topology = *(int_rule-&gt;topology);</div>
@@ -1464,7 +1464,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01346" name="l01346"></a><span class="lineno"> 1346</span>    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l01347" name="l01347"></a><span class="lineno"> 1347</span> </div>
 <div class="line"><a id="l01348" name="l01348"></a><span class="lineno"> 1348</span>      <span class="comment">// Iterating over side points</span></div>
-<div class="line"><a id="l01349" name="l01349"></a><span class="lineno"> 1349</span>      Kokkos::MDRangePolicy&lt;PHX::Device::execution_space,Kokkos::Rank&lt;2&gt;&gt; policy({0,0},{num_evaluate_cells_,num_points_on_face});</div>
+<div class="line"><a id="l01349" name="l01349"></a><span class="lineno"> 1349</span>      Kokkos::MDRangePolicy&lt;PHX::ExecutionSpace,Kokkos::Rank&lt;2&gt;&gt; policy({0,0},{num_evaluate_cells_,num_points_on_face});</div>
 <div class="line"><a id="l01350" name="l01350"></a><span class="lineno"> 1350</span> </div>
 <div class="line"><a id="l01351" name="l01351"></a><span class="lineno"> 1351</span>      <span class="keyword">auto</span> side_jacobian = Kokkos::DynRankView&lt;Scalar,PHX::Device&gt;(<span class="stringliteral">&quot;side_jac&quot;</span>,num_evaluate_cells_,num_points_on_face,cell_dim,cell_dim);</div>
 <div class="line"><a id="l01352" name="l01352"></a><span class="lineno"> 1352</span>      Kokkos::parallel_for(<span class="stringliteral">&quot;Copy jacobian to side jacobian&quot;</span>,policy,KOKKOS_LAMBDA (<span class="keyword">const</span> <span class="keywordtype">int</span> cell,<span class="keyword">const</span> <span class="keywordtype">int</span> point) {</div>
@@ -1491,14 +1491,14 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01373" name="l01373"></a><span class="lineno"> 1373</span>      });</div>
 <div class="line"><a id="l01374" name="l01374"></a><span class="lineno"> 1374</span>    }</div>
 <div class="line"><a id="l01375" name="l01375"></a><span class="lineno"> 1375</span> </div>
-<div class="line"><a id="l01376" name="l01376"></a><span class="lineno"> 1376</span>    PHX::Device::execution_space().fence();</div>
+<div class="line"><a id="l01376" name="l01376"></a><span class="lineno"> 1376</span>    PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l01377" name="l01377"></a><span class="lineno"> 1377</span> </div>
-<div class="line"><a id="l01378" name="l01378"></a><span class="lineno"> 1378</span>    Kokkos::MDRangePolicy&lt;PHX::Device::execution_space,Kokkos::Rank&lt;2&gt;&gt; policy({0,0},{num_evaluate_cells_,num_points_on_face});</div>
+<div class="line"><a id="l01378" name="l01378"></a><span class="lineno"> 1378</span>    Kokkos::MDRangePolicy&lt;PHX::ExecutionSpace,Kokkos::Rank&lt;2&gt;&gt; policy({0,0},{num_evaluate_cells_,num_points_on_face});</div>
 <div class="line"><a id="l01379" name="l01379"></a><span class="lineno"> 1379</span>    Kokkos::parallel_for(<span class="stringliteral">&quot;copy surface normals&quot;</span>, policy,KOKKOS_LAMBDA (<span class="keyword">const</span> <span class="keywordtype">int</span> cell,<span class="keyword">const</span> <span class="keywordtype">int</span> point) {</div>
 <div class="line"><a id="l01380" name="l01380"></a><span class="lineno"> 1380</span>      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> dim=0;dim&lt;cell_dim;++dim)</div>
 <div class="line"><a id="l01381" name="l01381"></a><span class="lineno"> 1381</span>        aux(cell,point_offset + point,dim) = side_normals(cell,point,dim);</div>
 <div class="line"><a id="l01382" name="l01382"></a><span class="lineno"> 1382</span>    });</div>
-<div class="line"><a id="l01383" name="l01383"></a><span class="lineno"> 1383</span>    PHX::Device::execution_space().fence();</div>
+<div class="line"><a id="l01383" name="l01383"></a><span class="lineno"> 1383</span>    PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l01384" name="l01384"></a><span class="lineno"> 1384</span>  }</div>
 <div class="line"><a id="l01385" name="l01385"></a><span class="lineno"> 1385</span> </div>
 <div class="line"><a id="l01386" name="l01386"></a><span class="lineno"> 1386</span>  <span class="comment">// Need to correct the virtual cells</span></div>
@@ -1545,7 +1545,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01425" name="l01425"></a><span class="lineno"> 1425</span>  <span class="keyword">auto</span> normals = getSurfaceNormals(<span class="keyword">false</span>,force).get_static_view();</div>
 <div class="line"><a id="l01426" name="l01426"></a><span class="lineno"> 1426</span>  <span class="keyword">auto</span> aux = af.template buildStaticArray&lt;Scalar,Cell,IP,Dim,Dim&gt;(<span class="stringliteral">&quot;surface_rotation_matrices&quot;</span>,num_cells_, num_ip, 3, 3);</div>
 <div class="line"><a id="l01427" name="l01427"></a><span class="lineno"> 1427</span> </div>
-<div class="line"><a id="l01428" name="l01428"></a><span class="lineno"> 1428</span>  Kokkos::MDRangePolicy&lt;PHX::Device::execution_space,Kokkos::Rank&lt;2&gt;&gt; policy({0,0},{num_evaluate_cells_,num_ip});</div>
+<div class="line"><a id="l01428" name="l01428"></a><span class="lineno"> 1428</span>  Kokkos::MDRangePolicy&lt;PHX::ExecutionSpace,Kokkos::Rank&lt;2&gt;&gt; policy({0,0},{num_evaluate_cells_,num_ip});</div>
 <div class="line"><a id="l01429" name="l01429"></a><span class="lineno"> 1429</span>  Kokkos::parallel_for(<span class="stringliteral">&quot;create surface rotation matrices&quot;</span>,policy,KOKKOS_LAMBDA (<span class="keyword">const</span> <span class="keywordtype">int</span> cell,<span class="keyword">const</span> <span class="keywordtype">int</span> point) {</div>
 <div class="line"><a id="l01430" name="l01430"></a><span class="lineno"> 1430</span>    Scalar normal[3];</div>
 <div class="line"><a id="l01431" name="l01431"></a><span class="lineno"> 1431</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;3;i++)</div>
@@ -1563,7 +1563,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01443" name="l01443"></a><span class="lineno"> 1443</span>      aux(cell,point,2,dim) = binormal[dim];</div>
 <div class="line"><a id="l01444" name="l01444"></a><span class="lineno"> 1444</span>    }</div>
 <div class="line"><a id="l01445" name="l01445"></a><span class="lineno"> 1445</span>  });</div>
-<div class="line"><a id="l01446" name="l01446"></a><span class="lineno"> 1446</span>  PHX::Device::execution_space().fence();</div>
+<div class="line"><a id="l01446" name="l01446"></a><span class="lineno"> 1446</span>  PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l01447" name="l01447"></a><span class="lineno"> 1447</span> </div>
 <div class="line"><a id="l01448" name="l01448"></a><span class="lineno"> 1448</span>  <span class="comment">// Need to correct the virtual cells</span></div>
 <div class="line"><a id="l01449" name="l01449"></a><span class="lineno"> 1449</span>  {</div>
@@ -1607,7 +1607,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01485" name="l01485"></a><span class="lineno"> 1485</span>  <span class="keyword">auto</span> jacobian = getJacobian(<span class="keyword">false</span>,force).get_static_view();</div>
 <div class="line"><a id="l01486" name="l01486"></a><span class="lineno"> 1486</span>  <span class="keyword">auto</span> aux = af.template buildStaticArray&lt;Scalar,Cell,IP,Dim,Dim&gt;(<span class="stringliteral">&quot;covarient&quot;</span>,num_cells_, num_ip, num_space_dim,num_space_dim);</div>
 <div class="line"><a id="l01487" name="l01487"></a><span class="lineno"> 1487</span> </div>
-<div class="line"><a id="l01488" name="l01488"></a><span class="lineno"> 1488</span>  Kokkos::MDRangePolicy&lt;PHX::Device,Kokkos::Rank&lt;2&gt;&gt; policy({0,0},{num_evaluate_cells_,num_ip});</div>
+<div class="line"><a id="l01488" name="l01488"></a><span class="lineno"> 1488</span>  Kokkos::MDRangePolicy&lt;PHX::ExecutionSpace,Kokkos::Rank&lt;2&gt;&gt; policy({0,0},{num_evaluate_cells_,num_ip});</div>
 <div class="line"><a id="l01489" name="l01489"></a><span class="lineno"> 1489</span>  Kokkos::parallel_for(<span class="stringliteral">&quot;evalaute covarient metric tensor&quot;</span>,policy,KOKKOS_LAMBDA (<span class="keyword">const</span> <span class="keywordtype">int</span> cell,<span class="keyword">const</span> <span class="keywordtype">int</span> ip) {</div>
 <div class="line"><a id="l01490" name="l01490"></a><span class="lineno"> 1490</span>    <span class="comment">// g^{ij} = \frac{\parital x_i}{\partial \chi_\alpha}\frac{\parital x_j}{\partial \chi_\alpha}</span></div>
 <div class="line"><a id="l01491" name="l01491"></a><span class="lineno"> 1491</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_space_dim; ++i) {</div>
@@ -1619,7 +1619,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01497" name="l01497"></a><span class="lineno"> 1497</span>      }</div>
 <div class="line"><a id="l01498" name="l01498"></a><span class="lineno"> 1498</span>    }</div>
 <div class="line"><a id="l01499" name="l01499"></a><span class="lineno"> 1499</span>  });</div>
-<div class="line"><a id="l01500" name="l01500"></a><span class="lineno"> 1500</span>  PHX::Device::execution_space().fence();</div>
+<div class="line"><a id="l01500" name="l01500"></a><span class="lineno"> 1500</span>  PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l01501" name="l01501"></a><span class="lineno"> 1501</span> </div>
 <div class="line"><a id="l01502" name="l01502"></a><span class="lineno"> 1502</span>  <span class="keywordflow">if</span>(cache){</div>
 <div class="line"><a id="l01503" name="l01503"></a><span class="lineno"> 1503</span>    covarient = aux;</div>
@@ -1655,8 +1655,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01531" name="l01531"></a><span class="lineno"> 1531</span>  <span class="keyword">auto</span> s_contravarient = Kokkos::subview(aux.get_view(), cell_range,Kokkos::ALL,Kokkos::ALL,Kokkos::ALL);</div>
 <div class="line"><a id="l01532" name="l01532"></a><span class="lineno"> 1532</span>  <span class="keyword">auto</span> s_covarient = Kokkos::subview(cov.get_view(), cell_range,Kokkos::ALL,Kokkos::ALL,Kokkos::ALL);</div>
 <div class="line"><a id="l01533" name="l01533"></a><span class="lineno"> 1533</span> </div>
-<div class="line"><a id="l01534" name="l01534"></a><span class="lineno"> 1534</span>  Intrepid2::RealSpaceTools&lt;PHX::Device::execution_space&gt;::inverse(s_contravarient, s_covarient);</div>
-<div class="line"><a id="l01535" name="l01535"></a><span class="lineno"> 1535</span>  PHX::Device::execution_space().fence();</div>
+<div class="line"><a id="l01534" name="l01534"></a><span class="lineno"> 1534</span>  Intrepid2::RealSpaceTools&lt;PHX::Device&gt;::inverse(s_contravarient, s_covarient);</div>
+<div class="line"><a id="l01535" name="l01535"></a><span class="lineno"> 1535</span>  PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l01536" name="l01536"></a><span class="lineno"> 1536</span> </div>
 <div class="line"><a id="l01537" name="l01537"></a><span class="lineno"> 1537</span>  <span class="keywordflow">if</span>(cache){</div>
 <div class="line"><a id="l01538" name="l01538"></a><span class="lineno"> 1538</span>    contravarient = aux;</div>
@@ -1689,7 +1689,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01563" name="l01563"></a><span class="lineno"> 1563</span>  <span class="keyword">auto</span> aux = af.template buildStaticArray&lt;Scalar,Cell,IP&gt;(<span class="stringliteral">&quot;norm_contravarient&quot;</span>,num_cells_, num_ip);</div>
 <div class="line"><a id="l01564" name="l01564"></a><span class="lineno"> 1564</span> </div>
 <div class="line"><a id="l01565" name="l01565"></a><span class="lineno"> 1565</span>  <span class="comment">// norm of g_ij</span></div>
-<div class="line"><a id="l01566" name="l01566"></a><span class="lineno"> 1566</span>  Kokkos::MDRangePolicy&lt;PHX::Device,Kokkos::Rank&lt;2&gt;&gt; policy({0,0},{num_evaluate_cells_,num_ip});</div>
+<div class="line"><a id="l01566" name="l01566"></a><span class="lineno"> 1566</span>  Kokkos::MDRangePolicy&lt;PHX::ExecutionSpace,Kokkos::Rank&lt;2&gt;&gt; policy({0,0},{num_evaluate_cells_,num_ip});</div>
 <div class="line"><a id="l01567" name="l01567"></a><span class="lineno"> 1567</span>  Kokkos::parallel_for(<span class="stringliteral">&quot;evaluate norm_contravarient&quot;</span>,policy,KOKKOS_LAMBDA (<span class="keyword">const</span> <span class="keywordtype">int</span> cell,<span class="keyword">const</span> <span class="keywordtype">int</span> ip) {</div>
 <div class="line"><a id="l01568" name="l01568"></a><span class="lineno"> 1568</span>    aux(cell,ip) = 0.0;</div>
 <div class="line"><a id="l01569" name="l01569"></a><span class="lineno"> 1569</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_space_dim; ++i) {</div>
@@ -1699,7 +1699,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01573" name="l01573"></a><span class="lineno"> 1573</span>    }</div>
 <div class="line"><a id="l01574" name="l01574"></a><span class="lineno"> 1574</span>    aux(cell,ip) = Kokkos::sqrt(aux(cell,ip));</div>
 <div class="line"><a id="l01575" name="l01575"></a><span class="lineno"> 1575</span>  });</div>
-<div class="line"><a id="l01576" name="l01576"></a><span class="lineno"> 1576</span>  PHX::Device::execution_space().fence();</div>
+<div class="line"><a id="l01576" name="l01576"></a><span class="lineno"> 1576</span>  PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l01577" name="l01577"></a><span class="lineno"> 1577</span> </div>
 <div class="line"><a id="l01578" name="l01578"></a><span class="lineno"> 1578</span>  <span class="keywordflow">if</span>(cache){</div>
 <div class="line"><a id="l01579" name="l01579"></a><span class="lineno"> 1579</span>    norm_contravarient = aux;</div>
@@ -1765,7 +1765,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01637" name="l01637"></a><span class="lineno"> 1637</span>    <span class="keyword">auto</span> s_coord      = Kokkos::subview(aux.get_view(),cell_range,Kokkos::ALL(),Kokkos::ALL());</div>
 <div class="line"><a id="l01638" name="l01638"></a><span class="lineno"> 1638</span>    <span class="keyword">auto</span> s_node_coord = Kokkos::subview(node_coord,    cell_range,Kokkos::ALL(),Kokkos::ALL());</div>
 <div class="line"><a id="l01639" name="l01639"></a><span class="lineno"> 1639</span> </div>
-<div class="line"><a id="l01640" name="l01640"></a><span class="lineno"> 1640</span>    Intrepid2::CellTools&lt;PHX::Device::execution_space&gt; cell_tools;</div>
+<div class="line"><a id="l01640" name="l01640"></a><span class="lineno"> 1640</span>    Intrepid2::CellTools&lt;PHX::Device&gt; cell_tools;</div>
 <div class="line"><a id="l01641" name="l01641"></a><span class="lineno"> 1641</span>    cell_tools.mapToPhysicalFrame(s_coord, s_ref_coord, s_node_coord, *(int_rule-&gt;topology));</div>
 <div class="line"><a id="l01642" name="l01642"></a><span class="lineno"> 1642</span> </div>
 <div class="line"><a id="l01643" name="l01643"></a><span class="lineno"> 1643</span>  } <span class="keywordflow">else</span> {</div>
@@ -1778,7 +1778,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01650" name="l01650"></a><span class="lineno"> 1650</span>    <span class="keyword">auto</span> s_coord      = Kokkos::subview(aux.get_view(),cell_range,Kokkos::ALL(),Kokkos::ALL());</div>
 <div class="line"><a id="l01651" name="l01651"></a><span class="lineno"> 1651</span>    <span class="keyword">auto</span> s_node_coord = Kokkos::subview(node_coord,    cell_range,Kokkos::ALL(),Kokkos::ALL());</div>
 <div class="line"><a id="l01652" name="l01652"></a><span class="lineno"> 1652</span> </div>
-<div class="line"><a id="l01653" name="l01653"></a><span class="lineno"> 1653</span>    Intrepid2::CellTools&lt;PHX::Device::execution_space&gt; cell_tools;</div>
+<div class="line"><a id="l01653" name="l01653"></a><span class="lineno"> 1653</span>    Intrepid2::CellTools&lt;PHX::Device&gt; cell_tools;</div>
 <div class="line"><a id="l01654" name="l01654"></a><span class="lineno"> 1654</span>    cell_tools.mapToPhysicalFrame(s_coord, ref_coord, s_node_coord, *(int_rule-&gt;topology));</div>
 <div class="line"><a id="l01655" name="l01655"></a><span class="lineno"> 1655</span> </div>
 <div class="line"><a id="l01656" name="l01656"></a><span class="lineno"> 1656</span>    <span class="keywordflow">if</span>(requires_permutation_)</div>
@@ -1786,7 +1786,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01658" name="l01658"></a><span class="lineno"> 1658</span> </div>
 <div class="line"><a id="l01659" name="l01659"></a><span class="lineno"> 1659</span>  }</div>
 <div class="line"><a id="l01660" name="l01660"></a><span class="lineno"> 1660</span> </div>
-<div class="line"><a id="l01661" name="l01661"></a><span class="lineno"> 1661</span>  PHX::Device::execution_space().fence();</div>
+<div class="line"><a id="l01661" name="l01661"></a><span class="lineno"> 1661</span>  PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l01662" name="l01662"></a><span class="lineno"> 1662</span> </div>
 <div class="line"><a id="l01663" name="l01663"></a><span class="lineno"> 1663</span>  <span class="keywordflow">if</span>(cache){</div>
 <div class="line"><a id="l01664" name="l01664"></a><span class="lineno"> 1664</span>    ip_coordinates = aux;</div>
@@ -1820,7 +1820,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01690" name="l01690"></a><span class="lineno"> 1690</span> </div>
 <div class="line"><a id="l01691" name="l01691"></a><span class="lineno"> 1691</span>  <a class="code hl_class" href="classpanzer_1_1_m_d_field_array_factory.html">MDFieldArrayFactory</a> af(prefix_,<span class="keyword">true</span>);</div>
 <div class="line"><a id="l01692" name="l01692"></a><span class="lineno"> 1692</span> </div>
-<div class="line"><a id="l01693" name="l01693"></a><span class="lineno"> 1693</span>  Intrepid2::CellTools&lt;PHX::Device::execution_space&gt; cell_tools;</div>
+<div class="line"><a id="l01693" name="l01693"></a><span class="lineno"> 1693</span>  Intrepid2::CellTools&lt;PHX::Device&gt; cell_tools;</div>
 <div class="line"><a id="l01694" name="l01694"></a><span class="lineno"> 1694</span> </div>
 <div class="line"><a id="l01695" name="l01695"></a><span class="lineno"> 1695</span>  <span class="keyword">auto</span> aux = af.template buildStaticArray&lt;Scalar,Cell,IP,Dim&gt;(<span class="stringliteral">&quot;ref_ip_coordinates&quot;</span>,num_cells_, num_ip, num_space_dim);</div>
 <div class="line"><a id="l01696" name="l01696"></a><span class="lineno"> 1696</span> </div>
@@ -1872,7 +1872,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01742" name="l01742"></a><span class="lineno"> 1742</span>        <span class="keyword">const</span> shards::CellTopology face_topology(cell_topology.getCellTopologyData(subcell_dim,side));</div>
 <div class="line"><a id="l01743" name="l01743"></a><span class="lineno"> 1743</span> </div>
 <div class="line"><a id="l01744" name="l01744"></a><span class="lineno"> 1744</span>        <span class="comment">// Create a cubature for the face of the cell</span></div>
-<div class="line"><a id="l01745" name="l01745"></a><span class="lineno"> 1745</span>        <span class="keyword">auto</span> ic = cubature_factory.create&lt;PHX::Device::execution_space,double,<span class="keywordtype">double</span>&gt;(face_topology,order);</div>
+<div class="line"><a id="l01745" name="l01745"></a><span class="lineno"> 1745</span>        <span class="keyword">auto</span> ic = cubature_factory.create&lt;PHX::Device,double,<span class="keywordtype">double</span>&gt;(face_topology,order);</div>
 <div class="line"><a id="l01746" name="l01746"></a><span class="lineno"> 1746</span>        <span class="keyword">auto</span> tmp_side_cub_weights = Kokkos::DynRankView&lt;double,PHX::Device&gt;(<span class="stringliteral">&quot;tmp_side_cub_weights&quot;</span>,num_points_on_face);</div>
 <div class="line"><a id="l01747" name="l01747"></a><span class="lineno"> 1747</span>        <span class="keyword">auto</span> tmp_side_cub_points = Kokkos::DynRankView&lt;double,PHX::Device&gt;(<span class="stringliteral">&quot;tmp_side_cub_points&quot;</span>,num_points_on_face,subcell_dim);</div>
 <div class="line"><a id="l01748" name="l01748"></a><span class="lineno"> 1748</span> </div>
@@ -1883,14 +1883,14 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01753" name="l01753"></a><span class="lineno"> 1753</span>        cell_tools.mapToReferenceSubcell(side_cub_points2.get_view(), tmp_side_cub_points, subcell_dim, side, cell_topology);</div>
 <div class="line"><a id="l01754" name="l01754"></a><span class="lineno"> 1754</span>      }</div>
 <div class="line"><a id="l01755" name="l01755"></a><span class="lineno"> 1755</span> </div>
-<div class="line"><a id="l01756" name="l01756"></a><span class="lineno"> 1756</span>      PHX::Device::execution_space().fence();</div>
+<div class="line"><a id="l01756" name="l01756"></a><span class="lineno"> 1756</span>      PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l01757" name="l01757"></a><span class="lineno"> 1757</span> </div>
 <div class="line"><a id="l01758" name="l01758"></a><span class="lineno"> 1758</span>      <span class="comment">// Copy from the side allocation to the surface allocation</span></div>
-<div class="line"><a id="l01759" name="l01759"></a><span class="lineno"> 1759</span>      Kokkos::MDRangePolicy&lt;PHX::Device::execution_space,Kokkos::Rank&lt;3&gt;&gt; policy({0,0,0},{num_evaluate_cells_,num_points_on_face, num_space_dim});</div>
+<div class="line"><a id="l01759" name="l01759"></a><span class="lineno"> 1759</span>      Kokkos::MDRangePolicy&lt;PHX::ExecutionSpace,Kokkos::Rank&lt;3&gt;&gt; policy({0,0,0},{num_evaluate_cells_,num_points_on_face, num_space_dim});</div>
 <div class="line"><a id="l01760" name="l01760"></a><span class="lineno"> 1760</span>      Kokkos::parallel_for(<span class="stringliteral">&quot;copy values&quot;</span>,policy,KOKKOS_LAMBDA (<span class="keyword">const</span> <span class="keywordtype">int</span> cell,<span class="keyword">const</span> <span class="keywordtype">int</span> point, <span class="keyword">const</span> <span class="keywordtype">int</span> dim) {</div>
 <div class="line"><a id="l01761" name="l01761"></a><span class="lineno"> 1761</span>        aux(cell,point_offset + point,dim) = side_cub_points2(point,dim);</div>
 <div class="line"><a id="l01762" name="l01762"></a><span class="lineno"> 1762</span>      });</div>
-<div class="line"><a id="l01763" name="l01763"></a><span class="lineno"> 1763</span>      PHX::Device::execution_space().fence();</div>
+<div class="line"><a id="l01763" name="l01763"></a><span class="lineno"> 1763</span>      PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l01764" name="l01764"></a><span class="lineno"> 1764</span>    }</div>
 <div class="line"><a id="l01765" name="l01765"></a><span class="lineno"> 1765</span> </div>
 <div class="line"><a id="l01766" name="l01766"></a><span class="lineno"> 1766</span>  } <span class="keywordflow">else</span> {</div>
@@ -1902,13 +1902,13 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01772" name="l01772"></a><span class="lineno"> 1772</span> </div>
 <div class="line"><a id="l01773" name="l01773"></a><span class="lineno"> 1773</span>    <span class="keyword">auto</span> cub_points2 = getUniformCubaturePointsRef(<span class="keyword">false</span>,force,<span class="keyword">false</span>);</div>
 <div class="line"><a id="l01774" name="l01774"></a><span class="lineno"> 1774</span> </div>
-<div class="line"><a id="l01775" name="l01775"></a><span class="lineno"> 1775</span>    Kokkos::MDRangePolicy&lt;PHX::Device,Kokkos::Rank&lt;3&gt;&gt; policy({0,0,0},{num_evaluate_cells_,num_ip,num_space_dim});</div>
+<div class="line"><a id="l01775" name="l01775"></a><span class="lineno"> 1775</span>    Kokkos::MDRangePolicy&lt;PHX::ExecutionSpace,Kokkos::Rank&lt;3&gt;&gt; policy({0,0,0},{num_evaluate_cells_,num_ip,num_space_dim});</div>
 <div class="line"><a id="l01776" name="l01776"></a><span class="lineno"> 1776</span>    Kokkos::parallel_for(policy, KOKKOS_LAMBDA(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp; cell, <span class="keyword">const</span> <span class="keywordtype">int</span> &amp; ip, <span class="keyword">const</span> <span class="keywordtype">int</span> &amp; dim){</div>
 <div class="line"><a id="l01777" name="l01777"></a><span class="lineno"> 1777</span>      aux(cell,ip,dim) = cub_points2(ip,dim);</div>
 <div class="line"><a id="l01778" name="l01778"></a><span class="lineno"> 1778</span>    });</div>
 <div class="line"><a id="l01779" name="l01779"></a><span class="lineno"> 1779</span>  }</div>
 <div class="line"><a id="l01780" name="l01780"></a><span class="lineno"> 1780</span> </div>
-<div class="line"><a id="l01781" name="l01781"></a><span class="lineno"> 1781</span>  PHX::Device::execution_space().fence();</div>
+<div class="line"><a id="l01781" name="l01781"></a><span class="lineno"> 1781</span>  PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l01782" name="l01782"></a><span class="lineno"> 1782</span> </div>
 <div class="line"><a id="l01783" name="l01783"></a><span class="lineno"> 1783</span>  <span class="keywordflow">if</span>(requires_permutation_)</div>
 <div class="line"><a id="l01784" name="l01784"></a><span class="lineno"> 1784</span>    applyPermutation(aux, permutations_);</div>

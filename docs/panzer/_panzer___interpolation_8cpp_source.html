@@ -787,7 +787,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span>      Kokkos::View&lt;int*,DeviceSpace&gt; elementIds_d(<span class="stringliteral">&quot;elementIds_d&quot;</span>, elementIds_h.extent(0));</div>
 <div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span>      Kokkos::deep_copy(elementIds_d, elementIds_h);</div>
 <div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span>      <span class="keywordflow">for</span>(std::size_t elemIter = 0; elemIter &lt; elementIds_d.extent(0); elemIter += numCells) {</div>
-<div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span>        <span class="keyword">using </span>range_type = Kokkos::RangePolicy&lt;LocalOrdinal, DeviceSpace&gt;;</div>
+<div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span>        <span class="keyword">using </span>range_type = Kokkos::RangePolicy&lt;LocalOrdinal, PHX::ExecutionSpace&gt;;</div>
 <div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>        Kokkos::parallel_for(<span class="stringliteral">&quot;miniEM::MatrixFreeInterpolationOp::cellLoop&quot;</span>,</div>
 <div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span>                             range_type(elemIter, std::min(elemIter+numCells,</div>
 <div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span>                                                           elementIds_d.extent(0))),</div>
@@ -853,7 +853,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span>    <span class="keyword">using </span>Teuchos::RCP;</div>
 <div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span>    <span class="keyword">using </span>Teuchos::rcp;</div>
 <div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span>    <span class="keyword">using </span>Teuchos::rcp_dynamic_cast;</div>
-<div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span>    <span class="keyword">using </span>range_type = Kokkos::RangePolicy&lt;LocalOrdinal, DeviceSpace&gt;;</div>
+<div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span>    <span class="keyword">using </span>range_type = Kokkos::RangePolicy&lt;LocalOrdinal, PHX::ExecutionSpace&gt;;</div>
 <div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span> </div>
 <div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span>    <span class="keyword">using </span>ots = Intrepid2::OrientationTools&lt;DeviceSpace&gt;;</div>
 <div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span>    <span class="keyword">using </span>li = Intrepid2::LagrangianInterpolation&lt;DeviceSpace&gt;;</div>
@@ -1069,7 +1069,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00969" name="l00969"></a><span class="lineno">  969</span>    <span class="keyword">using </span>Teuchos::RCP;</div>
 <div class="line"><a id="l00970" name="l00970"></a><span class="lineno">  970</span>    <span class="keyword">using </span>Teuchos::rcp;</div>
 <div class="line"><a id="l00971" name="l00971"></a><span class="lineno">  971</span>    <span class="keyword">using </span>Teuchos::rcp_dynamic_cast;</div>
-<div class="line"><a id="l00972" name="l00972"></a><span class="lineno">  972</span>    <span class="keyword">using </span>range_type = Kokkos::RangePolicy&lt;LocalOrdinal, DeviceSpace&gt;;</div>
+<div class="line"><a id="l00972" name="l00972"></a><span class="lineno">  972</span>    <span class="keyword">using </span>range_type = Kokkos::RangePolicy&lt;LocalOrdinal, PHX::ExecutionSpace&gt;;</div>
 <div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span> </div>
 <div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span>    <span class="keyword">typedef</span> Intrepid2::OrientationTools&lt;DeviceSpace&gt; ots;</div>
 <div class="line"><a id="l00975" name="l00975"></a><span class="lineno">  975</span>    <span class="keyword">typedef</span> Intrepid2::LagrangianInterpolation&lt;DeviceSpace&gt; li;</div>

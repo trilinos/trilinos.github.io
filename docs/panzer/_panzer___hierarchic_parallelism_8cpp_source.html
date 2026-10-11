@@ -147,8 +147,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    Kokkos::TeamPolicy&lt;PHX::Device&gt; policy(1, Kokkos::AUTO);</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">auto</span> blank_functor = KOKKOS_LAMBDA ( <span class="keyword">const</span> Kokkos::TeamPolicy&lt;PHX::exec_space&gt;::member_type) {};</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    Kokkos::TeamPolicy&lt;PHX::ExecutionSpace&gt; policy(1, Kokkos::AUTO);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">auto</span> blank_functor = KOKKOS_LAMBDA ( <span class="keyword">const</span> Kokkos::TeamPolicy&lt;PHX::ExecutionSpace&gt;::member_type) {};</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">int</span> team_size_max = std::min(in_team_size, policy.team_size_max(blank_functor, Kokkos::ParallelForTag()));</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <a class="code hl_variable" href="classpanzer_1_1_h_p.html#a142c19a67af30e6bda2783f0ea531894">team_size_</a>=roundDownToPowerOfTwo(team_size_max);</div>

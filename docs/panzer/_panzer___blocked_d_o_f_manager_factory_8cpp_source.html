@@ -209,7 +209,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>         <span class="comment">// determine if orientations are required</span></div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>         orientationsRequired |= fieldItr-&gt;second-&gt;requiresOrientations();</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>         Teuchos::RCP&lt; Intrepid2::Basis&lt;PHX::Device::execution_space,double,double&gt; &gt; intrepidBasis </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>         Teuchos::RCP&lt; Intrepid2::Basis&lt;PHX::Device,double,double&gt; &gt; intrepidBasis </div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>               = fieldItr-&gt;second-&gt;getIntrepid2Basis();</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>         Teuchos::RCP&lt;Intrepid2FieldPattern&gt; fp = Teuchos::rcp(<span class="keyword">new</span> <a class="code hl_class" href="classpanzer_1_1_intrepid2_field_pattern.html">Intrepid2FieldPattern</a>(intrepidBasis));</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>         dofManager-&gt;addField(pb-&gt;elementBlockID(),fieldItr-&gt;first,fp);</div>

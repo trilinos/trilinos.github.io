@@ -9,5 +9,6 @@ var searchData=
   ['statistics0_6',['Statistics0',['../namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1faf487f4b7e739a4d39611284e8f24f05a',1,'MueLu']]],
   ['statistics1_7',['Statistics1',['../namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1fa83a3214cf3b7416fa80a3de3d1965e73',1,'MueLu']]],
   ['statistics2_8',['Statistics2',['../namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1fa18d960e5bd7364c1ea53ae67f5891ff5',1,'MueLu']]],
-  ['string_9',['STRING',['../namespace_mue_lu.html#a6da7829994ac1d91a749c3cbf89e2033ad7734ed3828d75aa025afc234f8aed17',1,'MueLu']]]
+  ['string_9',['STRING',['../namespace_mue_lu.html#a6da7829994ac1d91a749c3cbf89e2033ad7734ed3828d75aa025afc234f8aed17',1,'MueLu']]],
+  ['symdrop_10',['SYMDROP',['../namespace_mue_lu.html#a68ae14477561647a8c38a292b7fb6c59a0641ed410a3ed0624dc14ec318f22cd9',1,'MueLu']]]
 ];

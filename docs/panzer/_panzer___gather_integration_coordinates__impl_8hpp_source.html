@@ -155,7 +155,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <span class="keyword">auto</span> d_quadCoordinates = quadCoordinates_.get_static_view();</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <span class="comment">// just copy the array</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  Kokkos::MDRangePolicy&lt;PHX::Device,Kokkos::Rank&lt;3&gt;&gt; policy({0,0,0},{int(workset.num_cells),s_ip_coordinates.extent_int(1),s_ip_coordinates.extent_int(2)});</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  Kokkos::MDRangePolicy&lt;PHX::ExecutionSpace,Kokkos::Rank&lt;3&gt;&gt; policy({0,0,0},{int(workset.num_cells),s_ip_coordinates.extent_int(1),s_ip_coordinates.extent_int(2)});</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  Kokkos::parallel_for(<span class="stringliteral">&quot;GatherIntegrationCoords&quot;</span>, policy, KOKKOS_LAMBDA (<span class="keyword">const</span> <span class="keywordtype">int</span> i, <span class="keyword">const</span> <span class="keywordtype">int</span> j, <span class="keyword">const</span> <span class="keywordtype">int</span> k) {</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keyword">auto</span> s_ip_coordinates_tmp = s_ip_coordinates;</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keyword">auto</span> d_quadCoordinates_tmp = d_quadCoordinates;</div>

@@ -14,6 +14,6 @@ var class_mue_lu_1_1_vector_dropping_distance_laplacian =
     [ "Level", "class_mue_lu_1_1_vector_dropping_distance_laplacian.html#aec6f851cd9eb3b0ecb1520a7273d7100", null ],
     [ "nnz_count_type", "class_mue_lu_1_1_vector_dropping_distance_laplacian.html#a30cfa4d2bf32803d10171b3149ae73be", null ],
     [ "block_indices_view_type", "class_mue_lu_1_1_vector_dropping_distance_laplacian.html#a301c4591d5333e3ee38012b3db339754", null ],
-    [ "runDroppingFunctors_on_dlap_inner", "class_mue_lu_1_1_vector_dropping_distance_laplacian.html#a04402d830a9186f391d883bb1c333787", null ],
-    [ "runDroppingFunctors_on_dlap", "class_mue_lu_1_1_vector_dropping_distance_laplacian.html#a8498aa157d0a0e69000edd59dd0d0037", null ]
+    [ "runDroppingFunctors_on_dlap_inner", "class_mue_lu_1_1_vector_dropping_distance_laplacian.html#a51ad7dfff8eea5cab4cadf0894837abf", null ],
+    [ "runDroppingFunctors_on_dlap", "class_mue_lu_1_1_vector_dropping_distance_laplacian.html#aad79f4ae8697c32dd9ea62e666fa7fe8", null ]
 ];

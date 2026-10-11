@@ -100,15 +100,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a698e55d407420ba10a24f482d0d83948" id="r_a698e55d407420ba10a24f482d0d83948"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; <a class="el" href="classpanzer_1_1_global_indexer.html">panzer::GlobalIndexer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_l2_projection.html#a698e55d407420ba10a24f482d0d83948">getTargetGlobalIndexer</a> () const</td></tr>
 <tr class="memdesc:a698e55d407420ba10a24f482d0d83948"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the target global indexer. Will be null if <a class="el" href="classpanzer_1_1_l2_projection.html#af32d2dbc35eca5e99285a0ad33037805" title="Setup base objects for L2 Projections - requires target scalar basis and creates worksets if not supp...">setup()</a> has not been called.  <br /></td></tr>
 <tr class="separator:a698e55d407420ba10a24f482d0d83948"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54dd9b581de6ce245c6fff7210e12be2" id="r_a54dd9b581de6ce245c6fff7210e12be2"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; Tpetra::CrsMatrix&lt; double, panzer::LocalOrdinal, panzer::GlobalOrdinal, Tpetra::KokkosCompat::KokkosDeviceWrapperNode&lt; PHX::Device &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_l2_projection.html#a54dd9b581de6ce245c6fff7210e12be2">buildMassMatrix</a> (bool use_lumping=false, const std::unordered_map&lt; std::string, double &gt; *elementBlockMultipliers=nullptr)</td></tr>
+<tr class="memitem:a54dd9b581de6ce245c6fff7210e12be2" id="r_a54dd9b581de6ce245c6fff7210e12be2"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; Tpetra::CrsMatrix&lt; double, panzer::LocalOrdinal, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a6cdf40340055318465bd0a87fd5b9e52">panzer::TpetraNodeType</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_l2_projection.html#a54dd9b581de6ce245c6fff7210e12be2">buildMassMatrix</a> (bool use_lumping=false, const std::unordered_map&lt; std::string, double &gt; *elementBlockMultipliers=nullptr)</td></tr>
 <tr class="memdesc:a54dd9b581de6ce245c6fff7210e12be2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates, fills and returns a mass matrix for L2 projection onto a target basis.  <br /></td></tr>
 <tr class="separator:a54dd9b581de6ce245c6fff7210e12be2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8445f14a5540f42a4c76b147e56b1d6e" id="r_a8445f14a5540f42a4c76b147e56b1d6e"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; Tpetra::MultiVector&lt; double, panzer::LocalOrdinal, panzer::GlobalOrdinal, Tpetra::KokkosCompat::KokkosDeviceWrapperNode&lt; PHX::Device &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_l2_projection.html#a8445f14a5540f42a4c76b147e56b1d6e">buildInverseLumpedMassMatrix</a> ()</td></tr>
+<tr class="memitem:a8445f14a5540f42a4c76b147e56b1d6e" id="r_a8445f14a5540f42a4c76b147e56b1d6e"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; Tpetra::MultiVector&lt; double, panzer::LocalOrdinal, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a6cdf40340055318465bd0a87fd5b9e52">panzer::TpetraNodeType</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_l2_projection.html#a8445f14a5540f42a4c76b147e56b1d6e">buildInverseLumpedMassMatrix</a> ()</td></tr>
 <tr class="memdesc:a8445f14a5540f42a4c76b147e56b1d6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates, fills and returns a Tpetra::MultiVector containing the inverse lumped mass matrix values as computed via Hinton 1976.  <br /></td></tr>
 <tr class="separator:a8445f14a5540f42a4c76b147e56b1d6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a998984f8cabcaae239f75107808dcc55" id="r_a998984f8cabcaae239f75107808dcc55"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; Tpetra::CrsMatrix&lt; double, panzer::LocalOrdinal, panzer::GlobalOrdinal, Tpetra::KokkosCompat::KokkosDeviceWrapperNode&lt; PHX::Device &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_l2_projection.html#a998984f8cabcaae239f75107808dcc55">buildRHSMatrix</a> (const <a class="el" href="classpanzer_1_1_global_indexer.html">panzer::GlobalIndexer</a> &amp;sourceDOFManager, const Teuchos::RCP&lt; const Tpetra::Map&lt; panzer::LocalOrdinal, panzer::GlobalOrdinal, Tpetra::KokkosCompat::KokkosDeviceWrapperNode&lt; PHX::Device &gt; &gt; &gt; &amp;ownedSourceMap, const std::string &amp;sourceFieldName, const <a class="el" href="classpanzer_1_1_basis_descriptor.html">panzer::BasisDescriptor</a> &amp;sourceBasisDescriptor, const int vectorOrGradientDirectionIndex=-1)</td></tr>
-<tr class="memdesc:a998984f8cabcaae239f75107808dcc55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates, fills and returns a rectangular matrix for L2 projection of a scalar field, one dimension of gradient (for hgrad basis), or one dimension of a vector field onto the target scalar basis. If you wish to project all values of a vector field or all the gradients of a scalar field, then you will need three separate RHS matrices to form the RHS for each independently. The vectors must be independent Tpetra vectors to solve multiple right hand sides with the linear solver.  <br /></td></tr>
-<tr class="separator:a998984f8cabcaae239f75107808dcc55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66ed8af311a4a04f35a2827bc376c85c" id="r_a66ed8af311a4a04f35a2827bc376c85c"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; Tpetra::CrsMatrix&lt; double, panzer::LocalOrdinal, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a6cdf40340055318465bd0a87fd5b9e52">panzer::TpetraNodeType</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_l2_projection.html#a66ed8af311a4a04f35a2827bc376c85c">buildRHSMatrix</a> (const <a class="el" href="classpanzer_1_1_global_indexer.html">panzer::GlobalIndexer</a> &amp;sourceDOFManager, const Teuchos::RCP&lt; const Tpetra::Map&lt; panzer::LocalOrdinal, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a6cdf40340055318465bd0a87fd5b9e52">panzer::TpetraNodeType</a> &gt; &gt; &amp;ownedSourceMap, const std::string &amp;sourceFieldName, const <a class="el" href="classpanzer_1_1_basis_descriptor.html">panzer::BasisDescriptor</a> &amp;sourceBasisDescriptor, const int vectorOrGradientDirectionIndex=-1)</td></tr>
+<tr class="memdesc:a66ed8af311a4a04f35a2827bc376c85c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates, fills and returns a rectangular matrix for L2 projection of a scalar field, one dimension of gradient (for hgrad basis), or one dimension of a vector field onto the target scalar basis. If you wish to project all values of a vector field or all the gradients of a scalar field, then you will need three separate RHS matrices to form the RHS for each independently. The vectors must be independent Tpetra vectors to solve multiple right hand sides with the linear solver.  <br /></td></tr>
+<tr class="separator:a66ed8af311a4a04f35a2827bc376c85c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -136,7 +136,7 @@ Private Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Unified set of tools for building objects for lumped and consistent L2 projects between bases. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___l2_projection_8hpp_source.html#l00043">43</a> of file <a class="el" href="_panzer___l2_projection_8hpp_source.html">Panzer_L2Projection.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___l2_projection_8hpp_source.html#l00044">44</a> of file <a class="el" href="_panzer___l2_projection_8hpp_source.html">Panzer_L2Projection.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="adbdc01a01e981cecba1c5004fb0e1f8f" name="adbdc01a01e981cecba1c5004fb0e1f8f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adbdc01a01e981cecba1c5004fb0e1f8f">&#9670;&#160;</a></span>L2Projection()</h2>
@@ -163,7 +163,7 @@ Private Attributes</h2></td></tr>
 
 <p>Constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___l2_projection_8hpp_source.html#l00059">59</a> of file <a class="el" href="_panzer___l2_projection_8hpp_source.html">Panzer_L2Projection.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___l2_projection_8hpp_source.html#l00060">60</a> of file <a class="el" href="_panzer___l2_projection_8hpp_source.html">Panzer_L2Projection.hpp</a>.</p>
 
 </div>
 </div>
@@ -292,7 +292,7 @@ Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Teuchos::RCP&lt; Tpetra::CrsMatrix&lt; double, panzer::LocalOrdinal, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a99d6c2e247dadbef989f9acd93e94960">panzer::TpetraNodeType</a> &gt; &gt; panzer::L2Projection::buildMassMatrix </td>
+          <td class="memname">Teuchos::RCP&lt; Tpetra::CrsMatrix&lt; double, panzer::LocalOrdinal, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a6cdf40340055318465bd0a87fd5b9e52">panzer::TpetraNodeType</a> &gt; &gt; panzer::L2Projection::buildMassMatrix </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>use_lumping</em> = <code>false</code>, </td>
@@ -332,7 +332,7 @@ Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Teuchos::RCP&lt; Tpetra::MultiVector&lt; double, panzer::LocalOrdinal, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a99d6c2e247dadbef989f9acd93e94960">panzer::TpetraNodeType</a> &gt; &gt; panzer::L2Projection::buildInverseLumpedMassMatrix </td>
+          <td class="memname">Teuchos::RCP&lt; Tpetra::MultiVector&lt; double, panzer::LocalOrdinal, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a6cdf40340055318465bd0a87fd5b9e52">panzer::TpetraNodeType</a> &gt; &gt; panzer::L2Projection::buildInverseLumpedMassMatrix </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -354,14 +354,14 @@ and Dynamic Finite Element Analysis," (1987), Section 7.3.2.</p>
 
 </div>
 </div>
-<a id="a998984f8cabcaae239f75107808dcc55" name="a998984f8cabcaae239f75107808dcc55"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a998984f8cabcaae239f75107808dcc55">&#9670;&#160;</a></span>buildRHSMatrix()</h2>
+<a id="a66ed8af311a4a04f35a2827bc376c85c" name="a66ed8af311a4a04f35a2827bc376c85c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66ed8af311a4a04f35a2827bc376c85c">&#9670;&#160;</a></span>buildRHSMatrix()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Teuchos::RCP&lt; Tpetra::CrsMatrix&lt; double, panzer::LocalOrdinal, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a99d6c2e247dadbef989f9acd93e94960">panzer::TpetraNodeType</a> &gt; &gt; panzer::L2Projection::buildRHSMatrix </td>
+          <td class="memname">Teuchos::RCP&lt; Tpetra::CrsMatrix&lt; double, panzer::LocalOrdinal, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a6cdf40340055318465bd0a87fd5b9e52">panzer::TpetraNodeType</a> &gt; &gt; panzer::L2Projection::buildRHSMatrix </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classpanzer_1_1_global_indexer.html">panzer::GlobalIndexer</a> &amp;&#160;</td>
           <td class="paramname"><em>sourceDOFManager</em>, </td>
@@ -369,7 +369,7 @@ and Dynamic Finite Element Analysis," (1987), Section 7.3.2.</p>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Teuchos::RCP&lt; const Tpetra::Map&lt; panzer::LocalOrdinal, panzer::GlobalOrdinal, Tpetra::KokkosCompat::KokkosDeviceWrapperNode&lt; PHX::Device &gt; &gt; &gt; &amp;&#160;</td>
+          <td class="paramtype">const Teuchos::RCP&lt; const Tpetra::Map&lt; panzer::LocalOrdinal, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a6cdf40340055318465bd0a87fd5b9e52">panzer::TpetraNodeType</a> &gt; &gt; &amp;&#160;</td>
           <td class="paramname"><em>ownedSourceMap</em>, </td>
         </tr>
         <tr>
@@ -436,7 +436,7 @@ and Dynamic Finite Element Analysis," (1987), Section 7.3.2.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___l2_projection_8hpp_source.html#l00045">45</a> of file <a class="el" href="_panzer___l2_projection_8hpp_source.html">Panzer_L2Projection.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___l2_projection_8hpp_source.html#l00046">46</a> of file <a class="el" href="_panzer___l2_projection_8hpp_source.html">Panzer_L2Projection.hpp</a>.</p>
 
 </div>
 </div>
@@ -460,7 +460,7 @@ and Dynamic Finite Element Analysis," (1987), Section 7.3.2.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___l2_projection_8hpp_source.html#l00046">46</a> of file <a class="el" href="_panzer___l2_projection_8hpp_source.html">Panzer_L2Projection.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___l2_projection_8hpp_source.html#l00047">47</a> of file <a class="el" href="_panzer___l2_projection_8hpp_source.html">Panzer_L2Projection.hpp</a>.</p>
 
 </div>
 </div>
@@ -484,7 +484,7 @@ and Dynamic Finite Element Analysis," (1987), Section 7.3.2.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___l2_projection_8hpp_source.html#l00047">47</a> of file <a class="el" href="_panzer___l2_projection_8hpp_source.html">Panzer_L2Projection.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___l2_projection_8hpp_source.html#l00048">48</a> of file <a class="el" href="_panzer___l2_projection_8hpp_source.html">Panzer_L2Projection.hpp</a>.</p>
 
 </div>
 </div>
@@ -508,7 +508,7 @@ and Dynamic Finite Element Analysis," (1987), Section 7.3.2.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___l2_projection_8hpp_source.html#l00048">48</a> of file <a class="el" href="_panzer___l2_projection_8hpp_source.html">Panzer_L2Projection.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___l2_projection_8hpp_source.html#l00049">49</a> of file <a class="el" href="_panzer___l2_projection_8hpp_source.html">Panzer_L2Projection.hpp</a>.</p>
 
 </div>
 </div>
@@ -532,7 +532,7 @@ and Dynamic Finite Element Analysis," (1987), Section 7.3.2.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___l2_projection_8hpp_source.html#l00049">49</a> of file <a class="el" href="_panzer___l2_projection_8hpp_source.html">Panzer_L2Projection.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___l2_projection_8hpp_source.html#l00050">50</a> of file <a class="el" href="_panzer___l2_projection_8hpp_source.html">Panzer_L2Projection.hpp</a>.</p>
 
 </div>
 </div>
@@ -556,7 +556,7 @@ and Dynamic Finite Element Analysis," (1987), Section 7.3.2.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___l2_projection_8hpp_source.html#l00050">50</a> of file <a class="el" href="_panzer___l2_projection_8hpp_source.html">Panzer_L2Projection.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___l2_projection_8hpp_source.html#l00051">51</a> of file <a class="el" href="_panzer___l2_projection_8hpp_source.html">Panzer_L2Projection.hpp</a>.</p>
 
 </div>
 </div>
@@ -580,7 +580,7 @@ and Dynamic Finite Element Analysis," (1987), Section 7.3.2.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___l2_projection_8hpp_source.html#l00051">51</a> of file <a class="el" href="_panzer___l2_projection_8hpp_source.html">Panzer_L2Projection.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___l2_projection_8hpp_source.html#l00052">52</a> of file <a class="el" href="_panzer___l2_projection_8hpp_source.html">Panzer_L2Projection.hpp</a>.</p>
 
 </div>
 </div>
@@ -604,7 +604,7 @@ and Dynamic Finite Element Analysis," (1987), Section 7.3.2.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___l2_projection_8hpp_source.html#l00052">52</a> of file <a class="el" href="_panzer___l2_projection_8hpp_source.html">Panzer_L2Projection.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___l2_projection_8hpp_source.html#l00053">53</a> of file <a class="el" href="_panzer___l2_projection_8hpp_source.html">Panzer_L2Projection.hpp</a>.</p>
 
 </div>
 </div>
@@ -628,7 +628,7 @@ and Dynamic Finite Element Analysis," (1987), Section 7.3.2.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___l2_projection_8hpp_source.html#l00053">53</a> of file <a class="el" href="_panzer___l2_projection_8hpp_source.html">Panzer_L2Projection.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___l2_projection_8hpp_source.html#l00054">54</a> of file <a class="el" href="_panzer___l2_projection_8hpp_source.html">Panzer_L2Projection.hpp</a>.</p>
 
 </div>
 </div>
@@ -652,7 +652,7 @@ and Dynamic Finite Element Analysis," (1987), Section 7.3.2.</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___l2_projection_8hpp_source.html#l00054">54</a> of file <a class="el" href="_panzer___l2_projection_8hpp_source.html">Panzer_L2Projection.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___l2_projection_8hpp_source.html#l00055">55</a> of file <a class="el" href="_panzer___l2_projection_8hpp_source.html">Panzer_L2Projection.hpp</a>.</p>
 
 </div>
 </div>

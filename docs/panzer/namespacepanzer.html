@@ -863,6 +863,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_tpetra_linear_obj_factory.html">TpetraLinearObjFactory</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpanzer_1_1_tpetra_node_is_instantiated.html">TpetraNodeIsInstantiated</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether Tpetra explicitly instantiated its classes over <code>Node</code>.  <a href="structpanzer_1_1_tpetra_node_is_instantiated.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_tpetra_vector___read_only___global_evaluation_data.html">TpetraVector_ReadOnly_GlobalEvaluationData</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpanzer_1_1_traits.html">Traits</a></td></tr>
@@ -923,9 +926,9 @@ Typedefs</h2></td></tr>
 <tr class="separator:aaa54d8ad3ec6aafbdc08cf1ea705b7ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa21a2913d458cd65171b772ce9bd5204" id="r_aa21a2913d458cd65171b772ce9bd5204"><td class="memItemLeft" align="right" valign="top">typedef std::pair&lt; std::string, Teuchos::RCP&lt; <a class="el" href="classpanzer_1_1_pure_basis.html">panzer::PureBasis</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer.html#aa21a2913d458cd65171b772ce9bd5204">StrPureBasisPair</a></td></tr>
 <tr class="separator:aa21a2913d458cd65171b772ce9bd5204"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99d6c2e247dadbef989f9acd93e94960" id="r_a99d6c2e247dadbef989f9acd93e94960"><td class="memItemLeft" align="right" valign="top">typedef Tpetra::KokkosCompat::KokkosDeviceWrapperNode&lt; PHX::Device &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer.html#a99d6c2e247dadbef989f9acd93e94960">TpetraNodeType</a></td></tr>
-<tr class="memdesc:a99d6c2e247dadbef989f9acd93e94960"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Kokkos node type used to instantiate all Tpetra objects (Map, MultiVector, CrsGraph, etc.) throughout panzer.  <br /></td></tr>
-<tr class="separator:a99d6c2e247dadbef989f9acd93e94960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cdf40340055318465bd0a87fd5b9e52" id="r_a6cdf40340055318465bd0a87fd5b9e52"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer.html#a6cdf40340055318465bd0a87fd5b9e52">TpetraNodeType</a> = Tpetra::KokkosCompat::KokkosDeviceWrapperNode&lt; PHX::ExecutionSpace, PHX::MemorySpace &gt;</td></tr>
+<tr class="memdesc:a6cdf40340055318465bd0a87fd5b9e52"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Kokkos node type used to instantiate all Tpetra objects (Map, MultiVector, CrsGraph, etc.) throughout panzer.  <br /></td></tr>
+<tr class="separator:a6cdf40340055318465bd0a87fd5b9e52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -1054,14 +1057,14 @@ Functions</h2></td></tr>
 <tr class="separator:a872bec0630370f43902ae3d9f64bf445"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcfa1e1f956b5f551751852d47254b06" id="r_abcfa1e1f956b5f551751852d47254b06"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/class_thyra_1_1_linear_op_base.html">Thyra::LinearOpBase</a>&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer.html#abcfa1e1f956b5f551751852d47254b06">buildInterpolation</a> (const Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_conn_manager.html">panzer::ConnManager</a> &gt; &amp;conn, const Teuchos::RCP&lt; <a class="el" href="classpanzer_1_1_d_o_f_manager.html">panzer::DOFManager</a> &gt; &amp;domain_ugi, const Teuchos::RCP&lt; <a class="el" href="classpanzer_1_1_d_o_f_manager.html">panzer::DOFManager</a> &gt; &amp;range_ugi, const std::string &amp;domain_basis_name, const std::string &amp;range_basis_name, Intrepid2::EOperator op, size_t worksetSize, const bool force_vectorial, const bool useTpetra, const bool matrixFree)</td></tr>
 <tr class="separator:abcfa1e1f956b5f551751852d47254b06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6fa77550e6e5964983996027bed4ea07" id="r_a6fa77550e6e5964983996027bed4ea07"><td class="memTemplParams" colspan="2">template&lt;typename ExecutionSpace , typename OutputValueType , typename PointValueType &gt; </td></tr>
-<tr class="memitem:a6fa77550e6e5964983996027bed4ea07"><td class="memTemplItemLeft" align="right" valign="top">Teuchos::RCP&lt; Intrepid2::Basis&lt; ExecutionSpace, OutputValueType, PointValueType &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepanzer.html#a6fa77550e6e5964983996027bed4ea07">createIntrepid2Basis</a> (const std::string basis_type, int basis_order, const shards::CellTopology &amp;cell_topology)</td></tr>
-<tr class="memdesc:a6fa77550e6e5964983996027bed4ea07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an Intrepid2::Basis object given the basis, order and cell topology.  <br /></td></tr>
-<tr class="separator:a6fa77550e6e5964983996027bed4ea07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1e7e8fe00d70c3018cc0823d7c8962e" id="r_ac1e7e8fe00d70c3018cc0823d7c8962e"><td class="memTemplParams" colspan="2">template&lt;typename ExecutionSpace , typename OutputValueType , typename PointValueType &gt; </td></tr>
-<tr class="memitem:ac1e7e8fe00d70c3018cc0823d7c8962e"><td class="memTemplItemLeft" align="right" valign="top">Teuchos::RCP&lt; Intrepid2::Basis&lt; ExecutionSpace, OutputValueType, PointValueType &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepanzer.html#ac1e7e8fe00d70c3018cc0823d7c8962e">createIntrepid2Basis</a> (const std::string basis_type, int basis_order, const Teuchos::RCP&lt; const shards::CellTopology &gt; &amp;cell_topology)</td></tr>
-<tr class="memdesc:ac1e7e8fe00d70c3018cc0823d7c8962e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an Intrepid2::Basis object given the basis, order and cell topology.  <br /></td></tr>
-<tr class="separator:ac1e7e8fe00d70c3018cc0823d7c8962e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada7be0bd512626a5eab692c827ed385b" id="r_ada7be0bd512626a5eab692c827ed385b"><td class="memTemplParams" colspan="2">template&lt;typename DeviceType , typename OutputValueType , typename PointValueType &gt; </td></tr>
+<tr class="memitem:ada7be0bd512626a5eab692c827ed385b"><td class="memTemplItemLeft" align="right" valign="top">Teuchos::RCP&lt; Intrepid2::Basis&lt; DeviceType, OutputValueType, PointValueType &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepanzer.html#ada7be0bd512626a5eab692c827ed385b">createIntrepid2Basis</a> (const std::string basis_type, int basis_order, const shards::CellTopology &amp;cell_topology)</td></tr>
+<tr class="memdesc:ada7be0bd512626a5eab692c827ed385b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an Intrepid2::Basis object given the basis, order and cell topology.  <br /></td></tr>
+<tr class="separator:ada7be0bd512626a5eab692c827ed385b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a8c70b6d98b26853b2358df776ee5d9" id="r_a3a8c70b6d98b26853b2358df776ee5d9"><td class="memTemplParams" colspan="2">template&lt;typename DeviceType , typename OutputValueType , typename PointValueType &gt; </td></tr>
+<tr class="memitem:a3a8c70b6d98b26853b2358df776ee5d9"><td class="memTemplItemLeft" align="right" valign="top">Teuchos::RCP&lt; Intrepid2::Basis&lt; DeviceType, OutputValueType, PointValueType &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepanzer.html#a3a8c70b6d98b26853b2358df776ee5d9">createIntrepid2Basis</a> (const std::string basis_type, int basis_order, const Teuchos::RCP&lt; const shards::CellTopology &gt; &amp;cell_topology)</td></tr>
+<tr class="memdesc:a3a8c70b6d98b26853b2358df776ee5d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an Intrepid2::Basis object given the basis, order and cell topology.  <br /></td></tr>
+<tr class="separator:a3a8c70b6d98b26853b2358df776ee5d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6414a5ce25775bfe668b5021130580a7" id="r_a6414a5ce25775bfe668b5021130580a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer.html#a6414a5ce25775bfe668b5021130580a7">buildIntrepidOrientation</a> (std::vector&lt; Intrepid2::Orientation &gt; &amp;orientation, <a class="el" href="classpanzer_1_1_conn_manager.html">panzer::ConnManager</a> &amp;connMgr)</td></tr>
 <tr class="memdesc:a6414a5ce25775bfe668b5021130580a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds the element orientations for all element blocks.  <br /></td></tr>
 <tr class="separator:a6414a5ce25775bfe668b5021130580a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1287,16 +1290,16 @@ Functions</h2></td></tr>
 <tr class="separator:a927f065c5f8b5158ea53d07ebfc1cb40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40c7a998171f8f7fab09015a31c69df4" id="r_a40c7a998171f8f7fab09015a31c69df4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer.html#a40c7a998171f8f7fab09015a31c69df4">printMeshTopology</a> (std::ostream &amp;os, const <a class="el" href="classpanzer_1_1_global_indexer.html">panzer::GlobalIndexer</a> &amp;ugi)</td></tr>
 <tr class="separator:a40c7a998171f8f7fab09015a31c69df4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ad96fa2d2ce54856f75f21f40a8da93" id="r_a9ad96fa2d2ce54856f75f21f40a8da93"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; Tpetra::Vector&lt; int, int, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a99d6c2e247dadbef989f9acd93e94960">panzer::TpetraNodeType</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer.html#a9ad96fa2d2ce54856f75f21f40a8da93">buildGhostedFieldReducedVector</a> (const <a class="el" href="classpanzer_1_1_global_indexer.html">GlobalIndexer</a> &amp;ugi)</td></tr>
+<tr class="memitem:a9ad96fa2d2ce54856f75f21f40a8da93" id="r_a9ad96fa2d2ce54856f75f21f40a8da93"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; Tpetra::Vector&lt; int, int, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a6cdf40340055318465bd0a87fd5b9e52">panzer::TpetraNodeType</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer.html#a9ad96fa2d2ce54856f75f21f40a8da93">buildGhostedFieldReducedVector</a> (const <a class="el" href="classpanzer_1_1_global_indexer.html">GlobalIndexer</a> &amp;ugi)</td></tr>
 <tr class="separator:a9ad96fa2d2ce54856f75f21f40a8da93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d8224d9e2f338a28dc0f48cdda73161" id="r_a5d8224d9e2f338a28dc0f48cdda73161"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer.html#a5d8224d9e2f338a28dc0f48cdda73161">buildGhostedFieldVector</a> (const <a class="el" href="classpanzer_1_1_global_indexer.html">GlobalIndexer</a> &amp;ugi, std::vector&lt; int &gt; &amp;fieldNumbers, const Teuchos::RCP&lt; const Tpetra::Vector&lt; int, int, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a99d6c2e247dadbef989f9acd93e94960">panzer::TpetraNodeType</a> &gt; &gt; &amp;reducedVec)</td></tr>
+<tr class="memitem:a5d8224d9e2f338a28dc0f48cdda73161" id="r_a5d8224d9e2f338a28dc0f48cdda73161"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer.html#a5d8224d9e2f338a28dc0f48cdda73161">buildGhostedFieldVector</a> (const <a class="el" href="classpanzer_1_1_global_indexer.html">GlobalIndexer</a> &amp;ugi, std::vector&lt; int &gt; &amp;fieldNumbers, const Teuchos::RCP&lt; const Tpetra::Vector&lt; int, int, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a6cdf40340055318465bd0a87fd5b9e52">panzer::TpetraNodeType</a> &gt; &gt; &amp;reducedVec)</td></tr>
 <tr class="separator:a5d8224d9e2f338a28dc0f48cdda73161"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a272014c71ffedf2a0694370dcc31984e" id="r_a272014c71ffedf2a0694370dcc31984e"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; const Tpetra::Vector&lt; int, int, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a99d6c2e247dadbef989f9acd93e94960">panzer::TpetraNodeType</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer.html#a272014c71ffedf2a0694370dcc31984e">buildGhostedFieldVector</a> (const <a class="el" href="classpanzer_1_1_global_indexer.html">GlobalIndexer</a> &amp;ugi, const Teuchos::RCP&lt; const Tpetra::Vector&lt; int, int, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a99d6c2e247dadbef989f9acd93e94960">panzer::TpetraNodeType</a> &gt; &gt; &amp;reducedVec)</td></tr>
+<tr class="memitem:a272014c71ffedf2a0694370dcc31984e" id="r_a272014c71ffedf2a0694370dcc31984e"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; const Tpetra::Vector&lt; int, int, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a6cdf40340055318465bd0a87fd5b9e52">panzer::TpetraNodeType</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer.html#a272014c71ffedf2a0694370dcc31984e">buildGhostedFieldVector</a> (const <a class="el" href="classpanzer_1_1_global_indexer.html">GlobalIndexer</a> &amp;ugi, const Teuchos::RCP&lt; const Tpetra::Vector&lt; int, int, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a6cdf40340055318465bd0a87fd5b9e52">panzer::TpetraNodeType</a> &gt; &gt; &amp;reducedVec)</td></tr>
 <tr class="separator:a272014c71ffedf2a0694370dcc31984e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1864765048f0f9ed118ec8bd162cb13e" id="r_a1864765048f0f9ed118ec8bd162cb13e"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; const Tpetra::Map&lt; int, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a99d6c2e247dadbef989f9acd93e94960">panzer::TpetraNodeType</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer.html#a1864765048f0f9ed118ec8bd162cb13e">getFieldMap</a> (int fieldNum, const Tpetra::Vector&lt; int, int, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a99d6c2e247dadbef989f9acd93e94960">panzer::TpetraNodeType</a> &gt; &amp;fieldTVector)</td></tr>
+<tr class="memitem:a1864765048f0f9ed118ec8bd162cb13e" id="r_a1864765048f0f9ed118ec8bd162cb13e"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; const Tpetra::Map&lt; int, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a6cdf40340055318465bd0a87fd5b9e52">panzer::TpetraNodeType</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer.html#a1864765048f0f9ed118ec8bd162cb13e">getFieldMap</a> (int fieldNum, const Tpetra::Vector&lt; int, int, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a6cdf40340055318465bd0a87fd5b9e52">panzer::TpetraNodeType</a> &gt; &amp;fieldTVector)</td></tr>
 <tr class="separator:a1864765048f0f9ed118ec8bd162cb13e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaadfa681352b3b72d8f73ba8d999ef05" id="r_aaadfa681352b3b72d8f73ba8d999ef05"><td class="memTemplParams" colspan="2">template&lt;typename ScalarT , typename ArrayT &gt; </td></tr>
-<tr class="memitem:aaadfa681352b3b72d8f73ba8d999ef05"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepanzer.html#aaadfa681352b3b72d8f73ba8d999ef05">updateGhostedDataReducedVector</a> (const std::string &amp;fieldName, const std::string blockId, const <a class="el" href="classpanzer_1_1_global_indexer.html">GlobalIndexer</a> &amp;ugi, const ArrayT &amp;data, Tpetra::MultiVector&lt; ScalarT, int, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a99d6c2e247dadbef989f9acd93e94960">panzer::TpetraNodeType</a> &gt; &amp;dataVector)</td></tr>
+<tr class="memitem:aaadfa681352b3b72d8f73ba8d999ef05"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepanzer.html#aaadfa681352b3b72d8f73ba8d999ef05">updateGhostedDataReducedVector</a> (const std::string &amp;fieldName, const std::string blockId, const <a class="el" href="classpanzer_1_1_global_indexer.html">GlobalIndexer</a> &amp;ugi, const ArrayT &amp;data, Tpetra::MultiVector&lt; ScalarT, int, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a6cdf40340055318465bd0a87fd5b9e52">panzer::TpetraNodeType</a> &gt; &amp;dataVector)</td></tr>
 <tr class="separator:aaadfa681352b3b72d8f73ba8d999ef05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -1428,22 +1431,23 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a99d6c2e247dadbef989f9acd93e94960" name="a99d6c2e247dadbef989f9acd93e94960"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99d6c2e247dadbef989f9acd93e94960">&#9670;&#160;</a></span>TpetraNodeType</h2>
+<a id="a6cdf40340055318465bd0a87fd5b9e52" name="a6cdf40340055318465bd0a87fd5b9e52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cdf40340055318465bd0a87fd5b9e52">&#9670;&#160;</a></span>TpetraNodeType</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef Tpetra::KokkosCompat::KokkosDeviceWrapperNode&lt;PHX::Device&gt; <a class="el" href="namespacepanzer.html#a99d6c2e247dadbef989f9acd93e94960">panzer::TpetraNodeType</a></td>
+          <td class="memname">using <a class="el" href="namespacepanzer.html#a6cdf40340055318465bd0a87fd5b9e52">panzer::TpetraNodeType</a> = typedef Tpetra::KokkosCompat::KokkosDeviceWrapperNode&lt;PHX::ExecutionSpace, PHX::MemorySpace&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>The Kokkos node type used to instantiate all Tpetra objects (Map, MultiVector, CrsGraph, etc.) throughout panzer. </p>
-<p>Tpetra classes are templated on a Kokkos node type in addition to their scalar/ordinal types. This typedef pins that node type to a <code>Tpetra::KokkosCompat::KokkosDeviceWrapperNode</code> wrapping panzer's chosen Kokkos execution/memory space (<code>PHX::Device</code>, the same device Phalanx evaluators run on), so that every Tpetra object created by panzer executes on and shares the correct device. Use this typedef wherever a Tpetra node type template argument is needed, e.g. <code>Tpetra::Map&lt;LocalOrdinal,GlobalOrdinal,TpetraNodeType&gt;</code>. </p>
+<p>Tpetra classes are templated on a Kokkos node type in addition to their scalar/ordinal types. This typedef follows Phalanx: it pairs <code>PHX::ExecutionSpace</code> with <code>PHX::MemorySpace</code>, so that Tpetra objects created by panzer run where Phalanx evaluators run and allocate where Phalanx fields allocate. Use this typedef wherever a Tpetra node type template argument is needed, e.g. <code>Tpetra::Map&lt;LocalOrdinal,GlobalOrdinal,TpetraNodeType&gt;</code>, rather than naming a node or a space directly.</p>
+<p>Tpetra must have been configured to instantiate this node type, which is what the static_assert below checks. The two memory space choices have to agree as well: <code>Phalanx_ENABLE_SHARED_SPACE</code> and <code>Tpetra_ALLOCATE_IN_SHARED_SPACE</code> both select the same <code>Kokkos::SharedSpace</code>, so enabling one without the other produces a node type Tpetra did not instantiate. </p>
 
-<p class="definition">Definition at line <a class="el" href="_panzer___node_type_8hpp_source.html#l00035">35</a> of file <a class="el" href="_panzer___node_type_8hpp_source.html">Panzer_NodeType.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___node_type_8hpp_source.html#l00039">39</a> of file <a class="el" href="_panzer___node_type_8hpp_source.html">Panzer_NodeType.hpp</a>.</p>
 
 </div>
 </div>
@@ -2187,7 +2191,7 @@ template&lt;typename EvalT , typename <a class="el" href="structpanzer_1_1_trait
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_panzer___basis_descriptor_8cpp_source.html#l00105">105</a> of file <a class="el" href="_panzer___basis_descriptor_8cpp_source.html">Panzer_BasisDescriptor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_panzer___basis_descriptor_8cpp_source.html#l00106">106</a> of file <a class="el" href="_panzer___basis_descriptor_8cpp_source.html">Panzer_BasisDescriptor.cpp</a>.</p>
 
 </div>
 </div>
@@ -3218,16 +3222,16 @@ template&lt;class Scalar , class LocalOrdinal , class GlobalOrdinal , class Node
 
 </div>
 </div>
-<a id="a6fa77550e6e5964983996027bed4ea07" name="a6fa77550e6e5964983996027bed4ea07"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6fa77550e6e5964983996027bed4ea07">&#9670;&#160;</a></span>createIntrepid2Basis() <span class="overload">[1/2]</span></h2>
+<a id="ada7be0bd512626a5eab692c827ed385b" name="ada7be0bd512626a5eab692c827ed385b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada7be0bd512626a5eab692c827ed385b">&#9670;&#160;</a></span>createIntrepid2Basis() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ExecutionSpace , typename OutputValueType , typename PointValueType &gt; </div>
+template&lt;typename DeviceType , typename OutputValueType , typename PointValueType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">Teuchos::RCP&lt; Intrepid2::Basis&lt; ExecutionSpace, OutputValueType, PointValueType &gt; &gt; panzer::createIntrepid2Basis </td>
+          <td class="memname">Teuchos::RCP&lt; Intrepid2::Basis&lt; DeviceType, OutputValueType, PointValueType &gt; &gt; panzer::createIntrepid2Basis </td>
           <td>(</td>
           <td class="paramtype">const std::string&#160;</td>
           <td class="paramname"><em>basis_type</em>, </td>
@@ -3268,16 +3272,16 @@ template&lt;typename ExecutionSpace , typename OutputValueType , typename PointV
 
 </div>
 </div>
-<a id="ac1e7e8fe00d70c3018cc0823d7c8962e" name="ac1e7e8fe00d70c3018cc0823d7c8962e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac1e7e8fe00d70c3018cc0823d7c8962e">&#9670;&#160;</a></span>createIntrepid2Basis() <span class="overload">[2/2]</span></h2>
+<a id="a3a8c70b6d98b26853b2358df776ee5d9" name="a3a8c70b6d98b26853b2358df776ee5d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a8c70b6d98b26853b2358df776ee5d9">&#9670;&#160;</a></span>createIntrepid2Basis() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ExecutionSpace , typename OutputValueType , typename PointValueType &gt; </div>
+template&lt;typename DeviceType , typename OutputValueType , typename PointValueType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">Teuchos::RCP&lt; Intrepid2::Basis&lt; ExecutionSpace, OutputValueType, PointValueType &gt; &gt; panzer::createIntrepid2Basis </td>
+          <td class="memname">Teuchos::RCP&lt; Intrepid2::Basis&lt; DeviceType, OutputValueType, PointValueType &gt; &gt; panzer::createIntrepid2Basis </td>
           <td>(</td>
           <td class="paramtype">const std::string&#160;</td>
           <td class="paramname"><em>basis_type</em>, </td>
@@ -6568,7 +6572,7 @@ template&lt;typename ScalarT , typename ArrayT &gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Teuchos::RCP&lt; Tpetra::Vector&lt; int, int, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a99d6c2e247dadbef989f9acd93e94960">panzer::TpetraNodeType</a> &gt; &gt; panzer::buildGhostedFieldReducedVector </td>
+          <td class="memname">Teuchos::RCP&lt; Tpetra::Vector&lt; int, int, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a6cdf40340055318465bd0a87fd5b9e52">panzer::TpetraNodeType</a> &gt; &gt; panzer::buildGhostedFieldReducedVector </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classpanzer_1_1_global_indexer.html">GlobalIndexer</a> &amp;&#160;</td>
           <td class="paramname"><em>ugi</em></td><td>)</td>
@@ -6611,7 +6615,7 @@ template&lt;typename ScalarT , typename ArrayT &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Teuchos::RCP&lt; const Tpetra::Vector&lt; int, int, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a99d6c2e247dadbef989f9acd93e94960">panzer::TpetraNodeType</a> &gt; &gt; &amp;&#160;</td>
+          <td class="paramtype">const Teuchos::RCP&lt; const Tpetra::Vector&lt; int, int, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a6cdf40340055318465bd0a87fd5b9e52">panzer::TpetraNodeType</a> &gt; &gt; &amp;&#160;</td>
           <td class="paramname"><em>reducedVec</em> = <code>Teuchos::null</code>&#160;</td>
         </tr>
         <tr>
@@ -6643,7 +6647,7 @@ template&lt;typename ScalarT , typename ArrayT &gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Teuchos::RCP&lt; const Tpetra::Vector&lt; int, int, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a99d6c2e247dadbef989f9acd93e94960">panzer::TpetraNodeType</a> &gt; &gt; panzer::buildGhostedFieldVector </td>
+          <td class="memname">Teuchos::RCP&lt; const Tpetra::Vector&lt; int, int, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a6cdf40340055318465bd0a87fd5b9e52">panzer::TpetraNodeType</a> &gt; &gt; panzer::buildGhostedFieldVector </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classpanzer_1_1_global_indexer.html">GlobalIndexer</a> &amp;&#160;</td>
           <td class="paramname"><em>ugi</em>, </td>
@@ -6651,7 +6655,7 @@ template&lt;typename ScalarT , typename ArrayT &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Teuchos::RCP&lt; const Tpetra::Vector&lt; int, int, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a99d6c2e247dadbef989f9acd93e94960">panzer::TpetraNodeType</a> &gt; &gt; &amp;&#160;</td>
+          <td class="paramtype">const Teuchos::RCP&lt; const Tpetra::Vector&lt; int, int, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a6cdf40340055318465bd0a87fd5b9e52">panzer::TpetraNodeType</a> &gt; &gt; &amp;&#160;</td>
           <td class="paramname"><em>reducedVec</em> = <code>Teuchos::null</code>&#160;</td>
         </tr>
         <tr>
@@ -6682,7 +6686,7 @@ template&lt;typename ScalarT , typename ArrayT &gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Teuchos::RCP&lt; const Tpetra::Map&lt; int, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a99d6c2e247dadbef989f9acd93e94960">panzer::TpetraNodeType</a> &gt; &gt; panzer::getFieldMap </td>
+          <td class="memname">Teuchos::RCP&lt; const Tpetra::Map&lt; int, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a6cdf40340055318465bd0a87fd5b9e52">panzer::TpetraNodeType</a> &gt; &gt; panzer::getFieldMap </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>fieldNum</em>, </td>
@@ -6690,7 +6694,7 @@ template&lt;typename ScalarT , typename ArrayT &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Tpetra::Vector&lt; int, int, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a99d6c2e247dadbef989f9acd93e94960">panzer::TpetraNodeType</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const Tpetra::Vector&lt; int, int, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a6cdf40340055318465bd0a87fd5b9e52">panzer::TpetraNodeType</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>fieldTVector</em>&#160;</td>
         </tr>
         <tr>
@@ -6750,7 +6754,7 @@ template&lt;typename ScalarT , typename ArrayT &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Tpetra::MultiVector&lt; ScalarT, int, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a99d6c2e247dadbef989f9acd93e94960">panzer::TpetraNodeType</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">Tpetra::MultiVector&lt; ScalarT, int, panzer::GlobalOrdinal, <a class="el" href="namespacepanzer.html#a6cdf40340055318465bd0a87fd5b9e52">panzer::TpetraNodeType</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>dataVector</em>&#160;</td>
         </tr>
         <tr>
