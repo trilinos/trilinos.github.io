@@ -9,5 +9,5 @@ var searchData=
   ['testobjwgtoffset_6',['TESTOBJWGTOFFSET',['../zoltan_compare_8cpp.html#a94e6b15228b3a79f3a13898015f732fead2bf8a5e21e23ef8daf03f994647f01c',1,'zoltanCompare.cpp']]],
   ['tetrahedron_7',['TETRAHEDRON',['../namespace_zoltan2.html#a6aa22decf38c9019cc0363dc2a054407afaae8e37da561a70d9b7c8555d136837',1,'Zoltan2']]],
   ['triangle_8',['TRIANGLE',['../namespace_zoltan2.html#a6aa22decf38c9019cc0363dc2a054407a7dd1c1e633ee96b71efc35370a2069fa',1,'Zoltan2']]],
-  ['twophase_9',['twophase',['../_task_mapping_problem_test_8cpp.html#acdc2ac4d550824cf4e6375403454ec1fa0cc3b0f4f2d6dedd50750ada186d6776',1,'TwoPhase:&#160;TaskMappingProblemTest.cpp'],['../_task_mapping_simulate_8cpp.html#acdc2ac4d550824cf4e6375403454ec1fa0cc3b0f4f2d6dedd50750ada186d6776',1,'TwoPhase:&#160;TaskMappingSimulate.cpp']]]
+  ['twophase_9',['TwoPhase',['../_task_mapping_problem_test_8cpp.html#acdc2ac4d550824cf4e6375403454ec1fa0cc3b0f4f2d6dedd50750ada186d6776',1,'TwoPhase:&#160;TaskMappingProblemTest.cpp'],['../_task_mapping_simulate_8cpp.html#acdc2ac4d550824cf4e6375403454ec1fa0cc3b0f4f2d6dedd50750ada186d6776',1,'TwoPhase:&#160;TaskMappingSimulate.cpp']]]
 ];

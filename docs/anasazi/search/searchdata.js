@@ -10,7 +10,7 @@ var indexSectionsWithContent =
   7: "cmrt",
   8: "acdefinopstuw",
   9: "aefiov",
-  10: "abep"
+  10: "abcdeinpst"
 };
 
 var indexSectionNames =

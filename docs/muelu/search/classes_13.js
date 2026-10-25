@@ -11,7 +11,8 @@ var searchData=
   ['userpartitioner_8',['UserPartitioner',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_ifpack2_1_1_details_1_1_user_partitioner.html',1,'Ifpack2::Details']]],
   ['userpfactory_9',['UserPFactory',['../class_mue_lu_1_1_user_p_factory.html',1,'MueLu']]],
   ['utilities_10',['Utilities',['../class_mue_lu_1_1_utilities.html',1,'MueLu']]],
-  ['utilitiesbase_11',['UtilitiesBase',['../class_mue_lu_1_1_utilities_base.html',1,'MueLu']]],
-  ['utilitiesbase_3c_20scalar_2c_20defaultlocalordinal_2c_20defaultglobalordinal_2c_20defaultnode_20_3e_12',['UtilitiesBase&lt; Scalar, DefaultLocalOrdinal, DefaultGlobalOrdinal, DefaultNode &gt;',['../class_mue_lu_1_1_utilities_base.html',1,'MueLu']]],
-  ['uzawasmoother_13',['UzawaSmoother',['../class_mue_lu_1_1_uzawa_smoother.html',1,'MueLu']]]
+  ['utilities_3c_20scalar_2c_20localordinal_2c_20globalordinal_2c_20node_20_3e_11',['Utilities&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;',['../class_mue_lu_1_1_utilities.html',1,'MueLu']]],
+  ['utilitiesbase_12',['UtilitiesBase',['../class_mue_lu_1_1_utilities_base.html',1,'MueLu']]],
+  ['utilitiesbase_3c_20scalar_2c_20defaultlocalordinal_2c_20defaultglobalordinal_2c_20defaultnode_20_3e_13',['UtilitiesBase&lt; Scalar, DefaultLocalOrdinal, DefaultGlobalOrdinal, DefaultNode &gt;',['../class_mue_lu_1_1_utilities_base.html',1,'MueLu']]],
+  ['uzawasmoother_14',['UzawaSmoother',['../class_mue_lu_1_1_uzawa_smoother.html',1,'MueLu']]]
 ];

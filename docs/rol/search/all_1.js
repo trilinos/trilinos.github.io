@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['0_200_20d_201_20end_20pmatrix_20f_0',['\f[ M^{-1} = \begin{pmatrix} A^{-1} &amp; 0 \ 0 &amp; D^^{-1} \end{pmatrix} \f]',['../classROL_1_1BlockOperator2Diagonal.html#autotoc_md30',1,'']]]
+  ['1_204_0',['1 4',['../classROL_1_1SemismoothNewtonDualModel.html#autotoc_md145',1,'&lt;a href=&quot;http://nbn-resolving.de/urn/resolver.pl?urn:nbn:de:bvb:91-diss-20150420-1241413-1-4&quot;&gt;http://nbn-resolving.de/urn/resolver.pl?urn:nbn:de:bvb:91-diss-20150420-1241413-1-4&lt;/a&gt;'],['../classROL_1_1SemismoothNewtonDualModel.html#autotoc_md162',1,'&lt;a href=&quot;http://nbn-resolving.de/urn/resolver.pl?urn:nbn:de:bvb:91-diss-20150420-1241413-1-4&quot;&gt;http://nbn-resolving.de/urn/resolver.pl?urn:nbn:de:bvb:91-diss-20150420-1241413-1-4&lt;/a&gt;']]],
+  ['1241413_201_204_1',['1241413 1 4',['../classROL_1_1SemismoothNewtonDualModel.html#autotoc_md145',1,'&lt;a href=&quot;http://nbn-resolving.de/urn/resolver.pl?urn:nbn:de:bvb:91-diss-20150420-1241413-1-4&quot;&gt;http://nbn-resolving.de/urn/resolver.pl?urn:nbn:de:bvb:91-diss-20150420-1241413-1-4&lt;/a&gt;'],['../classROL_1_1SemismoothNewtonDualModel.html#autotoc_md162',1,'&lt;a href=&quot;http://nbn-resolving.de/urn/resolver.pl?urn:nbn:de:bvb:91-diss-20150420-1241413-1-4&quot;&gt;http://nbn-resolving.de/urn/resolver.pl?urn:nbn:de:bvb:91-diss-20150420-1241413-1-4&lt;/a&gt;']]],
+  ['1_3a_20implement_20linear_20algebra_20vector_20interface_2',['Step 1: Implement linear algebra / vector interface.',['../index.html#vector_qs_sec',1,'']]]
 ];

@@ -28,5 +28,6 @@ var searchData=
   ['trilinossmoother_25',['TrilinosSmoother',['../class_mue_lu_1_1_trilinos_smoother.html',1,'MueLu']]],
   ['triplet_26',['Triplet',['../struct_mue_lu_1_1_triplet.html',1,'MueLu']]],
   ['twolevelfactorybase_27',['TwoLevelFactoryBase',['../class_mue_lu_1_1_two_level_factory_base.html',1,'MueLu']]],
-  ['twolevelmatlabfactory_28',['TwoLevelMatlabFactory',['../class_mue_lu_1_1_two_level_matlab_factory.html',1,'MueLu']]]
+  ['twolevelmatlabfactory_28',['TwoLevelMatlabFactory',['../class_mue_lu_1_1_two_level_matlab_factory.html',1,'MueLu']]],
+  ['typenametraits_3c_20_3a_3aifpack2_3a_3acontainer_3c_20matrixtype_20_3e_20_3e_29',['TypeNameTraits&lt; ::Ifpack2::Container&lt; MatrixType &gt; &gt;',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_teuchos_1_1_type_name_traits_3_01_1_1_ifpack2_1_1_container_3_01_matrix_type_01_4_01_4.html',1,'Teuchos']]]
 ];

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['initial_0',['Initial',['../namespaceROL.html#a9dd6ab8dac42a769044e106f370b9aeca4f2a91e15af2631ff9424564b8a45fb2',1,'ROL']]],
+  ['initial_0',['Initial',['../namespaceROL.html#a9dd6ab8dac42a769044e106f370b9aeca4f2a91e15af2631ff9424564b8a45fb2',1,'ROL::Initial'],['../namespaceROL_1_1ROL.html#ae7c316b822f8b55389fe4a4e12b144cea4f2a91e15af2631ff9424564b8a45fb2',1,'ROL::ROL::Initial']]],
   ['iterate_5flast_1',['ITERATE_LAST',['../classROL_1_1Lanczos.html#a9cbc1b9ef9feb9abcfa4f62cb46c1241a81522599da122258f5bcb55744d40406',1,'ROL::Lanczos']]],
   ['iterate_5fmax_5freached_2',['ITERATE_MAX_REACHED',['../classROL_1_1Lanczos.html#a9cbc1b9ef9feb9abcfa4f62cb46c1241a12bbd5604e13565803c4c9d25283d15f',1,'ROL::Lanczos']]],
   ['iterate_5fortho_5ftol_3',['ITERATE_ORTHO_TOL',['../classROL_1_1Lanczos.html#a9cbc1b9ef9feb9abcfa4f62cb46c1241a1a6aa46803e1431c9631c3f2e7323ded',1,'ROL::Lanczos']]],

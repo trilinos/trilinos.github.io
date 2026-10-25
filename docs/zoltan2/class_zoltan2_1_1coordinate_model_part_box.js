@@ -1,0 +1,26 @@
+var class_zoltan2_1_1coordinate_model_part_box =
+[
+    [ "coord_t", "class_zoltan2_1_1coordinate_model_part_box.html#a2099604f2125bb13422739164b80ecda", null ],
+    [ "part_t", "class_zoltan2_1_1coordinate_model_part_box.html#a50e0701395a8f0451421b7d7abe28307", null ],
+    [ "coordinateModelPartBox", "class_zoltan2_1_1coordinate_model_part_box.html#a978a3beb0cea53e3fbbd252b96e39da2", null ],
+    [ "coordinateModelPartBox", "class_zoltan2_1_1coordinate_model_part_box.html#a01f9bb6bdbed51dfd32243d599c5cc49", null ],
+    [ "coordinateModelPartBox", "class_zoltan2_1_1coordinate_model_part_box.html#aa8ba33cd6a1302206e53f162ef5cc3ed", null ],
+    [ "~coordinateModelPartBox", "class_zoltan2_1_1coordinate_model_part_box.html#afd4058d39f829f496b8e7260d41b13d2", null ],
+    [ "setpId", "class_zoltan2_1_1coordinate_model_part_box.html#a98f3935f7d7318b5675aa88e9d2c4297", null ],
+    [ "getpId", "class_zoltan2_1_1coordinate_model_part_box.html#a96d53d092ba3624e1cf91fb78c494327", null ],
+    [ "getDim", "class_zoltan2_1_1coordinate_model_part_box.html#ab4162885357fa5351ecf3b718db71e52", null ],
+    [ "getlmins", "class_zoltan2_1_1coordinate_model_part_box.html#af1c6b3508def16d0da6e18d1bea53c56", null ],
+    [ "getlmaxs", "class_zoltan2_1_1coordinate_model_part_box.html#a462c74f5c720a81c0c4d16ad349c5ae0", null ],
+    [ "computeCentroid", "class_zoltan2_1_1coordinate_model_part_box.html#a573886b5b71bc83811ec7677bad2ef67", null ],
+    [ "getGridIndices", "class_zoltan2_1_1coordinate_model_part_box.html#a506c883bd744f391d6923655bf20560b", null ],
+    [ "getNeighbors", "class_zoltan2_1_1coordinate_model_part_box.html#a9ea7b3a7660b30f7e7ee73ab57df1b62", null ],
+    [ "pointInBox", "class_zoltan2_1_1coordinate_model_part_box.html#a4db0c7f16deacefbacf9cd6a76a44d6d", null ],
+    [ "boxesOverlap", "class_zoltan2_1_1coordinate_model_part_box.html#a2754a21d4337b4fefd8649a47d081b82", null ],
+    [ "isNeighborWith", "class_zoltan2_1_1coordinate_model_part_box.html#a2fe26b65fea48b091a29813fce485a82", null ],
+    [ "addNeighbor", "class_zoltan2_1_1coordinate_model_part_box.html#aa71a93be87f06bdfa5999e8aeb31b39c", null ],
+    [ "isAlreadyNeighbor", "class_zoltan2_1_1coordinate_model_part_box.html#a387ca553ace9c5cef9eaf3cb25b344ff", null ],
+    [ "setMinMaxHashIndices", "class_zoltan2_1_1coordinate_model_part_box.html#a0240ac6fcc7746b5bf4fec5e9668cf19", null ],
+    [ "print", "class_zoltan2_1_1coordinate_model_part_box.html#acd921c4d02101d8af1675a4399f75d35", null ],
+    [ "updateMinMax", "class_zoltan2_1_1coordinate_model_part_box.html#a6cd55ae9cbe6dadc88d3ad2774f03102", null ],
+    [ "writeGnuPlot", "class_zoltan2_1_1coordinate_model_part_box.html#ada9588002dfa1f7b040afbd86d65448c", null ]
+];

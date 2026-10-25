@@ -8,6 +8,6 @@ var searchData=
   ['polytope_5',['Dimension (of the polytope)',['../group__shards__package__cell__topology.html#dimension',1,'']]],
   ['polytope_202d_20polygon_20or_203d_20polyhedron_6',['Polytope (2D polygon or 3D polyhedron)',['../group__shards__package__cell__topology.html#polytope',1,'']]],
   ['polytope_20cell_20topology_20descriptions_7',['Polytope Cell Topology Descriptions',['../group__shards__package__cell__topology.html',1,'']]],
-  ['prod_8',['prod',['../structshards_1_1_prod.html',1,'shards::Prod&lt; n, i &gt;'],['../structshards_1_1_prod.html#a503978a7d8de93dd927ff18030a56f08',1,'shards::Prod::Prod()']]],
+  ['prod_8',['Prod',['../structshards_1_1_prod.html',1,'shards::Prod&lt; n, i &gt;'],['../structshards_1_1_prod.html#a503978a7d8de93dd927ff18030a56f08',1,'shards::Prod::Prod()']]],
   ['pyramid_9',['Pyramid',['../structshards_1_1_pyramid.html',1,'shards']]]
 ];

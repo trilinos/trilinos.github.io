@@ -9,10 +9,10 @@ var searchData=
   ['errormeasure_5fquantilequadrangle_6',['ERRORMEASURE_QUANTILEQUADRANGLE',['../namespaceROL.html#ac64eab2c2149185d834460ec28f18a6ba1a4ff870c267adac08896993c50b622b',1,'ROL']]],
   ['errormeasure_5fsmoothedworstcasequadrangle_7',['ERRORMEASURE_SMOOTHEDWORSTCASEQUADRANGLE',['../namespaceROL.html#ac64eab2c2149185d834460ec28f18a6ba2dcbb318b019831353c1b05638bc70a9',1,'ROL']]],
   ['errormeasure_5ftruncatedmeanquadrangle_8',['ERRORMEASURE_TRUNCATEDMEANQUADRANGLE',['../namespaceROL.html#ac64eab2c2149185d834460ec28f18a6babfddd8068d5aa76d44b60a72e074d455',1,'ROL']]],
-  ['exitstatus_5fconverged_9',['EXITSTATUS_CONVERGED',['../namespaceROL.html#afaefe6b515b53784a835f934c847e3f3a76d871343216c5d92330855af19f6678',1,'ROL']]],
-  ['exitstatus_5flast_10',['EXITSTATUS_LAST',['../namespaceROL.html#afaefe6b515b53784a835f934c847e3f3abaa04faf39eafd47d9248b1c4ac159a8',1,'ROL']]],
-  ['exitstatus_5fmaxiter_11',['EXITSTATUS_MAXITER',['../namespaceROL.html#afaefe6b515b53784a835f934c847e3f3a701c5a69b9d102d01c13a71d18ca13ad',1,'ROL']]],
-  ['exitstatus_5fnan_12',['EXITSTATUS_NAN',['../namespaceROL.html#afaefe6b515b53784a835f934c847e3f3ab811a692462ac052a6679f36af9ba0ba',1,'ROL']]],
-  ['exitstatus_5fsteptol_13',['EXITSTATUS_STEPTOL',['../namespaceROL.html#afaefe6b515b53784a835f934c847e3f3a24e8d22a54aaf20e1a005319e00e6a20',1,'ROL']]],
-  ['exitstatus_5fuserdefined_14',['EXITSTATUS_USERDEFINED',['../namespaceROL.html#afaefe6b515b53784a835f934c847e3f3a90077ca60da893e87939008e43b81a44',1,'ROL']]]
+  ['exitstatus_5fconverged_9',['EXITSTATUS_CONVERGED',['../namespaceROL_1_1ROL.html#afcb1a7946f8d4eddb428836fded7f33cab6ab39f06caf3077789f378f6e71e0f4',1,'ROL::ROL::EXITSTATUS_CONVERGED'],['../namespaceROL.html#afaefe6b515b53784a835f934c847e3f3a76d871343216c5d92330855af19f6678',1,'ROL::EXITSTATUS_CONVERGED']]],
+  ['exitstatus_5flast_10',['EXITSTATUS_LAST',['../namespaceROL_1_1ROL.html#afcb1a7946f8d4eddb428836fded7f33ca4613b83f8dc46da62ee0bde42ae06548',1,'ROL::ROL::EXITSTATUS_LAST'],['../namespaceROL.html#afaefe6b515b53784a835f934c847e3f3abaa04faf39eafd47d9248b1c4ac159a8',1,'ROL::EXITSTATUS_LAST']]],
+  ['exitstatus_5fmaxiter_11',['EXITSTATUS_MAXITER',['../namespaceROL_1_1ROL.html#afcb1a7946f8d4eddb428836fded7f33cac86456009c5276b9681e21e30223862c',1,'ROL::ROL::EXITSTATUS_MAXITER'],['../namespaceROL.html#afaefe6b515b53784a835f934c847e3f3a701c5a69b9d102d01c13a71d18ca13ad',1,'ROL::EXITSTATUS_MAXITER']]],
+  ['exitstatus_5fnan_12',['EXITSTATUS_NAN',['../namespaceROL_1_1ROL.html#afcb1a7946f8d4eddb428836fded7f33ca384b187665dac7bcceb56e308477a4bc',1,'ROL::ROL::EXITSTATUS_NAN'],['../namespaceROL.html#afaefe6b515b53784a835f934c847e3f3ab811a692462ac052a6679f36af9ba0ba',1,'ROL::EXITSTATUS_NAN']]],
+  ['exitstatus_5fsteptol_13',['EXITSTATUS_STEPTOL',['../namespaceROL_1_1ROL.html#afcb1a7946f8d4eddb428836fded7f33ca45cf952b5f37b653007ca7de95d5676e',1,'ROL::ROL::EXITSTATUS_STEPTOL'],['../namespaceROL.html#afaefe6b515b53784a835f934c847e3f3a24e8d22a54aaf20e1a005319e00e6a20',1,'ROL::EXITSTATUS_STEPTOL']]],
+  ['exitstatus_5fuserdefined_14',['EXITSTATUS_USERDEFINED',['../namespaceROL_1_1ROL.html#afcb1a7946f8d4eddb428836fded7f33ca56d3b1fb3a278a21456c2f3a97ec5f8e',1,'ROL::ROL::EXITSTATUS_USERDEFINED'],['../namespaceROL.html#afaefe6b515b53784a835f934c847e3f3a90077ca60da893e87939008e43b81a44',1,'ROL::EXITSTATUS_USERDEFINED']]]
 ];

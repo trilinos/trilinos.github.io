@@ -16,10 +16,11 @@ var searchData=
   ['parserfail_13',['ParserFail',['../class_teuchos_1_1_parser_fail.html',1,'Teuchos']]],
   ['performancemonitorbase_14',['PerformanceMonitorBase',['../class_teuchos_1_1_performance_monitor_base.html',1,'Teuchos']]],
   ['performancemonitorbase_3c_20time_20_3e_15',['PerformanceMonitorBase&lt; Time &gt;',['../class_teuchos_1_1_performance_monitor_base.html',1,'Teuchos']]],
-  ['polynomial_16',['Polynomial',['../class_teuchos_1_1_polynomial.html',1,'Teuchos']]],
-  ['polynomialtraits_17',['PolynomialTraits',['../class_teuchos_1_1_polynomial_traits.html',1,'Teuchos']]],
-  ['postmodnothing_18',['PostModNothing',['../class_teuchos_1_1_post_mod_nothing.html',1,'Teuchos']]],
-  ['printoptions_19',['PrintOptions',['../class_teuchos_1_1_parameter_list_1_1_print_options.html',1,'Teuchos::ParameterList']]],
-  ['ptr_20',['Ptr',['../class_teuchos_1_1_ptr.html',1,'Teuchos']]],
-  ['ptr_3c_20const_20teuchos_3a_3acomm_3c_20int_20_3e_20_3e_21',['Ptr&lt; const Teuchos::Comm&lt; int &gt; &gt;',['../class_teuchos_1_1_ptr.html',1,'Teuchos']]]
+  ['pointer_16',['pointer',['../class_teuchos_1_1_array_r_c_p.html',1,'Teuchos']]],
+  ['polynomial_17',['Polynomial',['../class_teuchos_1_1_polynomial.html',1,'Teuchos']]],
+  ['polynomialtraits_18',['PolynomialTraits',['../class_teuchos_1_1_polynomial_traits.html',1,'Teuchos']]],
+  ['postmodnothing_19',['PostModNothing',['../class_teuchos_1_1_post_mod_nothing.html',1,'Teuchos']]],
+  ['printoptions_20',['PrintOptions',['../class_teuchos_1_1_parameter_list_1_1_print_options.html',1,'Teuchos::ParameterList']]],
+  ['ptr_21',['Ptr',['../class_teuchos_1_1_ptr.html',1,'Teuchos']]],
+  ['ptr_3c_20const_20teuchos_3a_3acomm_3c_20int_20_3e_20_3e_22',['Ptr&lt; const Teuchos::Comm&lt; int &gt; &gt;',['../class_teuchos_1_1_ptr.html',1,'Teuchos']]]
 ];

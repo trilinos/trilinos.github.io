@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['data_0',['data',['..//home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/compadre/examples/GMLS_Manifold.hpp#ex4',1,'Apply GMLS Alphas To Data'],['..//home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/compadre/examples/GMLS_Manifold.hpp#ex2',1,'Creating The Data']]],
+  ['data_0',['Data',['..//home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/compadre/examples/GMLS_Manifold.hpp#ex4',1,'Apply GMLS Alphas To Data'],['..//home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/compadre/examples/GMLS_Manifold.hpp#ex2',1,'Creating The Data']]],
   ['densesolvertype_1',['DenseSolverType',['../namespace_compadre.html#aa9f6f8690fcb1e67b5dbe42d60cb75fc',1,'Compadre']]],
   ['device_20views_2',['GMLS Example with Device Views',['..//home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/compadre/examples/GMLS_Manifold.hpp#ex',1,'']]],
   ['device_5fexecution_5fspace_3',['device_execution_space',['../namespace_compadre.html#ae286572bcbe783b8287842ec046236a3',1,'Compadre']]],

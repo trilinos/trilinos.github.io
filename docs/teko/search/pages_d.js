@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['user_20s_20guide_0',['Teko User&apos;s Guide',['../teko_guide.html',1,'index']]]
+  ['jacobi_0',['Block Jacobi — &lt;span class=&quot;tt&quot;&gt;&quot;Block Jacobi&quot;&lt;/span&gt;',['../teko_block_reference.html#autotoc_md30',1,'']]],
+  ['jacobi_20—_20block_20jacobi_1',['Block Jacobi — &lt;span class=&quot;tt&quot;&gt;&quot;Block Jacobi&quot;&lt;/span&gt;',['../teko_block_reference.html#autotoc_md30',1,'']]]
 ];

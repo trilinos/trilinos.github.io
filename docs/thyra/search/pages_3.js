@@ -1,4 +1,32 @@
 var searchData=
 [
-  ['for_20abstract_20numerical_20algorithms_20anas_0',['Thyra : Interfaces and Support code for Abstract Numerical Algorithms (ANAs)',['../index.html',1,'']]]
+  ['cases_0',['Cases',['../group___thyra___op___vec___a_n_a___development__grp.html#Thyra_Op_Vec_ANA_Development_other_sec',1,'Other Use Cases'],['../group___thyra___op___vec___adapters__grp.html#Thyra_Op_Vec_Adapters_other_sec',1,'Other Use Cases']]],
+  ['cases_1',['cases',['../class_thyra_1_1_linear_op_with_solve_base.html#LOWSB_use_cases_sec',1,'Use cases'],['../class_thyra_1_1_linear_op_with_solve_factory_base.html#LOWSFB_use_cases_sec',1,'Use cases']]],
+  ['changeable_20and_20non_20changeable_20views_2',['Changeable and non-changeable views',['../class_thyra_1_1_multi_vector_base.html#Thyra_MVB_views_sec',1,'']]],
+  ['changeable_20views_3',['Changeable and non-changeable views',['../class_thyra_1_1_multi_vector_base.html#Thyra_MVB_views_sec',1,'']]],
+  ['changes_20in_20the_20forward_20operator_4',['Reuse of factorizations for small changes in the forward operator',['../class_thyra_1_1_linear_op_with_solve_factory_base.html#LOWSFB_reuse_of_factorization_sec',1,'']]],
+  ['changes_20in_20the_20structure_20of_20the_20forward_20operator_5',['Updating the linear solver for major changes in the structure of the forward operator',['../class_thyra_1_1_linear_op_with_solve_factory_base.html#LOWSFB_major_changes_in_op_sec',1,'']]],
+  ['checking_6',['Compile-Time and Run-Time Safety and Checking',['../class_thyra_1_1_model_evaluator.html#Thyra_ME_checking_sec',1,'']]],
+  ['class_20and_20how_20do_20i_20use_20it_20to_20replace_20my_20underlying_20data_20type_20e_20g_20double_20in_20my_20ana_7',['Q: Where is the Scalar class, and how do I use it to replace my underlying data-type, e.g. double, in my ANA?',['../group__thyra__faq__grp.html#thyra_faq_Scalar_sec',1,'']]],
+  ['class_20teuchos_3a_3arcp_8',['Questions about the smart pointer class Teuchos::RCP',['../group__thyra__faq__grp.html#thyra_faq_rcp_sec',1,'']]],
+  ['code_20for_20abstract_20numerical_20algorithms_20anas_9',['Thyra : Interfaces and Support code for Abstract Numerical Algorithms (ANAs)',['../index.html',1,'']]],
+  ['code_20use_20rcp_20s_20everywhere_10',['Q: Should my code use RCP&apos;s everywhere?',['../group__thyra__faq__grp.html#thyra_faq_rcp_everywhere_sec',1,'']]],
+  ['coefficient_20access_11',['coefficient access',['../class_thyra_1_1_multi_vector_base.html#Thyra_MVB_expl_access_sec',1,'Explicit multi-vector coefficient access'],['../class_thyra_1_1_vector_base.html#Thyra_VB_expl_access_sec',1,'Explicit vector coefficient access']]],
+  ['coefficient_20access_20utilities_12',['coefficient access utilities',['../class_thyra_1_1_multi_vector_base.html#Thyra_MVB_expl_access_utils_sec',1,'Explicit multi-vector coefficient access utilities'],['../class_thyra_1_1_vector_base.html#Thyra_VB_expl_access_utils_sec',1,'Explicit vector coefficient access utilities']]],
+  ['coefficient_20assignment_13',['Explicit vector coefficient assignment',['../class_thyra_1_1_vector_base.html#Thyra_VB_expl_access_assign_sec',1,'']]],
+  ['collection_14',['Browse all of Thyra as a single doxygen collection',['../index.html#thyra_browse_sec',1,'']]],
+  ['collection_20of_20pre_20written_20rtops_20and_20wrapper_20functions_15',['Collection of pre written RTOps and wrapper functions',['../class_thyra_1_1_multi_vector_base.html#Thyra_MVB_rtop_collection_sec',1,'Collection of pre-written RTOps and wrapper functions'],['../class_thyra_1_1_vector_base.html#Thyra_VB_rtop_collection_sec',1,'Collection of pre-written RTOps and wrapper functions']]],
+  ['collections_20of_20columns_20as_20multi_20vector_20views_16',['Accessing collections of columns as multi-vector views',['../class_thyra_1_1_multi_vector_base.html#Thyra_MVB_subviews_sec',1,'']]],
+  ['columns_20as_20multi_20vector_20views_17',['Accessing collections of columns as multi-vector views',['../class_thyra_1_1_multi_vector_base.html#Thyra_MVB_subviews_sec',1,'']]],
+  ['columns_20as_20vector_20views_18',['Accessing the individual columns as vector views',['../class_thyra_1_1_multi_vector_base.html#Thyra_MVB_col_access_sec',1,'']]],
+  ['common_20behavior_20of_20vector_20and_20multi_20vector_20views_19',['Common behavior of vector and multi-vector views',['../class_thyra_1_1_multi_vector_base.html#Thyra_MVB_view_behavior_sec',1,'']]],
+  ['compile_20time_20and_20run_20time_20safety_20and_20checking_20',['Compile-Time and Run-Time Safety and Checking',['../class_thyra_1_1_model_evaluator.html#Thyra_ME_checking_sec',1,'']]],
+  ['concrete_20spmd_20subclasses_21',['Concrete SPMD Subclasses',['../group___thyra___op___vec__adapters___spmd__concrete__std__grp.html#Thyra_Op_Vec_adapters_Spmd_concrete_std_classes_grp',1,'']]],
+  ['concrete_20thyra_20subclass_20implementations_22',['Overview of Concrete Thyra Subclass Implementations',['../group___thyra___op___vec___adapters__grp.html#Thyra_Op_Vec_Adapters_overview_sec',1,'']]],
+  ['configuration_20of_20the_20thyra_20package_23',['Configuration of the Thyra Package',['../index.html#thyra_configuration_sec',1,'']]],
+  ['constrained_20optimization_24',['constrained optimization',['../class_thyra_1_1_model_evaluator.html#Thyra_ME_equality_constrained_optimization_sec',1,'Equality constrained optimization'],['../class_thyra_1_1_model_evaluator.html#Thyra_ME_general_constrained_optimization_sec',1,'General constrained optimization']]],
+  ['contributors_20to_20the_20thyra_20package_20and_20related_20software_25',['Contributors to the Thyra Package and Related Software',['../index.html#thyra_contributors_sec',1,'']]],
+  ['create_20a_20thyra_3a_3avectorbase_20or_20thyra_3a_3amultivectorbase_20object_26',['Q: How do I create a Thyra::VectorBase or Thyra::MultiVectorBase object?',['../group__thyra__faq__grp.html#thyra_faq_creating_vecs_multivecs_sec',1,'']]],
+  ['creating_20invertible_20operators_20for_20scaled_20and_20or_20adjoint_20forward_20operators_27',['Creating invertible operators for scaled and/or adjoint forward operators',['../class_thyra_1_1_linear_op_with_solve_factory_base.html#LOWSFB_scaled_adjoint_sec',1,'']]],
+  ['criteria_28',['Solve Criteria',['../class_thyra_1_1_linear_op_with_solve_base.html#LOWSB_solve_criteria_sec',1,'']]]
 ];

@@ -6,6 +6,7 @@ var searchData=
   ['overflow_3',['Overflow',['../class_mue_lu_1_1_exceptions_1_1_overflow.html',1,'MueLu::Exceptions']]],
   ['overlapgraph_4',['OverlapGraph',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_ifpack2_1_1_overlap_graph.html',1,'Ifpack2']]],
   ['overlappingpartitioner_5',['OverlappingPartitioner',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_ifpack2_1_1_overlapping_partitioner.html',1,'Ifpack2']]],
-  ['overlappingrowgraph_6',['OverlappingRowGraph',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_ifpack2_1_1_details_1_1_overlapping_row_graph.html',1,'Ifpack2::Details']]],
-  ['overlappingrowmatrix_7',['OverlappingRowMatrix',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_ifpack2_1_1_overlapping_row_matrix.html',1,'Ifpack2']]]
+  ['overlappingpartitioner_3c_20graphtype_20_3e_6',['OverlappingPartitioner&lt; GraphType &gt;',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_ifpack2_1_1_overlapping_partitioner.html',1,'Ifpack2']]],
+  ['overlappingrowgraph_7',['OverlappingRowGraph',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_ifpack2_1_1_details_1_1_overlapping_row_graph.html',1,'Ifpack2::Details']]],
+  ['overlappingrowmatrix_8',['OverlappingRowMatrix',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_ifpack2_1_1_overlapping_row_matrix.html',1,'Ifpack2']]]
 ];

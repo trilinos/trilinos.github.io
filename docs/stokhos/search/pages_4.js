@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['uncertainty_20quantification_20methods_0',['Stokhos:  Stochastic Galerkin Uncertainty Quantification Methods',['../index.html',1,'']]]
+  ['introduction_0',['Introduction',['../index.html#stokhos_intro',1,'']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['nested_20dissection_20based_20ordering_0',['Nested Dissection-based ordering',['../nd_page.html',1,'']]],
-  ['notes_1',['Developers&apos; Notes',['../z2_developer.html',1,'']]]
+  ['jagged_20algorithm_0',['Multi-jagged algorithm',['../mj_page.html#mj_algorithm',1,'']]],
+  ['jagged_20coordinate_20partitioning_20mj_1',['Multi-Jagged Coordinate Partitioning (MJ)',['../mj_page.html',1,'']]]
 ];

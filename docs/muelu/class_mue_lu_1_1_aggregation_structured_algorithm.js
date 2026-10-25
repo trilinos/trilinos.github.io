@@ -1,9 +1,9 @@
 var class_mue_lu_1_1_aggregation_structured_algorithm =
 [
-    [ "computeGraphDataConstantFunctor", "struct_mue_lu_1_1_aggregation_structured_algorithm_1_1compute_graph_data_constant_functor.html", "struct_mue_lu_1_1_aggregation_structured_algorithm_1_1compute_graph_data_constant_functor" ],
-    [ "computeGraphDataLinearFunctor", "struct_mue_lu_1_1_aggregation_structured_algorithm_1_1compute_graph_data_linear_functor.html", "struct_mue_lu_1_1_aggregation_structured_algorithm_1_1compute_graph_data_linear_functor" ],
-    [ "computeGraphRowPtrFunctor", "struct_mue_lu_1_1_aggregation_structured_algorithm_1_1compute_graph_row_ptr_functor.html", "struct_mue_lu_1_1_aggregation_structured_algorithm_1_1compute_graph_row_ptr_functor" ],
     [ "fillAggregatesFunctor", "struct_mue_lu_1_1_aggregation_structured_algorithm_1_1fill_aggregates_functor.html", "struct_mue_lu_1_1_aggregation_structured_algorithm_1_1fill_aggregates_functor" ],
+    [ "computeGraphDataConstantFunctor", "struct_mue_lu_1_1_aggregation_structured_algorithm_1_1compute_graph_data_constant_functor.html", "struct_mue_lu_1_1_aggregation_structured_algorithm_1_1compute_graph_data_constant_functor" ],
+    [ "computeGraphRowPtrFunctor", "struct_mue_lu_1_1_aggregation_structured_algorithm_1_1compute_graph_row_ptr_functor.html", "struct_mue_lu_1_1_aggregation_structured_algorithm_1_1compute_graph_row_ptr_functor" ],
+    [ "computeGraphDataLinearFunctor", "struct_mue_lu_1_1_aggregation_structured_algorithm_1_1compute_graph_data_linear_functor.html", "struct_mue_lu_1_1_aggregation_structured_algorithm_1_1compute_graph_data_linear_functor" ],
     [ "local_graph_type", "class_mue_lu_1_1_aggregation_structured_algorithm.html#a3a6f187c75f3b539c4dfceb4542c303b", null ],
     [ "non_const_row_map_type", "class_mue_lu_1_1_aggregation_structured_algorithm.html#a9fec4646b3123daa42b20858cbb7b700", null ],
     [ "size_type", "class_mue_lu_1_1_aggregation_structured_algorithm.html#aa2b3476b37658a9b8c03c4ae9711a3a1", null ],

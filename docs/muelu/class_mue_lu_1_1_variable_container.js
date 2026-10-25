@@ -1,10 +1,10 @@
 var class_mue_lu_1_1_variable_container =
 [
-    [ "Checker", "struct_mue_lu_1_1_variable_container_1_1_checker.html", "struct_mue_lu_1_1_variable_container_1_1_checker" ],
-    [ "Data", "class_mue_lu_1_1_variable_container_1_1_data.html", "class_mue_lu_1_1_variable_container_1_1_data" ],
     [ "DataBase", "class_mue_lu_1_1_variable_container_1_1_data_base.html", "class_mue_lu_1_1_variable_container_1_1_data_base" ],
+    [ "Data", "class_mue_lu_1_1_variable_container_1_1_data.html", "class_mue_lu_1_1_variable_container_1_1_data" ],
     [ "Getter", "struct_mue_lu_1_1_variable_container_1_1_getter.html", "struct_mue_lu_1_1_variable_container_1_1_getter" ],
-    [ "Getter< Teuchos::RCP< Xpetra::Operator< Scalar, LocalOrdinal, GlobalOrdinal, Node > > >", "struct_mue_lu_1_1_variable_container_1_1_getter_3_01_teuchos_1_1_r_c_p_3_01_xpetra_1_1_operator_4b62eec7e11992f03e326c42174f2a4a.html", "struct_mue_lu_1_1_variable_container_1_1_getter_3_01_teuchos_1_1_r_c_p_3_01_xpetra_1_1_operator_4b62eec7e11992f03e326c42174f2a4a" ],
+    [ "Checker", "struct_mue_lu_1_1_variable_container_1_1_checker.html", "struct_mue_lu_1_1_variable_container_1_1_checker" ],
+    [ "Getter&lt; Teuchos::RCP&lt; Xpetra::Operator&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt; &gt; &gt;", "struct_mue_lu_1_1_variable_container_1_1_getter_3_01_teuchos_1_1_r_c_p_3_01_xpetra_1_1_operator_4b62eec7e11992f03e326c42174f2a4a.html", "struct_mue_lu_1_1_variable_container_1_1_getter_3_01_teuchos_1_1_r_c_p_3_01_xpetra_1_1_operator_4b62eec7e11992f03e326c42174f2a4a" ],
     [ "request_container", "class_mue_lu_1_1_variable_container.html#a92082c45ecbb23dadc5edbec7f4621c8", null ],
     [ "VariableContainer", "class_mue_lu_1_1_variable_container.html#ab3225ead130d03fe988c6a8c4c491cc2", null ],
     [ "~VariableContainer", "class_mue_lu_1_1_variable_container.html#a81c2535f88dd08ec7f9726c0ddfcf682", null ],

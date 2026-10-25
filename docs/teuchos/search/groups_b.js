@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['of_20utilities_20for_20allocating_20temporary_20workspace_0',['Set of utilities for allocating temporary workspace.',['../group___teuchos___workspace__grp.html',1,'']]],
-  ['outputting_20utilities_1',['Teuchos Outputting Utilities',['../group__teuchos__outputting__grp.html',1,'']]]
+  ['point_20trapping_20support_20code_0',['Floating Point Trapping Support Code',['../group___teuchos___floating_point_trap__grp.html',1,'']]]
 ];

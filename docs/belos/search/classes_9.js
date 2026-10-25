@@ -15,8 +15,9 @@ var searchData=
   ['orthomanagerbenchmarker_12',['OrthoManagerBenchmarker',['../class_belos_1_1_test_1_1_ortho_manager_benchmarker.html',1,'Belos::Test']]],
   ['orthomanagerfactory_13',['OrthoManagerFactory',['../class_belos_1_1_ortho_manager_factory.html',1,'Belos']]],
   ['orthomanagerfactory_3c_20scalartype_2c_20mv_2c_20op_2c_20defaultdensematrix_3c_20int_2c_20scalartype_20_3e_20_3e_14',['OrthoManagerFactory&lt; ScalarType, MV, OP, DefaultDenseMatrix&lt; int, ScalarType &gt; &gt;',['../class_belos_1_1_ortho_manager_factory.html',1,'Belos']]],
-  ['orthomanagertester_15',['OrthoManagerTester',['../class_belos_1_1_test_1_1_ortho_manager_tester.html',1,'Belos::Test']]],
-  ['outofplacenormalizermixin_16',['OutOfPlaceNormalizerMixin',['../class_belos_1_1_out_of_place_normalizer_mixin.html',1,'Belos']]],
-  ['outofplacenormalizermixin_3c_20scalar_2c_20mv_2c_20defaultdensematrix_3c_20int_2c_20scalartype_20_3e_20_3e_17',['OutOfPlaceNormalizerMixin&lt; Scalar, MV, DefaultDenseMatrix&lt; int, ScalarType &gt; &gt;',['../class_belos_1_1_out_of_place_normalizer_mixin.html',1,'Belos']]],
-  ['outputmanager_18',['OutputManager',['../class_belos_1_1_output_manager.html',1,'Belos']]]
+  ['orthomanagerfactory_3c_20scalartype_2c_20mv_2c_20op_2c_20dm_20_3e_15',['OrthoManagerFactory&lt; ScalarType, MV, OP, DM &gt;',['../class_belos_1_1_ortho_manager_factory.html',1,'Belos']]],
+  ['orthomanagertester_16',['OrthoManagerTester',['../class_belos_1_1_test_1_1_ortho_manager_tester.html',1,'Belos::Test']]],
+  ['outofplacenormalizermixin_17',['OutOfPlaceNormalizerMixin',['../class_belos_1_1_out_of_place_normalizer_mixin.html',1,'Belos']]],
+  ['outofplacenormalizermixin_3c_20scalar_2c_20mv_2c_20defaultdensematrix_3c_20int_2c_20scalartype_20_3e_20_3e_18',['OutOfPlaceNormalizerMixin&lt; Scalar, MV, DefaultDenseMatrix&lt; int, ScalarType &gt; &gt;',['../class_belos_1_1_out_of_place_normalizer_mixin.html',1,'Belos']]],
+  ['outputmanager_19',['OutputManager',['../class_belos_1_1_output_manager.html',1,'Belos']]]
 ];

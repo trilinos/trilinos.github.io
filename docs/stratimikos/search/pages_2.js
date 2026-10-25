@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['linear_20solvers_0',['Stratimikos: Thyra-based strategies for linear solvers',['../index.html',1,'']]]
+  ['examples_0',['Stratimikos examples',['../index.html#stratimikos_examples_sec',1,'']]]
 ];
