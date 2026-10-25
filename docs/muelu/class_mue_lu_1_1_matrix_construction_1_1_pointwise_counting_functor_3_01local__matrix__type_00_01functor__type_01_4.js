@@ -12,5 +12,6 @@ var class_mue_lu_1_1_matrix_construction_1_1_pointwise_counting_functor_3_01loca
     [ "results", "class_mue_lu_1_1_matrix_construction_1_1_pointwise_counting_functor_3_01local__matrix__type_00_01functor__type_01_4.html#a4fb340a4b890721e9b05c25b4fa9fd56", null ],
     [ "rowptr", "class_mue_lu_1_1_matrix_construction_1_1_pointwise_counting_functor_3_01local__matrix__type_00_01functor__type_01_4.html#a7a2b7724765088aa1e7ecf6f96df02cd", null ],
     [ "functor", "class_mue_lu_1_1_matrix_construction_1_1_pointwise_counting_functor_3_01local__matrix__type_00_01functor__type_01_4.html#a4b5760b9fe69c5f3b8161f4ca2603d78", null ],
-    [ "firstFunctor", "class_mue_lu_1_1_matrix_construction_1_1_pointwise_counting_functor_3_01local__matrix__type_00_01functor__type_01_4.html#a6a140fdc9c6fd2ad6e5cd08184ac8389", null ]
+    [ "firstFunctor", "class_mue_lu_1_1_matrix_construction_1_1_pointwise_counting_functor_3_01local__matrix__type_00_01functor__type_01_4.html#a6a140fdc9c6fd2ad6e5cd08184ac8389", null ],
+    [ "remainingFunctors", "class_mue_lu_1_1_matrix_construction_1_1_pointwise_counting_functor.html#a9e7b188f6a520783f4f1ee48291c0683", null ]
 ];

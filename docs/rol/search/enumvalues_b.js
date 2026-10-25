@@ -9,7 +9,7 @@ var searchData=
   ['regretmeasure_5fmoreauyosidameanabsoluteloss_6',['REGRETMEASURE_MOREAUYOSIDAMEANABSOLUTELOSS',['../namespaceROL.html#ad8e375ae4020ab647d093aafbc3f92c0a9b78f09334c7bfbe793b0d46ba7ba9f0',1,'ROL']]],
   ['regretmeasure_5fsmoothedworstcase_7',['REGRETMEASURE_SMOOTHEDWORSTCASE',['../namespaceROL.html#ad8e375ae4020ab647d093aafbc3f92c0a976c114e7131abef04e5ce9e9d840807',1,'ROL']]],
   ['regretmeasure_5ftruncatedmean_8',['REGRETMEASURE_TRUNCATEDMEAN',['../namespaceROL.html#ad8e375ae4020ab647d093aafbc3f92c0aaafeb6fbf6c764291c555dcf7c279d58',1,'ROL']]],
-  ['revert_9',['Revert',['../namespaceROL.html#a9dd6ab8dac42a769044e106f370b9aeca5289bf157522a5cd34676f2777d27048',1,'ROL']]],
+  ['revert_9',['Revert',['../namespaceROL.html#a9dd6ab8dac42a769044e106f370b9aeca5289bf157522a5cd34676f2777d27048',1,'ROL::Revert'],['../namespaceROL_1_1ROL.html#ae7c316b822f8b55389fe4a4e12b144cea5289bf157522a5cd34676f2777d27048',1,'ROL::ROL::Revert']]],
   ['riskmeasure_5fchebyshevspectral_10',['RISKMEASURE_CHEBYSHEVSPECTRAL',['../namespaceROL.html#ad1e302d302e10518ae1e8763fd33f91aab3c1361b542841bc22613b4999153c12',1,'ROL']]],
   ['riskmeasure_5fchi2divergence_11',['RISKMEASURE_CHI2DIVERGENCE',['../namespaceROL.html#ad1e302d302e10518ae1e8763fd33f91aa0065d6f7a3fa014debaca7753df2f07e',1,'ROL']]],
   ['riskmeasure_5fcoherententropicrisk_12',['RISKMEASURE_COHERENTENTROPICRISK',['../namespaceROL.html#ad1e302d302e10518ae1e8763fd33f91aafe387f22934f6e4744363060f8970a0d',1,'ROL']]],

@@ -14,5 +14,6 @@ var searchData=
   ['statustestresnorm_11',['StatusTestResNorm',['../class_anasazi_1_1_status_test_res_norm.html',1,'Anasazi']]],
   ['statustestwithordering_12',['StatusTestWithOrdering',['../class_anasazi_1_1_status_test_with_ordering.html',1,'Anasazi']]],
   ['stubtsqradapter_13',['StubTsqrAdapter',['../class_anasazi_1_1details_1_1_stub_tsqr_adapter.html',1,'Anasazi::details']]],
-  ['svqborthomanager_14',['SVQBOrthoManager',['../class_anasazi_1_1_s_v_q_b_ortho_manager.html',1,'Anasazi']]]
+  ['svqborthomanager_14',['SVQBOrthoManager',['../class_anasazi_1_1_s_v_q_b_ortho_manager.html',1,'Anasazi']]],
+  ['svqborthomanager_3c_20scalar_2c_20mv_2c_20op_20_3e_15',['SVQBOrthoManager&lt; Scalar, MV, OP &gt;',['../class_anasazi_1_1_s_v_q_b_ortho_manager.html',1,'Anasazi']]]
 ];

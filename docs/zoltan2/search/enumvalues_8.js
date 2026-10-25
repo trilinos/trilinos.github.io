@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['macro_5ftimers_0',['MACRO_TIMERS',['../namespace_zoltan2.html#a2dd9d7a02bc84c094dd86c8c20c644b3a4fd3c25d79adc129a17f0e72655f99d4',1,'Zoltan2']]],
+  ['macro_5ftimers_0',['MACRO_TIMERS',['../namespace_zoltan2.html#a2dd9d7a02bc84c094dd86c8c20c644b3a4fd3c25d79adc129a17f0e72655f99d4',1,'Zoltan2::MACRO_TIMERS'],['../_timer_manager_8cpp.html#a4fd3c25d79adc129a17f0e72655f99d4',1,'MACRO_TIMERS:&#160;Zoltan2_Parameters.hpp']]],
   ['matrix_5fcolumn_1',['MATRIX_COLUMN',['../namespace_zoltan2.html#a06e622c74494ef0e1eed6e6f1e08bea6afd3d842fd4f4318e19d006ae03a50d3b',1,'Zoltan2']]],
   ['matrix_5fmarket_2',['MATRIX_MARKET',['../_user_input_for_tests_8hpp.html#ae1e69f3e78112064797477ddd0dbe1e9acab0be68664bd730bd60d8f57bdb6404',1,'UserInputForTests.hpp']]],
   ['matrix_5fnonzero_3',['MATRIX_NONZERO',['../namespace_zoltan2.html#a06e622c74494ef0e1eed6e6f1e08bea6a7b059c5470a630822a9871e6af90d834',1,'Zoltan2']]],
@@ -12,5 +12,5 @@ var searchData=
   ['mesh_5fregion_9',['MESH_REGION',['../namespace_zoltan2.html#abf1254e95e1358c00b95e0de653fa734aa2395c74f7b5c641c4e54d9171d9c98d',1,'Zoltan2']]],
   ['mesh_5fvertex_10',['MESH_VERTEX',['../namespace_zoltan2.html#abf1254e95e1358c00b95e0de653fa734ae0c6ee7cef3546aa84e85ec667598ee3',1,'Zoltan2']]],
   ['meshadaptertype_11',['MeshAdapterType',['../namespace_zoltan2.html#aaf2b3a48bc33001c3f0145306985eb6eabdbe3baeac3e13ec76220f7d94215d2e',1,'Zoltan2']]],
-  ['micro_5ftimers_12',['MICRO_TIMERS',['../namespace_zoltan2.html#a2dd9d7a02bc84c094dd86c8c20c644b3aa555f0fe39262da46d053017915e9b66',1,'Zoltan2']]]
+  ['micro_5ftimers_12',['MICRO_TIMERS',['../namespace_zoltan2.html#a2dd9d7a02bc84c094dd86c8c20c644b3aa555f0fe39262da46d053017915e9b66',1,'Zoltan2::MICRO_TIMERS'],['../_timer_manager_8cpp.html#aa555f0fe39262da46d053017915e9b66',1,'MICRO_TIMERS:&#160;Zoltan2_Parameters.hpp']]]
 ];

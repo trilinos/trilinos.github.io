@@ -5,7 +5,7 @@ var searchData=
   ['absolutevalue_5fsqrtdenom_2',['ABSOLUTEVALUE_SQRTDENOM',['../namespaceROL.html#ae055efa411e6c0cbef222268f10728c3ae3df9487b6249765cd5e2037fc0b8e73',1,'ROL']]],
   ['absolutevalue_5fsquareroot_3',['ABSOLUTEVALUE_SQUAREROOT',['../namespaceROL.html#ae055efa411e6c0cbef222268f10728c3a52cfcc0f35e78b483e457a5f364a0849',1,'ROL']]],
   ['absolutevalue_5ftrue_4',['ABSOLUTEVALUE_TRUE',['../namespaceROL.html#ae055efa411e6c0cbef222268f10728c3ae228927305eb3876fc6b82fd166e7e48',1,'ROL']]],
-  ['accept_5',['Accept',['../namespaceROL.html#a9dd6ab8dac42a769044e106f370b9aecac4408d335012a56ff58937d78050efad',1,'ROL']]],
+  ['accept_5',['Accept',['../namespaceROL.html#a9dd6ab8dac42a769044e106f370b9aecac4408d335012a56ff58937d78050efad',1,'ROL::Accept'],['../namespaceROL_1_1ROL.html#ae7c316b822f8b55389fe4a4e12b144ceac4408d335012a56ff58937d78050efad',1,'ROL::ROL::Accept']]],
   ['algorithm_5fb_5finteriorpoint_6',['ALGORITHM_B_INTERIORPOINT',['../namespaceROL_1_1TypeB.html#ad1e8b407f1d9ec35385a8fcefea9ff04a5c658211f08e38e9ce8b4a62457a902e',1,'ROL::TypeB']]],
   ['algorithm_5fb_5flast_7',['ALGORITHM_B_LAST',['../namespaceROL_1_1TypeB.html#ad1e8b407f1d9ec35385a8fcefea9ff04a948684a0e278c9311b1d3b8f02d5ff63',1,'ROL::TypeB']]],
   ['algorithm_5fb_5flinesearch_8',['ALGORITHM_B_LINESEARCH',['../namespaceROL_1_1TypeB.html#ad1e8b407f1d9ec35385a8fcefea9ff04acfc1714723287921e529b8d84508955e',1,'ROL::TypeB']]],

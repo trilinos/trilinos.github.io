@@ -9,6 +9,7 @@ var searchData=
   ['realsolvermanager_6',['RealSolverManager',['../class_belos_1_1_details_1_1_real_solver_manager.html',1,'Belos::Details']]],
   ['realsolvermanager_3c_20scalartype_2c_20mv_2c_20op_2c_20defaultdensematrix_3c_20int_2c_20scalartype_20_3e_2c_20teuchos_3a_3ascalartraits_3c_20scalartype_20_3e_3a_3aiscomplex_20_3e_7',['RealSolverManager&lt; ScalarType, MV, OP, DefaultDenseMatrix&lt; int, ScalarType &gt;, Teuchos::ScalarTraits&lt; ScalarType &gt;::isComplex &gt;',['../class_belos_1_1_details_1_1_real_solver_manager.html',1,'Belos::Details']]],
   ['realsolvermanager_3c_20scalartype_2c_20mv_2c_20op_2c_20dm_2c_20false_20_3e_8',['RealSolverManager&lt; ScalarType, MV, OP, DM, false &gt;',['../class_belos_1_1_details_1_1_real_solver_manager_3_01_scalar_type_00_01_m_v_00_01_o_p_00_01_d_m_00_01false_01_4.html',1,'Belos::Details']]],
-  ['realsolvermanager_3c_20scalartype_2c_20mv_2c_20op_2c_20dm_2c_20true_20_3e_9',['RealSolverManager&lt; ScalarType, MV, OP, DM, true &gt;',['../class_belos_1_1_details_1_1_real_solver_manager_3_01_scalar_type_00_01_m_v_00_01_o_p_00_01_d_m_00_01true_01_4.html',1,'Belos::Details']]],
-  ['reorthogonalizationcallback_10',['ReorthogonalizationCallback',['../class_belos_1_1_reorthogonalization_callback.html',1,'Belos']]]
+  ['realsolvermanager_3c_20scalartype_2c_20mv_2c_20op_2c_20dm_2c_20iscomplex_20_3e_9',['RealSolverManager&lt; ScalarType, MV, OP, DM, isComplex &gt;',['../class_belos_1_1_details_1_1_real_solver_manager.html',1,'Belos::Details']]],
+  ['realsolvermanager_3c_20scalartype_2c_20mv_2c_20op_2c_20dm_2c_20true_20_3e_10',['RealSolverManager&lt; ScalarType, MV, OP, DM, true &gt;',['../class_belos_1_1_details_1_1_real_solver_manager_3_01_scalar_type_00_01_m_v_00_01_o_p_00_01_d_m_00_01true_01_4.html',1,'Belos::Details']]],
+  ['reorthogonalizationcallback_11',['ReorthogonalizationCallback',['../class_belos_1_1_reorthogonalization_callback.html',1,'Belos']]]
 ];

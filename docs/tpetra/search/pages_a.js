@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['operator_0',['Tpetra Lesson 06: Custom Operator',['../_tpetra__lesson06.html',1,'']]]
+  ['justification_0',['Justification',['../class_tpetra_1_1_crs_matrix.html#Tpetra_CrsMatrix_packNew_why',1,'']]]
 ];

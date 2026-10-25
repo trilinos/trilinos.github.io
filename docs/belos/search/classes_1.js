@@ -14,5 +14,6 @@ var searchData=
   ['cgpositivedefinitefailure_11',['CGPositiveDefiniteFailure',['../class_belos_1_1_c_g_positive_definite_failure.html',1,'Belos']]],
   ['cgsinglerediter_12',['CGSingleRedIter',['../class_belos_1_1_c_g_single_red_iter.html',1,'Belos']]],
   ['cgsinglerediterationstate_13',['CGSingleRedIterationState',['../class_belos_1_1_c_g_single_red_iteration_state.html',1,'Belos']]],
-  ['customsolverfactory_14',['CustomSolverFactory',['../class_belos_1_1_custom_solver_factory.html',1,'Belos']]]
+  ['customsolverfactory_14',['CustomSolverFactory',['../class_belos_1_1_custom_solver_factory.html',1,'Belos']]],
+  ['customsolverfactory_3c_20scalar_2c_20mv_2c_20op_2c_20dm_20_3e_15',['CustomSolverFactory&lt; Scalar, MV, OP, DM &gt;',['../class_belos_1_1_custom_solver_factory.html',1,'Belos']]]
 ];

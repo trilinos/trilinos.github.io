@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['decomposition_20for_20tpetra_20objects_0',['Trilinos/Ifpack2: Incomplete factorizations, relaxations, and domain decomposition for Tpetra objects',['../index.html',1,'']]],
-  ['domain_20decomposition_20for_20tpetra_20objects_1',['Trilinos/Ifpack2: Incomplete factorizations, relaxations, and domain decomposition for Tpetra objects',['../index.html',1,'']]]
+  ['block_20of_20the_20original_20matrix_0',['Square diagonal block of the original matrix',['../class_ifpack2_1_1_local_filter.html#Ifpack2_LocalFilter_How_DiagBlock',1,'']]],
+  ['bounds_1',['Eigenvalue bounds',['../class_ifpack2_1_1_chebyshev.html#Ifpack_Chebyshev_Eig',1,'']]]
 ];

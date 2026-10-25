@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['eigensolvers_20package_0',['Anasazi: A Block Eigensolvers Package',['../index.html',1,'']]]
+  ['contributors_0',['Anasazi Contributors',['../index.html#contributors',1,'']]],
+  ['current_20eigensolvers_1',['Current Eigensolvers',['../index.html#solvers',1,'']]]
 ];

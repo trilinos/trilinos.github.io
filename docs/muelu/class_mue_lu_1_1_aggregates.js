@@ -9,7 +9,7 @@ var class_mue_lu_1_1_aggregates =
     [ "LO_view", "class_mue_lu_1_1_aggregates.html#ac6a1fd71f50e75e42b5d1596e74aaa99", null ],
     [ "aggregates_sizes_type", "class_mue_lu_1_1_aggregates.html#ac5e2d8df5d5bfd0c408f336f27ebc684", null ],
     [ "local_graph_type", "class_mue_lu_1_1_aggregates.html#a0e0f7830d5d9d44991a4518a0639498a", null ],
-    [ "colors_view_type", "class_mue_lu_1_1_aggregates.html#a505c0ec37451da46ef7391845d4bcdc3", null ],
+    [ "colors_view_type", "class_mue_lu_1_1_aggregates.html#a11136a95d1bbe6e686f6d78a1486ca54", null ],
     [ "Aggregates", "class_mue_lu_1_1_aggregates.html#a96ab6cff421fb0587d30c8c84e9f608e", null ],
     [ "Aggregates", "class_mue_lu_1_1_aggregates.html#abfdccaf9dca8daede425a1d5d5ac6b51", null ],
     [ "Aggregates", "class_mue_lu_1_1_aggregates.html#a0271614786a26abcf5ef119f159aebb3", null ],

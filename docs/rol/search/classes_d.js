@@ -10,11 +10,11 @@ var searchData=
   ['nodalbasis_7',['NodalBasis',['../structNodalBasis.html',1,'']]],
   ['nonlinearcg_5fu_8',['NonlinearCG_U',['../classROL_1_1NonlinearCG__U.html',1,'ROL']]],
   ['nonlinearcgstep_9',['NonlinearCGStep',['../classROL_1_1NonlinearCGStep.html',1,'ROL']]],
-  ['nonlinearleastsquaresobjective_10',['NonlinearLeastSquaresObjective',['../classROL_1_1NonlinearLeastSquaresObjective.html',1,'ROL']]],
+  ['nonlinearleastsquaresobjective_10',['NonlinearLeastSquaresObjective',['../classROL_1_1NonlinearLeastSquaresObjective.html',1,'ROL::NonlinearLeastSquaresObjective&lt; Real &gt;'],['../classROL_1_1ROL_1_1NonlinearLeastSquaresObjective.html',1,'ROL::ROL::NonlinearLeastSquaresObjective&lt; Real &gt;']]],
   ['nonlinearleastsquaresobjective_5fdynamic_11',['NonlinearLeastSquaresObjective_Dynamic',['../classROL_1_1NonlinearLeastSquaresObjective__Dynamic.html',1,'ROL']]],
   ['normalization_5fconstraint_12',['Normalization_Constraint',['../classNormalization__Constraint.html',1,'']]],
-  ['notimplemented_13',['NotImplemented',['../classROL_1_1Exception_1_1NotImplemented.html',1,'ROL::Exception']]],
+  ['notimplemented_13',['NotImplemented',['../classROL_1_1Exception_1_1NotImplemented.html',1,'ROL::Exception::NotImplemented'],['../classROL_1_1ROL_1_1Exception_1_1NotImplemented.html',1,'ROL::ROL::Exception::NotImplemented']]],
   ['nullobjective_14',['NullObjective',['../classNullObjective.html',1,'']]],
   ['nulloperator_15',['NullOperator',['../classROL_1_1NullOperator.html',1,'ROL']]],
-  ['nullspaceoperator_16',['NullSpaceOperator',['../classROL_1_1NullSpaceOperator.html',1,'ROL']]]
+  ['nullspaceoperator_16',['NullSpaceOperator',['../classROL_1_1NullSpaceOperator.html',1,'ROL::NullSpaceOperator&lt; Real &gt;'],['../classROL_1_1ROL_1_1NullSpaceOperator.html',1,'ROL::ROL::NullSpaceOperator&lt; Real &gt;']]]
 ];

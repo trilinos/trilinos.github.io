@@ -1,7 +1,7 @@
 var searchData=
 [
   ['identity_0',['Identity',['../classIdentity.html',1,'']]],
-  ['identityoperator_1',['identityoperator',['../classIdentityOperator.html',1,'IdentityOperator&lt; Real &gt;'],['../classROL_1_1IdentityOperator.html',1,'ROL::IdentityOperator&lt; Real &gt;']]],
+  ['identityoperator_1',['IdentityOperator',['../classIdentityOperator.html',1,'IdentityOperator&lt; Real &gt;'],['../classROL_1_1IdentityOperator.html',1,'ROL::IdentityOperator&lt; Real &gt;'],['../classROL_1_1ROL_1_1IdentityOperator.html',1,'ROL::ROL::IdentityOperator&lt; Real &gt;']]],
   ['inactiveset_5fdualvector_2',['InactiveSet_DualVector',['../classROL_1_1InactiveSet__DualVector.html',1,'ROL']]],
   ['inactiveset_5fprimalvector_3',['InactiveSet_PrimalVector',['../classROL_1_1InactiveSet__PrimalVector.html',1,'ROL']]],
   ['inequalityconstraint_5fhs29_4',['InequalityConstraint_HS29',['../classROL_1_1ZOO_1_1InequalityConstraint__HS29.html',1,'ROL::ZOO']]],
@@ -11,7 +11,7 @@ var searchData=
   ['innerconstraint_8',['InnerConstraint',['../classInnerConstraint.html',1,'']]],
   ['innerproductmatrix_9',['InnerProductMatrix',['../classInnerProductMatrix.html',1,'']]],
   ['innerproductmatrixsolver_10',['InnerProductMatrixSolver',['../classInnerProductMatrixSolver.html',1,'']]],
-  ['interiorpointalgorithm_11',['interiorpointalgorithm',['../classROL_1_1TypeB_1_1InteriorPointAlgorithm.html',1,'ROL::TypeB::InteriorPointAlgorithm&lt; Real &gt;'],['../classROL_1_1TypeG_1_1InteriorPointAlgorithm.html',1,'ROL::TypeG::InteriorPointAlgorithm&lt; Real &gt;']]],
+  ['interiorpointalgorithm_11',['InteriorPointAlgorithm',['../classROL_1_1TypeB_1_1InteriorPointAlgorithm.html',1,'ROL::TypeB::InteriorPointAlgorithm&lt; Real &gt;'],['../classROL_1_1TypeG_1_1InteriorPointAlgorithm.html',1,'ROL::TypeG::InteriorPointAlgorithm&lt; Real &gt;']]],
   ['interiorpointobjective_12',['InteriorPointObjective',['../classROL_1_1InteriorPointObjective.html',1,'ROL']]],
   ['interiorpointpenalty_13',['InteriorPointPenalty',['../classROL_1_1InteriorPointPenalty.html',1,'ROL']]],
   ['interiorpointstep_14',['InteriorPointStep',['../classROL_1_1InteriorPointStep.html',1,'ROL']]],

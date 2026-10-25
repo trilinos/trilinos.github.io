@@ -15,6 +15,5 @@ var group__minitensor__mechanics =
     [ "minitensor::piola", "group__minitensor__mechanics.html#ga8865677006e408fddc4b24b47b121c04", null ],
     [ "minitensor::piola_inverse", "group__minitensor__mechanics.html#gaab1bf840da9c43e8911d7f28edd1e9cd", null ],
     [ "minitensor::smallest_eigenvalue", "group__minitensor__mechanics.html#ga8257439b963799a9989e28a6d62167a2", null ],
-    [ "minitensor::check_strict_ellipticity", "group__minitensor__mechanics.html#gac56828c3f639a380d8b63d4998ab2535", null ],
     [ "minitensor::check_strong_ellipticity", "group__minitensor__mechanics.html#ga0185ea1a87344fe8c70a11d699893031", null ]
 ];

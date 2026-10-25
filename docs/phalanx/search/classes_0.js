@@ -1,7 +1,7 @@
 var searchData=
 [
   ['add_5fpointer_0',['add_pointer',['../struct_p_h_x_1_1add__pointer.html',1,'PHX::add_pointer&lt; Data, N &gt;'],['../struct_p_h_x_1_1v__of__v__utils_1_1add__pointer.html',1,'PHX::v_of_v_utils::add_pointer&lt; Data, N &gt;']]],
-  ['add_5fpointer_3c_20data_2c_200_20_3e_1',['add_pointer&lt; data, 0 &gt;',['../struct_p_h_x_1_1add__pointer_3_01_data_00_010_01_4.html',1,'PHX::add_pointer&lt; Data, 0 &gt;'],['../struct_p_h_x_1_1v__of__v__utils_1_1add__pointer_3_01_data_00_010_01_4.html',1,'PHX::v_of_v_utils::add_pointer&lt; Data, 0 &gt;']]],
+  ['add_5fpointer_3c_20data_2c_200_20_3e_1',['add_pointer&lt; Data, 0 &gt;',['../struct_p_h_x_1_1add__pointer_3_01_data_00_010_01_4.html',1,'PHX::add_pointer&lt; Data, 0 &gt;'],['../struct_p_h_x_1_1v__of__v__utils_1_1add__pointer_3_01_data_00_010_01_4.html',1,'PHX::v_of_v_utils::add_pointer&lt; Data, 0 &gt;']]],
   ['aliasfield_2',['AliasField',['../class_p_h_x_1_1_alias_field.html',1,'PHX']]],
   ['anytype_3',['AnyType',['../struct_p_h_x_1_1_any_type.html',1,'PHX']]],
   ['anytype_3c_200_20_3e_4',['AnyType&lt; 0 &gt;',['../struct_p_h_x_1_1_any_type_3_010_01_4.html',1,'PHX']]],

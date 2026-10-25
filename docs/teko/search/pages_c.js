@@ -1,7 +1,29 @@
 var searchData=
 [
-  ['teko_20user_20s_20guide_0',['Teko User&apos;s Guide',['../teko_guide.html',1,'index']]],
-  ['teko_3a_20block_20and_20physics_20based_20preconditioning_1',['Teko: Block and Physics-Based Preconditioning',['../index.html',1,'']]],
-  ['the_20inverse_20library_2',['The Inverse Library',['../teko_inverse_library.html',1,'index']]],
-  ['topics_3',['Advanced Topics',['../teko_advanced.html',1,'index']]]
+  ['identity_0',['Identity — &lt;span class=&quot;tt&quot;&gt;&quot;Identity&quot;&lt;/span&gt;',['../teko_block_reference.html#autotoc_md54',1,'']]],
+  ['identity_20—_20identity_1',['Identity — &lt;span class=&quot;tt&quot;&gt;&quot;Identity&quot;&lt;/span&gt;',['../teko_block_reference.html#autotoc_md54',1,'']]],
+  ['ids_2',['Arbitrary Tpetra blocks from global IDs',['../teko_cookbook.html#autotoc_md92',1,'']]],
+  ['in_20a_20krylov_20solve_3',['Step 4 — Use it in a Krylov solve',['../teko_getting_started.html#autotoc_md7',1,'']]],
+  ['in_20blockpreconditionerstate_4',['Store per-operator state in &lt;span class=&quot;tt&quot;&gt;BlockPreconditionerState&lt;/span&gt;',['../teko_advanced.html#autotoc_md86',1,'']]],
+  ['in_20c_5',['Building a library entry in C++',['../teko_inverse_library.html#autotoc_md27',1,'']]],
+  ['in_20nonlinear_20or_20time_20stepping_20loops_6',['Reuse in nonlinear or time-stepping loops',['../teko_cookbook.html#autotoc_md98',1,'']]],
+  ['ins_7',['Request message names used by the built-ins',['../teko_advanced.html#autotoc_md83',1,'']]],
+  ['inside_20stratimikos_8',['Enabling Teko inside Stratimikos',['../teko_config_model.html#autotoc_md17',1,'']]],
+  ['interoperability_20notes_9',['Thyra / Teko interoperability notes',['../teko_advanced.html#autotoc_md90',1,'']]],
+  ['introduction_10',['Introduction',['../index.html#teko_mainpage_intro',1,'']]],
+  ['inverse_11',['Diagnostic Inverse — &lt;span class=&quot;tt&quot;&gt;&quot;Diagnostic Inverse&quot;&lt;/span&gt;',['../teko_block_reference.html#autotoc_md48',1,'']]],
+  ['inverse_12',['Worked example: nested solves (a Krylov-preconditioned block inverse)',['../teko_inverse_library.html#autotoc_md26',1,'']]],
+  ['inverse_20—_20diagnostic_20inverse_13',['Diagnostic Inverse — &lt;span class=&quot;tt&quot;&gt;&quot;Diagnostic Inverse&quot;&lt;/span&gt;',['../teko_block_reference.html#autotoc_md48',1,'']]],
+  ['inverse_20factory_20library_14',['Layer 2 — the Inverse Factory Library',['../teko_config_model.html#autotoc_md15',1,'']]],
+  ['inverse_20library_15',['The Inverse Library',['../teko_inverse_library.html',1,'index']]],
+  ['inverse_20operator_16',['Step 3 — Build the inverse operator',['../teko_getting_started.html#autotoc_md6',1,'']]],
+  ['inverse_20strategy_20invlscstrategy_17',['Basic Inverse strategy (&lt;span class=&quot;tt&quot;&gt;InvLSCStrategy&lt;/span&gt;)',['../teko_navier_stokes.html#autotoc_md64',1,'']]],
+  ['inverses_18',['Step 2 — Define named inverses',['../teko_getting_started.html#autotoc_md5',1,'']]],
+  ['inverses_20and_20explicit_20operators_20across_20iterations_19',['Reusing inverses and explicit operators across iterations',['../teko_advanced.html#autotoc_md85',1,'']]],
+  ['invlscstrategy_20',['Basic Inverse strategy (&lt;span class=&quot;tt&quot;&gt;InvLSCStrategy&lt;/span&gt;)',['../teko_navier_stokes.html#autotoc_md64',1,'']]],
+  ['is_21',['What a library entry is',['../teko_inverse_library.html#autotoc_md19',1,'']]],
+  ['it_20in_20a_20krylov_20solve_22',['Step 4 — Use it in a Krylov solve',['../teko_getting_started.html#autotoc_md7',1,'']]],
+  ['iterations_23',['Reusing inverses and explicit operators across iterations',['../teko_advanced.html#autotoc_md85',1,'']]],
+  ['iterative_20preconditioner_24',['Iterative Preconditioner — &lt;span class=&quot;tt&quot;&gt;&quot;Iterative Preconditioner&quot;&lt;/span&gt;',['../teko_block_reference.html#autotoc_md42',1,'']]],
+  ['iterative_20preconditioner_20—_20iterative_20preconditioner_25',['Iterative Preconditioner — &lt;span class=&quot;tt&quot;&gt;&quot;Iterative Preconditioner&quot;&lt;/span&gt;',['../teko_block_reference.html#autotoc_md42',1,'']]]
 ];
