@@ -20,9 +20,10 @@ var searchData=
   ['gmresiterationorthofailure_17',['GmresIterationOrthoFailure',['../class_belos_1_1_gmres_iteration_ortho_failure.html',1,'Belos']]],
   ['gmresiterationstate_18',['GmresIterationState',['../struct_belos_1_1_gmres_iteration_state.html',1,'Belos']]],
   ['gmrespolymv_19',['GmresPolyMv',['../class_belos_1_1_gmres_poly_mv.html',1,'Belos']]],
-  ['gmrespolyop_20',['GmresPolyOp',['../class_belos_1_1_gmres_poly_op.html',1,'Belos']]],
-  ['gmrespolyoporthofailure_21',['GmresPolyOpOrthoFailure',['../class_belos_1_1_gmres_poly_op_ortho_failure.html',1,'Belos']]],
-  ['gmrespolysolmgr_22',['GmresPolySolMgr',['../class_belos_1_1_gmres_poly_sol_mgr.html',1,'Belos']]],
-  ['gmrespolysolmgrlinearproblemfailure_23',['GmresPolySolMgrLinearProblemFailure',['../class_belos_1_1_gmres_poly_sol_mgr_linear_problem_failure.html',1,'Belos']]],
-  ['gmrespolysolmgrpolynomialfailure_24',['GmresPolySolMgrPolynomialFailure',['../class_belos_1_1_gmres_poly_sol_mgr_polynomial_failure.html',1,'Belos']]]
+  ['gmrespolymv_3c_20scalartype_2c_20mv_2c_20dm_20_3e_20',['GmresPolyMv&lt; ScalarType, MV, DM &gt;',['../class_belos_1_1_gmres_poly_mv.html',1,'Belos']]],
+  ['gmrespolyop_21',['GmresPolyOp',['../class_belos_1_1_gmres_poly_op.html',1,'Belos']]],
+  ['gmrespolyoporthofailure_22',['GmresPolyOpOrthoFailure',['../class_belos_1_1_gmres_poly_op_ortho_failure.html',1,'Belos']]],
+  ['gmrespolysolmgr_23',['GmresPolySolMgr',['../class_belos_1_1_gmres_poly_sol_mgr.html',1,'Belos']]],
+  ['gmrespolysolmgrlinearproblemfailure_24',['GmresPolySolMgrLinearProblemFailure',['../class_belos_1_1_gmres_poly_sol_mgr_linear_problem_failure.html',1,'Belos']]],
+  ['gmrespolysolmgrpolynomialfailure_25',['GmresPolySolMgrPolynomialFailure',['../class_belos_1_1_gmres_poly_sol_mgr_polynomial_failure.html',1,'Belos']]]
 ];

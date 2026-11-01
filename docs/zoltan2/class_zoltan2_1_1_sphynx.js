@@ -1,0 +1,37 @@
+var class_zoltan2_1_1_sphynx =
+[
+    [ "scalar_t", "class_zoltan2_1_1_sphynx.html#aab84251d9c029e7daed46a7360d72157", null ],
+    [ "lno_t", "class_zoltan2_1_1_sphynx.html#a78e5902cee6b80e04987680ae45d099a", null ],
+    [ "gno_t", "class_zoltan2_1_1_sphynx.html#aaa7996948146eafe82957495eb7b2931", null ],
+    [ "node_t", "class_zoltan2_1_1_sphynx.html#a6c0ad423812d52e0660ebaeefdc2e4b5", null ],
+    [ "offset_t", "class_zoltan2_1_1_sphynx.html#a19803221d37882f010752a2eb6878247", null ],
+    [ "part_t", "class_zoltan2_1_1_sphynx.html#aef7431b7429eed5ecaa79d4185eb9b13", null ],
+    [ "weight_t", "class_zoltan2_1_1_sphynx.html#a90fb6c81678c69fc4c38358c817e6b72", null ],
+    [ "graph_t", "class_zoltan2_1_1_sphynx.html#a4578b5e3cabd9dffa0a5a863ed58d12f", null ],
+    [ "matrix_t", "class_zoltan2_1_1_sphynx.html#ae9c8ee3448da33ae15c7ce3c3ee9daef", null ],
+    [ "mvector_t", "class_zoltan2_1_1_sphynx.html#a619b9c1922174ea5e5328195878dabd2", null ],
+    [ "op_t", "class_zoltan2_1_1_sphynx.html#a7563da1618e5d5829cd898d3b590db8d", null ],
+    [ "MVT", "class_zoltan2_1_1_sphynx.html#a8a49414ae554f295967beff36687a7a3", null ],
+    [ "problemType", "class_zoltan2_1_1_sphynx.html#a5279801bd5762fc4367459f7e3ed862a", [
+      [ "COMBINATORIAL", "class_zoltan2_1_1_sphynx.html#a5279801bd5762fc4367459f7e3ed862aa0f701a86cfb345f86d80d8a353fa4bdc", null ],
+      [ "GENERALIZED", "class_zoltan2_1_1_sphynx.html#a5279801bd5762fc4367459f7e3ed862aa9e6d9860e829771d8fd1bed5206bfbf6", null ],
+      [ "NORMALIZED", "class_zoltan2_1_1_sphynx.html#a5279801bd5762fc4367459f7e3ed862aa175ff6f89b1f1cbdc73c9657675953fc", null ]
+    ] ],
+    [ "Sphynx", "class_zoltan2_1_1_sphynx.html#a00ecfe1312db4d89ef5da98567473e24", null ],
+    [ "partition", "class_zoltan2_1_1_sphynx.html#a965bc748db3af6850ff8d8a542d1c9dd", null ],
+    [ "AnasaziWrapper", "class_zoltan2_1_1_sphynx.html#a7cc563ac7df5853f9ef38ecbb593f343", null ],
+    [ "setPreconditioner", "class_zoltan2_1_1_sphynx.html#accf705b108e71c8172251818d7b512f8", null ],
+    [ "setMueLuPreconditioner", "class_zoltan2_1_1_sphynx.html#a08b5febc2f93026f4a4136c11c1abb4e", null ],
+    [ "setJacobiPreconditioner", "class_zoltan2_1_1_sphynx.html#ad58a2498f7229ddad97c45de91cd2bdc", null ],
+    [ "setPolynomialPreconditioner", "class_zoltan2_1_1_sphynx.html#ad312405483b77a8f924501e5bf6d5be0", null ],
+    [ "eigenvecsToCoords", "class_zoltan2_1_1_sphynx.html#a5b2b0ae3e8f6e3b68fd07303bae0e2a0", null ],
+    [ "computeWeights", "class_zoltan2_1_1_sphynx.html#af41fb933ef7b0fc659d46ac8ce4ce9c3", null ],
+    [ "MJwrapper", "class_zoltan2_1_1_sphynx.html#a3e48140d37759cdd85477e8329fa2c22", null ],
+    [ "setUserEigenvectors", "class_zoltan2_1_1_sphynx.html#a6b86ea499e3f4508a19ef29a79cee220", null ],
+    [ "determineRegularity", "class_zoltan2_1_1_sphynx.html#ab38d712d82b093f844272e88deb5eac1", null ],
+    [ "setDefaults", "class_zoltan2_1_1_sphynx.html#ada03ea2bd722c163f1f0faa2a13cb603", null ],
+    [ "computeLaplacian", "class_zoltan2_1_1_sphynx.html#a4d0ccd6e714f59782b2b64d1ba1074da", null ],
+    [ "computeDegreeMatrix", "class_zoltan2_1_1_sphynx.html#a1163161fa606bd376a5b00e44693a347", null ],
+    [ "computeCombinatorialLaplacian", "class_zoltan2_1_1_sphynx.html#a9d037f8682bbd0224e06473a5dbb6961", null ],
+    [ "computeNormalizedLaplacian", "class_zoltan2_1_1_sphynx.html#aa08b378580309f3510c8ca871a2b3c2a", null ]
+];

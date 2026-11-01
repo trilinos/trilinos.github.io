@@ -47,8 +47,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_shards___array_8hpp_source.html",
-"structshards_1_1_type_list_first.html"
+"structshards_1_1_compare.html#a0e69fecefe4a4b99fd614c38e7c7b4fc"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronisation';
-var SYNCOFFMSG = 'click to enable panel synchronisation';
+var SYNCONMSG = 'click to disable panel synchronization';
+var SYNCOFFMSG = 'click to enable panel synchronization';
+var LISTOFALLMEMBERS = 'List of all members';

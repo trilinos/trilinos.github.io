@@ -14,8 +14,6 @@ var dir_8cbae1337f54ee3ca81c62b2b2e050c6 =
     [ "MueLu_Ifpack2Smoother_def.hpp", "_mue_lu___ifpack2_smoother__def_8hpp.html", null ],
     [ "MueLu_MergedSmoother_decl.hpp", "_mue_lu___merged_smoother__decl_8hpp.html", "_mue_lu___merged_smoother__decl_8hpp" ],
     [ "MueLu_MergedSmoother_def.hpp", "_mue_lu___merged_smoother__def_8hpp.html", null ],
-    [ "MueLu_PermutingSmoother_decl.hpp", "_mue_lu___permuting_smoother__decl_8hpp.html", "_mue_lu___permuting_smoother__decl_8hpp" ],
-    [ "MueLu_PermutingSmoother_def.hpp", "_mue_lu___permuting_smoother__def_8hpp.html", null ],
     [ "MueLu_ProjectorSmoother_decl.hpp", "_mue_lu___projector_smoother__decl_8hpp.html", "_mue_lu___projector_smoother__decl_8hpp" ],
     [ "MueLu_ProjectorSmoother_def.hpp", "_mue_lu___projector_smoother__def_8hpp.html", null ],
     [ "MueLu_RefMaxwellSmoother_decl.hpp", "_mue_lu___ref_maxwell_smoother__decl_8hpp.html", "_mue_lu___ref_maxwell_smoother__decl_8hpp" ],

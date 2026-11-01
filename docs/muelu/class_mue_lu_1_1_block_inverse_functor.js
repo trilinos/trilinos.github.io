@@ -1,8 +1,8 @@
 var class_mue_lu_1_1_block_inverse_functor =
 [
-    [ "TagApply", "class_mue_lu_1_1_block_inverse_functor_1_1_tag_apply.html", null ],
-    [ "TagCountSingularBlocks", "class_mue_lu_1_1_block_inverse_functor_1_1_tag_count_singular_blocks.html", null ],
     [ "TagFindSingularBlocks", "class_mue_lu_1_1_block_inverse_functor_1_1_tag_find_singular_blocks.html", null ],
+    [ "TagCountSingularBlocks", "class_mue_lu_1_1_block_inverse_functor_1_1_tag_count_singular_blocks.html", null ],
+    [ "TagApply", "class_mue_lu_1_1_block_inverse_functor_1_1_tag_apply.html", null ],
     [ "CrsGraph", "class_mue_lu_1_1_block_inverse_functor.html#a3846878dd359a9ca13daa21a46c9d44d", null ],
     [ "CrsMatrix", "class_mue_lu_1_1_block_inverse_functor.html#a721d5c332ceb1a11bc7947fa32b09340", null ],
     [ "local_graph_type", "class_mue_lu_1_1_block_inverse_functor.html#a22a5fa69b657d2b96a22c16e171b92a6", null ],

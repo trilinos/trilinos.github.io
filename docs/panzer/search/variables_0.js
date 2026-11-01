@@ -1,8 +1,8 @@
 var searchData=
 [
   ['_5fbasis_5fdescriptors_0',['_basis_descriptors',['../structpanzer_1_1_workset_needs.html#a766e058678bccfabb8225b70960077e9',1,'panzer::WorksetNeeds']]],
-  ['_5fbasis_5forder_1',['_basis_order',['../classpanzer_1_1_basis_descriptor.html#a0a02c0784a1a530834eccdc9471073e8',1,'panzer::BasisDescriptor::_basis_order'],['../_panzer___basis_descriptor_8cpp.html#a982f3dc0238887938a06d581815e7504',1,'_basis_order:&#160;Panzer_BasisDescriptor.cpp']]],
-  ['_5fbasis_5ftype_2',['_basis_type',['../_panzer___basis_descriptor_8cpp.html#a9ec6e00a2657132a635867728a49f73d',1,'_basis_type:&#160;Panzer_BasisDescriptor.cpp'],['../classpanzer_1_1_basis_descriptor.html#a4eea06fe04793170b3890249fd3f20af',1,'panzer::BasisDescriptor::_basis_type']]],
+  ['_5fbasis_5forder_1',['_basis_order',['../classpanzer_1_1_basis_descriptor.html#a0a02c0784a1a530834eccdc9471073e8',1,'panzer::BasisDescriptor']]],
+  ['_5fbasis_5ftype_2',['_basis_type',['../classpanzer_1_1_basis_descriptor.html#a4eea06fe04793170b3890249fd3f20af',1,'panzer::BasisDescriptor']]],
   ['_5fcell_5fto_5fsubcells_3',['_cell_to_subcells',['../classpanzer_1_1_subcell_connectivity.html#a65869cd40775b08ad5e8258b72355398',1,'panzer::SubcellConnectivity']]],
   ['_5fcell_5fto_5fsubcells_5fadj_4',['_cell_to_subcells_adj',['../classpanzer_1_1_subcell_connectivity.html#a6b081311eca6496096aff63c955cf358',1,'panzer::SubcellConnectivity']]],
   ['_5fcell_5fto_5fsubcells_5fadj_5fhost_5',['_cell_to_subcells_adj_host',['../classpanzer_1_1_subcell_connectivity.html#ab6f4377dc87fa3d3fef65c9fad5e1120',1,'panzer::SubcellConnectivity']]],

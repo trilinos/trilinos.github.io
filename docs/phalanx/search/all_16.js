@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['name_20it_20phalanx_20br_0',['1. Why name it Phalanx?  &lt;br&gt;',['../faq.html#faq1',1,'']]],
+  ['name_20it_20phalanx_0',['1. Why name it Phalanx?',['../faq.html#faq1',1,'']]],
   ['news_1',['News',['../index.html#news',1,'']]],
   ['nodes_5f_2',['nodes_',['../class_p_h_x_1_1_dag_manager.html#ad120ea7d877cb3f4df8c9a1c09c6bae5',1,'PHX::DagManager']]],
   ['nomenclature_3',['B. Learn the Phalanx Nomenclature',['../user_guide.html#ug_dummy_2',1,'']]],

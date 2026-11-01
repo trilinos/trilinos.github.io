@@ -17,6 +17,7 @@ var class_mue_lu_1_1_smoother_factory =
     [ "description", "class_mue_lu_1_1_smoother_factory.html#a90aa78e3066b33954242e43b3a117c74", null ],
     [ "describe", "class_mue_lu_1_1_smoother_factory.html#ade51a0d418b1764b0436df80c6f04245", null ],
     [ "CheckPrototypes", "class_mue_lu_1_1_smoother_factory.html#a60567629a7f386494288702945cabe2a", null ],
+    [ "describe", "class_mue_lu_1_1_smoother_factory.html#a1040f110b490ed93e4ce4a9e8f81fa63", null ],
     [ "preSmootherPrototype_", "class_mue_lu_1_1_smoother_factory.html#a3040b2bbab8ddf2e7d2cbed433b741a1", null ],
     [ "postSmootherPrototype_", "class_mue_lu_1_1_smoother_factory.html#ae6683b887a05ee7e7880c14dcfca3f90", null ]
 ];

@@ -1,5 +1,31 @@
 var searchData=
 [
-  ['your_20code_0',['Step 3: Call NOX from your code',['../step3.html',1,'']]],
-  ['your_20code_20to_20nox_1',['Step 4: Link your code to NOX',['../step4.html',1,'']]]
+  ['s_20coding_20guidelines_0',['NOX Developer&apos;s Coding Guidelines',['../coding.html',1,'']]],
+  ['s_20guide_20to_20prerelease_20code_1',['NOX Developer&apos;s Guide to Prerelease Code',['../prerelease.html',1,'']]],
+  ['s_20guide_20to_20the_20git_20repository_20for_20nox_2',['NOX Developer&apos;s Guide to the Git Repository for NOX',['../cvsrepos.html',1,'']]],
+  ['set_20the_20solver_20parameters_3',['Step C: Set the solver parameters',['../step3.html#step3_stepc',1,'']]],
+  ['solve_4',['Step D: Construct the solver and solve',['../step3.html#step3_stepd',1,'']]],
+  ['solver_20and_20continuation_20packages_5',['NOX &amp;amp; LOCA: Object-Oriented Nonlinear Solver and Continuation Packages',['../index.html',1,'']]],
+  ['solver_20and_20solve_6',['Step D: Construct the solver and solve',['../step3.html#step3_stepd',1,'']]],
+  ['solver_20parameters_7',['Step C: Set the solver parameters',['../step3.html#step3_stepc',1,'']]],
+  ['special_20epetra_20features_8',['Special Epetra Features',['../epetra_interface.html#epetra_features',1,'']]],
+  ['specifications_9',['Parameter Specifications',['../loca_overview.html#loca_params',1,'']]],
+  ['status_20tests_10',['Step B: Construct the status tests',['../step3.html#step3_stepb',1,'']]],
+  ['step_201_3a_20download_20configure_20compile_20and_20install_20loca_11',['Step 1: Download, Configure, Compile, and Install LOCA',['../loca_user_info.html#loca_user_info_step_1',1,'']]],
+  ['step_201_3a_20download_20configure_20compile_20and_20install_20nox_12',['Step 1: Download, Configure, Compile, and Install NOX',['../step1.html',1,'']]],
+  ['step_202_3a_20create_20concrete_20implementations_20of_20the_20loca_20abstractgroup_20classes_13',['Step 2: Create concrete implementations of the LOCA AbstractGroup classes',['../loca_user_info.html#loca_user_info_step_2',1,'']]],
+  ['step_202_3a_20create_20concrete_20implementations_20of_20the_20nox_3a_3aabstract_20classes_14',['Step 2: Create concrete implementations of the NOX::Abstract classes',['../step2.html',1,'']]],
+  ['step_203_3a_20call_20loca_20from_20your_20code_15',['Step 3: Call LOCA from your code',['../loca_user_info.html#loca_user_info_step_3',1,'']]],
+  ['step_203_3a_20call_20nox_20from_20your_20code_16',['Step 3: Call NOX from your code',['../step3.html',1,'']]],
+  ['step_204_3a_20link_20your_20code_20to_20loca_17',['Step 4: Link your code to LOCA',['../loca_user_info.html#loca_user_info_step_4',1,'']]],
+  ['step_204_3a_20link_20your_20code_20to_20nox_18',['Step 4: Link your code to NOX',['../step4.html',1,'']]],
+  ['step_20a_3a_20instantiate_20a_20group_20object_20containing_20the_20initial_20guess_19',['Step A: Instantiate a Group object containing the initial guess.',['../step3.html#step3_stepa',1,'']]],
+  ['step_20b_3a_20construct_20the_20status_20tests_20',['Step B: Construct the status tests',['../step3.html#step3_stepb',1,'']]],
+  ['step_20c_3a_20set_20the_20solver_20parameters_21',['Step C: Set the solver parameters',['../step3.html#step3_stepc',1,'']]],
+  ['step_20d_3a_20construct_20the_20solver_20and_20solve_22',['Step D: Construct the solver and solve',['../step3.html#step3_stepd',1,'']]],
+  ['stepper_20parameters_23',['Stepper Parameters',['../loca_parameters.html#stepper_params',1,'']]],
+  ['stepping_20classes_24',['Parameter Stepping Classes',['../loca_class_overview.html#stepping',1,'']]],
+  ['strategies_20through_20factories_25',['User-Defined Strategies Through Factories',['../loca_parameters.html#user_defined_factory',1,'']]],
+  ['strategies_20through_20parameter_20lists_26',['User-Defined Strategies Through Parameter Lists',['../loca_parameters.html#user_defined_list',1,'']]],
+  ['system_27',['Using the Export Makefile System',['../step4.html#step4_export_makefiles',1,'']]]
 ];

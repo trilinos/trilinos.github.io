@@ -1,4 +1,25 @@
 var searchData=
 [
-  ['numerical_20algorithms_20anas_0',['Thyra : Interfaces and Support code for Abstract Numerical Algorithms (ANAs)',['../index.html',1,'']]]
+  ['factorizations_20for_20small_20changes_20in_20the_20forward_20operator_0',['Reuse of factorizations for small changes in the forward operator',['../class_thyra_1_1_linear_op_with_solve_factory_base.html#LOWSFB_reuse_of_factorization_sec',1,'']]],
+  ['failed_20evaluations_1',['Failed evaluations',['../class_thyra_1_1_model_evaluator.html#Thyra_ME_failed_evals_sec',1,'']]],
+  ['faq_2',['Frequently Asked Questions (FAQ)',['../index.html#thyra_faq_sec',1,'']]],
+  ['for_20abstract_20numerical_20algorithms_20anas_3',['Thyra : Interfaces and Support code for Abstract Numerical Algorithms (ANAs)',['../index.html',1,'']]],
+  ['for_20development_20of_20ana_20software_4',['Overview of Using Thyra Software for Development of ANA Software',['../group___thyra___op___vec___a_n_a___development__grp.html#Thyra_Op_Vec_ANA_Development_overview_sec',1,'']]],
+  ['for_20major_20changes_20in_20the_20structure_20of_20the_20forward_20operator_5',['Updating the linear solver for major changes in the structure of the forward operator',['../class_thyra_1_1_linear_op_with_solve_factory_base.html#LOWSFB_major_changes_in_op_sec',1,'']]],
+  ['for_20reduction_20transformation_20operations_6',['Support for reduction/transformation operations',['../class_thyra_1_1_multi_vector_base.html#Thyra_MVB_RTOp_sec',1,'']]],
+  ['for_20scaled_20and_20or_20adjoint_20forward_20operators_7',['Creating invertible operators for scaled and/or adjoint forward operators',['../class_thyra_1_1_linear_op_with_solve_factory_base.html#LOWSFB_scaled_adjoint_sec',1,'']]],
+  ['for_20small_20changes_20in_20the_20forward_20operator_8',['Reuse of factorizations for small changes in the forward operator',['../class_thyra_1_1_linear_op_with_solve_factory_base.html#LOWSFB_reuse_of_factorization_sec',1,'']]],
+  ['for_20specific_20types_20of_20operator_20applications_9',['Optional support for specific types of operator applications',['../class_thyra_1_1_linear_op_base.html#Thyra_LO_optional_adjoints_sec',1,'']]],
+  ['for_20spmd_20thyra_20implementations_10',['Subclasses for SPMD Thyra Implementations',['../group___thyra___op___vec__spmd__adapters__grp.html#Thyra_Op_Vec_spmd_adapters_classes_sec',1,'']]],
+  ['for_20subclass_20developers_11',['for subclass developers',['../class_thyra_1_1_linear_op_base.html#Thyra_LO_dev_notes_sec',1,'Notes for subclass developers'],['../class_thyra_1_1_multi_vector_base.html#Thyra_MVB_dev_notes_sec',1,'Notes for subclass developers'],['../class_thyra_1_1_vector_base.html#Thyra_VB_dev_notes_sec',1,'Notes for subclass developers']]],
+  ['forward_20operator_12',['forward operator',['../class_thyra_1_1_linear_op_with_solve_factory_base.html#LOWSFB_single_linear_solve_sec',1,'Performing a single linear solve given a forward operator'],['../class_thyra_1_1_linear_op_with_solve_factory_base.html#LOWSFB_reuse_of_factorization_sec',1,'Reuse of factorizations for small changes in the forward operator'],['../class_thyra_1_1_linear_op_with_solve_factory_base.html#LOWSFB_major_changes_in_op_sec',1,'Updating the linear solver for major changes in the structure of the forward operator']]],
+  ['forward_20operators_13',['Creating invertible operators for scaled and/or adjoint forward operators',['../class_thyra_1_1_linear_op_with_solve_factory_base.html#LOWSFB_scaled_adjoint_sec',1,'']]],
+  ['frequently_20asked_20questions_20faq_14',['Frequently Asked Questions (FAQ)',['../index.html#thyra_faq_sec',1,'']]],
+  ['fully_20and_20reduced_20parameters_15',['Mapping between fully and reduced parameters',['../class_thyra_1_1_default_lumped_parameter_model_evaluator.html#Thyra_DefaultLumpedParameterModelEvaluator_mapping_sec',1,'']]],
+  ['function_20bounds_16',['Variable and Function Bounds',['../class_thyra_1_1_model_evaluator.html#Thyra_ME_bounds_sec',1,'']]],
+  ['function_20derivatives_20and_20sensitivities_17',['Function derivatives and sensitivities',['../class_thyra_1_1_model_evaluator.html#Thyra_ME_derivatives_sec',1,'']]],
+  ['function_20evaluations_18',['Inexact function evaluations',['../class_thyra_1_1_model_evaluator.html#Thyra_ME_inexact_evals_sec',1,'']]],
+  ['functions_19',['functions',['../class_thyra_1_1_multi_vector_base.html#Thyra_MVB_rtop_collection_sec',1,'Collection of pre-written RTOps and wrapper functions'],['../class_thyra_1_1_vector_base.html#Thyra_VB_rtop_collection_sec',1,'Collection of pre-written RTOps and wrapper functions'],['../group__thyra__faq__grp.html#thyra_faq_why_helper_funcs_sec',1,'Q: Why is Thyra written with so many non-member helper functions instead of member functions?']]],
+  ['functions_20instead_20of_20member_20functions_20',['Q: Why is Thyra written with so many non-member helper functions instead of member functions?',['../group__thyra__faq__grp.html#thyra_faq_why_helper_funcs_sec',1,'']]],
+  ['fundamental_20thyra_20operator_20vector_20interfaces_21',['Questions about Fundamental Thyra Operator/Vector Interfaces',['../group__thyra__faq__grp.html#thyra_faq_itfc_sec',1,'']]]
 ];

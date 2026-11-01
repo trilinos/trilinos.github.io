@@ -9,11 +9,11 @@ var searchData=
   ['replicateddirectory_6',['ReplicatedDirectory',['../class_tpetra_1_1_details_1_1_replicated_directory.html',1,'Tpetra::Details']]],
   ['rightscalelocalcrsmatrix_7',['RightScaleLocalCrsMatrix',['../class_tpetra_1_1_details_1_1_right_scale_local_crs_matrix.html',1,'Tpetra::Details']]],
   ['rowgraph_8',['RowGraph',['../class_tpetra_1_1_row_graph.html',1,'Tpetra']]],
-  ['rowgraph_3c_20lo_2c_20go_2c_20node_5ftype_20_3e_9',['RowGraph&lt; LO, GO, node_type &gt;',['../class_tpetra_1_1_row_graph.html',1,'Tpetra']]],
-  ['rowinfo_10',['RowInfo',['../struct_tpetra_1_1_row_info.html',1,'Tpetra']]],
-  ['rowmatrix_11',['RowMatrix',['../class_tpetra_1_1_row_matrix.html',1,'Tpetra']]],
-  ['rowmatrix_3c_20_3a_3atpetra_3a_3adetails_3a_3adefaulttypes_3a_3ascalar_5ftype_2c_20_3a_3atpetra_3a_3adetails_3a_3adefaulttypes_3a_3alocal_5fordinal_5ftype_2c_20_3a_3atpetra_3a_3adetails_3a_3adefaulttypes_3a_3aglobal_5fordinal_5ftype_2c_20_3a_3atpetra_3a_3adetails_3a_3adefaulttypes_3a_3anode_5ftype_20_3e_12',['RowMatrix&lt; ::Tpetra::Details::DefaultTypes::scalar_type, ::Tpetra::Details::DefaultTypes::local_ordinal_type, ::Tpetra::Details::DefaultTypes::global_ordinal_type, ::Tpetra::Details::DefaultTypes::node_type &gt;',['../class_tpetra_1_1_row_matrix.html',1,'Tpetra']]],
-  ['rowmatrix_3c_20sc_2c_20lo_2c_20go_2c_20nt_20_3e_13',['RowMatrix&lt; SC, LO, GO, NT &gt;',['../class_tpetra_1_1_row_matrix.html',1,'Tpetra']]],
-  ['rowmatrix_3c_20scalar_2c_20lo_2c_20go_2c_20node_20_3e_14',['RowMatrix&lt; Scalar, LO, GO, Node &gt;',['../class_tpetra_1_1_row_matrix.html',1,'Tpetra']]],
+  ['rowinfo_9',['RowInfo',['../struct_tpetra_1_1_row_info.html',1,'Tpetra']]],
+  ['rowmatrix_10',['RowMatrix',['../class_tpetra_1_1_row_matrix.html',1,'Tpetra']]],
+  ['rowmatrix_3c_20_3a_3atpetra_3a_3adetails_3a_3adefaulttypes_3a_3ascalar_5ftype_2c_20_3a_3atpetra_3a_3adetails_3a_3adefaulttypes_3a_3alocal_5fordinal_5ftype_2c_20_3a_3atpetra_3a_3adetails_3a_3adefaulttypes_3a_3aglobal_5fordinal_5ftype_2c_20_3a_3atpetra_3a_3adetails_3a_3adefaulttypes_3a_3anode_5ftype_20_3e_11',['RowMatrix&lt; ::Tpetra::Details::DefaultTypes::scalar_type, ::Tpetra::Details::DefaultTypes::local_ordinal_type, ::Tpetra::Details::DefaultTypes::global_ordinal_type, ::Tpetra::Details::DefaultTypes::node_type &gt;',['../class_tpetra_1_1_row_matrix.html',1,'Tpetra']]],
+  ['rowmatrix_3c_20sc_2c_20lo_2c_20go_2c_20nt_20_3e_12',['RowMatrix&lt; SC, LO, GO, NT &gt;',['../class_tpetra_1_1_row_matrix.html',1,'Tpetra']]],
+  ['rowmatrix_3c_20scalar_2c_20lo_2c_20go_2c_20node_20_3e_13',['RowMatrix&lt; Scalar, LO, GO, Node &gt;',['../class_tpetra_1_1_row_matrix.html',1,'Tpetra']]],
+  ['rowmatrix_3c_20scalar_2c_20lo_2c_20go_2c_20node_5ftype_20_3e_14',['RowMatrix&lt; Scalar, LO, GO, node_type &gt;',['../class_tpetra_1_1_row_matrix.html',1,'Tpetra']]],
   ['rowmatrixtransposer_15',['RowMatrixTransposer',['../class_tpetra_1_1_row_matrix_transposer.html',1,'Tpetra']]]
 ];

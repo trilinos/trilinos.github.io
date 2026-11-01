@@ -1,7 +1,26 @@
 var searchData=
 [
   ['xpetracrsgraphadapter_0',['XpetraCrsGraphAdapter',['../class_zoltan2_1_1_xpetra_crs_graph_adapter.html',1,'Zoltan2']]],
-  ['xpetracrsmatrixadapter_1',['XpetraCrsMatrixAdapter',['../class_zoltan2_1_1_xpetra_crs_matrix_adapter.html',1,'Zoltan2']]],
-  ['xpetramultivectoradapter_2',['XpetraMultiVectorAdapter',['../class_zoltan2_1_1_xpetra_multi_vector_adapter.html',1,'Zoltan2']]],
-  ['xpetratraits_3',['XpetraTraits',['../struct_zoltan2_1_1_xpetra_traits.html',1,'Zoltan2']]]
+  ['xpetracrsgraphadapter_3c_20mytest_5ftcrsgraph_5ft_2c_20mytest_5ftmvector_5ft_20_3e_1',['XpetraCrsGraphAdapter&lt; mytest_tcrsGraph_t, mytest_tMVector_t &gt;',['../class_zoltan2_1_1_xpetra_crs_graph_adapter.html',1,'Zoltan2']]],
+  ['xpetracrsgraphadapter_3c_20sparsegraph_20_3e_2',['XpetraCrsGraphAdapter&lt; SparseGraph &gt;',['../class_zoltan2_1_1_xpetra_crs_graph_adapter.html',1,'Zoltan2']]],
+  ['xpetracrsgraphadapter_3c_20tcrsgraph_5ft_2c_20simpleuser_5ft_20_3e_3',['XpetraCrsGraphAdapter&lt; tcrsGraph_t, simpleUser_t &gt;',['../class_zoltan2_1_1_xpetra_crs_graph_adapter.html',1,'Zoltan2']]],
+  ['xpetracrsgraphadapter_3c_20tcrsgraph_5ft_2c_20tmvector_5ft_20_3e_4',['XpetraCrsGraphAdapter&lt; tcrsGraph_t, tMVector_t &gt;',['../class_zoltan2_1_1_xpetra_crs_graph_adapter.html',1,'Zoltan2']]],
+  ['xpetracrsgraphadapter_3c_20tcrsgraph_5ft_2c_20user_5ft_20_3e_5',['XpetraCrsGraphAdapter&lt; tcrsGraph_t, user_t &gt;',['../class_zoltan2_1_1_xpetra_crs_graph_adapter.html',1,'Zoltan2']]],
+  ['xpetracrsgraphadapter_3c_20xcrsgraph_5ft_2c_20tmvector_5ft_20_3e_6',['XpetraCrsGraphAdapter&lt; xcrsGraph_t, tMVector_t &gt;',['../class_zoltan2_1_1_xpetra_crs_graph_adapter.html',1,'Zoltan2']]],
+  ['xpetracrsgraphadapter_3c_20zgraph_5ft_20_3e_7',['XpetraCrsGraphAdapter&lt; zgraph_t &gt;',['../class_zoltan2_1_1_xpetra_crs_graph_adapter.html',1,'Zoltan2']]],
+  ['xpetracrsmatrixadapter_8',['XpetraCrsMatrixAdapter',['../class_zoltan2_1_1_xpetra_crs_matrix_adapter.html',1,'Zoltan2']]],
+  ['xpetracrsmatrixadapter_3c_20sparsematrix_20_3e_9',['XpetraCrsMatrixAdapter&lt; SparseMatrix &gt;',['../class_zoltan2_1_1_xpetra_crs_matrix_adapter.html',1,'Zoltan2']]],
+  ['xpetracrsmatrixadapter_3c_20sparsematrix_5ft_2c_20tmvector_5ft_20_3e_10',['XpetraCrsMatrixAdapter&lt; SparseMatrix_t, tMVector_t &gt;',['../class_zoltan2_1_1_xpetra_crs_matrix_adapter.html',1,'Zoltan2']]],
+  ['xpetracrsmatrixadapter_3c_20tcrsmatrix_5ft_2c_20simpleuser_5ft_20_3e_11',['XpetraCrsMatrixAdapter&lt; tcrsMatrix_t, simpleUser_t &gt;',['../class_zoltan2_1_1_xpetra_crs_matrix_adapter.html',1,'Zoltan2']]],
+  ['xpetracrsmatrixadapter_3c_20tcrsmatrix_5ft_2c_20tmvector_5ft_20_3e_12',['XpetraCrsMatrixAdapter&lt; tcrsMatrix_t, tMVector_t &gt;',['../class_zoltan2_1_1_xpetra_crs_matrix_adapter.html',1,'Zoltan2']]],
+  ['xpetracrsmatrixadapter_3c_20tmatrix_5ft_2c_20tmvector_5ft_20_3e_13',['XpetraCrsMatrixAdapter&lt; tMatrix_t, tMVector_t &gt;',['../class_zoltan2_1_1_xpetra_crs_matrix_adapter.html',1,'Zoltan2']]],
+  ['xpetracrsmatrixadapter_3c_20xcrsmatrix_5ft_2c_20tmvector_5ft_20_3e_14',['XpetraCrsMatrixAdapter&lt; xcrsMatrix_t, tMVector_t &gt;',['../class_zoltan2_1_1_xpetra_crs_matrix_adapter.html',1,'Zoltan2']]],
+  ['xpetracrsmatrixadapter_3c_20zmatrix_5ft_20_3e_15',['XpetraCrsMatrixAdapter&lt; zmatrix_t &gt;',['../class_zoltan2_1_1_xpetra_crs_matrix_adapter.html',1,'Zoltan2']]],
+  ['xpetramultivectoradapter_16',['XpetraMultiVectorAdapter',['../class_zoltan2_1_1_xpetra_multi_vector_adapter.html',1,'Zoltan2']]],
+  ['xpetramultivectoradapter_3c_20intvector_20_3e_17',['XpetraMultiVectorAdapter&lt; IntVector &gt;',['../class_zoltan2_1_1_xpetra_multi_vector_adapter.html',1,'Zoltan2']]],
+  ['xpetramultivectoradapter_3c_20tmvector_5ft_20_3e_18',['XpetraMultiVectorAdapter&lt; tMVector_t &gt;',['../class_zoltan2_1_1_xpetra_multi_vector_adapter.html',1,'Zoltan2']]],
+  ['xpetramultivectoradapter_3c_20vector_20_3e_19',['XpetraMultiVectorAdapter&lt; Vector &gt;',['../class_zoltan2_1_1_xpetra_multi_vector_adapter.html',1,'Zoltan2']]],
+  ['xpetramultivectoradapter_3c_20vectort_20_3e_20',['XpetraMultiVectorAdapter&lt; VectorT &gt;',['../class_zoltan2_1_1_xpetra_multi_vector_adapter.html',1,'Zoltan2']]],
+  ['xpetramultivectoradapter_3c_20xmvector_5ft_20_3e_21',['XpetraMultiVectorAdapter&lt; xMVector_t &gt;',['../class_zoltan2_1_1_xpetra_multi_vector_adapter.html',1,'Zoltan2']]],
+  ['xpetratraits_22',['XpetraTraits',['../struct_zoltan2_1_1_xpetra_traits.html',1,'Zoltan2']]]
 ];

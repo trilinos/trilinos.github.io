@@ -1,0 +1,28 @@
+var class_zoltan2_1_1_xpetra_crs_graph_adapter =
+[
+    [ "XpetraCrsGraphAdapter", "class_zoltan2_1_1_xpetra_crs_graph_adapter.html#abb7db1773145ea5821cdb5affbbf7111", null ],
+    [ "setWeights", "class_zoltan2_1_1_xpetra_crs_graph_adapter.html#a273157a5ff4aaa850765e0483b0511b0", null ],
+    [ "setWeightsDevice", "class_zoltan2_1_1_xpetra_crs_graph_adapter.html#a27856a075e05e66b0ae4f9066043b04f", null ],
+    [ "setWeightsHost", "class_zoltan2_1_1_xpetra_crs_graph_adapter.html#a2c647bea176c4c7a91d845f13cc01015", null ],
+    [ "setVertexWeights", "class_zoltan2_1_1_xpetra_crs_graph_adapter.html#a57eb137bd4cc5d8f03b5964fb09cb8bf", null ],
+    [ "setVertexWeightsDevice", "class_zoltan2_1_1_xpetra_crs_graph_adapter.html#aa111024acb6faa6d91cf8af0ee063d74", null ],
+    [ "setVertexWeightsHost", "class_zoltan2_1_1_xpetra_crs_graph_adapter.html#a3876e91a47518c72aed8cf74ecc4c3c2", null ],
+    [ "setWeightIsDegree", "class_zoltan2_1_1_xpetra_crs_graph_adapter.html#a1aa8c76c011e924b192b912bedf27525", null ],
+    [ "setVertexWeightIsDegree", "class_zoltan2_1_1_xpetra_crs_graph_adapter.html#a4b4262bc921801f5d6b42c9d6499626c", null ],
+    [ "setEdgeWeights", "class_zoltan2_1_1_xpetra_crs_graph_adapter.html#a968cf222f2ac02d221dcf72f91640ed2", null ],
+    [ "setEdgeWeightsDevice", "class_zoltan2_1_1_xpetra_crs_graph_adapter.html#af9483968d7a98183dbaf8b26bf51ddef", null ],
+    [ "setEdgeWeightsHost", "class_zoltan2_1_1_xpetra_crs_graph_adapter.html#a3f8082bed8d73dc3096e3356cbdaa00f", null ],
+    [ "getXpetraGraph", "class_zoltan2_1_1_xpetra_crs_graph_adapter.html#a0aba12592481b2c51740a2b0894bbb50", null ],
+    [ "getUserGraph", "class_zoltan2_1_1_xpetra_crs_graph_adapter.html#abfec6d80ad4ec3aa7a3d08c9583ae0ea", null ],
+    [ "getLocalNumVertices", "class_zoltan2_1_1_xpetra_crs_graph_adapter.html#a9c0502c7a848fb713709892b2e27578e", null ],
+    [ "getVertexIDsView", "class_zoltan2_1_1_xpetra_crs_graph_adapter.html#afc2af797171b1b5f3801317d6d895c5a", null ],
+    [ "getLocalNumEdges", "class_zoltan2_1_1_xpetra_crs_graph_adapter.html#a3b1970e0ec19ed1a52a1ffb11aba82e7", null ],
+    [ "getEdgesView", "class_zoltan2_1_1_xpetra_crs_graph_adapter.html#abd27b30d64f14b577dc6597b00fca04b", null ],
+    [ "getNumWeightsPerVertex", "class_zoltan2_1_1_xpetra_crs_graph_adapter.html#aee02f5a2032c5aef8b995acd6ce9aa9b", null ],
+    [ "getVertexWeightsView", "class_zoltan2_1_1_xpetra_crs_graph_adapter.html#abf78c4cc649711dc314a9bc590283bb8", null ],
+    [ "useDegreeAsVertexWeight", "class_zoltan2_1_1_xpetra_crs_graph_adapter.html#a196553f37b444080034eb92b81d00242", null ],
+    [ "getNumWeightsPerEdge", "class_zoltan2_1_1_xpetra_crs_graph_adapter.html#ae0bc757bfb0da650cc9bdee75d34fdc5", null ],
+    [ "getEdgeWeightsView", "class_zoltan2_1_1_xpetra_crs_graph_adapter.html#aac932a59838501d328de848d7c98f0c1", null ],
+    [ "applyPartitioningSolution", "class_zoltan2_1_1_xpetra_crs_graph_adapter.html#a4cf2a49022c913b380bf781a31a4e7de", null ],
+    [ "applyPartitioningSolution", "class_zoltan2_1_1_xpetra_crs_graph_adapter.html#ad26017f1de818a9a6a9da2e4de424388", null ]
+];

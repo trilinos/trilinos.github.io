@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['solve_20dense_20matrices_0',['Trilinos/Adelus: Object-Oriented Interface to a Direct Matrix Solve (Dense matrices)',['../index.html',1,'']]]
+  ['packing_0',['Matrix Packing',['../index.html#densep',1,'']]]
 ];

@@ -14,6 +14,6 @@ var class_mue_lu_1_1_scalar_dropping_distance_laplacian =
     [ "magnitudeType", "class_mue_lu_1_1_scalar_dropping_distance_laplacian.html#aa74de711194956bef64b987db0655a7f", null ],
     [ "boundary_nodes_type", "class_mue_lu_1_1_scalar_dropping_distance_laplacian.html#a1775903bf95a81a191d78b63bf39fd36", null ],
     [ "Level", "class_mue_lu_1_1_scalar_dropping_distance_laplacian.html#af080206f7e3ef27bd67da2536265086e", null ],
-    [ "runDroppingFunctors_on_dlap_inner", "class_mue_lu_1_1_scalar_dropping_distance_laplacian.html#ad21862e59e7010d4bdd756c2fa7047a7", null ],
-    [ "runDroppingFunctors_on_dlap", "class_mue_lu_1_1_scalar_dropping_distance_laplacian.html#a2afe790697daef28eb43f8bc5721e838", null ]
+    [ "runDroppingFunctors_on_dlap_inner", "class_mue_lu_1_1_scalar_dropping_distance_laplacian.html#a13282c1402e320bac60de714325a0552", null ],
+    [ "runDroppingFunctors_on_dlap", "class_mue_lu_1_1_scalar_dropping_distance_laplacian.html#a9a427f15e51c3f13eb1e7522bdd59228", null ]
 ];

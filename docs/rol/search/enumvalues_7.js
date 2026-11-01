@@ -1,13 +1,13 @@
 var searchData=
 [
-  ['linesearch_5fbacktracking_0',['LINESEARCH_BACKTRACKING',['../namespaceROL.html#a6a2b6701c6f46486d6cc9646d726a64aa20d3624c104f62b8cebf99598542fccf',1,'ROL']]],
-  ['linesearch_5fbisection_1',['LINESEARCH_BISECTION',['../namespaceROL.html#a6a2b6701c6f46486d6cc9646d726a64aa0f52739fc41b5f86fe339aa345d49a46',1,'ROL']]],
-  ['linesearch_5fbrents_2',['LINESEARCH_BRENTS',['../namespaceROL.html#a6a2b6701c6f46486d6cc9646d726a64aa8111cdb347985ffc9802b898278d892b',1,'ROL']]],
-  ['linesearch_5fcubicinterp_3',['LINESEARCH_CUBICINTERP',['../namespaceROL.html#a6a2b6701c6f46486d6cc9646d726a64aa5c4537ba5e435cd6e6158728ccc5d0bc',1,'ROL']]],
-  ['linesearch_5fgoldensection_4',['LINESEARCH_GOLDENSECTION',['../namespaceROL.html#a6a2b6701c6f46486d6cc9646d726a64aa90b18a88cfe7c0af73e32411f8ec53e3',1,'ROL']]],
-  ['linesearch_5fiterationscaling_5',['LINESEARCH_ITERATIONSCALING',['../namespaceROL.html#a6a2b6701c6f46486d6cc9646d726a64aadfea73fd39754e9aac5c9fc1c90ecfe8',1,'ROL']]],
-  ['linesearch_5flast_6',['LINESEARCH_LAST',['../namespaceROL.html#a6a2b6701c6f46486d6cc9646d726a64aa039c443d4ba4784da10ea43e556235c5',1,'ROL']]],
-  ['linesearch_5fpathbasedtargetlevel_7',['LINESEARCH_PATHBASEDTARGETLEVEL',['../namespaceROL.html#a6a2b6701c6f46486d6cc9646d726a64aa90e256e4de359800082ca57113bb66f3',1,'ROL']]],
+  ['linesearch_5fbacktracking_0',['LINESEARCH_BACKTRACKING',['../namespaceROL_1_1ROL.html#a41d06d97244002a74bbab3dda530cc68a9c97e4bb0e7c749ed607ed69cb12f187',1,'ROL::ROL::LINESEARCH_BACKTRACKING'],['../namespaceROL.html#a6a2b6701c6f46486d6cc9646d726a64aa20d3624c104f62b8cebf99598542fccf',1,'ROL::LINESEARCH_BACKTRACKING']]],
+  ['linesearch_5fbisection_1',['LINESEARCH_BISECTION',['../namespaceROL_1_1ROL.html#a41d06d97244002a74bbab3dda530cc68a76004a941f7745104c5bdaa411634930',1,'ROL::ROL::LINESEARCH_BISECTION'],['../namespaceROL.html#a6a2b6701c6f46486d6cc9646d726a64aa0f52739fc41b5f86fe339aa345d49a46',1,'ROL::LINESEARCH_BISECTION']]],
+  ['linesearch_5fbrents_2',['LINESEARCH_BRENTS',['../namespaceROL_1_1ROL.html#a41d06d97244002a74bbab3dda530cc68a9ebb2e887d8b3f8ee3d48a63e614402a',1,'ROL::ROL::LINESEARCH_BRENTS'],['../namespaceROL.html#a6a2b6701c6f46486d6cc9646d726a64aa8111cdb347985ffc9802b898278d892b',1,'ROL::LINESEARCH_BRENTS']]],
+  ['linesearch_5fcubicinterp_3',['LINESEARCH_CUBICINTERP',['../namespaceROL_1_1ROL.html#a41d06d97244002a74bbab3dda530cc68aafe461e091cb34a304a2ae06a1609304',1,'ROL::ROL::LINESEARCH_CUBICINTERP'],['../namespaceROL.html#a6a2b6701c6f46486d6cc9646d726a64aa5c4537ba5e435cd6e6158728ccc5d0bc',1,'ROL::LINESEARCH_CUBICINTERP']]],
+  ['linesearch_5fgoldensection_4',['LINESEARCH_GOLDENSECTION',['../namespaceROL_1_1ROL.html#a41d06d97244002a74bbab3dda530cc68a96faa1224b41dd02a48ac60df3b0b314',1,'ROL::ROL::LINESEARCH_GOLDENSECTION'],['../namespaceROL.html#a6a2b6701c6f46486d6cc9646d726a64aa90b18a88cfe7c0af73e32411f8ec53e3',1,'ROL::LINESEARCH_GOLDENSECTION']]],
+  ['linesearch_5fiterationscaling_5',['LINESEARCH_ITERATIONSCALING',['../namespaceROL_1_1ROL.html#a41d06d97244002a74bbab3dda530cc68ae03374e740883b96079ded54a7be130b',1,'ROL::ROL::LINESEARCH_ITERATIONSCALING'],['../namespaceROL.html#a6a2b6701c6f46486d6cc9646d726a64aadfea73fd39754e9aac5c9fc1c90ecfe8',1,'ROL::LINESEARCH_ITERATIONSCALING']]],
+  ['linesearch_5flast_6',['LINESEARCH_LAST',['../namespaceROL_1_1ROL.html#a41d06d97244002a74bbab3dda530cc68af0349a8aa9d710f61fb9251d1013c9a7',1,'ROL::ROL::LINESEARCH_LAST'],['../namespaceROL.html#a6a2b6701c6f46486d6cc9646d726a64aa039c443d4ba4784da10ea43e556235c5',1,'ROL::LINESEARCH_LAST']]],
+  ['linesearch_5fpathbasedtargetlevel_7',['LINESEARCH_PATHBASEDTARGETLEVEL',['../namespaceROL_1_1ROL.html#a41d06d97244002a74bbab3dda530cc68a4de87d33824ea14eccb7e2956c661cba',1,'ROL::ROL::LINESEARCH_PATHBASEDTARGETLEVEL'],['../namespaceROL.html#a6a2b6701c6f46486d6cc9646d726a64aa90e256e4de359800082ca57113bb66f3',1,'ROL::LINESEARCH_PATHBASEDTARGETLEVEL']]],
   ['linesearch_5fu_5fbacktracking_8',['LINESEARCH_U_BACKTRACKING',['../namespaceROL.html#a6955cba73793d6db3de10d8134ecdd91a167ca5b69a1e4993b48aa9ad52f7d17a',1,'ROL']]],
   ['linesearch_5fu_5fbisection_9',['LINESEARCH_U_BISECTION',['../namespaceROL.html#a6955cba73793d6db3de10d8134ecdd91abe32b0942d698f1cdffd34f104012f16',1,'ROL']]],
   ['linesearch_5fu_5fbrents_10',['LINESEARCH_U_BRENTS',['../namespaceROL.html#a6955cba73793d6db3de10d8134ecdd91aeecdf8f96dc5de291be195eba46d1580',1,'ROL']]],
@@ -17,5 +17,5 @@ var searchData=
   ['linesearch_5fu_5flast_14',['LINESEARCH_U_LAST',['../namespaceROL.html#a6955cba73793d6db3de10d8134ecdd91a8c0b1c5b0cfdc5e087f7bf8d580c5f91',1,'ROL']]],
   ['linesearch_5fu_5fpathbasedtargetlevel_15',['LINESEARCH_U_PATHBASEDTARGETLEVEL',['../namespaceROL.html#a6955cba73793d6db3de10d8134ecdd91a09906a44913b78b943169c0ec26b6db9',1,'ROL']]],
   ['linesearch_5fu_5fuserdefined_16',['LINESEARCH_U_USERDEFINED',['../namespaceROL.html#a6955cba73793d6db3de10d8134ecdd91aac68f9cbb12d8f0d218cda62c260ad65',1,'ROL']]],
-  ['linesearch_5fuserdefined_17',['LINESEARCH_USERDEFINED',['../namespaceROL.html#a6a2b6701c6f46486d6cc9646d726a64aa623979d15d545f52ea24d1aaa2299e5f',1,'ROL']]]
+  ['linesearch_5fuserdefined_17',['LINESEARCH_USERDEFINED',['../namespaceROL_1_1ROL.html#a41d06d97244002a74bbab3dda530cc68a371ac2d03f073c3c4c2e7b204fa53404',1,'ROL::ROL::LINESEARCH_USERDEFINED'],['../namespaceROL.html#a6a2b6701c6f46486d6cc9646d726a64aa623979d15d545f52ea24d1aaa2299e5f',1,'ROL::LINESEARCH_USERDEFINED']]]
 ];

@@ -10,7 +10,7 @@ var searchData=
   ['envconst_5f_7',['envConst_',['../class_zoltan2_1_1_problem.html#a133d6afab4a00826094ff0235f019a9d',1,'Zoltan2::Problem']]],
   ['epsilon_8',['epsilon',['../class_zoltan2_1_1u_multi_sort_item.html#a704addd62af57bc16b202a2066e0ef55',1,'Zoltan2::uMultiSortItem']]],
   ['errcheck_9',['errcheck',['../class_zoltan2_1_1_zoltan2___directory___node.html#a704a52b9c468cebdd00be97f20bb7fe7',1,'Zoltan2::Zoltan2_Directory_Node']]],
-  ['errorchecklevel_5f_10',['errorCheckLevel_',['../class_zoltan2_1_1_environment.html#adfb80fc6e98d6fd958c246b495256420',1,'Zoltan2::Environment']]],
+  ['errorchecklevel_5f_10',['errorCheckLevel_',['../class_zoltan2_1_1_environment.html#adfb80fc6e98d6fd958c246b495256420',1,'Zoltan2::Environment::errorCheckLevel_'],['../class_environment.html#adfb80fc6e98d6fd958c246b495256420',1,'Environment::errorCheckLevel_']]],
   ['evaluate_5f_11',['evaluate_',['../class_metric_analyzer.html#a299288ed86c7bd3bbb391414f3898396',1,'MetricAnalyzer']]],
   ['evaluatefactory_12',['evaluateFactory',['../class_comparison_source.html#a815cf5c56c28d9de163bd3223e83586c',1,'ComparisonSource']]]
 ];

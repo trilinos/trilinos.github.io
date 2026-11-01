@@ -8,5 +8,6 @@ var searchData=
   ['storage_5ftype_5fkeep_5fnewest_5',['STORAGE_TYPE_KEEP_NEWEST',['../namespace_tempus.html#a025fd31497b7ec7a7bd929086d709b23afe7a75a1de9f70597c0f734acf594add',1,'Tempus']]],
   ['storage_5ftype_5fstatic_6',['STORAGE_TYPE_STATIC',['../namespace_tempus.html#a025fd31497b7ec7a7bd929086d709b23a2d0902527015fc4fcba4aa907e7a0db5',1,'Tempus']]],
   ['storage_5ftype_5fundo_7',['STORAGE_TYPE_UNDO',['../namespace_tempus.html#a025fd31497b7ec7a7bd929086d709b23abd806ad4225a919ea1c4fe282a28139d',1,'Tempus']]],
-  ['storage_5ftype_5funlimited_8',['STORAGE_TYPE_UNLIMITED',['../namespace_tempus.html#a025fd31497b7ec7a7bd929086d709b23a5fccb9dede936716aaece5df183d2a28',1,'Tempus']]]
+  ['storage_5ftype_5funlimited_8',['STORAGE_TYPE_UNLIMITED',['../namespace_tempus.html#a025fd31497b7ec7a7bd929086d709b23a5fccb9dede936716aaece5df183d2a28',1,'Tempus']]],
+  ['sumovertimes_9',['SumOverTimes',['../namespace_tempus.html#a6f11a8b38b28d4a4fed9b5b40d50b162a609b6adc4c7613456793276f230f438d',1,'Tempus']]]
 ];

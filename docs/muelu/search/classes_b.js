@@ -16,7 +16,7 @@ var searchData=
   ['mergecountfunctor_13',['MergeCountFunctor',['../class_mue_lu_1_1_matrix_construction_1_1_merge_count_functor.html',1,'MueLu::MatrixConstruction']]],
   ['mergedblockedmatrix_14',['MergedBlockedMatrix',['../class_merged_blocked_matrix.html',1,'']]],
   ['mergedblockedmatrixfactory_15',['MergedBlockedMatrixFactory',['../class_mue_lu_1_1_merged_blocked_matrix_factory.html',1,'MueLu']]],
-  ['mergedsmoother_16',['mergedsmoother',['../class_merged_smoother.html',1,'MergedSmoother'],['../class_mue_lu_1_1_merged_smoother.html',1,'MueLu::MergedSmoother&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;']]],
+  ['mergedsmoother_16',['MergedSmoother',['../class_merged_smoother.html',1,'MergedSmoother'],['../class_mue_lu_1_1_merged_smoother.html',1,'MueLu::MergedSmoother&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;']]],
   ['mergefillfunctor_17',['MergeFillFunctor',['../class_mue_lu_1_1_matrix_construction_1_1_merge_fill_functor.html',1,'MueLu::MatrixConstruction']]],
   ['mhdrapfactory_18',['MHDRAPFactory',['../class_mue_lu_1_1_m_h_d_r_a_p_factory.html',1,'MueLu']]],
   ['minspmmv_19',['MinSpmMV',['../class_mue_lu_1_1_min_spm_m_v.html',1,'MueLu']]],

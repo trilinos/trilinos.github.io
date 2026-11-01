@@ -14,5 +14,5 @@ var class_mue_lu_1_1_vector_dropping_classical =
     [ "Level", "class_mue_lu_1_1_vector_dropping_classical.html#a6ab7bec621e282660703e52ac1294be2", null ],
     [ "nnz_count_type", "class_mue_lu_1_1_vector_dropping_classical.html#a6ef2264b1bbafd76e9ea8af8dbe212ae", null ],
     [ "block_indices_view_type", "class_mue_lu_1_1_vector_dropping_classical.html#a936e04f4b670d86977d297ae860c6390", null ],
-    [ "runDroppingFunctors_on_A", "class_mue_lu_1_1_vector_dropping_classical.html#a3cd027f4eefec64f1fab388454375911", null ]
+    [ "runDroppingFunctors_on_A", "class_mue_lu_1_1_vector_dropping_classical.html#a10325517edfe0017f943432cf656fb2e", null ]
 ];

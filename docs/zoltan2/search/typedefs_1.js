@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['comm_5ft_0',['Comm_t',['../class_zoltan2_1_1_environment.html#ab52d661409400400f0fcb74c5aa29319',1,'Zoltan2::Environment']]],
+  ['comm_5ft_0',['Comm_t',['../class_zoltan2_1_1_environment.html#ab52d661409400400f0fcb74c5aa29319',1,'Zoltan2::Environment::Comm_t'],['../class_environment.html#ab52d661409400400f0fcb74c5aa29319',1,'Environment::Comm_t']]],
   ['constidsdeviceview_1',['ConstIdsDeviceView',['../class_zoltan2_1_1_base_adapter.html#a635177858a79f5b896a9fce72a3ea143',1,'Zoltan2::BaseAdapter']]],
   ['constidshostview_2',['ConstIdsHostView',['../class_zoltan2_1_1_base_adapter.html#a8f988ff5e4cdac62204c111a24b02df1',1,'Zoltan2::BaseAdapter']]],
   ['constoffsetsdeviceview_3',['ConstOffsetsDeviceView',['../class_zoltan2_1_1_base_adapter.html#a3e27e1300587539f5d860ef8e79ca00e',1,'Zoltan2::BaseAdapter']]],
@@ -14,5 +14,5 @@ var searchData=
   ['coord_5ft_11',['coord_t',['../class_zoltan2_1_1coordinate_model_part_box.html#a2099604f2125bb13422739164b80ecda',1,'Zoltan2::coordinateModelPartBox']]],
   ['coordsdeviceview_12',['CoordsDeviceView',['../class_zoltan2_1_1_adapter_with_coords.html#a3c21decaba199fc13b1697ea4b2a58ba',1,'Zoltan2::AdapterWithCoords']]],
   ['coordshostview_13',['CoordsHostView',['../class_zoltan2_1_1_adapter_with_coords.html#accfb6c3feb2128173fb5211c99cf7a56',1,'Zoltan2::AdapterWithCoords']]],
-  ['crsadapter_5ft_14',['crsadapter_t',['../_tpetra_crs_matrix_input_8cpp.html#a02b45605c0ea34020e16b64114f93234',1,'crsAdapter_t:&#160;TpetraCrsMatrixInput.cpp'],['../_tpetra_row_graph_input_kokkos_8cpp.html#ad028d1a832877ab2e1f09b0eb5df2fb1',1,'crsAdapter_t:&#160;TpetraRowGraphInputKokkos.cpp'],['../_tpetra_row_matrix_input_8cpp.html#a02b45605c0ea34020e16b64114f93234',1,'crsAdapter_t:&#160;TpetraRowMatrixInput.cpp']]]
+  ['crsadapter_5ft_14',['crsAdapter_t',['../_tpetra_crs_matrix_input_8cpp.html#a02b45605c0ea34020e16b64114f93234',1,'crsAdapter_t:&#160;TpetraCrsMatrixInput.cpp'],['../_tpetra_row_graph_input_kokkos_8cpp.html#ad028d1a832877ab2e1f09b0eb5df2fb1',1,'crsAdapter_t:&#160;TpetraRowGraphInputKokkos.cpp'],['../_tpetra_row_matrix_input_8cpp.html#a02b45605c0ea34020e16b64114f93234',1,'crsAdapter_t:&#160;TpetraRowMatrixInput.cpp']]]
 ];

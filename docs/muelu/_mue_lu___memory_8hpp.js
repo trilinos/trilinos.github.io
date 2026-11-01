@@ -1,6 +1,6 @@
 var _mue_lu___memory_8hpp =
 [
-    [ "PrintMemoryUsage", "_mue_lu___memory_8hpp.html#a11c27664227aac4e4dd39acfb87bb5af", null ],
-    [ "PrintMemoryInfo", "_mue_lu___memory_8hpp.html#af8e87a10f8546fc4338c78cc7c38cb83", null ],
-    [ "ReportTimeAndMemory", "_mue_lu___memory_8hpp.html#aa8bc7137204e52950ca852a6fdf8b5b0", null ]
+    [ "MueLu::MemUtils::PrintMemoryUsage", "namespace_mue_lu_1_1_mem_utils.html#a11c27664227aac4e4dd39acfb87bb5af", null ],
+    [ "MueLu::MemUtils::PrintMemoryInfo", "namespace_mue_lu_1_1_mem_utils.html#af8e87a10f8546fc4338c78cc7c38cb83", null ],
+    [ "MueLu::MemUtils::ReportTimeAndMemory", "namespace_mue_lu_1_1_mem_utils.html#aa8bc7137204e52950ca852a6fdf8b5b0", null ]
 ];

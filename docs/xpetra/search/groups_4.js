@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['definition_20macros_0',['Unit Testing Definition Macros',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/teuchos/doc/html/group___teuchos___unit_test_definition_macros__grp.html',1,'']]],
-  ['deprecated_20teuchos_20code_1',['Deprecated Teuchos Code',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/teuchos/doc/html/group___teuchos___deprecated__grp.html',1,'']]]
+  ['enumerations_20for_20character_20inputs_20in_20teuchos_3a_3ablas_20methods_0',['Enumerations for character inputs in Teuchos::BLAS methods',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/teuchos/doc/html/group___b_l_a_s_enum__grp.html',1,'']]],
+  ['exceptions_20and_20setting_20breakpoints_1',['Utility code for throwing exceptions and setting breakpoints.',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/teuchos/doc/html/group___test_for_exception__grp.html',1,'']]]
 ];
