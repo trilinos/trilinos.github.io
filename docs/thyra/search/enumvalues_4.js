@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['nonconj_5fele_0',['NONCONJ_ELE',['../group___thyra___op___vec__fundamental__interfaces__code__grp.html#gga214169c51d2772af5fcd155ba5c1e7a6a56211f7d4df732ed33a46273542a33fa',1,'Thyra']]],
-  ['notrans_1',['NOTRANS',['../group___thyra___op___vec__fundamental__interfaces__code__grp.html#gga959712bcf3ed560543a0264b2bc97929a4f033a492ef97f641630e72f0b9e133e',1,'Thyra']]]
+  ['preconditioner_5finput_5ftype_5fas_5fmatrix_0',['PRECONDITIONER_INPUT_TYPE_AS_MATRIX',['../group___thyra___op___solve__fundamental__interfaces__code__grp.html#gga724d528c0dbe849a982b90b6e6bdcf93a88f68616bc2fe207f28ad0509d5d69d3',1,'Thyra']]],
+  ['preconditioner_5finput_5ftype_5fas_5foperator_1',['PRECONDITIONER_INPUT_TYPE_AS_OPERATOR',['../group___thyra___op___solve__fundamental__interfaces__code__grp.html#gga724d528c0dbe849a982b90b6e6bdcf93aaaad021fa247bf9a362f95a84fe50c0e',1,'Thyra']]]
 ];

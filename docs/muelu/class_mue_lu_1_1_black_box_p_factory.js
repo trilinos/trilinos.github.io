@@ -1,7 +1,7 @@
 var class_mue_lu_1_1_black_box_p_factory =
 [
-    [ "NodeID", "struct_mue_lu_1_1_black_box_p_factory_1_1_node_i_d.html", "struct_mue_lu_1_1_black_box_p_factory_1_1_node_i_d" ],
     [ "NodesIDs", "struct_mue_lu_1_1_black_box_p_factory_1_1_nodes_i_ds.html", "struct_mue_lu_1_1_black_box_p_factory_1_1_nodes_i_ds" ],
+    [ "NodeID", "struct_mue_lu_1_1_black_box_p_factory_1_1_node_i_d.html", "struct_mue_lu_1_1_black_box_p_factory_1_1_node_i_d" ],
     [ "BlackBoxPFactory", "class_mue_lu_1_1_black_box_p_factory.html#acd9fd45f366f6058caf397e236795eab", null ],
     [ "~BlackBoxPFactory", "class_mue_lu_1_1_black_box_p_factory.html#a99679830ae33c82cceac3cd651c61c78", null ],
     [ "GetValidParameterList", "class_mue_lu_1_1_black_box_p_factory.html#ae2fb0c07324a1fe77c96d35b7dbe0594", null ],

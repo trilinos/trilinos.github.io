@@ -8,5 +8,5 @@ var searchData=
   ['_7elu2x2diagonalstrategy_5',['~LU2x2DiagonalStrategy',['../class_teko_1_1_l_u2x2_diagonal_strategy.html#a6067c4c6f3bd7c3307f76d17a1a02c5a',1,'Teko::LU2x2DiagonalStrategy']]],
   ['_7epcdstrategy_6',['~PCDStrategy',['../class_teko_1_1_n_s_1_1_p_c_d_strategy.html#a700f21e91b00d5cc735a06edec06381c',1,'Teko::NS::PCDStrategy']]],
   ['_7etimingssimplepreconditionerfactory_7',['~TimingsSIMPLEPreconditionerFactory',['../class_teko_1_1_n_s_1_1_timings_s_i_m_p_l_e_preconditioner_factory.html#ad0420354a746f0d4605f7b20578bcc6e',1,'Teko::NS::TimingsSIMPLEPreconditionerFactory']]],
-  ['_7ezeroedoperator_8',['~zeroedoperator',['../class_teko_1_1_epetra_1_1_zeroed_operator.html#a6ee39f4b255658bbce702c35d38f443e',1,'Teko::Epetra::ZeroedOperator::~ZeroedOperator()'],['../class_teko_1_1_tpetra_helpers_1_1_zeroed_operator.html#a07ff2d08d81ca030aad861ee85173abc',1,'Teko::TpetraHelpers::ZeroedOperator::~ZeroedOperator()']]]
+  ['_7ezeroedoperator_8',['~ZeroedOperator',['../class_teko_1_1_epetra_1_1_zeroed_operator.html#a6ee39f4b255658bbce702c35d38f443e',1,'Teko::Epetra::ZeroedOperator::~ZeroedOperator()'],['../class_teko_1_1_tpetra_helpers_1_1_zeroed_operator.html#a07ff2d08d81ca030aad861ee85173abc',1,'Teko::TpetraHelpers::ZeroedOperator::~ZeroedOperator()']]]
 ];

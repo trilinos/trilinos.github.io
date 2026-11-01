@@ -2,7 +2,7 @@ var searchData=
 [
   ['r_5fdist_0',['r_dist',['../class_compadre_1_1_radius_result_set.html#a936390bf9ba9d0c3b3d061d86b921ef5',1,'Compadre::RadiusResultSet']]],
   ['radius_1',['radius',['../class_compadre_1_1_radius_result_set.html#a1d6edcbea76512fa1e7e5855734b8c23',1,'Compadre::RadiusResultSet']]],
-  ['radiusresultset_2',['radiusresultset',['../class_compadre_1_1_radius_result_set.html#a19a73bfa1cfc5cb8322523b0d262b0a8',1,'Compadre::RadiusResultSet::RadiusResultSet()'],['../class_compadre_1_1_radius_result_set.html',1,'Compadre::RadiusResultSet&lt; _DistanceType, _IndexType &gt;']]],
+  ['radiusresultset_2',['RadiusResultSet',['../class_compadre_1_1_radius_result_set.html',1,'Compadre::RadiusResultSet&lt; _DistanceType, _IndexType &gt;'],['../class_compadre_1_1_radius_result_set.html#a19a73bfa1cfc5cb8322523b0d262b0a8',1,'Compadre::RadiusResultSet::RadiusResultSet()']]],
   ['readme_2emd_3',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
   ['recent_20changes_4',['Recent Changes',['../index.html#autotoc_md6',1,'']]],
   ['reconstructionspace_5',['ReconstructionSpace',['../namespace_compadre.html#a64bb4f79de16fc9728def7ec3f4a120e',1,'Compadre']]],

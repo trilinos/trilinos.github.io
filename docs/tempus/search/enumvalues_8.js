@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['working_0',['WORKING',['../namespace_tempus.html#a24f0b0a527fc0ff0f86f64b5cff4532ba3cf4240b78211ea422d238fd1cbc2bd4',1,'Tempus']]]
+  ['timeintegral_0',['TimeIntegral',['../namespace_tempus.html#a6f11a8b38b28d4a4fed9b5b40d50b162af6b48673592510804fe9dbf88cb5c5f1',1,'Tempus']]]
 ];

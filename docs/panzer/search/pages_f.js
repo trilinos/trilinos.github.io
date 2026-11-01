@@ -1,10 +1,7 @@
 var searchData=
 [
-  ['page_0',['page',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/loca_parameters.html',1,'LOCA Parameter Reference Page'],['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/parameters.html',1,'NOX Parameter Reference Page']]],
-  ['panzer_1',['Panzer',['../index.html',1,'']]],
-  ['parameter_20reference_20page_2',['parameter reference page',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/loca_parameters.html',1,'LOCA Parameter Reference Page'],['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/parameters.html',1,'NOX Parameter Reference Page']]],
-  ['petsc_20interface_3',['The PETSc Interface',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/petsc_interface.html',1,'']]],
-  ['point_20continuation_20tutorial_4',['LOCA Turning Point Continuation Tutorial',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/loca_tp_continuation_tutorial.html',1,'']]],
-  ['portability_20issues_5',['Portability Issues',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/portability_issues.html',1,'']]],
-  ['prerelease_20code_6',['NOX Developer&apos;s Guide to Prerelease Code',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/prerelease.html',1,'']]]
+  ['main_20setup_20call_20for_20lazy_20evaluation_0',['(Required) Main setup call for lazy evaluation',['../classpanzer_1_1_basis_values2.html#autotoc_md0',1,'']]],
+  ['making_20enhancement_20requests_1',['Reporting Bugs and Making Enhancement Requests',['../index.html#bugs',1,'']]],
+  ['march_201st_202010_2',['NOX and LOCA Release Information (Last updated March 1st 2010)',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/panzer/doc/../../../packages/nox/doc/html/nox_release_information.html',1,'']]],
+  ['measure_20see_20integrationvalues2_3',['(Optional) If you are going to integrate quantities, you&apos;ll need the weighted measure (see IntegrationValues2)',['../classpanzer_1_1_basis_values2.html#autotoc_md3',1,'']]]
 ];

@@ -4,7 +4,7 @@ var searchData=
   ['labeledobject_1',['LabeledObject',['../class_teuchos_1_1_labeled_object.html#a075576549b14c7490425a9c737c2c536',1,'Teuchos::LabeledObject']]],
   ['lamch_2',['LAMCH',['../class_teuchos_1_1_l_a_p_a_c_k.html#a2defe6752ac6662aa596a2908b215c90',1,'Teuchos::LAPACK']]],
   ['langb_3',['LANGB',['../class_teuchos_1_1_l_a_p_a_c_k.html#a1c1b8107a77f19373d8b51fbc5fef71f',1,'Teuchos::LAPACK']]],
-  ['lapack_4',['lapack',['../class_teuchos_1_1_l_a_p_a_c_k.html#ac5aa4aab7118cd48cf621e5e15e406db',1,'Teuchos::LAPACK::LAPACK(void)'],['../class_teuchos_1_1_l_a_p_a_c_k.html#a36232e09cb826b79943f9e5e4ce65b76',1,'Teuchos::LAPACK::LAPACK(const LAPACK&lt; OrdinalType, ScalarType &gt; &amp;lapack)']]],
+  ['lapack_4',['LAPACK',['../class_teuchos_1_1_l_a_p_a_c_k.html#ac5aa4aab7118cd48cf621e5e15e406db',1,'Teuchos::LAPACK::LAPACK(void)'],['../class_teuchos_1_1_l_a_p_a_c_k.html#a36232e09cb826b79943f9e5e4ce65b76',1,'Teuchos::LAPACK::LAPACK(const LAPACK&lt; OrdinalType, ScalarType &gt; &amp;lapack)']]],
   ['lapy2_5',['LAPY2',['../class_teuchos_1_1_l_a_p_a_c_k.html#a93fa5f9682f6e0214c24a513ffe7f80a',1,'Teuchos::LAPACK']]],
   ['larfg_6',['LARFG',['../class_teuchos_1_1_l_a_p_a_c_k.html#a060784f0217ac3bbe7330ee6beb9f812',1,'Teuchos::LAPACK']]],
   ['larnd_7',['LARND',['../class_teuchos_1_1_l_a_p_a_c_k.html#a8e9f57972d30c8346269b57909b28628',1,'Teuchos::LAPACK']]],
@@ -17,11 +17,11 @@ var searchData=
   ['leftshift_14',['leftshift',['../class_teuchos_1_1_parameter_entry.html#aae6e8bc7195c168ea778c1da1a93e9d7',1,'Teuchos::ParameterEntry']]],
   ['length_15',['length',['../class_teuchos_1_1_array.html#a1c92461fa096a83d24ac8b4107f62d88',1,'Teuchos::Array::length()'],['../class_teuchos_1_1_serial_dense_vector.html#a22ff0f2271807c2a813ce2285f911aae',1,'Teuchos::SerialDenseVector::length()']]],
   ['level_16',['level',['../class_teuchos_1_1_stacked_timer_1_1_level_timer.html#aa6ce1a5ecf2097deb700ac64af11d09c',1,'Teuchos::StackedTimer::LevelTimer']]],
-  ['leveltimer_17',['leveltimer',['../class_teuchos_1_1_stacked_timer_1_1_level_timer.html#ab3de60aee27b333011743d3a818383da',1,'Teuchos::StackedTimer::LevelTimer::LevelTimer()'],['../class_teuchos_1_1_stacked_timer_1_1_level_timer.html#aeaa6b19d926e7169733cbb3021f852ed',1,'Teuchos::StackedTimer::LevelTimer::LevelTimer(int level, const char *name=&quot;RootTimer&quot;, LevelTimer *parent=nullptr, bool start_timer=true)'],['../class_teuchos_1_1_stacked_timer_1_1_level_timer.html#a6fc925f680c032ba8d42b14bb4a239b7',1,'Teuchos::StackedTimer::LevelTimer::LevelTimer(const LevelTimer &amp;src)']]],
+  ['leveltimer_17',['LevelTimer',['../class_teuchos_1_1_stacked_timer_1_1_level_timer.html#ab3de60aee27b333011743d3a818383da',1,'Teuchos::StackedTimer::LevelTimer::LevelTimer()'],['../class_teuchos_1_1_stacked_timer_1_1_level_timer.html#aeaa6b19d926e7169733cbb3021f852ed',1,'Teuchos::StackedTimer::LevelTimer::LevelTimer(int level, const char *name=&quot;RootTimer&quot;, LevelTimer *parent=nullptr, bool start_timer=true)'],['../class_teuchos_1_1_stacked_timer_1_1_level_timer.html#a6fc925f680c032ba8d42b14bb4a239b7',1,'Teuchos::StackedTimer::LevelTimer::LevelTimer(const LevelTimer &amp;src)']]],
   ['lock_18',['lock',['../class_teuchos_1_1_thread_lock.html#a4f1a41bcdb16c96194b82eb15a2c05c1',1,'Teuchos::ThreadLock']]],
   ['logallocation_19',['logAllocation',['../class_teuchos_1_1_details_1_1_allocation_logger.html#a9470b4629c1b72c20c9c0c706f429dc3',1,'Teuchos::Details::AllocationLogger']]],
   ['logdeallocation_20',['logDeallocation',['../class_teuchos_1_1_details_1_1_allocation_logger.html#acf13ee37a913f150b446645033e5cda5',1,'Teuchos::Details::AllocationLogger']]],
   ['lookupcounter_21',['lookupCounter',['../class_teuchos_1_1_performance_monitor_base.html#a8b299e2dc888ceff27146a1ba20894bf',1,'Teuchos::PerformanceMonitorBase']]],
   ['lowerbandwidth_22',['lowerBandwidth',['../class_teuchos_1_1_serial_band_dense_matrix.html#a7682a6497a03fefb64dc70703c1be396',1,'Teuchos::SerialBandDenseMatrix']]],
-  ['loweroffset_23',['lowerOffset',['../class_teuchos_1_1_array_r_c_p.html#a6b817f84cd75b98f266cae657358c368',1,'Teuchos::ArrayRCP']]]
+  ['loweroffset_23',['lowerOffset',['../class_teuchos_1_1_array_r_c_p.html#a6b817f84cd75b98f266cae657358c368',1,'Teuchos::ArrayRCP::lowerOffset()'],['../class_teuchos_1_1_array_r_c_p.html#a6b817f84cd75b98f266cae657358c368',1,'Teuchos::ArrayRCP&lt; const void &gt;::lowerOffset()'],['../class_teuchos_1_1_array_r_c_p.html#a6b817f84cd75b98f266cae657358c368',1,'Teuchos::ArrayRCP&lt; void &gt;::lowerOffset()']]]
 ];

@@ -1,7 +1,14 @@
 var _xpetra___config_defs_8hpp =
 [
-    [ "Xpetra::firstArg< Arg1, Arg2 >", "class_xpetra_1_1first_arg.html", "class_xpetra_1_1first_arg" ],
-    [ "Xpetra::secondArg< Arg1, Arg2 >", "class_xpetra_1_1second_arg.html", "class_xpetra_1_1second_arg" ],
+    [ "Xpetra::firstArg&lt; Arg1, Arg2 &gt;", "class_xpetra_1_1first_arg.html", "class_xpetra_1_1first_arg" ],
+    [ "Xpetra::secondArg&lt; Arg1, Arg2 &gt;", "class_xpetra_1_1second_arg.html", "class_xpetra_1_1second_arg" ],
+    [ "Xpetra::Array&lt; typename T &gt;", "class_xpetra_1_1_array.html", "class_xpetra_1_1_array" ],
+    [ "Xpetra::ArrayRCP&lt; class T &gt;", "class_xpetra_1_1_array_r_c_p.html", "class_xpetra_1_1_array_r_c_p" ],
+    [ "Xpetra::ArrayView&lt; class T &gt;", "class_xpetra_1_1_array_view.html", "class_xpetra_1_1_array_view" ],
+    [ "Xpetra::Comm&lt; typename Ordinal &gt;", "class_xpetra_1_1_comm.html", "class_xpetra_1_1_comm" ],
+    [ "Xpetra::OrdinalTraits&lt; class T &gt;", "struct_xpetra_1_1_ordinal_traits.html", "struct_xpetra_1_1_ordinal_traits" ],
+    [ "Xpetra::RCP&lt; class T &gt;", "class_xpetra_1_1_r_c_p.html", "class_xpetra_1_1_r_c_p" ],
+    [ "Xpetra::ScalarTraits&lt; typename T &gt;", "struct_xpetra_1_1_scalar_traits.html", "struct_xpetra_1_1_scalar_traits" ],
     [ "__cplusplus", "_xpetra___config_defs_8hpp.html#a1b391bc7ed92f79666c4a5d840aa1edd", null ],
     [ "XPETRA_THROWS_EFFICIENCY_WARNINGS", "_xpetra___config_defs_8hpp.html#a5d1aaced8e0af47a8925a5d6392f50c8", null ],
     [ "XPETRA_PRINTS_EFFICIENCY_WARNINGS", "_xpetra___config_defs_8hpp.html#a566903ed66cdae16b3f99bd190227945", null ],
@@ -10,23 +17,25 @@ var _xpetra___config_defs_8hpp =
     [ "XPETRA_MONITOR", "_xpetra___config_defs_8hpp.html#a777b973859a62f234fd7527af2c1db08", null ],
     [ "XPETRA_TEST_FOR_EXCEPTION", "_xpetra___config_defs_8hpp.html#aca3a4cc27031d622ee414b7b5f0806af", null ],
     [ "XPETRA_ERR_CHECK", "_xpetra___config_defs_8hpp.html#aacfbdb8ffb57f9b401ccd8a337d5249f", null ],
-    [ "Array_size_type", "_xpetra___config_defs_8hpp.html#a737a987da6fbd808a0790c47256db3fb", null ],
-    [ "global_size_t", "_xpetra___config_defs_8hpp.html#a271d58cd036f8c847275f21bc88427d0", null ],
-    [ "LocalGlobal", "_xpetra___config_defs_8hpp.html#a733dea33b13c79ffdb050d2d77b2d9ee", [
-      [ "LocallyReplicated", "_xpetra___config_defs_8hpp.html#a733dea33b13c79ffdb050d2d77b2d9eea7c64f79f602e0540f2cce83be92b819a", null ],
-      [ "GloballyDistributed", "_xpetra___config_defs_8hpp.html#a733dea33b13c79ffdb050d2d77b2d9eea83c716a253a277393f1f95561765c9d5", null ]
+    [ "Xpetra::Array_size_type", "namespace_xpetra.html#a737a987da6fbd808a0790c47256db3fb", null ],
+    [ "Xpetra::global_size_t", "namespace_xpetra.html#a271d58cd036f8c847275f21bc88427d0", null ],
+    [ "Xpetra::LocalGlobal", "namespace_xpetra.html#a733dea33b13c79ffdb050d2d77b2d9ee", [
+      [ "Xpetra::LocallyReplicated", "namespace_xpetra.html#a733dea33b13c79ffdb050d2d77b2d9eea7c64f79f602e0540f2cce83be92b819a", null ],
+      [ "Xpetra::GloballyDistributed", "namespace_xpetra.html#a733dea33b13c79ffdb050d2d77b2d9eea83c716a253a277393f1f95561765c9d5", null ]
     ] ],
-    [ "LookupStatus", "_xpetra___config_defs_8hpp.html#acc0107be8b975856d67ae8474f405831", [
-      [ "AllIDsPresent", "_xpetra___config_defs_8hpp.html#acc0107be8b975856d67ae8474f405831a57c8a1871e76d9d2b595ed91ced97c95", null ],
-      [ "IDNotPresent", "_xpetra___config_defs_8hpp.html#acc0107be8b975856d67ae8474f405831ae4192ed380addaa94d3603e5f71f7c43", null ]
+    [ "Xpetra::LookupStatus", "namespace_xpetra.html#acc0107be8b975856d67ae8474f405831", [
+      [ "Xpetra::AllIDsPresent", "namespace_xpetra.html#acc0107be8b975856d67ae8474f405831a57c8a1871e76d9d2b595ed91ced97c95", null ],
+      [ "Xpetra::IDNotPresent", "namespace_xpetra.html#acc0107be8b975856d67ae8474f405831ae4192ed380addaa94d3603e5f71f7c43", null ]
     ] ],
-    [ "OptimizeOption", "_xpetra___config_defs_8hpp.html#acf2f4e410836d369c8795783875fd7c5", [
-      [ "DoOptimizeStorage", "_xpetra___config_defs_8hpp.html#acf2f4e410836d369c8795783875fd7c5a238ae931d6e36566c7675a5d41f3a051", null ],
-      [ "DoNotOptimizeStorage", "_xpetra___config_defs_8hpp.html#acf2f4e410836d369c8795783875fd7c5ad6094ce4cdf70639d701f890aeeac404", null ]
+    [ "Xpetra::OptimizeOption", "namespace_xpetra.html#acf2f4e410836d369c8795783875fd7c5", [
+      [ "Xpetra::DoOptimizeStorage", "namespace_xpetra.html#acf2f4e410836d369c8795783875fd7c5a238ae931d6e36566c7675a5d41f3a051", null ],
+      [ "Xpetra::DoNotOptimizeStorage", "namespace_xpetra.html#acf2f4e410836d369c8795783875fd7c5ad6094ce4cdf70639d701f890aeeac404", null ]
     ] ],
-    [ "CombineMode", "_xpetra___config_defs_8hpp.html#af6a1304bc8e0917f0dee5c5ff73b4b15", [
-      [ "ADD", "_xpetra___config_defs_8hpp.html#af6a1304bc8e0917f0dee5c5ff73b4b15a23e72c1381f91906e00f1afc0f909ac7", null ],
-      [ "INSERT", "_xpetra___config_defs_8hpp.html#af6a1304bc8e0917f0dee5c5ff73b4b15a856eb04ad1bcaa5c9fc550eebdca753a", null ],
-      [ "ABSMAX", "_xpetra___config_defs_8hpp.html#af6a1304bc8e0917f0dee5c5ff73b4b15a6d271944d562f741bb38a908f154f7a4", null ]
-    ] ]
+    [ "Xpetra::CombineMode", "namespace_xpetra.html#af6a1304bc8e0917f0dee5c5ff73b4b15", [
+      [ "Xpetra::ADD", "namespace_xpetra.html#af6a1304bc8e0917f0dee5c5ff73b4b15a23e72c1381f91906e00f1afc0f909ac7", null ],
+      [ "Xpetra::INSERT", "namespace_xpetra.html#af6a1304bc8e0917f0dee5c5ff73b4b15a856eb04ad1bcaa5c9fc550eebdca753a", null ],
+      [ "Xpetra::ABSMAX", "namespace_xpetra.html#af6a1304bc8e0917f0dee5c5ff73b4b15a6d271944d562f741bb38a908f154f7a4", null ]
+    ] ],
+    [ "Xpetra::rcp", "namespace_xpetra.html#ab0600556d1618a6e0cb9c3122b1da46b", null ],
+    [ "Xpetra::typeName", "namespace_xpetra.html#a9be31eceb263b7ffdec0b66fd7e028b8", null ]
 ];

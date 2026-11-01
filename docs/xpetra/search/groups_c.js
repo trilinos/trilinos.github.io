@@ -1,4 +1,9 @@
 var searchData=
 [
-  ['point_20trapping_20support_20code_0',['Floating Point Trapping Support Code',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/teuchos/doc/html/group___teuchos___floating_point_trap__grp.html',1,'']]]
+  ['set_20of_20utilities_20for_20allocating_20temporary_20workspace_0',['Set of utilities for allocating temporary workspace.',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/teuchos/doc/html/group___teuchos___workspace__grp.html',1,'']]],
+  ['setting_20breakpoints_1',['Utility code for throwing exceptions and setting breakpoints.',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/teuchos/doc/html/group___test_for_exception__grp.html',1,'']]],
+  ['std_3a_3ashared_5fptr_2',['Conversion utilities for going between Teuchos::RCP and std::shared_ptr.',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/teuchos/doc/html/group___teuchos___r_c_p_std_shared_ptr_conversions__grp.html',1,'']]],
+  ['support_3',['Unit Testing Support',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/teuchos/doc/html/group___teuchos___unit_test__grp.html',1,'']]],
+  ['support_20code_4',['Floating Point Trapping Support Code',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/teuchos/doc/html/group___teuchos___floating_point_trap__grp.html',1,'']]],
+  ['support_20utilities_5',['Teuchos Language Support Utilities',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/teuchos/doc/html/group__teuchos__language__support__grp.html',1,'']]]
 ];

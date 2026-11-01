@@ -23,5 +23,5 @@ var searchData=
   ['locasort_20',['LOCASort',['../class_anasazi_1_1_l_o_c_a_sort.html',1,'Anasazi']]],
   ['lowertriangularblockelimination_21',['LowerTriangularBlockElimination',['../class_l_o_c_a_1_1_bordered_solver_1_1_lower_triangular_block_elimination.html',1,'LOCA::BorderedSolver']]],
   ['lowrankupdateop_22',['LowRankUpdateOp',['../class_l_o_c_a_1_1_epetra_1_1_low_rank_update_op.html',1,'LOCA::Epetra']]],
-  ['lowrankupdaterowmatrix_23',['lowrankupdaterowmatrix',['../class_l_o_c_a_1_1_epetra_1_1_low_rank_update_row_matrix.html',1,'LOCA::Epetra::LowRankUpdateRowMatrix'],['../class_l_o_c_a_1_1_tpetra_1_1_low_rank_update_row_matrix.html',1,'LOCA::Tpetra::LowRankUpdateRowMatrix']]]
+  ['lowrankupdaterowmatrix_23',['LowRankUpdateRowMatrix',['../class_l_o_c_a_1_1_epetra_1_1_low_rank_update_row_matrix.html',1,'LOCA::Epetra::LowRankUpdateRowMatrix'],['../class_l_o_c_a_1_1_tpetra_1_1_low_rank_update_row_matrix.html',1,'LOCA::Tpetra::LowRankUpdateRowMatrix']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['package_0',['Belos: An Iterative Linear Solvers Package',['../index.html',1,'']]]
+  ['frequently_20asked_20questions_0',['Frequently Asked Questions',['../index.html#belos_faq',1,'']]]
 ];

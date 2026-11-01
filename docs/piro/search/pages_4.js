@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['package_20for_20embedded_20analysis_20capabilitites_0',['Piro: Strategy package for embedded analysis capabilitites',['../index.html',1,'']]],
-  ['piro_3a_20strategy_20package_20for_20embedded_20analysis_20capabilitites_1',['Piro: Strategy package for embedded analysis capabilitites',['../index.html',1,'']]]
+  ['capabilitites_0',['Piro: Strategy package for embedded analysis capabilitites',['../index.html',1,'']]],
+  ['case_1',['Piro Use Case',['../index.html#piro_use',1,'']]],
+  ['confusion_2',['Model Evaluator Confusion',['../index.html#piro_me',1,'']]],
+  ['contacts_3',['Piro Contacts',['../index.html#piro_help',1,'']]]
 ];

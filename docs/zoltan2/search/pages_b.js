@@ -1,12 +1,10 @@
 var searchData=
 [
-  ['parmetis_0',['Graph partitioning with ParMETIS',['../parmetis_part_page.html',1,'']]],
-  ['partitioning_1',['Block partitioning',['../block_page.html',1,'']]],
-  ['partitioning_20and_20load_20balancing_2',['Partitioning and Load-Balancing',['../partition_page.html',1,'']]],
-  ['partitioning_20mj_3',['Multi-Jagged Coordinate Partitioning (MJ)',['../mj_page.html',1,'']]],
-  ['partitioning_20with_20parmetis_4',['Graph partitioning with ParMETIS',['../parmetis_part_page.html',1,'']]],
-  ['partitioning_20with_20ptscotch_5',['Graph partitioning with PTScotch',['../scotch_part_page.html',1,'']]],
-  ['partitioning_20with_20sphynx_6',['Graph partitioning with Sphynx',['../sphynx_page.html',1,'']]],
-  ['permutations_7',['Ordering and Permutations',['../ordering_page.html',1,'']]],
-  ['ptscotch_8',['Graph partitioning with PTScotch',['../scotch_part_page.html',1,'']]]
+  ['mckee_20ordering_0',['Reverse Cuthill-McKee ordering',['../rcm_page.html',1,'']]],
+  ['measures_1',['Quality Measures',['../sphynx_page.html#sphynx_quality',1,'']]],
+  ['measures_2',['measures',['../amd_page.html#amd_quality_measures',1,'Quality measures'],['../block_page.html#block_quality_measures',1,'Quality measures'],['../mj_page.html#mj_quality_measures',1,'Quality measures'],['../parmetis_part_page.html#parmetisPart_quality_measures',1,'Quality measures'],['../rcb_page.html#rcb_quality_measures',1,'Quality measures'],['../rcm_page.html#rcm_quality_measures',1,'Quality measures'],['../scotch_part_page.html#scotchPart_quality_measures',1,'Quality measures']]],
+  ['minimum_20degree_20ordering_3',['Approximate Minimum Degree Ordering',['../amd_page.html',1,'']]],
+  ['mj_4',['Multi-Jagged Coordinate Partitioning (MJ)',['../mj_page.html',1,'']]],
+  ['multi_20jagged_20algorithm_5',['Multi-jagged algorithm',['../mj_page.html#mj_algorithm',1,'']]],
+  ['multi_20jagged_20coordinate_20partitioning_20mj_6',['Multi-Jagged Coordinate Partitioning (MJ)',['../mj_page.html',1,'']]]
 ];

@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['tag_0',['tag',['../classshards_1_1_array_dimension.html#ae8a2e1297e5bf8bd4a9d29ea4ffba12b',1,'shards::ArrayDimension::tag()'],['../classshards_1_1_array.html#a8a441b38bd8f2c62925ab2db8da75f45',1,'shards::Array::tag()']]],
+  ['tag_0',['tag',['../classshards_1_1_array_dimension.html#ae8a2e1297e5bf8bd4a9d29ea4ffba12b',1,'shards::ArrayDimension::tag()'],['../classshards_1_1_array_3_01_scalar_00_01array__order_00_01void_00_01void_00_01void_00_01void_00_0af952cc32fd3b0d9917a06c522eaacaf.html#a9dccb2efb190dc539a9e5ac97976332a',1,'shards::Array&lt; Scalar, array_order, void, void, void, void, void, void, void, void &gt;::tag()'],['../classshards_1_1_array.html#a8a441b38bd8f2c62925ab2db8da75f45',1,'shards::Array::tag()'],['../classshards_1_1_array.html#a8a441b38bd8f2c62925ab2db8da75f45',1,'shards::Array&lt; Scalar, RankZero, void, void, void, void, void, void, void, void &gt;::tag()']]],
   ['to_5findex_1',['to_index',['../classshards_1_1_array_dim_tag.html#a0eed787815577a9e83e2c25ae316c1b5',1,'shards::ArrayDimTag']]],
   ['to_5fstring_2',['to_string',['../classshards_1_1_array_dim_tag.html#ab420a3c538d0011425204c0453e8a990',1,'shards::ArrayDimTag']]],
-  ['truncate_3',['truncate',['../classshards_1_1_array.html#a80b7fc05bbe153ff87913f6f5e42be8a',1,'shards::Array']]]
+  ['truncate_3',['truncate',['../classshards_1_1_array_3_01_scalar_00_01array__order_00_01void_00_01void_00_01void_00_01void_00_0af952cc32fd3b0d9917a06c522eaacaf.html#a912e5b9dcdaadc1c967516d04083d98d',1,'shards::Array&lt; Scalar, array_order, void, void, void, void, void, void, void, void &gt;::truncate()'],['../classshards_1_1_array.html#a80b7fc05bbe153ff87913f6f5e42be8a',1,'shards::Array::truncate()'],['../classshards_1_1_array.html#a80b7fc05bbe153ff87913f6f5e42be8a',1,'shards::Array&lt; Scalar, RankZero, void, void, void, void, void, void, void, void &gt;::truncate()']]]
 ];

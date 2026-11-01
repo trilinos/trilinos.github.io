@@ -30,7 +30,9 @@ var searchData=
   ['riluk_27',['RILUK',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_ifpack2_1_1_r_i_l_u_k.html',1,'Ifpack2']]],
   ['riluk_3c_20tpetra_3a_3arowmatrix_3c_20matrixtype_3a_3ascalar_5ftype_2c_20matrixtype_3a_3alocal_5fordinal_5ftype_2c_20matrixtype_3a_3aglobal_5fordinal_5ftype_2c_20matrixtype_3a_3anode_5ftype_20_3e_20_3e_28',['RILUK&lt; Tpetra::RowMatrix&lt; MatrixType::scalar_type, MatrixType::local_ordinal_type, MatrixType::global_ordinal_type, MatrixType::node_type &gt; &gt;',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_ifpack2_1_1_r_i_l_u_k.html',1,'Ifpack2']]],
   ['rowgraph_29',['RowGraph',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_ifpack2_1_1_details_1_1_row_graph.html',1,'Ifpack2::Details']]],
-  ['rowmatrix_30',['RowMatrix',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_ifpack2_1_1_details_1_1_row_matrix.html',1,'Ifpack2::Details']]],
-  ['rowsumfunctor_31',['RowSumFunctor',['../class_mue_lu_1_1_boundary_detection_1_1_row_sum_functor.html',1,'MueLu::BoundaryDetection']]],
-  ['runtimeerror_32',['RuntimeError',['../class_mue_lu_1_1_exceptions_1_1_runtime_error.html',1,'MueLu::Exceptions']]]
+  ['rowgraph_3c_20graphtype_20_3e_30',['RowGraph&lt; GraphType &gt;',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_ifpack2_1_1_details_1_1_row_graph.html',1,'Ifpack2::Details']]],
+  ['rowmatrix_31',['RowMatrix',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_ifpack2_1_1_details_1_1_row_matrix.html',1,'Ifpack2::Details']]],
+  ['rowmatrix_3c_20matrixtype_20_3e_32',['RowMatrix&lt; MatrixType &gt;',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_ifpack2_1_1_details_1_1_row_matrix.html',1,'Ifpack2::Details']]],
+  ['rowsumfunctor_33',['RowSumFunctor',['../class_mue_lu_1_1_boundary_detection_1_1_row_sum_functor.html',1,'MueLu::BoundaryDetection']]],
+  ['runtimeerror_34',['RuntimeError',['../class_mue_lu_1_1_exceptions_1_1_runtime_error.html',1,'MueLu::Exceptions']]]
 ];

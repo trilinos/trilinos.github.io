@@ -1,7 +1,7 @@
 var searchData=
 [
   ['no_5fassertions_0',['NO_ASSERTIONS',['../namespace_zoltan2.html#aa5647ff710d93088b7a1d04d16dbb28ba6988ce41922a05d4283580a2e556fc04',1,'Zoltan2']]],
-  ['no_5fstatus_1',['NO_STATUS',['../namespace_zoltan2.html#a6cae7ee10d21c7dada0507a5fec0fea4ad4e232477df407ef592c9d2c1d589047',1,'Zoltan2']]],
+  ['no_5fstatus_1',['NO_STATUS',['../namespace_zoltan2.html#a6cae7ee10d21c7dada0507a5fec0fea4ad4e232477df407ef592c9d2c1d589047',1,'Zoltan2::NO_STATUS'],['../_debug_manager_8cpp.html#ad4e232477df407ef592c9d2c1d589047',1,'NO_STATUS:&#160;Zoltan2_Parameters.hpp']]],
   ['no_5ftimers_2',['NO_TIMERS',['../namespace_zoltan2.html#a2dd9d7a02bc84c094dd86c8c20c644b3a347d353d94b06fd8742d3a9994935aca',1,'Zoltan2']]],
   ['normal_3',['normal',['../namespace_geometric_gen.html#a7d7e6d588f22bdfb8b62c7861614aeddaf8217fa5c80e85f2f4d72af7c87cf4dd',1,'GeometricGen']]],
   ['normalized_4',['NORMALIZED',['../class_zoltan2_1_1_sphynx.html#a5279801bd5762fc4367459f7e3ed862aa175ff6f89b1f1cbdc73c9657675953fc',1,'Zoltan2::Sphynx']]],
@@ -17,5 +17,5 @@ var searchData=
   ['num_5frange_5ftypes_14',['NUM_RANGE_TYPES',['../namespace_zoltan2.html#a85521ffef37f8ba522b17793fddf280ead625aa352192714f5f5c4ee68000dc1d',1,'Zoltan2']]],
   ['num_5fstatus_5foutput_5flevels_15',['NUM_STATUS_OUTPUT_LEVELS',['../namespace_zoltan2.html#a6cae7ee10d21c7dada0507a5fec0fea4ab544612bab177df18e1fb97b95e3a3f4',1,'Zoltan2']]],
   ['num_5ftiming_5foptions_16',['NUM_TIMING_OPTIONS',['../namespace_zoltan2.html#a2dd9d7a02bc84c094dd86c8c20c644b3afb354ca97a37718f7db7024f9198e322',1,'Zoltan2']]],
-  ['numweighttypes_17',['numweighttypes',['../partition_2rcb_performance_z1_8cpp.html#aae9d49bbbd69858ce68ddeaabea9d177a865aa7abf552156b7355204290ff24c2',1,'numWeightTypes:&#160;rcbPerformanceZ1.cpp'],['../rcb_performance_8cpp.html#aae9d49bbbd69858ce68ddeaabea9d177a865aa7abf552156b7355204290ff24c2',1,'numWeightTypes:&#160;rcbPerformance.cpp'],['../scaling_2rcb_performance_z1_8cpp.html#aae9d49bbbd69858ce68ddeaabea9d177a865aa7abf552156b7355204290ff24c2',1,'numWeightTypes:&#160;rcbPerformanceZ1.cpp']]]
+  ['numweighttypes_17',['numWeightTypes',['../partition_2rcb_performance_z1_8cpp.html#aae9d49bbbd69858ce68ddeaabea9d177a865aa7abf552156b7355204290ff24c2',1,'numWeightTypes:&#160;rcbPerformanceZ1.cpp'],['../rcb_performance_8cpp.html#aae9d49bbbd69858ce68ddeaabea9d177a865aa7abf552156b7355204290ff24c2',1,'numWeightTypes:&#160;rcbPerformance.cpp'],['../scaling_2rcb_performance_z1_8cpp.html#aae9d49bbbd69858ce68ddeaabea9d177a865aa7abf552156b7355204290ff24c2',1,'numWeightTypes:&#160;rcbPerformanceZ1.cpp']]]
 ];

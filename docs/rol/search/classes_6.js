@@ -49,7 +49,7 @@ var searchData=
   ['getsimpleeqconstrained_46',['getSimpleEqConstrained',['../classROL_1_1ZOO_1_1getSimpleEqConstrained.html',1,'ROL::ZOO']]],
   ['getsumofsquares_47',['getSumOfSquares',['../classROL_1_1ZOO_1_1getSumOfSquares.html',1,'ROL::ZOO']]],
   ['getzakharov_48',['getZakharov',['../classROL_1_1ZOO_1_1getZakharov.html',1,'ROL::ZOO']]],
-  ['gmres_49',['GMRES',['../classROL_1_1GMRES.html',1,'ROL']]],
+  ['gmres_49',['GMRES',['../classROL_1_1GMRES.html',1,'ROL::GMRES&lt; Real &gt;'],['../classROL_1_1ROL_1_1GMRES.html',1,'ROL::ROL::GMRES&lt; Real &gt;']]],
   ['goldensection_50',['GoldenSection',['../classROL_1_1GoldenSection.html',1,'ROL']]],
   ['gradient_5fu_51',['Gradient_U',['../classROL_1_1Gradient__U.html',1,'ROL']]],
   ['gradientalgorithm_52',['GradientAlgorithm',['../classROL_1_1TypeB_1_1GradientAlgorithm.html',1,'ROL::TypeB']]],

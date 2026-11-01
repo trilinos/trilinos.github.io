@@ -1,8 +1,10 @@
 \documentclass{article}
+\usepackage{iftex}
 \usepackage{ifthen}
 \usepackage{epsfig}
 \usepackage[utf8]{inputenc}
 \usepackage{xcolor}
+\ifPDFTeX
 \usepackage{newunicodechar}
   \makeatletter
     \def\doxynewunicodechar#1#2{%
@@ -23,6 +25,7 @@
   \doxynewunicodechar{²}{${}^{2}$}% Superscript two
   \doxynewunicodechar{³}{${}^{3}$}% Superscript three
 
+\fi
 \pagestyle{empty}
 \begin{document}
 $ O(1)$
@@ -38,8 +41,7 @@ $w =
 max(u,v)$
 \pagebreak
 
-\[
-  k = \begin{cases}
+\[  k = \begin{cases}
     i         & \text{if $u > v$}, \\
     \min(i,j) & \text{if $u = v$}, \\
     j         & \text{if $u < v$}. \\
@@ -47,8 +49,7 @@ max(u,v)$
 \]
 \pagebreak
 
-\[
-  w = \begin{cases}
+\[  w = \begin{cases}
     u     & \text{if $u > v$}, \\
     v     & \text{if $u < v$}. \\
     u     & \text{otherwise}. \\
@@ -56,8 +57,7 @@ max(u,v)$
 \]
 \pagebreak
 
-\[
-  k = \begin{cases}
+\[  k = \begin{cases}
     i         & \text{if $u > v$}, \\
     j         & \text{if $u < v$}. \\
     \min(i,j) & \text{otherwise}. \\
@@ -69,8 +69,7 @@ $w =
 min(u,v)$
 \pagebreak
 
-\[
-  k = \begin{cases}
+\[  k = \begin{cases}
     i         & \text{if $u < v$}, \\
     \min(i,j) & \text{if $u = v$}, \\
     j         & \text{if $u > v$}. \\
@@ -99,8 +98,7 @@ $O(N (\log N) (\log P))$
 $N \log N$
 \pagebreak
 
-\[
-    x(t) = \sum_{i=0}^d x_i t^i
+\[    x(t) = \sum_{i=0}^d x_i t^i
 \]
 \pagebreak
 

@@ -1,19 +1,17 @@
 var searchData=
 [
-  ['out_5farg_5fdfdp_0',['OUT_ARG_DfDp',['../class_thyra_1_1_model_evaluator_base.html#a951e2b8929bd0bb3cf0e9490ab1fee38ab3cd7737279ab11bd3f013b886cd5136',1,'Thyra::ModelEvaluatorBase']]],
-  ['out_5farg_5fdfdp_5fmp_1',['OUT_ARG_DfDp_mp',['../class_thyra_1_1_model_evaluator_base.html#a5522d788df5430fa4d426a0bec89f913a685506aab9241a852f388564ba560056',1,'Thyra::ModelEvaluatorBase']]],
-  ['out_5farg_5fdgdp_2',['OUT_ARG_DgDp',['../class_thyra_1_1_model_evaluator_base.html#a9ab460861d43621a1a39e6096827d94aadff6a21a0fcb880192e3ccba98ab1949',1,'Thyra::ModelEvaluatorBase']]],
-  ['out_5farg_5fdgdp_5fmp_3',['OUT_ARG_DgDp_mp',['../class_thyra_1_1_model_evaluator_base.html#aa173a79d547ccfa58ec3de9d05a6bc9ea641c550f1103e4a6cbebca8f54e5e4e5',1,'Thyra::ModelEvaluatorBase']]],
-  ['out_5farg_5fdgdx_4',['OUT_ARG_DgDx',['../class_thyra_1_1_model_evaluator_base.html#a121758676313420c50c9d8a418e3b1bca73ff2ddae6b4e7eab87640124fcba56c',1,'Thyra::ModelEvaluatorBase']]],
-  ['out_5farg_5fdgdx_5fdot_5',['OUT_ARG_DgDx_dot',['../class_thyra_1_1_model_evaluator_base.html#a6c25884d96f08af141a0f1b85aac0098a3d0410d00d4ee4bd6799bac9ed6a0296',1,'Thyra::ModelEvaluatorBase']]],
-  ['out_5farg_5fdgdx_5fdot_5fmp_6',['OUT_ARG_DgDx_dot_mp',['../class_thyra_1_1_model_evaluator_base.html#ae7c674aeebf278ed23d0cc6f4923bbeeadc00bd142ab2c02d63bc03a1ba50a879',1,'Thyra::ModelEvaluatorBase']]],
-  ['out_5farg_5fdgdx_5fmp_7',['OUT_ARG_DgDx_mp',['../class_thyra_1_1_model_evaluator_base.html#a556df16951a2f4b1d6a7d7181f89e12aaabafb1cd6d8dd101f1b7ef2caf02a2fc',1,'Thyra::ModelEvaluatorBase']]],
-  ['out_5farg_5ff_8',['OUT_ARG_f',['../class_thyra_1_1_model_evaluator_base.html#a0dcb168274ca26954a0b3ff74bc185b2a739cd09c2f8914c78ba9b954bd0402e8',1,'Thyra::ModelEvaluatorBase']]],
-  ['out_5farg_5ff_5fmp_9',['OUT_ARG_f_mp',['../class_thyra_1_1_model_evaluator_base.html#a0dcb168274ca26954a0b3ff74bc185b2a6f26cf9e69d1fad3b8518c7b34596178',1,'Thyra::ModelEvaluatorBase']]],
-  ['out_5farg_5ff_5fpoly_10',['OUT_ARG_f_poly',['../class_thyra_1_1_model_evaluator_base.html#a0dcb168274ca26954a0b3ff74bc185b2a34a9714884b030000695dbc43dc2bc12',1,'Thyra::ModelEvaluatorBase']]],
-  ['out_5farg_5fg_5fmp_11',['OUT_ARG_g_mp',['../class_thyra_1_1_model_evaluator_base.html#a3e6117306931033b175b0015fc0c945baafbe9fcf811a0731f7f4ad25557b19a0',1,'Thyra::ModelEvaluatorBase']]],
-  ['out_5farg_5fw_12',['OUT_ARG_W',['../class_thyra_1_1_model_evaluator_base.html#a0dcb168274ca26954a0b3ff74bc185b2a7edd7ee918e069e79f7048fcfb078d71',1,'Thyra::ModelEvaluatorBase']]],
-  ['out_5farg_5fw_5fmp_13',['OUT_ARG_W_mp',['../class_thyra_1_1_model_evaluator_base.html#a0dcb168274ca26954a0b3ff74bc185b2a84855f135253f69da52b11b72e17841f',1,'Thyra::ModelEvaluatorBase']]],
-  ['out_5farg_5fw_5fop_14',['OUT_ARG_W_op',['../class_thyra_1_1_model_evaluator_base.html#a0dcb168274ca26954a0b3ff74bc185b2a47fd06e2e5e1c849d6a4b13ecdb70734',1,'Thyra::ModelEvaluatorBase']]],
-  ['out_5farg_5fw_5fprec_15',['OUT_ARG_W_prec',['../class_thyra_1_1_model_evaluator_base.html#a0dcb168274ca26954a0b3ff74bc185b2a741e58dcd8fe23f7c9d032e97d5a69a5',1,'Thyra::ModelEvaluatorBase']]]
+  ['solve_5fmeasure_5fnorm_5finit_5fresidual_0',['SOLVE_MEASURE_NORM_INIT_RESIDUAL',['../group___thyra___op___solve__fundamental__interfaces__code__grp.html#ggaa00883ca75e1ab62ec24a5d697251734a215492c2f1a569476fe7df0fbd2a2f86',1,'Thyra']]],
+  ['solve_5fmeasure_5fnorm_5fresidual_1',['SOLVE_MEASURE_NORM_RESIDUAL',['../group___thyra___op___solve__fundamental__interfaces__code__grp.html#ggaa00883ca75e1ab62ec24a5d697251734a3db1e489c7fc027a4cd52cc454939d02',1,'Thyra']]],
+  ['solve_5fmeasure_5fnorm_5frhs_2',['SOLVE_MEASURE_NORM_RHS',['../group___thyra___op___solve__fundamental__interfaces__code__grp.html#ggaa00883ca75e1ab62ec24a5d697251734a4c133b5e87cce0c384f298be94bed1d2',1,'Thyra']]],
+  ['solve_5fmeasure_5fnorm_5fsolution_3',['SOLVE_MEASURE_NORM_SOLUTION',['../group___thyra___op___solve__fundamental__interfaces__code__grp.html#ggaa00883ca75e1ab62ec24a5d697251734a756e0120ddef8839b72eed8ba44166a3',1,'Thyra']]],
+  ['solve_5fmeasure_5fone_4',['SOLVE_MEASURE_ONE',['../group___thyra___op___solve__fundamental__interfaces__code__grp.html#ggaa00883ca75e1ab62ec24a5d697251734aee72a4548bf7cd1cd2f430fe44b6e164',1,'Thyra']]],
+  ['solve_5fstatus_5fconverged_5',['SOLVE_STATUS_CONVERGED',['../group___thyra___op___solve__fundamental__interfaces__code__grp.html#gga9426be3e153f2799ccae5104ba4ba010a92068373393f99ee3f3decc536bc0dac',1,'Thyra']]],
+  ['solve_5fstatus_5funconverged_6',['SOLVE_STATUS_UNCONVERGED',['../group___thyra___op___solve__fundamental__interfaces__code__grp.html#gga9426be3e153f2799ccae5104ba4ba010a70666df00db60bf6cec4f8eefeb74093',1,'Thyra']]],
+  ['solve_5fstatus_5funknown_7',['SOLVE_STATUS_UNKNOWN',['../group___thyra___op___solve__fundamental__interfaces__code__grp.html#gga9426be3e153f2799ccae5104ba4ba010afd9f0fb6770d78aa468ff5fbf9dd7403',1,'Thyra']]],
+  ['stride_5ftype_5fnonunit_8',['STRIDE_TYPE_NONUNIT',['../group___thyra___op___vec__fundamental__interfaces__code__grp.html#gga70ed6367e1d4feb7c360a5666e4cc082a45c8add8b2090272a6650dadb6ba432f',1,'Thyra']]],
+  ['stride_5ftype_5funit_9',['STRIDE_TYPE_UNIT',['../group___thyra___op___vec__fundamental__interfaces__code__grp.html#gga70ed6367e1d4feb7c360a5666e4cc082a308ad2240e3fd9a37978968b18ed625e',1,'Thyra']]],
+  ['support_5fsolve_5fforward_5fand_5ftranspose_10',['SUPPORT_SOLVE_FORWARD_AND_TRANSPOSE',['../group___thyra___op___solve__fundamental__interfaces__code__grp.html#gga76337245b47dc85bc5f24d0cd6e6367da6df6366fc0440b4a16029f43f4e08dc5',1,'Thyra']]],
+  ['support_5fsolve_5fforward_5fonly_11',['SUPPORT_SOLVE_FORWARD_ONLY',['../group___thyra___op___solve__fundamental__interfaces__code__grp.html#gga76337245b47dc85bc5f24d0cd6e6367da0e16289eb60cfed68f6169f47e01f7ed',1,'Thyra']]],
+  ['support_5fsolve_5ftranspose_5fonly_12',['SUPPORT_SOLVE_TRANSPOSE_ONLY',['../group___thyra___op___solve__fundamental__interfaces__code__grp.html#gga76337245b47dc85bc5f24d0cd6e6367daf54bd5300237b2e94fe82db3a98ad0a7',1,'Thyra']]],
+  ['support_5fsolve_5funspecified_13',['SUPPORT_SOLVE_UNSPECIFIED',['../group___thyra___op___solve__fundamental__interfaces__code__grp.html#gga76337245b47dc85bc5f24d0cd6e6367daa0de3986dd08d509e66ef820f0344279',1,'Thyra']]]
 ];

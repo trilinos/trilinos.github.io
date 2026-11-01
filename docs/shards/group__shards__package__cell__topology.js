@@ -2,17 +2,17 @@ var group__shards__package__cell__topology =
 [
     [ "shards::Node", "structshards_1_1_node.html", null ],
     [ "shards::Particle", "structshards_1_1_particle.html", null ],
-    [ "shards::Line< NodeCount >", "structshards_1_1_line.html", null ],
-    [ "shards::Beam< NodeCount >", "structshards_1_1_beam.html", null ],
-    [ "shards::ShellLine< NodeCount >", "structshards_1_1_shell_line.html", null ],
-    [ "shards::Triangle< NodeCount >", "structshards_1_1_triangle.html", null ],
-    [ "shards::ShellTriangle< NodeCount >", "structshards_1_1_shell_triangle.html", null ],
-    [ "shards::Quadrilateral< NodeCount >", "structshards_1_1_quadrilateral.html", null ],
-    [ "shards::ShellQuadrilateral< NodeCount >", "structshards_1_1_shell_quadrilateral.html", null ],
-    [ "shards::Tetrahedron< NodeCount >", "structshards_1_1_tetrahedron.html", null ],
-    [ "shards::Pyramid< NodeCount >", "structshards_1_1_pyramid.html", null ],
-    [ "shards::Wedge< NodeCount >", "structshards_1_1_wedge.html", null ],
-    [ "shards::Hexahedron< NodeCount >", "structshards_1_1_hexahedron.html", null ],
+    [ "shards::Line&lt; NodeCount &gt;", "structshards_1_1_line.html", null ],
+    [ "shards::Beam&lt; NodeCount &gt;", "structshards_1_1_beam.html", null ],
+    [ "shards::ShellLine&lt; NodeCount &gt;", "structshards_1_1_shell_line.html", null ],
+    [ "shards::Triangle&lt; NodeCount &gt;", "structshards_1_1_triangle.html", null ],
+    [ "shards::ShellTriangle&lt; NodeCount &gt;", "structshards_1_1_shell_triangle.html", null ],
+    [ "shards::Quadrilateral&lt; NodeCount &gt;", "structshards_1_1_quadrilateral.html", null ],
+    [ "shards::ShellQuadrilateral&lt; NodeCount &gt;", "structshards_1_1_shell_quadrilateral.html", null ],
+    [ "shards::Tetrahedron&lt; NodeCount &gt;", "structshards_1_1_tetrahedron.html", null ],
+    [ "shards::Pyramid&lt; NodeCount &gt;", "structshards_1_1_pyramid.html", null ],
+    [ "shards::Wedge&lt; NodeCount &gt;", "structshards_1_1_wedge.html", null ],
+    [ "shards::Hexahedron&lt; NodeCount &gt;", "structshards_1_1_hexahedron.html", null ],
     [ "shards::CellTopology", "classshards_1_1_cell_topology.html", [
       [ "CellTopology", "classshards_1_1_cell_topology.html#a9abf3514e52de6b8ca73550c13c0bea6", null ],
       [ "CellTopology", "classshards_1_1_cell_topology.html#a9197604f0fa8413a7af472f0a496a40a", null ],
@@ -71,11 +71,11 @@ var group__shards__package__cell__topology =
       [ "node", "struct_cell_topology_data___subcell.html#ae54645128bc0d1054f027f9d30583c60", null ]
     ] ],
     [ "CellTopologyData_Permutation", "struct_cell_topology_data___permutation.html", null ],
-    [ "shards::CellTopologyTraits< Dimension, Number_Vertex, Number_Node, EdgeList, EdgeMaps, FaceList, FaceMaps, PermutationMaps, PermutationPolarity >", "structshards_1_1_cell_topology_traits.html", [
+    [ "shards::CellTopologyTraits&lt; Dimension, Number_Vertex, Number_Node, EdgeList, EdgeMaps, FaceList, FaceMaps, PermutationMaps, PermutationPolarity &gt;", "structshards_1_1_cell_topology_traits.html", [
+      [ "subcell", "structshards_1_1_cell_topology_traits_1_1subcell.html", null ],
+      [ "side", "structshards_1_1_cell_topology_traits_1_1side.html", null ],
       [ "edge", "structshards_1_1_cell_topology_traits_1_1edge.html", null ],
       [ "permutation", "structshards_1_1_cell_topology_traits_1_1permutation.html", null ],
-      [ "side", "structshards_1_1_cell_topology_traits_1_1side.html", null ],
-      [ "subcell", "structshards_1_1_cell_topology_traits_1_1subcell.html", null ],
       [ "Traits", "structshards_1_1_cell_topology_traits.html#a1ade6499237b9b7171c6bf80313a75d7", null ]
     ] ],
     [ "CellTopologyData", "group__shards__package__cell__topology.html#gaced4ac1103f31ae1d467d884a5b69288", null ],

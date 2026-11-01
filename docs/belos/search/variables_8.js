@@ -1,7 +1,19 @@
 var searchData=
 [
-  ['imptolscale_0',['impTolScale',['../struct_belos_1_1_default_solver_parameters.html#a36f1260c5b23d0461ded198e4d489164',1,'Belos::DefaultSolverParameters']]],
-  ['ipiv_1',['ipiv',['../struct_belos_1_1_r_c_g_iter_state.html#ad29bffd05aa6bf1d6985304ea368e91d',1,'Belos::RCGIterState']]],
-  ['ishermitian_5f_2',['isHermitian_',['../class_belos_1_1_linear_problem.html#ada82c6cad4bc745aac96df0d7c1e413f',1,'Belos::LinearProblem']]],
-  ['isset_5f_3',['isSet_',['../class_belos_1_1_linear_problem.html#a57074182c37148855d665707f5e8b007',1,'Belos::LinearProblem']]]
+  ['icgsorthomanager_3c_20scalartype_2c_20mv_2c_20op_2c_20dm_20_3e_3a_3ablk_5ftol_5fdefault_5f_0',['blk_tol_default_',['../namespace_belos.html#ad6615c054c17cb8077e6e2aa133fdca3',1,'Belos']]],
+  ['icgsorthomanager_3c_20scalartype_2c_20mv_2c_20op_2c_20dm_20_3e_3a_3ablk_5ftol_5ffast_5f_1',['blk_tol_fast_',['../namespace_belos.html#a63e2c26c5df3bf7de037c2181a0e06b8',1,'Belos']]],
+  ['icgsorthomanager_3c_20scalartype_2c_20mv_2c_20op_2c_20dm_20_3e_3a_3amax_5fortho_5fsteps_5fdefault_5f_2',['max_ortho_steps_default_',['../namespace_belos.html#a8d88364dd7de3aab03186b49cabd0042',1,'Belos']]],
+  ['icgsorthomanager_3c_20scalartype_2c_20mv_2c_20op_2c_20dm_20_3e_3a_3amax_5fortho_5fsteps_5ffast_5f_3',['max_ortho_steps_fast_',['../namespace_belos.html#a87185241b2a2e5ddefed54f2dbabf86a',1,'Belos']]],
+  ['icgsorthomanager_3c_20scalartype_2c_20mv_2c_20op_2c_20dm_20_3e_3a_3asing_5ftol_5fdefault_5f_4',['sing_tol_default_',['../namespace_belos.html#a41e91c26aace0870d4502e78f8cc11f1',1,'Belos']]],
+  ['icgsorthomanager_3c_20scalartype_2c_20mv_2c_20op_2c_20dm_20_3e_3a_3asing_5ftol_5ffast_5f_5',['sing_tol_fast_',['../namespace_belos.html#a19774d585da558870f2d84f914bccdad',1,'Belos']]],
+  ['imgsorthomanager_3c_20scalartype_2c_20mv_2c_20op_2c_20dm_20_3e_3a_3ablk_5ftol_5fdefault_5f_6',['blk_tol_default_',['../namespace_belos.html#aaaff0266e2e726d39c06f77d76ace2ff',1,'Belos']]],
+  ['imgsorthomanager_3c_20scalartype_2c_20mv_2c_20op_2c_20dm_20_3e_3a_3ablk_5ftol_5ffast_5f_7',['blk_tol_fast_',['../namespace_belos.html#ae5d4ad919b109dabe65f665f7b736e9b',1,'Belos']]],
+  ['imgsorthomanager_3c_20scalartype_2c_20mv_2c_20op_2c_20dm_20_3e_3a_3amax_5fortho_5fsteps_5fdefault_5f_8',['max_ortho_steps_default_',['../namespace_belos.html#ae88881fbde7bcf8392dae3f3ea5d0e3c',1,'Belos']]],
+  ['imgsorthomanager_3c_20scalartype_2c_20mv_2c_20op_2c_20dm_20_3e_3a_3amax_5fortho_5fsteps_5ffast_5f_9',['max_ortho_steps_fast_',['../namespace_belos.html#aaddf73e08642d4910808155f0098b1b2',1,'Belos']]],
+  ['imgsorthomanager_3c_20scalartype_2c_20mv_2c_20op_2c_20dm_20_3e_3a_3asing_5ftol_5fdefault_5f_10',['sing_tol_default_',['../namespace_belos.html#a8c32e18d3611f6a049636965e02ab439',1,'Belos']]],
+  ['imgsorthomanager_3c_20scalartype_2c_20mv_2c_20op_2c_20dm_20_3e_3a_3asing_5ftol_5ffast_5f_11',['sing_tol_fast_',['../namespace_belos.html#ac10e5765af1c55423a8ff641f17839fa',1,'Belos']]],
+  ['imptolscale_12',['impTolScale',['../struct_belos_1_1_default_solver_parameters.html#a36f1260c5b23d0461ded198e4d489164',1,'Belos::DefaultSolverParameters']]],
+  ['ipiv_13',['ipiv',['../struct_belos_1_1_r_c_g_iter_state.html#ad29bffd05aa6bf1d6985304ea368e91d',1,'Belos::RCGIterState']]],
+  ['ishermitian_5f_14',['isHermitian_',['../class_belos_1_1_linear_problem.html#ada82c6cad4bc745aac96df0d7c1e413f',1,'Belos::LinearProblem']]],
+  ['isset_5f_15',['isSet_',['../class_belos_1_1_linear_problem.html#a57074182c37148855d665707f5e8b007',1,'Belos::LinearProblem']]]
 ];

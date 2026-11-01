@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['descent_5flast_0',['DESCENT_LAST',['../namespaceROL.html#a52eb01de314ff83fa642ec78ba889049a35c6ee90b7d4a95df06d9f956328e8be',1,'ROL']]],
-  ['descent_5fnewton_1',['DESCENT_NEWTON',['../namespaceROL.html#a52eb01de314ff83fa642ec78ba889049ae14dd487c2c5fc70349a5d1696d0c751',1,'ROL']]],
-  ['descent_5fnewtonkrylov_2',['DESCENT_NEWTONKRYLOV',['../namespaceROL.html#a52eb01de314ff83fa642ec78ba889049a121657bd454d6d7a485fad2ea0dfb86e',1,'ROL']]],
-  ['descent_5fnonlinearcg_3',['DESCENT_NONLINEARCG',['../namespaceROL.html#a52eb01de314ff83fa642ec78ba889049aa5e35a50a821c7e5097be007343cdff3',1,'ROL']]],
-  ['descent_5fsecant_4',['DESCENT_SECANT',['../namespaceROL.html#a52eb01de314ff83fa642ec78ba889049a2c9447dacd878b80b577746e641d2608',1,'ROL']]],
-  ['descent_5fsteepest_5',['DESCENT_STEEPEST',['../namespaceROL.html#a52eb01de314ff83fa642ec78ba889049aa19eed900d2dbd86741440416d32e8af',1,'ROL']]],
+  ['descent_5flast_0',['DESCENT_LAST',['../namespaceROL_1_1ROL.html#a85a1b8a8e97c4b5671b15bc88f3373e4a114f552bf2f1e244b00a22626ed19517',1,'ROL::ROL::DESCENT_LAST'],['../namespaceROL.html#a52eb01de314ff83fa642ec78ba889049a35c6ee90b7d4a95df06d9f956328e8be',1,'ROL::DESCENT_LAST']]],
+  ['descent_5fnewton_1',['DESCENT_NEWTON',['../namespaceROL_1_1ROL.html#a85a1b8a8e97c4b5671b15bc88f3373e4ae91e1b05af98d2eaaf925d28095b7018',1,'ROL::ROL::DESCENT_NEWTON'],['../namespaceROL.html#a52eb01de314ff83fa642ec78ba889049ae14dd487c2c5fc70349a5d1696d0c751',1,'ROL::DESCENT_NEWTON']]],
+  ['descent_5fnewtonkrylov_2',['DESCENT_NEWTONKRYLOV',['../namespaceROL_1_1ROL.html#a85a1b8a8e97c4b5671b15bc88f3373e4aeea8612f32eb78a2e936438856ae9426',1,'ROL::ROL::DESCENT_NEWTONKRYLOV'],['../namespaceROL.html#a52eb01de314ff83fa642ec78ba889049a121657bd454d6d7a485fad2ea0dfb86e',1,'ROL::DESCENT_NEWTONKRYLOV']]],
+  ['descent_5fnonlinearcg_3',['DESCENT_NONLINEARCG',['../namespaceROL_1_1ROL.html#a85a1b8a8e97c4b5671b15bc88f3373e4ac5d954654d83a613301a58b06e68d89a',1,'ROL::ROL::DESCENT_NONLINEARCG'],['../namespaceROL.html#a52eb01de314ff83fa642ec78ba889049aa5e35a50a821c7e5097be007343cdff3',1,'ROL::DESCENT_NONLINEARCG']]],
+  ['descent_5fsecant_4',['DESCENT_SECANT',['../namespaceROL_1_1ROL.html#a85a1b8a8e97c4b5671b15bc88f3373e4ad93c981d6839f673320b8282e074837d',1,'ROL::ROL::DESCENT_SECANT'],['../namespaceROL.html#a52eb01de314ff83fa642ec78ba889049a2c9447dacd878b80b577746e641d2608',1,'ROL::DESCENT_SECANT']]],
+  ['descent_5fsteepest_5',['DESCENT_STEEPEST',['../namespaceROL_1_1ROL.html#a85a1b8a8e97c4b5671b15bc88f3373e4a5ede6ca0ef304499f797f4d2ed8ea35a',1,'ROL::ROL::DESCENT_STEEPEST'],['../namespaceROL.html#a52eb01de314ff83fa642ec78ba889049aa19eed900d2dbd86741440416d32e8af',1,'ROL::DESCENT_STEEPEST']]],
   ['descent_5fu_5flast_6',['DESCENT_U_LAST',['../namespaceROL.html#a2154ff853a6c1edec024de2f3c7d5fe4a9ff5019b0f8302201984085857dc6c32',1,'ROL']]],
   ['descent_5fu_5fnewton_7',['DESCENT_U_NEWTON',['../namespaceROL.html#a2154ff853a6c1edec024de2f3c7d5fe4a667c048b72d70eff993e083d5db05808',1,'ROL']]],
   ['descent_5fu_5fnewtonkrylov_8',['DESCENT_U_NEWTONKRYLOV',['../namespaceROL.html#a2154ff853a6c1edec024de2f3c7d5fe4ac433062a2f2bbd2b7c149a5e5488bf0a',1,'ROL']]],

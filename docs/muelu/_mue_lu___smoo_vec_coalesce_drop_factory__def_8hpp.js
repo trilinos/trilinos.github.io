@@ -1,5 +1,6 @@
 var _mue_lu___smoo_vec_coalesce_drop_factory__def_8hpp =
 [
+    [ "MUELU_SMOOVECCOALESCEDROPFACTORY_DEF_HPP", "_mue_lu___smoo_vec_coalesce_drop_factory__def_8hpp.html#accd116fbf899ced3dfad0238a0abf74d", null ],
     [ "poly0thOrderCoef", "_mue_lu___smoo_vec_coalesce_drop_factory__def_8hpp.html#a5eb4457c4b94f0b5efcfdb1886b1857a", null ],
     [ "poly1stOrderCoef", "_mue_lu___smoo_vec_coalesce_drop_factory__def_8hpp.html#a96db95f41b592aabd68d1fda1c6f9c5f", null ],
     [ "poly2ndOrderCoef", "_mue_lu___smoo_vec_coalesce_drop_factory__def_8hpp.html#a05c9c423254602ae627979bd72d2da83", null ],

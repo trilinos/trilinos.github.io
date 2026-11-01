@@ -2,7 +2,7 @@ var searchData=
 [
   ['debug_0',['Debug',['../namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1fa6a391ac1916a6d1f5e3b952fc5e248b5',1,'MueLu']]],
   ['default_1',['Default',['../namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1fa47815c062d008efd5aa66650a143824e',1,'MueLu']]],
-  ['defaultalgo_2',['defaultalgo',['../namespace_mue_lu.html#a7a7ce8d552ac9219815bc541c4ee96ceac3b8c4c146efa6f2eb0f1fe3d72b7d89',1,'MueLu::defaultAlgo'],['../namespace_mue_lu_1_1_cut_drop.html#a5e244f636c3edaaa8931fec97bcd0312a65462a228738f8a73dcff4367e966097',1,'MueLu::CutDrop::defaultAlgo']]],
+  ['defaultalgo_2',['defaultAlgo',['../namespace_mue_lu.html#a7a7ce8d552ac9219815bc541c4ee96ceac3b8c4c146efa6f2eb0f1fe3d72b7d89',1,'MueLu::defaultAlgo'],['../namespace_mue_lu_1_1_cut_drop.html#a5e244f636c3edaaa8931fec97bcd0312a65462a228738f8a73dcff4367e966097',1,'MueLu::CutDrop::defaultAlgo']]],
   ['developer_3',['Developer',['../namespace_mue_lu.html#a1f14cd8d51f6e963d8e5a8dd03dbcf1fa40051789bed87d2c666942ed0354f69c',1,'MueLu']]],
   ['diag_5flumping_4',['diag_lumping',['../namespace_mue_lu_1_1_matrix_construction.html#a97f1e847f08e8c6cdbae4183f49d992aa361c49a2ef8d543d1a11a6bc49651651',1,'MueLu::MatrixConstruction']]],
   ['dinvanorm_5',['DINVANORM',['../namespace_mue_lu.html#ad48eb649d8503d42f939f9e53a75e1acabf04f49a5a9beec4cdb2468ed2bb315c',1,'MueLu']]],

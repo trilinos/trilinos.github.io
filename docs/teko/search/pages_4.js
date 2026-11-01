@@ -1,5 +1,31 @@
 var searchData=
 [
-  ['getting_20started_0',['Getting Started',['../teko_getting_started.html',1,'index']]],
-  ['guide_1',['Teko User&apos;s Guide',['../teko_guide.html',1,'index']]]
+  ['a_20block_20method_20over_20a_20multigrid_20block_20solve_0',['A richer example: nesting a block method over a multigrid block solve',['../teko_config_model.html#autotoc_md18',1,'']]],
+  ['a_20blocked_20operator_1',['Step 1 — Build a blocked operator',['../teko_getting_started.html#autotoc_md4',1,'']]],
+  ['a_20complete_20minimal_20example_2',['A complete, minimal example',['../teko_config_model.html#autotoc_md16',1,'']]],
+  ['a_20custom_20preconditioner_20factory_3',['Registering a custom preconditioner factory',['../teko_advanced.html#autotoc_md88',1,'']]],
+  ['a_20krylov_20preconditioned_20block_20inverse_4',['Worked example: nested solves (a Krylov-preconditioned block inverse)',['../teko_inverse_library.html#autotoc_md26',1,'']]],
+  ['a_20krylov_20solve_5',['Step 4 — Use it in a Krylov solve',['../teko_getting_started.html#autotoc_md7',1,'']]],
+  ['a_20library_20entry_20in_20c_6',['Building a library entry in C++',['../teko_inverse_library.html#autotoc_md27',1,'']]],
+  ['a_20library_20entry_20is_7',['What a library entry is',['../teko_inverse_library.html#autotoc_md19',1,'']]],
+  ['a_20method_8',['Choosing a method',['../teko_block_reference.html#autotoc_md58',1,'']]],
+  ['a_20multigrid_20block_20solve_9',['A richer example: nesting a block method over a multigrid block solve',['../teko_config_model.html#autotoc_md18',1,'']]],
+  ['a_20richer_20example_3a_20nesting_20a_20block_20method_20over_20a_20multigrid_20block_20solve_10',['A richer example: nesting a block method over a multigrid block solve',['../teko_config_model.html#autotoc_md18',1,'']]],
+  ['a_20strided_20operator_20solver_20chosen_20at_20runtime_11',['StridedSolve — SIMPLE on a strided operator, solver chosen at runtime',['../teko_examples.html#autotoc_md75',1,'']]],
+  ['across_20iterations_12',['Reusing inverses and explicit operators across iterations',['../teko_advanced.html#autotoc_md85',1,'']]],
+  ['adaptive_13',['Adaptive — &lt;span class=&quot;tt&quot;&gt;&quot;Adaptive&quot;&lt;/span&gt;',['../teko_block_reference.html#autotoc_md50',1,'']]],
+  ['adaptive_20—_20adaptive_14',['Adaptive — &lt;span class=&quot;tt&quot;&gt;&quot;Adaptive&quot;&lt;/span&gt;',['../teko_block_reference.html#autotoc_md50',1,'']]],
+  ['add_15',['Block Add — &lt;span class=&quot;tt&quot;&gt;&quot;Block Add&quot;&lt;/span&gt;',['../teko_block_reference.html#autotoc_md39',1,'']]],
+  ['add_20—_20block_20add_16',['Block Add — &lt;span class=&quot;tt&quot;&gt;&quot;Block Add&quot;&lt;/span&gt;',['../teko_block_reference.html#autotoc_md39',1,'']]],
+  ['addmultiplyprecs_20—_20composing_20preconditioners_17',['AddMultiplyPrecs — composing preconditioners',['../teko_examples.html#autotoc_md79',1,'']]],
+  ['advanced_20topics_18',['Advanced Topics',['../teko_advanced.html',1,'index']]],
+  ['and_20diagnostics_19',['Testing and diagnostics',['../teko_advanced.html#autotoc_md89',1,'']]],
+  ['and_20explicit_20operators_20across_20iterations_20',['Reusing inverses and explicit operators across iterations',['../teko_advanced.html#autotoc_md85',1,'']]],
+  ['and_20pcd_21',['Navier-Stokes: SIMPLE, LSC, and PCD',['../teko_cookbook.html#autotoc_md95',1,'']]],
+  ['and_20physics_20based_20preconditioning_22',['Teko: Block and Physics-Based Preconditioning',['../index.html',1,'']]],
+  ['application_20supplied_20operators_23',['Application-supplied operators',['../teko_cookbook.html#autotoc_md97',1,'']]],
+  ['arbitrary_20block_20membership_24',['Native Tpetra with arbitrary block membership',['../teko_getting_started.html#autotoc_md9',1,'']]],
+  ['arbitrary_20tpetra_20blocking_20—_20field_20blocks_20from_20monolithic_20gids_25',['Arbitrary Tpetra blocking — field blocks from monolithic GIDs',['../teko_examples.html#autotoc_md77',1,'']]],
+  ['arbitrary_20tpetra_20blocks_20from_20global_20ids_26',['Arbitrary Tpetra blocks from global IDs',['../teko_cookbook.html#autotoc_md92',1,'']]],
+  ['at_20runtime_27',['StridedSolve — SIMPLE on a strided operator, solver chosen at runtime',['../teko_examples.html#autotoc_md75',1,'']]]
 ];

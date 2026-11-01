@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['going_20between_20teuchos_3a_3arcp_20and_20boost_3a_3ashared_5fptr_0',['Conversion utilities for going between Teuchos::RCP and boost::shared_ptr.',['../group___teuchos___r_c_p_boost_shared_ptr_conversions__grp.html',1,'']]],
-  ['going_20between_20teuchos_3a_3arcp_20and_20std_3a_3ashared_5fptr_1',['Conversion utilities for going between Teuchos::RCP and std::shared_ptr.',['../group___teuchos___r_c_p_std_shared_ptr_conversions__grp.html',1,'']]]
+  ['in_20teuchos_3a_3ablas_20methods_0',['Enumerations for character inputs in Teuchos::BLAS methods',['../group___b_l_a_s_enum__grp.html',1,'']]],
+  ['inputs_20in_20teuchos_3a_3ablas_20methods_1',['Enumerations for character inputs in Teuchos::BLAS methods',['../group___b_l_a_s_enum__grp.html',1,'']]]
 ];

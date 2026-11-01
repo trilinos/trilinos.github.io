@@ -1,7 +1,7 @@
 var searchData=
 [
   ['coldiagonalentries_0',['colDiagonalEntries',['../struct_tpetra_1_1_details_1_1_equilibration_info.html#a575a7d69d2efa7afffc45ccd94e98879',1,'Tpetra::Details::EquilibrationInfo']]],
-  ['colmap_1',['colmap',['../class_tpetra_1_1_crs_matrix_struct.html#a0337c6abf1d8c756f991b4eae0cbf583',1,'Tpetra::CrsMatrixStruct::colMap'],['../class_tpetra_1_1_block_crs_matrix_struct.html#a8bf9bdcd2740539b8bb87c59063aa85a',1,'Tpetra::BlockCrsMatrixStruct::colMap']]],
+  ['colmap_1',['colMap',['../class_tpetra_1_1_crs_matrix_struct.html#a0337c6abf1d8c756f991b4eae0cbf583',1,'Tpetra::CrsMatrixStruct::colMap'],['../class_tpetra_1_1_block_crs_matrix_struct.html#a8bf9bdcd2740539b8bb87c59063aa85a',1,'Tpetra::BlockCrsMatrixStruct::colMap']]],
   ['colmap_5f_2',['colMap_',['../class_tpetra_1_1_crs_graph.html#a77cdbf7f030a8c332dd302da7d69b9d7',1,'Tpetra::CrsGraph']]],
   ['colnorms_3',['colNorms',['../struct_tpetra_1_1_details_1_1_equilibration_info.html#ae0fc6036b5b3163e62e08fe16734c888',1,'Tpetra::Details::EquilibrationInfo']]],
   ['compiletimesize_4',['compileTimeSize',['../struct_tpetra_1_1_details_1_1_pack_traits.html#a72a8852671973078860d89d92c1bcb1e',1,'Tpetra::Details::PackTraits']]],

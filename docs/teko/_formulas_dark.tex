@@ -1,10 +1,12 @@
 \documentclass{article}
+\usepackage{iftex}
 \usepackage{ifthen}
 \usepackage{epsfig}
 \usepackage[utf8]{inputenc}
 \usepackage{xcolor}
 \color{white}
 \pagecolor{black}
+\ifPDFTeX
 \usepackage{newunicodechar}
   \makeatletter
     \def\doxynewunicodechar#1#2{%
@@ -25,6 +27,7 @@
   \doxynewunicodechar{²}{${}^{2}$}% Superscript two
   \doxynewunicodechar{³}{${}^{3}$}% Superscript three
 
+\fi
 \pagestyle{empty}
 \begin{document}
 $A_{ij}$
@@ -42,8 +45,7 @@ $M^{-1} = M_A^{-1} + M_B^{-1}$
 $M^{-1} = M_A^{-1} M_B^{-1}$
 \pagebreak
 
-\[
-\begin{bmatrix} F & B^T \\ B & -C \end{bmatrix}
+\[\begin{bmatrix} F & B^T \\ B & -C \end{bmatrix}
 \begin{bmatrix} u \\ p \end{bmatrix}
 =
 \begin{bmatrix} f \\ g \end{bmatrix},
@@ -77,8 +79,7 @@ $A_p$
 $M_p$
 \pagebreak
 
-\[
-\begin{bmatrix} A_{00} & A_{01} \\ A_{10} & A_{11} \end{bmatrix},
+\[\begin{bmatrix} A_{00} & A_{01} \\ A_{10} & A_{11} \end{bmatrix},
 \]
 \pagebreak
 
@@ -114,8 +115,7 @@ $v_0^0, v_0^1,\ldots,v_0^{n_0},
    v_2^0, v_2^1,\ldots,v_2^{n_2} $
 \pagebreak
 
-$
-\left[ \begin{array}{cc}
+$\left[ \begin{array}{cc}
 A & B^T \\
 B & -C
 \end{array} \right]
@@ -131,8 +131,7 @@ g
 $
 \pagebreak
 
-$
-\left[ \begin{array}{cc}
+$\left[ \begin{array}{cc}
 A + \gamma B^T W^{-1} B & B^T - \gamma B^T W^{-1} C \\
 B & -C
 \end{array} \right]
@@ -148,8 +147,7 @@ g
 $
 \pagebreak
 
-$
-\widehat{\mathcal{A}} x = \hat{b}.
+$\widehat{\mathcal{A}} x = \hat{b}.
 $
 \pagebreak
 
@@ -279,8 +277,7 @@ $
 $C_I$
 \pagebreak
 
-$
-\left[ \begin{array}{cc}
+$\left[ \begin{array}{cc}
 A + \gamma B^T W^{-1} B & B^T - \gamma B^T W^{-1} C \\
 B & -C
 \end{array} \right]
@@ -302,8 +299,7 @@ B = (B_1, B_2)
 $
 \pagebreak
 
-$
-\left[ \begin{array}{ccc}
+$\left[ \begin{array}{ccc}
 A_{11} + \gamma B_1^T W^{-1} B_1^T & A_{12} + \gamma B_1^T W^{-1} B_2^T & B_1^T - \gamma B_1^T
 W^{-1} C \\
 0 & A_{22} + \gamma B_2^T W^{-1} B_2^T & B_1^T - \gamma B_2^T W^{-1} C \\
@@ -398,22 +394,19 @@ $2\times2$
 $P^{-1}$
 \pagebreak
 
+$  e_0 = P^{-1} r_0.
 $
-  e_0 = P^{-1} r_0.
-  $
 \pagebreak
 
 $r_1 = r_0 - A e_0$
 \pagebreak
 
+$  r_i = (I - A P^{-1})^i r_0.
 $
-  r_i = (I - A P^{-1})^i r_0.
-  $
 \pagebreak
 
+$  e_i = P^{-1} \sum_{j=0}^i r_j.
 $
-  e_i = P^{-1} \sum_{j=0}^i r_j.
-  $
 \pagebreak
 
 $e_0$
@@ -449,8 +442,7 @@ $ A = \left[\begin{array}{cc}
           \end{array}\right] $
 \pagebreak
 
-$
-A = \left[ \begin{array}{cc}
+$A = \left[ \begin{array}{cc}
 I & 0  \\
 A_{10} A_{00}^{-1} & I
 \end{array} \right]
@@ -507,46 +499,43 @@ $ A_{10} $
 $ A_{01} $
 \pagebreak
 
+$   A = \left[
+   \begin{array}{cc}
+   A_{00} & A_{01} \\
+   A_{10} & A_{11}
+   \end{array}
+   \right]
+   = \left[
+   \begin{array}{cc}
+   I & 0  \\
+   A_{10} A_{00}^{-1} & I
+   \end{array}
+   \right]
+   \left[
+   \begin{array}{cc}
+   A_{00} & 0  \\
+   0 & -S
+   \end{array}
+   \right]
+   \left[
+   \begin{array}{cc}
+   I &  A_{00}^{-1} A_{01} \\
+   0 & I
+   \end{array}
+   \right]
 $
-A = \left[
+\pagebreak
+
+$A = \left[
 \begin{array}{cc}
 A_{00} & A_{01} \\
 A_{10} & A_{11}
 \end{array}
 \right]
-= \left[
-\begin{array}{cc}
-I & 0  \\
-A_{10} A_{00}^{-1} & I
-\end{array}
-\right]
-\left[
-\begin{array}{cc}
-A_{00} & 0  \\
-0 & -S
-\end{array}
-\right]
-\left[
-\begin{array}{cc}
-I &  A_{00}^{-1} A_{01} \\
-0 & I
-\end{array}
-\right]
 $
 \pagebreak
 
-$
-A = \left[
-\begin{array}{cc}
-A_{00} & A_{01} \\
-A_{10} & A_{11}
-\end{array}
-\right]
-$
-\pagebreak
-
-$
-A = \left[
+$A = \left[
 \begin{array}{cc}
 I & 0  \\
 A_{10} A_{00}^{-1} & I
