@@ -1,6 +1,5 @@
 var NAVTREEINDEX3 =
 {
-"_mue_lu___kokkos_tuning_interface_8hpp_source.html":[11,0,2,9,25],
 "_mue_lu___l_w_graph__decl_8hpp.html":[11,0,2,0,1,2],
 "_mue_lu___l_w_graph__decl_8hpp.html#ae6ba7b5dc57aa8252db249b8006b3fef":[11,0,2,0,1,2,1],
 "_mue_lu___l_w_graph__decl_8hpp_source.html":[11,0,2,0,1,2],
@@ -249,5 +248,6 @@ var NAVTREEINDEX3 =
 "_mue_lu___nullspace_factory__fwd_8hpp_source.html":[11,0,2,9,0,104],
 "_mue_lu___nullspace_presmooth_factory__decl_8hpp.html":[11,0,2,8,4,12],
 "_mue_lu___nullspace_presmooth_factory__decl_8hpp.html#a4dce5655e888163b8c118d50fde38573":[11,0,2,8,4,12,1],
-"_mue_lu___nullspace_presmooth_factory__decl_8hpp_source.html":[11,0,2,8,4,12]
+"_mue_lu___nullspace_presmooth_factory__decl_8hpp_source.html":[11,0,2,8,4,12],
+"_mue_lu___nullspace_presmooth_factory__def_8hpp.html":[11,0,2,8,4,13]
 };

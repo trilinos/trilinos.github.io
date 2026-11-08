@@ -233,7 +233,6 @@ var NAVTREEINDEX2 =
 "_mue_lu___inverse_approximation_factory__decl_8hpp.html#a304aa9a5ca5c12c27314a47e200f4c00":[11,0,2,3,20,1],
 "_mue_lu___inverse_approximation_factory__decl_8hpp_source.html":[11,0,2,3,20],
 "_mue_lu___inverse_approximation_factory__def_8hpp.html":[11,0,2,3,21],
-"_mue_lu___inverse_approximation_factory__def_8hpp.html#a0fc232bd6f40b2ee02df67bd3c912662":[11,0,2,3,21,1],
 "_mue_lu___inverse_approximation_factory__def_8hpp_source.html":[11,0,2,3,21],
 "_mue_lu___inverse_approximation_factory__fwd_8hpp.html":[11,0,2,9,0,77],
 "_mue_lu___inverse_approximation_factory__fwd_8hpp.html#a304aa9a5ca5c12c27314a47e200f4c00":[11,0,2,9,0,77,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX2 =
 "_mue_lu___keep_type_8hpp_source.html":[11,0,2,4,15],
 "_mue_lu___kokkos_tuning_interface_8cpp.html":[11,0,2,9,24],
 "_mue_lu___kokkos_tuning_interface_8cpp_source.html":[11,0,2,9,24],
-"_mue_lu___kokkos_tuning_interface_8hpp.html":[11,0,2,9,25]
+"_mue_lu___kokkos_tuning_interface_8hpp.html":[11,0,2,9,25],
+"_mue_lu___kokkos_tuning_interface_8hpp_source.html":[11,0,2,9,25]
 };

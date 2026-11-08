@@ -122,6 +122,8 @@ Overridden from Teuchos::Describable</h2></td></tr>
 <tr class="memitem:a5375f073d47d5f2889f63850f9c8b067" id="r_a5375f073d47d5f2889f63850f9c8b067"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5375f073d47d5f2889f63850f9c8b067">mass_matrix_is_identity_</a></td></tr>
 <tr class="memitem:a1793a4bbbef94bc630cb1bbc0f5df408" id="r_a1793a4bbbef94bc630cb1bbc0f5df408"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_tempus.html#a6f11a8b38b28d4a4fed9b5b40d50b162">AdjointResponseType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1793a4bbbef94bc630cb1bbc0f5df408">response_type_</a></td></tr>
 <tr class="memitem:a70822064f618fc1c1bded3febf45668e" id="r_a70822064f618fc1c1bded3febf45668e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Scalar &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70822064f618fc1c1bded3febf45668e">response_times_</a></td></tr>
+<tr class="memitem:a57aa3c15987faf4f99a908fe109f0582" id="r_a57aa3c15987faf4f99a908fe109f0582"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; const Teuchos::ParameterList &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57aa3c15987faf4f99a908fe109f0582">time_tolerance_pl_</a></td></tr>
+<tr class="memdesc:a57aa3c15987faf4f99a908fe109f0582"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parameters with the tolerances for comparing times (null: defaults).  <br /></td></tr>
 <tr class="memitem:aec541337961ba1dc3fed46740d8003a0" id="r_aec541337961ba1dc3fed46740d8003a0"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; <a class="el" href="class_tempus_1_1_solution_history.html">SolutionHistory</a>&lt; Scalar &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec541337961ba1dc3fed46740d8003a0">adjoint_solution_history_</a></td></tr>
 <tr class="memitem:a794f734c1d11fcc62750b662c211710e" id="r_a794f734c1d11fcc62750b662c211710e"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; const <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_thyra_1_1_multi_vector_base.html">Thyra::MultiVectorBase</a>&lt; Scalar &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a794f734c1d11fcc62750b662c211710e">dxdp_init_</a></td></tr>
 <tr class="memitem:ade0c165c6caa8e1a677e2ce97ffef046" id="r_ade0c165c6caa8e1a677e2ce97ffef046"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_thyra_1_1_multi_vector_base.html">Thyra::MultiVectorBase</a>&lt; Scalar &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade0c165c6caa8e1a677e2ce97ffef046">dgdp_</a></td></tr>
@@ -165,6 +167,7 @@ Basic integrator methods</h2></td></tr>
 <tr class="memitem:a3e5606b107077caef4ff5f56ec7a3f57" id="r_a3e5606b107077caef4ff5f56ec7a3f57"><td class="memItemLeft" align="right" valign="top">virtual Teuchos::RCP&lt; const <a class="el" href="class_tempus_1_1_solution_history.html">SolutionHistory</a>&lt; Scalar &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e5606b107077caef4ff5f56ec7a3f57">getSolutionHistory</a> () const override</td></tr>
 <tr class="memdesc:a3e5606b107077caef4ff5f56ec7a3f57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="class_tempus_1_1_solution_history.html" title="SolutionHistory is basically a container of SolutionStates. SolutionHistory maintains a collection of...">SolutionHistory</a>.  <br /></td></tr>
 <tr class="memitem:ae6d1139d3a999338b791217df4e5ccbd" id="r_ae6d1139d3a999338b791217df4e5ccbd"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; const <a class="el" href="class_tempus_1_1_solution_history.html">SolutionHistory</a>&lt; Scalar &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6d1139d3a999338b791217df4e5ccbd">getStateSolutionHistory</a> () const</td></tr>
+<tr class="memitem:ac3b086e1e207841547b001030df906b9" id="r_ac3b086e1e207841547b001030df906b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3b086e1e207841547b001030df906b9">setTimeToleranceParameters</a> (const Teuchos::RCP&lt; const Teuchos::ParameterList &gt; &amp;pl)</td></tr>
 <tr class="memitem:a0193e50967c1e66ca7e50bd21e814719" id="r_a0193e50967c1e66ca7e50bd21e814719"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; const <a class="el" href="class_tempus_1_1_solution_history.html">SolutionHistory</a>&lt; Scalar &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0193e50967c1e66ca7e50bd21e814719">getSensSolutionHistory</a> () const</td></tr>
 <tr class="memitem:a0c2aed632cf6c8a165d8fe8d67b8a3fe" id="r_a0c2aed632cf6c8a165d8fe8d67b8a3fe"><td class="memItemLeft" align="right" valign="top">virtual Teuchos::RCP&lt; <a class="el" href="class_tempus_1_1_solution_history.html">SolutionHistory</a>&lt; Scalar &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c2aed632cf6c8a165d8fe8d67b8a3fe">getNonConstSolutionHistory</a> () override</td></tr>
 <tr class="memdesc:a0c2aed632cf6c8a165d8fe8d67b8a3fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="class_tempus_1_1_solution_history.html" title="SolutionHistory is basically a container of SolutionStates. SolutionHistory maintains a collection of...">SolutionHistory</a>.  <br /></td></tr>
@@ -359,6 +362,8 @@ template&lt;class Scalar&gt; </div>
 <li>
 "Response Time List" (default: "") Comma-separated list of the times t_k of the "Sum Over Times" response. </li>
 <li>
+"Response Time Relative Tolerance" (default: 1e-9) and "Response Time Absolute Tolerance" (default: 1e-15) Tolerances for comparing the times t_k with the times of the time steps (see <a class="el" href="namespace_tempus_1_1_adjoint_sensitivity_utils.html#aba4661c8b5cd2fa4b80a1f8893b4bb46" title="Tolerance for comparing times of a time integration on [t_init, t_final], e.g., the times of a &quot;Sum O...">AdjointSensitivityUtils::timeTolerance</a>). </li>
+<li>
 "Algebraic Equations Mask" (default: null) A Teuchos::RCP&lt;const <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_thyra_1_1_vector_base.html">Thyra::VectorBase&lt;Scalar&gt;</a> &gt; in the residual space, equal to 1 on the algebraic equations of an index-1 DAE and 0 elsewhere (see the class description and <a class="el" href="class_tempus_1_1_d_a_e_structure.html" title="Structure of an index-1 differential-algebraic system.">DAEStructure</a>). </li>
 <li>
 "Algebraic Jump Solver" (sublist) Options of the solver of the adjoint jumps of an index-1 DAE (see <a class="el" href="class_tempus_1_1_adjoint_d_a_e_jump_solver.html" title="Solver for the adjoint jumps of an index-1 DAE.">AdjointDAEJumpSolver</a>). </li>
@@ -421,7 +426,7 @@ template&lt;class Scalar&gt; </div>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00202">202</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00206">206</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -709,6 +714,36 @@ template&lt;class Scalar&gt; </div>
 
 </div>
 </div>
+<a id="ac3b086e1e207841547b001030df906b9" name="ac3b086e1e207841547b001030df906b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3b086e1e207841547b001030df906b9">&#9670;&#160;</a></span>setTimeToleranceParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Scalar&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_tempus_1_1_integrator_adjoint_sensitivity.html">Tempus::IntegratorAdjointSensitivity</a>&lt; Scalar &gt;::setTimeToleranceParameters </td>
+          <td>(</td>
+          <td class="paramtype">const Teuchos::RCP&lt; const Teuchos::ParameterList &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>pl</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the "Sensitivities" parameters with the tolerances for comparing times (see <a class="el" href="namespace_tempus_1_1_adjoint_sensitivity_utils.html#aba4661c8b5cd2fa4b80a1f8893b4bb46" title="Tolerance for comparing times of a time integration on [t_init, t_final], e.g., the times of a &quot;Sum O...">AdjointSensitivityUtils::timeTolerance</a>); null for the default tolerances. createIntegratorAdjointSensitivity sets them. </p>
+
+<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00233">233</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
+
+</div>
+</div>
 <a id="a0193e50967c1e66ca7e50bd21e814719" name="a0193e50967c1e66ca7e50bd21e814719"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0193e50967c1e66ca7e50bd21e814719">&#9670;&#160;</a></span>getSensSolutionHistory()</h2>
 
@@ -898,7 +933,7 @@ template&lt;class Scalar&gt; </div>
 
 <p>Implements <a class="el" href="class_tempus_1_1_integrator.html#a1a5970710be5d4239d2b5a790e59a702">Tempus::Integrator&lt; Scalar &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00237">237</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00251">251</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -929,7 +964,7 @@ template&lt;class Scalar&gt; </div>
 
 <p>Implements <a class="el" href="class_tempus_1_1_integrator.html#adb64af038925d65282c1b7ab4eb0ab16">Tempus::Integrator&lt; Scalar &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00241">241</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00255">255</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1328,7 +1363,7 @@ template&lt;class Scalar&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00284">284</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00298">298</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1359,7 +1394,7 @@ template&lt;class Scalar&gt; </div>
 
 <p>Structure of the index-1 DAE (null for an ODE). </p>
 
-<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00290">290</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00304">304</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1687,7 +1722,7 @@ template&lt;class Scalar&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00339">339</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00353">353</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1713,7 +1748,7 @@ template&lt;class Scalar&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00340">340</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00354">354</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1739,7 +1774,7 @@ template&lt;class Scalar&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00341">341</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00355">355</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1765,7 +1800,7 @@ template&lt;class Scalar&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00342">342</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00356">356</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1791,7 +1826,7 @@ template&lt;class Scalar&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00343">343</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00357">357</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1817,7 +1852,7 @@ template&lt;class Scalar&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00344">344</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00358">358</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1843,7 +1878,7 @@ template&lt;class Scalar&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00345">345</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00359">359</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1869,7 +1904,7 @@ template&lt;class Scalar&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00346">346</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00360">360</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1895,7 +1930,7 @@ template&lt;class Scalar&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00347">347</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00361">361</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1921,7 +1956,7 @@ template&lt;class Scalar&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00348">348</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00362">362</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1947,7 +1982,7 @@ template&lt;class Scalar&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00349">349</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00363">363</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1973,7 +2008,7 @@ template&lt;class Scalar&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00350">350</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00364">364</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1999,7 +2034,7 @@ template&lt;class Scalar&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00351">351</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00365">365</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2025,7 +2060,35 @@ template&lt;class Scalar&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00352">352</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00366">366</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a57aa3c15987faf4f99a908fe109f0582" name="a57aa3c15987faf4f99a908fe109f0582"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57aa3c15987faf4f99a908fe109f0582">&#9670;&#160;</a></span>time_tolerance_pl_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Scalar&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Teuchos::RCP&lt;const Teuchos::ParameterList&gt; <a class="el" href="class_tempus_1_1_integrator_adjoint_sensitivity.html">Tempus::IntegratorAdjointSensitivity</a>&lt; Scalar &gt;::time_tolerance_pl_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parameters with the tolerances for comparing times (null: defaults). </p>
+
+<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00368">368</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2052,7 +2115,7 @@ template&lt;class Scalar&gt; </div>
 </div><div class="memdoc">
 <p>Adjoint solution history combining the segments of the adjoint integration for the "Sum Over Times" response (null otherwise) </p>
 
-<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00355">355</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00371">371</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2078,7 +2141,7 @@ template&lt;class Scalar&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00356">356</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00372">372</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2104,7 +2167,7 @@ template&lt;class Scalar&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00357">357</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00373">373</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2130,7 +2193,7 @@ template&lt;class Scalar&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00358">358</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00374">374</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2158,7 +2221,7 @@ template&lt;class Scalar&gt; </div>
 
 <p>Structure of the index-1 DAE (null for an ODE). </p>
 
-<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00360">360</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00376">376</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2186,7 +2249,7 @@ template&lt;class Scalar&gt; </div>
 
 <p>Solver of the adjoint jumps of the index-1 DAE (null for an ODE). </p>
 
-<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00362">362</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00378">378</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2214,7 +2277,7 @@ template&lt;class Scalar&gt; </div>
 
 <p>df/dp work objects for the algebraic contributions of the jumps </p>
 
-<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00364">364</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00380">380</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -2240,7 +2303,7 @@ template&lt;class Scalar&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00365">365</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html#l00381">381</a> of file <a class="el" href="_tempus___integrator_adjoint_sensitivity__decl_8hpp_source.html">Tempus_IntegratorAdjointSensitivity_decl.hpp</a>.</p>
 
 </div>
 </div>

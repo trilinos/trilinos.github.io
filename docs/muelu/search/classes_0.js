@@ -27,5 +27,6 @@ var searchData=
   ['appendtrait_24',['AppendTrait',['../struct_mue_lu_1_1_append_trait.html',1,'MueLu']]],
   ['appendtrait_3c_20kokkos_3a_3aview_3c_20datatype_2c_20pack_2e_2e_2e_20_3e_2c_20t_20_3e_25',['AppendTrait&lt; Kokkos::View&lt; DataType, Pack... &gt;, T &gt;',['../struct_mue_lu_1_1_append_trait_3_01_kokkos_1_1_view_3_01_data_type_00_01_pack_8_8_8_01_4_00_01_t_01_4.html',1,'MueLu']]],
   ['applyparameters_26',['ApplyParameters',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/struct_ifpack2_1_1_block_tri_di_container_3_01_matrix_type_00_01_block_tri_di_container_details_03fe7ae53238d6eeea3418e658526b0d.html',1,'Ifpack2::BlockTriDiContainer&lt; MatrixType, BlockTriDiContainerDetails::ImplSimdTag &gt;']]],
-  ['arrayvaluetype_27',['ArrayValueType',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/struct_ifpack2_1_1_block_helper_details_1_1_array_value_type.html',1,'Ifpack2::BlockHelperDetails']]]
+  ['arrayvaluetype_27',['ArrayValueType',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/struct_ifpack2_1_1_block_helper_details_1_1_array_value_type.html',1,'Ifpack2::BlockHelperDetails']]],
+  ['axisclassmap_28',['AxisClassMap',['../struct_mue_lu_1_1_details_1_1_structured_r_a_p_kernel_1_1_axis_class_map.html',1,'MueLu::Details::StructuredRAPKernel']]]
 ];

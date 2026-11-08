@@ -116,7 +116,6 @@ var namespace_mue_lu =
     [ "InterfaceAggregationFactory", "class_mue_lu_1_1_interface_aggregation_factory.html", "class_mue_lu_1_1_interface_aggregation_factory" ],
     [ "InterfaceMappingTransferFactory", "class_mue_lu_1_1_interface_mapping_transfer_factory.html", "class_mue_lu_1_1_interface_mapping_transfer_factory" ],
     [ "InverseApproximationFactory", "class_mue_lu_1_1_inverse_approximation_factory.html", "class_mue_lu_1_1_inverse_approximation_factory" ],
-    [ "LocalFSAIFunctor", "class_mue_lu_1_1_local_f_s_a_i_functor.html", "class_mue_lu_1_1_local_f_s_a_i_functor" ],
     [ "LineDetectionFactory", "class_mue_lu_1_1_line_detection_factory.html", "class_mue_lu_1_1_line_detection_factory" ],
     [ "LocalOrdinalTransferFactory", "class_mue_lu_1_1_local_ordinal_transfer_factory.html", "class_mue_lu_1_1_local_ordinal_transfer_factory" ],
     [ "LowPrecisionFactory", "class_mue_lu_1_1_low_precision_factory.html", "class_mue_lu_1_1_low_precision_factory" ],

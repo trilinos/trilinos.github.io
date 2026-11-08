@@ -111,6 +111,8 @@ Collaboration diagram for Piro::ThyraProductME_ROL_DynamicObjective&lt; Real &gt
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a75afa07bb6fc3e8f035ce7ca9c6938e7" id="r_a75afa07bb6fc3e8f035ce7ca9c6938e7"><td class="memItemLeft" align="right" valign="top"><a id="a75afa07bb6fc3e8f035ce7ca9c6938e7" name="a75afa07bb6fc3e8f035ce7ca9c6938e7"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>ThyraProductME_ROL_DynamicObjective</b> (const Teuchos::RCP&lt; Thyra::ModelEvaluator&lt; Real &gt; &gt; &amp;model, const Teuchos::RCP&lt; Tempus::Integrator&lt; Real &gt; &gt; &amp;integrator, const Teuchos::RCP&lt; Tempus::Integrator&lt; Real &gt; &gt; &amp;adjoint_integrator, const Teuchos::RCP&lt; Thyra::ModelEvaluator&lt; Real &gt; &gt; &amp;modelAdjoin, int g_index, Teuchos::ParameterList &amp;piroParams, const int Nt, const bool onlyFinalTime=true, const bool useTrapezoidalTimeIntegration=true, Teuchos::EVerbosityLevel verbLevel=Teuchos::VERB_HIGH, Teuchos::RCP&lt; <a class="el" href="class_piro_1_1_r_o_l___observer_base.html">ROL_ObserverBase</a>&lt; Real &gt; &gt; observer=Teuchos::null)</td></tr>
+<tr class="memitem:aab76f8feb2f9b6f1b05548de8abb1101" id="r_aab76f8feb2f9b6f1b05548de8abb1101"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab76f8feb2f9b6f1b05548de8abb1101">setResponseTimes</a> (const std::vector&lt; Real &gt; &amp;responseTimes, const std::vector&lt; ROL::TimeStamp&lt; Real &gt; &gt; &amp;timeStamps)</td></tr>
+<tr class="memdesc:aab76f8feb2f9b6f1b05548de8abb1101"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use the sum of the responses at the given times as objective.  <br /></td></tr>
 <tr class="memitem:a32eac196aaac8c358addc4a43ddd4065" id="r_a32eac196aaac8c358addc4a43ddd4065"><td class="memItemLeft" align="right" valign="top"><a id="a32eac196aaac8c358addc4a43ddd4065" name="a32eac196aaac8c358addc4a43ddd4065"></a>
 Real&#160;</td><td class="memItemRight" valign="bottom"><b>value</b> (const ROL::Vector&lt; Real &gt; &amp;u_old, const ROL::Vector&lt; Real &gt; &amp;u_new, const ROL::Vector&lt; Real &gt; &amp;z, const ROL::TimeStamp&lt; Real &gt; &amp;timeStamp) const</td></tr>
 <tr class="memdesc:a32eac196aaac8c358addc4a43ddd4065"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute value of objective. <br /></td></tr>
@@ -143,17 +145,45 @@ class Piro::ThyraProductME_ROL_DynamicObjective&lt; Real &gt;</div><p><a class="
 <picture><source srcset="form_0_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\&zwj;[     \dot{u} = \frac{u_{new}-u_{old}}{dt}.
 \&zwj;]" src="form_0.png" width="93" height="24"/></picture>
 </p>
-<p>If the response depends only on the final time, the last time stamp contributes   </p><p class="formulaDsp">
-<picture><source srcset="form_1_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\&zwj;[     G = g(u_{new}, \dot{u}, z, t_{new})
-\&zwj;]" src="form_1.png" width="121" height="14"/></picture>
+<p>The contribution of a time stamp is a weighted sum of the responses at its two ends,   </p><p class="formulaDsp">
+<picture><source srcset="form_4_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\&zwj;[     G = w_{old}\, g(u_{old}, \dot{u}, z, t_{old}) + w_{new}\, g(u_{new}, \dot{u}, z, t_{new}),
+\&zwj;]" src="form_4.png" width="281" height="14"/></picture>
 </p>
-<p> and all other time stamps contribute zero.</p>
-<p>Otherwise the response is integrated in time with the trapezoidal rule   </p><p class="formulaDsp">
-<picture><source srcset="form_2_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\&zwj;[     G = \frac{dt}{2} \left[ g(u_{new}, \dot{u}, z, t_{new}) + g(u_{old}, \dot{u}, z, t_{old}) \right].
-\&zwj;]" src="form_2.png" width="251" height="28"/></picture>
-</p>
+<p> with weights given by the type of response:</p>
+<ul>
+<li>Final time (onlyFinalTime = true): <picture><source srcset="form_5_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$w_{new} = 1$" src="form_5.png" width="51" height="11"/></picture> for the last time stamp, all other weights are zero.</li>
+<li>Time integral (onlyFinalTime = false): the response is integrated in time with the trapezoidal rule, <picture><source srcset="form_6_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$w_{old} = w_{new} = dt/2$" src="form_6.png" width="109" height="14"/></picture>.</li>
+<li>Sum over times (see <a class="el" href="#aab76f8feb2f9b6f1b05548de8abb1101" title="Use the sum of the responses at the given times as objective.">setResponseTimes()</a>): the response is the sum of the responses at the given times t_k, which must be the initial time or ends of time stamps. <picture><source srcset="form_7_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$w_{new}$" src="form_7.png" width="28" height="9"/></picture> is the number of occurrences of <picture><source srcset="form_8_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$t_{new}$" src="form_8.png" width="24" height="11"/></picture> in the list and, for the first time stamp (which starts at the initial time), <picture><source srcset="form_9_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$w_{old}$" src="form_9.png" width="24" height="9"/></picture> is the number of occurrences of the initial time; all other weights are zero. The model is evaluated exactly at the listed times t_k.</li>
+</ul>
 <p>The gradients are the exact derivatives of G, including the dependence of <picture><source srcset="form_3_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$\dot{u}$" src="form_3.png" width="9" height="9"/></picture> on both u_old (factor -1/dt) and u_new (factor 1/dt). Models that do not support DgDx_dot are treated as responses that do not depend on x_dot. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="aab76f8feb2f9b6f1b05548de8abb1101" name="aab76f8feb2f9b6f1b05548de8abb1101"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab76f8feb2f9b6f1b05548de8abb1101">&#9670;&#160;</a></span>setResponseTimes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Real&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_piro_1_1_thyra_product_m_e___r_o_l___dynamic_objective.html">Piro::ThyraProductME_ROL_DynamicObjective</a>&lt; Real &gt;::setResponseTimes </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; Real &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>responseTimes</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; ROL::TimeStamp&lt; Real &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>timeStamps</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Use the sum of the responses at the given times as objective. </p>
+<p>timeStamps are the Nt time stamps of ROL::ReducedDynamicObjective (time stamp 0, which ends at the initial time, is not integrated). Each time must be, up to the tolerance of Tempus::AdjointSensitivityUtils::timeTolerance (with the tolerances of the Tempus "Sensitivities" parameters, as with the Tempus driver), the initial time or the end of one of the time stamps 1, ..., Nt-1; otherwise an exception is thrown. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><b>Piro_ThyraProductME_ROL_DynamicObjective.hpp</b></li>
 </ul>
 </div><!-- contents -->
