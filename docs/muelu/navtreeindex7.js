@@ -1,5 +1,6 @@
 var NAVTREEINDEX7 =
 {
+"_mue_lu___uzawa_smoother__def_8hpp_source.html":[11,0,2,7,0,15],
 "_mue_lu___uzawa_smoother__fwd_8hpp.html":[11,0,2,9,0,186],
 "_mue_lu___uzawa_smoother__fwd_8hpp.html#aae417e5c32ae73570bc9bb2438f6a783":[11,0,2,9,0,186,0],
 "_mue_lu___uzawa_smoother__fwd_8hpp_source.html":[11,0,2,9,0,186],
@@ -248,6 +249,5 @@ var NAVTREEINDEX7 =
 "class_belos_1_1_status_test_gen_res_sub_norm_3_01_scalar_00_01_xpetra_1_1_multi_vector_3_01_scal8e772064c09be5d4ee302f92ef6edb70.html#ae5c3a8b0014a03fb95a7f7cb2e8c5707":[9,0,1,2,46],
 "class_belos_1_1_status_test_gen_res_sub_norm_3_01_scalar_00_01_xpetra_1_1_multi_vector_3_01_scal8e772064c09be5d4ee302f92ef6edb70.html#ae5c3a8b0014a03fb95a7f7cb2e8c5707":[10,0,1,2,46],
 "class_belos_1_1_status_test_gen_res_sub_norm_3_01_scalar_00_01_xpetra_1_1_multi_vector_3_01_scal8e772064c09be5d4ee302f92ef6edb70.html#ae75325433452f3b332fa160b0764dda5":[9,0,1,2,58],
-"class_belos_1_1_status_test_gen_res_sub_norm_3_01_scalar_00_01_xpetra_1_1_multi_vector_3_01_scal8e772064c09be5d4ee302f92ef6edb70.html#ae75325433452f3b332fa160b0764dda5":[10,0,1,2,58],
-"class_belos_1_1_status_test_gen_res_sub_norm_3_01_scalar_00_01_xpetra_1_1_multi_vector_3_01_scal8e772064c09be5d4ee302f92ef6edb70.html#ae9532c52ddeb904cdb11aca43cf7c11f":[9,0,1,2,35]
+"class_belos_1_1_status_test_gen_res_sub_norm_3_01_scalar_00_01_xpetra_1_1_multi_vector_3_01_scal8e772064c09be5d4ee302f92ef6edb70.html#ae75325433452f3b332fa160b0764dda5":[10,0,1,2,58]
 };

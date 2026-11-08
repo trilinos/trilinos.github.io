@@ -3,6 +3,7 @@ var hierarchy =
     [ "AdaptiveSAMLParameterListInterpreter", "class_adaptive_s_a_m_l_parameter_list_interpreter.html", null ],
     [ "MueLu::AppendTrait&lt; View, AppendValue &gt;", "struct_mue_lu_1_1_append_trait.html", null ],
     [ "MueLu::AppendTrait&lt; Kokkos::View&lt; DataType, Pack... &gt;, T &gt;", "struct_mue_lu_1_1_append_trait_3_01_kokkos_1_1_view_3_01_data_type_00_01_pack_8_8_8_01_4_00_01_t_01_4.html", null ],
+    [ "MueLu::Details::StructuredRAPKernel&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;::AxisClassMap", "struct_mue_lu_1_1_details_1_1_structured_r_a_p_kernel_1_1_axis_class_map.html", null ],
     [ "MueLu::Behavior", "class_mue_lu_1_1_behavior.html", null ],
     [ "BelosError", null, [
       [ "Belos::MueLuOpFailure", "class_belos_1_1_mue_lu_op_failure.html", null ]
@@ -336,7 +337,6 @@ var hierarchy =
       [ "MueLu::Details::LinearSolverFactory< MV, OP, NormType >", "class_mue_lu_1_1_details_1_1_linear_solver_factory.html", null ]
     ] ],
     [ "MueLu::LocalAggregationAlgorithm&lt; LocalOrdinal, GlobalOrdinal, Node &gt;", "class_mue_lu_1_1_local_aggregation_algorithm.html", null ],
-    [ "MueLu::LocalFSAIFunctor&lt; local_matrix_type, global_ordinal_type &gt;", "class_mue_lu_1_1_local_f_s_a_i_functor.html", null ],
     [ "MueLu::LocalQR::LocalQRDecompFunctor&lt; LOType, GOType, SCType, DeviceType, NspType, aggRowsType, maxAggDofSizeType, agg2RowMapLOType, statusType, rowsType, rowsAuxType, colsAuxType, valsAuxType &gt;", "class_mue_lu_1_1_local_q_r_1_1_local_q_r_decomp_functor.html", null ],
     [ "MueLu::LWGraphBase&lt; LocalOrdinal, GlobalOrdinal, Node, OnHost &gt;", "class_mue_lu_1_1_l_w_graph_base.html", [
       [ "MueLu::LWGraph< mm_LocalOrd, mm_GlobalOrd, mm_node_t >", "class_mue_lu_1_1_l_w_graph.html", null ]
@@ -404,6 +404,7 @@ var hierarchy =
     ] ],
     [ "MueLu::PerfModels&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;", "class_mue_lu_1_1_perf_models.html", null ],
     [ "MueLu::PerfUtils&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;", "class_mue_lu_1_1_perf_utils.html", null ],
+    [ "MueLu::Details::StructuredRAPKernel&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;::PlanArray&lt; View &gt;", "struct_mue_lu_1_1_details_1_1_structured_r_a_p_kernel_1_1_plan_array.html", null ],
     [ "MueLu::BoundaryDetection::PointDirichletFunctor&lt; local_matrix_type &gt;", "class_mue_lu_1_1_boundary_detection_1_1_point_dirichlet_functor.html", null ],
     [ "MueLu::MatrixConstruction::PointwiseCountingFunctor&lt; local_matrix_type, functor_type, remaining_functor_types &gt;", "class_mue_lu_1_1_matrix_construction_1_1_pointwise_counting_functor.html", null ],
     [ "MueLu::MatrixConstruction::PointwiseCountingFunctor&lt; local_matrix_type, functor_type &gt;", "class_mue_lu_1_1_matrix_construction_1_1_pointwise_counting_functor_3_01local__matrix__type_00_01functor__type_01_4.html", null ],
@@ -443,6 +444,7 @@ var hierarchy =
     ] ],
     [ "MueLu::StructuredRAPFactory&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;::StencilOffset", "struct_mue_lu_1_1_structured_r_a_p_factory_1_1_stencil_offset.html", null ],
     [ "MueLu::StructuredRAPFactory&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;::StructuredGraphSpec", "struct_mue_lu_1_1_structured_r_a_p_factory_1_1_structured_graph_spec.html", null ],
+    [ "MueLu::Details::StructuredRAPKernel&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;", "class_mue_lu_1_1_details_1_1_structured_r_a_p_kernel.html", null ],
     [ "MueLu::Misc::SymmetrizeFunctor&lt; local_matrix_type, weakWins, offdiagNnzsCanBeReducedToZero &gt;", "class_mue_lu_1_1_misc_1_1_symmetrize_functor.html", null ],
     [ "MueLu::BlockInverseFunctor&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;::TagApply", "class_mue_lu_1_1_block_inverse_functor_1_1_tag_apply.html", null ],
     [ "MueLu::BlockInverseFunctor&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;::TagCountSingularBlocks", "class_mue_lu_1_1_block_inverse_functor_1_1_tag_count_singular_blocks.html", null ],

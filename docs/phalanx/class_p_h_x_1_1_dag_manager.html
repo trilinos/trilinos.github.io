@@ -77,6 +77,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_p_h_x_1_1_dag_manager-members.html">List of all members</a>  </div>
@@ -164,6 +165,10 @@ const std::vector&lt; Teuchos::RCP&lt; <a class="el" href="class_p_h_x_1_1_field
 <tr class="memitem:a54cb1043c9c2118ba043fe0f8c503dfe" id="r_a54cb1043c9c2118ba043fe0f8c503dfe"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; std::string, int &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54cb1043c9c2118ba043fe0f8c503dfe">queryRegisteredFields</a> () const</td></tr>
 <tr class="memitem:ae1eded405e9f36a37bfaaf1c9ce17ac9" id="r_ae1eded405e9f36a37bfaaf1c9ce17ac9"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="class_p_h_x_1_1_dag_node.html">PHX::DagNode</a>&lt; Traits &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1eded405e9f36a37bfaaf1c9ce17ac9">queryRegisteredEvaluators</a> () const</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a87ee660da23f0f44f3cb5ac007ef04bd" id="r_a87ee660da23f0f44f3cb5ac007ef04bd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87ee660da23f0f44f3cb5ac007ef04bd">setAddIndexToTimerNames</a> (bool add_index)</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a8576485a9802386735707069997e4931" id="r_a8576485a9802386735707069997e4931"><td class="memItemLeft" align="right" valign="top"><a id="a8576485a9802386735707069997e4931" name="a8576485a9802386735707069997e4931"></a>
@@ -196,9 +201,11 @@ std::vector&lt; Teuchos::RCP&lt; <a class="el" href="class_p_h_x_1_1_field_tag.h
 <tr class="memdesc:a5856259c117faa22de6f03c540babfed"><td class="mdescLeft">&#160;</td><td class="mdescRight">All fields that are needed for the evaluation. <br /></td></tr>
 <tr class="memitem:a5eb1cf112172ed4e9195932a34831bdc" id="r_a5eb1cf112172ed4e9195932a34831bdc"><td class="memItemLeft" align="right" valign="top"><a id="a5eb1cf112172ed4e9195932a34831bdc" name="a5eb1cf112172ed4e9195932a34831bdc"></a>
 std::vector&lt; Teuchos::RCP&lt; Teuchos::Time &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>evalTimers</b></td></tr>
-<tr id="pro-attribs-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Evaluation Order Objects</div></td></tr>
-<tr><td colspan="2" class="ititle"><div class="groupText"><p>Stores results from a topological sort on the evaluator DAG: the order to call evaluators to evaluate fields correctly. </p>
-</div></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-member-group" class="groupheader"><a id="member-group" name="member-group"></a>
+Evaluation Order Objects</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p>Stores results from a topological sort on the evaluator DAG: the order to call evaluators to evaluate fields correctly. </p>
+</td></tr>
 <tr class="memitem:a0553b0ec5e2aaf1f43e950a1081b4f04" id="r_a0553b0ec5e2aaf1f43e950a1081b4f04"><td class="memItemLeft" align="right" valign="top"><a id="a0553b0ec5e2aaf1f43e950a1081b4f04" name="a0553b0ec5e2aaf1f43e950a1081b4f04"></a>
 std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>topoSortEvalIndex</b></td></tr>
 <tr class="memitem:a75d4d1f9cf1ca47019c279a0abfab312" id="r_a75d4d1f9cf1ca47019c279a0abfab312"><td class="memItemLeft" align="right" valign="top"><a id="a75d4d1f9cf1ca47019c279a0abfab312" name="a75d4d1f9cf1ca47019c279a0abfab312"></a>
@@ -239,6 +246,9 @@ std::unordered_map&lt; std::string, Teuchos::RCP&lt; <a class="el" href="class_p
 <tr class="memitem:a4451ac7df54bc36118508c1dd8448f1a" id="r_a4451ac7df54bc36118508c1dd8448f1a"><td class="memItemLeft" align="right" valign="top"><a id="a4451ac7df54bc36118508c1dd8448f1a" name="a4451ac7df54bc36118508c1dd8448f1a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>unshared_evaluated_</b></td></tr>
 <tr class="memdesc:a4451ac7df54bc36118508c1dd8448f1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the unshared fields have been evaluated. <br /></td></tr>
+<tr class="memitem:a98b0265c2198d11ae9425371225979df" id="r_a98b0265c2198d11ae9425371225979df"><td class="memItemLeft" align="right" valign="top"><a id="a98b0265c2198d11ae9425371225979df" name="a98b0265c2198d11ae9425371225979df"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>add_index_to_timer_names_</b> = true</td></tr>
+<tr class="memdesc:a98b0265c2198d11ae9425371225979df"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, a static counter index is added to evaluator timer names to make them unique. <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename Traits&gt;<br />
@@ -575,6 +585,36 @@ template&lt;typename Traits&gt; </div>
 <p>Returns the internal fields this <a class="el" href="class_p_h_x_1_1_dag_manager.html" title="Class to generate the directed acyclic graph (DAG) for evaluation. Determined which Evaluators should...">DagManager</a> can currently evaluate and the index into the DAG node vector. This function is provided only for query, debug and unit testing. </p>
 
 <p class="reference">References <a class="el" href="#ad1e7cde87608e9447aae5594f6e097cc">field_to_node_index_</a>.</p>
+
+</div>
+</div>
+<a id="a87ee660da23f0f44f3cb5ac007ef04bd" name="a87ee660da23f0f44f3cb5ac007ef04bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87ee660da23f0f44f3cb5ac007ef04bd">&#9670;&#160;</a></span>setAddIndexToTimerNames()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Traits&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_p_h_x_1_1_dag_manager.html">PHX::DagManager</a>&lt; Traits &gt;::setAddIndexToTimerNames </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>add_index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>When configured with Phalanx_ENABLE_TEUCHOS_TIME_MONITOR, a static index is added to evaluator timer names to make them unique. Set to false to drop the index from the timer names. Default is true for backwards compatibility. Applies to all <a class="el" href="class_p_h_x_1_1_dag_manager.html" title="Class to generate the directed acyclic graph (DAG) for evaluation. Determined which Evaluators should...">DagManager</a> objects with the same Traits. </p>
+
+<p class="reference">References <a class="el" href="#a98b0265c2198d11ae9425371225979df">add_index_to_timer_names_</a>.</p>
 
 </div>
 </div>

@@ -11,5 +11,6 @@ var searchData=
   ['hierarchycoarse11_5f_8',['HierarchyCoarse11_',['../class_mue_lu_1_1_ref_maxwell.html#aab8fc06155bd811a5a5685b23213c18a',1,'MueLu::RefMaxwell']]],
   ['hierarchygmhd_5f_9',['HierarchyGmhd_',['../class_mue_lu_1_1_maxwell1.html#a17c58f75142c127b7b2546ca7c5d0001',1,'MueLu::Maxwell1']]],
   ['hierarchylabel_5f_10',['hierarchyLabel_',['../class_mue_lu_1_1_parameter_list_interpreter.html#a5e894c4fe399e850c2d73aebcf1c0c43',1,'MueLu::ParameterListInterpreter::hierarchyLabel_'],['../class_mue_lu_1_1_hierarchy.html#a8e93c0244568f3ca33e93e9a687c33b2',1,'MueLu::Hierarchy::hierarchyLabel_']]],
-  ['hierarchymultiphysics_5f_11',['hierarchyMultiphysics_',['../class_mue_lu_1_1_multi_phys.html#a03afb12040c530f849cb3269f6717be9',1,'MueLu::MultiPhys']]]
+  ['hierarchymultiphysics_5f_11',['hierarchyMultiphysics_',['../class_mue_lu_1_1_multi_phys.html#a03afb12040c530f849cb3269f6717be9',1,'MueLu::MultiPhys']]],
+  ['host_12',['host',['../struct_mue_lu_1_1_details_1_1_structured_r_a_p_kernel_1_1_plan_array.html#a258ae1ecbc6efde89959bf6748014423',1,'MueLu::Details::StructuredRAPKernel::PlanArray']]]
 ];

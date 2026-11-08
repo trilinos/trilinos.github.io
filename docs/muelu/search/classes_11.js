@@ -47,9 +47,10 @@ var searchData=
   ['structuredgraphspec_44',['StructuredGraphSpec',['../struct_mue_lu_1_1_structured_r_a_p_factory_1_1_structured_graph_spec.html',1,'MueLu::StructuredRAPFactory']]],
   ['structuredlinedetectionfactory_45',['StructuredLineDetectionFactory',['../class_mue_lu_1_1_structured_line_detection_factory.html',1,'MueLu']]],
   ['structuredrapfactory_46',['StructuredRAPFactory',['../class_mue_lu_1_1_structured_r_a_p_factory.html',1,'MueLu']]],
-  ['subblockafactory_47',['SubBlockAFactory',['../class_mue_lu_1_1_sub_block_a_factory.html',1,'MueLu']]],
-  ['subfactorymonitor_48',['SubFactoryMonitor',['../class_mue_lu_1_1_sub_factory_monitor.html',1,'MueLu']]],
-  ['submonitor_49',['SubMonitor',['../class_mue_lu_1_1_sub_monitor.html',1,'MueLu']]],
-  ['sumreducer_50',['SumReducer',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/struct_ifpack2_1_1_block_helper_details_1_1_sum_reducer.html',1,'Ifpack2::BlockHelperDetails']]],
-  ['symmetrizefunctor_51',['SymmetrizeFunctor',['../class_mue_lu_1_1_misc_1_1_symmetrize_functor.html',1,'MueLu::Misc']]]
+  ['structuredrapkernel_47',['StructuredRAPKernel',['../class_mue_lu_1_1_details_1_1_structured_r_a_p_kernel.html',1,'MueLu::Details']]],
+  ['subblockafactory_48',['SubBlockAFactory',['../class_mue_lu_1_1_sub_block_a_factory.html',1,'MueLu']]],
+  ['subfactorymonitor_49',['SubFactoryMonitor',['../class_mue_lu_1_1_sub_factory_monitor.html',1,'MueLu']]],
+  ['submonitor_50',['SubMonitor',['../class_mue_lu_1_1_sub_monitor.html',1,'MueLu']]],
+  ['sumreducer_51',['SumReducer',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/struct_ifpack2_1_1_block_helper_details_1_1_sum_reducer.html',1,'Ifpack2::BlockHelperDetails']]],
+  ['symmetrizefunctor_52',['SymmetrizeFunctor',['../class_mue_lu_1_1_misc_1_1_symmetrize_functor.html',1,'MueLu::Misc']]]
 ];

@@ -1,6 +1,7 @@
 var namespace_mue_lu_1_1_details =
 [
     [ "DropTol", "struct_mue_lu_1_1_details_1_1_drop_tol.html", "struct_mue_lu_1_1_details_1_1_drop_tol" ],
+    [ "StructuredRAPKernel", "class_mue_lu_1_1_details_1_1_structured_r_a_p_kernel.html", "class_mue_lu_1_1_details_1_1_structured_r_a_p_kernel" ],
     [ "has_build_p_blocked_thyra_eti", "struct_mue_lu_1_1_details_1_1has__build__p__blocked__thyra__eti.html", null ],
     [ "LinearSolverFactory", "class_mue_lu_1_1_details_1_1_linear_solver_factory.html", "class_mue_lu_1_1_details_1_1_linear_solver_factory" ],
     [ "LinearSolver", "class_mue_lu_1_1_details_1_1_linear_solver.html", "class_mue_lu_1_1_details_1_1_linear_solver" ],

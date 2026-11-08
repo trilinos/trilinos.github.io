@@ -14,7 +14,7 @@ var searchData=
   ['schwarz_5fordermethod_5f_11',['schwarz_ordermethod_',['../class_mue_lu_1_1_shifted_laplacian.html#a95b49c07e820ac0c1184bdb53061cbaf',1,'MueLu::ShiftedLaplacian']]],
   ['schwarz_5foverlap_5f_12',['schwarz_overlap_',['../class_mue_lu_1_1_shifted_laplacian.html#a5ec5c7c008e1a5c9135ec3dd27d787c7',1,'MueLu::ShiftedLaplacian']]],
   ['schwarz_5fusereorder_5f_13',['schwarz_usereorder_',['../class_mue_lu_1_1_shifted_laplacian.html#a4a62cf0886f6b237168af1de19fe22e4',1,'MueLu::ShiftedLaplacian']]],
-  ['scratchlevel_14',['scratchLevel',['../class_mue_lu_1_1_local_f_s_a_i_functor.html#a1b69cb3909dff5b1a8f8b6e56af620d3',1,'MueLu::LocalFSAIFunctor::scratchLevel'],['../class_mue_lu_1_1_local_q_r_1_1_local_q_r_decomp_functor.html#a4810194f586e9aa531eb72a5c1bf03dc',1,'MueLu::LocalQR::LocalQRDecompFunctor::scratchLevel']]],
+  ['scratchlevel_14',['scratchLevel',['../class_mue_lu_1_1_local_q_r_1_1_local_q_r_decomp_functor.html#a4810194f586e9aa531eb72a5c1bf03dc',1,'MueLu::LocalQR::LocalQRDecompFunctor']]],
   ['setupfunction_5f_15',['setupFunction_',['../class_mue_lu_1_1_matlab_smoother.html#ae759298a71554fefccd1ea1695b8c197',1,'MueLu::MatlabSmoother']]],
   ['shifts_5f_16',['shifts_',['../class_mue_lu_1_1_r_a_p_shift_factory.html#a818db539092f3d55fdf495ce1dbd0d01',1,'MueLu::RAPShiftFactory']]],
   ['shortclassname_5f_17',['shortClassName_',['../class_mue_lu_1_1_describable.html#a517173ce5db1c63c83e191ca9b4efd7c',1,'MueLu::Describable']]],

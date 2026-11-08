@@ -4723,7 +4723,7 @@ $(function() {
 <div class="line"><a id="l04698" name="l04698"></a><span class="lineno"> 4698</span>      <span class="comment">// scratch View, to keep indices/strides 32-bit for the single-vector</span></div>
 <div class="line"><a id="l04699" name="l04699"></a><span class="lineno"> 4699</span>      <span class="comment">// solve. The middle dimension (num_vectors == 1 here) is elided since we</span></div>
 <div class="line"><a id="l04700" name="l04700"></a><span class="lineno"> 4700</span>      <span class="comment">// specialize for the single-vector case.</span></div>
-<div class="line"><a id="l04701" name="l04701"></a><span class="lineno"> 4701</span><span class="preprocessor">#if defined(KOKKOS_ENABLE_IMPL_MDSPAN) || (KOKKOS_VERSION &gt;= 50299)</span></div>
+<div class="line"><a id="l04701" name="l04701"></a><span class="lineno"> 4701</span><span class="preprocessor">#if (defined(KOKKOS_ENABLE_IMPL_MDSPAN) &amp;&amp; (KOKKOS_VERSION &gt;= 50200)) || (KOKKOS_VERSION &gt;= 50299)</span></div>
 <div class="line"><a id="l04702" name="l04702"></a><span class="lineno"> 4702</span>      <span class="keyword">using </span>WW_u32_view_type = Kokkos::View&lt;</div>
 <div class="line"><a id="l04703" name="l04703"></a><span class="lineno"> 4703</span>          internal_vector_type,</div>
 <div class="line"><a id="l04704" name="l04704"></a><span class="lineno"> 4704</span>          Kokkos::extents&lt;uint32_t, Kokkos::dynamic_extent, Kokkos::dynamic_extent&gt;,</div>

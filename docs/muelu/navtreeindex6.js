@@ -1,6 +1,5 @@
 var NAVTREEINDEX6 =
 {
-"_mue_lu___stratimikos_smoother__fwd_8hpp.html":[11,0,2,9,0,160],
 "_mue_lu___stratimikos_smoother__fwd_8hpp_source.html":[11,0,2,9,0,160],
 "_mue_lu___structured_aggregation_factory__decl_8hpp.html":[11,0,2,0,5,8],
 "_mue_lu___structured_aggregation_factory__decl_8hpp.html#a71ef579df0c164cd63aaf757d7fe533a":[11,0,2,0,5,8,1],
@@ -38,6 +37,8 @@ var NAVTREEINDEX6 =
 "_mue_lu___structured_r_a_p_factory__fwd_8hpp.html":[11,0,2,9,0,164],
 "_mue_lu___structured_r_a_p_factory__fwd_8hpp.html#aa8a369d71a31bfa4bbf218383e1da371":[11,0,2,9,0,164,0],
 "_mue_lu___structured_r_a_p_factory__fwd_8hpp_source.html":[11,0,2,9,0,164],
+"_mue_lu___structured_r_a_p_kernel_8hpp.html":[11,0,2,3,48],
+"_mue_lu___structured_r_a_p_kernel_8hpp_source.html":[11,0,2,3,48],
 "_mue_lu___sub_block_a_factory__decl_8hpp.html":[11,0,2,8,2,6],
 "_mue_lu___sub_block_a_factory__decl_8hpp.html#ab85e9b690a8e1a06d7c05dd68a66861e":[11,0,2,8,2,6,1],
 "_mue_lu___sub_block_a_factory__decl_8hpp_source.html":[11,0,2,8,2,6],
@@ -74,11 +75,11 @@ var NAVTREEINDEX6 =
 "_mue_lu___tentative_p_factory__kokkos__fwd_8hpp.html":[11,0,2,9,0,168],
 "_mue_lu___tentative_p_factory__kokkos__fwd_8hpp.html#affbf5733b113bd86e6d633a659b82bea":[11,0,2,9,0,168,0],
 "_mue_lu___tentative_p_factory__kokkos__fwd_8hpp_source.html":[11,0,2,9,0,168],
-"_mue_lu___threshold_a_filter_factory__decl_8hpp.html":[11,0,2,3,48],
-"_mue_lu___threshold_a_filter_factory__decl_8hpp.html#ab4520aec1123b9a261f65583a716254c":[11,0,2,3,48,1],
-"_mue_lu___threshold_a_filter_factory__decl_8hpp_source.html":[11,0,2,3,48],
-"_mue_lu___threshold_a_filter_factory__def_8hpp.html":[11,0,2,3,49],
-"_mue_lu___threshold_a_filter_factory__def_8hpp_source.html":[11,0,2,3,49],
+"_mue_lu___threshold_a_filter_factory__decl_8hpp.html":[11,0,2,3,49],
+"_mue_lu___threshold_a_filter_factory__decl_8hpp.html#ab4520aec1123b9a261f65583a716254c":[11,0,2,3,49,1],
+"_mue_lu___threshold_a_filter_factory__decl_8hpp_source.html":[11,0,2,3,49],
+"_mue_lu___threshold_a_filter_factory__def_8hpp.html":[11,0,2,3,50],
+"_mue_lu___threshold_a_filter_factory__def_8hpp_source.html":[11,0,2,3,50],
 "_mue_lu___threshold_a_filter_factory__fwd_8hpp.html":[11,0,2,9,0,169],
 "_mue_lu___threshold_a_filter_factory__fwd_8hpp.html#ab4520aec1123b9a261f65583a716254c":[11,0,2,9,0,169,0],
 "_mue_lu___threshold_a_filter_factory__fwd_8hpp_source.html":[11,0,2,9,0,169],
@@ -248,6 +249,5 @@ var NAVTREEINDEX6 =
 "_mue_lu___uzawa_smoother__decl_8hpp.html":[11,0,2,7,0,14],
 "_mue_lu___uzawa_smoother__decl_8hpp.html#aae417e5c32ae73570bc9bb2438f6a783":[11,0,2,7,0,14,1],
 "_mue_lu___uzawa_smoother__decl_8hpp_source.html":[11,0,2,7,0,14],
-"_mue_lu___uzawa_smoother__def_8hpp.html":[11,0,2,7,0,15],
-"_mue_lu___uzawa_smoother__def_8hpp_source.html":[11,0,2,7,0,15]
+"_mue_lu___uzawa_smoother__def_8hpp.html":[11,0,2,7,0,15]
 };

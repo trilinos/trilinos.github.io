@@ -90,11 +90,13 @@ Inheritance diagram for Piro::TempusSolver&lt; Scalar &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_piro_1_1_tempus_solver__inherit__graph.gif" border="0" usemap="#a_piro_1_1_tempus_solver_3_01_scalar_01_4_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
 <map name="a_piro_1_1_tempus_solver_3_01_scalar_01_4_inherit__map" id="a_piro_1_1_tempus_solver_3_01_scalar_01_4_inherit__map">
-<area shape="rect" title="Thyra&#45;based Model Evaluator for Tempus solves." alt="" coords="32,191,178,235"/>
-<area shape="rect" href="class_piro_1_1_transient_solver.html" title="Thyra&#45;based Model Evaluator for Tempus solves using Tempus." alt="" coords="28,98,182,143"/>
-<area shape="poly" title=" " alt="" coords="107,156,107,191,103,190,103,160"/>
+<area shape="rect" title="Thyra&#45;based Model Evaluator for Tempus solves." alt="" coords="32,193,178,238"/>
+<area shape="rect" href="class_piro_1_1_tempus_solver.html" title=" " alt="" coords="32,311,178,356"/>
+<area shape="poly" title=" " alt="" coords="107,252,108,311,102,310,103,256"/>
+<area shape="rect" href="class_piro_1_1_transient_solver.html" title="Thyra&#45;based Model Evaluator for Tempus solves using Tempus." alt="" coords="28,99,182,144"/>
+<area shape="poly" title=" " alt="" coords="106,157,108,193,102,192,104,162"/>
 <area shape="rect" title=" " alt="" coords="5,5,205,50"/>
-<area shape="poly" title=" " alt="" coords="106,63,108,98,102,97,104,68"/>
+<area shape="poly" title=" " alt="" coords="106,63,108,99,102,98,104,68"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -110,9 +112,10 @@ Collaboration diagram for Piro::TempusSolver&lt; Scalar &gt;:</div>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Constructors/initializers</div></td></tr>
+<tr class="heading"><td colspan="2"><h2 id="header-member-group" class="groupheader"><a id="member-group" name="member-group"></a>
+Constructors/initializers</h2></td></tr>
+<tr class="memitem:a11739c0ac9ea5915e7ef5c3469108c04" id="r_a11739c0ac9ea5915e7ef5c3469108c04"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; void(const Teuchos::RCP&lt; Thyra::ModelEvaluator&lt; Scalar &gt; &gt; &amp;model, const Thyra::ModelEvaluatorBase::InArgs&lt; Scalar &gt; &amp;inArgs, Thyra::VectorBase&lt; Scalar &gt; &amp;x0)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11739c0ac9ea5915e7ef5c3469108c04">ConsistentInitialStateFunction</a></td></tr>
+<tr class="memdesc:a11739c0ac9ea5915e7ef5c3469108c04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that makes the initial state consistent.  <br /></td></tr>
 <tr class="memitem:a5ece710a20d8d589893765b7a2891ec0" id="r_a5ece710a20d8d589893765b7a2891ec0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ece710a20d8d589893765b7a2891ec0">TempusSolver</a> (const Teuchos::RCP&lt; Teuchos::ParameterList &gt; &amp;appParams, const Teuchos::RCP&lt; Thyra::ModelEvaluator&lt; Scalar &gt; &gt; &amp;model, const Teuchos::RCP&lt; Thyra::ModelEvaluator&lt; Scalar &gt; &gt; &amp;adjointModel=Teuchos::null, const Teuchos::RCP&lt; <a class="el" href="class_piro_1_1_observer_base.html">Piro::ObserverBase</a>&lt; Scalar &gt; &gt; &amp;piroObserver=Teuchos::null)</td></tr>
 <tr class="memdesc:a5ece710a20d8d589893765b7a2891ec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the internals, though the object is a blank slate. To initialize it call <code>initialize</code>.  <br /></td></tr>
 <tr class="memitem:a026a03979760a656231c0deb485eff4f" id="r_a026a03979760a656231c0deb485eff4f"><td class="memItemLeft" align="right" valign="top"><a id="a026a03979760a656231c0deb485eff4f" name="a026a03979760a656231c0deb485eff4f"></a>
@@ -151,6 +154,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setInitialState</b> (
 <tr class="memitem:a922f23d01a81f52e331049c2161e0964" id="r_a922f23d01a81f52e331049c2161e0964"><td class="memItemLeft" align="right" valign="top"><a id="a922f23d01a81f52e331049c2161e0964" name="a922f23d01a81f52e331049c2161e0964"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setInitialGuess</b> (Teuchos::RCP&lt; const Thyra::VectorBase&lt; Scalar &gt; &gt; initial_guess=Teuchos::null)</td></tr>
 <tr class="memdesc:a922f23d01a81f52e331049c2161e0964"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set initial guess for Newton method. <br /></td></tr>
+<tr class="memitem:a32a599d976645b30604df27985681efb" id="r_a32a599d976645b30604df27985681efb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32a599d976645b30604df27985681efb">setConsistentInitialStateFunction</a> (const <a class="el" href="#a11739c0ac9ea5915e7ef5c3469108c04">ConsistentInitialStateFunction</a> &amp;f)</td></tr>
+<tr class="memdesc:a32a599d976645b30604df27985681efb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a function that makes the initial state consistent with the parameters, before each time integration.  <br /></td></tr>
+<tr class="memitem:ab5f8466b93f0021d30c39f56f06ca162" id="r_ab5f8466b93f0021d30c39f56f06ca162"><td class="memItemLeft" align="right" valign="top"><a id="ab5f8466b93f0021d30c39f56f06ca162" name="ab5f8466b93f0021d30c39f56f06ca162"></a>
+const <a class="el" href="#a11739c0ac9ea5915e7ef5c3469108c04">ConsistentInitialStateFunction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getConsistentInitialStateFunction</b> () const</td></tr>
+<tr class="memdesc:ab5f8466b93f0021d30c39f56f06ca162"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that makes the initial state consistent (empty if not set). <br /></td></tr>
 <tr class="memitem:a81ac85b7460783f8edf2cb558b5bac83" id="r_a81ac85b7460783f8edf2cb558b5bac83"><td class="memItemLeft" align="right" valign="top"><a id="a81ac85b7460783f8edf2cb558b5bac83" name="a81ac85b7460783f8edf2cb558b5bac83"></a>
 Teuchos::RCP&lt; Tempus::SolutionHistory&lt; Scalar &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getSolutionHistory</b> () const</td></tr>
 <tr class="memdesc:a81ac85b7460783f8edf2cb558b5bac83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return RCP to Tempus::SolutionHistory. <br /></td></tr>
@@ -167,6 +175,9 @@ Teuchos::RCP&lt; <a class="el" href="class_piro_1_1_tempus_integrator.html">Piro
 Teuchos::RCP&lt; Thyra::ModelEvaluator&lt; Scalar &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getSubModel</b> ()</td></tr>
 <tr class="memitem:ae794e7d8323d648a29da64c7106379b5" id="r_ae794e7d8323d648a29da64c7106379b5"><td class="memItemLeft" align="right" valign="top"><a id="ae794e7d8323d648a29da64c7106379b5" name="ae794e7d8323d648a29da64c7106379b5"></a>
 Teuchos::RCP&lt; Thyra::ModelEvaluator&lt; Scalar &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getAdjointSubModel</b> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_methods_class_piro_1_1_transient_solver"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_piro_1_1_transient_solver')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_piro_1_1_transient_solver.html">Piro::TransientSolver&lt; Scalar &gt;</a></td></tr>
 <tr class="memitem:aa86edcaa8e7f042b57dfc63c95e5d40a inherit pub_methods_class_piro_1_1_transient_solver" id="r_aa86edcaa8e7f042b57dfc63c95e5d40a"><td class="memItemLeft" align="right" valign="top">
 &#160;</td><td class="memItemRight" valign="bottom"><b>TransientSolver</b> (const Teuchos::RCP&lt; Thyra::ModelEvaluator&lt; Scalar &gt; &gt; &amp;model, const Teuchos::RCP&lt; Teuchos::ParameterList &gt; &amp;appParams, const Teuchos::RCP&lt; <a class="el" href="class_piro_1_1_observer_base.html">Piro::ObserverBase</a>&lt; Scalar &gt; &gt; &amp;piroObserver=Teuchos::null)</td></tr>
@@ -196,9 +207,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setPiroTempusIntegrat
 <tr class="memdesc:a54b9177adcb2795a9f9042cdbf838122 inherit pub_methods_class_piro_1_1_transient_solver"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the parameter for which Tempus computes sensitivities.  <br /></td></tr>
 <tr class="memitem:a5294faa5d322d52993bf9673cc3abf1a inherit pub_methods_class_piro_1_1_transient_solver" id="r_a5294faa5d322d52993bf9673cc3abf1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_piro_1_1_transient_solver.html#a5294faa5d322d52993bf9673cc3abf1a">resetResponseFnIndex</a> (const int response_fn_index)</td></tr>
 <tr class="memdesc:a5294faa5d322d52993bf9673cc3abf1a inherit pub_methods_class_piro_1_1_transient_solver"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the response for which Tempus computes adjoint sensitivities.  <br /></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_class_piro_1_1_transient_solver"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_class_piro_1_1_transient_solver')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="class_piro_1_1_transient_solver.html">Piro::TransientSolver&lt; Scalar &gt;</a></td></tr>
 <tr class="memitem:a2cff5b8ed43e5625317577105975c8e3 inherit pro_methods_class_piro_1_1_transient_solver" id="r_a2cff5b8ed43e5625317577105975c8e3"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>evalConvergedModelResponsesAndSensitivities</b> (const Thyra::ModelEvaluatorBase::InArgs&lt; Scalar &gt; &amp;modelInArgs, const Thyra::ModelEvaluatorBase::OutArgs&lt; Scalar &gt; &amp;outArgs) const</td></tr>
@@ -206,7 +214,28 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>evalConvergedModelRes
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename Scalar&gt;<br />
 class Piro::TempusSolver&lt; Scalar &gt;</div><p>Thyra-based Model Evaluator for Tempus solves. </p>
-</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
+<a id="a11739c0ac9ea5915e7ef5c3469108c04" name="a11739c0ac9ea5915e7ef5c3469108c04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11739c0ac9ea5915e7ef5c3469108c04">&#9670;&#160;</a></span>ConsistentInitialStateFunction</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Scalar&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::function&lt;void(const Teuchos::RCP&lt;Thyra::ModelEvaluator&lt;Scalar&gt; &gt;&amp; model, const Thyra::ModelEvaluatorBase::InArgs&lt;Scalar&gt;&amp; inArgs, Thyra::VectorBase&lt;Scalar&gt;&amp; x0)&gt; <a class="el" href="class_piro_1_1_tempus_solver.html">Piro::TempusSolver</a>&lt; Scalar &gt;::ConsistentInitialStateFunction</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function that makes the initial state consistent. </p>
+<p>model is the model of the <a class="el" href="class_piro_1_1_tempus_solver.html" title="Thyra-based Model Evaluator for Tempus solves.">Piro::TempusSolver</a> (getSubModel()), and inArgs are InArgs of this model, in its own parameter layout, with the parameters of the time integration and the initial time. This holds for both callers: evalModel, and the Tempus-driven transient optimization (<a class="el" href="class_piro_1_1_thyra_product_m_e___tempus_final_objective.html" title="Reduced objective for transient problems, computed with Tempus.">Piro::ThyraProductME_TempusFinalObjective</a>), which unpacks the product parameter of the <a class="el" href="class_piro_1_1_product_model_evaluator.html" title="Product Model Evaluator Model Evaluator that supports only one parameter which is a product vector....">Piro::ProductModelEvaluator</a> it optimizes into the parameters of this model. (Only an objective built on a model that is neither this model nor a <a class="el" href="class_piro_1_1_product_model_evaluator.html" title="Product Model Evaluator Model Evaluator that supports only one parameter which is a product vector....">Piro::ProductModelEvaluator</a> around it passes its own model and InArgs instead.)</p>
+<p>On input, x0 is the initial state of the model (its nominal value); on output, it must be the consistent initial state for these parameters and initial time. For instance, for a semi-explicit index-1 DAE, the algebraic components of x0 are computed from the differential ones by solving the algebraic equations at the initial time. </p>
+
+</div>
+</div>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5ece710a20d8d589893765b7a2891ec0" name="a5ece710a20d8d589893765b7a2891ec0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5ece710a20d8d589893765b7a2891ec0">&#9670;&#160;</a></span>TempusSolver()</h2>
 
@@ -240,6 +269,39 @@ template&lt;typename Scalar&gt; </div>
 
 <p>Initializes the internals, though the object is a blank slate. To initialize it call <code>initialize</code>. </p>
 <p>Initialize with internally built objects according to the given parameter list. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a32a599d976645b30604df27985681efb" name="a32a599d976645b30604df27985681efb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32a599d976645b30604df27985681efb">&#9670;&#160;</a></span>setConsistentInitialStateFunction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Scalar&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_piro_1_1_tempus_solver.html">Piro::TempusSolver</a>&lt; Scalar &gt;::setConsistentInitialStateFunction </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a11739c0ac9ea5915e7ef5c3469108c04">ConsistentInitialStateFunction</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>f</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set a function that makes the initial state consistent with the parameters, before each time integration. </p>
+<p>It is called by evalModel, unless the initial state was set with setInitialState, and before each forward integration of the Tempus-driven transient optimization (<a class="el" href="class_piro_1_1_thyra_product_m_e___tempus_final_objective.html" title="Reduced objective for transient problems, computed with Tempus.">Piro::ThyraProductME_TempusFinalObjective</a>), which integrates from the nominal initial state for each value of the parameters. In particular, the adjoint sensitivities of Tempus are not accurate for DAEs whose initial state has inconsistent algebraic components: the last step of the adjoint integration uses the initial state. An empty function (the default) leaves the initial state unchanged.</p>
+<p>The transient optimization with the ROL dynamic constraint ("Tempus Driver" = false) does not call it (<a class="el" href="namespace_piro.html#aa69432902e31bf87a173c615e59e333f" title="Performs analysis of a transient solved model using ROL.">Piro::PerformROLTransientAnalysis</a> prints a warning): ROL integrates from the nominal initial state for all parameters. Its gradient is the exact gradient of its time discretization, so it does not need a consistent initial state, but a response at the initial time uses the nominal one.</p>
+<p>Only x0 is made consistent: the initial time derivative is the nominal one, unless the Tempus stepper recomputes it ("Initial Condition Consistency"; note that "Consistent" solves the residual for x_dot with x fixed, which requires a nonsingular mass matrix, so it does not apply to DAEs). Steppers that do not use the time derivative of the previous time step (e.g., Backward Euler) do not use the initial x_dot to advance in time, but the adjoint integration evaluates the model derivatives at the initial x_dot: an inconsistent x_dot affects the gradient if df/dx or df/dp depends on x_dot (e.g., a mass matrix that depends on the state, or a parameter that multiplies x_dot). </p>
 
 </div>
 </div>

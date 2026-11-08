@@ -1,6 +1,5 @@
 var NAVTREEINDEX5 =
 {
-"_mue_lu___reitzinger_p_factory__fwd_8hpp.html#a9b543dd7bbdbce69ab3b66c3e5629068":[11,0,2,9,0,131,0],
 "_mue_lu___reitzinger_p_factory__fwd_8hpp_source.html":[11,0,2,9,0,131],
 "_mue_lu___reorder_block_a_factory__decl_8hpp.html":[11,0,2,8,2,4],
 "_mue_lu___reorder_block_a_factory__decl_8hpp.html#a25e2c60604fcc474c29caa063f731321":[11,0,2,8,2,4,1],
@@ -249,5 +248,6 @@ var NAVTREEINDEX5 =
 "_mue_lu___stratimikos_smoother__decl_8hpp.html":[11,0,2,7,25],
 "_mue_lu___stratimikos_smoother__decl_8hpp_source.html":[11,0,2,7,25],
 "_mue_lu___stratimikos_smoother__def_8hpp.html":[11,0,2,7,26],
-"_mue_lu___stratimikos_smoother__def_8hpp_source.html":[11,0,2,7,26]
+"_mue_lu___stratimikos_smoother__def_8hpp_source.html":[11,0,2,7,26],
+"_mue_lu___stratimikos_smoother__fwd_8hpp.html":[11,0,2,9,0,160]
 };

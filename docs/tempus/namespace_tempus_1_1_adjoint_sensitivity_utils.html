@@ -88,6 +88,9 @@ Functions</h2></td></tr>
 <tr class="memdesc:a5dd2d44d35301818698648f80d6fc94e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the "Response Type" parameter value to the enum.  <br /></td></tr>
 <tr class="memitem:a0b3ec5246748c4146620b87dc3935415" id="r_a0b3ec5246748c4146620b87dc3935415"><td class="memTemplParams" colspan="2">template&lt;class Scalar&gt; </td></tr>
 <tr class="memitem:a0b3ec5246748c4146620b87dc3935415 template"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Scalar &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b3ec5246748c4146620b87dc3935415">parseTimeList</a> (const std::string &amp;str)</td></tr>
+<tr class="memitem:aba4661c8b5cd2fa4b80a1f8893b4bb46" id="r_aba4661c8b5cd2fa4b80a1f8893b4bb46"><td class="memTemplParams" colspan="2">template&lt;class Scalar&gt; </td></tr>
+<tr class="memitem:aba4661c8b5cd2fa4b80a1f8893b4bb46 template"><td class="memItemLeft" align="right" valign="top">Scalar&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba4661c8b5cd2fa4b80a1f8893b4bb46">timeTolerance</a> (const Scalar t_init, const Scalar t_final, const Teuchos::ParameterList *sensPL=nullptr)</td></tr>
+<tr class="memdesc:aba4661c8b5cd2fa4b80a1f8893b4bb46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tolerance for comparing times of a time integration on [t_init, t_final], e.g., the times of a "Sum Over Times" response with the times of the time steps:  <br /></td></tr>
 <tr class="memitem:a32e5d604e3ae699cb0cf329f960456a7" id="r_a32e5d604e3ae699cb0cf329f960456a7"><td class="memTemplParams" colspan="2">template&lt;class Scalar&gt; </td></tr>
 <tr class="memitem:a32e5d604e3ae699cb0cf329f960456a7 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32e5d604e3ae699cb0cf329f960456a7">evalResponseGradientX</a> (const <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_thyra_1_1_model_evaluator.html">Thyra::ModelEvaluator</a>&lt; Scalar &gt; &amp;model, const int g_index, const Thyra::ModelEvaluatorBase::InArgs&lt; Scalar &gt; &amp;inArgs, <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_thyra_1_1_multi_vector_base.html">Thyra::MultiVectorBase</a>&lt; Scalar &gt; &amp;dgdx, const bool dgdx_dot_check, const std::string &amp;caller)</td></tr>
 <tr class="memdesc:a32e5d604e3ae699cb0cf329f960456a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate dg/dx^T (gradient form, x_space x num_g) of response g_index at the given inArgs.  <br /></td></tr>
@@ -130,7 +133,7 @@ Functions</h2></td></tr>
 
 <p>Convert the "Response Type" parameter value to the enum. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html#l00053">53</a> of file <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html">Tempus_AdjointSensitivityUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html#l00054">54</a> of file <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html">Tempus_AdjointSensitivityUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -152,7 +155,47 @@ template&lt;class Scalar&gt; </div>
 </div><div class="memdoc">
 <p>Convert a comma-separated list of times (as in "Output Time List") to a sorted vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html#l00070">70</a> of file <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html">Tempus_AdjointSensitivityUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html#l00071">71</a> of file <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html">Tempus_AdjointSensitivityUtils.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aba4661c8b5cd2fa4b80a1f8893b4bb46" name="aba4661c8b5cd2fa4b80a1f8893b4bb46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba4661c8b5cd2fa4b80a1f8893b4bb46">&#9670;&#160;</a></span>timeTolerance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Scalar&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Scalar Tempus::AdjointSensitivityUtils::timeTolerance </td>
+          <td>(</td>
+          <td class="paramtype">const Scalar</td>          <td class="paramname"><span class="paramname"><em>t_init</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Scalar</td>          <td class="paramname"><span class="paramname"><em>t_final</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Teuchos::ParameterList *</td>          <td class="paramname"><span class="paramname"><em>sensPL</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tolerance for comparing times of a time integration on [t_init, t_final], e.g., the times of a "Sum Over Times" response with the times of the time steps: </p>
+<p>tol = max(relTol * max(|t_init|, |t_final|), absTol),</p>
+<p>with relTol and absTol the parameters "Response Time Relative Tolerance" (default 1e-9) and "Response Time Absolute Tolerance" (default 1e-15) of the "Sensitivities" parameters sensPL (the defaults if sensPL is null or does not set them).</p>
+<ul>
+<li>The times of the time steps are sums of time steps, t_{n+1} = t_n + dt, so after n steps they carry a rounding error of up to about n * eps * max(|t_init|, |t_final|) (eps = 2.2e-16 in double precision). The times given in the input (e.g., 0.1) are rounded as well. The default relTol = 1e-9 accepts these errors for up to millions of time steps.</li>
+<li>The tolerance must be smaller than half of the time steps, so that two times of the time grid are not confused: with the default relTol, the time steps must be larger than 2e-9 * max(|t_init|, |t_final|), e.g., fewer than 5e8 time steps when t_init = 0. For small time steps with large times, use a smaller relTol.</li>
+<li>absTol keeps the tolerance positive when t_init = t_final = 0.</li>
+</ul>
+<p><a class="el" href="class_tempus_1_1_integrator_adjoint_sensitivity.html" title="Time integrator suitable for adjoint sensitivity analysis.">Tempus::IntegratorAdjointSensitivity</a> uses the tolerances of its "Sensitivities" parameters: codes that compare times with those of a <a class="el" href="namespace_tempus.html">Tempus</a> adjoint integration (e.g., to check response times against a time grid) should pass the same parameters. </p>
+
+<p class="definition">Definition at line <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html#l00132">132</a> of file <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html">Tempus_AdjointSensitivityUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -200,7 +243,7 @@ template&lt;class Scalar&gt; </div>
 <p>Evaluate dg/dx^T (gradient form, x_space x num_g) of response g_index at the given inArgs. </p>
 <p>If dgdx_dot_check is true and the model supports dg/dx_dot in gradient form, dg/dx_dot is evaluated in the same call and an exception is thrown if it is nonzero, since the adjoint formulation requires responses that do not depend on x_dot. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html#l00110">110</a> of file <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html">Tempus_AdjointSensitivityUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html#l00157">157</a> of file <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html">Tempus_AdjointSensitivityUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -243,7 +286,7 @@ template&lt;class Scalar&gt; </div>
 <p>Evaluate dg/dp^T (gradient form, p_space x num_g) of response g_index with respect to parameter p_index at the given inArgs. </p>
 <p>Models that only provide the Jacobian form are supported by transposing, as done for the final-time response. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html#l00157">157</a> of file <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html">Tempus_AdjointSensitivityUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html#l00204">204</a> of file <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html">Tempus_AdjointSensitivityUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -306,7 +349,7 @@ template&lt;class Scalar&gt; </div>
 <p>Compute y = alpha * df/dp^T * v + beta * y. </p>
 <p>v is a multivector in the residual (f) space and y a multivector in the space of parameter p_index, with the same number of columns. df/dp is evaluated at inArgs in the form supported by the model (linear operator, Jacobian or gradient multivector). dfdp_op and dfdp_mv cache the derivative objects between calls (pass null RCPs on the first call). </p>
 
-<p class="definition">Definition at line <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html#l00197">197</a> of file <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html">Tempus_AdjointSensitivityUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html#l00244">244</a> of file <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html">Tempus_AdjointSensitivityUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -344,7 +387,7 @@ template&lt;class Scalar&gt; </div>
 <p>Create a solver for the adjoint model's W = (alpha*df/dx_dot + beta*df/dx)^T at inArgs. </p>
 <p>Uses the W out-arg of the adjoint model if supported, otherwise its W_op, its W_factory, and the preconditioner of the W_factory (or of the model). </p>
 
-<p class="definition">Definition at line <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html#l00240">240</a> of file <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html">Tempus_AdjointSensitivityUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html#l00287">287</a> of file <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html">Tempus_AdjointSensitivityUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -372,7 +415,7 @@ template&lt;class Scalar&gt; </div>
 <p>Add the response times to the time step control as time events on which the time steps land exactly. </p>
 <p>This only adjusts the time steps for "Step Type" = "Variable"; with "Constant" time steps the response times must be on the time grid. The time steps are not flagged for output. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html#l00310">310</a> of file <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html">Tempus_AdjointSensitivityUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html#l00357">357</a> of file <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html">Tempus_AdjointSensitivityUtils.hpp</a>.</p>
 
 </div>
 </div>
