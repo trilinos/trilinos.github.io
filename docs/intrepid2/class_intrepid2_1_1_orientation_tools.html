@@ -71,8 +71,8 @@ Public Types</h2></td></tr>
 <tr class="memitem:a294810be021561959e7cf3f97e928779" id="r_a294810be021561959e7cf3f97e928779"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a294810be021561959e7cf3f97e928779">KeyType</a> = std::pair&lt;const std::string,ordinal_type&gt;</td></tr>
 <tr class="memdesc:a294810be021561959e7cf3f97e928779"><td class="mdescLeft">&#160;</td><td class="mdescRight">key :: basis name, order, value :: matrix data view type  <br /></td></tr>
 <tr class="memitem:ad71253413b47b2a312a4199ec37e9155" id="r_ad71253413b47b2a312a4199ec37e9155"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad71253413b47b2a312a4199ec37e9155">OrtCoeffDataType</a> = std::map&lt;<a class="el" href="#a294810be021561959e7cf3f97e928779">KeyType</a>,Kokkos::View&lt;double****,DeviceType&gt; &gt;</td></tr>
-<tr class="memitem:acdc1de2ef096b2e1ecde0a0350ff89bf" id="r_acdc1de2ef096b2e1ecde0a0350ff89bf"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acdc1de2ef096b2e1ecde0a0350ff89bf">OrtOperatorDataType</a> = std::map&lt;std::pair&lt;std::string,ordinal_type&gt;,Kokkos::View&lt;<a class="el" href="class_intrepid2_1_1_orientation_operator.html">OrientationOperator</a>&lt;DeviceType&gt;***,DeviceType&gt; &gt;</td></tr>
-<tr class="memdesc:acdc1de2ef096b2e1ecde0a0350ff89bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">key :: basis name, order, value :: matrix data view type, transpose (0 for no transpose, 1 for transpose)  <br /></td></tr>
+<tr class="memitem:a767f137e4b6d05eaa6699a6851ef2b57" id="r_a767f137e4b6d05eaa6699a6851ef2b57"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a767f137e4b6d05eaa6699a6851ef2b57">OrtOperatorDataType</a> = std::map&lt;<a class="el" href="#a294810be021561959e7cf3f97e928779">KeyType</a>,Kokkos::View&lt;<a class="el" href="class_intrepid2_1_1_orientation_operator.html">OrientationOperator</a>&lt;DeviceType&gt;***,DeviceType&gt; &gt;</td></tr>
+<tr class="memdesc:a767f137e4b6d05eaa6699a6851ef2b57"><td class="mdescLeft">&#160;</td><td class="mdescRight">key :: basis name, order, value :: matrix data view type, transpose (0 for no transpose, 1 for transpose)  <br /></td></tr>
 <tr class="memitem:a8f59df98c5e8e69e5f482116a2e1a441" id="r_a8f59df98c5e8e69e5f482116a2e1a441"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f59df98c5e8e69e5f482116a2e1a441">OrtStaticDoubleAllocationType</a> = std::vector&lt; Kokkos::View&lt;double*,DeviceType&gt; &gt;</td></tr>
 <tr class="memitem:a37aebd50895a203ac54697602ed33425" id="r_a37aebd50895a203ac54697602ed33425"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37aebd50895a203ac54697602ed33425">OrtStaticOrdinalAllocationType</a> = std::vector&lt; Kokkos::View&lt;ordinal_type*,DeviceType&gt; &gt;</td></tr>
 </table><table class="memberdecls">
@@ -130,10 +130,10 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>clearOperators
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:aabde96d7a37fad3e4ae33f7f4fe36b0e" id="r_aabde96d7a37fad3e4ae33f7f4fe36b0e"><td class="memItemLeft" align="right" valign="top">static OrtCoeffDataType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabde96d7a37fad3e4ae33f7f4fe36b0e">ortCoeffData</a></td></tr>
 <tr class="memitem:aee2cfbd7a0718ed059c9f1a09d4e9529" id="r_aee2cfbd7a0718ed059c9f1a09d4e9529"><td class="memItemLeft" align="right" valign="top">static OrtCoeffDataType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee2cfbd7a0718ed059c9f1a09d4e9529">ortInvCoeffData</a></td></tr>
-<tr class="memitem:a57efc442fc2dd615e60848865364b2a1" id="r_a57efc442fc2dd615e60848865364b2a1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#acdc1de2ef096b2e1ecde0a0350ff89bf">OrtOperatorDataType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57efc442fc2dd615e60848865364b2a1">edgeOperatorData</a></td></tr>
-<tr class="memitem:ae766a2c93bc380bdab2d076512d238b1" id="r_ae766a2c93bc380bdab2d076512d238b1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#acdc1de2ef096b2e1ecde0a0350ff89bf">OrtOperatorDataType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae766a2c93bc380bdab2d076512d238b1">invEdgeOperatorData</a></td></tr>
-<tr class="memitem:af9841fbe3eaa8dd494ab95a0fb6f844c" id="r_af9841fbe3eaa8dd494ab95a0fb6f844c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#acdc1de2ef096b2e1ecde0a0350ff89bf">OrtOperatorDataType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9841fbe3eaa8dd494ab95a0fb6f844c">faceOperatorData</a></td></tr>
-<tr class="memitem:a432e099a663be2c0ba23bbc092ff696f" id="r_a432e099a663be2c0ba23bbc092ff696f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#acdc1de2ef096b2e1ecde0a0350ff89bf">OrtOperatorDataType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a432e099a663be2c0ba23bbc092ff696f">invFaceOperatorData</a></td></tr>
+<tr class="memitem:a57efc442fc2dd615e60848865364b2a1" id="r_a57efc442fc2dd615e60848865364b2a1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a767f137e4b6d05eaa6699a6851ef2b57">OrtOperatorDataType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57efc442fc2dd615e60848865364b2a1">edgeOperatorData</a></td></tr>
+<tr class="memitem:ae766a2c93bc380bdab2d076512d238b1" id="r_ae766a2c93bc380bdab2d076512d238b1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a767f137e4b6d05eaa6699a6851ef2b57">OrtOperatorDataType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae766a2c93bc380bdab2d076512d238b1">invEdgeOperatorData</a></td></tr>
+<tr class="memitem:af9841fbe3eaa8dd494ab95a0fb6f844c" id="r_af9841fbe3eaa8dd494ab95a0fb6f844c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a767f137e4b6d05eaa6699a6851ef2b57">OrtOperatorDataType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9841fbe3eaa8dd494ab95a0fb6f844c">faceOperatorData</a></td></tr>
+<tr class="memitem:a432e099a663be2c0ba23bbc092ff696f" id="r_a432e099a663be2c0ba23bbc092ff696f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a767f137e4b6d05eaa6699a6851ef2b57">OrtOperatorDataType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a432e099a663be2c0ba23bbc092ff696f">invFaceOperatorData</a></td></tr>
 <tr class="memitem:a90e4ecc5ada105e80f358b266d4d0462" id="r_a90e4ecc5ada105e80f358b266d4d0462"><td class="memItemLeft" align="right" valign="top">static OrtStaticDoubleAllocationType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90e4ecc5ada105e80f358b266d4d0462">doubleViewAllocations</a></td></tr>
 <tr class="memitem:ac2a71ba2ff0560c51fb9cf506e1bfdac" id="r_ac2a71ba2ff0560c51fb9cf506e1bfdac"><td class="memItemLeft" align="right" valign="top">static OrtStaticOrdinalAllocationType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2a71ba2ff0560c51fb9cf506e1bfdac">ordinalViewAllocations</a></td></tr>
 </table><table class="memberdecls">
@@ -248,8 +248,8 @@ template&lt;typename DeviceType&gt; </div>
 
 </div>
 </div>
-<a id="acdc1de2ef096b2e1ecde0a0350ff89bf" name="acdc1de2ef096b2e1ecde0a0350ff89bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acdc1de2ef096b2e1ecde0a0350ff89bf">&#9670;&#160;</a></span>OrtOperatorDataType</h2>
+<a id="a767f137e4b6d05eaa6699a6851ef2b57" name="a767f137e4b6d05eaa6699a6851ef2b57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a767f137e4b6d05eaa6699a6851ef2b57">&#9670;&#160;</a></span>OrtOperatorDataType</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -257,7 +257,7 @@ template&lt;typename DeviceType&gt; </div>
 template&lt;typename DeviceType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_intrepid2_1_1_orientation_tools.html">Intrepid2::OrientationTools</a>&lt; DeviceType &gt;::OrtOperatorDataType = std::map&lt;std::pair&lt;std::string,ordinal_type&gt;,Kokkos::View&lt;<a class="el" href="class_intrepid2_1_1_orientation_operator.html">OrientationOperator</a>&lt;DeviceType&gt;***,DeviceType&gt; &gt;</td>
+          <td class="memname">using <a class="el" href="class_intrepid2_1_1_orientation_tools.html">Intrepid2::OrientationTools</a>&lt; DeviceType &gt;::OrtOperatorDataType = std::map&lt;<a class="el" href="#a294810be021561959e7cf3f97e928779">KeyType</a>,Kokkos::View&lt;<a class="el" href="class_intrepid2_1_1_orientation_operator.html">OrientationOperator</a>&lt;DeviceType&gt;***,DeviceType&gt; &gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -608,7 +608,7 @@ template&lt;typename BasisType&gt; </div>
   </dd>
 </dl>
 
-<p class="reference">Referenced by <a class="el" href="_intrepid2___orientation_tools_def_modify_basis_8hpp_source.html#l00344">modifyBasisByOrientationInverse()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_intrepid2___orientation_tools_def_modify_basis_8hpp_source.html#l00347">modifyBasisByOrientationInverse()</a>.</p>
 
 </div>
 </div>
@@ -670,7 +670,7 @@ template&lt;typename BasisType&gt; </div>
   </dd>
 </dl>
 
-<p class="reference">Referenced by <a class="el" href="_intrepid2___orientation_tools_def_modify_basis_8hpp_source.html#l00244">modifyBasisByOrientation()</a>, and <a class="el" href="_intrepid2___orientation_tools_def_modify_basis_8hpp_source.html#l00430">modifyMatrixByOrientation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_intrepid2___orientation_tools_def_modify_basis_8hpp_source.html#l00247">modifyBasisByOrientation()</a>, and <a class="el" href="_intrepid2___orientation_tools_def_modify_basis_8hpp_source.html#l00433">modifyMatrixByOrientation()</a>.</p>
 
 </div>
 </div>
@@ -751,7 +751,7 @@ template&lt;typename elemOrtValueType, class ... elemOrtProperties, typename ele
 
 <p class="definition">Definition at line <a class="el" href="_intrepid2___orientation_tools_def_modify_basis_8hpp_source.html#l00031">31</a> of file <a class="el" href="_intrepid2___orientation_tools_def_modify_basis_8hpp_source.html">Intrepid2_OrientationToolsDefModifyBasis.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_intrepid2___cell_geometry_def_8hpp_source.html#l00982">Intrepid2::CellGeometry&lt; PointScalar, spaceDim, DeviceType &gt;::initializeOrientations()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_intrepid2___cell_geometry_def_8hpp_source.html#l00993">Intrepid2::CellGeometry&lt; PointScalar, spaceDim, DeviceType &gt;::initializeOrientations()</a>.</p>
 
 </div>
 </div>
@@ -941,11 +941,11 @@ template&lt;typename outputValueType, class ... outputProperties, typename input
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___orientation_tools_def_modify_basis_8hpp_source.html#l00243">243</a> of file <a class="el" href="_intrepid2___orientation_tools_def_modify_basis_8hpp_source.html">Intrepid2_OrientationToolsDefModifyBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___orientation_tools_def_modify_basis_8hpp_source.html#l00246">246</a> of file <a class="el" href="_intrepid2___orientation_tools_def_modify_basis_8hpp_source.html">Intrepid2_OrientationToolsDefModifyBasis.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html#l00334">Intrepid2::RealSpaceTools&lt; DeviceType &gt;::clone()</a>, and <a class="el" href="#a8812f5d844e2f2ecce1f9b4b720ad425">createOperators()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_intrepid2___orientation_tools_def_modify_basis_8hpp_source.html#l00329">modifyBasisByOrientationTranspose()</a>, and <a class="el" href="_intrepid2___projection_tools_8hpp_source.html#l00366">Intrepid2::ProjectionTools&lt; DeviceType &gt;::projectField()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_intrepid2___p_a_matrix_def_8hpp_source.html#l02202">Intrepid2::PAMatrix&lt; DeviceType, Scalar &gt;::apply()</a>, <a class="el" href="_intrepid2___orientation_tools_def_modify_basis_8hpp_source.html#l00332">modifyBasisByOrientationTranspose()</a>, and <a class="el" href="_intrepid2___projection_tools_8hpp_source.html#l00366">Intrepid2::ProjectionTools&lt; DeviceType &gt;::projectField()</a>.</p>
 
 </div>
 </div>
@@ -1007,7 +1007,7 @@ template&lt;typename outputValueType, class ... outputProperties, typename input
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___orientation_tools_def_modify_basis_8hpp_source.html#l00343">343</a> of file <a class="el" href="_intrepid2___orientation_tools_def_modify_basis_8hpp_source.html">Intrepid2_OrientationToolsDefModifyBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___orientation_tools_def_modify_basis_8hpp_source.html#l00346">346</a> of file <a class="el" href="_intrepid2___orientation_tools_def_modify_basis_8hpp_source.html">Intrepid2_OrientationToolsDefModifyBasis.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html#l00334">Intrepid2::RealSpaceTools&lt; DeviceType &gt;::clone()</a>, and <a class="el" href="#a4ae1050bcd0ca3aa77bd9fec6d862dc8">createInvOperators()</a>.</p>
 
@@ -1067,9 +1067,11 @@ template&lt;typename outputValueType, class ... outputProperties, typename input
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___orientation_tools_def_modify_basis_8hpp_source.html#l00328">328</a> of file <a class="el" href="_intrepid2___orientation_tools_def_modify_basis_8hpp_source.html">Intrepid2_OrientationToolsDefModifyBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___orientation_tools_def_modify_basis_8hpp_source.html#l00331">331</a> of file <a class="el" href="_intrepid2___orientation_tools_def_modify_basis_8hpp_source.html">Intrepid2_OrientationToolsDefModifyBasis.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_intrepid2___orientation_tools_def_modify_basis_8hpp_source.html#l00244">modifyBasisByOrientation()</a>.</p>
+<p class="reference">References <a class="el" href="_intrepid2___orientation_tools_def_modify_basis_8hpp_source.html#l00247">modifyBasisByOrientation()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_intrepid2___p_a_matrix_def_8hpp_source.html#l02202">Intrepid2::PAMatrix&lt; DeviceType, Scalar &gt;::apply()</a>.</p>
 
 </div>
 </div>
@@ -1120,7 +1122,7 @@ template&lt;typename outputValueType, class ... outputProperties, typename input
 </div><div class="memdoc">
 
 <p>Modify an assembled (C,F1,F2) matrix according to orientation of the cells. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>If O_L and O_R are the operators applied by <a class="el" href="#a89313c642f0df981c48205d7c7607187" title="Modify basis due to orientation.">modifyBasisByOrientation()</a> to the left and right bases, and M is the matrix assembled from unoriented bases, the output is the matrix assembled from the oriented bases, O_L M O_R^T. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">output</td><td>[out] - output array, shape (C,F1,F2) </td></tr>
     <tr><td class="paramname">input</td><td>[in] - input array, shape (C,F1,F2) </td></tr>
@@ -1131,9 +1133,11 @@ template&lt;typename outputValueType, class ... outputProperties, typename input
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___orientation_tools_def_modify_basis_8hpp_source.html#l00429">429</a> of file <a class="el" href="_intrepid2___orientation_tools_def_modify_basis_8hpp_source.html">Intrepid2_OrientationToolsDefModifyBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___orientation_tools_def_modify_basis_8hpp_source.html#l00432">432</a> of file <a class="el" href="_intrepid2___orientation_tools_def_modify_basis_8hpp_source.html">Intrepid2_OrientationToolsDefModifyBasis.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html#l00334">Intrepid2::RealSpaceTools&lt; DeviceType &gt;::clone()</a>, and <a class="el" href="#a8812f5d844e2f2ecce1f9b4b720ad425">createOperators()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_intrepid2___p_a_matrix_def_8hpp_source.html#l01748">Intrepid2::PAMatrix&lt; DeviceType, Scalar &gt;::orientAssembledMatrix()</a>.</p>
 
 </div>
 </div>
@@ -1176,7 +1180,7 @@ template&lt;typename DeviceType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#acdc1de2ef096b2e1ecde0a0350ff89bf">OrtOperatorDataType</a> <a class="el" href="class_intrepid2_1_1_orientation_tools.html">Intrepid2::OrientationTools</a>&lt; DeviceType &gt;::edgeOperatorData</td>
+          <td class="memname"><a class="el" href="#a767f137e4b6d05eaa6699a6851ef2b57">OrtOperatorDataType</a> <a class="el" href="class_intrepid2_1_1_orientation_tools.html">Intrepid2::OrientationTools</a>&lt; DeviceType &gt;::edgeOperatorData</td>
         </tr>
       </table>
   </td>
@@ -1202,7 +1206,7 @@ template&lt;typename DeviceType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#acdc1de2ef096b2e1ecde0a0350ff89bf">OrtOperatorDataType</a> <a class="el" href="class_intrepid2_1_1_orientation_tools.html">Intrepid2::OrientationTools</a>&lt; DeviceType &gt;::faceOperatorData</td>
+          <td class="memname"><a class="el" href="#a767f137e4b6d05eaa6699a6851ef2b57">OrtOperatorDataType</a> <a class="el" href="class_intrepid2_1_1_orientation_tools.html">Intrepid2::OrientationTools</a>&lt; DeviceType &gt;::faceOperatorData</td>
         </tr>
       </table>
   </td>
@@ -1228,7 +1232,7 @@ template&lt;typename DeviceType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#acdc1de2ef096b2e1ecde0a0350ff89bf">OrtOperatorDataType</a> <a class="el" href="class_intrepid2_1_1_orientation_tools.html">Intrepid2::OrientationTools</a>&lt; DeviceType &gt;::invEdgeOperatorData</td>
+          <td class="memname"><a class="el" href="#a767f137e4b6d05eaa6699a6851ef2b57">OrtOperatorDataType</a> <a class="el" href="class_intrepid2_1_1_orientation_tools.html">Intrepid2::OrientationTools</a>&lt; DeviceType &gt;::invEdgeOperatorData</td>
         </tr>
       </table>
   </td>
@@ -1254,7 +1258,7 @@ template&lt;typename DeviceType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#acdc1de2ef096b2e1ecde0a0350ff89bf">OrtOperatorDataType</a> <a class="el" href="class_intrepid2_1_1_orientation_tools.html">Intrepid2::OrientationTools</a>&lt; DeviceType &gt;::invFaceOperatorData</td>
+          <td class="memname"><a class="el" href="#a767f137e4b6d05eaa6699a6851ef2b57">OrtOperatorDataType</a> <a class="el" href="class_intrepid2_1_1_orientation_tools.html">Intrepid2::OrientationTools</a>&lt; DeviceType &gt;::invFaceOperatorData</td>
         </tr>
       </table>
   </td>

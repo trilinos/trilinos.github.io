@@ -205,9 +205,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a4650de4a264a2e87e3db6503e4c6acf4" id="r_a4650de4a264a2e87e3db6503e4c6acf4"><td class="memTemplParams" colspan="2">template&lt;typename InViewType, typename CtorProp, typename ... Dims&gt; </td></tr>
 <tr class="memitem:a4650de4a264a2e87e3db6503e4c6acf4 template"><td class="memItemLeft" align="right" valign="top">KOKKOS_INLINE_FUNCTION std::enable_if&lt; std::is_pointer_v&lt; CtorProp &gt; &amp;&amp;!std::is_convertible_v&lt; CtorProp, constchar * &gt;, typenameDeduceDynRankView&lt; InViewType &gt;::type &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4650de4a264a2e87e3db6503e4c6acf4">Intrepid2::Impl::createMatchingUnmanagedDynRankView</a> (const InViewType &amp;view, const CtorProp &amp;data, const Dims... dims)</td></tr>
 <tr class="memdesc:a4650de4a264a2e87e3db6503e4c6acf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an unmanaged view that matches the value_type of the provided view The output view type is deduced from the input view, choosing the default layout when the input view has a stride layout.  <br /></td></tr>
-<tr class="memitem:af091a07c101c255386d84054cd68d1d0" id="r_af091a07c101c255386d84054cd68d1d0"><td class="memTemplParams" colspan="2">template&lt;class ViewType, class ... DimArgs&gt; </td></tr>
-<tr class="memitem:af091a07c101c255386d84054cd68d1d0 template"><td class="memItemLeft" align="right" valign="top">Kokkos::DynRankView&lt; typename ViewType::value_type, typename <a class="el" href="struct_intrepid2_1_1_deduce_layout.html">DeduceLayout</a>&lt; ViewType &gt;::result_layout, typename ViewType::device_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af091a07c101c255386d84054cd68d1d0">Intrepid2::getMatchingViewWithLabel</a> (const ViewType &amp;view, const std::string &amp;label, DimArgs... dims)</td></tr>
-<tr class="memdesc:af091a07c101c255386d84054cd68d1d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and returns a view that matches the provided view in Kokkos Layout. DEPRECATED, use <a class="el" href="#a4265190cbd3af0773610caed66188873" title="Creates and returns a view that matches the value_type of the provided view The output view type is d...">Impl::createMatchingDynRankView</a> instead.  <br /></td></tr>
 <tr class="memitem:aad19f5dbd3a5c356955e98f835b6d02f" id="r_aad19f5dbd3a5c356955e98f835b6d02f"><td class="memTemplParams" colspan="2">template&lt;class Functor, ordinal_type default_value&gt; </td></tr>
 <tr class="memitem:aad19f5dbd3a5c356955e98f835b6d02f template"><td class="memItemLeft" align="right" valign="top">constexpr enable_if_t&lt; <a class="el" href="struct_intrepid2_1_1has__rank__member.html">has_rank_member</a>&lt; Functor &gt;::value, ordinal_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad19f5dbd3a5c356955e98f835b6d02f">Intrepid2::getFixedRank</a> ()</td></tr>
 <tr class="memitem:aa41f65f70f656f87e3331b6fb8937674" id="r_aa41f65f70f656f87e3331b6fb8937674"><td class="memTemplParams" colspan="2">template&lt;class Functor, ordinal_type default_value&gt; </td></tr>
@@ -367,7 +364,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00070">70</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_intrepid2___data_8hpp_source.html#l01458">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::allocateContractionResult()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l01258">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::allocateInPlaceCombinationResult()</a>, <a class="el" href="_intrepid2___cell_geometry_def_8hpp_source.html#l01486">Intrepid2::CellGeometry&lt; PointScalar, spaceDim, DeviceType &gt;::allocateJacobianData()</a>, <a class="el" href="_intrepid2___cell_geometry_def_8hpp_source.html#l00151">Intrepid2::CellGeometry&lt; PointScalar, spaceDim, DeviceType &gt;::allocateJacobianDataPrivate()</a>, <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html#l00159">Intrepid2::CellTools&lt; DeviceType &gt;::allocateJacobianInv()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l01278">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::allocateMatMatResult()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l01485">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::allocateMatVecResult()</a>, <a class="el" href="_intrepid2___data_dimension_info_8hpp_source.html#l00042">Intrepid2::combinedDimensionInfo()</a>, <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html#l00149">Intrepid2::RealSpaceTools&lt; DeviceType &gt;::Serial::det()</a>, <a class="el" href="_intrepid2___vector_data_8hpp_source.html#l00450">Intrepid2::VectorData&lt; Scalar, DeviceType &gt;::extent_int()</a>, <a class="el" href="_intrepid2___cell_data_def_8hpp_source.html#l00775">Intrepid2::RefCellCenter&lt; DeviceType &gt;::get()</a>, <a class="el" href="_intrepid2___cell_data_def_8hpp_source.html#l00527">Intrepid2::RefCellNodes&lt; DeviceType &gt;::get()</a>, <a class="el" href="_intrepid2___vector_data_8hpp_source.html#l00414">Intrepid2::VectorData&lt; Scalar, DeviceType &gt;::getComponent()</a>, <a class="el" href="_intrepid2___vector_data_8hpp_source.html#l00438">Intrepid2::VectorData&lt; Scalar, DeviceType &gt;::getComponent()</a>, <a class="el" href="_intrepid2___cell_geometry_def_8hpp_source.html#l00798">Intrepid2::CellGeometry&lt; PointScalar, spaceDim, DeviceType &gt;::getJacobianRefData()</a>, <a class="el" href="_intrepid2___cell_geometry_def_8hpp_source.html#l00882">Intrepid2::CellGeometry&lt; PointScalar, spaceDim, DeviceType &gt;::getJacobianRefData()</a>, <a class="el" href="_intrepid2___cell_geometry_def_8hpp_source.html#l01103">Intrepid2::CellGeometry&lt; PointScalar, spaceDim, DeviceType &gt;::getOrientation()</a>, <a class="el" href="_intrepid2___basis_8hpp_source.html#l00396">Intrepid2::Basis&lt; DeviceType, outputValueType, pointValueType &gt;::getScratchSpaceSize()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l00902">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::getUnderlyingView()</a>, <a class="el" href="_intrepid2___basis_8hpp_source.html#l00426">Intrepid2::Basis&lt; DeviceType, outputValueType, pointValueType &gt;::getValues()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l00364">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::getWritableEntryWithPassThroughOption()</a>, <a class="el" href="_intrepid2___cell_geometry_def_8hpp_source.html#l01121">Intrepid2::CellGeometry&lt; PointScalar, spaceDim, DeviceType &gt;::gridCellCoordinate()</a>, <a class="el" href="_intrepid2___cell_geometry_def_8hpp_source.html#l01161">Intrepid2::CellGeometry&lt; PointScalar, spaceDim, DeviceType &gt;::gridCellNodeForSubdivisionNode()</a>, <a class="el" href="_intrepid2___tensor_data_8hpp_source.html#l00045">Intrepid2::TensorData&lt; weightValueType, DeviceType &gt;::initialize()</a>, <a class="el" href="_intrepid2___integration_tools_def_8hpp_source.html#l02024">Intrepid2::IntegrationTools&lt; DeviceType &gt;::integrate()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l01229">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::isDiagonal()</a>, <a class="el" href="_intrepid2___transformed_basis_values_8hpp_source.html#l00118">Intrepid2::TransformedBasisValues&lt; Scalar, DeviceType &gt;::multiplyByPointwiseWeights()</a>, <a class="el" href="_intrepid2___vector_data_8hpp_source.html#l00500">Intrepid2::VectorData&lt; Scalar, DeviceType &gt;::numFieldsInFamily()</a>, <a class="el" href="_intrepid2___basis_values_8hpp_source.html#l00296">Intrepid2::BasisValues&lt; Scalar, DeviceType &gt;::operator()()</a>, <a class="el" href="_intrepid2___basis_values_8hpp_source.html#l00222">Intrepid2::BasisValues&lt; Scalar, DeviceType &gt;::operator()()</a>, <a class="el" href="_intrepid2___basis_values_8hpp_source.html#l00255">Intrepid2::BasisValues&lt; Scalar, DeviceType &gt;::operator()()</a>, <a class="el" href="_intrepid2___cell_geometry_def_8hpp_source.html#l01402">Intrepid2::CellGeometry&lt; PointScalar, spaceDim, DeviceType &gt;::operator()()</a>, <a class="el" href="_intrepid2___tensor_data_8hpp_source.html#l00260">Intrepid2::TensorData&lt; weightValueType, DeviceType &gt;::operator()()</a>, <a class="el" href="_intrepid2___tensor_data_8hpp_source.html#l00312">Intrepid2::TensorData&lt; weightValueType, DeviceType &gt;::operator()()</a>, <a class="el" href="_intrepid2___tensor_data_8hpp_source.html#l00399">Intrepid2::TensorData&lt; weightValueType, DeviceType &gt;::operator()()</a>, <a class="el" href="_intrepid2___tensor_data_8hpp_source.html#l00285">Intrepid2::TensorData&lt; weightValueType, DeviceType &gt;::operator()()</a>, <a class="el" href="_intrepid2___tensor_data_8hpp_source.html#l00454">Intrepid2::TensorData&lt; weightValueType, DeviceType &gt;::operator()()</a>, <a class="el" href="_intrepid2___projected_geometry_examples_8hpp_source.html#l00066">Intrepid2::UnitSquareToCircle&lt; Scalar &gt;::operator()()</a>, <a class="el" href="_intrepid2___vector_data_8hpp_source.html#l00359">Intrepid2::VectorData&lt; Scalar, DeviceType &gt;::operator()()</a>, <a class="el" href="_intrepid2___transformed_basis_values_8hpp_source.html#l00298">Intrepid2::TransformedBasisValues&lt; Scalar, DeviceType &gt;::rank()</a>, <a class="el" href="_intrepid2___cell_geometry_def_8hpp_source.html#l01513">Intrepid2::CellGeometry&lt; PointScalar, spaceDim, DeviceType &gt;::setJacobian()</a>, <a class="el" href="_intrepid2___cell_geometry_def_8hpp_source.html#l00243">Intrepid2::CellGeometry&lt; PointScalar, spaceDim, DeviceType &gt;::setJacobianDataPrivate()</a>, <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html#l00198">Intrepid2::CellTools&lt; DeviceType &gt;::setJacobianDet()</a>, <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html#l00475">Intrepid2::CellTools&lt; DeviceType &gt;::setJacobianInv()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l01680">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::storeDotProduct()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l01847">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::storeMatMat()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l01770">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::storeMatVec()</a>, <a class="el" href="_intrepid2___basis_values_8hpp_source.html#l00161">Intrepid2::BasisValues&lt; Scalar, DeviceType &gt;::tensorData()</a>, <a class="el" href="_intrepid2___basis_values_8hpp_source.html#l00168">Intrepid2::BasisValues&lt; Scalar, DeviceType &gt;::tensorData()</a>, <a class="el" href="_intrepid2___tensor_view_iterator_8hpp_source.html#l00078">Intrepid2::TensorViewIterator&lt; OutputFieldType, OutputFieldType, OutputFieldType, OutputScalar &gt;::TensorViewIterator()</a>, <a class="el" href="_intrepid2___transformed_basis_values_8hpp_source.html#l00051">Intrepid2::TransformedBasisValues&lt; Scalar, DeviceType &gt;::TransformedBasisValues()</a>, and <a class="el" href="_intrepid2___transformed_basis_values_8hpp_source.html#l00258">Intrepid2::TransformedBasisValues&lt; Scalar, DeviceType &gt;::transformWeight()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_intrepid2___data_8hpp_source.html#l01458">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::allocateContractionResult()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l01258">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::allocateInPlaceCombinationResult()</a>, <a class="el" href="_intrepid2___cell_geometry_def_8hpp_source.html#l01499">Intrepid2::CellGeometry&lt; PointScalar, spaceDim, DeviceType &gt;::allocateJacobianData()</a>, <a class="el" href="_intrepid2___cell_geometry_def_8hpp_source.html#l00151">Intrepid2::CellGeometry&lt; PointScalar, spaceDim, DeviceType &gt;::allocateJacobianDataPrivate()</a>, <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html#l00159">Intrepid2::CellTools&lt; DeviceType &gt;::allocateJacobianInv()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l01278">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::allocateMatMatResult()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l01485">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::allocateMatVecResult()</a>, <a class="el" href="_intrepid2___data_dimension_info_8hpp_source.html#l00042">Intrepid2::combinedDimensionInfo()</a>, <a class="el" href="_intrepid2___real_space_tools_def_8hpp_source.html#l00149">Intrepid2::RealSpaceTools&lt; DeviceType &gt;::Serial::det()</a>, <a class="el" href="_intrepid2___vector_data_8hpp_source.html#l00450">Intrepid2::VectorData&lt; Scalar, DeviceType &gt;::extent_int()</a>, <a class="el" href="_intrepid2___cell_data_def_8hpp_source.html#l00775">Intrepid2::RefCellCenter&lt; DeviceType &gt;::get()</a>, <a class="el" href="_intrepid2___cell_data_def_8hpp_source.html#l00527">Intrepid2::RefCellNodes&lt; DeviceType &gt;::get()</a>, <a class="el" href="_intrepid2___vector_data_8hpp_source.html#l00414">Intrepid2::VectorData&lt; Scalar, DeviceType &gt;::getComponent()</a>, <a class="el" href="_intrepid2___vector_data_8hpp_source.html#l00438">Intrepid2::VectorData&lt; Scalar, DeviceType &gt;::getComponent()</a>, <a class="el" href="_intrepid2___cell_geometry_def_8hpp_source.html#l00809">Intrepid2::CellGeometry&lt; PointScalar, spaceDim, DeviceType &gt;::getJacobianRefData()</a>, <a class="el" href="_intrepid2___cell_geometry_def_8hpp_source.html#l00893">Intrepid2::CellGeometry&lt; PointScalar, spaceDim, DeviceType &gt;::getJacobianRefData()</a>, <a class="el" href="_intrepid2___cell_geometry_def_8hpp_source.html#l01116">Intrepid2::CellGeometry&lt; PointScalar, spaceDim, DeviceType &gt;::getOrientation()</a>, <a class="el" href="_intrepid2___basis_8hpp_source.html#l00410">Intrepid2::Basis&lt; DeviceType, outputValueType, pointValueType &gt;::getScratchSpaceSize()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l00902">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::getUnderlyingView()</a>, <a class="el" href="_intrepid2___basis_8hpp_source.html#l00440">Intrepid2::Basis&lt; DeviceType, outputValueType, pointValueType &gt;::getValues()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l00364">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::getWritableEntryWithPassThroughOption()</a>, <a class="el" href="_intrepid2___cell_geometry_def_8hpp_source.html#l01134">Intrepid2::CellGeometry&lt; PointScalar, spaceDim, DeviceType &gt;::gridCellCoordinate()</a>, <a class="el" href="_intrepid2___cell_geometry_def_8hpp_source.html#l01174">Intrepid2::CellGeometry&lt; PointScalar, spaceDim, DeviceType &gt;::gridCellNodeForSubdivisionNode()</a>, <a class="el" href="_intrepid2___tensor_data_8hpp_source.html#l00045">Intrepid2::TensorData&lt; weightValueType, DeviceType &gt;::initialize()</a>, <a class="el" href="_intrepid2___integration_tools_def_8hpp_source.html#l02024">Intrepid2::IntegrationTools&lt; DeviceType &gt;::integrate()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l01229">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::isDiagonal()</a>, <a class="el" href="_intrepid2___transformed_basis_values_8hpp_source.html#l00118">Intrepid2::TransformedBasisValues&lt; Scalar, DeviceType &gt;::multiplyByPointwiseWeights()</a>, <a class="el" href="_intrepid2___vector_data_8hpp_source.html#l00500">Intrepid2::VectorData&lt; Scalar, DeviceType &gt;::numFieldsInFamily()</a>, <a class="el" href="_intrepid2___basis_values_8hpp_source.html#l00296">Intrepid2::BasisValues&lt; Scalar, DeviceType &gt;::operator()()</a>, <a class="el" href="_intrepid2___basis_values_8hpp_source.html#l00222">Intrepid2::BasisValues&lt; Scalar, DeviceType &gt;::operator()()</a>, <a class="el" href="_intrepid2___basis_values_8hpp_source.html#l00255">Intrepid2::BasisValues&lt; Scalar, DeviceType &gt;::operator()()</a>, <a class="el" href="_intrepid2___cell_geometry_def_8hpp_source.html#l01415">Intrepid2::CellGeometry&lt; PointScalar, spaceDim, DeviceType &gt;::operator()()</a>, <a class="el" href="_intrepid2___tensor_data_8hpp_source.html#l00260">Intrepid2::TensorData&lt; weightValueType, DeviceType &gt;::operator()()</a>, <a class="el" href="_intrepid2___tensor_data_8hpp_source.html#l00312">Intrepid2::TensorData&lt; weightValueType, DeviceType &gt;::operator()()</a>, <a class="el" href="_intrepid2___tensor_data_8hpp_source.html#l00399">Intrepid2::TensorData&lt; weightValueType, DeviceType &gt;::operator()()</a>, <a class="el" href="_intrepid2___tensor_data_8hpp_source.html#l00285">Intrepid2::TensorData&lt; weightValueType, DeviceType &gt;::operator()()</a>, <a class="el" href="_intrepid2___tensor_data_8hpp_source.html#l00454">Intrepid2::TensorData&lt; weightValueType, DeviceType &gt;::operator()()</a>, <a class="el" href="_intrepid2___projected_geometry_examples_8hpp_source.html#l00066">Intrepid2::UnitSquareToCircle&lt; Scalar &gt;::operator()()</a>, <a class="el" href="_intrepid2___vector_data_8hpp_source.html#l00359">Intrepid2::VectorData&lt; Scalar, DeviceType &gt;::operator()()</a>, <a class="el" href="_intrepid2___transformed_basis_values_8hpp_source.html#l00298">Intrepid2::TransformedBasisValues&lt; Scalar, DeviceType &gt;::rank()</a>, <a class="el" href="_intrepid2___cell_geometry_def_8hpp_source.html#l01526">Intrepid2::CellGeometry&lt; PointScalar, spaceDim, DeviceType &gt;::setJacobian()</a>, <a class="el" href="_intrepid2___cell_geometry_def_8hpp_source.html#l00243">Intrepid2::CellGeometry&lt; PointScalar, spaceDim, DeviceType &gt;::setJacobianDataPrivate()</a>, <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html#l00198">Intrepid2::CellTools&lt; DeviceType &gt;::setJacobianDet()</a>, <a class="el" href="_intrepid2___cell_tools_def_jacobian_8hpp_source.html#l00475">Intrepid2::CellTools&lt; DeviceType &gt;::setJacobianInv()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l01680">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::storeDotProduct()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l01847">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::storeMatMat()</a>, <a class="el" href="_intrepid2___data_8hpp_source.html#l01770">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::storeMatVec()</a>, <a class="el" href="_intrepid2___basis_values_8hpp_source.html#l00161">Intrepid2::BasisValues&lt; Scalar, DeviceType &gt;::tensorData()</a>, <a class="el" href="_intrepid2___basis_values_8hpp_source.html#l00168">Intrepid2::BasisValues&lt; Scalar, DeviceType &gt;::tensorData()</a>, <a class="el" href="_intrepid2___tensor_view_iterator_8hpp_source.html#l00078">Intrepid2::TensorViewIterator&lt; OutputFieldType, OutputFieldType, OutputFieldType, OutputScalar &gt;::TensorViewIterator()</a>, <a class="el" href="_intrepid2___transformed_basis_values_8hpp_source.html#l00051">Intrepid2::TransformedBasisValues&lt; Scalar, DeviceType &gt;::TransformedBasisValues()</a>, and <a class="el" href="_intrepid2___transformed_basis_values_8hpp_source.html#l00258">Intrepid2::TransformedBasisValues&lt; Scalar, DeviceType &gt;::transformWeight()</a>.</p>
 
 </div>
 </div>
@@ -489,7 +486,7 @@ template&lt;typename Device, typename Derived&gt; </div>
 </div><div class="memdoc">
 <p>Function for creating a vtable on device (requires copy ctor for derived object). Allocates device memory and must be called from host. </p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00952">952</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00936">936</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
 
 </div>
 </div>
@@ -800,7 +797,7 @@ template&lt;class Functor, ordinal_type default_value&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>functor.rank if the functor has a static rank member; returns specified default_value otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00529">529</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00513">513</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
 
 </div>
 </div>
@@ -830,7 +827,7 @@ template&lt;class Functor, ordinal_type default_value&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>functor.rank if the functor has a static rank member; returns specified default_value otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00518">518</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00502">502</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
 
 </div>
 </div>
@@ -852,7 +849,7 @@ template&lt;class Functor&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>functor.rank() if the functor implements rank(); functor.rank otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00893">893</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00877">877</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
 
 </div>
 </div>
@@ -874,56 +871,7 @@ template&lt;class Functor&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>functor.rank() if the functor implements rank(); functor.rank otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00882">882</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
-
-</div>
-</div>
-<a id="af091a07c101c255386d84054cd68d1d0" name="af091a07c101c255386d84054cd68d1d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af091a07c101c255386d84054cd68d1d0">&#9670;&#160;</a></span>getMatchingViewWithLabel()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class ViewType, class ... DimArgs&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Kokkos::DynRankView&lt; typename ViewType::value_type, typename DeduceLayout&lt; ViewType &gt;::result_layout, typename ViewType::device_type &gt; Intrepid2::getMatchingViewWithLabel </td>
-          <td>(</td>
-          <td class="paramtype">const ViewType &amp;</td>          <td class="paramname"><span class="paramname"><em>view</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>label</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">DimArgs...</td>          <td class="paramname"><span class="paramname"><em>dims</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Creates and returns a view that matches the provided view in Kokkos Layout. DEPRECATED, use Impl::createMatchingDynRankView instead. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">view</td><td>- the view to match </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">label</td><td>- a string label for the view to be created </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">dims</td><td>- dimensions to use for the view (the logical dimensions; this method handles adding the derivative dimension required for Fad types).</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>This method is particularly useful because we use LayoutStride as the Kokkos Layout in a number of places, and LayoutStride views cannot be instantiated without also providing stride information. </p>
-
-<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00491">491</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00866">866</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
 
 </div>
 </div>
@@ -954,7 +902,7 @@ template&lt;typename ViewType&gt; </div>
 
 <p>Returns the size of the Scalar dimension for the View. This is 0 for non-AD types. This method is useful for sizing scratch storage in hierarchically parallel kernels. Whereas get_dimension_scalar() returns 1 for POD types, this returns 0 for POD types. </p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00930">930</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00914">914</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
 
 </div>
 </div>
@@ -985,7 +933,7 @@ template&lt;typename Scalar&gt; </div>
 
 <p>Returns a vector size to be used for the provided Scalar type in the context of hierarchically-parallel Kokkos functor execution. </p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00918">918</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00902">902</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
 
 </div>
 </div>
@@ -1174,7 +1122,7 @@ template&lt;typename IdxType, typename DimType, typename IterType&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00911">911</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00895">895</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
 
 </div>
 </div>
@@ -1190,7 +1138,7 @@ template&lt;typename IdxType, typename DimType, typename IterType&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00907">907</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___utils_8hpp_source.html#l00891">891</a> of file <a class="el" href="_intrepid2___utils_8hpp_source.html">Intrepid2_Utils.hpp</a>.</p>
 
 </div>
 </div>
