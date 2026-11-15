@@ -522,9 +522,9 @@ $(function(){initNavTree('_mue_lu___sa_p_factory__def_8hpp_source.html','',''); 
 <div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>  Teuchos::ArrayRCP&lt;Scalar&gt; ConstraintViolationSum(nPDEs);</div>
 <div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>  Teuchos::ArrayRCP&lt;Scalar&gt; Rsum(nPDEs);</div>
 <div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>  Teuchos::ArrayRCP&lt;size_t&gt; nPositive(nPDEs);</div>
-<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> k = 0; k &lt; (size_t)nPDEs; k++) ConstraintViolationSum[k] = zero;</div>
-<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> k = 0; k &lt; (size_t)nPDEs; k++) Rsum[k] = zero;</div>
-<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> k = 0; k &lt; (size_t)nPDEs; k++) nPositive[k] = 0;</div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>  <span class="keywordflow">for</span> (LO k = 0; k &lt; nPDEs; k++) ConstraintViolationSum[k] = zero;</div>
+<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>  <span class="keywordflow">for</span> (LO k = 0; k &lt; nPDEs; k++) Rsum[k] = zero;</div>
+<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>  <span class="keywordflow">for</span> (LO k = 0; k &lt; nPDEs; k++) nPositive[k] = 0;</div>
 <div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span> </div>
 <div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; as&lt;size_t&gt;(P-&gt;getRowMap()-&gt;getLocalNumElements()); i++) {</div>
 <div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>    Teuchos::ArrayView&lt;const LocalOrdinal&gt; indices;</div>

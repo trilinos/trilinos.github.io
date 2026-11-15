@@ -79,6 +79,7 @@ Public Types</h2></td></tr>
 <tr class="memitem:a8f1160681c195153915137d09146e6b5" id="r_a8f1160681c195153915137d09146e6b5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f1160681c195153915137d09146e6b5">PointValueType</a> = typename BasisBase::PointValueType</td></tr>
 <tr class="memitem:a5e5ba3dea2175032aa5c8a323b642fc2" id="r_a5e5ba3dea2175032aa5c8a323b642fc2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e5ba3dea2175032aa5c8a323b642fc2">OrdinalTypeArray1DHost</a> = typename BasisBase::OrdinalTypeArray1DHost</td></tr>
 <tr class="memitem:aaa8a5d076a7ab98fa9a059b24173d012" id="r_aaa8a5d076a7ab98fa9a059b24173d012"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa8a5d076a7ab98fa9a059b24173d012">OrdinalTypeArray2DHost</a> = typename BasisBase::OrdinalTypeArray2DHost</td></tr>
+<tr class="memitem:a1627c503b5634deb563b2ead0d23f9d0" id="r_a1627c503b5634deb563b2ead0d23f9d0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1627c503b5634deb563b2ead0d23f9d0">OrdinalTypeArrayStride1DHost</a> = typename BasisBase::OrdinalTypeArrayStride1DHost</td></tr>
 <tr class="memitem:a295d59fa9e54cfb12213cfe5ef5f56cc" id="r_a295d59fa9e54cfb12213cfe5ef5f56cc"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a295d59fa9e54cfb12213cfe5ef5f56cc">OutputViewType</a> = typename BasisBase::OutputViewType</td></tr>
 <tr class="memitem:aaf65ed9162a63ba632fe063962fd723e" id="r_aaf65ed9162a63ba632fe063962fd723e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf65ed9162a63ba632fe063962fd723e">PointViewType</a> = typename BasisBase::PointViewType</td></tr>
 <tr class="memitem:ab05b48e11c53cb472c26ed7dbb4ae6ec" id="r_ab05b48e11c53cb472c26ed7dbb4ae6ec"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab05b48e11c53cb472c26ed7dbb4ae6ec">TensorBasis</a> = <a class="el" href="#aec1882761ae646439d58adfc0bf61127">Basis_TensorBasis</a>&lt;BasisBaseClass&gt;</td></tr>
@@ -87,6 +88,19 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aec1882761ae646439d58adfc0bf61127" id="r_aec1882761ae646439d58adfc0bf61127"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec1882761ae646439d58adfc0bf61127">Basis_TensorBasis</a> (BasisPtr basis1, BasisPtr basis2, EFunctionSpace functionSpace=FUNCTION_SPACE_MAX, const bool useShardsCellTopologyAndTags=false)</td></tr>
 <tr class="memdesc:aec1882761ae646439d58adfc0bf61127"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="memitem:a25bad834124014bd7ad4c4d8e900ee0b" id="r_a25bad834124014bd7ad4c4d8e900ee0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25bad834124014bd7ad4c4d8e900ee0b">setShardsTopology</a> ()</td></tr>
+<tr class="memitem:a35be067b9900bcc607c4f31a8604d3b6" id="r_a35be067b9900bcc607c4f31a8604d3b6"><td class="memItemLeft" align="right" valign="top">ordinal_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35be067b9900bcc607c4f31a8604d3b6">getCompositeSubcellOrdinal</a> (const ordinal_type subcellDim1, const ordinal_type subcellOrd1, const ordinal_type subcellDim2, const ordinal_type subcellOrd2) const</td></tr>
+<tr class="memitem:ad4d64b72fe0d5796a6211823d5f94177" id="r_ad4d64b72fe0d5796a6211823d5f94177"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4d64b72fe0d5796a6211823d5f94177">fillDofTag</a> (const ordinal_type dofOrd, OrdinalTypeArray2DHost tag, const ordinal_type row) const</td></tr>
+<tr class="memitem:aafcfca71ff97738aa92e98066a5d95ec" id="r_aafcfca71ff97738aa92e98066a5d95ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafcfca71ff97738aa92e98066a5d95ec">setTensorProductTags</a> ()</td></tr>
+<tr class="memitem:a6324b580c01a6e415e7072f6fdde62ed" id="r_a6324b580c01a6e415e7072f6fdde62ed"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6324b580c01a6e415e7072f6fdde62ed">requireTags</a> () const override</td></tr>
+<tr class="memdesc:a6324b580c01a6e415e7072f6fdde62ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">materializes the dense tag tables on first request (thread-safe)  <br /></td></tr>
+<tr class="memitem:a6e4e5a53ca876331b38f9d42a2b7354f" id="r_a6e4e5a53ca876331b38f9d42a2b7354f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e4e5a53ca876331b38f9d42a2b7354f">requireCompositeSubcellMap</a> () const</td></tr>
+<tr class="memdesc:a6e4e5a53ca876331b38f9d42a2b7354f"><td class="mdescLeft">&#160;</td><td class="mdescRight">builds compositeSubcellToComponents_ (once; thread-safe)  <br /></td></tr>
+<tr class="memitem:a75cfab74b522778d7f2f4b7ddf390986" id="r_a75cfab74b522778d7f2f4b7ddf390986"><td class="memItemLeft" align="right" valign="top">virtual ordinal_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75cfab74b522778d7f2f4b7ddf390986">getDofCount</a> (const ordinal_type subcDim, const ordinal_type subcOrd) const override</td></tr>
+<tr class="memdesc:a75cfab74b522778d7f2f4b7ddf390986"><td class="mdescLeft">&#160;</td><td class="mdescRight">DoF count for the specified subcell, computed from the component bases (without building dense tag tables).  <br /></td></tr>
+<tr class="memitem:a01fc82d3ce2ff7c235948b0889b7a03d" id="r_a01fc82d3ce2ff7c235948b0889b7a03d"><td class="memItemLeft" align="right" valign="top">virtual ordinal_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01fc82d3ce2ff7c235948b0889b7a03d">getDofOrdinal</a> (const ordinal_type subcDim, const ordinal_type subcOrd, const ordinal_type subcDofOrd) const override</td></tr>
+<tr class="memdesc:a01fc82d3ce2ff7c235948b0889b7a03d"><td class="mdescLeft">&#160;</td><td class="mdescRight">DoF tag to ordinal lookup, computed from the component bases (without building dense tag tables).  <br /></td></tr>
+<tr class="memitem:a7d051e7d15e5e3d331e4856298a7b15d" id="r_a7d051e7d15e5e3d331e4856298a7b15d"><td class="memItemLeft" align="right" valign="top">virtual const OrdinalTypeArray2DHost&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d051e7d15e5e3d331e4856298a7b15d">getAllDofTags</a> () const override</td></tr>
 <tr class="memitem:aa130bf8ff61b0bf271c515db3c149686" id="r_aa130bf8ff61b0bf271c515db3c149686"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa130bf8ff61b0bf271c515db3c149686">setShardsTopologyAndTags</a> ()</td></tr>
 <tr class="memitem:ae95c65421272fdc67a46a2796356a5e0" id="r_ae95c65421272fdc67a46a2796356a5e0"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae95c65421272fdc67a46a2796356a5e0">getNumTensorialExtrusions</a> () const override</td></tr>
 <tr class="memitem:ad8021c650ba9ce82401a1b46dbba54a5" id="r_ad8021c650ba9ce82401a1b46dbba54a5"><td class="memItemLeft" align="right" valign="top">ordinal_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8021c650ba9ce82401a1b46dbba54a5">getTensorDkEnumeration</a> (ordinal_type dkEnum1, ordinal_type operatorOrder1, ordinal_type dkEnum2, ordinal_type operatorOrder2) const</td></tr>
@@ -124,6 +138,12 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a8ac423a11b70d5b7ecd421ab91aaf0d0" id="r_a8ac423a11b70d5b7ecd421ab91aaf0d0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; BasisPtr &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ac423a11b70d5b7ecd421ab91aaf0d0">tensorComponents_</a></td></tr>
 <tr class="memitem:ad3bc343a0c6c05d4d27728daf90e9f1b" id="r_ad3bc343a0c6c05d4d27728daf90e9f1b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3bc343a0c6c05d4d27728daf90e9f1b">name_</a></td></tr>
 <tr class="memitem:a9dd79751967799a164a9a9438ed71b31" id="r_a9dd79751967799a164a9a9438ed71b31"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9dd79751967799a164a9a9438ed71b31">numTensorialExtrusions_</a></td></tr>
+<tr class="memitem:ae83dde89495ef971072520f32f350bc2" id="r_ae83dde89495ef971072520f32f350bc2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae83dde89495ef971072520f32f350bc2">useShardsCellTopologyAndTags_</a></td></tr>
+<tr class="memitem:a82785bfcda1a93bc69c34ba46a1816af" id="r_a82785bfcda1a93bc69c34ba46a1816af"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::pair&lt; ordinal_type, ordinal_type &gt;, std::array&lt; ordinal_type, 4 &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82785bfcda1a93bc69c34ba46a1816af">compositeSubcellToComponents_</a></td></tr>
+<tr class="memdesc:a82785bfcda1a93bc69c34ba46a1816af"><td class="mdescLeft">&#160;</td><td class="mdescRight">composite (subcell dim, subcell ordinal) -&gt; component subcells (d1, s1, d2, s2); built lazily by <a class="el" href="#a75cfab74b522778d7f2f4b7ddf390986" title="DoF count for the specified subcell, computed from the component bases (without building dense tag ta...">getDofCount()</a>/getDofOrdinal()  <br /></td></tr>
+<tr class="memitem:a67081b7a974efb36b54f7387fa18852d" id="r_a67081b7a974efb36b54f7387fa18852d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67081b7a974efb36b54f7387fa18852d">compositeSubcellMapBuilt_</a> = false</td></tr>
+<tr class="memitem:a46f9ffa3ae4eff8c99e144a7042e0bf7" id="r_a46f9ffa3ae4eff8c99e144a7042e0bf7"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; std::recursive_mutex &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46f9ffa3ae4eff8c99e144a7042e0bf7">lazyInitializationMutex_</a> = std::make_shared&lt;std::recursive_mutex&gt;()</td></tr>
+<tr class="memdesc:a46f9ffa3ae4eff8c99e144a7042e0bf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Guards lazy initialization in const methods (of the tag tables and of compositeSubcellToComponents_), so that TensorBasis objects shared between host threads may be queried concurrently. Held by pointer so that TensorBasis remains copyable. (Concurrent queries also require that Kokkos be built with real atomics, since the tag queries return reference-counted Views; Trilinos enables Kokkos_ENABLE_ATOMICS_BYPASS by default when Serial is the only Kokkos backend.) This lives here rather than in <a class="el" href="class_intrepid2_1_1_basis.html" title="An abstract base class that defines interface for concrete basis implementations for Finite Element (...">Basis</a> because <a class="el" href="class_intrepid2_1_1_basis.html" title="An abstract base class that defines interface for concrete basis implementations for Finite Element (...">Basis</a> must remain copyable on device; see <a class="el" href="class_intrepid2_1_1_basis.html#a01d3917dc0226dcad55ad8762a994e12" title="Ensures that the dense tag tables (ordinalToTag_, tagToOrdinal_) are filled.">Basis::requireTags()</a>. The lazy initialization must not dispatch Kokkos kernels, so that it may run inside an OpenMP parallel region.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename BasisBaseClass = void&gt;<br />
@@ -131,7 +151,7 @@ class Intrepid2::Basis_TensorBasis&lt; BasisBaseClass &gt;</div><p><a class="el"
 <p>The cell topology for the tensor basis is the tensor product of the cell topologies on which the component bases are defined; </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="class_intrepid2_1_1_tensor_topology_map.html" title="For two cell topologies whose tensor product is a third, this class establishes a mapping from subcel...">Intrepid2::TensorTopologyMap</a>.</dd></dl>
 <p>The basis is ordered such that the Basis1 field ordinals are the fastest-moving index; the formula for the composite field ordinal is: compositeFieldOrdinal = componentFieldOrdinal2 * basis1Cardinality + componentFieldOrdinal1 This is done so that we can consider, e.g. Basis1 as the "x" dimension and Basis2 as the "y" dimension, and have the basis ordered in the same way that existing Intrepid2 bases on the quadrilateral are ordered, namely, one moves along the x dimension first, moving across the quadrilateral dofs "row-wise". </p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00609">609</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00612">612</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
 <a id="ab90afcaabef3570608e48eeabba0c3c5" name="ab90afcaabef3570608e48eeabba0c3c5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab90afcaabef3570608e48eeabba0c3c5">&#9670;&#160;</a></span>BasisBase</h2>
@@ -147,7 +167,7 @@ template&lt;typename BasisBaseClass = void&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00614">614</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00617">617</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
 
 </div>
 </div>
@@ -165,7 +185,7 @@ template&lt;typename BasisBaseClass = void&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00615">615</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00618">618</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
 
 </div>
 </div>
@@ -183,7 +203,7 @@ template&lt;typename BasisBaseClass = void&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00627">627</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00644">644</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
 
 </div>
 </div>
@@ -201,7 +221,7 @@ template&lt;typename BasisBaseClass = void&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00628">628</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00645">645</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
 
 </div>
 </div>
@@ -219,7 +239,7 @@ template&lt;typename BasisBaseClass = void&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00632">632</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00649">649</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
 
 </div>
 </div>
@@ -237,7 +257,25 @@ template&lt;typename BasisBaseClass = void&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00633">633</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00650">650</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a1627c503b5634deb563b2ead0d23f9d0" name="a1627c503b5634deb563b2ead0d23f9d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1627c503b5634deb563b2ead0d23f9d0">&#9670;&#160;</a></span>OrdinalTypeArrayStride1DHost</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BasisBaseClass = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="class_intrepid2_1_1_basis___tensor_basis.html">Intrepid2::Basis_TensorBasis</a>&lt; BasisBaseClass &gt;::OrdinalTypeArrayStride1DHost = typename BasisBase::OrdinalTypeArrayStride1DHost</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00651">651</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
 
 </div>
 </div>
@@ -255,7 +293,7 @@ template&lt;typename BasisBaseClass = void&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00629">629</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00646">646</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
 
 </div>
 </div>
@@ -273,7 +311,7 @@ template&lt;typename BasisBaseClass = void&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00634">634</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00652">652</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
 
 </div>
 </div>
@@ -291,7 +329,7 @@ template&lt;typename BasisBaseClass = void&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00630">630</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00647">647</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
 
 </div>
 </div>
@@ -309,7 +347,7 @@ template&lt;typename BasisBaseClass = void&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00635">635</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00653">653</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
 
 </div>
 </div>
@@ -327,7 +365,7 @@ template&lt;typename BasisBaseClass = void&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00636">636</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00654">654</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
 
 </div>
 </div>
@@ -382,7 +420,7 @@ template&lt;typename BasisBaseClass = void&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00644">644</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00662">662</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
 
 </div>
 </div>
@@ -419,7 +457,74 @@ template&lt;typename BasisBaseClass = void&gt; </div>
 <p>Allocate <a class="el" href="class_intrepid2_1_1_basis_values.html" title="The data containers in Intrepid2 that support sum factorization and other reduced-data optimizations ...">BasisValues</a> container suitable for passing to the <a class="el" href="#af931c318ad295f04e1c2be2ab272d46d" title="Evaluation of a FEM basis on a reference cell, using point and output value containers that allow pre...">getValues()</a> variant that takes a <a class="el" href="class_intrepid2_1_1_tensor_points.html" title="View-like interface to tensor points; point components are stored separately; the appropriate coordin...">TensorPoints</a> container as argument. </p>
 <p>The basic exact-sequence operators are supported (VALUE, GRAD, DIV, CURL), as are the Dn operators (OPERATOR_D1 through OPERATOR_D10). </p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01160">1160</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01280">1280</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ad4d64b72fe0d5796a6211823d5f94177" name="ad4d64b72fe0d5796a6211823d5f94177"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4d64b72fe0d5796a6211823d5f94177">&#9670;&#160;</a></span>fillDofTag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BasisBaseClass = void&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_intrepid2_1_1_basis___tensor_basis.html">Intrepid2::Basis_TensorBasis</a>&lt; BasisBaseClass &gt;::fillDofTag </td>
+          <td>(</td>
+          <td class="paramtype">const ordinal_type</td>          <td class="paramname"><span class="paramname"><em>dofOrd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OrdinalTypeArray2DHost</td>          <td class="paramname"><span class="paramname"><em>tag</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ordinal_type</td>          <td class="paramname"><span class="paramname"><em>row</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00818">818</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a7d051e7d15e5e3d331e4856298a7b15d" name="a7d051e7d15e5e3d331e4856298a7b15d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d051e7d15e5e3d331e4856298a7b15d">&#9670;&#160;</a></span>getAllDofTags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BasisBaseClass = void&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const OrdinalTypeArray2DHost <a class="el" href="class_intrepid2_1_1_basis___tensor_basis.html">Intrepid2::Basis_TensorBasis</a>&lt; BasisBaseClass &gt;::getAllDofTags </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00956">956</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
 
 </div>
 </div>
@@ -480,9 +585,52 @@ template&lt;typename BasisBaseClass = void&gt; </div>
 </dl>
 <p>At present, attemptTensorDecomposition is ignored, and tensorDecompositionSucceeded will always return false. However, we intend to support the tensor decomposition in the future, which will allow substantial optimizations in computation of tensor bases. </p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01280">1280</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01400">1400</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01592">Intrepid2::Basis_TensorBasis&lt; BasisBase &gt;::getValues()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01712">Intrepid2::Basis_TensorBasis&lt; BasisBase &gt;::getValues()</a>.</p>
+
+</div>
+</div>
+<a id="a35be067b9900bcc607c4f31a8604d3b6" name="a35be067b9900bcc607c4f31a8604d3b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35be067b9900bcc607c4f31a8604d3b6">&#9670;&#160;</a></span>getCompositeSubcellOrdinal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BasisBaseClass = void&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ordinal_type <a class="el" href="class_intrepid2_1_1_basis___tensor_basis.html">Intrepid2::Basis_TensorBasis</a>&lt; BasisBaseClass &gt;::getCompositeSubcellOrdinal </td>
+          <td>(</td>
+          <td class="paramtype">const ordinal_type</td>          <td class="paramname"><span class="paramname"><em>subcellDim1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ordinal_type</td>          <td class="paramname"><span class="paramname"><em>subcellOrd1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ordinal_type</td>          <td class="paramname"><span class="paramname"><em>subcellDim2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ordinal_type</td>          <td class="paramname"><span class="paramname"><em>subcellOrd2</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00790">790</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
 
 </div>
 </div>
@@ -523,7 +671,7 @@ template&lt;typename BasisBaseClass = void&gt; </div>
 
 <p>Reimplemented in <a class="el" href="class_intrepid2_1_1_basis___tensor_basis3.html#a8837222addd35c8c9400675245a28314">Intrepid2::Basis_TensorBasis3&lt; BasisBaseClass &gt;</a>, <a class="el" href="class_intrepid2_1_1_basis___tensor_basis3.html#a8837222addd35c8c9400675245a28314">Intrepid2::Basis_TensorBasis3&lt; HGRAD_LINE::BasisBase &gt;</a>, and <a class="el" href="class_intrepid2_1_1_basis___tensor_basis3.html#a8837222addd35c8c9400675245a28314">Intrepid2::Basis_TensorBasis3&lt; typename HGRAD_LINE::BasisBase &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01370">1370</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01490">1490</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
 
 </div>
 </div>
@@ -562,7 +710,82 @@ template&lt;typename BasisBaseClass = void&gt; </div>
 <p>dofCoords should have shape (F,D), where the field dimension matches the cardinality of the basis, and D is the spatial dimension of the topology on which the basis is defined.</p>
 <p>Note that <a class="el" href="#a4208b42cdafebe03bb683df75a870be9" title="Fills in spatial locations (coordinates) of degrees of freedom (nodes) on the reference cell.">getDofCoords()</a> is not supported by all bases; in particular, hierarchical bases do not generally support this. </p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01324">1324</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01444">1444</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a75cfab74b522778d7f2f4b7ddf390986" name="a75cfab74b522778d7f2f4b7ddf390986"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75cfab74b522778d7f2f4b7ddf390986">&#9670;&#160;</a></span>getDofCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BasisBaseClass = void&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ordinal_type <a class="el" href="class_intrepid2_1_1_basis___tensor_basis.html">Intrepid2::Basis_TensorBasis</a>&lt; BasisBaseClass &gt;::getDofCount </td>
+          <td>(</td>
+          <td class="paramtype">const ordinal_type</td>          <td class="paramname"><span class="paramname"><em>subcDim</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ordinal_type</td>          <td class="paramname"><span class="paramname"><em>subcOrd</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>DoF count for the specified subcell, computed from the component bases (without building dense tag tables). </p>
+
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00917">917</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a01fc82d3ce2ff7c235948b0889b7a03d" name="a01fc82d3ce2ff7c235948b0889b7a03d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01fc82d3ce2ff7c235948b0889b7a03d">&#9670;&#160;</a></span>getDofOrdinal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BasisBaseClass = void&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ordinal_type <a class="el" href="class_intrepid2_1_1_basis___tensor_basis.html">Intrepid2::Basis_TensorBasis</a>&lt; BasisBaseClass &gt;::getDofOrdinal </td>
+          <td>(</td>
+          <td class="paramtype">const ordinal_type</td>          <td class="paramname"><span class="paramname"><em>subcDim</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ordinal_type</td>          <td class="paramname"><span class="paramname"><em>subcOrd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ordinal_type</td>          <td class="paramname"><span class="paramname"><em>subcDofOrd</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>DoF tag to ordinal lookup, computed from the component bases (without building dense tag tables). </p>
+
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00929">929</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
 
 </div>
 </div>
@@ -596,7 +819,7 @@ template&lt;typename BasisBaseClass = void&gt; </div>
 
 <p>Reimplemented in <a class="el" href="class_intrepid2_1_1_basis___derived___h_g_r_a_d___h_e_x.html#a04db4c560cd9d73499bdc83bb822a257">Intrepid2::Basis_Derived_HGRAD_HEX&lt; HGRAD_LINE &gt;</a>, <a class="el" href="class_intrepid2_1_1_basis___derived___h_g_r_a_d___q_u_a_d.html#afd8cd6bfca0ebc63a07952b871a7180e">Intrepid2::Basis_Derived_HGRAD_QUAD&lt; HGRAD_LINE &gt;</a>, <a class="el" href="class_intrepid2_1_1_basis___derived___h_g_r_a_d___w_e_d_g_e.html#a437cfdbb315b2f54fb93f365e4986866">Intrepid2::Basis_Derived_HGRAD_WEDGE&lt; HGRAD_TRI, HGRAD_LINE &gt;</a>, <a class="el" href="class_intrepid2_1_1_basis___derived___h_v_o_l___h_e_x.html#aee99e52d3e0dee51cbbdfa8dc64a7fae">Intrepid2::Basis_Derived_HVOL_HEX&lt; HVOL_LINE &gt;</a>, <a class="el" href="class_intrepid2_1_1_basis___derived___h_v_o_l___q_u_a_d.html#a7a9a5cb47686f88426b898b911ed9df8">Intrepid2::Basis_Derived_HVOL_QUAD&lt; HVOL_LINE &gt;</a>, <a class="el" href="class_intrepid2_1_1_basis___derived___h_v_o_l___w_e_d_g_e.html#a30509c13417cb6a3ae9ea3e72f5da21e">Intrepid2::Basis_Derived_HVOL_WEDGE&lt; HVOL_TRI, HVOL_LINE &gt;</a>, <a class="el" href="class_intrepid2_1_1_basis___tensor_basis3.html#a08c8f021a372adf0dfc8adaf7072287c">Intrepid2::Basis_TensorBasis3&lt; BasisBaseClass &gt;</a>, <a class="el" href="class_intrepid2_1_1_basis___tensor_basis3.html#a08c8f021a372adf0dfc8adaf7072287c">Intrepid2::Basis_TensorBasis3&lt; HGRAD_LINE::BasisBase &gt;</a>, and <a class="el" href="class_intrepid2_1_1_basis___tensor_basis3.html#a08c8f021a372adf0dfc8adaf7072287c">Intrepid2::Basis_TensorBasis3&lt; typename HGRAD_LINE::BasisBase &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01845">1845</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01965">1965</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
 
 </div>
 </div>
@@ -630,7 +853,7 @@ template&lt;typename BasisBaseClass = void&gt; </div>
 
 <p>Reimplemented in <a class="el" href="class_intrepid2_1_1_basis___derived___h_g_r_a_d___h_e_x.html#a1d88f4bcb8f19b6700de37b2ddb40de4">Intrepid2::Basis_Derived_HGRAD_HEX&lt; HGRAD_LINE &gt;</a>, <a class="el" href="class_intrepid2_1_1_basis___derived___h_g_r_a_d___q_u_a_d.html#a03733d123dde57d1303a1668941c27fd">Intrepid2::Basis_Derived_HGRAD_QUAD&lt; HGRAD_LINE &gt;</a>, <a class="el" href="class_intrepid2_1_1_basis___derived___h_g_r_a_d___w_e_d_g_e.html#a66758d6fd7ec6e98f20b7d67566c0e62">Intrepid2::Basis_Derived_HGRAD_WEDGE&lt; HGRAD_TRI, HGRAD_LINE &gt;</a>, <a class="el" href="class_intrepid2_1_1_basis___derived___h_v_o_l___h_e_x.html#a7dd8d63b46e7ee9ffb2578e570bc7cc7">Intrepid2::Basis_Derived_HVOL_HEX&lt; HVOL_LINE &gt;</a>, <a class="el" href="class_intrepid2_1_1_basis___derived___h_v_o_l___q_u_a_d.html#a78d1442944ad53f7638ec25a0cb07ff2">Intrepid2::Basis_Derived_HVOL_QUAD&lt; HVOL_LINE &gt;</a>, and <a class="el" href="class_intrepid2_1_1_basis___derived___h_v_o_l___w_e_d_g_e.html#ae41154c57129b4f4114468152b97274a">Intrepid2::Basis_Derived_HVOL_WEDGE&lt; HVOL_TRI, HVOL_LINE &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01415">1415</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01535">1535</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
 
 </div>
 </div>
@@ -659,7 +882,7 @@ template&lt;typename BasisBaseClass = void&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00920">920</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01040">1040</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
 
 </div>
 </div>
@@ -692,9 +915,9 @@ template&lt;typename BasisBaseClass = void&gt; </div>
 
 <p>Reimplemented in <a class="el" href="class_intrepid2_1_1_basis___tensor_basis3.html#a9795aed7853fc0eaeb9eb3947c57bb6e">Intrepid2::Basis_TensorBasis3&lt; BasisBaseClass &gt;</a>, <a class="el" href="class_intrepid2_1_1_basis___tensor_basis3.html#a9795aed7853fc0eaeb9eb3947c57bb6e">Intrepid2::Basis_TensorBasis3&lt; HGRAD_LINE::BasisBase &gt;</a>, and <a class="el" href="class_intrepid2_1_1_basis___tensor_basis3.html#a9795aed7853fc0eaeb9eb3947c57bb6e">Intrepid2::Basis_TensorBasis3&lt; typename HGRAD_LINE::BasisBase &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01081">1081</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01201">1201</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01160">Intrepid2::Basis_TensorBasis&lt; BasisBase &gt;::allocateBasisValues()</a>, and <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01437">Intrepid2::Basis_TensorBasis&lt; BasisBase &gt;::getValues()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01280">Intrepid2::Basis_TensorBasis&lt; BasisBase &gt;::allocateBasisValues()</a>, and <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01557">Intrepid2::Basis_TensorBasis&lt; BasisBase &gt;::getValues()</a>.</p>
 
 </div>
 </div>
@@ -728,9 +951,9 @@ template&lt;typename BasisBaseClass = void&gt; </div>
 
 <p>Reimplemented in <a class="el" href="class_intrepid2_1_1_basis___derived___h_c_u_r_l___family1___h_e_x.html#a72c14f0edd26e3752f8c09051dd5df29">Intrepid2::Basis_Derived_HCURL_Family1_HEX&lt; HGRAD_LINE, HVOL_LINE &gt;</a>, <a class="el" href="class_intrepid2_1_1_basis___derived___h_c_u_r_l___family1___q_u_a_d.html#a7136dcd3dd2546740b97a8cc1241e3b3">Intrepid2::Basis_Derived_HCURL_Family1_QUAD&lt; HGRAD_LINE, HVOL_LINE &gt;</a>, <a class="el" href="class_intrepid2_1_1_basis___derived___h_c_u_r_l___family1___w_e_d_g_e.html#abac4e5f392b486832435b071d13377e4">Intrepid2::Basis_Derived_HCURL_Family1_WEDGE&lt; HCURL_TRI, HGRAD_LINE &gt;</a>, <a class="el" href="class_intrepid2_1_1_basis___derived___h_c_u_r_l___family2___h_e_x.html#ae5172aa89eeb5a1b85fb42b7b688f8e6">Intrepid2::Basis_Derived_HCURL_Family2_HEX&lt; HGRAD_LINE, HVOL_LINE &gt;</a>, <a class="el" href="class_intrepid2_1_1_basis___derived___h_c_u_r_l___family2___q_u_a_d.html#aadd80866fd10b50d918ef650049b9a4c">Intrepid2::Basis_Derived_HCURL_Family2_QUAD&lt; HGRAD_LINE, HVOL_LINE &gt;</a>, <a class="el" href="class_intrepid2_1_1_basis___derived___h_c_u_r_l___family2___w_e_d_g_e.html#ae991c8f37ad0a7e4633088711e8a2867">Intrepid2::Basis_Derived_HCURL_Family2_WEDGE&lt; HGRAD_TRI, HVOL_LINE &gt;</a>, <a class="el" href="class_intrepid2_1_1_basis___derived___h_c_u_r_l___family3___h_e_x.html#ab3c0eac9e822841005f7117499a817c7">Intrepid2::Basis_Derived_HCURL_Family3_HEX&lt; HGRAD_LINE, HVOL_LINE &gt;</a>, <a class="el" href="class_intrepid2_1_1_basis___derived___h_d_i_v___family1___h_e_x.html#a196337722fd48a75065108c93dec9136">Intrepid2::Basis_Derived_HDIV_Family1_HEX&lt; HGRAD_LINE, HVOL_LINE &gt;</a>, <a class="el" href="class_intrepid2_1_1_basis___derived___h_d_i_v___family1___q_u_a_d.html#acf8278448ea740c4230d6a0c004cf239">Intrepid2::Basis_Derived_HDIV_Family1_QUAD&lt; HGRAD_LINE, HVOL_LINE &gt;</a>, <a class="el" href="class_intrepid2_1_1_basis___derived___h_d_i_v___family1___w_e_d_g_e.html#a7e0d33ca8776da4cc17ca33252165fbb">Intrepid2::Basis_Derived_HDIV_Family1_WEDGE&lt; HDIV_TRI, HVOL_LINE &gt;</a>, <a class="el" href="class_intrepid2_1_1_basis___derived___h_d_i_v___family2___h_e_x.html#aecdb8ab14c98ab936090a3504dcac04e">Intrepid2::Basis_Derived_HDIV_Family2_HEX&lt; HGRAD_LINE, HVOL_LINE &gt;</a>, <a class="el" href="class_intrepid2_1_1_basis___derived___h_d_i_v___family2___q_u_a_d.html#ab086fcab3aa0db54304a0e2bcdbcf619">Intrepid2::Basis_Derived_HDIV_Family2_QUAD&lt; HGRAD_LINE, HVOL_LINE &gt;</a>, <a class="el" href="class_intrepid2_1_1_basis___derived___h_d_i_v___family2___w_e_d_g_e.html#add4d5b4cc989f40a21dfc21d2c24b86f">Intrepid2::Basis_Derived_HDIV_Family2_WEDGE&lt; HVOL_TRI, HGRAD_LINE &gt;</a>, <a class="el" href="class_intrepid2_1_1_basis___derived___h_d_i_v___family3___h_e_x.html#aa8167d76ee13832671d2b32f242138cc">Intrepid2::Basis_Derived_HDIV_Family3_HEX&lt; HGRAD_LINE, HVOL_LINE &gt;</a>, <a class="el" href="class_intrepid2_1_1_basis___derived___h_v_o_l___h_e_x.html#a6161fc4a8365a4e59fcb9305be30c260">Intrepid2::Basis_Derived_HVOL_HEX&lt; HVOL_LINE &gt;</a>, and <a class="el" href="class_intrepid2_1_1_basis___derived___h_v_o_l___q_u_a_d.html#a942886b551218f3cab187170cf9391ac">Intrepid2::Basis_Derived_HVOL_QUAD&lt; HVOL_LINE &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01013">1013</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01133">1133</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01081">Intrepid2::Basis_TensorBasis&lt; BasisBase &gt;::getOperatorDecomposition()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01201">Intrepid2::Basis_TensorBasis&lt; BasisBase &gt;::getOperatorDecomposition()</a>.</p>
 
 </div>
 </div>
@@ -759,7 +982,7 @@ template&lt;typename BasisBaseClass = void&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01419">1419</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01539">1539</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
 
 </div>
 </div>
@@ -814,9 +1037,9 @@ template&lt;typename BasisBaseClass = void&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Dk enumeration index for the composite basis, corresponding to operator order operatorOrder1 + operatorOrder2. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00933">933</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01053">1053</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01592">Intrepid2::Basis_TensorBasis&lt; BasisBase &gt;::getValues()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01712">Intrepid2::Basis_TensorBasis&lt; BasisBase &gt;::getValues()</a>.</p>
 
 </div>
 </div>
@@ -868,9 +1091,9 @@ template&lt;typename BasisBaseClass = void&gt; </div>
 
 <p>Reimplemented in <a class="el" href="class_intrepid2_1_1_basis___derived___h_c_u_r_l___family1___w_e_d_g_e.html#a759f9100552994c0ddc58c3efee8b5de">Intrepid2::Basis_Derived_HCURL_Family1_WEDGE&lt; HCURL_TRI, HGRAD_LINE &gt;</a>, <a class="el" href="class_intrepid2_1_1_basis___derived___h_c_u_r_l___family2___w_e_d_g_e.html#a759f9100552994c0ddc58c3efee8b5de">Intrepid2::Basis_Derived_HCURL_Family2_WEDGE&lt; HGRAD_TRI, HVOL_LINE &gt;</a>, <a class="el" href="class_intrepid2_1_1_basis___derived___h_d_i_v___family1___w_e_d_g_e.html#a759f9100552994c0ddc58c3efee8b5de">Intrepid2::Basis_Derived_HDIV_Family1_WEDGE&lt; HDIV_TRI, HVOL_LINE &gt;</a>, <a class="el" href="class_intrepid2_1_1_basis___derived___h_d_i_v___family2___w_e_d_g_e.html#a759f9100552994c0ddc58c3efee8b5de">Intrepid2::Basis_Derived_HDIV_Family2_WEDGE&lt; HVOL_TRI, HGRAD_LINE &gt;</a>, <a class="el" href="class_intrepid2_1_1_basis___tensor_basis3.html#a759f9100552994c0ddc58c3efee8b5de">Intrepid2::Basis_TensorBasis3&lt; HGRAD_LINE::BasisBase &gt;</a>, and <a class="el" href="class_intrepid2_1_1_basis___tensor_basis3.html#a759f9100552994c0ddc58c3efee8b5de">Intrepid2::Basis_TensorBasis3&lt; typename HGRAD_LINE::BasisBase &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01437">1437</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01557">1557</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01437">Intrepid2::Basis_TensorBasis&lt; BasisBase &gt;::getValues()</a>, and <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01592">Intrepid2::Basis_TensorBasis&lt; BasisBase &gt;::getValues()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01557">Intrepid2::Basis_TensorBasis&lt; BasisBase &gt;::getValues()</a>, and <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01712">Intrepid2::Basis_TensorBasis&lt; BasisBase &gt;::getValues()</a>.</p>
 
 </div>
 </div>
@@ -942,7 +1165,7 @@ template&lt;typename BasisBaseClass = void&gt; </div>
 
 <p>Reimplemented in <a class="el" href="class_intrepid2_1_1_basis___tensor_basis3.html#a79e841156beecaa275b466eac2d4d846">Intrepid2::Basis_TensorBasis3&lt; typename HGRAD_LINE::BasisBase &gt;</a>, and <a class="el" href="class_intrepid2_1_1_basis___tensor_basis3.html#a6b489d09677e954cc168320a0498cd12">Intrepid2::Basis_TensorBasis3&lt; typename HGRAD_LINE::BasisBase &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01734">1734</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01854">1854</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
 
 </div>
 </div>
@@ -994,7 +1217,7 @@ template&lt;typename BasisBaseClass = void&gt; </div>
 <dd>
 A FEM basis spans a COMPLETE or INCOMPLETE polynomial space on the reference cell which is a smooth function space. Thus, all operator types that are meaningful for the approximated function space are admissible. When the order of the operator exceeds the degree of the basis, the output array is filled with the appropriate number of zeros. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01592">1592</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01712">1712</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
 
 </div>
 </div>
@@ -1074,7 +1297,100 @@ template&lt;typename BasisBaseClass = void&gt; </div>
 </ol>
 <p>Subclasses should override the five-argument version above; in their implementation, they need to do little else than call this seven-argument version. </p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01764">1764</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l01884">1884</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a6e4e5a53ca876331b38f9d42a2b7354f" name="a6e4e5a53ca876331b38f9d42a2b7354f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e4e5a53ca876331b38f9d42a2b7354f">&#9670;&#160;</a></span>requireCompositeSubcellMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BasisBaseClass = void&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_intrepid2_1_1_basis___tensor_basis.html">Intrepid2::Basis_TensorBasis</a>&lt; BasisBaseClass &gt;::requireCompositeSubcellMap </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>builds compositeSubcellToComponents_ (once; thread-safe) </p>
+
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00886">886</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00917">Intrepid2::Basis_TensorBasis&lt; BasisBase &gt;::getDofCount()</a>, and <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00929">Intrepid2::Basis_TensorBasis&lt; BasisBase &gt;::getDofOrdinal()</a>.</p>
+
+</div>
+</div>
+<a id="a6324b580c01a6e415e7072f6fdde62ed" name="a6324b580c01a6e415e7072f6fdde62ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6324b580c01a6e415e7072f6fdde62ed">&#9670;&#160;</a></span>requireTags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BasisBaseClass = void&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="class_intrepid2_1_1_basis___tensor_basis.html">Intrepid2::Basis_TensorBasis</a>&lt; BasisBaseClass &gt;::requireTags </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>materializes the dense tag tables on first request (thread-safe) </p>
+
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00872">872</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a25bad834124014bd7ad4c4d8e900ee0b" name="a25bad834124014bd7ad4c4d8e900ee0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25bad834124014bd7ad4c4d8e900ee0b">&#9670;&#160;</a></span>setShardsTopology()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BasisBaseClass = void&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_intrepid2_1_1_basis___tensor_basis.html">Intrepid2::Basis_TensorBasis</a>&lt; BasisBaseClass &gt;::setShardsTopology </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00757">757</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
 
 </div>
 </div>
@@ -1103,7 +1419,36 @@ template&lt;typename BasisBaseClass = void&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00817">817</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00962">962</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aafcfca71ff97738aa92e98066a5d95ec" name="aafcfca71ff97738aa92e98066a5d95ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafcfca71ff97738aa92e98066a5d95ec">&#9670;&#160;</a></span>setTensorProductTags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BasisBaseClass = void&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_intrepid2_1_1_basis___tensor_basis.html">Intrepid2::Basis_TensorBasis</a>&lt; BasisBaseClass &gt;::setTensorProductTags </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00841">841</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
 
 </div>
 </div>
@@ -1130,7 +1475,7 @@ template&lt;typename BasisBaseClass = void&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00618">618</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00621">621</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
 
 </div>
 </div>
@@ -1156,7 +1501,89 @@ template&lt;typename BasisBaseClass = void&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00619">619</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00622">622</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a67081b7a974efb36b54f7387fa18852d" name="a67081b7a974efb36b54f7387fa18852d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67081b7a974efb36b54f7387fa18852d">&#9670;&#160;</a></span>compositeSubcellMapBuilt_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BasisBaseClass = void&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_intrepid2_1_1_basis___tensor_basis.html">Intrepid2::Basis_TensorBasis</a>&lt; BasisBaseClass &gt;::compositeSubcellMapBuilt_ = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel mutable">mutable</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00632">632</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a82785bfcda1a93bc69c34ba46a1816af" name="a82785bfcda1a93bc69c34ba46a1816af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82785bfcda1a93bc69c34ba46a1816af">&#9670;&#160;</a></span>compositeSubcellToComponents_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BasisBaseClass = void&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;std::pair&lt;ordinal_type,ordinal_type&gt;, std::array&lt;ordinal_type,4&gt; &gt; <a class="el" href="class_intrepid2_1_1_basis___tensor_basis.html">Intrepid2::Basis_TensorBasis</a>&lt; BasisBaseClass &gt;::compositeSubcellToComponents_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel mutable">mutable</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>composite (subcell dim, subcell ordinal) -&gt; component subcells (d1, s1, d2, s2); built lazily by <a class="el" href="#a75cfab74b522778d7f2f4b7ddf390986" title="DoF count for the specified subcell, computed from the component bases (without building dense tag ta...">getDofCount()</a>/getDofOrdinal() </p>
+
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00631">631</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a46f9ffa3ae4eff8c99e144a7042e0bf7" name="a46f9ffa3ae4eff8c99e144a7042e0bf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46f9ffa3ae4eff8c99e144a7042e0bf7">&#9670;&#160;</a></span>lazyInitializationMutex_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BasisBaseClass = void&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;std::recursive_mutex&gt; <a class="el" href="class_intrepid2_1_1_basis___tensor_basis.html">Intrepid2::Basis_TensorBasis</a>&lt; BasisBaseClass &gt;::lazyInitializationMutex_ = std::make_shared&lt;std::recursive_mutex&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Guards lazy initialization in const methods (of the tag tables and of compositeSubcellToComponents_), so that TensorBasis objects shared between host threads may be queried concurrently. Held by pointer so that TensorBasis remains copyable. (Concurrent queries also require that Kokkos be built with real atomics, since the tag queries return reference-counted Views; Trilinos enables Kokkos_ENABLE_ATOMICS_BYPASS by default when Serial is the only Kokkos backend.) This lives here rather than in <a class="el" href="class_intrepid2_1_1_basis.html" title="An abstract base class that defines interface for concrete basis implementations for Finite Element (...">Basis</a> because <a class="el" href="class_intrepid2_1_1_basis.html" title="An abstract base class that defines interface for concrete basis implementations for Finite Element (...">Basis</a> must remain copyable on device; see <a class="el" href="class_intrepid2_1_1_basis.html#a01d3917dc0226dcad55ad8762a994e12" title="Ensures that the dense tag tables (ordinalToTag_, tagToOrdinal_) are filled.">Basis::requireTags()</a>. The lazy initialization must not dispatch Kokkos kernels, so that it may run inside an OpenMP parallel region. </p>
+
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00642">642</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
 
 </div>
 </div>
@@ -1182,7 +1609,7 @@ template&lt;typename BasisBaseClass = void&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00623">623</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00626">626</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
 
 </div>
 </div>
@@ -1208,7 +1635,7 @@ template&lt;typename BasisBaseClass = void&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00625">625</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00628">628</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
 
 </div>
 </div>
@@ -1234,7 +1661,33 @@ template&lt;typename BasisBaseClass = void&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00621">621</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00624">624</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ae83dde89495ef971072520f32f350bc2" name="ae83dde89495ef971072520f32f350bc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae83dde89495ef971072520f32f350bc2">&#9670;&#160;</a></span>useShardsCellTopologyAndTags_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BasisBaseClass = void&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_intrepid2_1_1_basis___tensor_basis.html">Intrepid2::Basis_TensorBasis</a>&lt; BasisBaseClass &gt;::useShardsCellTopologyAndTags_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html#l00629">629</a> of file <a class="el" href="_intrepid2___tensor_basis_8hpp_source.html">Intrepid2_TensorBasis.hpp</a>.</p>
 
 </div>
 </div>

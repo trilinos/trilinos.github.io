@@ -71,6 +71,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a34998ad4ea6e94db2c0349ae19933c3d" id="r_a34998ad4ea6e94db2c0349ae19933c3d"><td class="memTemplParams" colspan="2">template&lt;class Scalar&gt; </td></tr>
+<tr class="memitem:a34998ad4ea6e94db2c0349ae19933c3d template"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_intrepid2_1_1_data.html">Data</a>&lt; Scalar, DeviceType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34998ad4ea6e94db2c0349ae19933c3d">jacobianInverseTranspose</a> (const <a class="el" href="class_intrepid2_1_1_data.html">Data</a>&lt; Scalar, DeviceType &gt; &amp;jacobianInverse)</td></tr>
+<tr class="memdesc:a34998ad4ea6e94db2c0349ae19933c3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the transpose of the provided Jacobian inverse, (DF)^{-T}, for use as a <a class="el" href="class_intrepid2_1_1_transformed_basis_values.html" title="Structure-preserving representation of transformed vector data; reference space values and transforma...">TransformedBasisValues</a> transform.  <br /></td></tr>
 <tr class="memitem:a8492330d1b0a6bb5979f7db23377b67b" id="r_a8492330d1b0a6bb5979f7db23377b67b"><td class="memTemplParams" colspan="2">template&lt;class Scalar&gt; </td></tr>
 <tr class="memitem:a8492330d1b0a6bb5979f7db23377b67b template"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_intrepid2_1_1_transformed_basis_values.html">TransformedBasisValues</a>&lt; Scalar, DeviceType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8492330d1b0a6bb5979f7db23377b67b">getHGRADtransformGRAD</a> (const <a class="el" href="class_intrepid2_1_1_data.html">Data</a>&lt; Scalar, DeviceType &gt; &amp;jacobianInverse, const <a class="el" href="class_intrepid2_1_1_basis_values.html">BasisValues</a>&lt; Scalar, DeviceType &gt; &amp;refBasisGradValues)</td></tr>
 <tr class="memdesc:a8492330d1b0a6bb5979f7db23377b67b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transformation of a gradient field in the H-grad space, defined at points on a reference cell, stored in the user-provided container <em><b>inputVals</b></em> and indexed by (F,P,D). The returned object contains the transformed gradient field, defined on cells in physical space and indexed by (C,F,P,D). The transformations are computed on entry access; algorithms such as sum factorization rely on having access to the reference-space basis values as well as the transformation operator; both are stored in the returned <a class="el" href="class_intrepid2_1_1_transformed_basis_values.html" title="Structure-preserving representation of transformed vector data; reference space values and transforma...">TransformedBasisValues</a> object.  <br /></td></tr>
@@ -955,7 +958,7 @@ template&lt;class Scalar&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>lazily-evaluated transformed basis values. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html#l00238">238</a> of file <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html">Intrepid2_FunctionSpaceTools.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html#l00256">256</a> of file <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html">Intrepid2_FunctionSpaceTools.hpp</a>.</p>
 
 </div>
 </div>
@@ -1024,7 +1027,7 @@ template&lt;class Scalar&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html#l00288">288</a> of file <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html">Intrepid2_FunctionSpaceTools.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html#l00306">306</a> of file <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html">Intrepid2_FunctionSpaceTools.hpp</a>.</p>
 
 </div>
 </div>
@@ -1091,7 +1094,9 @@ template&lt;class Scalar&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>lazily-evaluated transformed basis values. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html#l00189">189</a> of file <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html">Intrepid2_FunctionSpaceTools.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html#l00206">206</a> of file <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html">Intrepid2_FunctionSpaceTools.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html#l00063">jacobianInverseTranspose()</a>.</p>
 
 </div>
 </div>
@@ -1159,7 +1164,7 @@ template&lt;class Scalar&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_intrepid2_1_1_transformed_basis_values.html" title="Structure-preserving representation of transformed vector data; reference space values and transforma...">TransformedBasisValues</a> object of logical shape (C,F,P). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html#l00386">386</a> of file <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html">Intrepid2_FunctionSpaceTools.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html#l00404">404</a> of file <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html">Intrepid2_FunctionSpaceTools.hpp</a>.</p>
 
 </div>
 </div>
@@ -1228,7 +1233,7 @@ template&lt;class Scalar&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_intrepid2_1_1_transformed_basis_values.html" title="Structure-preserving representation of transformed vector data; reference space values and transforma...">TransformedBasisValues</a> object of logical shape (C,F,P,D). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html#l00338">338</a> of file <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html">Intrepid2_FunctionSpaceTools.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html#l00356">356</a> of file <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html">Intrepid2_FunctionSpaceTools.hpp</a>.</p>
 
 </div>
 </div>
@@ -1296,7 +1301,9 @@ template&lt;class Scalar&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_intrepid2_1_1_transformed_basis_values.html" title="Structure-preserving representation of transformed vector data; reference space values and transforma...">TransformedBasisValues</a> object defined on (C,F,P,D) indices; transformation is computed on access. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html#l00097">97</a> of file <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html">Intrepid2_FunctionSpaceTools.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html#l00113">113</a> of file <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html">Intrepid2_FunctionSpaceTools.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html#l00063">jacobianInverseTranspose()</a>.</p>
 
 </div>
 </div>
@@ -1362,7 +1369,7 @@ template&lt;class Scalar&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_intrepid2_1_1_transformed_basis_values.html" title="Structure-preserving representation of transformed vector data; reference space values and transforma...">TransformedBasisValues</a> object of logical shape (C,F,P). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html#l00143">143</a> of file <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html">Intrepid2_FunctionSpaceTools.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html#l00160">160</a> of file <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html">Intrepid2_FunctionSpaceTools.hpp</a>.</p>
 
 </div>
 </div>
@@ -1430,7 +1437,7 @@ template&lt;class Scalar&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_intrepid2_1_1_transformed_basis_values.html" title="Structure-preserving representation of transformed vector data; reference space values and transforma...">TransformedBasisValues</a> object of logical shape (C,F,P). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html#l00434">434</a> of file <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html">Intrepid2_FunctionSpaceTools.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html#l00452">452</a> of file <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html">Intrepid2_FunctionSpaceTools.hpp</a>.</p>
 
 </div>
 </div>
@@ -2193,6 +2200,51 @@ template&lt;typename outputValueValueType, class ... outputValueProperties, type
 <p class="reference">References <a class="el" href="_intrepid2___array_tools_def_contractions_8hpp_source.html#l00659">Intrepid2::ArrayTools&lt; DeviceType &gt;::contractDataDataScalar()</a>, <a class="el" href="_intrepid2___array_tools_def_contractions_8hpp_source.html#l00731">Intrepid2::ArrayTools&lt; DeviceType &gt;::contractDataDataTensor()</a>, <a class="el" href="_intrepid2___array_tools_def_contractions_8hpp_source.html#l00694">Intrepid2::ArrayTools&lt; DeviceType &gt;::contractDataDataVector()</a>, <a class="el" href="_intrepid2___array_tools_def_contractions_8hpp_source.html#l00537">Intrepid2::ArrayTools&lt; DeviceType &gt;::contractDataFieldScalar()</a>, <a class="el" href="_intrepid2___array_tools_def_contractions_8hpp_source.html#l00617">Intrepid2::ArrayTools&lt; DeviceType &gt;::contractDataFieldTensor()</a>, <a class="el" href="_intrepid2___array_tools_def_contractions_8hpp_source.html#l00576">Intrepid2::ArrayTools&lt; DeviceType &gt;::contractDataFieldVector()</a>, <a class="el" href="_intrepid2___array_tools_def_contractions_8hpp_source.html#l00413">Intrepid2::ArrayTools&lt; DeviceType &gt;::contractFieldFieldScalar()</a>, <a class="el" href="_intrepid2___array_tools_def_contractions_8hpp_source.html#l00494">Intrepid2::ArrayTools&lt; DeviceType &gt;::contractFieldFieldTensor()</a>, and <a class="el" href="_intrepid2___array_tools_def_contractions_8hpp_source.html#l00453">Intrepid2::ArrayTools&lt; DeviceType &gt;::contractFieldFieldVector()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_intrepid2___projection_tools_def_h_c_u_r_l_8hpp_source.html#l00400">Intrepid2::ProjectionTools&lt; DeviceType &gt;::getHCurlBasisCoeffs()</a>, <a class="el" href="_intrepid2___projection_tools_def_h_d_i_v_8hpp_source.html#l00235">Intrepid2::ProjectionTools&lt; DeviceType &gt;::getHDivBasisCoeffs()</a>, <a class="el" href="_intrepid2___projection_tools_def_h_g_r_a_d_8hpp_source.html#l00288">Intrepid2::ProjectionTools&lt; DeviceType &gt;::getHGradBasisCoeffs()</a>, <a class="el" href="_intrepid2___projection_tools_def_h_v_o_l_8hpp_source.html#l00032">Intrepid2::ProjectionTools&lt; DeviceType &gt;::getHVolBasisCoeffs()</a>, <a class="el" href="_intrepid2___projection_tools_def_l2_8hpp_source.html#l00358">Intrepid2::ProjectionTools&lt; DeviceType &gt;::getL2BasisCoeffs()</a>, and <a class="el" href="_intrepid2___projection_tools_def_l2_8hpp_source.html#l00639">Intrepid2::ProjectionTools&lt; DeviceType &gt;::getL2DGBasisCoeffs()</a>.</p>
+
+</div>
+</div>
+<a id="a34998ad4ea6e94db2c0349ae19933c3d" name="a34998ad4ea6e94db2c0349ae19933c3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34998ad4ea6e94db2c0349ae19933c3d">&#9670;&#160;</a></span>jacobianInverseTranspose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DeviceType&gt; </div>
+<div class="memtemplate">
+template&lt;class Scalar&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_intrepid2_1_1_data.html">Data</a>&lt; Scalar, DeviceType &gt; <a class="el" href="class_intrepid2_1_1_function_space_tools.html">Intrepid2::FunctionSpaceTools</a>&lt; DeviceType &gt;::jacobianInverseTranspose </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_intrepid2_1_1_data.html">Data</a>&lt; Scalar, DeviceType &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>jacobianInverse</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the transpose of the provided Jacobian inverse, (DF)^{-T}, for use as a <a class="el" href="class_intrepid2_1_1_transformed_basis_values.html" title="Structure-preserving representation of transformed vector data; reference space values and transforma...">TransformedBasisValues</a> transform. </p>
+<p><a class="el" href="class_intrepid2_1_1_transformed_basis_values.html" title="Structure-preserving representation of transformed vector data; reference space values and transforma...">TransformedBasisValues</a> applies a matrix transform T to reference values v as T * v. The HGRAD gradient and HCURL value pullbacks are (DF)^{-T} * v, so the stored transform must be (DF)^{-T}. When the Jacobian inverse is diagonal (e.g., on axis-aligned meshes) it is its own transpose, and we return it as-is, preserving its structure and avoiding an allocation.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">jacobianInverse</td><td>[in] - <a class="el" href="class_intrepid2_1_1_data.html" title="Wrapper around a Kokkos::View that allows data that is constant or repeating in various logical dimen...">Data</a> object with logical shape (C,P,D,D) containing cell Jacobian inverses. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_intrepid2_1_1_data.html" title="Wrapper around a Kokkos::View that allows data that is constant or repeating in various logical dimen...">Data</a> object with logical shape (C,P,D,D) containing the transposes of the cell Jacobian inverses. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html#l00063">63</a> of file <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html">Intrepid2_FunctionSpaceTools.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_intrepid2___data_8hpp_source.html#l01229">Intrepid2::Data&lt; DataScalar, DeviceType &gt;::isDiagonal()</a>, and <a class="el" href="_intrepid2___data_tools_8hpp_source.html#l00077">Intrepid2::DataTools::transposeMatrix()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html#l00206">getHCURLtransformVALUE()</a>, and <a class="el" href="_intrepid2___function_space_tools_8hpp_source.html#l00113">getHGRADtransformGRAD()</a>.</p>
 
 </div>
 </div>
