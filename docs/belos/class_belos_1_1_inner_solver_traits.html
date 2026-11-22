@@ -106,12 +106,12 @@ Static Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class Scalar, class MV, class OP&gt;<br />
 class Belos::InnerSolverTraits&lt; Scalar, MV, OP &gt;</div><p>Wrap an <a class="el" href="class_belos_1_1_inner_solver.html" title="Inner solver interface.">InnerSolver</a> in an OP (operator). </p>
-<p>Take an <a class="el" href="class_belos_1_1_inner_solver.html" title="Inner solver interface.">InnerSolver</a> instance, and wrap it in an implementation of OP, where OP is one of the base operator interfaces that <a class="el" href="namespace_belos.html">Belos</a> supports (currently Thyra::LinearOpBase, Tpetra::Operator, and Epetra_Operator).</p>
+<p>Take an <a class="el" href="class_belos_1_1_inner_solver.html" title="Inner solver interface.">InnerSolver</a> instance, and wrap it in an implementation of OP, where OP is one of the base operator interfaces that <a class="el" href="namespace_belos.html">Belos</a> supports (currently Thyra::LinearOpBase and Tpetra::Operator)</p>
 <dl class="section note"><dt>Note</dt><dd>The reason for this class is that <a class="el" href="namespace_belos.html">Belos</a> solvers require that the preconditioner(s) and the operator have the same type (OP). So, if we want to use the <a class="el" href="class_belos_1_1_inner_solver.html" title="Inner solver interface.">InnerSolver</a> as e.g., a preconditioner for a Tpetra::CrsMatrix (which implements Tpetra::Operator), we have to wrap the <a class="el" href="class_belos_1_1_inner_solver.html" title="Inner solver interface.">InnerSolver</a> in something that implements the Tpetra::Operator interface. Otherwise, we would just use the above definition of <a class="el" href="class_belos_1_1_operator_traits.html" title="Class which defines basic traits for the operator type.">OperatorTraits</a> for <a class="el" href="class_belos_1_1_inner_solver.html" title="Inner solver interface.">InnerSolver</a> above.</dd>
 <dd>
 The reason this is a class and not just a template function, is that C++ doesn't allow partial template specialization of template functions. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_belos_inner_solver_8hpp_source.html#l00291">291</a> of file <a class="el" href="_belos_inner_solver_8hpp_source.html">BelosInnerSolver.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_belos_inner_solver_8hpp_source.html#l00290">290</a> of file <a class="el" href="_belos_inner_solver_8hpp_source.html">BelosInnerSolver.hpp</a>.</p>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
 <a id="aa2e02e87f67d23e272d3580da0add421" name="aa2e02e87f67d23e272d3580da0add421"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa2e02e87f67d23e272d3580da0add421">&#9670;&#160;</a></span>scalar_type</h2>
@@ -127,7 +127,7 @@ template&lt;class Scalar, class MV, class OP&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_belos_inner_solver_8hpp_source.html#l00293">293</a> of file <a class="el" href="_belos_inner_solver_8hpp_source.html">BelosInnerSolver.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_belos_inner_solver_8hpp_source.html#l00292">292</a> of file <a class="el" href="_belos_inner_solver_8hpp_source.html">BelosInnerSolver.hpp</a>.</p>
 
 </div>
 </div>
@@ -145,7 +145,7 @@ template&lt;class Scalar, class MV, class OP&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_belos_inner_solver_8hpp_source.html#l00294">294</a> of file <a class="el" href="_belos_inner_solver_8hpp_source.html">BelosInnerSolver.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_belos_inner_solver_8hpp_source.html#l00293">293</a> of file <a class="el" href="_belos_inner_solver_8hpp_source.html">BelosInnerSolver.hpp</a>.</p>
 
 </div>
 </div>
@@ -163,7 +163,7 @@ template&lt;class Scalar, class MV, class OP&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_belos_inner_solver_8hpp_source.html#l00295">295</a> of file <a class="el" href="_belos_inner_solver_8hpp_source.html">BelosInnerSolver.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_belos_inner_solver_8hpp_source.html#l00294">294</a> of file <a class="el" href="_belos_inner_solver_8hpp_source.html">BelosInnerSolver.hpp</a>.</p>
 
 </div>
 </div>
@@ -181,7 +181,7 @@ template&lt;class Scalar, class MV, class OP&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_belos_inner_solver_8hpp_source.html#l00296">296</a> of file <a class="el" href="_belos_inner_solver_8hpp_source.html">BelosInnerSolver.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_belos_inner_solver_8hpp_source.html#l00295">295</a> of file <a class="el" href="_belos_inner_solver_8hpp_source.html">BelosInnerSolver.hpp</a>.</p>
 
 </div>
 </div>
@@ -199,7 +199,7 @@ template&lt;class Scalar, class MV, class OP&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_belos_inner_solver_8hpp_source.html#l00297">297</a> of file <a class="el" href="_belos_inner_solver_8hpp_source.html">BelosInnerSolver.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_belos_inner_solver_8hpp_source.html#l00296">296</a> of file <a class="el" href="_belos_inner_solver_8hpp_source.html">BelosInnerSolver.hpp</a>.</p>
 
 </div>
 </div>
@@ -232,7 +232,7 @@ template&lt;class Scalar, class MV, class OP&gt; </div>
 <p>Wrap the given inner solver in a <a class="el" href="#a7cf4852770fedebde212c6d293f56307">wrapper_type</a>. </p>
 <p>The <a class="el" href="#a7cf4852770fedebde212c6d293f56307">wrapper_type</a> class implements the <a class="el" href="#a2260f3ed0a0d71dd4874e9390c4ff21a">operator_type</a> interface, which can be used directly in <a class="el" href="namespace_belos.html">Belos</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="_belos_inner_solver_8hpp_source.html#l00304">304</a> of file <a class="el" href="_belos_inner_solver_8hpp_source.html">BelosInnerSolver.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_belos_inner_solver_8hpp_source.html#l00303">303</a> of file <a class="el" href="_belos_inner_solver_8hpp_source.html">BelosInnerSolver.hpp</a>.</p>
 
 </div>
 </div>
@@ -266,7 +266,7 @@ template&lt;class Scalar, class MV, class OP&gt; </div>
 </p>
 <dl class="section note"><dt>Note</dt><dd>After calling this method, the inner solver object will persist beyond the scope of op. Thus, if you don't care about the wrapper that implements the <a class="el" href="#a2260f3ed0a0d71dd4874e9390c4ff21a">operator_type</a> interface, you can get rid of the wrapper (by setting the RCP to null) and keep the inner solver. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_belos_inner_solver_8hpp_source.html#l00325">325</a> of file <a class="el" href="_belos_inner_solver_8hpp_source.html">BelosInnerSolver.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_belos_inner_solver_8hpp_source.html#l00324">324</a> of file <a class="el" href="_belos_inner_solver_8hpp_source.html">BelosInnerSolver.hpp</a>.</p>
 
 </div>
 </div>

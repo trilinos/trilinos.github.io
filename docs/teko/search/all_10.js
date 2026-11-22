@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['mappingstrategy_0',['MappingStrategy',['../class_teko_1_1_epetra_1_1_mapping_strategy.html',1,'Teko::Epetra::MappingStrategy'],['../class_teko_1_1_tpetra_helpers_1_1_mapping_strategy.html',1,'Teko::TpetraHelpers::MappingStrategy']]],
+  ['mappingstrategy_0',['MappingStrategy',['../class_teko_1_1_tpetra_helpers_1_1_mapping_strategy.html',1,'Teko::TpetraHelpers']]],
   ['membership_1',['Native Tpetra with arbitrary block membership',['../teko_getting_started.html#autotoc_md9',1,'']]],
   ['merge_2',['merge',['../class_teko_1_1_preconditioner_state.html#a9915ba149130db95b333339e65d73e81',1,'Teko::PreconditionerState']]],
   ['mergestateobject_3',['mergeStateObject',['../class_teko_1_1_preconditioner.html#a224efa17dc1af93f1024d7c21d86b182',1,'Teko::Preconditioner']]],

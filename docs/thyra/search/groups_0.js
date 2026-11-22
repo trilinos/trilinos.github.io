@@ -4,7 +4,7 @@ var searchData=
   ['abstract_20numerical_20algorithms_20anas_20client_20support_1',['Development of linear Abstract Numerical Algorithms (ANAs) (Client Support)',['../group___thyra___op___vec___a_n_a___development__grp.html',1,'']]],
   ['abstracting_20application_20specific_20scalar_20products_2',['Basic Support Subclasses Abstracting Application-Specific Scalar Products',['../group___thyra___op___vec__basic__adapter__support__grp.html',1,'']]],
   ['accessing_20local_20data_20in_20spmd_20vectors_20and_20multi_20vectors_3',['Official utilities for accessing local data in SPMD vectors and multi-vectors.',['../group___thyra___op___vec__adapters__spmd__local__data__access__grp.html',1,'']]],
-  ['adapter_20code_4',['Adapter Code',['../group___epetra___thyra___op___vec__adapters__grp.html',1,'Thyra/Epetra Operator/Vector Adapter Code'],['../group___epetra_ext___thyra___op___vec__adapters__grp.html',1,'Thyra/EpetraExt Adapter Code'],['../group___tpetra___thyra___op___vec__adapters__grp.html',1,'Thyra/Tpetra Operator/Vector Adapter Code']]],
+  ['adapter_20code_4',['Thyra/Tpetra Operator/Vector Adapter Code',['../group___tpetra___thyra___op___vec__adapters__grp.html',1,'']]],
   ['adapter_20support_5',['Development of Concrete Thyra Operator/Vector Subclass Implementations (Adapter Support)',['../group___thyra___op___vec___adapters__grp.html',1,'']]],
   ['adapters_6',['Thyra adapters',['../group__thyra__adapters__grp.html',1,'']]],
   ['algorithms_20anas_20client_20support_7',['Development of linear Abstract Numerical Algorithms (ANAs) (Client Support)',['../group___thyra___op___vec___a_n_a___development__grp.html',1,'']]],

@@ -218,48 +218,44 @@ $(function() {
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                                                        <span class="keyword">const</span> InverseLibrary&amp; invLib) {</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>  Teko_DEBUG_SCOPE(<span class="stringliteral">&quot;LU2x2DiagonalStrategy::initializeFromParameterList&quot;</span>, 10);</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>  std::string invStr = <span class="stringliteral">&quot;&quot;</span>, invA00Str = <span class="stringliteral">&quot;&quot;</span>, invSStr = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="preprocessor">#if defined(Teko_ENABLE_Amesos)</span></div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>  invStr = <span class="stringliteral">&quot;Amesos&quot;</span>;</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="preprocessor">#elif defined(Teko_ENABLE_Amesos2)</span></div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>  invStr = <span class="stringliteral">&quot;Amesos2&quot;</span>;</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>  <span class="comment">// &quot;parse&quot; the parameter list</span></div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>  <span class="keywordflow">if</span> (pl.isParameter(<span class="stringliteral">&quot;Inverse Type&quot;</span>)) invStr = pl.get&lt;std::string&gt;(<span class="stringliteral">&quot;Inverse Type&quot;</span>);</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>  <span class="keywordflow">if</span> (pl.isParameter(<span class="stringliteral">&quot;Inverse A00 Type&quot;</span>)) invA00Str = pl.get&lt;std::string&gt;(<span class="stringliteral">&quot;Inverse A00 Type&quot;</span>);</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>  <span class="keywordflow">if</span> (pl.isParameter(<span class="stringliteral">&quot;Inverse Schur Type&quot;</span>)) invSStr = pl.get&lt;std::string&gt;(<span class="stringliteral">&quot;Inverse Schur Type&quot;</span>);</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>  <span class="keywordflow">if</span> (pl.isParameter(<span class="stringliteral">&quot;Diagonal Type&quot;</span>)) {</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    std::string massInverseStr = pl.get&lt;std::string&gt;(<span class="stringliteral">&quot;Diagonal Type&quot;</span>);</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <span class="comment">// build inverse types</span></div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    a00InverseType_ = getDiagonalType(massInverseStr);</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>  }</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>  <span class="comment">// set defaults as needed</span></div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>  <span class="keywordflow">if</span> (invA00Str == <span class="stringliteral">&quot;&quot;</span>) invA00Str = invStr;</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>  <span class="keywordflow">if</span> (invSStr == <span class="stringliteral">&quot;&quot;</span>) invSStr = invStr;</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>  Teko_DEBUG_MSG_BEGIN(5) DEBUG_STREAM &lt;&lt; <span class="stringliteral">&quot;LU2x2 Diagonal Strategy Parameters: &quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>  DEBUG_STREAM &lt;&lt; <span class="stringliteral">&quot;   inv type   = \&quot;&quot;</span> &lt;&lt; invStr &lt;&lt; <span class="stringliteral">&quot;\&quot;&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>  DEBUG_STREAM &lt;&lt; <span class="stringliteral">&quot;   inv A00 type = \&quot;&quot;</span> &lt;&lt; invA00Str &lt;&lt; <span class="stringliteral">&quot;\&quot;&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>  DEBUG_STREAM &lt;&lt; <span class="stringliteral">&quot;   inv S type = \&quot;&quot;</span> &lt;&lt; invSStr &lt;&lt; <span class="stringliteral">&quot;\&quot;&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>  DEBUG_STREAM &lt;&lt; <span class="stringliteral">&quot;LU2x2 Diagonal Strategy Parameter list: &quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>  pl.print(DEBUG_STREAM);</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>  Teko_DEBUG_MSG_END()</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>      <span class="comment">// build velocity inverse factory</span></div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>      invFactoryA00_ = invLib.getInverseFactory(invA00Str);</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>  <span class="keywordflow">if</span> (invA00Str == invSStr)</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    invFactoryS_ = invFactoryA00_;</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>  <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    invFactoryS_ = invLib.getInverseFactory(invSStr);</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>}</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>  std::string invStr = <span class="stringliteral">&quot;Amesos2&quot;</span>, invA00Str = <span class="stringliteral">&quot;&quot;</span>, invSStr = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>  <span class="comment">// &quot;parse&quot; the parameter list</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  <span class="keywordflow">if</span> (pl.isParameter(<span class="stringliteral">&quot;Inverse Type&quot;</span>)) invStr = pl.get&lt;std::string&gt;(<span class="stringliteral">&quot;Inverse Type&quot;</span>);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>  <span class="keywordflow">if</span> (pl.isParameter(<span class="stringliteral">&quot;Inverse A00 Type&quot;</span>)) invA00Str = pl.get&lt;std::string&gt;(<span class="stringliteral">&quot;Inverse A00 Type&quot;</span>);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  <span class="keywordflow">if</span> (pl.isParameter(<span class="stringliteral">&quot;Inverse Schur Type&quot;</span>)) invSStr = pl.get&lt;std::string&gt;(<span class="stringliteral">&quot;Inverse Schur Type&quot;</span>);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>  <span class="keywordflow">if</span> (pl.isParameter(<span class="stringliteral">&quot;Diagonal Type&quot;</span>)) {</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    std::string massInverseStr = pl.get&lt;std::string&gt;(<span class="stringliteral">&quot;Diagonal Type&quot;</span>);</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <span class="comment">// build inverse types</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    a00InverseType_ = getDiagonalType(massInverseStr);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>  }</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  <span class="comment">// set defaults as needed</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>  <span class="keywordflow">if</span> (invA00Str == <span class="stringliteral">&quot;&quot;</span>) invA00Str = invStr;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>  <span class="keywordflow">if</span> (invSStr == <span class="stringliteral">&quot;&quot;</span>) invSStr = invStr;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>  Teko_DEBUG_MSG_BEGIN(5)</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    DEBUG_STREAM &lt;&lt; <span class="stringliteral">&quot;LU2x2 Diagonal Strategy Parameters: &quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    DEBUG_STREAM &lt;&lt; <span class="stringliteral">&quot;   inv type   = \&quot;&quot;</span> &lt;&lt; invStr &lt;&lt; <span class="stringliteral">&quot;\&quot;&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    DEBUG_STREAM &lt;&lt; <span class="stringliteral">&quot;   inv A00 type = \&quot;&quot;</span> &lt;&lt; invA00Str &lt;&lt; <span class="stringliteral">&quot;\&quot;&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    DEBUG_STREAM &lt;&lt; <span class="stringliteral">&quot;   inv S type = \&quot;&quot;</span> &lt;&lt; invSStr &lt;&lt; <span class="stringliteral">&quot;\&quot;&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    DEBUG_STREAM &lt;&lt; <span class="stringliteral">&quot;LU2x2 Diagonal Strategy Parameter list: &quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    pl.print(DEBUG_STREAM);</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>  Teko_DEBUG_MSG_END()</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>  <span class="comment">// build velocity inverse factory</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>  invFactoryA00_ = invLib.getInverseFactory(invA00Str);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>  <span class="keywordflow">if</span> (invA00Str == invSStr)</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    invFactoryS_ = invFactoryA00_;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>  <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    invFactoryS_ = invLib.getInverseFactory(invSStr);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>}</div>
 </div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>}  <span class="comment">// end namespace Teko</span></div>
-<div class="ttc" id="a_teko___utilities_8hpp_html_a4b6c5456ff86db747c9c0b836648b4d2abab4feb993ec9033f351968b7b1a5ae0"><div class="ttname"><a href="_teko___utilities_8hpp.html#a4b6c5456ff86db747c9c0b836648b4d2abab4feb993ec9033f351968b7b1a5ae0">Teko::Diagonal</a></div><div class="ttdeci">@ Diagonal</div><div class="ttdoc">Specifies that just the diagonal is used.</div><div class="ttdef"><b>Definition</b> <a href="_teko___utilities_8hpp_source.html#l00810">Teko_Utilities.hpp:810</a></div></div>
-<div class="ttc" id="a_teko___utilities_8hpp_html_a9f49b5676e2c01fe275ed5739ede0f4d"><div class="ttname"><a href="_teko___utilities_8hpp.html#a9f49b5676e2c01fe275ed5739ede0f4d">Teko::getBlock</a></div><div class="ttdeci">MultiVector getBlock(int i, const BlockedMultiVector &amp;bmv)</div><div class="ttdoc">Get the ith block from a BlockedMultiVector object.</div><div class="ttdef"><b>Definition</b> <a href="_teko___utilities_8hpp_source.html#l00206">Teko_Utilities.hpp:206</a></div></div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>}  <span class="comment">// end namespace Teko</span></div>
+<div class="ttc" id="a_teko___utilities_8hpp_html_a4b6c5456ff86db747c9c0b836648b4d2abab4feb993ec9033f351968b7b1a5ae0"><div class="ttname"><a href="_teko___utilities_8hpp.html#a4b6c5456ff86db747c9c0b836648b4d2abab4feb993ec9033f351968b7b1a5ae0">Teko::Diagonal</a></div><div class="ttdeci">@ Diagonal</div><div class="ttdoc">Specifies that just the diagonal is used.</div><div class="ttdef"><b>Definition</b> <a href="_teko___utilities_8hpp_source.html#l00789">Teko_Utilities.hpp:789</a></div></div>
+<div class="ttc" id="a_teko___utilities_8hpp_html_a9f49b5676e2c01fe275ed5739ede0f4d"><div class="ttname"><a href="_teko___utilities_8hpp.html#a9f49b5676e2c01fe275ed5739ede0f4d">Teko::getBlock</a></div><div class="ttdeci">MultiVector getBlock(int i, const BlockedMultiVector &amp;bmv)</div><div class="ttdoc">Get the ith block from a BlockedMultiVector object.</div><div class="ttdef"><b>Definition</b> <a href="_teko___utilities_8hpp_source.html#l00190">Teko_Utilities.hpp:190</a></div></div>
 <div class="ttc" id="aclass_teko_1_1_block_preconditioner_state_html"><div class="ttname"><a href="class_teko_1_1_block_preconditioner_state.html">Teko::BlockPreconditionerState</a></div><div class="ttdoc">An implementation of a state object for block preconditioners.</div><div class="ttdef"><b>Definition</b> <a href="_teko___block_preconditioner_factory_8hpp_source.html#l00043">Teko_BlockPreconditionerFactory.hpp:43</a></div></div>
 <div class="ttc" id="aclass_teko_1_1_l_u2x2_diagonal_strategy_html_a0256e9aff1a54f490302329b97b7be36"><div class="ttname"><a href="class_teko_1_1_l_u2x2_diagonal_strategy.html#a0256e9aff1a54f490302329b97b7be36">Teko::LU2x2DiagonalStrategy::getInvS</a></div><div class="ttdeci">virtual const Teko::LinearOp getInvS(const Teko::BlockedLinearOp &amp;A, BlockPreconditionerState &amp;state) const</div><div class="ttdef"><b>Definition</b> <a href="#l00064">Teko_LU2x2DiagonalStrategy.cpp:64</a></div></div>
 <div class="ttc" id="aclass_teko_1_1_l_u2x2_diagonal_strategy_html_a48466f68ea441b45af11b20d3d37298e"><div class="ttname"><a href="class_teko_1_1_l_u2x2_diagonal_strategy.html#a48466f68ea441b45af11b20d3d37298e">Teko::LU2x2DiagonalStrategy::getTildeInvA00</a></div><div class="ttdeci">virtual const Teko::LinearOp getTildeInvA00(const Teko::BlockedLinearOp &amp;A, BlockPreconditionerState &amp;state) const</div><div class="ttdef"><b>Definition</b> <a href="#l00055">Teko_LU2x2DiagonalStrategy.cpp:55</a></div></div>

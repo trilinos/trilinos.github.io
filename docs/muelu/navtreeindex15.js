@@ -1,7 +1,5 @@
 var NAVTREEINDEX15 =
 {
-"class_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison.html#a2a5fdb9f6283be9986daa2c7efd2e9c3":[10,0,2,3,2,6],
-"class_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison.html#a3c35fd244060097013abbd20d0f9cd83":[9,0,7,3,2,16],
 "class_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison.html#a3c35fd244060097013abbd20d0f9cd83":[10,0,2,3,2,16],
 "class_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison.html#a5a42b92d25ea3a316ae732b2c895fdcf":[9,0,7,3,2,1],
 "class_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison.html#a5a42b92d25ea3a316ae732b2c895fdcf":[10,0,2,3,2,1],
@@ -249,5 +247,7 @@ var NAVTREEINDEX15 =
 "class_mue_lu_1_1_direct_solver.html#a9b6b38ba448677a7cb484458ea32de26":[10,0,2,145,22],
 "class_mue_lu_1_1_direct_solver.html#a9ba34ccfdb12b3a545cab3b1def85fff":[9,0,7,153,17],
 "class_mue_lu_1_1_direct_solver.html#a9ba34ccfdb12b3a545cab3b1def85fff":[10,0,2,145,17],
-"class_mue_lu_1_1_direct_solver.html#aa30002cb35662f089e9d368a85c3cd1c":[9,0,7,153,21]
+"class_mue_lu_1_1_direct_solver.html#aa30002cb35662f089e9d368a85c3cd1c":[9,0,7,153,21],
+"class_mue_lu_1_1_direct_solver.html#aa30002cb35662f089e9d368a85c3cd1c":[10,0,2,145,21],
+"class_mue_lu_1_1_direct_solver.html#aac0080d25eeed2e012be9cd8909374b4":[9,0,7,153,14]
 };

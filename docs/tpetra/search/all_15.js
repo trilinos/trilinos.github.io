@@ -21,5 +21,6 @@ var searchData=
   ['usemergepathmultivector_18',['useMergePathMultiVector',['../class_tpetra_1_1_details_1_1_behavior.html#ac132ce911dca337ae864a7f1cdc04674',1,'Tpetra::Details::Behavior']]],
   ['usenewcopyandpermute_19',['useNewCopyAndPermute',['../class_tpetra_1_1_details_1_1_behavior.html#a0956a240178de6fa1efb3b10e7f7953d',1,'Tpetra::Details::Behavior']]],
   ['user_20',['User',['../class_tpetra_1_1_details_1_1_spaces_1_1_user.html',1,'Tpetra::Details::Spaces']]],
-  ['uses_20mpi_20through_20trilinos_21',['Initialization for a code that only uses MPI through Trilinos',['../_tpetra__lesson01.html#Tpetra_Lesson01_MpiOnlyThroughTrilinos',1,'']]]
+  ['userangeshufflespmv_21',['useRangeShuffleSpMV',['../class_tpetra_1_1_details_1_1_behavior.html#ae66298d86c2a33cff5625822d958eb75',1,'Tpetra::Details::Behavior']]],
+  ['uses_20mpi_20through_20trilinos_22',['Initialization for a code that only uses MPI through Trilinos',['../_tpetra__lesson01.html#Tpetra_Lesson01_MpiOnlyThroughTrilinos',1,'']]]
 ];

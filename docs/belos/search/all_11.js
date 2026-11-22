@@ -37,7 +37,7 @@ var searchData=
   ['resettype_34',['ResetType',['../namespace_belos.html#ad8be32ab19b9ea8822407ca681ee021d',1,'Belos']]],
   ['reshape_35',['Reshape',['../class_belos_1_1_dense_mat_traits.html#ab9ebbb4ca8a07a24f226ea6cebb34f2d',1,'Belos::DenseMatTraits::Reshape()'],['../class_belos_1_1_dense_mat_traits_3_01_scalar_00_01_kokkos_1_1_dual_view_3_01typename_01_kokkos_k1e38db16fe9be22057613899f811a9c1.html#a663445c6c36ab8624f1da87024551fd1',1,'Belos::DenseMatTraits&lt; Scalar, Kokkos::DualView&lt; typename KokkosKernels::ArithTraits&lt; Scalar &gt;::val_type **, Properties... &gt; &gt;::Reshape()'],['../class_belos_1_1_dense_mat_traits_3_01_scalar_type_00_01_teuchos_1_1_serial_dense_matrix_3_01int_00_01_scalar_type_01_4_01_4.html#a071402f50e91551c7be6e040c49a71eb',1,'Belos::DenseMatTraits&lt; ScalarType, Teuchos::SerialDenseMatrix&lt; int, ScalarType &gt; &gt;::Reshape()']]],
   ['resid_5fnorm_36',['resid_norm',['../struct_belos_1_1_l_s_q_r_iteration_state.html#ae1d049868da384e77a9fc615fc6df323',1,'Belos::LSQRIterationState']]],
-  ['resscalefactor_37',['resScaleFactor',['../struct_belos_1_1_default_solver_parameters.html#a22137e3c741bd84f31b507fa30c995f3',1,'Belos::DefaultSolverParameters']]],
+  ['resscalefactor_37',['resScaleFactor',['../struct_belos_1_1_default_solver_parameters.html#a288c3ac41f97f25001335a40cbea58d3',1,'Belos::DefaultSolverParameters']]],
   ['restype_38',['ResType',['../class_belos_1_1_status_test_gen_res_norm.html#ad8268a1af6b9cad38dfafa2f5ace40ac',1,'Belos::StatusTestGenResNorm']]],
   ['result_39',['result',['../class_belos_1_1_inner_solve_result.html#a68c5d73ff09bc03c9d399d64103696f7',1,'Belos::InnerSolveResult']]],
   ['returntype_40',['ReturnType',['../namespace_belos.html#a2ab2fec66d34a6ec385de5eb8008c53e',1,'Belos']]],

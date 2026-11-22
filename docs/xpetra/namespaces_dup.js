@@ -354,6 +354,7 @@ var namespaces_dup =
       [ "TripleMatrixMultiply", "/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/tpetra/doc/html/namespace_tpetra_1_1_triple_matrix_multiply.html", [
         [ "MultiplyRAP", "/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/tpetra/doc/html/namespace_tpetra_1_1_triple_matrix_multiply.html#a4917839da433418c7d07440ea0171185", null ]
       ] ],
+      [ "Experimental", "/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/tpetra/doc/html/struct_tpetra_1_1_experimental_1_1_details_1_1_legacy_binary_header.html", null ],
       [ "details", "/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/tpetra/doc/html/class_tpetra_1_1details_1_1_apply_op.html", null ],
       [ "Array_size_type", "/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/tpetra/doc/html/namespace_tpetra.html#a84ef0e60cd064eafe292b7fbf88236c3", null ],
       [ "global_size_t", "/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/tpetra/doc/html/namespace_tpetra.html#a9bf6069ab0d0c54962569526f3cc9cf5", null ],

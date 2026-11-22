@@ -15,7 +15,7 @@ var searchData=
   ['imgsorthomanager_3c_20scalartype_2c_20mv_2c_20op_2c_20dm_20_3e_3a_3asing_5ftol_5fdefault_5f_12',['sing_tol_default_',['../namespace_belos.html#a8c32e18d3611f6a049636965e02ab439',1,'Belos']]],
   ['imgsorthomanager_3c_20scalartype_2c_20mv_2c_20op_2c_20dm_20_3e_3a_3asing_5ftol_5ffast_5f_13',['sing_tol_fast_',['../namespace_belos.html#ac10e5765af1c55423a8ff641f17839fa',1,'Belos']]],
   ['implicit_14',['Implicit',['../class_belos_1_1_status_test_gen_res_norm.html#ad8268a1af6b9cad38dfafa2f5ace40acab3411c943e6950f5d92ef84bd4289fa7',1,'Belos::StatusTestGenResNorm']]],
-  ['imptolscale_15',['impTolScale',['../struct_belos_1_1_default_solver_parameters.html#a36f1260c5b23d0461ded198e4d489164',1,'Belos::DefaultSolverParameters']]],
+  ['imptolscale_15',['impTolScale',['../struct_belos_1_1_default_solver_parameters.html#af307a0e5ddb60cc87b025e44d2773aa4',1,'Belos::DefaultSolverParameters']]],
   ['inconsistentstate_16',['InconsistentState',['../namespace_belos.html#a2ab2fec66d34a6ec385de5eb8008c53ea8487699e73d3e104d8ba78962ca98995',1,'Belos']]],
   ['index_2edoc_17',['index.doc',['../index_8doc.html',1,'']]],
   ['infnancount_18',['infNaNCount',['../class_belos_1_1details_1_1_local_dense_matrix_ops.html#a61767554ecbd3da2331483d359e8350d',1,'Belos::details::LocalDenseMatrixOps']]],

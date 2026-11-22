@@ -1,7 +1,5 @@
 var NAVTREEINDEX47 =
 {
-"struct_mue_lu_1_1_cut_drop_1_1_scaled_distance_laplacian_comparison_1_1_comparator.html#a965289358fba9577e7ce91fd16c28a08":[9,0,7,3,3,0,3],
-"struct_mue_lu_1_1_cut_drop_1_1_scaled_distance_laplacian_comparison_1_1_comparator.html#a965289358fba9577e7ce91fd16c28a08":[10,0,2,3,3,0,3],
 "struct_mue_lu_1_1_cut_drop_1_1_scaled_distance_laplacian_comparison_1_1_comparator.html#a98842733d5aef4123c04dbdb2b12c646":[9,0,7,3,3,0,1],
 "struct_mue_lu_1_1_cut_drop_1_1_scaled_distance_laplacian_comparison_1_1_comparator.html#a98842733d5aef4123c04dbdb2b12c646":[10,0,2,3,3,0,1],
 "struct_mue_lu_1_1_cut_drop_1_1_scaled_distance_laplacian_comparison_1_1_comparator.html#a9f1eeb17720ced967e27d74fe73f382a":[9,0,7,3,3,0,20],
@@ -249,5 +247,7 @@ var NAVTREEINDEX47 =
 "struct_mue_lu_1_1_general_geometric_p_factory_1_1_geometric_data.html":[9,0,7,184,0],
 "struct_mue_lu_1_1_general_geometric_p_factory_1_1_geometric_data.html":[10,0,2,176,0],
 "struct_mue_lu_1_1_general_geometric_p_factory_1_1_geometric_data.html#a093febaf2f32d3f34b58644e8f77525a":[9,0,7,184,0,22],
-"struct_mue_lu_1_1_general_geometric_p_factory_1_1_geometric_data.html#a093febaf2f32d3f34b58644e8f77525a":[10,0,2,176,0,22]
+"struct_mue_lu_1_1_general_geometric_p_factory_1_1_geometric_data.html#a093febaf2f32d3f34b58644e8f77525a":[10,0,2,176,0,22],
+"struct_mue_lu_1_1_general_geometric_p_factory_1_1_geometric_data.html#a1a906423294c5dc822dee08ed41aee62":[9,0,7,184,0,7],
+"struct_mue_lu_1_1_general_geometric_p_factory_1_1_geometric_data.html#a1a906423294c5dc822dee08ed41aee62":[10,0,2,176,0,7]
 };

@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['tpetra_5fextract_0',['tpetra_extract',['../class_tempus___test_1_1_c_d_r___model___tpetra.html#a672a766ec9ab8c86b6bd897038d444f2',1,'Tempus_Test::CDR_Model_Tpetra']]],
-  ['tpetra_5fgraph_1',['tpetra_graph',['../class_tempus___test_1_1_c_d_r___model___tpetra.html#a11bb7841c53893322611a9b41608faaa',1,'Tempus_Test::CDR_Model_Tpetra']]],
-  ['tpetra_5fmap_2',['tpetra_map',['../class_tempus___test_1_1_c_d_r___model___tpetra.html#ae14f1e1882dfa2469893244a13f2114d',1,'Tempus_Test::CDR_Model_Tpetra']]],
-  ['tpetra_5fmatrix_3',['tpetra_matrix',['../class_tempus___test_1_1_c_d_r___model___tpetra.html#a541796e3abac64dd847a410ce756caad',1,'Tempus_Test::CDR_Model_Tpetra']]],
-  ['tpetra_5fvec_4',['tpetra_vec',['../class_tempus___test_1_1_c_d_r___model___tpetra.html#aad77178e48d2912256651d4a6c0eb0b4',1,'Tempus_Test::CDR_Model_Tpetra']]]
+  ['sc_0',['SC',['../struct_tempus___test_1_1_coord_filler.html#af88064add807b74a1480a95d14ef6850',1,'Tempus_Test::CoordFiller::SC'],['../struct_tempus___test_1_1_jacobian_evaluator_functor.html#a91895b1f2a2ef57fb9a52e2e2f5e8c95',1,'Tempus_Test::JacobianEvaluatorFunctor::SC'],['../struct_tempus___test_1_1_preconditioner_evaluator_functor.html#abcf20956417c18f55eb985ed063ced16',1,'Tempus_Test::PreconditionerEvaluatorFunctor::SC'],['../struct_tempus___test_1_1_df_dp2_evaluator_functor.html#a760454c5a2090b83979b6dd5942a83aa',1,'Tempus_Test::DfDp2EvaluatorFunctor::SC']]],
+  ['scalartype_1',['ScalarType',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_anasazi_1_1_operator_traits_3_01double_00_01_n_o_x_1_1_abstract_1_1_multi_vector_00_01_l_o405a63f6a3ec5df8fab679bd04e013ea.html#a1e7062dc080476c72a2e3ed628a629bb',1,'Anasazi::OperatorTraits&lt; double, NOX::Abstract::MultiVector, LOCA::AnasaziOperator::AbstractStrategy &gt;::ScalarType'],['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_anasazi_1_1_multi_vec_traits_3_01double_00_01_n_o_x_1_1_abstract_1_1_multi_vector_01_4.html#a6dafaaa26214b0cf5c4e554b7f31758a',1,'Anasazi::MultiVecTraits&lt; double, NOX::Abstract::MultiVector &gt;::ScalarType']]],
+  ['scaledidentity_2',['ScaledIdentity',['../namespace_tempus___unit___test.html#a0a4686a5380889875befed120ae50a35',1,'Tempus_Unit_Test']]],
+  ['st_3',['ST',['../class_tempus_1_1_adjoint_aux_coupling_linear_op.html#a10359f32465460a38a9c6954ebba022e',1,'Tempus::AdjointAuxCouplingLinearOp']]]
 ];

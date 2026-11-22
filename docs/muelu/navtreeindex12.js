@@ -1,7 +1,5 @@
 var NAVTREEINDEX12 =
 {
-"class_mue_lu_1_1_boundary_detection_1_1_point_dirichlet_functor.html#af24713180ea9d6dcf4f6c8afbbb2ab6e":[10,0,2,0,0,0],
-"class_mue_lu_1_1_boundary_detection_1_1_row_sum_functor.html":[9,0,7,0,2],
 "class_mue_lu_1_1_boundary_detection_1_1_row_sum_functor.html":[10,0,2,0,2],
 "class_mue_lu_1_1_boundary_detection_1_1_row_sum_functor.html#a17b8947ab32ce76997c0270f85a4d9b9":[9,0,7,0,2,7],
 "class_mue_lu_1_1_boundary_detection_1_1_row_sum_functor.html#a17b8947ab32ce76997c0270f85a4d9b9":[10,0,2,0,2,7],
@@ -249,5 +247,7 @@ var NAVTREEINDEX12 =
 "class_mue_lu_1_1_classical_p_factory.html":[10,0,2,163],
 "class_mue_lu_1_1_classical_p_factory.html#a0cc5ea62776ca5f70f5c97c7efa1d558":[9,0,7,171,6],
 "class_mue_lu_1_1_classical_p_factory.html#a0cc5ea62776ca5f70f5c97c7efa1d558":[10,0,2,163,6],
-"class_mue_lu_1_1_classical_p_factory.html#a1ee11969d92c8d31d57d6661695bf419":[9,0,7,171,1]
+"class_mue_lu_1_1_classical_p_factory.html#a1ee11969d92c8d31d57d6661695bf419":[9,0,7,171,1],
+"class_mue_lu_1_1_classical_p_factory.html#a1ee11969d92c8d31d57d6661695bf419":[10,0,2,163,1],
+"class_mue_lu_1_1_classical_p_factory.html#a2eba4889e30b8e0fed33ee2aa27a96eb":[9,0,7,171,9]
 };

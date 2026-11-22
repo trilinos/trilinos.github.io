@@ -13,6 +13,7 @@ var searchData=
   ['rhs_5fdata_10',['RHS_data',['../struct_compadre_1_1_g_m_l_s_basis_data.html#a8e23daf4eb76e67161f8fae1423f3f2e',1,'Compadre::GMLSBasisData']]],
   ['rhs_5fdim_5f0_11',['RHS_dim_0',['../struct_compadre_1_1_g_m_l_s_basis_data.html#a74fe45dd30207551d8f8e0865ade444f',1,'Compadre::GMLSBasisData']]],
   ['rhs_5fdim_5f1_12',['RHS_dim_1',['../struct_compadre_1_1_g_m_l_s_basis_data.html#a24d8ce2cb804689ab03fe8fa54fa2a71',1,'Compadre::GMLSBasisData']]],
-  ['run_13',['run',['../struct_compadre_1_1_g_m_l_s___linear_algebra_1_1_functor___test_batched_team_vector_solve_u_t_v.html#a4de261dd6ea06f81b86424048795f54d',1,'Compadre::GMLS_LinearAlgebra::Functor_TestBatchedTeamVectorSolveUTV']]],
-  ['run_20mode_3a_14',['run mode:',['../class_compadre_1_1_point_cloud_search.html#autotoc_md0',1,'When in dry-run mode:'],['../class_compadre_1_1_point_cloud_search.html#autotoc_md1',1,'When not in dry-run mode:']]]
+  ['run_13',['run',['../struct_compadre_1_1_g_m_l_s___linear_algebra_1_1_functor___test_batched_team_vector_solve_u_t_v.html#a4de261dd6ea06f81b86424048795f54d',1,'Compadre::GMLS_LinearAlgebra::Functor_TestBatchedTeamVectorSolveUTV::run()'],['../struct_compadre_1_1_g_m_l_s___linear_algebra_1_1_functor___test_batched_team_vector_solve_cholesky.html#a7b2f6f5b3f86944c232496e5770b9aa4',1,'Compadre::GMLS_LinearAlgebra::Functor_TestBatchedTeamVectorSolveCholesky::run()'],['../struct_compadre_1_1_g_m_l_s___linear_algebra_1_1_functor___transpose.html#a2802e10524656a3c1f623d24e02b0d88',1,'Compadre::GMLS_LinearAlgebra::Functor_Transpose::run()']]],
+  ['run_20mode_3a_14',['run mode:',['../class_compadre_1_1_point_cloud_search.html#autotoc_md0',1,'When in dry-run mode:'],['../class_compadre_1_1_point_cloud_search.html#autotoc_md1',1,'When not in dry-run mode:']]],
+  ['runtime_15',['runtime',['../class_compadre_1_1_kokkos_parser.html#ad48676c1830eacaab41f08504bf0a5cd',1,'Compadre::KokkosParser']]]
 ];

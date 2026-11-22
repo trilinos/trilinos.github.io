@@ -9,7 +9,7 @@ var searchData=
   ['operator_20solve_20extended_20interfaces_6',['Thyra operator solve extended interfaces',['../group___thyra___op___solve__extended__interfaces__code__grp.html',1,'']]],
   ['operator_20solve_20fundamental_20interfaces_7',['Thyra operator solve fundamental interfaces',['../group___thyra___op___solve__fundamental__interfaces__code__grp.html',1,'']]],
   ['operator_20solve_20interfaces_8',['Thyra operator solve interfaces',['../group___thyra___op___solve__interfaces__code__grp.html',1,'']]],
-  ['operator_20vector_20adapter_20code_9',['Operator Vector Adapter Code',['../group___epetra___thyra___op___vec__adapters__grp.html',1,'Thyra/Epetra Operator/Vector Adapter Code'],['../group___tpetra___thyra___op___vec__adapters__grp.html',1,'Thyra/Tpetra Operator/Vector Adapter Code']]],
+  ['operator_20vector_20adapter_20code_9',['Thyra/Tpetra Operator/Vector Adapter Code',['../group___tpetra___thyra___op___vec__adapters__grp.html',1,'']]],
   ['operator_20vector_20base_20support_20subclasses_20for_20spmd_20thyra_20implementations_10',['Thyra Operator/Vector Base Support Subclasses for SPMD Thyra Implementations',['../group___thyra___op___vec__adapters___spmd__support__grp.html',1,'']]],
   ['operator_20vector_20extended_20interfaces_11',['Thyra operator/vector extended interfaces',['../group___thyra___op___vec__extended__interfaces__code__grp.html',1,'']]],
   ['operator_20vector_20fundamental_20interfaces_12',['Thyra operator/vector fundamental interfaces',['../group___thyra___op___vec__fundamental__interfaces__code__grp.html',1,'']]],

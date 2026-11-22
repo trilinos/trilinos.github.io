@@ -1,7 +1,5 @@
 var NAVTREEINDEX45 =
 {
-"namespace_mue_lu.html#a6da7829994ac1d91a749c3cbf89e2033a84c9961f006c9f3ece44cc16b4334abe":[9,0,7,307,5],
-"namespace_mue_lu.html#a6da7829994ac1d91a749c3cbf89e2033a996a08d43e4fb1ca7a037a9ab15f32c7":[9,0,7,307,8],
 "namespace_mue_lu.html#a6da7829994ac1d91a749c3cbf89e2033aa2cf8c8cf92ee3a39fa2eaa6ff7dc43a":[9,0,7,307,1],
 "namespace_mue_lu.html#a6da7829994ac1d91a749c3cbf89e2033aa567100c2bcae7a9b3e74e74aa0d1d6b":[9,0,7,307,10],
 "namespace_mue_lu.html#a6da7829994ac1d91a749c3cbf89e2033ad38a56fde076d810fcf4ad208a81e4ae":[9,0,7,307,15],
@@ -249,5 +247,7 @@ var NAVTREEINDEX45 =
 "namespace_mue_lu_1_1_perf_details.html#acdd82ab90d0e1ce2d5e11512c107b562":[9,0,7,16,1],
 "namespace_mue_lu_1_1_structured_r_a_p_factory_details.html":[9,0,7,9],
 "namespace_mue_lu_1_1_structured_r_a_p_factory_details.html#ac6a3fda17f060645b825e2bce25f8fa4":[9,0,7,9,0],
-"namespace_mue_lu_1_1_structured_r_a_p_factory_details.html#af4b09167feb8744f2b9618c89346e4fc":[9,0,7,9,1]
+"namespace_mue_lu_1_1_structured_r_a_p_factory_details.html#af4b09167feb8744f2b9618c89346e4fc":[9,0,7,9,1],
+"namespace_mue_lu_tests.html":[9,0,8],
+"namespace_stratimikos.html":[9,0,9]
 };

@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Compadre<span id="projectnumber">&#160;1.7.6</span>
+   <div id="projectname">Compadre<span id="projectnumber">&#160;1.7.8</span>
    </div>
   </td>
  </tr>
@@ -440,29 +440,29 @@ Check That Solutions Are Correct</h1>
 <div class="line">        }</div>
 <div class="line">    </div>
 <div class="line">        <span class="comment">// check actual function value</span></div>
-<div class="line">        <span class="keywordflow">if</span>(GMLS_value!=GMLS_value || std::abs(actual_value - GMLS_value) &gt; failure_tolerance) {</div>
+<div class="line">        <span class="keywordflow">if</span>(GMLS_value!=GMLS_value || !(std::abs(actual_value - GMLS_value) &lt;= failure_tolerance)) {</div>
 <div class="line">            all_passed = <span class="keyword">false</span>;</div>
 <div class="line">            std::cout &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot; Failed Actual by: &quot;</span> &lt;&lt; std::abs(actual_value - GMLS_value) &lt;&lt; std::endl;</div>
 <div class="line">        }</div>
 <div class="line">    </div>
 <div class="line">        <span class="comment">// check Laplacian</span></div>
-<div class="line">        <span class="keywordflow">if</span>(std::abs(actual_Laplacian - GMLS_Laplacian) &gt; laplacian_failure_tolerance) {</div>
+<div class="line">        <span class="keywordflow">if</span>(!(std::abs(actual_Laplacian - GMLS_Laplacian) &lt;= laplacian_failure_tolerance)) {</div>
 <div class="line">            all_passed = <span class="keyword">false</span>;</div>
 <div class="line">            std::cout &lt;&lt; i &lt;&lt;<span class="stringliteral">&quot; Failed Laplacian by: &quot;</span> &lt;&lt; std::abs(actual_Laplacian - GMLS_Laplacian) &lt;&lt; std::endl;</div>
 <div class="line">        }</div>
 <div class="line">    </div>
 <div class="line">        <span class="comment">// check gradient</span></div>
-<div class="line">        <span class="keywordflow">if</span>(std::abs(actual_Gradient[0] - GMLS_GradX) &gt; failure_tolerance) {</div>
+<div class="line">        <span class="keywordflow">if</span>(!(std::abs(actual_Gradient[0] - GMLS_GradX) &lt;= failure_tolerance)) {</div>
 <div class="line">            all_passed = <span class="keyword">false</span>;</div>
 <div class="line">            std::cout &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot; Failed GradX by: &quot;</span> &lt;&lt; std::abs(actual_Gradient[0] - GMLS_GradX) &lt;&lt; std::endl;</div>
 <div class="line">            <span class="keywordflow">if</span> (dimension&gt;1) {</div>
-<div class="line">                <span class="keywordflow">if</span>(std::abs(actual_Gradient[1] - GMLS_GradY) &gt; failure_tolerance) {</div>
+<div class="line">                <span class="keywordflow">if</span>(!(std::abs(actual_Gradient[1] - GMLS_GradY) &lt;= failure_tolerance)) {</div>
 <div class="line">                    all_passed = <span class="keyword">false</span>;</div>
 <div class="line">                    std::cout &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot; Failed GradY by: &quot;</span> &lt;&lt; std::abs(actual_Gradient[1] - GMLS_GradY) &lt;&lt; std::endl;</div>
 <div class="line">                }</div>
 <div class="line">            }</div>
 <div class="line">            <span class="keywordflow">if</span> (dimension&gt;2) {</div>
-<div class="line">                <span class="keywordflow">if</span>(std::abs(actual_Gradient[2] - GMLS_GradZ) &gt; failure_tolerance) {</div>
+<div class="line">                <span class="keywordflow">if</span>(!(std::abs(actual_Gradient[2] - GMLS_GradZ) &lt;= failure_tolerance)) {</div>
 <div class="line">                    all_passed = <span class="keyword">false</span>;</div>
 <div class="line">                    std::cout &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot; Failed GradZ by: &quot;</span> &lt;&lt; std::abs(actual_Gradient[2] - GMLS_GradZ) &lt;&lt; std::endl;</div>
 <div class="line">                }</div>
@@ -470,7 +470,7 @@ Check That Solutions Are Correct</h1>
 <div class="line">        }</div>
 <div class="line">    </div>
 <div class="line">        <span class="comment">// check divergence</span></div>
-<div class="line">        <span class="keywordflow">if</span>(std::abs(actual_Divergence - GMLS_Divergence) &gt; failure_tolerance) {</div>
+<div class="line">        <span class="keywordflow">if</span>(!(std::abs(actual_Divergence - GMLS_Divergence) &lt;= failure_tolerance)) {</div>
 <div class="line">            all_passed = <span class="keyword">false</span>;</div>
 <div class="line">            std::cout &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot; Failed Divergence by: &quot;</span> &lt;&lt; std::abs(actual_Divergence - GMLS_Divergence) &lt;&lt; std::endl;</div>
 <div class="line">        }</div>
@@ -482,7 +482,7 @@ Check That Solutions Are Correct</h1>
 <div class="line">                tmp_diff += std::abs(actual_Curl[0] - GMLS_CurlX) + std::abs(actual_Curl[1] - GMLS_CurlY);</div>
 <div class="line">            <span class="keywordflow">if</span> (dimension&gt;2)</div>
 <div class="line">                tmp_diff += std::abs(actual_Curl[2] - GMLS_CurlZ);</div>
-<div class="line">            <span class="keywordflow">if</span>(std::abs(tmp_diff) &gt; failure_tolerance) {</div>
+<div class="line">            <span class="keywordflow">if</span>(!(std::abs(tmp_diff) &lt;= failure_tolerance)) {</div>
 <div class="line">                all_passed = <span class="keyword">false</span>;</div>
 <div class="line">                std::cout &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot; Failed Curl by: &quot;</span> &lt;&lt; std::abs(tmp_diff) &lt;&lt; std::endl;</div>
 <div class="line">            }</div>

@@ -198,7 +198,7 @@ var NAVTREEINDEX =
 "functions_func_c.html",
 "namespace_tpetra.html#a7e17bde86848e97ada483136c49e5544",
 "namespace_xpetra.html#a5e41f5f4eab799ae09e018ea77854035",
-"namespace_xpetra_1_1_matrix_matrix_1_1_xpetra.html#a1f92e74aa41ef87a58e45a3f151379b6adc2d30f6dafc37b4a37c66c127367dc7",
+"namespace_xpetra_1_1_matrix_matrix_1_1_xpetra.html#a1f92e74aa41ef87a58e45a3f151379b6a017d10fb1bb0bc82488a1c1ce3ed61e4",
 "struct_teuchos_1_1_ordinal_traits.html#a7b4d398af106f8bd15b957df36cb0926",
 "struct_teuchos_1_1_scalar_traits.html#a0dbfc9614eb88bfaee0b4a57bc985de6",
 "struct_teuchos_1_1_scalar_traits.html#a4d71d35f1d8f187a9cced036c1b0e62d",

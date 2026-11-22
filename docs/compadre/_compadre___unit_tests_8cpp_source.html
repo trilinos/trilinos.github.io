@@ -23,7 +23,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Compadre<span id="projectnumber">&#160;1.7.6</span>
+   <div id="projectname">Compadre<span id="projectnumber">&#160;1.7.8</span>
    </div>
   </td>
  </tr>
@@ -93,42 +93,44 @@ $(function() {
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;unittests/test_PointCloudSearch.hpp&quot;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;unittests/test_LinearAlgebra.hpp&quot;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;unittests/test_Targets.hpp&quot;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#ifdef COMPADRE_USE_MPI</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;mpi.h&gt;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">// this provides main(),</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">// but all other tests come from ./unittests/*.cpp</span></div>
-<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="_compadre___unit_tests_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">   22</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="_compadre___unit_tests_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> **argv) {</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="comment">// initializes MPI (if available) with command line arguments given</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">    #ifdef COMPADRE_USE_MPI</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    MPI_Init(&amp;argc, &amp;argv);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">    #endif</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="comment">// this MPI init is rerun when using the &quot;threadsafe&quot; test style below</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    ::testing::InitGoogleTest(&amp;argc, argv);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;unittests/test_Quadrature.hpp&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;unittests/test_KokkosParser.hpp&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#ifdef COMPADRE_USE_MPI</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;mpi.h&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">// this provides main(),</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">// but all other tests come from ./unittests/*.cpp</span></div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="}">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="_compadre___unit_tests_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">   24</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="_compadre___unit_tests_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> **argv) {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="comment">// initializes MPI (if available) with command line arguments given</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">    #ifdef COMPADRE_USE_MPI</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    MPI_Init(&amp;argc, &amp;argv);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">    #endif</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">// this MPI init is rerun when using the &quot;threadsafe&quot; test style below</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">// initializes kokkos</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    Kokkos::initialize(argc, argv);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="comment">// execute all tests</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    ::testing::GTEST_FLAG(filter) = <span class="stringliteral">&quot;*&quot;</span>;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">int</span> sig = RUN_ALL_TESTS();</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="comment">// finalize Kokkos and MPI (if available)</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    Kokkos::finalize();</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="comment">// finialize MPI (if available)</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">    #ifdef COMPADRE_USE_MPI</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    MPI_Finalize();</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">    #endif</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordflow">return</span> sig; </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    ::testing::InitGoogleTest(&amp;argc, argv);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="comment">// initializes kokkos</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    Kokkos::initialize(argc, argv);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="comment">// execute all tests</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    ::testing::GTEST_FLAG(filter) = <span class="stringliteral">&quot;*&quot;</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">int</span> sig = RUN_ALL_TESTS();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="comment">// finalize Kokkos and MPI (if available)</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    Kokkos::finalize();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="comment">// finialize MPI (if available)</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">    #ifdef COMPADRE_USE_MPI</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    MPI_Finalize();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">    #endif</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordflow">return</span> sig; </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>}</div>
 </div>
 <div class="ttc" id="a_compadre___kokkos_parser_8hpp_html"><div class="ttname"><a href="_compadre___kokkos_parser_8hpp.html">Compadre_KokkosParser.hpp</a></div></div>
-<div class="ttc" id="a_compadre___unit_tests_8cpp_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="_compadre___unit_tests_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition</b> <a href="#l00022">Compadre_UnitTests.cpp:22</a></div></div>
+<div class="ttc" id="a_compadre___unit_tests_8cpp_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="_compadre___unit_tests_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition</b> <a href="#l00024">Compadre_UnitTests.cpp:24</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

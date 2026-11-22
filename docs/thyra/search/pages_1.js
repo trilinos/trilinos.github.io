@@ -17,7 +17,7 @@ var searchData=
   ['access_20utilities_14',['access utilities',['../class_thyra_1_1_multi_vector_base.html#Thyra_MVB_expl_access_utils_sec',1,'Explicit multi-vector coefficient access utilities'],['../class_thyra_1_1_vector_base.html#Thyra_VB_expl_access_utils_sec',1,'Explicit vector coefficient access utilities']]],
   ['accessing_20collections_20of_20columns_20as_20multi_20vector_20views_15',['Accessing collections of columns as multi-vector views',['../class_thyra_1_1_multi_vector_base.html#Thyra_MVB_subviews_sec',1,'']]],
   ['accessing_20the_20individual_20columns_20as_20vector_20views_16',['Accessing the individual columns as vector views',['../class_thyra_1_1_multi_vector_base.html#Thyra_MVB_col_access_sec',1,'']]],
-  ['adapters_17',['adapters',['../index.html#thyra_adapters_epetra_sec',1,'Thyra/Epetra adapters'],['../index.html#thyra_adapters_epetraext_sec',1,'Thyra/EpetraExt adapters'],['../index.html#thyra_adapters_tpetra_sec',1,'Thyra/Tpetra adapters']]],
+  ['adapters_17',['Thyra/Tpetra adapters',['../index.html#thyra_adapters_tpetra_sec',1,'']]],
   ['adapters_20to_20other_20packages_18',['Thyra adapters to other packages',['../index.html#thyra_adapters_sec',1,'']]],
   ['adjoint_20forward_20operators_19',['Creating invertible operators for scaled and/or adjoint forward operators',['../class_thyra_1_1_linear_op_with_solve_factory_base.html#LOWSFB_scaled_adjoint_sec',1,'']]],
   ['adjoint_20relation_20',['Scalar products and the adjoint relation',['../class_thyra_1_1_linear_op_base.html#Thyra_LO_adjoint_relation_sec',1,'']]],

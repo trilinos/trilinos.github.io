@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['vector_20adapter_20code_0',['Vector Adapter Code',['../group___epetra___thyra___op___vec__adapters__grp.html',1,'Thyra/Epetra Operator/Vector Adapter Code'],['../group___tpetra___thyra___op___vec__adapters__grp.html',1,'Thyra/Tpetra Operator/Vector Adapter Code']]],
+  ['vector_20adapter_20code_0',['Thyra/Tpetra Operator/Vector Adapter Code',['../group___tpetra___thyra___op___vec__adapters__grp.html',1,'']]],
   ['vector_20base_20support_20subclasses_20for_20spmd_20thyra_20implementations_1',['Thyra Operator/Vector Base Support Subclasses for SPMD Thyra Implementations',['../group___thyra___op___vec__adapters___spmd__support__grp.html',1,'']]],
   ['vector_20extended_20interfaces_2',['Thyra operator/vector extended interfaces',['../group___thyra___op___vec__extended__interfaces__code__grp.html',1,'']]],
   ['vector_20fundamental_20interfaces_3',['Thyra operator/vector fundamental interfaces',['../group___thyra___op___vec__fundamental__interfaces__code__grp.html',1,'']]],

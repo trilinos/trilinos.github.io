@@ -178,6 +178,8 @@ Constructors/Initializers/Accessors</h2></td></tr>
 <tr class="memitem:a605a004cf2542d36b4e2bd51a40fb571" id="r_a605a004cf2542d36b4e2bd51a40fb571"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a605a004cf2542d36b4e2bd51a40fb571">setBlocks</a> (const <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/thyra/doc/../../../packages/teuchos/doc/html/class_teuchos_1_1_r_c_p.html">RCP</a>&lt; const <a class="el" href="class_thyra_1_1_physically_blocked_linear_op_base.html">PhysicallyBlockedLinearOpBase</a>&lt; Scalar &gt; &gt; &amp;blocks)</td></tr>
 <tr class="memitem:a6c6eb31d7619468fa3b337084779f8b4" id="r_a6c6eb31d7619468fa3b337084779f8b4"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/thyra/doc/../../../packages/teuchos/doc/html/class_teuchos_1_1_r_c_p.html">RCP</a>&lt; <a class="el" href="class_thyra_1_1_physically_blocked_linear_op_base.html">PhysicallyBlockedLinearOpBase</a>&lt; Scalar &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c6eb31d7619468fa3b337084779f8b4">getNonconstBlocks</a> ()</td></tr>
 <tr class="memitem:a04768b5498374f8b2083b46729c59962" id="r_a04768b5498374f8b2083b46729c59962"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/thyra/doc/../../../packages/teuchos/doc/html/class_teuchos_1_1_r_c_p.html">RCP</a>&lt; const <a class="el" href="class_thyra_1_1_physically_blocked_linear_op_base.html">PhysicallyBlockedLinearOpBase</a>&lt; Scalar &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04768b5498374f8b2083b46729c59962">getBlocks</a> ()</td></tr>
+<tr class="memitem:aa109504252607eff74dd2a06546d96fe" id="r_aa109504252607eff74dd2a06546d96fe"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa109504252607eff74dd2a06546d96fe">assertBlockTriangular</a> (const <a class="el" href="class_thyra_1_1_physically_blocked_linear_op_base.html">PhysicallyBlockedLinearOpBase</a>&lt; Scalar &gt; &amp;blocks)</td></tr>
+<tr class="memdesc:aa109504252607eff74dd2a06546d96fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throws <span class="tt">std::logic_error</span> if <span class="tt">blocks</span> does not have as many block rows as block columns, or is not block triangular (has nonzero blocks both below and above the diagonal).  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-member-group" class="groupheader"><a id="member-group" name="member-group"></a>
 Overridden from PhysicallyBlockedLinearOpWithSolveBase</h2></td></tr>
@@ -192,8 +194,11 @@ Overridden from PhysicallyBlockedLinearOpBase</h2></td></tr>
 <tr class="memitem:afe7ac8e733c38bd8d88ba78362df8069" id="r_afe7ac8e733c38bd8d88ba78362df8069"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe7ac8e733c38bd8d88ba78362df8069">beginBlockFill</a> (const <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/thyra/doc/../../../packages/teuchos/doc/html/class_teuchos_1_1_r_c_p.html">RCP</a>&lt; const <a class="el" href="class_thyra_1_1_product_vector_space_base.html">ProductVectorSpaceBase</a>&lt; Scalar &gt; &gt; &amp;<a class="el" href="#af6366cdc8a0a6231924ba4bc8bf4ce21">productRange</a>, const <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/thyra/doc/../../../packages/teuchos/doc/html/class_teuchos_1_1_r_c_p.html">RCP</a>&lt; const <a class="el" href="class_thyra_1_1_product_vector_space_base.html">ProductVectorSpaceBase</a>&lt; Scalar &gt; &gt; &amp;<a class="el" href="#a20bfead2ef181b33d1a2b69630b5be9e">productDomain</a>)</td></tr>
 <tr class="memitem:aeac0b4ca2ced7caba796ecb1d3885b8a" id="r_aeac0b4ca2ced7caba796ecb1d3885b8a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeac0b4ca2ced7caba796ecb1d3885b8a">blockFillIsActive</a> () const</td></tr>
 <tr class="memitem:abaf4a25f10ce6367af14e3d368c89256" id="r_abaf4a25f10ce6367af14e3d368c89256"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abaf4a25f10ce6367af14e3d368c89256">acceptsBlock</a> (const int i, const int j) const</td></tr>
+<tr class="memdesc:abaf4a25f10ce6367af14e3d368c89256"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns false: the diagonal blocks are set with <span class="tt"><a class="el" href="#a3be69463a5d28511b30cec901a155c0e">setLOWSBlock()</a></span> or <span class="tt"><a class="el" href="#a88159ca4d3f2e2a9b7db6b54a385dc01">setNonconstLOWSBlock()</a></span>, and the off-diagonal blocks with <span class="tt"><a class="el" href="#a605a004cf2542d36b4e2bd51a40fb571">setBlocks()</a></span> or <span class="tt"><a class="el" href="#a2230ec2c2f2b7c94214929f5f2d70115">setNonconstBlocks()</a></span> after the block fill.  <br /></td></tr>
 <tr class="memitem:a5ac1c2736823c1f0cc7dabfe9c9dd98e" id="r_a5ac1c2736823c1f0cc7dabfe9c9dd98e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ac1c2736823c1f0cc7dabfe9c9dd98e">setNonconstBlock</a> (const int i, const int j, const <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/thyra/doc/../../../packages/teuchos/doc/html/class_teuchos_1_1_r_c_p.html">RCP</a>&lt; <a class="el" href="class_thyra_1_1_linear_op_base.html">LinearOpBase</a>&lt; Scalar &gt; &gt; &amp;block)</td></tr>
+<tr class="memdesc:a5ac1c2736823c1f0cc7dabfe9c9dd98e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throws, see <span class="tt"><a class="el" href="#abaf4a25f10ce6367af14e3d368c89256" title="Returns false: the diagonal blocks are set with setLOWSBlock() or setNonconstLOWSBlock(),...">acceptsBlock()</a></span>.  <br /></td></tr>
 <tr class="memitem:a931bfe8aaf4faf668c398d1d8ad48eae" id="r_a931bfe8aaf4faf668c398d1d8ad48eae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a931bfe8aaf4faf668c398d1d8ad48eae">setBlock</a> (const int i, const int j, const <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/thyra/doc/../../../packages/teuchos/doc/html/class_teuchos_1_1_r_c_p.html">RCP</a>&lt; const <a class="el" href="class_thyra_1_1_linear_op_base.html">LinearOpBase</a>&lt; Scalar &gt; &gt; &amp;block)</td></tr>
+<tr class="memdesc:a931bfe8aaf4faf668c398d1d8ad48eae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throws, see <span class="tt"><a class="el" href="#abaf4a25f10ce6367af14e3d368c89256" title="Returns false: the diagonal blocks are set with setLOWSBlock() or setNonconstLOWSBlock(),...">acceptsBlock()</a></span>.  <br /></td></tr>
 <tr class="memitem:a4541a229d5b672335dbfacec2d5f28e7" id="r_a4541a229d5b672335dbfacec2d5f28e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4541a229d5b672335dbfacec2d5f28e7">endBlockFill</a> ()</td></tr>
 <tr class="memitem:ab378496082eeb541ab11c2af49030706" id="r_ab378496082eeb541ab11c2af49030706"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab378496082eeb541ab11c2af49030706">uninitialize</a> ()</td></tr>
 </table><table class="memberdecls">
@@ -207,9 +212,12 @@ Overridden from BlockedLinearOpBase</h2></td></tr>
 <tr class="memitem:af6366cdc8a0a6231924ba4bc8bf4ce21" id="r_af6366cdc8a0a6231924ba4bc8bf4ce21"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/thyra/doc/../../../packages/teuchos/doc/html/class_teuchos_1_1_r_c_p.html">RCP</a>&lt; const <a class="el" href="class_thyra_1_1_product_vector_space_base.html">ProductVectorSpaceBase</a>&lt; Scalar &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6366cdc8a0a6231924ba4bc8bf4ce21">productRange</a> () const</td></tr>
 <tr class="memitem:a20bfead2ef181b33d1a2b69630b5be9e" id="r_a20bfead2ef181b33d1a2b69630b5be9e"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/thyra/doc/../../../packages/teuchos/doc/html/class_teuchos_1_1_r_c_p.html">RCP</a>&lt; const <a class="el" href="class_thyra_1_1_product_vector_space_base.html">ProductVectorSpaceBase</a>&lt; Scalar &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20bfead2ef181b33d1a2b69630b5be9e">productDomain</a> () const</td></tr>
 <tr class="memitem:afe189204aec6970c0273709c669d413b" id="r_afe189204aec6970c0273709c669d413b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe189204aec6970c0273709c669d413b">blockExists</a> (const int i, const int j) const</td></tr>
+<tr class="memdesc:afe189204aec6970c0273709c669d413b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The diagonal blocks are the LOWSB blocks, and the off-diagonal blocks those of the blocked operator of <span class="tt"><a class="el" href="#a605a004cf2542d36b4e2bd51a40fb571">setBlocks()</a></span>.  <br /></td></tr>
 <tr class="memitem:a9bd3ab8321c0920d0eab1ea07fc262b8" id="r_a9bd3ab8321c0920d0eab1ea07fc262b8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9bd3ab8321c0920d0eab1ea07fc262b8">blockIsConst</a> (const int i, const int j) const</td></tr>
 <tr class="memitem:ae89610970039002620afd437684da662" id="r_ae89610970039002620afd437684da662"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/thyra/doc/../../../packages/teuchos/doc/html/class_teuchos_1_1_r_c_p.html">RCP</a>&lt; <a class="el" href="class_thyra_1_1_linear_op_base.html">LinearOpBase</a>&lt; Scalar &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae89610970039002620afd437684da662">getNonconstBlock</a> (const int i, const int j)</td></tr>
+<tr class="memdesc:ae89610970039002620afd437684da662"><td class="mdescLeft">&#160;</td><td class="mdescRight">See <span class="tt"><a class="el" href="#afe189204aec6970c0273709c669d413b" title="The diagonal blocks are the LOWSB blocks, and the off-diagonal blocks those of the blocked operator o...">blockExists()</a></span>. The off-diagonal blocks are nonconst only if the blocked operator was set with <span class="tt"><a class="el" href="#a2230ec2c2f2b7c94214929f5f2d70115">setNonconstBlocks()</a></span> (throws otherwise).  <br /></td></tr>
 <tr class="memitem:a46e9cc4b2b282bdb2467c079cfdfe4db" id="r_a46e9cc4b2b282bdb2467c079cfdfe4db"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/thyra/doc/../../../packages/teuchos/doc/html/class_teuchos_1_1_r_c_p.html">RCP</a>&lt; const <a class="el" href="class_thyra_1_1_linear_op_base.html">LinearOpBase</a>&lt; Scalar &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46e9cc4b2b282bdb2467c079cfdfe4db">getBlock</a> (const int i, const int j) const</td></tr>
+<tr class="memdesc:a46e9cc4b2b282bdb2467c079cfdfe4db"><td class="mdescLeft">&#160;</td><td class="mdescRight">See <span class="tt"><a class="el" href="#afe189204aec6970c0273709c669d413b" title="The diagonal blocks are the LOWSB blocks, and the off-diagonal blocks those of the blocked operator o...">blockExists()</a></span>.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-member-group" class="groupheader"><a id="member-group" name="member-group"></a>
 Overridden from LinearOpBase</h2></td></tr>
@@ -265,10 +273,11 @@ class Thyra::DefaultBlockedTriangularLinearOpWithSolve&lt; Scalar &gt;</div><p>C
  x(1) = inv(M(1,1)) * ( b(1) - M(1,0)*x(0) )
  x(2) = inv(M(2,2)) * ( b(2) - M(2,0)*x(0) - M(2,1)*x(1) )
 </pre><p>The same approach can be used for block upper triangular linear operators as well of course.</p>
+<p>The diagonal blocks are the LOWSB objects set in the block fill. The off-diagonal blocks are those of the blocked linear operator set with <span class="tt"><a class="el" href="#a605a004cf2542d36b4e2bd51a40fb571">setBlocks()</a></span> or <span class="tt"><a class="el" href="#a2230ec2c2f2b7c94214929f5f2d70115">setNonconstBlocks()</a></span> after the block fill (whose diagonal blocks are not used); they can not be set in the block fill. This blocked operator must have as many block rows and columns as there are diagonal blocks, and be block lower or block upper triangular, not both. The apply and the solves (block forward or backward substitution, also for the transposed operator) include the off-diagonal blocks. <span class="tt"><a class="el" href="#ab378496082eeb541ab11c2af49030706">uninitialize()</a></span> and a new block fill remove the off-diagonal blocks.</p>
 <p>See the class <span class="tt"><a class="el" href="class_thyra_1_1_default_blocked_triangular_linear_op_with_solve_factory.html" title="Implicit subclass that takes a blocked triangular LOWB object and turns it into a LOWSB object.">DefaultBlockedTriangularLinearOpWithSolveFactory</a></span> for an example of how one of these objects can be created from any <span class="tt"><a class="el" href="class_thyra_1_1_physically_blocked_linear_op_base.html" title="Base interface for physically blocked linear operators.">PhysicallyBlockedLinearOpBase</a></span> object and compatible <span class="tt">LinearWithSolveBase</span> objects.</p>
 <p>ToDo: Finish Documentation! </p>
 
-<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__decl_8hpp_source.html#l00080">80</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__decl_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__decl_8hpp_source.html#l00090">90</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__decl_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_decl.hpp</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a9803213c06a6ec07c4c7a75500a71995" name="a9803213c06a6ec07c4c7a75500a71995"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9803213c06a6ec07c4c7a75500a71995">&#9670;&#160;</a></span>DefaultBlockedTriangularLinearOpWithSolve()</h2>
@@ -313,7 +322,7 @@ template&lt;class Scalar&gt; </div>
 
 <p></p>
 
-<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00036">36</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00037">37</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -336,7 +345,39 @@ template&lt;class Scalar&gt; </div>
 
 <p></p>
 
-<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00046">46</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00047">47</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aa109504252607eff74dd2a06546d96fe" name="aa109504252607eff74dd2a06546d96fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa109504252607eff74dd2a06546d96fe">&#9670;&#160;</a></span>assertBlockTriangular()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Scalar&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_thyra_1_1_default_blocked_triangular_linear_op_with_solve.html">Thyra::DefaultBlockedTriangularLinearOpWithSolve</a>&lt; Scalar &gt;::assertBlockTriangular </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_thyra_1_1_physically_blocked_linear_op_base.html">PhysicallyBlockedLinearOpBase</a>&lt; Scalar &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>blocks</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Throws <span class="tt">std::logic_error</span> if <span class="tt">blocks</span> does not have as many block rows as block columns, or is not block triangular (has nonzero blocks both below and above the diagonal). </p>
+<p><span class="tt"><a class="el" href="#a605a004cf2542d36b4e2bd51a40fb571">setBlocks()</a></span> and <span class="tt"><a class="el" href="#a2230ec2c2f2b7c94214929f5f2d70115">setNonconstBlocks()</a></span> also check this (and the number of blocks); a factory can check it before reinitializing the diagonal blocks, so that a rejected operator leaves the object unchanged. </p>
+
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00057">57</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -359,7 +400,7 @@ template&lt;class Scalar&gt; </div>
 
 <p></p>
 
-<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00057">57</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00068">68</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -382,7 +423,7 @@ template&lt;class Scalar&gt; </div>
 
 <p></p>
 
-<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00065">65</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00076">76</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -419,7 +460,7 @@ template&lt;class Scalar&gt; </div>
 
 <p>Implements <a class="el" href="class_thyra_1_1_physically_blocked_linear_op_with_solve_base.html#aa5c66f4072fa6999c890cd396302732e">Thyra::PhysicallyBlockedLinearOpWithSolveBase&lt; Scalar &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00075">75</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00086">86</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -461,7 +502,7 @@ template&lt;class Scalar&gt; </div>
 
 <p>Implements <a class="el" href="class_thyra_1_1_physically_blocked_linear_op_with_solve_base.html#a26c3d130110fde65e815785f3f9000f8">Thyra::PhysicallyBlockedLinearOpWithSolveBase&lt; Scalar &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00085">85</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00096">96</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -503,7 +544,7 @@ template&lt;class Scalar&gt; </div>
 
 <p>Implements <a class="el" href="class_thyra_1_1_physically_blocked_linear_op_with_solve_base.html#a6b181ddd3664c72194a46b2504946517">Thyra::PhysicallyBlockedLinearOpWithSolveBase&lt; Scalar &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00095">95</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00106">106</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -536,7 +577,7 @@ template&lt;class Scalar&gt; </div>
 
 <p>Implements <a class="el" href="class_thyra_1_1_physically_blocked_linear_op_base.html#a5d3e54492310b41e6faeb5dbb9c78198">Thyra::PhysicallyBlockedLinearOpBase&lt; Scalar &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00108">108</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00119">119</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -573,7 +614,7 @@ template&lt;class Scalar&gt; </div>
 
 <p>Implements <a class="el" href="class_thyra_1_1_physically_blocked_linear_op_base.html#a50da8be8612452e6b095c86d59a64f4c">Thyra::PhysicallyBlockedLinearOpBase&lt; Scalar &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00116">116</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00127">127</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -610,7 +651,7 @@ template&lt;class Scalar&gt; </div>
 
 <p>Implements <a class="el" href="class_thyra_1_1_physically_blocked_linear_op_base.html#ab0687e997e0732b80d7919a312bf4ea8">Thyra::PhysicallyBlockedLinearOpBase&lt; Scalar &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00136">136</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00148">148</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -643,7 +684,7 @@ template&lt;class Scalar&gt; </div>
 
 <p>Implements <a class="el" href="class_thyra_1_1_physically_blocked_linear_op_base.html#ad3e853efe0b268d973693c645eb6e072">Thyra::PhysicallyBlockedLinearOpBase&lt; Scalar &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00156">156</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00169">169</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -676,11 +717,11 @@ template&lt;class Scalar&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p></p>
+<p>Returns false: the diagonal blocks are set with <span class="tt"><a class="el" href="#a3be69463a5d28511b30cec901a155c0e">setLOWSBlock()</a></span> or <span class="tt"><a class="el" href="#a88159ca4d3f2e2a9b7db6b54a385dc01">setNonconstLOWSBlock()</a></span>, and the off-diagonal blocks with <span class="tt"><a class="el" href="#a605a004cf2542d36b4e2bd51a40fb571">setBlocks()</a></span> or <span class="tt"><a class="el" href="#a2230ec2c2f2b7c94214929f5f2d70115">setNonconstBlocks()</a></span> after the block fill. </p>
 
 <p>Implements <a class="el" href="class_thyra_1_1_physically_blocked_linear_op_base.html#ab3535f3db135336d529110a6086b2ce8">Thyra::PhysicallyBlockedLinearOpBase&lt; Scalar &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00163">163</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00176">176</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -718,11 +759,11 @@ template&lt;class Scalar&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p></p>
+<p>Throws, see <span class="tt"><a class="el" href="#abaf4a25f10ce6367af14e3d368c89256" title="Returns false: the diagonal blocks are set with setLOWSBlock() or setNonconstLOWSBlock(),...">acceptsBlock()</a></span>. </p>
 
 <p>Implements <a class="el" href="class_thyra_1_1_physically_blocked_linear_op_base.html#a7db7164aa4c5a75db5fdbe0217bd9002">Thyra::PhysicallyBlockedLinearOpBase&lt; Scalar &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00174">174</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00189">189</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -760,11 +801,11 @@ template&lt;class Scalar&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p></p>
+<p>Throws, see <span class="tt"><a class="el" href="#abaf4a25f10ce6367af14e3d368c89256" title="Returns false: the diagonal blocks are set with setLOWSBlock() or setNonconstLOWSBlock(),...">acceptsBlock()</a></span>. </p>
 
 <p>Implements <a class="el" href="class_thyra_1_1_physically_blocked_linear_op_base.html#a9c083f83265f1bf7cbdd7d71f11f4013">Thyra::PhysicallyBlockedLinearOpBase&lt; Scalar &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00185">185</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00204">204</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -797,7 +838,7 @@ template&lt;class Scalar&gt; </div>
 
 <p>Implements <a class="el" href="class_thyra_1_1_physically_blocked_linear_op_base.html#aaa9058847589158ba02d17c65e33a456">Thyra::PhysicallyBlockedLinearOpBase&lt; Scalar &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00196">196</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00219">219</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -830,7 +871,7 @@ template&lt;class Scalar&gt; </div>
 
 <p>Implements <a class="el" href="class_thyra_1_1_physically_blocked_linear_op_base.html#a3e7f1220d3a95739b9f7f6752121889d">Thyra::PhysicallyBlockedLinearOpBase&lt; Scalar &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00221">221</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00244">244</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -867,7 +908,7 @@ template&lt;class Scalar&gt; </div>
 
 <p>Implements <a class="el" href="class_thyra_1_1_blocked_linear_op_with_solve_base.html#a354e0e138731e4e4d559ca9d96994e1f">Thyra::BlockedLinearOpWithSolveBase&lt; Scalar &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00236">236</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00260">260</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -904,7 +945,7 @@ template&lt;class Scalar&gt; </div>
 
 <p>Implements <a class="el" href="class_thyra_1_1_blocked_linear_op_with_solve_base.html#a66628bc468fa5895013d05649da83c1b">Thyra::BlockedLinearOpWithSolveBase&lt; Scalar &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00250">250</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00274">274</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -937,7 +978,7 @@ template&lt;class Scalar&gt; </div>
 
 <p>Implements <a class="el" href="class_thyra_1_1_blocked_linear_op_base.html#ade043db04e45c41db5247bc7f74d2904">Thyra::BlockedLinearOpBase&lt; Scalar &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00267">267</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00291">291</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -970,7 +1011,7 @@ template&lt;class Scalar&gt; </div>
 
 <p>Implements <a class="el" href="class_thyra_1_1_blocked_linear_op_base.html#ace73ee7f3fdb83b3d46c6d75d0f4fccb">Thyra::BlockedLinearOpBase&lt; Scalar &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00275">275</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00299">299</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -1003,11 +1044,11 @@ template&lt;class Scalar&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p></p>
+<p>The diagonal blocks are the LOWSB blocks, and the off-diagonal blocks those of the blocked operator of <span class="tt"><a class="el" href="#a605a004cf2542d36b4e2bd51a40fb571">setBlocks()</a></span>. </p>
 
 <p>Implements <a class="el" href="class_thyra_1_1_blocked_linear_op_base.html#a5726dc809252b867a9682625704f2510">Thyra::BlockedLinearOpBase&lt; Scalar &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00282">282</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00306">306</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -1044,7 +1085,7 @@ template&lt;class Scalar&gt; </div>
 
 <p>Implements <a class="el" href="class_thyra_1_1_blocked_linear_op_base.html#a1c9601f97f45274d66be30cac59c9510">Thyra::BlockedLinearOpBase&lt; Scalar &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00295">295</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00319">319</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -1077,11 +1118,11 @@ template&lt;class Scalar&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p></p>
+<p>See <span class="tt"><a class="el" href="#afe189204aec6970c0273709c669d413b" title="The diagonal blocks are the LOWSB blocks, and the off-diagonal blocks those of the blocked operator o...">blockExists()</a></span>. The off-diagonal blocks are nonconst only if the blocked operator was set with <span class="tt"><a class="el" href="#a2230ec2c2f2b7c94214929f5f2d70115">setNonconstBlocks()</a></span> (throws otherwise). </p>
 
 <p>Implements <a class="el" href="class_thyra_1_1_blocked_linear_op_base.html#acf38d17c3e7b5af0fdff47d803909e1c">Thyra::BlockedLinearOpBase&lt; Scalar &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00307">307</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00331">331</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -1114,11 +1155,11 @@ template&lt;class Scalar&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p></p>
+<p>See <span class="tt"><a class="el" href="#afe189204aec6970c0273709c669d413b" title="The diagonal blocks are the LOWSB blocks, and the off-diagonal blocks those of the blocked operator o...">blockExists()</a></span>. </p>
 
 <p>Implements <a class="el" href="class_thyra_1_1_blocked_linear_op_base.html#afe7cc83047d2093b33bedc2372323e09">Thyra::BlockedLinearOpBase&lt; Scalar &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00321">321</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00349">349</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -1151,7 +1192,7 @@ template&lt;class Scalar&gt; </div>
 
 <p>Implements <a class="el" href="class_thyra_1_1_linear_op_base.html#ab1dffbffb5b2bab70d74d34ecae2078f">Thyra::LinearOpBase&lt; Scalar &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00338">338</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00366">366</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -1184,7 +1225,7 @@ template&lt;class Scalar&gt; </div>
 
 <p>Implements <a class="el" href="class_thyra_1_1_linear_op_base.html#ad80251a0f1463c57ed20b1ddfb4727dc">Thyra::LinearOpBase&lt; Scalar &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00346">346</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00374">374</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -1217,7 +1258,7 @@ template&lt;class Scalar&gt; </div>
 
 <p>Reimplemented from <a class="el" href="class_thyra_1_1_linear_op_base.html#af80a1d0cc5c951b232f59560cbc9fcab">Thyra::LinearOpBase&lt; Scalar &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00354">354</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00382">382</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -1250,7 +1291,7 @@ template&lt;class Scalar&gt; </div>
 
 <p>Reimplemented from <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/thyra/doc/../../../packages/teuchos/doc/html/class_teuchos_1_1_describable.html#ae4aa2912f0f01ef54c41f99dba0df2ff">Teuchos::Describable</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00365">365</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00393">393</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -1289,7 +1330,7 @@ template&lt;class Scalar&gt; </div>
 
 <p>Reimplemented from <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/thyra/doc/../../../packages/teuchos/doc/html/class_teuchos_1_1_describable.html#ada0fd8d1337054a649c3a0d165fd03de">Teuchos::Describable</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00378">378</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00406">406</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -1322,7 +1363,7 @@ template&lt;class Scalar&gt; </div>
 
 <p>Implements <a class="el" href="class_thyra_1_1_linear_op_base.html#a2b1700955a00ab39b55ad4b94c129fcf">Thyra::LinearOpBase&lt; Scalar &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00396">396</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00424">424</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -1374,7 +1415,7 @@ template&lt;class Scalar&gt; </div>
 
 <p>Implements <a class="el" href="class_thyra_1_1_linear_op_base.html#a89c094fa628356c2901fc78138ce45d0">Thyra::LinearOpBase&lt; Scalar &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00414">414</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00442">442</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -1407,7 +1448,7 @@ template&lt;class Scalar&gt; </div>
 
 <p>Reimplemented from <a class="el" href="class_thyra_1_1_linear_op_with_solve_base.html#ac5a41005896cc2ef5df549e8fa5f8e74">Thyra::LinearOpWithSolveBase&lt; Scalar &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00464">464</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00503">503</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -1444,7 +1485,7 @@ template&lt;class Scalar&gt; </div>
 
 <p>Reimplemented from <a class="el" href="class_thyra_1_1_linear_op_with_solve_base.html#ad965d499903197912b86d5af24688d6f">Thyra::LinearOpWithSolveBase&lt; Scalar &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00482">482</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00522">522</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -1491,7 +1532,7 @@ template&lt;class Scalar&gt; </div>
 
 <p>Implements <a class="el" href="class_thyra_1_1_linear_op_with_solve_base.html#a58376a61aefdb295dc58b6c4bea56444">Thyra::LinearOpWithSolveBase&lt; Scalar &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00505">505</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html#l00545">545</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__def_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_def.hpp</a>.</p>
 
 </div>
 </div>
@@ -1523,7 +1564,7 @@ template&lt;class Scalar&gt; </div>
 
 <p>Nonmember constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__decl_8hpp_source.html#l00314">314</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__decl_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__decl_8hpp_source.html#l00370">370</a> of file <a class="el" href="_thyra___default_blocked_triangular_linear_op_with_solve__decl_8hpp_source.html">Thyra_DefaultBlockedTriangularLinearOpWithSolve_decl.hpp</a>.</p>
 
 </div>
 </div>

@@ -12,7 +12,7 @@ var searchData=
   ['pcpgsolmgrlinearproblemfailure_9',['PCPGSolMgrLinearProblemFailure',['../class_belos_1_1_p_c_p_g_sol_mgr_linear_problem_failure.html',1,'Belos::PCPGSolMgrLinearProblemFailure'],['../class_belos_1_1_p_c_p_g_sol_mgr_linear_problem_failure.html#a985f91e56dd48c541a5bed8944910d4e',1,'Belos::PCPGSolMgrLinearProblemFailure::PCPGSolMgrLinearProblemFailure()']]],
   ['pcpgsolmgrorthofailure_10',['PCPGSolMgrOrthoFailure',['../class_belos_1_1_p_c_p_g_sol_mgr_ortho_failure.html',1,'Belos::PCPGSolMgrOrthoFailure'],['../class_belos_1_1_p_c_p_g_sol_mgr_ortho_failure.html#a6674e4a64c23b361a01a3e3004d7ca99',1,'Belos::PCPGSolMgrOrthoFailure::PCPGSolMgrOrthoFailure()']]],
   ['polydegree_11',['polyDegree',['../class_belos_1_1_gmres_poly_op.html#a16f9a61971199858b0b416a6637862b1',1,'Belos::GmresPolyOp']]],
-  ['polytol_12',['polyTol',['../struct_belos_1_1_default_solver_parameters.html#af167cba626f1340747598068204f3866',1,'Belos::DefaultSolverParameters']]],
+  ['polytol_12',['polyTol',['../struct_belos_1_1_default_solver_parameters.html#af1c555470d54f0198da3abf319a8edb7',1,'Belos::DefaultSolverParameters']]],
   ['pr0_5f_13',['PR0_',['../class_belos_1_1_linear_problem.html#a3c0a1ae9e897cf883ce6b0e47deb05a1',1,'Belos::LinearProblem']]],
   ['pr0_5fuser_5f_14',['PR0_user_',['../class_belos_1_1_linear_problem.html#a0ddf91dfb50692a4d0bf98905358a450',1,'Belos::LinearProblem']]],
   ['preconditionernorm_15',['PreconditionerNorm',['../namespace_belos.html#a24aa69bf4f5cd54d0c704958cb556893a7622e5179219aefd1c72d7caf5bb6d4d',1,'Belos']]],

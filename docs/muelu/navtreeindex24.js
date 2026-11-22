@@ -1,7 +1,5 @@
 var NAVTREEINDEX24 =
 {
-"class_mue_lu_1_1_local_lexicographic_index_manager.html#ad59d77ba490471d88dc8b8371138b113":[10,0,2,34,35],
-"class_mue_lu_1_1_local_lexicographic_index_manager.html#adae0013e98de0727a967f1857b4c85a4":[9,0,7,42,33],
 "class_mue_lu_1_1_local_lexicographic_index_manager.html#adae0013e98de0727a967f1857b4c85a4":[10,0,2,34,33],
 "class_mue_lu_1_1_local_lexicographic_index_manager.html#ade03c1636ad143418be057f09614b224":[9,0,7,42,13],
 "class_mue_lu_1_1_local_lexicographic_index_manager.html#ade03c1636ad143418be057f09614b224":[10,0,2,34,13],
@@ -249,5 +247,7 @@ var NAVTREEINDEX24 =
 "class_mue_lu_1_1_matlab_smoother.html#ad310f9ffbe1340ae1671b1cf8c7eceb6":[10,0,2,218,15],
 "class_mue_lu_1_1_matlab_smoother.html#ae6da9db939f5829a94202b2b332fb968":[9,0,7,226,5],
 "class_mue_lu_1_1_matlab_smoother.html#ae6da9db939f5829a94202b2b332fb968":[10,0,2,218,5],
-"class_mue_lu_1_1_matlab_smoother.html#ae759298a71554fefccd1ea1695b8c197":[9,0,7,226,16]
+"class_mue_lu_1_1_matlab_smoother.html#ae759298a71554fefccd1ea1695b8c197":[9,0,7,226,16],
+"class_mue_lu_1_1_matlab_smoother.html#ae759298a71554fefccd1ea1695b8c197":[10,0,2,218,16],
+"class_mue_lu_1_1_matlab_smoother.html#afe3dd12fe09d40ff30ef26b56e31a218":[9,0,7,226,2]
 };

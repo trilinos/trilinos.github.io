@@ -1,7 +1,5 @@
 var NAVTREEINDEX27 =
 {
-"class_mue_lu_1_1_maxwell1.html#a1c604a5b162516c6da044310c4aad693":[10,0,2,109,52],
-"class_mue_lu_1_1_maxwell1.html#a1f2c8d7d37ebb893a83b994372b5146e":[9,0,7,117,62],
 "class_mue_lu_1_1_maxwell1.html#a1f2c8d7d37ebb893a83b994372b5146e":[10,0,2,109,62],
 "class_mue_lu_1_1_maxwell1.html#a22bc215e32e19895b01ee6dc7a0e946b":[9,0,7,117,51],
 "class_mue_lu_1_1_maxwell1.html#a22bc215e32e19895b01ee6dc7a0e946b":[10,0,2,109,51],
@@ -249,5 +247,7 @@ var NAVTREEINDEX27 =
 "class_mue_lu_1_1_misc_1_1_block_diagonalize_functor.html#a4d1f60a1af0e770f4665b965ad730068":[10,0,2,5,9,10],
 "class_mue_lu_1_1_misc_1_1_block_diagonalize_functor.html#a55631c7aa6c4cd8b938f59124e4bd280":[9,0,7,5,9,1],
 "class_mue_lu_1_1_misc_1_1_block_diagonalize_functor.html#a55631c7aa6c4cd8b938f59124e4bd280":[10,0,2,5,9,1],
-"class_mue_lu_1_1_misc_1_1_block_diagonalize_functor.html#a67a585a0f1d312fc1669b199f04bc8b0":[9,0,7,5,9,6]
+"class_mue_lu_1_1_misc_1_1_block_diagonalize_functor.html#a67a585a0f1d312fc1669b199f04bc8b0":[9,0,7,5,9,6],
+"class_mue_lu_1_1_misc_1_1_block_diagonalize_functor.html#a67a585a0f1d312fc1669b199f04bc8b0":[10,0,2,5,9,6],
+"class_mue_lu_1_1_misc_1_1_block_diagonalize_functor.html#a6f069affadd76f73a1a920a0923cd268":[9,0,7,5,9,2]
 };

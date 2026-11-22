@@ -1,7 +1,5 @@
 var NAVTREEINDEX17 =
 {
-"class_mue_lu_1_1_distance_laplacian_1_1_unweighted_distance_functor.html#af4944803e2e0bbcdf732d12217f98209":[10,0,2,4,0,0],
-"class_mue_lu_1_1_distance_laplacian_1_1_unweighted_distance_functor.html#aff7600d7c76bf01a0591f66356b7f6d6":[9,0,7,4,0,5],
 "class_mue_lu_1_1_distance_laplacian_1_1_unweighted_distance_functor.html#aff7600d7c76bf01a0591f66356b7f6d6":[10,0,2,4,0,5],
 "class_mue_lu_1_1_distance_laplacian_1_1_vector_drop_functor.html":[9,0,7,4,7],
 "class_mue_lu_1_1_distance_laplacian_1_1_vector_drop_functor.html":[10,0,2,4,7],
@@ -249,5 +247,7 @@ var NAVTREEINDEX17 =
 "class_mue_lu_1_1_factory.html#a07c6036d140f9c522227b87d586306f0":[10,0,2,89,2],
 "class_mue_lu_1_1_factory.html#a0d0276a8e5af4cad7be9d002b955f8d0":[9,0,7,97,20],
 "class_mue_lu_1_1_factory.html#a0d0276a8e5af4cad7be9d002b955f8d0":[10,0,2,89,20],
-"class_mue_lu_1_1_factory.html#a27d16374f4005df25deafffb46b67cf7":[9,0,7,97,1]
+"class_mue_lu_1_1_factory.html#a27d16374f4005df25deafffb46b67cf7":[9,0,7,97,1],
+"class_mue_lu_1_1_factory.html#a27d16374f4005df25deafffb46b67cf7":[10,0,2,89,1],
+"class_mue_lu_1_1_factory.html#a314faa92bb48ca9c400aaff1858689c3":[9,0,7,97,17]
 };
