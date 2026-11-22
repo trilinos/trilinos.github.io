@@ -166,11 +166,11 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A factory that creates a block Gauss Seidel preconditioner. The user must specify the solvers (or preconditioners) to use to approximately invert the diagonal operators. </p>
 <p>A factory that creates a block Gauss Seidel preconditioner. The user must specify the solvers (or preconditioners) to use to approximately invert the diagonal operators.</p>
-<p>To invoke this preconditioner using the XML file a diagonal inverse needs to be specified. For example the following XML code creates a Gauss-Seidel preconditioner called "GS-Outer" using Amesos (a direct solver) to invert the diagonal blocks. This will invert the lower triangular portion of the matrix.</p>
+<p>To invoke this preconditioner using the XML file a diagonal inverse needs to be specified. For example the following XML code creates a Gauss-Seidel preconditioner called "GS-Outer" using Amesos2 (a direct solver) to invert the diagonal blocks. This will invert the lower triangular portion of the matrix.</p>
 <pre class="fragment">&lt;ParameterList name="GS-Outer"&gt;
    &lt;Parameter name="Type" type="string" value="Block Gauss-Seidel"/&gt;
    &lt;Parameter name="Use Upper Triangle" type="bool" value="false"/&gt;
-   &lt;Parameter name="Inverse Type" type="string" value="Amesos"/&gt;
+   &lt;Parameter name="Inverse Type" type="string" value="Amesos2"/&gt;
 &lt;/ParameterList&gt;
 </pre><p>Or if you want to specify a different inverse factory for a particular diagonal you can use</p>
 <pre class="fragment">&lt;ParameterList name="GS-Outer"&gt;
@@ -207,7 +207,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Construct a <a class="el" href="class_teko_1_1_preconditioner_factory.html" title="Abstract class which block preconditioner factories in Teko should be based on.">PreconditionerFactory</a> assuming a specific block <picture><source srcset="form_93_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$2\times2$" src="form_93.png"/></picture> matrix. This case is a simple one. </p>
+<p>Construct a <a class="el" href="class_teko_1_1_preconditioner_factory.html" title="Abstract class which block preconditioner factories in Teko should be based on.">PreconditionerFactory</a> assuming a specific block <picture><source srcset="form_84_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$2\times2$" src="form_84.png"/></picture> matrix. This case is a simple one. </p>
 
 <p class="definition">Definition at line <a class="el" href="_teko___gauss_seidel_preconditioner_factory_8cpp_source.html#l00021">21</a> of file <a class="el" href="_teko___gauss_seidel_preconditioner_factory_8cpp_source.html">Teko_GaussSeidelPreconditionerFactory.cpp</a>.</p>
 

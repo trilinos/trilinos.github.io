@@ -706,7 +706,11 @@ If <a class="el" href="namespace_trilinos.html" title="Namespace of things gener
 <div class="line"><a class="code hl_function" href="#a794bfee7c48341bdcd6c2e9e0dd91695">TimeMonitor::report</a> (myComm.<a class="code hl_function" href="class_teuchos_1_1_r_c_p.html#a84fb567279e17b54997201f24191c583">ptr</a> (), ...);</div>
 <div class="ttc" id="aclass_teuchos_1_1_time_monitor_html_a794bfee7c48341bdcd6c2e9e0dd91695"><div class="ttname"><a href="#a794bfee7c48341bdcd6c2e9e0dd91695">Teuchos::TimeMonitor::report</a></div><div class="ttdeci">static void report(Ptr&lt; const Comm&lt; int &gt; &gt; comm, std::ostream &amp;out, const std::string &amp;filter, const RCP&lt; ParameterList &gt; &amp;params=null)</div><div class="ttdoc">Report timer statistics to the given output stream.</div><div class="ttdef"><b>Definition</b> <a href="_teuchos___time_monitor_8cpp_source.html#l01547">Teuchos_TimeMonitor.cpp:1547</a></div></div>
 </div><!-- fragment --></td></tr>
-    <tr><td class="paramname">out</td><td>[out] Output stream to which to write. This will only be used on the process with rank 0 in the communicator.</td></tr>
+    <tr><td class="paramname">out</td><td>[out] Output stream to which to write. With "Table" format, only the process with rank 0 in the communicator writes to it. With "YAML" format, every process writes the full report to it. To write the YAML report only once, wrap the stream in a <a class="el" href="group__teuchos__outputting__grp.html#ga348df63f6befd76c5cfad4f13414b2c7">FancyOStream</a> that writes only on rank 0: <div class="fragment"><div class="line"><a class="code hl_class" href="class_teuchos_1_1_r_c_p.html">RCP&lt;FancyOStream&gt;</a> fos = getFancyOStream (<a class="code hl_function" href="class_teuchos_1_1_r_c_p.html#a6c754d72d6d232c97e38bc359ab6ef82">rcpFromRef</a> (std::cout));</div>
+<div class="line">fos-&gt;setOutputToRootOnly (0);</div>
+<div class="line"><a class="code hl_function" href="#a794bfee7c48341bdcd6c2e9e0dd91695">TimeMonitor::report</a> (*fos, params);</div>
+<div class="ttc" id="aclass_teuchos_1_1_r_c_p_html_a6c754d72d6d232c97e38bc359ab6ef82"><div class="ttname"><a href="class_teuchos_1_1_r_c_p.html#a6c754d72d6d232c97e38bc359ab6ef82">Teuchos::RCP::rcpFromRef</a></div><div class="ttdeci">RCP&lt; T &gt; rcpFromRef(T &amp;r)</div><div class="ttdoc">Return a non-owning weak RCP object from a raw object reference for a defined type.</div></div>
+</div><!-- fragment --></td></tr>
     <tr><td class="paramname">filter</td><td>[in] Filter for timer labels. If filter is not empty, this method will only print timers whose labels begin with this string.</td></tr>
     <tr><td class="paramname">params</td><td>[in/out] Parameters to control output format and which statistics to generate. If null, we use default parameters if this method was not yet called with params nonnull, otherwise we use the previous set of parameters. If nonnull, we read the given parameters, filling in defaults, and use the resulting parameters for all subsequent calls to <a class="el" href="#a794bfee7c48341bdcd6c2e9e0dd91695" title="Report timer statistics to the given output stream.">report()</a> (until new parameters are set).</td></tr>
   </table>
@@ -968,7 +972,7 @@ style" for sequences and mappings whenever possible, except at the outermost lev
 
 <p>Stacked timer for optional injection of timing from TimeMonitor-enabled objects. </p>
 
-<p class="definition">Definition at line <a class="el" href="_teuchos___time_monitor_8hpp_source.html#l00735">735</a> of file <a class="el" href="_teuchos___time_monitor_8hpp_source.html">Teuchos_TimeMonitor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_teuchos___time_monitor_8hpp_source.html#l00743">743</a> of file <a class="el" href="_teuchos___time_monitor_8hpp_source.html">Teuchos_TimeMonitor.hpp</a>.</p>
 
 </div>
 </div>

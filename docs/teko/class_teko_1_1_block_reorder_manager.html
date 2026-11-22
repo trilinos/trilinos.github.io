@@ -154,13 +154,13 @@ Constructors</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class that describes how a flat blocked operator should be reordered. </p>
 <p>Class that describes how a flat blocked operator should be reordered. The semenatics are very similar to a Teuchos::ParameterList. Each level expects you to set the size of the level and define what each subblock is. For example, to change the blocked 3x3 matrix from</p>
-<p><picture><source srcset="form_78_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ Z = \left[\begin{array}{ccc}
+<p><picture><source srcset="form_69_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ Z = \left[\begin{array}{ccc}
       A &amp; B &amp; C \\
       D &amp; E &amp; F \\
       G &amp; H &amp; I
-    \end{array}\right]$" src="form_78.png"/></picture></p>
+    \end{array}\right]$" src="form_69.png"/></picture></p>
 <p>to</p>
-<p><picture><source srcset="form_79_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ Z' = \left[\begin{array}{cc}
+<p><picture><source srcset="form_70_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ Z' = \left[\begin{array}{cc}
     \left[\begin{array}{cc}
        A &amp; B \\
        D &amp; E
@@ -170,7 +170,7 @@ Constructors</h2></td></tr>
     \left[\begin{array}{cc}
       G &amp; H
     \end{array}\right] &amp; I
-    \end{array}\right]$" src="form_79.png"/></picture></p>
+    \end{array}\right]$" src="form_70.png"/></picture></p>
 <p>the algorithm to build the appropriate block manager is</p>
 <p><code>
    RCP&lt;BlockReorderManager&gt; bmm = rcp(new BlockReorderManager(2));<br  />
@@ -179,7 +179,7 @@ Constructors</h2></td></tr>
    bmm-&gt;GetBlock(0)-&gt;SetBlock(1,1);<br  />
    bmm-&gt;SetBlock(1,2);
 </code></p>
-<p>Suppose now you want to take your <picture><source srcset="form_80_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$Z$" src="form_80.png"/></picture> operator and build <picture><source srcset="form_81_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$Z'$" src="form_81.png"/></picture>. The relevant code is</p>
+<p>Suppose now you want to take your <picture><source srcset="form_71_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$Z$" src="form_71.png"/></picture> operator and build <picture><source srcset="form_72_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$Z'$" src="form_72.png"/></picture>. The relevant code is</p>
 <p><code>
    BlockedLinearOp Z = ... <br  />
    LinearOp Zprime = buildReorderedLinearOp(*bmm,Z);

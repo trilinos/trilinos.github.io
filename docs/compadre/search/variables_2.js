@@ -7,5 +7,6 @@ var searchData=
   ['coeffs_5fdim_5f1_4',['Coeffs_dim_1',['../struct_compadre_1_1_g_m_l_s_basis_data.html#a33e089fb260620a52941b1f63781c9d7',1,'Compadre::GMLSBasisData::Coeffs_dim_1'],['../struct_compadre_1_1_g_m_l_s_solution_data.html#acd975a3986184dd0c3a019ba1462d8d9',1,'Compadre::GMLSSolutionData::Coeffs_dim_1']]],
   ['constraint_5fname_5',['constraint_name',['../struct_command_line_processor.html#a7f961403c559e3be04a63ec59d7d618d',1,'CommandLineProcessor']]],
   ['count_6',['count',['../class_compadre_1_1_radius_result_set.html#ab5576b045077c6696440bbaef7c5846e',1,'Compadre::RadiusResultSet']]],
-  ['curvature_5fkernel_5ftype_7',['curvature_kernel_type',['../struct_command_line_processor.html#a8a7873f56df55bc21c093fcac0b71688',1,'CommandLineProcessor']]]
+  ['curvature_5fkernel_5ftype_7',['curvature_kernel_type',['../struct_command_line_processor.html#a8a7873f56df55bc21c093fcac0b71688',1,'CommandLineProcessor']]],
+  ['curvature_5forder_8',['curvature_order',['../struct_command_line_processor.html#a70bc100cff069cb62f5384b35d390df2',1,'CommandLineProcessor']]]
 ];

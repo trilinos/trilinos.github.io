@@ -289,186 +289,183 @@ $(function() {
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>  state-&gt;<a class="code hl_variable" href="class_teko_1_1_n_s_1_1_l_s_c_precond_state.html#ab1f48dfb52ccbeb404b889b7ac8e8184">alpha_</a> = 1.0 / num;</div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>  state-&gt;<a class="code hl_variable" href="class_teko_1_1_n_s_1_1_l_s_c_precond_state.html#a9c862104efe73c628ee163df4fe28c80">aiD_</a>   = Thyra::scale(state-&gt;<a class="code hl_variable" href="class_teko_1_1_n_s_1_1_l_s_c_precond_state.html#ab1f48dfb52ccbeb404b889b7ac8e8184">alpha_</a>, invD);</div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>  Teko_DEBUG_MSG_BEGIN(5) DEBUG_STREAM &lt;&lt; <span class="stringliteral">&quot;PL-LSC Alpha Parameter = &quot;</span> &lt;&lt; state-&gt;<a class="code hl_variable" href="class_teko_1_1_n_s_1_1_l_s_c_precond_state.html#ab1f48dfb52ccbeb404b889b7ac8e8184">alpha_</a> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>  Teko_DEBUG_MSG_END()</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>      state-&gt;<a class="code hl_function" href="class_teko_1_1_preconditioner_state.html#ab4a684832966d11c041bdbf93b696f6b">setInitialized</a>(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>}</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>  Teko_DEBUG_MSG_BEGIN(5)</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    DEBUG_STREAM &lt;&lt; <span class="stringliteral">&quot;PL-LSC Alpha Parameter = &quot;</span> &lt;&lt; state-&gt;<a class="code hl_variable" href="class_teko_1_1_n_s_1_1_l_s_c_precond_state.html#ab1f48dfb52ccbeb404b889b7ac8e8184">alpha_</a> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>  Teko_DEBUG_MSG_END()</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>  state-&gt;<a class="code hl_function" href="class_teko_1_1_preconditioner_state.html#ab4a684832966d11c041bdbf93b696f6b">setInitialized</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>}</div>
 </div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span></div>
-<div class="foldopen" id="foldopen00213" data-start="{" data-end="}">
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno"><a class="line" href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#a96db99695859ad5573c03f8b4fd44b92">  213</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#a96db99695859ad5573c03f8b4fd44b92">PresLaplaceLSCStrategy::computeInverses</a>(<span class="keyword">const</span> BlockedLinearOp&amp; A,</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>                                             <a class="code hl_class" href="class_teko_1_1_n_s_1_1_l_s_c_precond_state.html">LSCPrecondState</a>* state)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>  Teko_DEBUG_SCOPE(<span class="stringliteral">&quot;PresLaplaceLSCStrategy::computeInverses&quot;</span>, 10);</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>  Teko_DEBUG_EXPR(Teuchos::Time invTimer(<span class="stringliteral">&quot;&quot;</span>));</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>  std::string presLapStr = getPressureLaplaceString();</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>  <span class="keyword">const</span> LinearOp F       = <a class="code hl_function" href="_teko___utilities_8hpp.html#a9f49b5676e2c01fe275ed5739ede0f4d">getBlock</a>(0, 0, A);</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>  <span class="keyword">const</span> LinearOp presLap = state-&gt;<a class="code hl_function" href="class_teko_1_1_preconditioner_state.html#aaa94213bd6522e74043e39d34e91e333">getLinearOp</a>(presLapStr);</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span></div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>  <span class="comment">// (re)build the inverse of F</span></div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>  Teko_DEBUG_MSG(<span class="stringliteral">&quot;PL-LSC::computeInverses Building inv(F)&quot;</span>, 1);</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>  Teko_DEBUG_EXPR(invTimer.start(<span class="keyword">true</span>));</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>  ModifiableLinearOp&amp; invF = state-&gt;<a class="code hl_function" href="class_teko_1_1_preconditioner_state.html#a61ab14b6103a855002e07a1ea7162727">getModifiableOp</a>(<span class="stringliteral">&quot;invF&quot;</span>);</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>  <span class="keywordflow">if</span> (invF == Teuchos::null) {</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    invF = buildInverse(*invFactoryV_, F);</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    rebuildInverse(*invFactoryV_, F, invF);</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>  }</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>  Teko_DEBUG_EXPR(invTimer.stop());</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>  Teko_DEBUG_MSG(<span class="stringliteral">&quot;PL-LSC::computeInverses GetInvF = &quot;</span> &lt;&lt; invTimer.totalElapsedTime(), 1);</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span></div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>  <span class="comment">// (re)build the inverse of P</span></div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>  Teko_DEBUG_MSG(<span class="stringliteral">&quot;PL-LSC::computeInverses Building inv(PresLap)&quot;</span>, 1);</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>  Teko_DEBUG_EXPR(invTimer.start(<span class="keyword">true</span>));</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>  ModifiableLinearOp&amp; invPresLap = state-&gt;<a class="code hl_function" href="class_teko_1_1_preconditioner_state.html#a61ab14b6103a855002e07a1ea7162727">getModifiableOp</a>(<span class="stringliteral">&quot;invPresLap&quot;</span>);</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>  <span class="keywordflow">if</span> (invPresLap == Teuchos::null) {</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    invPresLap = buildInverse(*invFactoryP_, presLap);</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    <span class="comment">// not need because the pressure laplacian never changes</span></div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    <span class="comment">// rebuildInverse(*invFactoryP_,presLap,invPresLap);</span></div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>  }</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>  Teko_DEBUG_EXPR(invTimer.stop());</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>  Teko_DEBUG_MSG(<span class="stringliteral">&quot;PL-LSC::computeInverses GetInvBQBt = &quot;</span> &lt;&lt; invTimer.totalElapsedTime(), 1);</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>}</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span></div>
+<div class="foldopen" id="foldopen00214" data-start="{" data-end="}">
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno"><a class="line" href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#a96db99695859ad5573c03f8b4fd44b92">  214</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#a96db99695859ad5573c03f8b4fd44b92">PresLaplaceLSCStrategy::computeInverses</a>(<span class="keyword">const</span> BlockedLinearOp&amp; A,</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>                                             <a class="code hl_class" href="class_teko_1_1_n_s_1_1_l_s_c_precond_state.html">LSCPrecondState</a>* state)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>  Teko_DEBUG_SCOPE(<span class="stringliteral">&quot;PresLaplaceLSCStrategy::computeInverses&quot;</span>, 10);</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>  Teko_DEBUG_EXPR(Teuchos::Time invTimer(<span class="stringliteral">&quot;&quot;</span>));</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>  std::string presLapStr = getPressureLaplaceString();</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span> </div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>  <span class="keyword">const</span> LinearOp F       = <a class="code hl_function" href="_teko___utilities_8hpp.html#a9f49b5676e2c01fe275ed5739ede0f4d">getBlock</a>(0, 0, A);</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>  <span class="keyword">const</span> LinearOp presLap = state-&gt;<a class="code hl_function" href="class_teko_1_1_preconditioner_state.html#aaa94213bd6522e74043e39d34e91e333">getLinearOp</a>(presLapStr);</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span></div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>  <span class="comment">// (re)build the inverse of F</span></div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>  Teko_DEBUG_MSG(<span class="stringliteral">&quot;PL-LSC::computeInverses Building inv(F)&quot;</span>, 1);</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>  Teko_DEBUG_EXPR(invTimer.start(<span class="keyword">true</span>));</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>  ModifiableLinearOp&amp; invF = state-&gt;<a class="code hl_function" href="class_teko_1_1_preconditioner_state.html#a61ab14b6103a855002e07a1ea7162727">getModifiableOp</a>(<span class="stringliteral">&quot;invF&quot;</span>);</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>  <span class="keywordflow">if</span> (invF == Teuchos::null) {</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    invF = buildInverse(*invFactoryV_, F);</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    rebuildInverse(*invFactoryV_, F, invF);</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>  }</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>  Teko_DEBUG_EXPR(invTimer.stop());</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>  Teko_DEBUG_MSG(<span class="stringliteral">&quot;PL-LSC::computeInverses GetInvF = &quot;</span> &lt;&lt; invTimer.totalElapsedTime(), 1);</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span></div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span> </div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>  <span class="comment">// (re)build the inverse of P</span></div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>  Teko_DEBUG_MSG(<span class="stringliteral">&quot;PL-LSC::computeInverses Building inv(PresLap)&quot;</span>, 1);</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>  Teko_DEBUG_EXPR(invTimer.start(<span class="keyword">true</span>));</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>  ModifiableLinearOp&amp; invPresLap = state-&gt;<a class="code hl_function" href="class_teko_1_1_preconditioner_state.html#a61ab14b6103a855002e07a1ea7162727">getModifiableOp</a>(<span class="stringliteral">&quot;invPresLap&quot;</span>);</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>  <span class="keywordflow">if</span> (invPresLap == Teuchos::null) {</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    invPresLap = buildInverse(*invFactoryP_, presLap);</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    <span class="comment">// not need because the pressure laplacian never changes</span></div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    <span class="comment">// rebuildInverse(*invFactoryP_,presLap,invPresLap);</span></div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>  }</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>  Teko_DEBUG_EXPR(invTimer.stop());</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>  Teko_DEBUG_MSG(<span class="stringliteral">&quot;PL-LSC::computeInverses GetInvBQBt = &quot;</span> &lt;&lt; invTimer.totalElapsedTime(), 1);</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>}</div>
 </div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span></div>
-<div class="foldopen" id="foldopen00254" data-start="{" data-end="}">
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno"><a class="line" href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#a04b805e5729d92764b0c306d7ed5c8be">  254</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#a04b805e5729d92764b0c306d7ed5c8be">PresLaplaceLSCStrategy::initializeFromParameterList</a>(<span class="keyword">const</span> Teuchos::ParameterList&amp; pl,</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>                                                         <span class="keyword">const</span> InverseLibrary&amp; invLib) {</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>  <span class="comment">// get string specifying inverse</span></div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>  std::string invStr = <span class="stringliteral">&quot;&quot;</span>, invVStr = <span class="stringliteral">&quot;&quot;</span>, invPStr = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span><span class="preprocessor">#if defined(Teko_ENABLE_Amesos)</span></div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>  invStr = <span class="stringliteral">&quot;Amesos&quot;</span>;</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span><span class="preprocessor">#elif defined(Teko_ENABLE_Amesos2)</span></div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>  invStr = <span class="stringliteral">&quot;Amesos2&quot;</span>;</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span> </div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>  <span class="keywordtype">bool</span> useLDU = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>  scaleType_  = <a class="code hl_enumvalue" href="_teko___utilities_8hpp.html#a4b6c5456ff86db747c9c0b836648b4d2a9c4fb6f601a380fe75256994cba726cd">AbsRowSum</a>;</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>  <span class="comment">// &quot;parse&quot; the parameter list</span></div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>  <span class="keywordflow">if</span> (pl.isParameter(<span class="stringliteral">&quot;Inverse Type&quot;</span>)) invStr = pl.get&lt;std::string&gt;(<span class="stringliteral">&quot;Inverse Type&quot;</span>);</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>  <span class="keywordflow">if</span> (pl.isParameter(<span class="stringliteral">&quot;Inverse Velocity Type&quot;</span>))</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    invVStr = pl.get&lt;std::string&gt;(<span class="stringliteral">&quot;Inverse Velocity Type&quot;</span>);</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>  <span class="keywordflow">if</span> (pl.isParameter(<span class="stringliteral">&quot;Inverse Pressure Type&quot;</span>))</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    invPStr = pl.get&lt;std::string&gt;(<span class="stringliteral">&quot;Inverse Pressure Type&quot;</span>);</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>  <span class="keywordflow">if</span> (pl.isParameter(<span class="stringliteral">&quot;Use LDU&quot;</span>)) useLDU = pl.get&lt;<span class="keywordtype">bool</span>&gt;(<span class="stringliteral">&quot;Use LDU&quot;</span>);</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>  <span class="keywordflow">if</span> (pl.isParameter(<span class="stringliteral">&quot;Use Mass Scaling&quot;</span>)) useMass_ = pl.get&lt;<span class="keywordtype">bool</span>&gt;(<span class="stringliteral">&quot;Use Mass Scaling&quot;</span>);</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>  <span class="keywordflow">if</span> (pl.isParameter(<span class="stringliteral">&quot;Eigen Solver Iterations&quot;</span>))</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    eigSolveParam_ = pl.get&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;Eigen Solver Iterations&quot;</span>);</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>  <span class="keywordflow">if</span> (pl.isParameter(<span class="stringliteral">&quot;Scaling Type&quot;</span>)) {</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    scaleType_ = getDiagonalType(pl.get&lt;std::string&gt;(<span class="stringliteral">&quot;Scaling Type&quot;</span>));</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    TEUCHOS_TEST_FOR_EXCEPT(scaleType_ == <a class="code hl_enumvalue" href="_teko___utilities_8hpp.html#a4b6c5456ff86db747c9c0b836648b4d2a5afc99f563e06bd442f06603a86d122b">NotDiag</a>);</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>  }</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span></div>
+<div class="foldopen" id="foldopen00255" data-start="{" data-end="}">
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno"><a class="line" href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#a04b805e5729d92764b0c306d7ed5c8be">  255</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#a04b805e5729d92764b0c306d7ed5c8be">PresLaplaceLSCStrategy::initializeFromParameterList</a>(<span class="keyword">const</span> Teuchos::ParameterList&amp; pl,</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>                                                         <span class="keyword">const</span> InverseLibrary&amp; invLib) {</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>  <span class="comment">// get string specifying inverse</span></div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>  std::string invStr = <span class="stringliteral">&quot;Amesos2&quot;</span>, invVStr = <span class="stringliteral">&quot;&quot;</span>, invPStr = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span> </div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>  <span class="keywordtype">bool</span> useLDU = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>  scaleType_  = <a class="code hl_enumvalue" href="_teko___utilities_8hpp.html#a4b6c5456ff86db747c9c0b836648b4d2a9c4fb6f601a380fe75256994cba726cd">AbsRowSum</a>;</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span> </div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>  <span class="comment">// &quot;parse&quot; the parameter list</span></div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>  <span class="keywordflow">if</span> (pl.isParameter(<span class="stringliteral">&quot;Inverse Type&quot;</span>)) invStr = pl.get&lt;std::string&gt;(<span class="stringliteral">&quot;Inverse Type&quot;</span>);</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>  <span class="keywordflow">if</span> (pl.isParameter(<span class="stringliteral">&quot;Inverse Velocity Type&quot;</span>))</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    invVStr = pl.get&lt;std::string&gt;(<span class="stringliteral">&quot;Inverse Velocity Type&quot;</span>);</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>  <span class="keywordflow">if</span> (pl.isParameter(<span class="stringliteral">&quot;Inverse Pressure Type&quot;</span>))</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    invPStr = pl.get&lt;std::string&gt;(<span class="stringliteral">&quot;Inverse Pressure Type&quot;</span>);</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>  <span class="keywordflow">if</span> (pl.isParameter(<span class="stringliteral">&quot;Use LDU&quot;</span>)) useLDU = pl.get&lt;<span class="keywordtype">bool</span>&gt;(<span class="stringliteral">&quot;Use LDU&quot;</span>);</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>  <span class="keywordflow">if</span> (pl.isParameter(<span class="stringliteral">&quot;Use Mass Scaling&quot;</span>)) useMass_ = pl.get&lt;<span class="keywordtype">bool</span>&gt;(<span class="stringliteral">&quot;Use Mass Scaling&quot;</span>);</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>  <span class="keywordflow">if</span> (pl.isParameter(<span class="stringliteral">&quot;Eigen Solver Iterations&quot;</span>))</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    eigSolveParam_ = pl.get&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;Eigen Solver Iterations&quot;</span>);</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>  <span class="keywordflow">if</span> (pl.isParameter(<span class="stringliteral">&quot;Scaling Type&quot;</span>)) {</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    scaleType_ = getDiagonalType(pl.get&lt;std::string&gt;(<span class="stringliteral">&quot;Scaling Type&quot;</span>));</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    TEUCHOS_TEST_FOR_EXCEPT(scaleType_ == <a class="code hl_enumvalue" href="_teko___utilities_8hpp.html#a4b6c5456ff86db747c9c0b836648b4d2a5afc99f563e06bd442f06603a86d122b">NotDiag</a>);</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>  }</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>  <span class="comment">// set defaults as needed</span></div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>  <span class="keywordflow">if</span> (invVStr == <span class="stringliteral">&quot;&quot;</span>) invVStr = invStr;</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>  <span class="keywordflow">if</span> (invPStr == <span class="stringliteral">&quot;&quot;</span>) invPStr = invStr;</div>
 <div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span> </div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>  <span class="comment">// set defaults as needed</span></div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>  <span class="keywordflow">if</span> (invVStr == <span class="stringliteral">&quot;&quot;</span>) invVStr = invStr;</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>  <span class="keywordflow">if</span> (invPStr == <span class="stringliteral">&quot;&quot;</span>) invPStr = invStr;</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span> </div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>  Teko_DEBUG_MSG_BEGIN(5) DEBUG_STREAM &lt;&lt; <span class="stringliteral">&quot;LSC Inverse Strategy Parameters: &quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>  DEBUG_STREAM &lt;&lt; <span class="stringliteral">&quot;   inv v type = \&quot;&quot;</span> &lt;&lt; invVStr &lt;&lt; <span class="stringliteral">&quot;\&quot;&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>  DEBUG_STREAM &lt;&lt; <span class="stringliteral">&quot;   inv p type = \&quot;&quot;</span> &lt;&lt; invPStr &lt;&lt; <span class="stringliteral">&quot;\&quot;&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>  DEBUG_STREAM &lt;&lt; <span class="stringliteral">&quot;   use ldu    = &quot;</span> &lt;&lt; useLDU &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>  DEBUG_STREAM &lt;&lt; <span class="stringliteral">&quot;   use mass    = &quot;</span> &lt;&lt; useMass_ &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>  DEBUG_STREAM &lt;&lt; <span class="stringliteral">&quot;   scale type    = &quot;</span> &lt;&lt; getDiagonalName(scaleType_) &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>  DEBUG_STREAM &lt;&lt; <span class="stringliteral">&quot;LSC  Pressure Laplace Strategy Parameter list: &quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>  pl.print(DEBUG_STREAM);</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>  Teko_DEBUG_MSG_END()</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span> </div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>      <span class="comment">// build velocity inverse factory</span></div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>      invFactoryV_ = invLib.getInverseFactory(invVStr);</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>  invFactoryP_     = invFactoryV_;  <span class="comment">// by default these are the same</span></div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>  <span class="keywordflow">if</span> (invVStr != invPStr)           <span class="comment">// if different, build pressure inverse factory</span></div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    invFactoryP_ = invLib.getInverseFactory(invPStr);</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span> </div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>  <span class="comment">// set other parameters</span></div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>  <a class="code hl_function" href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#ab44e00bd95f275611408476bb6096c9a">setUseFullLDU</a>(useLDU);</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>}</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>  Teko_DEBUG_MSG_BEGIN(5)</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    DEBUG_STREAM &lt;&lt; <span class="stringliteral">&quot;LSC Inverse Strategy Parameters: &quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    DEBUG_STREAM &lt;&lt; <span class="stringliteral">&quot;   inv v type = \&quot;&quot;</span> &lt;&lt; invVStr &lt;&lt; <span class="stringliteral">&quot;\&quot;&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    DEBUG_STREAM &lt;&lt; <span class="stringliteral">&quot;   inv p type = \&quot;&quot;</span> &lt;&lt; invPStr &lt;&lt; <span class="stringliteral">&quot;\&quot;&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    DEBUG_STREAM &lt;&lt; <span class="stringliteral">&quot;   use ldu    = &quot;</span> &lt;&lt; useLDU &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    DEBUG_STREAM &lt;&lt; <span class="stringliteral">&quot;   use mass    = &quot;</span> &lt;&lt; useMass_ &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    DEBUG_STREAM &lt;&lt; <span class="stringliteral">&quot;   scale type    = &quot;</span> &lt;&lt; getDiagonalName(scaleType_) &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    DEBUG_STREAM &lt;&lt; <span class="stringliteral">&quot;LSC  Pressure Laplace Strategy Parameter list: &quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    pl.print(DEBUG_STREAM);</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>  Teko_DEBUG_MSG_END()</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span> </div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>  <span class="comment">// build velocity inverse factory</span></div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>  invFactoryV_ = invLib.getInverseFactory(invVStr);</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>  invFactoryP_ = invFactoryV_;  <span class="comment">// by default these are the same</span></div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>  <span class="keywordflow">if</span> (invVStr != invPStr)       <span class="comment">// if different, build pressure inverse factory</span></div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    invFactoryP_ = invLib.getInverseFactory(invPStr);</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>  <span class="comment">// set other parameters</span></div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>  <a class="code hl_function" href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#ab44e00bd95f275611408476bb6096c9a">setUseFullLDU</a>(useLDU);</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>}</div>
 </div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span></div>
-<div class="foldopen" id="foldopen00307" data-start="{" data-end="}">
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno"><a class="line" href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#a6e139b0a453cc8de33235b3fb7af75ab">  307</a></span>Teuchos::RCP&lt;Teuchos::ParameterList&gt; <a class="code hl_function" href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#a6e139b0a453cc8de33235b3fb7af75ab">PresLaplaceLSCStrategy::getRequestedParameters</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>  Teko_DEBUG_SCOPE(<span class="stringliteral">&quot;PresLaplaceLSCStrategy::getRequestedParameters&quot;</span>, 10);</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>  Teuchos::RCP&lt;Teuchos::ParameterList&gt; pl = rcp(<span class="keyword">new</span> Teuchos::ParameterList());</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span> </div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>  <span class="comment">// grab parameters from F solver</span></div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>  RCP&lt;Teuchos::ParameterList&gt; fList = invFactoryV_-&gt;getRequestedParameters();</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>  <span class="keywordflow">if</span> (fList != Teuchos::null) {</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    Teuchos::ParameterList::ConstIterator itr;</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>    <span class="keywordflow">for</span> (itr = fList-&gt;begin(); itr != fList-&gt;end(); ++itr) pl-&gt;setEntry(itr-&gt;first, itr-&gt;second);</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>  }</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span> </div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>  <span class="comment">// grab parameters from S solver</span></div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>  RCP&lt;Teuchos::ParameterList&gt; sList = invFactoryP_-&gt;getRequestedParameters();</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>  <span class="keywordflow">if</span> (sList != Teuchos::null) {</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    Teuchos::ParameterList::ConstIterator itr;</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>    <span class="keywordflow">for</span> (itr = sList-&gt;begin(); itr != sList-&gt;end(); ++itr) pl-&gt;setEntry(itr-&gt;first, itr-&gt;second);</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>  }</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span> </div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>  <span class="comment">// use the mass matrix</span></div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>  <span class="keywordflow">if</span> (useMass_) pl-&gt;set(getVelocityMassString(), <span class="keyword">false</span>, <span class="stringliteral">&quot;Velocity mass matrix&quot;</span>);</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>  pl-&gt;set(getPressureLaplaceString(), <span class="keyword">false</span>, <span class="stringliteral">&quot;Pressure Laplacian matrix&quot;</span>);</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span> </div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>  <span class="keywordflow">return</span> pl;</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>}</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span></div>
+<div class="foldopen" id="foldopen00304" data-start="{" data-end="}">
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno"><a class="line" href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#a6e139b0a453cc8de33235b3fb7af75ab">  304</a></span>Teuchos::RCP&lt;Teuchos::ParameterList&gt; <a class="code hl_function" href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#a6e139b0a453cc8de33235b3fb7af75ab">PresLaplaceLSCStrategy::getRequestedParameters</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>  Teko_DEBUG_SCOPE(<span class="stringliteral">&quot;PresLaplaceLSCStrategy::getRequestedParameters&quot;</span>, 10);</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>  Teuchos::RCP&lt;Teuchos::ParameterList&gt; pl = rcp(<span class="keyword">new</span> Teuchos::ParameterList());</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span> </div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>  <span class="comment">// grab parameters from F solver</span></div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>  RCP&lt;Teuchos::ParameterList&gt; fList = invFactoryV_-&gt;getRequestedParameters();</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>  <span class="keywordflow">if</span> (fList != Teuchos::null) {</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>    Teuchos::ParameterList::ConstIterator itr;</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>    <span class="keywordflow">for</span> (itr = fList-&gt;begin(); itr != fList-&gt;end(); ++itr) pl-&gt;setEntry(itr-&gt;first, itr-&gt;second);</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>  }</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span> </div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>  <span class="comment">// grab parameters from S solver</span></div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>  RCP&lt;Teuchos::ParameterList&gt; sList = invFactoryP_-&gt;getRequestedParameters();</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>  <span class="keywordflow">if</span> (sList != Teuchos::null) {</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    Teuchos::ParameterList::ConstIterator itr;</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>    <span class="keywordflow">for</span> (itr = sList-&gt;begin(); itr != sList-&gt;end(); ++itr) pl-&gt;setEntry(itr-&gt;first, itr-&gt;second);</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>  }</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span> </div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>  <span class="comment">// use the mass matrix</span></div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>  <span class="keywordflow">if</span> (useMass_) pl-&gt;set(getVelocityMassString(), <span class="keyword">false</span>, <span class="stringliteral">&quot;Velocity mass matrix&quot;</span>);</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>  pl-&gt;set(getPressureLaplaceString(), <span class="keyword">false</span>, <span class="stringliteral">&quot;Pressure Laplacian matrix&quot;</span>);</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span> </div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>  <span class="keywordflow">return</span> pl;</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>}</div>
 </div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span></div>
-<div class="foldopen" id="foldopen00333" data-start="{" data-end="}">
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno"><a class="line" href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#a5410687b232609b0ec14cd482eb35ffc">  333</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#a5410687b232609b0ec14cd482eb35ffc">PresLaplaceLSCStrategy::updateRequestedParameters</a>(<span class="keyword">const</span> Teuchos::ParameterList&amp; pl) {</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>  Teko_DEBUG_SCOPE(<span class="stringliteral">&quot;PresLaplaceLSCStrategy::updateRequestedParameters&quot;</span>, 10);</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>  <span class="keywordtype">bool</span> result = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span> </div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>  <span class="comment">// update requested parameters in solvers</span></div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>  result &amp;= invFactoryV_-&gt;updateRequestedParameters(pl);</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>  result &amp;= invFactoryP_-&gt;updateRequestedParameters(pl);</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span> </div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>  Teuchos::ParameterList hackList(pl);</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span></div>
+<div class="foldopen" id="foldopen00330" data-start="{" data-end="}">
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno"><a class="line" href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#a5410687b232609b0ec14cd482eb35ffc">  330</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#a5410687b232609b0ec14cd482eb35ffc">PresLaplaceLSCStrategy::updateRequestedParameters</a>(<span class="keyword">const</span> Teuchos::ParameterList&amp; pl) {</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>  Teko_DEBUG_SCOPE(<span class="stringliteral">&quot;PresLaplaceLSCStrategy::updateRequestedParameters&quot;</span>, 10);</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>  <span class="keywordtype">bool</span> result = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span> </div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>  <span class="comment">// update requested parameters in solvers</span></div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>  result &amp;= invFactoryV_-&gt;updateRequestedParameters(pl);</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>  result &amp;= invFactoryP_-&gt;updateRequestedParameters(pl);</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span> </div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>  Teuchos::ParameterList hackList(pl);</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span> </div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>  <span class="comment">// get required operator acknowledgment...user must set these to true</span></div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>  <span class="keywordtype">bool</span> plo = hackList.get&lt;<span class="keywordtype">bool</span>&gt;(getPressureLaplaceString(), <span class="keyword">false</span>);</div>
 <div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span> </div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>  <span class="comment">// get required operator acknowledgment...user must set these to true</span></div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>  <span class="keywordtype">bool</span> plo = hackList.get&lt;<span class="keywordtype">bool</span>&gt;(getPressureLaplaceString(), <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>  <span class="keywordtype">bool</span> vmo = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>  <span class="keywordflow">if</span> (useMass_) vmo = hackList.get&lt;<span class="keywordtype">bool</span>&gt;(getVelocityMassString(), <span class="keyword">false</span>);</div>
 <div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span> </div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>  <span class="keywordtype">bool</span> vmo = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>  <span class="keywordflow">if</span> (useMass_) vmo = hackList.get&lt;<span class="keywordtype">bool</span>&gt;(getVelocityMassString(), <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span> </div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>  <span class="keywordflow">if</span> (not plo) {</div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>    Teko_DEBUG_MSG(<span class="stringliteral">&quot;User must acknowledge the use of the \&quot;&quot;</span> &lt;&lt; getPressureLaplaceString() &lt;&lt; <span class="stringliteral">&quot;\&quot;!&quot;</span>,</div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>                   0);</div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>  }</div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>  <span class="keywordflow">if</span> (not vmo) {</div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>    Teko_DEBUG_MSG(<span class="stringliteral">&quot;User must acknowledge the use of the \&quot;&quot;</span> &lt;&lt; getVelocityMassString() &lt;&lt; <span class="stringliteral">&quot;\&quot;!&quot;</span>,</div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>                   0);</div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>  }</div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span> </div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>  result &amp;= (plo &amp; vmo);</div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span> </div>
-<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>  <span class="keywordflow">return</span> result;</div>
-<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>}</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>  <span class="keywordflow">if</span> (not plo) {</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    Teko_DEBUG_MSG(<span class="stringliteral">&quot;User must acknowledge the use of the \&quot;&quot;</span> &lt;&lt; getPressureLaplaceString() &lt;&lt; <span class="stringliteral">&quot;\&quot;!&quot;</span>,</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>                   0);</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>  }</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>  <span class="keywordflow">if</span> (not vmo) {</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>    Teko_DEBUG_MSG(<span class="stringliteral">&quot;User must acknowledge the use of the \&quot;&quot;</span> &lt;&lt; getVelocityMassString() &lt;&lt; <span class="stringliteral">&quot;\&quot;!&quot;</span>,</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>                   0);</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>  }</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span> </div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>  result &amp;= (plo &amp; vmo);</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span> </div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>}</div>
 </div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span> </div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>}  <span class="comment">// end namespace NS</span></div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>}  <span class="comment">// end namespace Teko</span></div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span> </div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>}  <span class="comment">// end namespace NS</span></div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>}  <span class="comment">// end namespace Teko</span></div>
 <div class="ttc" id="a_teko___utilities_8hpp_html"><div class="ttname"><a href="_teko___utilities_8hpp.html">Teko_Utilities.hpp</a></div></div>
-<div class="ttc" id="a_teko___utilities_8hpp_html_a4b6c5456ff86db747c9c0b836648b4d2a5afc99f563e06bd442f06603a86d122b"><div class="ttname"><a href="_teko___utilities_8hpp.html#a4b6c5456ff86db747c9c0b836648b4d2a5afc99f563e06bd442f06603a86d122b">Teko::NotDiag</a></div><div class="ttdeci">@ NotDiag</div><div class="ttdoc">For user convenience, if Teko recieves this value, exceptions will be thrown.</div><div class="ttdef"><b>Definition</b> <a href="_teko___utilities_8hpp_source.html#l00818">Teko_Utilities.hpp:818</a></div></div>
-<div class="ttc" id="a_teko___utilities_8hpp_html_a4b6c5456ff86db747c9c0b836648b4d2a9c4fb6f601a380fe75256994cba726cd"><div class="ttname"><a href="_teko___utilities_8hpp.html#a4b6c5456ff86db747c9c0b836648b4d2a9c4fb6f601a380fe75256994cba726cd">Teko::AbsRowSum</a></div><div class="ttdeci">@ AbsRowSum</div><div class="ttdoc">Specifies that the  diagonal entry is .</div><div class="ttdef"><b>Definition</b> <a href="_teko___utilities_8hpp_source.html#l00814">Teko_Utilities.hpp:814</a></div></div>
-<div class="ttc" id="a_teko___utilities_8hpp_html_a9f49b5676e2c01fe275ed5739ede0f4d"><div class="ttname"><a href="_teko___utilities_8hpp.html#a9f49b5676e2c01fe275ed5739ede0f4d">Teko::getBlock</a></div><div class="ttdeci">MultiVector getBlock(int i, const BlockedMultiVector &amp;bmv)</div><div class="ttdoc">Get the ith block from a BlockedMultiVector object.</div><div class="ttdef"><b>Definition</b> <a href="_teko___utilities_8hpp_source.html#l00206">Teko_Utilities.hpp:206</a></div></div>
+<div class="ttc" id="a_teko___utilities_8hpp_html_a4b6c5456ff86db747c9c0b836648b4d2a5afc99f563e06bd442f06603a86d122b"><div class="ttname"><a href="_teko___utilities_8hpp.html#a4b6c5456ff86db747c9c0b836648b4d2a5afc99f563e06bd442f06603a86d122b">Teko::NotDiag</a></div><div class="ttdeci">@ NotDiag</div><div class="ttdoc">For user convenience, if Teko recieves this value, exceptions will be thrown.</div><div class="ttdef"><b>Definition</b> <a href="_teko___utilities_8hpp_source.html#l00797">Teko_Utilities.hpp:797</a></div></div>
+<div class="ttc" id="a_teko___utilities_8hpp_html_a4b6c5456ff86db747c9c0b836648b4d2a9c4fb6f601a380fe75256994cba726cd"><div class="ttname"><a href="_teko___utilities_8hpp.html#a4b6c5456ff86db747c9c0b836648b4d2a9c4fb6f601a380fe75256994cba726cd">Teko::AbsRowSum</a></div><div class="ttdeci">@ AbsRowSum</div><div class="ttdoc">Specifies that the  diagonal entry is .</div><div class="ttdef"><b>Definition</b> <a href="_teko___utilities_8hpp_source.html#l00793">Teko_Utilities.hpp:793</a></div></div>
+<div class="ttc" id="a_teko___utilities_8hpp_html_a9f49b5676e2c01fe275ed5739ede0f4d"><div class="ttname"><a href="_teko___utilities_8hpp.html#a9f49b5676e2c01fe275ed5739ede0f4d">Teko::getBlock</a></div><div class="ttdeci">MultiVector getBlock(int i, const BlockedMultiVector &amp;bmv)</div><div class="ttdoc">Get the ith block from a BlockedMultiVector object.</div><div class="ttdef"><b>Definition</b> <a href="_teko___utilities_8hpp_source.html#l00190">Teko_Utilities.hpp:190</a></div></div>
 <div class="ttc" id="aclass_teko_1_1_block_preconditioner_state_html"><div class="ttname"><a href="class_teko_1_1_block_preconditioner_state.html">Teko::BlockPreconditionerState</a></div><div class="ttdoc">An implementation of a state object for block preconditioners.</div><div class="ttdef"><b>Definition</b> <a href="_teko___block_preconditioner_factory_8hpp_source.html#l00043">Teko_BlockPreconditionerFactory.hpp:43</a></div></div>
 <div class="ttc" id="aclass_teko_1_1_n_s_1_1_l_s_c_precond_state_html"><div class="ttname"><a href="class_teko_1_1_n_s_1_1_l_s_c_precond_state.html">Teko::NS::LSCPrecondState</a></div><div class="ttdoc">Preconditioner state for the LSC factory.</div><div class="ttdef"><b>Definition</b> <a href="_teko___l_s_c_preconditioner_factory_8hpp_source.html#l00027">Teko_LSCPreconditionerFactory.hpp:27</a></div></div>
 <div class="ttc" id="aclass_teko_1_1_n_s_1_1_l_s_c_precond_state_html_a935851bd9c2896d529877d6490fcd495"><div class="ttname"><a href="class_teko_1_1_n_s_1_1_l_s_c_precond_state.html#a935851bd9c2896d529877d6490fcd495">Teko::NS::LSCPrecondState::invMass_</a></div><div class="ttdeci">LinearOp invMass_</div><div class="ttdoc">Inverse mass operator ( ).</div><div class="ttdef"><b>Definition</b> <a href="_teko___l_s_c_preconditioner_factory_8hpp_source.html#l00032">Teko_LSCPreconditionerFactory.hpp:32</a></div></div>
 <div class="ttc" id="aclass_teko_1_1_n_s_1_1_l_s_c_precond_state_html_a9c862104efe73c628ee163df4fe28c80"><div class="ttname"><a href="class_teko_1_1_n_s_1_1_l_s_c_precond_state.html#a9c862104efe73c628ee163df4fe28c80">Teko::NS::LSCPrecondState::aiD_</a></div><div class="ttdeci">LinearOp aiD_</div><div class="ttdoc">where</div><div class="ttdef"><b>Definition</b> <a href="_teko___l_s_c_preconditioner_factory_8hpp_source.html#l00053">Teko_LSCPreconditionerFactory.hpp:53</a></div></div>
 <div class="ttc" id="aclass_teko_1_1_n_s_1_1_l_s_c_precond_state_html_ab1f48dfb52ccbeb404b889b7ac8e8184"><div class="ttname"><a href="class_teko_1_1_n_s_1_1_l_s_c_precond_state.html#ab1f48dfb52ccbeb404b889b7ac8e8184">Teko::NS::LSCPrecondState::alpha_</a></div><div class="ttdeci">double alpha_</div><div class="ttdef"><b>Definition</b> <a href="_teko___l_s_c_preconditioner_factory_8hpp_source.html#l00061">Teko_LSCPreconditionerFactory.hpp:61</a></div></div>
-<div class="ttc" id="aclass_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy_html_a04b805e5729d92764b0c306d7ed5c8be"><div class="ttname"><a href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#a04b805e5729d92764b0c306d7ed5c8be">Teko::NS::PresLaplaceLSCStrategy::initializeFromParameterList</a></div><div class="ttdeci">virtual void initializeFromParameterList(const Teuchos::ParameterList &amp;pl, const InverseLibrary &amp;invLib)</div><div class="ttdoc">Initialize from a parameter list.</div><div class="ttdef"><b>Definition</b> <a href="#l00254">Teko_PresLaplaceLSCStrategy.cpp:254</a></div></div>
+<div class="ttc" id="aclass_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy_html_a04b805e5729d92764b0c306d7ed5c8be"><div class="ttname"><a href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#a04b805e5729d92764b0c306d7ed5c8be">Teko::NS::PresLaplaceLSCStrategy::initializeFromParameterList</a></div><div class="ttdeci">virtual void initializeFromParameterList(const Teuchos::ParameterList &amp;pl, const InverseLibrary &amp;invLib)</div><div class="ttdoc">Initialize from a parameter list.</div><div class="ttdef"><b>Definition</b> <a href="#l00255">Teko_PresLaplaceLSCStrategy.cpp:255</a></div></div>
 <div class="ttc" id="aclass_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy_html_a3ae25ddab9842f671d6743aa9eb51f08"><div class="ttname"><a href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#a3ae25ddab9842f671d6743aa9eb51f08">Teko::NS::PresLaplaceLSCStrategy::initializeState</a></div><div class="ttdeci">virtual void initializeState(const BlockedLinearOp &amp;A, LSCPrecondState *state) const</div><div class="ttdoc">Initialize the state object using this blocked linear operator.</div><div class="ttdef"><b>Definition</b> <a href="#l00137">Teko_PresLaplaceLSCStrategy.cpp:137</a></div></div>
 <div class="ttc" id="aclass_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy_html_a3f10cc39ac47138a6af667bc8d37abcb"><div class="ttname"><a href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#a3f10cc39ac47138a6af667bc8d37abcb">Teko::NS::PresLaplaceLSCStrategy::getHScaling</a></div><div class="ttdeci">virtual LinearOp getHScaling(const BlockedLinearOp &amp;A, BlockPreconditionerState &amp;state) const</div><div class="ttdef"><b>Definition</b> <a href="#l00131">Teko_PresLaplaceLSCStrategy.cpp:131</a></div></div>
 <div class="ttc" id="aclass_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy_html_a5325270dbb5b6bf413cb5ea4d362ee3c"><div class="ttname"><a href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#a5325270dbb5b6bf413cb5ea4d362ee3c">Teko::NS::PresLaplaceLSCStrategy::getInvMass</a></div><div class="ttdeci">virtual LinearOp getInvMass(const BlockedLinearOp &amp;A, BlockPreconditionerState &amp;state) const</div><div class="ttdef"><b>Definition</b> <a href="#l00122">Teko_PresLaplaceLSCStrategy.cpp:122</a></div></div>
-<div class="ttc" id="aclass_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy_html_a5410687b232609b0ec14cd482eb35ffc"><div class="ttname"><a href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#a5410687b232609b0ec14cd482eb35ffc">Teko::NS::PresLaplaceLSCStrategy::updateRequestedParameters</a></div><div class="ttdeci">virtual bool updateRequestedParameters(const Teuchos::ParameterList &amp;pl)</div><div class="ttdoc">For assiting in construction of the preconditioner.</div><div class="ttdef"><b>Definition</b> <a href="#l00333">Teko_PresLaplaceLSCStrategy.cpp:333</a></div></div>
+<div class="ttc" id="aclass_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy_html_a5410687b232609b0ec14cd482eb35ffc"><div class="ttname"><a href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#a5410687b232609b0ec14cd482eb35ffc">Teko::NS::PresLaplaceLSCStrategy::updateRequestedParameters</a></div><div class="ttdeci">virtual bool updateRequestedParameters(const Teuchos::ParameterList &amp;pl)</div><div class="ttdoc">For assiting in construction of the preconditioner.</div><div class="ttdef"><b>Definition</b> <a href="#l00330">Teko_PresLaplaceLSCStrategy.cpp:330</a></div></div>
 <div class="ttc" id="aclass_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy_html_a6bddbefc92ff418533876b382e86a398"><div class="ttname"><a href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#a6bddbefc92ff418533876b382e86a398">Teko::NS::PresLaplaceLSCStrategy::getInvBQBt</a></div><div class="ttdeci">virtual LinearOp getInvBQBt(const BlockedLinearOp &amp;A, BlockPreconditionerState &amp;state) const</div><div class="ttdef"><b>Definition</b> <a href="#l00096">Teko_PresLaplaceLSCStrategy.cpp:96</a></div></div>
-<div class="ttc" id="aclass_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy_html_a6e139b0a453cc8de33235b3fb7af75ab"><div class="ttname"><a href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#a6e139b0a453cc8de33235b3fb7af75ab">Teko::NS::PresLaplaceLSCStrategy::getRequestedParameters</a></div><div class="ttdeci">virtual Teuchos::RCP&lt; Teuchos::ParameterList &gt; getRequestedParameters() const</div><div class="ttdoc">For assiting in construction of the preconditioner.</div><div class="ttdef"><b>Definition</b> <a href="#l00307">Teko_PresLaplaceLSCStrategy.cpp:307</a></div></div>
+<div class="ttc" id="aclass_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy_html_a6e139b0a453cc8de33235b3fb7af75ab"><div class="ttname"><a href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#a6e139b0a453cc8de33235b3fb7af75ab">Teko::NS::PresLaplaceLSCStrategy::getRequestedParameters</a></div><div class="ttdeci">virtual Teuchos::RCP&lt; Teuchos::ParameterList &gt; getRequestedParameters() const</div><div class="ttdoc">For assiting in construction of the preconditioner.</div><div class="ttdef"><b>Definition</b> <a href="#l00304">Teko_PresLaplaceLSCStrategy.cpp:304</a></div></div>
 <div class="ttc" id="aclass_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy_html_a8d9e60184d3cf67e4607c8c616d232a9"><div class="ttname"><a href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#a8d9e60184d3cf67e4607c8c616d232a9">Teko::NS::PresLaplaceLSCStrategy::getInvF</a></div><div class="ttdeci">virtual LinearOp getInvF(const BlockedLinearOp &amp;A, BlockPreconditionerState &amp;state) const</div><div class="ttdef"><b>Definition</b> <a href="#l00106">Teko_PresLaplaceLSCStrategy.cpp:106</a></div></div>
-<div class="ttc" id="aclass_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy_html_a96db99695859ad5573c03f8b4fd44b92"><div class="ttname"><a href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#a96db99695859ad5573c03f8b4fd44b92">Teko::NS::PresLaplaceLSCStrategy::computeInverses</a></div><div class="ttdeci">void computeInverses(const BlockedLinearOp &amp;A, LSCPrecondState *state) const</div><div class="ttdef"><b>Definition</b> <a href="#l00213">Teko_PresLaplaceLSCStrategy.cpp:213</a></div></div>
+<div class="ttc" id="aclass_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy_html_a96db99695859ad5573c03f8b4fd44b92"><div class="ttname"><a href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#a96db99695859ad5573c03f8b4fd44b92">Teko::NS::PresLaplaceLSCStrategy::computeInverses</a></div><div class="ttdeci">void computeInverses(const BlockedLinearOp &amp;A, LSCPrecondState *state) const</div><div class="ttdef"><b>Definition</b> <a href="#l00214">Teko_PresLaplaceLSCStrategy.cpp:214</a></div></div>
 <div class="ttc" id="aclass_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy_html_a9e029f9ca85acb3a3ebcddac0425f72e"><div class="ttname"><a href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#a9e029f9ca85acb3a3ebcddac0425f72e">Teko::NS::PresLaplaceLSCStrategy::getOuterStabilization</a></div><div class="ttdeci">virtual LinearOp getOuterStabilization(const BlockedLinearOp &amp;A, BlockPreconditionerState &amp;state) const</div><div class="ttdef"><b>Definition</b> <a href="#l00113">Teko_PresLaplaceLSCStrategy.cpp:113</a></div></div>
 <div class="ttc" id="aclass_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy_html_ab30d6c5a87b3b977ae2deb3b78b9ae4c"><div class="ttname"><a href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#ab30d6c5a87b3b977ae2deb3b78b9ae4c">Teko::NS::PresLaplaceLSCStrategy::buildState</a></div><div class="ttdeci">virtual void buildState(BlockedLinearOp &amp;A, BlockPreconditionerState &amp;state) const</div><div class="ttdoc">Functions inherited from LSCStrategy.</div><div class="ttdef"><b>Definition</b> <a href="#l00061">Teko_PresLaplaceLSCStrategy.cpp:61</a></div></div>
 <div class="ttc" id="aclass_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy_html_ab44e00bd95f275611408476bb6096c9a"><div class="ttname"><a href="class_teko_1_1_n_s_1_1_pres_laplace_l_s_c_strategy.html#ab44e00bd95f275611408476bb6096c9a">Teko::NS::PresLaplaceLSCStrategy::setUseFullLDU</a></div><div class="ttdeci">virtual void setUseFullLDU(bool val)</div><div class="ttdoc">Set to true to use the Full LDU decomposition, false otherwise.</div><div class="ttdef"><b>Definition</b> <a href="_teko___pres_laplace_l_s_c_strategy_8hpp_source.html#l00169">Teko_PresLaplaceLSCStrategy.hpp:169</a></div></div>

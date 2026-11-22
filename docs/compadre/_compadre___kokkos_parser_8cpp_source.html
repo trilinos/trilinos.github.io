@@ -23,7 +23,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Compadre<span id="projectnumber">&#160;1.7.6</span>
+   <div id="projectname">Compadre<span id="projectnumber">&#160;1.7.8</span>
    </div>
   </td>
  </tr>
@@ -87,62 +87,111 @@ $(function() {
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">// *****************************************************************************</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// @HEADER</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="_compadre___kokkos_parser_8hpp.html">Compadre_KokkosParser.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="namespace_compadre.html">Compadre</a>;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// for InitArguments, pass them directly in to Kokkos</span></div>
-<div class="foldopen" id="foldopen00014" data-start="{" data-end="}">
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_compadre_1_1_kokkos_parser.html#a53126ee2623b886b0ce9aa9ea75e56a8">   14</a></span><a class="code hl_function" href="class_compadre_1_1_kokkos_parser.html#a995157098e16b5d2a257f977b144f7fe">KokkosParser::KokkosParser</a>(<a class="code hl_typedef" href="namespace_compadre.html#ada59aaeac4b0622afd4c2c4ec7ccac30">KokkosInitArguments</a> args, <span class="keywordtype">bool</span> print_status) {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    this-&gt;<a class="code hl_variable" href="class_compadre_1_1_kokkos_parser.html#a0052ce99adcbaea4820393cc9ffbe595">ksg</a> = !Kokkos::is_initialized()</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>                &amp;&amp; !Kokkos::is_finalized()</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                ?</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                <span class="keyword">new</span> Kokkos::ScopeGuard(args) : <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordflow">if</span> (print_status) this-&gt;<a class="code hl_function" href="class_compadre_1_1_kokkos_parser.html#a0d5c0f2a38854568d5b20d6ef68a2e15">status</a>();</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>}</div>
-</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">// for command line arguments, pass them directly in to Kokkos</span></div>
-<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_compadre_1_1_kokkos_parser.html#a48b1cbc21185bbb54378f81a857de569">   23</a></span><a class="code hl_function" href="class_compadre_1_1_kokkos_parser.html#a995157098e16b5d2a257f977b144f7fe">KokkosParser::KokkosParser</a>(<span class="keywordtype">int</span> narg, <span class="keywordtype">char</span>* args[], <span class="keywordtype">bool</span> print_status) {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    this-&gt;<a class="code hl_variable" href="class_compadre_1_1_kokkos_parser.html#a0052ce99adcbaea4820393cc9ffbe595">ksg</a> = !Kokkos::is_initialized()</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                &amp;&amp; !Kokkos::is_finalized()</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                ?</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                <span class="keyword">new</span> Kokkos::ScopeGuard(narg, args) : <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordflow">if</span> (print_status) this-&gt;<a class="code hl_function" href="class_compadre_1_1_kokkos_parser.html#a0d5c0f2a38854568d5b20d6ef68a2e15">status</a>();</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>}</div>
-</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_compadre_1_1_kokkos_parser.html#a7b3e1edbbd6375c39657c1b12586cde9">   31</a></span><a class="code hl_function" href="class_compadre_1_1_kokkos_parser.html#a995157098e16b5d2a257f977b144f7fe">KokkosParser::KokkosParser</a>(std::vector&lt;std::string&gt; stdvec_args, <span class="keywordtype">bool</span> print_status) {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    std::vector&lt;char*&gt; char_args;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; arg : stdvec_args) {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        char_args.push_back((<span class="keywordtype">char</span>*)arg.data());</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    }</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    char_args.push_back(<span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">int</span> narg = (int)stdvec_args.size();</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    this-&gt;<a class="code hl_variable" href="class_compadre_1_1_kokkos_parser.html#a0052ce99adcbaea4820393cc9ffbe595">ksg</a> = !Kokkos::is_initialized()</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                &amp;&amp; !Kokkos::is_finalized()</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                ?</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                <span class="keyword">new</span> Kokkos::ScopeGuard(narg, char_args.data()) : <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordflow">if</span> (print_status) this-&gt;<a class="code hl_function" href="class_compadre_1_1_kokkos_parser.html#a0d5c0f2a38854568d5b20d6ef68a2e15">status</a>();</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="namespace_compadre.html">Compadre</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span>{</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">// the Kokkos runtime started by a KokkosParser, shared by every KokkosParser and by every holder of</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">// KokkosParser::runtime(); its ScopeGuard finalizes Kokkos when the last of them releases it</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>std::weak_ptr&lt;Kokkos::ScopeGuard&gt; started_runtime;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>std::mutex started_runtime_mutex;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keywordtype">void</span> throwIfFinalized() {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordflow">if</span> (Kokkos::is_finalized()) {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;KokkosParser: Kokkos has already been finalized, and it cannot be initialized &quot;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                <span class="stringliteral">&quot;again in the same process.&quot;</span>);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    }</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>}</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">// for the constructors given arguments or settings: initializes Kokkos with start(), and throws if Kokkos is</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">// already initialized, since it would then be initialized twice with arguments</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Start&gt;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>std::shared_ptr&lt;void&gt; startRuntime(Start&amp;&amp; start) {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    std::lock_guard&lt;std::mutex&gt; lock(started_runtime_mutex);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    throwIfFinalized();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordflow">if</span> (Kokkos::is_initialized()) {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;KokkosParser: Kokkos is already initialized, so it cannot be initialized again &quot;</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                <span class="stringliteral">&quot;with these arguments. Code that runs after Kokkos is initialized, or without access to the &quot;</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                <span class="stringliteral">&quot;command line, should use KokkosParser() to join the running Kokkos.&quot;</span>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    std::shared_ptr&lt;Kokkos::ScopeGuard&gt; runtime = start();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    started_runtime = runtime;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordflow">return</span> runtime;</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}</div>
-</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_compadre_1_1_kokkos_parser.html#a554702ebc9d6655585d4bc9117dc6fa3">   46</a></span><a class="code hl_function" href="class_compadre_1_1_kokkos_parser.html#a995157098e16b5d2a257f977b144f7fe">KokkosParser::KokkosParser</a>(<span class="keywordtype">bool</span> print_status) : <a class="code hl_function" href="class_compadre_1_1_kokkos_parser.html#a995157098e16b5d2a257f977b144f7fe">KokkosParser</a>(<a class="code hl_typedef" href="namespace_compadre.html#ada59aaeac4b0622afd4c2c4ec7ccac30">KokkosInitArguments</a>(), print_status) {}</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_compadre_1_1_kokkos_parser.html#a0d5c0f2a38854568d5b20d6ef68a2e15">   48</a></span>std::string <a class="code hl_function" href="class_compadre_1_1_kokkos_parser.html#a0d5c0f2a38854568d5b20d6ef68a2e15">KokkosParser::status</a>() {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    std::stringstream stream;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    Kokkos::print_configuration(stream, <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    std::string <a class="code hl_function" href="class_compadre_1_1_kokkos_parser.html#a0d5c0f2a38854568d5b20d6ef68a2e15">status</a> = stream.str();</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="class_compadre_1_1_kokkos_parser.html#a0d5c0f2a38854568d5b20d6ef68a2e15">status</a>;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">// for KokkosParser(): joins the running Kokkos (sharing its runtime if a KokkosParser started it); if Kokkos is</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">// not initialized, warns that command-line arguments are ignored and initializes it from the environment only</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>std::shared_ptr&lt;void&gt; joinOrStartFromEnvironment() {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    std::lock_guard&lt;std::mutex&gt; lock(started_runtime_mutex);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordflow">if</span> (<span class="keyword">auto</span> runtime = started_runtime.lock()) <span class="keywordflow">return</span> runtime;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">if</span> (Kokkos::is_initialized()) <span class="keywordflow">return</span> <span class="keyword">nullptr</span>; <span class="comment">// initialized outside Compadre, which also finalizes it</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    throwIfFinalized();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    std::cerr &lt;&lt; <span class="stringliteral">&quot;Compadre::KokkosParser: WARNING: initializing Kokkos without the command line, so Kokkos &quot;</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                 <span class="stringliteral">&quot;command-line arguments are ignored; only the KOKKOS_* environment variables are used.\n&quot;</span>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    std::shared_ptr&lt;Kokkos::ScopeGuard&gt; runtime = std::make_shared&lt;Kokkos::ScopeGuard&gt;(<a class="code hl_typedef" href="namespace_compadre.html#ada59aaeac4b0622afd4c2c4ec7ccac30">KokkosInitArguments</a>());</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    started_runtime = runtime;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordflow">return</span> runtime;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>} <span class="comment">// anonymous namespace</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_compadre_1_1_kokkos_parser.html#ad48676c1830eacaab41f08504bf0a5cd">   62</a></span>std::shared_ptr&lt;void&gt; <a class="code hl_function" href="class_compadre_1_1_kokkos_parser.html#ad48676c1830eacaab41f08504bf0a5cd">KokkosParser::runtime</a>() {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    std::lock_guard&lt;std::mutex&gt; lock(started_runtime_mutex);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordflow">return</span> started_runtime.lock();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>}</div>
+</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="foldopen" id="foldopen00067" data-start="{" data-end="}">
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_compadre_1_1_kokkos_parser.html#aab86443166049b90fb4f1f3a3be122ce">   67</a></span><a class="code hl_function" href="class_compadre_1_1_kokkos_parser.html#a4503f9c03d18d09b00a7eacb317bad6e">KokkosParser::KokkosParser</a>(<a class="code hl_typedef" href="namespace_compadre.html#ada59aaeac4b0622afd4c2c4ec7ccac30">KokkosInitArguments</a> args) {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <a class="code hl_variable" href="class_compadre_1_1_kokkos_parser.html#a65850d61440b2d6947551a06bffbb2f6">_runtime</a> = startRuntime([&amp;]() { <span class="keywordflow">return</span> std::make_shared&lt;Kokkos::ScopeGuard&gt;(args); });</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>}</div>
+</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">// copies the arguments, since Kokkos removes the arguments it recognizes from the argv it is given</span></div>
+<div class="foldopen" id="foldopen00072" data-start="{" data-end="}">
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_compadre_1_1_kokkos_parser.html#afe7b5eb860fcab86c18cabe6ccf47e5d">   72</a></span><a class="code hl_function" href="class_compadre_1_1_kokkos_parser.html#a4503f9c03d18d09b00a7eacb317bad6e">KokkosParser::KokkosParser</a>(<span class="keywordtype">int</span> narg, <span class="keywordtype">char</span>* args[])</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        : <a class="code hl_function" href="class_compadre_1_1_kokkos_parser.html#aab86443166049b90fb4f1f3a3be122ce">KokkosParser</a>(std::vector&lt;std::string&gt;(args, args + narg)) {}</div>
+</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="foldopen" id="foldopen00075" data-start="{" data-end="}">
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_compadre_1_1_kokkos_parser.html#adc3e964637da9dba73bf31f57d8dadb6">   75</a></span><a class="code hl_function" href="class_compadre_1_1_kokkos_parser.html#a4503f9c03d18d09b00a7eacb317bad6e">KokkosParser::KokkosParser</a>(std::vector&lt;std::string&gt; stdvec_args) {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="comment">// Kokkos takes argv as char* entries followed by a nullptr, and removes the entries it recognizes</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    std::vector&lt;char*&gt; char_args;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; arg : stdvec_args) {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        char_args.push_back(arg.data());</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    char_args.push_back(<span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">int</span> narg = (int)stdvec_args.size();</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <a class="code hl_variable" href="class_compadre_1_1_kokkos_parser.html#a65850d61440b2d6947551a06bffbb2f6">_runtime</a> = startRuntime([&amp;]() { <span class="keywordflow">return</span> std::make_shared&lt;Kokkos::ScopeGuard&gt;(narg, char_args.data()); });</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>}</div>
+</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="foldopen" id="foldopen00087" data-start="{" data-end="}">
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="class_compadre_1_1_kokkos_parser.html#a4503f9c03d18d09b00a7eacb317bad6e">   87</a></span><a class="code hl_function" href="class_compadre_1_1_kokkos_parser.html#a4503f9c03d18d09b00a7eacb317bad6e">KokkosParser::KokkosParser</a>() {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <a class="code hl_variable" href="class_compadre_1_1_kokkos_parser.html#a65850d61440b2d6947551a06bffbb2f6">_runtime</a> = joinOrStartFromEnvironment();</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>}</div>
+</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="foldopen" id="foldopen00091" data-start="{" data-end="}">
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="class_compadre_1_1_kokkos_parser.html#a0d5c0f2a38854568d5b20d6ef68a2e15">   91</a></span>std::string <a class="code hl_function" href="class_compadre_1_1_kokkos_parser.html#a0d5c0f2a38854568d5b20d6ef68a2e15">KokkosParser::status</a>() {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    std::stringstream stream;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    Kokkos::print_configuration(stream, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    std::string <a class="code hl_function" href="class_compadre_1_1_kokkos_parser.html#a0d5c0f2a38854568d5b20d6ef68a2e15">status</a> = stream.str();</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="class_compadre_1_1_kokkos_parser.html#a0d5c0f2a38854568d5b20d6ef68a2e15">status</a>;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>}</div>
 </div>
 <div class="ttc" id="a_compadre___kokkos_parser_8hpp_html"><div class="ttname"><a href="_compadre___kokkos_parser_8hpp.html">Compadre_KokkosParser.hpp</a></div></div>
-<div class="ttc" id="aclass_compadre_1_1_kokkos_parser_html_a0052ce99adcbaea4820393cc9ffbe595"><div class="ttname"><a href="class_compadre_1_1_kokkos_parser.html#a0052ce99adcbaea4820393cc9ffbe595">Compadre::KokkosParser::ksg</a></div><div class="ttdeci">Kokkos::ScopeGuard * ksg</div><div class="ttdef"><b>Definition</b> <a href="_compadre___kokkos_parser_8hpp_source.html#l00028">Compadre_KokkosParser.hpp:28</a></div></div>
-<div class="ttc" id="aclass_compadre_1_1_kokkos_parser_html_a0d5c0f2a38854568d5b20d6ef68a2e15"><div class="ttname"><a href="class_compadre_1_1_kokkos_parser.html#a0d5c0f2a38854568d5b20d6ef68a2e15">Compadre::KokkosParser::status</a></div><div class="ttdeci">static std::string status()</div><div class="ttdef"><b>Definition</b> <a href="#l00048">Compadre_KokkosParser.cpp:48</a></div></div>
-<div class="ttc" id="aclass_compadre_1_1_kokkos_parser_html_a995157098e16b5d2a257f977b144f7fe"><div class="ttname"><a href="class_compadre_1_1_kokkos_parser.html#a995157098e16b5d2a257f977b144f7fe">Compadre::KokkosParser::KokkosParser</a></div><div class="ttdeci">KokkosParser()</div></div>
+<div class="ttc" id="aclass_compadre_1_1_kokkos_parser_html_a0d5c0f2a38854568d5b20d6ef68a2e15"><div class="ttname"><a href="class_compadre_1_1_kokkos_parser.html#a0d5c0f2a38854568d5b20d6ef68a2e15">Compadre::KokkosParser::status</a></div><div class="ttdeci">static std::string status()</div><div class="ttdef"><b>Definition</b> <a href="#l00091">Compadre_KokkosParser.cpp:91</a></div></div>
+<div class="ttc" id="aclass_compadre_1_1_kokkos_parser_html_a4503f9c03d18d09b00a7eacb317bad6e"><div class="ttname"><a href="class_compadre_1_1_kokkos_parser.html#a4503f9c03d18d09b00a7eacb317bad6e">Compadre::KokkosParser::KokkosParser</a></div><div class="ttdeci">KokkosParser()</div><div class="ttdef"><b>Definition</b> <a href="#l00087">Compadre_KokkosParser.cpp:87</a></div></div>
+<div class="ttc" id="aclass_compadre_1_1_kokkos_parser_html_a65850d61440b2d6947551a06bffbb2f6"><div class="ttname"><a href="class_compadre_1_1_kokkos_parser.html#a65850d61440b2d6947551a06bffbb2f6">Compadre::KokkosParser::_runtime</a></div><div class="ttdeci">std::shared_ptr&lt; void &gt; _runtime</div><div class="ttdef"><b>Definition</b> <a href="_compadre___kokkos_parser_8hpp_source.html#l00060">Compadre_KokkosParser.hpp:60</a></div></div>
+<div class="ttc" id="aclass_compadre_1_1_kokkos_parser_html_aab86443166049b90fb4f1f3a3be122ce"><div class="ttname"><a href="class_compadre_1_1_kokkos_parser.html#aab86443166049b90fb4f1f3a3be122ce">Compadre::KokkosParser::KokkosParser</a></div><div class="ttdeci">KokkosParser(KokkosInitArguments args)</div><div class="ttdef"><b>Definition</b> <a href="#l00067">Compadre_KokkosParser.cpp:67</a></div></div>
+<div class="ttc" id="aclass_compadre_1_1_kokkos_parser_html_ad48676c1830eacaab41f08504bf0a5cd"><div class="ttname"><a href="class_compadre_1_1_kokkos_parser.html#ad48676c1830eacaab41f08504bf0a5cd">Compadre::KokkosParser::runtime</a></div><div class="ttdeci">static std::shared_ptr&lt; void &gt; runtime()</div><div class="ttdef"><b>Definition</b> <a href="#l00062">Compadre_KokkosParser.cpp:62</a></div></div>
 <div class="ttc" id="anamespace_compadre_html"><div class="ttname"><a href="namespace_compadre.html">Compadre</a></div><div class="ttdef"><b>Definition</b> <a href="_compadre___apply_target_evaluations_8hpp_source.html#l00013">Compadre_ApplyTargetEvaluations.hpp:13</a></div></div>
 <div class="ttc" id="anamespace_compadre_html_ada59aaeac4b0622afd4c2c4ec7ccac30"><div class="ttname"><a href="namespace_compadre.html#ada59aaeac4b0622afd4c2c4ec7ccac30">Compadre::KokkosInitArguments</a></div><div class="ttdeci">Kokkos::InitializationSettings KokkosInitArguments</div><div class="ttdef"><b>Definition</b> <a href="_compadre___typedefs_8hpp_source.html#l00134">Compadre_Typedefs.hpp:134</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

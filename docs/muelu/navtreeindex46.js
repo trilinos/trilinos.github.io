@@ -1,7 +1,5 @@
 var NAVTREEINDEX46 =
 {
-"namespace_mue_lu_tests.html":[9,0,8],
-"namespace_stratimikos.html":[9,0,9],
 "namespace_stratimikos.html#a32b2b3334a4ad4ea60ac11e51e97e73b":[9,0,9,3],
 "namespace_stratimikos.html#a549d558aa71ef1c3b1d11e4d766bee02":[9,0,9,0],
 "namespace_stratimikos.html#a759a68fe12f237a83d119cdf01565b82":[9,0,9,2],
@@ -249,5 +247,7 @@ var NAVTREEINDEX46 =
 "struct_mue_lu_1_1_cut_drop_1_1_scaled_distance_laplacian_comparison_1_1_comparator.html#a7f2a21c2fa8f197dc623f5c61139a7e9":[9,0,7,3,3,0,12],
 "struct_mue_lu_1_1_cut_drop_1_1_scaled_distance_laplacian_comparison_1_1_comparator.html#a7f2a21c2fa8f197dc623f5c61139a7e9":[10,0,2,3,3,0,12],
 "struct_mue_lu_1_1_cut_drop_1_1_scaled_distance_laplacian_comparison_1_1_comparator.html#a85218411b70f0686261df001e87b6325":[9,0,7,3,3,0,17],
-"struct_mue_lu_1_1_cut_drop_1_1_scaled_distance_laplacian_comparison_1_1_comparator.html#a85218411b70f0686261df001e87b6325":[10,0,2,3,3,0,17]
+"struct_mue_lu_1_1_cut_drop_1_1_scaled_distance_laplacian_comparison_1_1_comparator.html#a85218411b70f0686261df001e87b6325":[10,0,2,3,3,0,17],
+"struct_mue_lu_1_1_cut_drop_1_1_scaled_distance_laplacian_comparison_1_1_comparator.html#a965289358fba9577e7ce91fd16c28a08":[9,0,7,3,3,0,3],
+"struct_mue_lu_1_1_cut_drop_1_1_scaled_distance_laplacian_comparison_1_1_comparator.html#a965289358fba9577e7ce91fd16c28a08":[10,0,2,3,3,0,3]
 };

@@ -1,7 +1,5 @@
 var NAVTREEINDEX8 =
 {
-"class_belos_1_1_status_test_gen_res_sub_norm_3_01_scalar_00_01_xpetra_1_1_multi_vector_3_01_scal8e772064c09be5d4ee302f92ef6edb70.html#ae9532c52ddeb904cdb11aca43cf7c11f":[9,0,1,2,35],
-"class_belos_1_1_status_test_gen_res_sub_norm_3_01_scalar_00_01_xpetra_1_1_multi_vector_3_01_scal8e772064c09be5d4ee302f92ef6edb70.html#ae9532c52ddeb904cdb11aca43cf7c11f":[10,0,1,2,35],
 "class_belos_1_1_status_test_gen_res_sub_norm_3_01_scalar_00_01_xpetra_1_1_multi_vector_3_01_scal8e772064c09be5d4ee302f92ef6edb70.html#aeadd68561bd0d1bb078afcb326c867cc":[9,0,1,2,38],
 "class_belos_1_1_status_test_gen_res_sub_norm_3_01_scalar_00_01_xpetra_1_1_multi_vector_3_01_scal8e772064c09be5d4ee302f92ef6edb70.html#aeadd68561bd0d1bb078afcb326c867cc":[10,0,1,2,38],
 "class_belos_1_1_status_test_gen_res_sub_norm_3_01_scalar_00_01_xpetra_1_1_multi_vector_3_01_scal8e772064c09be5d4ee302f92ef6edb70.html#aeb36a31d5b8636b209d992b5c444685c":[9,0,1,2,0],
@@ -249,5 +247,7 @@ var NAVTREEINDEX8 =
 "class_mue_lu_1_1_aggregates.html#a861b7b08f30fea471b6614253839d540":[10,0,2,10,14],
 "class_mue_lu_1_1_aggregates.html#a929028c062bab6c186b17f1f3b0b91b7":[9,0,7,18,36],
 "class_mue_lu_1_1_aggregates.html#a929028c062bab6c186b17f1f3b0b91b7":[10,0,2,10,36],
-"class_mue_lu_1_1_aggregates.html#a950450ed8dc51f8c3b8670892eef7544":[9,0,7,18,1]
+"class_mue_lu_1_1_aggregates.html#a950450ed8dc51f8c3b8670892eef7544":[9,0,7,18,1],
+"class_mue_lu_1_1_aggregates.html#a950450ed8dc51f8c3b8670892eef7544":[10,0,2,10,1],
+"class_mue_lu_1_1_aggregates.html#a96ab6cff421fb0587d30c8c84e9f608e":[9,0,7,18,10]
 };

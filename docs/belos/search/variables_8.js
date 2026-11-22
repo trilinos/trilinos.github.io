@@ -12,7 +12,7 @@ var searchData=
   ['imgsorthomanager_3c_20scalartype_2c_20mv_2c_20op_2c_20dm_20_3e_3a_3amax_5fortho_5fsteps_5ffast_5f_9',['max_ortho_steps_fast_',['../namespace_belos.html#aaddf73e08642d4910808155f0098b1b2',1,'Belos']]],
   ['imgsorthomanager_3c_20scalartype_2c_20mv_2c_20op_2c_20dm_20_3e_3a_3asing_5ftol_5fdefault_5f_10',['sing_tol_default_',['../namespace_belos.html#a8c32e18d3611f6a049636965e02ab439',1,'Belos']]],
   ['imgsorthomanager_3c_20scalartype_2c_20mv_2c_20op_2c_20dm_20_3e_3a_3asing_5ftol_5ffast_5f_11',['sing_tol_fast_',['../namespace_belos.html#ac10e5765af1c55423a8ff641f17839fa',1,'Belos']]],
-  ['imptolscale_12',['impTolScale',['../struct_belos_1_1_default_solver_parameters.html#a36f1260c5b23d0461ded198e4d489164',1,'Belos::DefaultSolverParameters']]],
+  ['imptolscale_12',['impTolScale',['../struct_belos_1_1_default_solver_parameters.html#af307a0e5ddb60cc87b025e44d2773aa4',1,'Belos::DefaultSolverParameters']]],
   ['ipiv_13',['ipiv',['../struct_belos_1_1_r_c_g_iter_state.html#ad29bffd05aa6bf1d6985304ea368e91d',1,'Belos::RCGIterState']]],
   ['ishermitian_5f_14',['isHermitian_',['../class_belos_1_1_linear_problem.html#ada82c6cad4bc745aac96df0d7c1e413f',1,'Belos::LinearProblem']]],
   ['isset_5f_15',['isSet_',['../class_belos_1_1_linear_problem.html#a57074182c37148855d665707f5e8b007',1,'Belos::LinearProblem']]]

@@ -9,7 +9,7 @@ var searchData=
   ['realpart_6',['realpart',['../../../../anasazi/doc/html/struct_anasazi_1_1_value.html#a92cd788df2cfd47a10339f3c4efba428',1,'Anasazi::Value']]],
   ['recyclesubspace_7',['RecycleSubspace',['../../../../belos/doc/html/namespace_belos.html#ad8be32ab19b9ea8822407ca681ee021daa53ca23268f3dea8f40a7df79274ae81',1,'Belos']]],
   ['resid_5fnorm_8',['resid_norm',['../../../../belos/doc/html/struct_belos_1_1_l_s_q_r_iteration_state.html#ae1d049868da384e77a9fc615fc6df323',1,'Belos::LSQRIterationState']]],
-  ['resscalefactor_9',['resScaleFactor',['../../../../belos/doc/html/struct_belos_1_1_default_solver_parameters.html#a22137e3c741bd84f31b507fa30c995f3',1,'Belos::DefaultSolverParameters']]],
+  ['resscalefactor_9',['resScaleFactor',['../../../../belos/doc/html/struct_belos_1_1_default_solver_parameters.html#a288c3ac41f97f25001335a40cbea58d3',1,'Belos::DefaultSolverParameters']]],
   ['reversepermutations_5f_10',['reversePermutations_',['../class_ifpack2_1_1_m_d_f.html#a33c24cafde948768802363a049c567c3',1,'Ifpack2::MDF']]],
   ['rhat_11',['Rhat',['../../../../belos/doc/html/struct_belos_1_1_bi_c_g_stab_iteration_state.html#a1c0383ef441118d5245ba697b4def658',1,'Belos::BiCGStabIterationState']]],
   ['rho_12',['rho',['../../../../belos/doc/html/struct_belos_1_1_pseudo_block_t_f_q_m_r_iter_state.html#a705d64f5deb11c9ad6b2b72e895aac0d',1,'Belos::PseudoBlockTFQMRIterState::rho'],['../../../../anasazi/doc/html/struct_anasazi_1_1_r_t_r_state.html#a5e8cd43f8a13350a9113b4440bff9049',1,'Anasazi::RTRState::rho']]],

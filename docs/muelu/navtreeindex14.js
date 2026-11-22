@@ -1,7 +1,5 @@
 var NAVTREEINDEX14 =
 {
-"class_mue_lu_1_1_count_unggregated_by_color.html":[10,0,2,44],
-"class_mue_lu_1_1_count_unggregated_by_color.html#a00aaab333116f121ed216e23f6d1f6f1":[9,0,7,52,0],
 "class_mue_lu_1_1_count_unggregated_by_color.html#a00aaab333116f121ed216e23f6d1f6f1":[10,0,2,44,0],
 "class_mue_lu_1_1_count_unggregated_by_color.html#a02b188d799d0abb432e3249b51abd808":[9,0,7,52,5],
 "class_mue_lu_1_1_count_unggregated_by_color.html#a02b188d799d0abb432e3249b51abd808":[10,0,2,44,5],
@@ -249,5 +247,7 @@ var NAVTREEINDEX14 =
 "class_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison.html#a27d7f651bd4a19292bfd39cf2cfd8bf1":[10,0,2,3,2,5],
 "class_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison.html#a29db9b44f4f60fedf6a88a41a0fd53de":[9,0,7,3,2,3],
 "class_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison.html#a29db9b44f4f60fedf6a88a41a0fd53de":[10,0,2,3,2,3],
-"class_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison.html#a2a5fdb9f6283be9986daa2c7efd2e9c3":[9,0,7,3,2,6]
+"class_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison.html#a2a5fdb9f6283be9986daa2c7efd2e9c3":[9,0,7,3,2,6],
+"class_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison.html#a2a5fdb9f6283be9986daa2c7efd2e9c3":[10,0,2,3,2,6],
+"class_mue_lu_1_1_cut_drop_1_1_unscaled_distance_laplacian_comparison.html#a3c35fd244060097013abbd20d0f9cd83":[9,0,7,3,2,16]
 };

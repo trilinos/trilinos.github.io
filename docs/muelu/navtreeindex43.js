@@ -1,7 +1,5 @@
 var NAVTREEINDEX43 =
 {
-"class_mue_lu_1_1my_vec3.html#a1f2f1c397279a9b70ab333bba3848a6f":[10,0,2,254,3],
-"class_mue_lu_1_1my_vec3.html#a9a8b94a742592f944361e1d9e19ac919":[9,0,7,262,5],
 "class_mue_lu_1_1my_vec3.html#a9a8b94a742592f944361e1d9e19ac919":[10,0,2,254,5],
 "class_mue_lu_1_1my_vec3.html#a9e53927108a11c2673a9357963d75e4f":[9,0,7,262,4],
 "class_mue_lu_1_1my_vec3.html#a9e53927108a11c2673a9357963d75e4f":[10,0,2,254,4],
@@ -249,5 +247,7 @@ var NAVTREEINDEX43 =
 "functions_vars_m.html":[10,3,2,12],
 "functions_vars_n.html":[10,3,2,13],
 "functions_vars_o.html":[10,3,2,14],
-"functions_vars_p.html":[10,3,2,15]
+"functions_vars_p.html":[10,3,2,15],
+"functions_vars_q.html":[10,3,2,16],
+"functions_vars_r.html":[10,3,2,17]
 };

@@ -127,8 +127,8 @@ $(function() {
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>{</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keyword">protected</span>:</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  <span class="comment">// SolverFactoryParent should never be created directly. Usually it will be</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <span class="comment">// created through derived classes EpetraSolverFactory, TpetraSolverFactory,</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <span class="comment">// BelosSolverFactory, or XpetraSolverFactory. If you are doing custom types</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <span class="comment">// created through derived classes TpetraSolverFactory, BelosSolverFactory,</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <span class="comment">// or XpetraSolverFactory. If you are doing custom types</span></div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <span class="comment">// and include BelosSolverFactory_Generic.hpp you should explicitly use</span></div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <span class="comment">// GenericSolverFactory, not SolverFactory, which will avoid an error trying</span></div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <span class="comment">// to construct here. GenericSolverFactory is special because it registers</span></div>
@@ -227,8 +227,8 @@ $(function() {
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span><span class="comment">// If this compile fails then the error is likely that BelosSolverFactory.hpp</span></div>
 <div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span><span class="comment">// was included directly but the specific sub class of SolverFactoryParent was</span></div>
 <div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span><span class="comment">// not included. Examples are:</span></div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span><span class="comment">//   BelosSolverFactory_Belos.hpp, BelosSolverFactory_Epetra.hpp,</span></div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span><span class="comment">//   BelosSolverFactory_Tpetra.hpp, BelosSolverFactory_Xpetra.hpp</span></div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span><span class="comment">//   BelosSolverFactory_Belos.hpp, BelosSolverFactory_Tpetra.hpp,</span></div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span><span class="comment">//   BelosSolverFactory_Xpetra.hpp</span></div>
 <div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span><span class="comment">// These were setup to be automatically included through the corresponding</span></div>
 <div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span><span class="comment">// adapter includes so something may have gone wrong with that.</span></div>
 <div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> SC, <span class="keyword">class</span> MV, <span class="keyword">class</span> OP, <span class="keyword">class</span> DM = DefaultDenseMatrix&lt;<span class="keywordtype">int</span>,SC&gt;&gt;</div>
@@ -567,7 +567,6 @@ $(function() {
 <div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span><span class="preprocessor">#include &quot;<a class="code" href="_belos_solver_factory___belos_8hpp.html">BelosSolverFactory_Belos.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span> </div>
 <div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span><span class="preprocessor">#endif </span><span class="comment">// __Belos_SolverFactory_hpp</span></div>
-<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span> </div>
 <div class="ttc" id="a_belos___details___e_belos_solver_type_8hpp_html"><div class="ttname"><a href="_belos___details___e_belos_solver_type_8hpp.html">Belos_Details_EBelosSolverType.hpp</a></div><div class="ttdoc">Declaration of alias functions for solver names.</div></div>
 <div class="ttc" id="a_belos_config_defs_8hpp_html"><div class="ttname"><a href="_belos_config_defs_8hpp.html">BelosConfigDefs.hpp</a></div><div class="ttdoc">Belos header file which uses auto-configuration information to include necessary C++ headers.</div></div>
 <div class="ttc" id="a_belos_custom_solver_factory_8hpp_html"><div class="ttname"><a href="_belos_custom_solver_factory_8hpp.html">BelosCustomSolverFactory.hpp</a></div></div>

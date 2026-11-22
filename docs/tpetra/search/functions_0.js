@@ -20,10 +20,11 @@ var searchData=
   ['applyfilter_5flid_17',['applyFilter_LID',['../namespace_tpetra.html#a8b8306f491cf4d3ec642db07cf48370e',1,'Tpetra']]],
   ['applyfilter_5fvals_18',['applyFilter_vals',['../namespace_tpetra.html#abc60ea45ac2268dba00aac3d9053f9b5',1,'Tpetra']]],
   ['applyimbalancedrows_19',['applyImbalancedRows',['../class_tpetra_1_1_local_crs_matrix_operator.html#adb3d76899646f095ceae040ec7e4efd3',1,'Tpetra::LocalCrsMatrixOperator']]],
-  ['applynontranspose_20',['applyNonTranspose',['../class_tpetra_1_1_crs_matrix.html#a13ee1172d758aef6f94d713d84bd6985',1,'Tpetra::CrsMatrix::applyNonTranspose()'],['../class_tpetra_1_1_crs_matrix_multiply_op.html#a27c8d926b24e3d4b35f0f35bfd07ac06',1,'Tpetra::CrsMatrixMultiplyOp::applyNonTranspose()']]],
-  ['applyop_21',['ApplyOp',['../class_tpetra_1_1details_1_1_apply_op.html#a3e44c9e1686014ca86d0e35b77f90058',1,'Tpetra::details::ApplyOp']]],
-  ['applytranspose_22',['applyTranspose',['../class_tpetra_1_1_crs_matrix.html#a49af35409fc41f775aa23a34c8295530',1,'Tpetra::CrsMatrix::applyTranspose()'],['../class_tpetra_1_1_crs_matrix_multiply_op.html#a9343a93c13582e49ee1ed4f5b89f64da',1,'Tpetra::CrsMatrixMultiplyOp::applyTranspose()']]],
-  ['assign_23',['assign',['../struct_tpetra_1_1_details_1_1_equilibration_info.html#a3c2cf87705dc8f67af5eb4b8d1d24c19',1,'Tpetra::Details::EquilibrationInfo::assign()'],['../class_tpetra_1_1_multi_vector.html#a3db220925b8597ba88461d52d7f944ac',1,'Tpetra::MultiVector::assign()']]],
-  ['assumempiisgpuaware_24',['assumeMpiIsGPUAware',['../class_tpetra_1_1_details_1_1_behavior.html#a7daf1c7b5d16adfba9b58bec9d69e897',1,'Tpetra::Details::Behavior']]],
-  ['axpy_25',['AXPY',['../namespace_tpetra.html#a6c6ed99caf4e4c5db5b0ddecee819669',1,'Tpetra']]]
+  ['applyinverse_20',['applyInverse',['../class_tpetra_1_1_ext_1_1_point_to_block_diag_permute.html#adf77c2dd825ad56c77c3e0488763fe98',1,'Tpetra::Ext::PointToBlockDiagPermute']]],
+  ['applynontranspose_21',['applyNonTranspose',['../class_tpetra_1_1_crs_matrix.html#a13ee1172d758aef6f94d713d84bd6985',1,'Tpetra::CrsMatrix::applyNonTranspose()'],['../class_tpetra_1_1_crs_matrix_multiply_op.html#a27c8d926b24e3d4b35f0f35bfd07ac06',1,'Tpetra::CrsMatrixMultiplyOp::applyNonTranspose()']]],
+  ['applyop_22',['ApplyOp',['../class_tpetra_1_1details_1_1_apply_op.html#a3e44c9e1686014ca86d0e35b77f90058',1,'Tpetra::details::ApplyOp']]],
+  ['applytranspose_23',['applyTranspose',['../class_tpetra_1_1_crs_matrix.html#a49af35409fc41f775aa23a34c8295530',1,'Tpetra::CrsMatrix::applyTranspose()'],['../class_tpetra_1_1_crs_matrix_multiply_op.html#a9343a93c13582e49ee1ed4f5b89f64da',1,'Tpetra::CrsMatrixMultiplyOp::applyTranspose()']]],
+  ['assign_24',['assign',['../struct_tpetra_1_1_details_1_1_equilibration_info.html#a3c2cf87705dc8f67af5eb4b8d1d24c19',1,'Tpetra::Details::EquilibrationInfo::assign()'],['../class_tpetra_1_1_multi_vector.html#a3db220925b8597ba88461d52d7f944ac',1,'Tpetra::MultiVector::assign()']]],
+  ['assumempiisgpuaware_25',['assumeMpiIsGPUAware',['../class_tpetra_1_1_details_1_1_behavior.html#a7daf1c7b5d16adfba9b58bec9d69e897',1,'Tpetra::Details::Behavior']]],
+  ['axpy_26',['AXPY',['../namespace_tpetra.html#a6c6ed99caf4e4c5db5b0ddecee819669',1,'Tpetra']]]
 ];

@@ -97,6 +97,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ae8236e67c7abf1a8c7b75478da3dd66e" id="r_ae8236e67c7abf1a8c7b75478da3dd66e"><td class="memTemplParams" colspan="2">template&lt;class Scalar&gt; </td></tr>
 <tr class="memitem:ae8236e67c7abf1a8c7b75478da3dd66e template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8236e67c7abf1a8c7b75478da3dd66e">evalResponseGradientP</a> (const <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_thyra_1_1_model_evaluator.html">Thyra::ModelEvaluator</a>&lt; Scalar &gt; &amp;model, const int g_index, const int p_index, const Thyra::ModelEvaluatorBase::InArgs&lt; Scalar &gt; &amp;inArgs, <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_thyra_1_1_multi_vector_base.html">Thyra::MultiVectorBase</a>&lt; Scalar &gt; &amp;dgdp)</td></tr>
 <tr class="memdesc:ae8236e67c7abf1a8c7b75478da3dd66e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate dg/dp^T (gradient form, p_space x num_g) of response g_index with respect to parameter p_index at the given inArgs.  <br /></td></tr>
+<tr class="memitem:a971dcde8b2322d2f7b499c4926601c9c" id="r_a971dcde8b2322d2f7b499c4926601c9c"><td class="memTemplParams" colspan="2">template&lt;class Scalar&gt; </td></tr>
+<tr class="memitem:a971dcde8b2322d2f7b499c4926601c9c template"><td class="memItemLeft" align="right" valign="top">Thyra::EOpTransp&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a971dcde8b2322d2f7b499c4926601c9c">evalDfDp</a> (const <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_thyra_1_1_model_evaluator.html">Thyra::ModelEvaluator</a>&lt; Scalar &gt; &amp;model, const int p_index, const Thyra::ModelEvaluatorBase::InArgs&lt; Scalar &gt; &amp;inArgs, Teuchos::RCP&lt; <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_thyra_1_1_linear_op_base.html">Thyra::LinearOpBase</a>&lt; Scalar &gt; &gt; &amp;dfdp_op, Teuchos::RCP&lt; <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_thyra_1_1_multi_vector_base.html">Thyra::MultiVectorBase</a>&lt; Scalar &gt; &gt; &amp;dfdp_mv)</td></tr>
+<tr class="memdesc:a971dcde8b2322d2f7b499c4926601c9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate df/dp of parameter p_index at inArgs, in the form supported by the model, and return the transpose mode trans such that df/dp^T * v = apply(dfdp_op, trans, v).  <br /></td></tr>
 <tr class="memitem:adf56e80dd5f360af4b6080c2d67bf077" id="r_adf56e80dd5f360af4b6080c2d67bf077"><td class="memTemplParams" colspan="2">template&lt;class Scalar&gt; </td></tr>
 <tr class="memitem:adf56e80dd5f360af4b6080c2d67bf077 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf56e80dd5f360af4b6080c2d67bf077">applyDfDpTranspose</a> (const <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_thyra_1_1_model_evaluator.html">Thyra::ModelEvaluator</a>&lt; Scalar &gt; &amp;model, const int p_index, const Thyra::ModelEvaluatorBase::InArgs&lt; Scalar &gt; &amp;inArgs, const <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_thyra_1_1_multi_vector_base.html">Thyra::MultiVectorBase</a>&lt; Scalar &gt; &amp;v, <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_thyra_1_1_multi_vector_base.html">Thyra::MultiVectorBase</a>&lt; Scalar &gt; &amp;y, const Scalar alpha, const Scalar beta, Teuchos::RCP&lt; <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_thyra_1_1_linear_op_base.html">Thyra::LinearOpBase</a>&lt; Scalar &gt; &gt; &amp;dfdp_op, Teuchos::RCP&lt; <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_thyra_1_1_multi_vector_base.html">Thyra::MultiVectorBase</a>&lt; Scalar &gt; &gt; &amp;dfdp_mv)</td></tr>
 <tr class="memdesc:adf56e80dd5f360af4b6080c2d67bf077"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute y = alpha * df/dp^T * v + beta * y.  <br /></td></tr>
@@ -290,6 +293,49 @@ template&lt;class Scalar&gt; </div>
 
 </div>
 </div>
+<a id="a971dcde8b2322d2f7b499c4926601c9c" name="a971dcde8b2322d2f7b499c4926601c9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a971dcde8b2322d2f7b499c4926601c9c">&#9670;&#160;</a></span>evalDfDp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Scalar&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Thyra::EOpTransp Tempus::AdjointSensitivityUtils::evalDfDp </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_thyra_1_1_model_evaluator.html">Thyra::ModelEvaluator</a>&lt; Scalar &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>model</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>p_index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Thyra::ModelEvaluatorBase::InArgs&lt; Scalar &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>inArgs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Teuchos::RCP&lt; <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_thyra_1_1_linear_op_base.html">Thyra::LinearOpBase</a>&lt; Scalar &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>dfdp_op</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Teuchos::RCP&lt; <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_thyra_1_1_multi_vector_base.html">Thyra::MultiVectorBase</a>&lt; Scalar &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>dfdp_mv</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Evaluate df/dp of parameter p_index at inArgs, in the form supported by the model, and return the transpose mode trans such that df/dp^T * v = apply(dfdp_op, trans, v). </p>
+<p>The forms are, in order of preference: a linear operator (dfdp_op, trans = CONJTRANS), the Jacobian multivector (dfdp_op = dfdp_mv, f space x num_p, trans = CONJTRANS) and the gradient multivector (dfdp_op = dfdp_mv, p space x dim(f), trans = CONJ). dfdp_op and dfdp_mv cache the derivative objects between calls (pass null RCPs on the first call). </p>
+
+<p class="definition">Definition at line <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html#l00246">246</a> of file <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html">Tempus_AdjointSensitivityUtils.hpp</a>.</p>
+
+</div>
+</div>
 <a id="adf56e80dd5f360af4b6080c2d67bf077" name="adf56e80dd5f360af4b6080c2d67bf077"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adf56e80dd5f360af4b6080c2d67bf077">&#9670;&#160;</a></span>applyDfDpTranspose()</h2>
 
@@ -347,9 +393,9 @@ template&lt;class Scalar&gt; </div>
 </div><div class="memdoc">
 
 <p>Compute y = alpha * df/dp^T * v + beta * y. </p>
-<p>v is a multivector in the residual (f) space and y a multivector in the space of parameter p_index, with the same number of columns. df/dp is evaluated at inArgs in the form supported by the model (linear operator, Jacobian or gradient multivector). dfdp_op and dfdp_mv cache the derivative objects between calls (pass null RCPs on the first call). </p>
+<p>v is a multivector in the residual (f) space and y a multivector in the space of parameter p_index, with the same number of columns. df/dp is evaluated at inArgs by <a class="el" href="#a971dcde8b2322d2f7b499c4926601c9c" title="Evaluate df/dp of parameter p_index at inArgs, in the form supported by the model,...">evalDfDp()</a>, with which dfdp_op and dfdp_mv cache the derivative objects between calls (pass null RCPs on the first call). </p>
 
-<p class="definition">Definition at line <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html#l00244">244</a> of file <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html">Tempus_AdjointSensitivityUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html#l00287">287</a> of file <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html">Tempus_AdjointSensitivityUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -387,7 +433,7 @@ template&lt;class Scalar&gt; </div>
 <p>Create a solver for the adjoint model's W = (alpha*df/dx_dot + beta*df/dx)^T at inArgs. </p>
 <p>Uses the W out-arg of the adjoint model if supported, otherwise its W_op, its W_factory, and the preconditioner of the W_factory (or of the model). </p>
 
-<p class="definition">Definition at line <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html#l00287">287</a> of file <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html">Tempus_AdjointSensitivityUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html#l00308">308</a> of file <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html">Tempus_AdjointSensitivityUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -415,7 +461,7 @@ template&lt;class Scalar&gt; </div>
 <p>Add the response times to the time step control as time events on which the time steps land exactly. </p>
 <p>This only adjusts the time steps for "Step Type" = "Variable"; with "Constant" time steps the response times must be on the time grid. The time steps are not flagged for output. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html#l00357">357</a> of file <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html">Tempus_AdjointSensitivityUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html#l00378">378</a> of file <a class="el" href="_tempus___adjoint_sensitivity_utils_8hpp_source.html">Tempus_AdjointSensitivityUtils.hpp</a>.</p>
 
 </div>
 </div>

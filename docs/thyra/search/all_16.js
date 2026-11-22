@@ -119,7 +119,7 @@ var searchData=
   ['vartablesubstitute_116',['varTableSubstitute',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/thyra/doc/../../../packages/teuchos/doc/html/class_teuchos_1_1_str_utils.html#ade9aaf0da80f754c8a437ddae4b85f35',1,'Teuchos::StrUtils']]],
   ['vecspaces_117',['vecSpaces',['../class_thyra_1_1_default_product_vector_space.html#a7d3ffd26d17ce5d52da669d3efcd4d73',1,'Thyra::DefaultProductVectorSpace']]],
   ['vecspacesoffsets_118',['vecSpacesOffsets',['../class_thyra_1_1_default_product_vector_space.html#ad7583c99dddb67b7bfc3a07bf1ed4847',1,'Thyra::DefaultProductVectorSpace']]],
-  ['vector_20adapter_20code_119',['Vector Adapter Code',['../group___epetra___thyra___op___vec__adapters__grp.html',1,'Thyra/Epetra Operator/Vector Adapter Code'],['../group___tpetra___thyra___op___vec__adapters__grp.html',1,'Thyra/Tpetra Operator/Vector Adapter Code']]],
+  ['vector_20adapter_20code_119',['Thyra/Tpetra Operator/Vector Adapter Code',['../group___tpetra___thyra___op___vec__adapters__grp.html',1,'']]],
   ['vector_20and_20multi_20vector_20views_120',['Common behavior of vector and multi-vector views',['../class_thyra_1_1_multi_vector_base.html#Thyra_MVB_view_behavior_sec',1,'']]],
   ['vector_20base_20support_20subclasses_20for_20spmd_20thyra_20implementations_121',['Thyra Operator/Vector Base Support Subclasses for SPMD Thyra Implementations',['../group___thyra___op___vec__adapters___spmd__support__grp.html',1,'']]],
   ['vector_20block_20inner_20products_122',['Multi-vector block inner products',['../class_thyra_1_1_multi_vector_base.html#Thyra_MVB_block_inner_prod_sec',1,'']]],

@@ -50,6 +50,9 @@ var namespace_xpetra =
       [ "Xpetra", "namespace_xpetra_1_1_i_o_1_1_xpetra.html", "namespace_xpetra_1_1_i_o_1_1_xpetra" ],
       [ "XpetraExamples", "namespace_xpetra_1_1_i_o_1_1_xpetra_examples.html", null ]
     ] ],
+    [ "Experimental", "namespace_xpetra_1_1_experimental.html", [
+      [ "ConvertLegacyBinaryToBinary", "namespace_xpetra_1_1_experimental.html#a3352d3642c0be21995028031c8b93c3c", null ]
+    ] ],
     [ "MatrixMatrix", null, [
       [ "Xpetra", "namespace_xpetra_1_1_matrix_matrix_1_1_xpetra.html", "namespace_xpetra_1_1_matrix_matrix_1_1_xpetra" ],
       [ "XpetraExamples", "namespace_xpetra_1_1_matrix_matrix_1_1_xpetra_examples.html", null ]

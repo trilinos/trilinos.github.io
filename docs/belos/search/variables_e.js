@@ -7,7 +7,7 @@ var searchData=
   ['r1_4',['R1',['../struct_belos_1_1_minres_iteration_state.html#ad614a1e762348c4521515b411eb3638e',1,'Belos::MinresIterationState']]],
   ['r2_5',['R2',['../struct_belos_1_1_minres_iteration_state.html#a684976eecb449d1d0f1680253429ae76',1,'Belos::MinresIterationState']]],
   ['resid_5fnorm_6',['resid_norm',['../struct_belos_1_1_l_s_q_r_iteration_state.html#ae1d049868da384e77a9fc615fc6df323',1,'Belos::LSQRIterationState']]],
-  ['resscalefactor_7',['resScaleFactor',['../struct_belos_1_1_default_solver_parameters.html#a22137e3c741bd84f31b507fa30c995f3',1,'Belos::DefaultSolverParameters']]],
+  ['resscalefactor_7',['resScaleFactor',['../struct_belos_1_1_default_solver_parameters.html#a288c3ac41f97f25001335a40cbea58d3',1,'Belos::DefaultSolverParameters']]],
   ['rhat_8',['Rhat',['../struct_belos_1_1_bi_c_g_stab_iteration_state.html#a1c0383ef441118d5245ba697b4def658',1,'Belos::BiCGStabIterationState']]],
   ['rho_9',['rho',['../struct_belos_1_1_pseudo_block_t_f_q_m_r_iter_state.html#a705d64f5deb11c9ad6b2b72e895aac0d',1,'Belos::PseudoBlockTFQMRIterState']]],
   ['rho_5fold_10',['rho_old',['../struct_belos_1_1_bi_c_g_stab_iteration_state.html#a3e0e77988af5c3250a2fe15ab8bbe20b',1,'Belos::BiCGStabIterationState']]],

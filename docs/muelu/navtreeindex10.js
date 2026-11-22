@@ -1,7 +1,5 @@
 var NAVTREEINDEX10 =
 {
-"class_mue_lu_1_1_amalgamation_factory.html":[10,0,2,16],
-"class_mue_lu_1_1_amalgamation_factory.html#a03675cc1879fe21cdc1cb88ca5b2c6f6":[9,0,7,24,2],
 "class_mue_lu_1_1_amalgamation_factory.html#a03675cc1879fe21cdc1cb88ca5b2c6f6":[10,0,2,16,2],
 "class_mue_lu_1_1_amalgamation_factory.html#a1afeff2a286cbfd0a8c411ee5759bcf5":[9,0,7,24,3],
 "class_mue_lu_1_1_amalgamation_factory.html#a1afeff2a286cbfd0a8c411ee5759bcf5":[10,0,2,16,3],
@@ -249,5 +247,7 @@ var NAVTREEINDEX10 =
 "class_mue_lu_1_1_block_inverse_functor_1_1_tag_apply.html":[10,0,2,167,2],
 "class_mue_lu_1_1_block_inverse_functor_1_1_tag_count_singular_blocks.html":[9,0,7,175,1],
 "class_mue_lu_1_1_block_inverse_functor_1_1_tag_count_singular_blocks.html":[10,0,2,167,1],
-"class_mue_lu_1_1_block_inverse_functor_1_1_tag_find_singular_blocks.html":[9,0,7,175,0]
+"class_mue_lu_1_1_block_inverse_functor_1_1_tag_find_singular_blocks.html":[9,0,7,175,0],
+"class_mue_lu_1_1_block_inverse_functor_1_1_tag_find_singular_blocks.html":[10,0,2,167,0],
+"class_mue_lu_1_1_blocked_coarse_map_factory.html":[9,0,7,165]
 };

@@ -23,7 +23,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Compadre<span id="projectnumber">&#160;1.7.6</span>
+   <div id="projectname">Compadre<span id="projectnumber">&#160;1.7.8</span>
    </div>
   </td>
  </tr>
@@ -95,67 +95,80 @@ $(function() {
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>parser = argparse.ArgumentParser(description=&#39;convert files by adding cell centroids and ID (for cubed-sphere)&#39;)</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>parser.add_argument(&#39;--porder&#39;, dest=&#39;porder&#39;, type=int, default=3, help=&#39;polynomial degree for basis&#39;)</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>parser.add_argument(&#39;--grids&#39;, dest=&#39;grids&#39;, type=int, default=2, help=&#39;number of grids for refinement sequence&#39;)</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>parser.add_argument(&#39;--solver-type&#39;, dest=&#39;solver_type&#39;, type=str, default=&#39;QR&#39;, help=&#39;solver type {QR,LU}&#39;)</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>parser.add_argument(&#39;--in-trilinos&#39;, dest=&#39;in_trilinos&#39;, type=str, default=&#39;false&#39;, help=&#39;whether being called from inside of Trilinos&#39;)</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>args = parser.parse_args()</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>def check_bounds(porder, rate):</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    if (porder==&quot;1&quot;):</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        if rate&lt;3 and rate&gt;.9:</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            return True</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        else:</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            return False</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    else:</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        if rate&gt;float(porder)-1.2:</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            return True</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        else:</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            return False</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>num_target_sites = 100</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>porder = args.porder</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>grids = args.grids</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>solver_type = args.solver_type</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>errors = []</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>parser.add_argument(&#39;--curvature-porder&#39;, dest=&#39;curvature_porder&#39;, type=int, default=-1, help=&#39;polynomial degree for curvature (default: same as porder)&#39;)</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>parser.add_argument(&#39;--grids&#39;, dest=&#39;grids&#39;, type=int, default=2, help=&#39;number of grids for refinement sequence&#39;)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>parser.add_argument(&#39;--solver-type&#39;, dest=&#39;solver_type&#39;, type=str, default=&#39;QR&#39;, help=&#39;solver type {QR,CHOL}&#39;)</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>parser.add_argument(&#39;--in-trilinos&#39;, dest=&#39;in_trilinos&#39;, type=str, default=&#39;false&#39;, help=&#39;whether being called from inside of Trilinos&#39;)</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>args = parser.parse_args()</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>def check_bounds(porder, rate):</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    if (porder==1):</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        if rate&gt;.9:</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            return True</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        else:</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            return False</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    else:</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        if rate&gt;float(porder)-1.2:</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            return True</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        else:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            return False</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span># operators built on second derivatives cannot converge until the polynomial order is at least 2,</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span># since degree 1 polynomials have no second derivatives</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>second_derivative_operators = (&quot;Laplace-Beltrami&quot;, &quot;Gaussian Curvature&quot;)</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>def rate_is_checked(porder, operator):</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    return not (porder &lt;= 1 and any(name in operator for name in second_derivative_operators))</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>target_operators=(&quot;Tangent Bundle&quot;, &quot;Point Value&quot;, &quot;Laplace-Beltrami&quot;, &quot;Gaussian Curvature&quot;, &quot;Surface Gradient \&zwj;(Ambient\&zwj;)&quot;, &quot;Surface Vector \&zwj;(VectorBasis\&zwj;)&quot;, &quot;Surface Divergence \&zwj;(VectorBasis\&zwj;)&quot;, &quot;Surface Vector \&zwj;(ScalarClones\&zwj;)&quot;, &quot;Surface Divergence \&zwj;(ScalarClones\&zwj;)&quot;)#, &quot;Surface Gradient (Manifold)&quot;, </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>for operator in target_operators:</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    errors.append([])</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>for grid_num in range(grids):</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    with open(os.devnull, &#39;w&#39;) as devnull:</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        exe_name=&quot;&quot;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        if args.in_trilinos.lower()==&quot;true&quot;:</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            exe_name = &quot;@CMAKE_CURRENT_BINARY_DIR@/Compadre_GMLS_Manifold_Test.exe&quot;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        else:</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            exe_name = &quot;@CMAKE_CURRENT_BINARY_DIR@/GMLS_Manifold_Test&quot;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        output_commands = [exe_name,&quot;--p&quot;,&quot;%d&quot;%porder,&quot;--nt&quot;,&quot;%d&quot;%num_target_sites,&quot;--d&quot;,&quot;3&quot;,&quot;--ns&quot;,&quot;%d&quot;%(20*num_target_sites*pow(4,grid_num)),&quot;--solver&quot;,str(solver_type),&quot;--problem&quot;,&quot;MANIFOLD&quot;,&quot;@KOKKOS_THREADS_ARG@=4&quot;]</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        print(output_commands)</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        output = subprocess.check_output(output_commands, stderr=devnull)</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        #print(output)</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        for key, operator in enumerate(target_operators):</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            m = re.search(&#39;(?&lt;=%s Error: )[0-9]+\.?[0-9]*(?:[Ee]\ *-?\ *[0-9]+)?&#39;%operator, output.decode(&#39;utf-8&#39;))</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            try:</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                errors[key].append(float(m.group(0)))</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            except:</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                print(&quot;Program exited early. Regular expression search for error failed.&quot;)</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                exit(-1)</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>print(errors)</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>for key, operator in enumerate(target_operators):</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    print(&quot;\n\n%s rates: porder:%s\n=============&quot;%(operator.replace(&#39;\\&#39;,&#39;&#39;), porder))</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    for i in range(1,len(errors[key])):</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        if (errors[key][i]!=0):</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            rate = math.log(errors[key][i]/errors[key][i-1])/math.log(.5)</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            print(str(rate) + &quot;, &quot; + str(errors[key][i]) + &quot;, &quot; + str(errors[key][i-1]))</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            assert(check_bounds(porder, rate))</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        else:</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            print(&quot;NaN - Division by zero&quot;)</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>print(&quot;Passed.&quot;)</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>sys.exit(0)</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>num_target_sites = 100</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>porder = args.porder</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>grids = args.grids</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>solver_type = args.solver_type</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>errors = []</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>target_operators=(&quot;Tangent Bundle&quot;, &quot;Point Value&quot;, &quot;Laplace-Beltrami&quot;, &quot;Gaussian Curvature&quot;, r&quot;Surface Gradient \&zwj;(Ambient\&zwj;)&quot;, r&quot;Surface Vector \&zwj;(VectorBasis\&zwj;)&quot;, r&quot;Surface Divergence \&zwj;(VectorBasis\&zwj;)&quot;, r&quot;Surface Vector \&zwj;(ScalarClones\&zwj;)&quot;, r&quot;Surface Divergence \&zwj;(ScalarClones\&zwj;)&quot;)#, &quot;Surface Gradient (Manifold)&quot;,</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>for operator in target_operators:</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    errors.append([])</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>for grid_num in range(grids):</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    with open(os.devnull, &#39;w&#39;) as devnull:</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        exe_name=&quot;&quot;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        if args.in_trilinos.lower()==&quot;true&quot;:</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            exe_name = &quot;@CMAKE_CURRENT_BINARY_DIR@/Compadre_GMLS_Manifold_Test.exe&quot;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        else:</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            exe_name = &quot;@CMAKE_CURRENT_BINARY_DIR@/GMLS_Manifold_Test&quot;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        output_commands = [exe_name,&quot;--p&quot;,&quot;%d&quot;%porder,&quot;--nt&quot;,&quot;%d&quot;%num_target_sites,&quot;--d&quot;,&quot;3&quot;,&quot;--ns&quot;,&quot;%d&quot;%(20*num_target_sites*pow(4,grid_num)),&quot;--solver&quot;,str(solver_type),&quot;--problem&quot;,&quot;MANIFOLD&quot;,&quot;@KOKKOS_THREADS_ARG@=4&quot;]</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        if args.curvature_porder &gt;= 0:</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            output_commands += [&quot;--curvature-order&quot;, &quot;%d&quot;%args.curvature_porder]</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        print(output_commands)</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        output = subprocess.check_output(output_commands, stderr=devnull)</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        #print(output)</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        for key, operator in enumerate(target_operators):</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            m = re.search(r&#39;(?&lt;=%s Error: )[0-9]+\.?[0-9]*(?:[Ee]\ *-?\ *[0-9]+)?&#39;%operator, output.decode(&#39;utf-8&#39;))</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            try:</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                errors[key].append(float(m.group(0)))</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            except:</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                print(&quot;Program exited early. Regular expression search for error failed.&quot;)</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                exit(-1)</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>print(errors)</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>for key, operator in enumerate(target_operators):</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    print(&quot;\n\n%s rates: porder:%s\n=============&quot;%(operator.replace(&#39;\\&#39;,&#39;&#39;), porder))</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    checked = rate_is_checked(porder, operator)</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    if not checked:</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        print(&quot;(not checked: second derivative operators need polynomial order &gt;= 2)&quot;)</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    for i in range(1,len(errors[key])):</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        if (errors[key][i]!=0):</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            rate = math.log(errors[key][i]/errors[key][i-1])/math.log(.5)</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            print(str(rate) + &quot;, &quot; + str(errors[key][i]) + &quot;, &quot; + str(errors[key][i-1]))</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            if checked:</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                assert(check_bounds(porder, rate))</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        else:</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            print(&quot;NaN - Division by zero&quot;)</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>print(&quot;Passed.&quot;)</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>sys.exit(0)</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

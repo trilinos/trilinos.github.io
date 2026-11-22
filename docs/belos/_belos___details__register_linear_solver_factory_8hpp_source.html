@@ -96,40 +96,40 @@ $(function() {
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_belos.html">Belos</a> {</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_belos_1_1_details.html">Details</a> {</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespace_belos_1_1_details.html#abc05dca5313e97bba9cdbeb99124402d">registerLinearSolverFactory</a> ();</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>} <span class="comment">// namespace Details</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>} <span class="comment">// namespace Belos</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespace_belos_1_1_details.html#abc05dca5313e97bba9cdbeb99124402d">registerLinearSolverFactory</a> ();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>} <span class="comment">// namespace Details</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>} <span class="comment">// namespace Belos</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword">namespace </span>{ <span class="comment">// (anonymous)</span></div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keyword">namespace </span>{ <span class="comment">// (anonymous)</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">// \class RegisterLinearSolverFactory</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">// \brief Register Belos&#39; solver factory/ies with the central registry.</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">// \class RegisterLinearSolverFactory</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">// \brief Register Belos&#39; solver factory/ies with the central registry.</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">//</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">// \warning NOT FOR USERS.  ONLY FOR USE IN THIS FILE.</span></div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">//</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">// \warning NOT FOR USERS.  ONLY FOR USE IN THIS FILE.</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">//</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">// Invoke this class&#39; constructor to register Belos&#39;s solver</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment">// factory/ies with the central registry, for all template parameter</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">// combinations that Belos enabled.  You need not keep the instance of</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">// the class around; the constructor has a side effect if it returns.</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">// (This is the C++ way of doing</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">// &lt;tt&gt;__attribute__((constructor))&lt;/tt&gt;, without actually requiring</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">// the syntax extension.)</span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="keyword">class </span>RegisterLinearSolverFactory {</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  RegisterLinearSolverFactory () {</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <a class="code hl_function" href="namespace_belos_1_1_details.html#abc05dca5313e97bba9cdbeb99124402d">Belos::Details::registerLinearSolverFactory</a> ();</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  }</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>};</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">// Creating an instance of RegisterLinearSolverFactory invokes its</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment">// constructor, which has the side effect of calling</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="comment">// Belos::Details::registerLinearSolverFactory().</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>RegisterLinearSolverFactory registerIt;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">// Invoke this class&#39; constructor to register Belos&#39;s solver</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">// factory/ies with the central registry, for all template parameter</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">// combinations that Belos enabled.  You need not keep the instance of</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment">// the class around; the constructor has a side effect if it returns.</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">// (This is the C++ way of doing</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">// &lt;tt&gt;__attribute__((constructor))&lt;/tt&gt;, without actually requiring</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">// the syntax extension.)</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keyword">class </span>RegisterLinearSolverFactory {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  RegisterLinearSolverFactory () {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <a class="code hl_function" href="namespace_belos_1_1_details.html#abc05dca5313e97bba9cdbeb99124402d">Belos::Details::registerLinearSolverFactory</a> ();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>};</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">// Creating an instance of RegisterLinearSolverFactory invokes its</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">// constructor, which has the side effect of calling</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">// Belos::Details::registerLinearSolverFactory().</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>RegisterLinearSolverFactory registerIt;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>} <span class="comment">// namespace (anonymous)</span></div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>} <span class="comment">// namespace (anonymous)</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">#endif </span><span class="comment">/* BELOS_DETAILS_REGISTERLINEARSOLVERFACTORY_HPP */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">#endif </span><span class="comment">/* BELOS_DETAILS_REGISTERLINEARSOLVERFACTORY_HPP */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="a_belos_config_defs_8hpp_html"><div class="ttname"><a href="_belos_config_defs_8hpp.html">BelosConfigDefs.hpp</a></div><div class="ttdoc">Belos header file which uses auto-configuration information to include necessary C++ headers.</div></div>
 <div class="ttc" id="anamespace_belos_1_1_details_html"><div class="ttname"><a href="namespace_belos_1_1_details.html">Belos::Details</a></div><div class="ttdef"><b>Definition</b> <a href="_belos___details___e_belos_solver_type_8cpp_source.html#l00014">Belos_Details_EBelosSolverType.cpp:14</a></div></div>
 <div class="ttc" id="anamespace_belos_1_1_details_html_abc05dca5313e97bba9cdbeb99124402d"><div class="ttname"><a href="namespace_belos_1_1_details.html#abc05dca5313e97bba9cdbeb99124402d">Belos::Details::registerLinearSolverFactory</a></div><div class="ttdeci">void registerLinearSolverFactory()</div><div class="ttdoc">Register Belos&#39; LinearSolverFactory with the central repository, for all enabled combinations of temp...</div><div class="ttdef"><b>Definition</b> <a href="_belos___details__register_linear_solver_factory_8cpp_source.html#l00038">Belos_Details_registerLinearSolverFactory.cpp:38</a></div></div>

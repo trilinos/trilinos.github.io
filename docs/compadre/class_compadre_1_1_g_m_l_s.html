@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Compadre<span id="projectnumber">&#160;1.7.6</span>
+   <div id="projectname">Compadre<span id="projectnumber">&#160;1.7.8</span>
    </div>
   </td>
  </tr>
@@ -97,7 +97,7 @@ $(function() {
 <div class="textblock"><p>Generalized Moving Least Squares (<a class="el" href="class_compadre_1_1_g_m_l_s.html" title="Generalized Moving Least Squares (GMLS).">GMLS</a>). </p>
 <p>This class sets up a batch of <a class="el" href="class_compadre_1_1_g_m_l_s.html" title="Generalized Moving Least Squares (GMLS).">GMLS</a> problems from a given set of neighbor lists, target sites, and source sites. <a class="el" href="class_compadre_1_1_g_m_l_s.html" title="Generalized Moving Least Squares (GMLS).">GMLS</a> requires a target functional, reconstruction space, and sampling functional to be specified. For a given choice of reconstruction space and sampling functional, multiple targets can be generated with very little additional computation, which is why this class allows for multiple target functionals to be specified. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00040">40</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00044">44</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>&gt;</code></p>
 <table class="memberdecls">
@@ -112,10 +112,10 @@ Public Member Functions</h2></td></tr>
 <tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Instantiation / Destruction</div></td></tr>
 <tr class="memitem:aae610324db068aa626af977f4c6a0958" id="r_aae610324db068aa626af977f4c6a0958"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae610324db068aa626af977f4c6a0958">GMLS</a> (<a class="el" href="namespace_compadre.html#a64bb4f79de16fc9728def7ec3f4a120e">ReconstructionSpace</a> reconstruction_space, const <a class="el" href="struct_compadre_1_1_sampling_functional.html">SamplingFunctional</a> polynomial_sampling_strategy, const <a class="el" href="struct_compadre_1_1_sampling_functional.html">SamplingFunctional</a> data_sampling_strategy, const int poly_order, const int dimensions, const <a class="el" href="namespace_compadre.html#aa9f6f8690fcb1e67b5dbe42d60cb75fc">DenseSolverType</a> dense_solver_type, const <a class="el" href="namespace_compadre.html#a7bcef14eab05ce9b74e76640a660d2e3">ProblemType</a> problem_type, const <a class="el" href="namespace_compadre.html#a552ac4edb0b6dd03cbb5a309ab5e2bf8">ConstraintType</a> constraint_type, const int manifold_curvature_poly_order)</td></tr>
 <tr class="memdesc:aae610324db068aa626af977f4c6a0958"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximal constructor, not intended for users.  <br /></td></tr>
-<tr class="memitem:ae941be095b5df762754a896063e5411a" id="r_ae941be095b5df762754a896063e5411a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae941be095b5df762754a896063e5411a">GMLS</a> (<a class="el" href="namespace_compadre.html#a64bb4f79de16fc9728def7ec3f4a120e">ReconstructionSpace</a> reconstruction_space, const <a class="el" href="struct_compadre_1_1_sampling_functional.html">SamplingFunctional</a> polynomial_sampling_strategy, const <a class="el" href="struct_compadre_1_1_sampling_functional.html">SamplingFunctional</a> data_sampling_strategy, const int poly_order, const int dimensions=3, const std::string dense_solver_type=std::string(&quot;QR&quot;), const std::string problem_type=std::string(&quot;STANDARD&quot;), const std::string constraint_type=std::string(&quot;NO_CONSTRAINT&quot;), const int manifold_curvature_poly_order=2)</td></tr>
-<tr class="memdesc:ae941be095b5df762754a896063e5411a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximal constructor, but with string arguments.  <br /></td></tr>
-<tr class="memitem:a7dabc7b0211bff5bc2a61a9f7bb23ed5" id="r_a7dabc7b0211bff5bc2a61a9f7bb23ed5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7dabc7b0211bff5bc2a61a9f7bb23ed5">GMLS</a> (const int poly_order, const int dimensions=3, const std::string dense_solver_type=std::string(&quot;QR&quot;), const std::string problem_type=std::string(&quot;STANDARD&quot;), const std::string constraint_type=std::string(&quot;NO_CONSTRAINT&quot;), const int manifold_curvature_poly_order=2)</td></tr>
-<tr class="memitem:a351e31e200bcdb167dd7353fe626853a" id="r_a351e31e200bcdb167dd7353fe626853a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a351e31e200bcdb167dd7353fe626853a">GMLS</a> (<a class="el" href="namespace_compadre.html#a64bb4f79de16fc9728def7ec3f4a120e">ReconstructionSpace</a> reconstruction_space, <a class="el" href="struct_compadre_1_1_sampling_functional.html">SamplingFunctional</a> dual_sampling_strategy, const int poly_order, const int dimensions=3, const std::string dense_solver_type=std::string(&quot;QR&quot;), const std::string problem_type=std::string(&quot;STANDARD&quot;), const std::string constraint_type=std::string(&quot;NO_CONSTRAINT&quot;), const int manifold_curvature_poly_order=2)</td></tr>
+<tr class="memitem:a24b2c0141bb4bc5bc4a7ed7da7c5a34d" id="r_a24b2c0141bb4bc5bc4a7ed7da7c5a34d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24b2c0141bb4bc5bc4a7ed7da7c5a34d">GMLS</a> (<a class="el" href="namespace_compadre.html#a64bb4f79de16fc9728def7ec3f4a120e">ReconstructionSpace</a> reconstruction_space, const <a class="el" href="struct_compadre_1_1_sampling_functional.html">SamplingFunctional</a> polynomial_sampling_strategy, const <a class="el" href="struct_compadre_1_1_sampling_functional.html">SamplingFunctional</a> data_sampling_strategy, const int poly_order, const int dimensions=3, const std::string dense_solver_type=std::string(&quot;CHOL&quot;), const std::string problem_type=std::string(&quot;STANDARD&quot;), const std::string constraint_type=std::string(&quot;NO_CONSTRAINT&quot;), const int manifold_curvature_poly_order=2)</td></tr>
+<tr class="memdesc:a24b2c0141bb4bc5bc4a7ed7da7c5a34d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximal constructor, but with string arguments.  <br /></td></tr>
+<tr class="memitem:a190f2d9acc197f02e0daddd9c378754e" id="r_a190f2d9acc197f02e0daddd9c378754e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a190f2d9acc197f02e0daddd9c378754e">GMLS</a> (const int poly_order, const int dimensions=3, const std::string dense_solver_type=std::string(&quot;CHOL&quot;), const std::string problem_type=std::string(&quot;STANDARD&quot;), const std::string constraint_type=std::string(&quot;NO_CONSTRAINT&quot;), const int manifold_curvature_poly_order=2)</td></tr>
+<tr class="memitem:aae0c571e9567d991de6a5a5a551908e2" id="r_aae0c571e9567d991de6a5a5a551908e2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae0c571e9567d991de6a5a5a551908e2">GMLS</a> (<a class="el" href="namespace_compadre.html#a64bb4f79de16fc9728def7ec3f4a120e">ReconstructionSpace</a> reconstruction_space, <a class="el" href="struct_compadre_1_1_sampling_functional.html">SamplingFunctional</a> dual_sampling_strategy, const int poly_order, const int dimensions=3, const std::string dense_solver_type=std::string(&quot;CHOL&quot;), const std::string problem_type=std::string(&quot;STANDARD&quot;), const std::string constraint_type=std::string(&quot;NO_CONSTRAINT&quot;), const int manifold_curvature_poly_order=2)</td></tr>
 <tr id="pub-methods-1" class="groupHeader"><td colspan="2"><div class="groupHeader">Accessors</div></td></tr>
 <tr><td colspan="2" class="ititle"><div class="groupText"><p>Retrieve member variables through public member functions </p>
 </div></td></tr>
@@ -139,6 +139,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ad7070a4e5fb58a8f894bbbc2817c6177"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get constraint type.  <br /></td></tr>
 <tr class="memitem:a475f0209dd9f7401622d38db6dcc804f" id="r_a475f0209dd9f7401622d38db6dcc804f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a475f0209dd9f7401622d38db6dcc804f">getPolynomialOrder</a> () const</td></tr>
 <tr class="memdesc:a475f0209dd9f7401622d38db6dcc804f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get basis order used for reconstruction.  <br /></td></tr>
+<tr class="memitem:a13b851ad9e0f5c0b4b6b992d20fc8866" id="r_a13b851ad9e0f5c0b4b6b992d20fc8866"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13b851ad9e0f5c0b4b6b992d20fc8866">getRequestedPolynomialOrder</a> () const</td></tr>
 <tr class="memitem:a97c9c3678cd846bde605b747a891b169" id="r_a97c9c3678cd846bde605b747a891b169"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97c9c3678cd846bde605b747a891b169">getCurvaturePolynomialOrder</a> () const</td></tr>
 <tr class="memdesc:a97c9c3678cd846bde605b747a891b169"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get basis order used for curvature reconstruction.  <br /></td></tr>
 <tr class="memitem:a7452c3a3cc839ac4e0682cb2b41f6da6" id="r_a7452c3a3cc839ac4e0682cb2b41f6da6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_compadre.html#acf614d8a2188158837b85ae0dedcf2fd">WeightingFunctionType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7452c3a3cc839ac4e0682cb2b41f6da6">getWeightingType</a> () const</td></tr>
@@ -199,26 +200,26 @@ Public Member Functions</h2></td></tr>
 <tr><td colspan="2" class="ititle"><div class="groupText"><p>Changed member variables through public member functions </p>
 </div></td></tr>
 <tr class="memitem:ab8396c2ed14860465a8c795089c034ee" id="r_ab8396c2ed14860465a8c795089c034ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8396c2ed14860465a8c795089c034ee">resetCoefficientData</a> ()</td></tr>
-<tr class="memitem:a9053c5a00e750b85642a4e89f7d10768" id="r_a9053c5a00e750b85642a4e89f7d10768"><td class="memTemplParams" colspan="2">template&lt;typename view_type_1, typename view_type_2, typename view_type_3, typename view_type_4&gt; </td></tr>
-<tr class="memitem:a9053c5a00e750b85642a4e89f7d10768 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9053c5a00e750b85642a4e89f7d10768">setProblemData</a> (view_type_1 neighbor_lists, view_type_2 source_coordinates, view_type_3 target_coordinates, view_type_4 epsilons)</td></tr>
-<tr class="memdesc:a9053c5a00e750b85642a4e89f7d10768"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets basic problem data (neighbor lists, source coordinates, and target coordinates).  <br /></td></tr>
-<tr class="memitem:a24aaa10cab200268a4053580dcc739f1" id="r_a24aaa10cab200268a4053580dcc739f1"><td class="memTemplParams" colspan="2">template&lt;typename view_type_1, typename view_type_2, typename view_type_3, typename view_type_4&gt; </td></tr>
-<tr class="memitem:a24aaa10cab200268a4053580dcc739f1 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24aaa10cab200268a4053580dcc739f1">setProblemData</a> (view_type_1 cr_neighbor_lists, view_type_1 number_of_neighbors_list, view_type_2 source_coordinates, view_type_3 target_coordinates, view_type_4 epsilons)</td></tr>
-<tr class="memdesc:a24aaa10cab200268a4053580dcc739f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets basic problem data (neighbor lists data, number of neighbors list, source coordinates, and target coordinates).  <br /></td></tr>
+<tr class="memitem:a5fc9657f16962931d16069daa10f5368" id="r_a5fc9657f16962931d16069daa10f5368"><td class="memTemplParams" colspan="2">template&lt;typename view_type_1, typename view_type_2, typename view_type_3, typename view_type_4&gt; </td></tr>
+<tr class="memitem:a5fc9657f16962931d16069daa10f5368 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5fc9657f16962931d16069daa10f5368">setProblemData</a> (view_type_1 neighbor_lists, view_type_2 source_coordinates, view_type_3 target_coordinates, view_type_4 epsilons, bool verify_unisolvency=true)</td></tr>
+<tr class="memdesc:a5fc9657f16962931d16069daa10f5368"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets basic problem data (neighbor lists, source coordinates, and target coordinates).  <br /></td></tr>
+<tr class="memitem:a1b6b9321a548cc8723a7c2d507aa7aee" id="r_a1b6b9321a548cc8723a7c2d507aa7aee"><td class="memTemplParams" colspan="2">template&lt;typename view_type_1, typename view_type_2, typename view_type_3, typename view_type_4&gt; </td></tr>
+<tr class="memitem:a1b6b9321a548cc8723a7c2d507aa7aee template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b6b9321a548cc8723a7c2d507aa7aee">setProblemData</a> (view_type_1 cr_neighbor_lists, view_type_1 number_of_neighbors_list, view_type_2 source_coordinates, view_type_3 target_coordinates, view_type_4 epsilons, bool verify_unisolvency=true)</td></tr>
+<tr class="memdesc:a1b6b9321a548cc8723a7c2d507aa7aee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets basic problem data (neighbor lists data, number of neighbors list, source coordinates, and target coordinates).  <br /></td></tr>
 <tr class="memitem:a4dcfd8c5670aa05859fb32a3396c4e84" id="r_a4dcfd8c5670aa05859fb32a3396c4e84"><td class="memTemplParams" colspan="2">template&lt;typename view_type_1, typename view_type_2&gt; </td></tr>
 <tr class="memitem:a4dcfd8c5670aa05859fb32a3396c4e84 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4dcfd8c5670aa05859fb32a3396c4e84">setAdditionalEvaluationSitesData</a> (view_type_1 additional_evaluation_indices, view_type_2 additional_evaluation_coordinates)</td></tr>
 <tr class="memdesc:a4dcfd8c5670aa05859fb32a3396c4e84"><td class="mdescLeft">&#160;</td><td class="mdescRight">(OPTIONAL) Sets additional evaluation sites for each target site  <br /></td></tr>
 <tr class="memitem:a582803a54057ba1f59b6fa87f60bc02b" id="r_a582803a54057ba1f59b6fa87f60bc02b"><td class="memTemplParams" colspan="2">template&lt;typename view_type_1, typename view_type_2&gt; </td></tr>
 <tr class="memitem:a582803a54057ba1f59b6fa87f60bc02b template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a582803a54057ba1f59b6fa87f60bc02b">setAdditionalEvaluationSitesData</a> (view_type_1 cr_additional_evaluation_indices, view_type_1 number_of_additional_evaluation_indices, view_type_2 additional_evaluation_coordinates)</td></tr>
 <tr class="memdesc:a582803a54057ba1f59b6fa87f60bc02b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(OPTIONAL) Sets additional evaluation sites for each target site  <br /></td></tr>
-<tr class="memitem:a21696eb385c472d2fe8512e498d62361" id="r_a21696eb385c472d2fe8512e498d62361"><td class="memTemplParams" colspan="2">template&lt;typename view_type&gt; </td></tr>
-<tr class="memitem:a21696eb385c472d2fe8512e498d62361 template"><td class="memItemLeft" align="right" valign="top">std::enable_if&lt; view_type::rank==1 &amp;&amp;std::is_same&lt; <a class="el" href="struct_compadre_1_1_neighbor_lists.html#a41daf2b402b7c2ebedbbabe062930c7e">neighbor_lists_type::internal_view_type</a>, view_type &gt;::value==1, void &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21696eb385c472d2fe8512e498d62361">setNeighborLists</a> (view_type neighbor_lists, view_type number_of_neighbors_list)</td></tr>
-<tr class="memdesc:a21696eb385c472d2fe8512e498d62361"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets neighbor list information from compressed row neighborhood lists data (if same view_type).  <br /></td></tr>
-<tr class="memitem:a8e86a139c8d6e01d042281c2f1347321" id="r_a8e86a139c8d6e01d042281c2f1347321"><td class="memTemplParams" colspan="2">template&lt;typename view_type&gt; </td></tr>
-<tr class="memitem:a8e86a139c8d6e01d042281c2f1347321 template"><td class="memItemLeft" align="right" valign="top">std::enable_if&lt; view_type::rank==1 &amp;&amp;std::is_same&lt; <a class="el" href="struct_compadre_1_1_neighbor_lists.html#a41daf2b402b7c2ebedbbabe062930c7e">neighbor_lists_type::internal_view_type</a>, view_type &gt;::value==0, void &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e86a139c8d6e01d042281c2f1347321">setNeighborLists</a> (view_type neighbor_lists, view_type number_of_neighbors_list)</td></tr>
-<tr class="memdesc:a8e86a139c8d6e01d042281c2f1347321"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets neighbor list information from compressed row neighborhood lists data (if different view_type).  <br /></td></tr>
-<tr class="memitem:a8c1e23a8395803bc12b0000eb87c500c" id="r_a8c1e23a8395803bc12b0000eb87c500c"><td class="memTemplParams" colspan="2">template&lt;typename view_type&gt; </td></tr>
-<tr class="memitem:a8c1e23a8395803bc12b0000eb87c500c template"><td class="memItemLeft" align="right" valign="top">std::enable_if&lt; view_type::rank==2, void &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c1e23a8395803bc12b0000eb87c500c">setNeighborLists</a> (view_type neighbor_lists)</td></tr>
+<tr class="memitem:aae6cff532949b9976d1931a78d6d5cca" id="r_aae6cff532949b9976d1931a78d6d5cca"><td class="memTemplParams" colspan="2">template&lt;typename view_type&gt; </td></tr>
+<tr class="memitem:aae6cff532949b9976d1931a78d6d5cca template"><td class="memItemLeft" align="right" valign="top">std::enable_if&lt; view_type::rank==1 &amp;&amp;std::is_same&lt; <a class="el" href="struct_compadre_1_1_neighbor_lists.html#a41daf2b402b7c2ebedbbabe062930c7e">neighbor_lists_type::internal_view_type</a>, view_type &gt;::value==1, void &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae6cff532949b9976d1931a78d6d5cca">setNeighborLists</a> (view_type neighbor_lists, view_type number_of_neighbors_list, bool verify_unisolvency=true)</td></tr>
+<tr class="memdesc:aae6cff532949b9976d1931a78d6d5cca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets neighbor list information from compressed row neighborhood lists data (if same view_type).  <br /></td></tr>
+<tr class="memitem:a1ef7f158c19b7eeab1761268541c83d9" id="r_a1ef7f158c19b7eeab1761268541c83d9"><td class="memTemplParams" colspan="2">template&lt;typename view_type&gt; </td></tr>
+<tr class="memitem:a1ef7f158c19b7eeab1761268541c83d9 template"><td class="memItemLeft" align="right" valign="top">std::enable_if&lt; view_type::rank==1 &amp;&amp;std::is_same&lt; <a class="el" href="struct_compadre_1_1_neighbor_lists.html#a41daf2b402b7c2ebedbbabe062930c7e">neighbor_lists_type::internal_view_type</a>, view_type &gt;::value==0, void &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ef7f158c19b7eeab1761268541c83d9">setNeighborLists</a> (view_type neighbor_lists, view_type number_of_neighbors_list, bool verify_unisolvency=true)</td></tr>
+<tr class="memdesc:a1ef7f158c19b7eeab1761268541c83d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets neighbor list information from compressed row neighborhood lists data (if different view_type).  <br /></td></tr>
+<tr class="memitem:a7941ef76de062c88175ee886816f2132" id="r_a7941ef76de062c88175ee886816f2132"><td class="memTemplParams" colspan="2">template&lt;typename view_type&gt; </td></tr>
+<tr class="memitem:a7941ef76de062c88175ee886816f2132 template"><td class="memItemLeft" align="right" valign="top">std::enable_if&lt; view_type::rank==2, void &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7941ef76de062c88175ee886816f2132">setNeighborLists</a> (view_type neighbor_lists, bool verify_unisolvency=true)</td></tr>
 <tr class="memitem:ac687869af379575e958cf7f96170d508" id="r_ac687869af379575e958cf7f96170d508"><td class="memTemplParams" colspan="2">template&lt;typename view_type&gt; </td></tr>
 <tr class="memitem:ac687869af379575e958cf7f96170d508 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac687869af379575e958cf7f96170d508">setSourceSites</a> (view_type source_coordinates)</td></tr>
 <tr class="memitem:a4771c73905f91fb4673ef73b607b9664" id="r_a4771c73905f91fb4673ef73b607b9664"><td class="memTemplParams" colspan="2">template&lt;typename view_type&gt; </td></tr>
@@ -259,10 +260,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ad709a008f97c4cd6a3993dbb8cf9ca4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type for weighting kernel for curvature.  <br /></td></tr>
 <tr class="memitem:a15cec0fd87992f7227dbfd9e2d26e5dd" id="r_a15cec0fd87992f7227dbfd9e2d26e5dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15cec0fd87992f7227dbfd9e2d26e5dd">setCurvatureWeightingType</a> (const <a class="el" href="namespace_compadre.html#acf614d8a2188158837b85ae0dedcf2fd">WeightingFunctionType</a> wt)</td></tr>
 <tr class="memdesc:a15cec0fd87992f7227dbfd9e2d26e5dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type for weighting kernel for curvature.  <br /></td></tr>
-<tr class="memitem:aad4e54d138ecb7958473c0ebfbf85518" id="r_aad4e54d138ecb7958473c0ebfbf85518"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad4e54d138ecb7958473c0ebfbf85518">setPolynomialOrder</a> (const int poly_order)</td></tr>
-<tr class="memdesc:aad4e54d138ecb7958473c0ebfbf85518"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets basis order to be used when reconstructing any function.  <br /></td></tr>
-<tr class="memitem:a5f3cdfd055a9cc283008bcc5d7f4c504" id="r_a5f3cdfd055a9cc283008bcc5d7f4c504"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f3cdfd055a9cc283008bcc5d7f4c504">setCurvaturePolynomialOrder</a> (const int curvature_poly_order)</td></tr>
-<tr class="memdesc:a5f3cdfd055a9cc283008bcc5d7f4c504"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets basis order to be used when reconstruction curvature.  <br /></td></tr>
+<tr class="memitem:adfa28842a50b7fbea8d18915edc48a0a" id="r_adfa28842a50b7fbea8d18915edc48a0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adfa28842a50b7fbea8d18915edc48a0a">setPolynomialOrder</a> (const int poly_order, const bool verify_unisolvency=true)</td></tr>
+<tr class="memitem:a1510b915f223d8fddfb093b6621feb33" id="r_a1510b915f223d8fddfb093b6621feb33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1510b915f223d8fddfb093b6621feb33">setCurvaturePolynomialOrder</a> (const int curvature_poly_order, const bool verify_unisolvency=true)</td></tr>
 <tr class="memitem:a58b9d81a647fb4e4a0792162c607b4e5" id="r_a58b9d81a647fb4e4a0792162c607b4e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58b9d81a647fb4e4a0792162c607b4e5">setWeightingParameter</a> (int wp, int index=0)</td></tr>
 <tr class="memitem:a2b156b32ddd70546538e7f9382c26008" id="r_a2b156b32ddd70546538e7f9382c26008"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b156b32ddd70546538e7f9382c26008">setCurvatureWeightingParameter</a> (int wp, int index=0)</td></tr>
 <tr class="memitem:a64cddbeeb9cd57c5b4d71cd74320aa51" id="r_a64cddbeeb9cd57c5b4d71cd74320aa51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64cddbeeb9cd57c5b4d71cd74320aa51">setOrderOfQuadraturePoints</a> (int order)</td></tr>
@@ -313,18 +312,9 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a01d7a99a4988aace82f3fbefa87c674a" id="r_a01d7a99a4988aace82f3fbefa87c674a"><td class="memTemplParams" colspan="2">template&lt;typename view_type&gt; </td></tr>
 <tr class="memitem:a01d7a99a4988aace82f3fbefa87c674a template"><td class="memItemLeft" align="right" valign="top">std::enable_if&lt; view_type::rank==2, void &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01d7a99a4988aace82f3fbefa87c674a">setAuxiliaryEvaluationIndicesLists</a> (view_type additional_evaluation_indices)</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pri-static-methods" class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
-Static Private Member Functions</h2></td></tr>
-<tr id="pri-static-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Private Utility</div></td></tr>
-<tr class="memitem:abfc5d103df93e27b8ae20929f292222c" id="r_abfc5d103df93e27b8ae20929f292222c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespace_compadre.html#aa9f6f8690fcb1e67b5dbe42d60cb75fc">DenseSolverType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abfc5d103df93e27b8ae20929f292222c">parseSolverType</a> (const std::string &amp;dense_solver_type)</td></tr>
-<tr class="memdesc:abfc5d103df93e27b8ae20929f292222c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a string to determine solver type.  <br /></td></tr>
-<tr class="memitem:a7b03df54b1b2f5d608f516eb67989a25" id="r_a7b03df54b1b2f5d608f516eb67989a25"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespace_compadre.html#a7bcef14eab05ce9b74e76640a660d2e3">ProblemType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b03df54b1b2f5d608f516eb67989a25">parseProblemType</a> (const std::string &amp;problem_type)</td></tr>
-<tr class="memdesc:a7b03df54b1b2f5d608f516eb67989a25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a string to determine problem type.  <br /></td></tr>
-<tr class="memitem:a7c1fac0de25fa3d76c581eba96d642c5" id="r_a7c1fac0de25fa3d76c581eba96d642c5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespace_compadre.html#a552ac4edb0b6dd03cbb5a309ab5e2bf8">ConstraintType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c1fac0de25fa3d76c581eba96d642c5">parseConstraintType</a> (const std::string &amp;constraint_type)</td></tr>
-<tr class="memdesc:a7c1fac0de25fa3d76c581eba96d642c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a string to determine constraint type.  <br /></td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:a3d69f87a22c82c06d711a17c5cf85628" id="r_a3d69f87a22c82c06d711a17c5cf85628"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d69f87a22c82c06d711a17c5cf85628">_kokkos_runtime</a> = <a class="el" href="class_compadre_1_1_kokkos_parser.html#ad48676c1830eacaab41f08504bf0a5cd">KokkosParser::runtime</a>()</td></tr>
 <tr class="memitem:ad7324621d99e70fdbf1b1ab5d9ce3bd9" id="r_ad7324621d99e70fdbf1b1ab5d9ce3bd9"><td class="memItemLeft" align="right" valign="top">Kokkos::View&lt; double * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7324621d99e70fdbf1b1ab5d9ce3bd9">_w</a></td></tr>
 <tr class="memdesc:ad7324621d99e70fdbf1b1ab5d9ce3bd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">contains weights for all problems  <br /></td></tr>
 <tr class="memitem:aa9139695f0c9550032ffb0eee277a6c4" id="r_aa9139695f0c9550032ffb0eee277a6c4"><td class="memItemLeft" align="right" valign="top">Kokkos::View&lt; double * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9139695f0c9550032ffb0eee277a6c4">_P</a></td></tr>
@@ -362,6 +352,7 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a00785da47f898a4bea8a5742fb6d0548" id="r_a00785da47f898a4bea8a5742fb6d0548"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_compadre_1_1_solution_set.html">SolutionSet</a>&lt; <a class="el" href="namespace_compadre.html#adb53768ff5fee611431cfb25fb76d5ed">device_memory_space</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00785da47f898a4bea8a5742fb6d0548">_d_ss</a></td></tr>
 <tr class="memitem:a63a20324f4cdebb8d0495f8e1cb28bbe" id="r_a63a20324f4cdebb8d0495f8e1cb28bbe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63a20324f4cdebb8d0495f8e1cb28bbe">_poly_order</a></td></tr>
 <tr class="memdesc:a63a20324f4cdebb8d0495f8e1cb28bbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">order of basis for polynomial reconstruction  <br /></td></tr>
+<tr class="memitem:afdb728b680bfdbd53df8f550b86db35d" id="r_afdb728b680bfdbd53df8f550b86db35d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afdb728b680bfdbd53df8f550b86db35d">_requested_poly_order</a></td></tr>
 <tr class="memitem:a7d2a438c2f83102b0278141cf6dce225" id="r_a7d2a438c2f83102b0278141cf6dce225"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d2a438c2f83102b0278141cf6dce225">_curvature_poly_order</a></td></tr>
 <tr class="memdesc:a7d2a438c2f83102b0278141cf6dce225"><td class="mdescLeft">&#160;</td><td class="mdescRight">order of basis for curvature reconstruction  <br /></td></tr>
 <tr class="memitem:a5c1da656bbdc4263658b9bbfdacefda0" id="r_a5c1da656bbdc4263658b9bbfdacefda0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c1da656bbdc4263658b9bbfdacefda0">_NP</a></td></tr>
@@ -377,7 +368,7 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a242dbde292983912f63bd88020bd1d92" id="r_a242dbde292983912f63bd88020bd1d92"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a242dbde292983912f63bd88020bd1d92">_reconstruction_space_rank</a></td></tr>
 <tr class="memdesc:a242dbde292983912f63bd88020bd1d92"><td class="mdescLeft">&#160;</td><td class="mdescRight">actual rank of reconstruction basis  <br /></td></tr>
 <tr class="memitem:a49584d74d38532742ed91ace83c6c1dd" id="r_a49584d74d38532742ed91ace83c6c1dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_compadre.html#aa9f6f8690fcb1e67b5dbe42d60cb75fc">DenseSolverType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49584d74d38532742ed91ace83c6c1dd">_dense_solver_type</a></td></tr>
-<tr class="memdesc:a49584d74d38532742ed91ace83c6c1dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">solver type for <a class="el" href="class_compadre_1_1_g_m_l_s.html" title="Generalized Moving Least Squares (GMLS).">GMLS</a> problem - can be QR, SVD or LU  <br /></td></tr>
+<tr class="memdesc:a49584d74d38532742ed91ace83c6c1dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">solver type for <a class="el" href="class_compadre_1_1_g_m_l_s.html" title="Generalized Moving Least Squares (GMLS).">GMLS</a> problem - can be QR or CHOL  <br /></td></tr>
 <tr class="memitem:a3b3c8064c9d8714eb4ff66b18e57c84f" id="r_a3b3c8064c9d8714eb4ff66b18e57c84f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_compadre.html#a7bcef14eab05ce9b74e76640a660d2e3">ProblemType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b3c8064c9d8714eb4ff66b18e57c84f">_problem_type</a></td></tr>
 <tr class="memitem:a730d173cef5cea20eed5a0c410e45c4d" id="r_a730d173cef5cea20eed5a0c410e45c4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_compadre.html#a552ac4edb0b6dd03cbb5a309ab5e2bf8">ConstraintType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a730d173cef5cea20eed5a0c410e45c4d">_constraint_type</a></td></tr>
 <tr class="memdesc:a730d173cef5cea20eed5a0c410e45c4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">constraint type for <a class="el" href="class_compadre_1_1_g_m_l_s.html" title="Generalized Moving Least Squares (GMLS).">GMLS</a> problem  <br /></td></tr>
@@ -429,6 +420,17 @@ Private Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:a4ceea777a33ef19332d271c60d245f1f" id="r_a4ceea777a33ef19332d271c60d245f1f"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ceea777a33ef19332d271c60d245f1f">Evaluator</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-member-group" class="groupheader"><a id="member-group" name="member-group"></a>
+Private Utility</h2></td></tr>
+<tr class="memitem:aa24170cbf2ec39c5b9c8983c17af4856" id="r_aa24170cbf2ec39c5b9c8983c17af4856"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa24170cbf2ec39c5b9c8983c17af4856">checkSupportedOrders</a> (const int poly_order, const int curvature_poly_order) const</td></tr>
+<tr class="memitem:a237dca926e11c28993317a2533250b48" id="r_a237dca926e11c28993317a2533250b48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a237dca926e11c28993317a2533250b48">checkNeighborCounts</a> (const bool verify_unisolvency=true)</td></tr>
+<tr class="memitem:abfc5d103df93e27b8ae20929f292222c" id="r_abfc5d103df93e27b8ae20929f292222c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespace_compadre.html#aa9f6f8690fcb1e67b5dbe42d60cb75fc">DenseSolverType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abfc5d103df93e27b8ae20929f292222c">parseSolverType</a> (const std::string &amp;dense_solver_type)</td></tr>
+<tr class="memdesc:abfc5d103df93e27b8ae20929f292222c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a string to determine solver type.  <br /></td></tr>
+<tr class="memitem:a7b03df54b1b2f5d608f516eb67989a25" id="r_a7b03df54b1b2f5d608f516eb67989a25"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespace_compadre.html#a7bcef14eab05ce9b74e76640a660d2e3">ProblemType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b03df54b1b2f5d608f516eb67989a25">parseProblemType</a> (const std::string &amp;problem_type)</td></tr>
+<tr class="memdesc:a7b03df54b1b2f5d608f516eb67989a25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a string to determine problem type.  <br /></td></tr>
+<tr class="memitem:a7c1fac0de25fa3d76c581eba96d642c5" id="r_a7c1fac0de25fa3d76c581eba96d642c5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespace_compadre.html#a552ac4edb0b6dd03cbb5a309ab5e2bf8">ConstraintType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c1fac0de25fa3d76c581eba96d642c5">parseConstraintType</a> (const std::string &amp;constraint_type)</td></tr>
+<tr class="memdesc:a7c1fac0de25fa3d76c581eba96d642c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a string to determine constraint type.  <br /></td></tr>
 </table>
 <a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
 <a id="ac12cdc87222a3580e31b98b445be787a" name="ac12cdc87222a3580e31b98b445be787a"></a>
@@ -443,7 +445,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00053">53</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00057">57</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -459,7 +461,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00051">51</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00055">55</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -475,7 +477,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00049">49</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00053">53</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -544,12 +546,12 @@ Friends</h2></td></tr>
 
 <p>Maximal constructor, not intended for users. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00389">389</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00452">452</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
-<a id="ae941be095b5df762754a896063e5411a" name="ae941be095b5df762754a896063e5411a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae941be095b5df762754a896063e5411a">&#9670;&#160;</a></span>GMLS() <span class="overload">[2/4]</span></h2>
+<a id="a24b2c0141bb4bc5bc4a7ed7da7c5a34d" name="a24b2c0141bb4bc5bc4a7ed7da7c5a34d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24b2c0141bb4bc5bc4a7ed7da7c5a34d">&#9670;&#160;</a></span>GMLS() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -585,7 +587,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string</td>          <td class="paramname"><span class="paramname"><em>dense_solver_type</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::string(&quot;QR&quot;)</span>, </td>
+          <td class="paramtype">const std::string</td>          <td class="paramname"><span class="paramname"><em>dense_solver_type</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::string(&quot;CHOL&quot;)</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -612,12 +614,12 @@ Friends</h2></td></tr>
 
 <p>Maximal constructor, but with string arguments. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00468">468</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00531">531</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a7dabc7b0211bff5bc2a61a9f7bb23ed5" name="a7dabc7b0211bff5bc2a61a9f7bb23ed5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7dabc7b0211bff5bc2a61a9f7bb23ed5">&#9670;&#160;</a></span>GMLS() <span class="overload">[3/4]</span></h2>
+<a id="a190f2d9acc197f02e0daddd9c378754e" name="a190f2d9acc197f02e0daddd9c378754e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a190f2d9acc197f02e0daddd9c378754e">&#9670;&#160;</a></span>GMLS() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -638,7 +640,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string</td>          <td class="paramname"><span class="paramname"><em>dense_solver_type</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::string(&quot;QR&quot;)</span>, </td>
+          <td class="paramtype">const std::string</td>          <td class="paramname"><span class="paramname"><em>dense_solver_type</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::string(&quot;CHOL&quot;)</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -664,12 +666,12 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Constructor for the case when the data sampling functional does not match the polynomial sampling functional. Only case anticipated is staggered Laplacian. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00481">481</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00544">544</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a351e31e200bcdb167dd7353fe626853a" name="a351e31e200bcdb167dd7353fe626853a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a351e31e200bcdb167dd7353fe626853a">&#9670;&#160;</a></span>GMLS() <span class="overload">[4/4]</span></h2>
+<a id="aae0c571e9567d991de6a5a5a551908e2" name="aae0c571e9567d991de6a5a5a551908e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae0c571e9567d991de6a5a5a551908e2">&#9670;&#160;</a></span>GMLS() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -700,7 +702,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string</td>          <td class="paramname"><span class="paramname"><em>dense_solver_type</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::string(&quot;QR&quot;)</span>, </td>
+          <td class="paramtype">const std::string</td>          <td class="paramname"><span class="paramname"><em>dense_solver_type</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::string(&quot;CHOL&quot;)</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -726,7 +728,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Constructor for the case when nonstandard sampling functionals or reconstruction spaces are to be used. Reconstruction space and sampling strategy can only be set at instantiation. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00491">491</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00554">554</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -756,7 +758,7 @@ Friends</h2></td></tr>
 
 <p>Adds a vector of target functionals to the vector of target functionals already to be applied to the reconstruction. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01280">1280</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01357">1357</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -785,7 +787,67 @@ Friends</h2></td></tr>
 
 <p>Adds a target to the vector of target functional to be applied to the reconstruction. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01274">1274</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01351">1351</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a237dca926e11c28993317a2533250b48" name="a237dca926e11c28993317a2533250b48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a237dca926e11c28993317a2533250b48">&#9670;&#160;</a></span>checkNeighborCounts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Compadre::GMLS::checkNeighborCounts </td>
+          <td>(</td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>verify_unisolvency</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Each target's local least-squares problem must have at least as many samples as unknowns; otherwise it is underdetermined and the solvers return meaningless weights (QR silently, via a minimum norm solution). Run when neighbor lists or orders are set (checked in every build type), using the smallest neighborhood, which is computed along with the neighbor lists. Skipped when verify_unisolvency is false. </p>
+
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00412">412</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aa24170cbf2ec39c5b9c8983c17af4856" name="aa24170cbf2ec39c5b9c8983c17af4856"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa24170cbf2ec39c5b9c8983c17af4856">&#9670;&#160;</a></span>checkSupportedOrders()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Compadre::GMLS::checkSupportedOrders </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>poly_order</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>curvature_poly_order</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Throws (in every build type) if an order exceeds what basis evaluation supports: its tables are sized for orders up to 10, and StaggeredEdgeAnalyticGradientIntegralSample uses one order higher internally. Checked when orders are set, so basis evaluation itself does not check. </p>
+
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00395">395</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -814,7 +876,7 @@ Friends</h2></td></tr>
 
 <p>Empties the vector of target functionals to apply to the reconstruction. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01286">1286</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01363">1363</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -843,7 +905,7 @@ Friends</h2></td></tr>
 
 <p>Check if <a class="el" href="class_compadre_1_1_g_m_l_s.html" title="Generalized Moving Least Squares (GMLS).">GMLS</a> solution set contains valid alpha values (has generateAlphas been called). </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00846">846</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00913">913</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -864,7 +926,7 @@ Friends</h2></td></tr>
 
 <p>Get <a class="el" href="class_compadre_1_1_g_m_l_s.html" title="Generalized Moving Least Squares (GMLS).">GMLS</a> basis data. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8cpp_source.html#l00523">523</a> of file <a class="el" href="_compadre___g_m_l_s_8cpp_source.html">Compadre_GMLS.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8cpp_source.html#l00553">553</a> of file <a class="el" href="_compadre___g_m_l_s_8cpp_source.html">Compadre_GMLS.cpp</a>.</p>
 
 </div>
 </div>
@@ -885,7 +947,7 @@ Friends</h2></td></tr>
 
 <p>Get <a class="el" href="class_compadre_1_1_g_m_l_s.html" title="Generalized Moving Least Squares (GMLS).">GMLS</a> solution data. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8cpp_source.html#l00475">475</a> of file <a class="el" href="_compadre___g_m_l_s_8cpp_source.html">Compadre_GMLS.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8cpp_source.html#l00497">497</a> of file <a class="el" href="_compadre___g_m_l_s_8cpp_source.html">Compadre_GMLS.cpp</a>.</p>
 
 </div>
 </div>
@@ -925,7 +987,7 @@ Friends</h2></td></tr>
 </dl>
 <p><em class="arg">clear_cache</em> should be <em class="arg">false</em> to be used for debugging as it will leave all data structures used to compute the solution intact. If <em class="arg">clear_cache</em> is set <em class="arg">true</em> and <em class="arg">keep_coefficients</em> is <em class="arg">true</em>, it will allow the polynomial coefficients to persist after calculation. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8cpp_source.html#l00469">469</a> of file <a class="el" href="_compadre___g_m_l_s_8cpp_source.html">Compadre_GMLS.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8cpp_source.html#l00491">491</a> of file <a class="el" href="_compadre___g_m_l_s_8cpp_source.html">Compadre_GMLS.cpp</a>.</p>
 
 </div>
 </div>
@@ -994,7 +1056,7 @@ Friends</h2></td></tr>
 
 <p>(OPTIONAL) Get additional evaluation sites neighbor list-like accessor </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00728">728</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00795">795</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -1023,7 +1085,7 @@ Friends</h2></td></tr>
 
 <p>(OPTIONAL) Get a view (device) of all additional evaluation point connection info </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00733">733</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00800">800</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -1052,7 +1114,7 @@ Friends</h2></td></tr>
 
 <p>Get constraint type. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00675">675</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00738">738</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -1081,7 +1143,7 @@ Friends</h2></td></tr>
 
 <p>Get basis order used for curvature reconstruction. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00681">681</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00748">748</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -1110,7 +1172,7 @@ Friends</h2></td></tr>
 
 <p>Get the data sampling functional specified at instantiation (often the same as the polynomial sampling functional). </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00797">797</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00864">864</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -1139,7 +1201,7 @@ Friends</h2></td></tr>
 
 <p>Get dense solver type. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00669">669</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00732">732</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -1168,7 +1230,7 @@ Friends</h2></td></tr>
 
 <p>Dimensions of quadrature points. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00714">714</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00781">781</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -1197,7 +1259,7 @@ Friends</h2></td></tr>
 
 <p>Dimension of the <a class="el" href="class_compadre_1_1_g_m_l_s.html" title="Generalized Moving Least Squares (GMLS).">GMLS</a> problem, set only at class instantiation. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00660">660</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00723">723</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -1226,7 +1288,7 @@ Friends</h2></td></tr>
 
 <p>Get a view (device) of all polynomial coefficients basis. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00781">781</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00848">848</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -1255,7 +1317,7 @@ Friends</h2></td></tr>
 
 <p>Dimension of the <a class="el" href="class_compadre_1_1_g_m_l_s.html" title="Generalized Moving Least Squares (GMLS).">GMLS</a> problem's point data (spatial description of points in ambient space), set only at class instantiation. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00663">663</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00726">726</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -1284,7 +1346,7 @@ Friends</h2></td></tr>
 
 <p>Local dimension of the <a class="el" href="class_compadre_1_1_g_m_l_s.html" title="Generalized Moving Least Squares (GMLS).">GMLS</a> problem (less than global dimension if on a manifold), set only at class instantiation. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00666">666</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00729">729</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -1313,7 +1375,7 @@ Friends</h2></td></tr>
 
 <p>Get parameter for weighting kernel for curvature. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00699">699</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00766">766</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -1342,7 +1404,7 @@ Friends</h2></td></tr>
 
 <p>Type for weighting kernel for curvature. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00687">687</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00754">754</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -1371,7 +1433,7 @@ Friends</h2></td></tr>
 
 <p>Get neighbor list accessor. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00720">720</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00787">787</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -1409,7 +1471,7 @@ Friends</h2></td></tr>
 
 <p>Returns number of neighbors needed for unisolvency for a given basis order and dimension. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00524">524</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00587">587</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -1446,7 +1508,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Returns size of the basis for a given polynomial order and dimension General to dimension 1..3 and polynomial order m The divfree options will return the divergence-free basis if true </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00512">512</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00575">575</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -1475,7 +1537,7 @@ Friends</h2></td></tr>
 
 <p>Number of quadrature points. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00708">708</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00775">775</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -1504,7 +1566,7 @@ Friends</h2></td></tr>
 
 <p>Order of quadrature points. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00711">711</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00778">778</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -1533,7 +1595,7 @@ Friends</h2></td></tr>
 
 <p>Get a view (device) of all point connection info. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00725">725</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00792">792</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -1562,7 +1624,7 @@ Friends</h2></td></tr>
 
 <p>Returns (size of the basis used in instance's polynomial reconstruction) x (data input dimension). </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00630">630</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00693">693</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -1591,7 +1653,7 @@ Friends</h2></td></tr>
 
 <p>Returns 2D array size in memory on which coefficients are stored. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00644">644</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00707">707</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -1620,7 +1682,7 @@ Friends</h2></td></tr>
 
 <p>Returns size of the basis used in instance's polynomial reconstruction. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00638">638</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00701">701</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -1649,7 +1711,7 @@ Friends</h2></td></tr>
 
 <p>Get basis order used for reconstruction. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00678">678</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00741">741</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -1678,7 +1740,7 @@ Friends</h2></td></tr>
 
 <p>Get the polynomial sampling functional specified at instantiation. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00794">794</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00861">861</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -1730,7 +1792,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Returns a stencil to transform data from its existing state into the input expected for some sampling functionals. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00804">804</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00871">871</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -1763,7 +1825,7 @@ Friends</h2></td></tr>
 <p>4 - Data transform resulting in rank 1 data for the <a class="el" href="class_compadre_1_1_g_m_l_s.html" title="Generalized Moving Least Squares (GMLS).">GMLS</a> operator will have size _local_dimensions, otherwise 1</p>
 <p>5 - Data transform taking in rank 1 data will have size _global_dimensions, otherwise 1 </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00776">776</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00843">843</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -1792,7 +1854,7 @@ Friends</h2></td></tr>
 
 <p>Get problem type. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00672">672</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00735">735</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -1821,7 +1883,7 @@ Friends</h2></td></tr>
 
 <p>Type of quadrature points. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00717">717</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00784">784</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -1850,7 +1912,7 @@ Friends</h2></td></tr>
 
 <p>Get the reconstruction space specified at instantiation. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00800">800</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00867">867</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -1883,7 +1945,7 @@ Friends</h2></td></tr>
 
 <p>Get component of tangent or normal directions for manifold problems. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00754">754</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00821">821</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -1912,7 +1974,35 @@ Friends</h2></td></tr>
 
 <p>Get a view (device) of all reference outward normal directions. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00742">742</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00809">809</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a13b851ad9e0f5c0b4b6b992d20fc8866" name="a13b851ad9e0f5c0b4b6b992d20fc8866"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13b851ad9e0f5c0b4b6b992d20fc8866">&#9670;&#160;</a></span>getRequestedPolynomialOrder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Compadre::GMLS::getRequestedPolynomialOrder </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Polynomial order requested at construction or with setPolynomialOrder (<a class="el" href="#a475f0209dd9f7401622d38db6dcc804f" title="Get basis order used for reconstruction.">getPolynomialOrder()</a> can be one higher once coefficients are generated, for sampling functionals that raise the order internally) </p>
+
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00745">745</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -1941,7 +2031,7 @@ Friends</h2></td></tr>
 
 <p>Get solution set on device. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00839">839</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00906">906</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -1970,7 +2060,7 @@ Friends</h2></td></tr>
 
 <p>Get solution set on host. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00827">827</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00894">894</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -2008,7 +2098,7 @@ Friends</h2></td></tr>
 
 <p>Get component of tangent or normal directions for manifold problems. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00745">745</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00812">812</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -2037,7 +2127,7 @@ Friends</h2></td></tr>
 
 <p>Get a view (device) of all tangent direction bundles. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00739">739</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00806">806</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -2066,7 +2156,7 @@ Friends</h2></td></tr>
 
 <p>Get parameter for weighting kernel for <a class="el" href="class_compadre_1_1_g_m_l_s.html" title="Generalized Moving Least Squares (GMLS).">GMLS</a> problem. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00690">690</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00757">757</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -2095,7 +2185,7 @@ Friends</h2></td></tr>
 
 <p>Type for weighting kernel for <a class="el" href="class_compadre_1_1_g_m_l_s.html" title="Generalized Moving Least Squares (GMLS).">GMLS</a> problem. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00684">684</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00751">751</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -2124,7 +2214,7 @@ Friends</h2></td></tr>
 
 <p>Get a view (device) of all window sizes. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00736">736</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00803">803</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -2153,7 +2243,7 @@ Friends</h2></td></tr>
 
 <p>Parses a string to determine constraint type. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00367">367</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00380">380</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -2182,7 +2272,7 @@ Friends</h2></td></tr>
 
 <p>Parses a string to determine problem type. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00354">354</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00367">367</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -2211,7 +2301,7 @@ Friends</h2></td></tr>
 
 <p>Parses a string to determine solver type. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00343">343</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00355">355</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -2238,7 +2328,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00862">862</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00929">929</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -2273,7 +2363,7 @@ template&lt;typename view_type_1, typename view_type_2&gt; </div>
 
 <p>(OPTIONAL) Sets additional evaluation sites for each target site </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00898">898</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00967">967</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -2313,7 +2403,7 @@ template&lt;typename view_type_1, typename view_type_2&gt; </div>
 
 <p>(OPTIONAL) Sets additional evaluation sites for each target site </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00907">907</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00976">976</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -2343,7 +2433,7 @@ template&lt;typename view_type&gt; </div>
 </div><div class="memdoc">
 <p>(OPTIONAL) Sets additional points for evaluation of target operation on polynomial reconstruction. If this is never called, then the target sites are the only locations where the target operations will be evaluated and applied to polynomial reconstructions. (device) </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00287">287</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00299">299</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -2373,7 +2463,7 @@ template&lt;typename view_type&gt; </div>
 </div><div class="memdoc">
 <p>(OPTIONAL) Sets additional points for evaluation of target operation on polynomial reconstruction. If this is never called, then the target sites are the only locations where the target operations will be evaluated and applied to polynomial reconstructions. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00257">257</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00269">269</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -2403,7 +2493,7 @@ template&lt;typename view_type&gt; </div>
 </div><div class="memdoc">
 <p>(OPTIONAL) Sets the additional target evaluation indices list information. Should be # targets x maximum number of indices evaluation indices for any target + 1. first entry in every row should be the number of indices for the corresponding target. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00326">326</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00338">338</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -2437,7 +2527,7 @@ template&lt;typename view_type&gt; </div>
 </div><div class="memdoc">
 <p>(OPTIONAL) Sets the additional target evaluation indices list information from compressed row format (if different view_type) </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00308">308</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00320">320</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -2471,7 +2561,7 @@ template&lt;typename view_type&gt; </div>
 </div><div class="memdoc">
 <p>(OPTIONAL) Sets the additional target evaluation indices list information from compressed row format (if same view_type) </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00296">296</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00308">308</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -2500,12 +2590,12 @@ template&lt;typename view_type&gt; </div>
 
 <p>Set constraint type. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01187">1187</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01259">1259</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a5f3cdfd055a9cc283008bcc5d7f4c504" name="a5f3cdfd055a9cc283008bcc5d7f4c504"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f3cdfd055a9cc283008bcc5d7f4c504">&#9670;&#160;</a></span>setCurvaturePolynomialOrder()</h2>
+<a id="a1510b915f223d8fddfb093b6621feb33" name="a1510b915f223d8fddfb093b6621feb33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1510b915f223d8fddfb093b6621feb33">&#9670;&#160;</a></span>setCurvaturePolynomialOrder()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2516,8 +2606,12 @@ template&lt;typename view_type&gt; </div>
         <tr>
           <td class="memname">void Compadre::GMLS::setCurvaturePolynomialOrder </td>
           <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>curvature_poly_order</em></span></td><td>)</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>curvature_poly_order</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>verify_unisolvency</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2526,10 +2620,9 @@ template&lt;typename view_type&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Sets basis order to be used when reconstruction curvature (with verify_unisolvency, checks that existing neighbor lists give enough samples per target for the new order) </p>
 
-<p>Sets basis order to be used when reconstruction curvature. </p>
-
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01225">1225</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01301">1301</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -2561,7 +2654,7 @@ template&lt;typename view_type&gt; </div>
 </div><div class="memdoc">
 <p>Parameter for weighting kernel for curvature index = 0 sets p paramater for weighting kernel index = 1 sets n paramater for weighting kernel </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01246">1246</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01323">1323</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -2590,7 +2683,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>Type for weighting kernel for curvature. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01205">1205</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01277">1277</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -2619,7 +2712,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>Type for weighting kernel for curvature. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01211">1211</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01283">1283</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -2648,7 +2741,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>Set dense solver type type. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01181">1181</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01253">1253</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -2677,12 +2770,12 @@ template&lt;typename view_type&gt; </div>
 
 <p>Dimensions of quadrature points to use. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01262">1262</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01339">1339</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a8c1e23a8395803bc12b0000eb87c500c" name="a8c1e23a8395803bc12b0000eb87c500c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c1e23a8395803bc12b0000eb87c500c">&#9670;&#160;</a></span>setNeighborLists() <span class="overload">[1/3]</span></h2>
+<a id="a7941ef76de062c88175ee886816f2132" name="a7941ef76de062c88175ee886816f2132"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7941ef76de062c88175ee886816f2132">&#9670;&#160;</a></span>setNeighborLists() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2695,8 +2788,12 @@ template&lt;typename view_type&gt; </div>
         <tr>
           <td class="memname">std::enable_if&lt; view_type::rank==2, void &gt;::type Compadre::GMLS::setNeighborLists </td>
           <td>(</td>
-          <td class="paramtype">view_type</td>          <td class="paramname"><span class="paramname"><em>neighbor_lists</em></span></td><td>)</td>
+          <td class="paramtype">view_type</td>          <td class="paramname"><span class="paramname"><em>neighbor_lists</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>verify_unisolvency</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2707,12 +2804,12 @@ template&lt;typename view_type&gt; </div>
 </div><div class="memdoc">
 <p>Sets neighbor list information. Should be # targets x maximum number of neighbors for any target + 1. first entry in ever row should be the number of neighbors for the corresponding target. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00945">945</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01016">1016</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a8e86a139c8d6e01d042281c2f1347321" name="a8e86a139c8d6e01d042281c2f1347321"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e86a139c8d6e01d042281c2f1347321">&#9670;&#160;</a></span>setNeighborLists() <span class="overload">[2/3]</span></h2>
+<a id="a1ef7f158c19b7eeab1761268541c83d9" name="a1ef7f158c19b7eeab1761268541c83d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ef7f158c19b7eeab1761268541c83d9">&#9670;&#160;</a></span>setNeighborLists() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2730,7 +2827,12 @@ template&lt;typename view_type&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">view_type</td>          <td class="paramname"><span class="paramname"><em>number_of_neighbors_list</em></span>&#160;)</td>
+          <td class="paramtype">view_type</td>          <td class="paramname"><span class="paramname"><em>number_of_neighbors_list</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>verify_unisolvency</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2742,12 +2844,12 @@ template&lt;typename view_type&gt; </div>
 
 <p>Sets neighbor list information from compressed row neighborhood lists data (if different view_type). </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00929">929</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00999">999</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a21696eb385c472d2fe8512e498d62361" name="a21696eb385c472d2fe8512e498d62361"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a21696eb385c472d2fe8512e498d62361">&#9670;&#160;</a></span>setNeighborLists() <span class="overload">[3/3]</span></h2>
+<a id="aae6cff532949b9976d1931a78d6d5cca" name="aae6cff532949b9976d1931a78d6d5cca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae6cff532949b9976d1931a78d6d5cca">&#9670;&#160;</a></span>setNeighborLists() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2765,7 +2867,12 @@ template&lt;typename view_type&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">view_type</td>          <td class="paramname"><span class="paramname"><em>number_of_neighbors_list</em></span>&#160;)</td>
+          <td class="paramtype">view_type</td>          <td class="paramname"><span class="paramname"><em>number_of_neighbors_list</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>verify_unisolvency</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2777,7 +2884,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>Sets neighbor list information from compressed row neighborhood lists data (if same view_type). </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00919">919</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00988">988</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -2806,12 +2913,12 @@ template&lt;typename view_type&gt; </div>
 
 <p>Number quadrature points to use. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01256">1256</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01333">1333</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
-<a id="aad4e54d138ecb7958473c0ebfbf85518" name="aad4e54d138ecb7958473c0ebfbf85518"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad4e54d138ecb7958473c0ebfbf85518">&#9670;&#160;</a></span>setPolynomialOrder()</h2>
+<a id="adfa28842a50b7fbea8d18915edc48a0a" name="adfa28842a50b7fbea8d18915edc48a0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfa28842a50b7fbea8d18915edc48a0a">&#9670;&#160;</a></span>setPolynomialOrder()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2822,8 +2929,12 @@ template&lt;typename view_type&gt; </div>
         <tr>
           <td class="memname">void Compadre::GMLS::setPolynomialOrder </td>
           <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>poly_order</em></span></td><td>)</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>poly_order</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>verify_unisolvency</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2832,15 +2943,14 @@ template&lt;typename view_type&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Sets basis order to be used when reconstructing any function (with verify_unisolvency, checks that existing neighbor lists give enough samples per target for the new order) </p>
 
-<p>Sets basis order to be used when reconstructing any function. </p>
-
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01217">1217</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01290">1290</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a24aaa10cab200268a4053580dcc739f1" name="a24aaa10cab200268a4053580dcc739f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24aaa10cab200268a4053580dcc739f1">&#9670;&#160;</a></span>setProblemData() <span class="overload">[1/2]</span></h2>
+<a id="a1b6b9321a548cc8723a7c2d507aa7aee" name="a1b6b9321a548cc8723a7c2d507aa7aee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b6b9321a548cc8723a7c2d507aa7aee">&#9670;&#160;</a></span>setProblemData() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2873,7 +2983,12 @@ template&lt;typename view_type_1, typename view_type_2, typename view_type_3, ty
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">view_type_4</td>          <td class="paramname"><span class="paramname"><em>epsilons</em></span>&#160;)</td>
+          <td class="paramtype">view_type_4</td>          <td class="paramname"><span class="paramname"><em>epsilons</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>verify_unisolvency</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2885,12 +3000,12 @@ template&lt;typename view_type_1, typename view_type_2, typename view_type_3, ty
 
 <p>Sets basic problem data (neighbor lists data, number of neighbors list, source coordinates, and target coordinates). </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00884">884</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00952">952</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a9053c5a00e750b85642a4e89f7d10768" name="a9053c5a00e750b85642a4e89f7d10768"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9053c5a00e750b85642a4e89f7d10768">&#9670;&#160;</a></span>setProblemData() <span class="overload">[2/2]</span></h2>
+<a id="a5fc9657f16962931d16069daa10f5368" name="a5fc9657f16962931d16069daa10f5368"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fc9657f16962931d16069daa10f5368">&#9670;&#160;</a></span>setProblemData() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2918,7 +3033,12 @@ template&lt;typename view_type_1, typename view_type_2, typename view_type_3, ty
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">view_type_4</td>          <td class="paramname"><span class="paramname"><em>epsilons</em></span>&#160;)</td>
+          <td class="paramtype">view_type_4</td>          <td class="paramname"><span class="paramname"><em>epsilons</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>verify_unisolvency</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2930,7 +3050,7 @@ template&lt;typename view_type_1, typename view_type_2, typename view_type_3, ty
 
 <p>Sets basic problem data (neighbor lists, source coordinates, and target coordinates). </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00871">871</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00938">938</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -2959,7 +3079,7 @@ template&lt;typename view_type_1, typename view_type_2, typename view_type_3, ty
 
 <p>Type of quadrature points. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01268">1268</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01345">1345</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -2993,7 +3113,7 @@ template&lt;typename view_type&gt; </div>
 </div><div class="memdoc">
 <p>(OPTIONAL) Sets outward normal direction. For manifolds this may be used for orienting surface. It is also accessible for sampling operators that require a normal direction. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01107">1107</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01179">1179</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -3023,7 +3143,7 @@ template&lt;typename view_type&gt; </div>
 </div><div class="memdoc">
 <p>(OPTIONAL) Sets extra data to be used by sampling functionals in certain instances. (device) </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01150">1150</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01222">1222</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -3053,7 +3173,7 @@ template&lt;typename view_type&gt; </div>
 </div><div class="memdoc">
 <p>(OPTIONAL) Sets extra data to be used by sampling functionals in certain instances. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01135">1135</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01207">1207</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -3083,7 +3203,7 @@ template&lt;typename view_type&gt; </div>
 </div><div class="memdoc">
 <p>Sets source coordinate information. Rows of this 2D-array should correspond to neighbor IDs contained in the entries of the neighbor lists 2D array. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00984">984</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01056">1056</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -3113,7 +3233,7 @@ template&lt;typename view_type&gt; </div>
 </div><div class="memdoc">
 <p>Sets source coordinate information. Rows of this 2D-array should correspond to neighbor IDs contained in the entries of the neighbor lists 2D array. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00955">955</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01027">1027</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -3143,7 +3263,7 @@ template&lt;typename view_type&gt; </div>
 </div><div class="memdoc">
 <p>(OPTIONAL) Sets orthonormal tangent directions for reconstruction on a manifold. The first rank of this 2D array corresponds to the target indices, i.e., rows of the neighbor lists 2D array. The second rank is the ordinal of the tangent direction (spatial dimensions-1 are tangent, last one is normal), and the third rank is indices into the spatial dimension. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01070">1070</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01142">1142</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -3173,7 +3293,7 @@ template&lt;typename view_type&gt; </div>
 </div><div class="memdoc">
 <p>(OPTIONAL) Sets extra data to be used by target operations in certain instances. (device) </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01174">1174</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01246">1246</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -3203,7 +3323,7 @@ template&lt;typename view_type&gt; </div>
 </div><div class="memdoc">
 <p>(OPTIONAL) Sets extra data to be used by target operations in certain instances. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01159">1159</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01231">1231</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -3234,7 +3354,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>Sets target coordinate information. Rows of this 2D-array should correspond to rows of the neighbor lists. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01029">1029</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01101">1101</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -3265,7 +3385,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>Sets target coordinate information. Rows of this 2D-array should correspond to rows of the neighbor lists. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00992">992</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01064">1064</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -3297,7 +3417,7 @@ template&lt;typename view_type&gt; </div>
 </div><div class="memdoc">
 <p>Parameter for weighting kernel for <a class="el" href="class_compadre_1_1_g_m_l_s.html" title="Generalized Moving Least Squares (GMLS).">GMLS</a> problem index = 0 sets p paramater for weighting kernel index = 1 sets n paramater for weighting kernel </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01234">1234</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01311">1311</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -3326,7 +3446,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>Type for weighting kernel for <a class="el" href="class_compadre_1_1_g_m_l_s.html" title="Generalized Moving Least Squares (GMLS).">GMLS</a> problem. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01193">1193</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01265">1265</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -3355,7 +3475,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>Type for weighting kernel for <a class="el" href="class_compadre_1_1_g_m_l_s.html" title="Generalized Moving Least Squares (GMLS).">GMLS</a> problem. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01199">1199</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01271">1271</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -3386,7 +3506,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>Sets window sizes, also called the support of the kernel (device). </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01058">1058</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01130">1130</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -3417,7 +3537,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>Sets window sizes, also called the support of the kernel. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01046">1046</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01118">1118</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -3446,7 +3566,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>Type for weighting kernel for <a class="el" href="class_compadre_1_1_g_m_l_s.html" title="Generalized Moving Least Squares (GMLS).">GMLS</a> problem. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00599">599</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00662">662</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -3475,7 +3595,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>Verify whether _additional_pc is valid. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01308">1308</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01385">1385</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -3504,7 +3624,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>Verify whether _pc is valid. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01292">1292</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l01369">1369</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -3562,7 +3682,7 @@ template&lt;typename view_type&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00549">549</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00612">612</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -3587,7 +3707,7 @@ template&lt;typename view_type&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00042">42</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00046">46</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -3614,7 +3734,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>(OPTIONAL) connections between additional points and neighbors </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00117">117</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00125">125</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -3639,7 +3759,7 @@ template&lt;typename view_type&gt; </div>
 </div><div class="memdoc">
 <p>dimension of the reconstructed function e.g. reconstruction of vector on a 2D manifold in 3D would have _basis_multiplier of 2 </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00197">197</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00209">209</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -3665,7 +3785,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>constraint type for <a class="el" href="class_compadre_1_1_g_m_l_s.html" title="Generalized Moving Least Squares (GMLS).">GMLS</a> problem </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00157">157</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00169">169</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -3691,7 +3811,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>order of basis for curvature reconstruction </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00129">129</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00141">141</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -3717,7 +3837,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>vector containing target functionals to be applied for curvature </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00169">169</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00181">181</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -3743,7 +3863,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>second parameter to be used for weighting kernel for curvature </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00193">193</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00205">205</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -3769,7 +3889,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>first parameter to be used for weighting kernel for curvature </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00190">190</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00202">202</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -3795,7 +3915,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>weighting kernel type for curvature problem </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00181">181</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00193">193</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -3819,7 +3939,7 @@ template&lt;typename view_type&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00123">123</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00131">131</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -3846,7 +3966,7 @@ template&lt;typename view_type&gt; </div>
 <p>generally the same as _polynomial_sampling_functional, but can differ if specified at </p>
 <p><a class="el" href="class_compadre_1_1_g_m_l_s.html" title="Generalized Moving Least Squares (GMLS).">GMLS</a> class instantiation </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00166">166</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00178">178</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -3871,7 +3991,7 @@ template&lt;typename view_type&gt; </div>
 </div><div class="memdoc">
 <p>effective dimension of the data sampling functional e.g. in 3D, a scalar will be 1, a vector will be 3, and a vector of reused scalars will be 3 </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00206">206</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00218">218</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -3895,9 +4015,9 @@ template&lt;typename view_type&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>solver type for <a class="el" href="class_compadre_1_1_g_m_l_s.html" title="Generalized Moving Least Squares (GMLS).">GMLS</a> problem - can be QR, SVD or LU </p>
+<p>solver type for <a class="el" href="class_compadre_1_1_g_m_l_s.html" title="Generalized Moving Least Squares (GMLS).">GMLS</a> problem - can be QR or CHOL </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00150">150</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00162">162</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -3923,7 +4043,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>dimension of quadrature rule </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00237">237</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00249">249</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -3949,7 +4069,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>dimension of the problem, set at class instantiation only </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00141">141</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00153">153</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -3974,7 +4094,7 @@ template&lt;typename view_type&gt; </div>
 </div><div class="memdoc">
 <p>whether entire calculation was computed at once the alternative is that it was broken up over many smaller groups, in which case this is false, and so the _RHS matrix can not be stored or requested </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00222">222</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00234">234</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4000,7 +4120,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>h supports determined through neighbor search (device) </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00106">106</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00114">114</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4026,7 +4146,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>spatial dimension of the points, set at class instantiation only </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00135">135</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00147">147</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4052,7 +4172,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>Solution Set (contains all alpha values from solution and alpha layout methods). </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00122">122</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00130">130</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4078,7 +4198,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>vector containing target functionals to be applied for reconstruction problem (host) </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00175">175</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00187">187</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4103,7 +4223,7 @@ template&lt;typename view_type&gt; </div>
 </div><div class="memdoc">
 <p>generated weights for nontraditional samples required to transform data into expected sampling functional form (host) </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00114">114</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00122">122</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4129,7 +4249,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>reference outward normal vectors information (host) </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00085">85</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00093">93</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4155,7 +4275,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>tangent vectors information (host) </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00082">82</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00090">90</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4181,7 +4301,32 @@ template&lt;typename view_type&gt; </div>
 
 <p>initial index for current batch </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00228">228</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00240">240</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a3d69f87a22c82c06d711a17c5cf85628" name="a3d69f87a22c82c06d711a17c5cf85628"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d69f87a22c82c06d711a17c5cf85628">&#9670;&#160;</a></span>_kokkos_runtime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;void&gt; Compadre::GMLS::_kokkos_runtime = <a class="el" href="class_compadre_1_1_kokkos_parser.html#ad48676c1830eacaab41f08504bf0a5cd">KokkosParser::runtime</a>()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>keeps a Kokkos runtime started by a <a class="el" href="class_compadre_1_1_kokkos_parser.html" title="Initializes Kokkos from the command line, or joins the Kokkos already running.">KokkosParser</a> running while this object owns Kokkos memory; declared first, so it is released after every View member (see <a class="el" href="class_compadre_1_1_kokkos_parser.html#ad48676c1830eacaab41f08504bf0a5cd">KokkosParser::runtime</a>) </p>
+
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00063">63</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4207,7 +4352,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>dimension of the problem, set at class instantiation only. For manifolds, generally _global_dimensions-1 </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00138">138</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00150">150</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4233,7 +4378,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>curvature polynomial coefficients for all problems </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00091">91</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00099">99</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4259,7 +4404,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>_dimension-1 gradient values for curvature for all problems </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00094">94</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00102">102</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4285,7 +4430,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>metric tensor inverse for all problems </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00088">88</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00096">96</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4311,7 +4456,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>dimension of basis for polynomial reconstruction </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00132">132</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00144">144</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4337,7 +4482,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>vector containing target functionals to be applied for reconstruction problem (device) </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00172">172</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00184">184</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4363,7 +4508,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>order of exact polynomial integration for quadrature rule </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00234">234</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00246">246</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4388,7 +4533,7 @@ template&lt;typename view_type&gt; </div>
 </div><div class="memdoc">
 <p>whether or not the orthonormal tangent directions were provided by the user. If they are not, then for the case of calculations on manifolds, a <a class="el" href="class_compadre_1_1_g_m_l_s.html" title="Generalized Moving Least Squares (GMLS).">GMLS</a> approximation of the tangent space will be made and stored for use. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00211">211</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00223">223</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4414,7 +4559,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>P*sqrt(w) matrix for all problems. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00064">64</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00072">72</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4440,7 +4585,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>connections between points and neighbors </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00103">103</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00111">111</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4466,7 +4611,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>determines scratch level spaces and is used to call kernels </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00231">231</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00243">243</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4492,7 +4637,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>order of basis for polynomial reconstruction </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00126">126</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00134">134</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4518,7 +4663,7 @@ template&lt;typename view_type&gt; </div>
 <p>polynomial sampling functional used to construct P matrix, set at <a class="el" href="class_compadre_1_1_g_m_l_s.html" title="Generalized Moving Least Squares (GMLS).">GMLS</a> class instantiation <br  />
  <b>NOTE: can only be set at object instantiation</b> </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00161">161</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00173">173</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4543,7 +4688,7 @@ template&lt;typename view_type&gt; </div>
 </div><div class="memdoc">
 <p>generated weights for nontraditional samples required to transform data into expected sampling functional form (device). </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00110">110</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00118">118</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4569,7 +4714,7 @@ template&lt;typename view_type&gt; </div>
 <p>problem type for <a class="el" href="class_compadre_1_1_g_m_l_s.html" title="Generalized Moving Least Squares (GMLS).">GMLS</a> problem, can also be set to STANDARD for normal or MANIFOLD for manifold problems <br  />
  <b>NOTE: can only be set at object instantiation</b> </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00154">154</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00166">166</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4595,7 +4740,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>manages and calculates quadrature </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00243">243</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00255">255</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4621,7 +4766,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>quadrature rule type </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00240">240</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00252">252</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4647,7 +4792,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>reconstruction space for <a class="el" href="class_compadre_1_1_g_m_l_s.html" title="Generalized Moving Least Squares (GMLS).">GMLS</a> problems, set at <a class="el" href="class_compadre_1_1_g_m_l_s.html" title="Generalized Moving Least Squares (GMLS).">GMLS</a> class instantiation </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00144">144</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00156">156</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4673,7 +4818,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>actual rank of reconstruction basis </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00147">147</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00159">159</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4698,7 +4843,7 @@ template&lt;typename view_type&gt; </div>
 </div><div class="memdoc">
 <p>Rank 2 tensor for high order approximation of tangent vectors for all problems. First rank is for the target index, the second is for the spatial dimension (_dimensions) </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00079">79</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00087">87</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4724,7 +4869,32 @@ template&lt;typename view_type&gt; </div>
 
 <p>whether or not the reference outward normal directions were provided by the user. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00214">214</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00226">226</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+
+</div>
+</div>
+<a id="afdb728b680bfdbd53df8f550b86db35d" name="afdb728b680bfdbd53df8f550b86db35d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdb728b680bfdbd53df8f550b86db35d">&#9670;&#160;</a></span>_requested_poly_order</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Compadre::GMLS::_requested_poly_order</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>order of basis requested by the user (_poly_order can be raised internally for some sampling functionals, see generatePolynomialCoefficients) </p>
+
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00138">138</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4750,7 +4920,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>sqrt(w)*Identity matrix for all problems, later holds polynomial coefficients for all problems </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00067">67</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00075">75</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4775,7 +4945,7 @@ template&lt;typename view_type&gt; </div>
 </div><div class="memdoc">
 <p>actual dimension of the sampling functional e.g. reconstruction of vector on a 2D manifold in 3D would have _basis_multiplier of 2 e.g. in 3D, a scalar will be 1, a vector will be 3, and a vector of reused scalars will be 1 </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00202">202</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00214">214</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4801,7 +4971,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>Extra data available to basis functions (optional). </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00097">97</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00105">105</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4827,7 +4997,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>whether polynomial coefficients were requested to be stored (in a state not yet applied to data) </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00225">225</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00237">237</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4852,7 +5022,7 @@ template&lt;typename view_type&gt; </div>
 </div><div class="memdoc">
 <p>Rank 3 tensor for high order approximation of tangent vectors for all problems. First rank is for the target index, the second is for the local direction to the manifolds 0..(_dimensions-1) are tangent, _dimensions is the normal, and the third is for the spatial dimension (_dimensions) </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00075">75</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00083">83</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4878,7 +5048,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>Extra data available to target operations (optional). </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00100">100</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00108">108</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4904,7 +5074,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>whether or not to use reference outward normal directions to orient the surface in a manifold problem. </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00217">217</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00229">229</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4930,7 +5100,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>contains weights for all problems </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00061">61</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00069">69</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4956,7 +5126,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>second parameter to be used for weighting kernel </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00187">187</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00199">199</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -4982,7 +5152,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>first parameter to be used for weighting kernel </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00184">184</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00196">196</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -5008,7 +5178,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>weighting kernel type for <a class="el" href="class_compadre_1_1_g_m_l_s.html" title="Generalized Moving Least Squares (GMLS).">GMLS</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00178">178</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00190">190</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>
@@ -5034,7 +5204,7 @@ template&lt;typename view_type&gt; </div>
 
 <p>stores evaluations of targets applied to basis </p>
 
-<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00070">70</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_compadre___g_m_l_s_8hpp_source.html#l00078">78</a> of file <a class="el" href="_compadre___g_m_l_s_8hpp_source.html">Compadre_GMLS.hpp</a>.</p>
 
 </div>
 </div>

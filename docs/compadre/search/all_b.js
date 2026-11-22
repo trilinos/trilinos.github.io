@@ -15,5 +15,6 @@ var searchData=
   ['local_12',['Local',['../namespace_compadre.html#a25fc5848273e148a1ac661153f55f589a58505b33031e3896e0cbe0e7a7d37adc',1,'Compadre']]],
   ['local_5findex_5ftype_13',['local_index_type',['../namespace_compadre.html#abfea1cfb62b138c43e24417deb10e70d',1,'Compadre']]],
   ['longitude_14',['longitude',['../_g_m_l_s___manifold_8hpp.html#af14d2ccb63bf05c55713e671d5132563',1,'GMLS_Manifold.hpp']]],
-  ['lu_15',['LU',['../namespace_compadre.html#aa9f6f8690fcb1e67b5dbe42d60cb75fca0c85776ccade4d9e9c59af2282b44152',1,'Compadre']]]
+  ['lowertriangleoftransposeproduct_15',['lowerTriangleOfTransposeProduct',['../namespace_compadre.html#a0199e51170e23c2c39c3eac6fa8ed65f',1,'Compadre']]],
+  ['lu_16',['LU',['../namespace_compadre.html#aa9f6f8690fcb1e67b5dbe42d60cb75fca0c85776ccade4d9e9c59af2282b44152',1,'Compadre']]]
 ];

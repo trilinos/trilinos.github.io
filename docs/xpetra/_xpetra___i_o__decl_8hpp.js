@@ -40,6 +40,7 @@ var _xpetra___i_o__decl_8hpp =
       [ "Xpetra::IO::Xpetra::INSERT", "namespace_xpetra_1_1_i_o_1_1_xpetra.html#a3bbb33ef8888deb82eb440e3553c8f8ca167d684a6a4de344c5081c6c09cbb7c0", null ],
       [ "Xpetra::IO::Xpetra::ABSMAX", "namespace_xpetra_1_1_i_o_1_1_xpetra.html#a3bbb33ef8888deb82eb440e3553c8f8ca5cecaf0571ebf6ffc642000e7a377935", null ]
     ] ],
+    [ "Xpetra::Experimental::ConvertLegacyBinaryToBinary", "namespace_xpetra_1_1_experimental.html#a3352d3642c0be21995028031c8b93c3c", null ],
     [ "Xpetra::IO::Xpetra::rcp", "namespace_xpetra_1_1_i_o_1_1_xpetra.html#ab0600556d1618a6e0cb9c3122b1da46b", null ],
     [ "Xpetra::IO::Xpetra::typeName", "namespace_xpetra_1_1_i_o_1_1_xpetra.html#a9be31eceb263b7ffdec0b66fd7e028b8", null ]
 ];

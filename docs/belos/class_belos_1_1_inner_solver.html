@@ -126,9 +126,9 @@ class Belos::InnerSolver&lt; Scalar, MV, OP &gt;</div><p>Inner solver interface.
 <li>Multiprecision algorithms (where e.g., the preconditioner uses a different floating-point precision than the matrix and vectors)</li>
 <li>Inexact Krylov methods (where the matrix and/or preconditioner are applied with accuracy that gradually decreases as the outer iteration converges)</li>
 </ul>
-<p>InnerSolvers may be used directly as the "OP" template argument in <code><a class="el" href="class_belos_1_1_operator_traits.html" title="Class which defines basic traits for the operator type.">Belos::OperatorTraits</a></code>, but <a class="el" href="namespace_belos.html">Belos</a>' current architecture makes this hard to use in practice. The more typical use is via the wrapper defined in <code>Belos::InnerSolveTraits</code>. The <code>InnerSolveTraits::makeInnerSolveOperator()</code> method wraps an InnerSolve instance in an operator appropriate for your linear algebra library: <code>Epetra_Operator</code> for Epetra, <code>Tpetra::Operator</code> for Tpetra, or <code>Thyra::LinearOpBase</code> for Thyra. Then, you can mix and match <a class="el" href="class_belos_1_1_inner_solver.html" title="Inner solver interface.">InnerSolver</a> instances with ordinary matrices or other kinds of operators in your <a class="el" href="namespace_belos.html">Belos</a> iterative solvers. The wrappers have an "envelope" capability, so your custom iterative solvers can receive the <a class="el" href="class_belos_1_1_inner_solver.html" title="Inner solver interface.">InnerSolver</a> wrapped up in the wrapper, extract the <a class="el" href="class_belos_1_1_inner_solver.html" title="Inner solver interface.">InnerSolver</a> (via <code>Belos::InnerSolveTraits::getInnerSolver()</code>), discard the wrapper if desired, and use the <a class="el" href="class_belos_1_1_inner_solver.html" title="Inner solver interface.">InnerSolver</a> directly. </p>
+<p>InnerSolvers may be used directly as the "OP" template argument in <code><a class="el" href="class_belos_1_1_operator_traits.html" title="Class which defines basic traits for the operator type.">Belos::OperatorTraits</a></code>, but <a class="el" href="namespace_belos.html">Belos</a>' current architecture makes this hard to use in practice. The more typical use is via the wrapper defined in <code>Belos::InnerSolveTraits</code>. The <code>InnerSolveTraits::makeInnerSolveOperator()</code> method wraps an InnerSolve instance in an operator appropriate for your linear algebra library: <code>Tpetra::Operator</code> for Tpetra, or <code>Thyra::LinearOpBase</code> for Thyra. Then, you can mix and match <a class="el" href="class_belos_1_1_inner_solver.html" title="Inner solver interface.">InnerSolver</a> instances with ordinary matrices or other kinds of operators in your <a class="el" href="namespace_belos.html">Belos</a> iterative solvers. The wrappers have an "envelope" capability, so your custom iterative solvers can receive the <a class="el" href="class_belos_1_1_inner_solver.html" title="Inner solver interface.">InnerSolver</a> wrapped up in the wrapper, extract the <a class="el" href="class_belos_1_1_inner_solver.html" title="Inner solver interface.">InnerSolver</a> (via <code>Belos::InnerSolveTraits::getInnerSolver()</code>), discard the wrapper if desired, and use the <a class="el" href="class_belos_1_1_inner_solver.html" title="Inner solver interface.">InnerSolver</a> directly. </p>
 
-<p class="definition">Definition at line <a class="el" href="_belos_inner_solver_8hpp_source.html#l00106">106</a> of file <a class="el" href="_belos_inner_solver_8hpp_source.html">BelosInnerSolver.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_belos_inner_solver_8hpp_source.html#l00105">105</a> of file <a class="el" href="_belos_inner_solver_8hpp_source.html">BelosInnerSolver.hpp</a>.</p>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
 <a id="a8c59197ca25561ca3b345fd3d8b7e074" name="a8c59197ca25561ca3b345fd3d8b7e074"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8c59197ca25561ca3b345fd3d8b7e074">&#9670;&#160;</a></span>scalar_type</h2>
@@ -144,7 +144,7 @@ template&lt;class Scalar, class MV, class OP&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_belos_inner_solver_8hpp_source.html#l00108">108</a> of file <a class="el" href="_belos_inner_solver_8hpp_source.html">BelosInnerSolver.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_belos_inner_solver_8hpp_source.html#l00107">107</a> of file <a class="el" href="_belos_inner_solver_8hpp_source.html">BelosInnerSolver.hpp</a>.</p>
 
 </div>
 </div>
@@ -162,7 +162,7 @@ template&lt;class Scalar, class MV, class OP&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_belos_inner_solver_8hpp_source.html#l00109">109</a> of file <a class="el" href="_belos_inner_solver_8hpp_source.html">BelosInnerSolver.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_belos_inner_solver_8hpp_source.html#l00108">108</a> of file <a class="el" href="_belos_inner_solver_8hpp_source.html">BelosInnerSolver.hpp</a>.</p>
 
 </div>
 </div>
@@ -180,7 +180,7 @@ template&lt;class Scalar, class MV, class OP&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_belos_inner_solver_8hpp_source.html#l00110">110</a> of file <a class="el" href="_belos_inner_solver_8hpp_source.html">BelosInnerSolver.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_belos_inner_solver_8hpp_source.html#l00109">109</a> of file <a class="el" href="_belos_inner_solver_8hpp_source.html">BelosInnerSolver.hpp</a>.</p>
 
 </div>
 </div>
@@ -198,7 +198,7 @@ template&lt;class Scalar, class MV, class OP&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_belos_inner_solver_8hpp_source.html#l00111">111</a> of file <a class="el" href="_belos_inner_solver_8hpp_source.html">BelosInnerSolver.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_belos_inner_solver_8hpp_source.html#l00110">110</a> of file <a class="el" href="_belos_inner_solver_8hpp_source.html">BelosInnerSolver.hpp</a>.</p>
 
 </div>
 </div>
@@ -230,7 +230,7 @@ template&lt;class Scalar, class MV, class OP&gt; </div>
 
 <p>Virtual destructor, for correctness. </p>
 
-<p class="definition">Definition at line <a class="el" href="_belos_inner_solver_8hpp_source.html#l00114">114</a> of file <a class="el" href="_belos_inner_solver_8hpp_source.html">BelosInnerSolver.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_belos_inner_solver_8hpp_source.html#l00113">113</a> of file <a class="el" href="_belos_inner_solver_8hpp_source.html">BelosInnerSolver.hpp</a>.</p>
 
 </div>
 </div>

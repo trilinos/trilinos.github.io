@@ -1,7 +1,5 @@
 var NAVTREEINDEX35 =
 {
-"class_mue_lu_1_1_scalar_dropping_base.html":[10,0,2,22],
-"class_mue_lu_1_1_scalar_dropping_base.html#a0e31c53db62b35b12a91030a7e58b5f5":[9,0,7,30,7],
 "class_mue_lu_1_1_scalar_dropping_base.html#a0e31c53db62b35b12a91030a7e58b5f5":[10,0,2,22,7],
 "class_mue_lu_1_1_scalar_dropping_base.html#a211f81cb99e19f6e1bf99bfcb049fb6a":[9,0,7,30,9],
 "class_mue_lu_1_1_scalar_dropping_base.html#a211f81cb99e19f6e1bf99bfcb049fb6a":[10,0,2,22,9],
@@ -249,5 +247,7 @@ var NAVTREEINDEX35 =
 "class_mue_lu_1_1_shifted_laplacian.html#a3d2ca2e33ccfc06eab016ffaf81107a6":[10,0,2,257,16],
 "class_mue_lu_1_1_shifted_laplacian.html#a49ba21c24d9e7da22cee44cc33f57370":[9,0,7,265,64],
 "class_mue_lu_1_1_shifted_laplacian.html#a49ba21c24d9e7da22cee44cc33f57370":[10,0,2,257,64],
-"class_mue_lu_1_1_shifted_laplacian.html#a4a62cf0886f6b237168af1de19fe22e4":[9,0,7,265,70]
+"class_mue_lu_1_1_shifted_laplacian.html#a4a62cf0886f6b237168af1de19fe22e4":[9,0,7,265,70],
+"class_mue_lu_1_1_shifted_laplacian.html#a4a62cf0886f6b237168af1de19fe22e4":[10,0,2,257,70],
+"class_mue_lu_1_1_shifted_laplacian.html#a4c079540904599b22a8e0b449664dc14":[9,0,7,265,100]
 };

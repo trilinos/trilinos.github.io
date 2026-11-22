@@ -1,7 +1,5 @@
 var NAVTREEINDEX25 =
 {
-"class_mue_lu_1_1_matlab_smoother.html#ae759298a71554fefccd1ea1695b8c197":[10,0,2,218,16],
-"class_mue_lu_1_1_matlab_smoother.html#afe3dd12fe09d40ff30ef26b56e31a218":[9,0,7,226,2],
 "class_mue_lu_1_1_matlab_smoother.html#afe3dd12fe09d40ff30ef26b56e31a218":[10,0,2,218,2],
 "class_mue_lu_1_1_matlab_smoother.html#afe6e97d0be69fd7abf4d6a69bb482c7b":[9,0,7,226,8],
 "class_mue_lu_1_1_matlab_smoother.html#afe6e97d0be69fd7abf4d6a69bb482c7b":[10,0,2,218,8],
@@ -249,5 +247,7 @@ var NAVTREEINDEX25 =
 "class_mue_lu_1_1_matrix_construction_1_1_pointwise_fill_reuse_functor.html#a86ee6036e03c5c54a716efc41aebb4c1":[10,0,2,6,2,3],
 "class_mue_lu_1_1_matrix_construction_1_1_pointwise_fill_reuse_functor.html#a947819eac9bed6995c80d89e537a632c":[9,0,7,6,2,14],
 "class_mue_lu_1_1_matrix_construction_1_1_pointwise_fill_reuse_functor.html#a947819eac9bed6995c80d89e537a632c":[10,0,2,6,2,14],
-"class_mue_lu_1_1_matrix_construction_1_1_pointwise_fill_reuse_functor.html#aa71d4cf3cfe9bc9013c3f05ce312a892":[9,0,7,6,2,2]
+"class_mue_lu_1_1_matrix_construction_1_1_pointwise_fill_reuse_functor.html#aa71d4cf3cfe9bc9013c3f05ce312a892":[9,0,7,6,2,2],
+"class_mue_lu_1_1_matrix_construction_1_1_pointwise_fill_reuse_functor.html#aa71d4cf3cfe9bc9013c3f05ce312a892":[10,0,2,6,2,2],
+"class_mue_lu_1_1_matrix_construction_1_1_pointwise_fill_reuse_functor.html#ac7fdb3a281a1fede620539c99d9a52e6":[9,0,7,6,2,0]
 };

@@ -76,6 +76,7 @@ $(function() {
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="class_tpetra_1_1_ext_1_1_point_to_block_diag_permute-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Tpetra::Ext::PointToBlockDiagPermute&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt; Class Template Reference</div></div>
 </div><!--header-->
@@ -85,6 +86,14 @@ $(function() {
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_tpetra_ext___point_to_block_diag_permute__decl_8hpp_source.html">TpetraExt_PointToBlockDiagPermute_decl.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:adf77c2dd825ad56c77c3e0488763fe98" id="r_adf77c2dd825ad56c77c3e0488763fe98"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf77c2dd825ad56c77c3e0488763fe98">applyInverse</a> (const mv_type &amp;X, mv_type &amp;Y) const</td></tr>
+<tr class="memdesc:adf77c2dd825ad56c77c3e0488763fe98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the inverse block diagonal to X, returning Y.  <br /></td></tr>
+<tr class="memitem:ab9d43143448dde2efc4e46220a1804b8" id="r_ab9d43143448dde2efc4e46220a1804b8"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; crs_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9d43143448dde2efc4e46220a1804b8">getInverseBlockDiagonal</a> () const</td></tr>
+<tr class="memdesc:ab9d43143448dde2efc4e46220a1804b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the inverse of the extracted block diagonal as a sparse matrix.  <br /></td></tr>
+</table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class Scalar = ::Tpetra::Details::DefaultTypes::scalar_type, class LocalOrdinal = ::Tpetra::Details::DefaultTypes::local_ordinal_type, class GlobalOrdinal = ::Tpetra::Details::DefaultTypes::global_ordinal_type, class Node = ::Tpetra::Details::DefaultTypes::node_type&gt;<br />
 class Tpetra::Ext::PointToBlockDiagPermute&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;</div><p><a class="el" href="namespace_tpetra.html" title="Namespace Tpetra contains the class and methods constituting the Tpetra library.">Tpetra</a> analogue of EpetraExt_PointToBlockDiagPermute. </p>
@@ -93,10 +102,71 @@ class Tpetra::Ext::PointToBlockDiagPermute&lt; Scalar, LocalOrdinal, GlobalOrdin
 <li>contiguous block size</li>
 <li>explicit local block starts + local/global block entry ids</li>
 </ul>
-<p>The extracted block diagonal may be materialized as a <a class="el" href="class_tpetra_1_1_crs_matrix.html" title="Sparse matrix that presents a row-oriented interface that lets users read or modify entries.">Tpetra::CrsMatrix</a>. </p>
+<p>Blocks are purely local: each rank only keeps the entries of a block that it owns. compute() inverts every block and stores the result as a <a class="el" href="class_tpetra_1_1_crs_matrix.html" title="Sparse matrix that presents a row-oriented interface that lets users read or modify entries.">Tpetra::CrsMatrix</a> (see <a class="el" href="#ab9d43143448dde2efc4e46220a1804b8" title="Return the inverse of the extracted block diagonal as a sparse matrix.">getInverseBlockDiagonal()</a>), so applying the inverse is a sparse matrix-vector product on the matrix's execution space. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tpetra_ext___point_to_block_diag_permute__decl_8hpp_source.html#l00034">34</a> of file <a class="el" href="_tpetra_ext___point_to_block_diag_permute__decl_8hpp_source.html">TpetraExt_PointToBlockDiagPermute_decl.hpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+<p class="definition">Definition at line <a class="el" href="_tpetra_ext___point_to_block_diag_permute__decl_8hpp_source.html#l00037">37</a> of file <a class="el" href="_tpetra_ext___point_to_block_diag_permute__decl_8hpp_source.html">TpetraExt_PointToBlockDiagPermute_decl.hpp</a>.</p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="adf77c2dd825ad56c77c3e0488763fe98" name="adf77c2dd825ad56c77c3e0488763fe98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf77c2dd825ad56c77c3e0488763fe98">&#9670;&#160;</a></span>applyInverse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Scalar, class LocalOrdinal, class GlobalOrdinal, class Node&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="class_tpetra_1_1_ext_1_1_point_to_block_diag_permute.html">Tpetra::Ext::PointToBlockDiagPermute</a>&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;::applyInverse </td>
+          <td>(</td>
+          <td class="paramtype">const mv_type &amp;</td>          <td class="paramname"><span class="paramname"><em>X</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mv_type &amp;</td>          <td class="paramname"><span class="paramname"><em>Y</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Apply the inverse block diagonal to X, returning Y. </p>
+<p>This applies the inverse of the extracted local block diagonal, not the original matrix. Equivalent to <span class="tt"><a class="el" href="#ab9d43143448dde2efc4e46220a1804b8" title="Return the inverse of the extracted block diagonal as a sparse matrix.">getInverseBlockDiagonal()</a>-&gt;apply(X, Y)</span>. </p>
+
+<p class="definition">Definition at line <a class="el" href="_tpetra_ext___point_to_block_diag_permute__def_8hpp_source.html#l00267">267</a> of file <a class="el" href="_tpetra_ext___point_to_block_diag_permute__def_8hpp_source.html">TpetraExt_PointToBlockDiagPermute_def.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ab9d43143448dde2efc4e46220a1804b8" name="ab9d43143448dde2efc4e46220a1804b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9d43143448dde2efc4e46220a1804b8">&#9670;&#160;</a></span>getInverseBlockDiagonal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Scalar = ::Tpetra::Details::DefaultTypes::scalar_type, class LocalOrdinal = ::Tpetra::Details::DefaultTypes::local_ordinal_type, class GlobalOrdinal = ::Tpetra::Details::DefaultTypes::global_ordinal_type, class Node = ::Tpetra::Details::DefaultTypes::node_type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Teuchos::RCP&lt; crs_type &gt; <a class="el" href="class_tpetra_1_1_ext_1_1_point_to_block_diag_permute.html">Tpetra::Ext::PointToBlockDiagPermute</a>&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;::getInverseBlockDiagonal </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the inverse of the extracted block diagonal as a sparse matrix. </p>
+<p>The matrix is computed by compute() and shared, not copied. </p>
+
+<p class="definition">Definition at line <a class="el" href="_tpetra_ext___point_to_block_diag_permute__decl_8hpp_source.html#l00062">62</a> of file <a class="el" href="_tpetra_ext___point_to_block_diag_permute__decl_8hpp_source.html">TpetraExt_PointToBlockDiagPermute_decl.hpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_tpetra_ext___point_to_block_diag_permute__decl_8hpp_source.html">TpetraExt_PointToBlockDiagPermute_decl.hpp</a></li>
 <li><a class="el" href="_tpetra_ext___point_to_block_diag_permute__def_8hpp_source.html">TpetraExt_PointToBlockDiagPermute_def.hpp</a></li>
 </ul>

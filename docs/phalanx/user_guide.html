@@ -317,14 +317,7 @@ B. Performance Example Requirements</h2>
 <p>TVMET is optional and hidden behind an ifdef. The performance tests will be built regardless of whether tvmet is enabled/disabled.</p>
 <h2 class="doxsection"><a class="anchor" id="ug_step1_fem"></a>
 C. Nonlinear Finite Element Example Requirements</h2>
-<p>To build the example problem in "phalanx/example/FEM_Nonlinear", distributed vector, distributed sparse matrix, and corresponding linear solvers are required. The following <b>Trilinos</b> packages need to be enabled to build the FEM_Nonlinear example:</p>
-<ul>
-<li><b>Requires:</b> the <a href="http://trilinos.sandia.gov/packages/epetra">Epetra Library</a>, supplies the linear algebra data structures for spares matrices. Can be enabled during the Trilinos configure with the flag "-D Trilinos_ENABLE_Epetra=ON".</li>
-<li><b>Requires:</b> the <a href="http://trilinos.sandia.gov/packages/ifpack">Ifpack Library</a>, supplies incomplete factorization preconditioners. Can be enabled during the Trilinos configure with the flag "-D Trilinos_ENABLE_Ifpack=ON".</li>
-<li><b>Requires:</b> the <a href="http://trilinos.sandia.gov/packages/belos">Belos Library</a>, supplies block GMRES iterative linear solver. Can be enabled during the Trilinos configure with the flag "-D Trilinos_ENABLE_Belos=ON". <br  />
-</li>
-</ul>
-<p>This example will be disabled if the above packages are not enabled.</p>
+<p>The historical nonlinear finite-element example under <span class="tt">phalanx/example/FiniteElementAssembly/deprecated</span> is no longer part of the supported build guidance. The supported Phalanx examples rely on Teuchos, Sacado, and other currently maintained Trilinos packages.</p>
 <h2 class="doxsection"><a class="anchor" id="db"></a>
 D. Configure Trilinos/Phalanx</h2>
 <p>The general instructions for building trilinos can be found at <a href="http://trilinos.sandia.gov/documentation.html">Trilinos Documentation Page</a>. Of particular importance are the Overview, User Guide, and Tutorial documents. At a minimum you must enable the Teuchos, Sacado, and Phalanx packages. An example configure script is:</p>

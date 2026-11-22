@@ -1,7 +1,5 @@
 var NAVTREEINDEX34 =
 {
-"class_mue_lu_1_1_ref_maxwell.html#af6906fb4ca6d3439c1ff2d1a4bd6c200":[10,0,2,113,43],
-"class_mue_lu_1_1_ref_maxwell.html#afa1a44b90e4f9634ad9e81c6785e0b33":[9,0,7,121,28],
 "class_mue_lu_1_1_ref_maxwell.html#afa1a44b90e4f9634ad9e81c6785e0b33":[10,0,2,113,28],
 "class_mue_lu_1_1_ref_maxwell.html#afa61d9a409b5279679b717f12ebe452c":[9,0,7,121,68],
 "class_mue_lu_1_1_ref_maxwell.html#afa61d9a409b5279679b717f12ebe452c":[10,0,2,113,68],
@@ -249,5 +247,7 @@ var NAVTREEINDEX34 =
 "class_mue_lu_1_1_sa_p_factory.html#aecdbe0f1a070653bf71cbbf1f2bb33d3":[10,0,2,201,7],
 "class_mue_lu_1_1_sa_p_factory.html#aee10774ba2075e6ed8790bf529711b1b":[9,0,7,209,15],
 "class_mue_lu_1_1_sa_p_factory.html#aee10774ba2075e6ed8790bf529711b1b":[10,0,2,201,15],
-"class_mue_lu_1_1_scalar_dropping_base.html":[9,0,7,30]
+"class_mue_lu_1_1_scalar_dropping_base.html":[9,0,7,30],
+"class_mue_lu_1_1_scalar_dropping_base.html":[10,0,2,22],
+"class_mue_lu_1_1_scalar_dropping_base.html#a0e31c53db62b35b12a91030a7e58b5f5":[9,0,7,30,7]
 };

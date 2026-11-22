@@ -1,7 +1,5 @@
 var NAVTREEINDEX11 =
 {
-"class_mue_lu_1_1_block_inverse_functor_1_1_tag_find_singular_blocks.html":[10,0,2,167,0],
-"class_mue_lu_1_1_blocked_coarse_map_factory.html":[9,0,7,165],
 "class_mue_lu_1_1_blocked_coarse_map_factory.html":[10,0,2,157],
 "class_mue_lu_1_1_blocked_coarse_map_factory.html#a58ac0d509985a50d88fe250289a7b6c0":[9,0,7,165,2],
 "class_mue_lu_1_1_blocked_coarse_map_factory.html#a58ac0d509985a50d88fe250289a7b6c0":[10,0,2,157,2],
@@ -249,5 +247,7 @@ var NAVTREEINDEX11 =
 "class_mue_lu_1_1_boundary_detection_1_1_point_dirichlet_functor.html#ac09ab760011fe47737244459bc45962c":[10,0,2,0,0,6],
 "class_mue_lu_1_1_boundary_detection_1_1_point_dirichlet_functor.html#adc1e1607640ca188f838a31dc3a46c0d":[9,0,7,0,0,9],
 "class_mue_lu_1_1_boundary_detection_1_1_point_dirichlet_functor.html#adc1e1607640ca188f838a31dc3a46c0d":[10,0,2,0,0,9],
-"class_mue_lu_1_1_boundary_detection_1_1_point_dirichlet_functor.html#af24713180ea9d6dcf4f6c8afbbb2ab6e":[9,0,7,0,0,0]
+"class_mue_lu_1_1_boundary_detection_1_1_point_dirichlet_functor.html#af24713180ea9d6dcf4f6c8afbbb2ab6e":[9,0,7,0,0,0],
+"class_mue_lu_1_1_boundary_detection_1_1_point_dirichlet_functor.html#af24713180ea9d6dcf4f6c8afbbb2ab6e":[10,0,2,0,0,0],
+"class_mue_lu_1_1_boundary_detection_1_1_row_sum_functor.html":[9,0,7,0,2]
 };

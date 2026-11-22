@@ -4,5 +4,6 @@ var searchData=
   ['largesttwoeigenvectorsthreebythreesymmetric_1',['largestTwoEigenvectorsThreeByThreeSymmetric',['../namespace_compadre_1_1_g_m_l_s___linear_algebra.html#a071f7c18e8878f725c120e353083ce1d',1,'Compadre::GMLS_LinearAlgebra']]],
   ['latitude_2',['latitude',['../_g_m_l_s___manifold_8hpp.html#a59d9ec56edda974c3d195cbf51f98a26',1,'GMLS_Manifold.hpp']]],
   ['legendre54_3',['legendre54',['../_g_m_l_s___manifold_8hpp.html#a2ac280ec9894f7a7344171fde2e85f80',1,'GMLS_Manifold.hpp']]],
-  ['longitude_4',['longitude',['../_g_m_l_s___manifold_8hpp.html#af14d2ccb63bf05c55713e671d5132563',1,'GMLS_Manifold.hpp']]]
+  ['longitude_4',['longitude',['../_g_m_l_s___manifold_8hpp.html#af14d2ccb63bf05c55713e671d5132563',1,'GMLS_Manifold.hpp']]],
+  ['lowertriangleoftransposeproduct_5',['lowerTriangleOfTransposeProduct',['../namespace_compadre.html#a0199e51170e23c2c39c3eac6fa8ed65f',1,'Compadre']]]
 ];
